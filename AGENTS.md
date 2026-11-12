@@ -168,3 +168,8 @@ Rules that bind only this project go here, one sentence each, with a link to the
    ([decision 0001](docs/decisions/0001.md)).
 8. **A session looks at its change in a browser with `bun run shot`,** which saves screenshots under
    `.agent-tmp/shots/` and reports page errors ([tools/shot.ts](tools/shot.ts)).
+9. **A new or changed text is written in English and German only.** Every other locale shows the English
+   until a translation pass ([decision 0012](docs/decisions/0012.md),
+   [translation.md](docs/agent/translation.md)).
+10. **A text whose meaning changes gets a new key,** and a reworded text keeps its key
+    ([decision 0012](docs/decisions/0012.md)).
