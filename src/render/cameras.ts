@@ -26,6 +26,9 @@
  *   piano then sits at the top of the picture, with the notes rising towards it.
  * - The piano position lifts the target along the lanes by a share of the half-screen, which raises
  *   the piano on screen. The frame's shift moves the target sideways, and the camera with it.
+ * - `update` says whether the camera moved, so the scene draws only then. A glide counts until it is
+ *   within `SETTLED` of its preset, and cinematic always moves. A drag moves the camera in the controls'
+ *   own handlers, between updates, so their change marks the next update as moved. So does each setter.
  *
  * Bounds: two cameras, one `OrbitControls` and two listeners on the canvas.
  */
@@ -60,13 +63,18 @@ export interface CameraRig {
   returnToPreset(): void;
   setFrame(frame: CameraFrame): void;
   setAspect(aspect: number): void;
-  /** Moves the camera one frame on. `seconds` is the frame's length and `time` the clock. */
-  update(seconds: number, time: number): void;
+  /**
+   * Moves the camera one frame on. `seconds` is the frame's length and `time` the clock. Returns whether
+   * the camera moved since the last update, or a setter changed what it shows.
+   */
+  update(seconds: number, time: number): boolean;
   dispose(): void;
 }
 
 /** How fast the camera closes on its preset, per second. */
 const EASE_RATE = 5;
+/** A glide this close to its preset, in world units, no longer moves the picture by a visible amount. */
+const SETTLED = 1e-3;
 const FOV = 40;
 const TAN_HALF_FOV = Math.tan(((FOV / 2) * Math.PI) / 180);
 /** How high above the lanes the flat camera sits, in world units. Its height never changes the picture. */
@@ -104,6 +112,7 @@ export function createCameraRig(canvas: HTMLElement, initial: CameraPreset = "cl
         controls.maxDistance = 160;
         controls.enabled = preset !== "flat";
         controls.addEventListener("start", onStart);
+        controls.addEventListener("change", onChange);
       },
       () => {},
     );
@@ -119,12 +128,18 @@ export function createCameraRig(canvas: HTMLElement, initial: CameraPreset = "cl
   let free = false;
   /** Whether the next update jumps to the preset instead of gliding, as on the first frame. */
   let snap = true;
+  /** Whether a setter or the controls changed the camera since the last update. */
+  let stirred = true;
 
   const goalPosition = new Vector3();
   const goalTarget = new Vector3();
 
   const onStart = () => {
     free = true;
+    stirred = true;
+  };
+  const onChange = () => {
+    stirred = true;
   };
   const onDoubleClick = () => rig.returnToPreset();
   canvas.addEventListener("dblclick", onDoubleClick);
@@ -170,44 +185,60 @@ export function createCameraRig(canvas: HTMLElement, initial: CameraPreset = "cl
     setPreset(next) {
       preset = next;
       free = false;
+      stirred = true;
       if (controls) controls.enabled = next !== "flat";
       else if (next !== "flat" && !controlsLoading) loadControls();
     },
 
     returnToPreset() {
       free = false;
+      stirred = true;
     },
 
     setFrame(next) {
       frame = { ...next };
+      stirred = true;
     },
 
     setAspect(next) {
       aspect = next;
       camera.aspect = next;
       camera.updateProjectionMatrix();
+      stirred = true;
     },
 
     update(seconds, time) {
+      const changed = stirred;
+      stirred = false;
       if (preset === "flat") {
         placeFlat();
-        return;
+        return changed;
       }
       if (free && controls) {
-        controls.update(seconds);
-        return;
+        // The controls' own update raises their change too, which this update already reports.
+        const moved = controls.update(seconds);
+        stirred = false;
+        return moved || changed;
       }
       place(time);
+      // The gap before this step, so a glide counts as moving until it closes, and cinematic never closes.
+      const moving =
+        snap ||
+        preset === "cinematic" ||
+        camera.position.distanceTo(goalPosition) > SETTLED ||
+        target.distanceTo(goalTarget) > SETTLED;
       const t = snap ? 1 : 1 - Math.exp(-EASE_RATE * Math.min(seconds, 0.1));
       snap = false;
       camera.position.lerp(goalPosition, t);
       target.lerp(goalTarget, t);
       camera.lookAt(target);
+      return moving || changed;
     },
 
     dispose() {
       disposed = true;
       controls?.removeEventListener("start", onStart);
+      controls?.removeEventListener("change", onChange);
       canvas.removeEventListener("dblclick", onDoubleClick);
       controls?.dispose();
     },

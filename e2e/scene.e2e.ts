@@ -1,4 +1,7 @@
-/** The 3D scene in a real browser: its overlays show on request, and its cameras, labels and glow switch cleanly. */
+/**
+ * The 3D scene in a real browser: it draws only on a change, its overlays show on request, and its
+ * cameras, labels and glow switch cleanly.
+ */
 import { expect, test, type Page } from "@playwright/test";
 
 /** Collects every uncaught error and console error the page reports from now on. */
@@ -23,6 +26,38 @@ test("fps_and_bpm_overlays_show_when_turned_on", async ({ page }) => {
   // The demo song plays at 120 BPM, and the frame rate replaces its placeholder within a second.
   await expect(stats.filter({ hasText: "120 BPM" })).toBeVisible();
   await expect(stats.filter({ hasText: /^\d+ FPS$/ })).toBeVisible();
+});
+
+test("the_paused_scene_stops_drawing_and_a_seek_draws_it_again", async ({ page }) => {
+  // Counts WebGL's draw calls by wrapping them before the app loads, so the app needs no hook.
+  await page.addInitScript(() => {
+    const counter = window as unknown as { draws: number };
+    counter.draws = 0;
+    const proto = WebGL2RenderingContext.prototype as unknown as Record<string, (...args: unknown[]) => unknown>;
+    for (const name of ["drawElements", "drawArrays", "drawElementsInstanced", "drawArraysInstanced"]) {
+      const original = proto[name]!;
+      proto[name] = function (this: unknown, ...args: unknown[]) {
+        counter.draws++;
+        return original.apply(this, args);
+      };
+    }
+  });
+  await page.goto("./play/");
+  const draws = () => page.evaluate(() => (window as unknown as { draws: number }).draws);
+  await expect(page.getByRole("button", { name: "Play" })).toBeVisible();
+
+  // Paused, the scene draws until the glow has loaded and the camera has arrived, then not at all.
+  const drawsOverHalfASecond = async () => {
+    const before = await draws();
+    await page.waitForTimeout(500);
+    return (await draws()) - before;
+  };
+  await expect.poll(drawsOverHalfASecond, { timeout: 15_000 }).toBe(0);
+
+  // A seek while paused draws the scene again.
+  const settled = await draws();
+  await page.keyboard.press("ArrowRight");
+  await expect.poll(draws).toBeGreaterThan(settled);
 });
 
 test("camera_presets_and_glow_switch_without_errors", async ({ page }) => {

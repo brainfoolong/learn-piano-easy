@@ -13,6 +13,8 @@
  * - The envelope rises fast and falls slowly, so a struck key swells at once and settles after.
  * - The wave travels at `speed` radians a second, with `resolution` waves to an octave's seven keys.
  * - With no key sounding the line lies flat, so it shows where it is before the first note.
+ * - `update` says whether the line still moves: while its envelope has not reached its target, or while
+ *   any of it swells and the wave travels. A flat line holds still, so the scene can stop drawing.
  *
  * Bounds: one strip, and an envelope of `SAMPLES` floats and bytes.
  */
@@ -49,8 +51,11 @@ export interface PianoLine {
   readonly mesh: Mesh;
   setLayout(layout: KeyLayout): void;
   setOptions(options: PianoLineOptions): void;
-  /** Moves the wave on by `seconds`, with a bell over the centre of each key in `centres`. */
-  update(seconds: number, centres: Iterable<number>): void;
+  /**
+   * Moves the wave on by `seconds`, with a bell over the centre of each key in `centres`. Returns whether
+   * the line still moves. A hidden line never moves.
+   */
+  update(seconds: number, centres: Iterable<number>): boolean;
   dispose(): void;
 }
 
@@ -136,10 +141,12 @@ export function createPianoLine(): PianoLine {
     },
 
     update(seconds, centres) {
-      if (!mesh.visible) return;
+      if (!mesh.visible) return false;
       material.uniforms.uPhase!.value = ((material.uniforms.uPhase!.value as number) + seconds * speed) % (Math.PI * 2000);
       const keys = [...centres];
       let changed = false;
+      // The line moves on while a sample has not reached its target, or while it swells and the wave travels.
+      let moving = false;
       for (let i = 0; i < SAMPLES; i++) {
         const x = ((i + 0.5) / SAMPLES - 0.5) * width;
         let target = 0;
@@ -149,12 +156,14 @@ export function createPianoLine(): PianoLine {
         }
         const now = level[i]!;
         const next = target > now ? Math.min(target, now + RISE * seconds) : Math.max(target, now - FALL * seconds);
+        if (next !== target || (next > 0 && speed !== 0)) moving = true;
         if (next === now) continue;
         level[i] = next;
         bytes[i] = Math.round(next * 255);
         changed = true;
       }
       if (changed) envelope.needsUpdate = true;
+      return moving;
     },
 
     dispose() {

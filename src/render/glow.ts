@@ -15,7 +15,8 @@
  *   bloom memory.
  * - The composer's code is `src/render/glow-composer.ts`, loaded with `import()` the first time bloom
  *   is wanted. A scene whose glow stays off, such as the embed's, loads none of it. The frames until it
- *   arrives draw plain. A failed load leaves the plain render for the visit.
+ *   arrives draw plain. A failed load leaves the plain render for the visit. `pending` holds while the
+ *   load runs, so a scene that draws only on a change still draws the bloom once it arrives.
  *
  * Bounds: one composer and its targets while bloom is on, and none while it is off.
  */
@@ -28,6 +29,8 @@ export type GlowMode = "auto" | "on" | "off";
 export interface Glow {
   /** Whether bloom draws now. */
   readonly active: boolean;
+  /** Whether bloom is wanted but its composer is not built yet, so a later frame draws differently. */
+  readonly pending: boolean;
   setMode(mode: GlowMode): void;
   setStrength(strength: number): void;
   /** Sizes the composer to the canvas, in CSS pixels at `pixelRatio`. */
@@ -60,6 +63,7 @@ export function createGlow(renderer: WebGLRenderer, scene: Scene, view: () => Ca
   /** The composer's builder once its module has loaded, and whether the load has started. */
   let build: typeof buildGlowComposer | undefined;
   let loading = false;
+  let failed = false;
   /** Whether auto has seen long frames and turned bloom off for the visit. */
   let tooSlow = false;
   let measured = 0;
@@ -75,7 +79,9 @@ export function createGlow(renderer: WebGLRenderer, scene: Scene, view: () => Ca
       (module) => {
         build = module.buildGlowComposer;
       },
-      () => {},
+      () => {
+        failed = true;
+      },
     );
   };
 
@@ -101,6 +107,10 @@ export function createGlow(renderer: WebGLRenderer, scene: Scene, view: () => Ca
   return {
     get active() {
       return built !== undefined;
+    },
+
+    get pending() {
+      return wanted() && strength > 0 && built === undefined && !failed;
     },
 
     setMode(next) {

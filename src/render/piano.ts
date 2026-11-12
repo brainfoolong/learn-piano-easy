@@ -2,7 +2,8 @@
  * The 3D piano: its keys and case, laid out for a key range, pressed and lit as the music plays.
  *
  * It follows the world contract of `piano-geometry.ts`, with the range centred on x = 0. The caller
- * says which keys are down and in what colour. The piano animates them in `update`.
+ * says which keys are down and in what colour. The piano animates them in `update`, which says whether
+ * any key still moves, so the scene can stop drawing once every key rests.
  *
  * Decisions, and what each costs:
  * - Each key is its own mesh with its own material, so a key colours by track without a shader. That
@@ -99,8 +100,11 @@ export interface Piano {
   clearIncoming(): void;
   /** Marks `pitch` as coming in `color` at `strength` from 0 to 1. The strongest mark of a key wins. */
   markIncoming(pitch: number, color: ColorRepresentation, strength: number): void;
-  /** Advances the animation by `seconds`. */
-  update(seconds: number): void;
+  /**
+   * Advances the animation by `seconds`. Returns whether a key still moves: its spring, its flash or its
+   * fading flare. A key held still, lit or marked as incoming does not move.
+   */
+  update(seconds: number): boolean;
   dispose(): void;
 }
 
@@ -213,8 +217,8 @@ export function createPiano(options: PianoOptions = {}): Piano {
     geometries.dispose();
   };
 
-  /** Moves `key` one frame on: its spring, its flash and flare, and its colour. */
-  const animate = (key: KeyState, seconds: number) => {
+  /** Moves `key` one frame on: its spring, its flash and flare, and its colour. Returns whether it still moves. */
+  const animate = (key: KeyState, seconds: number): boolean => {
     const target = key.pressed ? key.pressAngle : 0;
     for (let left = seconds; left > 0; left -= MAX_STEP) {
       const step = Math.min(left, MAX_STEP);
@@ -257,6 +261,12 @@ export function createPiano(options: PianoOptions = {}): Piano {
       key.mesh.rotation.x = 0;
       key.material.emissiveIntensity = 0;
     }
+    return (
+      key.flash > 0 ||
+      (!key.pressed && key.flareLevel > 0) ||
+      Math.abs(key.angle - target) > 1e-4 ||
+      Math.abs(key.velocity) > 1e-3
+    );
   };
 
   build();
@@ -304,7 +314,9 @@ export function createPiano(options: PianoOptions = {}): Piano {
     },
     update(seconds) {
       const frame = Math.min(Math.max(seconds, 0), MAX_FRAME);
-      for (const key of keys) if (key?.live) animate(key, frame);
+      let moving = false;
+      for (const key of keys) if (key?.live && animate(key, frame)) moving = true;
+      return moving;
     },
     dispose() {
       teardown();

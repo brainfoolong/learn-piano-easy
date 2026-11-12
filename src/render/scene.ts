@@ -71,8 +71,15 @@
  *   transport hands the scene a new song on each transposition, so the guide outlives `setSong`, and
  *   the caller sets it anew for each song.
  * - The canvas is drawn at the device pixel ratio, capped at 2, because higher ratios cost fill rate
- *   with no visible gain. It renders only while the page is visible, through `setAnimationLoop`, and
- *   `run(false)` stops it while the scene's view hides.
+ *   with no visible gain. The frame loop runs only while the page is visible, through
+ *   `setAnimationLoop`, and `run(false)` stops it while the scene's view hides.
+ * - A frame draws only when the picture can differ from the last one drawn. That is when the song time
+ *   moved, the camera moved, or `stale` was set. Every setter, a setting, a held key, a resize, a locale,
+ *   a page shown again and a restored context set it. So does the pointer while note details show.
+ * - A drawn frame draws the next one too while something still animates by itself. That is a key's
+ *   spring or flash, the particles, the flames, the wave line, the glow's load or the shown frame rate.
+ *   Any other frame returns after reading the time and moving the camera, so a paused song costs no
+ *   render. The price is a rule: anything new that changes the picture sets `stale` or animates.
  *
  * Gaps: incoming-key marks, the key hit effect, the flare's size, colour and offset and black key length
  * are not yet applied. The picture offset is the transport's, in the time it hands `setTimeSource`.
@@ -433,6 +440,7 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
   const stopLocale = onLocale(() => {
     if (piano) ariaRange = rangeLabel(piano.layout.range);
     nameCanvas(ariaChord);
+    stale = true;
   });
 
   /** Lights the guide's start keys in their hands' track colours while the song has not reached its first note. */
@@ -496,6 +504,19 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
   const unsubscribe = settings.subscribe(() => {
     dirty = true;
   });
+  /** Whether the next frame draws though the time and the camera hold, as after a call that changes what shows. */
+  let stale = true;
+  const invalidate = () => {
+    stale = true;
+  };
+  const onVisible = () => {
+    if (document.visibilityState === "visible") stale = true;
+  };
+  document.addEventListener("visibilitychange", onVisible);
+  renderer.domElement.addEventListener("webglcontextrestored", invalidate);
+  /** Whether the last drawn frame left something animating, and whether the frame rate shows, which counts every frame. */
+  let animating = false;
+  let countFrames = false;
 
   const applySettings = () => {
     dirty = false;
@@ -570,7 +591,8 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
     zoom = zoomSettings(settings);
     glow.setMode(settings.get("glowMode") as GlowMode);
     glow.setStrength(settings.get("glowStrength"));
-    overlays.showFps(settings.get("showFps"));
+    countFrames = settings.get("showFps");
+    overlays.showFps(countFrames);
     overlays.showBpm(settings.get("showBPM"));
     lyrics.setOptions({
       enabled: settings.get("lyricsEnabled"),
@@ -715,9 +737,12 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
   const onPointerMove = (event: PointerEvent) => {
     const box = container.getBoundingClientRect();
     pointer = { x: event.clientX - box.left, y: event.clientY - box.top };
+    // The pointer changes the picture only through the note card, which shows only with note details.
+    if (settings.get("showNoteDebugInfo")) stale = true;
   };
   const onPointerLeave = () => {
     pointer = undefined;
+    stale = true;
   };
   renderer.domElement.addEventListener("pointermove", onPointerMove);
   renderer.domElement.addEventListener("pointerleave", onPointerLeave);
@@ -751,23 +776,34 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
     renderer.setSize(w, h, false);
     glow.setSize(w, h, ratio);
     rig.setAspect(w / h);
+    // A new size clears the canvas, so it must draw again.
+    stale = true;
   };
   const observer = new ResizeObserver(resize);
   observer.observe(container);
   resize();
 
   let last: number | undefined;
-  /** The song time of the last frame, so a dying bar flame moves on with its bar. */
-  let flamesNow = 0;
+  /**
+   * The song time the last drawn frame showed. A frame draws when the time moved from it, and a dying bar
+   * flame rides on with its bar by the difference.
+   */
+  let drawnNow = 0;
   const frame = (time: number) => {
     const raw = last === undefined ? 0 : (time - last) / 1000;
     const seconds = Math.min(raw, MAX_FRAME);
     last = time;
+    const changed = stale || dirty;
     if (dirty) applySettings();
     if (demoClock !== undefined) {
       demoClock = (demoClock + seconds) % song.duration;
       now = demoClock;
     } else if (timeSource !== undefined) now = timeSource();
+    // The camera moves on every frame, as a drag or a glide moves it with no call to the scene.
+    const turned = rig.update(seconds, time / 1000);
+    // Nothing can look different from the last drawn frame, so this one draws nothing.
+    if (!changed && !animating && !turned && now === drawnNow) return;
+    stale = false;
     const nextSpeed = FAR / secondsShown(zoom, song.tempoMap, now);
     if (nextSpeed !== speed) {
       speed = nextSpeed;
@@ -781,19 +817,27 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
     followNotes(now);
     lightStartKeys();
     lanes.setHeld(heldColors());
-    if (particles && particles.emitters.length > 0) particles.update(seconds, keySources());
-    pianoLine.update(seconds, keyCentres());
-    piano!.update(seconds);
+    const sparking = particles !== undefined && particles.emitters.length > 0;
+    if (sparking) particles!.update(seconds, keySources());
+    const waving = pianoLine.update(seconds, keyCentres());
+    const springing = piano!.update(seconds);
     notes.setSelected(fingering?.selected);
     notes.update(now);
     showLabels();
     showChordsAt(now);
     lanes.update(now);
     lyrics.update(now);
-    rig.update(seconds, time / 1000);
     // The flames read the bars as placed above and the camera as the rig placed it.
-    if (flames?.on) flames.update(seconds, flameSources(), Math.max(0, (now - flamesNow) * speed), rig.camera);
-    flamesNow = now;
+    if (flames?.on) flames.update(seconds, flameSources(), Math.max(0, (now - drawnNow) * speed), rig.camera);
+    drawnNow = now;
+    // Whatever still moves by itself draws the next frame too.
+    animating =
+      springing ||
+      waving ||
+      countFrames ||
+      glow.pending ||
+      (sparking && particles!.emitters.some((emitter) => emitter.live() > 0)) ||
+      (flames?.on === true && flames.live() > 0);
     const distance = rig.camera.position.length();
     fog.near = distance + 10;
     fog.far = distance + FAR + 40;
@@ -807,6 +851,7 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
   return {
     run(on) {
       last = undefined;
+      stale = true;
       renderer.setAnimationLoop(on ? frame : null);
     },
 
@@ -821,31 +866,37 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
       chordsStale = true;
       spellNames();
       showSong();
+      stale = true;
     },
 
     setKey(key) {
       keyOverride = key;
       chordsStale = true;
       spellNames();
+      stale = true;
     },
 
     setTimeSource(read) {
       timeSource = read;
+      stale = true;
     },
 
     setGuide(guide) {
       startKeys = guide?.starts ?? [];
       lanes.setGuideMarks(guide?.marks ?? []);
+      stale = true;
     },
 
     setCycle(next) {
       showCycle(next);
+      stale = true;
     },
 
     setTracks(next) {
       looks = next;
       colors = [];
       showSong();
+      stale = true;
     },
 
     resetCamera() {
@@ -899,16 +950,21 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
     setFingering(source) {
       stopFingering?.();
       fingering = source;
-      // A change of finger recolours the bars only while the colours follow the fingers.
+      // A change of finger recolours the bars only while the colours follow the fingers. Any change may relabel them.
       stopFingering = source.subscribe(() => {
         if (codesFingers(coding)) recolor = true;
+        stale = true;
       });
       recolor = true;
+      stale = true;
     },
 
     holdKey(pitch, isDown) {
+      // A key held again, or let go again, changes nothing, so it draws nothing.
+      if (isDown === held.has(pitch)) return;
       if (isDown) held.add(pitch);
       else held.delete(pitch);
+      stale = true;
     },
 
     dispose() {
@@ -916,6 +972,8 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
       unsubscribe();
       stopLocale();
       stopFingering?.();
+      document.removeEventListener("visibilitychange", onVisible);
+      renderer.domElement.removeEventListener("webglcontextrestored", invalidate);
       renderer.domElement.removeEventListener("pointermove", onPointerMove);
       renderer.domElement.removeEventListener("pointerleave", onPointerLeave);
       observer.disconnect();
