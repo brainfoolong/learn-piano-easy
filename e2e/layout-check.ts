@@ -221,7 +221,7 @@ function textsInPage(): string[] {
     if ((e.closest("[lang]")?.getAttribute("lang") ?? pageLang) !== pageLang) continue;
     const own = [...e.childNodes].filter((n) => n.nodeType === Node.TEXT_NODE).map((n) => n.textContent ?? "");
     out.push(own.join(""));
-    for (const name of ["aria-label", "placeholder", "title"]) {
+    for (const name of ["aria-label", "placeholder", "data-tip"]) {
       const value = e.getAttribute(name);
       if (value !== null) out.push(value);
     }

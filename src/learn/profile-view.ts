@@ -149,7 +149,7 @@ export function profilePage(locale: Locale, context: ViewContext, refreshSlot: (
       class: "profile__calendar",
       attrs: { role: "img", "aria-label": t.calendar.label(met, played) },
       children: days.map(({ day, state }) =>
-        el("span", { class: "profile__day", attrs: { "data-state": state, "data-today": String(day === today), title: state === "ahead" ? "" : `${day}: ${title[state]}` } }),
+        el("span", { class: "profile__day", attrs: { "data-state": state, "data-today": String(day === today), "data-tip": state === "ahead" ? "" : `${day}: ${title[state]}` } }),
       ),
     });
     const key = el("ul", {

@@ -59,10 +59,10 @@ function keyChoices(found: Key | undefined): (readonly [string, string])[] {
   return [[FOUND, found ? m.fromNotesKey(keyName(found)) : m.fromNotes], ...keys.map((key) => [keyValue(key), keyName(key)] as const)];
 }
 
-/** `target` with its text from `text` and its title and accessible name from `title`, in the live locale. */
+/** `target` with its text from `text` and its tooltip and accessible name from `title`, in the live locale. */
 function localButton(target: HTMLButtonElement, text: TextPick, title: TextPick): HTMLButtonElement {
   localize(target, text);
-  localize(target, title, "title");
+  localize(target, title, "data-tip");
   return localize(target, title, "aria-label");
 }
 

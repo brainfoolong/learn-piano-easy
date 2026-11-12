@@ -173,7 +173,7 @@ function createScorePanel(onHistory: () => void): ScorePanel {
   const counts = el("span", { class: "score-counts" });
   const line = el("span", { class: "score-line" });
   const history = localize(button("", onHistory, { class: "outline" }), (m) => m.player.input.scoring.history);
-  localize(history, (m) => m.player.input.scoring.historyTitle, "title");
+  localize(history, (m) => m.player.input.scoring.historyTitle, "data-tip");
   localize(history, (m) => m.player.input.scoring.historyTitle, "aria-label");
   const element = localize(
     el("div", {

@@ -114,7 +114,7 @@ export function createGameHud(container: HTMLElement, scene: Pick<PianoScene, "k
   const comboCount = el("strong", { class: "game-combo-count", text: "0" });
   const comboLabel = localize(el("span", { class: "game-combo-label" }), (m) => says(m).combo);
   const combo = el("span", { class: "game-combo", children: [comboCount, comboLabel] });
-  const badge = localize(el("span", { class: "game-multiplier", text: "×1", attrs: { "data-level": "1" } }), (m) => says(m).multiplier, "title");
+  const badge = localize(el("span", { class: "game-multiplier", text: "×1", attrs: { "data-level": "1" } }), (m) => says(m).multiplier, "data-tip");
   const panel = localize(el("div", {
     class: "game-hud",
     attrs: { role: "group" },

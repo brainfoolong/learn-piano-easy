@@ -266,7 +266,7 @@ export function createSettingsPanel(store: SettingsStore, options: PanelOptions)
     if (reset !== null) {
       const name: Pick = (m) => m.player.settings.panel.reset(textsOf(m, setting.id).label);
       localize(reset, name, "aria-label");
-      localize(reset, name, "title");
+      localize(reset, name, "data-tip");
     }
     const label = setting.kind === "action" ? null : el("span", { class: "setting-label" });
     const help = el("span", { class: "setting-description" });

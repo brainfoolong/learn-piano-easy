@@ -68,7 +68,7 @@ export function learnRangeButton(bus: InputBus, store: SettingsStore): { element
     element.setAttribute("aria-pressed", String(learning.active));
   });
   const element = button(stepLabel(shown), () => learning.toggle(), { class: "outline" });
-  localize(element, (m) => m.player.input.learnRange.title, "title");
+  localize(element, (m) => m.player.input.learnRange.title, "data-tip");
   localize(element, (m) => m.player.input.learnRange.title, "aria-label");
   element.setAttribute("aria-pressed", "false");
   const stopLocale = onLocale(() => (element.textContent = stepLabel(shown)));

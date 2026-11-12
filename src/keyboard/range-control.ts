@@ -122,7 +122,7 @@ export function createRangeControl(store: SettingsStore, extras: readonly HTMLEl
   const octave = (label: Pick, name: Pick, octaves: number) => {
     const node = button(label(t()), () => shift(octaves));
     localize(node, label);
-    localize(node, name, "title");
+    localize(node, name, "data-tip");
     return localize(node, name, "aria-label");
   };
   const down = octave((m) => say(m).octaveDown, (m) => say(m).octaveDownName, -1);

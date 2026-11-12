@@ -102,7 +102,6 @@ export function keyBindingsControl(open: () => void): Control<string> {
   const node = button("", open, { class: "outline" });
   const pick = (m: Messages) => m.player.input.keyBinding.open;
   localize(node, pick);
-  localize(node, pick, "title");
   localize(node, pick, "aria-label");
   return { element: node, set() {} };
 }

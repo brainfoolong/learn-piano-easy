@@ -16,9 +16,28 @@
  *
  * The tip never takes pointer events, so it never blocks a click. It fades and rises in, and a hidden
  * tip is `display: none`, so it adds no width to the page.
+ *
+ * **The floating tip** is one tip for every element that carries `data-tip`, which the app uses in
+ * place of the browser's `title`. `installTips` starts it once, from the app's entry.
+ *
+ * - **Shown:** while the pointer is over the element, or while it has the keyboard's focus. A touch
+ *   never shows it, and neither does the focus a click gives.
+ * - **Hidden:** when both leave, on a press, and on Escape. An empty `data-tip` shows none.
+ * - **Follows its element** through a scroll, until the pointer is over another one.
+ * - **Live:** a change of `data-tip` while it shows rewrites the tip, such as *Play* turning to *Pause*.
+ * - **Above everything:** it is a popover in the top layer, so no dialog covers it and no scrolling
+ *   box clips it. It sits above the element at its start edge, or below it where the top has no room,
+ *   and stays inside the window.
+ * - **Accessible:** while it shows, the element's `aria-describedby` points to it, unless the text
+ *   repeats the element's accessible name.
  */
 import "./tooltip.css";
 import { el } from "../dom";
+
+/** The attribute that holds an element's floating tip. */
+export const TIP_ATTRIBUTE = "data-tip";
+/** The space between the floating tip and its element, and between it and the window's edge, in pixels. */
+const FLOAT_GAP = 8;
 
 /** Where the tip sits beside its host. */
 export type TipPlacement = "top" | "bottom";
@@ -106,6 +125,91 @@ export function attachTip(host: HTMLElement, target: HTMLElement, text: string, 
 /** Keeps the tip that `attachTip` put in `host` shown, as the gallery asks. */
 export function keepTipOpen(host: HTMLElement): void {
   pins.get(host)?.();
+}
+
+/** Starts the floating tip for every element with `data-tip`. A second call does nothing. */
+export function installTips(): void {
+  if (document.getElementById("tip-float") !== null) return;
+  const tip = el("div", { class: "tip tip--float", attrs: { id: "tip-float", role: "tooltip", popover: "manual" } });
+  document.body.append(tip);
+
+  let hovered: HTMLElement | null = null;
+  let focused: HTMLElement | null = null;
+  let shownFor: HTMLElement | null = null;
+  let dismissed = false;
+  const watch = new MutationObserver(() => render());
+
+  const describe = (target: HTMLElement, on: boolean) => {
+    const ids = (target.getAttribute("aria-describedby") ?? "").split(" ").filter((id) => id !== "" && id !== tip.id);
+    if (on) ids.push(tip.id);
+    if (ids.length > 0) target.setAttribute("aria-describedby", ids.join(" "));
+    else target.removeAttribute("aria-describedby");
+  };
+  const hide = () => {
+    watch.disconnect();
+    if (shownFor !== null) describe(shownFor, false);
+    shownFor = null;
+    if (tip.matches(":popover-open")) tip.hidePopover();
+  };
+  const place = (target: HTMLElement) => {
+    const box = target.getBoundingClientRect();
+    const size = tip.getBoundingClientRect();
+    const below = box.top - size.height - FLOAT_GAP < FLOAT_GAP;
+    const start = getComputedStyle(target).direction === "rtl" ? box.right - size.width : box.left;
+    const left = Math.max(FLOAT_GAP, Math.min(start, innerWidth - size.width - FLOAT_GAP));
+    tip.dataset.placement = below ? "bottom" : "top";
+    tip.style.left = `${left}px`;
+    tip.style.top = `${below ? box.bottom + FLOAT_GAP : box.top - size.height - FLOAT_GAP}px`;
+  };
+  const render = () => {
+    const target = dismissed ? null : (hovered ?? focused);
+    const text = target?.getAttribute(TIP_ATTRIBUTE)?.trim() ?? "";
+    if (target === null || text === "" || !target.isConnected) return hide();
+    if (target !== shownFor) {
+      hide();
+      shownFor = target;
+      watch.observe(target, { attributeFilter: [TIP_ATTRIBUTE] });
+    }
+    tip.textContent = text;
+    describe(target, accessibleName(target) !== text);
+    if (!tip.matches(":popover-open")) tip.showPopover();
+    place(target);
+  };
+  const tipped = (node: EventTarget | null) => (node instanceof Element ? node.closest<HTMLElement>(`[${TIP_ATTRIBUTE}]`) : null);
+  const dismiss = () => {
+    if (shownFor === null) return;
+    dismissed = true;
+    render();
+  };
+
+  document.addEventListener("pointerover", (event) => {
+    const next = event.pointerType === "touch" ? null : tipped(event.target);
+    if (next === hovered) return;
+    hovered = next;
+    if (next !== null) dismissed = false;
+    render();
+  });
+  document.addEventListener("pointerout", (event) => {
+    if (event.relatedTarget !== null) return;
+    hovered = null;
+    render();
+  });
+  document.addEventListener("focusin", (event) => {
+    const target = event.target instanceof Element && event.target.matches(":focus-visible") ? tipped(event.target) : null;
+    if (target === focused) return;
+    focused = target;
+    if (target !== null) dismissed = false;
+    render();
+  });
+  document.addEventListener("focusout", () => {
+    focused = null;
+    render();
+  });
+  document.addEventListener("pointerdown", dismiss);
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") dismiss();
+  });
+  document.addEventListener("scroll", render, { capture: true, passive: true });
 }
 
 /** The target's accessible name, as far as its label or its text gives it. */

@@ -74,7 +74,7 @@ export function playerBar(): PlayerBar {
   const title = localize(el("span", { class: "song-title" }), (m) => m.player.shell.topbar.openSong, "aria-label");
   title.textContent = t().player.shell.topbar.demoSong;
   // A long title ends in an ellipsis, so the whole of it shows under the pointer.
-  const showWhole = () => void (title.title = title.textContent ?? "");
+  const showWhole = () => void (title.dataset.tip = title.textContent ?? "");
   new MutationObserver(showWhole).observe(title, { childList: true, characterData: true, subtree: true });
   showWhole();
   const row = el("div", {

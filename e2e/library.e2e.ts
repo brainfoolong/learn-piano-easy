@@ -60,7 +60,7 @@ test("a_mutopia_piece_shows_its_license_and_credit_and_opens", async ({ page }) 
   const card = cardOf(dialog, "Maple Leaf Rag");
   const license = card.locator(".library-license");
   await expect(license).toHaveText("Public Domain");
-  await expect(license).toHaveAttribute("title", /The Mutopia Project$/);
+  await expect(license).toHaveAttribute("data-tip", /The Mutopia Project$/);
   await card.getByRole("button", { name: "Maple Leaf Rag", exact: true }).click();
   await expect(page.getByLabel("Open song")).toHaveText("Maple Leaf Rag");
 });
@@ -83,7 +83,7 @@ test("an_original_piece_comes_first_and_opens_in_two_hands", async ({ page }) =>
   await expect(card.locator(".song-step")).toHaveCount(0);
   const license = card.locator(".library-license");
   await expect(license).toHaveText("MIT");
-  await expect(license).toHaveAttribute("title", "Composed by the learn-piano-easy authors");
+  await expect(license).toHaveAttribute("data-tip", "Composed by the learn-piano-easy authors");
   await card.getByRole("button", { name: "Twelve-Bar Walk", exact: true }).click();
   await expect(page.getByLabel("Open song")).toHaveText("Twelve-Bar Walk");
 

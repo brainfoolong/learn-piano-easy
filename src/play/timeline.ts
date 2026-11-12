@@ -123,7 +123,7 @@ export function createTimeline(transport: Transport, settings: SettingsStore): T
       }
       if (settings.get("showMarkersTimeline")) {
         for (const marker of song.markers) {
-          marks.append(el("div", { class: "timeline-marker", attrs: { style: `left: ${at(marker.seconds)}`, title: marker.text } }));
+          marks.append(el("div", { class: "timeline-marker", attrs: { style: `left: ${at(marker.seconds)}`, "data-tip": marker.text } }));
         }
       }
     }

@@ -98,7 +98,7 @@ export function createControlBar(transport: Transport, scene: Pick<PianoScene, "
   stop.querySelector(".btn__label")?.remove();
   stop.classList.add("control-stop");
   localize(stop, (m) => m.player.bar.controls.stop, "aria-label");
-  localize(stop, (m) => m.player.bar.actions.stop, "title");
+  localize(stop, (m) => m.player.bar.actions.stop, "data-tip");
   const speedOut = localize(el("output", { class: "readout" }), (m) => m.player.bar.controls.speed, "aria-label");
   const transposeOut = localize(el("output", { class: "readout" }), (m) => m.player.bar.controls.transpose, "aria-label");
   const stepSpeed = (by: number) => {
@@ -239,7 +239,7 @@ export function createControlBar(transport: Transport, scene: Pick<PianoScene, "
     const on = settings.get("expertControls");
     element.classList.toggle("is-expert", on);
     expertButton.setAttribute("aria-pressed", String(on));
-    expertButton.title = t().player.bar.controls.expertTitles[on ? "on" : "off"];
+    expertButton.dataset.tip = t().player.bar.controls.expertTitles[on ? "on" : "off"];
   };
   // The flat camera ignores the view's sideways move, so its buttons leave the bar there.
   const showCamera = () => element.classList.toggle("is-flat", settings.get("cameraPreset") === "flat");
@@ -250,7 +250,7 @@ export function createControlBar(transport: Transport, scene: Pick<PianoScene, "
     const label = mode === "song" ? words.repeatAll : words.loop;
     labelOf(loop).textContent = label;
     loop.setAttribute("aria-label", label);
-    loop.title = words.loopTitles[mode];
+    loop.dataset.tip = words.loopTitles[mode];
     loop.setAttribute("aria-pressed", String(mode !== "off"));
   };
   const showLoop = () => {
@@ -287,7 +287,7 @@ export function createControlBar(transport: Transport, scene: Pick<PianoScene, "
     const text = transport.playing ? t().player.bar.controls.pause : t().player.bar.controls.play;
     labelOf(play).textContent = text;
     play.querySelector(".icon")?.replaceWith(icon(transport.playing ? "pause" : "play"));
-    play.title = text;
+    play.dataset.tip = text;
     play.setAttribute("aria-label", text);
   };
   const showSpeed = () => {
@@ -320,8 +320,9 @@ export function createControlBar(transport: Transport, scene: Pick<PianoScene, "
   };
   const onFullscreen = () => {
     const on = document.fullscreenElement !== null;
-    fullscreen.title = on ? t().player.bar.controls.leaveFullScreen : t().player.bar.actions.fullscreen;
-    fullscreen.setAttribute("aria-label", fullscreen.title);
+    const name = on ? t().player.bar.controls.leaveFullScreen : t().player.bar.actions.fullscreen;
+    fullscreen.dataset.tip = name;
+    fullscreen.setAttribute("aria-label", name);
   };
   onFullscreen();
   // A change of the locale rewrites every text that follows the bar's state.
@@ -408,7 +409,7 @@ function labelOf(node: HTMLButtonElement): Element {
 
 /** Writes the text `pick` chooses into `node`'s tooltip and accessible name, now and on each change of the locale. */
 function titled<E extends Element>(node: E, pick: Choose): E {
-  localize(node, pick, "title");
+  localize(node, pick, "data-tip");
   return localize(node, pick, "aria-label");
 }
 

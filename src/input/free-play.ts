@@ -53,7 +53,7 @@ export function attachFreePlay(bus: InputBus, settings: SettingsStore, host: Fre
     if (file !== undefined) host.download(writeMidi(file), RECORDING_NAME, "audio/midi");
   });
   localize(save, (m) => m.player.input.freePlay.save);
-  localize(save, (m) => m.player.input.freePlay.saveTitle, "title");
+  localize(save, (m) => m.player.input.freePlay.saveTitle, "data-tip");
   localize(save, (m) => m.player.input.freePlay.saveTitle, "aria-label");
   const heading = (m: Messages) => m.player.input.freePlay.heading;
   const panel = localize(
@@ -71,7 +71,7 @@ export function attachFreePlay(bus: InputBus, settings: SettingsStore, host: Fre
     const words = t().player.input.freePlay;
     record.textContent = recorder.recording ? words.stop : words.record;
     record.setAttribute("aria-label", recorder.recording ? words.stopRecording : words.record);
-    record.title = record.getAttribute("aria-label") ?? "";
+    record.dataset.tip = record.getAttribute("aria-label") ?? "";
     save.disabled = recorder.recording || file === undefined;
     if (recorder.recording) line.textContent = words.recording(clockText(performance.now() - started));
     else if (file !== undefined) line.textContent = words.recorded(noteCount(file));

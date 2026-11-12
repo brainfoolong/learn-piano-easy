@@ -96,4 +96,38 @@
   .tip-host[data-tip-open][data-tip-placement="bottom"] {
     margin-block-end: var(--tip-room);
   }
+
+  /*
+   * The floating tip is a popover, placed by its script in the window's coordinates. It undoes the
+   * popover's own box, and it vanishes at once when hidden, so it never lingers in a closed place.
+   */
+  .tip--float {
+    --tip-from: calc(var(--motion-rise) / 2);
+
+    position: fixed;
+    inset: auto;
+    margin: 0;
+    border: 0;
+    overflow: visible;
+    transition:
+      opacity var(--m-small) var(--ease-standard),
+      transform var(--m-small) var(--ease-emphasis);
+  }
+
+  .tip--float[data-placement="bottom"] {
+    --tip-from: calc(var(--motion-rise) / -2);
+  }
+
+  .tip--float:popover-open {
+    display: block;
+    opacity: 1;
+    transform: none;
+  }
+
+  @starting-style {
+    .tip--float:popover-open {
+      opacity: 0;
+      transform: translateY(var(--tip-from));
+    }
+  }
 }

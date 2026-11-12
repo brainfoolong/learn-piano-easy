@@ -195,7 +195,7 @@ export function attachPitchPractice(bus: InputBus, settings: SettingsStore, host
   /** A button whose label and tooltip follow the live locale. */
   const labelled = (label: Choose, title: Choose, run: () => void) => {
     const node = localize(button("", run), label);
-    localize(node, title, "title");
+    localize(node, title, "data-tip");
     return localize(node, title, "aria-label");
   };
   const panel = localize(

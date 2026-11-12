@@ -79,14 +79,14 @@ export function barSlot(locale: Locale, settings: SettingsStore): BarSlot {
     const { current, todayXp } = standing.streak;
     days.textContent = new Intl.NumberFormat(locale).format(current);
     streak.setAttribute("aria-label", t.map.bar.streak(current));
-    streak.title = t.map.bar.streak(current);
+    streak.dataset.tip = t.map.bar.streak(current);
     xp.set(standing.tally.total);
     const share = Math.min(1, todayXp / standing.goal);
     arc.setAttribute("stroke-dasharray", `${share * 100} 100`);
     arc.toggleAttribute("data-empty", share === 0);
     today.dataset.met = String(standing.streak.today);
     today.setAttribute("aria-label", t.map.bar.todayGoal(todayXp, standing.goal));
-    today.title = t.map.bar.todayGoal(todayXp, standing.goal);
+    today.dataset.tip = t.map.bar.todayGoal(todayXp, standing.goal);
     element.dataset.ready = "true";
   };
 

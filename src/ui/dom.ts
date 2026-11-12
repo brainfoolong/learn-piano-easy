@@ -37,12 +37,15 @@ export function el<K extends keyof HTMLElementTagNameMap>(
 
 /**
  * A button with a label, an accessible name and a click handler. It is the action control of
- * `src/ui/controls.css`, and its class `primary` fills it with the brand.
+ * `src/ui/controls.css`, and its class `primary` fills it with the brand. A `title` is its accessible
+ * name and its tooltip, which `installTips` of `src/ui/components/tooltip.ts` shows. With none, the
+ * label is its name and it has no tooltip, since the tip would only repeat the label.
  */
 export function button(label: string, onClick: () => void, options: { title?: string; class?: string } = {}) {
+  const tip = options.title === undefined ? {} : { "data-tip": options.title };
   return el("button", {
     class: `button${options.class ? ` ${options.class}` : ""}`,
-    attrs: { type: "button", title: options.title ?? label, "aria-label": options.title ?? label, "data-control": "action" },
+    attrs: { type: "button", "aria-label": options.title ?? label, "data-control": "action", ...tip },
     text: label,
     on: { click: () => onClick() },
   });

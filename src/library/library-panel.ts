@@ -204,19 +204,19 @@ function marked(text: string, words: readonly string[]): (Node | string)[] {
   return parts;
 }
 
-/** A small button labelled `label` that runs `onClick`, whose title and accessible name are `name`. */
+/** A small button labelled `label` that runs `onClick`, whose tooltip and accessible name are `name`. */
 function namedButton(label: string, name: string, variant: ButtonVariant, onClick: () => void): HTMLButtonElement {
   const target = button({ label, variant, size: "small", onClick });
-  target.title = name;
+  target.dataset.tip = name;
   target.setAttribute("aria-label", name);
   return target;
 }
 
-/** A small button that runs `onClick`. Its label, title and accessible name follow the live locale. */
+/** A small button that runs `onClick`. Its label, tooltip and accessible name follow the live locale. */
 function localButton(text: TextPick, title: TextPick, onClick: () => void): HTMLButtonElement {
   const target = button({ label: "", size: "small", onClick });
   localize(target.querySelector(".btn__label")!, text);
-  localize(target, title, "title");
+  localize(target, title, "data-tip");
   return localize(target, title, "aria-label");
 }
 
@@ -460,7 +460,7 @@ export function createLibraryPanel(
     if (kind === "level") node.dataset.level = tagId(key);
     if (small) {
       node.tabIndex = -1;
-      node.title = say().tagTitle(name);
+      node.dataset.tip = say().tagTitle(name);
     }
     return node;
   }
@@ -626,7 +626,7 @@ export function createLibraryPanel(
 
     const star = el("button", {
       class: "song-card__star",
-      attrs: { type: "button", "aria-label": say().favourite.label, "aria-pressed": String(ids.some((one) => memory.isFavourite(one))), title: say().favourite.title(title) },
+      attrs: { type: "button", "aria-label": say().favourite.label, "aria-pressed": String(ids.some((one) => memory.isFavourite(one))), "data-tip": say().favourite.title(title) },
       on: {
         click: () => {
           const on = !ids.some((one) => memory.isFavourite(one));
@@ -655,7 +655,7 @@ export function createLibraryPanel(
                   "aria-label": name,
                   "aria-pressed": String(row === song),
                   "data-level": row.rarity === undefined ? "original" : levelOf(row.difficulty),
-                  title: t().player.library.rarity.stepTitle(name, tagline),
+                  "data-tip": t().player.library.rarity.stepTitle(name, tagline),
                 },
                 on: { click: (event) => pick(entry!, row, (event.currentTarget as HTMLElement).closest<HTMLElement>(".song-card")!) },
                 children: row === song ? [el("span", { class: "tag__dot", attrs: { "aria-hidden": "true" } }), el("span", { class: "song-step__name", text: name })] : [name.charAt(0)],
@@ -669,7 +669,7 @@ export function createLibraryPanel(
           });
     const preview = el("button", {
       class: "song-card__preview",
-      attrs: { type: "button", "data-id": id, title: say().preview.title(item.title) },
+      attrs: { type: "button", "data-id": id, "data-tip": say().preview.title(item.title) },
       on: { click: () => void previewer.toggle(id, () => read(item)) },
       children: [el("span", { class: "song-card__sweep", attrs: { "aria-hidden": "true" } }), icon("play")],
     });
@@ -690,7 +690,7 @@ export function createLibraryPanel(
         }),
         el("button", {
           class: "song-card__open library-song",
-          attrs: { type: "button", "aria-label": item.title, title: item.title },
+          attrs: { type: "button", "aria-label": item.title, "data-tip": item.title },
           on: { click: () => (upload !== undefined ? actions.openUpload(upload) : actions.open(song!)) },
         }),
         el("div", {
@@ -705,8 +705,8 @@ export function createLibraryPanel(
           children: [
             song === undefined ? null : el("span", { class: "song-card__meter", attrs: { "aria-hidden": "true", style: `--level: ${song.difficulty}` }, children: [el("i")] }),
             step === undefined ? null : el("span", { class: "song-card__step", text: say().step(step) }),
-            el("span", { class: "song-card__length", attrs: { "data-id": id, title: say().lengthTitle }, text: length === undefined ? "" : formatLength(length) }),
-            song === undefined ? null : el("span", { class: "library-license", attrs: { title: song.credit }, text: song.license }),
+            el("span", { class: "song-card__length", attrs: { "data-id": id, "data-tip": say().lengthTitle }, text: length === undefined ? "" : formatLength(length) }),
+            song === undefined ? null : el("span", { class: "library-license", attrs: { "data-tip": song.credit }, text: song.license }),
           ],
         }),
         el("div", {

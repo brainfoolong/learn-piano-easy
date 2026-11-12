@@ -160,3 +160,24 @@ test("the_player_follows_the_site_theme", async ({ page }) => {
   // The scene keeps its own theme, which the player's setting picks.
   await expect(panel.getByRole("combobox", { name: "Scene theme" })).toHaveValue("dark");
 });
+
+test("a_control_shows_the_apps_own_tooltip_and_no_native_one", async ({ page }) => {
+  const words = CATALOGS.en.player.bar;
+  await page.goto("./play/");
+  const tip = page.locator("#tip-float");
+  const stop = page.getByRole("button", { name: words.controls.stop, exact: true });
+  await stop.hover();
+  await expect(tip).toBeVisible();
+  await expect(tip).toHaveText(words.actions.stop);
+  await expect(stop).toHaveAccessibleDescription(words.actions.stop);
+  await page.keyboard.press("Escape");
+  await expect(tip).toBeHidden();
+
+  // The tip shows above a modal dialog too, and no element anywhere carries a native tooltip.
+  await page.getByRole("button", { name: "Songs", exact: true }).click();
+  const license = page.getByRole("dialog", { name: "Songs" }).locator(".library-license").first();
+  await license.hover();
+  await expect(tip).toBeVisible();
+  await expect(tip).toHaveText((await license.getAttribute("data-tip"))!);
+  expect(await page.locator("body [title]").count()).toBe(0);
+});
