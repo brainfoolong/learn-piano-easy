@@ -40,10 +40,10 @@ export const theWaltzBassDe: TheWaltzBassTexts = {
       text: "Hier ist eine kleine Melodie über dem Walzerbass. Die rechte Hand hält lange Töne, und die linke Hand spielt weiter Um-ta-ta.",
     },
     "waltz-tune": {
-      text: "Leg den rechten Daumen auf das mittlere C. Spiel jeden Melodieton zusammen mit dem Basston oder Akkord, der daneben klingt.",
+      text: "Leg den rechten Daumen auf das mittlere C. Drück jeden Melodieton zusammen mit den Tasten der linken Hand darunter, und spiel den Walzerbass dazwischen weiter.",
     },
     recap: {
-      text: "Gut gemacht. Deine linke Hand tanzt jetzt Walzer.",
+      text: "Gut gemacht. Deine linke Hand spielt jetzt einen Walzerbass.",
       points: [
         "Ein Walzer steht im Dreivierteltakt, mit drei Schlägen pro Takt.",
         "Die linke Hand spielt auf der Eins den Grundton tief.",

@@ -35,7 +35,7 @@ export const crescendoAndDiminuendoEn = {
       answers: ["The closing hairpin >", "The opening hairpin <", "The mark f", "The mark mf"],
     },
     "play-diminuendo": {
-      text: "Play G, F, E, D and C as a diminuendo. Press G, F and E quickly and firmly, then D and C gently and slowly.",
+      text: "Play G, F, E, D and C as a diminuendo, starting on the G above middle C. Press G, F and E quickly and firmly, then D and C gently and slowly.",
     },
     "hear-diminuendo": {
       text: "Listen to G, F, E, D and C played as a diminuendo. Each key goes down a little slower than the one before.",
@@ -48,14 +48,14 @@ export const crescendoAndDiminuendoEn = {
       text: "A phrase often grows louder on its way up and softer on its way down. It swells and fades like a wave.",
     },
     "play-swell": {
-      text: "Play C up to G and back down to C. Grow louder on the way up and softer on the way down. This step checks the notes, so let your ears judge the loudness.",
+      text: "Play from middle C up to G and back down to C. Grow louder on the way up and softer on the way down. This step checks the notes, so let your ears judge the loudness.",
     },
     "how-it-ends": {
       text: "A phrase starts with p and has an opening hairpin < under it. How should it end?",
       answers: ["Softer than p", "Just as soft as it started", "Faster than it started", "Louder than it started"],
     },
     recap: {
-      text: "Well done. You make music grow and fade.",
+      text: "Well done. You can now make music grow louder and softer.",
       points: [
         "A crescendo grows louder, marked cresc. or an opening hairpin <.",
         "A diminuendo grows softer, marked dim., decresc. or a closing hairpin >.",

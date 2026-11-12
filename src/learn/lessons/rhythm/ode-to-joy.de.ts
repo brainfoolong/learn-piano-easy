@@ -5,10 +5,10 @@ export const odeToJoyDe: OdeToJoyTexts = {
   title: "Boss: Ode an die Freude",
   steps: {
     intro: {
-      text: "Diese Welt endet mit einer berühmten Melodie. Die meisten Töne sind Viertelnoten, und ein paar dauern zwei Schläge. Zähl beim Spielen mit.",
+      text: "Diese Welt endet mit einer berühmten Melodie. Fast jeder Ton ist eine Viertelnote, und der letzte dauert zwei Schläge. Zähl beim Spielen mit.",
     },
     song: {
-      text: "Spiel die Ode an die Freude mit der rechten Hand. Versuch, jeden langen Ton für seine zwei Schläge zu halten.",
+      text: "Spiel die ersten vier Takte der Ode an die Freude mit der rechten Hand. Halte den letzten Ton zwei Schläge lang.",
     },
   },
 };

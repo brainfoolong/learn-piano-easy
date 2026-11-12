@@ -8,14 +8,14 @@ export const restsEn = {
       text: "Watch and listen. On some beats the piano stays silent, but the beat keeps going.",
     },
     "what-a-rest-is": {
-      text: "A rest is a beat of silence. You play nothing, but you still count it. A quarter rest lasts one beat, just like a quarter note.",
+      text: "A rest is a silence in the music. You play nothing, but you still count it. A quarter rest lasts one beat, like a quarter note.",
     },
     "quarter-rest-quiz": {
-      text: "You count C, C, quarter rest, C. How many beats of silence do you count?",
+      text: "You play C, C, a quarter rest, then C. How many beats of silence are there?",
       answers: ["One beat", "Two beats", "No beat at all"],
     },
     "half-rest": {
-      text: "A half rest lasts two beats, just like a half note. You stay silent and count two beats before you play again.",
+      text: "A half rest lasts two beats, like a half note. You stay silent and count two beats before you play again.",
     },
     "half-rest-quiz": {
       text: "How many beats of silence does a half rest last?",
@@ -27,7 +27,7 @@ export const restsEn = {
     },
     recap: {
       text: "Well done. You know your first rests now.",
-      points: ["A rest is a beat of silence that still counts.", "A quarter rest lasts one beat.", "A half rest lasts two beats."],
+      points: ["A rest is a silence that still counts.", "A quarter rest lasts one beat.", "A half rest lasts two beats."],
     },
   },
 } satisfies LessonTexts;

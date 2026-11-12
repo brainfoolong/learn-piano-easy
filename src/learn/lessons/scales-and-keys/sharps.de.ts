@@ -8,7 +8,7 @@ export const sharpsDe: SharpsTexts = {
       text: "Hör zu: das C, dann die schwarze Taste direkt rechts daneben. Danach das F und die schwarze Taste rechts vom F.",
     },
     "the-sharp-sign": {
-      text: "Dieses Zeichen ♯ heißt Kreuz. Es erhöht einen Ton um einen Halbton, zur Taste direkt rechts. Im Namen hängst du ein -is an: Aus C wird Cis.",
+      text: "Dieses Zeichen ♯ heißt Kreuz. Es erhöht einen Ton um einen Halbton, zur Taste direkt rechts daneben. Im Namen hängst du ein -is an: Aus C wird Cis.",
     },
     "find-c-sharp": {
       text: "Such das Cis. Fang auf irgendeinem C an und geh einen Halbton hinauf.",
@@ -34,12 +34,12 @@ export const sharpsDe: SharpsTexts = {
       text: "Lies jede Note mit ihrem Kreuz und spiel sie. Such zuerst die weiße Taste, dann geh einen Halbton hinauf.",
     },
     "through-f-sharp": {
-      text: "Spiel D, E, Fis und G und wieder hinunter zum D. Der rechte Daumen liegt auf dem D, der Mittelfinger auf dem Fis.",
+      text: "Leg den rechten Daumen auf das D über dem mittleren C und den Mittelfinger auf das Fis. Spiel D, E, Fis und G und wieder hinunter zum D.",
     },
     recap: {
       text: "Gut gemacht. Du kannst jetzt Kreuze lesen und spielen.",
       points: [
-        "Ein Kreuz ♯ erhöht einen Ton um einen Halbton, zur Taste direkt rechts.",
+        "Ein Kreuz ♯ erhöht einen Ton um einen Halbton, zur Taste direkt rechts daneben.",
         "Meist ist das eine schwarze Taste, so wie Cis und Fis.",
         "Eis ist F und His ist C, denn dazwischen liegt keine schwarze Taste.",
         "In den Noten steht das ♯ direkt links vor seiner Note.",

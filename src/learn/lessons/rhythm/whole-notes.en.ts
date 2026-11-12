@@ -26,7 +26,7 @@ export const wholeNotesEn = {
       answers: ["Two", "Four", "Eight"],
     },
     "play-and-hold": {
-      text: "Put your right thumb on middle C. Play C, E and G, and hold each key down while you count \"1-2-3-4\". The step waits for each note, so take your time.",
+      text: "Put your right hand in C position. Play C, E and G, and hold each key down while you count \"1-2-3-4\". The step waits for each note, so take your time.",
     },
     "count-to-four": {
       text: "Tap any key on every click. Count \"1-2-3-4\" as you tap, two times. Each \"1-2-3-4\" is the length of one whole note.",

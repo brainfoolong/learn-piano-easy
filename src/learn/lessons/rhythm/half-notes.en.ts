@@ -15,7 +15,7 @@ export const halfNotesEn = {
       answers: ["One beat", "Two beats", "Four beats"],
     },
     "play-and-hold": {
-      text: "Put your right thumb on middle C. Play C, D, E, D, C, and hold each key down while you count \"1-2\". The step waits for each note, so take your time.",
+      text: "Put your right hand in C position. Play C, D, E, D, C, and hold each key down while you count \"1-2\". The step waits for each note, so take your time.",
     },
     "count-one-two": {
       text: "Tap any key on every click. Count \"1-2, 1-2\" as you tap. Each \"1-2\" is the length of one half note.",

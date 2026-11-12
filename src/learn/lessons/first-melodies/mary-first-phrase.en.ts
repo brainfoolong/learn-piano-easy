@@ -25,7 +25,7 @@ export const maryFirstPhraseEn = {
       text: "Now the next part: D three times, then E, then G twice. Your fingers go 2, 2, 2, then 3, 5, 5.",
     },
     "whole-phrase": {
-      text: "Play the first phrase of Mary Had a Little Lamb with your right hand, thumb on middle C. Play E D C D E E E, D D D, E G G without stopping.",
+      text: "Now play the whole phrase without stopping: E D C D E E E, D D D, E G G.",
     },
     recap: {
       text: "Well done. You played the first half of a real song.",

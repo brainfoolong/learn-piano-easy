@@ -24,7 +24,7 @@ export const handsApartThenTogetherEn = {
       text: "Now both hands together. Press each pair of keys at the same moment, one C with each hand to start.",
     },
     "slow-together": {
-      text: "Playing together is new, so go slowly. Speed comes later, once both hands move as one.",
+      text: "Playing together is new, so go slowly. Speed comes later, once both hands feel sure together.",
     },
     "mirror-tune": {
       text: "Here is a new tune. Your hands move apart and come back, like a mirror.",

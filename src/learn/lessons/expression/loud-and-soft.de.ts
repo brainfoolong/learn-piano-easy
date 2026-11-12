@@ -35,10 +35,10 @@ export const loudAndSoftDe: LoudAndSoftTexts = {
       answers: ["Leise", "Erst leise, dann laut", "Erst laut, dann leise", "Laut"],
     },
     "piano-and-forte": {
-      text: "In den Noten steht unter dem System, wie laut du spielst. Das p heißt piano, italienisch für leise. Das f heißt forte, also laut.",
+      text: "In den Noten steht unter dem Notensystem, wie laut du spielst. Das p heißt piano, italienisch für leise. Das f heißt forte, also laut.",
     },
     "what-f-asks": {
-      text: "Unter dem System steht ein f. Was sollst du tun?",
+      text: "Unter dem Notensystem steht ein f. Was sollst du tun?",
       answers: ["Leise spielen", "Laut spielen", "Schnell spielen", "Langsam spielen"],
     },
     "mezzo-marks": {
@@ -55,7 +55,7 @@ export const loudAndSoftDe: LoudAndSoftTexts = {
       text: "Spiel C, E und G laut und dann noch einmal leise als Echo. Hier zählen nur die Töne, also achte selbst mit den Ohren auf die Lautstärke.",
     },
     recap: {
-      text: "Gut gemacht. Du spielst laut und leise.",
+      text: "Gut gemacht. Jetzt kannst du laut und leise spielen.",
       points: [
         "Wie schnell eine Taste hinuntergeht, bestimmt, wie laut sie klingt.",
         "Das p heißt leise, das f heißt laut.",

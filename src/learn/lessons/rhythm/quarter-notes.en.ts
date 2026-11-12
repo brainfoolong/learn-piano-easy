@@ -21,7 +21,7 @@ export const quarterNotesEn = {
       text: "Here is the start of a famous tune. Every note is a quarter note, one on each beat.",
     },
     "quarter-phrase": {
-      text: "Put your right thumb on middle C, one finger on each key. Play the tune and count one beat for each note.",
+      text: "Put your right hand in C position. Play the tune and count one beat for each note.",
     },
     recap: {
       text: "Well done. You know your first note length now.",

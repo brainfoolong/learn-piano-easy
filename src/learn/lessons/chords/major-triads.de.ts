@@ -15,7 +15,7 @@ export const majorTriadsDe: MajorTriadsTexts = {
       answers: ["Zwei", "Drei", "Vier"],
     },
     "major-recipe": {
-      text: "Das ist das Rezept für einen Dur-Dreiklang. Du beginnst auf seinem Grundton. Dann gehst du vier Halbtöne hoch und danach noch drei.",
+      text: "Das ist das Rezept für einen Dur-Dreiklang. Du beginnst auf seinem Grundton, der Taste, die ihm den Namen gibt. Dann gehst du vier Halbtöne hoch und danach noch drei.",
     },
     "right-hand-fingers": {
       text: "Die rechte Hand spielt einen Dreiklang mit den Fingern 1, 3 und 5. Der Daumen spielt den Grundton.",
@@ -52,7 +52,7 @@ export const majorTriadsDe: MajorTriadsTexts = {
       text: "Jetzt du. Spiel die vier Dreiklänge mit der rechten Hand. Behalte die Form und rück von Grundton zu Grundton.",
     },
     recap: {
-      text: "Gut gemacht. Du baust Dur-Dreiklänge auf jeder Taste.",
+      text: "Gut gemacht. Jetzt kannst du auf jeder Taste einen Dur-Dreiklang bauen.",
       points: [
         "Ein Dur-Dreiklang beginnt auf seinem Grundton.",
         "Die mittlere Taste liegt vier Halbtöne höher, die oberste drei weitere.",

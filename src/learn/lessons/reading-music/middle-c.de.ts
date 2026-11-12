@@ -15,16 +15,16 @@ export const middleCDe: MiddleCTexts = {
       answers: ["Auf der untersten Notenlinie", "Auf einer kurzen Hilfslinie direkt unter dem Notensystem", "In der Mitte des Notensystems"],
     },
     "the-c-you-know": {
-      text: "Das ist das C, das du schon kennst. Es liegt nahe der Mitte der Tastatur, direkt links von zwei schwarzen Tasten. Jetzt kannst du es auch lesen.",
+      text: "Das ist das C, das du schon kennst. Es liegt nahe der Mitte des Klaviers, direkt links von zwei schwarzen Tasten. Jetzt kannst du es auch lesen.",
     },
     "press-middle-c": {
-      text: "Drück das mittlere C auf der Tastatur.",
+      text: "Drück das mittlere C auf dem Klavier.",
     },
     "name-middle-c": {
       text: "Wie heißt jede Note? Achte auf die kurze Hilfslinie.",
     },
     "the-neighbours": {
-      text: "Das mittlere C hat zwei nahe Nachbarn. Das D hängt direkt unter der untersten Notenlinie. Das E sitzt genau auf der untersten Notenlinie.",
+      text: "Das mittlere C hat zwei nahe Nachbarn. Das D hängt direkt unter der untersten Notenlinie. Das E steht genau auf der untersten Notenlinie.",
     },
     "neighbour-quiz": {
       text: "Welche Note steht im Violinschlüssel auf der untersten Notenlinie?",
@@ -38,7 +38,7 @@ export const middleCDe: MiddleCTexts = {
     },
     recap: {
       text: "Gut gemacht. Jetzt kannst du das mittlere C lesen.",
-      points: ["Das mittlere C steht auf einer kurzen Hilfslinie unter dem Notensystem.", "Es ist das C nahe der Mitte der Tastatur.", "Das D hängt unter der untersten Notenlinie, und das E sitzt darauf."],
+      points: ["Das mittlere C steht auf einer kurzen Hilfslinie unter dem Notensystem.", "Es ist das C nahe der Mitte des Klaviers.", "Das D hängt unter der untersten Notenlinie, und das E steht darauf."],
     },
   },
 };

@@ -8,7 +8,7 @@ export const leftHandCPositionEn = {
       text: "Listen to five keys below middle C, up and back down. Your left hand plays them in this lesson.",
     },
     "place-left-hand": {
-      text: "Find the C one octave below middle C. Put your left little finger, finger 5, on it, and one finger on each key after it. Your thumb, finger 1, rests on G.",
+      text: "Find the C one octave below middle C. Put your left little finger, finger 5, on it, and one finger on each white key to its right. Your thumb, finger 1, rests on G.",
     },
     "c-finger-quiz": {
       text: "Your left hand is in C position. Which finger plays C?",
@@ -24,10 +24,10 @@ export const leftHandCPositionEn = {
       text: "Play the five keys up and back down. Count the fingers as you go: 5, 4, 3, 2, 1, then back to 5.",
     },
     "left-steps": {
-      text: "Now steps with your left hand, starting on your thumb. Each note moves to the next key.",
+      text: "Now steps with your left hand, starting on your thumb. Each note moves to the next white key.",
     },
     "left-skips-repeats": {
-      text: "Put your left little finger on the C one octave below middle C, one finger on each key. Play skips and repeated notes: C, E E, G G, E, C. Your fingers go 5, 3, 3, 1, 1, 3, 5.",
+      text: "Keep your left hand in C position. Play skips and repeated notes: C, E E, G G, E, C. Your fingers go 5, 3, 3, 1, 1, 3, 5.",
     },
     recap: {
       text: "Well done. Your left hand has its own home on the keys.",

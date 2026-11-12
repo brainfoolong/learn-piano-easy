@@ -20,7 +20,7 @@ export const highAndLowEn = {
       text: "And back down. Play the marked keys from right to left, and hear the sound go down.",
     },
     "low-then-high": {
-      text: "Big jumps: play the three marked keys, a low C, middle C and a high C.",
+      text: "Big jumps: play the three marked keys, from low to high.",
     },
     "which-way": {
       text: "You move your hand to the right on the keys. What happens to the sound?",

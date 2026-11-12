@@ -32,7 +32,7 @@ export const bassLandmarksDe: BassLandmarksTexts = {
       answers: ["H", "D", "E"],
     },
     "play-bass-landmarks": {
-      text: "Spiel jede Note, die du im Bassschlüssel siehst. Die Merknoten sind das tiefe C im zweiten Zwischenraum, das F auf der vierten Notenlinie und das mittlere C auf seiner Hilfslinie darüber. Die anderen Noten liegen ein oder zwei Schritte neben einer Merknote.",
+      text: "Spiel jede Note, die du im Bassschlüssel siehst. Einige sind Merknoten, die anderen liegen ein oder zwei Schritte neben einer Merknote.",
     },
     "name-by-counting": {
       text: "Nenn jede Note. Drück ihren Buchstaben. Zähl von der nächsten Merknote aus: dem tiefen C, dem F oder dem mittleren C.",

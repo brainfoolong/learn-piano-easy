@@ -15,10 +15,10 @@ export const aHeldBassNoteEn = {
       answers: ["After the fourth quarter note", "After the first quarter note", "Straight away"],
     },
     "first-bar": {
-      text: "Press the left C and middle C together. Hold the left C down while your right hand plays D E F.",
+      text: "Press the C below middle C with your left hand and middle C with your right. Hold the low C down while your right hand plays D E F.",
     },
     "both-bars": {
-      text: "Play two bars, and hold each bass note while the tune goes on. Press the C below middle C with your left hand and middle C with your right, then play D E F. Then press the G below middle C with your left hand and the G above middle C with your right, then play F E D.",
+      text: "Play two bars, and hold each bass note. Press the C below middle C with your left hand and middle C with your right, then play D E F. Next press the G below middle C and the G above middle C the same way, then play F E D.",
     },
     "half-bass": {
       text: "A bass note can also be a half note. It lasts two beats, so the bass changes twice in every bar.",
@@ -34,7 +34,7 @@ export const aHeldBassNoteEn = {
       text: "Your turn. Play each bass note with the tune's note above it, and hold it while the next tune note sounds.",
     },
     recap: {
-      text: "Well done. Your left hand now carries a tune.",
+      text: "Well done. Your left hand now holds a bass under the tune.",
       points: [
         "Your left hand can play one long bass note under a moving tune.",
         "Press the bass with the tune's note, then hold it down.",

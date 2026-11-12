@@ -26,7 +26,7 @@ export const wholeNotesDe: WholeNotesTexts = {
       answers: ["Zwei", "Vier", "Acht"],
     },
     "play-and-hold": {
-      text: "Leg den rechten Daumen auf das mittlere C. Spiel C, E und G und halte jede Taste gedrückt, während du „1-2-3-4“ zählst. Die Übung wartet auf jeden Ton, also lass dir Zeit.",
+      text: "Leg deine rechte Hand in die C-Lage. Spiel C, E und G und halte jede Taste gedrückt, während du „1-2-3-4“ zählst. Die Übung wartet auf jeden Ton, also lass dir Zeit.",
     },
     "count-to-four": {
       text: "Tipp bei jedem Klick auf eine beliebige Taste. Zähl dabei zweimal „1-2-3-4“. Jedes „1-2-3-4“ ist so lang wie eine ganze Note.",

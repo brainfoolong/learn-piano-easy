@@ -42,7 +42,7 @@ export const theCMajorScaleDe: TheCMajorScaleTexts = {
     recap: {
       text: "Gut gemacht. Du hast deine erste Tonleiter gespielt.",
       points: [
-        "Die C-Dur-Tonleiter sind acht weiße Tasten von C bis C.",
+        "Die C-Dur-Tonleiter besteht aus acht weißen Tasten von C bis C.",
         "Ihr Muster ist Ganzton, Ganzton, Halbton, Ganzton, Ganzton, Ganzton, Halbton.",
         "Aufwärts setzt du den Daumen unter, auf das F.",
         "Abwärts greift der dritte Finger über den Daumen auf das E.",

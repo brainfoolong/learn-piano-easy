@@ -24,18 +24,18 @@ export const changingTheBassOnTheBeatDe: ChangingTheBassOnTheBeatTexts = {
       text: "Erst die linke Hand allein. Spiel die Quinte auf dem C unter dem mittleren C, wechsle hinunter zur Quinte auf dem G darunter und dann zurück zum C.",
     },
     "change-under-tune": {
-      text: "Jetzt mit beiden Händen. Die Quinten liegen auf C, dann auf dem G darunter, dann wieder auf C. Jeder neue Takt beginnt mit einer neuen Quinte und einem Melodieton zugleich. Dazwischen spielt die rechte Hand weiter.",
+      text: "Jetzt mit beiden Händen. Die Quinten liegen auf C, dann auf dem G darunter, dann wieder auf C. Jeder Takt beginnt mit einer neuen Quinte und einem Melodieton zugleich.",
     },
     "four-basses": {
       text: "Hör dir vier Takte an, jeder mit seiner eigenen Quinte: C, F, G und wieder C. Jeder Wechsel fällt auf die Eins.",
     },
     "four-bars": {
-      text: "Jetzt du. Spiel die vier Takte. Die Quinten liegen auf C, dann auf dem F und dem G darunter, dann wieder auf C. Wechsle die Quinte immer mit dem ersten Ton des Takts.",
+      text: "Jetzt du. Spiel die vier Takte mit Quinten auf C, dann auf dem F und dem G darunter, dann wieder auf C. Wechsle die Quinte immer mit dem ersten Ton des Takts.",
     },
     recap: {
       text: "Gut gemacht. Deine linke Hand wechselt jetzt auf dem Schlag.",
       points: [
-        "Die Bassnote wechselt auf der Eins eines neuen Takts.",
+        "Der Bass wechselt auf der Eins eines neuen Takts.",
         "Die neue Quinte setzt zusammen mit dem Ton der rechten Hand ein.",
         "Halte die alte Quinte bis zum Ende des Takts, dann wechsle.",
       ],

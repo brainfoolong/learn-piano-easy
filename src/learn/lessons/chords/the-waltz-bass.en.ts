@@ -34,16 +34,16 @@ export const theWaltzBassEn = {
       text: "Now move to the F one white key below that G. Finger 5 plays F, then fingers 3 and 1 play A and C together, twice.",
     },
     "chord-walk": {
-      text: "Play one bar each of C, F, G and C. Move your hand on beat one, and keep counting three.",
+      text: "Play one bar each of C, F, G and C. Move your hand on beat one, and keep counting to three.",
     },
     "waltz-tune-demo": {
-      text: "Here is a short tune over the waltz bass. The right hand plays a long note while the left hand keeps the oom-pah-pah.",
+      text: "Here is a short tune over the waltz bass. The right hand plays long notes while the left hand keeps the oom-pah-pah.",
     },
     "waltz-tune": {
-      text: "Put your right thumb on middle C. Play each tune note with the bass note or chord that sounds beside it.",
+      text: "Put your right thumb on middle C. Press each tune note together with the left-hand keys under it, and keep the waltz bass going between them.",
     },
     recap: {
-      text: "Well done. Your left hand can dance a waltz.",
+      text: "Well done. Your left hand can now play a waltz bass.",
       points: [
         "A waltz is in three-four time, with three beats per bar.",
         "The left hand plays the root low on beat one.",

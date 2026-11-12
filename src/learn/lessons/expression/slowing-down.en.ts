@@ -34,7 +34,7 @@ export const slowingDownEn = {
       text: "After a rit., the words a tempo bring back the speed you had before. They mean \"in time\" in Italian.",
     },
     "a-tempo-demo": {
-      text: "Listen. The phrase slows down in the middle, then a tempo starts it again at its first speed.",
+      text: "Listen. The phrase slows down in the middle, then a tempo brings back its first speed.",
     },
     "a-tempo-means": {
       text: "You slowed down for a rit. Now you see a tempo. What do you do?",
@@ -45,7 +45,7 @@ export const slowingDownEn = {
       answers: ["On the very first note", "In every bar", "Near the end of a piece", "Only in the left hand"],
     },
     "ending-with-fermata": {
-      text: "Play E, D, C, D, E, E from the E above middle C, slowing as you go. End on a chord: the C below middle C and the G above it in your left hand, with the same E in your right. Let the chord ring a little longer, as a fermata asks.",
+      text: "Play E, D, C, D, E, E from the E above middle C, slowing as you go. End on a chord: the C below middle C and the G above it in your left hand, with one more E in your right. Let the chord ring a little longer, as a fermata asks.",
     },
     "rall-means": {
       text: "Some pieces write rall., short for rallentando, instead. Which mark means the same?",

@@ -49,7 +49,7 @@ export const inversionsEn = {
       text: "Now add the root in your left hand under each chord: C, F, G and C below middle C.",
     },
     recap: {
-      text: "Well done. You play chords in three positions.",
+      text: "Well done. You can now play a chord in three positions.",
       points: [
         "An inversion plays a chord's three notes in another order.",
         "Move the bottom note up an octave: C-E-G becomes E-G-C, then G-C-E.",

@@ -27,7 +27,7 @@ export const gMajorDe: GMajorTexts = {
       text: "Jetzt du. Leg den rechten Daumen auf das G über dem mittleren C und spiel die G-Dur-Tonleiter aufwärts bis zum nächsten G. Der vierte Finger spielt das Fis.",
     },
     "g-scale-down": {
-      text: "Jetzt spielst du sie abwärts, vom hohen G bis zum G. Der dritte Finger setzt über den Daumen aufs H.",
+      text: "Jetzt spielst du sie abwärts, vom hohen G zurück zum G, auf dem du begonnen hast. Der dritte Finger setzt über den Daumen aufs H.",
     },
     "hear-f-and-f-sharp": {
       text: "Fis liegt nur einen Halbton über F, also hör genau hin. Ist die zweite Taste höher, tiefer oder gleich?",
@@ -39,7 +39,7 @@ export const gMajorDe: GMajorTexts = {
       text: "Leg den rechten Daumen auf das D über dem mittleren C, dann liegt der dritte Finger auf dem Fis. Die linke Hand spielt die tiefe Quinte: das G unterhalb des C, das unter dem mittleren C liegt, und das D darüber. Spiel die Quinte mit dem ersten G und noch einmal mit dem zweiten.",
     },
     recap: {
-      text: "Gut gemacht. Du spielst deine zweite Tonleiter.",
+      text: "Gut gemacht. Du hast deine zweite Tonleiter gespielt.",
       points: [
         "Das Muster der Dur-Tonleiter kann auf jeder Taste beginnen.",
         "Auf G begonnen, braucht es Fis, damit der Halbton direkt unter dem hohen G bleibt.",

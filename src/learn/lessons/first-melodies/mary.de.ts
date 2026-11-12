@@ -8,7 +8,7 @@ export const maryDe: MaryTexts = {
       text: "Diese Welt endet mit einem ganzen Lied. Du spielst es im Player, und er wartet auf jeden deiner Töne.",
     },
     song: {
-      text: "Spiel alle acht Takte von Mary Had a Little Lamb mit der rechten Hand. Der Player wartet auf jeden Ton.",
+      text: "Spiel alle acht Takte von „Mary Had a Little Lamb“ mit der rechten Hand.",
     },
   },
 };

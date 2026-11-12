@@ -25,7 +25,7 @@ export const staccatoEn = {
       text: "For staccato, bounce off the key like a ball off the floor. Play lightly from the wrist and let the key spring back at once.",
     },
     "both-hands-bounce": {
-      text: "Play C, E, G, E, C in both hands together, the left hand an octave lower. Bounce off every note.",
+      text: "Play C, E, G, E, C in both hands together, the right hand from middle C and the left hand an octave lower. Bounce off every note.",
     },
     "contrast-demo": {
       text: "Listen to the same five notes twice. One time they are legato, the other time staccato.",
@@ -45,14 +45,14 @@ export const staccatoEn = {
       answers: ["Smooth into the next note", "Twice as long", "Held with the pedal", "Short, bouncing off the key"],
     },
     "bounced-chords": {
-      text: "Bounce chords in the right hand: C major twice, then F major as C-F-A, G major as B-D-G and C major again.",
+      text: "Bounce chords in the right hand from middle C: C major twice, then F major as C-F-A, G major as B-D-G and C major again.",
     },
     "which-lets-go-early": {
       text: "In which style does your finger leave the key well before the next note?",
       answers: ["Staccato", "Legato", "Under a slur", "On a whole note"],
     },
     recap: {
-      text: "Well done. You play short and detached.",
+      text: "Well done. You can now play short and detached.",
       points: [
         "Staccato means short and detached.",
         "A dot above or below the note head marks it.",

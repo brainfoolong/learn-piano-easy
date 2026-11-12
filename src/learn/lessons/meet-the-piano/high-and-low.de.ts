@@ -20,7 +20,7 @@ export const highAndLowDe: HighAndLowTexts = {
       text: "Und wieder hinunter. Spiel die markierten Tasten von rechts nach links und hör, wie der Klang sinkt.",
     },
     "low-then-high": {
-      text: "Große Sprünge: Spiel die drei markierten Tasten, ein tiefes C, das mittlere C und ein hohes C.",
+      text: "Große Sprünge: Spiel die drei markierten Tasten, von tief nach hoch.",
     },
     "which-way": {
       text: "Deine Hand wandert auf den Tasten nach rechts. Wie verändert sich der Klang?",

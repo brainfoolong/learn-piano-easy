@@ -5,7 +5,7 @@ export const theStaffDe: TheStaffTexts = {
   title: "Das Notensystem",
   steps: {
     "five-lines": {
-      text: "Musik steht in einem Notensystem. Es besteht aus fünf Notenlinien übereinander. Du zählst sie von unten nach oben, die unterste ist also die erste.",
+      text: "Musik wird in einem Notensystem aufgeschrieben. Es besteht aus fünf Notenlinien übereinander. Du zählst sie von unten nach oben, die unterste ist also die erste.",
     },
     "lines-quiz": {
       text: "Wie viele Notenlinien hat ein Notensystem?",
@@ -19,10 +19,10 @@ export const theStaffDe: TheStaffTexts = {
       answers: ["Drei", "Vier", "Fünf"],
     },
     "line-or-space": {
-      text: "Eine Note sitzt auf einer Linie oder in einem Zwischenraum. Auf einer Linie geht die Linie mitten durch die Note. Im Zwischenraum füllt die Note die Lücke zwischen zwei Linien.",
+      text: "Eine Note steht auf einer Linie oder in einem Zwischenraum. Auf einer Linie geht die Linie mitten durch die Note. Im Zwischenraum füllt die Note die Lücke zwischen zwei Linien.",
     },
     "line-or-space-quiz": {
-      text: "Eine Linie geht mitten durch eine Note. Wo sitzt diese Note?",
+      text: "Eine Linie geht mitten durch eine Note. Wo steht diese Note?",
       answers: ["Auf einer Linie", "In einem Zwischenraum"],
     },
     "higher-is-higher": {
@@ -35,7 +35,7 @@ export const theStaffDe: TheStaffTexts = {
       text: "Du hörst zwei Töne. Ist der zweite höher, tiefer oder gleich hoch wie der erste? Ein höherer Ton stünde weiter oben im Notensystem.",
     },
     "top-or-bottom-quiz": {
-      text: "Eine Note sitzt auf der obersten Linie, eine andere auf der untersten. Welche klingt höher?",
+      text: "Eine Note steht auf der obersten Linie, eine andere auf der untersten. Welche klingt höher?",
       answers: ["Die Note auf der untersten Linie", "Die Note auf der obersten Linie", "Beide klingen gleich hoch"],
     },
     "first-line-quiz": {
@@ -44,7 +44,7 @@ export const theStaffDe: TheStaffTexts = {
     },
     recap: {
       text: "Gut gemacht. Jetzt kennst du das Notensystem.",
-      points: ["Ein Notensystem hat fünf Notenlinien und vier Zwischenräume, von unten gezählt.", "Eine Note sitzt auf einer Linie oder in einem Zwischenraum.", "Je höher die Note steht, desto höher klingt sie."],
+      points: ["Ein Notensystem hat fünf Notenlinien und vier Zwischenräume, von unten gezählt.", "Eine Note steht auf einer Linie oder in einem Zwischenraum.","Je höher die Note steht, desto höher klingt sie."],
     },
   },
 };

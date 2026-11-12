@@ -8,7 +8,7 @@ export const phrasesEn = {
       text: "Listen to two short tunes, one after the other. The first seems to ask something, and the second answers it. Hear the small breath between them.",
     },
     "musical-sentences": {
-      text: "Music speaks in sentences, just like you do. A musical sentence is called a phrase. It is often four bars long.",
+      text: "Music speaks in sentences, like you do. A musical sentence is called a phrase. It is often four bars long.",
     },
     "what-is-a-phrase": {
       text: "What is a phrase?",
@@ -31,7 +31,7 @@ export const phrasesEn = {
       text: "Play the first phrase and lift your hand after its last D. Then play the second: C-D-E-F, G, E, F-E-D-D, and end on C.",
     },
     "open-and-home": {
-      text: "The first phrase ends on D, so it sounds open, like a question. The second ends on C, at home, like an answer.",
+      text: "The first phrase ends on D, so it sounds open, like a question. The second ends on C, the note C major comes to rest on, like an answer.",
     },
     "which-ends-answer": {
       text: "In C major, which last note makes a phrase sound finished, like an answer?",
@@ -45,14 +45,14 @@ export const phrasesEn = {
       answers: ["On its first note", "On its last note", "Near its middle or its highest note", "Nowhere, it stays the same"],
     },
     "shape-both-phrases": {
-      text: "With your right hand, play two phrases starting on middle C, with a breath between them. First play C D E F G, E F E D, E D. Then play C D E F G, E F E D, D C. Your ears judge the shape: grow a little louder towards each G, and softer towards each end.",
+      text: "Play two phrases with your right hand, starting on middle C, and breathe between them. First play C D E F G, E F E D, E D, then C D E F G, E F E D, D C. Only the notes are checked, so let your ears make each phrase louder towards its G and softer towards its end.",
     },
     "when-to-breathe": {
       text: "When do you lift your hand for a breath?",
       answers: ["After every note", "Between two phrases", "In the middle of a phrase", "Never"],
     },
     recap: {
-      text: "Well done. You play music in sentences.",
+      text: "Well done. You can now play music in phrases.",
       points: [
         "A phrase is a musical sentence, often four bars long.",
         "A long slur shows a phrase. Play it as one smooth line.",

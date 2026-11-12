@@ -44,7 +44,7 @@ export const fingerOverTheThumbEn = {
       points: [
         "Going down, your right hand plays 5, 4, 3, 2, 1, then 3 crosses over the thumb.",
         "Going up, your left hand does the same, with 3 crossing onto A.",
-        "Thumb under on the way up and finger over on the way down are partners.",
+        "In the right hand, the thumb tucks under going up, and finger 3 crosses over going down.",
       ],
     },
   },

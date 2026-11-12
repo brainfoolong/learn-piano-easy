@@ -26,7 +26,7 @@ export const theWhiteKeysDe: TheWhiteKeysTexts = {
       text: "Das A liegt in der Dreiergruppe zwischen der zweiten und der dritten schwarzen Taste. Finde ein A.",
     },
     "find-b": {
-      text: "Das H ist die weiße Taste direkt rechts neben einer Dreiergruppe. Finde ein H. Auf Englisch heißt es übrigens B.",
+      text: "Das H ist die weiße Taste direkt rechts neben einer Dreiergruppe. Finde ein H. Auf Englisch heißt es B.",
     },
     "play-c-to-c": {
       text: "Spiel jetzt alle weißen Tasten vom mittleren C bis zum nächsten C. Sag dabei jeden Buchstaben mit.",

@@ -15,7 +15,7 @@ export const skipsEn = {
       answers: ["D", "E", "F"],
     },
     "skips-up": {
-      text: "Put your right thumb on middle C, one finger on each key. Play the skips up: fingers 1 and 3, then 2 and 4, then 3 and 5.",
+      text: "Put your right hand in C position. Play the skips up: fingers 1 and 3, then 2 and 4, then 3 and 5.",
     },
     "skips-down": {
       text: "Now the same skips back down. Start with finger 5 and follow the marked key.",
@@ -25,11 +25,11 @@ export const skipsEn = {
       answers: ["A step", "A skip"],
     },
     "mixed-phrase": {
-      text: "Put your right thumb on middle C, one finger on each key. This tune mixes steps and a skip: C D E, a skip up to G, then F E D C.",
+      text: "Put your right hand in C position. This tune mixes steps and a skip: C D E, a skip up to G, then F E D C.",
     },
     recap: {
       text: "Well done. You can play skips now.",
-      points: ["A skip jumps over one white key.", "In the C position, a skip leaves out one finger.", "A tune can mix steps and skips."],
+      points: ["A skip jumps over one white key.", "In C position, a skip leaves out one finger.", "A tune can mix steps and skips."],
     },
   },
 } satisfies LessonTexts;

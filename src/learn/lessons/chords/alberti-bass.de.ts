@@ -5,7 +5,7 @@ export const albertiBassDe: AlbertiBassTexts = {
   title: "Der Albertibass",
   steps: {
     "alberti-demo": {
-      text: "Hör dir die linke Hand allein an. Sie zerlegt jeden Akkord in ein schnelles, perlendes Muster. Mozart hat ihn oft benutzt.",
+      text: "Hör dir die linke Hand allein an. Sie zerlegt jeden Akkord in ein schnelles, perlendes Muster. Mozart hat dieses Muster oft benutzt.",
     },
     "what-alberti-is": {
       text: "Dieser gebrochene Akkord heißt Albertibass. Er spielt die Töne des Akkords tief, hoch, Mitte, hoch, in Achteln.",
@@ -21,7 +21,7 @@ export const albertiBassDe: AlbertiBassTexts = {
       text: "Jetzt du, auf C. Leg den fünften Finger auf das C unter dem mittleren C. Spiel zweimal C, G, E, G, schön gleichmäßig.",
     },
     "g7-shape": {
-      text: "Bei G spielst du H, F und D, die Töne von G7 ohne G. Sie liegen nah bei C, E und G, also bewegt sich deine Hand kaum.",
+      text: "Bei G nimmst du G7: G-Dur mit einem F obendrauf. Lass das G weg und spiel H, D und F. Sie liegen nah bei C, E und G, also bewegt sich deine Hand kaum.",
     },
     "g7-alberti": {
       text: "Setz den fünften Finger hinunter aufs H. Spiel zweimal H, F, D, F mit den Fingern 5, 1, 3, 1.",
@@ -43,10 +43,10 @@ export const albertiBassDe: AlbertiBassTexts = {
       text: "Hier ist eine kleine Melodie über dem Albertibass. Die rechte Hand spielt halbe Noten, und die linke Hand perlt weiter.",
     },
     "alberti-tune": {
-      text: "Leg den rechten Daumen auf das mittlere C. Spiel jeden Melodieton zusammen mit dem tiefen Basston daneben.",
+      text: "Leg den rechten Daumen auf das mittlere C. Spiel jeden Melodieton zusammen mit der tiefen Bassnote darunter.",
     },
     recap: {
-      text: "Gut gemacht. Du spielst den Albertibass.",
+      text: "Gut gemacht. Jetzt kannst du den Albertibass spielen.",
       points: [
         "Der Albertibass bricht einen Akkord tief, hoch, Mitte, hoch.",
         "Er läuft in Achteln, mit den Fingern 5, 1, 3, 1.",

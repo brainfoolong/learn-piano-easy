@@ -8,7 +8,7 @@ export const countingToFourDe: CountingToFourTexts = {
       text: "Schau zu und hör hin. Ein tiefes C beginnt jede Gruppe aus vier Schlägen, und G spielt die anderen drei.",
     },
     "what-a-bar-is": {
-      text: "Die Schläge bilden Gruppen aus vier, die Takte. Du zählst jeden Takt „eins, zwei, drei, vier“, und ein Taktstrich schließt ihn ab. Das ist der Viervierteltakt, und die Eins ist der stärkste Schlag.",
+      text: "Die Schläge bilden Gruppen, die Takte, und ein Taktstrich schließt jeden Takt ab. Hier hat jeder Takt vier Schläge, gezählt „eins, zwei, drei, vier“. Das ist der Viervierteltakt, und die Eins ist der stärkste Schlag.",
     },
     "beats-in-a-bar-quiz": {
       text: "Wie viele Schläge hat ein Takt im Viervierteltakt?",

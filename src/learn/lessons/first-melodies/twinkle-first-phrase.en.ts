@@ -5,13 +5,13 @@ export const twinkleFirstPhraseEn = {
   title: "Twinkle's first phrase",
   steps: {
     "phrase-demo": {
-      text: "Listen to the first phrase of Twinkle Twinkle Little Star. One note in it lies past C position.",
+      text: "Listen to the first phrase of Twinkle Twinkle Little Star. One note in it lies outside C position.",
     },
     "one-key-past": {
       text: "That note is A, the white key right after G. Your hand stays in C position. Your little finger stretches one key to the right to play A.",
     },
     "find-a": {
-      text: "Put your thumb on middle C. Stretch your little finger past G and press A.",
+      text: "Put your right hand in C position. Stretch your little finger past G and press A.",
     },
     "leap-quiz": {
       text: "The tune starts on C, then makes a big leap up. Which note does it leap to?",
@@ -28,7 +28,7 @@ export const twinkleFirstPhraseEn = {
     },
     recap: {
       text: "Well done. You reached past your five fingers for the first time.",
-      points: ["A tune can leave the C position for one note.", "Your little finger stretches from G to A.", "A tune can leap, as from C up to G."],
+      points: ["A tune can leave C position for one note.", "Your little finger stretches from G to A.", "A tune can leap, as from C up to G."],
     },
   },
 } satisfies LessonTexts;

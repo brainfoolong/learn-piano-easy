@@ -39,7 +39,7 @@ export const theGrandStaffEn = {
     },
     recap: {
       text: "Well done. You can read the grand staff now.",
-      points: ["The grand staff joins a treble staff and a bass staff with a brace.", "The right hand reads the treble staff, and the left hand reads the bass staff.", "Middle C sits on a ledger line between them and belongs to both."],
+      points: ["The grand staff joins a treble staff and a bass staff with a brace.", "The right hand mostly reads the treble staff, and the left hand the bass staff.", "Middle C sits on a ledger line between them and belongs to both."],
     },
   },
 } satisfies LessonTexts;

@@ -18,7 +18,7 @@ export const handsTakeTurnsEn = {
       text: "Listen to two notes each time. Is the second one higher, lower or the same?",
     },
     "first-turn": {
-      text: "Your turn. Play C D E with your right hand, then the same three keys with your left hand.",
+      text: "Your turn. Play C D E with your right hand, then C D E with your left hand.",
     },
     "second-turn": {
       text: "Now start on your right little finger and walk down to E. Your left hand answers, from its thumb down to E.",
@@ -27,7 +27,7 @@ export const handsTakeTurnsEn = {
       text: "While one hand plays, the other rests on its keys and waits. It stays in place, so it is ready for its turn.",
     },
     "long-phrase": {
-      text: "Rest your right thumb on middle C and your left little finger on the C one octave below. This longer tune takes four turns: right hand, left hand, right, then left. Follow the marked key from hand to hand.",
+      text: "Keep both hands in C position. This longer tune takes four turns: right hand, left hand, right, then left. Follow the marked key from hand to hand.",
     },
     recap: {
       text: "Well done. Your hands now share a tune.",

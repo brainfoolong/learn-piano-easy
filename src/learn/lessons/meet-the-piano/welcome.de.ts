@@ -15,7 +15,7 @@ export const welcomeDe: WelcomeTexts = {
     },
     "ways-quiz": {
       text: "Worauf kannst du eine Lektion spielen?",
-      answers: ["Nur auf einem MIDI-Keyboard", "Nur auf den Tasten am Bildschirm", "Auf allem: am Bildschirm, auf der Computertastatur oder einem MIDI-Keyboard"],
+      answers: ["Nur auf einem MIDI-Keyboard", "Nur auf den Tasten am Bildschirm", "Auf allen dreien: am Bildschirm, auf der Computertastatur oder einem MIDI-Keyboard"],
     },
     "first-key": {
       text: "Dein erster Ton! Drück die markierte Taste.",

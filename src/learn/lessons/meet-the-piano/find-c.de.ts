@@ -5,7 +5,7 @@ export const findCDe: FindCTexts = {
   title: "Das C finden",
   steps: {
     "hear-cs": {
-      text: "Hör zu und schau hin. Das Klavier spielt viermal denselben Ton, von tief nach hoch. Jeder davon heißt C.",
+      text: "Hör zu und schau hin. Das Klavier spielt vier Tasten von tief nach hoch. Alle haben denselben Namen: C.",
     },
     "c-rule": {
       text: "Such dir eine Gruppe aus zwei schwarzen Tasten. Die weiße Taste direkt links davon ist ein C. Neben jeder Zweiergruppe findest du so ein C.",
@@ -26,7 +26,7 @@ export const findCDe: FindCTexts = {
       text: "Und jetzt das C direkt links vom mittleren C. Es klingt tiefer.",
     },
     "cs-low-to-high": {
-      text: "Spiel vier Cs von tief nach hoch, beginnend beim C direkt unter dem mittleren C. Such jedes Mal die nächste Gruppe aus zwei schwarzen Tasten weiter rechts.",
+      text: "Spiel vier C von tief nach hoch, beginnend beim C direkt unter dem mittleren C. Such jedes Mal die nächste Gruppe aus zwei schwarzen Tasten weiter rechts.",
     },
     "c-quiz": {
       text: "Wo liegt das C?",

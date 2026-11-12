@@ -14,10 +14,10 @@ export const whatAChordIsEn = {
       text: "Press C and E together. They are a third apart, so one white key lies between them. Fingers 1 and 3 play it.",
     },
     "thirds-up": {
-      text: "Your turn. Put your right thumb on middle C. Play C and E together. Then move your hand up to D and F, and to E and G.",
+      text: "Your turn. Put your right thumb on middle C and play C and E together. Then move your hand up to D and F, and to E and G.",
     },
     "skipped-key": {
-      text: "A third on the white keys skips some keys. How many white keys lie between its two keys?",
+      text: "Look at a third on the white keys. How many white keys lie between its two keys?",
       answers: ["None", "One", "Two"],
     },
     "thirds-and-fifths": {
@@ -43,7 +43,7 @@ export const whatAChordIsEn = {
       text: "Keep the shape of your right hand. Play C-E-G from middle C, then move up to D-F-A and E-G-B, all on white keys. End on C-E-G.",
     },
     recap: {
-      text: "Well done. You play your first chords.",
+      text: "Well done. You played your first chords.",
       points: [
         "A chord is several keys pressed together.",
         "A third skips one white key, and fingers 1 and 3 play it.",

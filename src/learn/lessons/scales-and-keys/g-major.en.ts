@@ -27,7 +27,7 @@ export const gMajorEn = {
       text: "Your turn. Put your right thumb on the G above middle C, and play the G major scale up to the next G. Finger 4 plays F♯.",
     },
     "g-scale-down": {
-      text: "Now play it down, from the high G to G. Finger 3 crosses over the thumb onto B.",
+      text: "Now play it down, from the high G back to the G you started on. Finger 3 crosses over the thumb onto B.",
     },
     "hear-f-and-f-sharp": {
       text: "F♯ is only a half step above F, so listen closely. Is the second key higher, lower or the same?",
@@ -39,7 +39,7 @@ export const gMajorEn = {
       text: "Put your right thumb on the D above middle C, so finger 3 rests on F♯. Your left hand plays the low fifth: the G below the C under middle C, and the D above it. Play the fifth with the first G, and again with the second.",
     },
     recap: {
-      text: "Well done. You play your second scale.",
+      text: "Well done. You played your second scale.",
       points: [
         "The major scale pattern can start on any key.",
         "Started on G, it needs F♯ to keep the half step below the top.",

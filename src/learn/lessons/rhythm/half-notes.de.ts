@@ -15,7 +15,7 @@ export const halfNotesDe: HalfNotesTexts = {
       answers: ["Einen Schlag", "Zwei Schläge", "Vier Schläge"],
     },
     "play-and-hold": {
-      text: "Leg den rechten Daumen auf das mittlere C. Spiel C, D, E, D, C und halte jede Taste gedrückt, während du „1-2“ zählst. Die Übung wartet auf jeden Ton, also lass dir Zeit.",
+      text: "Leg deine rechte Hand in die C-Lage. Spiel C, D, E, D, C und halte jede Taste gedrückt, während du „1-2“ zählst. Die Übung wartet auf jeden Ton, also lass dir Zeit.",
     },
     "count-one-two": {
       text: "Tipp bei jedem Klick auf eine beliebige Taste. Zähl dabei „1-2, 1-2“. Jedes „1-2“ ist so lang wie eine halbe Note.",

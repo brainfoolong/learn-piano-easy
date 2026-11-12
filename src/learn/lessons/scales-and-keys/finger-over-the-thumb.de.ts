@@ -44,7 +44,7 @@ export const fingerOverTheThumbDe: FingerOverTheThumbTexts = {
       points: [
         "Abwärts spielt die rechte Hand 5, 4, 3, 2, 1, dann setzt der dritte Finger über den Daumen.",
         "Aufwärts macht die linke Hand dasselbe, und der dritte Finger landet auf dem A.",
-        "Daumenuntersatz aufwärts und Übersetzen abwärts gehören zusammen.",
+        "In der rechten Hand setzt du aufwärts den Daumen unter und abwärts den dritten Finger über.",
       ],
     },
   },

@@ -5,7 +5,7 @@ export const findCEn = {
   title: "Find C",
   steps: {
     "hear-cs": {
-      text: "Listen and watch. The piano plays the same note four times, from low to high. Each one is called C.",
+      text: "Listen and watch. The piano plays four keys from low to high. They all have the same name: C.",
     },
     "c-rule": {
       text: "Look for a group of two black keys. The white key just left of it is a C. Every group of two has a C beside it.",

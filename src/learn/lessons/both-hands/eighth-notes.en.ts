@@ -5,7 +5,7 @@ export const eighthNotesEn = {
   title: "Eighth notes",
   steps: {
     "eighth-demo": {
-      text: "Watch and listen. Middle C plays one note on each beat first. Then it plays two notes on each beat.",
+      text: "Watch and listen. First middle C sounds once on each beat. Then it sounds twice on each beat.",
     },
     "what-an-eighth-note-is": {
       text: "The fast notes were eighth notes. An eighth note lasts half a beat. So two eighth notes fill one beat.",
@@ -31,7 +31,7 @@ export const eighthNotesEn = {
       text: "Now both hands play. The left hand holds a low C, while the right hand runs up to G in eighth notes. Then it runs back down to C.",
     },
     "eighth-phrase": {
-      text: "Put both hands in C position. Your right hand plays C D E F G G F E D C, starting on middle C. Press the C below middle C with your left little finger together with the first C. Press it again together with the second G.",
+      text: "Put both hands in C position. Your right hand plays C D E F G G F E D C, starting on middle C. Your left little finger presses the C below middle C with the first C, and again with the second G.",
     },
     recap: {
       text: "Well done. Your notes can move twice as fast now.",

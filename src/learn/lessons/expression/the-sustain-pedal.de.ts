@@ -39,7 +39,7 @@ export const theSustainPedalDe: TheSustainPedalTexts = {
       answers: ["Drück das Pedal hinunter", "Heb das Pedal", "Tipp zweimal auf das Pedal", "Halte das Pedal bis zum Schluss unten"],
     },
     "chords-without-pedal": {
-      text: "Lern zuerst vier gebrochene Akkorde in der linken Hand, ohne Pedal: C-E-G, dann C-F-A, dann H-D-G, dann wieder C-E-G.",
+      text: "Lern zuerst vier gebrochene Akkorde in der linken Hand, ohne Pedal und ab dem C unter dem mittleren C: C-E-G, dann C-F-A, dann H-D-G, dann wieder C-E-G.",
     },
     "chords-blur": {
       text: "Bleibt das Pedal von einem Akkord bis in den nächsten unten, klingen beide zugleich und verschwimmen. Darum wechselst du das Pedal bei jedem neuen Akkord.",

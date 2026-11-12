@@ -5,10 +5,10 @@ export const threeFourTimeEn = {
   title: "Three-four time",
   steps: {
     "waltz-demo": {
-      text: "Watch and listen. A low note plays first, then two higher notes. The pattern goes round and round.",
+      text: "Watch and listen. A low note sounds on the first beat, and higher notes on the next two. The pattern repeats.",
     },
     "beats-in-threes": {
-      text: "Some music groups its beats in threes. You count 1 2 3, 1 2 3, and beat 1 is the strongest. This is 3/4 time, the time of the waltz.",
+      text: "Some music groups its beats in threes. You count 1, 2, 3, 1, 2, 3, and beat 1 is the strongest. This is 3/4 time, the time of the waltz.",
     },
     "beats-in-a-bar-quiz": {
       text: "How many beats does a bar of 3/4 time have?",
@@ -16,14 +16,14 @@ export const threeFourTimeEn = {
     },
     "which-is-a-waltz-quiz": {
       text: "A waltz is in 3/4 time. How do you count it?",
-      answers: ["1 2 3, 1 2 3", "1 2 3 4, 1 2 3 4"],
+      answers: ["1, 2, 3, 1, 2, 3", "1, 2, 3, 4, 1, 2, 3, 4"],
     },
     "tap-in-threes": {
-      text: "Press Start and tap any key on each click. Count 1 2 3 aloud as you tap. Make each 1 a little stronger.",
+      text: "Press Start and listen to four clicks first. Then tap any key on each click, and count 1, 2, 3 aloud. Say each 1 a little louder.",
     },
     recap: {
       text: "Well done. You can count in threes now.",
-      points: ["Some music groups its beats in threes.", "A bar of 3/4 time has three beats, counted 1 2 3.", "Beat 1 is the strongest, as in a waltz."],
+      points: ["Some music groups its beats in threes.", "A bar of 3/4 time has three beats, counted 1, 2, 3.", "Beat 1 is the strongest, as in a waltz."],
     },
   },
 } satisfies LessonTexts;

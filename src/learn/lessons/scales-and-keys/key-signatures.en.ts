@@ -30,7 +30,7 @@ export const keySignaturesEn = {
       answers: ["F♯, the black key", "F, the white key"],
     },
     "phrase-in-g": {
-      text: "Here is a phrase in G major. Your thumb starts on D. Listen for the F♯ at the top.",
+      text: "Here is a phrase in G major. Your right thumb starts on the second D above middle C. Listen for the F♯ at the top.",
     },
     "play-in-g": {
       text: "Your turn. The key signature has one sharp, so every F is F♯.",
@@ -40,7 +40,7 @@ export const keySignaturesEn = {
       answers: ["B, the white key", "B♭, the black key"],
     },
     "play-in-f": {
-      text: "Now a phrase in F major. Put your thumb on F. The key signature has one flat, so every B is B♭.",
+      text: "Now a phrase in F major. Put your right thumb on the F above middle C. The key signature has one flat, so every B is B♭.",
     },
     recap: {
       text: "Well done. You can read a key signature now. Next comes a song in C major, with no sharps or flats.",

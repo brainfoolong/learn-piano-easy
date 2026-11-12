@@ -39,7 +39,7 @@ export const theSustainPedalEn = {
       answers: ["Press the pedal down", "Lift the pedal", "Tap the pedal twice", "Keep the pedal down to the end"],
     },
     "chords-without-pedal": {
-      text: "Learn four broken chords in your left hand first, without the pedal: C-E-G, then C-F-A, then B-D-G, then C-E-G again.",
+      text: "Learn four broken chords in your left hand first, without the pedal. Start on the C below middle C: C-E-G, then C-F-A, then B-D-G, then C-E-G again.",
     },
     "chords-blur": {
       text: "If the pedal stays down from one chord into the next, both chords sound at once and blur. So change the pedal with each new chord.",
@@ -55,7 +55,7 @@ export const theSustainPedalEn = {
       answers: ["To play louder", "To rest your foot", "So the chords do not blur together", "So the notes sound shorter"],
     },
     recap: {
-      text: "Well done. Your right foot joins the music.",
+      text: "Well done. Now your right foot plays along too.",
       points: [
         "The right pedal keeps notes sounding after you let go of the keys.",
         "Press it with your right foot, heel on the floor.",

@@ -11,18 +11,18 @@ export const readingStepsAndSkipsDe: ReadingStepsAndSkipsTexts = {
       text: "Ein Schritt geht von einer Notenlinie in den nächsten Zwischenraum oder von einem Zwischenraum auf die nächste Linie. Auf den Tasten ist das die nächste weiße Taste.",
     },
     "step-from-line-quiz": {
-      text: "Ein Ton steht auf einer Linie. Wo steht der Ton einen Schritt höher?",
+      text: "Eine Note steht auf einer Linie. Wo steht die Note einen Schritt höher?",
       answers: ["Im Zwischenraum direkt darüber", "Auf der nächsten Linie darüber", "Zwei Linien höher"],
     },
     "skip-on-the-staff": {
       text: "Ein Sprung geht von einer Linie zur nächsten Linie oder von einem Zwischenraum zum nächsten. Auf den Tasten lässt er eine weiße Taste aus.",
     },
     "step-or-skip-quiz": {
-      text: "Ein Ton geht von einer Linie zur nächsten Linie nach oben. Ist das ein Schritt oder ein Sprung?",
+      text: "Eine Note geht von einer Linie zur nächsten Linie nach oben. Ist das ein Schritt oder ein Sprung?",
       answers: ["Ein Schritt", "Ein Sprung"],
     },
     "space-to-line-quiz": {
-      text: "Ein Ton geht von einem Zwischenraum auf die Linie direkt darüber. Ist das ein Schritt oder ein Sprung?",
+      text: "Eine Note geht von einem Zwischenraum auf die Linie direkt darüber. Ist das ein Schritt oder ein Sprung?",
       answers: ["Ein Schritt", "Ein Sprung"],
     },
     "read-by-moves": {
@@ -39,7 +39,7 @@ export const readingStepsAndSkipsDe: ReadingStepsAndSkipsTexts = {
       text: "Das nächste Lied braucht diese fünf Töne. Lies jeden und spiel ihn mit der rechten Hand.",
     },
     "song-opening": {
-      text: "So beginnt das nächste Lied. Ein Ton kommt dreimal, dann geht es abwärts. Danach geht es in Schritten weiter. Folge der markierten Taste.",
+      text: "So beginnt das nächste Lied. Leg den rechten Daumen auf das D und die Finger 2 bis 5 auf E, G, A und H. Folge der markierten Taste.",
     },
     "opening-move-quiz": {
       text: "In dieser Melodie geht das E abwärts zum D. Das E steht auf der untersten Linie. Wo steht das D?",

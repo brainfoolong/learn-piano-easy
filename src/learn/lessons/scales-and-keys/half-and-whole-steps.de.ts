@@ -8,10 +8,10 @@ export const halfAndWholeStepsDe: HalfAndWholeStepsTexts = {
       text: "Hör zu, wie das Klavier vom C zum E hinaufsteigt. Es spielt jede Taste auf dem Weg, auch die schwarzen.",
     },
     "half-step": {
-      text: "Jeder Schritt war dabei ein Halbtonschritt. Ein Halbton führt zur allernächsten Taste, schwarz oder weiß, ohne Taste dazwischen.",
+      text: "Jeder Schritt war dabei ein Halbton. Ein Halbton führt zur allernächsten Taste, schwarz oder weiß, ohne Taste dazwischen.",
     },
     "half-step-from-c": {
-      text: "Jetzt du. Spiel das C, dann die schwarze Taste direkt rechts daneben. Spiel das Paar zweimal. Jeder Schritt ist ein Halbton.",
+      text: "Jetzt du. Spiel das mittlere C, dann die schwarze Taste direkt rechts daneben, und spiel das Paar zweimal. Jeder Schritt ist ein Halbton.",
     },
     "no-black-key-between": {
       text: "Schau dir E und F an. Zwischen ihnen liegt keine schwarze Taste. Von E zu F ist also ein Halbton, und von H zu C auch.",
@@ -21,7 +21,7 @@ export const halfAndWholeStepsDe: HalfAndWholeStepsTexts = {
       answers: ["C und D", "E und F", "F und G"],
     },
     "e-f-and-b-c": {
-      text: "Spiel E und dann F. Spiel danach H und das C darüber. Beides sind Halbtöne zwischen zwei weißen Tasten.",
+      text: "Spiel das E und das F über dem mittleren C. Spiel danach H und das C darüber. Beides sind Halbtöne zwischen zwei weißen Tasten.",
     },
     "whole-step": {
       text: "Zwei Halbtöne ergeben einen Ganzton. Ein Ganzton überspringt eine Taste. Von C zu D ist ein Ganzton, denn dazwischen liegt eine schwarze Taste.",
@@ -30,7 +30,7 @@ export const halfAndWholeStepsDe: HalfAndWholeStepsTexts = {
       text: "Hör zu: Von C zu D ist ein Ganzton, von D zu E auch. Von E zu F ist es nur ein Halbton.",
     },
     "whole-steps-from-c": {
-      text: "Jetzt du. Spiel C, D und E. Jeder Schritt ist ein Ganzton über eine schwarze Taste hinweg.",
+      text: "Jetzt du. Spiel das mittlere C, dann D und E. Jeder Schritt ist ein Ganzton über eine schwarze Taste hinweg.",
     },
     "f-to-g": {
       text: "Von F hinauf zu G: Ist das ein Halbton oder ein Ganzton?",

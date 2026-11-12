@@ -22,7 +22,7 @@ export const fingerNumbersDe: FingerNumbersTexts = {
       text: "Schau zu: fünf Tasten nacheinander, eine für jeden Finger deiner rechten Hand. Der Daumen spielt die erste Taste, dann folgen die Finger 2, 3, 4 und 5.",
     },
     "right-hand-five": {
-      text: "Jetzt bist du dran. Leg den rechten Daumen auf das mittlere C und je einen Finger auf die Tasten daneben. Spiel mit den Fingern 1, 2, 3, 4 und 5.",
+      text: "Jetzt bist du dran. Leg den rechten Daumen auf das mittlere C und je einen Finger auf die weißen Tasten rechts daneben. Spiel mit den Fingern 1, 2, 3, 4 und 5.",
     },
     "finger-pattern": {
       text: "Lass die Hand, wo sie ist. Spiel jetzt die Finger 1, 3, 5, 3, 1.",

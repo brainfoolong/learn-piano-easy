@@ -8,7 +8,7 @@ export const stepsEn = {
       text: "Watch a little tune. Each note moves to the key right next to the one before it.",
     },
     "what-a-step-is": {
-      text: "A move to the very next white key is called a step. A step can go up or down. In C position, the finger next door plays it.",
+      text: "A move to the very next white key is called a step. A step can go up or down. In C position, the next finger plays it.",
     },
     "which-is-a-step": {
       text: "Which of these moves is a step?",
@@ -31,11 +31,11 @@ export const stepsEn = {
       text: "Step all the way up and all the way down again. Follow the marked key.",
     },
     "stepping-tune": {
-      text: "Put your right thumb on middle C, one finger on each key. This tune is made only of steps: C D E D E F E D C.",
+      text: "Put your right hand in C position. This tune is made only of steps: C D E D E F E D C.",
     },
     recap: {
       text: "Well done. You can play a tune made of steps.",
-      points: ["A step moves to the very next white key.", "A step goes up or down.", "In C position, the finger next door plays a step."],
+      points: ["A step moves to the very next white key.", "A step goes up or down.", "In C position, the next finger plays a step."],
     },
   },
 } satisfies LessonTexts;

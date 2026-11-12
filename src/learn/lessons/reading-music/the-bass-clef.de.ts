@@ -22,7 +22,7 @@ export const theBassClefDe: TheBassClefTexts = {
       answers: ["Um die zweite Linie von unten", "Um die vierte Linie von unten", "Um die mittlere Linie"],
     },
     "play-bass-f": {
-      text: "Hier steht das F auf der vierten Linie. Spiel es auf den Tasten. In der C-Lage der linken Hand liegt dein Zeigefinger darauf.",
+      text: "Hier steht das F auf der vierten Linie. Spiel es auf den Tasten. In der C-Lage der linken Hand liegt Finger 2 darauf.",
     },
     "neighbours-of-f": {
       text: "Im Zwischenraum direkt über dem F steht das G. Im Zwischenraum direkt darunter steht das E. Noch einen Schritt tiefer, auf der mittleren Linie, steht das D.",

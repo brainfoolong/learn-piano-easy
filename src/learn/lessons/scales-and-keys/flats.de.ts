@@ -8,7 +8,7 @@ export const flatsDe: FlatsTexts = {
       text: "Hör dir das H an und dann die schwarze Taste direkt links davon. Danach hörst du das E und die schwarze Taste links vom E.",
     },
     "what-a-flat-is": {
-      text: "Dieses Zeichen heißt b: ♭. Es macht einen Ton um einen Halbton tiefer. Du spielst die nächste Taste links davon.",
+      text: "Dieses Zeichen heißt b: ♭. Es erniedrigt einen Ton um einen Halbton. Du spielst die nächste Taste links davon.",
     },
     "find-b-flat": {
       text: "Das H mit einem b davor heißt im Deutschen einfach B. Such das B: Geh vom H eine Taste nach links.",
@@ -31,13 +31,13 @@ export const flatsDe: FlatsTexts = {
       answers: ["Des", "B", "Es"],
     },
     "half-steps-down": {
-      text: "Jetzt du. Spiel H, B und A. Dann spiel E, Es und D. Jeder Ton liegt einen Halbton unter dem davor.",
+      text: "Jetzt du. Spiel H, B und A, dann E, Es und D. Jeder Ton liegt einen Halbton unter dem davor.",
     },
     recap: {
       text: "Gut gemacht. Du weißt jetzt, was ein b ist.",
       points: [
-        "Ein b ♭ macht einen Ton um einen Halbton tiefer.",
-        "Aus E wird Es und aus D wird Des. Nur aus H wird B.",
+        "Ein b ♭ erniedrigt einen Ton um einen Halbton.",
+        "Aus D wird Des, aus E wird Es und aus H wird B.",
         "Das B liegt links vom H, das Es links vom E.",
         "Eine schwarze Taste kann zwei Namen haben: Cis ist auch Des.",
       ],

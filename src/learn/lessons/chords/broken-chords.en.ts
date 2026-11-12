@@ -43,10 +43,10 @@ export const brokenChordsEn = {
       text: "Play the left hand alone, starting on the C below middle C: C-E-G-E, then G-B-D-B from the next G down, then C-E-G-E.",
     },
     "tune-over-broken-chords": {
-      text: "Now add the tune in your right hand. Each tune note starts together with a left-hand note.",
+      text: "Now add the tune in your right hand, in C position. Each tune note starts together with a left-hand note.",
     },
     recap: {
-      text: "Well done. You break chords in both hands.",
+      text: "Well done. You can now break chords in both hands.",
       points: [
         "A broken chord plays its notes one after another.",
         "The notes are the same, so the chord sounds the same.",

@@ -21,7 +21,7 @@ export const octavesDe: OctavesTexts = {
       text: "Du hörst jedes Mal zwei Töne. Ist der zweite höher, tiefer oder gleich hoch wie der erste?",
     },
     "e-above": {
-      text: "Such das erste E über dem mittleren C, zwei weiße Tasten rechts davon. Drück dann das nächste E darüber, eine Oktave höher.",
+      text: "Das erste E über dem mittleren C liegt zwei weiße Tasten rechts davon. Drück das E eine Oktave über diesem E.",
     },
     "c-below": {
       text: "Jetzt in die andere Richtung. Drück das C eine Oktave unter dem mittleren C.",
@@ -31,7 +31,7 @@ export const octavesDe: OctavesTexts = {
     },
     "octave-quiz": {
       text: "Was ist eine Oktave?",
-      answers: ["Zwei Tasten direkt nebeneinander", "Die zwei schwarzen Tasten einer Gruppe", "Der Abstand von einem Buchstaben zum selben Buchstaben, acht weiße Tasten mit beiden gezählt"],
+      answers: ["Zwei Tasten direkt nebeneinander", "Die zwei schwarzen Tasten einer Gruppe", "Der Abstand von einem Buchstaben zum selben Buchstaben, acht weiße Tasten, beide mitgezählt"],
     },
     recap: {
       text: "Gut gemacht. Jetzt weißt du, was eine Oktave ist.",

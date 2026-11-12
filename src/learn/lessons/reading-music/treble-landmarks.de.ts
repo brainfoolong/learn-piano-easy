@@ -28,7 +28,7 @@ export const trebleLandmarksDe: TrebleLandmarksTexts = {
       text: "Wie heißt jede Note? Such die nächste Merknote und zähl die Schritte nach oben oder unten.",
     },
     "read-treble-landmarks": {
-      text: "Spiel jede Note, die du im Violinschlüssel siehst. Die Merknoten sind das mittlere C auf seiner Hilfslinie, das G auf der zweiten Notenlinie und das hohe C im dritten Zwischenraum. Die anderen Noten liegen einen Schritt neben einer Merknote.",
+      text: "Spiel jede Note, die du im Violinschlüssel siehst. Einige sind Merknoten, die anderen liegen einen Schritt neben einer Merknote.",
     },
     recap: {
       text: "Gut gemacht. Du kennst jetzt drei Merknoten im Violinschlüssel.",

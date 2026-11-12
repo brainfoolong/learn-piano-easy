@@ -32,7 +32,7 @@ export const sittingAtThePianoEn = {
       answers: ["Flat and stretched out", "Tight, pressed hard together", "Relaxed and curved, playing with the fingertips"],
     },
     "relaxed-play": {
-      text: "Hold a small ball in your hand in your mind, and play the marked keys with your fingertips. Stay loose, from your shoulders to your fingers.",
+      text: "Imagine a small ball in your hand, and play the marked keys with your fingertips. Stay loose, from your shoulders to your fingers.",
     },
     "posture-quiz": {
       text: "Which of these is a good way to sit at the piano?",

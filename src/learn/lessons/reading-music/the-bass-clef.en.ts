@@ -22,7 +22,7 @@ export const theBassClefEn = {
       answers: ["The second line from the bottom", "The fourth line from the bottom", "The middle line"],
     },
     "play-bass-f": {
-      text: "Here is F on the fourth line. Play it on the keys. In your left-hand C position, your index finger rests on it.",
+      text: "Here is F on the fourth line. Play it on the keys. In your left-hand C position, finger 2 rests on it.",
     },
     "neighbours-of-f": {
       text: "The space just above F is G. The space just below F is E. One more step down, on the middle line, sits D.",

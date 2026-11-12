@@ -8,7 +8,7 @@ export const countingToFourEn = {
       text: "Watch and listen. A low C starts each group of four beats, and G plays the other three.",
     },
     "what-a-bar-is": {
-      text: "Beats come in groups of four, called bars. You count each bar 1, 2, 3, 4, and a bar line ends it. This is 4/4 time, and beat 1 is the strongest.",
+      text: "Beats are grouped into bars, and a bar line ends each bar. Here each bar has four beats, counted 1, 2, 3, 4. This is 4/4 time, and beat 1 is the strongest.",
     },
     "beats-in-a-bar-quiz": {
       text: "How many beats does a bar of 4/4 time hold?",

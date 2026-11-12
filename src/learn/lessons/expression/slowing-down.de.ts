@@ -34,7 +34,7 @@ export const slowingDownDe: SlowingDownTexts = {
       text: "Nach einem ritardando bringt a tempo das alte Tempo zurück. Auf Italienisch heißt das „im Zeitmaß“.",
     },
     "a-tempo-demo": {
-      text: "Hör zu. Die Phrase wird in der Mitte langsamer. Dann setzt a tempo sie im ersten Tempo wieder fort.",
+      text: "Hör zu. Die Phrase wird in der Mitte langsamer. Dann bringt a tempo das erste Tempo zurück.",
     },
     "a-tempo-means": {
       text: "Du bist bei rit. langsamer geworden. Jetzt steht a tempo da. Was tust du?",
@@ -45,7 +45,7 @@ export const slowingDownDe: SlowingDownTexts = {
       answers: ["Auf dem allerersten Ton", "In jedem Takt", "Gegen Ende eines Stücks", "Nur in der linken Hand"],
     },
     "ending-with-fermata": {
-      text: "Spiel E, D, C, D, E, E ab dem E über dem mittleren C und werde dabei langsamer. Ende auf einem Akkord: links das C unter dem mittleren C und das G darüber, rechts dasselbe E. Lass den Akkord etwas länger klingen, wie eine Fermate es verlangt.",
+      text: "Spiel E, D, C, D, E, E ab dem E über dem mittleren C und werde dabei langsamer. Ende auf einem Akkord: links das C unter dem mittleren C und das G darüber, rechts noch einmal das E. Lass den Akkord etwas länger klingen, wie eine Fermate es verlangt.",
     },
     "rall-means": {
       text: "Manche Stücke schreiben stattdessen rall., kurz für rallentando. Welches Zeichen bedeutet dasselbe?",
@@ -54,7 +54,7 @@ export const slowingDownDe: SlowingDownTexts = {
     recap: {
       text: "Gut gemacht. Du kannst das Tempo mit Absicht ändern.",
       points: [
-        "rit. und rall. werden nach und nach langsamer, meist am Ende.",
+        "rit. und rall. heißen: nach und nach langsamer werden, meist am Ende.",
         "Eine Fermate hält ihren Ton länger, als er notiert ist.",
         "a tempo bringt das erste Tempo zurück.",
       ],

@@ -5,7 +5,7 @@ export const cFAndGDe: CFAndGTexts = {
   title: "C, F und G",
   steps: {
     "progression-demo": {
-      text: "Hör dir vier Akkorde an: C, F, G und zurück zu C. Sie klingen wie ein kleines Lied, das am Ende nach Hause kommt.",
+      text: "Hör dir vier Akkorde an: C, F, G und zurück zu C. Sie klingen wie ein kleines Lied, das am Ende auf C zur Ruhe kommt.",
     },
     "three-main-chords": {
       text: "Bau einen Dreiklang auf der 1., 4. und 5. Stufe der C-Dur-Tonleiter. So bekommst du C, F und G, die drei Hauptakkorde von C-Dur.",
@@ -18,14 +18,14 @@ export const cFAndGDe: CFAndGTexts = {
       text: "Der F-Dur-Dreiklang ist F, A und C. Er ist ein Dur-Dreiklang wie C-Dur, also behalten deine Finger dieselbe Form.",
     },
     "c-and-f": {
-      text: "Jetzt du. Spiel C-Dur ab dem mittleren C mit den Fingern 1, 3 und 5. Dann setzt du den Daumen auf das F über dem mittleren C, für F-Dur, und gehst zurück zu C.",
+      text: "Jetzt du. Spiel C-Dur ab dem mittleren C mit den Fingern 1, 3 und 5. Dann setzt du für F-Dur den Daumen auf das F über dem mittleren C und gehst zurück zu C.",
     },
     "g-triad-notes": {
       text: "Der G-Dur-Dreiklang steht auf der 5. Stufe der Tonleiter. Aus welchen Tönen besteht er?",
       answers: ["G, B und D", "G, H und D", "G, A und H", "F, A und C"],
     },
     "c-and-g": {
-      text: "Spiel C-Dur ab dem mittleren C, dann setz den Daumen auf das G über dem mittleren C, für G-Dur, und geh zurück zu C.",
+      text: "Spiel C-Dur ab dem mittleren C, dann setz für G-Dur den Daumen auf das G über dem mittleren C und geh zurück zu C.",
     },
     "move-the-hand": {
       text: "Heb die ganze Hand von einem Akkord zum nächsten. Halte die Finger 1, 3 und 5 in ihrer Form, und lass den Daumen den neuen Grundton finden.",
@@ -46,12 +46,12 @@ export const cFAndGDe: CFAndGTexts = {
       text: "Leg den rechten Daumen auf das G über dem mittleren C. Spiel jeden Akkord mit dem ersten Ton seines Takts, dann den zweiten Ton allein. Der letzte Takt hat keinen zweiten Ton.",
     },
     recap: {
-      text: "Gut gemacht. Du spielst die drei Hauptakkorde von C-Dur.",
+      text: "Gut gemacht. Jetzt kannst du die drei Hauptakkorde von C-Dur spielen.",
       points: [
         "C, F und G sind die Dreiklänge auf der 1., 4. und 5. Stufe von C-Dur.",
         "F-Dur ist F, A und C, und G-Dur ist G, H und D.",
         "Heb die ganze Hand und halte ihre Form, um zwischen Akkorden zu wechseln.",
-        "C, F, G und C klingt wie nach Hause kommen.",
+        "Der Schritt von G zurück zu C klingt abgeschlossen.",
       ],
     },
   },

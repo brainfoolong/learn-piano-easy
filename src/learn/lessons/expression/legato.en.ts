@@ -18,7 +18,7 @@ export const legatoEn = {
       text: "For legato, let go of one key just as the next one goes down. One finger rises while the next one sinks.",
     },
     "five-notes-legato": {
-      text: "Play C, D, E, F and G with fingers 1 to 5. Hand each note over to the next, with no gap.",
+      text: "Play C, D, E, F and G with fingers 1 to 5, starting on middle C. Hand each note over to the next, with no gap.",
     },
     "when-to-let-go": {
       text: "You play legato. When does a finger leave its key?",
@@ -38,7 +38,7 @@ export const legatoEn = {
       text: "Legato needs a free finger for each next note. In a scale, the thumb passes under, so the line never breaks.",
     },
     "scale-legato": {
-      text: "Play the C major scale up with fingers 1, 2, 3, then the thumb under to F. Keep every note joined to the next.",
+      text: "Play the C major scale up from middle C with fingers 1, 2, 3, then the thumb under to F. Keep every note joined to the next.",
     },
     "which-move-keeps-it-smooth": {
       text: "You play the C major scale up legato. After E with finger 3, how do you reach F?",
@@ -52,7 +52,7 @@ export const legatoEn = {
       answers: ["Notes with a rest after each", "Notes all on one key", "Notes far apart that need a jump", "Notes under a slur"],
     },
     recap: {
-      text: "Well done. You play smooth and connected.",
+      text: "Well done. You can now play smooth and connected.",
       points: [
         "Legato means smooth and connected.",
         "Let go of one key just as the next one goes down.",

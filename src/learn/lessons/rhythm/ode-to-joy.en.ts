@@ -5,10 +5,10 @@ export const odeToJoyEn = {
   title: "Boss: Ode to Joy",
   steps: {
     intro: {
-      text: "This world ends with a famous tune. Most of its notes are quarter notes, and a few last two beats. Count along as you play.",
+      text: "This world ends with a famous tune. Almost every note is a quarter note, and the last one lasts two beats. Count along as you play.",
     },
     song: {
-      text: "Play Ode to Joy with your right hand. Try to hold each long note for its two beats.",
+      text: "Play the first four bars of Ode to Joy with your right hand. Hold the last note for two beats.",
     },
   },
 } satisfies LessonTexts;

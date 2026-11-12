@@ -25,18 +25,18 @@ export const openFifthsDe: OpenFifthsTexts = {
       answers: ["D", "C", "E"],
     },
     "three-fifths": {
-      text: "Spiel mit der linken Hand die Quinte vom C unter dem mittleren C hinauf zum G. Dann spiel die Quinte auf dem G unter diesem C, dann auf dem F darunter und zurück auf C. Der Griff bleibt immer gleich.",
+      text: "Spiel mit der linken Hand die Quinte vom C unter dem mittleren C hinauf zum G. Dann spiel die Quinte auf dem G unter diesem C, dann auf dem F darunter und wieder auf dem C. Der Griff bleibt immer gleich.",
     },
     "fifth-under-tune": {
       text: "Jetzt spielt die rechte Hand eine Melodie über der Quinte. Die linke Hand schlägt die Quinte mit dem ersten Ton an und hält sie.",
     },
     "fifth-and-tune": {
-      text: "Jetzt du. Spiel die Quinte C und G zusammen mit dem E der rechten Hand. Dann spielt die rechte Hand D und C. Spiel die Quinte noch einmal zusammen mit E, danach noch zweimal E.",
+      text: "Jetzt du. Spiel die Quinte C und G zusammen mit dem E der rechten Hand, dann D und C. Spiel die Quinte noch einmal mit E, danach noch zweimal E.",
     },
     recap: {
       text: "Gut gemacht. Deine linke Hand spielt jetzt Quinten.",
       points: [
-        "Eine Quinte sind zwei Tasten, fünf weiße Tasten auseinander, zusammen gespielt.",
+        "Eine Quinte reicht über fünf weiße Tasten, beide Enden mitgezählt, und ihre zwei Tasten spielst du zusammen.",
         "Der linke kleine Finger spielt die tiefe Taste, der Daumen die hohe.",
         "Der Griff wandert: C und G, G und D, F und C.",
         "Eine Quinte unter einer Melodie klingt offen und kräftig.",

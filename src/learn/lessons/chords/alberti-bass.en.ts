@@ -21,7 +21,7 @@ export const albertiBassEn = {
       text: "Your turn on C. Put finger 5 on the C below middle C. Play C, G, E, G twice, evenly.",
     },
     "g7-shape": {
-      text: "For G, play B, F and D, the notes of G7 without G. They lie close to C, E and G, so your hand barely moves.",
+      text: "For G, use G7: G major with an F added on top. Leave out its G and play B, D and F. They lie close to C, E and G, so your hand barely moves.",
     },
     "g7-alberti": {
       text: "Move finger 5 down to B. Play B, F, D, F twice with fingers 5, 1, 3, 1.",
@@ -43,10 +43,10 @@ export const albertiBassEn = {
       text: "Here is a short tune over the Alberti bass. The right hand plays half notes while the left hand ripples on.",
     },
     "alberti-tune": {
-      text: "Put your right thumb on middle C. Play each tune note together with the low bass note beside it.",
+      text: "Put your right thumb on middle C. Play each tune note together with the low bass note under it.",
     },
     recap: {
-      text: "Well done. You play the Alberti bass.",
+      text: "Well done. You can now play the Alberti bass.",
       points: [
         "The Alberti bass breaks a chord low, high, middle, high.",
         "It runs in eighths, with fingers 5, 1, 3, 1.",

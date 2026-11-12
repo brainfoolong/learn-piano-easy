@@ -18,7 +18,7 @@ export const trebleLandmarksEn = {
       text: "Name each landmark: C or G.",
     },
     "count-from-a-landmark": {
-      text: "Every other note is a few steps from a landmark. From a line to the next space is one step, and so is a space to the next line. Each step up is the next letter.",
+      text: "Any other note is a few steps from a landmark. From a line to the next space is one step, and so is a space to the next line. Each step up is the next letter.",
     },
     "count-quiz": {
       text: "A note sits one step above G, in the space above the second line. Which note is it?",
@@ -28,7 +28,7 @@ export const trebleLandmarksEn = {
       text: "Name each note. Find the nearest landmark, then count the steps up or down.",
     },
     "read-treble-landmarks": {
-      text: "Play each note you see on the treble staff. The landmarks are middle C on its ledger line, G on the second line and high C in the third space. The other notes sit one step from a landmark.",
+      text: "Play each note you see on the treble staff. Some are landmarks, and the others sit one step from a landmark.",
     },
     recap: {
       text: "Well done. You have three landmarks in the treble clef.",

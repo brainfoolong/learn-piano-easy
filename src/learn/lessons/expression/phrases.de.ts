@@ -15,14 +15,14 @@ export const phrasesDe: PhrasesTexts = {
       answers: ["Ein einzelner lauter Ton", "Ein musikalischer Satz, oft vier Takte lang", "Ein gebrochener Akkord", "Ein Zeichen für schnelles Spielen"],
     },
     "the-long-slur": {
-      text: "Ein kurzer Bindebogen verbindet ein paar Töne legato. Ein langer Bindebogen über mehrere Takte zeigt eine ganze Phrase. Spiel ihre Töne als eine ruhige Linie.",
+      text: "Ein kurzer Bindebogen verbindet ein paar Töne legato. Ein langer Bindebogen über mehrere Takte zeigt eine ganze Phrase. Spiel ihre Töne als eine verbundene Linie.",
     },
     "slur-shows": {
       text: "Ein langer Bindebogen reicht über vier Takte. Was zeigt er?",
-      answers: ["Eine Phrase, als eine ruhige Linie gespielt", "Vier laute Töne", "Nach jedem Ton die Hand heben", "Das Pedal gedrückt halten"],
+      answers: ["Eine Phrase, als eine verbundene Linie gespielt", "Vier laute Töne", "Nach jedem Ton die Hand heben", "Das Pedal gedrückt halten"],
     },
     "play-question": {
-      text: "Spiel die erste Phrase mit der rechten Hand in der C-Lage: C-D-E-F, G, E, F-E-D-E, und ende auf D. Bleib dabei gebunden.",
+      text: "Spiel die erste Phrase mit der rechten Hand in der C-Lage: C-D-E-F, G, E, F-E-D-E, und ende auf D. Spiel dabei verbunden.",
     },
     breathe: {
       text: "Am Ende einer Phrase hebst du die Hand ein wenig, so wie eine Sängerin Luft holt. Dann beginnst du die nächste Phrase.",
@@ -31,7 +31,7 @@ export const phrasesDe: PhrasesTexts = {
       text: "Spiel die erste Phrase und heb die Hand nach ihrem letzten D. Dann spiel die zweite: C-D-E-F, G, E, F-E-D-D, und ende auf C.",
     },
     "open-and-home": {
-      text: "Die erste Phrase endet auf D, darum klingt sie offen wie eine Frage. Die zweite endet zu Hause auf C, wie eine Antwort.",
+      text: "Die erste Phrase endet auf D, darum klingt sie offen wie eine Frage. Die zweite endet auf C, dem Ruheton von C-Dur, wie eine Antwort.",
     },
     "which-ends-answer": {
       text: "Mit welchem letzten Ton klingt eine Phrase in C-Dur fertig, wie eine Antwort?",
@@ -45,17 +45,17 @@ export const phrasesDe: PhrasesTexts = {
       answers: ["Auf ihrem ersten Ton", "Auf ihrem letzten Ton", "In ihrer Mitte oder auf ihrem höchsten Ton", "Nirgends, sie bleibt gleich laut"],
     },
     "shape-both-phrases": {
-      text: "Spiel mit der rechten Hand zwei Phrasen ab dem mittleren C, mit einem Atemzug dazwischen. Zuerst C D E F G, E F E D, E D. Dann C D E F G, E F E D, D C. Ob die Form stimmt, hören deine Ohren: Werde zu jedem G hin etwas lauter und zu jedem Ende hin leiser.",
+      text: "Spiel mit der rechten Hand zwei Phrasen ab dem mittleren C und hol dazwischen Luft. Zuerst C D E F G, E F E D, E D, dann C D E F G, E F E D, D C. Hier zählen nur die Töne, also werde selbst zu jedem G hin etwas lauter und zu jedem Ende hin leiser.",
     },
     "when-to-breathe": {
       text: "Wann hebst du die Hand für einen Atemzug?",
       answers: ["Nach jedem Ton", "Zwischen zwei Phrasen", "Mitten in einer Phrase", "Nie"],
     },
     recap: {
-      text: "Gut gemacht. Du spielst Musik in Sätzen.",
+      text: "Gut gemacht. Jetzt kannst du Musik in Phrasen spielen.",
       points: [
         "Eine Phrase ist ein musikalischer Satz, oft vier Takte lang.",
-        "Ein langer Bindebogen zeigt eine Phrase. Spiel sie als eine ruhige Linie.",
+        "Ein langer Bindebogen zeigt eine Phrase. Spiel sie als eine verbundene Linie.",
         "Zwischen zwei Phrasen hebst du die Hand für einen Atemzug.",
         "Eine Phrase fragt oder antwortet oft, und sie wird lauter und dann leiser.",
       ],

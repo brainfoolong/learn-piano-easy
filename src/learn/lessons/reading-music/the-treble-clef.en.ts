@@ -8,7 +8,7 @@ export const theTrebleClefEn = {
       text: "Every staff starts with a clef. The clef tells you which note each line and space is. Your right hand mostly reads the treble clef.",
     },
     "the-g-line": {
-      text: "The treble clef curls around the second line from the bottom. That line is G, so the clef is also called the G clef. It is the G just above middle C.",
+      text: "The treble clef curls around the second line from the bottom. That line is G, so the clef is also called the G clef. It is the first G above middle C.",
     },
     "g-line-quiz": {
       text: "Which line does the treble clef curl around?",

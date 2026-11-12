@@ -31,7 +31,7 @@ export const flatsEn = {
       answers: ["D♭", "B♭", "E♭"],
     },
     "half-steps-down": {
-      text: "Your turn. Play B, B♭ and A. Then play E, E♭ and D. Each note is a half step below the one before.",
+      text: "Your turn. Play B, B♭ and A, then E, E♭ and D. Each note is a half step below the one before.",
     },
     recap: {
       text: "Well done. You know what a flat is.",

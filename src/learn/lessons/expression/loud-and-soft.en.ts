@@ -35,7 +35,7 @@ export const loudAndSoftEn = {
       answers: ["Soft", "Soft, then loud", "Loud, then soft", "Loud"],
     },
     "piano-and-forte": {
-      text: "Music marks how loud to play with letters under the staff. The mark p means piano, which is Italian for soft. The mark f means forte, which means loud.",
+      text: "Music marks how loud to play with letters under the staff. The mark p means piano, which is Italian for soft. The mark f means forte, Italian for loud.",
     },
     "what-f-asks": {
       text: "You see the mark f under the staff. What does it ask you to do?",
@@ -55,7 +55,7 @@ export const loudAndSoftEn = {
       text: "Play C, E and G loudly, then play them again softly as an echo. This step checks the notes, so let your ears judge the loudness.",
     },
     recap: {
-      text: "Well done. You play loud and soft.",
+      text: "Well done. You can now play loud and soft.",
       points: [
         "How fast a key goes down sets how loud it sounds.",
         "The mark p means soft, and f means loud.",

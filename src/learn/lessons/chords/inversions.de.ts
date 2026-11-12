@@ -49,7 +49,7 @@ export const inversionsDe: InversionsTexts = {
       text: "Jetzt spielt die linke Hand unter jedem Akkord den Grundton: C, F, G und C unter dem mittleren C.",
     },
     recap: {
-      text: "Gut gemacht. Du spielst Akkorde in drei Lagen.",
+      text: "Gut gemacht. Jetzt kannst du einen Akkord in drei Stellungen spielen.",
       points: [
         "Eine Umkehrung spielt die drei Töne eines Akkords in anderer Reihenfolge.",
         "Leg den untersten Ton eine Oktave höher: Aus C-E-G wird E-G-C, dann G-C-E.",

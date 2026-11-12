@@ -15,10 +15,10 @@ export const middleCEn = {
       answers: ["On the bottom line of the staff", "On a short ledger line just below the staff", "In the middle of the staff"],
     },
     "the-c-you-know": {
-      text: "This is the C you already know. It sits near the middle of the keyboard, just left of two black keys. Now you can read it, too.",
+      text: "This is the C you already know. It sits near the middle of the piano, just left of two black keys. Now you can read it, too.",
     },
     "press-middle-c": {
-      text: "Press middle C on the keyboard.",
+      text: "Press middle C on the piano.",
     },
     "name-middle-c": {
       text: "Name each note on the staff. Look for the short ledger line.",
@@ -38,7 +38,7 @@ export const middleCEn = {
     },
     recap: {
       text: "Well done. You can read middle C now.",
-      points: ["Middle C sits on a short ledger line below the treble staff.", "It is the C near the middle of the keyboard.", "D hangs below the bottom line, and E sits on it."],
+      points: ["Middle C sits on a short ledger line below the treble staff.", "It is the C near the middle of the piano.", "D hangs below the bottom line, and E sits on it."],
     },
   },
 } satisfies LessonTexts;

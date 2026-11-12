@@ -5,7 +5,7 @@ export const odeToJoyRareEn = {
   title: "Boss: Ode to Joy with both hands",
   steps: {
     intro: {
-      text: "You know this tune from the rhythm world. Now it moves to D major and gets its real rhythm, with the dotted note in bar 4. Your left hand holds notes and chords below it.",
+      text: "You know this tune from the Rhythm world. Now it moves to D major and gets its real rhythm, with the dotted note in bar 4. Your left hand holds notes and chords below it.",
     },
     song: {
       text: "Play Ode to Joy with both hands, a little slower than written. Hold each bass note until the next one comes.",

@@ -21,7 +21,7 @@ export const quarterNotesDe: QuarterNotesTexts = {
       text: "Hier hörst du den Anfang einer berühmten Melodie. Jeder Ton ist eine Viertelnote, einer pro Schlag.",
     },
     "quarter-phrase": {
-      text: "Leg den rechten Daumen auf das mittlere C und je einen Finger auf die Tasten daneben. Spiel die Melodie und zähl bei jedem Ton einen Schlag.",
+      text: "Leg deine rechte Hand in die C-Lage. Spiel die Melodie und zähl bei jedem Ton einen Schlag.",
     },
     recap: {
       text: "Gut gemacht. Jetzt kennst du deine erste Notenlänge.",

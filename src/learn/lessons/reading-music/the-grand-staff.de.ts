@@ -39,7 +39,7 @@ export const theGrandStaffDe: TheGrandStaffTexts = {
     },
     recap: {
       text: "Gut gemacht. Jetzt kannst du das Klaviersystem lesen.",
-      points: ["Das Klaviersystem verbindet Violin- und Bassschlüssel mit einer Klammer.", "Die rechte Hand liest den Violinschlüssel, die linke Hand den Bassschlüssel.", "Das mittlere C steht auf einer Hilfslinie dazwischen und gehört zu beiden."],
+      points: ["Das Klaviersystem verbindet zwei Notensysteme mit einer Klammer: oben den Violinschlüssel, unten den Bassschlüssel.", "Die rechte Hand liest meist den Violinschlüssel, die linke den Bassschlüssel.", "Das mittlere C steht auf einer Hilfslinie dazwischen und gehört zu beiden."],
     },
   },
 };

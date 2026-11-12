@@ -5,7 +5,7 @@ export const cFAndGEn = {
   title: "C, F and G",
   steps: {
     "progression-demo": {
-      text: "Listen to four chords: C, F, G and back to C. They sound like a short song that comes home at the end.",
+      text: "Listen to four chords: C, F, G and back to C. They sound like a short song that comes to rest on C.",
     },
     "three-main-chords": {
       text: "Build a triad on the 1st, 4th and 5th steps of the C major scale. You get C, F and G, the three main chords of C major.",
@@ -46,12 +46,12 @@ export const cFAndGEn = {
       text: "Put your right thumb on the G above middle C. Play each chord with the first note of its bar, then the second note alone. The last bar has no second note.",
     },
     recap: {
-      text: "Well done. You play the three main chords of C major.",
+      text: "Well done. You can now play the three main chords of C major.",
       points: [
         "C, F and G are the triads on the 1st, 4th and 5th steps of C major.",
         "The F triad is F, A and C, and the G triad is G, B and D.",
         "Lift the whole hand and keep its shape to move between chords.",
-        "C, F, G and C sounds like coming home.",
+        "Going from G back to C sounds finished.",
       ],
     },
   },

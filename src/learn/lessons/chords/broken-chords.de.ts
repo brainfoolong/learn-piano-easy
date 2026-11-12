@@ -43,10 +43,10 @@ export const brokenChordsDe: BrokenChordsTexts = {
       text: "Spiel die linke Hand allein, ab dem C unter dem mittleren C: C-E-G-E, dann G-H-D-H ab dem nächsten G darunter, dann C-E-G-E.",
     },
     "tune-over-broken-chords": {
-      text: "Jetzt kommt die Melodie in der rechten Hand dazu. Jeder Melodieton beginnt zusammen mit einem Ton der linken Hand.",
+      text: "Jetzt kommt die Melodie in der rechten Hand dazu, in der C-Lage. Jeder Melodieton beginnt zusammen mit einem Ton der linken Hand.",
     },
     recap: {
-      text: "Gut gemacht. Du brichst Akkorde in beiden Händen.",
+      text: "Gut gemacht. Jetzt kannst du Akkorde in beiden Händen brechen.",
       points: [
         "Ein gebrochener Akkord spielt seine Töne nacheinander.",
         "Die Töne bleiben dieselben, also klingt auch der Akkord gleich.",

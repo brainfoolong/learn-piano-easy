@@ -21,7 +21,7 @@ export const octavesEn = {
       text: "You hear two notes each time. Is the second one higher, lower or the same as the first?",
     },
     "e-above": {
-      text: "Find the first E above middle C, two white keys to its right. Then press the next E up, one octave higher.",
+      text: "The first E above middle C is two white keys to its right. Press the E one octave above that E.",
     },
     "c-below": {
       text: "Now go the other way. Press the C one octave below middle C.",

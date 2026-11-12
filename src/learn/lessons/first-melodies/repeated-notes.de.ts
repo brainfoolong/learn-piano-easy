@@ -14,7 +14,7 @@ export const repeatedNotesDe: RepeatedNotesTexts = {
       text: "Du hörst jedes Mal zwei Töne. Ist der zweite höher, tiefer oder gleich hoch wie der erste?",
     },
     "repeat-e-d": {
-      text: "Leg den rechten Daumen auf das mittlere C und je einen Finger auf die Tasten daneben. Spiel dreimal E mit Finger 3, dann dreimal D mit Finger 2.",
+      text: "Leg deine rechte Hand in die C-Lage. Spiel dreimal E mit Finger 3, dann dreimal D mit Finger 2.",
     },
     "repeat-after-skip": {
       text: "Jetzt ein Sprung und dann eine Wiederholung. Spiel E mit Finger 3, danach zweimal G mit Finger 5.",

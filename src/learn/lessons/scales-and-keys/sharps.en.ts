@@ -8,7 +8,7 @@ export const sharpsEn = {
       text: "Listen: C, then the black key just right of it. Then F, and the black key just right of F.",
     },
     "the-sharp-sign": {
-      text: "This sign ♯ is a sharp. It raises a note a half step, to the key just right. So C♯ is the black key right of C.",
+      text: "This sign ♯ is a sharp. It raises a note a half step, to the key just right of it. So C♯ is the black key right of C.",
     },
     "find-c-sharp": {
       text: "Find C♯. Start on any C and take one half step up.",
@@ -34,12 +34,12 @@ export const sharpsEn = {
       text: "Read each note with its sharp and play it. Find the white key first, then take one half step up.",
     },
     "through-f-sharp": {
-      text: "Play D, E, F♯ and G, then back down to D. Put your right thumb on D and your middle finger on F♯.",
+      text: "Put your right thumb on the D above middle C and your middle finger on F♯. Play D, E, F♯ and G, then back down to D.",
     },
     recap: {
       text: "Well done. You can read and play sharps.",
       points: [
-        "A sharp ♯ raises a note a half step, to the key just right.",
+        "A sharp ♯ raises a note a half step, to the key just right of it.",
         "Most sharps are black keys, such as C♯ and F♯.",
         "E♯ is F, and B♯ is C, because no black key sits between.",
         "On the staff, the ♯ stands just left of its note.",

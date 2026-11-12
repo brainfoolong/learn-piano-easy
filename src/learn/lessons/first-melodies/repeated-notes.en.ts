@@ -14,7 +14,7 @@ export const repeatedNotesEn = {
       text: "You hear two notes each time. Is the second one higher, lower or the same as the first?",
     },
     "repeat-e-d": {
-      text: "Put your right thumb on middle C, one finger on each key. Play E three times with finger 3, then D three times with finger 2.",
+      text: "Put your right hand in C position. Play E three times with finger 3, then D three times with finger 2.",
     },
     "repeat-after-skip": {
       text: "Now a skip, then a repeat. Play E with finger 3, then G twice with finger 5.",
@@ -24,7 +24,7 @@ export const repeatedNotesEn = {
       answers: ["One key, three times", "Three different keys"],
     },
     "mixed-phrase": {
-      text: "This tune has steps, skips and repeats. Keep your hand in the C position and follow the marked key.",
+      text: "This tune has steps, skips and repeats. Keep your hand in C position and follow the marked key.",
     },
     recap: {
       text: "Well done. You can play repeated notes now.",

@@ -8,7 +8,7 @@ export const maryEn = {
       text: "This world ends with a whole song. You play it in the player, and it waits for each of your notes.",
     },
     song: {
-      text: "Play all eight bars of Mary Had a Little Lamb with your right hand. The player waits for each note.",
+      text: "Play all eight bars of Mary Had a Little Lamb with your right hand.",
     },
   },
 } satisfies LessonTexts;

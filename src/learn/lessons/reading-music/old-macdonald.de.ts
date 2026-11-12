@@ -8,7 +8,7 @@ export const oldMacDonaldDe: OldMacDonaldTexts = {
       text: "Diesmal fallen keine Noten. Du liest das Lied aus den Noten, so wie Pianisten es tun. Es beginnt mit G auf der zweiten Linie.",
     },
     song: {
-      text: "Lies Old MacDonald aus den Noten und spiel es mit der rechten Hand. Das Lied wartet auf jeden Ton.",
+      text: "Lies die ersten vier Takte von „Old MacDonald“ aus den Noten und spiel sie mit der rechten Hand. Das Lied wartet auf jeden Ton.",
     },
   },
 };

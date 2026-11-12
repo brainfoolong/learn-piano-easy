@@ -18,7 +18,7 @@ export const keyHuntEn = {
     "any-a": { text: "Find any A." },
     "high-c": { text: "Last one! Find the C one octave above middle C." },
     recap: {
-      text: "You beat the key hunt. You know your way around the piano.",
+      text: "You finished the key hunt. You know your way around the piano.",
       points: ["The black keys guide you, in groups of two and three.", "Seven letters name the white keys, from C to B.", "The same letter comes back one octave higher."],
     },
   },

@@ -28,10 +28,10 @@ export const eighthNotesDe: EighthNotesTexts = {
       answers: ["Vier", "Sechs", "Acht"],
     },
     "phrase-demo": {
-      text: "Jetzt spielen beide Hände. Die linke Hand hält ein tiefes C. Darüber läuft die rechte Hand in Achteln zum G hinauf. Danach läuft sie zurück zum C.",
+      text: "Jetzt spielen beide Hände. Die linke Hand hält ein tiefes C, und die rechte läuft darüber in Achteln zum G hinauf. Danach läuft sie zurück zum C.",
     },
     "eighth-phrase": {
-      text: "Leg beide Hände in die C-Lage. Die rechte Hand spielt C D E F G G F E D C, beginnend beim mittleren C. Drück das C unter dem mittleren C mit dem linken kleinen Finger zusammen mit dem ersten C. Drück es noch einmal zusammen mit dem zweiten G.",
+      text: "Leg beide Hände in die C-Lage. Die rechte Hand spielt C D E F G G F E D C, beginnend beim mittleren C. Der linke kleine Finger drückt das C unter dem mittleren C zusammen mit dem ersten C und noch einmal mit dem zweiten G.",
     },
     recap: {
       text: "Gut gemacht. Deine Töne können jetzt doppelt so schnell laufen.",

@@ -31,12 +31,12 @@ export const openFifthsEn = {
       text: "Now your right hand plays a tune over the fifth. Your left hand presses the fifth with the first note and holds it.",
     },
     "fifth-and-tune": {
-      text: "Your turn. Play the fifth C and G together with E in your right hand. Then your right hand plays D and C. Play the fifth again together with E, then two more Es.",
+      text: "Your turn. Play the fifth C and G together with E in your right hand, then D and C. Play the fifth with E again, then two more Es.",
     },
     recap: {
       text: "Well done. Your left hand now plays fifths.",
       points: [
-        "A fifth is two keys five white keys apart, played together.",
+        "A fifth spans five white keys, counting both ends, and you play its two keys together.",
         "Your left little finger plays the low key, and your thumb the high one.",
         "The shape moves: C and G, G and D, F and C.",
         "A fifth under a tune sounds open and strong.",

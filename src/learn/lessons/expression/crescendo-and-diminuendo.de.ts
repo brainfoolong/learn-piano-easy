@@ -11,7 +11,7 @@ export const crescendoAndDiminuendoDe: CrescendoAndDiminuendoTexts = {
       text: "Wird die Musik nach und nach lauter, ist das ein Crescendo. In den Noten steht cresc. oder eine öffnende Gabel <, die mit dem Klang breiter wird.",
     },
     "what-cresc-asks": {
-      text: "Unter dem System steht cresc. Was sollst du tun?",
+      text: "Unter dem Notensystem steht cresc. Was sollst du tun?",
       answers: ["Nach und nach leiser werden", "Nach und nach lauter werden", "Schneller spielen", "Die Töne höher spielen"],
     },
     "play-crescendo": {
@@ -35,7 +35,7 @@ export const crescendoAndDiminuendoDe: CrescendoAndDiminuendoTexts = {
       answers: ["Die schließende Gabel >", "Die öffnende Gabel <", "Das f", "Das mf"],
     },
     "play-diminuendo": {
-      text: "Spiel G, F, E, D und C als Diminuendo. Drück G, F und E schnell und kräftig, dann D und C sanft und langsam.",
+      text: "Spiel G, F, E, D und C als Diminuendo, ab dem G über dem mittleren C. Drück G, F und E schnell und kräftig, dann D und C sanft und langsam.",
     },
     "hear-diminuendo": {
       text: "Hör dir G, F, E, D und C als Diminuendo an. Jede Taste geht ein wenig langsamer hinunter als die davor.",
@@ -48,18 +48,18 @@ export const crescendoAndDiminuendoDe: CrescendoAndDiminuendoTexts = {
       text: "Eine Phrase wird oft lauter, wenn sie hinaufgeht, und leiser, wenn sie hinuntergeht. Sie schwillt an und ab wie eine Welle.",
     },
     "play-swell": {
-      text: "Spiel von C hinauf bis G und wieder hinunter zum C. Werde hinauf lauter und hinunter leiser. Hier zählen nur die Töne, also achte selbst mit den Ohren auf die Lautstärke.",
+      text: "Spiel vom mittleren C hinauf bis G und wieder hinunter zum C. Werde hinauf lauter und hinunter leiser. Hier zählen nur die Töne, also achte selbst mit den Ohren auf die Lautstärke.",
     },
     "how-it-ends": {
       text: "Eine Phrase beginnt mit p und hat eine öffnende Gabel < darunter. Wie soll sie enden?",
       answers: ["Leiser als p", "Genauso leise wie am Anfang", "Schneller als am Anfang", "Lauter als am Anfang"],
     },
     recap: {
-      text: "Gut gemacht. Du lässt Musik anschwellen und verklingen.",
+      text: "Gut gemacht. Jetzt kannst du Musik lauter und leiser werden lassen.",
       points: [
         "Ein Crescendo wird lauter, markiert mit cresc. oder einer öffnenden Gabel <.",
         "Ein Diminuendo wird leiser, markiert mit dim., decresc. oder einer schließenden Gabel >.",
-        "Eine Phrase schwillt oft hinauf an und klingt hinunter ab.",
+        "Eine Phrase wird oft hinauf lauter und hinunter leiser.",
       ],
     },
   },

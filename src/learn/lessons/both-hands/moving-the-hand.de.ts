@@ -34,7 +34,7 @@ export const movingTheHandDe: MovingTheHandTexts = {
       text: "Die Hand wandert in einer Pause oder am Ende eines langen Tons. Heb die ganze Hand, behalte ihre Form und setz den Daumen auf die neue Taste.",
     },
     "move-and-play": {
-      text: "Spiel zwei Teile in einem Zug mit der rechten Hand. Spiel C D E F E D C, beginnend beim mittleren C. Dann heb die Hand in die G-Lage und spiel G A H C H A G, beginnend beim G über dem mittleren C. Setz die Hand um, ohne jede Taste zu suchen.",
+      text: "Spiel zwei Teile in einem Zug mit der rechten Hand. Beginn auf dem mittleren C und spiel C D E F E D C. Dann setz den Daumen auf das G über dem mittleren C und spiel G A H C H A G.",
     },
     recap: {
       text: "Gut gemacht. Deine Hand kann jetzt ihren Platz wechseln.",

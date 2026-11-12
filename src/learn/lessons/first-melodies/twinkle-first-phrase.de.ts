@@ -5,13 +5,13 @@ export const twinkleFirstPhraseDe: TwinkleFirstPhraseTexts = {
   title: "Die erste Phrase von Twinkle",
   steps: {
     "phrase-demo": {
-      text: "Hör dir die erste Phrase von „Twinkle Twinkle Little Star“ an. Bei uns kennst du die Melodie als „Morgen kommt der Weihnachtsmann“. Ein Ton darin liegt über der C-Lage.",
+      text: "Hör dir die erste Phrase von „Twinkle Twinkle Little Star“ an. Bei uns kennst du die Melodie als „Morgen kommt der Weihnachtsmann“. Ein Ton darin liegt außerhalb der C-Lage.",
     },
     "one-key-past": {
       text: "Dieser Ton ist das A, die weiße Taste gleich nach dem G. Deine Hand bleibt in der C-Lage. Der kleine Finger streckt sich eine Taste nach rechts und spielt das A.",
     },
     "find-a": {
-      text: "Leg den Daumen auf das mittlere C. Streck den kleinen Finger über das G hinaus und drück das A.",
+      text: "Leg deine rechte Hand in die C-Lage. Streck den kleinen Finger über das G hinaus und drück das A.",
     },
     "leap-quiz": {
       text: "Die Melodie beginnt auf dem C und springt dann weit nach oben. Auf welchen Ton springt sie?",

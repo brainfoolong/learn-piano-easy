@@ -15,7 +15,7 @@ export const majorTriadsEn = {
       answers: ["Two", "Three", "Four"],
     },
     "major-recipe": {
-      text: "That is the recipe for a major triad. Start on its root. Go four half steps up, then three more.",
+      text: "That is the recipe for a major triad. Start on its root, the key that names the triad. Go four half steps up, then three more.",
     },
     "right-hand-fingers": {
       text: "Your right hand plays a triad with fingers 1, 3 and 5. The thumb plays the root.",
@@ -52,7 +52,7 @@ export const majorTriadsEn = {
       text: "Your turn. Play the four triads with your right hand. Keep the shape, and move it from root to root.",
     },
     recap: {
-      text: "Well done. You build major triads on any key.",
+      text: "Well done. You can now build a major triad on any key.",
       points: [
         "A major triad starts on its root.",
         "Its middle key is four half steps up, and its top key three more.",

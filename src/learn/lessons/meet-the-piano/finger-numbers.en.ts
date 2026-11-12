@@ -22,7 +22,7 @@ export const fingerNumbersEn = {
       text: "Watch five keys in a row, one for each finger of your right hand. Your thumb plays the first key, then fingers 2, 3, 4 and 5.",
     },
     "right-hand-five": {
-      text: "Now you play them. Put your right thumb on middle C and one finger on each key after it. Play with fingers 1, 2, 3, 4 and 5.",
+      text: "Now you play them. Put your right thumb on middle C and one finger on each white key to its right. Play with fingers 1, 2, 3, 4 and 5.",
     },
     "finger-pattern": {
       text: "Keep your hand where it is. Play the fingers 1, 3, 5, 3, 1.",

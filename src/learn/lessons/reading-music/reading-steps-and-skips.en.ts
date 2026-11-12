@@ -39,7 +39,7 @@ export const readingStepsAndSkipsEn = {
       text: "The next song uses these five notes. Read each one and play it with your right hand.",
     },
     "song-opening": {
-      text: "Here is the start of the next song. It repeats one note and moves down. After that it goes by steps. Follow the marked key.",
+      text: "Here is the start of the next song. Put your right thumb on D, and fingers 2 to 5 on E, G, A and B. Follow the marked key.",
     },
     "opening-move-quiz": {
       text: "In that tune, E moves down to D. E sits on the bottom line. Where is D?",

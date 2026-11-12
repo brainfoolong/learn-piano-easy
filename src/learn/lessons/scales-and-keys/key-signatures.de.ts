@@ -30,7 +30,7 @@ export const keySignaturesDe: KeySignaturesTexts = {
       answers: ["Fis, die schwarze Taste", "F, die weiße Taste"],
     },
     "phrase-in-g": {
-      text: "Hier ist eine Phrase in G-Dur. Dein Daumen beginnt auf dem D. Hör auf das Fis ganz oben.",
+      text: "Hier ist eine Phrase in G-Dur. Dein rechter Daumen beginnt auf dem zweiten D über dem mittleren C. Hör auf das Fis ganz oben.",
     },
     "play-in-g": {
       text: "Jetzt du. Am Zeilenanfang steht ein Kreuz, also ist jedes F ein Fis.",
@@ -40,7 +40,7 @@ export const keySignaturesDe: KeySignaturesTexts = {
       answers: ["H, die weiße Taste", "B, die schwarze Taste"],
     },
     "play-in-f": {
-      text: "Jetzt eine Phrase in F-Dur. Leg den Daumen auf das F. Am Zeilenanfang steht ein b, also ist jedes H ein B.",
+      text: "Jetzt eine Phrase in F-Dur. Leg den rechten Daumen auf das F über dem mittleren C. Am Zeilenanfang steht ein b, also ist jedes H ein B.",
     },
     recap: {
       text: "Gut gemacht. Jetzt kannst du Vorzeichen lesen. Als Nächstes kommt ein Lied in C-Dur, ganz ohne Kreuz und b.",

@@ -8,7 +8,7 @@ export const leftHandCPositionDe: LeftHandCPositionTexts = {
       text: "Hör zu: fünf Tasten unter dem mittleren C, hinauf und wieder hinunter. In dieser Lektion spielt sie deine linke Hand.",
     },
     "place-left-hand": {
-      text: "Such das C eine Oktave unter dem mittleren C. Leg den kleinen Finger der linken Hand darauf, also die 5, und je einen Finger auf die Tasten daneben. Dein Daumen, die 1, liegt auf dem G.",
+      text: "Such das C eine Oktave unter dem mittleren C. Leg den kleinen Finger der linken Hand darauf, also die 5, und je einen Finger auf die weißen Tasten rechts daneben. Dein Daumen, die 1, liegt auf dem G.",
     },
     "c-finger-quiz": {
       text: "Deine linke Hand liegt in C-Lage. Welcher Finger spielt das C?",
@@ -24,10 +24,10 @@ export const leftHandCPositionDe: LeftHandCPositionTexts = {
       text: "Spiel die fünf Tasten hinauf und wieder hinunter. Zähl die Finger mit: 5, 4, 3, 2, 1 und zurück bis 5.",
     },
     "left-steps": {
-      text: "Jetzt Schritte mit der linken Hand, vom Daumen aus. Jeder Ton geht zur Nachbartaste.",
+      text: "Jetzt Schritte mit der linken Hand, vom Daumen aus. Jeder Ton geht zur nächsten weißen Taste.",
     },
     "left-skips-repeats": {
-      text: "Leg den linken kleinen Finger auf das C eine Oktave unter dem mittleren C und je einen Finger auf die Tasten daneben. Spiel Sprünge und wiederholte Töne: C, E E, G G, E, C. Deine Finger sind 5, 3, 3, 1, 1, 3, 5.",
+      text: "Lass deine linke Hand in der C-Lage. Spiel Sprünge und wiederholte Töne: C, E E, G G, E, C. Deine Finger sind 5, 3, 3, 1, 1, 3, 5.",
     },
     recap: {
       text: "Gut gemacht. Deine linke Hand hat jetzt ihren eigenen Platz auf den Tasten.",

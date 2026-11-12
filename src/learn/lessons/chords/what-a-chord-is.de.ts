@@ -14,14 +14,14 @@ export const whatAChordIsDe: WhatAChordIsTexts = {
       text: "Drück C und E zusammen. Sie liegen eine Terz auseinander, also liegt eine weiße Taste dazwischen. Die Finger 1 und 3 spielen sie.",
     },
     "thirds-up": {
-      text: "Jetzt du. Leg den rechten Daumen auf das mittlere C. Spiel C und E zusammen. Dann rückst du die Hand hoch zu D und F und zu E und G.",
+      text: "Jetzt du. Leg den rechten Daumen auf das mittlere C und spiel C und E zusammen. Dann rückst du die Hand hoch zu D und F und zu E und G.",
     },
     "skipped-key": {
-      text: "Eine Terz auf den weißen Tasten überspringt Tasten. Wie viele weiße Tasten liegen zwischen ihren beiden Tasten?",
+      text: "Schau dir eine Terz auf den weißen Tasten an. Wie viele weiße Tasten liegen zwischen ihren beiden Tasten?",
       answers: ["Keine", "Eine", "Zwei"],
     },
     "thirds-and-fifths": {
-      text: "Eine Quinte reicht über fünf weiße Tasten, etwa von C bis G. Daumen und fünfter Finger spielen sie. Die Terz klingt süß, die Quinte klingt leer.",
+      text: "Eine Quinte reicht über fünf weiße Tasten, etwa von C bis G. Daumen und fünfter Finger spielen sie. Die Terz klingt süß, die Quinte klingt offen.",
     },
     "third-then-fifth": {
       text: "Lass den Daumen auf dem C. Spiel die Terz C und E, dann die Quinte C und G. Spiel beide zweimal.",
@@ -43,9 +43,9 @@ export const whatAChordIsDe: WhatAChordIsTexts = {
       text: "Behalte die Form deiner rechten Hand. Spiel C-E-G ab dem mittleren C, dann rück hoch zu D-F-A und E-G-H, alles auf weißen Tasten. Zum Schluss spielst du C-E-G.",
     },
     recap: {
-      text: "Gut gemacht. Du spielst deine ersten Akkorde.",
+      text: "Gut gemacht. Du hast deine ersten Akkorde gespielt.",
       points: [
-        "Ein Akkord sind mehrere Tasten, die du zusammen drückst.",
+        "Ein Akkord besteht aus mehreren Tasten, die du zusammen drückst.",
         "Eine Terz überspringt eine weiße Taste, und die Finger 1 und 3 spielen sie.",
         "Zwei gestapelte Terzen bilden einen Dreiklang, etwa C, E und G.",
         "In der rechten Hand spielen die Finger 1, 3 und 5 einen Dreiklang.",

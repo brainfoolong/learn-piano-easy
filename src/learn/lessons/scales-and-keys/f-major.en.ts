@@ -25,7 +25,7 @@ export const fMajorEn = {
       answers: ["B♭", "A", "C"],
     },
     "f-scale-up": {
-      text: "Your turn. Play the F major scale up, from F to the next F. Remember the B♭.",
+      text: "Your turn. Play the F major scale up, from the F above middle C to the next F. Remember the B♭.",
     },
     "f-scale-down": {
       text: "Now play it down. After C, cross finger 4 over your thumb to B♭.",
@@ -34,7 +34,7 @@ export const fMajorEn = {
       text: "Here is a short tune in F major. Your left hand holds the fifth F and C under it.",
     },
     "tune-and-fifth": {
-      text: "Your turn. Your left hand plays the low fifth: the C below middle C, and the F under it. Press the fifth with the first note of each bar, then play the tune on alone.",
+      text: "Your left hand plays the low fifth: the C below middle C and the F under it. Your right hand starts on the F above middle C. Press the fifth together with the first note of each bar.",
     },
     recap: {
       text: "Well done. You can play in F major now.",

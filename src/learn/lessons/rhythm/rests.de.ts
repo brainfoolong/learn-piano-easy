@@ -8,10 +8,10 @@ export const restsDe: RestsTexts = {
       text: "Schau zu und hör hin. Auf manchen Schlägen bleibt das Klavier still, doch der Grundschlag läuft weiter.",
     },
     "what-a-rest-is": {
-      text: "Eine Pause ist ein Schlag Stille. Du spielst nichts, zählst ihn aber trotzdem mit. Eine Viertelpause dauert einen Schlag, genau wie eine Viertelnote.",
+      text: "Eine Pause ist Stille in der Musik. Du spielst nichts, zählst sie aber trotzdem mit. Eine Viertelpause dauert einen Schlag, genau wie eine Viertelnote.",
     },
     "quarter-rest-quiz": {
-      text: "Du zählst C, C, Viertelpause, C. Wie viele Schläge lang ist es still?",
+      text: "Du spielst C, C, eine Viertelpause und dann C. Wie viele Schläge lang ist es still?",
       answers: ["Einen Schlag", "Zwei Schläge", "Gar keinen Schlag"],
     },
     "half-rest": {
@@ -27,7 +27,7 @@ export const restsDe: RestsTexts = {
     },
     recap: {
       text: "Gut gemacht. Jetzt kennst du deine ersten Pausen.",
-      points: ["Eine Pause ist ein Schlag Stille, der mitgezählt wird.", "Eine Viertelpause dauert einen Schlag.", "Eine halbe Pause dauert zwei Schläge."],
+      points: ["Eine Pause ist Stille, die mitgezählt wird.", "Eine Viertelpause dauert einen Schlag.", "Eine halbe Pause dauert zwei Schläge."],
     },
   },
 };
