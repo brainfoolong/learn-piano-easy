@@ -2,7 +2,7 @@ import { expect, test } from "../testing";
 import { noteName } from "../theory/note-names";
 import { describeMarks, type Mark, MARKS } from "../ui/mark";
 import { layoutKeys } from "./key-layout";
-import { fitFrame, keySpans, MARK_STRENGTH, MARK_TOKENS, markColors, reachSpan } from "./piano-keys";
+import { flatView, frameOf, keySpans, MARK_STRENGTH, MARK_TOKENS, markColors, reachSpan } from "./piano-keys";
 
 test("marks_are_named_for_a_screen_reader", () => {
   const markNames: Record<Mark, string> = { next: "Play next", correct: "Right", mistake: "Wrong" };
@@ -55,9 +55,13 @@ test("a_mark_takes_its_token_colour", () => {
 
 test("every_key_span_lies_inside_the_frame_in_pitch_order", () => {
   const layout = layoutKeys({ first: 48, last: 72 });
-  // A frame round the keys, the way `frameOf` sees a piano box.
-  const frame = { left: -layout.width / 2 - 1, right: layout.width / 2 + 1, top: 1, bottom: -6 };
+  const frame = frameOf(layout, true);
   const spans = keySpans(layout, frame);
+  // The keys span the frame from edge to edge, and the finger band adds room above them only.
+  expect(spans[0]!.left).toBe(0);
+  expect(spans.at(-1)!.left + spans.at(-1)!.width).toBeCloseTo(1, 9);
+  expect(frameOf(layout, false).bottom).toBe(frame.bottom);
+  expect(frameOf(layout, false).top).toBeLessThan(frame.top);
 
   expect(spans.map((span) => span.pitch)).toEqual(layout.keys.map((key) => key.pitch));
   for (const span of spans) {
@@ -71,10 +75,10 @@ test("every_key_span_lies_inside_the_frame_in_pitch_order", () => {
   expect(cSharp.left + cSharp.width).toBeLessThan(d.left + d.width);
   expect(cSharp.top + cSharp.height).toBeLessThan(c.top + c.height);
 
-  // A box wider than the frame widens the view about its centre, and the frame keeps its share.
-  const { view, inset } = fitFrame(frame, 2 * ((frame.right - frame.left) / (frame.top - frame.bottom)));
-  expect((view.left + view.right) / 2).toBeCloseTo((frame.left + frame.right) / 2, 9);
-  expect(inset.width).toBeCloseTo(0.5, 9);
-  expect(inset.left).toBeCloseTo(0.25, 9);
-  expect(inset.height).toBe(1);
+  // A box twice as tall as the frame keeps the keys' width and front edge, and shows more above them.
+  const { view, inset } = flatView(frame, (frame.right - frame.left) / (frame.top - frame.bottom) / 2);
+  expect([view.left, view.right, view.bottom]).toEqual([frame.left, frame.right, frame.bottom]);
+  expect(inset.width).toBe(1);
+  expect(inset.top).toBeCloseTo(0.5, 9);
+  expect(inset.height).toBeCloseTo(0.5, 9);
 });

@@ -7,14 +7,17 @@
  * Decisions, and what each costs:
  * - **One piano.** It frames `createPiano` of `src/render/piano.ts`, lit by `src/render/lights.ts`, so a
  *   learner sees the player's piano. It has no notes, lanes, glow, particles, fog or settings store, so
- *   it holds one renderer, one camera and one piano.
- * - **A fixed orthographic camera** looks at the keys from in front, `ELEVATION` above them. Without
- *   perspective a key's top face is a rectangle on screen, and the frame is the piano's bounding box
- *   seen from the camera. The aspect, the frame and the key map are then plain maths, and the keys at
- *   both ends are the same size. The cost is a flatter picture than the player's seat view.
+ *   it holds one renderer, one camera rig and one piano.
+ * - **The camera is the rig's flat preset** of `src/render/cameras.ts`, as the landing page's players
+ *   use it. It looks straight down without perspective, the keys span the box from edge to edge, and it
+ *   ignores drags. A key's top face is then a rectangle on screen, so the key map is plain maths. The
+ *   cost is that the case's cheeks fall outside the picture, and the keys show no depth.
  * - **The height follows the width.** The view sets its CSS `aspect-ratio` to the frame's, so the page
- *   lays it out before a frame draws and nothing shifts. A `ResizeObserver` sizes the canvas to the box,
- *   and `fitFrame` widens the camera's frame to a box of any other shape, so a key never stretches.
+ *   lays it out before a frame draws and nothing shifts. A `ResizeObserver` sizes the canvas to the box.
+ *   The rig keeps the keys' width and the piano's front edge, so a box of another shape shows more or
+ *   less above the keys, and a key never stretches. `flatView` says where the frame then sits.
+ * - **The frame** runs from the felt behind the keys to the front rail under them. With `fingers` given
+ *   it adds a band above the felt, and the band stays while the option does.
  * - **Reconfigured, never rebuilt.** `show` takes new options and drops the last ones' subscriptions. A
  *   new range lays the piano out again and reframes the camera in the same WebGL context.
  * - **A mark tints its key** through the piano's incoming tint, in the token colour `MARK_TOKENS` names,
@@ -23,8 +26,10 @@
  *   theme or the colour scheme changes. A held key presses in the player's input colours, over any tint.
  * - **Names** are the player's key labels, from `keyNameText` or from `nameOf`: `c` names every C and
  *   `white` every white key, with the octave on C only. **A finger** is a digit in a ring of its key's
- *   mark colour, just behind its key's front. **The reach** is a thin bar on the case's front rail. All
- *   three sit within the piano's own frame, so their coming and going moves nothing.
+ *   mark colour, in the band above the keys: a white key's in the row nearer the keys, a black key's in
+ *   the row behind it, so two neighbours never overlap. **The reach** is a thin bar on the front rail,
+ *   under the white keys' front edge. A name and the reach sit within the piano's own frame, so their
+ *   coming and going moves nothing.
  * - **The pointer** plays through `src/input/pointer-piano.ts` and the piano's `keyAt`, by the player's
  *   rules. With `onPress` given, the canvas takes every touch, so the page does not scroll under a hand.
  * - **A frame draws only when the picture can differ:** an option, a held key, a resize, a theme change,
@@ -43,14 +48,12 @@
  */
 import "./piano-keys.css";
 import {
-  Box3,
   BoxGeometry,
   CanvasTexture,
   Color,
   Group,
   Mesh,
   MeshBasicMaterial,
-  OrthographicCamera,
   Raycaster,
   Scene,
   Sprite,
@@ -62,6 +65,7 @@ import {
 
 import { localize } from "../i18n/live";
 import { attachPointerPiano } from "../input/pointer-piano";
+import { createCameraRig } from "./cameras";
 import { defaults } from "../settings/schema";
 import { noteName } from "../theory/note-names";
 import { el } from "../ui/dom";
@@ -72,7 +76,7 @@ import { FULL_RANGE, isBlack, type KeyLayout, type KeyRange, layoutKeys } from "
 import { createLabelLayer } from "./labels";
 import { pianoLights } from "./lights";
 import { createPiano } from "./piano";
-import { BLACK_KEY_LENGTH, BLACK_KEY_TOP, WHITE_KEY_HEIGHT, WHITE_KEY_LENGTH } from "./piano-geometry";
+import { BLACK_KEY_LENGTH, WHITE_KEY_LENGTH } from "./piano-geometry";
 
 /** Which keys carry their name. */
 export type KeyNames = "none" | "c" | "white";
@@ -130,7 +134,10 @@ export function markColors(read: (token: string) => string): Record<Mark, string
   return colors;
 }
 
-/** A rectangle the camera sees, in world units: x to the right, and y up the screen. */
+/**
+ * A rectangle the camera sees from straight above, in world units: x to the right, and y up the screen.
+ * Up the screen is away from the player, so y is -z.
+ */
 export interface Frame {
   left: number;
   right: number;
@@ -138,28 +145,23 @@ export interface Frame {
   bottom: number;
 }
 
-/** A box of the world, by its corners. */
-export interface WorldBox {
-  min: { x: number; y: number; z: number };
-  max: { x: number; y: number; z: number };
-}
+/** How far behind the keys' back edge the frame starts, so the felt shows. */
+const FELT_ROOM = 0.35;
+/** How far past the white keys' front edge the frame ends, so the front rail shows under them. */
+const RAIL_ROOM = 0.6;
+/** A finger ring's size, and the gap before each row of rings, in world units. */
+const RING_SIZE = 0.62;
+const RING_GAP = 0.08;
+/** The band above the felt that holds the rings: a row for the white keys, and a row behind it for the black. */
+const FINGER_ROOM = 2 * (RING_SIZE + RING_GAP);
 
-/** How far above the keys the camera looks down at them, in radians. */
-const ELEVATION = (40 * Math.PI) / 180;
-const SIN = Math.sin(ELEVATION);
-const COS = Math.cos(ELEVATION);
-/** How far the camera sits from the keys. An orthographic picture does not change with it. */
-const CAMERA_DISTANCE = 50;
-/** The margin the frame keeps round the piano, in world units. */
-const PAD = 0.15;
-
-/** The frame that holds `box` as the camera sees it, with a margin. */
-export function frameOf(box: WorldBox): Frame {
+/** The frame round the keys of `layout`, from the felt to the front rail, with the finger band when `fingers` holds. */
+export function frameOf(layout: KeyLayout, fingers: boolean): Frame {
   return {
-    left: box.min.x - PAD,
-    right: box.max.x + PAD,
-    top: COS * box.max.y - SIN * box.min.z + PAD,
-    bottom: COS * box.min.y - SIN * box.max.z - PAD,
+    left: -layout.width / 2,
+    right: layout.width / 2,
+    top: FELT_ROOM + (fingers ? FINGER_ROOM : 0),
+    bottom: -(WHITE_KEY_LENGTH + RAIL_ROOM),
   };
 }
 
@@ -172,21 +174,17 @@ export interface Share {
 }
 
 /**
- * `frame` widened to `aspect`, its width over its height, about its centre. Returns the widened frame
- * and where `frame` sits inside it, so the key map can follow.
+ * What the rig's flat camera shows of `frame` in a box of `aspect`, its width over its height. The camera
+ * keeps the frame's width and its bottom edge, so a box of another shape shows more or less above it.
+ * Returns that view and where `frame` sits inside it, so the key map can follow.
  */
-export function fitFrame(frame: Frame, aspect: number): { view: Frame; inset: Share } {
+export function flatView(frame: Frame, aspect: number): { view: Frame; inset: Share } {
   const width = frame.right - frame.left;
   const height = frame.top - frame.bottom;
   if (!(aspect > 0)) return { view: frame, inset: { left: 0, top: 0, width: 1, height: 1 } };
-  if (aspect >= width / height) {
-    const extra = (height * aspect - width) / 2;
-    const view = { ...frame, left: frame.left - extra, right: frame.right + extra };
-    return { view, inset: { left: extra / (width + 2 * extra), top: 0, width: width / (width + 2 * extra), height: 1 } };
-  }
-  const extra = (width / aspect - height) / 2;
-  const view = { ...frame, top: frame.top + extra, bottom: frame.bottom - extra };
-  return { view, inset: { left: 0, top: extra / (height + 2 * extra), width: 1, height: height / (height + 2 * extra) } };
+  const shown = width / aspect;
+  const view = { ...frame, top: frame.bottom + shown };
+  return { view, inset: { left: 0, top: (view.top - frame.top) / shown, width: 1, height: height / shown } };
 }
 
 /** One key's span in the key map: its key's top face, as a share of the frame. */
@@ -195,23 +193,20 @@ export interface KeySpan extends Share {
   black: boolean;
 }
 
-/** The span of each key of `layout` over its top face, as the camera sees it within `frame`. */
+/** The span of each key of `layout` over its top face, seen from straight above within `frame`. */
 export function keySpans(layout: KeyLayout, frame: Frame): KeySpan[] {
   const width = frame.right - frame.left;
   const height = frame.top - frame.bottom;
   return layout.keys.map((rect) => {
-    const top = rect.black ? BLACK_KEY_TOP : 0;
+    // The top face runs from the back edge at z = 0, which is y = 0, to `length` towards the player.
     const length = rect.black ? BLACK_KEY_LENGTH : WHITE_KEY_LENGTH;
-    // The top face's back edge is at z = 0 and its front edge `length` towards the camera.
-    const back = COS * top;
-    const front = COS * top - SIN * length;
     return {
       pitch: rect.pitch,
       black: rect.black,
       left: (rect.x - layout.width / 2 - frame.left) / width,
-      top: (frame.top - back) / height,
+      top: frame.top / height,
       width: rect.width / width,
-      height: (back - front) / height,
+      height: length / height,
     };
   });
 }
@@ -238,9 +233,10 @@ const NAME_STYLE = { white: true, black: false, flats: false, octave: "onlyC", s
 const LIFT = 0.02;
 /** The most of its key's width a name takes. */
 const LABEL_FILL = 0.95;
-/** A finger ring's size, and how far behind the hit line it sits, by key colour, in world units. */
-const FINGER_SIZE = { white: 0.7, black: 0.5 } as const;
-const FINGER_Z = { white: 4.5, black: 3.5 } as const;
+/** The z of the centre of each row of finger rings, by key colour: white nearer the keys, black behind. */
+const RING_Z = { white: -(FELT_ROOM + RING_GAP + RING_SIZE / 2), black: -(FELT_ROOM + 2 * RING_GAP + (3 * RING_SIZE) / 2) } as const;
+/** The height the rings float at, above every part of the piano, so nothing hides them. */
+const RING_Y = 2;
 /** The finger digit's height, as a share of its ring. */
 const DIGIT_SHARE = 0.6;
 /** How much nearer the camera a digit sits than its ring, so it draws over it. */
@@ -248,12 +244,12 @@ const DIGIT_NUDGE = 0.05;
 /** The token of a ring on an unmarked key. */
 const RING_TOKEN = "--c-text-soft";
 /**
- * The reach bar: its height and depth, its centre's height on the front rail's face, and how far it
- * stops short of its outer keys' edges, in world units.
+ * The reach bar on the front rail's top: its thickness along z, its centre's z and height, and how far
+ * it stops short of its outer keys' edges, in world units.
  */
-const REACH_HEIGHT = 0.14;
-const REACH_DEPTH = 0.04;
-const REACH_Y = -WHITE_KEY_HEIGHT / 2 - 0.2;
+const REACH_DEPTH = 0.22;
+const REACH_Z = WHITE_KEY_LENGTH + RAIL_ROOM / 2;
+const REACH_Y = -0.3;
 const REACH_INSET = 0.08;
 /** The reach bar's colour. The case is the same dark lacquer in both themes, so one light grey reads on both. */
 const REACH_COLOR = 0xc9c4d6;
@@ -353,14 +349,12 @@ export function pianoKeys(): PianoKeys {
   const rings = new Group();
   const ringMap = ringTexture();
   const ringPool: Sprite[] = [];
-  const reachGeometry = new BoxGeometry(1, REACH_HEIGHT, REACH_DEPTH);
+  const reachGeometry = new BoxGeometry(1, 0.04, REACH_DEPTH);
   const reachMaterial = new MeshBasicMaterial({ color: REACH_COLOR });
   const reachBar = new Mesh(reachGeometry, reachMaterial);
   reachBar.visible = false;
   scene.add(piano.group, rings, labels.group, reachBar);
-  const camera = new OrthographicCamera(-1, 1, 1, -1, 1, CAMERA_DISTANCE * 4);
-  camera.position.set(0, SIN * CAMERA_DISTANCE, COS * CAMERA_DISTANCE);
-  camera.lookAt(0, 0, 0);
+  const rig = createCameraRig(renderer?.domElement ?? element, "flat");
 
   const input = defaults();
   const heldWhite = new Color(input.inputNoteColorWhite.slice(0, 7));
@@ -379,9 +373,9 @@ export function pianoKeys(): PianoKeys {
   /** The keys pressed on the piano now. */
   const pressedNow = new Set<number>();
   const spans = new Map<number, HTMLSpanElement>();
-  /** The piano's frame, the room the reach bar's z is set from, and the camera's frame fitted to the box. */
+  /** The frame round the shown keys, whether it holds the finger band, and the box's width over its height. */
   let frame: Frame = { left: -1, right: 1, top: 1, bottom: -1 };
-  let reachZ = WHITE_KEY_LENGTH;
+  let fingerBand = false;
   let aspect = 0;
 
   /** What the next frame must do first: read the colours, mark the keys, or place the labels. */
@@ -403,26 +397,23 @@ export function pianoKeys(): PianoKeys {
     ringIdle.set(read(RING_TOKEN));
   };
 
-  /** Fits the camera to the box's shape, and the key map to the piano's place in it. */
+  /** Fits the flat camera to the frame and the box's shape, and the key map to the frame's place in the view. */
   const fit = () => {
-    const { view, inset } = fitFrame(frame, aspect);
-    camera.left = view.left;
-    camera.right = view.right;
-    camera.top = view.top;
-    camera.bottom = view.bottom;
-    camera.updateProjectionMatrix();
-    camera.updateMatrixWorld();
-    placeAt(map, inset);
+    const halfWidth = (frame.right - frame.left) / 2;
+    rig.setFrame({ halfWidth, keyHalfWidth: halfWidth, pianoFront: -frame.bottom, reverse: false, lift: 0, shift: 0 });
+    if (aspect > 0) rig.setAspect(aspect);
+    // The flat camera takes its place in `update`, which a pointer's ray needs before the next frame.
+    rig.update(0, 0);
+    rig.camera.updateMatrixWorld();
+    placeAt(map, flatView(frame, aspect).inset);
   };
 
-  /** Frames the piano's range, and lays the key map out for it. */
+  /** Frames the piano's range, with the finger band when `fingerBand` holds, and lays the key map out for it. */
   const relayout = () => {
     const range = piano.layout.range;
+    // A pointer's ray meets the keys where they are now, before the next frame draws them.
     piano.group.updateMatrixWorld(true);
-    const box = new Box3().setFromObject(piano.group);
-    reachZ = box.max.z + REACH_DEPTH / 2;
-    box.max.z += REACH_DEPTH;
-    frame = frameOf(box);
+    frame = frameOf(piano.layout, fingerBand);
     element.style.setProperty("--piano-keys-aspect", String((frame.right - frame.left) / (frame.top - frame.bottom)));
     element.dataset.first = String(range.first);
     element.dataset.last = String(range.last);
@@ -440,11 +431,14 @@ export function pianoKeys(): PianoKeys {
     labelsStale = true;
   };
 
-  const setRange = (range: KeyRange) => {
+  /** Shows the keys of `range`, with the finger band when `band` holds. Lays out again only on a change. */
+  const setRange = (range: KeyRange, band: boolean) => {
     const shown = layoutKeys(range).range;
     const now = piano.layout.range;
-    if (shown.first === now.first && shown.last === now.last) return;
-    piano.setRange(shown);
+    const same = shown.first === now.first && shown.last === now.last;
+    if (same && band === fingerBand) return;
+    fingerBand = band;
+    if (!same) piano.setRange(shown);
     relayout();
   };
 
@@ -475,19 +469,16 @@ export function pianoKeys(): PianoKeys {
     for (const [pitch, finger] of fingers) {
       const rect = layout.key(pitch);
       if (!rect) continue;
-      const color = rect.black ? "black" : "white";
-      const size = FINGER_SIZE[color];
       const x = left + rect.center;
-      const y = (rect.black ? BLACK_KEY_TOP : 0) + size / 2 + LIFT;
-      const z = FINGER_Z[color];
+      const z = RING_Z[rect.black ? "black" : "white"];
       const ring = ringAt(used++);
-      ring.position.set(x, y, z);
-      ring.scale.set(size, size, 1);
+      ring.position.set(x, RING_Y, z);
+      ring.scale.set(RING_SIZE, RING_SIZE, 1);
       const mark = marks.get(pitch);
       ring.material.color.copy(mark === undefined ? ringIdle : colors[mark]);
       ring.visible = true;
-      const digit = size * DIGIT_SHARE;
-      labels.push(String(finger), x, y + SIN * DIGIT_NUDGE, z + COS * DIGIT_NUDGE, digit, digit);
+      const digit = RING_SIZE * DIGIT_SHARE;
+      labels.push(String(finger), x, RING_Y + DIGIT_NUDGE, z, digit, digit);
     }
     for (let i = used; i < ringPool.length; i++) ringPool[i]!.visible = false;
     labels.end();
@@ -513,7 +504,8 @@ export function pianoKeys(): PianoKeys {
     }
     const seconds = last === undefined ? 1 / 60 : Math.min((time - last) / 1000, MAX_FRAME);
     const moving = piano.update(seconds);
-    if (aspect > 0) renderer.render(scene, camera);
+    rig.update(seconds, time / 1000);
+    if (aspect > 0) renderer.render(scene, rig.camera);
     // A key still moving draws the next frame too, and a still piano draws none.
     last = moving ? time : undefined;
     if (moving) invalidate();
@@ -551,7 +543,7 @@ export function pianoKeys(): PianoKeys {
       element.dataset.reachFirst = String(reach.first);
       element.dataset.reachLast = String(reach.last);
       reachBar.scale.x = Math.max(0.01, span.width - 2 * REACH_INSET);
-      reachBar.position.set(span.x + span.width / 2 - piano.layout.width / 2, REACH_Y, reachZ);
+      reachBar.position.set(span.x + span.width / 2 - piano.layout.width / 2, REACH_Y, REACH_Z);
     }
     invalidate();
   };
@@ -562,7 +554,7 @@ export function pianoKeys(): PianoKeys {
     const box = renderer?.domElement.getBoundingClientRect();
     if (!box || box.width === 0 || box.height === 0) return undefined;
     ndc.set(((x - box.left) / box.width) * 2 - 1, 1 - ((y - box.top) / box.height) * 2);
-    raycaster.setFromCamera(ndc, camera);
+    raycaster.setFromCamera(ndc, rig.camera);
     return piano.keyAt(raycaster);
   };
   const stopPointer = renderer
@@ -619,7 +611,7 @@ export function pianoKeys(): PianoKeys {
       options = next;
       element.setAttribute("aria-label", next.label);
       element.dataset.interactive = String(next.onPress !== undefined);
-      setRange(next.range ?? FULL_RANGE);
+      setRange(next.range ?? FULL_RANGE, next.fingers !== undefined);
       stops.push(
         follow(next.marks, new Map(), (value) => {
           marks = value;
@@ -668,6 +660,7 @@ export function pianoKeys(): PianoKeys {
       scheme.removeEventListener("change", onTheme);
       themes.disconnect();
       renderer?.domElement.removeEventListener("webglcontextrestored", invalidate);
+      rig.dispose();
       piano.dispose();
       labels.dispose();
       for (const ring of ringPool) ring.material.dispose();

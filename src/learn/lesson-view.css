@@ -320,9 +320,13 @@
     gap: var(--s-3);
   }
 
-  /* A short range would stand tall at the column's width, so its keys stop at a height and centre. */
+  /*
+   * A short range would stand tall at the column's width, so its keys stop at a height and centre. The
+   * piano spans its box from edge to edge, so the width stops, by the view's own aspect.
+   */
   .lesson-step__keys .piano-keys {
-    max-height: calc(2 * var(--s-12));
+    max-width: calc(2 * var(--s-12) * var(--piano-keys-aspect));
+    margin-inline: auto;
   }
 
   /* A hint, once the learner is stuck: a note in the blue of information. Empty, it takes no room. */

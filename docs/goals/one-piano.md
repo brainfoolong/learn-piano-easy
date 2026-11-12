@@ -54,14 +54,16 @@ landing page, and decision 0008 already answers it: a picture until a click.
 - **The model is `createPiano` of `src/render/piano.ts`.** The view below adds no second piano. It frames
   the same meshes, materials, layout and key labels as the player.
 - **The view is `src/render/piano-keys.ts`, `pianoKeys()`.** It is the player's piano alone, without
-  notes, lanes, transport or settings store. It owns a renderer, the player's lights, a fixed camera and
+  notes, lanes, transport or settings store. It owns a renderer, the player's lights, a camera rig and
   one piano. It is a separate host because a step needs no lanes, and the player scene's 1100 lines would
   carry them all in.
 - **The lights move to `src/render/lights.ts`,** which `scene.ts` and the view both call, so both pianos
   are lit alike.
-- **The camera sits in front of and above the keys,** as the `player` preset looks at them, and frames
-  the range's width. The view's height follows its width by the range's aspect, as the SVG did. A phone
-  gets narrow keys, as before.
+- **The camera is the rig's `flat` preset** of `src/render/cameras.ts`, as the landing page's players
+  use it, so the lesson piano looks like the landing's. It looks straight down without perspective, the
+  keys span the box from edge to edge, and it ignores drags. A key's top face is then a screen
+  rectangle, and the key map is plain maths. The cost is that the case's cheeks fall outside the
+  picture. The view's height follows its width by the frame's aspect, and a phone gets narrow keys.
 - **A view is reconfigured, never rebuilt.** `show(options)` takes the 2D keyboard's options: `label`,
   `range`, `marks`, `markNames`, `fingers`, `fingerName`, `names`, `nameOf`, `pressed`, `reach`,
   `onPress`, `onRelease`. It drops the last options' signal subscriptions. A lesson makes one view and
@@ -74,10 +76,11 @@ landing page, and decision 0008 already answers it: a picture until a click.
 - **A held key presses** through `press` in the player's input colour, under any mark's tint.
 - **Names are the player's key labels,** from `keyNameText` of `src/render/key-labels.ts`. `c` names
   every C with its octave, and `white` every white key.
-- **A finger is a label sprite** from `src/render/labels.ts`, just behind its key's front, in a ring of
-  its mark's colour. **The reach is a thin bar mesh** in front of the white keys, spanning the reached
-  keys. Both have room in the frame whenever their option is given, so their coming and going moves
-  nothing.
+- **A finger is a label sprite** from `src/render/labels.ts`, in a ring of its mark's colour, in a band
+  above the keys. A white key's ring sits in the row nearer the keys and a black key's in the row
+  behind, so neighbours never overlap. The band is in the frame whenever `fingers` is given. **The
+  reach is a thin bar** on the front rail, under the white keys' front edge, spanning the reached keys.
+  The rail is always in the frame, so no finger or reach coming or going moves anything.
 - **The pointer plays through `keyAt`,** one key per pointer, sliding from key to key.
   `src/input/pointer-piano.ts` is generalised to take press and release callbacks, so the player and the
   view share its rules.
@@ -133,8 +136,8 @@ landing page, and decision 0008 already answers it: a picture until a click.
 - [x] The e2e tests that read 2D keys read the key map. `e2e/learn.e2e.ts:156`, `e2e/lesson-keys.e2e.ts:36`, `e2e/game.e2e.ts:185`
 - [x] E2e tests `a_step_shows_the_3d_piano` and `a_touch_on_a_3d_key_plays_the_step`. `e2e/lesson-keys.e2e.ts:1`
 - [x] Every mark reads clearly on a key in both themes. `src/render/piano-keys.ts:115`
-- [ ] The view frames the piano with the camera rig's flat preset, as the landing players do. `src/render/piano-keys.ts:1`
-- [ ] Look at a find-key, a play-notes and a demo step with `bun run shot`.
+- [x] The view frames the piano with the camera rig's flat preset, as the landing players do. `src/render/piano-keys.ts:1`
+- [x] Look at a find-key, a play-notes and a demo step with `bun run shot`.
 
 ### 3. The landing band plays the 3D piano, and the 2D keyboard is deleted
 
