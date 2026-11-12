@@ -1,27 +1,81 @@
-# learn-piano-easy
+<h1 align="center">
+  <img src="public/icons/icon.svg" width="72" alt="" /><br />
+  Learn Piano Easy
+</h1>
 
-Learn piano by playing along with MIDI files. Notes fly towards a 3D piano, and the app listens to your
-MIDI keyboard to tell you what you hit. It runs in any modern browser, works offline, and installs as an app.
+<p align="center">
+  <strong>Learn piano in your browser.</strong> Free, open source, offline, and no account needed.
+</p>
 
-Demo: <https://learn-piano-easy.app>. The app runs the same way from your own machine.
+<p align="center">
+  <a href="https://learn-piano-easy.app"><strong>Open the app</strong></a> ·
+  <a href="https://learn-piano-easy.app/de/">Deutsch</a> ·
+  <a href="https://learn-piano-easy.app/sponsor/">Sponsor</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/brainfoolong/learn-piano-easy/actions/workflows/ci.yml"><img src="https://github.com/brainfoolong/learn-piano-easy/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License" /></a>
+  <a href="https://github.com/sponsors/brainfoolong"><img src="https://img.shields.io/badge/sponsor-%E2%99%A5-db61a2" alt="Sponsor" /></a>
+</p>
+
+![The player, with notes falling onto a 3D piano](public/images/landing/play-light.webp)
+
+Notes fall towards a 3D piano, and you play them on your MIDI keyboard, the computer keys or the screen.
+The app listens and tells you what you hit. It runs in any modern browser and installs as an app.
+
+## Two ways to play
+
+**Learn Piano** is a course from your first key to your first songs. It walks eight worlds of short
+lessons, and each world ends with a boss. Stars, XP and a daily streak keep you coming back.
+
+**The player** opens any song of the library, or a MIDI file of your own. Slow it down, loop a hard
+bar, or let the song wait until you hit each note.
+
+![The course map, with a world of lessons and the next one to continue](public/images/landing/learn-light.webp)
 
 ## Features
 
-[docs/reference/features.md](docs/reference/features.md) lists every feature we build,
-and [docs/goals/](docs/goals/README.md) is the plan in order.
+- **Hundreds of songs,** from nursery rhymes to the classics, each in versions from Beginner to the
+  original score.
+- **Wait mode** for each hand alone or both together, and a loop trainer that raises the speed.
+- **Sheet music** beside the falling notes, and note names or fingering on the notes and keys.
+- **Your own keyboard,** drawn key for key, so the screen matches the 61 or 88 keys in front of you.
+- **MIDI in and out,** with the keys of your keyboard lit up to show what to play.
+- **Accuracy history** per song, and your playing saved as a MIDI file.
+- **Offline first.** After the first visit, the app needs no network.
+- **Private by design.** Your progress stays in your browser.
+- **English and German,** in light and dark themes, on a phone or a desktop.
 
-## Running it
+[docs/reference/features.md](docs/reference/features.md) lists every feature in detail.
 
-You need [Bun](https://bun.sh). [CONTRIBUTING.md](CONTRIBUTING.md) has the full setup.
+## Run it yourself
+
+The app is a static site, so any web server can host it, at any path.
+
+- **Download** the zip of a [release](https://github.com/brainfoolong/learn-piano-easy/releases) and
+  serve the unpacked folder.
+- **Or build it** with [Bun](https://bun.sh):
 
 ```
 bun install
-git config core.hooksPath tools/git-hooks   # once per clone: the commit-msg check
-bun run dev                                 # the app at http://localhost:4173
 bun run build                               # the static app in dist/
+bun run dev                                 # the app at http://localhost:4173, with live reload
+```
+
+[CONTRIBUTING.md](CONTRIBUTING.md) has the full setup for contributors, including the tests.
+
+```
+git config core.hooksPath tools/git-hooks   # once per clone: the commit-msg check
 looper verify                               # the checks a change reaches
 looper loop start                           # the unattended run, in a terminal of its own
 ```
+
+## Support the project
+
+Learn Piano Easy is made by one person in their spare time. If it helps you play, you can
+[sponsor it on GitHub](https://github.com/sponsors/brainfoolong). A star, a bug report or a word to a
+friend helps too.
 
 ## License
 

@@ -4,7 +4,7 @@
   "description": "Learn piano by playing along with MIDI files, with a 3D piano, offline in the browser.",
   "license": "MIT",
   "homepage": "https://learn-piano-easy.app",
-  "keywords": ["piano", "midi", "music", "learning", "three.js", "pwa"],
+  "keywords": ["piano", "learn-piano", "piano-lessons", "music-education", "midi", "web-midi", "sheet-music", "three.js", "pwa", "offline-first"],
   "private": true,
   "type": "module",
   "scripts": {
