@@ -8,7 +8,7 @@
  *   song's tempo and time signature at that play position, and its first click lands on the song's
  *   next beat. From there it clicks on its own timer, so tempo changes, speed changes and a wait mode's
  *   hold leave it alone. A pause, a seek or a new song ends it, through `stop` and `load`. A loop's
- *   count-in that clicks ends it too, and it starts again on the first beat of the pass.
+ *   count-in ends it too, whether it clicks or not, and it starts again on the first beat of the pass.
  * - **Free.** `startFree` clicks at a steady tempo from a time on the audio clock until `stopFree`,
  *   whatever the song does.
  *
@@ -20,11 +20,15 @@
  * Decisions, and what each costs:
  * - A click is a sine burst of `CLICK_LENGTH` seconds through its own gain, so it needs no sample file.
  * - A pause or a seek silences the clicks still queued, and lets the one sounding finish.
- * - A loop's count-in clicks through `setCountIn` even while the metronome is off. A song beat on a
- *   count-in beat clicks once.
- * - The steady beat rests through a count-in, so only one click sounds at a time. The scheduler window
- *   that reaches the count-in's first beat ends it, as a seek does. Each pass then starts it anew at
- *   the tempo where the pass starts.
+ * - `setCountIn` hands over a loop's count-in and whether it clicks. A count-in that clicks does so even
+ *   while the metronome is off. A song beat on a count-in beat clicks once.
+ * - The steady beat rests through a count-in, whether it clicks or not, so the pass starts on a fresh
+ *   beat. The scheduler window that reaches the count-in's first beat ends it, as a seek does. Each pass
+ *   then starts it anew at the tempo where the pass starts.
+ * - While a loop has a count-in, the steady beat sends a MIDI click only once a scheduler window reaches
+ *   it. It then knows of a coming count-in before it sends, and no MIDI click of it sounds there. The
+ *   cost is that a wait mode's hold, which stops the windows, stops these MIDI clicks too. A click
+ *   whose time passed while it waited is dropped, since it would sound late.
  * - A click may also go to the MIDI output `midiOut` returns, as a note-on and a note-off timed ahead
  *   on the MIDI clock. The drum kit plays on channel 10, where the note picks the drum. Every other
  *   sound plays on channel 16, after one program change whenever the sound or the port changes.
@@ -34,8 +38,8 @@
  * Gaps:
  * - A pause or a seek cannot take back the MIDI clicks already sent, so up to the look-ahead of them
  *   still sound.
- * - The steady beat queues on its own timer, so it may send a MIDI click past a count-in's first beat
- *   before the scheduler's window reaches that beat. That click still sounds.
+ * - A speed-up after a window moves a coming count-in earlier on the audio clock. A MIDI click of the
+ *   steady beat sent within that window may then still sound in the count-in.
  */
 
 import type { Song } from "../midi/song";
@@ -127,6 +131,10 @@ interface SteadyBeat {
 interface Run extends SteadyBeat {
   /** The index of the next beat to queue, counted from the first click. */
   next: number;
+  /** The index of the next beat to send to the MIDI output, which may trail `next`. */
+  midiNext: number;
+  /** Whether its MIDI clicks wait for the scheduler's windows while a loop has a count-in: the steady beat's do. */
+  readonly gated: boolean;
   stopTimer: () => void;
 }
 
@@ -147,8 +155,11 @@ export class Metronome implements ScheduledPart {
   #clicks: Click[] = [];
   #free: Run | null = null;
   #steady: Run | null = null;
-  /** The loop's count-in that clicks, or undefined for none. */
+  /** The loop's count-in, or undefined for none, and whether it clicks. */
   #countIn: CountIn | undefined;
+  #countInClicks = false;
+  /** The audio time the scheduler's latest window reaches. */
+  #window = -Infinity;
   readonly #now: () => number;
   /** The port and program of the last program change sent. */
   #programmed: { port: MidiOut; program: number } | undefined;
@@ -181,16 +192,22 @@ export class Metronome implements ScheduledPart {
     this.#steady = this.#end(this.#steady);
   }
 
-  /** Clicks on the beats of `countIn`, whether the metronome is on or not. Undefined stops it. */
-  setCountIn(countIn: CountIn | undefined): void {
+  /**
+   * Takes the loop's count-in, or undefined for none. The steady beat rests through it. When `clicks`
+   * is true, it clicks on its beats, whether the metronome is on or not.
+   */
+  setCountIn(countIn: CountIn | undefined, clicks: boolean): void {
     this.#countIn = countIn;
+    this.#countInClicks = clicks;
   }
 
   schedule(from: number, to: number, at: (songTime: number) => number): void {
-    const beats = this.#countIn?.beats ?? [];
+    const beats = this.#countInClicks ? (this.#countIn?.beats ?? []) : [];
     const counting = (this.#options.speakers || this.#options.midi) && this.#options.volume > 0;
     const counted = (seconds: number) => beats.some((beat) => Math.abs(beat - seconds) < 1e-3);
+    this.#window = at(to);
     this.#keepSteady(from, to, at);
+    if (this.#steady !== null) this.#pump(this.#steady);
     beats.forEach((seconds, i) => {
       if (counting && seconds >= from && seconds < to) this.#click(at(seconds), i === 0);
     });
@@ -216,7 +233,8 @@ export class Metronome implements ScheduledPart {
       start = countIn.start;
       if (this.#steady !== null && from <= first + 1e-6) {
         // The beat's clicks before the count-in still sound. Its timer may have queued speaker clicks
-        // past the count-in's first beat, and those are silenced.
+        // past the count-in's first beat, and those are silenced. Its MIDI clicks waited for the
+        // windows, so none of them lies past that beat.
         const end = at(first) - 1e-3;
         this.#pump(this.#steady, end);
         this.#steady = this.#end(this.#steady);
@@ -224,7 +242,7 @@ export class Metronome implements ScheduledPart {
         begin = true;
       }
     }
-    if (begin && this.#tempoMap !== undefined) this.#steady = this.#start(steadyBeatFrom(this.#tempoMap, start, at));
+    if (begin && this.#tempoMap !== undefined) this.#steady = this.#start(steadyBeatFrom(this.#tempoMap, start, at), true);
   }
 
   /** Ends the player's steady beat, and silences every click still queued, as a pause or a seek needs. */
@@ -236,7 +254,7 @@ export class Metronome implements ScheduledPart {
   /** Clicks `bpm` beats a minute, `beatsPerMeasure` to a measure, from `time` or now, until `stopFree`. */
   startFree(bpm: number, beatsPerMeasure: number, time = this.#ctx.currentTime): void {
     this.stopFree();
-    this.#free = this.#start({ start: time, secondsPerBeat: 60 / bpm, beatsPerMeasure, firstBeat: 0 });
+    this.#free = this.#start({ start: time, secondsPerBeat: 60 / bpm, beatsPerMeasure, firstBeat: 0 }, false);
   }
 
   /** Stops the free clicks, and silences every click still queued. */
@@ -246,9 +264,9 @@ export class Metronome implements ScheduledPart {
     this.#silence();
   }
 
-  /** Starts `beat` clicking on its own timer, and queues its first clicks at once. */
-  #start(beat: SteadyBeat): Run {
-    const run: Run = { ...beat, next: 0, stopTimer: () => {} };
+  /** Starts `beat` clicking on its own timer, and queues its first clicks at once. `gated` is as `Run` says. */
+  #start(beat: SteadyBeat, gated: boolean): Run {
+    const run: Run = { ...beat, next: 0, midiNext: 0, gated, stopTimer: () => {} };
     run.stopTimer = this.#startTimer(run);
     this.#pump(run);
     return run;
@@ -264,15 +282,24 @@ export class Metronome implements ScheduledPart {
     return this.#timer.every(this.#options.intervalMs, () => this.#pump(run));
   }
 
-  /** Queues `run`'s clicks up to the look-ahead, and before audio time `end`. It counts on while it may not sound. */
+  /**
+   * Queues `run`'s clicks up to the look-ahead, and before audio time `end`. It counts on while it may
+   * not sound. A gated run's MIDI clicks also wait, while a loop has a count-in, until the scheduler's
+   * window reaches them. One whose time passed while it waited is dropped, since it would sound late.
+   */
   #pump(run: Run, end = Infinity): void {
-    const until = Math.min(end, this.#ctx.currentTime + this.#options.aheadMs / 1000);
+    const now = this.#ctx.currentTime;
+    const until = Math.min(end, now + this.#options.aheadMs / 1000);
     const sounds = this.#sounds(false);
-    for (;;) {
-      const time = run.start + run.next * run.secondsPerBeat;
-      if (time >= until) break;
-      if (sounds) this.#click(time, (run.firstBeat + run.next) % run.beatsPerMeasure === 0);
-      run.next++;
+    const time = (beat: number) => run.start + beat * run.secondsPerBeat;
+    const accent = (beat: number) => (run.firstBeat + beat) % run.beatsPerMeasure === 0;
+    for (; time(run.next) < until; run.next++) {
+      if (sounds && this.#options.speakers) this.#beep(time(run.next), accent(run.next));
+    }
+    const gated = run.gated && (this.#countIn?.beats.length ?? 0) > 0;
+    const midiUntil = gated ? Math.min(until, this.#window) : until;
+    for (; time(run.midiNext) < midiUntil; run.midiNext++) {
+      if (sounds && this.#options.midi && (!gated || time(run.midiNext) >= now)) this.#sendMidi(time(run.midiNext), accent(run.midiNext));
     }
   }
 

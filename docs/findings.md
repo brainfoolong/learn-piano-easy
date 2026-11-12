@@ -120,7 +120,8 @@ equaliser, scheduled exactly against the audio clock.
 - At most 64 voices sound at once, and the oldest released voice stops first.
 - The metronome is a synthesised tone burst. Synced, it clicks on the song's beats in the scheduler's
   windows. Unsynced, the player's metronome keeps a steady beat at the song's tempo where playback
-  starts. It rests through a loop's count-in that clicks, and starts again on the pass's first beat. A
+  starts. It rests through a loop's count-in, whether the count-in clicks or not, and starts again on
+  the pass's first beat. In a loop, its MIDI clicks go out only within the scheduler's windows. A
   lesson's clicks run at the tempo the lesson gives.
 - Reverb plays generated noise responses with an exponential decay, in a few room presets. It mixes in
   at a fixed wet gain of 0.3, and `reverbImpulseResponse` picks the room.

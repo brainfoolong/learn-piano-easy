@@ -44,7 +44,7 @@ function setup() {
   const told = { loaded: [] as Song[], restarts: 0, countIn: [] as readonly number[] };
   const fakes = {
     scheduler: { load: (s: Song) => told.loaded.push(s), start() {}, stop() {}, restart: () => told.restarts++, pump() {} },
-    metronome: { setCountIn: (countIn?: { beats: readonly number[] }) => (told.countIn = countIn?.beats ?? []) },
+    metronome: { setCountIn: (countIn: { beats: readonly number[] } | undefined, clicks: boolean) => (told.countIn = clicks ? (countIn?.beats ?? []) : []) },
     song: { noteOn() {}, noteOff() {} },
     resume: () => Promise.resolve(),
   };

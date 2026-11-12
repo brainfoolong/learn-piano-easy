@@ -369,7 +369,7 @@ export class Transport {
     const played = this.#learnerPlays ? songWithout(looped, new Set(this.#required)) : looped;
     this.#setCycle(shown);
     this.#audio.scheduler.load(songWithoutMuted(played, this.#mix), (track) => this.#mix[track]?.volume ?? 1);
-    this.#audio.metronome.setCountIn(this.#loop?.clicks === true ? range : undefined);
+    this.#audio.metronome.setCountIn(range, this.#loop?.clicks === true);
     this.#scene.setSong(shown);
     this.#scene.setTimeSource(() => this.#clock.songTimeAt(this.#clock.audioTime - this.#renderOffset));
     if (this.#clock.playing) this.#audio.scheduler.start();

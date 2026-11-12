@@ -30,7 +30,7 @@ test("a_midi_click_goes_out_timed_on_the_midi_clock", () => {
   const sent: [number[], number | undefined][] = [];
   const m = metronome(sent);
   // A count-in of two beats, the first accented, sounding at 1.5 s and 2 s on the audio clock.
-  m.setCountIn({ beats: [0.5, 1], start: 1.5 });
+  m.setCountIn({ beats: [0.5, 1], start: 1.5 }, true);
   m.schedule(0, 2, (songTime) => songTime + 1);
   expect(sent).toEqual([
     [[0xcf, 115], undefined],
@@ -123,10 +123,15 @@ test("the_unsynced_metronome_keeps_a_steady_beat_from_the_play_position", () => 
   expect(clicks()).toEqual([[16000, true]]);
 });
 
-test("the_steady_beat_rests_through_a_loop_count_in_and_starts_on_the_pass_first_beat", () => {
+/**
+ * The steady beat in a looped song, played by a model of the scheduler. The song is 4/4 at 120 bpm. The
+ * loop is measure 2, from 2 s to 4 s, after a count-in of two beats at 1 s and 1.5 s. Each pass repeats
+ * song time 1 s to 4 s, the first from audio time 10 s, so pass n starts at 10 + 3n s. The MIDI clock
+ * reads 4000 ms at audio time 0, and the count-in clicks when `countInClicks` is true.
+ */
+function loopedSteadyBeat(countInClicks: boolean) {
   const sent: [number[], number | undefined][] = [];
   const port = { send: (data: number[], time?: number) => void sent.push([data, time]) };
-  // An audio clock the test moves, and a timer the test fires. The MIDI clock reads 4000 ms at audio time 0.
   const clock = { currentTime: 10 };
   const runs = new Set<() => void>();
   const timer = {
@@ -135,53 +140,86 @@ test("the_steady_beat_rests_through_a_loop_count_in_and_starts_on_the_pass_first
       return () => void runs.delete(run);
     },
   };
-  const tick = (time: number) => {
-    clock.currentTime = time;
-    for (const run of runs) run();
-  };
   const m = new Metronome(clock as MetronomeContext, {} as never, { ...options, synced: false }, timer, () => 4000 + clock.currentTime * 1000);
   m.midiOut = () => port;
-  // 4/4 at 120 bpm. The loop is measure 2, from 2 s to 4 s, after a count-in of two beats at 1 s and 1.5 s.
   const tempoMap = new TempoMap({ kind: "ticks", ticksPerBeat: 480 }, [{ tick: 0, microsecondsPerBeat: 500_000 }], [{ tick: 0, numerator: 4, denominator: 4 }]);
   m.load({ tempoMap, endTick: 8 * 1920 } as Song);
-  m.setCountIn({ beats: [1, 1.5], start: 2 });
-  // Each pass repeats from song time 1 s to 4 s. The first starts at audio time 10 s, the second at 13 s.
-  const pass = (n: number) => (songTime: number) => 9 + songTime + 3 * n;
-  const clicks = () => {
-    const ons = sent.filter(([data]) => data[0] === 0x9f).map(([data, time]) => [time, data[2] === ACCENT_VELOCITY]);
-    sent.length = 0;
-    return ons;
+  m.setCountIn({ beats: [1, 1.5], start: 2 }, countInClicks);
+  // The run time the scheduler has queued to. Run time is song time plus 3 s for each pass before.
+  let until = 1;
+  let step = 0;
+  return {
+    /**
+     * Plays to audio time `end`, waking every 25 ms. The metronome's timer wakes before the scheduler's,
+     * so the steady beat queues ahead before the window that may reach a count-in.
+     */
+    play(end: number) {
+      for (let time = 10.01 + step * 0.025; time <= end; time = 10.01 + ++step * 0.025) {
+        clock.currentTime = time;
+        for (const run of runs) run();
+        const to = time + 0.1 - 9;
+        while (until < to) {
+          const offset = 3 * Math.floor((until - 1) / 3);
+          const pieceEnd = Math.min(to, 4 + offset);
+          m.schedule(until - offset, pieceEnd - offset, (songTime) => 9 + songTime + offset);
+          until = pieceEnd;
+        }
+      }
+    },
+    /** The MIDI note-ons sent since the last call, as [MIDI time in whole milliseconds, accented]. */
+    clicks() {
+      const ons = sent.filter(([data]) => data[0] === 0x9f).map(([data, time]) => [Math.round(time!), data[2] === ACCENT_VELOCITY]);
+      sent.length = 0;
+      return ons;
+    },
   };
+}
 
-  // Playback starts at the count-in. Only the count-in clicks there, its first beat accented.
-  m.schedule(1, 2, pass(0));
-  expect(clicks()).toEqual([
+test("the_steady_beat_rests_through_a_loop_count_in_and_starts_on_the_pass_first_beat", () => {
+  const loop = loopedSteadyBeat(true);
+  // Only the count-in clicks before each pass, its first beat accented. The steady beat starts on
+  // each pass's first beat, a downbeat.
+  loop.play(13.95);
+  expect(loop.clicks()).toEqual([
     [14000, true],
     [14500, false],
-  ]);
-  tick(10.55);
-  expect(clicks()).toEqual([]);
-  // The steady beat starts on the pass's first beat, a downbeat.
-  tick(10.95);
-  expect(clicks()).toEqual([[15000, true]]);
-  tick(12.45);
-  expect(clicks()).toEqual([
+    [15000, true],
     [15500, false],
     [16000, false],
     [16500, false],
-  ]);
-
-  // The loop wraps at audio time 13 s. The window that reaches the next count-in ends the steady beat,
-  // so only the count-in clicks there, and the beat starts again on the second pass's first beat.
-  m.schedule(2, 4, pass(0));
-  clock.currentTime = 12.95;
-  m.schedule(1, 2, pass(1));
-  expect(clicks()).toEqual([
     [17000, true],
     [17500, false],
+    [18000, true],
   ]);
-  tick(13.55);
-  expect(clicks()).toEqual([]);
-  tick(13.95);
-  expect(clicks()).toEqual([[18000, true]]);
+});
+
+test("the_steady_beat_rests_through_a_count_in_that_does_not_click", () => {
+  const loop = loopedSteadyBeat(false);
+  // Nothing clicks from 13 s to 14 s on the audio clock, the second pass's count-in.
+  loop.play(13.95);
+  expect(loop.clicks()).toEqual([
+    [15000, true],
+    [15500, false],
+    [16000, false],
+    [16500, false],
+    [18000, true],
+  ]);
+});
+
+test("no_midi_click_of_the_steady_beat_falls_in_a_count_in", () => {
+  const loop = loopedSteadyBeat(true);
+  // Each count-in spans 1 s from a pass's start, 14000 ms on the MIDI clock and every 3000 ms after.
+  // Only its own two clicks sound there, through four passes.
+  loop.play(19.95);
+  const inCountIns = loop.clicks().filter(([time]) => ((time as number) - 14000) % 3000 < 1000);
+  expect(inCountIns).toEqual([
+    [14000, true],
+    [14500, false],
+    [17000, true],
+    [17500, false],
+    [20000, true],
+    [20500, false],
+    [23000, true],
+    [23500, false],
+  ]);
 });

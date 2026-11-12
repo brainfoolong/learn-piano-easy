@@ -227,7 +227,7 @@ export const playerSettingsPlay: typeof en = {
   },
   synchedMetronome: {
     label: "Metronom im Takt des Lieds halten",
-    help: "An: Das Metronom klickt auf den Schlägen des Lieds und folgt seinen Tempowechseln und der Geschwindigkeit. Aus: Es hält einen gleichmäßigen Schlag im Tempo des Lieds dort, wo die Wiedergabe startet. Spätere Tempo- und Geschwindigkeitswechsel ändern diesen Schlag nicht. Er startet und stoppt mit der Wiedergabe. Klickt das Einzählen einer Schleife, setzt er dabei aus und startet auf dem ersten Schlag der Schleife neu.",
+    help: "An: Das Metronom klickt auf den Schlägen des Lieds und folgt seinen Tempowechseln und der Geschwindigkeit. Aus: Es hält einen gleichmäßigen Schlag im Tempo des Lieds dort, wo die Wiedergabe startet. Spätere Tempo- und Geschwindigkeitswechsel ändern diesen Schlag nicht. Er startet und stoppt mit der Wiedergabe. Beim Einzählen einer Schleife setzt er aus und startet auf dem ersten Schlag der Schleife neu.",
   },
   enableEqualizer: {
     label: "Equalizer",
