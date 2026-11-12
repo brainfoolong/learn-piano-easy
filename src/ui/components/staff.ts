@@ -23,8 +23,8 @@ import type { Sheet } from "../../sheet/quantize";
 import { breakLines } from "../../sheet/sheet-view";
 import type { Key } from "../../theory/key";
 import { el } from "../dom";
+import type { Mark } from "../mark";
 import type { Signal } from "../signal";
-import type { Mark } from "./keyboard";
 
 /** Pixels per staff space. */
 export const STAFF_SPACE = 9;

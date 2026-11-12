@@ -10,8 +10,9 @@
 import { messagesOf } from "../../i18n/locale";
 import type { KeyRange } from "../../render/key-layout";
 import { button } from "../../ui/components/button";
-import { keyboard, type Mark } from "../../ui/components/keyboard";
+import { keyboard } from "../../ui/components/keyboard";
 import { el } from "../../ui/dom";
+import type { Mark } from "../../ui/mark";
 import { signal } from "../../ui/signal";
 import type { Playback } from "../lesson-sound";
 import type { DemoStep } from "../model";

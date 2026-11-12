@@ -14,7 +14,8 @@
 import type { InputEvent } from "../../input/input-bus";
 import { KEY_VELOCITY } from "../../input/keyboard";
 import type { KeyRange } from "../../render/key-layout";
-import { keyboard, type KeyNames, type Mark } from "../../ui/components/keyboard";
+import { keyboard, type KeyNames } from "../../ui/components/keyboard";
+import type { Mark } from "../../ui/mark";
 import { signal, type Signal } from "../../ui/signal";
 import type { StepHost } from "./step";
 

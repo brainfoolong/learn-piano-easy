@@ -107,8 +107,8 @@ landing page, and decision 0008 already answers it: a picture until a click.
 **Gate:** none.
 
 - [ ] Lights move to `src/render/lights.ts`, and `scene.ts` calls it. `src/render/scene.ts:219`
-- [ ] `src/input/pointer-piano.ts` takes press and release callbacks, and `player-core.ts` passes the bus's. `src/input/pointer-piano.ts:23`
-- [ ] `Mark` moves to `src/ui/mark.ts`, and every importer follows. `src/ui/components/keyboard.ts:37`
+- [x] `src/input/pointer-piano.ts` takes press and release callbacks, and `player-core.ts` passes the bus's. `src/input/pointer-piano.ts:23`
+- [x] `Mark` moves to `src/ui/mark.ts`, and every importer follows. `src/ui/components/keyboard.ts:37`
 - [ ] `src/render/piano-keys.ts` with `pianoKeys()`, `show`, `dispose`, the key map and the live text. `src/render/piano-keys.ts:1`
 - [ ] Its styles beside it. `src/render/piano-keys.css:1`
 - [ ] `ui.pianoKeys.noWebgl` in English and German. `src/i18n/messages/en.ts:1`

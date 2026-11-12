@@ -2,9 +2,9 @@
 import type { SongTrack } from "../../midi/song";
 import { TempoMap } from "../../midi/tempo-map";
 import { quantize, type Sheet } from "../../sheet/quantize";
-import type { Mark } from "../components/keyboard";
 import { staff } from "../components/staff";
 import { el } from "../dom";
+import type { Mark } from "../mark";
 import { group, section, specimen, type Locale } from "./parts";
 
 const MESSAGES = {

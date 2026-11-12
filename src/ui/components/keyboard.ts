@@ -22,7 +22,8 @@
  *   once, and a pointer that slides moves to the key it reaches. The keyboard then takes every touch,
  *   so the page does not scroll under a playing finger.
  * - **Screen readers:** the drawing is hidden from them. The keyboard is a group named by `label`,
- *   and a polite live text names every marked key with its mark and finger.
+ *   and a polite live text names every marked key with its mark and finger, by `describeMarks` of
+ *   `src/ui/mark.ts`.
  *
  * The keys are no focus stops, since a learner plays on a MIDI or a computer keyboard. The pointer is
  * one more way in, never the only one.
@@ -31,10 +32,8 @@ import "./keyboard.css";
 import { FULL_RANGE, type KeyRange, layoutKeys } from "../../render/key-layout";
 import { noteName } from "../../theory/note-names";
 import { el } from "../dom";
+import { describeMarks, type Mark } from "../mark";
 import type { Signal } from "../signal";
-
-/** How a key is marked: the key to play next, a right note, or a wrong one. */
-export type Mark = "next" | "correct" | "mistake";
 
 /** Which keys carry their name. */
 export type KeyNames = "none" | "c" | "white";
@@ -120,27 +119,6 @@ export function reachSpan(geometry: KeyboardGeometry, reach: KeyRange): { x: num
   if (inside.length === 0) return undefined;
   const x = Math.min(...inside.map((box) => box.x));
   return { x, width: Math.max(...inside.map((box) => box.x + box.width)) - x };
-}
-
-/** The text a screen reader hears for `marks`: each marked key by name, with its mark and finger. */
-export function describeMarks(
-  marks: ReadonlyMap<number, Mark>,
-  markNames: Readonly<Record<Mark, string>>,
-  nameOf: (pitch: number) => string,
-  fingers: ReadonlyMap<number, number> = new Map(),
-  fingerName?: (finger: number) => string,
-): string {
-  const parts: string[] = [];
-  for (const mark of ["next", "correct", "mistake"] as const) {
-    const pitches = [...marks].filter(([, m]) => m === mark).map(([pitch]) => pitch).sort((a, b) => a - b);
-    if (pitches.length === 0) continue;
-    const keys = pitches.map((pitch) => {
-      const finger = fingers.get(pitch);
-      return finger !== undefined && fingerName ? `${nameOf(pitch)} (${fingerName(finger)})` : nameOf(pitch);
-    });
-    parts.push(`${markNames[mark]}: ${keys.join(", ")}`);
-  }
-  return parts.join(". ");
 }
 
 const SVG = "http://www.w3.org/2000/svg";

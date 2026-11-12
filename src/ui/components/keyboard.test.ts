@@ -1,7 +1,8 @@
 import { FULL_RANGE, isBlack, layoutKeys } from "../../render/key-layout";
 import { noteName } from "../../theory/note-names";
 import { expect, test } from "../../testing";
-import { BLACK_LENGTH, describeMarks, FINGER_BAND, keyboardGeometry, type Mark, REACH_BAND, reachSpan, WHITE_LENGTH, WHITE_WIDTH } from "./keyboard";
+import { describeMarks, type Mark } from "../mark";
+import { BLACK_LENGTH, FINGER_BAND, keyboardGeometry, REACH_BAND, reachSpan, WHITE_LENGTH, WHITE_WIDTH } from "./keyboard";
 
 test("keys_sit_where_the_3d_piano_puts_them", () => {
   for (const range of [FULL_RANGE, { first: 48, last: 72 }, { first: 61, last: 66 }, { first: 60, last: 60 }]) {

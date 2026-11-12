@@ -20,8 +20,8 @@
  */
 import { messagesOf } from "../../i18n/locale";
 import { noteName } from "../../theory/note-names";
-import type { Mark } from "../../ui/components/keyboard";
 import { el } from "../../ui/dom";
+import type { Mark } from "../../ui/mark";
 import { LOUD_FROM, type PlayEntry, type PlayNotesStep, pitchesOf } from "../model";
 import { demoRange } from "./demo";
 import { scoreOf, showsHint } from "./judge";
