@@ -25,3 +25,6 @@ Desktop.ini
 
 # The built app, written by `bun run build`.
 /dist/
+
+# Each machine's own environment, such as the dev server's HTTPS certificate in tools/dev.ts.
+.env.local

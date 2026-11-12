@@ -87,7 +87,7 @@ if (!steps.some((s) => s.kind === "shot")) steps.push({ kind: "shot", value: "" 
 /** Builds into a folder of this run's own and serves it on a free port. Gives the URL and a stop. */
 async function serveBuild(): Promise<{ url: string; stop: () => Promise<void> }> {
   const outDir = join(shotsDir, `dist-${process.pid}`);
-  const server = Bun.spawn(["bun", join(root, "tools", "dev.ts"), "--preview", "--port", "0", "--out", outDir], {
+  const server = Bun.spawn(["bun", join(root, "tools", "dev.ts"), "--preview", "--port", "0", "--out", outDir, "--no-tls"], {
     cwd: root,
     stdout: "pipe",
     stderr: "pipe",

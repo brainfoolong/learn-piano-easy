@@ -80,7 +80,7 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
-    command: `bun tools/dev.ts --preview --port ${port} --out ${run}/dist`,
+    command: `bun tools/dev.ts --preview --port ${port} --out ${run}/dist --no-tls`,
     url: `http://localhost:${port}/`,
     reuseExistingServer: false,
     timeout: 60_000,
