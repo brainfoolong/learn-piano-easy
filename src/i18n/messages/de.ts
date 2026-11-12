@@ -162,6 +162,7 @@ export const de: Messages = {
         { title: "Deine Computertastatur", text: "Die Buchstaben- und Zifferntasten spielen zwei Oktaven, und du kannst jede Note auf eine andere Taste legen." },
       ],
       piano: "Ein kleines Klavier zum Ausprobieren",
+      start: "Lade das kleine Klavier, um darauf zu spielen",
       hint: "Tipp eine Taste an, um sie zu hören.",
     },
     free: {

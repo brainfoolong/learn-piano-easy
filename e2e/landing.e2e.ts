@@ -1,6 +1,6 @@
 /**
  * The landing page in a real browser: its layout, its calls to action, the mascot, the hero's player,
- * the versions band, its motion and its stillness while it loads.
+ * the versions band, the devices band's piano, its motion and its stillness while it loads.
  *
  * - **The layout checks run with reduced motion.** The hero's parts rise in as the page shows, and a
  *   measured text must stand at its full colour. With reduced motion nothing enters.
@@ -212,6 +212,40 @@ test("the_hero_piano_plays_a_pressed_key", async ({ page }) => {
   await page.mouse.down();
   await expect.poll(started, { timeout: 10_000 }).toBeGreaterThan(before);
   await page.mouse.up();
+  expect(errors).toEqual([]);
+});
+
+test("the_devices_band_loads_the_piano_on_a_click", async ({ page }) => {
+  test.setTimeout(60_000);
+  const errors = watchErrors(page);
+  const started = await countSounds(page);
+  await page.goto("./");
+  const panel = page.locator(".landing-devices__piano");
+  const start = panel.getByRole("button", { name: t.landing.devices.start });
+  await start.scrollIntoViewIfNeeded();
+  await expect(start.locator("img:visible")).toBeVisible();
+  // Before the click the band is a picture: no canvas, and no three.js.
+  await expect(panel.locator("canvas")).toHaveCount(0);
+
+  // One click loads the piano view in the picture's place, with a span per key from C4 to E5.
+  await start.click();
+  const view = panel.locator(".piano-keys");
+  await expect(view.locator("canvas")).toBeVisible();
+  await expect(start).toHaveCount(0);
+  await expect(view).toHaveAttribute("data-first", "60");
+  await expect(view).toHaveAttribute("data-last", "76");
+  await expect(view.locator(".piano-keys__key")).toHaveCount(17);
+  await expect(panel.locator(".landing-devices__hint")).toHaveText(t.landing.devices.hint);
+
+  // A press low on E4's span holds that key and sounds it, and letting go lets it go.
+  const key = view.locator('.piano-keys__key[data-pitch="64"]');
+  const box = (await key.boundingBox())!;
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height * 0.85);
+  await page.mouse.down();
+  await expect(key).toHaveAttribute("data-held", "");
+  await expect.poll(started, { timeout: 45_000 }).toBeGreaterThan(0);
+  await page.mouse.up();
+  await expect(key).not.toHaveAttribute("data-held");
   expect(errors).toEqual([]);
 });
 

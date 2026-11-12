@@ -12,7 +12,8 @@
  * - **The steps and the promises:** cards with a tile over a title and a text.
  * - **The versions:** the stage takes the chosen version's colour for its notes, its lit keys and the
  *   dot before its tagline. The tagline holds two lines' room, so a switch moves nothing.
- * - **The devices:** rows of a tile and its words, with the small keyboard on a panel beside them.
+ * - **The devices:** rows of a tile and its words, with the small piano on a panel beside them. Its
+ *   picture of the site's theme shows until a click, under a round cue, in the piano's own shape.
  * - **The questions:** folds in one centred column. A fold's chevron turns as it opens and its answer
  *   settles in, both at once with reduced motion.
  * - **The last call:** a centred column under the glow, which closes the page as the hero opened it.
@@ -229,7 +230,7 @@
     background: var(--rarity);
   }
 
-  /* What you play on: rows of a tile and its words, and the small keyboard that plays. */
+  /* What you play on: rows of a tile and its words, and the small piano that plays. */
   .landing-devices__layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -278,10 +279,84 @@
     box-shadow: var(--e-rim), var(--e-2);
   }
 
-  .landing-devices__piano .keyboard {
+  /* The picture and the piano that replaces it share one frame and one shape, so the swap moves nothing. */
+  .landing-devices__start,
+  .landing-devices__piano .piano-keys {
     overflow: hidden;
     border: 1px solid var(--c-line-strong);
     border-radius: var(--r-control);
+  }
+
+  .landing-devices__start {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1200 / 858;
+    padding: 0;
+    background: var(--c-surface-1);
+    cursor: pointer;
+  }
+
+  .landing-devices__picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .landing-devices__picture[data-theme="dark"] {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-site-theme="light"]) .landing-devices__picture[data-theme="light"] {
+      display: none;
+    }
+
+    :root:not([data-site-theme="light"]) .landing-devices__picture[data-theme="dark"] {
+      display: block;
+    }
+  }
+
+  :root[data-site-theme="dark"] .landing-devices__picture[data-theme="light"] {
+    display: none;
+  }
+
+  :root[data-site-theme="dark"] .landing-devices__picture[data-theme="dark"] {
+    display: block;
+  }
+
+  .landing-devices__cue {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    display: grid;
+    place-items: center;
+    width: var(--s-10);
+    height: var(--s-10);
+    margin: calc(var(--s-10) / -2) 0 0 calc(var(--s-10) / -2);
+    border-radius: var(--r-pill);
+    background: var(--c-accent);
+    box-shadow: var(--e-3);
+    color: var(--c-accent-ink);
+  }
+
+  .landing-devices__cue .icon {
+    width: var(--s-6);
+    height: var(--s-6);
+  }
+
+  .landing-devices__start[aria-busy="true"] {
+    cursor: progress;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .landing-devices__cue {
+      transition: transform var(--m-small) var(--ease-standard);
+    }
+
+    .landing-devices__start:hover .landing-devices__cue {
+      transform: scale(1.08);
+    }
   }
 
   .landing-devices__hint {

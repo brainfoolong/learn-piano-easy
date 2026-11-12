@@ -187,8 +187,10 @@ export const en = {
         { title: "A touch screen", text: "Tap the keys on the screen, with as many fingers as you like." },
         { title: "Your computer keyboard", text: "The letter and number keys play two octaves, and you can move any note to another key." },
       ],
-      /** The small keyboard's accessible name. */
+      /** The small piano's accessible name. */
       piano: "A small piano to try",
+      /** The accessible name of the small piano's picture, a button that loads the piano. */
+      start: "Load the small piano to play it",
       hint: "Touch a key to hear it.",
     },
     free: {

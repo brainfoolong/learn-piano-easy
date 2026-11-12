@@ -1,6 +1,7 @@
 /**
- * Makes the landing page's pictures: the players of the hero and of the versions band, and the two
- * parts, each in the light and the dark scheme, as WebP in `public/images/landing/`.
+ * Makes the landing page's pictures: the players of the hero and of the versions band, the devices
+ * band's small piano, and the two parts, each in the light and the dark scheme, as WebP in
+ * `public/images/landing/`.
  *
  * It runs `tools/shot.ts` once per picture and scheme, in English, at the picture's size. Run it again
  * whenever a picture's look changes. `bun tools/landing-pictures.ts hero rarity-epic` makes only the
@@ -13,6 +14,9 @@
  * - **The hero** plays the hero's song. **Each version's picture** is named by the version's id, such
  *   as `rarity-epic` for Medium. It plays that version of *Ode to Joy* in the version's colour. The
  *   run first chooses the version in the band's control, by the name a visitor reads.
+ * - **The devices band's small piano** is the piano view of `src/render/piano-keys.ts`, from C4 to E5
+ *   with the C names, as the band's click loads it. It is 1200 by 858 pixels, the view's own shape,
+ *   on the colour of the band's panel.
  * - **The two parts** are 1200 by 750 pixels.
  * - **Just Play Piano** is the player, a moment after its demo song starts, with its bar shown. Its run
  *   sets the player's own theme through its settings, since the player keeps a theme apart from the
@@ -77,6 +81,23 @@ const startBox = (band: string, version?: string) => `(() => {
   return "started";
 })()`;
 
+/**
+ * A script for `--eval` that loads the devices band's small piano with a click, then fills the window
+ * with it on the panel's colour. The view moves to the page's body, as a landing box does.
+ */
+const START_PIANO = `(async () => {
+  document.querySelector(".landing-devices__start").click();
+  const frame = () => new Promise((done) => requestAnimationFrame(done));
+  let view = null;
+  while (view === null) {
+    await frame();
+    view = document.querySelector(".landing-devices__piano .piano-keys");
+  }
+  document.body.append(view);
+  Object.assign(view.style, { position: "fixed", inset: "0", width: "100vw", height: "100vh", aspectRatio: "auto", zIndex: "2147483647", background: "var(--c-surface-1)" });
+  return "loaded";
+})()`;
+
 /** The steps that shoot a landing box: start it, then let its song play a few seconds. */
 const boxSteps = (band: string, version?: string) => ["--eval", startBox(band, version), "--wait", "8000"];
 
@@ -92,6 +113,7 @@ const PARTS: Record<string, { path: string; size: string; steps: (scheme: string
       { path: "./", size: "1200x900", steps: () => boxSteps(".landing-rarities", name) },
     ]),
   ),
+  devices: { path: "./", size: "1200x858", steps: () => ["--eval", START_PIANO, "--wait", "1500"] },
   play: {
     path: "play/",
     size: "1200x750",
