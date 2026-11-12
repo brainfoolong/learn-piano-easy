@@ -34,7 +34,9 @@
  * - **The learner's notes sound while the lesson shows,** from every input on the bus, and the computer
  *   keyboard plays. The player's shell stays silent then, so a note never sounds twice.
  * - **The computer keyboard shifts by octaves for the step that shows.** A step names its notes through
- *   `reachKeys`, and `octaveShift` picks the shift. Each new step starts unshifted. The reach is marked
+ *   `reachKeys`, and `octaveShift` picks the shift. Each new step starts unshifted. A phrase wider
+ *   than the keys aims them at its next entry through `aimKeys`, and they move only when that entry
+ *   is out of reach. The reach is marked
  *   under the step's keys while no MIDI keyboard is on, and follows the MIDI state as it changes.
  * - **A song step moves to the player and back** through `songHandoff` of `src/learn/song-handoff.ts`.
  *   The lesson keeps its step while the song is out, and moves back once the player ends the request.
@@ -158,7 +160,7 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
   /** Shifts the computer keyboard to reach the asked notes, and shows its reach while no MIDI keyboard is on. */
   const fitKeys = () => {
     const bound = keyReach(context.settings.get("keyBindings"));
-    keyShift = asked === undefined || bound === undefined ? 0 : octaveShift(asked.notes, bound);
+    keyShift = asked === undefined || bound === undefined ? 0 : octaveShift(asked.notes, bound, keyShift);
     const midi = inputService(context.settings).midi.state === "on";
     asked?.reach.set(bound === undefined || midi ? undefined : { first: bound.first + keyShift, last: bound.last + keyShift });
   };
@@ -185,6 +187,11 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
         asked = { notes, reach: signal<KeyRange | undefined>(undefined) };
         fitKeys();
         return asked.reach;
+      },
+      aimKeys: (notes) => {
+        if (asked === undefined) return;
+        asked.notes = notes;
+        fitKeys();
       },
       tryAgain: (message) => {
         if (passed === undefined) setBand("try-again", message);

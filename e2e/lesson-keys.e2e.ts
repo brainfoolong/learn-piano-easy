@@ -43,3 +43,39 @@ test("the_computer_keyboard_shifts_an_octave_to_play_a_scale_above_its_keys", as
   await expect(band.getByRole("button", { name: t.band.continue })).toBeVisible();
   expect(errors).toEqual([]);
 });
+
+test("a_chord_too_wide_for_the_computer_keys_is_played_a_key_at_a_time", async ({ page }) => {
+  const t = messagesOf("en").lesson;
+  const entry = (await courseLessons()).find(({ world, lesson }) => world === "both-hands" && lesson.id === "changing-the-bass-on-the-beat");
+  if (entry === undefined) throw new Error("The course has no lesson both-hands/changing-the-bass-on-the-beat.");
+  const steps = stepsToRun(entry.lesson.steps, inputHas(false));
+  const at = steps.findIndex((step) => step.id === "change-under-tune");
+  const phrase = steps[at];
+  if (phrase?.kind !== "play-notes") throw new Error("The lesson has no play-notes step change-under-tune.");
+  const reach = keyReach("")!;
+  // A chord of the G bass and the tune's D spans more than any one octave shift of the keys reaches.
+  expect(phrase.notes.some((notes) => [-24, -12, 0, 12].every((shift) => pitchesOf(notes).some((pitch) => pitch < reach.first + shift || pitch > reach.last + shift)))).toBe(true);
+
+  const errors = watchErrors(page);
+  await page.goto(lessonPath(entry, "en"));
+  for (const [index, step] of steps.slice(0, at).entries()) {
+    await onStep(page, index);
+    for (const move of solutionOf(step)) await playMove(page, move, "en");
+    await page.locator(".lesson__band").getByRole("button", { name: t.band.continue }).click();
+  }
+  await onStep(page, at);
+  const bar = stage(page).locator(".keyboard__reach");
+  for (const notes of phrase.notes) {
+    let left = pitchesOf(notes);
+    while (left.length > 0) {
+      const first = Number(await bar.getAttribute("data-first"));
+      const shift = first - reach.first;
+      const pitch = left.find((p) => p >= first && p <= reach.last + shift);
+      if (pitch === undefined) throw new Error(`No key of ${left.join("+")} is in reach at shift ${shift}.`);
+      await page.keyboard.press(DEFAULT_KEYS.get(pitch - shift)!);
+      left = left.filter((p) => p !== pitch);
+    }
+  }
+  await expect(page.locator(".lesson__band").getByRole("button", { name: t.band.continue })).toBeVisible();
+  expect(errors).toEqual([]);
+});

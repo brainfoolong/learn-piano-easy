@@ -12,7 +12,9 @@
  * - **A step may judge touch or the pedal per entry,** and runs only on a MIDI keyboard, as
  *   `src/learn/lesson-run.ts` chooses. A right key played too loud, too soft, or with the pedal wrong is
  *   a mistake like a wrong key. The band names what to change, and the key is not counted as played.
- * - **The computer keyboard shifts to reach the phrase,** and its reach is marked under the keys.
+ * - **The computer keyboard shifts to reach the phrase,** and its reach is marked under the keys. A
+ *   phrase wider than the keys aims them at the keys of the next entry not yet pressed. They move only
+ *   when those are out of reach, so a chord too wide for them is played a key at a time.
  * - **The last entry passes the step,** with the mistakes counted on the way. Later input does nothing.
  * - **The judges are `playNote` and `expressionMiss`,** pure functions the unit tests call.
  */
@@ -105,6 +107,7 @@ export const playNotesStep: StepView<PlayNotesStep> = (element, step, host) => {
         keys.marks.set(marksAt(step.notes, at, pressed));
         hint.textContent = "";
         if (at === step.notes.length) host.pass({ mistakes, score: scoreOf(mistakes) });
+        else host.aimKeys(pitchesOf(step.notes[at]!).filter((key) => !pressed.includes(key)));
         return;
       }
       mistakes += 1;
@@ -117,6 +120,7 @@ export const playNotesStep: StepView<PlayNotesStep> = (element, step, host) => {
     },
   });
   keys.marks.set(marksAt(step.notes, at, pressed));
+  host.aimKeys(pitchesOf(step.notes[0]!));
   element.append(
     el("div", {
       class: "lesson-step lesson-play-notes",

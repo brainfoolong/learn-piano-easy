@@ -48,6 +48,8 @@ export interface StepHost {
    * mounts. Returns the keys it reaches, undefined while a MIDI keyboard is on.
    */
   reachKeys(notes: readonly number[]): Signal<KeyRange | undefined>;
+  /** Aims the computer keyboard at `notes`, the next of a phrase, shifting it only when they are out of its reach. */
+  aimKeys(notes: readonly number[]): void;
   /** Says the last answer was wrong, with `message`, and keeps the step open. */
   tryAgain(message: string): void;
   /** Passes the step with `result`. The band shows Continue. Later calls do nothing. */

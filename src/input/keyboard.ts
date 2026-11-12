@@ -101,10 +101,12 @@ const MOST_OCTAVES = 4;
 
 /**
  * The whole octaves to shift the keys of `reach` by, in semitones, so the fewest of `notes` fall outside
- * them. A tie goes to the smallest shift, so every note already in reach shifts nothing.
+ * them. The shift `from` stays while every note fits it, so the keys never move without need. Otherwise
+ * a tie goes to the smallest shift.
  */
-export function octaveShift(notes: readonly number[], reach: KeyRange): number {
+export function octaveShift(notes: readonly number[], reach: KeyRange, from = 0): number {
   const outside = (shift: number) => notes.filter((pitch) => pitch < reach.first + shift || pitch > reach.last + shift).length;
+  if (outside(from) === 0) return from;
   let best = 0;
   let fewest = outside(0);
   for (let octaves = 1; octaves <= MOST_OCTAVES; octaves++) {

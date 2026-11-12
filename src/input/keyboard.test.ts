@@ -22,6 +22,16 @@ test("the_octave_shift_leaves_the_fewest_notes_outside_and_prefers_no_shift", ()
   expect(octaveShift([45, 60], reach)).toBe(-12);
 });
 
+test("the_octave_shift_stays_while_every_note_fits_it", () => {
+  const reach = { first: 48, last: 72 };
+  // A low fifth moves the keys down, and they stay there for a note that still fits.
+  expect(octaveShift([43, 50], reach, 0)).toBe(-12);
+  expect(octaveShift([55], reach, -12)).toBe(-12);
+  // A note out of reach moves them the least way that fits it, and they stay for the next.
+  expect(octaveShift([74], reach, -12)).toBe(12);
+  expect(octaveShift([60], reach, 12)).toBe(12);
+});
+
 test("rebinding_a_key_moves_it_off_its_old_note", () => {
   expect(notesOf("").get("KeyZ")).toBe(48);
   expect(notesOf("").get("KeyI")).toBe(72);
