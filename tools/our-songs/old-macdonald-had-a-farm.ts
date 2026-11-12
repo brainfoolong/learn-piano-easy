@@ -202,4 +202,88 @@ export const oldMacDonaldHadAFarm: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "\"Old MacDonald hat 'ne Farm\" ist ein Kinderlied über einen Bauern und seine Tiere. " +
+      "Eine frühe Fassung namens Ohio erschien 1917 in einem Buch mit Liedern, die britische Soldaten sangen. " +
+      "Jede Strophe bringt ein Tier und seinen Laut dazu, also dauert das Lied so lange, wie die Sänger wollen.",
+    funFact: "Im Lied von 1917 hieß der Bauer Old Macdougal, und sein Hof lag in Ohio.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand allein und langsam, und lass das Lied auf jeden Ton warten.",
+          "Jetzt die linke Hand allein. Sie hält jeden Ton zwei oder vier Schläge lang.",
+          "Nimm beide Hände zusammen für die ersten acht Takte.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Dein Daumen liegt auf dem D und Finger 3 auf dem G. Jeder Finger behält seine eigene Taste.",
+          "Heb die Hand kurz vor dem hohen H etwas an, damit du rechtzeitig darauf landest.",
+          "Das sind die Laute der Tiere. Lass sie hüpfen, und lächle ruhig dabei.",
+        ],
+        tricky: {
+          3: "Dein kleiner Finger greift hinauf zum hohen H, während der Daumen nah am D bleibt.",
+          7: "Wieder derselbe Griff: der kleine Finger auf H, dann Finger 4 auf A.",
+          15: "Ein letzter Griff zum H. Nutz die kurze Pause davor, um dich bereitzumachen.",
+        },
+      },
+      rare: {
+        practice: [
+          "Klatsch die schnellen Töne der Takte 11 und 12, dann spiel die rechte Hand allein.",
+          "Spiel die linke Hand allein, und halt jeden Akkord bis zum nächsten.",
+          "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Die zwei schnellen D sind Achtel. Stell sie dir als einen geteilten Schlag vor.",
+          "Hier wiederholt sich ein Muster aus kurz, kurz, lang. Sag beim Spielen im Kopf den Laut des Tiers.",
+          "Der Akkord der linken Hand wechselt in der Taktmitte. Lass jeden zwei Schläge lang klingen.",
+        ],
+        tricky: {
+          3: "Der Daumen verlässt das D, und der kleine Finger nimmt sofort das hohe H. Halt die Hand offen.",
+          7: "Derselbe Sprung hinauf zum H. In der Taktmitte nimmt Finger 4 der linken Hand das A.",
+          15: "Der letzte Sprung zum H. Danach bleibt beiden Händen nur noch der Schlussakkord.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal jeden halben Takt, sobald der Alberti-Bass neu beginnt.",
+        ],
+        tricky: {
+          7: "Die Terzen springen vom D hinauf zu G und H. Beweg die ganze Hand, und behalt ihre Form.",
+          15: "Nach dem schnellen Lauf landet dein kleiner Finger auf dem H. Lass den Lauf die Hand dorthin tragen.",
+          16: "Deine Hand fällt vom A zum Schlussakkord. Daumen auf H, Finger 3 auf G.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zum Basston, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Spiel die schnellen Läufe der rechten Hand allein, am Anfang langsam.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Die schnellen Töne steigen stufenweise, ein Finger pro Taste, bis zum kleinen Finger auf H.",
+        ],
+        tricky: {
+          4: "Halt den langen Akkord drei Schläge lang. Dann lass den Daumen für den Akkord auf Schlag vier zum G fallen.",
+          8: "Dein Daumen spielt beide schnellen D und ist damit bereit für die einzelnen Töne von Takt 9.",
+          13: "Der Lauf endet mit dem Daumen auf D. Schieb ihn hinunter zum H für den Akkord, mit Finger 2 auf D.",
+        },
+      },
+    },
+  },
 };

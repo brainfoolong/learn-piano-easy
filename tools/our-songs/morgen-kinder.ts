@@ -185,8 +185,8 @@ export const morgenKinder: OurSong = {
     edition: "Carl Gottlieb Hering, Neue praktische Singschule für Kinder, 1809",
   },
   about:
-    "Morgen, Kinder, wird's was geben means Tomorrow, children, there will be something in German. " +
-    "Karl Friedrich Splittegarb's words were first printed in 1795, under the title Die Weihnachtsfreude. " +
+    "The German title Morgen, Kinder, wird's was geben means Tomorrow, children, there will be something. " +
+    "Karl Friedrich Splittegarb's words were first printed in 1795. " +
     "Carl Gottlieb Hering set them to this tune in 1809, in a singing school for children. " +
     "The song is about children looking forward to their presents, and it never mentions the birth of Jesus.",
   funFact:
@@ -304,6 +304,93 @@ export const morgenKinder: OurSong = {
         4: "Finger 3 holds the long D, while the left hand leaps from the low G to its chord and back.",
         8: "Finger 2 takes the long D this time, so finger 3 is ready for the F of bar 9.",
         9: "Finger 3 plays F twice and finger 5 plays A twice, while the stride bass drops to a low F.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Morgen, Kinder, wird's was geben heißt auf Englisch Tomorrow, children, there will be something. " +
+      "Karl Friedrich Splittegarbs Text wurde 1795 zum ersten Mal gedruckt. " +
+      "Carl Gottlieb Hering vertonte ihn 1809 mit dieser Melodie, in einer Gesangschule für Kinder. " +
+      "Das Lied erzählt von Kindern, die sich auf ihre Geschenke freuen, und erwähnt die Geburt Jesu nie.",
+    funFact:
+      "1927 schrieb Erich Kästner eine Parodie über arme Kinder, die mit Morgen, Kinder, wird's nichts geben beginnt.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die letzten vier Takte nur mit der rechten Hand. Dort steigt die Melodie bis zum hohen A.",
+          "Jetzt die linke Hand allein. Sie hält eine Quinte oder ein einzelnes F.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Die vier schnellen Töne in Takt 2 sind die kürzesten im Lied. Zähl sie gleichmäßig: eins, zwei, drei, vier.",
+          "Takt 2 endet mit einem kurzen G und einer Pause. Nutz die Pause, um die Hand bis zum E zu öffnen.",
+          "Der Daumen spielt das erste C und Finger 2 das zweite, damit Finger 5 das F erreicht.",
+        ],
+        tricky: {
+          3: "Nach der Pause spielt Finger 3 zweimal das E. Finger 4 und 5 steigen zu F und G, und Finger 4 kehrt zum E zurück.",
+          7: "Wie in Takt 3: Finger 3 auf E, dann Finger 4 und 5 hinauf zu F und G.",
+          8: "Finger 5 und 4 spielen F und E, und Finger 2 nimmt das D. Dann ist Finger 3 bereit für das F in Takt 9.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die ersten acht Takte nur mit der rechten Hand. Das ist die Anfangsphrase.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt jeden Akkord leise den ganzen Takt lang, damit die Melodie oben bleibt.",
+          "Takt 4 endet auf einem tiefen G, und Takt 5 beginnt hoch auf dem E. Schau auf das E, bevor du das G spielst.",
+          "Der Daumen spielt das erste C und Finger 2 das zweite, damit Finger 5 das F erreicht.",
+        ],
+        tricky: {
+          5: "Nach dem G des Daumens springt Finger 3 ohne Pause hinauf zum E. Halt den Daumen leicht, damit sich die Hand öffnet.",
+          6: "Finger 5 spielt das hohe G, und Finger 4 kehrt über dem C-Akkord zum E zurück.",
+          14: "Wie in Takt 6: Finger 5 auf dem hohen G, dann Finger 4 auf dem E.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde des zweiten Durchgangs allein, hinauf und wieder hinab.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die rechte Hand pausiert am Ende von Takt 12 eine Viertel lang, dann springt sie eine Oktave hinauf.",
+          "Wechsle das Pedal auf jeder Takthälfte, sobald die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          13: "Die Melodie beginnt eine Oktave höher von vorn. Finger 2 nimmt das hohe C, und der Daumen fällt auf das G.",
+          23: "Der Daumen spielt das erste C und Finger 2 das zweite, damit Finger 5 das hohe F erreicht.",
+          24: "Finger 4, 3, 2 und 1 wandern hinab zum H, und Finger 2 endet über dem letzten Akkord auf dem C.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Oktaven der rechten Hand allein, und heb die Hand bei jeder kurzen Pause.",
+          "Spiel die Arpeggien des zweiten Durchgangs nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Halt Daumen und kleinen Finger eine Oktave auseinander. Die kurzen Pausen geben der Hand Zeit zum Springen.",
+          "Spann die Hand für den letzten Akkord über C, E, G und C, und lass ihn klingen.",
+        ],
+        tricky: {
+          4: "Finger 3 hält das lange D, während die linke Hand vom tiefen G zu ihrem Akkord springt und zurück.",
+          8: "Diesmal nimmt Finger 2 das lange D, damit Finger 3 bereit ist für das F in Takt 9.",
+          9: "Finger 3 spielt zweimal das F und Finger 5 zweimal das A, während der Stride-Bass auf ein tiefes F fällt.",
+        },
       },
     },
   },

@@ -225,7 +225,7 @@ export const oHolyNight: OurSong = {
     "The French composer Adolphe Adam set Placide Cappeau's poem Minuit, chrétiens to music, as Cantique de Noël. " +
     "It was first sung at Midnight Mass in Roquemaure, in the south of France, in 1847. " +
     "The best-known English version, O Holy Night, was written in 1855 by the American critic and minister John Sullivan Dwight.",
-  funFact: "Cappeau wrote the poem on 3 December 1847, during a stagecoach journey from Mâcon to Dijon.",
+  funFact: "Adolphe Adam is best known today for his ballet Giselle.",
   mythic: null,
   collection: "christmas",
   aka: ["Cantique de Noël", "Minuit, chrétiens"],
@@ -343,6 +343,91 @@ export const oHolyNight: OurSong = {
         6: "The octaves rock between G and A, then drop to D. Keep the hand in its octave shape.",
         7: "The same rocking as bar 6, then a climb to the high C. Let the stride keep its beat.",
         12: "The octaves leap from G up to the high E. Use the short gap before it to jump.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Der französische Komponist Adolphe Adam vertonte Placide Cappeaus Gedicht Minuit, chrétiens als Cantique de Noël. " +
+      "Es erklang zuerst 1847 in der Christmette in Roquemaure, im Süden Frankreichs. " +
+      "Die bekannteste englische Fassung, O Holy Night, schrieb 1855 der amerikanische Kritiker und Geistliche John Sullivan Dwight.",
+    funFact: "Adolphe Adam ist heute vor allem für sein Ballett Giselle bekannt.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die Takte 1 bis 7 nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel den Aufstieg von Takt 8 bis zum Schluss nur mit der rechten Hand.",
+          "Jetzt die linke Hand allein. Sie hält eine Handform und wechselt in der Mitte jedes Takts.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Halt den langen Ton jedes punktierten Paars. Der kurze Ton führt dann direkt in den nächsten.",
+          "Nutz die Pause am Ende von Takt 7, um nach oben zu rücken. Finger 3 landet auf dem hohen C.",
+          "Das ist der Aufstieg, für den das Lied bekannt ist. Lass ihn bis zum hohen E lauter werden.",
+        ],
+        tricky: {
+          2: "Der kleine Finger spielt das hohe C, und die Hand wandert mit Finger 3, 2 und 1 hinab zum mittleren C.",
+          4: "Nach dem A greift der Daumen hinunter zum F, dann streckt sich der kleine Finger hinauf zum hohen C.",
+          8: "Nach der Pause rückt die Hand nach oben, mit Finger 3 auf dem hohen C. Dann spielt der Daumen das A.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die ersten sieben Takte nur mit der rechten Hand, und gib jedem kurzen Ton seinen Platz.",
+          "Spiel die linke Hand allein. Halt jeden Akkord, bis der nächste kommt.",
+          "Spiel den Aufstieg in den Takten 8 bis 10 mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Spiel das zweite G mit Finger 5. Dann wandern Finger 3, 2 und 1 hinab zum C.",
+          "Die Fis machen die Melodie für einen Moment traurig. Spiel sie leise.",
+          "Die letzten sechs Takte kommen noch einmal. Spiel sie etwas leiser, wie ein Echo.",
+        ],
+        tricky: {
+          2: "Wechsle beim wiederholten G von Finger 3 auf Finger 5, damit die Hand hinab zum C wandern kann.",
+          4: "Finger 2 spielt beide Fis, und der Daumen nimmt gleich danach das E.",
+          8: "Nach der Pause rückt die Hand nach oben, mit Finger 3 auf dem hohen C. Dann spielt der Daumen das A.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel den Refrain eine Oktave höher nur mit der rechten Hand.",
+          "Spiel die ersten sieben Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise und gleichmäßig, damit die Melodie darüber singt.",
+          "Wechsle das Pedal mit jedem neuen Akkord, damit der Bass nie verschwimmt.",
+          "Spring nach dem letzten C mit der rechten Hand eine Oktave hinauf zum Refrain.",
+        ],
+        tricky: {
+          4: "Die rechte Hand spielt ihre Fis, während die linke Hand auf E rollt. Halt beide Hände leicht.",
+          13: "Die Melodie kehrt heim zum C, während die linke Hand von C zu G und zurück wechselt.",
+          19: "Derselbe Schluss wie in Takt 13, eine Oktave höher. Halt das letzte C bis zum Ende.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann hinauf zum Akkord.",
+          "Spiel den Aufstieg in Oktaven nur mit der rechten Hand. Halt die Hand in Oktavform.",
+          "Spiel die gebrochenen Oktaven des Refrains nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel jede Oktave mit Daumen und kleinem Finger, und halt die Hand in dieser Form.",
+          "Über den gebrochenen Oktaven soll die rechte Hand singen. Die linke Hand bleibt leise.",
+        ],
+        tricky: {
+          6: "Die Oktaven schaukeln zwischen G und A, dann fallen sie zum D. Halt die Hand in ihrer Oktavform.",
+          7: "Dasselbe Schaukeln wie in Takt 6, dann ein Aufstieg zum hohen C. Lass den Stride im Takt bleiben.",
+          12: "Die Oktaven springen vom G hinauf zum hohen E. Nutz die kurze Lücke davor für den Sprung.",
+        },
       },
     },
   },

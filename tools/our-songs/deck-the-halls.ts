@@ -88,7 +88,7 @@ export const deckTheHalls: OurSong = {
   },
   about:
     "Deck the Halls is sung to Nos Galan, an old Welsh tune for New Year's Eve. " +
-    "The tune was first printed in 1794, and Joseph Haydn arranged it in 1803. " +
+    "The tune was first printed in 1794, and Joseph Haydn later arranged it. " +
     "Thomas Oliphant wrote the English Christmas words in 1862, and the tune is sung to them today.",
   funFact:
     "Oliphant's words began with Deck the hall, for one hall only. Later songbooks changed it to the plural we sing today.",
@@ -236,6 +236,91 @@ export const deckTheHalls: OurSong = {
         4: "Finger 2 slides down from D to C, and the thumb tucks in for B. The left hand leaps to the low G.",
         5: "The fill of bar 4 runs straight into the high G, so keep finger 5 ready for it.",
         8: "Finger 2 slides down to C again, while the left hand leaps for the low G octave.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Deck the Halls wird auf Nos Galan gesungen, eine alte walisische Melodie für Silvester. " +
+      "Die Melodie erschien 1794 zum ersten Mal im Druck, und Joseph Haydn bearbeitete sie später. " +
+      "Thomas Oliphant schrieb 1862 den englischen Weihnachtstext, und auf ihn singt man die Melodie heute.",
+    funFact:
+      "Oliphants Text begann mit Deck the hall, also nur mit einer Halle. Spätere Liederbücher machten daraus die Mehrzahl, die wir heute singen.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand langsam allein, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 9 bis 12 nur mit der rechten Hand. Dort steigt die Melodie bis zum hohen C.",
+          "Nimm beide Hände zusammen. Die linke Hand hält jeden tiefen Ton einen halben Takt oder länger.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Lang, kurz: Das erste G ist lang, und das F ist kurz und folgt direkt danach.",
+          "Die Takte 13 und 14 sind wieder der Anfang, also kennt deine Hand sie schon.",
+          "Nimm bei den letzten Tönen etwas Tempo heraus, und lass das tiefe C klingen.",
+        ],
+        tricky: {
+          3: "Finger 3, 4 und 5 wandern hinauf über D, E und F, dann fällt Finger 3 zurück zum D.",
+          9: "Finger 5 spielt das F, dann greift der Daumen hinab zum D, während die Hand stillhält.",
+          11: "Der Daumen rutscht vom D hinauf zum E. Dann steigen Finger 2 bis 5 über G, A, H und das hohe C.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die rechte Hand langsam allein, und lass das Lied auf jeden Ton warten.",
+          "Spiel die linke Hand allein: in jedem Takt einen tiefen Ton, dann einen Akkord.",
+          "Spiel die Takte 17 bis 24 nur mit der rechten Hand. Dort steigt die Melodie bis zum hohen C.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Das Fis ist die schwarze Taste zwischen F und G. Es hebt die Melodie hin zum hohen C.",
+          "Spiel den tiefen Ton der linken Hand etwas lauter als den Akkord danach.",
+          "Vier schnelle A: Halt sie gleichmäßig, wie vier Schritte auf derselben Treppenstufe.",
+        ],
+        tricky: {
+          21: "Der Daumen geht vom D hinauf zum E, und Finger 2 nimmt das schwarze Fis.",
+          22: "Nach dem G rutscht Finger 3 eine Taste hinauf zum A, damit Finger 4 und 5 H und C erreichen.",
+          32: "Der Daumen rutscht vom D hinab zum letzten C, während die linke Hand ihren vollen Akkord spielt.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal in der Mitte jedes Takts, wenn die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          11: "Nach dem G kommt der Daumenuntersatz unter Finger 3 zum A. Dann enden Finger 2 und 3 auf H und C.",
+          12: "Vom A fällt der Daumen zum D, während Finger 4 auf dem G darüber landet.",
+          16: "Der Daumen greift für den letzten Akkord hinab zum G, und die linke Hand fällt zu einer tiefen Oktave.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Takte 1 bis 4 nur mit der rechten Hand, und halt die schnellen Füllnoten leicht.",
+          "Spiel den Lauf der Takte 11 und 12 nur mit der rechten Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel die schnellen Füllnoten leiser als die Melodietöne, wie ein kleines Echo.",
+          "Heb die Hand nach dem letzten D, dann lande mit beiden Händen auf dem großen Akkord.",
+        ],
+        tricky: {
+          4: "Finger 2 rutscht vom D hinab zum C, und der Daumen schlüpft für das H darunter. Die linke Hand springt zum tiefen G.",
+          5: "Die Füllnoten aus Takt 4 laufen direkt ins hohe G, also halt Finger 5 dafür bereit.",
+          8: "Finger 2 rutscht wieder hinab zum C, während die linke Hand zur tiefen G-Oktave springt.",
+        },
       },
     },
   },

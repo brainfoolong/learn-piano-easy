@@ -196,7 +196,7 @@ export const kommetIhrHirten: OurSong = {
     edition: "Katolický kancionál, Olomouc 1847, its first print, as sung to Carl Riedel's German words of 1870",
   },
   about:
-    "Kommet, ihr Hirten means Come, you shepherds in German. " +
+    "The German title Kommet, ihr Hirten means Come, you shepherds. " +
     "The song comes from Bohemia, where its Czech title is Nesem vám noviny. " +
     "The tune was first printed in 1847, in a Catholic hymnal in Olomouc. " +
     "The Leipzig conductor Carl Riedel wrote the German words freely after the original, and first printed them in 1870.",
@@ -314,6 +314,92 @@ export const kommetIhrHirten: OurSong = {
         19: "The octaves leap up to A and back down to F. Lift the hand on each short rest.",
         24: "The octaves step C, E, C and D, then drop to the low G. Let the wrist bounce.",
         26: "The same as bar 24. Then the hand leaps a whole octave up to the high G.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Kommet, ihr Hirten heißt auf Englisch Come, you shepherds. " +
+      "Das Lied stammt aus Böhmen, wo sein tschechischer Titel Nesem vám noviny lautet. " +
+      "Die Melodie wurde 1847 zum ersten Mal gedruckt, in einem katholischen Gesangbuch in Olmütz. " +
+      "Der Leipziger Dirigent Carl Riedel dichtete den deutschen Text frei nach dem Original und druckte ihn 1870 zum ersten Mal.",
+    funFact: "Der Musikwissenschaftler Konrad Ameln datierte die Melodie allein nach ihrem Stil auf etwa 1700.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 9 bis 12 nur mit der rechten Hand. Der Daumen rückt hinab zum tiefen G.",
+          "Jetzt die linke Hand allein. Sie hält in jedem Takt eine einzige Handform.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Jeder Takt beginnt mit einem langen G für zwei Schläge, dann folgen vier kurze Töne für je einen Schlag.",
+          "Die linke Hand hält C und G wie den Bordun eines Dudelsacks. Lass ihn unter der Melodie klingen.",
+          "Hier spielt Finger 2 das C, damit der Daumen in Takt 10 für das tiefe G frei ist.",
+        ],
+        tricky: {
+          9: "Finger 2 übernimmt das C vom Daumen. Dann spielen Finger 4 und 5 E und G.",
+          11: "Wie in Takt 9: Finger 2 auf C, Finger 4 auf E und Finger 5 auf G.",
+          13: "Finger 5 landet auf dem hohen G. Dann spielen Finger 2 und 4 E und G, und der Daumen spielt das D.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein: ein tiefes C, dann zwei Akkorde in jedem Takt.",
+          "Spiel die Takte 9 bis 14 nur mit der linken Hand. Dort wechseln die Akkorde öfter.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "In den meisten Takten spielt die linke Hand das C auf Schlag eins, dann einen Akkord auf jedem der beiden anderen.",
+          "Spiel das tiefe C etwas kräftiger als die Akkorde, wie den Bordun eines Dudelsacks.",
+          "Die Melodie springt vom tiefen G hinauf zum hohen G. Finger 4 spannt die ganze Oktave.",
+        ],
+        tricky: {
+          13: "Der Daumen verlässt das tiefe G, und Finger 4 greift eine Oktave hinauf zum hohen G.",
+          27: "Derselbe Oktavgriff wie in Takt 13. Halt das Handgelenk locker, während sich die Hand öffnet.",
+          28: "Für den letzten Akkord fällt der Daumen auf das G, und Finger 2 spielt gleichzeitig das C.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel die gebrochenen Akkorde allein, bis sie von selbst rollen: tief, Mitte, hoch, Mitte.",
+          "Spiel ab Takt 15 die Melodie nur mit der linken Hand.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt die gebrochenen Akkorde leise, damit die Melodie darüber singt.",
+          "Jetzt hat die linke Hand die Melodie. Spiel sie deutlich, und halt die Akkorde der rechten Hand leise.",
+          "Wechsle das Pedal auf jedem Schlag.",
+        ],
+        tricky: {
+          9: "Die linke Hand springt für den a-Moll-Akkord zum A, während Finger 2 der rechten Hand das C nimmt.",
+          11: "Zwei Schläge a-Moll, dann hebt die linke Hand ab und landet wieder auf dem tiefen C.",
+          15: "Die Hände tauschen ihre Aufgaben. Die linke Hand beginnt die Melodie auf G, und die rechte Hand spielt Akkorde.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Takte 1 bis 9 nur mit der rechten Hand, und spiel die schnellen Läufe leicht.",
+          "Spiel die Arpeggien des zweiten Durchgangs nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der Lauf steigt über D, E und F, dann hebt die Hand ab und setzt Finger 4 auf das G.",
+          "Halt Daumen und kleinen Finger eine Oktave auseinander. Die kurzen Pausen geben der Hand Zeit zum Springen.",
+        ],
+        tricky: {
+          19: "Die Oktaven springen hinauf zum A und wieder hinab zum F. Heb die Hand in jeder kurzen Pause.",
+          24: "Die Oktaven schreiten über C, E, C und D, dann fallen sie zum tiefen G. Lass das Handgelenk federn.",
+          26: "Wie in Takt 24. Dann springt die Hand eine ganze Oktave hinauf zum hohen G.",
+        },
       },
     },
   },

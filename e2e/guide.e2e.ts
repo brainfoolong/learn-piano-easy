@@ -1,6 +1,8 @@
 /** The guide of a song of ours in a real browser: the learner reads it and applies a practice step. */
 import { expect, test, type Page } from "@playwright/test";
 
+import { CATALOGS } from "../src/i18n/locale";
+
 /** The settings the page keeps in `localStorage`: only those that differ from their defaults. */
 function storedSettings(page: Page): Promise<Record<string, unknown>> {
   return page.evaluate(() => JSON.parse(localStorage.getItem("learn-piano-easy.settings") ?? "{}").values ?? {});
@@ -87,4 +89,22 @@ test("a_practice_step_sets_hands_speed_and_loop", async ({ page }) => {
   expect(values.playHands).toBeUndefined();
   expect(values.enableLoop).toBeUndefined();
   expect(values.waitForNotes).toBeUndefined();
+});
+
+test("the_guide_reads_in_the_pages_language", async ({ page }) => {
+  const de = CATALOGS.de.player;
+  await page.goto("./de/play/");
+  await page.getByRole("button", { name: de.shell.topbar.songs, exact: true }).click();
+  const songs = page.getByRole("dialog", { name: de.shell.dialog.songs });
+  await songs.getByRole("searchbox", { name: de.library.panel.search.label }).fill("silent night");
+  const title = `Silent Night, ${de.library.panel.levels.beginner}`;
+  await songs.getByRole("button", { name: title }).click();
+  await expect(page.getByLabel(de.shell.topbar.openSong)).toHaveText(title);
+
+  // Silent Night carries German text, so its story and its first practice step read in German.
+  await page.getByRole("button", { name: de.shell.topbar.guide, exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: de.shell.dialog.guide(title) });
+  await expect(dialog.getByRole("heading", { name: de.library.guide.headings.about })).toBeVisible();
+  await expect(dialog.getByText("Franz Xaver Gruber schrieb diese Melodie", { exact: false })).toBeVisible();
+  await expect(dialog.getByText("Spiel die ersten vier Takte nur mit der rechten Hand", { exact: false })).toBeVisible();
 });

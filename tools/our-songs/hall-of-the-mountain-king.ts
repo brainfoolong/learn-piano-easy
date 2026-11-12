@@ -270,4 +270,89 @@ export const hallOfTheMountainKing: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Grieg schrieb diese Musik für Henrik Ibsens Schauspiel Peer Gynt, das 1876 in Christiania, dem heutigen Oslo, zuerst aufgeführt wurde. " +
+      "In dieser Szene drängen sich die Trolle in der Halle ihres Königs um Peer. " +
+      "Dieselbe kurze Melodie kehrt immer wieder, jedes Mal lauter und schneller, bis sie krachend endet.",
+    funFact:
+      "Grieg schrieb selbst, dieses Stück rieche nach Kuhfladen und trollhafter Selbstzufriedenheit, und er könne es kaum anhören.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand langsam allein, und lass das Stück auf jeden Ton warten.",
+          "Jetzt die rechte Hand allein in den Takten 9 bis 16, wo die Melodie höher steigt.",
+          "Die linke Hand hält für jeden Takt eine Quinte oder einen Ton. Spiel die ersten acht Takte mit beiden Händen zusammen.",
+          "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Hier hat jeder Finger seine eigene Taste: Daumen auf A, kleiner Finger auf E.",
+          "Spiel kurz und leise, wie ein Troll, der auf Zehenspitzen durch eine Höhle schleicht.",
+          "Hier steigt die Melodie höher. Lass sie etwas lauter werden, als ob die Trolle aufwachen.",
+        ],
+        tricky: {
+          4: "In Takt 3 griff Finger 4 hinein zum Dis, und hier greift Finger 2 hinein zum B.",
+          9: "Der Daumen landet auf dem E, und Finger 2, 3 und 4 steigen je eine Taste. Die linke Hand geht hinab zum E.",
+          17: "Die Melodie beginnt von vorn. Führ den Daumen in der Pause zurück zum A, und die linke Hand auch.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein. Sie geht auf jedem Schlag zwischen zwei Tönen hin und her, wie ein Trollmarsch.",
+          "Spiel die Takte 3 und 4 nur mit der rechten Hand, und achte auf das Kreuz und das b.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel die Takte 9 bis 16 mit beiden Händen zusammen. Dort steigt die Melodie.",
+          "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Dis und B sind schwarze Tasten. Finger 4 und 2 greifen etwas weiter hinein.",
+          "Beide Hände spielen auf jedem Schlag. Marschier mit, und halt die Schläge gleichmäßig.",
+          "In diesem Teil kommen die Trolle näher. Spiel ihn etwas lauter als den Anfang.",
+        ],
+        tricky: {
+          4: "Finger 2 greift hinein zum B, während die linke Hand zwischen G und D wechselt.",
+          9: "Nutz die Pause, um die linke Hand zum tiefen E zu bringen. Der rechte Daumen beginnt den Aufstieg auf dem E.",
+          17: "Beide Hände gehen in der Pause zurück zum A, und die Melodie beginnt noch einmal.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel die gebrochenen Akkorde der linken Hand allein, bis sie von selbst rollen: tief, Mitte, hoch, Mitte.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort kommt der Daumenuntersatz.",
+          "Spiel das Thema ab Takt 17 nur mit der linken Hand.",
+          "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass es zum Ende hin lauter werden.",
+        ],
+        tips: [
+          "Der Bass rutscht vom Cis hinab zum C. Dieses gruselige Rutschen lässt die Trolle so hinterlistig klingen.",
+          "Nach dem Cis mit Finger 2 kommt der Daumenuntersatz zum D, und die Hand rückt hinauf.",
+          "Jetzt spielt die linke Hand die Melodie. Die rechte Hand tupft nur kurze Akkorde zwischen die Schläge.",
+        ],
+        tricky: {
+          9: "Bring die linke Hand in der kurzen Pause hinab zum tiefen Fis. Der rechte Daumen beginnt den Aufstieg.",
+          17: "Die Hände tauschen ihre Aufgaben. Die linke Hand spielt die Melodie auf den Schlägen, und die rechte tupft dazwischen.",
+          23: "Die linke Hand steigt über Fis, Ais, Cis und E, dann lässt sie los und sucht das tiefe H.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel die Oktaven der linken Hand allein, kurz und gezupft, mit einer Pause nach jeder.",
+          "Spiel die Oktaven der rechten Hand allein. Halt die Hand in einer Form, und beweg sie als Ganzes.",
+          "Spiel die treibenden Oktaven der linken Hand allein, acht pro Takt.",
+          "Nimm beide Hände zusammen, und spiel das ganze Stück in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, vom leisen Anfang bis zum lauten Ende.",
+        ],
+        tips: [
+          "Fang leise an. Das ganze Stück wird bis zum Ende lauter, also lass dir Raum zum Wachsen.",
+          "Bei Oktaven behalten Daumen und kleiner Finger dieselbe Form. Lass das Handgelenk die Bewegung machen.",
+          "Das sind die letzten krachenden Schläge der Trolle. Spiel jeden Akkord laut und kurz.",
+        ],
+        tricky: {
+          9: "Die rechte Hand beginnt ihre Oktaven, und die linke Hand beginnt ihre Achtel. Halt beide Hände locker.",
+          13: "Die Oktaven steigen wieder über Fis, Gis, Ais und H. Lass das Handgelenk von Taste zu Taste federn.",
+          27: "Die Akkorde wechseln zwischen h-Moll und Fis-Dur. Halt Finger 1, 2, 3 und 5 in ihrer Form.",
+        },
+      },
+    },
+  },
 };

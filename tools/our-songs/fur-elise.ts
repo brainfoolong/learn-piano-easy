@@ -234,4 +234,90 @@ export const furElise: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Beethoven schrieb dieses kurze Klavierstück 1810, und seine Handschrift widmet es Elise. " +
+      "Niemand weiß sicher, wer Elise war. " +
+      "Ludwig Nohl fand das Stück und veröffentlichte es 1867, vierzig Jahre nach Beethovens Tod.",
+    funFact:
+      "Eine Theorie sagt, Nohl habe den Namen falsch gelesen, und das Stück sei eigentlich für Therese Malfatti, die Beethoven gern geheiratet hätte.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten.",
+          "Spiel ab Takt 5 nur die rechte Hand. Dort geht die Hand hinab zum mittleren C.",
+          "Jetzt die linke Hand allein. Sie hält zwei Griffformen, eine pro Takt.",
+          "Spiel die ersten acht Takte mit beiden Händen zusammen.",
+          "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Wieg dich zwischen Finger 5 und 4 hin und her, für E und Dis, wie auf einer sanften Schaukel.",
+          "Hier wartet die linke Hand. Spiel die Melodie leise, als würdest du ein Geheimnis erzählen.",
+          "Heb die Hand in der Pause nach dem A, und lande mit dem Daumen auf dem mittleren C.",
+        ],
+        tricky: {
+          5: "Nach der Pause landet dein Daumen auf dem mittleren C. Schau hin, bevor du es spielst.",
+          7: "Dein Daumen nimmt die schwarze Taste Gis, damit die Hand hinauf zum C reicht.",
+          13: "Die Hand geht wieder hinab zum mittleren C. Nutz die Pause in Takt 12, um dorthin zu kommen.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die ersten acht Takte langsam nur mit der rechten Hand.",
+          "Spiel die linke Hand allein. Jeder Akkord steigt vom Bass auf, ein Ton pro Schlag.",
+          "Spiel die Takte 4 bis 8 mit beiden Händen zusammen. Dort wechseln sie sich ab.",
+          "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Die linke Hand steigt, dann steigt die rechte Hand weiter. Es soll wie eine einzige Hand klingen.",
+          "Daumen auf E, kleiner Finger auf dem hohen E. Spann die Hand über die ganze Oktave.",
+          "Das Gis im Bass macht den Akkord hell. Es zieht das Ohr zurück nach Hause zum A.",
+        ],
+        tricky: {
+          5: "Nutz die Pause nach dem A, um den rechten Daumen hinab zum mittleren C zu führen.",
+          6: "Die linke Hand öffnet sich weit: Finger 2 spielt das H, und der Daumen greift hinauf zum Gis.",
+          14: "Dieselbe Streckung wie in Takt 6: Finger 2 spielt das H, und der linke Daumen greift hinauf zum Gis.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs wie einen an.",
+          "Spiel die Takte 4 bis 8 langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Wechsle das Pedal an jedem Taktstrich. Heb es an, sobald der neue Basston klingt.",
+          "Die Melodie ist der obere Ton jeder Terz, also lass den oberen Finger führen.",
+        ],
+        tricky: {
+          20: "Heb die Hand nach den Terzen, dann lande mit dem Daumen auf dem mittleren C und dem kleinen Finger auf dem A.",
+          28: "Derselbe Sprung wie in Takt 20: Daumen auf das mittlere C und kleiner Finger auf das A, zusammen.",
+          32: "Spreiz die Hand für den letzten Akkord: Daumen auf C, Finger 2 auf E und Finger 4 auf A.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Spiel die zweite Hälfte mit beiden Händen zusammen. Dort steigt die Melodie eine Oktave höher.",
+          "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Oben sollen E und Dis schimmern. Spiel sie leicht und gleichmäßig.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+        ],
+        tricky: {
+          15: "Der Akkord der linken Hand auf Schlag zwei hat nur E und Gis. Nimm auf Schlag drei das H dazu.",
+          20: "Heb die Hand vom hohen C, dann greif A, C, E und A mit Finger 1, 2, 3 und 5.",
+          28: "Der Vierklang kommt zurück. Heb zuerst vom hohen C ab, dann lande auf der ganzen Oktave.",
+        },
+      },
+    },
+  },
 };

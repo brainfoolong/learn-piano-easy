@@ -185,7 +185,6 @@ export const oDuFroehliche: OurSong = {
   about:
     "O du fröhliche means O you joyful, and it is one of the best-known German Christmas songs. " +
     "Johannes Daniel Falk of Weimar wrote its first verse for the neglected children he took into his home. " +
-    "It was first printed in 1816. " +
     "Falk set it to O sanctissima, a song to the Virgin Mary first printed in London in 1792.",
   funFact: "Falk first wrote it for all three great Christian feasts, with one verse for Christmas, one for Easter and one for Pentecost.",
   mythic: null,
@@ -301,6 +300,91 @@ export const oDuFroehliche: OurSong = {
         6: "The chord climbs from F to G, and the little finger rises from B to the high C.",
         8: "The chord settles on G. The thumb drops to B, and the little finger steps down from A to G.",
         14: "Leave the A a little early, so the hand has time to drop to the G chord.",
+      },
+    },
+  },
+  de: {
+    about:
+      "O du fröhliche heißt auf Englisch O you joyful, und es ist eines der bekanntesten deutschen Weihnachtslieder. " +
+      "Johannes Daniel Falk aus Weimar schrieb die erste Strophe für die verwahrlosten Kinder, die er in sein Haus aufnahm. " +
+      "Falk unterlegte sie der Melodie von O sanctissima, einem Marienlied, das 1792 zuerst in London gedruckt wurde.",
+    funFact: "Falk schrieb das Lied zuerst für alle drei großen christlichen Feste, mit je einer Strophe für Weihnachten, Ostern und Pfingsten.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten acht Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 9 bis 16 nur mit der rechten Hand. Dort steigt die Melodie Schritt für Schritt.",
+          "Jetzt die linke Hand allein. Sie hält eine Quinte oder ein einzelnes F.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Lang, kurz: Halt das G, dann lass das schnelle F ins E fallen.",
+          "Spiel das zweite G mit Finger 2 statt 3. Dann ist die Hand bereit, zum C hinaufzusteigen.",
+          "Heb den Daumen etwas früher vom F, und setz Finger 3 auf das E darunter.",
+        ],
+        tricky: {
+          7: "Finger 4 und 3 gehen vom H zurück hinab zum A. Halt die Hand ruhig über ihren fünf Tasten.",
+          12: "Finger 4 spielt das G, Finger 5 das schnelle A, dann nimmt Finger 2 das G, bereit für das hohe C.",
+          15: "Nach dem kurzen F landet Finger 3 auf dem E und Finger 2 auf dem D.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel das ganze Lied nur mit der rechten Hand.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Die linke Hand bewegt sich kaum. Finger 5 auf C und Finger 4 auf D wechseln sich ab, und der Daumen bleibt auf dem G.",
+          "Hier ruht die Phrase auf dem G. Lass die beiden Töne den ganzen Takt lang klingen.",
+          "Die Melodie geht zweimal vom C hinab. Spiel das zweite Mal etwas lauter.",
+        ],
+        tricky: {
+          6: "Die rechte Hand steigt mit Finger 3, 4 und 5 über A, H und C, während die linke Hand von F zu G wechselt.",
+          12: "Finger 4 spielt das G, Finger 5 das schnelle A, dann nimmt Finger 2 das G, bereit für das hohe C.",
+          15: "Nach dem kurzen F landet Finger 3 auf dem E und Finger 2 auf dem D.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Wechsle das Pedal auf jeder Takthälfte, sobald der neue Basston klingt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+        ],
+        tricky: {
+          17: "Die Hand springt eine Oktave hinauf. Setz Finger 3 und 5 auf E und G, dann öffne die Hand zur Sexte C und A.",
+          22: "Finger 2 und 4 nehmen F und A, die Hand öffnet sich zur Sexte D und H, und Finger 5 greift zum C.",
+          32: "Heb die Hand in der kurzen Pause, dann spann sie für den letzten Akkord über E, G und C.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den oberen Finger die Melodie singen.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Die Oktaven sollen wie Kirchenglocken klingen. Halt das Handgelenk locker.",
+          "In jedem Arpeggio greift Finger 3 auf dem Weg nach oben über den Daumen.",
+        ],
+        tricky: {
+          6: "Der Akkord steigt von F nach G, und der kleine Finger steigt vom H zum hohen C.",
+          8: "Der Akkord kommt auf G zur Ruhe. Der Daumen fällt auf das H, und der kleine Finger geht vom A hinab zum G.",
+          14: "Verlass das A etwas früher, damit die Hand Zeit hat, auf den G-Akkord zu fallen.",
+        },
       },
     },
   },

@@ -317,4 +317,89 @@ export const carolOfTheBells: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Schtschedryk ist ein ukrainisches Neujahrslied, und sein Name geht auf den \"freigebigen Abend\" zurück. " +
+      "Mykola Leontowytsch, ein ukrainischer Komponist, Dirigent und Lehrer, baute es im 3/4-Takt auf einer Figur aus vier Tönen auf. " +
+      "Es erklang zum ersten Mal im Dezember 1916 in Kyjiw, und später machte Peter J. Wilhousky daraus das englische Carol of the Bells.",
+    funFact: "Wilhousky gab dem Lied einen Text über Glocken, weil ihn die Melodie an Handglocken erinnerte.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand: C, H, C, A, immer wieder.",
+          "Spiel die Takte 12 bis 16 nur mit der rechten Hand, hinauf zum hohen A und wieder hinab.",
+          "Jetzt die linke Hand allein. Sie hält für jeden Takt eine Griffform.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Die vier Töne klingen wie kleine Glocken. Spiel sie leicht und gleichmäßig.",
+          "Der Daumen nimmt das letzte C, damit der kleine Finger hinauf zum hohen A greifen kann.",
+          "Wechsle beim dritten E von Finger 2 auf Finger 3. Die Hand bleibt, wo sie ist.",
+        ],
+        tricky: {
+          12: "Spiel das letzte C mit dem Daumen, und öffne die Hand in der kurzen Pause für das hohe A.",
+          18: "Finger 4 und 5 schaukeln zwischen D und E, dann landet Finger 3 auf dem C.",
+          20: "Wie Takt 18. Halt das C die ganze halbe Note lang, bevor die Glocken zurückkommen.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein. Drück die drei Töne jedes Akkords zusammen an.",
+          "Spiel die Takte 17 bis 20 nur mit der rechten Hand, und heb die Hand nach dem Gis.",
+          "Spiel die ersten zwölf Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Die linke Hand lässt das C weg, damit es nie am H der Melodie reibt.",
+          "Nimm das letzte A mit Finger 3. Dann ist der Daumen frei für das tiefe E.",
+          "Spiel das Gis kurz, heb die Hand, und setz den Daumen auf das A.",
+        ],
+        tricky: {
+          12: "Der Daumen nimmt das letzte C, damit der kleine Finger im nächsten Takt das hohe A erreicht.",
+          17: "Spiel das Gis kurz, dann heb die Hand, und setz den Daumen auf das A.",
+          19: "Derselbe Aufstieg wie in Takt 17. Heb nach dem Gis ab, und halt den Takt gleichmäßig.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel die linke Hand allein, bis sie von selbst schaukelt: tief, rauf, rauf, ganz oben, runter, runter.",
+          "Spiel die Sexten und Terzen der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel den Aufstieg der Takte 17 bis 20 nur mit der rechten Hand. Beim A kommt der Daumenuntersatz.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Der Bass fällt in jedem Takt einen Schritt, vom A hinab zum E, während die Glocken darüber weiterklingen.",
+          "Die Melodie ist der obere Ton jeder Sexte, also lass den oberen Finger führen.",
+          "Nach dem Gis kommt der Daumenuntersatz zum A, und die Hand steigt weiter.",
+        ],
+        tricky: {
+          9: "Die Hand springt von den tiefen Sexten hinauf zu G und E. Heb sie in der kurzen Pause am Ende von Takt 8.",
+          10: "Der Daumen geht über G, F, G und E, während Finger 5 und 4 oben die Melodie läuten.",
+          19: "Mach nach dem Gis den Daumenuntersatz, ohne dass der Klang holpert.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel die Oktaven der linken Hand allein. Sie läuten dieselbe Figur aus vier Tönen zwei Oktaven tiefer.",
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Beide Hände läuten dieselbe Figur, zwei Oktaven auseinander, wie eine große und eine kleine Glocke.",
+          "Die linke Hand führt die Figur aus vier Tönen unter der Melodie fort, damit die Glocken nie verstummen.",
+          "Beide Hände steigen zusammen. Rechts kommt der Daumenuntersatz, und links kreuzt Finger 3 über den Daumen.",
+        ],
+        tricky: {
+          6: "Die rechte Hand läutet ihr tiefes E zwischen den Melodietönen, während die linke Hand für den Stride springt.",
+          15: "Spiel den G-Akkord leicht, dann E und D mit Finger 5 und 4, und heb die Hand für den nächsten Akkord.",
+          16: "Die rechte Hand wiederholt einen Akkord, während die linke springt. Lass das A oben weiterklingen.",
+        },
+      },
+    },
+  },
 };

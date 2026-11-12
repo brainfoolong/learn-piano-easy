@@ -300,4 +300,89 @@ export const weThreeKings: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Der amerikanische Geistliche John Henry Hopkins Junior schrieb dieses Weihnachtslied 1857 für ein Krippenspiel an dem Seminar, an dem er lehrte. " +
+      "Es erzählt von den Weisen aus dem Morgenland und ihren Gaben und erschien 1863 als Three Kings of Orient. " +
+      "Die Strophe steht in Moll, und der Refrain wendet sich nach Dur.",
+    funFact: "Hopkins plante das Lied so, dass drei Männer je eine Strophe allein singen, einer für jeden König.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten zwei Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort steigt die Melodie zum G und wandert hinab zum A.",
+          "Jetzt die linke Hand allein. Sie wechselt ihre Form nur auf dem ersten und dem vierten Schlag.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Jeder Takt hat zwei Gruppen aus drei Schlägen. Zähl zweimal eins, zwei, drei.",
+          "Wechsle auf dem zweiten C von Finger 3 zum Daumen. Dann ist die Hand bereit für den Aufstieg zum G.",
+          "Nach dem langen C rückt die ganze Hand eine Taste tiefer, damit Finger 2 das H spielt.",
+        ],
+        tricky: {
+          1: "Finger 5 spielt E, Finger 4 spielt D, Finger 3 spielt C, dann greift der Daumen hinab zum A.",
+          3: "Dieselben Töne wie in Takt 1. Spiel die langen Töne voll und die kurzen leicht.",
+          7: "Halt das lange C mit Finger 2, dann verschieb die Hand nach unten, damit Finger 2 das H spielt.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand in den ersten acht Takten allein, und drück die drei Töne jedes Akkords zusammen.",
+          "Spiel den Walzerbass des Refrains allein: tiefer Ton, Akkord, Akkord.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Die Strophe steht in Moll. Spiel sie leise und gleichmäßig, und halt jeden Akkord den ganzen Takt lang.",
+          "Halt das C mit Finger 2, dann verschieb die Hand eine Taste tiefer, damit Finger 2 das H spielt.",
+          "Der Refrain wendet sich nach Dur. Lass ihn heller klingen, und halt den Walzerbass leicht.",
+        ],
+        tricky: {
+          1: "Finger 5 spielt E, Finger 4 spielt D, Finger 3 spielt C, dann greift der Daumen hinab zum A.",
+          5: "Dieselben Töne wie in Takt 1, nach einer Pause. Setz Finger 5 auf das E, bevor du beginnst.",
+          14: "Halt das C mit Finger 2, dann verschieb die Hand nach unten, damit Finger 2 das H spielt. Die linke Hand wechselt zum E-Akkord.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und drück beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Heb die Hand nach dem kurzen D an, und setz den Daumen für den Refrain auf das E darunter.",
+          "Daumen und Finger 5 halten die Sexte, und die Hand gleitet als Ganzes von Taste zu Taste.",
+        ],
+        tricky: {
+          17: "Heb die Hand nach dem D an, und setz den Daumen auf das E und Finger 5 auf das C.",
+          27: "Schieb die Sexte hinauf zu A und F, dann zurück hinab zu G und E. Halt das Handgelenk locker.",
+          28: "Die Sexte gleitet von F und D hinauf zu G und E. Finger 5 spielt die Melodie.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel die Oktaven der rechten Hand allein, und halt Daumen und Finger 5 in einer festen Form.",
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Arpeggien der Takte 9 bis 16 nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau bei den Oktaven auf Finger 5 mit der Melodie. Der Daumen folgt ihm nach Gefühl.",
+          "In jedem Arpeggio greift Finger 3 auf dem Weg nach oben über den Daumen.",
+          "Spiel bei den Akkorden den obersten Finger etwas lauter, damit die Melodie singt.",
+        ],
+        tricky: {
+          3: "Die Oktaven gehen vom H zum C und zurück, während die linke Hand zwischen dem tiefen E und seinem Akkord springt.",
+          7: "Wie in Takt 3. Spiel die Oktaven gleichmäßig, und halt die Hand leicht.",
+          9: "Die linke Hand beginnt ihr erstes Arpeggio, zwei Oktaven hinauf vom C und zurück, unter dem wiederholten C.",
+        },
+      },
+    },
+  },
 };

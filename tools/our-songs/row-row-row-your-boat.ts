@@ -201,4 +201,87 @@ export const rowRowRowYourBoat: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Dies ist eines der bekanntesten Kinderlieder im englischen Sprachraum. " +
+      "Eliphalet Oram Lyte veröffentlichte die heute gesungene Melodie 1881 in The Franklin Square Song Collection. " +
+      "Sie steigt die ersten fünf Töne der Tonleiter hinauf und purzelt dann eine ganze Oktave hinab.",
+    funFact: "Das Lied ist ein Kanon: Eine zweite Stimme beginnt dieselbe Melodie zwei Takte später, und beide Stimmen passen zusammen.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand allein und langsam, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort läuft die Melodie abwärts.",
+          "Nimm beide Hände zusammen. Die linke Hand hält nur einen langen tiefen Ton.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Hier hat jeder Finger seine eigene Taste: der Daumen auf C, der kleine Finger auf G.",
+          "Das G dauert den ganzen Takt, also zähl alle sechs Schläge, bevor du weitergehst.",
+          "Jeder Ton dauert hier drei Schläge, also zähl auf jeder Taste bis drei.",
+        ],
+        tricky: {
+          5: "Verschieb die Hand während des langen G nach oben, damit der kleine Finger auf dem hohen C landet.",
+          6: "Halt das E mit Finger 2 und dann das C mit dem Daumen, je drei Schläge lang. Lass die Hand ruhig.",
+          7: "Der kleine Finger findet wieder das G, und die Melodie wandert abwärts: 5, 4, 3, 2.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die drei Töne jedes Akkords zusammen.",
+          "Spiel die linke Hand der zweiten Hälfte. Dort kommt vor jedem Akkord ein Basston.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Der Akkord wechselt nach G. Der Daumen bleibt auf G, und die anderen zwei Finger gehen je eine Taste abwärts.",
+          "Der Basston kommt auf Schlag eins, die Töne darüber auf Schlag vier.",
+          "Lass die fallenden Töne etwas leiser werden, wie ein Boot, das davontreibt.",
+        ],
+        tricky: {
+          5: "Verschieb die rechte Hand während des langen G nach oben, damit der kleine Finger auf dem hohen C landet.",
+          7: "In der linken Hand gleitet der kleine Finger von C nach H und Finger 3 von E nach D.",
+          13: "Das hohe C kommt zurück. Verschieb die rechte Hand während des langen G in Takt 12 nach oben.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel ab Takt 9 die Melodie in der linken Hand allein.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Heb das Pedal auf Schlag eins und auf Schlag vier an, und tritt es gleich wieder.",
+          "Die Melodie wandert in die linke Hand. Spiel sie lauter als die gebrochenen Akkorde der rechten Hand.",
+        ],
+        tricky: {
+          5: "Verschieb die rechte Hand während des langen G nach oben, damit der kleine Finger auf dem hohen C bereit ist.",
+          9: "Hier tauschen die Hände ihre Aufgaben: Die linke Hand übernimmt die Melodie, die rechte die Akkorde.",
+          13: "Dein linker Daumen greift hinauf zum mittleren C, dann wandert die Hand mit 2, 3 und 5 abwärts.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel ab Takt 9 die linke Hand allein. Dort beginnt sie den Kanon.",
+          "Spiel den Kanon langsam mit beiden Händen zusammen, und hör auf die zwei Stimmen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Die linke Hand beginnt den Kanon allein. Die rechte Hand wartet zwei Takte.",
+          "Jede Hand spielt die ganze Melodie. Lass beide Stimmen gut hörbar sein.",
+        ],
+        tricky: {
+          5: "Heb die Hand vom Akkord in Takt 4 ab, und setz den kleinen Finger auf das hohe C.",
+          17: "Die rechte Hand beendet die Melodie über einem tiefen G. Heb sie nach dem D ab, bereit für den letzten Akkord.",
+          18: "Spann die rechte Hand für den letzten Akkord über eine ganze Oktave: C, E, G und C.",
+        },
+      },
+    },
+  },
 };

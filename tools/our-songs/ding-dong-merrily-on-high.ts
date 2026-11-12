@@ -330,4 +330,90 @@ export const dingDongMerrilyOnHigh: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Dieses Weihnachtslied begann als Tanzmelodie namens Branle de l'Official. " +
+      "Sie erschien 1589 in Orchésographie, einem Tanzbuch des französischen Geistlichen Thoinot Arbeau. " +
+      "Der englische Komponist George Ratcliffe Woodward schrieb den Text des Liedes, und es erschien 1924. " +
+      "Charles Wood harmonisierte es.",
+    funFact: "Thoinot Arbeau war ein Deckname. Dahinter stand Jehan Tabourot.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten zwei Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 7 nur mit der rechten Hand. Dort läuft die Melodie vom hohen G hinab.",
+          "Jetzt die linke Hand allein. Sie hält für jeden halben Takt eine Griffform.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Der Daumen beginnt auf dem G unter der Melodie, und Finger 4 spielt das erste C.",
+          "Spiel das letzte C mit dem Daumen. Dann greift der kleine Finger hinauf zum hohen G.",
+          "Der Lauf fällt mit jedem langen Ton um eine Taste. Finger 5, 4 und 3 nehmen die ersten drei, dann rückt die Hand Taste für Taste hinab.",
+        ],
+        tricky: {
+          1: "Finger 4 spielt zweimal das C, dann steigen Finger 5, 4, 3 und 2 vom D hinab zum A. Der Daumen hält das lange G.",
+          5: "Der Lauf beginnt mit dem kleinen Finger auf dem hohen G. Jeder lange Ton beginnt dasselbe Muster eine Taste tiefer.",
+          7: "Finger 3, 2 und 1 spielen C, H und A, dann H, C und A. Danach wandern sie hinab über H, A und G.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen an.",
+          "Spiel die Takte 5 bis 7 nur mit der rechten Hand. Dort läuft die Melodie vom hohen G hinab.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Der Lauf geht in Gruppen aus einem langen Ton und fünf schnellen. Halt jeden langen Ton so lang wie drei schnelle.",
+          "Halt jeden Akkord leise, damit die Glocken der Melodie darüber klingen.",
+          "Spiel in der zweiten Strophe den tiefen Ton etwas lauter als den Akkord danach.",
+        ],
+        tricky: {
+          5: "Der Lauf beginnt mit dem kleinen Finger auf dem hohen G. Jeder lange Ton beginnt dasselbe Muster eine Taste tiefer.",
+          7: "Finger 3, 2 und 1 spielen C, H und A, dann H, C und A. Danach wandern sie hinab über H, A und G.",
+          15: "Dieselben Töne wie in Takt 7, jetzt über Basston und Akkord im Wechsel.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel den Lauf der Takte 5 bis 7 nur mit der rechten Hand.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber wie eine Glocke klingt.",
+          "Nach dem letzten C springt die rechte Hand eine Oktave hinauf, und die linke Hand fällt zu einem tiefen C.",
+          "Wechsle das Pedal jeden halben Takt, wenn die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          9: "Die rechte Hand spielt den Anfang eine Oktave höher. Die linke Hand fällt für ihren gebrochenen Akkord zum tiefen C.",
+          10: "Die linke Hand spielt F, dann G mit einer Pause, und springt hinab zum tiefen C.",
+          12: "Derselbe Sprung hinab zum C wie in Takt 10. Dann nimmt der rechte Daumen das letzte C, bereit für das hohe G.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel den Lauf der Takte 5 bis 7 nur mit der rechten Hand, und halt die schnellen Schwünge leicht.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Jeder lange Ton schwingt einmal hin und her, wie eine Glocke. Spiel den Schwung leichter als die Melodie.",
+          "Halt Daumen und kleinen Finger eine Oktave weit gespreizt, und lass das Handgelenk federn.",
+        ],
+        tricky: {
+          9: "Die Oktaven auf C, D, H und A kommen schnell. Halt die Hand in ihrer Oktavform, und beweg sie aus dem Handgelenk.",
+          11: "Der Anfang kehrt in Oktaven zurück. Halt sie gleichmäßig, während darunter die Arpeggien laufen.",
+          14: "Der Lauf schwingt hinab zum H, während die linke Hand darunter ein C- und dann ein G-Arpeggio hinaufsteigt.",
+        },
+      },
+    },
+  },
 };

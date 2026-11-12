@@ -2,8 +2,14 @@
   "song": "hall-of-the-mountain-king",
   "title": "In the Hall of the Mountain King",
   "composer": "Edvard Grieg",
-  "about": "Grieg wrote this music for Henrik Ibsen's play Peer Gynt, first staged in Christiania, today's Oslo, in 1876. In this scene, the trolls crowd around Peer in the hall of their king. The same short tune comes back again and again, each time louder and faster, until it crashes to an end.",
-  "funFact": "Grieg himself wrote that this piece reeked of cow pies and trollish self-satisfaction, and he could hardly bear to hear it.",
+  "about": {
+    "en": "Grieg wrote this music for Henrik Ibsen's play Peer Gynt, first staged in Christiania, today's Oslo, in 1876. In this scene, the trolls crowd around Peer in the hall of their king. The same short tune comes back again and again, each time louder and faster, until it crashes to an end.",
+    "de": "Grieg schrieb diese Musik für Henrik Ibsens Schauspiel Peer Gynt, das 1876 in Christiania, dem heutigen Oslo, zuerst aufgeführt wurde. In dieser Szene drängen sich die Trolle in der Halle ihres Königs um Peer. Dieselbe kurze Melodie kehrt immer wieder, jedes Mal lauter und schneller, bis sie krachend endet."
+  },
+  "funFact": {
+    "en": "Grieg himself wrote that this piece reeked of cow pies and trollish self-satisfaction, and he could hardly bear to hear it.",
+    "de": "Grieg schrieb selbst, dieses Stück rieche nach Kuhfladen und trollhafter Selbstzufriedenheit, und er könne es kaum anhören."
+  },
   "mythic": null,
   "versions": {
     "common": {
@@ -22,28 +28,40 @@
       },
       "practice": [
         {
-          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "text": {
+            "en": "Play the right hand alone, slowly, and let the song wait for each note.",
+            "de": "Spiel die rechte Hand langsam allein, und lass das Stück auf jeden Ton warten."
+          },
           "hands": "right",
           "speed": 0.6,
           "loop": [1, 8],
           "wait": true
         },
         {
-          "text": "Now the right hand alone in bars 9 to 16, where the tune climbs higher.",
+          "text": {
+            "en": "Now the right hand alone in bars 9 to 16, where the tune climbs higher.",
+            "de": "Jetzt die rechte Hand allein in den Takten 9 bis 16, wo die Melodie höher steigt."
+          },
           "hands": "right",
           "speed": 0.6,
           "loop": [9, 16],
           "wait": true
         },
         {
-          "text": "The left hand holds one fifth or one note for each bar. Join the hands on the first eight bars.",
+          "text": {
+            "en": "The left hand holds one fifth or one note for each bar. Join the hands on the first eight bars.",
+            "de": "Die linke Hand hält für jeden Takt eine Quinte oder einen Ton. Spiel die ersten acht Takte mit beiden Händen zusammen."
+          },
           "hands": "both",
           "speed": 0.7,
           "loop": [1, 8],
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at full speed.",
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -55,33 +73,51 @@
           "fromBar": 1,
           "toBar": 2,
           "kind": "fingering",
-          "text": "Each finger has its own key here: thumb on A, little finger on E."
+          "text": {
+            "en": "Each finger has its own key here: thumb on A, little finger on E.",
+            "de": "Hier hat jeder Finger seine eigene Taste: Daumen auf A, kleiner Finger auf E."
+          }
         },
         {
           "fromBar": 1,
           "toBar": 8,
           "kind": "sound",
-          "text": "Play short and quiet, like a troll tiptoeing through a cave."
+          "text": {
+            "en": "Play short and quiet, like a troll tiptoeing through a cave.",
+            "de": "Spiel kurz und leise, wie ein Troll, der auf Zehenspitzen durch eine Höhle schleicht."
+          }
         },
         {
           "fromBar": 9,
           "toBar": 16,
           "kind": "sound",
-          "text": "The tune climbs higher here. Let it grow a little louder, as if the trolls are waking up."
+          "text": {
+            "en": "The tune climbs higher here. Let it grow a little louder, as if the trolls are waking up.",
+            "de": "Hier steigt die Melodie höher. Lass sie etwas lauter werden, als ob die Trolle aufwachen."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 17,
-          "text": "The tune starts again. Take the thumb back down to A during the rest, and the left hand back to A."
+          "text": {
+            "en": "The tune starts again. Take the thumb back down to A during the rest, and the left hand back to A.",
+            "de": "Die Melodie beginnt von vorn. Führ den Daumen in der Pause zurück zum A, und die linke Hand auch."
+          }
         },
         {
           "bar": 9,
-          "text": "The thumb lands on E, and fingers 2, 3 and 4 climb one key each. The left hand moves down to E."
+          "text": {
+            "en": "The thumb lands on E, and fingers 2, 3 and 4 climb one key each. The left hand moves down to E.",
+            "de": "Der Daumen landet auf dem E, und Finger 2, 3 und 4 steigen je eine Taste. Die linke Hand geht hinab zum E."
+          }
         },
         {
           "bar": 4,
-          "text": "Finger 4 reached in for D sharp in bar 3, and finger 2 reaches in for B flat here."
+          "text": {
+            "en": "Finger 4 reached in for D sharp in bar 3, and finger 2 reaches in for B flat here.",
+            "de": "In Takt 3 griff Finger 4 hinein zum Dis, und hier greift Finger 2 hinein zum B."
+          }
         }
       ]
     },
@@ -101,35 +137,50 @@
       },
       "practice": [
         {
-          "text": "Play the left hand alone. It steps between two notes on every beat, like a troll's march.",
+          "text": {
+            "en": "Play the left hand alone. It steps between two notes on every beat, like a troll's march.",
+            "de": "Spiel die linke Hand allein. Sie geht auf jedem Schlag zwischen zwei Tönen hin und her, wie ein Trollmarsch."
+          },
           "hands": "left",
           "speed": 0.6,
           "loop": [1, 4],
           "wait": true
         },
         {
-          "text": "Play bars 3 and 4 with the right hand alone, and watch for the sharp and the flat.",
+          "text": {
+            "en": "Play bars 3 and 4 with the right hand alone, and watch for the sharp and the flat.",
+            "de": "Spiel die Takte 3 und 4 nur mit der rechten Hand, und achte auf das Kreuz und das b."
+          },
           "hands": "right",
           "speed": 0.5,
           "loop": [3, 4],
           "wait": true
         },
         {
-          "text": "Join the hands on the first eight bars, slowly.",
+          "text": {
+            "en": "Join the hands on the first eight bars, slowly.",
+            "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen."
+          },
           "hands": "both",
           "speed": 0.6,
           "loop": [1, 8],
           "wait": true
         },
         {
-          "text": "Join the hands on bars 9 to 16, where the tune climbs.",
+          "text": {
+            "en": "Join the hands on bars 9 to 16, where the tune climbs.",
+            "de": "Spiel die Takte 9 bis 16 mit beiden Händen zusammen. Dort steigt die Melodie."
+          },
           "hands": "both",
           "speed": 0.7,
           "loop": [9, 16],
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at full speed.",
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -141,33 +192,51 @@
           "fromBar": 3,
           "toBar": 4,
           "kind": "fingering",
-          "text": "D sharp and B flat are black keys. Fingers 4 and 2 reach a little further in."
+          "text": {
+            "en": "D sharp and B flat are black keys. Fingers 4 and 2 reach a little further in.",
+            "de": "Dis und B sind schwarze Tasten. Finger 4 und 2 greifen etwas weiter hinein."
+          }
         },
         {
           "fromBar": 1,
           "toBar": 8,
           "kind": "rhythm",
-          "text": "Both hands play on every beat. March along and keep the beats even."
+          "text": {
+            "en": "Both hands play on every beat. March along and keep the beats even.",
+            "de": "Beide Hände spielen auf jedem Schlag. Marschier mit, und halt die Schläge gleichmäßig."
+          }
         },
         {
           "fromBar": 9,
           "toBar": 16,
           "kind": "sound",
-          "text": "This part is the trolls getting closer. Play it a little louder than the start."
+          "text": {
+            "en": "This part is the trolls getting closer. Play it a little louder than the start.",
+            "de": "In diesem Teil kommen die Trolle näher. Spiel ihn etwas lauter als den Anfang."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 9,
-          "text": "Use the rest to drop the left hand to the low E. The right thumb starts the climb on E."
+          "text": {
+            "en": "Use the rest to drop the left hand to the low E. The right thumb starts the climb on E.",
+            "de": "Nutz die Pause, um die linke Hand zum tiefen E zu bringen. Der rechte Daumen beginnt den Aufstieg auf dem E."
+          }
         },
         {
           "bar": 17,
-          "text": "Both hands go back to A during the rest, and the tune starts once more."
+          "text": {
+            "en": "Both hands go back to A during the rest, and the tune starts once more.",
+            "de": "Beide Hände gehen in der Pause zurück zum A, und die Melodie beginnt noch einmal."
+          }
         },
         {
           "bar": 4,
-          "text": "Finger 2 reaches in for B flat, while the left hand steps between G and D."
+          "text": {
+            "en": "Finger 2 reaches in for B flat, while the left hand steps between G and D.",
+            "de": "Finger 2 greift hinein zum B, während die linke Hand zwischen G und D wechselt."
+          }
         }
       ]
     },
@@ -188,35 +257,50 @@
       },
       "practice": [
         {
-          "text": "Play the left hand's broken chords alone until they roll by themselves: low, middle, high, middle.",
+          "text": {
+            "en": "Play the left hand's broken chords alone until they roll by themselves: low, middle, high, middle.",
+            "de": "Spiel die gebrochenen Akkorde der linken Hand allein, bis sie von selbst rollen: tief, Mitte, hoch, Mitte."
+          },
           "hands": "left",
           "speed": 0.5,
           "loop": [1, 4],
           "wait": false
         },
         {
-          "text": "Play the right hand alone on bars 5 to 8, where the thumb passes under.",
+          "text": {
+            "en": "Play the right hand alone on bars 5 to 8, where the thumb passes under.",
+            "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort kommt der Daumenuntersatz."
+          },
           "hands": "right",
           "speed": 0.6,
           "loop": [5, 8],
           "wait": true
         },
         {
-          "text": "Play the theme in the left hand alone, from bar 17.",
+          "text": {
+            "en": "Play the theme in the left hand alone, from bar 17.",
+            "de": "Spiel das Thema ab Takt 17 nur mit der linken Hand."
+          },
           "hands": "left",
           "speed": 0.6,
           "loop": [17, 24],
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three-quarter speed.",
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and let it get louder towards the end.",
+          "text": {
+            "en": "Now play it at full speed, and let it get louder towards the end.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass es zum Ende hin lauter werden."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -228,33 +312,51 @@
           "fromBar": 3,
           "toBar": 4,
           "kind": "sound",
-          "text": "The bass slides down from C sharp to C. That spooky slide is what makes the trolls sound sneaky."
+          "text": {
+            "en": "The bass slides down from C sharp to C. That spooky slide is what makes the trolls sound sneaky.",
+            "de": "Der Bass rutscht vom Cis hinab zum C. Dieses gruselige Rutschen lässt die Trolle so hinterlistig klingen."
+          }
         },
         {
           "fromBar": 5,
           "toBar": 5,
           "kind": "fingering",
-          "text": "After C sharp on finger 2, tuck the thumb under for D, and the hand moves up."
+          "text": {
+            "en": "After C sharp on finger 2, tuck the thumb under for D, and the hand moves up.",
+            "de": "Nach dem Cis mit Finger 2 kommt der Daumenuntersatz zum D, und die Hand rückt hinauf."
+          }
         },
         {
           "fromBar": 17,
           "toBar": 22,
           "kind": "trick",
-          "text": "The left hand plays the tune now. The right hand only taps short chords between the beats."
+          "text": {
+            "en": "The left hand plays the tune now. The right hand only taps short chords between the beats.",
+            "de": "Jetzt spielt die linke Hand die Melodie. Die rechte Hand tupft nur kurze Akkorde zwischen die Schläge."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 17,
-          "text": "The hands swap jobs. The left hand plays the tune on the beats, and the right hand taps between them."
+          "text": {
+            "en": "The hands swap jobs. The left hand plays the tune on the beats, and the right hand taps between them.",
+            "de": "Die Hände tauschen ihre Aufgaben. Die linke Hand spielt die Melodie auf den Schlägen, und die rechte tupft dazwischen."
+          }
         },
         {
           "bar": 23,
-          "text": "The left hand climbs F sharp, A sharp, C sharp and E, then lets go to find the low B."
+          "text": {
+            "en": "The left hand climbs F sharp, A sharp, C sharp and E, then lets go to find the low B.",
+            "de": "Die linke Hand steigt über Fis, Ais, Cis und E, dann lässt sie los und sucht das tiefe H."
+          }
         },
         {
           "bar": 9,
-          "text": "Drop the left hand to the low F sharp during the short rest. The right thumb starts the climb."
+          "text": {
+            "en": "Drop the left hand to the low F sharp during the short rest. The right thumb starts the climb.",
+            "de": "Bring die linke Hand in der kurzen Pause hinab zum tiefen Fis. Der rechte Daumen beginnt den Aufstieg."
+          }
         }
       ]
     },
@@ -274,35 +376,50 @@
       },
       "practice": [
         {
-          "text": "Play the left hand's octaves alone, short and plucked, with a rest after each.",
+          "text": {
+            "en": "Play the left hand's octaves alone, short and plucked, with a rest after each.",
+            "de": "Spiel die Oktaven der linken Hand allein, kurz und gezupft, mit einer Pause nach jeder."
+          },
           "hands": "left",
           "speed": 0.6,
           "loop": [1, 4],
           "wait": false
         },
         {
-          "text": "Play the right hand's octaves alone. Keep the hand in one shape and move it as one piece.",
+          "text": {
+            "en": "Play the right hand's octaves alone. Keep the hand in one shape and move it as one piece.",
+            "de": "Spiel die Oktaven der rechten Hand allein. Halt die Hand in einer Form, und beweg sie als Ganzes."
+          },
           "hands": "right",
           "speed": 0.5,
           "loop": [9, 12],
           "wait": true
         },
         {
-          "text": "Play the driving octaves of the left hand alone, eight to a bar.",
+          "text": {
+            "en": "Play the driving octaves of the left hand alone, eight to a bar.",
+            "de": "Spiel die treibenden Oktaven der linken Hand allein, acht pro Takt."
+          },
           "hands": "left",
           "speed": 0.5,
           "loop": [9, 12],
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three-quarter speed.",
+          "text": {
+            "en": "Join the hands on the whole song at three-quarter speed.",
+            "de": "Nimm beide Hände zusammen, und spiel das ganze Stück in Dreiviertel-Tempo."
+          },
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, from soft at the start to loud at the end.",
+          "text": {
+            "en": "Now play it at full speed, from soft at the start to loud at the end.",
+            "de": "Jetzt spiel es im vollen Tempo, vom leisen Anfang bis zum lauten Ende."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -314,33 +431,51 @@
           "fromBar": 1,
           "toBar": 8,
           "kind": "sound",
-          "text": "Start quietly. The whole piece grows louder to its end, so leave room to grow."
+          "text": {
+            "en": "Start quietly. The whole piece grows louder to its end, so leave room to grow.",
+            "de": "Fang leise an. Das ganze Stück wird bis zum Ende lauter, also lass dir Raum zum Wachsen."
+          }
         },
         {
           "fromBar": 9,
           "toBar": 16,
           "kind": "trick",
-          "text": "For octaves, thumb and little finger keep the same shape. Let the wrist do the moving."
+          "text": {
+            "en": "For octaves, thumb and little finger keep the same shape. Let the wrist do the moving.",
+            "de": "Bei Oktaven behalten Daumen und kleiner Finger dieselbe Form. Lass das Handgelenk die Bewegung machen."
+          }
         },
         {
           "fromBar": 25,
           "toBar": 28,
           "kind": "sound",
-          "text": "These are the trolls' final crashes. Play each chord loud and short."
+          "text": {
+            "en": "These are the trolls' final crashes. Play each chord loud and short.",
+            "de": "Das sind die letzten krachenden Schläge der Trolle. Spiel jeden Akkord laut und kurz."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 9,
-          "text": "The right hand starts its octaves, and the left hand starts its eighths. Keep both hands loose."
+          "text": {
+            "en": "The right hand starts its octaves, and the left hand starts its eighths. Keep both hands loose.",
+            "de": "Die rechte Hand beginnt ihre Oktaven, und die linke Hand beginnt ihre Achtel. Halt beide Hände locker."
+          }
         },
         {
           "bar": 13,
-          "text": "The octaves climb again on F sharp, G sharp, A sharp and B. Let the wrist bounce from key to key."
+          "text": {
+            "en": "The octaves climb again on F sharp, G sharp, A sharp and B. Let the wrist bounce from key to key.",
+            "de": "Die Oktaven steigen wieder über Fis, Gis, Ais und H. Lass das Handgelenk von Taste zu Taste federn."
+          }
         },
         {
           "bar": 27,
-          "text": "The chords swap between B minor and F sharp major. Keep fingers 1, 2, 3 and 5 in their shape."
+          "text": {
+            "en": "The chords swap between B minor and F sharp major. Keep fingers 1, 2, 3 and 5 in their shape.",
+            "de": "Die Akkorde wechseln zwischen h-Moll und Fis-Dur. Halt Finger 1, 2, 3 und 5 in ihrer Form."
+          }
         }
       ]
     }

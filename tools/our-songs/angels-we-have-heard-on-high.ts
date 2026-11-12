@@ -175,7 +175,7 @@ export const angelsWeHaveHeardOnHigh: OurSong = {
     "In French it is Les Anges dans nos campagnes, which means The angels in our countryside. " +
     "Its earliest known printing with words and notes is from 1842, in a collection by Louis Lambillotte. " +
     "The English words are a paraphrase from 1862 by James Chadwick, the Roman Catholic Bishop of Hexham and Newcastle.",
-  funFact: "In the refrain Gloria in excelsis Deo, the o of Gloria is held through sixteen notes that rise and fall.",
+  funFact: "In the refrain Gloria in excelsis Deo, the o of Gloria is held through a long run of notes that rise and fall.",
   mythic: null,
   collection: "christmas",
   aka: ["Les Anges dans nos campagnes", "Gloria"],
@@ -314,6 +314,93 @@ export const angelsWeHaveHeardOnHigh: OurSong = {
         2: "Lift the hand off each single note before the next octave, so it lands without a stretch.",
         3: "The opening again. Keep the octaves even while the left hand jumps.",
         11: "Four quick notes run from C up to F, and finger 5 lands on G. The stride bass keeps going below.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Angels We Have Heard on High ist ein traditionelles französisches Weihnachtslied. " +
+      "Auf Französisch heißt es Les Anges dans nos campagnes, das bedeutet Die Engel auf unseren Feldern. " +
+      "Der früheste bekannte Druck mit Text und Noten stammt von 1842, aus einer Sammlung von Louis Lambillotte. " +
+      "Der englische Text ist eine Nachdichtung von 1862 durch James Chadwick, den römisch-katholischen Bischof von Hexham und Newcastle.",
+    funFact:
+      "Im Refrain Gloria in excelsis Deo wird das o von Gloria über einen langen Lauf von Tönen gehalten, die steigen und fallen.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel das Gloria, Takte 5 bis 7, nur mit der rechten Hand. Lass die schnellen Töne gleichmäßig steigen und fallen.",
+          "Jetzt die linke Hand allein. Sie hält für jeden halben Takt eine Griffform.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Beginn mit Finger 3 auf dem E. Der Daumen liegt auf dem mittleren C, Finger 5 auf dem G.",
+          "Auf jeden langen Ton folgen vier schnelle. Zähl sie als eins, zwei, drei, vier.",
+          "Lass das letzte C den ganzen Takt klingen, und heb beide Hände zusammen ab.",
+        ],
+        tricky: {
+          6: "Finger 2 spielt das D, dann streckt sich der Daumen hinab zum tiefen G. Die Hand bleibt, wo sie ist.",
+          7: "Vom tiefen G aus steigen Finger 2 bis 5 über C, D, E und F, je eine Taste.",
+          10: "Derselbe Aufstieg wie in Takt 7: Finger 2 bis 5 auf C, D, E und F.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen an.",
+          "Spiel das Gloria, Takte 5 bis 7, nur mit der rechten Hand. Halt die schnellen Töne gleichmäßig.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Die linke Hand bewegt sich nicht: Finger 5 auf C, 4 auf D, 3 auf E, 2 auf F und der Daumen auf G.",
+          "Die rechte Hand pausiert, während die linke einen G-Septakkord spielt. Er führt dich zurück zum Anfang.",
+          "Spiel beim zweiten Mal den tiefen Ton etwas lauter als den Akkord danach.",
+        ],
+        tricky: {
+          6: "Finger 2 spielt das D, dann streckt sich der Daumen hinab zum tiefen G, während die linke Hand D und F hält.",
+          9: "Dieselben Töne wie in Takt 6. Halt die rechte Hand ruhig, und lass den Daumen hinabgreifen.",
+          17: "Noch einmal Takt 6, jetzt im zweiten Durchgang. Halt die Akkorde unter der Melodie leise.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde des zweiten Durchgangs nur mit der linken Hand.",
+          "Spiel das hohe Gloria, Takte 16 bis 18, nur mit der rechten Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Heb die Hand nach G, A und H, und setz Finger 3 eine Oktave höher auf das E.",
+          "Wechsle das Pedal jedes Mal, wenn die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          17: "Finger 2 spielt das hohe D, und der Daumen streckt sich hinab zum G, während die linke Hand steigt.",
+          19: "Das Gloria läuft jetzt hoch. Lass Finger 5, 4, 3 und 2 vom A hinab zum E rollen.",
+          20: "Der Daumen nimmt das C, dann landet Finger 2 auf dem D. Halt die gebrochenen Akkorde darunter gleichmäßig.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Oktaven der rechten Hand allein, und lass Finger 5 die Melodie singen.",
+          "Spiel den gebrochenen Oktavbass des zweiten Durchgangs nur mit der linken Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Nach jeder Oktave bleibt Finger 5 oben und führt die schnellen Töne hinab.",
+          "Der schnelle Lauf zum G ist eine kleine Fanfare. Spiel ihn leicht und hell.",
+        ],
+        tricky: {
+          2: "Heb die Hand nach jedem Einzelton ab, damit sie ohne Strecken auf der nächsten Oktave landet.",
+          3: "Wieder der Anfang. Halt die Oktaven gleichmäßig, während die linke Hand springt.",
+          11: "Vier schnelle Töne laufen vom C hinauf zum F, und Finger 5 landet auf dem G. Darunter läuft der Stride-Bass weiter.",
+        },
       },
     },
   },

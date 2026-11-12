@@ -147,11 +147,11 @@ export const ihrKinderleinKommet: OurSong = {
     edition: "Taschenbuch zum geselligen Vergnügen auf das Jahr 1795, Leipzig (1794), Schulz's tune to Wie reizend, wie wonnig",
   },
   about:
-    "Ihr Kinderlein, kommet means Come, little children in German. " +
-    "The priest Christoph von Schmid wrote the words around 1808 to 1810, and called his poem The Children at the Manger. " +
+    "The German title Ihr Kinderlein, kommet means Come, little children. " +
+    "The priest Christoph von Schmid wrote the words, and called his poem The Children at the Manger. " +
     "Johann Abraham Peter Schulz wrote the tune in 1794 for a spring poem by Wilhelm Gottlieb Becker. " +
-    "The teacher Friedrich Hermann Eickhoff first set Schmid's words to it, and the song was first sung at Christmas 1829.",
-  funFact: "The same tune carries a summer song in Iceland, and an evening song in German-speaking Switzerland.",
+    "Schmid's words were later sung to that spring tune, and together they became a Christmas song.",
+  funFact: "Christoph von Schmid also wrote stories for children, such as Das Blumenkörbchen, The Basket of Flowers.",
   mythic: null,
   collection: "christmas",
   aka: ["Come, Little Children", "Die Kinder bey der Krippe"],
@@ -285,6 +285,92 @@ export const ihrKinderleinKommet: OurSong = {
         20: "The octaves step F, D and F over a G arpeggio. Keep the hand in its octave shape.",
         24: "The same steps as bar 20. Let the arpeggio run on under the octaves.",
         29: "The octave A lands after a short lift. Count the rest, then play the A again.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Ihr Kinderlein, kommet heißt auf Englisch Come, little children. " +
+      "Der Priester Christoph von Schmid schrieb den Text und nannte sein Gedicht Die Kinder bei der Krippe. " +
+      "Johann Abraham Peter Schulz schrieb die Melodie 1794 für ein Frühlingsgedicht von Wilhelm Gottlieb Becker. " +
+      "Später sang man Schmids Text zu dieser Frühlingsmelodie, und zusammen wurden sie ein Weihnachtslied.",
+    funFact: "Christoph von Schmid schrieb auch Geschichten für Kinder, etwa Das Blumenkörbchen.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten fünf Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die letzten vier Takte nur mit der rechten Hand. Dort reicht die Melodie hinauf bis zum hohen C.",
+          "Jetzt die linke Hand allein. Sie hält in jedem Takt eine einzige Handform.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Jeder Takt beginnt mit einem langen Ton und endet mit zwei kurzen, wie eine schaukelnde Wiege.",
+          "In Takt 13 steht nach dem ersten A eine Pause. Heb den Finger, zähl die Pause, und spiel das A noch einmal.",
+          "Finger 5 spielt das hohe C. Dann wandert die Hand hinab, und der Daumen endet auf dem H.",
+        ],
+        tricky: {
+          2: "Finger 4 spielt das G, und Finger 2 fällt auf das E. Halt die Hand ruhig über D bis A.",
+          15: "Finger 5 streckt sich hinauf zum hohen C, dann spielen Finger 3 und 2 das G und das E.",
+          16: "Finger 3 und 2 spielen F und D, und der Daumen greift hinunter zum H.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die drei Töne jedes Akkords zusammen.",
+          "Spiel die Takte 10 bis 17 nur mit der linken Hand, zwei Akkorde in jedem Takt.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt jeden Akkord leise, damit die schaukelnde Melodie darüber klar bleibt.",
+          "Der linke Daumen geht in Takt 13 für den F-Akkord hinauf zum A, und in Takt 14 zurück zum G.",
+          "Die linke Hand spielt jetzt auf jeder Takthälfte einen Akkord. Zähl eins, zwei, und drück auf jeden Schlag.",
+        ],
+        tricky: {
+          14: "Finger 3 spielt dreimal das G, während der linke Daumen vom A zurück zum G gleitet.",
+          15: "Finger 5 greift hinauf zum hohen C, dann kehrt Finger 3 zum G zurück.",
+          16: "Finger 3, 2 und 1 wandern hinab über F, D und H, über einem G-Septakkord.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde des zweiten Durchgangs allein, und heb die Hand bei jeder Pause.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Beide Hände heben in einer Pause ab. Die rechte Hand springt hinauf zum hohen G, die linke fällt auf ein tiefes C.",
+          "Wechsle das Pedal auf jeder Takthälfte, sobald die linke Hand ihr Muster neu beginnt.",
+        ],
+        tricky: {
+          17: "Halt das C, heb die Hand in der Pause, und setz Finger 4 auf das hohe G.",
+          18: "Die Melodie beginnt eine Oktave höher von vorn, und die linke Hand beginnt ihre gebrochenen Akkorde auf dem tiefen C.",
+          21: "Nach dem langen E pausiert die Melodie. Zähl die Pause, dann spielt Finger 4 das G.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Takte 2 bis 9 nur mit der rechten Hand, und spiel die schnellen Doppelschläge leicht.",
+          "Spiel die Arpeggien des zweiten Durchgangs nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der schnelle Doppelschlag nach dem langen E ist ein kleiner Hüpfer. Spiel ihn leiser als die Melodie.",
+          "Halt Daumen und kleinen Finger eine Oktave auseinander, und lass das Handgelenk federn.",
+        ],
+        tricky: {
+          20: "Die Oktaven schreiten über F, D und F, während ein G-Arpeggio läuft. Halt die Hand in ihrer Oktavform.",
+          24: "Dieselben Schritte wie in Takt 20. Lass das Arpeggio unter den Oktaven weiterlaufen.",
+          29: "Die Oktave A kommt nach einem kurzen Abheben. Zähl die Pause, dann spiel das A noch einmal.",
+        },
       },
     },
   },

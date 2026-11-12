@@ -240,4 +240,89 @@ export const canonInD: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Johann Pachelbel schrieb diesen Kanon um 1700 für drei Violinen über einer Basslinie. " +
+      "Der Bass spielt immer wieder dieselben acht Töne, während jede Violine mit derselben Melodie einsetzt. " +
+      "Das Stück war vergessen, bis Gustav Beckmann es 1919 zum ersten Mal druckte.",
+    funFact:
+      "Bis Ende der 1960er-Jahre kannte kaum jemand den Kanon, und heute gehört er zu den meistgespielten Stücken auf Hochzeiten.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand langsam allein, und lass das Stück auf jeden Ton warten.",
+          "Jetzt die linke Hand allein. Dieselben acht Töne kommen dreimal wieder.",
+          "Spiel die ersten vier Takte mit beiden Händen zusammen.",
+          "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Die Melodie wandert Taste für Taste hinab, von Finger 5 bis zum Daumen.",
+          "Jeder Basston dauert zwei Schläge. Lass ihn unter der Melodie klingen.",
+          "Die Melodie geht jetzt in Vierteln, doppelt so schnell wie vorher. Zähl in jedem Takt bis vier.",
+        ],
+        tricky: {
+          5: "Finger 5 kehrt oben zum C zurück, und die Melodie wandert wieder hinab.",
+          7: "Rück die Hand eine Taste tiefer: Finger 2 geht vom G zum F, und der Daumen nimmt das E.",
+          8: "Finger 3 spielt das F und Finger 2 das D, so ist der Daumen bereit für das C.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die rechte Hand langsam allein durch die fallende Linie.",
+          "Spiel die linke Hand allein: einen tiefen Ton mit Finger 5, dann einen höheren mit dem Daumen.",
+          "Spiel die Terzen der Takte 13 und 14 allein, und drück beide Töne jedes Zweiklangs wie einen an.",
+          "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Der Bass geht durch das ganze Stück dieselben acht Töne. Halt ihn leise und gleichmäßig.",
+          "Die Melodie bewegt sich jetzt auf jedem Schlag, während der Bass sein ruhiges Tempo hält.",
+          "Im Kanon spielen die Violinen dieselbe Melodie zu verschiedenen Zeiten. Hier klingen zwei davon zusammen, eine Terz auseinander.",
+        ],
+        tricky: {
+          6: "Finger 4 geht vom Cis hinab zum H, und die Hand rutscht eine Taste tiefer.",
+          8: "Finger 3 nimmt das G und Finger 2 das E, so ist der Daumen bereit für das D.",
+          12: "Beende den Takt mit dem Daumen auf dem G. Dann greift Finger 5 hinauf zum Fis.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Sexten der rechten Hand allein. Halt die Hand in einer Form, und beweg sie als Block.",
+          "Spiel den Lauf der Takte 13 bis 16 langsam allein, mit den notierten Fingern.",
+          "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die langen Töne der Melodie darüber singen.",
+          "Daumen und Finger 4 spielen jede Sexte. Die Melodie ist der obere Ton.",
+          "Heb für den Lauf das Pedal, damit jeder schnelle Ton klar bleibt.",
+        ],
+        tricky: {
+          6: "Schieb die Sexte Taste für Taste hinab. Daumen und Finger 4 behalten ihre Form.",
+          16: "Finger 3 und 2 kreuzen über den Daumen, während der Lauf fällt. Halt das Handgelenk ruhig.",
+          17: "Öffne die Hand vom letzten E aus in einer Bewegung zu D, Fis und dem hohen D.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Oktavbass allein: Halt jede Oktave, dann heb die Hand für die nächste.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Spiel die Sechzehntel der linken Hand allein, bis sie fließen.",
+          "Nimm beide Hände zusammen, und spiel das ganze Stück in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Halt in der linken Hand Daumen und kleinen Finger eine Oktave auseinander, und beweg die Hand als eine Form.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Halt die Sechzehntel der linken Hand unter der Melodie leise, leicht und gleichmäßig.",
+        ],
+        tricky: {
+          2: "Der Daumen bleibt bei beiden Akkorden auf dem Fis. Beweg nur Finger 3 und 5.",
+          5: "Die linke Hand springt hinauf zur D-Oktave, während der rechte Daumen vom E zum Fis geht.",
+          9: "Hier beginnt die linke Hand ihre Sechzehntel. Fang langsam an, und lass die Melodie obenauf wandern.",
+        },
+      },
+    },
+  },
 };

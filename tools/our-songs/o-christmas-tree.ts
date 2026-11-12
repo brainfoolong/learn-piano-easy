@@ -128,7 +128,7 @@ export const oChristmasTree: OurSong = {
     edition: "Ernst Anschütz, Musikalisches Schulgesangbuch, Leipzig (1824), the traditional German folk tune as sung today",
   },
   about:
-    "O Tannenbaum means O fir tree in German. " +
+    "The German title O Tannenbaum means O fir tree. " +
     "The tune comes from an old German folk song, and nobody knows who wrote it. " +
     "The Leipzig teacher Ernst Anschütz wrote the words sung today in 1824. " +
     "His song praises the fir tree for staying green all through the winter.",
@@ -297,6 +297,92 @@ export const oChristmasTree: OurSong = {
         4: "The little finger plays D, E and F on top. Then the hand drops to the G chord, with the little finger on B.",
         5: "Lift the hand after the C chord, and reach up to the high G with the little finger.",
         12: "The same chords as bar 4. Keep the little finger on the tune as the thumb steps down.",
+      },
+    },
+  },
+  de: {
+    about:
+      "O Tannenbaum heißt auf Englisch O fir tree. " +
+      "Die Melodie stammt aus einem alten deutschen Volkslied, und niemand weiß, wer sie geschrieben hat. " +
+      "Der Leipziger Lehrer Ernst Anschütz schrieb 1824 den Text, der heute gesungen wird. " +
+      "Sein Lied lobt die Tanne, weil sie den ganzen Winter über grün bleibt.",
+    funFact: "Dieselbe Melodie trägt das offizielle Lied des Bundesstaats Iowa, und Marylands Staatslied nutzte sie bis 2021.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten fünf Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 9 nur mit der rechten Hand. Dort steigt die Melodie bis zum A.",
+          "Jetzt die linke Hand allein. Sie hält nur zwei Handformen, eine pro Takt.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Lang, kurz, lang: Der schnelle zweite Ton lehnt sich an den dritten, wie ein kleiner Hüpfer.",
+          "Dein Daumen beginnt auf dem G unter dem mittleren C, und Finger 2 nimmt das mittlere C.",
+          "Heb die Hand vor dem tiefen G, und lass den Daumen darauf hinunterfallen.",
+        ],
+        tricky: {
+          3: "Finger 4 spielt viermal das E. Spiel leicht, damit das schnelle zweite E noch klingt.",
+          4: "Finger 3, 4 und 5 wandern hinauf zum F, dann greift der Daumen hinunter zum H.",
+          6: "Der kleine Finger spielt das G, Finger 3 nimmt das E, und der kleine Finger streckt sich hinauf zum A.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die drei Töne jedes Akkords zusammen.",
+          "Spiel den Walzerbass der zweiten Strophe allein: tiefer Ton, Akkord, Akkord.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Nach dem letzten C rückt der Daumen hinauf zum nächsten G. Die zweite Strophe beginnt dann eine Oktave höher.",
+          "Spiel im Walzerbass den tiefen Ton etwas lauter als die Akkorde danach.",
+          "Die mittlere Phrase kommt zweimal, beim zweiten Mal einen Ton tiefer. Spiel das Echo etwas leiser.",
+        ],
+        tricky: {
+          13: "Finger 2 und 1 spielen D und C, dann springt der Daumen hinauf zum nächsten G.",
+          16: "Eine Oktave höher steigen Finger 3, 4 und 5 zum F, und der Daumen greift zurück zum H.",
+          24: "Derselbe Griff wie in Takt 16: Steig zum F, dann setz den Daumen hinunter auf das H.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal auf dem zweiten Schlag, wo der Akkord von G nach C wechselt.",
+        ],
+        tricky: {
+          16: "Die Hand spannt sich zu einer Septime, G und F. Dann fällt der Daumen für den letzten Zweiklang vom G zum D.",
+          17: "Nach den beiden Zweiklängen greift der kleine Finger hinauf zum hohen G.",
+          25: "Spann die Hand für die letzten beiden Akkorde, und lass das C oben klingen.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Hoch oben sollen die Oktaven wie Glocken klingen. Halt das Handgelenk locker.",
+          "In jedem Arpeggio greift Finger 3 auf dem Weg nach oben über den Daumen.",
+        ],
+        tricky: {
+          4: "Der kleine Finger spielt oben D, E und F. Dann fällt die Hand auf den G-Akkord, mit dem kleinen Finger auf H.",
+          5: "Heb die Hand nach dem C-Akkord, und greif mit dem kleinen Finger hinauf zum hohen G.",
+          12: "Dieselben Akkorde wie in Takt 4. Lass den kleinen Finger auf der Melodie, während der Daumen hinabschreitet.",
+        },
       },
     },
   },

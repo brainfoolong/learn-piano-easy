@@ -147,7 +147,7 @@ export const alleJahreWieder: OurSong = {
     "Wilhelm Hey wrote its three verses in 1837, and they tell of the Christ Child, who comes down to earth every year. " +
     "Friedrich Silcher wrote the tune and published it in 1842, in a set of twelve songs for children.",
   funFact:
-    "The same words are also sung to a tune Christian Heinrich Rinck wrote in 1827. " +
+    "The same words are also sung to a tune by Christian Heinrich Rinck. " +
     "Today that tune mostly carries another poem, Abend wird es wieder.",
   mythic: null,
   collection: "christmas",
@@ -261,6 +261,92 @@ export const alleJahreWieder: OurSong = {
         10: "After the C arpeggio, the left hand drops to the low G in the short rest.",
         12: "The right hand holds its octave, so watch the left hand through the two G arpeggios.",
         14: "The octaves leap up to the high C, while the left hand runs up F and then G seventh.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Alle Jahre wieder ist eines der bekanntesten deutschen Weihnachtslieder. " +
+      "Wilhelm Hey schrieb 1837 seine drei Strophen, und sie erzählen vom Christkind, das jedes Jahr auf die Erde kommt. " +
+      "Friedrich Silcher schrieb die Melodie und veröffentlichte sie 1842 in einer Sammlung von zwölf Kinderliedern.",
+    funFact:
+      "Dieselben Worte singt man auch auf eine Melodie von Christian Heinrich Rinck. Heute trägt diese Melodie meist ein anderes Gedicht, Abend wird es wieder.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort steigt die Melodie bis zum hohen C.",
+          "Jetzt die linke Hand allein. Sie hält eine Griffform und wechselt sie höchstens einmal pro Takt.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Das erste G ist lang, das A ist kurz, wie ein kleiner Schwung, bevor das G zurückkommt.",
+          "Heb nach dem langen D die Hand, und setz den Daumen auf das mittlere C.",
+          "Während das hohe C klingt, rutsch mit dem kleinen Finger hinab zum H.",
+        ],
+        tricky: {
+          3: "Der Daumen nimmt das mittlere C. Dann wandern Finger 2, 3 und 4 hinauf zum F und gehen zurück zum E.",
+          6: "Der kleine Finger spielt das hohe C und rutscht dann hinab zum H. Finger 4 und 3 nehmen A und G.",
+          14: "Dasselbe Rutschen wie in Takt 6: Halt das hohe C, dann führ den kleinen Finger hinab zum H.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen an.",
+          "Spiel den Bass der zweiten Strophe allein: tiefer Ton, hoher Ton, einer auf jedem Schlag.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Für den F-Akkord greift der Daumen vom G hinauf zum A und kehrt für den nächsten Akkord zurück.",
+          "Spiel in der zweiten Strophe die tiefen Töne etwas lauter als die hohen.",
+          "D und E sind schnell, und das F landet mit dem Akkord in der Mitte des Takts.",
+        ],
+        tricky: {
+          3: "Der rechte Daumen geht hinab zum mittleren C, während die linke Hand für den zweiten Akkord das E loslässt.",
+          6: "Hier bewegen sich beide Hände. Der linke Daumen greift hinauf zum A, und der rechte kleine Finger rutscht hinab zum H.",
+          14: "Über dem tiefen F und C hält der rechte kleine Finger das hohe C und rutscht dann hinab zum H.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal in der Mitte des Takts, wo der Akkord wechselt.",
+        ],
+        tricky: {
+          6: "In der Mitte des Takts wechselt der Alberti-Bass von F zum G-Septakkord. Wechsle das Pedal mit ihm.",
+          9: "Die rechte Hand springt eine Oktave hinauf und spielt Zweiklänge. Such den ersten Zweiklang, bevor der Takt beginnt.",
+          14: "A und C, dann G und H, dann F und A: Die Zweiklänge steigen hinab, und der kleine Finger führt.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Oben sollen die Oktaven wie Glocken klingen. Lass das Handgelenk locker.",
+          "In jedem Arpeggio kreuzt Finger 3 auf dem Weg nach oben über den Daumen.",
+        ],
+        tricky: {
+          10: "Nach dem C-Arpeggio fällt die linke Hand in der kurzen Pause hinab zum tiefen G.",
+          12: "Die rechte Hand hält ihre Oktave, also achte bei den beiden G-Arpeggien auf die linke Hand.",
+          14: "Die Oktaven springen hinauf zum hohen C, während die linke Hand über F und dann den G-Septakkord hinaufläuft.",
+        },
       },
     },
   },

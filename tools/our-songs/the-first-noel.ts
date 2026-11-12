@@ -302,4 +302,90 @@ export const theFirstNoel: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "The First Noel ist ein englisches Weihnachtslied, und niemand weiß, wer seine Melodie geschrieben hat. " +
+      "Man nimmt an, dass sie aus Cornwall stammt, im äußersten Südwesten Englands. " +
+      "Davies Gilbert druckte das Lied 1823, William Sandys druckte es 1833. " +
+      "John Stainer setzte es 1871 für Chor, und seine Fassung singt man bis heute.",
+    funFact: "Noel kommt vom französischen Wort Noël, und das stammt vom lateinischen Wort für Geburt.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten acht Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel den Refrain, die Takte 17 bis 24, nur mit der rechten Hand.",
+          "Jetzt die linke Hand allein. Sie hält eine Form jeweils einen ganzen Takt lang.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Das erste C ist lang. Zähl bis drei, dann lass D, E und F gleichmäßig hinaufgehen.",
+          "Die Takte 9 bis 16 sind wieder die ersten acht Takte, also kennt deine Hand sie schon.",
+          "Nimm beim letzten E das Tempo etwas zurück, und lass es mit dem tiefen C klingen.",
+        ],
+        tricky: {
+          2: "Finger 5 hält das lange G. Heb die Hand in der kurzen Pause an, und setz Finger 3 auf das A.",
+          10: "Dieselbe Bewegung wie in Takt 2: Heb die Hand nach dem langen G an, und setz Finger 3 auf das A.",
+          18: "Finger 5 hält das lange G. Heb die Hand an, und lass denselben Finger auf dem hohen C landen.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel den Walzerbass allein: tiefer Ton, Akkord, Akkord.",
+          "Spiel die rechte Hand allein ab dem Auftakt, und lass das Lied auf jeden Ton warten.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Das Lied beginnt auf dem letzten Schlag. Zähl eins, zwei, dann spiel E und D.",
+          "Spiel im Walzerbass den tiefen Ton etwas lauter als die Akkorde danach.",
+          "Die Takte 22 bis 24 wiederholen die Takte 6 bis 8, also kennt deine Hand sie schon.",
+        ],
+        tricky: {
+          3: "Finger 5 hält das lange G. Heb die Hand in der kurzen Pause an, und setz Finger 3 auf das A.",
+          11: "Dieselbe Bewegung wie in Takt 3: Heb die Hand nach dem langen G an, und setz Finger 3 auf das A.",
+          19: "Finger 5 hält das lange G. Heb die Hand an, und lass denselben Finger auf dem hohen C landen.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel den Aufstieg der Takte 2 und 3 nur mit der rechten Hand, mit Daumenuntersatz auf dem F.",
+          "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal auf dem dritten Schlag, wo der Akkord von C nach G wechselt.",
+        ],
+        tricky: {
+          2: "Finger 1, 2 und 3 spielen C, D und E. Dann geht der Daumen unter Finger 3 hindurch zum F.",
+          16: "Eine Sexte, dann zwei Terzen. Finger 2 bleibt bei den ersten beiden auf dem E, und der Daumen fällt zum D.",
+          24: "Dieselben Zweiklänge wie in Takt 16: eine Sexte, zwei Terzen, und der Daumen hinab zum D.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Oktaven der rechten Hand in der ersten Strophe allein, mit lockerem Handgelenk.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Jede Oktave spielen Daumen und kleiner Finger. Halt die Hand in dieser Form.",
+          "Spiel die tiefen Töne jedes Akkords leiser, damit der obere Ton die Melodie trägt.",
+        ],
+        tricky: {
+          5: "Nach dem langen G gehen die Oktaven schnell weiter zu A und H. Beweg die ganze Hand, mit lockerem Handgelenk.",
+          7: "Die Oktaven steigen über G, A und H. Lass die Hand über die Tasten gleiten, ohne sie hoch anzuheben.",
+          10: "Spann die Hand für den vollen C-Akkord, dann schließ sie für D, E und F zur Oktave.",
+        },
+      },
+    },
+  },
 };

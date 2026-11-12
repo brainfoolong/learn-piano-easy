@@ -232,4 +232,88 @@ export const jingleBells: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "James Lord Pierpont veröffentlichte dieses Lied 1857 in Boston unter dem Titel One Horse Open Sleigh. " +
+      "Es erzählt von einer schnellen Fahrt durch den Schnee in einem Schlitten, den ein einziges Pferd zieht. " +
+      "Weihnachten kommt im Lied nie vor, und doch wurde es eines der bekanntesten Weihnachtslieder der Welt.",
+    funFact: "1965 spielten zwei Astronauten Jingle Bells im Weltraum, auf einer kleinen Mundharmonika und einer Handvoll Glöckchen.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel langsam nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort steigt die Melodie bis zum F.",
+          "Nimm beide Hände zusammen. Die linke Hand hält in jedem Takt einen tiefen Ton oder eine Quinte.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Kurz, kurz, lang: Das dritte E dauert zwei Schläge, wie das Klingeln einer Glocke.",
+          "Hier hat jeder Finger seine eigene Taste: der Daumen das C, der kleine Finger das G.",
+          "Werd bei den letzten Tönen etwas langsamer, und lass das tiefe C klingen.",
+        ],
+        tricky: {
+          5: "Finger 4 spielt dreimal das F, während der linke kleine Finger hinunter zum tiefen F greift.",
+          13: "Die F kommen zurück. Lass Finger 4 auf dem F, und setz den linken kleinen Finger wieder auf das tiefe F.",
+          15: "Finger 5 spielt zweimal das G, dann wandern Finger 4 und 2 hinab, bereit für das letzte C des Daumens.",
+        },
+      },
+      rare: {
+        practice: [
+          "Klatsch den Rhythmus von Takt 3, dann spiel die rechte Hand allein.",
+          "Spiel die linke Hand allein, und halt jeden Akkord bis zum nächsten.",
+          "Spiel die Takte 5 bis 8 mit beiden Händen zusammen. Dort stehen die schnellen Töne.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Lang, kurz: Das C dauert anderthalb Schläge, und das D folgt schnell danach.",
+          "Die letzten beiden E sind Achtel. Denk an einen Schlag, der in zwei Hälften geteilt ist.",
+          "Spiel den Basston der linken Hand etwas lauter als den Akkord danach.",
+        ],
+        tricky: {
+          5: "Vier F mit Finger 4: Das letzte ist schnell und führt direkt in Takt 6.",
+          9: "Dein linker kleiner Finger gleitet vom H zurück hinauf zum C, wenn die Melodie neu beginnt.",
+          13: "Die F kehren zurück. Lass Finger 4 auf dem F federn, und zähl das kurze letzte mit.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Glocken der Melodie darüber klingen.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal am Anfang und in der Mitte jedes Takts, sobald die linke Hand ihr Muster neu beginnt.",
+        ],
+        tricky: {
+          12: "Nach der Terz läuft die Hand mit Finger 5, 4, 3 und 2 über G, F, E und D hinab.",
+          14: "Auf Schlag zwei wird die Sexte zur Terz: Der Daumen verlässt das A, und Finger 2 und 4 nehmen C und E.",
+          16: "Heb beide Hände nach dem D, dann greif den letzten Akkord, mit der linken Hand in Oktaven.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zum Basston, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel die Sechzehntelläufe der Takte 9 bis 12 nur mit der rechten Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Jeder Lauf passt in einen Schlag: vier schnelle Töne, dann läutet die Glocke wieder.",
+        ],
+        tricky: {
+          6: "Auf Schlag zwei gehen Daumen und kleiner Finger eine Taste hinab, während Finger 2 auf dem C bleibt.",
+          7: "Die Melodie sinkt vom E zum D über gehaltenem G und H. Finger 4 nimmt das D.",
+          8: "Spann die Hand für vier Töne auf einmal: G, H, F und G. Lass den kleinen Finger singen.",
+        },
+      },
+    },
+  },
 };

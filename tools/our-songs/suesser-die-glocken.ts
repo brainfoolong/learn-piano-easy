@@ -163,8 +163,8 @@ export const suesserDieGlocken: OurSong = {
     "Süßer die Glocken nie klingen means Never do the bells ring sweeter in German. " +
     "The theologian and teacher Friedrich Wilhelm Kritzinger wrote the words. " +
     "Bernhard Brähmig first printed the song in 1860, in his collection Liederstrauß, as Die Weihnachtsglocken. " +
-    "The tune is the folk song Seht, wie die Sonne dort sinket, known in Thuringia since 1841.",
-  funFact: "Older words to the same tune already sang of bells, which may have given Kritzinger his idea.",
+    "The tune is the folk song Seht, wie die Sonne dort sinket, known in Thuringia.",
+  funFact: "Before it rang for Christmas, the tune sang of evening: its folk song's title means See how the sun sets there.",
   mythic: null,
   collection: "christmas",
   aka: ["Die Weihnachtsglocken", "Seht, wie die Sonne dort sinket"],
@@ -286,6 +286,91 @@ export const suesserDieGlocken: OurSong = {
         6: "The right hand leaps up to the high C, while the stride bass jumps down to a low F.",
         7: "The quick A sits between the Gs. Keep finger 4 light, while the stride bass changes to G.",
         14: "The same leap as bar 6. Let go of C on time, so the hand lands calmly on the high C.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Den Text von \"Süßer die Glocken nie klingen\" schrieb der Theologe und Lehrer Friedrich Wilhelm Kritzinger. " +
+      "Bernhard Brähmig druckte das Lied 1860 zum ersten Mal, in seiner Sammlung Liederstrauß, unter dem Titel Die Weihnachtsglocken. " +
+      "Die Melodie ist das Volkslied \"Seht, wie die Sonne dort sinket\", das man in Thüringen kannte.",
+    funFact: "Bevor die Melodie zu Weihnachten läutete, besang sie den Abend: Ihr Volkslied heißt \"Seht, wie die Sonne dort sinket\".",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort springt die Hand hinauf zum hohen C.",
+          "Jetzt die linke Hand allein. Sie hält in jedem Takt eine oder zwei Formen.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Jedes punktierte Paar ist ein langer und ein schneller Ton, wie eine Glocke, die schwingt und läutet.",
+          "Nachdem der Daumen das C gespielt hat, springt die ganze Hand eine Oktave hinauf, und Finger 5 landet auf dem hohen C.",
+          "Die Takte 11 und 12 wiederholen die Takte 9 und 10. Spiel sie etwas leiser, wie ein Echo.",
+        ],
+        tricky: {
+          6: "Der Daumen lässt das C früh los, und Finger 5 landet auf dem hohen C. Dann spielt Finger 4 das A.",
+          8: "Der Daumen geht vom D hinab zum C und hält es. Zähl den langen Ton bis zu seinem Ende aus.",
+          16: "Dieselbe Bewegung wie in Takt 8: Der Daumen geht vom D hinab zum C, und das Lied endet.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die drei Töne jedes Akkords zusammen.",
+          "Spiel die Takte 9 bis 16 nur mit der linken Hand, mit einem Akkord auf jeder Takthälfte.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt jeden Akkord leise, damit die klingende Melodie darüber klar bleibt.",
+          "Die linke Hand spielt jetzt auf jeder Takthälfte einen Akkord. Zähl eins, zwei, und drück auf jeden Schlag.",
+          "Der linke Daumen geht für den F-Akkord hinauf zum A, während die rechte Hand zum hohen C springt.",
+        ],
+        tricky: {
+          8: "Der rechte Daumen geht vom D hinab zum C, während die linke Hand zurück zum C-Akkord wechselt.",
+          14: "Finger 5 springt hinauf zum hohen C, und der linke Daumen geht für den F-Akkord hinauf zum A.",
+          16: "Der Daumen geht hinab zum C, und beide Hände halten den letzten C-Akkord bis zum Ende.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde des zweiten Durchgangs allein, und heb die Hand bei jeder Pause an.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber wie eine Glocke klingt.",
+          "Beide Hände heben bei der Pause ab. Die rechte Hand springt eine Oktave hinauf, die linke fällt zu einem tiefen C.",
+          "Wechsle das Pedal jeden halben Takt, sobald die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          17: "Die Melodie beginnt eine Oktave höher von vorn, während die linke Hand ihre gebrochenen Akkorde auf dem tiefen C beginnt.",
+          24: "Halt das lange C, während der gebrochene Akkord weiterrollt. Heb die linke Hand bei der Pause am Ende an.",
+          32: "Der Daumen lässt das D früh los. Dann fällt die Hand auf den letzten Akkord, mit Finger 5 auf C.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Takte 1 bis 8 nur mit der rechten Hand, und halt den schnellen Lauf leicht.",
+          "Spiel die Arpeggien des zweiten Durchgangs nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der schnelle Lauf nach dem langen E ist ein kleines Glockengeläut. Spiel ihn leiser als die Melodie.",
+          "Halt Daumen und kleinen Finger eine Oktave auseinander, und lass das Handgelenk federn.",
+        ],
+        tricky: {
+          6: "Die rechte Hand springt hinauf zum hohen C, während der Stride-Bass hinunter zu einem tiefen F springt.",
+          7: "Das schnelle A liegt zwischen den beiden G. Halt Finger 4 leicht, während der Stride-Bass nach G wechselt.",
+          14: "Derselbe Sprung wie in Takt 6. Lass das C rechtzeitig los, damit die Hand ruhig auf dem hohen C landet.",
+        },
       },
     },
   },

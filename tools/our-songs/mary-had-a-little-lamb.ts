@@ -48,7 +48,7 @@ export const maryHadALittleLamb: OurSong = {
   },
   about:
     "Sarah Josepha Hale published the poem about Mary and her lamb in Boston in 1830. " +
-    "The music teacher Lowell Mason set it to this simple tune soon after, for children to sing at school. " +
+    "The tune it is sung to today is traditional, and nobody knows who first matched the two. " +
     "It uses only four notes, which is why so many first piano books start with it.",
   funFact: "In 1877 Thomas Edison recited its first lines into his new phonograph, so it was the first verse ever recorded and played back.",
   mythic: null,
@@ -183,6 +183,90 @@ export const maryHadALittleLamb: OurSong = {
         3: "The bass jumps down to the low G octave. Glance at the left hand before the bar starts.",
         11: "Keep the thumb on G and the chord shape still, so only the left hand travels.",
         15: "Lift the hand after the last D, so it has time to open wide for the final chord.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Sarah Josepha Hale veröffentlichte das Gedicht über Mary und ihr Lamm 1830 in Boston. " +
+      "Die Melodie, zu der man es heute singt, ist überliefert, und niemand weiß, wer beides zuerst zusammenbrachte. " +
+      "Sie kommt mit nur vier Tönen aus, deshalb beginnen so viele erste Klavierschulen damit.",
+    funFact: "1877 sprach Thomas Edison die ersten Zeilen in seinen neuen Phonographen. So war es der erste Vers, der je aufgenommen und wieder abgespielt wurde.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel langsam nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Jetzt die linke Hand allein. Sie hält einen Ton für jeden ganzen Takt.",
+          "Nimm beide Hände zusammen, immer noch langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Hier hat jeder Finger seine eigene Taste: der Daumen das C, Finger 3 das E.",
+          "Der kleine Finger der linken Hand nimmt das tiefe G, und der Daumen wartet darüber auf dem C.",
+          "Das letzte C dauert den ganzen Takt, also zähl vier Schläge, bevor du die Hand hebst.",
+        ],
+        tricky: {
+          3: "Die linke Hand rückt zum tiefen G, während die rechte Hand das D wiederholt. Nimm den kleinen Finger.",
+          4: "Die Melodie überspringt das F, vom E zum G. Spiel das G mit dem kleinen Finger, und lass die anderen Finger auf ihren Tasten.",
+          7: "Die rechte Hand schaukelt mit Finger 2 und 3 zwischen D und E, während der Bass zum G fällt.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die zweite Hälfte nur mit der rechten Hand. Dort kommen die Achtel dazu.",
+          "Spiel die linke Hand allein, und halt jeden Akkord bis zum nächsten.",
+          "Spiel die ersten acht Takte mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Jedes schnelle Paar ist ein Schlag, in zwei Hälften geteilt. Zähl eins-und, zwei-und.",
+          "Der kleine Finger der linken Hand greift für diesen Akkord hinunter zum Fis.",
+          "Drück H und D am Ende des Takts zusammen, als wären sie eine Taste.",
+        ],
+        tricky: {
+          9: "Finger 4 spielt das schnelle C, dann nimmt Finger 2 das A. Halt die Hand ruhig.",
+          11: "Die linke Hand greift hinunter zum Fis, während die rechte Hand ein schnelles H dazuspielt.",
+          13: "Hier kommen die schnellen Töne zurück. Zähl eins-und, zwei-und, damit sie gleichmäßig bleiben.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Das schnelle F am Ende des Takts führt dich zurück zum E für die nächste Phrase.",
+          "Die Melodie ist der obere Ton jeder Terz, also lass den oberen Finger führen.",
+        ],
+        tricky: {
+          9: "Hier beginnen die Terzen. Dein Daumen wechselt unter jedem Zweiklang zwischen C und H.",
+          13: "Nach dem gehaltenen Zweiklang beginnt die letzte Phrase. Drück die beiden Töne jedes Zweiklangs wie einen.",
+          15: "Die Zweiklänge wechseln auf jedem Schlag, und der Bass wechselt in der Mitte des Takts den Akkord.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zum Basston, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den oberen Finger die Melodie singen.",
+          "Spiel die ersten acht Takte mit beiden Händen zusammen in Dreiviertel-Tempo.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Halt den letzten Akkord mit dem Pedal, bis er verklingt.",
+        ],
+        tricky: {
+          3: "Der Bass springt hinunter zur tiefen G-Oktave. Wirf vor dem Takt einen Blick auf die linke Hand.",
+          11: "Lass den Daumen auf dem G und die Akkordform ruhig, damit nur die linke Hand wandert.",
+          15: "Heb die Hand nach dem letzten D, damit sie Zeit hat, sich weit für den Schlussakkord zu öffnen.",
+        },
       },
     },
   },

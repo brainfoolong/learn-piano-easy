@@ -7,6 +7,21 @@
  * notation of `tools/song-notation.ts`, and the text of its guide. The writer measures every version with
  * `tools/song-meter.ts` and refuses the whole run on any problem `songProblems` names.
  *
+ * A guide's text is English beside each field, and German in the song's `de` block, which
+ * `tools/our-songs/silent-night.ts` shows. A translator adds that block and changes no other line:
+ * - `de.about` and `de.funFact` translate `about` and `funFact`.
+ * - `de.versions.<id>.practice` and `de.versions.<id>.tips` hold one text per step and per tip, in the
+ *   English order.
+ * - `de.versions.<id>.tricky` holds one text per tricky bar, under the same bar numbers as `tricky`.
+ * - The writer refuses a block whose counts or bars differ from the English.
+ * - The test `every_guide_is_complete` checks each German text has words, and each German sentence
+ *   keeps to 25. A German `about` takes 2 to 4 sentences. The test's last check lists every song
+ *   without a block.
+ * - A sentence ends at `.`, `!` or `?`. The abbreviations `z. B.`, `d. h.`, `u. a.` and `St.` end none, nor
+ *   a day or century before its noun, as in `24. Dezember`. Every other abbreviation is written out.
+ *
+ * The writer stores each text as `{ "en": …, "de": … }`, and leaves `de` out where the module has none.
+ *
  * Decisions, and what each costs:
  * - The guide's fingers, start position and tricky bars come from the versions and the meter, so the
  *   module writes only what a person must: the fingers in the notation and the text.
@@ -14,6 +29,8 @@
  *   change to a version that moves its tricky bars then fails until the tips follow.
  * - The start position of a hand maps each finger to the first key it plays, until a finger takes a
  *   second key. That is where the opening position ends.
+ * - The German sits in one block apart from the English, so a translator touches no note and no English
+ *   line. Its steps and tips match the English by position, so a step moved in one list moves in both.
  * - A version's catalog difficulty is the meter's `catalogDifficulty`, never set by hand.
  * - A song's collection and other titles go on each of its rows, so the library groups and finds every
  *   version alike.
@@ -32,7 +49,7 @@ import { join } from "node:path";
 import { readMidi } from "../src/midi/smf-read";
 import { writeMidi } from "../src/midi/smf-write";
 import { songFromMidi } from "../src/midi/song";
-import { RARITIES, RARITY_NAMES, type Guide, type PracticeStep, type Rarity, type Tip, type VersionGuide } from "../src/library/guide";
+import { RARITIES, RARITY_NAMES, type Guide, type GuideText, type PracticeStep, type Rarity, type Tip, type VersionGuide } from "../src/library/guide";
 import type { Collection } from "../src/library/search";
 import type { SkillId } from "../src/library/skills";
 import type { Finger, Hand } from "../src/theory/fingering";
@@ -128,6 +145,9 @@ export interface OurTune {
   hookBars: [number, number];
 }
 
+/** A practice step or tip as a module writes it: its text in English alone. */
+export type Written<T extends { text: GuideText }> = Omit<T, "text"> & { text: string };
+
 /** One version of a song: its notes in the notation and the text of its guide. */
 export interface OurVersion {
   /** The version's key, which its file names, so the meter and the sheet read it without guessing. */
@@ -142,10 +162,27 @@ export interface OurVersion {
   /** The bars, from 1, where the hands clash on purpose. */
   markedClashBars?: number[];
   skills: SkillId[];
-  practice: PracticeStep[];
-  tips: Tip[];
+  practice: Written<PracticeStep>[];
+  tips: Written<Tip>[];
   /** A tip for each bar the meter names as a tricky spot, by bar. */
   tricky: Record<number, string>;
+}
+
+/** The German text of one version's guide, in the shape of its English text. */
+export interface OurVersionGerman {
+  /** One text per practice step, in the order of `practice`. */
+  practice: string[];
+  /** One text per tip, in the order of `tips`. */
+  tips: string[];
+  /** One text per tricky bar, by the same bars as `tricky`. */
+  tricky: Record<number, string>;
+}
+
+/** The German text of a song's guide. */
+export interface OurGerman {
+  about: string;
+  funFact: string;
+  versions: Record<Rarity, OurVersionGerman>;
 }
 
 /** A song of ours, as its module exports it. */
@@ -164,6 +201,8 @@ export interface OurSong {
   aka?: string[];
   tune: OurTune;
   versions: Record<Rarity, OurVersion>;
+  /** The guide's German text. A song without it still builds, and the guide's test names it as missing. */
+  de?: OurGerman;
 }
 
 /** Every song of ours, in the catalog's order. */
@@ -264,6 +303,13 @@ export function versionProblems(song: OurSong, rarity: Rarity): string[] {
   const spots = trickySpots(meter).map((spot) => spot.bar).sort((a, b) => a - b);
   const written = Object.keys(version.tricky).map(Number).sort((a, b) => a - b);
   if (spots.join() !== written.join()) problems.push(`its tricky spots are bars ${spots.join(", ")}, and the tips name bars ${written.join(", ")}`);
+  const german = song.de?.versions[rarity];
+  if (german !== undefined) {
+    if (german.practice.length !== version.practice.length) problems.push(`it has ${version.practice.length} practice steps, and ${german.practice.length} in German`);
+    if (german.tips.length !== version.tips.length) problems.push(`it has ${version.tips.length} tips, and ${german.tips.length} in German`);
+    const germanBars = Object.keys(german.tricky).map(Number).sort((a, b) => a - b);
+    if (germanBars.join() !== written.join()) problems.push(`its tricky tips name bars ${written.join(", ")}, and in German bars ${germanBars.join(", ")}`);
+  }
   return problems.map((problem) => `${where}: ${problem}`);
 }
 
@@ -288,6 +334,11 @@ function startOf(notes: readonly HandNote[]): (number | null)[] {
   return keys;
 }
 
+/** The text `en` with its German `de`, which is left out when the module has none. */
+function bilingual(en: string, de: string | undefined): GuideText {
+  return de === undefined ? { en } : { en, de };
+}
+
 /** The guide of the version `rarity` of `song`. */
 function versionGuide(song: OurSong, rarity: Rarity): VersionGuide {
   const notation = versionNotation(song, rarity);
@@ -301,14 +352,15 @@ function versionGuide(song: OurSong, rarity: Rarity): VersionGuide {
     });
   const parsed = parseSong(notation);
   const version = song.versions[rarity];
+  const german = song.de?.versions[rarity];
   return {
     file: versionFile(song, rarity),
     skills: version.skills,
     fingers: { right: fingersOf(0, "right"), left: fingersOf(1, "left") },
     start: { right: startOf(parsed.right), left: startOf(parsed.left) },
-    practice: version.practice,
-    tips: version.tips,
-    tricky: trickySpots(versionMeter(song, rarity)).map(({ bar }) => ({ bar, text: version.tricky[bar]! })),
+    practice: version.practice.map((step, at) => ({ ...step, text: bilingual(step.text, german?.practice[at]) })),
+    tips: version.tips.map((tip, at) => ({ ...tip, text: bilingual(tip.text, german?.tips[at]) })),
+    tricky: trickySpots(versionMeter(song, rarity)).map(({ bar }) => ({ bar, text: bilingual(version.tricky[bar]!, german?.tricky[bar]) })),
   };
 }
 
@@ -318,8 +370,8 @@ export function guideOf(song: OurSong): Guide {
     song: song.slug,
     title: song.title,
     composer: song.source.composer,
-    about: song.about,
-    funFact: song.funFact,
+    about: bilingual(song.about, song.de?.about),
+    funFact: bilingual(song.funFact, song.de?.funFact),
     mythic: song.mythic,
     versions: Object.fromEntries(RARITIES.map((rarity) => [rarity, versionGuide(song, rarity)])) as Record<Rarity, VersionGuide>,
   };

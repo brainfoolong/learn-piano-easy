@@ -6,7 +6,9 @@
  * skills, its practice plan, its tips by bar and its tricky spots.
  *
  * The panel's own labels come from the live locale's catalog when it is built. The guide's own prose,
- * such as its steps, tips and fun fact, is the guide's data and shows as written.
+ * such as its steps, tips and fun fact, shows in the live locale too, through `textIn`. A text the
+ * guide lacks in that locale shows in English. The shell builds the panel each time the guide opens, so
+ * a guide opened after a change of locale reads in the new one.
  *
  * Decisions, and what each costs:
  * - A guide is fetched from the version's folder when the version opens, as `guide.json` beside its
@@ -22,10 +24,10 @@
  * - The step after a version is the next version of the same song, then the song's original score.
  *   The hardest version of a song without an original has none, and the offer only congratulates.
  */
-import { t } from "../i18n/live";
+import { liveLocale, t } from "../i18n/live";
 import type { SettingsStore } from "../settings/store";
 import { button, el } from "../ui/dom";
-import { type Guide, originalName, type PracticeStep, RARITIES, type Rarity, rarityName, rarityTagline, readGuide } from "./guide";
+import { type Guide, type GuideText, originalName, type PracticeStep, RARITIES, type Rarity, rarityName, rarityTagline, readGuide, textIn } from "./guide";
 import type { CatalogSong } from "./search";
 import { skillName } from "./skills";
 import "./guide-panel.css";
@@ -116,6 +118,8 @@ export function loopBar(bar: number, settings: Pick<SettingsStore, "set">): void
 export function createGuidePanel(guide: Guide, rarity: Rarity, actions: GuideActions): HTMLElement {
   const { apply, loop } = actions;
   const m = t().player.library.guide;
+  const locale = liveLocale();
+  const say = (text: GuideText) => textIn(text, locale);
   const version = guide.versions[rarity];
   const steps = version.practice.map((step, index) =>
     el("li", {
@@ -124,7 +128,7 @@ export function createGuidePanel(guide: Guide, rarity: Rarity, actions: GuideAct
         el("div", {
           class: "guide-step-row",
           children: [
-            el("div", { children: [el("p", { text: step.text }), el("p", { class: "guide-step-summary", text: stepSummary(step) })] }),
+            el("div", { children: [el("p", { text: say(step.text) }), el("p", { class: "guide-step-summary", text: stepSummary(step) })] }),
             button(m.apply, () => apply(step, index), { title: m.applyTitle(index + 1) }),
           ],
         }),
@@ -132,7 +136,7 @@ export function createGuidePanel(guide: Guide, rarity: Rarity, actions: GuideAct
     }),
   );
   const tips = version.tips.map((tip) =>
-    el("li", { children: [el("strong", { text: m.tip(m.bars(tip.fromBar, tip.toBar), m.tipKinds[tip.kind]) }), tip.text] }),
+    el("li", { children: [el("strong", { text: m.tip(m.bars(tip.fromBar, tip.toBar), m.tipKinds[tip.kind]) }), say(tip.text)] }),
   );
   const tricky = [...version.tricky]
     .sort((a, b) => a.bar - b.bar)
@@ -140,7 +144,7 @@ export function createGuidePanel(guide: Guide, rarity: Rarity, actions: GuideAct
       el("li", {
         class: "guide-step-row",
         children: [
-          el("p", { children: [el("strong", { text: `${m.bars(spot.bar, spot.bar)}: ` }), spot.text] }),
+          el("p", { children: [el("strong", { text: `${m.bars(spot.bar, spot.bar)}: ` }), say(spot.text)] }),
           button(m.loop, () => loop(spot.bar), { title: m.loopTitle(spot.bar) }),
         ],
       }),
@@ -155,8 +159,8 @@ export function createGuidePanel(guide: Guide, rarity: Rarity, actions: GuideAct
           ` ${rarityTagline(rarity)}`,
         ],
       }),
-      section("about", m.headings.about, el("p", { text: guide.about }), el("p", { class: "guide-composer", text: guide.composer })),
-      section("funFact", m.headings.funFact, el("p", { text: guide.funFact })),
+      section("about", m.headings.about, el("p", { text: say(guide.about) }), el("p", { class: "guide-composer", text: guide.composer })),
+      section("funFact", m.headings.funFact, el("p", { text: say(guide.funFact) })),
       section("skills", m.headings.skills, el("ul", { class: "guide-skills", children: version.skills.map((id) => el("li", { text: skillName(id) })) })),
       section("practice", m.headings.practice, el("ol", { class: "guide-steps", children: steps })),
       section("tips", m.headings.tips, el("ul", { children: tips })),

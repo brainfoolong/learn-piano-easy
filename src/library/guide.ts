@@ -12,6 +12,9 @@
  * The names and taglines come from the live locale's catalog. The catalog's titles keep the English
  * names, since `tools/make-our-songs.ts` writes them once for every locale.
  *
+ * Every text a learner reads in a guide is a `GuideText`: one string per locale, such as
+ * `{ "en": "…", "de": "…" }`. `textIn` picks the live locale's string.
+ *
  * Decisions, and what each costs:
  * - The fingers of a version are one list per track, in the order of that track's notes in the file.
  *   Track 0 is the right hand and track 1 the left, as `tools/song-notation.ts` writes them. A finger
@@ -22,10 +25,15 @@
  *   first and last bar, from 1, and null plays the whole song.
  * - `readGuide` checks every field, and a malformed guide is dropped whole. The song then plays without
  *   one, which is safer than a guide that half applies.
+ * - A text needs its English, and every other locale may be missing. `textIn` then shows the English,
+ *   so a guide reads before its translation lands. The writer's test lists every song that lacks one.
+ * - Each text carries its locales side by side, so the panel picks one string per field and needs no
+ *   second guide per locale.
  * - Every bar a guide names lies inside the version, which only the writer knows. `readGuide` checks
  *   the bars are whole numbers from 1 in order, and the writer's test checks the rest.
  */
 import { t } from "../i18n/live";
+import { LOCALES, type Locale } from "../i18n/locale";
 import { playerLibrary } from "../i18n/messages/player-library.en";
 import type { Finger, Hand } from "../theory/fingering";
 import { isSkillId, type SkillId } from "./skills";
@@ -79,9 +87,17 @@ export type TipKind = (typeof TIP_KINDS)[number];
 /** Which hands a practice step plays. */
 export type StepHands = Hand | "both";
 
+/** A text of the guide in each locale it is written in. The English is always there. */
+export type GuideText = { en: string } & Partial<Record<Locale, string>>;
+
+/** `text` in `locale`, or in English where `text` has none in `locale`. */
+export function textIn(text: GuideText, locale: Locale): string {
+  return text[locale] ?? text.en;
+}
+
 /** One step of a practice plan: what to do, and the setup one click applies. */
 export interface PracticeStep {
-  text: string;
+  text: GuideText;
   hands: StepHands;
   /** A share of full speed, from `MIN_STEP_SPEED` to 1. */
   speed: number;
@@ -95,13 +111,13 @@ export interface Tip {
   fromBar: number;
   toBar: number;
   kind: TipKind;
-  text: string;
+  text: GuideText;
 }
 
 /** A bar the meter measures as one of the hardest, with a tip for it. */
 export interface TrickySpot {
   bar: number;
-  text: string;
+  text: GuideText;
 }
 
 /** The guide of one version. */
@@ -125,8 +141,8 @@ export interface Guide {
   title: string;
   composer: string;
   /** Where the tune comes from, in two to four sentences. */
-  about: string;
-  funFact: string;
+  about: GuideText;
+  funFact: GuideText;
   /** The catalog file of the original score, the song's last step, or null. */
   mythic: string | null;
   versions: Record<Rarity, VersionGuide>;
@@ -140,6 +156,11 @@ function isRecord(value: unknown): value is Record<string, unknown> {
 /** Whether `value` is a string with text in it. */
 function isText(value: unknown): value is string {
   return typeof value === "string" && value.trim() !== "";
+}
+
+/** Whether `value` is a guide's text: English with text in it, and text in each other locale it names. */
+function isGuideText(value: unknown): value is GuideText {
+  return isRecord(value) && isText(value.en) && LOCALES.every((locale) => value[locale] === undefined || isText(value[locale]));
 }
 
 /** Whether `value` is a bar number: a whole number from 1. */
@@ -168,7 +189,7 @@ function isPerHand<T>(value: unknown, check: (item: unknown) => boolean): value 
 }
 
 function isStep(value: unknown): value is PracticeStep {
-  if (!isRecord(value) || !isText(value.text) || typeof value.wait !== "boolean") return false;
+  if (!isRecord(value) || !isGuideText(value.text) || typeof value.wait !== "boolean") return false;
   if (value.hands !== "both" && value.hands !== "right" && value.hands !== "left") return false;
   if (typeof value.speed !== "number" || value.speed < MIN_STEP_SPEED || value.speed > 1) return false;
   return value.loop === null || (isList(value.loop, isBar, 2, 2) && value.loop[0]! <= value.loop[1]!);
@@ -181,12 +202,12 @@ function isTip(value: unknown): value is Tip {
     isBar(value.toBar) &&
     value.fromBar <= value.toBar &&
     TIP_KINDS.includes(value.kind as TipKind) &&
-    isText(value.text)
+    isGuideText(value.text)
   );
 }
 
 function isTricky(value: unknown): value is TrickySpot {
-  return isRecord(value) && isBar(value.bar) && isText(value.text);
+  return isRecord(value) && isBar(value.bar) && isGuideText(value.text);
 }
 
 function isVersion(value: unknown): value is VersionGuide {
@@ -201,7 +222,7 @@ function isVersion(value: unknown): value is VersionGuide {
 /** `raw` as a guide, or undefined when any field of it is missing or malformed. */
 export function readGuide(raw: unknown): Guide | undefined {
   if (!isRecord(raw) || !isText(raw.song) || !isText(raw.title) || !isText(raw.composer)) return undefined;
-  if (!isText(raw.about) || !isText(raw.funFact) || !(raw.mythic === null || isText(raw.mythic))) return undefined;
+  if (!isGuideText(raw.about) || !isGuideText(raw.funFact) || !(raw.mythic === null || isText(raw.mythic))) return undefined;
   const versions = raw.versions;
   if (!isRecord(versions) || !RARITIES.every((rarity) => isVersion(versions[rarity]))) return undefined;
   return raw as unknown as Guide;

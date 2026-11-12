@@ -1,6 +1,6 @@
 import { join } from "node:path";
 
-import { RARITIES, readGuide, type Guide } from "../src/library/guide";
+import { RARITIES, readGuide, textIn, type Guide, type GuideText } from "../src/library/guide";
 import { filterSongs, groupSongs, NO_FILTER } from "../src/library/search";
 import { readMidi } from "../src/midi/smf-read";
 import { songFromMidi, songLength } from "../src/midi/song";
@@ -15,6 +15,23 @@ const BANDS = { common: [1, 1.5], rare: [2, 2.5], epic: [3, 3.5], legendary: [4,
 /** The sentences of `text`, where neither `St.` nor a name's initial, as in `William J.`, ends one. */
 function sentences(text: string): string[] {
   return text.split(/(?<!\b[A-Z][a-z]+ [A-Z]\.|\bSt\.)(?<=[.!?])\s+/).filter((sentence) => sentence.trim() !== "");
+}
+
+/**
+ * The German abbreviations whose period ends no sentence: `z. B.`, `d. h.`, `u. a.`, `St.`, `Nr.` and the
+ * like, and a day or a century before its noun, as in `24. Dezember` or `19. Jahrhundert`. A German noun
+ * is capitalised, so a capital after a period proves nothing, and a note name such as `C.` may end one.
+ */
+const GERMAN_ABBREVIATIONS =
+  /(?<![\p{L}\d])(?:z\. ?B|d\. ?h|u\. ?a|[uo]\. ?Ä|[vn]\. Chr|bzw|ca|Nr|St|Dr|Jh|vgl|evtl|ggf|Hl)\.|(?<![\p{L}\d])\d{1,2}\.(?= (?:Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember|Jahrhundert)\b)/gu;
+
+/** The sentences of the German `text`, where no abbreviation of `GERMAN_ABBREVIATIONS` ends one. */
+function germanSentences(text: string): string[] {
+  const kept = text.replace(GERMAN_ABBREVIATIONS, (abbreviation) => abbreviation.replaceAll(".", "\u0000"));
+  return kept
+    .split(/(?<=[.!?])\s+/)
+    .filter((sentence) => sentence.trim() !== "")
+    .map((sentence) => sentence.replaceAll("\u0000", "."));
 }
 
 /** The guide of `slug` as the tree holds it. */
@@ -123,12 +140,19 @@ test("a_song_is_found_by_another_title", async () => {
 });
 
 test("every_guide_is_complete", async () => {
+  // A German abbreviation or a date ends no sentence, and a note name may.
+  expect(germanSentences("Spiel z. B. das C. Am 24. Dezember 1818 sang man in St. Nikolaus, d. h. in Oberndorf.")).toEqual([
+    "Spiel z. B. das C.",
+    "Am 24. Dezember 1818 sang man in St. Nikolaus, d. h. in Oberndorf.",
+  ]);
+  const untranslated: string[] = [];
   for (const song of ourSongs) {
     const guide = readGuide(await storedGuide(song.slug)) as Guide;
     expect({ song: song.slug, read: guide !== undefined }).toEqual({ song: song.slug, read: true });
-    expect(sentences(guide.about).length).toBeGreaterThanOrEqual(2);
-    expect(sentences(guide.about).length).toBeLessThanOrEqual(4);
-    const texts = [guide.about, guide.funFact];
+    // The story takes two to four sentences in each language it is written in.
+    const counts = [sentences(guide.about.en).length, ...(guide.about.de === undefined ? [] : [germanSentences(guide.about.de).length])];
+    expect({ song: song.slug, counts, fit: counts.every((count) => count >= 2 && count <= 4) }).toEqual({ song: song.slug, counts, fit: true });
+    const texts: GuideText[] = [guide.about, guide.funFact];
     for (const rarity of RARITIES) {
       const version = guide.versions[rarity];
       const where = `${song.slug}, ${rarity}`;
@@ -148,10 +172,14 @@ test("every_guide_is_complete", async () => {
       expect({ where, tricky: version.tricky.map((spot) => spot.bar) }).toEqual({ where, tricky: spots });
       texts.push(...version.practice.map((step) => step.text), ...version.tips.map((tip) => tip.text), ...version.tricky.map((spot) => spot.text));
     }
-    // A learner reads every sentence, so each keeps to the prose rules' 25 words.
-    for (const sentence of texts.flatMap(sentences)) {
+    // A learner reads every sentence, in English and German, so each keeps to the prose rules' 25 words.
+    const all = [...texts.flatMap((text) => sentences(text.en)), ...texts.flatMap((text) => (text.de === undefined ? [] : germanSentences(text.de)))];
+    for (const sentence of all) {
       expect({ sentence, short: sentence.split(/\s+/).length <= 25 }).toEqual({ sentence, short: true });
     }
+    // A song with German has it for every text, and a song without it is listed below.
+    if (song.de === undefined) untranslated.push(song.slug);
+    else expect({ song: song.slug, missing: texts.filter((text) => text.de === undefined).map((text) => text.en) }).toEqual({ song: song.slug, missing: [] });
   }
   // A malformed guide is dropped whole.
   const good = guideOf(ourSongs[0]!);
@@ -160,7 +188,14 @@ test("every_guide_is_complete", async () => {
   expect(readGuide(unknownSkill)).toBeUndefined();
   const noPlan = { ...good, versions: { ...good.versions, epic: { ...good.versions.epic, practice: [] } } };
   expect(readGuide(noPlan)).toBeUndefined();
-  expect(readGuide({ ...good, about: "" })).toBeUndefined();
+  expect(readGuide({ ...good, about: { en: "" } })).toBeUndefined();
+  expect(readGuide({ ...good, about: "A story in one language." })).toBeUndefined();
+  expect(readGuide({ ...good, funFact: { en: "A fact.", de: " " } })).toBeUndefined();
+  // A text without German reads, and shows in English.
+  expect(textIn({ en: "Play." }, "de")).toBe("Play.");
+  expect(textIn({ en: "Play.", de: "Spiel." }, "de")).toBe("Spiel.");
+  // Last, so every check above runs first: the songs whose module has no German block, by slug.
+  expect({ untranslated }).toEqual({ untranslated: [] });
 });
 
 test("the_files_match_their_source", async () => {

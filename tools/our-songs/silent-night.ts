@@ -255,4 +255,88 @@ export const silentNight: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Franz Xaver Gruber schrieb diese Melodie für Heiligabend 1818 in Oberndorf bei Salzburg. " +
+      "Der junge Priester Joseph Mohr hatte den Text geschrieben, und Gruber vertonte ihn. " +
+      "Mohr spielte bei der ersten Aufführung Gitarre, und das Lied reiste später weit über Österreich hinaus.",
+    funFact: "2011 nahm die Österreichische UNESCO-Kommission das Lied in das Verzeichnis des immateriellen Kulturerbes in Österreich auf.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 17 bis 23 nur mit der rechten Hand. Dort steigt die Melodie hoch und wandert hinab zum mittleren C.",
+          "Nimm beide Hände zusammen. Die linke Hand hält in jedem Takt einen tiefen Ton oder eine Quinte.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Das erste G ist lang, das A ist kurz. Es schaukelt wie eine Wiege.",
+          "Heb die Hand in der kurzen Pause nach dem E, und greif hinauf zum hohen D.",
+          "Spiel das ganze Lied leise. Es ist ein Wiegenlied.",
+        ],
+        tricky: {
+          6: "Finger 4 nimmt das H nach den beiden D. Unten hält die linke Hand das G mit Finger 4.",
+          17: "Nach der Pause streckt sich die Hand vom E nach oben, und Finger 3 landet auf dem hohen D.",
+          21: "Finger 5 geht vom E hinab zum C. Dann wandert die Melodie hinab bis zum Daumen auf dem mittleren C.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein: einen tiefen Ton, dann zwei leise Akkorde, wie ein langsamer Walzer.",
+          "Spiel die Takte 17 bis 23 nur mit der rechten Hand. Dort steigt die Melodie hoch und wandert hinab zum mittleren C.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Spiel die Akkorde der linken Hand leiser als ihren tiefen Ton.",
+          "Wechsle das Pedal an jedem Taktstrich. Heb es an, sobald der neue Basston klingt.",
+          "Finger 3 und 5 nehmen C und E zusammen. Lass das E über dem C singen.",
+        ],
+        tricky: {
+          17: "Die rechte Hand streckt sich vom E nach oben, und Finger 3 landet auf dem hohen D.",
+          21: "Finger 5 geht vom E hinab zum C. Dann wandert die Melodie hinab über G und E.",
+          22: "Finger 4, 3 und 2 wandern hinab über G, F und D, während die linke Hand ihren G-Septakkord spielt.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel den Lauf in Takt 4 nur mit der rechten Hand, mit Daumenuntersatz zum A.",
+          "Spiel die Zweiklänge und Akkorde der Takte 13 bis 20 nur mit der rechten Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Finger 1, 2 und 3 spielen E, F und G. Dann folgt der Daumenuntersatz zum A.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+        ],
+        tricky: {
+          4: "Der Lauf steigt vom F zum C. Führ den Daumen unter Finger 3 hindurch zum A.",
+          16: "Derselbe Lauf wie in Takt 4, diesmal ab einer Terz auf C und E. Mit Daumenuntersatz geht es zum A.",
+          21: "Die Hand fällt vom Akkord mit Finger 5 auf das C und wandert dann hinab zu G und E.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel die gebrochenen Oktaven der Takte 13 bis 16 nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Lass die gebrochenen Oktaven sanft unter der Melodie rollen, wie eine schaukelnde Wiege.",
+        ],
+        tricky: {
+          5: "Nach dem Lauf landest du mit Finger 1, 3 und 5 auf G, H und D.",
+          9: "Die Hand öffnet sich zu C, F und A, und der kleine Finger singt die Melodie.",
+          10: "Finger 4 nimmt allein das H zwischen den Akkorden. Halt den Daumen nah am F.",
+        },
+      },
+    },
+  },
 };

@@ -252,4 +252,89 @@ export const happyBirthday: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Mildred J. Hill schrieb diese Melodie für Good Morning to All, ein Begrüßungslied für Kindergartengruppen. " +
+      "Sie veröffentlichte es 1893 in Song Stories for the Kindergarten, einem Buch, das sie mit ihrer Schwester Patty machte. " +
+      "Die heute gesungene Geburtstagsfassung fügt der dritten Zeile zwei Töne hinzu, mit einem Oktavsprung.",
+    funFact:
+      "2015 entschied ein US-Gericht, dass die Firma, die für das Geburtstagslied Gebühren verlangte, kein gültiges Urheberrecht an seinem Text hatte.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand langsam allein, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 9 nur mit der rechten Hand. Dort springt die Melodie hoch hinauf.",
+          "Nimm beide Hände zusammen. Die linke Hand hält nur eine Quinte oder einen einzelnen Ton.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Von den beiden G am Anfang ist das erste lang, das zweite kurz. Das kurze führt in den nächsten Takt.",
+          "Dein Daumen liegt auf dem G, und jeder Finger behält seine eigene Taste bis hinauf zum D.",
+          "Heb die Hand nach dem zweiten G, und lande mit dem kleinen Finger auf dem hohen G.",
+        ],
+        tricky: {
+          2: "Finger 2 spielt das A, der Daumen kehrt zum G zurück, und Finger 4 greift zum C.",
+          6: "Lande mit dem kleinen Finger auf dem hohen G, dann geh mit Finger 4 und 2 hinab zu E und C.",
+          7: "Dein Daumen spielt das H und rutscht dann hinab zum A. Heb die Hand vor den beiden F.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die drei Töne jedes Akkords zusammen an.",
+          "Spiel den Walzerbass der zweiten Strophe allein: tiefer Ton, Akkord, Akkord.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Der kleine Finger greift eine ganze Oktave über den Daumen hinauf. Die Hand öffnet sich und schließt sich wieder.",
+          "Führ den Daumen nach dem langen C hinauf zum G. Die zweite Strophe beginnt eine Oktave höher.",
+          "Spiel im Walzerbass den tiefen Ton etwas lauter als die Akkorde danach.",
+        ],
+        tricky: {
+          7: "Dein Daumen spielt das H und rutscht dann hinab zum A, und Finger 4 greift hinauf zum F.",
+          9: "Halt das C, dann führ deinen Daumen hinauf zum nächsten G für die zweite Strophe.",
+          15: "Der Daumen rutscht wieder vom H hinab zum A, jetzt eine Oktave höher.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Der Walzerbass hebt von jedem Ton ab. Das Pedal verbindet sie, also wechsle es am Anfang jedes Takts.",
+        ],
+        tricky: {
+          12: "Die Zweiklänge steigen hinab, dann springen Finger 3 und 5 hinauf zu H und D.",
+          15: "Greif nach den beiden tiefen Zweiklängen mit Finger 3 und 5 hinauf zum hohen D und F.",
+          17: "Lass die Hand auf den letzten Akkord fallen: Daumen auf E, Finger 2 auf G und kleiner Finger auf C.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel die Oktaven etwas abgesetzt, wie Glocken, und lass das Pedal sie verbinden.",
+          "In jedem Arpeggio kreuzt Finger 3 auf dem Weg nach oben über den Daumen.",
+        ],
+        tricky: {
+          7: "Heb die Hand nach dem A, damit sie sich zum Akkord mit dem F oben öffnen kann.",
+          10: "Die Oktaven beginnen, während die linke Hand ihr erstes Arpeggio läuft. Üb zuerst jede Hand allein.",
+          15: "Halt die Oktavform, während die Hand hinauf zum F springt, und lass den Bass darunter rollen.",
+        },
+      },
+    },
+  },
 };

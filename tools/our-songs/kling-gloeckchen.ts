@@ -140,9 +140,8 @@ export const klingGloeckchen: OurSong = {
     "Kling, Glöckchen, klingelingeling means Ring, little bell, ring-a-ling-a-ling. " +
     "Karl Enslin wrote the words, and they were first printed in 1854. " +
     "In them the Christ Child begs the children to open the door, because the winter is so cold. " +
-    "The first edition had a tune by Wilhelm Speyer, but nobody knows who wrote the tune sung today.",
-  funFact:
-    "Some books name Benedikt Widmann as the composer, but that is a mix-up. He edited the collection that first printed the words.",
+    "Nobody knows who wrote the tune sung today.",
+  funFact: "In many German homes a small bell rings on Christmas Eve, to tell the children that the presents are ready.",
   mythic: null,
   collection: "christmas",
   aka: ["Kling Glöckchen"],
@@ -303,6 +302,92 @@ export const klingGloeckchen: OurSong = {
         3: "Press B, D and F together, then fingers 2 and 4 play D and G while the left hand jumps.",
         7: "Fingers 2 and 4 play the third, then finger 4 repeats F and the little finger takes G.",
         15: "The same chord as bar 3. Watch the left hand's jump down to the low G octave.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Kling, Glöckchen, klingelingeling heißt auf Englisch Ring, little bell, ring-a-ling-a-ling. " +
+      "Karl Enslin schrieb den Text, der 1854 zum ersten Mal gedruckt wurde. " +
+      "Darin bittet das Christkind die Kinder, die Tür zu öffnen, weil der Winter so kalt ist. " +
+      "Niemand weiß, wer die heute gesungene Melodie geschrieben hat.",
+    funFact: "In vielen deutschen Familien läutet an Heiligabend ein Glöckchen und sagt den Kindern, dass die Geschenke bereit sind.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 12 nur mit der rechten Hand. Dort rückt die Hand zweimal weiter.",
+          "Jetzt die linke Hand allein. Sie hält eine Handform für einen Takt oder einen halben Takt.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "G, A, G, A: Das ist das kleine Glöckchen, das klingelt. Spiel es leicht und gleichmäßig.",
+          "Während du das lange E hältst, lass den Daumen vom D hinab zum mittleren C gleiten.",
+          "Rück den Daumen während des letzten E wieder hinauf zum D, damit Finger 3 die schwarze Taste Fis erreicht.",
+        ],
+        tricky: {
+          2: "Finger 4 und 5 schaukeln zwischen G und A, wie eine schwingende Glocke.",
+          5: "Dein Daumen sitzt jetzt auf dem mittleren C, also spielt Finger 2 die beiden D.",
+          14: "Das Glöckchen klingelt wieder. Finger 4 und 5 schaukeln zwischen G und A, wie in Takt 2.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die Takte 9 bis 12 nur mit der linken Hand. Dort rückt sie hinab zum G.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Spiel das tiefe C etwas lauter als den Akkord danach.",
+          "Hier rücken beide Hände weiter. Nutz die langen letzten Töne von Takt 8, um dorthin zu kommen.",
+          "Die linke Hand gleitet zurück hinauf zum C, wenn die Glöckchen-Phrase wiederkommt.",
+        ],
+        tricky: {
+          5: "Der rechte Daumen rückt hinab zum mittleren C, während die linke Hand das C und dann ihren Akkord spielt.",
+          9: "Beide Hände rücken: Der rechte Daumen geht hinauf zum D, die linke Hand hinab zu A, C und D.",
+          13: "Die linke Hand gleitet zurück hinauf zum C, und die rechte Hand beginnt die Glöckchen-Phrase von vorn.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Glöckchen-Melodie darüber klingt.",
+          "Wechsle das Pedal am Anfang und in der Mitte jedes Takts.",
+          "Heb die Hand vom letzten E, und setz Finger 2 und 4 eine Oktave höher auf.",
+        ],
+        tricky: {
+          17: "Die rechte Hand landet eine Oktave höher auf einer Terz, und die linke Hand beginnt mit Bass und Akkorden.",
+          27: "Finger 2 spielt das E, und der kleine Finger streckt sich hinauf zum A. Halt den Daumen nah am D.",
+          29: "Die Glöckchen-Phrase kehrt in Terzen zurück. Finger 2 und 4 nehmen E und G zusammen.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den oberen Finger die Melodie singen.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "In Oktaven soll die Glöckchenfigur wie echte Glocken klingen. Halt das Handgelenk locker.",
+          "Daumen und kleiner Finger spielen jede Oktave. Halt die Hand offen in einer einzigen Form.",
+        ],
+        tricky: {
+          3: "Drück H, D und F zusammen, dann spielen Finger 2 und 4 D und G, während die linke Hand springt.",
+          7: "Finger 2 und 4 spielen die Terz, dann wiederholt Finger 4 das F, und der kleine Finger nimmt das G.",
+          15: "Derselbe Akkord wie in Takt 3. Behalt den Sprung der linken Hand hinab zur tiefen G-Oktave im Blick.",
+        },
       },
     },
   },

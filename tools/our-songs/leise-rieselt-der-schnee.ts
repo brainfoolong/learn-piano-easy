@@ -157,12 +157,12 @@ export const leiseRieseltDerSchnee: OurSong = {
     edition: "Urania, Heft 3, December 1924, printed as an old Christmas song (Altes Weihnachtslied)",
   },
   about:
-    "Leise rieselt der Schnee means Softly falls the snow in German. " +
+    "The German title Leise rieselt der Schnee means Softly falls the snow. " +
     "It is one of the best-known Advent songs in the German language. " +
     "The pastor Eduard Ebel wrote the words in 1895, and his book printed them with no tune. " +
     "Many books credit the tune to Ebel too, but no source shows it, and others call it a folk tune.",
   funFact:
-    "Some say the tune grew from a Musette by Daniel Gottlob Türk from 1792, but only its first bar and a half match.",
+    "Each of its three verses opens with a short picture: the soft snow, warm hearts, and the holy night that comes soon.",
   mythic: null,
   collection: "christmas",
   tune: { text: tune, numerator: 6, denominator: 2, steps: 2, key: C_MAJOR, hookBars: [1, 2] },
@@ -277,6 +277,93 @@ export const leiseRieseltDerSchnee: OurSong = {
         9: "Both hands change their pattern. The right hand plays octaves, and the left starts its first arpeggio over two octaves.",
         12: "Hold the G octave while the left hand climbs to the high E and back down.",
         14: "The same climb as bar 12, now under the C octave. Let finger 3 cross over the thumb smoothly.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Leise rieselt der Schnee heißt auf Englisch Softly falls the snow. " +
+      "Es ist eines der bekanntesten Adventslieder in deutscher Sprache. " +
+      "Der Pfarrer Eduard Ebel schrieb den Text 1895, und sein Buch druckte ihn ohne Melodie. " +
+      "Viele Bücher schreiben auch die Melodie Ebel zu, doch keine Quelle belegt das, und andere nennen sie ein Volkslied.",
+    funFact:
+      "Jede der drei Strophen beginnt mit einem kurzen Bild: dem leisen Schnee, den warmen Herzen und der heiligen Nacht, die bald kommt.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten zwei Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 1 bis 8 nur mit der rechten Hand. Das ist einmal die ganze Strophe.",
+          "Jetzt die linke Hand allein. Sie hält eine Handform pro Takt, höchstens zwei.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Dein rechter Daumen beginnt auf dem mittleren C, und Finger 3 nimmt das erste E.",
+          "Finger 4 nimmt das C, das dein Daumen in Takt 2 hielt. Dann rückt die Hand hinab, bis der Daumen auf dem G sitzt.",
+          "Jede Phrase endet mit einem langen Ton und einer kurzen Pause. Lass den Ton klingen, dann atme, wie fallender Schnee.",
+        ],
+        tricky: {
+          7: "Finger 4 hält das D, dann fällt der Daumen zweimal auf das A. Spiel das schnelle A leicht.",
+          9: "Die Strophe beginnt von vorn. Heb Finger 3 in der Pause vom C, und setz ihn auf das E.",
+          15: "Derselbe Hüpfer wie in Takt 7: ein langes D, dann ein schnelles A mit dem Daumen.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel den Walzerbass der zweiten Strophe allein: tiefer Ton, Akkord, Akkord.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Der linke Daumen bleibt die ganze erste Strophe auf dem G. Nur die anderen Finger bewegen sich.",
+          "Spiel im Walzerbass den tiefen Ton etwas lauter als die Akkorde danach.",
+          "Cis ist die einzige schwarze Taste im Lied. Lass den Daumen darauf und wieder herunter gleiten.",
+        ],
+        tricky: {
+          7: "Finger 4 hält das D, dann fällt der Daumen zweimal auf das A, während die linke Hand zur Takthälfte den Akkord wechselt.",
+          9: "Die Strophe beginnt von vorn, und der Walzer setzt ein. Rück Finger 3 in der Pause vom C hinauf zum E.",
+          15: "Das schnelle A kommt wieder, jetzt über dem Walzerbass. Zähl das lange D vorher ganz aus.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal auf jeder Takthälfte, sobald die linke Hand ihr Muster neu beginnt.",
+        ],
+        tricky: {
+          7: "Das schnelle A fällt auf den Daumen, während die linke Hand durch d-Moll rollt. Halt den Bass darunter gleichmäßig.",
+          13: "Die Zweiklänge kreisen um das Cis. Finger 1 und 3 nehmen A und Cis, dann kehren 2 und 4 zu H und D zurück.",
+          14: "Die Hand öffnet sich von einer Terz zu einer Sexte, mit dem Daumen auf E und Finger 3 auf C.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den oberen Finger die Melodie singen.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Hoch oben sollen die Oktaven wie Glocken klingen. Halt das Handgelenk locker.",
+          "Lös die D-Oktave einen Moment früher, damit die Hand rechtzeitig auf dem schnellen A landet.",
+        ],
+        tricky: {
+          9: "Beide Hände wechseln ihr Muster. Die rechte Hand spielt Oktaven, und die linke beginnt ihr erstes Arpeggio über zwei Oktaven.",
+          12: "Halt die G-Oktave, während die linke Hand hinauf zum hohen E steigt und wieder hinab.",
+          14: "Derselbe Aufstieg wie in Takt 12, jetzt unter der C-Oktave. Lass Finger 3 geschmeidig über den Daumen greifen.",
+        },
       },
     },
   },

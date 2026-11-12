@@ -312,4 +312,90 @@ export const itCameUponTheMidnightClear: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Edmund Sears schrieb das Gedicht 1849. " +
+      "Es erschien zuerst am 29. Dezember 1849 in The Christian Register in Boston. " +
+      "Richard Storrs Willis veröffentlichte die Melodie ein Jahr später als Übungsstück für Chöre. " +
+      "Gesangbücher in den USA setzten das Gedicht unter dem Namen Carol auf diese Melodie, und es wurde ein beliebtes Weihnachtslied.",
+    funFact: "In Großbritannien singt man denselben Text meist zu einer anderen Melodie, Noel, die Arthur Sullivan nach einem englischen Volkslied bearbeitete.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten drei Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 9 bis 13 nur mit der rechten Hand. Dort fällt die Melodie ab und steigt wieder hinauf.",
+          "Jetzt die linke Hand allein. Sie hält immer eine Quinte oder einen Ton und bleibt an einer Stelle.",
+          "Spiel die ersten fünf Takte mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Heb den Daumen einen Moment früher vom G. Dann hat der kleine Finger Zeit, das hohe E zu erreichen.",
+          "Hier fällt die Melodie eine ganze Oktave. Heb die Hand vom hohen E, und setz den Daumen auf das tiefe.",
+          "Zähl sechs Schläge im Takt: lang, kurz, lang, kurz. Die Melodie wiegt sich wie ein Wiegenlied.",
+        ],
+        tricky: {
+          6: "Nach der kurzen Pause landet Finger 5 auf dem hohen E. Dann wandern Finger 4, 3 und 2 hinab zum A.",
+          8: "Finger 2 spielt zweimal das A, und Finger 3 steigt zum H. Dann wandern Finger 2 und 1 hinab zum G.",
+          14: "Dieselbe Form wie in Takt 6: Finger 5 auf dem hohen E, dann 4, 3 und 2 hinab zum A.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein. Zuerst kommt ein Basston, dann der Rest seines Akkords.",
+          "Spiel die ersten fünf Takte langsam nur mit der rechten Hand.",
+          "Spiel die Takte 9 bis 13 nur mit der rechten Hand. Dort fällt die Melodie ab und steigt wieder.",
+          "Spiel die Takte 1 bis 5 mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Wechsle beim zweiten C von Finger 4 auf den Daumen. Dann greifen Finger 2 und 3 das D und das E.",
+          "Nutz den langen Akkord in Takt 5, um die Hand auf das hohe E vorzubereiten.",
+          "Die Melodie steigt über Fis und Gis. Lass sie bis zum hohen E etwas lauter werden.",
+        ],
+        tricky: {
+          10: "Die Melodie fällt vom hohen E zum tiefen. Dann gleitet der Daumen hinauf zum Fis, und Finger 2 nimmt das Gis.",
+          11: "Finger 3, 4 und 5 steigen zu A, H und C. Dann geht Finger 5 weiter hinauf zum hohen E.",
+          12: "Finger 4, 3, 2 und 1 wandern vom D hinab zum A. Dann nimmt Finger 3 das H, damit Finger 2 auf dem A landet.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Takte 9 bis 13 nur mit der rechten Hand, mit Daumenuntersatz auf dem Weg nach oben.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und drück beide Töne jedes Zweiklangs wie einen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber schwebt.",
+          "Steig mit Finger 1, 2 und 3 über E, Fis und Gis, dann folgt der Daumenuntersatz zum A.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+        ],
+        tricky: {
+          4: "Der Daumen geht vom G hinauf zum A. Dann steigen Finger 2 bis 5 zum E, mit Finger 3 auf beiden C.",
+          15: "Die Zweiklänge wechseln ihre Form: 1 und 3 für eine Terz, 1 und 5 für eine Sexte. Der Daumen wandert hinab zum H, dann hinauf zum D.",
+          16: "Terzen auf F und A, dann steigen Finger 2 und 4 zu G und H und zurück. Am Ende greift der Daumen hinunter zum H.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den oberen Finger die Melodie singen.",
+          "Spiel die dritte Phrase, die Takte 9 bis 13, mit beiden Händen. Dort fällt die Melodie ab und steigt wieder.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Vor jedem Auftakt kommt eine kurze Pause. Nutz sie, um die Hand zum nächsten Akkord zu bringen.",
+        ],
+        tricky: {
+          3: "Finger 3 singt das A nach E und G. Dann fällt der Daumen auf das H unter F und G, und Finger 3 behält das G der Melodie.",
+          5: "Spann die Hand über vier Töne: D, G, H und D. Dann heb sie an und setz den Daumen auf das G.",
+          13: "Wieder ein Akkord aus vier Tönen, G, H, D und G, mit dem kleinen Finger oben. Lös ihn in der Pause vor dem Auftakt.",
+        },
+      },
+    },
+  },
 };

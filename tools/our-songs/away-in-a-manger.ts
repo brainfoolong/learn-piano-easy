@@ -162,9 +162,8 @@ export const awayInAManger: OurSong = {
   },
   about:
     "The words of Away in a Manger are American, and nobody knows who wrote them. " +
-    "Their first two verses were printed in 1882. " +
     "Many tunes were written for them, and this one is Cradle Song by William J. Kirkpatrick, from 1895. " +
-    "It is the tune sung in Britain, Ireland and Canada.",
+    "It is the tune sung in Britain and Ireland.",
   funFact: "The words were long called Luther's Cradle Hymn, but Martin Luther never wrote them.",
   mythic: null,
   collection: "christmas",
@@ -317,6 +316,91 @@ export const awayInAManger: OurSong = {
         6: "The left hand jumps to the low G octave while the right hand plays the B, D and F chord.",
         22: "The octaves play F twice, then G, while the left hand climbs a G seventh and falls back.",
         30: "The same as bar 22. Keep the octaves even while the arpeggio runs below them.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Der Text von Away in a Manger stammt aus Amerika, und niemand weiß, wer ihn geschrieben hat. " +
+      "Viele Melodien entstanden dazu, und diese ist Cradle Song von William J. Kirkpatrick aus dem Jahr 1895. " +
+      "Diese Melodie singt man in Großbritannien und Irland.",
+    funFact: "Der Text hieß lange Luther's Cradle Hymn, doch Martin Luther hat ihn nie geschrieben.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten fünf Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 9 nur mit der rechten Hand. Dort wandert die Melodie hinab zum tiefen G.",
+          "Jetzt die linke Hand allein. Sie hält für jeden Takt eine Griffform.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Der Daumen spielt das tiefe G, und Finger 2 nimmt das mittlere C.",
+          "Zwei lange Töne, dann zwei schnelle, die sich in den nächsten Takt lehnen.",
+          "Der Daumen greift hinab zum A, und die Hand folgt ihm hinab zum tiefen G.",
+        ],
+        tricky: {
+          6: "Finger 3 spielt zweimal das F, dann streckt sich der kleine Finger hinauf zum G.",
+          7: "Finger 4 spielt das E, Finger 2 greift hinab zum C, und Finger 4 kehrt zum E zurück.",
+          15: "Dieselben Töne wie in Takt 7: zweimal E mit Finger 4, dann C mit Finger 2.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die drei Töne jedes Akkords zusammen an.",
+          "Spiel den Walzerbass allein: tiefer Ton, Akkord, Akkord.",
+          "Spiel die erste Hälfte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Für den F-Akkord geht der Daumen vom G hinauf zum A. Für den nächsten Akkord geht er zurück.",
+          "Spiel im Walzerbass den tiefen Ton etwas lauter als die Akkorde danach.",
+          "Halt jeden Akkord den ganzen Takt lang, leise, wie in einem Wiegenlied.",
+        ],
+        tricky: {
+          6: "Der linke Daumen geht vom A zurück zum G, während die rechte Hand hinauf zum G steigt.",
+          7: "Finger 4 spielt das E, Finger 2 greift hinab zum C, und Finger 4 kehrt zum E zurück.",
+          15: "Dieselben Töne wie in Takt 7, jetzt über einem Walzerbass. Halt den Bass leise.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen und Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Heb die Hand nach dem C, und lande eine Oktave höher auf dem G.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+        ],
+        tricky: {
+          17: "Heb die rechte Hand nach dem C, und setz den Daumen eine Oktave höher auf das G.",
+          19: "Der Daumen lässt das tiefe E los, und Finger 2, 3 und 4 wandern hinauf zum F.",
+          32: "Spreiz die Hand für die Sexte, dann schließ sie für die letzte Terz auf G und H.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Oben sollen die Oktaven wie Glocken klingen. Lass das Handgelenk locker.",
+          "In jedem Arpeggio kreuzt Finger 3 auf dem Weg nach oben über den Daumen.",
+        ],
+        tricky: {
+          6: "Die linke Hand springt zur tiefen G-Oktave, während die rechte Hand den Akkord aus H, D und F spielt.",
+          22: "Die Oktaven spielen zweimal F, dann G, während die linke Hand einen G-Septakkord hinaufsteigt und zurückfällt.",
+          30: "Wie Takt 22. Halt die Oktaven gleichmäßig, während das Arpeggio darunter läuft.",
+        },
       },
     },
   },

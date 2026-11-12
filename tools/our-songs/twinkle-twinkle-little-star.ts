@@ -223,4 +223,89 @@ export const twinkleTwinkleLittleStar: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Diese Melodie begann als französisches Lied, \"Ah! vous dirai-je, maman\", das 1761 zuerst gedruckt wurde. " +
+      "Mozart schrieb dazu zwölf Variationen für Klavier. " +
+      "1806 erschien Jane Taylors Gedicht vom kleinen Stern, auf Deutsch \"Funkel, funkel, kleiner Stern\", das man später zu dieser Melodie sang.",
+    funFact: "Auch das englische Alphabetlied und Baa, Baa, Black Sheep singt man zu genau dieser Melodie.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand allein und langsam, und lass das Lied auf jeden Ton warten.",
+          "Jetzt die linke Hand allein. Sie bewegt sich nur zwischen C, F und G.",
+          "Nimm beide Hände zusammen für die ersten vier Takte.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Leg deinen Daumen auf das mittlere C. Finger 4 spielt G, und der kleine Finger spielt A.",
+          "Das letzte C ist doppelt so lang wie die Töne davor, also zähl zwei Schläge.",
+          "Der Mittelteil sagt zweimal dasselbe. Spiel ihn beim zweiten Mal leiser, wie ein Echo.",
+        ],
+        tricky: {
+          3: "Hier rückt deine Hand eine Taste tiefer, also verlässt Finger 4 das G und landet auf dem F.",
+          5: "Jetzt spielt dein kleiner Finger das G. Geh von ihm abwärts, ein Finger pro Taste: 5, 4, 3, 2.",
+          11: "Das ist wieder Takt 3. Schieb die Hand eine Taste tiefer, damit Finger 4 auf dem F landet.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die rechte Hand allein und langsam, und spür die zwei schnellen Töne in Takt 4.",
+          "Spiel die linke Hand allein. Sie hält jeden Akkord zwei oder vier Schläge lang.",
+          "Nimm beide Hände zusammen für den Mittelteil.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Das D und das E teilen sich einen Schlag. Sag \"eins-und\", während du sie spielst.",
+          "Die linke Hand bleibt an einem Ort, und jeder Akkord behält seine eigenen Finger.",
+          "Die letzten vier Takte sind eine Coda, ein kurzer Abschied. Nimm am Ende das Tempo etwas zurück.",
+        ],
+        tricky: {
+          3: "Finger 4 geht hier vom G hinab zum F. Lass die ganze Hand mit ihm eine Taste tiefer gleiten.",
+          11: "Das ist wieder Takt 3. Schieb die Hand eine Taste tiefer, damit Finger 4 auf dem F landet.",
+          14: "Finger 4 gleitet noch einmal vom G hinab zum F, während die Coda nach Hause geht.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs wie einen.",
+          "Spiel die Tonleiter in Takt 15 allein, mit Daumenuntersatz nach Finger 3.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Spiel den Alberti-Bass leise, damit die Melodie obenauf bleibt.",
+          "Die zwei schnellen Töne am Ende der Takte 4 und 6 führen hinauf zum G. Spiel sie leicht.",
+          "Mit Daumenuntersatz auf dem F steigt die Tonleiter ohne Lücke bis zum C.",
+          "Wechsle das Pedal zweimal pro Takt, auf Schlag eins und drei.",
+        ],
+        tricky: {
+          3: "Finger 4 gleitet vom G hinab zum F, während der Alberti-Bass weiterrollt.",
+          9: "Dein Daumen gleitet vom D hinab zum C. Dann nehmen Finger 2 und 4 die erste Terz.",
+          14: "Finger 4 gleitet vom G hinab zum F, wie schon in Takt 3.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Sechzehntel des Mittelteils langsam, nur mit der rechten Hand.",
+          "Spiel die Oktaven der rechten Hand allein, und heb die Hand zwischen ihnen an.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau auf die Sprünge der linken Hand, und lass die rechte Hand ihre Akkorde nach Gefühl finden.",
+          "Jeder Melodieton beginnt eine Gruppe aus vier Sechzehnteln. Betone ihn ein wenig, damit die Melodie hörbar bleibt.",
+          "Spiel die Oktaven kurz und hell, wie Glocken.",
+        ],
+        tricky: {
+          3: "Der Daumen geht vom A hinab zum G, während Finger 2 das C hält. Beweg die Hand als Ganzes.",
+          14: "Das ist wieder Takt 3. Der Daumen geht vom A hinab zum G, und Finger 2 bleibt auf dem C.",
+          15: "Finger 3 greift beim H über den Daumen, während der Lauf fällt. Dann steigt die Hand durch G-Dur wieder hinauf.",
+        },
+      },
+    },
+  },
 };

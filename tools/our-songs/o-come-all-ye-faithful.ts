@@ -267,4 +267,89 @@ export const oComeAllYeFaithful: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "John Francis Wade schrieb diese Melodie um 1751 von Hand ab, mit lateinischem Text, der mit Adeste fideles beginnt. " +
+      "Wade war ein englischer Katholik, der in Frankreich vom Abschreiben von Noten lebte. " +
+      "Frederick Oakeley schrieb 1841 den englischen Text, den die meisten heute singen.",
+    funFact: "In London nannte man es einst die Portugiesische Hymne, weil man es in der Kapelle der portugiesischen Botschaft hörte.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten drei Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 1 bis 9 nur mit der rechten Hand, bis hinab zum langen tiefen G.",
+          "Jetzt die linke Hand allein. Sie hält für jede Takthälfte eine Handform.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Finger 2 beginnt auf dem mittleren C, und der Daumen wartet auf dem G darunter.",
+          "Lang, kurz: Halt das A, dann lass das schnelle G in den nächsten Takt fallen.",
+          "Der Refrain ruft dreimal denselben Ruf. Spiel jeden Ruf etwas lauter als den davor.",
+        ],
+        tricky: {
+          4: "Nach der kurzen Pause landet Finger 3 auf dem E. Dann schaukeln Finger 2, 3 und 4 zwischen D, E und F.",
+          10: "Heb die Hand in der Pause, und setz den kleinen Finger auf das hohe G. Finger 4 und 3 gehen hinab zu F und E.",
+          11: "Diesmal nimmt der kleine Finger das F, damit Finger 4 bereit ist für das E.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die ersten neun Takte nur mit der rechten Hand, und spür das Paar aus lang und kurz in Takt 8.",
+          "Spiel den Refrain, die Takte 14 bis 17, mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Der linke Daumen bleibt hier bei jedem Akkord auf dem G, also bewegt sich die Hand kaum.",
+          "Lang, kurz: Das A dauert dreimal so lang wie das G.",
+          "Die letzte Zeile ist die größte. Lass sie anschwellen, dann ruh dich auf dem letzten C aus.",
+        ],
+        tricky: {
+          4: "Mach die Hand weit auf: Der Daumen verlässt das tiefe G, während Finger 3 hinauf zum E greift.",
+          11: "Diesmal nimmt der kleine Finger das F, damit Finger 4 bereit ist für das E.",
+          12: "Finger 2 kehrt zwischen E und D zum C zurück. Halt die Hand ruhig, und lass die Finger arbeiten.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die ersten neun Takte nur mit der rechten Hand, eine Oktave über dem mittleren C.",
+          "Spiel die Terzen und Sexten der Takte 14 bis 17 nur mit der rechten Hand. Drück beide Töne wie einen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Wechsle das Pedal in der Mitte jedes Takts, sobald die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          7: "Die rechte Hand steigt vom H zum E, ein Finger pro Taste, während die linke Hand den Akkord wechselt.",
+          16: "Die Zweiklänge wechseln von Terzen zu Sexten und zurück. Schau auf den nächsten Zweiklang, bevor du ihn spielst.",
+          21: "Heb die linke Hand nach dem letzten D, dann greif mit dem Schlussakkord die tiefe C-Oktave.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel die Oktaven der Takte 14 bis 21 nur mit der rechten Hand. Halt die Hand offen und leicht.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel in den Oktaven den kleinen Finger etwas lauter, damit die Melodie oben strahlt.",
+          "Der gebrochene Oktavbass rollt vom kleinen Finger zum Daumen und zurück.",
+        ],
+        tricky: {
+          3: "Spann die Hand für den G-Akkord aus vier Tönen. Dann lass sie sich auf D und G schließen.",
+          8: "Der Akkord gleitet von G und H hinab zu F und A. Dann kommt Finger 2 auf dem G zur Ruhe.",
+          12: "Der kleine Finger greift zwischen den Akkorden hinauf zum E. Dann fällt die Hand auf A und C.",
+        },
+      },
+    },
+  },
 };

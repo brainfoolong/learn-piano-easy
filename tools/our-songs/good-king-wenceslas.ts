@@ -233,7 +233,7 @@ export const goodKingWenceslas: OurSong = {
     "It was first published in 1582 in Piae Cantiones, a Finnish song book. " +
     "In 1853 the English hymnwriter John Mason Neale wrote new words to it, with his music editor Thomas Helmore. " +
     "The carol tells of a king of Bohemia who braves the winter weather to give alms to a poor peasant.",
-  funFact: "Wenceslas was only a duke in his lifetime. Emperor Otto I gave him the title of king after his death.",
+  funFact: "Wenceslas was only a duke in his lifetime. Later legend remembers him as a king.",
   mythic: null,
   collection: "christmas",
   aka: ["Tempus adest floridum"],
@@ -353,6 +353,92 @@ export const goodKingWenceslas: OurSong = {
         3: "The octaves step A, G, A and B, while the left hand jumps from the low F to its chord, then to G.",
         7: "The same as bar 3. Keep the octaves even and the wrist loose.",
         11: "The same steps once more, after the run down. Keep the stride bass light under the octaves.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Die Melodie ist Tempus adest floridum, ein Frühlingslied aus dem 13. Jahrhundert. " +
+      "Sie erschien zuerst 1582 in Piae Cantiones, einem finnischen Liederbuch. " +
+      "1853 schrieb der englische Kirchenlieddichter John Mason Neale mit seinem Musikredakteur Thomas Helmore einen neuen Text dazu. " +
+      "Das Lied erzählt von einem König von Böhmen, der dem Winterwetter trotzt, um einem armen Bauern Almosen zu bringen.",
+    funFact: "Zu Lebzeiten war Wenzel nur ein Herzog. Die spätere Legende kennt ihn als König.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 8 bis 11 nur mit der rechten Hand, hinauf zum hohen G und wieder hinab zum A.",
+          "Jetzt die linke Hand allein. Sie wechselt ihre Griffform nur auf dem ersten und dem dritten Schlag.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Der Daumen beginnt auf dem G, und Finger 4 spielt das wiederholte C.",
+          "Spiel das zweite C mit dem Daumen. Dann greift der kleine Finger hinauf zum hohen G.",
+          "Heb die Hand nach dem C, und setz Finger 2 auf das A.",
+        ],
+        tricky: {
+          1: "Finger 4 spielt dreimal das C, dann spielt Finger 5 das D. Der Daumen wartet über dem G.",
+          5: "Dieselben Töne wie in Takt 1. Spiel die drei C gleichmäßig und das D leicht.",
+          11: "Nach dem Abheben landet Finger 2 auf dem A, und der Daumen nimmt das G. Dann steigen Finger 2 und 3 zu A und H.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die ersten acht Takte nur mit der linken Hand, und drück die Töne jedes Akkords zusammen an.",
+          "Spiel ab Takt 9 nur die linke Hand: einen tiefen Ton und dann den Akkord, je einen auf jedem Schlag.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt jeden Akkord leise für seine zwei Schläge, damit die Melodie darüber klingt.",
+          "Spiel das zweite C mit dem Daumen. Dann greift der kleine Finger hinauf zum hohen G.",
+          "Spiel den tiefen Ton etwas lauter als den Akkord danach.",
+        ],
+        tricky: {
+          1: "Finger 4 spielt dreimal das C, dann spielt Finger 5 das D. Die linke Hand spielt zweimal den C-Akkord.",
+          5: "Dieselben Töne wie in Takt 1. Spiel die drei C gleichmäßig und das D leicht.",
+          11: "Nach dem Abheben landet Finger 2 auf dem A. Die linke Hand spielt F, dann C, dann G, dann ihren Akkord.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde der zweiten Strophe nur mit der linken Hand.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Nach dem letzten C springt die rechte Hand eine Oktave hinauf, und die linke Hand fällt zu einem tiefen C.",
+          "Wechsle das Pedal jeden halben Takt, wenn die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          18: "Die rechte Hand beginnt wieder eine Oktave höher, und die linke Hand fällt zum tiefen C.",
+          28: "Die linke Hand macht nach dem F-Akkord Pause und springt dann hinab zum tiefen G.",
+          33: "Die Melodie springt vom C hinauf zum F, während die linke Hand pausiert und zum tiefen F hinabgeht.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel die Oktaven der rechten Hand allein, und halt Daumen und Finger 5 in einer Form.",
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der zweiten Strophe nur mit der rechten Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Halt Daumen und Finger 5 eine Oktave weit gespreizt, und lass das Handgelenk den Lauf hinabtragen.",
+          "Heb jeden Akkord etwas früher ab, um die Hand zu versetzen. Das Pedal hält seinen Klang.",
+        ],
+        tricky: {
+          3: "Die Oktaven gehen über A, G, A und H, während die linke Hand vom tiefen F zu ihrem Akkord springt, dann zum G.",
+          7: "Wie Takt 3. Halt die Oktaven gleichmäßig und das Handgelenk locker.",
+          11: "Noch einmal dieselben Schritte, nach dem Lauf hinab. Halt den Stride-Bass unter den Oktaven leicht.",
+        },
       },
     },
   },

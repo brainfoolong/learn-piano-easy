@@ -197,4 +197,89 @@ export const odeToJoy: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Beethoven schrieb diese Melodie für den letzten Satz seiner Neunten Sinfonie, die 1824 in Wien uraufgeführt wurde. " +
+      "Ein Chor singt dazu Friedrich Schillers Gedicht über Freude und Freundschaft. " +
+      "Heute ist sie die Hymne der Europäischen Union, gespielt ohne Worte.",
+    funFact:
+      "Beethoven war fast völlig taub, als die Neunte zum ersten Mal erklang. Man musste ihn umdrehen, damit er den Beifall sah.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand allein und langsam, und lass das Lied auf jeden Ton warten.",
+          "Jetzt die linke Hand allein. Sie wechselt nur zwischen zwei Formen.",
+          "Nimm beide Hände zusammen für die ersten acht Takte.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Hier hat jeder Finger seine eigene Taste: der Daumen auf C, der kleine Finger auf G.",
+          "Das letzte D ist doppelt so lang wie die Töne davor, also zähl zwei Schläge.",
+          "Der Mittelteil ist der leise Teil. Spiel ihn sanft, und komm in Takt 13 kräftig zurück.",
+        ],
+        tricky: {
+          2: "Geh vom kleinen Finger abwärts, ein Finger pro Taste: 5, 4, 3, 2.",
+          12: "Dein Daumen streckt sich hinunter zum tiefen G, während die anderen Finger bleiben, wo sie sind.",
+          13: "Nach der Pause findest du das E mit Finger 3, und die Melodie beginnt von vorn.",
+        },
+      },
+      rare: {
+        practice: [
+          "Klatsch oder tipp den punktierten Rhythmus von Takt 4, dann spiel die rechte Hand allein.",
+          "Spiel die linke Hand allein, und halt jeden Akkord bis zum nächsten.",
+          "Spiel den Mittelteil mit beiden Händen zusammen. Dort wechseln die Akkorde alle zwei Schläge.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Lang, kurz, lang: Das Fis dauert anderthalb Schläge und das E einen halben.",
+          "Die zwei schnellen Töne sind Achtel. Stell sie dir als einen geteilten Schlag vor.",
+          "Jeder Akkord im Mittelteil dauert zwei Schläge. Lass ihn bis zum nächsten klingen.",
+        ],
+        tricky: {
+          10: "Fis und G ziehen schnell vorbei. Halt Finger 3 und 4 nah an ihren Tasten.",
+          12: "Dein Daumen gleitet vom D hinunter zum tiefen A, und die Hand folgt ihm.",
+          13: "Vom tiefen A greift Finger 3 hinauf zum Fis. Schau hin, bevor du springst.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
+          "Hier wechselt das Pedal in der Mitte jedes Takts. Heb es an, sobald der neue Akkord beginnt.",
+        ],
+        tricky: {
+          8: "Wechsle auf dem wiederholten D von Finger 3 zu Finger 1, damit die Hand für Takt 9 bereit ist.",
+          13: "Hier kommen die Terzen zurück. Drück die beiden Töne jedes Zweiklangs wie einen einzigen.",
+          16: "Dein Daumen fällt für den letzten Akkord auf das tiefe A, unter dem D von Finger 3.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zum Basston, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Spiel die Arpeggien des Mittelteils nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
+          "Das Arpeggio steigt mit 5, 3, 2, 1, also landet der Daumen auf dem obersten Ton.",
+        ],
+        tricky: {
+          2: "Die Melodie geht abwärts, während der Bass springt. Behalt die linke Hand im Blick.",
+          6: "Die Akkorde wechseln auf jedem Schlag. Lass den Daumen auf dem A, und beweg nur die oberen Finger.",
+          14: "Die Melodie fällt vom A zum E, während der Daumen nah am Cis bleibt. Lass den obersten Finger sie tragen.",
+        },
+      },
+    },
+  },
 };

@@ -328,4 +328,89 @@ export const esIstEinRosEntsprungen: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Es ist ein Ros entsprungen ist ein geistliches Weihnachtslied aus dem 16. Jahrhundert. " +
+      "Seine Melodie erschien zuerst 1599 in Köln im Speyerer Gesangbuch, und ihr Komponist ist unbekannt. " +
+      "Michael Praetorius setzte sie 1609 für vier Stimmen, und sein Satz verbreitete sich weit.",
+    funFact: "Johannes Brahms schrieb über diese Melodie ein Choralvorspiel für Orgel, das achte seines Opus 122.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten zwei Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 3 bis 6 nur mit der rechten Hand. In Takt 5 taucht die Melodie hinab zum G.",
+          "Jetzt die linke Hand allein. Sie hält eine Griffform einen halben oder einen ganzen Takt lang.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Jedes lange G beginnt mit Finger 5. Wechsle beim nächsten G auf Finger 4, und die Hand bleibt still.",
+          "Jeder Takt fasst drei Takte des alten Drucks. Zähl sechs langsame Schläge, zwei Viertel auf jeden Schlag.",
+          "Mach nach dem tiefen G kurz Pause, dann lass Finger 5 eine Oktave hinauf zum hohen G greifen.",
+        ],
+        tricky: {
+          3: "Finger 2 hält das C, dann streckt sich Finger 5 hinauf zum G. Wechsle beim nächsten G auf Finger 4.",
+          5: "Finger 4, 2, 3 und 2 spielen D, H, C und A, dann landet der Daumen auf dem tiefen G. Mach Pause, und greif mit Finger 5 hinauf.",
+          9: "Dieselbe Streckung wie in Takt 3: Finger 5 greift vom C hinauf zum G, und Finger 4 nimmt das nächste G.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen an. Der Daumen bleibt auf dem G.",
+          "Spiel die Takte 7 bis 13 nur mit der rechten Hand. Die Melodie geht eine Oktave hinauf und zurück.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Unter dem F der Melodie schrumpft der Akkord auf D und G. Lass den Daumen auf dem G, und lass das F klingen.",
+          "Nutz die Pause nach dem C, um die rechte Hand eine Oktave höher zu heben.",
+          "Dieselbe Pause bringt die rechte Hand wieder hinab, für den letzten Durchgang.",
+        ],
+        tricky: {
+          3: "Finger 5 streckt sich vom C hinauf zum G, während die linke Hand ihren C-Akkord hält.",
+          7: "Halt das C, heb die rechte Hand in der Pause, und setz Finger 5 eine Oktave höher auf das G.",
+          13: "Halt das hohe C, heb in der Pause ab, und setz Finger 5 wieder auf das G darunter.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde des zweiten Durchgangs allein, und heb die Hand bei jeder Pause.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal im Mittelteil.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Wechsle das Pedal auf jedem Schlag, wenn die linke Hand einen neuen Akkord beginnt.",
+          "Beide Hände heben in der Pause ab. Die rechte Hand fällt eine Oktave, und die linke kehrt zu ihrem Alberti-Bass zurück.",
+        ],
+        tricky: {
+          7: "Die rechte Hand springt in der Pause eine Oktave hinauf. Der Alberti-Bass endet mit einer Pause, damit die linke Hand hinabgehen kann.",
+          8: "Die linke Hand beginnt ihre gebrochenen Akkorde auf dem tiefen C. Heb sie bei jeder Pause, und wechsle das Pedal auf jedem Schlag.",
+          13: "Die rechte Hand geht in der Pause wieder hinab, während die gebrochenen Akkorde auf dem F enden.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Oktaven der rechten Hand allein, und halt Daumen und Finger 5 eine Oktave auseinander.",
+          "Spiel die Arpeggien des zweiten Durchgangs nur mit der linken Hand.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Die Arpeggien steigen auf jedem Schlag zwei Oktaven hinauf. Halt sie leise, damit die Oktaven darüber klingen.",
+          "Halt Daumen und Finger 5 eine Oktave auseinander, und lass das Handgelenk federn.",
+        ],
+        tricky: {
+          9: "Lass die C-Oktave ein Achtel früher los, damit die Hand rechtzeitig auf der G-Oktave landet.",
+          11: "Die Oktaven steigen hinab zum tiefen G und springen nach der Pause eine Oktave hinauf.",
+          13: "Halt die C-Oktave, dann lande auf der G-Oktave, während die Arpeggien auf dem F enden.",
+        },
+      },
+    },
+  },
 };

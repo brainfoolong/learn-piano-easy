@@ -194,7 +194,7 @@ export const tochterZion: OurSong = {
     "Tochter Zion, freue dich means Daughter of Zion, rejoice in German. " +
     "George Frideric Handel wrote the chorus See, the conqu'ring hero comes in 1747 for his oratorio Joshua. " +
     "In 1751 he added it to his oratorio Judas Maccabaeus. " +
-    "Friedrich Heinrich Ranke set German words to the tune in Erlangen after 1820.",
+    "Friedrich Heinrich Ranke later set German words to the tune, in Erlangen.",
   funFact: "In 1905, Henry Wood used the tune in his Fantasia on British Sea Songs, a piece often heard at the Last Night of the Proms.",
   mythic: null,
   collection: "christmas",
@@ -321,6 +321,92 @@ export const tochterZion: OurSong = {
         3: "The tune climbs D, E, F and G an octave up, while the stride bass jumps under it.",
         7: "Lift after the G, land finger 5 on F, and walk down while the stride bass turns to G.",
         11: "The left hand changes from C to G in the middle of the bar. Keep the stride even.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Georg Friedrich Händel schrieb 1747 den Chor \"See, the conqu'ring hero comes\" für sein Oratorium Joshua. " +
+      "1751 nahm er ihn in sein Oratorium Judas Maccabaeus auf. " +
+      "Später unterlegte Friedrich Heinrich Ranke der Melodie in Erlangen den deutschen Text \"Tochter Zion, freue dich\".",
+    funFact:
+      "Henry Wood nutzte die Melodie 1905 in seiner Fantasia on British Sea Songs. Das Stück erklingt oft bei der Last Night of the Proms.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 9 bis 16 nur mit der rechten Hand. Dort taucht die Melodie hinab zum H.",
+          "Jetzt die linke Hand allein. Sie hält jede Form einen halben Takt oder länger.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Takt 3 steigt über D, E, F und G und kommt wieder herab. Spiel die vier steigenden Töne gleichmäßig.",
+          "Heb die Hand nach dem G in Takt 6 an. Finger 5 landet auf dem F, und die Hand wandert hinab zum C.",
+          "Das letzte C in Takt 13 ist kurz. Nutz die Pause, um die Hand nach oben zu verschieben, mit Finger 4 auf A.",
+        ],
+        tricky: {
+          7: "Nach dem Abheben landet Finger 5 auf dem F, dann spielen Finger 4 und 3 das E und das D.",
+          14: "Finger 4 spielt das A, und Finger 2 spielt das Fis, die schwarze Taste zwischen F und G.",
+          19: "Dieselbe Bewegung wie in Takt 7: Heb nach dem G ab, und setz Finger 5 auf das F.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die Takte 9 bis 16 nur mit der rechten Hand. Die Melodie wendet sich nach G, mit zwei Fis.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Spiel die Akkorde leiser als die Melodie, damit sie heraussticht wie ein Trompetensignal.",
+          "Hier wechselt die linke Hand den Akkord in der Taktmitte. Zähl bis vier, und wechsle auf drei.",
+          "In Takt 14 nimmt Finger 2 der linken Hand das Fis, und in Takt 15 geht er zurück zum F.",
+        ],
+        tricky: {
+          7: "Heb nach dem G ab, setz Finger 5 auf das F, und drück mit der linken Hand den G-Akkord.",
+          14: "Beide Hände spielen ein Fis. Rechts und links nimmt jeweils Finger 2 die schwarze Taste.",
+          19: "Dieselbe Bewegung wie in Takt 7: Heb nach dem G ab, und setz Finger 5 auf das F.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde des letzten Teils allein, und heb die Hand bei jeder Pause an.",
+          "Spiel die Takte 1 bis 16 langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Beide Hände heben am Ende von Takt 16 ab. Die rechte Hand springt eine Oktave hinauf, die linke fällt zu einem tiefen C.",
+          "Wechsle das Pedal auf jedem Schlag, sobald die linke Hand eine neue Vierergruppe beginnt.",
+        ],
+        tricky: {
+          7: "Heb nach dem G ab, und setz Finger 5 auf das F, während der Alberti-Bass nach G wechselt.",
+          17: "Die Melodie beginnt eine Oktave höher von vorn, während die linke Hand ihre gebrochenen Akkorde auf dem tiefen C beginnt.",
+          23: "Finger 5, 4 und 3 wandern hinab über F, E und D. Heb beim letzten D ab, um den Schlussakkord zu erreichen.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Takte 1 bis 8 nur mit der rechten Hand, und halt die schnellen Doppelschläge leicht.",
+          "Spiel die Arpeggien des letzten Teils nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der schnelle Doppelschlag am Ende von Takt 4 schmückt das lange D. Spiel ihn leiser als die Melodie.",
+          "Halt Daumen und kleinen Finger eine Oktave auseinander, und lass das Handgelenk federn.",
+        ],
+        tricky: {
+          3: "Die Melodie steigt eine Oktave höher über D, E, F und G, während der Stride-Bass darunter springt.",
+          7: "Heb nach dem G ab, setz Finger 5 auf das F, und geh hinab, während der Stride-Bass nach G wechselt.",
+          11: "Die linke Hand wechselt in der Taktmitte von C nach G. Halt den Stride gleichmäßig.",
+        },
       },
     },
   },

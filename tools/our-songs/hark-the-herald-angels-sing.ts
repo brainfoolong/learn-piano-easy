@@ -316,4 +316,90 @@ export const harkTheHeraldAngelsSing: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Felix Mendelssohn schrieb diese Melodie 1840 für ein Fest in Leipzig. " +
+      "Das Fest feierte vierhundert Jahre Buchdruck mit beweglichen Lettern. " +
+      "1855 legte William H. Cummings der Melodie einen Weihnachtstext unter, den Charles Wesley 1739 geschrieben hatte.",
+    funFact:
+      "Zum ersten Mal sang ein Männerchor mit zwei Blechbläserorchestern die Melodie, am 24. Juni 1840 auf dem Leipziger Marktplatz.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten zwei Takte nur mit der rechten Hand. Der Daumen beginnt auf dem G.",
+          "Spiel die Takte 1 bis 8 nur mit der rechten Hand. Die Hand muss sich nie bewegen.",
+          "Spiel die Takte 13 bis 20 nur mit der rechten Hand. Dort steigt die Melodie bis zum hohen A.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Lang, kurz: Das zweite C dauert dreimal so lang wie das H danach.",
+          "Spiel das H in Takt 7 mit Finger 2 und das H in Takt 8 mit Finger 3. Dann spielen Finger 2 und 1 A und G.",
+          "Die Takte 11 und 12 wiederholen die Takte 9 und 10. Spiel sie beim zweiten Mal etwas lauter.",
+        ],
+        tricky: {
+          3: "Finger 3 spielt das D, dann greift der kleine Finger hinauf zum G. Halt die Hand ruhig und offen.",
+          7: "Der kleine Finger spielt das G. Dann fällt Finger 3 auf das D und Finger 2 auf das H.",
+          13: "Finger 2 spielt das D, dann streckt sich der kleine Finger hinauf zum hohen A.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die linke Hand allein. Sie hält für jede Hälfte eines Takts einen Akkord.",
+          "Spiel die Takte 13 bis 20 mit beiden Händen zusammen. Dort spielt die rechte Hand zwei Töne zugleich.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt die Akkorde der linken Hand leise, damit die Melodie darüber klingt.",
+          "Drück D und F zusammen mit Daumen und Finger 3. Das F ist die Melodie, also lass es singen.",
+          "Lang, kurz, dann gleichmäßig: Das erste A dauert dreimal so lang wie das zweite.",
+        ],
+        tricky: {
+          3: "Finger 3 spielt das D, dann greift der kleine Finger hinauf zum G. Halt die Hand ruhig und offen.",
+          7: "Der kleine Finger spielt das G. Dann fällt Finger 3 auf das D und Finger 2 auf das H.",
+          13: "Finger 2 spielt das D, dann streckt sich der kleine Finger hinauf zum hohen A.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Takte 8 und 9 nur mit der rechten Hand. Mit Daumenuntersatz unter Finger 3 geht es zum C.",
+          "Spiel die Terzen der Takte 9 bis 12 nur mit der rechten Hand, und drück beide Töne wie einen an.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Die Melodie ist der obere Ton jeder Terz, also lass den oberen Finger führen.",
+          "Wechsle das Pedal am Anfang und in der Mitte jedes Takts, wenn die linke Hand ihr Muster neu beginnt.",
+        ],
+        tricky: {
+          8: "Nach dem tiefen G laufen Finger 2 und 3 hinauf über A und H. Dann kommt der Daumenuntersatz zum C.",
+          18: "Die Terzen gehen hinab und wieder hinauf: Finger 2 und 4, dann Daumen und 3, dann wieder 2 und 4.",
+          20: "Finger 2 spielt das C und Finger 3 das D. Dann greift der Daumen unter dem letzten C hinab zum E.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein. Heb die Hand nach jedem ab, und lass den obersten Finger singen.",
+          "Spiel die Oktaven der Takte 9 bis 20 nur mit der rechten Hand. Halt die Hand offen und leicht.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Jeder Akkord ist kurz, und das Pedal verbindet sie. Wechsle es am Anfang und in der Mitte jedes Takts.",
+          "Spiel bei Oktaven den kleinen Finger etwas lauter, damit die Melodie oben strahlt.",
+        ],
+        tricky: {
+          2: "Vom großen C-Akkord springt die Hand hinauf zu G, C und E. Heb sie vorher in der kurzen Pause.",
+          6: "Takt 6 ist wieder Takt 2. Heb die Hand in der Pause, dann spring hinauf zu G, C und E.",
+          7: "Die Hand fällt vom hohen G-Akkord auf G, H und D. Der Daumen geht vom H hinab zum G.",
+        },
+      },
+    },
+  },
 };

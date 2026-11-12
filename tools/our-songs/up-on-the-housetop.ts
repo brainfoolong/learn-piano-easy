@@ -290,4 +290,91 @@ export const upOnTheHousetop: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Benjamin Hanby schrieb dieses Weihnachtslied 1864, als er in New Paris, Ohio, eine Gesangsschule leitete. " +
+      "Zuerst veröffentlichte es der Verlag Root & Cady in der Zeitschrift Our Song Birds. " +
+      "Man hält es für das erste Weihnachtslied, das vor allem vom Weihnachtsmann handelt. " +
+      "Hanby schrieb rund 80 Lieder, bevor er 1867 an Tuberkulose starb.",
+    funFact:
+      "Ein Buch zählt es als zweitältestes Weihnachtslied, das nicht religiös ist. Nur Jingle Bells, veröffentlicht 1857, ist älter.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel den Refrain nur mit der rechten Hand. Jetzt kommt Finger 3 auf dem F dazu.",
+          "Jetzt die linke Hand allein. Sie hält eine Form einen halben oder einen ganzen Takt lang.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Leg den Daumen auf D und Finger 2 bis 5 auf E, F, G und A.",
+          "Heb die Hand nach dem D etwas an, damit der Daumen in Takt 2 auf das C fällt.",
+          "Hier beginnt der Refrain. Spiel ihn etwas heller als die Strophe.",
+        ],
+        tricky: {
+          1: "Finger 4 und 5 schaukeln zwischen G und A. Dann spielt Finger 2 das E und der Daumen das D.",
+          2: "Heb die Hand nach dem D an, und setz den Daumen auf das C. Finger 2 spielt E, und Finger 4 hält G.",
+          5: "Der Anfang kommt zurück. Diesmal hält Finger 2 das E länger, und vor dem C kommt kein D.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand in der Strophe allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die linke Hand im Refrain allein: den Grundton jedes Akkords, dann seine Quinte.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort kommen die kurzen Töne.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt jeden Akkord leise bis zu seinem Ende, damit die Melodie darüber singt.",
+          "Nach dem ersten A sind die nächsten zwei A und die zwei G doppelt so schnell. Spiel sie gleichmäßig.",
+          "Spiel im Refrain jeden Grundton etwas lauter als die Quinte danach.",
+        ],
+        tricky: {
+          2: "Der Daumen gleitet vom D hinab zum C. Finger 2 spielt E, und Finger 4 hält G.",
+          6: "Dieselbe Bewegung wie in Takt 2: Der Daumen gleitet vom D hinab zum C, während der nächste Akkord beginnt.",
+          7: "Finger 5 spielt dreimal das A, dann Finger 4 zweimal das G. Danach spielt Finger 2 das E.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs zusammen.",
+          "Spiel die Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber klingt.",
+          "Drück beide Töne jeder Terz gleichzeitig, und lass den oberen Finger singen.",
+          "Wechsle das Pedal jeden halben Takt, sobald die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          2: "Der Daumen gleitet vom D hinab zum C, während der Alberti-Bass darunter weiterrollt.",
+          6: "Dieselbe Bewegung wie in Takt 2. Halt die linke Hand ruhig, während der Daumen gleitet.",
+          13: "Die Terzen steigen von E und G zu F und A und wieder zurück. Finger 2 und 4 übergeben an 3 und 5.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Strophe nur mit der rechten Hand, und halt die schnellen Zwischenläufe leicht.",
+          "Spiel die Arpeggien des Refrains nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Im schnellen Zwischenlauf gehen Finger 5, 4, 3 und 2 vom A hinab zum E.",
+          "Heb die Hand nach dem G an, und setz den vierstimmigen Akkord bei getretenem Pedal.",
+        ],
+        tricky: {
+          3: "Finger 5 spielt zweimal das A, dann rollt die Hand hinab zum E. Die linke Hand springt von F nach C.",
+          4: "Nach dem langen G spielen Finger 3, 2 und 3 eine schnelle kleine Wendung, die zurück zum G führt.",
+          7: "Finger 5 wiederholt das A, dann wiederholt Finger 4 das G. Halt die schnellen Töne über dem Stride leicht.",
+        },
+      },
+    },
+  },
 };

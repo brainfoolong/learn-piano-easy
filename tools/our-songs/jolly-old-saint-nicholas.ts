@@ -308,4 +308,90 @@ export const jollyOldSaintNicholas: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Jolly Old Saint Nicholas ist ein Weihnachtslied, das als Gedicht von Emily Huntington Miller begann. " +
+      "Ihr Gedicht erschien im Dezember 1865 unter dem Titel Lilly's Secret in der Zeitschrift The Little Corporal. " +
+      "Die Musik stammt nach allgemeiner Ansicht von James Ramsey Murray. " +
+      "Zuerst gedruckt wurde das Lied 1874, in einem Schulliederbuch namens School Chimes.",
+    funFact: "Der Bandleader Ray Conniff nahm das Lied 1962 für sein Album We Wish You a Merry Christmas auf.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort fällt die Melodie zum A und steigt wieder hinauf.",
+          "Jetzt die linke Hand allein. Sie hält in jedem Takt eine einzige Handform.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Vier gleichmäßige Töne auf einer Taste. Spiel sie leicht, wie Schritte auf einem Dach.",
+          "Finger 2 spielt in Takt 5 das A und in Takt 7 das H. Der Rest der Hand bewegt sich nie.",
+          "Halt das letzte C alle vier Schläge lang, und heb dann beide Hände zusammen ab.",
+        ],
+        tricky: {
+          2: "Finger 5 verlässt das E, und Finger 4 spielt dreimal das D. Halt das letzte D zwei Schläge lang.",
+          10: "Wie in Takt 2. Die linke Hand geht darunter zu D und G.",
+          15: "Finger 4, 3, 4 und 5 spielen D, C, D und E. Dann fällt Finger 3 auf das letzte C.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die linke Hand des zweiten Durchgangs allein: einen Basston, dann seinen Akkord.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt jeden Akkord leise, damit die wiederholten Töne der Melodie darüber klar bleiben.",
+          "Die linke Hand lässt das F in der Mitte des Takts los. Die rechte Hand steigt darüber zum E.",
+          "Der Basston fällt auf den ersten Schlag, der Akkord auf den dritten. Zähl in jedem Takt bis vier.",
+        ],
+        tricky: {
+          2: "Finger 4 spielt dreimal das D, während die linke Hand einen G-Septakkord ohne sein H hält.",
+          10: "Wie in Takt 2. Spiel das wiederholte D gleichmäßig und leicht.",
+          15: "Finger 4, 3, 4 und 5 spielen D, C, D und E. In der Mitte des Takts lässt die linke Hand das F los.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde des zweiten Durchgangs allein, und heb die Hand bei jeder Pause.",
+          "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber klingt wie ein Schlittenglöckchen.",
+          "Beide Hände heben in der Pause ab. Die rechte Hand springt eine Oktave hinauf, die linke fällt auf ein tiefes C.",
+          "Wechsle das Pedal auf jeder Takthälfte, sobald die linke Hand ihr Muster neu beginnt.",
+        ],
+        tricky: {
+          17: "Die rechte Hand landet eine Oktave höher auf dem E, und die linke Hand beginnt ihre gebrochenen Akkorde auf dem tiefen C.",
+          19: "Finger 3 spielt viermal das hohe C, während die linke Hand in der Pause abhebt und wieder auf dem C landet.",
+          25: "Wie in Takt 17, jetzt nach dem langen D. Setz Finger 5 auf das hohe E.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Takte 4 und 5 nur mit der rechten Hand, und spiel den schnellen Lauf leicht.",
+          "Spiel die Arpeggien des zweiten Durchgangs nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der schnelle Lauf nach dem langen E rutscht hinab wie der Weihnachtsmann durch den Schornstein. Spiel ihn leichter als die Melodie.",
+          "Halt Daumen und kleinen Finger eine Oktave weit gespreizt, und lass das Handgelenk federn.",
+        ],
+        tricky: {
+          21: "Nach einem kurzen Abheben fallen die Oktaven vom E zum A. Halt die Hand unterwegs in ihrer Oktavform.",
+          29: "Derselbe Fall zum A wie in Takt 21, während die linke Hand darunter ein F-Arpeggio hinaufsteigt.",
+          31: "Die Oktaven schreiten über D, C, D und E. Dann hebt die Hand ab und landet auf dem Akkord aus vier Tönen.",
+        },
+      },
+    },
+  },
 };

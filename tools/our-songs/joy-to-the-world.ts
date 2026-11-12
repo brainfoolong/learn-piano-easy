@@ -92,7 +92,7 @@ export const joyToTheWorld: OurSong = {
       "Antioch, in Lowell Mason's The Modern Psalmist, Boston (1839), in the form of his National Psalmist (1848) that hymnals print today",
   },
   about:
-    "Lowell Mason published this tune in Boston in 1839, under the name Antioch. " +
+    "Lowell Mason published this tune in Boston, under the name Antioch. " +
     "It carries words that Isaac Watts wrote in 1719. " +
     "Its first four notes match the start of the chorus Lift up your heads, from Handel's Messiah.",
   funFact: "Isaac Watts wrote the words as a retelling of Psalm 98, and he never meant them as a Christmas song.",
@@ -244,6 +244,91 @@ export const joyToTheWorld: OurSong = {
         5: "From the high G, the hand drops onto C, F and A. The little finger moves up one key to A.",
         6: "The whole chord moves up one key, from C, F and A to D, G and B. Keep the hand's shape.",
         9: "The thumb steps down from E to C, while the top finger falls from the high C to G.",
+      },
+    },
+  },
+  de: {
+    about:
+      "Lowell Mason veröffentlichte diese Melodie in Boston unter dem Namen Antioch. " +
+      "Sie trägt einen Text, den Isaac Watts 1719 schrieb. " +
+      "Ihre ersten vier Töne gleichen dem Anfang des Chors Lift up your heads aus Händels Messias.",
+    funFact: "Isaac Watts schrieb den Text als Nachdichtung von Psalm 98, und er meinte ihn nie als Weihnachtslied.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten zwei Takte nur mit der rechten Hand, einen Finger für jede Taste vom C hinab zum F.",
+          "Spiel die Takte 1 bis 5 mit beiden Händen. Die linke Hand beendet die fallende Tonleiter in Takt 3 und 4.",
+          "Spiel die Takte 13 bis 16 nur mit der rechten Hand. Dort steigen und fallen die wiederholten Töne.",
+          "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Jeder Finger geht eine Taste hinab: 5, 4, 3, 2 und dann der Daumen.",
+          "Die Melodie hüpft für zwei Töne in die linke Hand. Lass sie diese Töne aussingen.",
+          "Zähl die wiederholten Töne gleichmäßig, wie Glocken, die nacheinander läuten.",
+        ],
+        tricky: {
+          3: "Der Daumen gleitet vom F hinab zum E, dann spielt die linke Hand D und C.",
+          17: "Heb die Hand nach dem E, und setz den kleinen Finger auf das hohe C.",
+          20: "Der Daumen gleitet vom D hinab zum letzten C. Halt es bis zum Schluss.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die linke Hand allein. Sie hält für jede Takthälfte einen Akkord.",
+          "Spiel die Takte 13 bis 16 mit beiden Händen zusammen. Dort stehen die wiederholten Töne.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Lang, lang, kurz: Das A ist schnell und führt in das lange G.",
+          "Spiel das F kurz und heb die Hand. Finger 3 landet auf dem E, bereit für den Weg hinab zum C.",
+          "Die Melodie steigt Schritt für Schritt, vom A zum H zum C. Lass die Musik jedes Mal etwas lauter werden.",
+        ],
+        tricky: {
+          3: "Die Hand ist nach unten gerückt: Finger 3 spielt das E, Finger 2 das D, und der Daumen wartet auf das C.",
+          19: "Der Daumen spielt das E und gleitet dann hinab zum D.",
+          20: "Der Daumen gleitet noch einmal hinab zum letzten C. Halt es bis zum Schluss.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die ersten vier Takte nur mit der rechten Hand. In Takt 3 greift Finger 3 über den Daumen.",
+          "Spiel die Terzen der Takte 13 bis 16 nur mit der rechten Hand, und drück beide Töne wie einen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die fallende Tonleiter darüber klingt.",
+          "Die Melodie ist der obere Ton jeder Terz, also lass den oberen Finger führen.",
+          "Wechsle das Pedal am Anfang und in der Mitte jedes Takts, sobald die linke Hand ihr Muster neu beginnt.",
+        ],
+        tricky: {
+          17: "Der Daumen geht unter Finger 3 hindurch auf das E. Dann greift der kleine Finger hinauf zum hohen C.",
+          18: "Nachdem der Daumen das F gespielt hat, greift Finger 3 über ihn auf das E.",
+          20: "Heb beide Hände nach H und D, dann greif den letzten Akkord, mit der linken Hand in Oktaven.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen.",
+          "Spiel die Oktaven der Takte 13 bis 19 nur mit der rechten Hand. Halt die Hand offen und leicht.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der schnelle Lauf vom C hinauf zum G ist eine Verzierung. Lass ihn funkeln, und komm dann auf dem G an.",
+          "Spiel in den Oktaven den kleinen Finger etwas lauter, damit die Melodie oben strahlt.",
+        ],
+        tricky: {
+          5: "Vom hohen G fällt die Hand auf C, F und A. Der kleine Finger rückt eine Taste hinauf zum A.",
+          6: "Der ganze Akkord rückt eine Taste hinauf, von C, F und A zu D, G und H. Halt die Form der Hand.",
+          9: "Der Daumen geht vom E hinab zum C, während der obere Finger vom hohen C zum G fällt.",
+        },
       },
     },
   },

@@ -208,4 +208,88 @@ export const yankeeDoodle: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Yankee Doodle ist eine überlieferte Melodie, mit der britische Soldaten die amerikanischen Kolonisten verspotteten. " +
+      "Im Amerikanischen Unabhängigkeitskrieg machten die Amerikaner das Lied zu ihrem eigenen und sangen es voller Stolz. " +
+      "Einer der ersten Drucke steht in einem Melodienbuch, das James Aird 1782 in Glasgow herausgab.",
+    funFact: "Yankee Doodle ist das offizielle Lied des US-Bundesstaats Connecticut.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die rechte Hand allein und langsam, und lass das Lied auf jeden Ton warten.",
+          "Jetzt die linke Hand allein. Jeder ihrer Töne dauert zwei Schläge oder länger.",
+          "Nimm beide Hände zusammen für die ersten vier Takte.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Finger 2 liegt auf C, und dein Daumen greift am Ende von Takt 2 hinab zum tiefen G.",
+          "Beide Töne in Takt 4 dauern zwei Schläge, also zähl sie aus.",
+          "Heb die Hand nach dem C in Takt 6 kurz an. Sie landet eine Taste tiefer.",
+        ],
+        tricky: {
+          6: "Geh mit Finger 5, 4, 3 und 2 abwärts über F, E, D und C, dann heb die Hand an.",
+          7: "Setz Finger 2 auf das H, und der Daumen nimmt das tiefe G.",
+          8: "Finger 4 spielt beide C. Halt jedes zwei Schläge lang.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die rechte Hand allein und langsam durch die Strophe.",
+          "Spiel die linke Hand allein. Halt jeden Akkord bis zum nächsten Ton.",
+          "Spiel den Refrain mit beiden Händen zusammen. Er liegt höher auf den Tasten.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Zuerst kommt der Basston, und der Akkord antwortet ihm. Spiel den Akkord etwas leiser.",
+          "Wechsle auf dem zweiten G zum Daumen, damit die Hand hinauf zum Refrain greifen kann.",
+          "Hier steigt die Melodie zu ihrem höchsten Ton. Lass ihn klingen, dann komm sanft auf dem G an.",
+        ],
+        tricky: {
+          7: "Schieb Finger 2 vom G hinab zum Fis, und der Daumen landet darunter auf dem D.",
+          12: "Dein Daumen spielt das H und geht dann hinab zum G. Halt das H vorher seine zwei Schläge lang.",
+          15: "Der Daumen nimmt das D, dann greift Finger 4 hinauf zum G. Halt die Hand offen.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel den Lauf in Takt 8 allein, mit Daumenuntersatz zum C.",
+          "Spiel den Refrain in Terzen allein, und drück beide Töne jedes Zweiklangs zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Der Daumen geht unter Finger 3 hindurch zum C, und der Lauf steigt weiter in den Refrain.",
+          "Die Fis reiben sich kurz mit dem Bass, und zwar mit Absicht.",
+        ],
+        tricky: {
+          7: "Schieb Finger 2 vom G hinab zum Fis. Der Rest der Hand folgt ihm.",
+          11: "Der Refrain fällt zurück zum D. Finger 3 nimmt es, damit die Hand für das C bereit ist.",
+          15: "Die Hand öffnet sich zu einer Sexte auf H und G, dann steigt sie zu Fis und A.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Sexten und Terzen der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
+          "Spiel die Oktaven des Refrains nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der Daumen spielt jeden unteren Ton, und Finger 4 und 5 tragen die Melodie.",
+          "Spiel die Oktaven kurz, und lass das Pedal sie verbinden.",
+        ],
+        tricky: {
+          3: "Die Melodie geht aufwärts, während der Bass springt. Behalt die linke Hand im Blick.",
+          5: "Die Sexten bewegen sich als eine Form. Lass den Daumen jeden Schritt nach oben führen.",
+          8: "Heb die Hand nach dem zweiten Akkord an, dann spring hinauf zum E für den Refrain.",
+        },
+      },
+    },
+  },
 };

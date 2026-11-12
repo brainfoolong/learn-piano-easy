@@ -269,4 +269,91 @@ export const godRestYeMerryGentlemen: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "God Rest Ye Merry, Gentlemen ist eines der ältesten englischen Weihnachtslieder, die man heute noch singt. " +
+      "Sein Text wurde ab etwa 1760 in London auf billigen Flugblättern verkauft. " +
+      "William Sandys druckte die Melodie 1833 in seinem Buch mit Weihnachtsliedern. " +
+      "Die erste Zeile bedeutete einst: Möge Gott euch Frieden und Glück schenken.",
+    funFact:
+      "In Charles Dickens' Eine Weihnachtsgeschichte singt ein Junge dieses Lied an Scrooges Schlüsselloch. Scrooge verjagt ihn mit einem Lineal.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten fünf Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 10 bis 14 nur mit der rechten Hand. Dort steigt die Melodie bis zum hohen A.",
+          "Jetzt die linke Hand allein. Sie hält immer einen tiefen Ton oder eine leere Quinte.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Dein Daumen beginnt auf dem A unter dem mittleren C, und der kleine Finger liegt auf dem E.",
+          "Heb die Hand nach dem A kurz ab, und lass den Daumen auf das G darunter fallen.",
+          "Das ist der Refrain. Lass ihn etwas lauter klingen als die Strophe.",
+        ],
+        tricky: {
+          3: "Finger 3, 2 und 1 wandern hinab zum A. Heb die Hand, und der Daumen fällt auf das G.",
+          11: "Finger 4 und 5 steigen zum hohen A. Heb die Hand, und der kleine Finger landet auf dem E darunter.",
+          19: "Finger 3, 2 und 1 wandern hinab zum C. Heb die Hand, und Finger 2 landet auf dem H.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein: einen tiefen Ton, dann die Töne darüber, zweimal in jedem Takt.",
+          "Spiel die Takte 2 bis 5 nur mit der rechten Hand. Unterwegs verschiebt sich die Hand zweimal.",
+          "Spiel die Takte 7 und 8 nur mit der rechten Hand. Dort hilft ein wiederholter Ton der Hand beim Umsetzen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Finger 4 rutscht vom D hinab zum C. Im nächsten Takt rutscht der Daumen vom G hinauf zum A.",
+          "Wechsle den Finger beim zweiten der zwei schnellen A und D. Dann wandert die Hand ohne Sprung weiter.",
+          "C und H teilen sich einen Schlag. Zähl eins-und, und spiel sie als zwei schnelle, gleichmäßige Schritte.",
+        ],
+        tricky: {
+          11: "Finger 4 und 5 steigen zum hohen A. Dann springt der kleine Finger hinab zum E, und Finger 4 nimmt das D.",
+          18: "Finger 2 rutscht vom D hinauf zum E. Dann nimmt jeder Finger die nächste Taste, bis zum hohen A.",
+          19: "Der kleine Finger springt vom hohen A hinab zum E. Dann wandert die Hand hinab zum H.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel die linke Hand allein, bis die gebrochenen Akkorde von selbst rollen: tief, hoch, Mitte, hoch.",
+          "Spiel die Takte 3 und 4 nur mit der rechten Hand. Dort kreuzen die Finger in beide Richtungen.",
+          "Spiel die ersten neun Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Halt die gebrochenen Akkorde leise, damit die Melodie darüber singt.",
+          "Abwärts kreuzt Finger 3 über den Daumen auf das H. Aufwärts kommt der Daumenuntersatz zum C.",
+          "Mit Daumenuntersatz geht es zum E, und die Hand steigt bis zum hohen A.",
+        ],
+        tricky: {
+          12: "Finger 2 kreuzt über den Daumen auf das C. Am Ende des Takts kommt der Daumenuntersatz zum C.",
+          18: "Mit Daumenuntersatz geht es auf das E. Finger 2 und 3 steigen, und der kleine Finger erreicht das hohe A.",
+          19: "Finger 3 fällt auf das E und wandert hinab zum C. Dann kreuzt Finger 2 über den Daumen auf das H.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Takte 4 bis 6 nur mit der rechten Hand, und halt den schnellen Doppelschlag leicht.",
+          "Spiel die ersten neun Takte mit beiden Händen zusammen, im halben Tempo.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Der schnelle Doppelschlag um das E ist eine Verzierung. Spiel ihn leiser als die Melodie.",
+          "Heb die Hand nach dem H, dann lande mit beiden Händen zugleich auf dem letzten Akkord.",
+        ],
+        tricky: {
+          9: "Der Doppelschlag beginnt auf dem hohen G. Finger 5, 4, 3 und der Daumen laufen hinab, dann nimmt Finger 2 das E.",
+          15: "Wechsle beim wiederholten E auf den kleinen Finger, und geh mit einem Finger pro Taste hinab. Die linke Hand springt zum tiefen E.",
+          19: "Finger 2 kreuzt für das H über den Daumen. Spiel es kurz, und führ die Hand hinab zum letzten Akkord.",
+        },
+      },
+    },
+  },
 };

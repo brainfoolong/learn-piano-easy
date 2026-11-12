@@ -120,6 +120,17 @@ Each version ships with a guide, so the learner knows how to play it before the 
 
 Every sentence of a guide follows [prose.md](agent/prose.md), because a learner reads it.
 
+Every text of a guide is written in English and German, and the app shows the learner's language. The
+head comment of [tools/make-our-songs.ts](../tools/make-our-songs.ts) says where the German goes. The
+German follows these rules:
+
+- **Speak to the learner as "du",** in short imperatives: "Spiel", "Halt", "Zeig", "Wähl".
+- **Quote with straight double quotes,** never with German low and high quotes.
+- **Name notes the German way:** H for B, and B for B flat.
+- **Use the course's terms:** "Takt" for bar, "Notenblatt" for sheet music, and "rechte Hand" and
+  "linke Hand". A finger is "Finger 1 bis 5", the thumb passing under is "Daumenuntersatz", and the
+  pedal is "Pedal".
+
 ## How a song is made
 
 1. **Pick a tune that is free everywhere.** Its composer died more than 70 years ago, and it was

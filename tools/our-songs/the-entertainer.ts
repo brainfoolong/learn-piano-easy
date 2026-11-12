@@ -295,4 +295,88 @@ export const theEntertainer: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Scott Joplin, der König des Ragtime, veröffentlichte diesen Rag 1902 in St. Louis. " +
+      "Ein Rag legt eine hüpfende Melodie gegen den Schlag über einen gleichmäßigen Bass, der Um-pa macht. " +
+      "Dies ist der erste Teil, den alle summen.",
+    funFact: "Weltberühmt wurde der Rag 1973 durch den Film Der Clou, mehr als siebzig Jahre nachdem Joplin ihn geschrieben hatte.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten zwei Takte nur mit der rechten Hand, bis der Sprung von E zu C leichtfällt.",
+          "Spiel die ganze Phrase nur mit der rechten Hand.",
+          "Nimm beide Hände zusammen für die ersten acht Takte.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Daumen auf E, Finger 3 auf dem hohen C. Halt die Hand offen, und lass sie zwischen beiden schaukeln.",
+          "Spiel jedes E kurz und federnd. Diese kleine Lücke ist der Hüpfer des Rags.",
+          "Finger 2 bis 5 liegen auf H, C, D und E, direkt nebeneinander.",
+        ],
+        tricky: {
+          2: "Die Hand schaukelt vom C hinab zum E und zurück. Lass jede Taste schnell los, damit der Sprung Zeit hat.",
+          9: "Vom H fällt dein Daumen zurück aufs E. Halt die Hand offen, und die Melodie beginnt von vorn.",
+          10: "Derselbe schaukelnde Takt wie vorher: Finger 3 auf C, Daumen auf E, und kurze Töne.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel den Auftakt und die ersten zwei Takte nur mit der rechten Hand.",
+          "Spiel die linke Hand allein: einen tiefen Ton, dann einen Akkord, wie ein kleiner Marsch.",
+          "Spiel die ersten neun Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Dis und E teilen sich Finger 2. Lass ihn eine Taste hinauf in die Melodie gleiten.",
+          "Die linke Hand macht in jedem Takt Um auf Schlag eins und Pa auf Schlag drei.",
+          "Lass den Aufstieg C, D, Dis, E mit jedem Schritt etwas lauter werden.",
+        ],
+        tricky: {
+          2: "Finger 2 gleitet vom Dis hinauf zum E, und der kleine Finger greift zum hohen C.",
+          3: "Halt den kleinen Finger über dem C und Finger 2 über dem E. Nur das Handgelenk schaukelt.",
+          10: "Nach der Pause springt Finger 2 hinunter zum E. Schau auf die Taste, bevor du landest.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel die linke Hand allein: Spring hinunter zum Basston, dann hinauf zum Akkord.",
+          "Spiel die rechte Hand der zweiten Phrase allein. Dort führt ein Fis die Melodie zum G.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Drück das Pedal mit jedem Basston, und heb es zum Akkord an, damit der Akkord knackig bleibt.",
+          "Der Bass gleitet eine Taste hinab, vom E zum Es. Lass ihn gut hörbar sein.",
+          "Die letzte Phrase wiederholt eine kleine Wendung dreimal. Zähl mit, damit du weißt, bei welcher du bist.",
+        ],
+        tricky: {
+          4: "Die linke Hand springt vom tiefen F hinauf zum Akkord, während die rechte Hand A und C hält.",
+          5: "Verschieb die rechte Hand nach der Pause nach oben, damit Finger 2 für den Aufstieg auf dem C landet.",
+          21: "Der Aufstieg aus Takt 5 kommt zurück. Verschieb die Hand in der Pause nach oben, und Finger 2 nimmt das C.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: unten eine Oktave, dann oben den Akkord.",
+          "Spiel die Sexten der rechten Hand allein. Daumen und kleiner Finger bewegen sich zusammen.",
+          "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Spiel den oberen Ton jeder Sexte etwas lauter, damit die Melodie singt.",
+          "Die Bassoktaven gleiten vom E hinab zum Es, dann weiter zum D.",
+        ],
+        tricky: {
+          4: "Die linke Hand springt von der tiefen F-Oktave hinauf zum Akkord, während sich die rechte Hand über F, A und C spannt.",
+          12: "Der F-Akkord kommt zurück. Setz zuerst die tiefe Oktave, dann lass die Hand hinaufschnellen.",
+          20: "Der F-Akkord kommt ein drittes Mal, mit denselben Sprüngen wie in Takt 4. Halt den Schlag gleichmäßig.",
+        },
+      },
+    },
+  },
 };

@@ -2,8 +2,14 @@
   "song": "jingle-bells",
   "title": "Jingle Bells",
   "composer": "James Lord Pierpont",
-  "about": "James Lord Pierpont published this song in Boston in 1857, under the title One Horse Open Sleigh. It tells of a fast ride through the snow in a sleigh pulled by one horse. The song never mentions Christmas, yet it became one of the best-known Christmas songs in the world.",
-  "funFact": "In 1965, two astronauts played Jingle Bells in space, on a small harmonica and a handful of bells.",
+  "about": {
+    "en": "James Lord Pierpont published this song in Boston in 1857, under the title One Horse Open Sleigh. It tells of a fast ride through the snow in a sleigh pulled by one horse. The song never mentions Christmas, yet it became one of the best-known Christmas songs in the world.",
+    "de": "James Lord Pierpont veröffentlichte dieses Lied 1857 in Boston unter dem Titel One Horse Open Sleigh. Es erzählt von einer schnellen Fahrt durch den Schnee in einem Schlitten, den ein einziges Pferd zieht. Weihnachten kommt im Lied nie vor, und doch wurde es eines der bekanntesten Weihnachtslieder der Welt."
+  },
+  "funFact": {
+    "en": "In 1965, two astronauts played Jingle Bells in space, on a small harmonica and a handful of bells.",
+    "de": "1965 spielten zwei Astronauten Jingle Bells im Weltraum, auf einer kleinen Mundharmonika und einer Handvoll Glöckchen."
+  },
   "mythic": null,
   "versions": {
     "common": {
@@ -22,28 +28,40 @@
       },
       "practice": [
         {
-          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "text": {
+            "en": "Play the right hand alone, slowly, and let the song wait for each note.",
+            "de": "Spiel langsam nur mit der rechten Hand, und lass das Lied auf jeden Ton warten."
+          },
           "hands": "right",
           "speed": 0.6,
           "loop": [1, 4],
           "wait": true
         },
         {
-          "text": "Play bars 5 to 8 with the right hand alone, where the tune climbs to F.",
+          "text": {
+            "en": "Play bars 5 to 8 with the right hand alone, where the tune climbs to F.",
+            "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort steigt die Melodie bis zum F."
+          },
           "hands": "right",
           "speed": 0.6,
           "loop": [5, 8],
           "wait": true
         },
         {
-          "text": "Put both hands together. The left hand holds one low note or a fifth in each bar.",
+          "text": {
+            "en": "Put both hands together. The left hand holds one low note or a fifth in each bar.",
+            "de": "Nimm beide Hände zusammen. Die linke Hand hält in jedem Takt einen tiefen Ton oder eine Quinte."
+          },
           "hands": "both",
           "speed": 0.7,
           "loop": null,
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at full speed.",
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -55,33 +73,51 @@
           "fromBar": 1,
           "toBar": 2,
           "kind": "rhythm",
-          "text": "Short, short, long: the third E lasts two beats, like the jingle of a bell."
+          "text": {
+            "en": "Short, short, long: the third E lasts two beats, like the jingle of a bell.",
+            "de": "Kurz, kurz, lang: Das dritte E dauert zwei Schläge, wie das Klingeln einer Glocke."
+          }
         },
         {
           "fromBar": 1,
           "toBar": 16,
           "kind": "fingering",
-          "text": "Each finger has its own key here: thumb on C, little finger on G."
+          "text": {
+            "en": "Each finger has its own key here: thumb on C, little finger on G.",
+            "de": "Hier hat jeder Finger seine eigene Taste: der Daumen das C, der kleine Finger das G."
+          }
         },
         {
           "fromBar": 15,
           "toBar": 16,
           "kind": "sound",
-          "text": "Slow down a little on the last notes, and let the low C ring."
+          "text": {
+            "en": "Slow down a little on the last notes, and let the low C ring.",
+            "de": "Werd bei den letzten Tönen etwas langsamer, und lass das tiefe C klingen."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 5,
-          "text": "Finger 4 plays F three times, while the left little finger reaches down to the low F."
+          "text": {
+            "en": "Finger 4 plays F three times, while the left little finger reaches down to the low F.",
+            "de": "Finger 4 spielt dreimal das F, während der linke kleine Finger hinunter zum tiefen F greift."
+          }
         },
         {
           "bar": 13,
-          "text": "The F's come back. Keep finger 4 on F, and drop the left little finger to the low F again."
+          "text": {
+            "en": "The F's come back. Keep finger 4 on F, and drop the left little finger to the low F again.",
+            "de": "Die F kommen zurück. Lass Finger 4 auf dem F, und setz den linken kleinen Finger wieder auf das tiefe F."
+          }
         },
         {
           "bar": 15,
-          "text": "Finger 5 plays G twice, then fingers 4 and 2 walk down, ready for the thumb's last C."
+          "text": {
+            "en": "Finger 5 plays G twice, then fingers 4 and 2 walk down, ready for the thumb's last C.",
+            "de": "Finger 5 spielt zweimal das G, dann wandern Finger 4 und 2 hinab, bereit für das letzte C des Daumens."
+          }
         }
       ]
     },
@@ -102,35 +138,50 @@
       },
       "practice": [
         {
-          "text": "Clap the rhythm of bar 3, then play the right hand alone.",
+          "text": {
+            "en": "Clap the rhythm of bar 3, then play the right hand alone.",
+            "de": "Klatsch den Rhythmus von Takt 3, dann spiel die rechte Hand allein."
+          },
           "hands": "right",
           "speed": 0.6,
           "loop": [1, 4],
           "wait": true
         },
         {
-          "text": "Play the left hand alone, and keep each chord until the next one.",
+          "text": {
+            "en": "Play the left hand alone, and keep each chord until the next one.",
+            "de": "Spiel die linke Hand allein, und halt jeden Akkord bis zum nächsten."
+          },
           "hands": "left",
           "speed": 0.6,
           "loop": [1, 8],
           "wait": true
         },
         {
-          "text": "Join the hands on bars 5 to 8, where the quick notes are.",
+          "text": {
+            "en": "Join the hands on bars 5 to 8, where the quick notes are.",
+            "de": "Spiel die Takte 5 bis 8 mit beiden Händen zusammen. Dort stehen die schnellen Töne."
+          },
           "hands": "both",
           "speed": 0.6,
           "loop": [5, 8],
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands, a little slower than written.",
+          "text": {
+            "en": "Play the whole song with both hands, a little slower than written.",
+            "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert."
+          },
           "hands": "both",
           "speed": 0.8,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed.",
+          "text": {
+            "en": "Now play it at full speed.",
+            "de": "Jetzt spiel es im vollen Tempo."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -142,33 +193,51 @@
           "fromBar": 3,
           "toBar": 3,
           "kind": "rhythm",
-          "text": "Long, short: the C takes a beat and a half, and the D comes quickly after it."
+          "text": {
+            "en": "Long, short: the C takes a beat and a half, and the D comes quickly after it.",
+            "de": "Lang, kurz: Das C dauert anderthalb Schläge, und das D folgt schnell danach."
+          }
         },
         {
           "fromBar": 6,
           "toBar": 6,
           "kind": "rhythm",
-          "text": "The last two E's are eighths. Think of one beat split in two."
+          "text": {
+            "en": "The last two E's are eighths. Think of one beat split in two.",
+            "de": "Die letzten beiden E sind Achtel. Denk an einen Schlag, der in zwei Hälften geteilt ist."
+          }
         },
         {
           "fromBar": 1,
           "toBar": 4,
           "kind": "sound",
-          "text": "Play the left hand's bass note a little louder than the chord after it."
+          "text": {
+            "en": "Play the left hand's bass note a little louder than the chord after it.",
+            "de": "Spiel den Basston der linken Hand etwas lauter als den Akkord danach."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 5,
-          "text": "Four F's with finger 4: the last one is quick, so it leads straight into bar 6."
+          "text": {
+            "en": "Four F's with finger 4: the last one is quick, so it leads straight into bar 6.",
+            "de": "Vier F mit Finger 4: Das letzte ist schnell und führt direkt in Takt 6."
+          }
         },
         {
           "bar": 13,
-          "text": "The F's return. Let finger 4 bounce on F, and count the short last one."
+          "text": {
+            "en": "The F's return. Let finger 4 bounce on F, and count the short last one.",
+            "de": "Die F kehren zurück. Lass Finger 4 auf dem F federn, und zähl das kurze letzte mit."
+          }
         },
         {
           "bar": 9,
-          "text": "Your left little finger slides back up from B to C, as the tune starts again."
+          "text": {
+            "en": "Your left little finger slides back up from B to C, as the tune starts again.",
+            "de": "Dein linker kleiner Finger gleitet vom H zurück hinauf zum C, wenn die Melodie neu beginnt."
+          }
         }
       ]
     },
@@ -189,35 +258,50 @@
       },
       "practice": [
         {
-          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "text": {
+            "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+            "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch."
+          },
           "hands": "left",
           "speed": 0.5,
           "loop": [1, 4],
           "wait": false
         },
         {
-          "text": "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.",
+          "text": {
+            "en": "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.",
+            "de": "Spiel die Terzen und Sexten der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen."
+          },
           "hands": "right",
           "speed": 0.6,
           "loop": [9, 16],
           "wait": true
         },
         {
-          "text": "Join the hands on the first four bars, slowly.",
+          "text": {
+            "en": "Join the hands on the first four bars, slowly.",
+            "de": "Spiel die ersten vier Takte langsam mit beiden Händen zusammen."
+          },
           "hands": "both",
           "speed": 0.5,
           "loop": [1, 4],
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three-quarter speed.",
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo."
+          },
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, with the pedal.",
+          "text": {
+            "en": "Now play it at full speed, with the pedal.",
+            "de": "Jetzt spiel es im vollen Tempo, mit Pedal."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -229,33 +313,51 @@
           "fromBar": 1,
           "toBar": 4,
           "kind": "sound",
-          "text": "Keep the Alberti bass soft, so the bells of the tune ring above it."
+          "text": {
+            "en": "Keep the Alberti bass soft, so the bells of the tune ring above it.",
+            "de": "Halt den Alberti-Bass leise, damit die Glocken der Melodie darüber klingen."
+          }
         },
         {
           "fromBar": 9,
           "toBar": 16,
           "kind": "fingering",
-          "text": "The tune is the top note of each pair, so let the upper finger lead."
+          "text": {
+            "en": "The tune is the top note of each pair, so let the upper finger lead.",
+            "de": "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen."
+          }
         },
         {
           "fromBar": 1,
           "toBar": 16,
           "kind": "sound",
-          "text": "Change the pedal at the start and the middle of each bar, as the left hand starts its pattern again."
+          "text": {
+            "en": "Change the pedal at the start and the middle of each bar, as the left hand starts its pattern again.",
+            "de": "Wechsle das Pedal am Anfang und in der Mitte jedes Takts, sobald die linke Hand ihr Muster neu beginnt."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 16,
-          "text": "Lift both hands after the D, then land on the last chord with the left hand in octaves."
+          "text": {
+            "en": "Lift both hands after the D, then land on the last chord with the left hand in octaves.",
+            "de": "Heb beide Hände nach dem D, dann greif den letzten Akkord, mit der linken Hand in Oktaven."
+          }
         },
         {
           "bar": 14,
-          "text": "On beat two, the sixth becomes a third: the thumb leaves A, and fingers 2 and 4 take C and E."
+          "text": {
+            "en": "On beat two, the sixth becomes a third: the thumb leaves A, and fingers 2 and 4 take C and E.",
+            "de": "Auf Schlag zwei wird die Sexte zur Terz: Der Daumen verlässt das A, und Finger 2 und 4 nehmen C und E."
+          }
         },
         {
           "bar": 12,
-          "text": "After the third, the hand runs down G, F, E and D with fingers 5, 4, 3 and 2."
+          "text": {
+            "en": "After the third, the hand runs down G, F, E and D with fingers 5, 4, 3 and 2.",
+            "de": "Nach der Terz läuft die Hand mit Finger 5, 4, 3 und 2 über G, F, E und D hinab."
+          }
         }
       ]
     },
@@ -276,35 +378,50 @@
       },
       "practice": [
         {
-          "text": "Play the stride bass alone: jump down for the bass note, then back up for the chord.",
+          "text": {
+            "en": "Play the stride bass alone: jump down for the bass note, then back up for the chord.",
+            "de": "Spiel den Stride-Bass allein: Spring hinunter zum Basston, dann zurück hinauf zum Akkord."
+          },
           "hands": "left",
           "speed": 0.5,
           "loop": [1, 4],
           "wait": false
         },
         {
-          "text": "Play the right hand's chords alone, and let the little finger sing the tune.",
+          "text": {
+            "en": "Play the right hand's chords alone, and let the little finger sing the tune.",
+            "de": "Spiel die Akkorde der rechten Hand allein, und lass den kleinen Finger die Melodie singen."
+          },
           "hands": "right",
           "speed": 0.5,
           "loop": [1, 8],
           "wait": true
         },
         {
-          "text": "Play the sixteenth runs of bars 9 to 12 with the right hand alone.",
+          "text": {
+            "en": "Play the sixteenth runs of bars 9 to 12 with the right hand alone.",
+            "de": "Spiel die Sechzehntelläufe der Takte 9 bis 12 nur mit der rechten Hand."
+          },
           "hands": "right",
           "speed": 0.5,
           "loop": [9, 12],
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three-quarter speed.",
+          "text": {
+            "en": "Join the hands on the whole song at three-quarter speed.",
+            "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo."
+          },
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and let the last chord ring.",
+          "text": {
+            "en": "Now play it at full speed, and let the last chord ring.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen."
+          },
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -316,33 +433,51 @@
           "fromBar": 1,
           "toBar": 8,
           "kind": "trick",
-          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+          "text": {
+            "en": "In stride, look at the bass note and let the hand find the chord by feel.",
+            "de": "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden."
+          }
         },
         {
           "fromBar": 1,
           "toBar": 8,
           "kind": "sound",
-          "text": "Play the top note of each chord a little louder than the others."
+          "text": {
+            "en": "Play the top note of each chord a little louder than the others.",
+            "de": "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen."
+          }
         },
         {
           "fromBar": 9,
           "toBar": 12,
           "kind": "rhythm",
-          "text": "Each run fits in one beat: four quick notes, then the bell rings again."
+          "text": {
+            "en": "Each run fits in one beat: four quick notes, then the bell rings again.",
+            "de": "Jeder Lauf passt in einen Schlag: vier schnelle Töne, dann läutet die Glocke wieder."
+          }
         }
       ],
       "tricky": [
         {
           "bar": 7,
-          "text": "The tune dips from E to D over a held G and B. Finger 4 takes the D."
+          "text": {
+            "en": "The tune dips from E to D over a held G and B. Finger 4 takes the D.",
+            "de": "Die Melodie sinkt vom E zum D über gehaltenem G und H. Finger 4 nimmt das D."
+          }
         },
         {
           "bar": 8,
-          "text": "Spread the hand for four notes at once: G, B, F and G. Let the little finger sing."
+          "text": {
+            "en": "Spread the hand for four notes at once: G, B, F and G. Let the little finger sing.",
+            "de": "Spann die Hand für vier Töne auf einmal: G, H, F und G. Lass den kleinen Finger singen."
+          }
         },
         {
           "bar": 6,
-          "text": "On beat two, the thumb and little finger step down one key, while finger 2 stays on C."
+          "text": {
+            "en": "On beat two, the thumb and little finger step down one key, while finger 2 stays on C.",
+            "de": "Auf Schlag zwei gehen Daumen und kleiner Finger eine Taste hinab, während Finger 2 auf dem C bleibt."
+          }
         }
       ]
     }

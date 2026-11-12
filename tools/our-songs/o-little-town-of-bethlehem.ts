@@ -298,4 +298,91 @@ export const oLittleTownOfBethlehem: OurSong = {
       },
     },
   },
+  de: {
+    about:
+      "Phillips Brooks, ein Priester der Episkopalkirche in Philadelphia, schrieb den Text 1868 für seine Gemeinde. " +
+      "Dazu hatte ihn ein Besuch im Dorf Bethlehem drei Jahre zuvor angeregt. " +
+      "Sein Organist Lewis Redner schrieb dafür diese Melodie mit dem Namen St. Louis. " +
+      "In den USA und Kanada singt man das Lied zu dieser Melodie, in Großbritannien und Irland zu einer anderen.",
+    funFact:
+      "Redner erzählte, er sei nachts aufgewacht und habe eine Engelsweise in seinem Ohr flüstern hören. Er schrieb die Melodie schnell auf.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten fünf Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 6 bis 9 nur mit der rechten Hand. Dort steigt die Melodie bis zum hohen A.",
+          "Jetzt die linke Hand allein. Sie wechselt ihre Form nur am Anfang oder in der Mitte eines Takts.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Das Dis ist die schwarze Taste zwischen D und E. Finger 2 taucht kurz darauf, und Finger 3 kehrt zum E zurück.",
+          "Heb die Hand kurz vor dem tiefen A an, und noch einmal nach dem tiefen G. Der Daumen spielt beide.",
+          "Die zwei schnellen Töne H und C teilen sich einen Schlag.",
+        ],
+        tricky: {
+          6: "Finger 3 spielt zweimal das E, dann greift Finger 5 hinauf zum A, und Finger 4 nimmt das G.",
+          10: "Finger 5 übernimmt das E, dann wandern Finger 5, 4 und 3 hinab zum C.",
+          15: "Heb nach dem F ab, und setz den Daumen auf das tiefe A. Dann heb wieder ab, damit Finger 5 auf dem hohen A landet.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die ersten fünf Takte, den Anfang des Lieds, nur mit der rechten Hand.",
+          "Spiel die ersten neun Takte langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Unter dem Dis spielt die linke Hand nur C und G, damit kein E dagegen klingt.",
+          "Halt jeden Akkord leise über seine ganze Länge, wie eine stille Orgel.",
+          "Heb die rechte Hand nach dem A an, und setz Finger 5 auf das A eine Oktave höher.",
+        ],
+        tricky: {
+          6: "Finger 3 spielt zweimal das E, dann greift Finger 5 hinauf zum A. Die linke Hand wechselt in der Taktmitte von C nach F.",
+          10: "Finger 5 übernimmt das E, und die Melodie wandert hinab zum C. In der Taktmitte wechselt die linke Hand zum G-Septakkord.",
+          15: "Heb die rechte Hand zweimal an: einmal für das tiefe A und einmal für das A eine Oktave darüber.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel den schnelleren Alberti-Bass der zweiten Strophe allein.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
+          "Heb die rechte Hand nach dem langen C an, und setz Finger 3 auf das E eine Oktave höher.",
+          "Wechsle das Pedal jeden halben Takt, sobald die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          17: "Halt das lange C mit dem Daumen. Dann heb die Hand an, und setz Finger 3 auf das E eine Oktave höher.",
+          19: "Die Melodie fällt vom F zum A, während die linke Hand ihren Alberti-Bass doppelt so schnell spielt.",
+          33: "Heb nach dem kurzen D ab, dann spiel E, G und C zusammen mit Finger 1, 2 und 5.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Oktaven der rechten Hand allein, und halt Daumen und Finger 5 in einer festen Form.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "Halt Daumen und Finger 5 eine Oktave auseinander, und heb die Hand vor jedem weiteren Sprung an.",
+          "Lass die Oktaven wie Glocken klingen, und halt die Arpeggien darunter leise.",
+        ],
+        tricky: {
+          20: "Die Oktaven gehen schrittweise über C, H, C und D. Dann heb ab und spring hinunter zum G. Halt Daumen und Finger 5 in einer Form.",
+          22: "Heb nach dem zweiten E die Oktave an, und setz sie auf das A, eine Quarte höher.",
+          31: "Heb die Oktave zweimal an: hinunter zum tiefen A, dann eine ganze Oktave hinauf zum hohen A.",
+        },
+      },
+    },
+  },
 };

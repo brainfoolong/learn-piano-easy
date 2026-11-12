@@ -196,8 +196,7 @@ export const theTwelveDaysOfChristmas: OurSong = {
   about:
     "The Twelve Days of Christmas is an English carol and nursery rhyme. " +
     "Its words were first printed in London in 1780, in a children's book called Mirth Without Mischief. " +
-    "The tune sung today comes from the English singer Frederic Austin, and his arrangement was published in 1909. " +
-    "Austin wrote that the song was current in his family when he was a child.",
+    "The tune sung today comes from the English singer Frederic Austin, and his arrangement was published in 1909.",
   funFact:
     "People once played the song as a memory game. Each player repeated the gifts, and every slip cost a forfeit, such as a kiss or a sweet.",
   mythic: null,
@@ -312,6 +311,92 @@ export const theTwelveDaysOfChristmas: OurSong = {
         14: "The right hand holds the G octave, while the left hand runs G arpeggios below it.",
         15: "Finger 5 plays G again and the hand walks down to C. Below it, the arpeggios turn from G to C, then F.",
         17: "The right hand moves up from the G, so finger 2 plays E. The left hand turns from C to F.",
+      },
+    },
+  },
+  de: {
+    about:
+      "The Twelve Days of Christmas ist ein englisches Weihnachtslied und zugleich ein Kinderreim. " +
+      "Sein Text erschien zuerst 1780 in London, in einem Kinderbuch namens Mirth Without Mischief. " +
+      "Die heute gesungene Melodie stammt vom englischen Sänger Frederic Austin, dessen Bearbeitung 1909 erschien.",
+    funFact:
+      "Früher spielte man das Lied als Gedächtnisspiel. Jeder Spieler wiederholte die Geschenke, und jeder Fehler kostete ein Pfand, etwa einen Kuss oder eine Süßigkeit.",
+    versions: {
+      common: {
+        practice: [
+          "Spiel die ersten drei Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
+          "Spiel die Takte 4 bis 7 nur mit der rechten Hand, von den goldenen Ringen hinab zum tiefen A.",
+          "Jetzt die linke Hand allein. Sie wechselt ihre Form nur am Anfang und in der Mitte jedes Takts.",
+          "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
+          "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
+        ],
+        tips: [
+          "Der Daumen spielt die drei tiefen G, und Finger 2 nimmt jedes C in Takt 2.",
+          "Halt das lange G den ganzen Takt, während du bis acht zählst. Das ist der goldene Ring.",
+          "Nach der kurzen Pause landet der Daumen auf dem tiefen A. Finger 5 hat das F kurz vorher losgelassen.",
+        ],
+        tricky: {
+          3: "Finger 3, 4 und 5 steigen zum F. Dann gleitet der Daumen hinauf zum D, und Finger 2 hält das lange E.",
+          4: "Finger 3 hält das G, dann greift Finger 5 hinauf zum A. Die linke Hand geht von ihrer Quinte zu einem einzelnen D.",
+          6: "Spiel das G noch einmal mit Finger 5, dann geh mit dem Daumen hinab zum C. Heb die Hand vor dem tiefen A an.",
+        },
+      },
+      rare: {
+        practice: [
+          "Spiel die linke Hand in der ersten Strophe allein, und drück die Töne jedes Akkords zusammen.",
+          "Spiel die Takte 3 bis 5 nur mit der rechten Hand. Dort steigen die goldenen Ringe zu A und Fis.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
+          "Jetzt spiel es im vollen Tempo.",
+        ],
+        tips: [
+          "Finger 4 spielt das Fis, eine schwarze Taste. Dann landet Finger 5 auf dem langen G.",
+          "Nach dem tiefen G wandert die Hand nach oben, damit Finger 2 das E spielt. Das G ist lang, also hast du Zeit.",
+          "Spiel in der zweiten Strophe den tiefen Ton etwas lauter als den Akkord danach.",
+        ],
+        tricky: {
+          3: "Finger 3, 4 und 5 steigen zum F. Dann gleitet der Daumen hinauf zum D, und Finger 2 hält das lange E.",
+          10: "Der Daumen verlässt das letzte C und landet für die nächste Strophe auf dem tiefen G. Die linke Hand spielt C, dann D und F.",
+          12: "Dieselben Töne wie in Takt 3, jetzt über Bass und Akkord im Wechsel.",
+        },
+      },
+      epic: {
+        practice: [
+          "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
+          "Spiel die gebrochenen Akkorde der zweiten Strophe nur mit der linken Hand.",
+          "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, mit Pedal.",
+        ],
+        tips: [
+          "Halt den Alberti-Bass leise, damit die Melodie darüber klingt.",
+          "Hier wandern beide Hände nach unten. Der rechte Daumen landet auf dem tiefen G, die linke Hand auf einem tiefen G.",
+          "Wechsle das Pedal jeden halben Takt, sobald die linke Hand einen neuen Akkord beginnt.",
+        ],
+        tricky: {
+          12: "Finger 3, 4 und 5 steigen zum F, und der Daumen gleitet hinauf zum D. Die linke Hand wechselt von G nach C.",
+          15: "Die rechte Hand geht vom G hinab zum C, dann greift Finger 5 hinauf zum F. Heb die linke Hand nach jedem Akkord an.",
+          17: "Die rechte Hand wandert vom tiefen G nach oben, damit Finger 2 das E spielt. Die linke Hand wechselt von C nach F.",
+        },
+      },
+      legendary: {
+        practice: [
+          "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
+          "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
+          "Spiel die Takte 13 bis 15 langsam mit beiden Händen. Dort laufen die Arpeggien unter den goldenen Ringen.",
+          "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
+          "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+        ],
+        tips: [
+          "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
+          "In jedem Arpeggio greift Finger 3 auf dem Weg nach oben über den Daumen.",
+          "Lass die Oktave auf G den ganzen Takt klingen, wie einen goldenen Ring, den man ins Licht hält.",
+        ],
+        tricky: {
+          14: "Die rechte Hand hält die G-Oktave, während die linke Hand darunter G-Arpeggien spielt.",
+          15: "Finger 5 spielt noch einmal das G, und die Hand wandert hinab zum C. Darunter wechseln die Arpeggien von G nach C, dann nach F.",
+          17: "Die rechte Hand wandert vom G nach oben, damit Finger 2 das E spielt. Die linke Hand wechselt von C nach F.",
+        },
       },
     },
   },
