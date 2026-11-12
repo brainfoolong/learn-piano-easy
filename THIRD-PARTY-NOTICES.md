@@ -5,8 +5,9 @@ third-party work the repository or the built app carries, with its author, sourc
 
 - **A file under a different license keeps that license.** The MIT License covers only our own code.
 - **Every asset folder holds a `LICENSE.md`** that names the license of the files in it.
-- **The app shows this file** on its About page, and the build copies each full license text into
-  `licenses/` next to the app.
+- **The app shows this file** on its About page.
+- **The build copies the license texts into `licenses/` next to the app:** ours, this file, three.js's
+  and the icons'. Each asset folder keeps its own `LICENSE.md`.
 - A new dependency or asset gets its row here, and its license text, in the commit that adds it.
 
 ## Code
@@ -15,8 +16,8 @@ third-party work the repository or the built app carries, with its author, sourc
 |---|---|---|---|---|---|
 | three.js | pinned in `package.json` | Ricardo Cabello (mrdoob) and the three.js authors | MIT | <https://github.com/mrdoob/three.js> | The 3D scene, bundled into the app |
 
-three.js is the only third-party code in the app. TypeScript and `@types/*` are development tools.
-They never ship in the built app.
+three.js is the only third-party code in the app. TypeScript, Playwright and the `@types/*` packages are
+development tools. They never ship in the built app.
 
 ## Fonts and icons
 
@@ -49,6 +50,8 @@ authors. They are under the MIT License too.
 Our songs in `public/songs/ours/` are our own arrangements of tunes in the public domain, with their
 guides. They are under the MIT License, and the folder's `LICENSE.md` names each tune's composer.
 
+## Pictures
+
 The pictures in `public/images/landing/` are screenshots of the app itself. They are under the MIT
 License too.
 
@@ -67,10 +70,8 @@ carries it. `tools/import-sounds.ts` converts it for the web.
 |---|---|---|---|---|
 | Salamander Grand Piano V3, converted for the web | Alexander Holm | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) | <https://freepats.zenvoid.org/Piano/acoustic-grand-piano.html> | `public/sounds/salamander/` |
 
-A row appears here only once its files are in the repository.
-
 ## Not carried
 
-- **No code from another app.** learn-piano-easy builds every feature in its own code.
+- **No code from another app.** Learn Piano Easy builds every feature in its own code.
 - **No recorded reverb impulse responses.** The app makes its reverb from a generated impulse response.
 - **No sheet-music library.** The notation engraver is our own.

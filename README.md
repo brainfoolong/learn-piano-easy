@@ -21,30 +21,33 @@
 
 ![The player, with notes falling onto a 3D piano](public/images/landing/play-light.webp)
 
-Notes fall towards a 3D piano, and you play them on your MIDI keyboard, the computer keys or the screen.
-The app listens and tells you what you hit. It runs in any modern browser and installs as an app.
+Notes fall towards a 3D piano, and you play them on your MIDI keyboard, your computer keyboard or the
+screen. The app checks each note and tells you what you hit. It runs in any modern browser and installs
+as an app.
 
 ## Two ways to play
 
-**Learn Piano** is a course from your first key to your first songs. It walks eight worlds of short
-lessons, and each world ends with a boss. Stars, XP and a daily streak keep you coming back.
+**"Learn Piano"** is a course from your first key to your first songs. It has eight worlds of short
+lessons, and each world ends with a boss lesson. Each lesson earns stars and XP, and a daily streak
+counts the days you play.
 
-**The player** opens any song of the library, or a MIDI file of your own. Slow it down, loop a hard
-bar, or let the song wait until you hit each note.
+**"Just Play Piano"** opens any song of the library, or a MIDI or MusicXML file of your own. Slow it down,
+loop a hard bar, or let the song wait until you hit each note.
 
-![The course map, with a world of lessons and the next one to continue](public/images/landing/learn-light.webp)
+![The course map, with its first lesson done and the next one open](public/images/landing/learn-light.webp)
 
 ## Features
 
-- **Hundreds of songs,** from nursery rhymes to the classics, each in versions from Beginner to the
-  original score.
+- **Hundreds of songs,** from nursery rhymes to the classics. Our own arrangements come in four versions,
+  from Beginner to Hard.
 - **Wait mode** for each hand alone or both together, and a loop trainer that raises the speed.
-- **Sheet music** beside the falling notes, and note names or fingering on the notes and keys.
-- **Your own keyboard,** drawn key for key, so the screen matches the 61 or 88 keys in front of you.
-- **MIDI in and out,** with the keys of your keyboard lit up to show what to play.
+- **Sheet music** above the falling notes or on its own, and note names or fingering on the notes and keys.
+- **Your own keyboard,** drawn key for key, so the screen matches the 25 to 88 keys in front of you.
+- **MIDI in and out.** A keyboard with lit keys shows you what to play.
 - **Accuracy history** per song, and your playing saved as a MIDI file.
-- **Offline first.** After the first visit, the app needs no network.
-- **Private by design.** Your progress stays in your browser.
+- **Offline first.** After the first visit, the app runs offline, and so does every song you have opened.
+- **Private by design.** Your progress stays in your browser. The hosted site counts page visits,
+  without cookies.
 - **English and German,** in light and dark themes, on a phone or a desktop.
 
 [docs/reference/features.md](docs/reference/features.md) lists every feature in detail.
@@ -65,12 +68,6 @@ bun run dev                                 # the app at http://localhost:4173, 
 
 [CONTRIBUTING.md](CONTRIBUTING.md) has the full setup for contributors, including the tests.
 
-```
-git config core.hooksPath tools/git-hooks   # once per clone: the commit-msg check
-looper verify                               # the checks a change reaches
-looper loop start                           # the unattended run, in a terminal of its own
-```
-
 ## Support the project
 
 Learn Piano Easy is made by one person in their spare time. If it helps you play, you can
@@ -79,8 +76,8 @@ friend helps too.
 
 ## License
 
-Our code is under the [MIT License](LICENSE). The songs and sounds keep their own licenses, which
-[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) names one by one.
+Our code and our own songs are under the [MIT License](LICENSE). The third-party songs, sounds, font
+and icons keep their own licenses, which [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) names one by one.
 
 ## Layout
 
@@ -95,10 +92,10 @@ disagree.
 | `THIRD-PARTY-NOTICES.md` | every third-party work we carry, with its author, source and license |
 | `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md` | how to contribute, how we treat each other, and how to report a vulnerability |
 | `looper.toml` | the project's looper config |
-| `docs/` | the design, the decisions, the goals, the findings, the reference and the agent docs |
-| `tools/` | the git hooks, the kit's copy in `tools/looper/`, the `loop` shims, and the build and dev tools |
+| `docs/` | the design, the curriculum, our songs, the decisions, the goals, the findings, the reference and the agent docs |
+| `tools/` | the git hooks, the kit's copy in `tools/looper/`, the `loop` shims, the build and dev tools, and the tools that make the songs, sounds and pictures |
 | `package.json`, `bun.lock` | the package, its scripts and its locked dependencies |
 | `tsconfig.json`, `bunfig.toml` | the TypeScript and bun config |
 | `src/` | the app's source and its tests |
 | `e2e/`, `playwright.config.ts` | the end-to-end tests, which Playwright runs in Chromium against the production build |
-| `public/` | the static files copied into the app as they are: the page, styles, manifest, icons, songs and sounds |
+| `public/` | the app's static files: the page template, the manifest, the font, icons, pictures, songs and sounds |

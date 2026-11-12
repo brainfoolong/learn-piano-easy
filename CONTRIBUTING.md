@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping. learn-piano-easy is an open-source piano-learning app under the
+Thank you for helping. Learn Piano Easy is an open-source piano-learning app under the
 [MIT License](LICENSE). By sending a change, you agree that it is published under that license.
 
 ## Before you start
@@ -15,20 +15,24 @@ You need [Bun](https://bun.sh) at the version `package.json` pins in `engines.bu
 
 ```
 bun install
-git config core.hooksPath tools/git-hooks
-bun run dev        # the app at http://localhost:4173, rebuilt on every change
-bun run build      # the static app in dist/
-bun run e2e:install  # once: the Chromium build Playwright drives
-bun run e2e        # the end-to-end tests, against a production build
-bun run e2e:docker # the same tests in Playwright's Docker image, as CI runs them
+git config core.hooksPath tools/git-hooks   # once per clone: the commit message check
+bun run dev                    # the app at http://localhost:4173, rebuilt on every change
+bun run build                  # the static app in dist/
+bun run e2e:install            # once: the Chromium build Playwright drives
+bun run e2e                    # the end-to-end tests, against a production build
+bun run e2e:docker             # the same tests in Playwright's Docker image, as CI runs them
+bun tools/looper/main.ts verify   # every check a change reaches
 ```
 
 `bun run e2e:docker` needs only Docker, and no browser on your machine. `bun run shot` saves
 screenshots of the app under `.agent-tmp/shots/`, and its head comment in `tools/shot.ts` lists its
 steps, such as `--click Settings --shot`.
 
+The docs write `bun tools/looper/main.ts <command>` as `looper <command>`. The shim `tools/loop` runs it
+shorter, as `tools/loop verify`.
+
 The app runs the same way from `dist/` on any static host or on your own machine. It needs no server
-code and no network after the first load.
+code. Once loaded, it runs offline, and so does every song it has opened.
 
 ## Rules for a change
 
@@ -40,8 +44,8 @@ code and no network after the first load.
 - **Only add work you have the right to share.** Music and sounds must be public domain or under a free
   license that allows redistribution.
 - **Commits follow Conventional Commits,** as [docs/agent/conventions.md](docs/agent/conventions.md) says.
-- **`looper verify` is green** before you open a pull request. It runs the type check, the tests, the
-  end-to-end tests and the doc checks.
+- **`looper verify` is green** before you open a pull request. Of the type check, the unit tests, the
+  end-to-end tests and the doc checks, it runs each one your change reaches.
 
 ## Reporting a bug
 

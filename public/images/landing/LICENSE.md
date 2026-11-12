@@ -19,5 +19,5 @@ The tool writes them, so a change is a new run of it, never an edit of a file he
 | `rarity-legendary-dark.webp` | The embedded player from above, a few seconds into the Hard version of *Ode to Joy*, in the dark scheme | MIT |
 | `play-light.webp` | Just Play Piano, a moment into its demo song, in the light scheme | MIT |
 | `play-dark.webp` | Just Play Piano, a moment into its demo song, in the dark scheme | MIT |
-| `learn-light.webp` | The song list open on the beginner path, in the light scheme | MIT |
-| `learn-dark.webp` | The song list open on the beginner path, in the dark scheme | MIT |
+| `learn-light.webp` | The map of Learn Piano, with its first lesson done and the next one open, in the light scheme | MIT |
+| `learn-dark.webp` | The map of Learn Piano, with its first lesson done and the next one open, in the dark scheme | MIT |

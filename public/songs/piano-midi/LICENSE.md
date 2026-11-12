@@ -1,4 +1,4 @@
-# The classical songs
+# The piano-midi.de songs
 
 The MIDI files in this folder are by Bernd Krueger, from <http://www.piano-midi.de>.
 They are under the [Creative Commons Attribution-ShareAlike 3.0 Germany](https://creativecommons.org/licenses/by-sa/3.0/de/deed.en)

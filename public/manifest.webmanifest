@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "learn-piano-easy",
+  "name": "Learn Piano Easy",
   "short_name": "Piano Easy",
-  "description": "Learn piano by playing along with MIDI files, with a 3D piano, offline in your browser.",
+  "description": "Learn piano by playing. A guided course, a 3D piano and your MIDI keyboard. Free, open source and offline.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

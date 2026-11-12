@@ -1,8 +1,10 @@
 # Working on learn-piano-easy
 
-learn-piano-easy is an open-source piano-learning web app under the MIT License. A learner opens a MIDI
-file, watches its notes fly towards a 3D piano, and plays along on a MIDI keyboard. It runs offline in
-the browser, and its feature set grows from [docs/reference/features.md](docs/reference/features.md).
+learn-piano-easy is the source of Learn Piano Easy, an open-source piano-learning web app under the MIT
+License. It runs offline in the browser and has three parts: the landing page, "Learn Piano" and
+"Just Play Piano". "Learn Piano" is a course of worlds and lessons that plays like a game. In
+"Just Play Piano", a learner opens a song, watches its notes fly towards a 3D piano, and plays along.
+The player's feature set grows from [docs/reference/features.md](docs/reference/features.md).
 
 This file is read by every agent before it does anything. The block between the `looper:begin` and
 `looper:end` markers is looper's: `looper sync` rewrites it, and `looper lint` fails when it is edited by
