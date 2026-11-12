@@ -8,9 +8,10 @@
  * plays both. A demo then plays the opening of *Für Elise* softly over a broken chord. The learner plays
  * it softly, judged on touch, or on another input hears it loud and soft and picks the fitting one. The
  * boss's left hand breaks A minor and E major from fingers 5, 2 and 1, and E major spans E2 to G♯3,
- * wider than any shape before. A demo plays both shapes, and the learner plays them. A quiz on how to
- * play the boss and a recap close the year. The texts are `playing-with-feeling.en.ts`
- * and `playing-with-feeling.de.ts` beside it.
+ * wider than any shape before. A demo plays both shapes, and the learner plays them. In bar 9 the
+ * boss's right hand stretches an octave, from the thumb on E4 to finger 5 on E5. A demo plays that
+ * phrase, and the learner plays it. A quiz on how to play the boss and a recap close the year. The
+ * texts are `playing-with-feeling.en.ts` and `playing-with-feeling.de.ts` beside it.
  */
 import type { Lesson, PhraseNote } from "../../model";
 import { playingWithFeelingDe } from "./playing-with-feeling.de";
@@ -30,6 +31,9 @@ const ELISE = [76, 75, 76, 75, 76, 71, 74, 72, 69];
 
 /** The boss's left hand: A minor as A2, E3 and A3, then E major as E2, B2 and G♯3, then A minor again. */
 const ELISE_LEFT = [45, 52, 57, 40, 47, 56, 45, 52, 57];
+
+/** The boss's right hand from bar 9: the thumb on E4, an octave up to E5, then the opening tune down to A. */
+const ELISE_OCTAVE = [64, 76, 75, 76, 75, 76, 71, 74, 72, 69];
 
 /** *Für Elise*'s first notes, a half beat each and the last A longer, at `velocity`, starting at `from`. */
 function elise(velocity: number, from: number): PhraseNote[] {
@@ -104,6 +108,13 @@ export const playingWithFeeling: Lesson = {
       notes: ELISE_LEFT.map((note, i) => ({ note, at: Math.floor(i / 3) * 3 + (i % 3) * 0.5, beats: i % 3 === 2 ? 2 : 0.5, velocity: 40 })),
     },
     { id: "elise-left-hand", kind: "play-notes", notes: ELISE_LEFT },
+    {
+      id: "elise-octave-demo",
+      kind: "demo",
+      bpm: 72,
+      notes: ELISE_OCTAVE.map((note, i) => ({ note, at: i, beats: i === ELISE_OCTAVE.length - 1 ? 2 : 1, velocity: 40 })),
+    },
+    { id: "elise-octave", kind: "play-notes", notes: ELISE_OCTAVE },
     { id: "how-to-play-the-boss", kind: "quiz", right: 2 },
     { id: "recap", kind: "recap" },
   ],

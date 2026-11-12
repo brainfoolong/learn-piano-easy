@@ -59,6 +59,12 @@ export const playingWithFeelingEn = {
     "elise-left-hand": {
       text: "Your turn. Play A, E and A from the second A below middle C, then E, B and G♯ from the second E below middle C. End on A, E and A again.",
     },
+    "elise-octave-demo": {
+      text: "In bar 9, the boss's right hand stretches an octave. The thumb plays the E above middle C, and finger 5 the E an octave higher. Then the tune goes on as it began.",
+    },
+    "elise-octave": {
+      text: "Your turn. Spread your hand over the octave: thumb on the E above middle C, and finger 5 on the next E up. Play the phrase softly.",
+    },
     "how-to-play-the-boss": {
       text: "Für Elise is in A minor and starts with p. How will you play it?",
       answers: ["Loud and bright", "Fast and short", "Softly and gently, like a quiet song", "With every note equal and hard"],

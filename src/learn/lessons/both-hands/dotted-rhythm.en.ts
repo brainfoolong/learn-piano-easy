@@ -34,6 +34,12 @@ export const dottedRhythmEn = {
     "ode-phrase": {
       text: "Put your right thumb on middle C and play the tune. Hold the last E a little longer, then play the D after it quickly.",
     },
+    "fourth-demo": {
+      text: "Listen to the boss's left hand. It changes between C with G, the fifth you know, and D with G. D with G is a fourth: it spans four white keys, counting both.",
+    },
+    "fifth-and-fourth": {
+      text: "Your turn. Put finger 5 on the C below middle C, and your thumb on G. Play C and G together, then D and G with finger 4 on D, and repeat both.",
+    },
     recap: {
       text: "Well done. You can play the rhythm of a famous tune now.",
       points: ["A dot adds half of a note's length.", "A dotted half note lasts three beats.", "A dotted quarter lasts one and a half beats.", "An eighth note often follows a dotted quarter."],

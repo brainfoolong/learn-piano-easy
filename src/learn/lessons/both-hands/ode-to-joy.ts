@@ -4,8 +4,9 @@
  * one the boss of *Rhythm* plays with the right hand alone.
  *
  * It asks only what the course taught by then. Both hands stay in C position, with no black key. The
- * left hand holds two keys at once, C with G or D with G, as *Open fifths* taught. It never plays the
- * `rare` version, which is in D major with F sharp and left-hand chords.
+ * left hand holds two keys at once: the fifth C with G, as *Open fifths* taught, and the fourth D with
+ * G, as *The dotted rhythm* taught. It never plays the `rare` version, which is in D major with F sharp
+ * and left-hand chords.
  */
 import type { Lesson } from "../../model";
 import { odeToJoyBothHandsDe } from "./ode-to-joy.de";

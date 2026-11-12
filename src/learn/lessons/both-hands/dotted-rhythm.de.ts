@@ -34,6 +34,12 @@ export const dottedRhythmDe: DottedRhythmTexts = {
     "ode-phrase": {
       text: "Leg den rechten Daumen auf das mittlere C und spiel die Melodie. Halt das letzte E etwas länger und spiel das D danach schnell.",
     },
+    "fourth-demo": {
+      text: "Hör dir die linke Hand des Bosses an. Sie wechselt zwischen C mit G, der Quinte, die du kennst, und D mit G. D mit G ist eine Quarte: Sie reicht über vier weiße Tasten, beide mitgezählt.",
+    },
+    "fifth-and-fourth": {
+      text: "Jetzt du. Leg den fünften Finger auf das C unter dem mittleren C und den Daumen auf das G. Spiel zweimal C mit G und dann D mit G, das D mit dem vierten Finger.",
+    },
     recap: {
       text: "Gut gemacht. Jetzt kannst du den Rhythmus einer berühmten Melodie spielen.",
       points: ["Ein Punkt verlängert eine Note um die Hälfte.", "Eine punktierte halbe Note dauert drei Schläge.", "Eine punktierte Viertelnote dauert anderthalb Schläge.", "Nach einer punktierten Viertelnote folgt oft eine Achtelnote."],

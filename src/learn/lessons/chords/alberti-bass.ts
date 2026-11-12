@@ -7,8 +7,11 @@
  * in second inversion as C, F and A, so the hand barely moves. A quiz checks the thumb's key on F. The
  * learner plays each shape, changes chords in a row, hears a short tune over the bass and plays it. The
  * boss is in D major, whose key signature no earlier lesson teaches. A demo plays the D major scale and
- * names its two sharps, a quiz checks them, and the learner plays the scale. The texts are
- * `alberti-bass.en.ts` and `alberti-bass.de.ts` beside it.
+ * names its two sharps, a quiz checks them, and the learner plays the scale. The boss's left hand plays
+ * pairs of a low note and a higher one, jumps down an octave between some pairs, reaches D2 and ends on
+ * D major. A demo plays it, and the learner plays the pairs, then the chord. Its right hand plays
+ * thirds on F♯ and C♯, which a demo plays before the learner does. The texts are `alberti-bass.en.ts`
+ * and `alberti-bass.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
 import { albertiBassDe } from "./alberti-bass.de";
@@ -21,6 +24,20 @@ function bar(low: number, middle: number, high: number, at: number) {
 
 /** The D major scale from the D above middle C, up and back down, with F♯ and C♯. */
 const D_MAJOR = [62, 64, 66, 67, 69, 71, 73, 74, 73, 71, 69, 67, 66, 64, 62];
+
+/** The boss's left hand over one turn of its ground: a pair per chord, from D3 and A3 down to D2 and back up. */
+const CANON_BASS = [50, 57, 45, 52, 47, 54, 42, 49, 43, 50, 38, 45, 43, 50, 45, 52];
+
+/** The D major chord the boss's left hand ends on: D3, F♯3 and A3. */
+const LEFT_D_MAJOR = [50, 54, 57];
+
+/** The boss's thirds in the right hand, falling from D5 and F♯5 to A4 and C♯5. */
+const CANON_THIRDS = [
+  [74, 78],
+  [73, 76],
+  [71, 74],
+  [69, 73],
+];
 
 export const albertiBass: Lesson = {
   id: "alberti-bass",
@@ -70,6 +87,21 @@ export const albertiBass: Lesson = {
     },
     { id: "two-sharps", kind: "quiz", right: 0 },
     { id: "d-major-scale", kind: "play-notes", notes: D_MAJOR },
+    {
+      id: "canon-bass-demo",
+      kind: "demo",
+      bpm: 76,
+      notes: [...CANON_BASS.map((note, i) => ({ note, at: i, beats: 1 })), ...LEFT_D_MAJOR.map((note) => ({ note, at: CANON_BASS.length, beats: 2 }))],
+    },
+    { id: "canon-bass", kind: "play-notes", notes: CANON_BASS },
+    { id: "left-d-major", kind: "play-notes", notes: [...LEFT_D_MAJOR, LEFT_D_MAJOR] },
+    {
+      id: "black-key-thirds-demo",
+      kind: "demo",
+      bpm: 72,
+      notes: CANON_THIRDS.flatMap((third, i) => third.map((note) => ({ note, at: i * 2, beats: 2 }))),
+    },
+    { id: "black-key-thirds", kind: "play-notes", notes: CANON_THIRDS },
     { id: "recap", kind: "recap" },
   ],
   texts: { en: albertiBassEn, de: albertiBassDe },

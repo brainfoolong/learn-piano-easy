@@ -55,6 +55,21 @@ export const albertiBassEn = {
     "d-major-scale": {
       text: "Your turn. Put your right thumb on the D above middle C, and play the scale up and down with the fingering of C major.",
     },
+    "canon-bass-demo": {
+      text: "Listen to the boss's left hand: finger 5 plays a low note, and the thumb a higher one. Then the hand jumps to the next pair, such as from A down to the A an octave lower. It ends on a D major chord.",
+    },
+    "canon-bass": {
+      text: "Your turn. Put finger 5 on the D below middle C, play each pair, and move the hand to the next one. The lowest note is the second D below middle C.",
+    },
+    "left-d-major": {
+      text: "The boss ends on D major in the left hand. Put finger 5 on the D below middle C, and play D, F♯ and A one by one, then together.",
+    },
+    "black-key-thirds-demo": {
+      text: "Near its end, the boss's right hand plays the tune in thirds. Three of these four thirds have a black key: F♯ or C♯.",
+    },
+    "black-key-thirds": {
+      text: "Your turn. Put finger 3 on the second D above middle C, and finger 5 on the F♯ above it. Press both keys of each third as one, and walk down.",
+    },
     recap: {
       text: "Well done. You can now play the Alberti bass.",
       points: [

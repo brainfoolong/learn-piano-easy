@@ -59,6 +59,12 @@ export const playingWithFeelingDe: PlayingWithFeelingTexts = {
     "elise-left-hand": {
       text: "Jetzt du. Spiel A, E und A ab dem zweiten A unter dem mittleren C, dann E, H und Gis ab dem zweiten E unter dem mittleren C. Ende wieder auf A, E und A.",
     },
+    "elise-octave-demo": {
+      text: "In Takt 9 spannt die rechte Hand des Bosses eine Oktave. Der Daumen spielt das E über dem mittleren C, Finger 5 das E eine Oktave höher. Dann geht die Melodie weiter wie am Anfang.",
+    },
+    "elise-octave": {
+      text: "Jetzt du. Spann die Hand über die Oktave: Daumen auf das E über dem mittleren C, Finger 5 auf das nächste E darüber. Spiel die Stelle leise.",
+    },
     "how-to-play-the-boss": {
       text: "Für Elise steht in a-Moll und beginnt mit p. Wie spielst du das Stück?",
       answers: ["Laut und hell", "Schnell und kurz", "Leise und sanft, wie ein stilles Lied", "Jeden Ton gleich und hart"],

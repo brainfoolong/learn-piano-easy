@@ -78,10 +78,10 @@ world, and [findings.md](findings.md) holds that goal's findings under its slug.
 | First melodies | The C position of each hand, steps and skips | *Mary Had a Little Lamb*, Beginner | `learn-first-steps` |
 | Rhythm | The beat, note values, rests, counting and time signatures | *Ode to Joy*, Beginner | `learn-first-steps` |
 | Reading music | The staff, both clefs, landmark notes, reading by steps, and the dotted notes of its boss | *Old MacDonald Had a Farm*, Beginner | `learn-first-steps` |
-| Both hands | Hands apart, then together, over a held bass | *Ode to Joy*, Beginner: the rhythm boss returns with both hands | `learn-both-hands` |
+| Both hands | Hands apart, then together, over a held bass, and the fourth in the left hand of its boss | *Ode to Joy*, Beginner: the rhythm boss returns with both hands | `learn-both-hands` |
 | Scales and keys | Half and whole steps, sharps and flats, thumb under, key signatures | *Jingle Bells*, Beginner | `learn-both-hands` |
-| Chords | Triads, major and minor, the three main chords, broken chords, and the key of D major | *Canon in D*, Easy | `learn-both-hands` |
-| Expression | Dynamics, legato and staccato, the sustain pedal, phrasing, and the wide left hand of its boss | *Für Elise*, Easy | `learn-both-hands` |
+| Chords | Triads, major and minor, the three main chords, broken chords, the key of D major, and the low bass and black-key thirds of its boss | *Canon in D*, Easy | `learn-both-hands` |
+| Expression | Dynamics, legato and staccato, the sustain pedal, phrasing, and the wide hands of its boss | *Für Elise*, Easy | `learn-both-hands` |
 
 ## Open
 

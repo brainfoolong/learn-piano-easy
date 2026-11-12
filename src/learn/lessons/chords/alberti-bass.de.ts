@@ -55,6 +55,21 @@ export const albertiBassDe: AlbertiBassTexts = {
     "d-major-scale": {
       text: "Jetzt du. Leg den rechten Daumen auf das D über dem mittleren C und spiel die Tonleiter hinauf und hinunter, mit dem Fingersatz von C-Dur.",
     },
+    "canon-bass-demo": {
+      text: "Hör dir die linke Hand des Bosses an: Finger 5 spielt einen tiefen Ton, der Daumen einen höheren. Dann springt die Hand zum nächsten Paar, etwa vom A hinunter zum A eine Oktave tiefer. Sie endet auf einem D-Dur-Akkord.",
+    },
+    "canon-bass": {
+      text: "Jetzt du. Leg den fünften Finger auf das D unter dem mittleren C, spiel jedes Paar und setz die Hand zum nächsten. Der tiefste Ton ist das zweite D unter dem mittleren C.",
+    },
+    "left-d-major": {
+      text: "Der Boss endet mit D-Dur in der linken Hand. Leg den fünften Finger auf das D unter dem mittleren C. Spiel D, Fis und A einzeln und dann zusammen.",
+    },
+    "black-key-thirds-demo": {
+      text: "Gegen Ende spielt die rechte Hand des Bosses die Melodie in Terzen. Drei dieser vier Terzen haben eine schwarze Taste: Fis oder Cis.",
+    },
+    "black-key-thirds": {
+      text: "Jetzt du. Leg den dritten Finger auf das zweite D über dem mittleren C und den fünften auf das Fis darüber. Drück die zwei Tasten jeder Terz zusammen und geh Terz für Terz hinab.",
+    },
     recap: {
       text: "Gut gemacht. Jetzt kannst du den Albertibass spielen.",
       points: [
