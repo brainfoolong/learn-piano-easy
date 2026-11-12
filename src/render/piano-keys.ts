@@ -25,9 +25,11 @@
  *   both themes. The colours are read from the page's CSS at the next frame, and again when the site's
  *   theme or the colour scheme changes. A held key presses in the player's input colours, over any tint.
  * - **Names** are the player's key labels, from `keyNameText` or from `nameOf`: `c` names every C and
- *   `white` every white key, with the octave on C only. **A finger** is a digit in a ring of its key's
- *   mark colour, in the band above the keys: a white key's in the row nearer the keys, a black key's in
- *   the row behind it, so two neighbours never overlap. **The reach** is a thin bar on the front rail,
+ *   `white` every white key, with the octave on C only. They are dark ink, larger than the player's,
+ *   and sized from the key's width, so they read at a lesson's width and never spill past their key.
+ *   **A finger** is a white digit in a ring of its key's mark colour, in the band above the keys,
+ *   nearly a key wide: a white key's in the row nearer the keys, a black key's in the row behind it, so
+ *   two neighbours never overlap. **The reach** is a thin bar on the front rail,
  *   under the white keys' front edge. A name and the reach sit within the piano's own frame, so their
  *   coming and going moves nothing.
  * - **The pointer** plays through `src/input/pointer-piano.ts` and the piano's `keyAt`, by the player's
@@ -71,7 +73,7 @@ import { noteName } from "../theory/note-names";
 import { el } from "../ui/dom";
 import { describeMarks, type Mark, MARKS } from "../ui/mark";
 import type { Signal } from "../ui/signal";
-import { KEY_LABEL_HEIGHT, KEY_NAME_INSET, keyNameText } from "./key-labels";
+import { KEY_NAME_INSET, keyNameText } from "./key-labels";
 import { FULL_RANGE, isBlack, type KeyLayout, type KeyRange, layoutKeys } from "./key-layout";
 import { createLabelLayer } from "./labels";
 import { pianoLights } from "./lights";
@@ -149,8 +151,8 @@ export interface Frame {
 const FELT_ROOM = 0.35;
 /** How far past the white keys' front edge the frame ends, so the front rail shows under them. */
 const RAIL_ROOM = 0.6;
-/** A finger ring's size, and the gap before each row of rings, in world units. */
-const RING_SIZE = 0.62;
+/** A finger ring's size, and the gap before each row of rings, in world units, where a white key is 1 wide. */
+const RING_SIZE = 0.9;
 const RING_GAP = 0.08;
 /** The band above the felt that holds the rings: a row for the white keys, and a row behind it for the black. */
 const FINGER_ROOM = 2 * (RING_SIZE + RING_GAP);
@@ -231,14 +233,20 @@ export function reachSpan(layout: KeyLayout, reach: KeyRange): ReachSpan | undef
 const NAME_STYLE = { white: true, black: false, flats: false, octave: "onlyC", system: "letters" } as const;
 /** How far a label floats above its key's top, in world units, so it never cuts into the key. */
 const LIFT = 0.02;
-/** The most of its key's width a name takes. */
-const LABEL_FILL = 0.95;
+/**
+ * A name's height and the most of its key's width it takes, as shares of that width. A name such as
+ * `C4` fills the width and shrinks below the height, so it never spills past its key.
+ */
+const NAME_HEIGHT = 0.75;
+const NAME_FILL = 0.9;
+/** A name's colour. A white key is the same ivory in both themes, so one dark ink reads on both. */
+const NAME_COLOR = 0x1d1a26;
 /** The z of the centre of each row of finger rings, by key colour: white nearer the keys, black behind. */
 const RING_Z = { white: -(FELT_ROOM + RING_GAP + RING_SIZE / 2), black: -(FELT_ROOM + 2 * RING_GAP + (3 * RING_SIZE) / 2) } as const;
 /** The height the rings float at, above every part of the piano, so nothing hides them. */
 const RING_Y = 2;
 /** The finger digit's height, as a share of its ring. */
-const DIGIT_SHARE = 0.6;
+const DIGIT_SHARE = 0.72;
 /** How much nearer the camera a digit sits than its ring, so it draws over it. */
 const DIGIT_NUDGE = 0.05;
 /** The token of a ring on an unmarked key. */
@@ -345,7 +353,10 @@ export function pianoKeys(): PianoKeys {
   const scene = new Scene();
   scene.add(...pianoLights());
   const piano = createPiano({ range: FULL_RANGE, flare: false, incomingTint: 1 });
-  const labels = createLabelLayer();
+  // Names are dark ink on the keys, and digits stay white on their dark discs.
+  const names = createLabelLayer({ outline: false });
+  names.setColor(NAME_COLOR);
+  const digits = createLabelLayer();
   const rings = new Group();
   const ringMap = ringTexture();
   const ringPool: Sprite[] = [];
@@ -353,7 +364,7 @@ export function pianoKeys(): PianoKeys {
   const reachMaterial = new MeshBasicMaterial({ color: REACH_COLOR });
   const reachBar = new Mesh(reachGeometry, reachMaterial);
   reachBar.visible = false;
-  scene.add(piano.group, rings, labels.group, reachBar);
+  scene.add(piano.group, rings, names.group, digits.group, reachBar);
   const rig = createCameraRig(renderer?.domElement ?? element, "flat");
 
   const input = defaults();
@@ -457,14 +468,17 @@ export function pianoKeys(): PianoKeys {
   const placeLabels = () => {
     const layout = piano.layout;
     const left = -layout.width / 2;
-    const names = options.names ?? "none";
-    labels.begin();
+    const named = options.names ?? "none";
+    names.begin();
     for (const rect of layout.keys) {
-      if (names === "none" || rect.black || (names === "c" && rect.pitch % 12 !== 0)) continue;
+      if (named === "none" || rect.black || (named === "c" && rect.pitch % 12 !== 0)) continue;
       const text = options.nameOf?.(rect.pitch) ?? keyNameText(rect.pitch, NAME_STYLE) ?? "";
       const z = WHITE_KEY_LENGTH - KEY_NAME_INSET.white;
-      labels.push(text, left + rect.center, KEY_LABEL_HEIGHT / 2 + LIFT, z, KEY_LABEL_HEIGHT, rect.width * LABEL_FILL);
+      const height = rect.width * NAME_HEIGHT;
+      names.push(text, left + rect.center, height / 2 + LIFT, z, height, rect.width * NAME_FILL);
     }
+    names.end();
+    digits.begin();
     let used = 0;
     for (const [pitch, finger] of fingers) {
       const rect = layout.key(pitch);
@@ -478,10 +492,10 @@ export function pianoKeys(): PianoKeys {
       ring.material.color.copy(mark === undefined ? ringIdle : colors[mark]);
       ring.visible = true;
       const digit = RING_SIZE * DIGIT_SHARE;
-      labels.push(String(finger), x, RING_Y + DIGIT_NUDGE, z, digit, digit);
+      digits.push(String(finger), x, RING_Y + DIGIT_NUDGE, z, digit, digit);
     }
     for (let i = used; i < ringPool.length; i++) ringPool[i]!.visible = false;
-    labels.end();
+    digits.end();
   };
 
   const draw = (time: number) => {
@@ -662,7 +676,8 @@ export function pianoKeys(): PianoKeys {
       renderer?.domElement.removeEventListener("webglcontextrestored", invalidate);
       rig.dispose();
       piano.dispose();
-      labels.dispose();
+      names.dispose();
+      digits.dispose();
       for (const ring of ringPool) ring.material.dispose();
       ringMap.dispose();
       reachGeometry.dispose();

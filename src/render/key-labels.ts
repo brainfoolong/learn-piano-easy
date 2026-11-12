@@ -7,7 +7,8 @@
  * - White and black keys are switched apart, and the octave shows on every key, on C only or never.
  * - The texts are worked out here as plain data, so they are tested without a canvas. The scene and
  *   the piano view of `src/render/piano-keys.ts` draw them on sprites from `src/render/labels.ts`,
- *   at the same height and inset, whenever the range or an option changes, never per frame.
+ *   at the same inset, whenever the range or an option changes, never per frame. The scene draws them
+ *   `KEY_LABEL_HEIGHT` tall, and the view sizes them from the key's width.
  *
  * Bounds: one name and one computer key at most per key of the range.
  */

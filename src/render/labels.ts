@@ -6,7 +6,8 @@
  *   then only moves sprites and swaps materials, with no DOM element per note.
  * - The text is drawn white with a dark outline, and the material's colour tints it. One colour change
  *   then retints every cached label without drawing any again, and the outline keeps a label legible on
- *   a note of any colour.
+ *   a note of any colour. A layer made with `outline: false` draws plain text, for dark ink on a light
+ *   key, where an outline would only thicken it.
  * - A label always faces the camera, as a sprite does, so it reads the same from every camera preset.
  * - The glow is kept off every label, so a label on a lit note stays readable.
  * - A label fits its width: it is `height` tall unless its text is too wide for `maxWidth`, and then it
@@ -49,8 +50,9 @@ export interface LabelLayer {
   dispose(): void;
 }
 
-/** An empty label layer. */
-export function createLabelLayer(): LabelLayer {
+/** An empty label layer, whose texts carry a dark outline unless `outline` is false. */
+export function createLabelLayer({ outline = true }: { outline?: boolean } = {}): LabelLayer {
+  const stroke = outline ? OUTLINE : 0;
   const group = new Group();
   group.name = "labels";
   const color = new Color(0xffffff);
@@ -73,17 +75,19 @@ export function createLabelLayer(): LabelLayer {
     const context = canvas.getContext("2d");
     if (!context) return undefined;
     context.font = FONT;
-    canvas.width = Math.ceil(context.measureText(text).width + 2 * (OUTLINE + PADDING));
+    canvas.width = Math.ceil(context.measureText(text).width + 2 * (stroke + PADDING));
     canvas.height = PIXELS;
     // A resized canvas forgets its font, so it is set again.
     context.font = FONT;
     context.textAlign = "center";
     context.textBaseline = "middle";
-    context.lineJoin = "round";
-    context.lineWidth = OUTLINE;
-    context.strokeStyle = "rgba(0, 0, 0, 0.85)";
+    if (outline) {
+      context.lineJoin = "round";
+      context.lineWidth = OUTLINE;
+      context.strokeStyle = "rgba(0, 0, 0, 0.85)";
+      context.strokeText(text, canvas.width / 2, PIXELS / 2);
+    }
     context.fillStyle = "#ffffff";
-    context.strokeText(text, canvas.width / 2, PIXELS / 2);
     context.fillText(text, canvas.width / 2, PIXELS / 2);
 
     const texture = new CanvasTexture(canvas);
