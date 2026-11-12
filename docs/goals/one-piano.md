@@ -2,7 +2,7 @@
 looper: 1
 title: One piano
 summary: "Every piano the site draws is the 3D piano, and the 2D keyboard is gone from the code."
-context: [docs/decisions/0011.md, src/render/piano.ts, src/render/scene.ts, src/ui/components/keyboard.ts, src/learn/steps/keys.ts]
+context: [docs/decisions/0011.md, src/render/piano.ts, src/render/scene.ts, src/render/piano-keys.ts, src/learn/steps/keys.ts]
 stages:
   - id: 1
     title: The 3D piano view for a page
@@ -149,10 +149,13 @@ landing page, and decision 0008 already answers it: a picture until a click.
 - [x] E2e test `the_devices_band_loads_the_piano_on_a_click`. `e2e/landing.e2e.ts:1`
 - [x] The gallery test reads the view. `e2e/design.e2e.ts:37`
 - [x] Delete `keyboard.ts`, `keyboard.css` and `keyboard.test.ts`. `src/ui/components/keyboard.ts:1`
-- [ ] The floor's `keyboard-2d` check goes. `docs/goals/README.md:244`
-- [ ] The site design's component table names the view. `docs/site-design.md:147`
+- [x] The floor's `keyboard-2d` check goes. `docs/goals/README.md:244`
+- [x] The site design's component table names the view. `docs/site-design.md:147`
 - [ ] The findings and the playbook name the view, not the 2D keyboard. `docs/findings.md:707`, `docs/agent/playbook.md:17`
-- [ ] The feature list says every piano is the 3D one. `docs/reference/features.md:1`
+  - [x] The playbook's pointer trap names the view. `docs/agent/playbook.md:17`
+  - [ ] The findings' lines 692, 709, 710, 765 and 870 name the view. `docs/findings.md:709`
+- [x] The feature list says every piano is the 3D one. `docs/reference/features.md:145`
+- [x] The view's key names and finger digits read clearly at a lesson's width. `src/render/piano-keys.ts:240`
 
 ### 4. the goal is verified once, and every failure is fixed
 

@@ -143,6 +143,8 @@ Each one is easy to make, and ours avoids it in the goal named.
 ## Ours only
 
 - The whole scene in 3D, with camera presets.
+- One piano across the site: lessons, the setup check, the landing page and the gallery all draw the
+  player's 3D piano. The landing page shows its picture until a click loads it.
 - A flat view whose keys fill the screen width, to line up with a real keyboard below the screen.
 - The learner's exact keyboard, by preset or by first and last note, drawn key for key.
 - Wait mode per hand, and a loop trainer that raises the speed.

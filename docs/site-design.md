@@ -144,7 +144,7 @@ every component in every state.
 | Empty state | [src/ui/components/empty-state.ts](../src/ui/components/empty-state.ts) |
 | Mascot | [src/ui/components/mascot.ts](../src/ui/components/mascot.ts) |
 | Skeleton | [src/ui/components/skeleton.ts](../src/ui/components/skeleton.ts) |
-| Keyboard | [src/ui/components/keyboard.ts](../src/ui/components/keyboard.ts) |
+| Piano view, the 3D piano of every page | [src/render/piano-keys.ts](../src/render/piano-keys.ts) |
 | Staff | [src/ui/components/staff.ts](../src/ui/components/staff.ts) |
 
 ## Reading and hierarchy

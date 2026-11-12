@@ -14,9 +14,10 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **`bun run shot` on a page of the default locale may show it in German.** The site moves a first
   visit to the browser's language, which follows the system's. Pass `--locale en-US` or
   `--locale de-DE` to `tools/shot.ts` for each locale you look at.
-- **A synthetic `pointerdown` on a key of the on-screen piano plays nothing.** `src/ui/components/keyboard.ts`
-  finds the key with `elementFromPoint`, so an event without coordinates misses. In a `--eval` of
-  `tools/shot.ts`, give `clientX` and `clientY` inside the key's `getBoundingClientRect()`.
+- **A synthetic `pointerdown` on a key of the piano view plays nothing.** `src/render/piano-keys.ts`
+  finds the key by a ray from the pointer's point on its canvas, and its key map's spans take no pointer.
+  In a `--eval` of `tools/shot.ts`, send the event to the canvas, with `clientX` and `clientY` inside
+  the span's `getBoundingClientRect()`.
 - **A goal check is red with "test … did not run and pass" while every test passes.** Bun's reporter
   omits `(pass)` lines when an AI agent runs it. Import `test` from `src/testing.ts`, never from
   `bun:test`, because it prints the line itself.
