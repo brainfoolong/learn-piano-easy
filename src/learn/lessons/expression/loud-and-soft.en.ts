@@ -15,7 +15,7 @@ export const loudAndSoftEn = {
       answers: ["Holding the key longer", "Pressing a key further to the left", "Pressing the key down faster", "Pressing a black key"],
     },
     "play-softly": {
-      text: "Play C, D, E, F and G above middle C softly. Press each key gently and slowly.",
+      text: "Play C, D, E, F and G softly, starting on middle C. Press each key gently and slowly.",
     },
     "hear-softly": {
       text: "Listen to C, D, E, F and G played softly. Each key went down gently and slowly.",

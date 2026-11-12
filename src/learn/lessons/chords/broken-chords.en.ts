@@ -11,7 +11,7 @@ export const brokenChordsEn = {
       text: "A broken chord plays a chord's notes one after another instead of together. The notes are the same, so the chord is too.",
     },
     "chord-together": {
-      text: "First play C major together: C, E and G above middle C, with fingers 1, 3 and 5.",
+      text: "First play C major together: C, E and G from middle C, with fingers 1, 3 and 5.",
     },
     "broken-up": {
       text: "Now break it. Keep your hand in place and play C, then E, then G.",
@@ -27,7 +27,7 @@ export const brokenChordsEn = {
       text: "Play C, E, G, E twice, and end on C. Let your hand stay still while the fingers rock.",
     },
     "three-chords-broken": {
-      text: "Break three chords this way: C-E-G-E, F-A-C-A and G-B-D-B. End on C, E and G. Move your hand with each chord.",
+      text: "Break three chords with your right hand, starting on middle C: C-E-G-E, F-A-C-A and G-B-D-B. End on C, E and G. Move your hand with each chord.",
     },
     "which-is-broken": {
       text: "Which of these is a broken C major chord?",

@@ -33,7 +33,7 @@ export const handsApartThenTogetherDe: HandsApartThenTogetherTexts = {
       text: "Die rechte Hand allein. Spiel E F G F E.",
     },
     "mirror-left": {
-      text: "Die linke Hand allein. Spiel E D C D E, sie geht also hinunter, wo die rechte hinaufging.",
+      text: "Die linke Hand allein. Spiel E D C D E, beginnend beim E unter dem mittleren C. Sie geht also hinunter, wo die rechte hinaufging.",
     },
     "mirror-together": {
       text: "Jetzt beide zusammen. Lass dir Zeit und drück jedes Tastenpaar gleichzeitig.",

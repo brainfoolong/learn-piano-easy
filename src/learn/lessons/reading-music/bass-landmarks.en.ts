@@ -32,7 +32,7 @@ export const bassLandmarksEn = {
       answers: ["B", "D", "E"],
     },
     "play-bass-landmarks": {
-      text: "Play each note you see. Some are landmarks, and some are their neighbours. Find the nearest landmark first.",
+      text: "Play each note you see on the bass staff. The landmarks are low C in the second space, F on the fourth line and middle C on its ledger line above. The other notes sit one or two steps from a landmark.",
     },
     "name-by-counting": {
       text: "Name each note. Press its letter. Count from the nearest landmark: low C, F or middle C.",

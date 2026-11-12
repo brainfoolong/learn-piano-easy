@@ -25,13 +25,13 @@ export const openFifthsDe: OpenFifthsTexts = {
       answers: ["D", "C", "E"],
     },
     "three-fifths": {
-      text: "Spiel die Quinte auf C, dann auf G, dann auf F und zurück auf C. Der Griff bleibt immer gleich.",
+      text: "Spiel mit der linken Hand die Quinte vom C unter dem mittleren C hinauf zum G. Dann spiel die Quinte auf dem G unter diesem C, dann auf dem F darunter und zurück auf C. Der Griff bleibt immer gleich.",
     },
     "fifth-under-tune": {
       text: "Jetzt spielt die rechte Hand eine Melodie über der Quinte. Die linke Hand schlägt die Quinte mit dem ersten Ton an und hält sie.",
     },
     "fifth-and-tune": {
-      text: "Jetzt du. Spiel die Quinte C und G zusammen mit dem E der rechten Hand. Danach spielt die rechte Hand allein weiter.",
+      text: "Jetzt du. Spiel die Quinte C und G zusammen mit dem E der rechten Hand. Dann spielt die rechte Hand D und C. Spiel die Quinte noch einmal zusammen mit E, danach noch zweimal E.",
     },
     recap: {
       text: "Gut gemacht. Deine linke Hand spielt jetzt Quinten.",

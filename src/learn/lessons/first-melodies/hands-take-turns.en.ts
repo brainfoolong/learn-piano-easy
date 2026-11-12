@@ -27,7 +27,7 @@ export const handsTakeTurnsEn = {
       text: "While one hand plays, the other rests on its keys and waits. It stays in place, so it is ready for its turn.",
     },
     "long-phrase": {
-      text: "A longer tune with three turns. Keep both hands in place and follow the marked key from hand to hand.",
+      text: "Rest your right thumb on middle C and your left little finger on the C one octave below. This longer tune takes four turns: right hand, left hand, right, then left. Follow the marked key from hand to hand.",
     },
     recap: {
       text: "Well done. Your hands now share a tune.",

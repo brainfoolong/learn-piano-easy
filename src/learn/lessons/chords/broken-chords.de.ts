@@ -11,7 +11,7 @@ export const brokenChordsDe: BrokenChordsTexts = {
       text: "Ein gebrochener Akkord spielt die Töne eines Akkords nacheinander statt zusammen. Die Töne bleiben dieselben, also auch der Akkord.",
     },
     "chord-together": {
-      text: "Spiel C-Dur zuerst zusammen: C, E und G über dem mittleren C, mit den Fingern 1, 3 und 5.",
+      text: "Spiel C-Dur zuerst zusammen: C, E und G ab dem mittleren C, mit den Fingern 1, 3 und 5.",
     },
     "broken-up": {
       text: "Jetzt brichst du ihn. Lass die Hand an ihrem Platz und spiel C, dann E, dann G.",
@@ -27,7 +27,7 @@ export const brokenChordsDe: BrokenChordsTexts = {
       text: "Spiel zweimal C, E, G, E und ende auf dem C. Die Hand bleibt ruhig, nur die Finger schaukeln.",
     },
     "three-chords-broken": {
-      text: "Brich drei Akkorde auf diese Weise: C-E-G-E, F-A-C-A und G-H-D-H. Ende auf C, E und G. Versetz die Hand mit jedem Akkord.",
+      text: "Brich drei Akkorde mit der rechten Hand, ab dem mittleren C: C-E-G-E, F-A-C-A und G-H-D-H. Ende auf C, E und G. Versetz die Hand mit jedem Akkord.",
     },
     "which-is-broken": {
       text: "Welches davon ist ein gebrochener C-Dur-Akkord?",

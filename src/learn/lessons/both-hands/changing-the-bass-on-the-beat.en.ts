@@ -21,16 +21,16 @@ export const changingTheBassOnTheBeatEn = {
       text: "Hold the old fifth through beat four. Then let go and land on the new fifth right on one.",
     },
     "c-to-g": {
-      text: "Your left hand alone. Play the fifth on C, move to the fifth on G, then go back to C.",
+      text: "Your left hand alone. Play the fifth on the C below middle C, move down to the fifth on the G below it, then go back to C.",
     },
     "change-under-tune": {
-      text: "Now both hands. Each new bar starts with a new fifth and a tune note together. Between them, the right hand plays on.",
+      text: "Now both hands. The fifths are on C, then on the G below it, then on C again. Each new bar starts with a new fifth and a tune note together. Between them, the right hand plays on.",
     },
     "four-basses": {
       text: "Listen to four bars, each with its own fifth: C, F, G and C again. Every change falls on one.",
     },
     "four-bars": {
-      text: "Your turn. Play the four bars, and change the fifth together with the first note of each bar.",
+      text: "Your turn. Play the four bars. The fifths are on C, then on the F and the G below it, then on C again. Change the fifth together with the first note of each bar.",
     },
     recap: {
       text: "Well done. Your left hand now changes on the beat.",

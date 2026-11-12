@@ -37,7 +37,7 @@ export const majorTriadsEn = {
       text: "So D major needs a black key. Find F♯, the black key just right of F.",
     },
     "d-major-triad": {
-      text: "Put your thumb on D, and finger 3 rests on F♯. Play D, F♯ and A one by one, then together.",
+      text: "Put your right thumb on the D above middle C, and finger 3 rests on F♯. Play D, F♯ and A one by one, then together.",
     },
     "left-hand-fingers": {
       text: "Your left hand plays a triad with fingers 5, 3 and 1. Finger 5 plays the root, and the thumb plays the top key.",

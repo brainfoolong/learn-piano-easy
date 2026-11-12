@@ -38,7 +38,7 @@ export const staccatoDe: StaccatoTexts = {
       text: "Musik mischt oft beides. Ein Bindebogen verbindet manche Noten, und Staccatopunkte machen andere kurz.",
     },
     "mixed-phrase": {
-      text: "Spiel C, D, E, F und G legato unter einem Bindebogen. Dann federst du dreimal kurz auf dem G.",
+      text: "Spiel C, D, E, F und G ab dem mittleren C legato unter einem Bindebogen. Dann federst du noch dreimal kurz auf dem G.",
     },
     "dot-above-quiz": {
       text: "Über einer Note steht ein kleiner Punkt. Wie spielst du sie?",

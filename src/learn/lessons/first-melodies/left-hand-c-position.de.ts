@@ -27,7 +27,7 @@ export const leftHandCPositionDe: LeftHandCPositionTexts = {
       text: "Jetzt Schritte mit der linken Hand, vom Daumen aus. Jeder Ton geht zur Nachbartaste.",
     },
     "left-skips-repeats": {
-      text: "Sprünge und wiederholte Töne gehen auch mit dieser Hand. Spring über eine Taste und spiel eine Taste zweimal, wo es die Markierung zeigt.",
+      text: "Leg den linken kleinen Finger auf das C eine Oktave unter dem mittleren C und je einen Finger auf die Tasten daneben. Spiel Sprünge und wiederholte Töne: C, E E, G G, E, C. Deine Finger sind 5, 3, 3, 1, 1, 3, 5.",
     },
     recap: {
       text: "Gut gemacht. Deine linke Hand hat jetzt ihren eigenen Platz auf den Tasten.",

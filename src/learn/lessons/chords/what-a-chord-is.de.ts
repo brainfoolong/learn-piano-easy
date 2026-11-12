@@ -40,7 +40,7 @@ export const whatAChordIsDe: WhatAChordIsTexts = {
       answers: ["D, E und F", "D, G und A", "D, F und A"],
     },
     "triads-up": {
-      text: "Behalte die Form deiner Hand. Spiel den Dreiklang auf C, dann rück hoch zu D und zu E. Am Ende spielst du wieder C.",
+      text: "Behalte die Form deiner rechten Hand. Spiel C-E-G ab dem mittleren C, dann rück hoch zu D-F-A und E-G-H, alles auf weißen Tasten. Zum Schluss spielst du C-E-G.",
     },
     recap: {
       text: "Gut gemacht. Du spielst deine ersten Akkorde.",

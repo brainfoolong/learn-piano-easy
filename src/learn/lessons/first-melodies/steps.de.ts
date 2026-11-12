@@ -31,7 +31,7 @@ export const stepsDe: StepsTexts = {
       text: "Geh in Schritten ganz nach oben und wieder ganz nach unten. Folge der markierten Taste.",
     },
     "stepping-tune": {
-      text: "Diese Melodie besteht nur aus Schritten. Lass jeden Finger auf seiner Taste und folge der markierten Taste.",
+      text: "Leg den rechten Daumen auf das mittlere C und je einen Finger auf die Tasten daneben. Diese Melodie besteht nur aus Schritten: C D E D E F E D C.",
     },
     recap: {
       text: "Gut gemacht. Du spielst jetzt eine Melodie aus Schritten.",

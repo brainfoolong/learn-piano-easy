@@ -45,7 +45,7 @@ export const slowingDownDe: SlowingDownTexts = {
       answers: ["Auf dem allerersten Ton", "In jedem Takt", "Gegen Ende eines Stücks", "Nur in der linken Hand"],
     },
     "ending-with-fermata": {
-      text: "Spiel E, D, C, D, E, E ab dem E über dem mittleren C und werde dabei langsamer. Ende auf einem Akkord: C und G links, E rechts. Halte ihn unter seiner Fermate.",
+      text: "Spiel E, D, C, D, E, E ab dem E über dem mittleren C und werde dabei langsamer. Ende auf einem Akkord: links das C unter dem mittleren C und das G darüber, rechts dasselbe E. Lass den Akkord etwas länger klingen, wie eine Fermate es verlangt.",
     },
     "rall-means": {
       text: "Manche Stücke schreiben stattdessen rall., kurz für rallentando. Welches Zeichen bedeutet dasselbe?",

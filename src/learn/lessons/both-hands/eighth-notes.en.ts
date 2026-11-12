@@ -31,7 +31,7 @@ export const eighthNotesEn = {
       text: "Now both hands play. The left hand holds a low C, while the right hand runs up to G in eighth notes. Then it runs back down to C.",
     },
     "eighth-phrase": {
-      text: "Put both hands in C position. Press the low C with your left little finger together with the first C. Press it again with the G that starts the way down.",
+      text: "Put both hands in C position. Your right hand plays C D E F G G F E D C, starting on middle C. Press the C below middle C with your left little finger together with the first C. Press it again together with the second G.",
     },
     recap: {
       text: "Well done. Your notes can move twice as fast now.",

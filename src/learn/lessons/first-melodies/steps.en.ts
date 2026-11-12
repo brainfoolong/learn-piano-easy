@@ -31,7 +31,7 @@ export const stepsEn = {
       text: "Step all the way up and all the way down again. Follow the marked key.",
     },
     "stepping-tune": {
-      text: "Here is a tune made only of steps. Keep each finger on its key and follow the marked key.",
+      text: "Put your right thumb on middle C, one finger on each key. This tune is made only of steps: C D E D E F E D C.",
     },
     recap: {
       text: "Well done. You can play a tune made of steps.",

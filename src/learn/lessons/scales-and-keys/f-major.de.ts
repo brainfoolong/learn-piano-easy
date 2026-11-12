@@ -34,7 +34,7 @@ export const fMajorDe: FMajorTexts = {
       text: "Hier ist eine kleine Melodie in F-Dur. Deine linke Hand hält darunter die Quinte F und C.",
     },
     "tune-and-fifth": {
-      text: "Jetzt du. Schlag die Quinte mit dem ersten Ton jedes Takts an, dann spiel die Melodie allein weiter.",
+      text: "Jetzt du. Die linke Hand spielt die tiefe Quinte: das C unter dem mittleren C und das F darunter. Schlag die Quinte mit dem ersten Ton jedes Takts an, dann spiel die Melodie allein weiter.",
     },
     recap: {
       text: "Gut gemacht. Du kannst jetzt in F-Dur spielen.",

@@ -20,14 +20,14 @@ export const highAndLowDe: HighAndLowTexts = {
       text: "Und wieder hinunter. Spiel die markierten Tasten von rechts nach links und hör, wie der Klang sinkt.",
     },
     "low-then-high": {
-      text: "Ein großer Sprung: Spiel eine tiefe Taste, eine in der Mitte und eine hohe.",
+      text: "Große Sprünge: Spiel die drei markierten Tasten, ein tiefes C, das mittlere C und ein hohes C.",
     },
     "which-way": {
       text: "Deine Hand wandert auf den Tasten nach rechts. Wie verändert sich der Klang?",
       answers: ["Er wird tiefer", "Er wird höher", "Er bleibt gleich"],
     },
     "close-listen": {
-      text: "Jetzt genau hinhören: Diese Töne liegen direkt nebeneinander. Ist der zweite höher, tiefer oder gleich hoch?",
+      text: "Hör genau hin: Die zwei Töne liegen nah beieinander oder sind derselbe Ton. Ist der zweite höher, tiefer oder gleich hoch?",
     },
     recap: {
       text: "Gut gemacht. Du hörst und spielst jetzt hoch und tief.",

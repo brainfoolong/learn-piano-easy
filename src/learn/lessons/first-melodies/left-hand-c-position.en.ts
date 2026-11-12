@@ -27,7 +27,7 @@ export const leftHandCPositionEn = {
       text: "Now steps with your left hand, starting on your thumb. Each note moves to the next key.",
     },
     "left-skips-repeats": {
-      text: "Skips and repeated notes work in this hand too. Jump over a key, and play a key twice where the marks say so.",
+      text: "Put your left little finger on the C one octave below middle C, one finger on each key. Play skips and repeated notes: C, E E, G G, E, C. Your fingers go 5, 3, 3, 1, 1, 3, 5.",
     },
     recap: {
       text: "Well done. Your left hand has its own home on the keys.",

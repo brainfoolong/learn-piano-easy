@@ -18,13 +18,13 @@ export const aHeldBassNoteEn = {
       text: "Press the left C and middle C together. Hold the left C down while your right hand plays D E F.",
     },
     "both-bars": {
-      text: "Now two bars. After F, your left hand moves to G and holds it while your right hand plays G F E D.",
+      text: "Play two bars, and hold each bass note while the tune goes on. Press the C below middle C with your left hand and middle C with your right, then play D E F. Then press the G below middle C with your left hand and the G above middle C with your right, then play F E D.",
     },
     "half-bass": {
       text: "A bass note can also be a half note. It lasts two beats, so the bass changes twice in every bar.",
     },
     "half-note-bass": {
-      text: "Listen to a bass of half notes. Each bass note sounds under two notes of the tune.",
+      text: "Listen to a bass of half notes. Each bass note sounds under two beats of the tune.",
     },
     "half-bass-quiz": {
       text: "Your left hand holds a half note. How many quarter notes does your right hand play over it?",

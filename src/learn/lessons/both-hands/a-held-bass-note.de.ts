@@ -18,13 +18,13 @@ export const aHeldBassNoteDe: AHeldBassNoteTexts = {
       text: "Drück das linke C und das mittlere C zusammen. Halte das linke C, während die rechte Hand D E F spielt.",
     },
     "both-bars": {
-      text: "Jetzt zwei Takte. Nach dem F geht die linke Hand zum G und hält es, während die rechte G F E D spielt.",
+      text: "Spiel zwei Takte und halte jede Bassnote, während die Melodie weiterläuft. Drück links das C unter dem mittleren C und rechts das mittlere C, dann spiel D E F. Dann drück links das G unter dem mittleren C und rechts das G über dem mittleren C, dann spiel F E D.",
     },
     "half-bass": {
       text: "Eine Bassnote kann auch eine Halbe Note sein. Sie dauert zwei Schläge, also wechselt der Bass zweimal in jedem Takt.",
     },
     "half-note-bass": {
-      text: "Hör dir einen Bass aus Halben Noten an. Unter jeder Bassnote erklingen zwei Töne der Melodie.",
+      text: "Hör dir einen Bass aus Halben Noten an. Jede Bassnote klingt zwei Schläge der Melodie lang.",
     },
     "half-bass-quiz": {
       text: "Die linke Hand hält eine Halbe Note. Wie viele Viertelnoten spielt die rechte Hand darüber?",

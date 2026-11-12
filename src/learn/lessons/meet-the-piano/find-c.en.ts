@@ -26,7 +26,7 @@ export const findCEn = {
       text: "Now find the C just to the left of middle C. It sounds lower.",
     },
     "cs-low-to-high": {
-      text: "Play four Cs, from low to high. Each time, look for the next group of two black keys to the right.",
+      text: "Play four Cs from low to high, starting at the C just below middle C. Each time, look for the next group of two black keys to the right.",
     },
     "c-quiz": {
       text: "Where is C?",

@@ -25,13 +25,13 @@ export const openFifthsEn = {
       answers: ["D", "C", "E"],
     },
     "three-fifths": {
-      text: "Play the fifth on C, then on G, then on F, and back to C. Keep the same shape each time.",
+      text: "With your left hand, play the fifth from the C below middle C up to G. Then play the fifth on the G below that C, then on the F below it, and back on C. Keep the same shape each time.",
     },
     "fifth-under-tune": {
       text: "Now your right hand plays a tune over the fifth. Your left hand presses the fifth with the first note and holds it.",
     },
     "fifth-and-tune": {
-      text: "Your turn. Play the fifth C and G together with E in your right hand. Then the right hand goes on alone.",
+      text: "Your turn. Play the fifth C and G together with E in your right hand. Then your right hand plays D and C. Play the fifth again together with E, then two more Es.",
     },
     recap: {
       text: "Well done. Your left hand now plays fifths.",

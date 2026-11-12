@@ -30,8 +30,8 @@ export const tuneAndBassTogetherDe: TuneAndBassTogetherTexts = {
       text: "Spiel die ersten zwei Takte mit beiden Händen. Drück die Bassnote und den ersten Melodieton gleichzeitig.",
     },
     "held-bass-quiz": {
-      text: "Im zweiten Takt spielt die rechte Hand F E D. Was macht die linke Hand währenddessen?",
-      answers: ["Sie spielt F E D eine Oktave tiefer", "Sie hält ihr G", "Sie hebt ab und ruht"],
+      text: "Im zweiten Takt spielt die rechte Hand G F E D. Was macht die linke Hand währenddessen?",
+      answers: ["Sie spielt G F E D eine Oktave tiefer", "Sie hält ihr G", "Sie hebt ab und ruht"],
     },
     "whole-tune-together": {
       text: "Jetzt die ganze Melodie mit beiden Händen. Lass dir auf jeder Eins Zeit, denn dort spielen beide Hände.",

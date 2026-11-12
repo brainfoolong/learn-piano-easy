@@ -37,7 +37,7 @@ export const fingerOverTheThumbDe: FingerOverTheThumbTexts = {
       text: "Jetzt du. Spiel die Tonleiter mit der linken Hand aufwärts, vom C unter dem mittleren C bis zum mittleren C.",
     },
     "scale-up-and-down": {
-      text: "Zurück zur rechten Hand. Spiel die Tonleiter aufwärts mit Daumenuntersatz und abwärts mit dem Übersetzen des dritten Fingers.",
+      text: "Spiel die C-Dur-Tonleiter mit der rechten Hand, vom mittleren C hinauf zum nächsten C und zurück. Aufwärts mit Daumenuntersatz, abwärts mit dem Übersetzen des dritten Fingers.",
     },
     recap: {
       text: "Gut gemacht. Deine Finger kreuzen jetzt in beide Richtungen.",

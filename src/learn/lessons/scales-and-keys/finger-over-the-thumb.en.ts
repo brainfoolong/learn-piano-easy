@@ -37,7 +37,7 @@ export const fingerOverTheThumbEn = {
       text: "Your turn. Play the scale up with your left hand, from the C below middle C to middle C.",
     },
     "scale-up-and-down": {
-      text: "Back to the right hand. Play the scale up with the thumb under, then down with finger 3 over the thumb.",
+      text: "Play the C major scale with your right hand, from middle C up to the next C and back down. Go up with the thumb under, and down with finger 3 over the thumb.",
     },
     recap: {
       text: "Well done. Your fingers now cross both ways.",

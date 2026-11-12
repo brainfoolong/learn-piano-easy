@@ -28,7 +28,7 @@ export const trebleLandmarksEn = {
       text: "Name each note. Find the nearest landmark, then count the steps up or down.",
     },
     "read-treble-landmarks": {
-      text: "Now play each note you see. Some are landmarks, and some sit close to one.",
+      text: "Play each note you see on the treble staff. The landmarks are middle C on its ledger line, G on the second line and high C in the third space. The other notes sit one step from a landmark.",
     },
     recap: {
       text: "Well done. You have three landmarks in the treble clef.",

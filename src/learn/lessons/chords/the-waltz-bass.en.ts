@@ -24,14 +24,14 @@ export const theWaltzBassEn = {
       text: "The same pattern works on every chord. For G, play the low G, then B and D. For F, play the low F, then A and C.",
     },
     "g-waltz": {
-      text: "Move your hand down to G. Finger 5 plays G, then fingers 3 and 1 play B and D together, twice.",
+      text: "Move your hand down to the G below the C under middle C. Finger 5 plays G, then fingers 3 and 1 play B and D together, twice.",
     },
     "f-beats-two-and-three": {
       text: "In a bar on F, what does the left hand play on beats two and three?",
       answers: ["F alone", "F, A and C one after another", "A and C together"],
     },
     "f-waltz": {
-      text: "Now move to F. Finger 5 plays F, then fingers 3 and 1 play A and C together, twice.",
+      text: "Now move to the F one white key below that G. Finger 5 plays F, then fingers 3 and 1 play A and C together, twice.",
     },
     "chord-walk": {
       text: "Play one bar each of C, F, G and C. Move your hand on beat one, and keep counting three.",

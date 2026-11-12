@@ -34,7 +34,7 @@ export const theCMajorScaleEn = {
       text: "Your thumb is now on F. Play F, G, A, B and C with fingers 1, 2, 3, 4 and 5.",
     },
     "scale-up": {
-      text: "Now play the whole scale up. Fingers 1, 2, 3, then the thumb tucks under, then 1, 2, 3, 4, 5.",
+      text: "Play the C major scale up with your right hand, from middle C to the next C. Fingers 1, 2, 3, then the thumb tucks under, then 1, 2, 3, 4, 5.",
     },
     "scale-down": {
       text: "Now come back down with fingers 5, 4, 3, 2, 1. After F, finger 3 crosses over your thumb to E.",

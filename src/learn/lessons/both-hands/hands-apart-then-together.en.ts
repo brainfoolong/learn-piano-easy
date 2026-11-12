@@ -33,7 +33,7 @@ export const handsApartThenTogetherEn = {
       text: "Right hand alone. Play E F G F E.",
     },
     "mirror-left": {
-      text: "Left hand alone. Play E D C D E, walking down while your right hand walked up.",
+      text: "Left hand alone. Play E D C D E, starting on the E below middle C, so you walk down while your right hand walked up.",
     },
     "mirror-together": {
       text: "Now put them together. Take your time, and press each pair of keys at once.",

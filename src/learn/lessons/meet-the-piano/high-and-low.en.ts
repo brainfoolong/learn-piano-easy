@@ -20,14 +20,14 @@ export const highAndLowEn = {
       text: "And back down. Play the marked keys from right to left, and hear the sound go down.",
     },
     "low-then-high": {
-      text: "A big jump: play a low key, a middle key and a high key.",
+      text: "Big jumps: play the three marked keys, a low C, middle C and a high C.",
     },
     "which-way": {
       text: "You move your hand to the right on the keys. What happens to the sound?",
       answers: ["It gets lower", "It gets higher", "It stays the same"],
     },
     "close-listen": {
-      text: "Listen closely now: these notes sit right next to each other. Is the second one higher, lower or the same?",
+      text: "Listen closely: the two notes lie close together, or are the same note. Is the second one higher, lower or the same?",
     },
     recap: {
       text: "Well done. You can hear and play high and low.",

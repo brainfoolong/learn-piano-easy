@@ -1,6 +1,6 @@
 /**
- * *Mary's first phrase*, the lesson of *First melodies* after *Hands take turns*: the steps and repeated
- * notes the learner knows already make a real tune.
+ * *Mary's first phrase*, the lesson of *First melodies* after *Hands take turns*: the steps, repeated
+ * notes and skip the learner knows already make a real tune.
  *
  * The learner hears the first half of *Mary Had a Little Lamb*, names the note it starts on, and learns
  * which finger plays each of its four notes. They then play it in two chunks, bars 1 and 2, then bars 3

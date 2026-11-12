@@ -28,10 +28,10 @@ export const tempoAndTheMetronomeDe: TempoAndTheMetronomeTexts = {
       text: "Das Metronom klickt mit 60 Schlägen pro Minute. Drück auf Start und tippe bei jedem Klick auf eine beliebige Taste.",
     },
     "faster-tap": {
-      text: "Jetzt klickt das Metronom schneller, mit 104 Schlägen pro Minute. Tippe wieder bei jedem Klick auf eine Taste.",
+      text: "Das Metronom klickt mit 104 Schlägen pro Minute. Drück auf Start und tippe bei jedem Klick einmal auf eine beliebige Taste.",
     },
     recap: {
-      text: "Gut gemacht. Du hältst den Grundschlag jetzt in zwei Tempi. Als Nächstes wartet die Ode an die Freude mit 100 Schlägen pro Minute.",
+      text: "Gut gemacht. Du hältst den Grundschlag jetzt in zwei Tempi. Als Nächstes wartet die Ode an die Freude, zuerst langsam.",
       points: ["Das Tempo sagt, wie schnell der Grundschlag geht.", "Ein Metronom klickt den Grundschlag in dem Tempo, das du wählst.", "Übe zuerst langsam und dann etwas schneller."],
     },
   },

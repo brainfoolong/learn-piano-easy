@@ -33,7 +33,7 @@ export const minorTriadsEn = {
       text: "Put your thumb on the A below middle C. Play A minor twice: A, C and E together.",
     },
     "d-and-e-minor": {
-      text: "Now move your hand. Play D minor from the D above middle C, then E minor one key higher, then D minor again.",
+      text: "Now move your hand. Play D minor from the D above middle C, then E minor one white key higher, then D minor again.",
     },
     "g-major-to-minor": {
       text: "G major is G, B and D. Which note do you lower to play G minor?",

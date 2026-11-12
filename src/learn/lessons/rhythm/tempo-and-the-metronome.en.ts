@@ -28,10 +28,10 @@ export const tempoAndTheMetronomeEn = {
       text: "The metronome clicks at 60 bpm. Press Start and tap any key on each click.",
     },
     "faster-tap": {
-      text: "Now the metronome clicks faster, at 104 bpm. Tap any key on each click again.",
+      text: "The metronome clicks at 104 beats per minute. Press Start and tap any key once on each click.",
     },
     recap: {
-      text: "Well done. You can keep a beat at two tempos now. Next comes Ode to Joy at 100 bpm.",
+      text: "Well done. You can keep a beat at two tempos now. Next comes Ode to Joy, slowly at first.",
       points: ["Tempo is how fast the beat goes, counted in beats per minute.", "A metronome clicks the beat at the tempo you choose.", "Practise slowly first, then a little faster."],
     },
   },

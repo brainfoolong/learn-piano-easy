@@ -11,7 +11,7 @@ export const inversionsDe: InversionsTexts = {
       text: "C-E-G mit dem C unten ist die Grundstellung. Eine Umkehrung spielt dieselben drei Töne in anderer Reihenfolge. Es bleibt C-Dur.",
     },
     "root-position": {
-      text: "Spiel C-Dur in Grundstellung: C, E und G über dem mittleren C, alle zusammen. Nimm die Finger 1, 3 und 5.",
+      text: "Spiel C-Dur in Grundstellung: C, E und G ab dem mittleren C, alle zusammen. Nimm die Finger 1, 3 und 5.",
     },
     "first-inversion": {
       text: "Jetzt legst du den untersten Ton eine Oktave höher. Aus C-E-G wird E-G-C. Das ist die erste Umkehrung.",

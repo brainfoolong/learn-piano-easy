@@ -30,8 +30,8 @@ export const tuneAndBassTogetherEn = {
       text: "Play the first two bars with both hands. Press the bass and the first note of the tune together.",
     },
     "held-bass-quiz": {
-      text: "In bar two, your right hand plays F E D. What does your left hand do meanwhile?",
-      answers: ["It plays F E D one octave lower", "It holds its G", "It lifts off and rests"],
+      text: "In bar two, your right hand plays G F E D. What does your left hand do meanwhile?",
+      answers: ["It plays G F E D one octave lower", "It holds its G", "It lifts off and rests"],
     },
     "whole-tune-together": {
       text: "Now the whole tune with both hands. Take your time on each beat one, where both hands play.",

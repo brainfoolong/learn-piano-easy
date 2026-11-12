@@ -5,7 +5,7 @@ export const dottedRhythmDe: DottedRhythmTexts = {
   title: "Der punktierte Rhythmus",
   steps: {
     "even-and-dotted-demo": {
-      text: "Hör dir dieselben Töne zweimal an. Zuerst sind es gleichmäßige Viertelnoten. Dann wird das erste E länger, und das D danach kommt schneller.",
+      text: "Hör dir E und D in zwei Rhythmen an. Zuerst kommen gleichmäßige Viertelnoten: E E D D. Dann folgt auf ein langes E ein schnelles D, und ein noch längeres D schließt ab.",
     },
     "what-a-dot-does": {
       text: "Hinter dem langen Ton stand ein Punkt. Ein Punkt verlängert eine Note um die Hälfte ihrer Länge. Sie dauert dann anderthalbmal so lang.",

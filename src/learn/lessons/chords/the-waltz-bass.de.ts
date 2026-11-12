@@ -24,14 +24,14 @@ export const theWaltzBassDe: TheWaltzBassTexts = {
       text: "Das Muster passt auf jeden Akkord. Bei G spielst du das tiefe G, dann H und D. Bei F spielst du das tiefe F, dann A und C.",
     },
     "g-waltz": {
-      text: "Geh mit der Hand hinunter zum G. Der fünfte Finger spielt G, dann spielen Finger 3 und 1 zweimal H und D zusammen.",
+      text: "Geh mit der Hand hinunter zum G unterhalb des C, das unter dem mittleren C liegt. Der fünfte Finger spielt G, dann spielen Finger 3 und 1 zweimal H und D zusammen.",
     },
     "f-beats-two-and-three": {
       text: "Was spielt die linke Hand in einem Takt auf F auf der Zwei und der Drei?",
       answers: ["Nur F", "F, A und C nacheinander", "A und C zusammen"],
     },
     "f-waltz": {
-      text: "Geh jetzt zum F. Der fünfte Finger spielt F, dann spielen Finger 3 und 1 zweimal A und C zusammen.",
+      text: "Geh jetzt zum F eine weiße Taste unter diesem G. Der fünfte Finger spielt F, dann spielen Finger 3 und 1 zweimal A und C zusammen.",
     },
     "chord-walk": {
       text: "Spiel je einen Takt C, F, G und C. Wechsle die Lage auf der Eins und zähl weiter bis drei.",

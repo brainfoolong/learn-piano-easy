@@ -8,7 +8,7 @@ export const theGrandStaffDe: TheGrandStaffTexts = {
       text: "Hör zu. Das Klavier steigt vom tiefen C über das mittlere C bis zum hohen C. Dieser Weg führt durch beide Notensysteme, die du kennst.",
     },
     "two-staves": {
-      text: "Klaviernoten stehen in zwei Notensystemen übereinander. Links hält sie eine geschweifte Klammer zusammen. So entsteht das Klaviersystem: oben der Violinschlüssel, unten der Bassschlüssel.",
+      text: "Klaviernoten stehen in zwei Notensystemen übereinander. Links hält sie eine geschweifte Klammer zusammen. So entsteht das Klaviersystem: oben das Notensystem mit dem Violinschlüssel, unten das mit dem Bassschlüssel.",
     },
     "which-hand-quiz": {
       text: "Welche Hand liest meistens das obere System im Violinschlüssel?",

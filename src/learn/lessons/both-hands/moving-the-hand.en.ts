@@ -34,7 +34,7 @@ export const movingTheHandEn = {
       text: "Move your hand during a rest or the end of a long note. Lift the whole hand, keep its shape, and land with your thumb on the new key.",
     },
     "move-and-play": {
-      text: "Play both phrases in one go. After middle C, lift your hand and move it to G position without looking for each key.",
+      text: "Play two phrases in one go with your right hand. Play C D E F E D C, starting on middle C. Then lift your hand to G position and play G A B C B A G, starting on the G above middle C. Move without looking for each key.",
     },
     recap: {
       text: "Well done. Your hand can now change its place.",

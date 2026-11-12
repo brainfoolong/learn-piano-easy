@@ -26,7 +26,7 @@ export const findCDe: FindCTexts = {
       text: "Und jetzt das C direkt links vom mittleren C. Es klingt tiefer.",
     },
     "cs-low-to-high": {
-      text: "Spiel vier Cs von tief nach hoch. Such dafür jedes Mal die nächste Zweiergruppe weiter rechts.",
+      text: "Spiel vier Cs von tief nach hoch, beginnend beim C direkt unter dem mittleren C. Such jedes Mal die nächste Gruppe aus zwei schwarzen Tasten weiter rechts.",
     },
     "c-quiz": {
       text: "Wo liegt das C?",

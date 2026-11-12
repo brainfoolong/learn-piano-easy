@@ -18,20 +18,20 @@ export const cFAndGDe: CFAndGTexts = {
       text: "Der F-Dur-Dreiklang ist F, A und C. Er ist ein Dur-Dreiklang wie C-Dur, also behalten deine Finger dieselbe Form.",
     },
     "c-and-f": {
-      text: "Jetzt du. Spiel C-Dur ab dem mittleren C mit den Fingern 1, 3 und 5. Dann setzt du den Daumen aufs F, für F-Dur, und gehst zurück zu C.",
+      text: "Jetzt du. Spiel C-Dur ab dem mittleren C mit den Fingern 1, 3 und 5. Dann setzt du den Daumen auf das F über dem mittleren C, für F-Dur, und gehst zurück zu C.",
     },
     "g-triad-notes": {
       text: "Der G-Dur-Dreiklang steht auf der 5. Stufe der Tonleiter. Aus welchen Tönen besteht er?",
       answers: ["G, B und D", "G, H und D", "G, A und H", "F, A und C"],
     },
     "c-and-g": {
-      text: "Spiel C-Dur, dann setz den Daumen aufs G, für G-Dur, und geh zurück zu C.",
+      text: "Spiel C-Dur ab dem mittleren C, dann setz den Daumen auf das G über dem mittleren C, für G-Dur, und geh zurück zu C.",
     },
     "move-the-hand": {
       text: "Heb die ganze Hand von einem Akkord zum nächsten. Halte die Finger 1, 3 und 5 in ihrer Form, und lass den Daumen den neuen Grundton finden.",
     },
     "c-f-g-c": {
-      text: "Jetzt spielst du alle vier Akkorde: C, F, G und C. Lass dir Zeit dazwischen.",
+      text: "Spiel vier Akkorde mit der rechten Hand: C-E-G ab dem mittleren C, dann F-A-C, G-H-D und C-E-G. Lass dir Zeit dazwischen.",
     },
     "left-hand-chords": {
       text: "Die linke Hand spielt dieselben Akkorde tiefer, mit den Fingern 5, 3 und 1. Der fünfte Finger liegt auf dem Grundton.",
@@ -43,7 +43,7 @@ export const cFAndGDe: CFAndGTexts = {
       text: "Hier ist eine kleine Melodie über den drei Akkorden. Die linke Hand spielt die Akkorde, und die rechte Hand spielt zwei Töne darüber.",
     },
     tune: {
-      text: "Leg den rechten Daumen auf das G über dem mittleren C. Spiel jeden Akkord mit dem ersten Ton seines Takts, dann den zweiten Ton allein.",
+      text: "Leg den rechten Daumen auf das G über dem mittleren C. Spiel jeden Akkord mit dem ersten Ton seines Takts, dann den zweiten Ton allein. Der letzte Takt hat keinen zweiten Ton.",
     },
     recap: {
       text: "Gut gemacht. Du spielst die drei Hauptakkorde von C-Dur.",

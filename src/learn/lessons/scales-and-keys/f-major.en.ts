@@ -34,7 +34,7 @@ export const fMajorEn = {
       text: "Here is a short tune in F major. Your left hand holds the fifth F and C under it.",
     },
     "tune-and-fifth": {
-      text: "Your turn. Press the fifth with the first note of each bar, then play the tune on alone.",
+      text: "Your turn. Your left hand plays the low fifth: the C below middle C, and the F under it. Press the fifth with the first note of each bar, then play the tune on alone.",
     },
     recap: {
       text: "Well done. You can play in F major now.",

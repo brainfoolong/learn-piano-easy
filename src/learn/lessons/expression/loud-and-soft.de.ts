@@ -15,7 +15,7 @@ export const loudAndSoftDe: LoudAndSoftTexts = {
       answers: ["Die Taste länger halten", "Eine Taste weiter links drücken", "Die Taste schneller hinunterdrücken", "Eine schwarze Taste drücken"],
     },
     "play-softly": {
-      text: "Spiel C, D, E, F und G über dem mittleren C leise. Drück jede Taste sanft und langsam.",
+      text: "Spiel C, D, E, F und G ab dem mittleren C leise. Drück jede Taste sanft und langsam.",
     },
     "hear-softly": {
       text: "Hör dir C, D, E, F und G leise gespielt an. Jede Taste ging sanft und langsam hinunter.",

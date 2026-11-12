@@ -38,7 +38,7 @@ export const playingWithFeelingDe: PlayingWithFeelingTexts = {
       text: "Spiel die helle Melodie: mittleres C, E, G, das nächste C und wieder hinunter. Spiel sie kräftig und etwas kurz.",
     },
     "play-sad": {
-      text: "Jetzt die traurige Melodie: das A unter dem mittleren C, C, E, das A darüber und wieder hinunter. Spiel sie sanft und gebunden.",
+      text: "Spiel eine traurige Melodie: das A unter dem mittleren C, C, E, das A darüber und wieder hinunter. Spiel sie sanft und gebunden.",
     },
     "elise-demo": {
       text: "So beginnt der Endgegner, Für Elise. Das Stück steht in a-Moll und klingt leise über einem gebrochenen Akkord der linken Hand.",

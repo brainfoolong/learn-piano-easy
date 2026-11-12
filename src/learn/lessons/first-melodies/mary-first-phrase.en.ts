@@ -5,7 +5,7 @@ export const maryFirstPhraseEn = {
   title: "Mary's first phrase",
   steps: {
     "phrase-demo": {
-      text: "Listen to the first half of Mary Had a Little Lamb. It is made of steps and repeated notes, which you know already.",
+      text: "Listen to the first half of Mary Had a Little Lamb. It is made of steps, repeated notes and one skip, which you know already.",
     },
     "first-note-quiz": {
       text: "Which note does the tune start on?",
@@ -25,11 +25,11 @@ export const maryFirstPhraseEn = {
       text: "Now the next part: D three times, then E, then G twice. Your fingers go 2, 2, 2, then 3, 5, 5.",
     },
     "whole-phrase": {
-      text: "Put the two parts together. Play the whole first half without stopping.",
+      text: "Play the first phrase of Mary Had a Little Lamb with your right hand, thumb on middle C. Play E D C D E E E, D D D, E G G without stopping.",
     },
     recap: {
       text: "Well done. You played the first half of a real song.",
-      points: ["Steps and repeated notes make a tune.", "A tune is learned in small chunks, then put together.", "Finger numbers tell your hand where to go."],
+      points: ["Steps, repeated notes and one skip make this tune.", "A tune is learned in small chunks, then put together.", "Finger numbers tell your hand where to go."],
     },
   },
 } satisfies LessonTexts;

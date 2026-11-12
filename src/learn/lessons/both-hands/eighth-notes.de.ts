@@ -31,7 +31,7 @@ export const eighthNotesDe: EighthNotesTexts = {
       text: "Jetzt spielen beide Hände. Die linke Hand hält ein tiefes C. Darüber läuft die rechte Hand in Achteln zum G hinauf. Danach läuft sie zurück zum C.",
     },
     "eighth-phrase": {
-      text: "Leg beide Hände in die C-Lage. Drück das tiefe C mit dem linken kleinen Finger zusammen mit dem ersten C. Schlag es wieder an, wenn das G den Weg nach unten beginnt.",
+      text: "Leg beide Hände in die C-Lage. Die rechte Hand spielt C D E F G G F E D C, beginnend beim mittleren C. Drück das C unter dem mittleren C mit dem linken kleinen Finger zusammen mit dem ersten C. Drück es noch einmal zusammen mit dem zweiten G.",
     },
     recap: {
       text: "Gut gemacht. Deine Töne können jetzt doppelt so schnell laufen.",

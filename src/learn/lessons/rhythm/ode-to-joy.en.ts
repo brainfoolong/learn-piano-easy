@@ -8,7 +8,7 @@ export const odeToJoyEn = {
       text: "This world ends with a famous tune. Most of its notes are quarter notes, and a few last two beats. Count along as you play.",
     },
     song: {
-      text: "Play Ode to Joy with your right hand. Hold each long note for its two beats.",
+      text: "Play Ode to Joy with your right hand. Try to hold each long note for its two beats.",
     },
   },
 } satisfies LessonTexts;

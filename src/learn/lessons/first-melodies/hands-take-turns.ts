@@ -4,7 +4,7 @@
  *
  * A demo plays a call in the right hand and its echo in the left first. The learner then answers which
  * hand plays the low notes, hears a phrase and its echo, plays two short phrases that switch hands, and
- * ends on a longer phrase with three turns. The texts are `hands-take-turns.en.ts` and
+ * ends on a longer phrase with four turns. The texts are `hands-take-turns.en.ts` and
  * `hands-take-turns.de.ts` beside it.
  */
 import type { Lesson } from "../../model";

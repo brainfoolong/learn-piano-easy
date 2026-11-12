@@ -15,7 +15,7 @@ export const crescendoAndDiminuendoEn = {
       answers: ["Get softer bit by bit", "Get louder bit by bit", "Play faster", "Play the notes higher"],
     },
     "play-crescendo": {
-      text: "Play C, D, E, F and G above middle C as a crescendo. Press C, D and E gently and slowly, then F and G quickly and firmly.",
+      text: "Play C, D, E, F and G as a crescendo, starting on middle C. Press C, D and E gently and slowly, then F and G quickly and firmly.",
     },
     "hear-crescendo": {
       text: "Listen to C, D, E, F and G played as a crescendo. Each key goes down a little faster than the one before.",

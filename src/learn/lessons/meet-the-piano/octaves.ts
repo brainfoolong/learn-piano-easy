@@ -1,6 +1,6 @@
 /**
- * *Octaves*, a lesson of *Meet the piano*: the same letter comes back every eight white keys, and that
- * distance is an octave. Two notes an octave apart sound alike, and one is higher.
+ * *Octaves*, a lesson of *Meet the piano*: the same letter comes back on the eighth white key, counting
+ * the first, and that distance is an octave. Two notes an octave apart sound alike, and one is higher.
  *
  * It follows *The white keys* and leads to *Sitting at the piano*. The texts are `octaves.en.ts` and
  * `octaves.de.ts` beside it.

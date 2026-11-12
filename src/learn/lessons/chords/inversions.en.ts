@@ -11,7 +11,7 @@ export const inversionsEn = {
       text: "C-E-G with C at the bottom is the root position. An inversion plays the same three notes in another order. It is still C major.",
     },
     "root-position": {
-      text: "Play C major in root position: C, E and G above middle C, all together. Use fingers 1, 3 and 5.",
+      text: "Play C major in root position: C, E and G from middle C, all together. Use fingers 1, 3 and 5.",
     },
     "first-inversion": {
       text: "Now move the bottom note up an octave. C-E-G becomes E-G-C. This is the first inversion.",

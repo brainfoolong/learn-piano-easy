@@ -40,7 +40,7 @@ export const whatAChordIsEn = {
       answers: ["D, E and F", "D, G and A", "D, F and A"],
     },
     "triads-up": {
-      text: "Keep the shape of your hand. Play the triad on C, then move up to D and to E. End on C again.",
+      text: "Keep the shape of your right hand. Play C-E-G from middle C, then move up to D-F-A and E-G-B, all on white keys. End on C-E-G.",
     },
     recap: {
       text: "Well done. You play your first chords.",

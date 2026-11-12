@@ -25,7 +25,7 @@ export const skipsDe: SkipsTexts = {
       answers: ["Ein Schritt", "Ein Sprung"],
     },
     "mixed-phrase": {
-      text: "In dieser Melodie wechseln sich Schritte und Sprünge ab. Achte darauf, wann ein Finger ausruht.",
+      text: "Leg den rechten Daumen auf das mittlere C und je einen Finger auf die Tasten daneben. Diese Melodie mischt Schritte und einen Sprung: C D E, ein Sprung hinauf zum G, dann F E D C.",
     },
     recap: {
       text: "Gut gemacht. Jetzt kannst du Sprünge spielen.",

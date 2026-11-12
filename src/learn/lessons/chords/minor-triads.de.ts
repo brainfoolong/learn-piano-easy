@@ -33,7 +33,7 @@ export const minorTriadsDe: MinorTriadsTexts = {
       text: "Leg den Daumen auf das A unter dem mittleren C. Spiel zweimal a-Moll: A, C und E zusammen.",
     },
     "d-and-e-minor": {
-      text: "Jetzt wandert deine Hand. Spiel d-Moll ab dem D über dem mittleren C, dann e-Moll eine Taste höher, dann wieder d-Moll.",
+      text: "Jetzt wandert deine Hand. Spiel d-Moll ab dem D über dem mittleren C, dann e-Moll eine weiße Taste höher, dann wieder d-Moll.",
     },
     "g-major-to-minor": {
       text: "G-Dur ist G, H und D. Welchen Ton senkst du für g-Moll?",

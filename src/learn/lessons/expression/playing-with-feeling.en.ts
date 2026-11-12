@@ -38,7 +38,7 @@ export const playingWithFeelingEn = {
       text: "Play the bright tune: middle C, E, G, the next C, and back down. Play it firmly and a little short.",
     },
     "play-sad": {
-      text: "Now the sad tune: the A below middle C, C, E, the A above, and back down. Play it gently and join the notes.",
+      text: "Play a sad tune: the A below middle C, C, E, the A above, and back down. Play it gently and join the notes.",
     },
     "elise-demo": {
       text: "This is how the boss, Für Elise, begins. It is in A minor, played softly over a broken chord in the left hand.",

@@ -37,7 +37,7 @@ export const majorTriadsDe: MajorTriadsTexts = {
       text: "D-Dur braucht also eine schwarze Taste. Such das Fis, die schwarze Taste direkt rechts neben dem F.",
     },
     "d-major-triad": {
-      text: "Leg den Daumen auf das D, dann liegt der dritte Finger auf dem Fis. Spiel D, Fis und A einzeln und dann zusammen.",
+      text: "Leg den rechten Daumen auf das D über dem mittleren C, dann liegt der dritte Finger auf dem Fis. Spiel D, Fis und A einzeln und dann zusammen.",
     },
     "left-hand-fingers": {
       text: "Die linke Hand spielt einen Dreiklang mit den Fingern 5, 3 und 1. Der fünfte Finger spielt den Grundton, der Daumen die oberste Taste.",

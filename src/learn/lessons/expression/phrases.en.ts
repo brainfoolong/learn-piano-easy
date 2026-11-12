@@ -45,7 +45,7 @@ export const phrasesEn = {
       answers: ["On its first note", "On its last note", "Near its middle or its highest note", "Nowhere, it stays the same"],
     },
     "shape-both-phrases": {
-      text: "Play both phrases again with a breath between them. Grow a little louder towards each G, and softer towards each end.",
+      text: "With your right hand, play two phrases starting on middle C, with a breath between them. First play C D E F G, E F E D, E D. Then play C D E F G, E F E D, D C. Your ears judge the shape: grow a little louder towards each G, and softer towards each end.",
     },
     "when-to-breathe": {
       text: "When do you lift your hand for a breath?",

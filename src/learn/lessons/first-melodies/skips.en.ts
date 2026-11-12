@@ -25,7 +25,7 @@ export const skipsEn = {
       answers: ["A step", "A skip"],
     },
     "mixed-phrase": {
-      text: "This tune mixes steps and skips. Watch for the moments where a finger rests.",
+      text: "Put your right thumb on middle C, one finger on each key. This tune mixes steps and a skip: C D E, a skip up to G, then F E D C.",
     },
     recap: {
       text: "Well done. You can play skips now.",

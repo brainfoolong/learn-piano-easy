@@ -24,7 +24,7 @@ export const gMajorDe: GMajorTexts = {
       text: "Die rechte Hand spielt G-Dur wie C-Dur. Die Finger 1, 2 und 3 spielen G, A und H. Nach dem Daumenuntersatz aufs C spielen 1, 2, 3, 4, 5 dann C, D, E, Fis und G.",
     },
     "g-scale-up": {
-      text: "Jetzt du. Leg den rechten Daumen auf das G über dem mittleren C und spiel die Tonleiter aufwärts. Der vierte Finger spielt das Fis.",
+      text: "Jetzt du. Leg den rechten Daumen auf das G über dem mittleren C und spiel die G-Dur-Tonleiter aufwärts bis zum nächsten G. Der vierte Finger spielt das Fis.",
     },
     "g-scale-down": {
       text: "Jetzt spielst du sie abwärts, vom hohen G bis zum G. Der dritte Finger setzt über den Daumen aufs H.",
@@ -36,7 +36,7 @@ export const gMajorDe: GMajorTexts = {
       text: "Hier ist eine kleine Melodie in G-Dur. Die linke Hand hält die Quinte G und D, und die rechte Hand spielt Fis.",
     },
     "g-tune": {
-      text: "Leg den rechten Daumen auf das D über dem mittleren C, dann liegt der dritte Finger auf dem Fis. Spiel die Quinte G und D mit dem ersten G und noch einmal mit dem zweiten.",
+      text: "Leg den rechten Daumen auf das D über dem mittleren C, dann liegt der dritte Finger auf dem Fis. Die linke Hand spielt die tiefe Quinte: das G unterhalb des C, das unter dem mittleren C liegt, und das D darüber. Spiel die Quinte mit dem ersten G und noch einmal mit dem zweiten.",
     },
     recap: {
       text: "Gut gemacht. Du spielst deine zweite Tonleiter.",

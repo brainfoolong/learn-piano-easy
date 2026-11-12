@@ -45,7 +45,7 @@ export const phrasesDe: PhrasesTexts = {
       answers: ["Auf ihrem ersten Ton", "Auf ihrem letzten Ton", "In ihrer Mitte oder auf ihrem höchsten Ton", "Nirgends, sie bleibt gleich laut"],
     },
     "shape-both-phrases": {
-      text: "Spiel beide Phrasen noch einmal, mit einem Atemzug dazwischen. Werde zu jedem G hin etwas lauter und zu jedem Ende hin leiser.",
+      text: "Spiel mit der rechten Hand zwei Phrasen ab dem mittleren C, mit einem Atemzug dazwischen. Zuerst C D E F G, E F E D, E D. Dann C D E F G, E F E D, D C. Ob die Form stimmt, hören deine Ohren: Werde zu jedem G hin etwas lauter und zu jedem Ende hin leiser.",
     },
     "when-to-breathe": {
       text: "Wann hebst du die Hand für einen Atemzug?",

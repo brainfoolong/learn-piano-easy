@@ -5,7 +5,7 @@ export const dottedRhythmEn = {
   title: "The dotted rhythm",
   steps: {
     "even-and-dotted-demo": {
-      text: "Listen to the same notes twice. First they are even quarter notes. Then the first E grows longer, and the D after it gets quicker.",
+      text: "Listen to E and D in two rhythms. First come even quarter notes: E E D D. Then a long E is followed by a quick D, and a longer D ends it.",
     },
     "what-a-dot-does": {
       text: "That long note had a dot after it. A dot adds half of the note's own length. So a dotted note lasts one and a half times as long.",

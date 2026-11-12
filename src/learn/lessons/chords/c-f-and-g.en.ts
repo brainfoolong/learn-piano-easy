@@ -18,20 +18,20 @@ export const cFAndGEn = {
       text: "The F triad is F, A and C. It is a major triad, like C major, so your fingers keep the same shape.",
     },
     "c-and-f": {
-      text: "Your turn. Play C major from middle C with fingers 1, 3 and 5. Then move your thumb to F for the F triad, and go back to C.",
+      text: "Your turn. Play C major from middle C with fingers 1, 3 and 5. Then move your thumb to the F above middle C for the F triad, and go back to C.",
     },
     "g-triad-notes": {
       text: "The G triad stands on the 5th step of the scale. Which notes make it?",
       answers: ["G, B♭ and D", "G, B and D", "G, A and B", "F, A and C"],
     },
     "c-and-g": {
-      text: "Play C major, then move your thumb to G for the G triad, and go back to C.",
+      text: "Play C major from middle C, then move your thumb to the G above middle C for the G triad, and go back to C.",
     },
     "move-the-hand": {
       text: "Lift the whole hand from one chord to the next. Keep fingers 1, 3 and 5 in their shape, and let the thumb find the new root.",
     },
     "c-f-g-c": {
-      text: "Now play all four chords: C, F, G and C. Take your time between them.",
+      text: "Play four chords with your right hand: C-E-G from middle C, then F-A-C, G-B-D and C-E-G. Take your time between them.",
     },
     "left-hand-chords": {
       text: "Your left hand plays the same chords lower, with fingers 5, 3 and 1. Finger 5 sits on the root.",
@@ -43,7 +43,7 @@ export const cFAndGEn = {
       text: "Here is a short tune over the three chords. Your left hand plays each chord, and your right hand plays two notes above it.",
     },
     tune: {
-      text: "Put your right thumb on the G above middle C. Play each chord with the first note of its bar, then the second note alone.",
+      text: "Put your right thumb on the G above middle C. Play each chord with the first note of its bar, then the second note alone. The last bar has no second note.",
     },
     recap: {
       text: "Well done. You play the three main chords of C major.",

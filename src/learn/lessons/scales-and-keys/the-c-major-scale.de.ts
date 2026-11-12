@@ -34,7 +34,7 @@ export const theCMajorScaleDe: TheCMajorScaleTexts = {
       text: "Dein Daumen liegt jetzt auf dem F. Spiel F, G, A, H und C mit den Fingern 1, 2, 3, 4 und 5.",
     },
     "scale-up": {
-      text: "Jetzt spielst du die ganze Tonleiter aufwärts. Finger 1, 2, 3, dann der Daumenuntersatz, dann 1, 2, 3, 4, 5.",
+      text: "Spiel die C-Dur-Tonleiter mit der rechten Hand aufwärts, vom mittleren C bis zum nächsten C. Finger 1, 2, 3, dann der Daumenuntersatz, dann 1, 2, 3, 4, 5.",
     },
     "scale-down": {
       text: "Jetzt geht es abwärts mit den Fingern 5, 4, 3, 2, 1. Nach dem F greift der dritte Finger über den Daumen auf das E.",

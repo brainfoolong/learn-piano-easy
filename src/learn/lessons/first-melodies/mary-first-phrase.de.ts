@@ -5,7 +5,7 @@ export const maryFirstPhraseDe: MaryFirstPhraseTexts = {
   title: "Marys erste Phrase",
   steps: {
     "phrase-demo": {
-      text: "Hör dir die erste Hälfte von „Mary Had a Little Lamb“ an. Sie besteht nur aus Schritten und wiederholten Tönen, und die kennst du schon.",
+      text: "Hör dir die erste Hälfte von „Mary Had a Little Lamb“ an. Sie besteht aus Schritten, wiederholten Tönen und einem Sprung, und die kennst du schon.",
     },
     "first-note-quiz": {
       text: "Mit welchem Ton fängt die Melodie an?",
@@ -25,11 +25,11 @@ export const maryFirstPhraseDe: MaryFirstPhraseTexts = {
       text: "Jetzt das nächste Stück: dreimal D, dann E und zweimal G. Deine Finger sind 2, 2, 2 und dann 3, 5, 5.",
     },
     "whole-phrase": {
-      text: "Setz beide Stücke zusammen. Spiel die ganze erste Hälfte ohne Pause.",
+      text: "Spiel die erste Phrase von „Mary Had a Little Lamb“ mit der rechten Hand, den Daumen auf dem mittleren C. Spiel E D C D E E E, D D D, E G G ohne Pause.",
     },
     recap: {
       text: "Super! Du hast die erste Hälfte eines echten Lieds gespielt.",
-      points: ["Schritte und wiederholte Töne ergeben eine Melodie.", "Eine Melodie lernst du in kleinen Stücken und setzt sie dann zusammen.", "Die Fingernummern zeigen deiner Hand den Weg."],
+      points: ["Schritte, wiederholte Töne und ein Sprung ergeben diese Melodie.", "Eine Melodie lernst du in kleinen Stücken und setzt sie dann zusammen.", "Die Fingernummern zeigen deiner Hand den Weg."],
     },
   },
 };

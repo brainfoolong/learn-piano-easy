@@ -24,7 +24,7 @@ export const gMajorEn = {
       text: "Your right hand plays G major like C major. Fingers 1, 2 and 3 play G, A and B. The thumb goes under to C, then 1, 2, 3, 4, 5 play C, D, E, F♯ and G.",
     },
     "g-scale-up": {
-      text: "Your turn. Put your right thumb on the G above middle C, and play the scale up. Finger 4 plays F♯.",
+      text: "Your turn. Put your right thumb on the G above middle C, and play the G major scale up to the next G. Finger 4 plays F♯.",
     },
     "g-scale-down": {
       text: "Now play it down, from the high G to G. Finger 3 crosses over the thumb onto B.",
@@ -36,7 +36,7 @@ export const gMajorEn = {
       text: "Here is a short tune in G major. Your left hand holds the fifth G and D, and your right hand plays F♯.",
     },
     "g-tune": {
-      text: "Put your right thumb on the D above middle C, so finger 3 rests on F♯. Play the fifth G and D with the first G, and again with the second.",
+      text: "Put your right thumb on the D above middle C, so finger 3 rests on F♯. Your left hand plays the low fifth: the G below the C under middle C, and the D above it. Play the fifth with the first G, and again with the second.",
     },
     recap: {
       text: "Well done. You play your second scale.",

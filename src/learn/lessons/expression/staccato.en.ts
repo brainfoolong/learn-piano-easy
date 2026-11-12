@@ -38,7 +38,7 @@ export const staccatoEn = {
       text: "Music often mixes the two. A slur joins some notes, and dots make others short.",
     },
     "mixed-phrase": {
-      text: "Play C, D, E, F and G legato under a slur. Then bounce three short Gs.",
+      text: "Play C, D, E, F and G legato under a slur, starting on middle C. Then bounce three more short Gs.",
     },
     "dot-above-quiz": {
       text: "A note has a small dot above it. How do you play it?",

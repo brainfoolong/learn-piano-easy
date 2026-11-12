@@ -45,7 +45,7 @@ export const slowingDownEn = {
       answers: ["On the very first note", "In every bar", "Near the end of a piece", "Only in the left hand"],
     },
     "ending-with-fermata": {
-      text: "Play E, D, C, D, E, E from the E above middle C, slowing as you go. End on a chord: C and G in your left hand, E in your right. Hold it under its fermata.",
+      text: "Play E, D, C, D, E, E from the E above middle C, slowing as you go. End on a chord: the C below middle C and the G above it in your left hand, with the same E in your right. Let the chord ring a little longer, as a fermata asks.",
     },
     "rall-means": {
       text: "Some pieces write rall., short for rallentando, instead. Which mark means the same?",

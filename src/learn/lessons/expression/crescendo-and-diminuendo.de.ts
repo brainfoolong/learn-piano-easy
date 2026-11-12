@@ -15,7 +15,7 @@ export const crescendoAndDiminuendoDe: CrescendoAndDiminuendoTexts = {
       answers: ["Nach und nach leiser werden", "Nach und nach lauter werden", "Schneller spielen", "Die Töne höher spielen"],
     },
     "play-crescendo": {
-      text: "Spiel C, D, E, F und G über dem mittleren C als Crescendo. Drück C, D und E sanft und langsam, dann F und G schnell und kräftig.",
+      text: "Spiel C, D, E, F und G ab dem mittleren C als Crescendo. Drück C, D und E sanft und langsam, dann F und G schnell und kräftig.",
     },
     "hear-crescendo": {
       text: "Hör dir C, D, E, F und G als Crescendo an. Jede Taste geht ein wenig schneller hinunter als die davor.",
