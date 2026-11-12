@@ -2,7 +2,7 @@ import { InputBus } from "../../input/input-bus";
 import { expect, test } from "../../testing";
 import { inputHas, stepsToRun } from "../lesson-run";
 import { lessonProblems, LOUD_FROM, type Step, type Touch } from "../model";
-import { findsKey } from "./find-key";
+import { FIND_KEY_RANGE, findKeyRange, findsKey } from "./find-key";
 import { HINT_AFTER, judgeChoice, passesRound, scoreOf, showsHint } from "./judge";
 import { compareNotes } from "./listen";
 import { expressionMiss, playNote } from "./play-notes";
@@ -19,6 +19,18 @@ test("find_key_passes_on_the_asked_key_only", () => {
   expect([36, 48, 60, 72, 84].every((pitch) => findsKey(anyC, pitch))).toBe(true);
   expect(findsKey(anyC, 59)).toBe(false);
   expect(findsKey(anyC, 62)).toBe(false);
+});
+
+test("find_key_shows_the_same_keys_centred_on_middle_c", () => {
+  const whitesBetween = (from: number, to: number) => [...Array(to - from - 1).keys()].map((i) => from + 1 + i).filter((p) => ![1, 3, 6, 8, 10].includes(p % 12)).length;
+  for (const key of [48, 55, 60, 63, 72, 76]) {
+    expect(findKeyRange(key)).toEqual(FIND_KEY_RANGE);
+    const { first, last } = findKeyRange(key);
+    expect(whitesBetween(first - 1, 60)).toBe(whitesBetween(60, last + 1));
+  }
+  const low = findKeyRange(30);
+  expect(low.first <= 30 && low.last >= 30).toBe(true);
+  expect(whitesBetween(low.first - 1, 60)).toBe(whitesBetween(60, low.last + 1));
 });
 
 test("play_notes_judges_each_note_in_order", () => {

@@ -144,6 +144,37 @@ test("a_timed_key_runs_out_and_marks_the_key", async ({ page }) => {
   await expect(page.getByText(t.findKey.hint, { exact: true })).toBeVisible();
 });
 
+test("every_find_key_step_shows_middle_c_in_the_middle_so_the_c_left_of_it_passes", async ({ page }) => {
+  const t = messagesOf("en").lesson;
+  const entry = (await courseLessons()).find(({ lesson }) => lesson.id === "find-c");
+  if (entry === undefined) throw new Error("The course has no lesson find-c.");
+  const steps = stepsToRun(entry.lesson.steps, inputHas(false));
+  const low = steps.findIndex((step) => step.id === "find-low-c");
+  // F2 to G5: the keys of every find-key step. The step's module loads a stylesheet, so Node cannot import its constant.
+  const range = [41, 79];
+  const shown = () => stage(page).locator(".keyboard__key").evaluateAll((keys) => keys.map((key) => Number(key.getAttribute("data-pitch"))));
+  const errors = watchErrors(page);
+  await page.goto(lessonPath(entry, "en"));
+  for (const [index, step] of steps.slice(0, low).entries()) {
+    await onStep(page, index);
+    if (step.kind === "find-key") {
+      const pitches = await shown();
+      expect([Math.min(...pitches), Math.max(...pitches)]).toEqual(range);
+    }
+    for (const move of solutionOf(step)) await playMove(page, move, "en");
+    await page.locator(".lesson__band").getByRole("button", { name: t.band.continue }).click();
+  }
+  await onStep(page, low);
+  const pitches = await shown();
+  expect([Math.min(...pitches), Math.max(...pitches)]).toEqual(range);
+  expect(pitches.filter((pitch) => pitch % 12 === 0).sort((a, b) => a - b)).toEqual([48, 60, 72]);
+  await playMove(page, { do: "play", notes: [60] }, "en");
+  await expect(page.getByText(t.findKey.wrong, { exact: true })).toBeVisible();
+  await playMove(page, { do: "play", notes: [48] }, "en");
+  await expect(page.locator(".lesson__band").getByRole("button", { name: t.band.continue })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
 test("leaving_a_lesson_asks_first", async ({ page }) => {
   const t = messagesOf("en").lesson;
   const [entry] = await courseLessons();

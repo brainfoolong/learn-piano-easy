@@ -1,8 +1,10 @@
 /**
  * The `find-key` step: the learner presses the key the step's text names, on any input.
  *
- * - **The keys are the step's own two octaves,** from the C an octave below the asked key's C. They
- *   carry no names, since finding the key is the skill.
+ * - **Every step shows the same keys, centred on middle C,** as `findKeyRange` says. A window that
+ *   followed the asked key would put the answer in the same place every time, and "the C left of
+ *   middle C" could not be read from the screen. The keys carry no names, since finding the key is
+ *   the skill.
  * - **A wrong key never fails.** It is marked a mistake until the next press, and the band says try
  *   again. After `HINT_AFTER` mistakes the asked key is marked as the one to play.
  * - **The right key passes,** with `anyOctave` letting the same note in any octave count.
@@ -17,7 +19,7 @@
 import { messagesOf } from "../../i18n/locale";
 import type { KeyRange } from "../../render/key-layout";
 import { el } from "../../ui/dom";
-import type { FindKeyStep } from "../model";
+import { type FindKeyStep, HIGHEST_NOTE, LOWEST_NOTE } from "../model";
 import { scoreOf, showsHint } from "./judge";
 import { listeningKeys } from "./keys";
 import type { StepView } from "./step";
@@ -30,10 +32,20 @@ export function findsKey(step: Pick<FindKeyStep, "key" | "anyOctave">, pitch: nu
   return step.anyOctave ? (pitch - step.key) % 12 === 0 : pitch === step.key;
 }
 
-/** The keys a find-key step for `key` shows: two octaves and a third, from the C an octave below. */
+/** The keys every find-key step shows when its key is on them: F2 to G5, with middle C the middle white key. */
+export const FIND_KEY_RANGE: KeyRange = { first: 41, last: 79 };
+
+/**
+ * The keys a find-key step for `key` shows: `FIND_KEY_RANGE`, an octave wider on each side while `key`
+ * is off it. Middle C stays the middle key, so a text that names it or a C beside it holds on screen.
+ */
 export function findKeyRange(key: number): KeyRange {
-  const first = Math.floor(key / 12) * 12 - 12;
-  return { first, last: first + 28 };
+  let { first, last } = FIND_KEY_RANGE;
+  while (key < first || key > last) {
+    first -= 12;
+    last += 12;
+  }
+  return { first: Math.max(LOWEST_NOTE, first), last: Math.min(HIGHEST_NOTE, last) };
 }
 
 export const findKeyStep: StepView<FindKeyStep> = (element, step, host) => {
