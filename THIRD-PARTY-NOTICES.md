@@ -61,6 +61,12 @@ maintainer made with Google Gemini. They are under the MIT License too.
 The social pictures in `public/images/social/` are drawn by `tools/make-social-image.ts`. They are
 under the MIT License, and their text is set in Plus Jakarta Sans, under the SIL Open Font License 1.1.
 
+## Models
+
+The mascot's hand in `public/models/` starts from the human base mesh, rig and weights of MakeHuman,
+which are under CC0 1.0. `tools/hand-model.ts` builds it with MakeHuman's MPFB extension for Blender,
+whose GPL code never ships with the app. Our changes to the model are under the MIT License.
+
 ## Sounds
 
 The piano samples come from the sample set below, and its license binds every copy of the app that
