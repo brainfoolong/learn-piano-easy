@@ -17,9 +17,10 @@
  *   and `fitFrame` widens the camera's frame to a box of any other shape, so a key never stretches.
  * - **Reconfigured, never rebuilt.** `show` takes new options and drops the last ones' subscriptions. A
  *   new range lays the piano out again and reframes the camera in the same WebGL context.
- * - **A mark tints its key** through the piano's incoming tint, in the token colour `MARK_TOKENS` names.
- *   The colours are read from the page's CSS at the next frame, and again when the site's theme or the
- *   colour scheme changes. A held key presses in the player's default input colours, over any tint.
+ * - **A mark tints its key** through the piano's incoming tint, in the token colour `MARK_TOKENS` names,
+ *   by the share `MARK_STRENGTH` gives it. That share is far above the player's, so each mark reads in
+ *   both themes. The colours are read from the page's CSS at the next frame, and again when the site's
+ *   theme or the colour scheme changes. A held key presses in the player's input colours, over any tint.
  * - **Names** are the player's key labels, from `keyNameText` or from `nameOf`: `c` names every C and
  *   `white` every white key, with the octave on C only. **A finger** is a digit in a ring of its key's
  *   mark colour, just behind its key's front. **The reach** is a thin bar on the case's front rail. All
@@ -30,7 +31,9 @@
  *   or a key's spring or flash. A still view costs no render. The pixel ratio is capped at 2.
  * - **The key map** is an `aria-hidden` layer of one empty span per key, over its key's top face. It is
  *   the test seam: each span carries `data-pitch` and mirrors `data-mark`, `data-held` and `data-finger`.
- *   A span's place is a share of the frame, set on a new range. A resize moves only the layer.
+ *   A span's place is a share of the frame, set on a new range. A resize moves only the layer. The view
+ *   carries the range as `data-first` and `data-last`. While the bar shows, it carries the whole reach
+ *   as `data-reach-first` and `data-reach-last`, even where the bar stops at the shown keys' edge.
  * - **Screen readers** hear a group named by `label`, and a polite live text naming each marked key.
  * - **Without WebGL** the view shows the catalog's `ui.pianoKeys.noWebgl` where the canvas would be. The
  *   key map, its attributes and the live text still follow the options.
@@ -111,8 +114,14 @@ export interface PianoKeys {
   dispose(): void;
 }
 
-/** The CSS token whose colour each mark takes. */
-export const MARK_TOKENS: Readonly<Record<Mark, string>> = { next: "--c-brand", correct: "--c-success", mistake: "--c-mistake" };
+/**
+ * The CSS token whose colour each mark takes. A right key takes the vivid green, which fills shapes,
+ * since the light theme's text green is too dark to read as green on a key.
+ */
+export const MARK_TOKENS: Readonly<Record<Mark, string>> = { next: "--c-brand", correct: "--c-success-vivid", mistake: "--c-mistake" };
+
+/** How much of its colour each mark gives its key. A weak tint reads as grey on a white key. */
+export const MARK_STRENGTH: Readonly<Record<Mark, number>> = { next: 0.75, correct: 0.8, mistake: 0.85 };
 
 /** Each mark's colour, as `read` gives the colour of a CSS token. */
 export function markColors(read: (token: string) => string): Record<Mark, string> {
@@ -339,7 +348,7 @@ export function pianoKeys(): PianoKeys {
 
   const scene = new Scene();
   scene.add(...pianoLights());
-  const piano = createPiano({ range: FULL_RANGE, flare: false });
+  const piano = createPiano({ range: FULL_RANGE, flare: false, incomingTint: 1 });
   const labels = createLabelLayer();
   const rings = new Group();
   const ringMap = ringTexture();
@@ -496,7 +505,7 @@ export function pianoKeys(): PianoKeys {
     if (marksStale) {
       marksStale = false;
       piano.clearIncoming();
-      for (const [pitch, mark] of marks) piano.markIncoming(pitch, colors[mark], 1);
+      for (const [pitch, mark] of marks) piano.markIncoming(pitch, colors[mark], MARK_STRENGTH[mark]);
     }
     if (labelsStale) {
       labelsStale = false;
@@ -535,12 +544,12 @@ export function pianoKeys(): PianoKeys {
   const placeReach = () => {
     const span = reach === undefined ? undefined : reachSpan(piano.layout, reach);
     reachBar.visible = span !== undefined;
-    if (span === undefined) {
+    if (reach === undefined || span === undefined) {
       delete element.dataset.reachFirst;
       delete element.dataset.reachLast;
     } else {
-      element.dataset.reachFirst = String(span.first);
-      element.dataset.reachLast = String(span.last);
+      element.dataset.reachFirst = String(reach.first);
+      element.dataset.reachLast = String(reach.last);
       reachBar.scale.x = Math.max(0.01, span.width - 2 * REACH_INSET);
       reachBar.position.set(span.x + span.width / 2 - piano.layout.width / 2, REACH_Y, reachZ);
     }

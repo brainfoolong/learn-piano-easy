@@ -15,12 +15,16 @@
  *   computer keyboard by octaves to reach them, and every step starts unshifted.
  * - **A step's view only shows what its judge decided.** A step's judge is a pure function, which its
  *   unit tests call without a browser.
+ * - **A lesson has one piano view,** `piano`, which the host makes the first time a step reads it. A step
+ *   shows its keys on it and puts its element in its own tree, so the lesson holds one WebGL context.
+ *   The host frees the view when the lesson ends or hides.
  * - **A step's solution is in `src/learn/steps/solution.ts`,** pure, never in the step's view module.
  *   The e2e test imports it in Node, where a view module's stylesheet cannot load.
  */
 import type { Locale } from "../../i18n/locale";
 import type { InputBus } from "../../input/input-bus";
 import type { KeyRange } from "../../render/key-layout";
+import type { PianoKeys } from "../../render/piano-keys";
 import type { Signal } from "../../ui/signal";
 import type { LessonSound } from "../lesson-sound";
 import type { Step, StepTexts } from "../model";
@@ -43,6 +47,8 @@ export interface StepHost {
   input: InputBus;
   /** The lesson's sound, which plays a phrase or a key. */
   sound: LessonSound;
+  /** The lesson's piano view, made on the first read and shared by every step. A step that shows no keys never reads it. */
+  readonly piano: PianoKeys;
   /**
    * Shifts the computer keyboard by whole octaves so it reaches the most of `notes`, until the next step
    * mounts. Returns the keys it reaches, undefined while a MIDI keyboard is on.

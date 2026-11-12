@@ -16,7 +16,7 @@
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { expect, type Page } from "@playwright/test";
+import { expect, type Locator, type Page } from "@playwright/test";
 import { messagesOf, type Locale } from "../src/i18n/locale";
 import { DEFAULT_KEYS, keysOf } from "../src/input/keyboard";
 import { momentsOf, requiredNotes, type Hands } from "../src/input/wait-mode";
@@ -98,12 +98,20 @@ export async function onStep(page: Page, index: number): Promise<void> {
   await expect(page.locator(".lesson__progress")).toHaveAttribute("aria-valuenow", String(index + 1));
 }
 
-/** Presses the on-screen key of `pitch` near its bottom edge. */
-async function pressKey(page: Page, pitch: number): Promise<void> {
-  const key = stage(page).locator(`.keyboard__key[data-pitch="${pitch}"]`);
+/**
+ * Clicks the centre of `key`, a span of the 3D piano view's key map, which plays its key. The span takes
+ * no pointer, so the mouse clicks the canvas under it.
+ */
+export async function clickKey(page: Page, key: Locator): Promise<void> {
+  await key.scrollIntoViewIfNeeded();
   const box = await key.boundingBox();
-  if (box === null) throw new Error(`The step shows no key ${pitch}.`);
-  await key.click({ position: { x: box.width / 2, y: box.height * 0.9 } });
+  if (box === null) throw new Error("The piano shows no such key.");
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+}
+
+/** Presses the on-screen key of `pitch` on the step's piano. */
+async function pressKey(page: Page, pitch: number): Promise<void> {
+  await clickKey(page, stage(page).locator(`.piano-keys__key[data-pitch="${pitch}"]`));
 }
 
 /**

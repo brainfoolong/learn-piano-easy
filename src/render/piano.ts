@@ -82,6 +82,8 @@ export interface PianoOptions {
   flare?: boolean;
   /** How incoming notes mark their keys. A tint by default. */
   incomingStyle?: IncomingStyle;
+  /** How much of its colour an incoming note gives its key at full strength, from 0 to 1. `INCOMING_TINT` by default. */
+  incomingTint?: number;
 }
 
 export interface Piano {
@@ -135,6 +137,7 @@ export function createPiano(options: PianoOptions = {}): Piano {
   const materials = keyMaterials(options);
   const flareOn = options.flare ?? true;
   const incomingStyle = options.incomingStyle ?? "tint";
+  const incomingTint = options.incomingTint ?? INCOMING_TINT;
   const flareTexture = flareOn ? radialGlowTexture() : undefined;
   const dotGeometry = new CircleGeometry(0.15, 20).rotateX(-Math.PI / 2);
   const caseMat = emitsInGlow(caseMaterial());
@@ -237,7 +240,7 @@ export function createPiano(options: PianoOptions = {}): Piano {
     }
 
     const color = key.material.color.copy(key.base);
-    if (incomingStyle === "tint" && key.incoming > 0) color.lerp(key.incomingColor, key.incoming * INCOMING_TINT);
+    if (incomingStyle === "tint" && key.incoming > 0) color.lerp(key.incomingColor, key.incoming * incomingTint);
     if (key.pressed) color.lerp(key.color, PRESS_TINT);
     key.material.emissive.copy(key.color);
     key.material.emissiveIntensity = key.pressed ? 0.15 + 0.85 * key.flash : 0.6 * key.flash;

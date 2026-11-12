@@ -38,6 +38,9 @@
  *   than the keys aims them at its next entry through `aimKeys`, and they move only when that entry
  *   is out of reach. The reach is marked
  *   under the step's keys while no MIDI keyboard is on, and follows the MIDI state as it changes.
+ * - **The steps share one piano view,** the 3D piano of `pianoKeys`, made when a step first shows keys
+ *   and freed when the lesson ends or hides. A lesson then holds one WebGL context, and one without keys
+ *   holds none. The view's chunk is imported statically, since the service worker precaches it.
  * - **A song step moves to the player and back** through `songHandoff` of `src/learn/song-handoff.ts`.
  *   The lesson keeps its step while the song is out, and moves back once the player ends the request.
  *   Shown again by Back or a link meanwhile, it ends the request without a take. The way back is a new
@@ -47,6 +50,7 @@ import "./lesson-view.css";
 import { messagesOf, type Locale } from "../i18n/locale";
 import { attachKeyboard, keyReach, octaveShift } from "../input/keyboard";
 import type { KeyRange } from "../render/key-layout";
+import { type PianoKeys, pianoKeys } from "../render/piano-keys";
 import { inputService } from "../site/services";
 import { lessonRoute, pageOf } from "../site/routes";
 import { hrefOf } from "../site/site-bar";
@@ -121,6 +125,12 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
   let mounted: MountedStep | undefined;
   let passed: StepResult | undefined;
   let showing = false;
+  /** The piano view the steps share, made when a step first shows keys. */
+  let piano: PianoKeys | undefined;
+  const freePiano = () => {
+    piano?.dispose();
+    piano = undefined;
+  };
 
   const setBand = (tone: "idle" | "right" | "try-again" | "ready", text: string) => {
     band.dataset.tone = tone;
@@ -183,6 +193,10 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
       texts,
       input: inputService(context.settings).bus,
       sound,
+      get piano() {
+        piano ??= pianoKeys();
+        return piano;
+      },
       reachKeys: (notes) => {
         asked = { notes, reach: signal<KeyRange | undefined>(undefined) };
         fitKeys();
@@ -247,6 +261,7 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
     mounted?.dispose();
     mounted = undefined;
     unshift();
+    freePiano();
     if (phase === "running" || phase === "ended") phase = "idle";
   };
 
@@ -254,6 +269,7 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
     mounted?.dispose();
     mounted = undefined;
     unshift();
+    freePiano();
     phase = "ended";
     const stars = starsOf(steps, results);
     const key = lessonKey(at.world, at.lesson);

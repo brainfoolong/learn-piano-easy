@@ -4,13 +4,13 @@
  * - **It plays as it mounts,** since the learner's Continue just woke the audio. On a page opened
  *   straight at a lesson, the browser holds the sound until a gesture, and Play starts it.
  * - **It passes when the phrase ends, or on Skip.** Skip then leaves, and Play again stays.
- * - **The keys are the keyboard component,** from the C at or below the lowest note, an octave and a
- *   third wide at least. The lit keys are its `next` mark, which its live text names.
+ * - **The keys are the lesson's 3D piano view,** from the C at or below the lowest note, an octave and a
+ *   third wide at least. They only show, so a touch plays nothing. The lit keys are the view's `next`
+ *   mark, which its live text names.
  */
 import { messagesOf } from "../../i18n/locale";
 import type { KeyRange } from "../../render/key-layout";
 import { button } from "../../ui/components/button";
-import { keyboard } from "../../ui/components/keyboard";
 import { el } from "../../ui/dom";
 import type { Mark } from "../../ui/mark";
 import { signal } from "../../ui/signal";
@@ -27,7 +27,8 @@ export function demoRange(notes: readonly number[]): KeyRange {
 export const demoStep: StepView<DemoStep> = (element, step, host) => {
   const t = messagesOf(host.locale).lesson.demo;
   const marks = signal<ReadonlyMap<number, Mark>>(new Map());
-  const keys = keyboard({
+  const piano = host.piano;
+  piano.show({
     label: t.piano,
     range: demoRange(step.notes.map((n) => n.note)),
     names: "c",
@@ -64,7 +65,7 @@ export const demoStep: StepView<DemoStep> = (element, step, host) => {
       class: "lesson-step lesson-demo",
       children: [
         el("p", { class: "lesson-step__text", text: host.texts.text }),
-        el("div", { class: "lesson-demo__keys", children: [keys] }),
+        el("div", { class: "lesson-demo__keys", children: [piano.element] }),
         el("div", { class: "lesson-demo__actions", children: [again, skip] }),
       ],
     }),

@@ -67,8 +67,10 @@ landing page, and decision 0008 already answers it: a picture until a click.
   `onPress`, `onRelease`. It drops the last options' signal subscriptions. A lesson makes one view and
   hands it to each step, so a lesson holds one WebGL context. `dispose()` frees it.
 - **A mark tints its key** through `markIncoming` in the mark's token colour: `next` is `--c-brand`,
-  `correct` is `--c-success`, `mistake` is `--c-mistake`. The colours are read with `getComputedStyle`
-  and read again when the site theme or the colour scheme changes, as `embed.ts` does.
+  `correct` is `--c-success-vivid`, `mistake` is `--c-mistake`. The light theme's `--c-success` is a
+  text green, too dark to read as green on a key. The tint is far stronger than the player's, by
+  `MARK_STRENGTH`. The colours are read with `getComputedStyle` and read again when the site theme or the
+  colour scheme changes, as `embed.ts` does.
 - **A held key presses** through `press` in the player's input colour, under any mark's tint.
 - **Names are the player's key labels,** from `keyNameText` of `src/render/key-labels.ts`. `c` names
   every C with its octave, and `white` every white key.
@@ -86,11 +88,12 @@ landing page, and decision 0008 already answers it: a picture until a click.
   `span.piano-keys__key` per shown key, with `data-pitch`, at its key's projected top face. It is placed
   on a resize or a new range, never per frame, and takes no pointer. Each span mirrors `data-mark`,
   `data-held` and `data-finger`. The host element carries `data-first` and `data-last` of the range, and
-  `data-reach-first` and `data-reach-last` while a reach shows. A polite live text names the marked keys,
-  with `describeMarks` moved from the 2D keyboard.
+  `data-reach-first` and `data-reach-last` of the whole reach while its bar shows. A polite live text
+  names the marked keys, with `describeMarks`.
 - **Without WebGL the view says so** in a short text in its place, from the catalog's new
   `ui.pianoKeys.noWebgl`. The step still hears MIDI and the computer keyboard.
-- **`Mark` moves to `src/ui/mark.ts`,** because the staff uses it too.
+- **`Mark` and `describeMarks` live in `src/ui/mark.ts`,** because the staff uses `Mark` too, and the
+  landing then never pulls three.js to name a mark.
 - **The landing devices band follows decision 0008:** a picture of the view until a click, then the view
   loads with `import()` and plays. `tools/landing-pictures.ts` makes the picture in both themes. The
   landing page stays within its byte budget.
@@ -121,14 +124,16 @@ landing page, and decision 0008 already answers it: a picture until a click.
 **Does:** the lesson view makes one view and hands it to its steps, and the setup check uses one too.
 **Gate:** `src/render/piano-keys.ts` exists and the gallery shows it.
 
-- [ ] The lesson view makes the view on the first step that needs keys, and disposes it at the end. `src/learn/lesson-view.ts:106`
-- [ ] `StepHost` hands it to a step. `src/learn/steps/step.ts:1`
-- [ ] `listeningKeys` shows its options on the host's view. `src/learn/steps/keys.ts:47`
-- [ ] The demo step shows its notes on it. `src/learn/steps/demo.ts:29`
-- [ ] The setup check's keys are a view. `src/learn/onboarding.ts:104`
-- [ ] The e2e key press clicks the key map's span. `e2e/lesson-walk.ts:102`
-- [ ] The e2e tests that read 2D keys read the key map. `e2e/learn.e2e.ts:156`, `e2e/lesson-keys.e2e.ts:36`, `e2e/game.e2e.ts:185`
-- [ ] E2e tests `a_step_shows_the_3d_piano` and `a_touch_on_a_3d_key_plays_the_step`. `e2e/lesson-keys.e2e.ts:1`
+- [x] The lesson view makes the view on the first step that needs keys, and disposes it at the end. `src/learn/lesson-view.ts:106`
+- [x] `StepHost` hands it to a step. `src/learn/steps/step.ts:1`
+- [x] `listeningKeys` shows its options on the host's view. `src/learn/steps/keys.ts:47`
+- [x] The demo step shows its notes on it. `src/learn/steps/demo.ts:29`
+- [x] The setup check's keys are a view. `src/learn/onboarding.ts:104`
+- [x] The e2e key press clicks the key map's span. `e2e/lesson-walk.ts:102`
+- [x] The e2e tests that read 2D keys read the key map. `e2e/learn.e2e.ts:156`, `e2e/lesson-keys.e2e.ts:36`, `e2e/game.e2e.ts:185`
+- [x] E2e tests `a_step_shows_the_3d_piano` and `a_touch_on_a_3d_key_plays_the_step`. `e2e/lesson-keys.e2e.ts:1`
+- [x] Every mark reads clearly on a key in both themes. `src/render/piano-keys.ts:115`
+- [ ] The view frames the piano with the camera rig's flat preset, as the landing players do. `src/render/piano-keys.ts:1`
 - [ ] Look at a find-key, a play-notes and a demo step with `bun run shot`.
 
 ### 3. The landing band plays the 3D piano, and the 2D keyboard is deleted

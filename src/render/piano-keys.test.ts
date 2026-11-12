@@ -2,7 +2,7 @@ import { expect, test } from "../testing";
 import { noteName } from "../theory/note-names";
 import { describeMarks, type Mark, MARKS } from "../ui/mark";
 import { layoutKeys } from "./key-layout";
-import { fitFrame, keySpans, MARK_TOKENS, markColors, reachSpan } from "./piano-keys";
+import { fitFrame, keySpans, MARK_STRENGTH, MARK_TOKENS, markColors, reachSpan } from "./piano-keys";
 
 test("marks_are_named_for_a_screen_reader", () => {
   const markNames: Record<Mark, string> = { next: "Play next", correct: "Right", mistake: "Wrong" };
@@ -41,12 +41,14 @@ test("the_reach_spans_the_shown_keys", () => {
 });
 
 test("a_mark_takes_its_token_colour", () => {
-  const tokens: Record<string, string> = { "--c-brand": "#f6a723", "--c-success": "#0b7446", "--c-mistake": "#c2283a" };
+  const tokens: Record<string, string> = { "--c-brand": "#f6a723", "--c-success-vivid": "#22c55e", "--c-mistake": "#c2283a" };
   const read = (token: string) => tokens[token] ?? "#000000";
 
-  // The next key is honey, a right one green and a wrong one red, each read from its token.
-  expect(MARK_TOKENS).toEqual({ next: "--c-brand", correct: "--c-success", mistake: "--c-mistake" });
-  expect(markColors(read)).toEqual({ next: "#f6a723", correct: "#0b7446", mistake: "#c2283a" });
+  // The next key is honey, a right one vivid green and a wrong one red, each read from its token.
+  expect(MARK_TOKENS).toEqual({ next: "--c-brand", correct: "--c-success-vivid", mistake: "--c-mistake" });
+  expect(markColors(read)).toEqual({ next: "#f6a723", correct: "#22c55e", mistake: "#c2283a" });
+  // Each mark is a strong tint, so it reads as its colour on a white key.
+  for (const mark of MARKS) expect(MARK_STRENGTH[mark]).toBeGreaterThanOrEqual(0.7);
   // Each mark reads its own token, so no two marks share a colour.
   expect(new Set(MARKS.map((mark) => MARK_TOKENS[mark])).size).toBe(MARKS.length);
 });

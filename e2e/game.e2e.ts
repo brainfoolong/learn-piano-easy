@@ -16,7 +16,7 @@ import { COURSE } from "../src/learn/course";
 import { PRACTICE_XP, XP_PER_STAR } from "../src/learn/game/xp";
 import { STORAGE_KEY } from "../src/settings/store";
 import { checkLayout, PAST_SETUP, pastSetup, THEMES, LOCALES } from "./layout-check";
-import { lessonPath, walkLesson, watchErrors } from "./lesson-walk";
+import { clickKey, lessonPath, walkLesson, watchErrors } from "./lesson-walk";
 
 const t = messagesOf("en");
 
@@ -182,10 +182,7 @@ test("the_first_visit_setup_runs_once", async ({ page }) => {
   await dialog.getByRole("button", { name: new RegExp(`^${setup.device.screen.name}`) }).click();
   const next = dialog.getByRole("button", { name: setup.next, exact: true });
   await expect(next).toBeDisabled();
-  const key = dialog.locator('.setup__keys .keyboard__key[data-pitch="60"]');
-  const box = await key.boundingBox();
-  if (box === null) throw new Error("The key check shows no middle C.");
-  await key.click({ position: { x: box.width / 2, y: box.height * 0.9 } });
+  await clickKey(page, dialog.locator('.setup__keys .piano-keys__key[data-pitch="60"]'));
   await expect(dialog.locator(".setup__status")).toHaveAttribute("data-heard", "true");
   await next.click();
 

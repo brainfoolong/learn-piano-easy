@@ -20,17 +20,20 @@
  *   shows the skip tests.
  * - **The check plays the note it hears,** through the lesson's sound, so the learner hears the piano
  *   before the first lesson. The cost is the sound set's load on the first visit.
+ * - **The check's keys are the 3D piano view** of `pianoKeys`, an octave from middle C. The view is
+ *   freed as the check moves on or the setup closes, so the setup holds a WebGL context only while it
+ *   asks for a key.
  * - **The mascot greets on the first question only,** so the key check and the later questions keep
  *   their room. Its picture is named by the catalog, since here it is the one who speaks.
  */
 import "./onboarding.css";
 import { messagesOf, type Locale } from "../i18n/locale";
 import { attachKeyboard, KEY_VELOCITY } from "../input/keyboard";
+import { pianoKeys } from "../render/piano-keys";
 import { inputService } from "../site/services";
 import type { ViewContext } from "../site/views";
 import { button } from "../ui/components/button";
 import { dialog } from "../ui/components/dialog";
-import { keyboard } from "../ui/components/keyboard";
 import { mascot } from "../ui/components/mascot";
 import { progressSteps } from "../ui/components/progress";
 import { segmented } from "../ui/components/tabs";
@@ -101,7 +104,8 @@ export function runSetup(locale: Locale, context: ViewContext): RunningSetup {
     });
     const next = button({ label: t.next, variant: "primary", disabled: true, onClick: () => goBefore() });
     const pressed = signal<ReadonlySet<number>>(input.bus.held);
-    const keys = keyboard({
+    const keys = pianoKeys();
+    keys.show({
       label: t.device.keys,
       range: CHECK_RANGE,
       names: "c",
@@ -123,11 +127,12 @@ export function runSetup(locale: Locale, context: ViewContext): RunningSetup {
         next.disabled = false;
       }),
       () => input.bus.releaseAll("pointer"),
+      () => keys.dispose(),
     );
     const hint = device === "midi" ? t.device.checkMidi : device === "computer" ? t.device.checkComputer : t.device.checkScreen;
     show(0, [
       heading(hint),
-      el("div", { class: "setup__keys", children: [keys] }),
+      el("div", { class: "setup__keys", children: [keys.element] }),
       status,
       el("div", { class: "setup__actions", children: [button({ label: t.device.skip, variant: "ghost", onClick: () => goBefore() }), next] }),
     ]);

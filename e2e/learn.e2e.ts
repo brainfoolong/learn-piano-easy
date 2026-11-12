@@ -153,7 +153,7 @@ test("every_find_key_step_shows_middle_c_in_the_middle_so_the_c_left_of_it_passe
   const low = steps.findIndex((step) => step.id === "find-low-c");
   // F2 to G5: the keys of every find-key step. The step's module loads a stylesheet, so Node cannot import its constant.
   const range = [41, 79];
-  const shown = () => stage(page).locator(".keyboard__key").evaluateAll((keys) => keys.map((key) => Number(key.getAttribute("data-pitch"))));
+  const shown = () => stage(page).locator(".piano-keys__key").evaluateAll((keys) => keys.map((key) => Number(key.getAttribute("data-pitch"))));
   const errors = watchErrors(page);
   await page.goto(lessonPath(entry, "en"));
   for (const [index, step] of steps.slice(0, low).entries()) {

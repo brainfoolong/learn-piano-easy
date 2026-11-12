@@ -321,7 +321,7 @@
   }
 
   /* A short range would stand tall at the column's width, so its keys stop at a height and centre. */
-  .lesson-step__keys .keyboard__drawing {
+  .lesson-step__keys .piano-keys {
     max-height: calc(2 * var(--s-12));
   }
 
