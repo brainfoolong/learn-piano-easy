@@ -7,6 +7,7 @@
  * About shows the licenses.
  * The Data page's body is `src/data/data-view.ts`, a chunk of its own under a heading built at once.
  * The legal notice and the privacy policy share `src/site/legal-view.ts`, built the same way.
+ * The sponsor page's body is `src/site/sponsor-view.ts`, built the same way too.
  *
  * The gallery at `design/` shows every component. It is a chunk of its own too, imported when its page
  * opens, so no other page loads its specimens. Its frame fills the window until the chunk draws, so the
@@ -140,6 +141,13 @@ function legalView(kind: "imprint" | "privacy", locale: Locale): View {
   return { element };
 }
 
+/** The sponsor page, whose heading shows at once and whose body loads as a chunk of its own. */
+function sponsorView(locale: Locale): View {
+  const element = page(messagesOf(locale).pages.sponsor.title, []);
+  void import("./sponsor-view").then((module) => element.append(module.sponsorBody(locale)));
+  return { element };
+}
+
 /** The gallery, whose code loads when its page opens. */
 function galleryPage(locale: Locale, settings: SettingsStore): View {
   const element = el("div", { class: "gallery-page" });
@@ -225,6 +233,8 @@ export function makeView(route: Route, locale: Locale, context: ViewContext): Vi
       return aboutView(locale);
     case "data":
       return dataView(locale, context.settings);
+    case "sponsor":
+      return sponsorView(locale);
     case "imprint":
     case "privacy":
       return legalView(route.id, locale);

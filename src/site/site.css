@@ -264,6 +264,44 @@
   }
 
   /*
+   * The heart that leads to the sponsor page: an orchid icon with no frame. Under the pointer it fills,
+   * and it beats softly while the visitor allows motion. On its own page it stays filled.
+   */
+  .site-bar__sponsor .icon {
+    color: var(--c-orchid);
+    transition: fill var(--m-small) var(--ease-standard);
+  }
+
+  .site-bar__sponsor[aria-current="page"] .icon {
+    fill: currentColor;
+  }
+
+  @media (hover: hover) {
+    .site-bar__sponsor:hover .icon {
+      fill: currentColor;
+    }
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .site-bar__sponsor:hover .icon {
+      animation: site-bar-beat 1.2s var(--ease-standard) infinite;
+    }
+  }
+
+  @keyframes site-bar-beat {
+    0%,
+    50%,
+    100% {
+      scale: 1;
+    }
+
+    15%,
+    35% {
+      scale: 1.16;
+    }
+  }
+
+  /*
    * A switch: a face of our own, with its native select laid over it at no opacity. In the bar the
    * face is short, a code or an icon before a chevron. In the menu it is a row of a name and a choice.
    * The select's list still shows, since the browser draws it in the top layer, apart from the select.

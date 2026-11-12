@@ -140,3 +140,5 @@ Each one is easy to make, and ours avoids it in the goal named.
 - The learner's playing saved as a MIDI file.
 - Themes, and a layout that works on a phone.
 - Open source, with every third-party license named.
+- A sponsor page at `sponsor/`, opened by the top bar's heart. It links to GitHub Sponsors and names
+  ways to help that cost no money.

@@ -2,10 +2,14 @@
  * The site's top bar: the bar of `src/ui/components/top-bar.ts`, filled from the locale's catalog.
  *
  * It holds the brand, the links to *Learn Piano*, "Just Play Piano" and the play modes, and the page's
- * slot. Then come the language switch, the theme switch and the link to the Data page. Every link is
- * relative to the page's `<base>`, which is the site's root, so a link means the same on every route.
+ * slot. Then come the heart that leads to the sponsor page, the language switch, the theme switch and
+ * the link to the Data page. Every link is relative to the page's `<base>`, which is the site's root,
+ * so a link means the same on every route.
  *
  * Decisions, and what each costs:
+ * - **The heart shows in the bar at every width but the player's,** as an orchid icon with a tooltip.
+ *   It is unframed, so it stands apart from the switches. On a phone it costs the page's slot the width
+ *   of one more button. The player's bar keeps that room for its controls.
  * - **The player's bar has no links,** so its title, its tools and its controls keep the room. The
  *   brand still leads home, so another page costs the learner one more click.
  * - **The link to the Data page shows in the bar at every width,** as an icon with a tooltip. A
@@ -144,6 +148,15 @@ export function siteBar(id: RouteId, locale: Locale, switches: SiteSwitches, act
     tip: "bottom",
   });
   data.classList.add("site-bar__data");
+  const sponsor = iconLink({
+    label: messagesOf(locale).pages.sponsor.title,
+    icon: "heart",
+    href: hrefOf("sponsor", locale),
+    variant: "ghost",
+    current: id === "sponsor",
+    tip: "bottom",
+  });
+  sponsor.classList.add("site-bar__sponsor");
   const link = (target: StaticRouteId, label: string) => ({
     label,
     href: hrefOf(target, locale),
@@ -153,6 +166,6 @@ export function siteBar(id: RouteId, locale: Locale, switches: SiteSwitches, act
     brand: { label: messagesOf(locale).siteName, href: hrefOf("home", locale) },
     nav: id === "play" ? [] : [link("learn", t.learn), link("play", t.play), link("modes", t.modes)],
     navLabel: t.nav,
-    actions: [...actions, switches.element, data, menu],
+    actions: [...actions, ...(id === "play" ? [] : [sponsor]), switches.element, data, menu],
   });
 }

@@ -22,6 +22,7 @@ import { playerLibrary } from "./player-library.en";
 import { playerSettings } from "./player-settings.en";
 import { playerShell } from "./player-shell.en";
 import { playModes } from "./play-modes.en";
+import { sponsorPage } from "./sponsor.en";
 
 /** What a page tells the browser and a search engine before any script runs. */
 export interface PageMeta {
@@ -68,6 +69,10 @@ export const en = {
     data: {
       title: "Your data",
       description: "Save everything you have in this browser to one file, and bring it back on any device.",
+    },
+    sponsor: {
+      title: "Sponsor",
+      description: "Learn Piano Easy is free and made by one person. Here is how you can help it grow.",
     },
     imprint: {
       title: "Legal notice",
@@ -260,6 +265,8 @@ export const en = {
   setup: learnSetup,
   /** The Data page at `data/`, which saves and restores everything in this browser. */
   data: dataPage,
+  /** The sponsor page at `sponsor/`, which the top bar's heart leads to. */
+  sponsor: sponsorPage,
   /** The play modes at `modes/`, and the player's toast that applies one. */
   playModes,
   /** The player at `play/`, which reads them through `src/i18n/live.ts`. */

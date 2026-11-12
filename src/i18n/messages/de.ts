@@ -13,6 +13,7 @@ import { playerLibrary } from "./player-library.de";
 import { playerSettings } from "./player-settings.de";
 import { playerShell } from "./player-shell.de";
 import { playModes } from "./play-modes.de";
+import { sponsorPage } from "./sponsor.de";
 
 const SITE_NAME = en.siteName;
 
@@ -50,6 +51,10 @@ export const de: Messages = {
     data: {
       title: "Deine Daten",
       description: "Speichere alles, was du in diesem Browser hast, in einer Datei, und hol es auf jedem Gerät zurück.",
+    },
+    sponsor: {
+      title: "Unterstützen",
+      description: "Learn Piano Easy ist kostenlos und wird von einer Person gebaut. So kannst du helfen, dass es wächst.",
     },
     imprint: {
       title: "Impressum",
@@ -225,6 +230,7 @@ export const de: Messages = {
   map: learnMap,
   profile: learnProfile,
   data: dataPage,
+  sponsor: sponsorPage,
   playModes,
   setup: learnSetup,
   player: { shell: playerShell, bar: playerBar, library: playerLibrary, input: playerInput, settings: playerSettings },

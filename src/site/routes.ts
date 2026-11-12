@@ -20,7 +20,7 @@ import { LOCALES, localeOfPath, localeRoot, messagesOf, type Locale } from "../i
 import { COURSE } from "../learn/course";
 
 /** A route's id, which the router, the build and the catalogs name it by. */
-export type RouteId = "home" | "play" | "modes" | "learn" | "profile" | "about" | "data" | "imprint" | "privacy" | "design" | "lesson";
+export type RouteId = "home" | "play" | "modes" | "learn" | "profile" | "about" | "data" | "sponsor" | "imprint" | "privacy" | "design" | "lesson";
 
 /** The id of a route with one page per locale: every route but a lesson's. */
 export type StaticRouteId = Exclude<RouteId, "lesson">;
@@ -73,6 +73,7 @@ export const ROUTES: readonly Route[] = [
   { id: "profile", path: "learn/profile/", hidden: false },
   { id: "about", path: "about/", hidden: false },
   { id: "data", path: "data/", hidden: false },
+  { id: "sponsor", path: "sponsor/", hidden: false },
   { id: "imprint", path: "imprint/", hidden: false },
   { id: "privacy", path: "privacy/", hidden: false },
   { id: "design", path: "design/", hidden: true },

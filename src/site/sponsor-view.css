@@ -1,0 +1,223 @@
+/*
+ * The sponsor page's styles. `src/site/sponsor-view.ts` is the home of what the page shows.
+ *
+ * The hero is a raised panel with a soft orchid glow: the heart above the pitch on a phone, beside it
+ * from 768 pixels. The two cards of who and where stand side by side from 768 pixels too.
+ *
+ * - **The heart beats, and the notes float,** slowly, and only while the visitor allows motion.
+ * - **Every colour is a token,** so the page follows the site's light and dark themes on its own.
+ */
+@layer pages {
+  .sponsor {
+    display: grid;
+    gap: var(--s-6);
+  }
+
+  .sponsor p,
+  .sponsor ul,
+  .sponsor dl,
+  .sponsor dd {
+    margin: 0;
+  }
+
+  .sponsor__hero {
+    display: grid;
+    justify-items: center;
+    gap: var(--s-6);
+    padding: var(--s-7) var(--s-5);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background:
+      radial-gradient(circle at 20% 30%, color-mix(in srgb, var(--c-orchid-vivid) 14%, transparent), transparent 60%),
+      radial-gradient(circle at 85% 90%, color-mix(in srgb, var(--c-brand) 14%, transparent), transparent 55%),
+      var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-2);
+    text-align: center;
+  }
+
+  /* The drawing: a round orchid tile with the heart in its middle and a note on each side. */
+  .sponsor__art {
+    position: relative;
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: calc(var(--s-12) + var(--s-6));
+    height: calc(var(--s-12) + var(--s-6));
+    border-radius: var(--r-pill);
+    background: radial-gradient(circle, var(--c-orchid-soft) 0%, color-mix(in srgb, var(--c-orchid-vivid) 18%, var(--c-surface-1)) 100%);
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c-orchid) 22%, transparent);
+  }
+
+  .sponsor__heart {
+    width: 58%;
+    height: 58%;
+    color: var(--c-orchid-vivid);
+    fill: currentColor;
+    stroke: var(--c-orchid);
+    filter: drop-shadow(0 6px 14px color-mix(in srgb, var(--c-orchid-vivid) 40%, transparent));
+  }
+
+  .sponsor__note-icon {
+    position: absolute;
+    width: var(--s-7);
+    height: var(--s-7);
+    color: var(--c-iris);
+  }
+
+  .sponsor__note-icon[data-side="start"] {
+    inset-block-start: var(--s-2);
+    inset-inline-start: calc(-1 * var(--s-2));
+    rotate: -14deg;
+  }
+
+  .sponsor__note-icon[data-side="end"] {
+    inset-block-end: var(--s-3);
+    inset-inline-end: calc(-1 * var(--s-3));
+    width: var(--s-6);
+    height: var(--s-6);
+    color: var(--c-brand-text);
+    rotate: 10deg;
+  }
+
+  .sponsor__pitch {
+    display: grid;
+    justify-items: center;
+    gap: var(--s-4);
+    max-width: 52ch;
+  }
+
+  .sponsor__lead {
+    font-size: var(--t-xl);
+    font-weight: var(--w-semibold);
+    line-height: var(--lh-body);
+    text-wrap: pretty;
+  }
+
+  .sponsor__note {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  /* The heart in the main action is filled, as the drawing's is. */
+  .sponsor__action .icon {
+    fill: currentColor;
+  }
+
+  /* What every learner gets anyway: a row of small pills, each with a tick. */
+  .sponsor__promises {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--s-2);
+    padding: 0;
+    list-style: none;
+  }
+
+  .sponsor__promise {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    padding: var(--s-2) var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-1);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+  }
+
+  .sponsor__promise .icon {
+    width: var(--s-4);
+    height: var(--s-4);
+    color: var(--c-success);
+  }
+
+  .sponsor__cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-6);
+  }
+
+  .sponsor__spend {
+    display: grid;
+    gap: var(--s-1);
+  }
+
+  .sponsor__spend dt {
+    margin-block-start: var(--s-2);
+    font-weight: var(--w-bold);
+  }
+
+  .sponsor__help {
+    display: grid;
+    gap: var(--s-4);
+    padding: 0;
+    list-style: none;
+  }
+
+  .sponsor__help li {
+    display: grid;
+    justify-items: start;
+    gap: var(--s-1);
+    padding-inline-start: var(--s-4);
+    border-inline-start: 3px solid var(--c-orchid-soft);
+  }
+
+  .sponsor__thanks {
+    justify-self: center;
+    color: var(--c-text-soft);
+    font-size: var(--t-lg);
+    font-weight: var(--w-semibold);
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .sponsor__hero {
+      grid-template-columns: auto minmax(0, 1fr);
+      justify-items: start;
+      gap: var(--s-9);
+      padding: var(--s-9) var(--s-10);
+      text-align: start;
+    }
+
+    .sponsor__pitch {
+      justify-items: start;
+    }
+
+    .sponsor__cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sponsor__heart {
+      animation: sponsor-beat 2.4s var(--ease-standard) infinite;
+    }
+
+    .sponsor__note-icon {
+      animation: sponsor-float 4s ease-in-out infinite alternate;
+    }
+
+    .sponsor__note-icon[data-side="end"] {
+      animation-delay: -2s;
+    }
+  }
+
+  @keyframes sponsor-beat {
+    0%,
+    40%,
+    100% {
+      scale: 1;
+    }
+
+    10%,
+    25% {
+      scale: 1.08;
+    }
+  }
+
+  @keyframes sponsor-float {
+    to {
+      translate: 0 calc(-1 * var(--s-2));
+    }
+  }
+}

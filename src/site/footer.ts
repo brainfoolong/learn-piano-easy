@@ -61,7 +61,7 @@ export function siteFooter(page: Page, onLanguage: (locale: Locale) => void): HT
             class: "site-footer__nav",
             attrs: { "aria-label": t.nav },
             children: [
-              group(t.explore, [to("learn", messages.topBar.learn), to("play", messages.topBar.play), to("modes", messages.topBar.modes), to("about", t.about), to("data", messages.pages.data.title)]),
+              group(t.explore, [to("learn", messages.topBar.learn), to("play", messages.topBar.play), to("modes", messages.topBar.modes), to("about", t.about), to("data", messages.pages.data.title), to("sponsor", messages.pages.sponsor.title)]),
               group(t.legal, [to("imprint", messages.pages.imprint.title), to("privacy", messages.pages.privacy.title)]),
               group(t.language, others),
             ],
