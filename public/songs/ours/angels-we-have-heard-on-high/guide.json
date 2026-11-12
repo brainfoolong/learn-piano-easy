@@ -2,7 +2,7 @@
   "song": "angels-we-have-heard-on-high",
   "title": "Angels We Have Heard on High",
   "composer": "Traditional",
-  "about": "Angels We Have Heard on High is a traditional French carol. In French it is Les Anges dans nos campagnes, which means the angels in our countryside. Its earliest known printing with words and notes is from 1842, in a collection by Louis Lambillotte. The English words are a paraphrase from 1862 by James Chadwick, the Roman Catholic Bishop of Hexham and Newcastle.",
+  "about": "Angels We Have Heard on High is a traditional French carol. In French it is Les Anges dans nos campagnes, which means The angels in our countryside. Its earliest known printing with words and notes is from 1842, in a collection by Louis Lambillotte. The English words are a paraphrase from 1862 by James Chadwick, the Roman Catholic Bishop of Hexham and Newcastle.",
   "funFact": "In the refrain Gloria in excelsis Deo, the o of Gloria is held through sixteen notes that rise and fall.",
   "mythic": null,
   "versions": {
@@ -147,7 +147,7 @@
           "fromBar": 1,
           "toBar": 4,
           "kind": "fingering",
-          "text": "The left hand never moves: finger 5 on C, finger 4 on D, finger 2 on F and the thumb on G."
+          "text": "The left hand does not move: finger 5 on C, 4 on D, 3 on E, 2 on F and the thumb on G."
         },
         {
           "fromBar": 11,
@@ -215,7 +215,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -302,14 +302,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

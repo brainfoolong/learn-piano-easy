@@ -2,7 +2,7 @@
   "song": "o-christmas-tree",
   "title": "O Christmas Tree",
   "composer": "Traditional",
-  "about": "O Tannenbaum means O fir tree in German. The tune is an old German folk melody, and nobody knows who first wrote it. The Leipzig teacher Ernst Anschütz wrote the words sung today in 1824. His song praises the fir tree for staying green all through the winter.",
+  "about": "O Tannenbaum means O fir tree in German. The tune comes from an old German folk song, and nobody knows who wrote it. The Leipzig teacher Ernst Anschütz wrote the words sung today in 1824. His song praises the fir tree for staying green all through the winter.",
   "funFact": "The same tune carries the state song of Iowa, and Maryland's state song used it until 2021.",
   "mythic": null,
   "versions": {
@@ -149,7 +149,7 @@
           "fromBar": 13,
           "toBar": 14,
           "kind": "trick",
-          "text": "During the last C, slide the thumb up to the next G, and the second verse starts an octave higher."
+          "text": "After the last C, the thumb moves up to the next G. The second verse then starts an octave higher."
         },
         {
           "fromBar": 14,
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -262,7 +262,7 @@
         },
         {
           "bar": 16,
-          "text": "The hand opens to a sixth, then the thumb drops from G to D for the last pair."
+          "text": "The hand stretches to a seventh, G and F. Then the thumb drops from G to D for the last pair."
         }
       ]
     },
@@ -304,14 +304,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -341,7 +341,7 @@
       "tricky": [
         {
           "bar": 4,
-          "text": "The little finger plays D and E on top, then holds the tune while the chords change under it."
+          "text": "The little finger plays D, E and F on top. Then the hand drops to the G chord, with the little finger on B."
         },
         {
           "bar": 12,

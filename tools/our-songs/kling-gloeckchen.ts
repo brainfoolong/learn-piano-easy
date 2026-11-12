@@ -8,7 +8,7 @@
  * so the sixteenths of the bell figure are quarters, and Common plays them at their place. The hook is
  * the first four bars, the opening "Kling, Glöckchen" phrase.
  *
- * Common plays the tune over held fifths. Rare plays it over triads, some bars a bass note and then its
+ * Common plays the tune over held fifths and single bass notes. Rare plays it over triads, some bars a bass note and then its
  * chord. Epic puts an Alberti bass and the pedal under the first verse, and plays the second an octave up
  * with thirds and fourths under the long notes. Legendary sets the tune in chords over a stride bass,
  * then plays it in octaves over arpeggios. Wherever a hand jumps further than its span, a short rest
@@ -172,7 +172,7 @@ export const klingGloeckchen: OurSong = {
       tips: [
         { fromBar: 2, toBar: 2, kind: "sound", text: "G, A, G, A: this is the little bell ringing. Keep it light and even." },
         { fromBar: 4, toBar: 5, kind: "trick", text: "While you hold the long E, slide the thumb down from D to middle C." },
-        { fromBar: 8, toBar: 9, kind: "trick", text: "During the last E, move the thumb back up to D for the black key F sharp." },
+        { fromBar: 8, toBar: 9, kind: "trick", text: "During the last E, move the thumb back up to D, so finger 3 can reach the black key F sharp." },
       ],
       tricky: {
         2: "Fingers 4 and 5 rock between G and A, like a bell swinging.",
@@ -244,12 +244,12 @@ export const klingGloeckchen: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [17, 20], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 16, kind: "sound", text: "Keep the Alberti bass soft, so the bell tune rings above it." },
-        { fromBar: 1, toBar: 32, kind: "sound", text: "Change the pedal with every chord, twice in most bars." },
+        { fromBar: 1, toBar: 32, kind: "sound", text: "Change the pedal at the start and the middle of each bar." },
         { fromBar: 16, toBar: 17, kind: "trick", text: "Lift the hand off the last E, and land an octave up with fingers 2 and 4." },
       ],
       tricky: {
@@ -291,16 +291,16 @@ export const klingGloeckchen: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [17, 20], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 16, kind: "trick", text: "In stride, look at the octave and let the hand find the chord by feel." },
         { fromBar: 17, toBar: 32, kind: "sound", text: "In octaves, the bell figure should ring like real bells. Keep the wrist loose." },
-        { fromBar: 17, toBar: 32, kind: "fingering", text: "Thumb and little finger play every octave. Let the hand stay open and still." },
+        { fromBar: 17, toBar: 32, kind: "fingering", text: "Thumb and little finger play every octave. Keep the hand open in one shape." },
       ],
       tricky: {
-        3: "Grab B, D and F, then fingers 2 and 4 play D and G while the left hand jumps.",
+        3: "Press B, D and F together, then fingers 2 and 4 play D and G while the left hand jumps.",
         7: "Fingers 2 and 4 play the third, then finger 4 repeats F and the little finger takes G.",
         15: "The same chord as bar 3. Watch the left hand's jump down to the low G octave.",
       },

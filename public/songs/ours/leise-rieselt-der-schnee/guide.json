@@ -2,7 +2,7 @@
   "song": "leise-rieselt-der-schnee",
   "title": "Leise rieselt der Schnee",
   "composer": "Traditional",
-  "about": "Leise rieselt der Schnee means Softly falls the snow in German. It is one of the best-known Advent songs in the German language. The pastor Eduard Ebel wrote the words in 1895, and his book printed them with no melody. Many books credit the tune to Ebel too, but no source shows it, and others call it a folk tune.",
+  "about": "Leise rieselt der Schnee means Softly falls the snow in German. It is one of the best-known Advent songs in the German language. The pastor Eduard Ebel wrote the words in 1895, and his book printed them with no tune. Many books credit the tune to Ebel too, but no source shows it, and others call it a folk tune.",
   "funFact": "Some say the tune grew from a Musette by Daniel Gottlob Türk from 1792, but only its first bar and a half match.",
   "mythic": null,
   "versions": {
@@ -68,7 +68,7 @@
           "fromBar": 3,
           "toBar": 4,
           "kind": "trick",
-          "text": "Finger 4 takes the C your thumb just held, and the hand settles down until the thumb sits on G."
+          "text": "Finger 4 takes the C your thumb held in bar 2, and the hand moves down until the thumb sits on G."
         },
         {
           "fromBar": 1,
@@ -202,7 +202,7 @@
           "wait": false
         },
         {
-          "text": "Play the right hand's thirds alone, and keep both notes of each pair together.",
+          "text": "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.",
           "hands": "right",
           "speed": 0.6,
           "loop": [9, 12],
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -247,7 +247,7 @@
           "fromBar": 1,
           "toBar": 16,
           "kind": "sound",
-          "text": "Change the pedal at each half bar, where the chord changes."
+          "text": "Change the pedal at each half bar, as the left hand starts its pattern again."
         }
       ],
       "tricky": [
@@ -303,14 +303,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -340,11 +340,11 @@
       "tricky": [
         {
           "bar": 9,
-          "text": "The hands change jobs. The right hand plays octaves, and the left starts its first arpeggio over two octaves."
+          "text": "Both hands change their pattern. The right hand plays octaves, and the left starts its first arpeggio over two octaves."
         },
         {
           "bar": 12,
-          "text": "Hold the G octave for the whole bar while the left hand climbs to E and back down."
+          "text": "Hold the G octave while the left hand climbs to the high E and back down."
         },
         {
           "bar": 14,

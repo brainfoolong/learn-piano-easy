@@ -4,7 +4,7 @@
  * The tune is twelve bars in C major, the theme Mozart wrote his variations on, with two of its bars
  * to one of ours. The hook is its first two bars, seven notes.
  *
- * Common keeps the beginner song's notes and adds a finger to each. Rare plays the tune with a few
+ * Common plays the tune as it is, with a finger on each note. Rare plays the tune with a few
  * eighth notes over held chords, and ends with a four-bar coda. Epic puts an Alberti bass under it with
  * the pedal, plays the returning phrase in thirds and runs up a scale in the coda. Legendary plays the
  * tune in chords over a stride bass, breaks it into sixteenths, then plays it in octaves.
@@ -64,10 +64,10 @@ export const twinkleTwinkleLittleStar: OurSong = {
     edition: "The theme of Mozart's Twelve Variations on \"Ah, vous dirai-je, maman\", K. 265, in the Breitkopf & Härtel complete edition, series 21",
   },
   about:
-    "This tune began as a French song, \"Ah! vous dirai-je, maman\", first printed in 1761. " +
+    "This tune began as a French song, Ah! vous dirai-je, maman, first printed in 1761. " +
     "Mozart wrote twelve variations on it for the piano. " +
-    "In 1806 Jane Taylor wrote her poem about a little star, and children have sung it to this tune ever since.",
-  funFact: "The alphabet song and \"Baa, Baa, Black Sheep\" are sung to this same tune.",
+    "In 1806 Jane Taylor published her poem about a little star, and it was later sung to this tune.",
+  funFact: "The alphabet song and Baa, Baa, Black Sheep are sung to this same tune.",
   mythic: null,
   tune: { text: tune, numerator: 4, denominator: 4, key: C_MAJOR, hookBars: [1, 2] },
   versions: {
@@ -126,7 +126,7 @@ export const twinkleTwinkleLittleStar: OurSong = {
       skills: ["eighth-notes", "triads"],
       practice: [
         { text: "Play the right hand alone, slowly, and feel the two quick notes in bar 4.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
-        { text: "Play the left hand alone. It holds each chord for two beats.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
+        { text: "Play the left hand alone. It holds each chord for two or four beats.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Put both hands together on the middle part.", hands: "both", speed: 0.7, loop: [5, 8], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
@@ -134,7 +134,7 @@ export const twinkleTwinkleLittleStar: OurSong = {
       tips: [
         { fromBar: 4, toBar: 4, kind: "rhythm", text: "The D and the E share one beat. Say \"one-and\" as you play them." },
         { fromBar: 1, toBar: 8, kind: "fingering", text: "The left hand stays in one place, and each chord keeps its own fingers." },
-        { fromBar: 13, toBar: 16, kind: "sound", text: "The last four bars are a coda, a short goodbye. Slow down a little at the very end." },
+        { fromBar: 13, toBar: 16, kind: "sound", text: "The last four bars are a coda, a short goodbye. Slow down a little at the end." },
       ],
       tricky: {
         3: "Finger 4 moves from G down to F here. Let the whole hand slide one key down with it.",
@@ -161,19 +161,19 @@ export const twinkleTwinkleLittleStar: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds alone, and press both notes of each pair as one.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
         { text: "Play the scale of bar 15 alone, with the thumb passing under after finger 3.", hands: "right", speed: 0.5, loop: [15, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 4, kind: "sound", text: "Play the Alberti bass softly, so the tune stays on top." },
         { fromBar: 4, toBar: 6, kind: "rhythm", text: "The two quick notes at the end of bars 4 and 6 lead up to G. Play them lightly." },
         { fromBar: 15, toBar: 15, kind: "fingering", text: "Your thumb tucks under on F, so the scale climbs to C without a gap." },
-        { fromBar: 1, toBar: 15, kind: "sound", text: "The pedal changes twice a bar, each time the chord changes." },
+        { fromBar: 1, toBar: 15, kind: "sound", text: "Change the pedal twice a bar, on beats one and three." },
       ],
       tricky: {
         3: "Finger 4 slides from G down to F, while the Alberti bass keeps rolling.",
         9: "Your thumb slides from D down to C. Then fingers 2 and 4 take the first third.",
-        14: "Finger 4 slides from G down to F, just as it did in bar 3.",
+        14: "Finger 4 slides from G down to F, as it did in bar 3.",
       },
     },
     legendary: {
@@ -208,7 +208,7 @@ export const twinkleTwinkleLittleStar: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the sixteenths of the middle part slowly, with the right hand alone.", hands: "right", speed: 0.5, loop: [5, 8], wait: true },
         { text: "Play the right hand's octaves alone, and lift the hand between them.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

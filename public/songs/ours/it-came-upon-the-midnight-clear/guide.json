@@ -2,8 +2,8 @@
   "song": "it-came-upon-the-midnight-clear",
   "title": "It Came Upon the Midnight Clear",
   "composer": "Richard Storrs Willis",
-  "about": "Edmund Sears wrote the poem in 1849. It was first printed in The Christian Register, in Boston, on December 29, 1849. Richard Storrs Willis published the tune a year later, as a study for choirs called Carol. Hymnals in the United States set the poem to it, and it became a well loved carol.",
-  "funFact": "In Britain, the same words are usually sung to a different tune, Noel, which Arthur Sullivan arranged from an English melody.",
+  "about": "Edmund Sears wrote the poem in 1849. It was first printed in The Christian Register, in Boston, on December 29, 1849. Richard Storrs Willis published the tune a year later, as a study for choirs. Hymnals in the United States set the poem to it under the name Carol, and it became a well-loved carol.",
+  "funFact": "In Britain, the same words are usually sung to a different tune, Noel, which Arthur Sullivan arranged from an English folk tune.",
   "mythic": null,
   "versions": {
     "common": {
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -303,14 +303,14 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -348,7 +348,7 @@
         },
         {
           "bar": 3,
-          "text": "Finger 3 sings A over E and G. Then the thumb drops to B under F and G, and finger 3 keeps the tune's G."
+          "text": "Finger 3 sings A after E and G. Then the thumb drops to B under F and G, and finger 3 keeps the tune's G."
         }
       ]
     }

@@ -3,7 +3,7 @@
   "title": "Es ist ein Ros entsprungen",
   "composer": "Traditional",
   "about": "Es ist ein Ros entsprungen means A rose has sprung up in German. It is a church Christmas song from the 16th century. Its tune was first printed in the Speyer hymnal, in Cologne in 1599, and its composer is unknown. Michael Praetorius set it for four voices in 1609, and his setting spread widely.",
-  "funFact": "Johannes Brahms took Praetorius's melody as the starting point of a chorale prelude, the eighth of his Op. 122.",
+  "funFact": "Johannes Brahms built a chorale prelude for organ on this tune, the eighth of his Op. 122.",
   "mythic": null,
   "versions": {
     "common": {
@@ -63,7 +63,7 @@
           "fromBar": 1,
           "toBar": 2,
           "kind": "fingering",
-          "text": "Each long G starts on finger 5. Change to finger 4 on the next G, and the hand stays put."
+          "text": "Each long G starts on finger 5. Change to finger 4 on the next G, and the hand stays still."
         },
         {
           "fromBar": 2,
@@ -89,7 +89,7 @@
         },
         {
           "bar": 5,
-          "text": "Fingers 4 and 2 play D and B, then the thumb lands on the low G. Rest, and reach up with finger 5."
+          "text": "Fingers 4, 2, 3 and 2 play D, B, C and A, then the thumb lands on the low G. Rest, and reach up with finger 5."
         }
       ]
     },
@@ -175,7 +175,7 @@
         },
         {
           "bar": 3,
-          "text": "Finger 5 stretches up from C to G while the left hand presses a new C chord."
+          "text": "Finger 5 stretches up from C to G, while the left hand holds its C chord."
         }
       ]
     },
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -304,7 +304,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

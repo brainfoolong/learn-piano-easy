@@ -177,7 +177,7 @@ export const theFirstNoel: OurSong = {
   },
   about:
     "The First Noel is an English carol, and nobody knows who wrote its tune. " +
-    "It comes from Cornwall, in the far south-west of England. " +
+    "It is thought to come from Cornwall, in the far south-west of England. " +
     "Davies Gilbert printed it in 1823, and William Sandys printed it in 1833. " +
     "John Stainer set it for choirs in 1871, and his version is the one sung today.",
   funFact: "Noel comes from the French word Noël, and that comes from the Latin word for birth.",
@@ -254,7 +254,7 @@ export const theFirstNoel: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the climb of bars 2 and 3 with the right hand alone, and pass the thumb under on F.", hands: "right", speed: 0.5, loop: [2, 3], wait: true },
         { text: "Play the right hand's thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [10, 17], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -287,8 +287,8 @@ export const theFirstNoel: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's octaves alone on the first verse, with a loose wrist.", hands: "right", speed: 0.5, loop: [1, 9], wait: true },
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [10, 13], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 9, kind: "trick", text: "In stride, look at the octave and let the hand find the chord by feel." },

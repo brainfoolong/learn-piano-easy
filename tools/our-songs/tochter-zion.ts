@@ -8,8 +8,8 @@
  *
  * Common and Rare play A, B and the second half of A. All of A again would pass Common's 60 seconds,
  * and Rare's hand would move three times in eight bars. Common holds fifths and single bass notes, and
- * Rare plays block chords and fifths. Epic plays A, B and A over an Alberti bass, then the last A an octave up over
- * broken chords, with the pedal. Legendary sets A and B an octave up with quick turns over a stride bass,
+ * Rare plays block chords and fifths. Epic plays A and B over an Alberti bass, then the last A an octave
+ * up over broken chords, with the pedal. Legendary sets A and B an octave up with quick turns over a stride bass,
  * then plays the last A in octaves over arpeggios, and ends on a four-note chord.
  */
 import type { Key } from "../../src/theory/key";
@@ -195,7 +195,7 @@ export const tochterZion: OurSong = {
     "George Frideric Handel wrote the chorus See, the conqu'ring hero comes in 1747 for his oratorio Joshua. " +
     "In 1751 he added it to his oratorio Judas Maccabaeus. " +
     "Friedrich Heinrich Ranke set German words to the tune in Erlangen after 1820.",
-  funFact: "The tune is a main theme of Henry Wood's Fantasia on British Sea Songs, played every year at the Last Night of the Proms.",
+  funFact: "In 1905, Henry Wood used the tune in his Fantasia on British Sea Songs, a piece often heard at the Last Night of the Proms.",
   mythic: null,
   collection: "christmas",
   aka: ["See, the Conqu'ring Hero Comes", "À toi la gloire"],
@@ -277,7 +277,7 @@ export const tochterZion: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the broken chords of the last part alone, and lift the hand on each rest.", hands: "left", speed: 0.5, loop: [17, 20], wait: false },
         { text: "Join the hands on bars 1 to 16, slowly.", hands: "both", speed: 0.5, loop: [1, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -309,7 +309,7 @@ export const tochterZion: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play bars 1 to 8 with the right hand alone, and keep the quick turns light.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the arpeggios of the last part in the left hand alone.", hands: "left", speed: 0.5, loop: [17, 20], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

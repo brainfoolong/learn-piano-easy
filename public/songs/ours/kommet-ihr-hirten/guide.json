@@ -116,7 +116,7 @@
           "wait": true
         },
         {
-          "text": "Play bars 9 to 14 with the left hand alone, where the chords change on each beat.",
+          "text": "Play bars 9 to 14 with the left hand alone, where the chords change more often.",
           "hands": "left",
           "speed": 0.6,
           "loop": [9, 14],
@@ -196,7 +196,7 @@
       },
       "practice": [
         {
-          "text": "Play the broken chords alone until they roll by themselves: low, high, top, high.",
+          "text": "Play the broken chords alone until they roll by themselves: low, middle, high, middle.",
           "hands": "left",
           "speed": 0.5,
           "loop": [1, 4],
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -242,13 +242,13 @@
           "fromBar": 15,
           "toBar": 28,
           "kind": "sound",
-          "text": "Now the left hand has the tune. Play it out, and keep the right-hand chords quiet."
+          "text": "Now the left hand has the tune. Play it clearly, and keep the right-hand chords quiet."
         },
         {
           "fromBar": 1,
           "toBar": 28,
           "kind": "sound",
-          "text": "Change the pedal on each beat, as a new chord starts."
+          "text": "Change the pedal on each beat."
         }
       ],
       "tricky": [
@@ -304,7 +304,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

@@ -7,8 +7,8 @@
  *
  * Common moves the tune to C major and keeps the right hand in one place. Rare plays it in D with its
  * real rhythm over a bass and chords. Epic puts an Alberti bass under it with the pedal and plays the
- * returning phrase in thirds. Legendary sets the tune an octave up over a stride bass, and ends in
- * full chords.
+ * returning phrase in thirds. Legendary sets the tune an octave up over a stride bass, plays the
+ * returning phrase in chords with arpeggios under the middle part, and ends on a four-note chord.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -120,7 +120,7 @@ export const odeToJoy: OurSong = {
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 4, toBar: 4, kind: "rhythm", text: "Long, short, long: the F sharp takes a beat and a half, and the E sneaks in after it." },
+        { fromBar: 4, toBar: 4, kind: "rhythm", text: "Long, short, long: the F sharp lasts a beat and a half, and the E half a beat." },
         { fromBar: 10, toBar: 11, kind: "rhythm", text: "The two quick notes are eighths. Think of them as one beat split in two." },
         { fromBar: 9, toBar: 12, kind: "sound", text: "Each chord of the middle part lasts two beats. Let it ring until the next one." },
       ],
@@ -149,16 +149,16 @@ export const odeToJoy: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [5, 8], wait: true },
         { text: "Join the hands on the first four bars, slowly.", hands: "both", speed: 0.5, loop: [1, 4], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 2, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
-        { fromBar: 5, toBar: 8, kind: "fingering", text: "The tune is still the top note of each third, so let the upper finger lead." },
+        { fromBar: 5, toBar: 8, kind: "fingering", text: "The tune is the top note of each pair, so let the upper finger lead." },
         { fromBar: 8, toBar: 12, kind: "sound", text: "The pedal changes in the middle of each bar here. Lift it as the new chord starts." },
       ],
       tricky: {
-        8: "Change from finger 3 to 1 on the held D, so the hand is ready for bar 9.",
+        8: "Change from finger 3 to 1 on the repeated D, so the hand is ready for bar 9.",
         13: "The thirds come back here. Press the two notes of each pair as one.",
         16: "Your thumb drops to the low A for the last chord, under the third finger's D.",
       },
@@ -182,8 +182,8 @@ export const odeToJoy: OurSong = {
         { text: "Play the stride bass alone: jump down for the bass note, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [5, 8], wait: true },
         { text: "Play the middle part's arpeggios in the left hand alone.", hands: "left", speed: 0.6, loop: [9, 12], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 4, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },
@@ -193,7 +193,7 @@ export const odeToJoy: OurSong = {
       tricky: {
         2: "The tune walks down while the bass jumps. Keep your eyes on the left hand.",
         6: "The chords change on every beat. Keep the thumb on A and move only the upper fingers.",
-        14: "The tune falls from A to E over a held C sharp. Let the top finger carry it.",
+        14: "The tune falls from A to E while the thumb stays near C sharp. Let the top finger carry it.",
       },
     },
   },

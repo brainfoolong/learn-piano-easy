@@ -166,9 +166,8 @@ export const weThreeKings: OurSong = {
     edition: "Three Kings of Orient (1863), as Wikipedia engraves it",
   },
   about:
-    "John Henry Hopkins Jr., an American clergyman and hymn writer, wrote this carol in 1857 for a Christmas pageant at the seminary where he taught. " +
-    "Its original title is Three Kings of Orient, and it was published in 1863. " +
-    "The carol tells of the Magi of the Bible, who brought gold, frankincense and myrrh. " +
+    "The American clergyman John Henry Hopkins Jr. wrote this carol in 1857, for a Christmas pageant at the seminary where he taught. " +
+    "It tells of the Magi and their gifts, and was published in 1863 as Three Kings of Orient. " +
     "Its verse is in a minor key, and the refrain turns to the major.",
   funFact: "Hopkins planned the carol so that three men each sing one verse alone, one for each king.",
   mythic: null,
@@ -250,7 +249,7 @@ export const weThreeKings: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [17, 20], wait: true },
         { text: "Join the hands on the verse, slowly.", hands: "both", speed: 0.5, loop: [1, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -286,8 +285,8 @@ export const weThreeKings: OurSong = {
         { text: "Play the right hand's octaves alone, with the thumb and finger 5 kept in one shape.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the arpeggios of bars 9 to 16 in the left hand alone.", hands: "left", speed: 0.5, loop: [9, 16], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "trick", text: "In the octaves, watch finger 5 on the tune. The thumb follows it by feel." },

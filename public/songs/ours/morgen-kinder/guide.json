@@ -74,21 +74,21 @@
           "fromBar": 11,
           "toBar": 11,
           "kind": "fingering",
-          "text": "The thumb plays the first C, and finger 2 plays the second. Finger 5 then reaches F with ease."
+          "text": "The thumb plays the first C and finger 2 the second, so finger 5 reaches F."
         }
       ],
       "tricky": [
         {
           "bar": 3,
-          "text": "Finger 3 lands on E after the rest. Fingers 4 and 5 climb to G, and finger 4 comes back to E."
+          "text": "After the rest, finger 3 plays E twice. Fingers 4 and 5 climb to F and G, and finger 4 comes back to E."
         },
         {
           "bar": 7,
-          "text": "The same as bar 3: finger 3 on E, then fingers 4 and 5 up to G."
+          "text": "The same as bar 3: finger 3 on E, then fingers 4 and 5 up to F and G."
         },
         {
           "bar": 8,
-          "text": "Fingers 5 and 4 step down to E, and finger 2 takes D. Finger 3 is then ready for the F of bar 9."
+          "text": "Fingers 5 and 4 play F and E, and finger 2 takes D. Finger 3 is then ready for the F of bar 9."
         }
       ]
     },
@@ -174,7 +174,7 @@
         },
         {
           "bar": 5,
-          "text": "Finger 3 leaps up from G to E with no rest. Keep the thumb light, so the hand opens out."
+          "text": "After the thumb's G, finger 3 leaps up to E with no rest. Keep the thumb light, so the hand opens out."
         }
       ]
     },
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -241,7 +241,7 @@
           "fromBar": 12,
           "toBar": 13,
           "kind": "trick",
-          "text": "The right hand rests for an eighth at the end of bar 12, then jumps up an octave."
+          "text": "The right hand rests for a quarter at the end of bar 12, then jumps up an octave."
         },
         {
           "fromBar": 1,
@@ -302,7 +302,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

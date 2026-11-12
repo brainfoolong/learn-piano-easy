@@ -78,7 +78,7 @@ export const jingleBells: OurSong = {
   about:
     "James Lord Pierpont published this song in Boston in 1857, under the title One Horse Open Sleigh. " +
     "It tells of a fast ride through the snow in a sleigh pulled by one horse. " +
-    "The song never mentions Christmas, yet it became one of the best known Christmas songs in the world.",
+    "The song never mentions Christmas, yet it became one of the best-known Christmas songs in the world.",
   funFact: "In 1965, two astronauts played Jingle Bells in space, on a small harmonica and a handful of bells.",
   mythic: null,
   collection: "christmas",
@@ -104,7 +104,7 @@ export const jingleBells: OurSong = {
       practice: [
         { text: "Play the right hand alone, slowly, and let the song wait for each note.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
         { text: "Play bars 5 to 8 with the right hand alone, where the tune climbs to F.", hands: "right", speed: 0.6, loop: [5, 8], wait: true },
-        { text: "Put both hands together. The left hand holds one low note in each bar.", hands: "both", speed: 0.7, loop: null, wait: true },
+        { text: "Put both hands together. The left hand holds one low note or a fifth in each bar.", hands: "both", speed: 0.7, loop: null, wait: true },
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -136,19 +136,19 @@ export const jingleBells: OurSong = {
       ].join(" | "),
       skills: ["eighth-notes", "dotted-rhythm", "triads"],
       practice: [
-        { text: "Tap the rhythm of bar 3 on the lid, then play the right hand alone.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
+        { text: "Clap the rhythm of bar 3, then play the right hand alone.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
         { text: "Play the left hand alone, and keep each chord until the next one.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Join the hands on bars 5 to 8, where the quick notes are.", hands: "both", speed: 0.6, loop: [5, 8], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 3, toBar: 3, kind: "rhythm", text: "Long, short: the C takes a beat and a half, and the D sneaks in after it." },
+        { fromBar: 3, toBar: 3, kind: "rhythm", text: "Long, short: the C takes a beat and a half, and the D comes quickly after it." },
         { fromBar: 6, toBar: 6, kind: "rhythm", text: "The last two E's are eighths. Think of one beat split in two." },
         { fromBar: 1, toBar: 4, kind: "sound", text: "Play the left hand's bass note a little louder than the chord after it." },
       ],
       tricky: {
-        5: "Four F's with finger 4: the last one is quick, so it almost bumps into bar 6.",
+        5: "Four F's with finger 4: the last one is quick, so it leads straight into bar 6.",
         9: "Your left little finger slides back up from B to C, as the tune starts again.",
         13: "The F's return. Let finger 4 bounce on F, and count the short last one.",
       },
@@ -173,13 +173,13 @@ export const jingleBells: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [9, 16], wait: true },
         { text: "Join the hands on the first four bars, slowly.", hands: "both", speed: 0.5, loop: [1, 4], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 4, kind: "sound", text: "Keep the Alberti bass soft, so the bells of the tune ring above it." },
         { fromBar: 9, toBar: 16, kind: "fingering", text: "The tune is the top note of each pair, so let the upper finger lead." },
-        { fromBar: 1, toBar: 16, kind: "sound", text: "Change the pedal in the middle of each bar, as the left hand starts its pattern again." },
+        { fromBar: 1, toBar: 16, kind: "sound", text: "Change the pedal at the start and the middle of each bar, as the left hand starts its pattern again." },
       ],
       tricky: {
         12: "After the third, the hand runs down G, F, E and D with fingers 5, 4, 3 and 2.",
@@ -217,8 +217,8 @@ export const jingleBells: OurSong = {
         { text: "Play the stride bass alone: jump down for the bass note, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the sixteenth runs of bars 9 to 12 with the right hand alone.", hands: "right", speed: 0.5, loop: [9, 12], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },

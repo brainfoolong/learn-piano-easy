@@ -36,7 +36,7 @@
           "wait": true
         },
         {
-          "text": "Now the left hand alone. It only holds two shapes, one per bar.",
+          "text": "Now the left hand alone. It holds two shapes, one per bar.",
           "hands": "left",
           "speed": 0.6,
           "loop": null,
@@ -166,11 +166,11 @@
       "tricky": [
         {
           "bar": 6,
-          "text": "The left thumb stretches from B up to G sharp. Let the hand open wide."
+          "text": "The left hand opens wide: finger 2 plays B, and the thumb reaches up to G sharp."
         },
         {
           "bar": 14,
-          "text": "The same stretch as bar 6: the left thumb reaches from B up to G sharp."
+          "text": "The same stretch as bar 6: finger 2 plays B, and the left thumb reaches up to G sharp."
         },
         {
           "bar": 5,
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -261,7 +261,7 @@
         },
         {
           "bar": 32,
-          "text": "Spread the hand for the last chord: thumb on C, then fingers 2 and 4 on E and A."
+          "text": "Spread the hand for the last chord: thumb on C, finger 2 on E and finger 4 on A."
         }
       ]
     },
@@ -289,7 +289,7 @@
           "wait": false
         },
         {
-          "text": "Play the right hand's chords alone, and let the little finger sing the tune.",
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
           "hands": "right",
           "speed": 0.5,
           "loop": [20, 24],
@@ -303,14 +303,14 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

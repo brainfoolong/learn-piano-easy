@@ -187,13 +187,13 @@ export const joyToTheWorld: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the first four bars with the right hand alone. Finger 3 crosses over the thumb in bar 3.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
         { text: "Play the thirds of bars 13 to 16 with the right hand alone, and press both notes as one.", hands: "right", speed: 0.6, loop: [13, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 4, kind: "sound", text: "Keep the Alberti bass soft, so the falling scale rings out above it." },
         { fromBar: 13, toBar: 16, kind: "fingering", text: "The tune is the top note of each third, so let the upper finger lead." },
-        { fromBar: 1, toBar: 19, kind: "sound", text: "Change the pedal in the middle of each bar, as the left hand starts its pattern again." },
+        { fromBar: 1, toBar: 19, kind: "sound", text: "Change the pedal at the start and the middle of each bar, as the left hand starts its pattern again." },
       ],
       tricky: {
         17: "The thumb passes under finger 3 onto E. Then the little finger reaches up to the high C.",
@@ -232,13 +232,13 @@ export const joyToTheWorld: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 12], wait: true },
         { text: "Play the octaves of bars 13 to 19 with the right hand alone. Keep the hand open and light.", hands: "right", speed: 0.5, loop: [13, 19], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 12, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },
         { fromBar: 4, toBar: 4, kind: "sound", text: "The quick run from C up to G is a flourish. Let it sparkle, then land on G." },
-        { fromBar: 13, toBar: 19, kind: "sound", text: "In octaves, play the little finger a bit louder, so the tune shines on top." },
+        { fromBar: 13, toBar: 19, kind: "sound", text: "In octaves, play the little finger a little louder, so the tune shines on top." },
       ],
       tricky: {
         5: "From the high G, the hand drops onto C, F and A. The little finger moves up one key to A.",

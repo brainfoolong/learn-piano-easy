@@ -9,8 +9,9 @@
  * reaches the high C, and the hand walks down to B with no jump.
  *
  * Common plays the tune once over held fifths. Rare plays it once over block triads. Epic plays it
- * twice, over an Alberti bass and then an octave up over broken chords, with the pedal. Legendary adds quick turns over a stride bass, then plays the tune in octaves
- * over arpeggios, and ends on a four-note chord.
+ * twice, over an Alberti bass and then an octave up over broken chords, with the pedal. Legendary adds
+ * quick turns over a stride bass, then plays the tune in octaves over arpeggios, and ends on a four-note
+ * chord.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -32,7 +33,7 @@ const PICKUP = "r:3 G4/4:1";
 
 /**
  * The verse in the right hand, in quarters, without its last bar. The hand stays on D to A until finger 5
- * reaches up to C in bar 14, then finger 3 drops to D after the long F of bar 15.
+ * reaches up to C in bar 14, then finger 2 takes D after the long F of bar 15.
  */
 const VERSE = [
   "G4/4:2 E4/2:1 G4/4:1 | G4/4:2 E4/2:1 G4/4:1 | F4/3:2 D4/1:1 F4/3:1 | E4/2:2 r:1 G4/4:1",
@@ -209,7 +210,7 @@ export const ihrKinderleinKommet: OurSong = {
         { fromBar: 10, toBar: 17, kind: "rhythm", text: "The left hand now plays a chord on each half of the bar. Count one, two, and press on each count." },
       ],
       tricky: {
-        14: "Finger 3 plays G four times, while the left thumb slides back from A to G.",
+        14: "Finger 3 plays G three times, while the left thumb slides back from A to G.",
         15: "Finger 5 reaches up to the high C, then finger 3 comes back to G.",
         16: "Fingers 3, 2 and 1 walk down F, D and B over a G seventh chord.",
       },
@@ -233,13 +234,13 @@ export const ihrKinderleinKommet: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the broken chords of the second time alone, and lift the hand on each rest.", hands: "left", speed: 0.5, loop: [18, 21], wait: false },
         { text: "Join the hands on the first time through, slowly.", hands: "both", speed: 0.5, loop: [1, 17], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 17, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
-        { fromBar: 17, toBar: 18, kind: "trick", text: "Both hands lift on the rest. The right hand jumps up to the high G, and the left drops to a low C." },
-        { fromBar: 2, toBar: 33, kind: "sound", text: "Change the pedal on each half bar, as the left hand starts a new chord." },
+        { fromBar: 17, toBar: 18, kind: "trick", text: "Both hands lift on a rest. The right hand jumps up to the high G, and the left drops to a low C." },
+        { fromBar: 2, toBar: 33, kind: "sound", text: "Change the pedal on each half bar, as the left hand starts its pattern again." },
       ],
       tricky: {
         17: "Hold the C, lift the hand on the rest, and land finger 4 on the high G.",
@@ -272,7 +273,7 @@ export const ihrKinderleinKommet: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play bars 2 to 9 with the right hand alone, and keep the quick turns light.", hands: "right", speed: 0.5, loop: [2, 9], wait: true },
         { text: "Play the arpeggios of the second time in the left hand alone.", hands: "left", speed: 0.5, loop: [18, 21], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

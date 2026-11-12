@@ -3,7 +3,7 @@
   "title": "Tochter Zion, freue dich",
   "composer": "George Frideric Handel",
   "about": "Tochter Zion, freue dich means Daughter of Zion, rejoice in German. George Frideric Handel wrote the chorus See, the conqu'ring hero comes in 1747 for his oratorio Joshua. In 1751 he added it to his oratorio Judas Maccabaeus. Friedrich Heinrich Ranke set German words to the tune in Erlangen after 1820.",
-  "funFact": "The tune is a main theme of Henry Wood's Fantasia on British Sea Songs, played every year at the Last Night of the Proms.",
+  "funFact": "In 1905, Henry Wood used the tune in his Fantasia on British Sea Songs, a piece often heard at the Last Night of the Proms.",
   "mythic": null,
   "versions": {
     "common": {
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -304,7 +304,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

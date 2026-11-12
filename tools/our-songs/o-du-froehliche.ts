@@ -210,7 +210,7 @@ export const oDuFroehliche: OurSong = {
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 2, toBar: 2, kind: "rhythm", text: "Long, short: hold the G for three counts, and let the quick F fall into the E." },
+        { fromBar: 2, toBar: 2, kind: "rhythm", text: "Long, short: hold the G, then let the quick F fall into the E." },
         { fromBar: 5, toBar: 5, kind: "trick", text: "Play the second G with finger 2 instead of 3. The hand is then ready to climb to C." },
         { fromBar: 14, toBar: 15, kind: "trick", text: "Lift the thumb off F a little early, and drop finger 3 onto the E below." },
       ],
@@ -261,7 +261,7 @@ export const oDuFroehliche: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 8], wait: false },
         { text: "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [17, 24], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -289,13 +289,13 @@ export const oDuFroehliche: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 8], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [17, 24], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 16, kind: "trick", text: "In stride, look at the octave and let the hand find the chord by feel." },
         { fromBar: 17, toBar: 31, kind: "sound", text: "The octaves should ring like church bells. Keep the wrist loose." },
-        { fromBar: 17, toBar: 31, kind: "fingering", text: "In each arpeggio, finger 3 crosses over the thumb on the way up." },
+        { fromBar: 17, toBar: 31, kind: "fingering", text: "In each arpeggio, the third finger crosses over the thumb on the way up." },
       ],
       tricky: {
         6: "The chord climbs from F to G, and the little finger rises from B to the high C.",

@@ -2,7 +2,7 @@
   "song": "happy-birthday",
   "title": "Happy Birthday to You",
   "composer": "Mildred J. Hill",
-  "about": "Mildred J. Hill wrote this melody for Good Morning to All, a greeting song for kindergarten classes. She published it in 1893 in Song Stories for the Kindergarten, a book she made with her sister Patty. The birthday version sung today adds two notes to its third line, with a leap of an octave.",
+  "about": "Mildred J. Hill wrote this tune for Good Morning to All, a greeting song for kindergarten classes. She published it in 1893 in Song Stories for the Kindergarten, a book she made with her sister Patty. The birthday version sung today adds two notes to its third line, with a leap of an octave.",
   "funFact": "In 2015, a US court ruled that the company charging for the birthday song had no valid copyright on its words.",
   "mythic": null,
   "versions": {
@@ -148,7 +148,7 @@
           "fromBar": 9,
           "toBar": 10,
           "kind": "trick",
-          "text": "During the long C, slide the thumb up to the next G, and the second verse starts an octave higher."
+          "text": "After the long C, move the thumb up to G. The second verse starts an octave higher."
         },
         {
           "fromBar": 10,
@@ -210,7 +210,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -241,7 +241,7 @@
           "fromBar": 10,
           "toBar": 17,
           "kind": "sound",
-          "text": "The waltz bass lifts off each note. The pedal joins them, so change it on each bar."
+          "text": "The waltz bass lifts off each note. The pedal joins them, so change it at the start of each bar."
         }
       ],
       "tricky": [
@@ -297,14 +297,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

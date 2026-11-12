@@ -2,7 +2,7 @@
   "song": "old-macdonald-had-a-farm",
   "title": "Old MacDonald Had a Farm",
   "composer": "Traditional",
-  "about": "Old MacDonald Had a Farm is a children's song about a farmer and his animals. An early form called \"Ohio\" was printed in 1917, in a book of songs sung by British soldiers. Each verse adds an animal and its sound, so the song lasts as long as the singers like.",
+  "about": "Old MacDonald Had a Farm is a children's song about a farmer and his animals. An early form called Ohio was printed in 1917, in a book of songs sung by British soldiers. Each verse adds an animal and its sound, so the song lasts as long as the singers like.",
   "funFact": "In the 1917 song the farmer was called Old Macdougal, and his farm was in Ohio.",
   "mythic": null,
   "versions": {
@@ -209,7 +209,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -234,13 +234,13 @@
           "fromBar": 5,
           "toBar": 7,
           "kind": "fingering",
-          "text": "The tune is still the top note of each third, so let the upper finger lead."
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
         },
         {
           "fromBar": 1,
           "toBar": 16,
           "kind": "sound",
-          "text": "Change the pedal each time the left hand starts a new chord."
+          "text": "Change the pedal on every half bar, as the Alberti bass starts again."
         }
       ],
       "tricky": [
@@ -254,7 +254,7 @@
         },
         {
           "bar": 7,
-          "text": "The thirds jump up from D to G and B. Move the whole hand, and keep it shaped."
+          "text": "The thirds jump up from D to G and B. Move the whole hand, and keep its shape."
         }
       ]
     },
@@ -296,14 +296,14 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

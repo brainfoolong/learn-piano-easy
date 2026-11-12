@@ -29,14 +29,14 @@
           "wait": true
         },
         {
-          "text": "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks home.",
+          "text": "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks down to middle C.",
           "hands": "right",
           "speed": 0.6,
           "loop": [17, 23],
           "wait": true
         },
         {
-          "text": "Put both hands together. The left hand holds one low note in each bar.",
+          "text": "Put both hands together. The left hand holds one low note or a fifth in each bar.",
           "hands": "both",
           "speed": 0.7,
           "loop": null,
@@ -77,7 +77,7 @@
         },
         {
           "bar": 6,
-          "text": "Finger 4 takes B after the D's. Down below, the left hand holds G with finger 4."
+          "text": "Finger 4 takes B after the two Ds. Down below, the left hand holds G with finger 4."
         },
         {
           "bar": 17,
@@ -109,7 +109,7 @@
           "wait": true
         },
         {
-          "text": "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks home.",
+          "text": "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks down to middle C.",
           "hands": "right",
           "speed": 0.6,
           "loop": [17, 23],
@@ -203,14 +203,14 @@
           "wait": true
         },
         {
-          "text": "Play the thirds and sixths of bars 13 to 20 with the right hand alone.",
+          "text": "Play the pairs and chords of bars 13 to 20 with the right hand alone.",
           "hands": "right",
           "speed": 0.6,
           "loop": [13, 20],
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -297,14 +297,14 @@
           "wait": false
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

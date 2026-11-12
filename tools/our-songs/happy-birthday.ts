@@ -98,7 +98,7 @@ export const happyBirthday: OurSong = {
       "Good Morning to All, in Mildred J. Hill and Patty Smith Hill, Song Stories for the Kindergarten, Clayton F. Summy, Chicago (1893)",
   },
   about:
-    "Mildred J. Hill wrote this melody for Good Morning to All, a greeting song for kindergarten classes. " +
+    "Mildred J. Hill wrote this tune for Good Morning to All, a greeting song for kindergarten classes. " +
     "She published it in 1893 in Song Stories for the Kindergarten, a book she made with her sister Patty. " +
     "The birthday version sung today adds two notes to its third line, with a leap of an octave.",
   funFact: "In 2015, a US court ruled that the company charging for the birthday song had no valid copyright on its words.",
@@ -161,7 +161,7 @@ export const happyBirthday: OurSong = {
       ],
       tips: [
         { fromBar: 6, toBar: 6, kind: "fingering", text: "The little finger reaches a whole octave up from the thumb. The hand opens, then closes again." },
-        { fromBar: 9, toBar: 10, kind: "trick", text: "During the long C, slide the thumb up to the next G, and the second verse starts an octave higher." },
+        { fromBar: 9, toBar: 10, kind: "trick", text: "After the long C, move the thumb up to G. The second verse starts an octave higher." },
         { fromBar: 10, toBar: 17, kind: "sound", text: "In the waltz bass, play the low note a little louder than the chords after it." },
       ],
       tricky: {
@@ -196,13 +196,13 @@ export const happyBirthday: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [10, 13], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 9], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 9, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
         { fromBar: 10, toBar: 17, kind: "fingering", text: "The tune is the top note of each pair, so let the upper finger lead." },
-        { fromBar: 10, toBar: 17, kind: "sound", text: "The waltz bass lifts off each note. The pedal joins them, so change it on each bar." },
+        { fromBar: 10, toBar: 17, kind: "sound", text: "The waltz bass lifts off each note. The pedal joins them, so change it at the start of each bar." },
       ],
       tricky: {
         12: "The pairs step down, then fingers 3 and 5 jump up to B and D.",
@@ -237,8 +237,8 @@ export const happyBirthday: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 5], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [10, 13], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 9, kind: "trick", text: "In stride, look at the octave and let the hand find the chord by feel." },

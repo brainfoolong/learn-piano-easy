@@ -2,7 +2,7 @@
   "song": "jingle-bells",
   "title": "Jingle Bells",
   "composer": "James Lord Pierpont",
-  "about": "James Lord Pierpont published this song in Boston in 1857, under the title One Horse Open Sleigh. It tells of a fast ride through the snow in a sleigh pulled by one horse. The song never mentions Christmas, yet it became one of the best known Christmas songs in the world.",
+  "about": "James Lord Pierpont published this song in Boston in 1857, under the title One Horse Open Sleigh. It tells of a fast ride through the snow in a sleigh pulled by one horse. The song never mentions Christmas, yet it became one of the best-known Christmas songs in the world.",
   "funFact": "In 1965, two astronauts played Jingle Bells in space, on a small harmonica and a handful of bells.",
   "mythic": null,
   "versions": {
@@ -36,7 +36,7 @@
           "wait": true
         },
         {
-          "text": "Put both hands together. The left hand holds one low note in each bar.",
+          "text": "Put both hands together. The left hand holds one low note or a fifth in each bar.",
           "hands": "both",
           "speed": 0.7,
           "loop": null,
@@ -102,7 +102,7 @@
       },
       "practice": [
         {
-          "text": "Tap the rhythm of bar 3 on the lid, then play the right hand alone.",
+          "text": "Clap the rhythm of bar 3, then play the right hand alone.",
           "hands": "right",
           "speed": 0.6,
           "loop": [1, 4],
@@ -142,7 +142,7 @@
           "fromBar": 3,
           "toBar": 3,
           "kind": "rhythm",
-          "text": "Long, short: the C takes a beat and a half, and the D sneaks in after it."
+          "text": "Long, short: the C takes a beat and a half, and the D comes quickly after it."
         },
         {
           "fromBar": 6,
@@ -160,7 +160,7 @@
       "tricky": [
         {
           "bar": 5,
-          "text": "Four F's with finger 4: the last one is quick, so it almost bumps into bar 6."
+          "text": "Four F's with finger 4: the last one is quick, so it leads straight into bar 6."
         },
         {
           "bar": 13,
@@ -210,7 +210,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -241,7 +241,7 @@
           "fromBar": 1,
           "toBar": 16,
           "kind": "sound",
-          "text": "Change the pedal in the middle of each bar, as the left hand starts its pattern again."
+          "text": "Change the pedal at the start and the middle of each bar, as the left hand starts its pattern again."
         }
       ],
       "tricky": [
@@ -297,14 +297,14 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

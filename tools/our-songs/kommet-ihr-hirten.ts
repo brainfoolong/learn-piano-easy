@@ -244,7 +244,7 @@ export const kommetIhrHirten: OurSong = {
       skills: ["waltz-bass", "triads"],
       practice: [
         { text: "Play the left hand alone: a low C, then two chords in each bar.", hands: "left", speed: 0.6, loop: [1, 4], wait: true },
-        { text: "Play bars 9 to 14 with the left hand alone, where the chords change on each beat.", hands: "left", speed: 0.6, loop: [9, 14], wait: true },
+        { text: "Play bars 9 to 14 with the left hand alone, where the chords change more often.", hands: "left", speed: 0.6, loop: [9, 14], wait: true },
         { text: "Join the hands on the first time through, slowly.", hands: "both", speed: 0.6, loop: [1, 14], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
@@ -271,16 +271,16 @@ export const kommetIhrHirten: OurSong = {
       pedal: [...Array(13).fill("P:4 P:4 P:4"), "P:12", ...Array(13).fill("P:4 P:4 P:4"), "P:12"].join(" | "),
       skills: ["broken-chords", "left-hand-melody", "pedal"],
       practice: [
-        { text: "Play the broken chords alone until they roll by themselves: low, high, top, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
+        { text: "Play the broken chords alone until they roll by themselves: low, middle, high, middle.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the tune in the left hand alone, from bar 15 on.", hands: "left", speed: 0.5, loop: [15, 28], wait: true },
         { text: "Join the hands on the first time through, slowly.", hands: "both", speed: 0.5, loop: [1, 14], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 14, kind: "sound", text: "Keep the broken chords soft, so the tune sings above them." },
-        { fromBar: 15, toBar: 28, kind: "sound", text: "Now the left hand has the tune. Play it out, and keep the right-hand chords quiet." },
-        { fromBar: 1, toBar: 28, kind: "sound", text: "Change the pedal on each beat, as a new chord starts." },
+        { fromBar: 15, toBar: 28, kind: "sound", text: "Now the left hand has the tune. Play it clearly, and keep the right-hand chords quiet." },
+        { fromBar: 1, toBar: 28, kind: "sound", text: "Change the pedal on each beat." },
       ],
       tricky: {
         9: "The left hand jumps to A for the A minor chord, while finger 2 of the right hand takes the C.",
@@ -302,7 +302,7 @@ export const kommetIhrHirten: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play bars 1 to 9 with the right hand alone, and keep the quick runs light.", hands: "right", speed: 0.5, loop: [1, 9], wait: true },
         { text: "Play the arpeggios of the second time in the left hand alone.", hands: "left", speed: 0.5, loop: [15, 18], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

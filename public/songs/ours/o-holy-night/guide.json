@@ -2,7 +2,7 @@
   "song": "o-holy-night",
   "title": "O Holy Night",
   "composer": "Adolphe Adam",
-  "about": "Adolphe Adam was a French composer, and he set Placide Cappeau's French poem Minuit, chrétiens to music. The song's original title is Cantique de Noël, and it was first performed at Midnight Mass in Roquemaure in 1847. One of its earliest known publications was an organ arrangement from around 1855. The best-known English version, O Holy Night, was written in 1855 by the American critic and minister John Sullivan Dwight.",
+  "about": "The French composer Adolphe Adam set Placide Cappeau's poem Minuit, chrétiens to music, as Cantique de Noël. It was first sung at Midnight Mass in Roquemaure, in the south of France, in 1847. The best-known English version, O Holy Night, was written in 1855 by the American critic and minister John Sullivan Dwight.",
   "funFact": "Cappeau wrote the poem on 3 December 1847, during a stagecoach journey from Mâcon to Dijon.",
   "mythic": null,
   "versions": {
@@ -63,7 +63,7 @@
           "fromBar": 1,
           "toBar": 2,
           "kind": "rhythm",
-          "text": "Hold the long note of each pair, then play the short one just before the next note."
+          "text": "Hold the long note of each dotted pair. The short note then leads straight into the next one."
         },
         {
           "fromBar": 7,
@@ -109,7 +109,7 @@
       },
       "practice": [
         {
-          "text": "Play the first seven bars with the right hand alone. Now every short note is there.",
+          "text": "Play the first seven bars with the right hand alone, and give every short note its place.",
           "hands": "right",
           "speed": 0.6,
           "loop": [1, 7],
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -262,7 +262,7 @@
         },
         {
           "bar": 19,
-          "text": "The same ending an octave up. Hold the last C for the whole bar."
+          "text": "The same ending as bar 13, an octave up. Hold the last C to the end."
         }
       ]
     },
@@ -303,14 +303,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

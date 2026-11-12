@@ -2,7 +2,7 @@
   "song": "row-row-row-your-boat",
   "title": "Row Row Row Your Boat",
   "composer": "Eliphalet Oram Lyte",
-  "about": "This is one of the best known children's songs in the English-speaking world. Eliphalet Oram Lyte published the tune we sing today in 1881, in The Franklin Square Song Collection. It walks up the first five notes of the scale, then tumbles down a whole octave.",
+  "about": "This is one of the best-known children's songs in the English-speaking world. Eliphalet Oram Lyte published the tune we sing today in 1881, in The Franklin Square Song Collection. It walks up the first five notes of the scale, then tumbles down a whole octave.",
   "funFact": "The song is a round: a second voice starts the same tune two bars later, and the two parts fit together.",
   "mythic": null,
   "versions": {
@@ -134,7 +134,7 @@
           "fromBar": 7,
           "toBar": 7,
           "kind": "fingering",
-          "text": "The chord moves down one key: only the little finger leaves C for B."
+          "text": "The chord moves to G. The thumb stays on G, and the other two fingers each step down one key."
         },
         {
           "fromBar": 9,
@@ -202,7 +202,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -289,14 +289,14 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -330,7 +330,7 @@
         },
         {
           "bar": 17,
-          "text": "The right hand ends the round alone. Lift it after the D, ready for the last chord."
+          "text": "The right hand ends the tune over a low G. Lift it after the D, ready for the last chord."
         },
         {
           "bar": 5,

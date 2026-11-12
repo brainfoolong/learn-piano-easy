@@ -2,8 +2,8 @@
   "song": "jolly-old-saint-nicholas",
   "title": "Jolly Old Saint Nicholas",
   "composer": "James R. Murray",
-  "about": "Jolly Old Saint Nicholas is a Christmas song that began as a poem by Emily Huntington Miller. Her poem was published as Lilly's Secret in The Little Corporal Magazine in December 1865. The music is generally believed to be by James R. Murray. It was first printed in 1874, in a school music book called School Chimes.",
-  "funFact": "Ray Conniff recorded the song for his 1962 album We Wish You a Merry Christmas, and it helped the album go platinum.",
+  "about": "Jolly Old Saint Nicholas is a Christmas song that began as a poem by Emily Huntington Miller. Her poem was published as Lilly's Secret in the magazine The Little Corporal in December 1865. The music is generally believed to be by James R. Murray. It was first printed in 1874, in a school music book called School Chimes.",
+  "funFact": "The bandleader Ray Conniff recorded the song in 1962, for his album We Wish You a Merry Christmas.",
   "mythic": null,
   "versions": {
     "common": {
@@ -116,7 +116,7 @@
           "wait": true
         },
         {
-          "text": "Play the bass and chord in turns of the second time alone.",
+          "text": "Play the left hand of the second time alone: a bass note, then its chord.",
           "hands": "left",
           "speed": 0.6,
           "loop": [17, 20],
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -248,7 +248,7 @@
           "fromBar": 1,
           "toBar": 32,
           "kind": "sound",
-          "text": "Change the pedal each half bar, as the left hand starts a new chord."
+          "text": "Change the pedal each half bar, as the left hand starts its pattern again."
         }
       ],
       "tricky": [
@@ -304,7 +304,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

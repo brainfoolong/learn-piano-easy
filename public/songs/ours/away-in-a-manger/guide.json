@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -303,14 +303,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -340,7 +340,7 @@
       "tricky": [
         {
           "bar": 22,
-          "text": "The octaves sit still on F, while the left hand climbs a G seventh and falls back."
+          "text": "The octaves play F twice, then G, while the left hand climbs a G seventh and falls back."
         },
         {
           "bar": 30,
@@ -348,7 +348,7 @@
         },
         {
           "bar": 6,
-          "text": "The left hand jumps to the low G octave while the right hand holds the B, D and F chord."
+          "text": "The left hand jumps to the low G octave while the right hand plays the B, D and F chord."
         }
       ]
     }

@@ -11,8 +11,9 @@
  *
  * Common moves the tune to A minor over held open fifths, with D sharp and B flat in the chromatic bars.
  * There the left hand holds one low note of its position, so the hands never clash. Rare plays every note
- * of the tune over a bass that walks on each beat. Epic keeps B minor over broken chords, then gives the theme to the left hand. Legendary
- * builds up, from a plucked octave bass to the tune in octaves over a driving bass, and ends in full chords.
+ * of the tune over a root and fifth in turns, one on each beat. Epic keeps B minor over broken chords,
+ * then gives the theme to the left hand. Legendary builds up, from a plucked octave bass to the tune in
+ * octaves over a driving bass, and ends in full chords.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -96,7 +97,7 @@ export const hallOfTheMountainKing: OurSong = {
   },
   about:
     "Grieg wrote this music for Henrik Ibsen's play Peer Gynt, first staged in Christiania, today's Oslo, in 1876. " +
-    "Peer sneaks into the hall of the troll king, and the trolls creep closer and closer. " +
+    "In this scene, the trolls crowd around Peer in the hall of their king. " +
     "The same short tune comes back again and again, each time louder and faster, until it crashes to an end.",
   funFact: "Grieg himself wrote that this piece reeked of cow pies and trollish self-satisfaction, and he could hardly bear to hear it.",
   mythic: null,
@@ -125,7 +126,7 @@ export const hallOfTheMountainKing: OurSong = {
       practice: [
         { text: "Play the right hand alone, slowly, and let the song wait for each note.", hands: "right", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Now the right hand alone in bars 9 to 16, where the tune climbs higher.", hands: "right", speed: 0.6, loop: [9, 16], wait: true },
-        { text: "The left hand only holds two notes. Join the hands on the first eight bars.", hands: "both", speed: 0.7, loop: [1, 8], wait: true },
+        { text: "The left hand holds one fifth or one note for each bar. Join the hands on the first eight bars.", hands: "both", speed: 0.7, loop: [1, 8], wait: true },
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -134,8 +135,8 @@ export const hallOfTheMountainKing: OurSong = {
         { fromBar: 9, toBar: 16, kind: "sound", text: "The tune climbs higher here. Let it grow a little louder, as if the trolls are waking up." },
       ],
       tricky: {
-        4: "Fingers 4 and 2 reach in for the black keys, D sharp in bar 3 and B flat here.",
-        9: "The thumb lands on E, and fingers 1, 2, 3 and 4 climb one key each. The left hand moves down to E.",
+        4: "Finger 4 reached in for D sharp in bar 3, and finger 2 reaches in for B flat here.",
+        9: "The thumb lands on E, and fingers 2, 3 and 4 climb one key each. The left hand moves down to E.",
         17: "The tune starts again. Take the thumb back down to A during the rest, and the left hand back to A.",
       },
     },
@@ -169,9 +170,9 @@ export const hallOfTheMountainKing: OurSong = {
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 3, toBar: 4, kind: "fingering", text: "D sharp and B flat are black keys. Fingers 4 and 2 simply reach a little further in." },
-        { fromBar: 1, toBar: 8, kind: "rhythm", text: "Both hands play on every beat. March along and keep the beats perfectly even." },
-        { fromBar: 9, toBar: 16, kind: "sound", text: "This part is the trolls getting closer. Play it a bit louder than the start." },
+        { fromBar: 3, toBar: 4, kind: "fingering", text: "D sharp and B flat are black keys. Fingers 4 and 2 reach a little further in." },
+        { fromBar: 1, toBar: 8, kind: "rhythm", text: "Both hands play on every beat. March along and keep the beats even." },
+        { fromBar: 9, toBar: 16, kind: "sound", text: "This part is the trolls getting closer. Play it a little louder than the start." },
       ],
       tricky: {
         4: "Finger 2 reaches in for B flat, while the left hand steps between G and D.",
@@ -212,7 +213,7 @@ export const hallOfTheMountainKing: OurSong = {
         { text: "Play the left hand's broken chords alone until they roll by themselves: low, middle, high, middle.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand alone on bars 5 to 8, where the thumb passes under.", hands: "right", speed: 0.6, loop: [5, 8], wait: true },
         { text: "Play the theme in the left hand alone, from bar 17.", hands: "left", speed: 0.6, loop: [17, 24], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let it get louder towards the end.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -252,13 +253,13 @@ export const hallOfTheMountainKing: OurSong = {
       skills: ["octave-bass", "melody-in-chords"],
       practice: [
         { text: "Play the left hand's octaves alone, short and plucked, with a rest after each.", hands: "left", speed: 0.6, loop: [1, 4], wait: false },
-        { text: "Play the right hand's octaves alone. Keep the hand stiff and move it as one piece.", hands: "right", speed: 0.5, loop: [9, 12], wait: true },
+        { text: "Play the right hand's octaves alone. Keep the hand in one shape and move it as one piece.", hands: "right", speed: 0.5, loop: [9, 12], wait: true },
         { text: "Play the driving octaves of the left hand alone, eight to a bar.", hands: "left", speed: 0.5, loop: [9, 12], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, from a whisper at the start to a roar at the end.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, from soft at the start to loud at the end.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 8, kind: "sound", text: "Start very quietly. The whole piece is one long build-up, so save your strength." },
+        { fromBar: 1, toBar: 8, kind: "sound", text: "Start quietly. The whole piece grows louder to its end, so leave room to grow." },
         { fromBar: 9, toBar: 16, kind: "trick", text: "For octaves, thumb and little finger keep the same shape. Let the wrist do the moving." },
         { fromBar: 25, toBar: 28, kind: "sound", text: "These are the trolls' final crashes. Play each chord loud and short." },
       ],

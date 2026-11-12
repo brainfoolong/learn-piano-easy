@@ -159,7 +159,7 @@ export const leiseRieseltDerSchnee: OurSong = {
   about:
     "Leise rieselt der Schnee means Softly falls the snow in German. " +
     "It is one of the best-known Advent songs in the German language. " +
-    "The pastor Eduard Ebel wrote the words in 1895, and his book printed them with no melody. " +
+    "The pastor Eduard Ebel wrote the words in 1895, and his book printed them with no tune. " +
     "Many books credit the tune to Ebel too, but no source shows it, and others call it a folk tune.",
   funFact:
     "Some say the tune grew from a Musette by Daniel Gottlob Türk from 1792, but only its first bar and a half match.",
@@ -187,7 +187,7 @@ export const leiseRieseltDerSchnee: OurSong = {
       ],
       tips: [
         { fromBar: 1, toBar: 2, kind: "fingering", text: "Your right thumb starts on middle C, and finger 3 takes the first E." },
-        { fromBar: 3, toBar: 4, kind: "trick", text: "Finger 4 takes the C your thumb just held, and the hand settles down until the thumb sits on G." },
+        { fromBar: 3, toBar: 4, kind: "trick", text: "Finger 4 takes the C your thumb held in bar 2, and the hand moves down until the thumb sits on G." },
         { fromBar: 1, toBar: 16, kind: "sound", text: "Each phrase ends on a long note and a short rest. Let the note ring, then breathe, like falling snow." },
       ],
       tricky: {
@@ -235,15 +235,15 @@ export const leiseRieseltDerSchnee: OurSong = {
       skills: ["alberti-bass", "pedal", "thirds-and-sixths"],
       practice: [
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
-        { text: "Play the right hand's thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
+        { text: "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
         { fromBar: 9, toBar: 16, kind: "fingering", text: "The tune is the top note of each pair, so let the upper finger lead." },
-        { fromBar: 1, toBar: 16, kind: "sound", text: "Change the pedal at each half bar, where the chord changes." },
+        { fromBar: 1, toBar: 16, kind: "sound", text: "Change the pedal at each half bar, as the left hand starts its pattern again." },
       ],
       tricky: {
         7: "The quick A falls on the thumb while the left hand rolls through D minor. Keep the bass even under it.",
@@ -265,8 +265,8 @@ export const leiseRieseltDerSchnee: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [9, 12], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "trick", text: "In stride, look at the octave and let the hand find the chord by feel." },
@@ -274,8 +274,8 @@ export const leiseRieseltDerSchnee: OurSong = {
         { fromBar: 15, toBar: 15, kind: "rhythm", text: "Let go of the D octave a moment early, so the hand lands on the quick A in time." },
       ],
       tricky: {
-        9: "The hands change jobs. The right hand plays octaves, and the left starts its first arpeggio over two octaves.",
-        12: "Hold the G octave for the whole bar while the left hand climbs to E and back down.",
+        9: "Both hands change their pattern. The right hand plays octaves, and the left starts its first arpeggio over two octaves.",
+        12: "Hold the G octave while the left hand climbs to the high E and back down.",
         14: "The same climb as bar 12, now under the C octave. Let finger 3 cross over the thumb smoothly.",
       },
     },

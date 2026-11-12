@@ -222,9 +222,8 @@ export const oHolyNight: OurSong = {
     edition: "Cantique de Noël, read from G. Schirmer's print of 1871",
   },
   about:
-    "Adolphe Adam was a French composer, and he set Placide Cappeau's French poem Minuit, chrétiens to music. " +
-    "The song's original title is Cantique de Noël, and it was first performed at Midnight Mass in Roquemaure in 1847. " +
-    "One of its earliest known publications was an organ arrangement from around 1855. " +
+    "The French composer Adolphe Adam set Placide Cappeau's poem Minuit, chrétiens to music, as Cantique de Noël. " +
+    "It was first sung at Midnight Mass in Roquemaure, in the south of France, in 1847. " +
     "The best-known English version, O Holy Night, was written in 1855 by the American critic and minister John Sullivan Dwight.",
   funFact: "Cappeau wrote the poem on 3 December 1847, during a stagecoach journey from Mâcon to Dijon.",
   mythic: null,
@@ -249,7 +248,7 @@ export const oHolyNight: OurSong = {
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 2, kind: "rhythm", text: "Hold the long note of each pair, then play the short one just before the next note." },
+        { fromBar: 1, toBar: 2, kind: "rhythm", text: "Hold the long note of each dotted pair. The short note then leads straight into the next one." },
         { fromBar: 7, toBar: 8, kind: "trick", text: "Use the rest at the end of bar 7 to move up. Finger 3 lands on the high C." },
         { fromBar: 8, toBar: 10, kind: "sound", text: "This is the climb the song is known for. Let it grow louder up to the high E." },
       ],
@@ -269,7 +268,7 @@ export const oHolyNight: OurSong = {
       left: inPairs([...CHORDS, ...CHORDS.slice(CODA)].map((letters) => heldBar(BLOCK, letters, 4))),
       skills: ["triads", "dotted-rhythm"],
       practice: [
-        { text: "Play the first seven bars with the right hand alone. Now every short note is there.", hands: "right", speed: 0.6, loop: [1, 7], wait: true },
+        { text: "Play the first seven bars with the right hand alone, and give every short note its place.", hands: "right", speed: 0.6, loop: [1, 7], wait: true },
         { text: "Play the left hand alone. Hold each chord until the next one comes.", hands: "left", speed: 0.6, loop: null, wait: true },
         { text: "Join the hands on the climb in bars 8 to 10.", hands: "both", speed: 0.6, loop: [8, 10], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
@@ -300,7 +299,7 @@ export const oHolyNight: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 3], wait: false },
         { text: "Play the refrain an octave up with the right hand alone.", hands: "right", speed: 0.6, loop: [14, 19], wait: true },
         { text: "Join the hands on the first seven bars, slowly.", hands: "both", speed: 0.5, loop: [1, 7], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -311,7 +310,7 @@ export const oHolyNight: OurSong = {
       tricky: {
         4: "The right hand plays its F sharps while the left hand rolls on E. Keep both hands light.",
         13: "The tune comes home to C while the left hand turns from C to G and back.",
-        19: "The same ending an octave up. Hold the last C for the whole bar.",
+        19: "The same ending as bar 13, an octave up. Hold the last C to the end.",
       },
     },
     legendary: {
@@ -332,8 +331,8 @@ export const oHolyNight: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then up for the chord.", hands: "left", speed: 0.5, loop: [1, 3], wait: false },
         { text: "Play the climb in octaves with the right hand alone. Keep the hand in the shape of an octave.", hands: "right", speed: 0.5, loop: [8, 10], wait: true },
         { text: "Play the broken octaves of the refrain with the left hand alone.", hands: "left", speed: 0.5, loop: [14, 19], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 13, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },

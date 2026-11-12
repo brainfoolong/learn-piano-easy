@@ -75,7 +75,7 @@
           "fromBar": 8,
           "toBar": 9,
           "kind": "trick",
-          "text": "During the last E, move the thumb back up to D for the black key F sharp."
+          "text": "During the last E, move the thumb back up to D, so finger 3 can reach the black key F sharp."
         }
       ],
       "tricky": [
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -242,7 +242,7 @@
           "fromBar": 1,
           "toBar": 32,
           "kind": "sound",
-          "text": "Change the pedal with every chord, twice in most bars."
+          "text": "Change the pedal at the start and the middle of each bar."
         },
         {
           "fromBar": 16,
@@ -304,14 +304,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -335,13 +335,13 @@
           "fromBar": 17,
           "toBar": 32,
           "kind": "fingering",
-          "text": "Thumb and little finger play every octave. Let the hand stay open and still."
+          "text": "Thumb and little finger play every octave. Keep the hand open in one shape."
         }
       ],
       "tricky": [
         {
           "bar": 3,
-          "text": "Grab B, D and F, then fingers 2 and 4 play D and G while the left hand jumps."
+          "text": "Press B, D and F together, then fingers 2 and 4 play D and G while the left hand jumps."
         },
         {
           "bar": 15,

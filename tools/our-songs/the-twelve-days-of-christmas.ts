@@ -223,7 +223,7 @@ export const theTwelveDaysOfChristmas: OurSong = {
       tips: [
         { fromBar: 1, toBar: 2, kind: "fingering", text: "The thumb plays the three low Gs, and finger 2 takes each C of bar 2." },
         { fromBar: 4, toBar: 5, kind: "rhythm", text: "Hold the long G for the whole bar while you count to eight. That is the gold ring." },
-        { fromBar: 6, toBar: 7, kind: "trick", text: "After the short rest, the thumb lands on the low A. Finger 5 has just let go of F." },
+        { fromBar: 6, toBar: 7, kind: "trick", text: "After the short rest, the thumb lands on the low A. Finger 5 has let go of F a moment before." },
       ],
       tricky: {
         3: "Fingers 3, 4 and 5 climb to F. Then the thumb slides up to D, and finger 2 holds the long E.",
@@ -272,7 +272,7 @@ export const theTwelveDaysOfChristmas: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the broken chords of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [11, 14], wait: false },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 9], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -300,7 +300,7 @@ export const theTwelveDaysOfChristmas: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [11, 14], wait: false },
         { text: "Play bars 13 to 15 with both hands slowly, where the arpeggios run under the gold rings.", hands: "both", speed: 0.5, loop: [13, 15], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

@@ -129,7 +129,7 @@ export const oChristmasTree: OurSong = {
   },
   about:
     "O Tannenbaum means O fir tree in German. " +
-    "The tune is an old German folk melody, and nobody knows who first wrote it. " +
+    "The tune comes from an old German folk song, and nobody knows who wrote it. " +
     "The Leipzig teacher Ernst Anschütz wrote the words sung today in 1824. " +
     "His song praises the fir tree for staying green all through the winter.",
   funFact: "The same tune carries the state song of Iowa, and Maryland's state song used it until 2021.",
@@ -192,7 +192,7 @@ export const oChristmasTree: OurSong = {
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 13, toBar: 14, kind: "trick", text: "During the last C, slide the thumb up to the next G, and the second verse starts an octave higher." },
+        { fromBar: 13, toBar: 14, kind: "trick", text: "After the last C, the thumb moves up to the next G. The second verse then starts an octave higher." },
         { fromBar: 14, toBar: 25, kind: "sound", text: "In the waltz bass, play the low note a little louder than the chords after it." },
         { fromBar: 6, toBar: 9, kind: "sound", text: "The middle phrase comes twice, a step lower the second time. Play the echo a little softer." },
       ],
@@ -237,7 +237,7 @@ export const oChristmasTree: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [14, 17], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 13], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -246,7 +246,7 @@ export const oChristmasTree: OurSong = {
         { fromBar: 17, toBar: 17, kind: "sound", text: "Change the pedal on the second beat, where the chord turns from G to C." },
       ],
       tricky: {
-        16: "The hand opens to a sixth, then the thumb drops from G to D for the last pair.",
+        16: "The hand stretches to a seventh, G and F. Then the thumb drops from G to D for the last pair.",
         17: "After the two pairs, the little finger reaches up to the high G.",
         25: "Spread the hand for the last two chords, and let the C on top ring.",
       },
@@ -285,8 +285,8 @@ export const oChristmasTree: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 5], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [14, 17], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 13, kind: "trick", text: "In stride, look at the octave and let the hand find the chord by feel." },
@@ -294,7 +294,7 @@ export const oChristmasTree: OurSong = {
         { fromBar: 14, toBar: 25, kind: "fingering", text: "In each arpeggio, the third finger crosses over the thumb on the way up." },
       ],
       tricky: {
-        4: "The little finger plays D and E on top, then holds the tune while the chords change under it.",
+        4: "The little finger plays D, E and F on top. Then the hand drops to the G chord, with the little finger on B.",
         5: "Lift the hand after the C chord, and reach up to the high G with the little finger.",
         12: "The same chords as bar 4. Keep the little finger on the tune as the thumb steps down.",
       },

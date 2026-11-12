@@ -73,7 +73,7 @@
       "tricky": [
         {
           "bar": 4,
-          "text": "Your little finger jumps over F to G. Keep the other fingers resting on their keys."
+          "text": "The tune skips F, from E to G. Play G with the little finger, and keep the other fingers on their keys."
         },
         {
           "bar": 3,
@@ -154,13 +154,13 @@
           "fromBar": 12,
           "toBar": 12,
           "kind": "sound",
-          "text": "Press both notes of the last chord together, as if they were one key."
+          "text": "Press B and D together at the end of the bar, as if they were one key."
         }
       ],
       "tricky": [
         {
           "bar": 9,
-          "text": "Your fourth finger plays the quick C, then falls back to A. Keep the hand still."
+          "text": "Finger 4 plays the quick C, then finger 2 takes A. Keep the hand still."
         },
         {
           "bar": 11,
@@ -210,7 +210,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -251,7 +251,7 @@
         },
         {
           "bar": 13,
-          "text": "The thirds come back after a held bar. Press the two notes of each pair as one."
+          "text": "After the held pair, the last phrase starts. Press the two notes of each pair as one."
         },
         {
           "bar": 15,
@@ -289,21 +289,21 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the first eight bars at three quarters speed.",
+          "text": "Join the hands on the first eight bars at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": [1, 8],
           "wait": false
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

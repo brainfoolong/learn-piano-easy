@@ -65,7 +65,7 @@ export const rowRowRowYourBoat: OurSong = {
     edition: "The Franklin Square Song Collection (1881)",
   },
   about:
-    "This is one of the best known children's songs in the English-speaking world. " +
+    "This is one of the best-known children's songs in the English-speaking world. " +
     "Eliphalet Oram Lyte published the tune we sing today in 1881, in The Franklin Square Song Collection. " +
     "It walks up the first five notes of the scale, then tumbles down a whole octave.",
   funFact: "The song is a round: a second voice starts the same tune two bars later, and the two parts fit together.",
@@ -117,7 +117,7 @@ export const rowRowRowYourBoat: OurSong = {
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 7, toBar: 7, kind: "fingering", text: "The chord moves down one key: only the little finger leaves C for B." },
+        { fromBar: 7, toBar: 7, kind: "fingering", text: "The chord moves to G. The thumb stays on G, and the other two fingers each step down one key." },
         { fromBar: 9, toBar: 15, kind: "rhythm", text: "The bass note falls on beat one, and the notes above it on beat four." },
         { fromBar: 5, toBar: 6, kind: "sound", text: "Let the falling notes get a little softer, like a boat drifting away." },
       ],
@@ -146,7 +146,7 @@ export const rowRowRowYourBoat: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the tune in the left hand alone, from bar 9.", hands: "left", speed: 0.6, loop: [9, 16], wait: true },
         { text: "Join the hands on the first eight bars, slowly.", hands: "both", speed: 0.5, loop: [1, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -186,8 +186,8 @@ export const rowRowRowYourBoat: OurSong = {
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the left hand alone from bar 9, where it starts the round.", hands: "left", speed: 0.6, loop: [9, 16], wait: true },
         { text: "Join the hands on the round, slowly, and listen for the two voices.", hands: "both", speed: 0.5, loop: [9, 18], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "sound", text: "Play the top note of each chord a little louder than the others." },
@@ -196,7 +196,7 @@ export const rowRowRowYourBoat: OurSong = {
       ],
       tricky: {
         5: "Lift the hand off the chord of bar 4, and land with the little finger on the high C.",
-        17: "The right hand ends the round alone. Lift it after the D, ready for the last chord.",
+        17: "The right hand ends the tune over a low G. Lift it after the D, ready for the last chord.",
         18: "Spread the right hand over a whole octave for the last chord: C, E, G and C.",
       },
     },

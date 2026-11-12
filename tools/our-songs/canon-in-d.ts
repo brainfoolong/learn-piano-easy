@@ -85,12 +85,12 @@ export const canonInD: OurSong = {
     composer: "Johann Pachelbel",
     died: 1706,
     published: 1919,
-    edition: "Canon and Gigue in D major, in Max Seiffert's first edition (1919) of the score from about 1700",
+    edition: "Canon and Gigue in D major, in Gustav Beckmann's first edition (1919) of the score from about 1700",
   },
   about:
     "Johann Pachelbel wrote this canon around 1700, for three violins over a bass line. " +
     "The bass plays the same eight notes again and again, while each violin enters with the same tune. " +
-    "The piece lay forgotten until Max Seiffert first printed it in 1919.",
+    "The piece lay forgotten until Gustav Beckmann first printed it in 1919.",
   funFact: "The canon was almost unknown until the late 1960s, and today it is one of the most played pieces at weddings.",
   mythic: null,
   tune: { text: tune, numerator: 4, denominator: 4, key: D_MAJOR, hookBars: [1, 2] },
@@ -160,7 +160,7 @@ export const canonInD: OurSong = {
       tips: [
         { fromBar: 1, toBar: 4, kind: "sound", text: "The bass walks the same eight notes all through the piece. Keep it soft and even." },
         { fromBar: 9, toBar: 12, kind: "rhythm", text: "The tune now moves on every beat, while the bass keeps its steady pace." },
-        { fromBar: 13, toBar: 14, kind: "trick", text: "The lower notes of these thirds are the second violin. It plays the same tune, a third below." },
+        { fromBar: 13, toBar: 14, kind: "trick", text: "In the canon, the violins play the same tune at different times. Here two of them sound together, a third apart." },
       ],
       tricky: {
         6: "Finger 4 moves from C sharp down to B, and the hand slides one key lower.",
@@ -190,7 +190,7 @@ export const canonInD: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's sixths alone. Keep the hand in one shape and move it as a block.", hands: "right", speed: 0.6, loop: [5, 8], wait: true },
         { text: "Play the run of bars 13 to 16 alone, slowly, with the fingers written.", hands: "right", speed: 0.5, loop: [13, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -225,13 +225,13 @@ export const canonInD: OurSong = {
         { text: "Play the octave bass alone: hold each octave, then lift the hand for the next one.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the sixteenths of the left hand alone until they flow.", hands: "left", speed: 0.5, loop: [9, 12], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 4, kind: "trick", text: "Keep thumb and little finger an octave apart, and move the hand as one shape." },
+        { fromBar: 1, toBar: 4, kind: "trick", text: "In the left hand, keep the thumb and little finger an octave apart, and move the hand as one shape." },
         { fromBar: 1, toBar: 8, kind: "sound", text: "Play the top note of each chord a little louder than the others." },
-        { fromBar: 9, toBar: 16, kind: "sound", text: "The left hand's sixteenths are a soft carpet. Keep them light and even." },
+        { fromBar: 9, toBar: 16, kind: "sound", text: "Keep the left hand's sixteenths soft, light and even, under the tune." },
       ],
       tricky: {
         2: "The thumb stays on F sharp for both chords. Move only fingers 3 and 5.",

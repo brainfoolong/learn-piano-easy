@@ -177,7 +177,7 @@ export const esIstEinRosEntsprungen: OurSong = {
     "It is a church Christmas song from the 16th century. " +
     "Its tune was first printed in the Speyer hymnal, in Cologne in 1599, and its composer is unknown. " +
     "Michael Praetorius set it for four voices in 1609, and his setting spread widely.",
-  funFact: "Johannes Brahms took Praetorius's melody as the starting point of a chorale prelude, the eighth of his Op. 122.",
+  funFact: "Johannes Brahms built a chorale prelude for organ on this tune, the eighth of his Op. 122.",
   mythic: null,
   collection: "christmas",
   aka: ["Lo, How a Rose E'er Blooming"],
@@ -200,13 +200,13 @@ export const esIstEinRosEntsprungen: OurSong = {
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 2, kind: "fingering", text: "Each long G starts on finger 5. Change to finger 4 on the next G, and the hand stays put." },
+        { fromBar: 1, toBar: 2, kind: "fingering", text: "Each long G starts on finger 5. Change to finger 4 on the next G, and the hand stays still." },
         { fromBar: 2, toBar: 2, kind: "rhythm", text: "Each bar holds three bars of the old print. Count six slow beats, two quarters to each beat." },
         { fromBar: 5, toBar: 5, kind: "trick", text: "After the low G, rest a moment, then let finger 5 reach up an octave to the high G." },
       ],
       tricky: {
         3: "Finger 2 holds C, then finger 5 stretches up to G. Swap to finger 4 on the next G.",
-        5: "Fingers 4 and 2 play D and B, then the thumb lands on the low G. Rest, and reach up with finger 5.",
+        5: "Fingers 4, 2, 3 and 2 play D, B, C and A, then the thumb lands on the low G. Rest, and reach up with finger 5.",
         9: "The same stretch as bar 3: finger 5 reaches up from C to G, and finger 4 takes the next G.",
       },
     },
@@ -240,7 +240,7 @@ export const esIstEinRosEntsprungen: OurSong = {
         { fromBar: 13, toBar: 13, kind: "trick", text: "The same rest brings the right hand back down, for the last time through." },
       ],
       tricky: {
-        3: "Finger 5 stretches up from C to G while the left hand presses a new C chord.",
+        3: "Finger 5 stretches up from C to G, while the left hand holds its C chord.",
         7: "Hold the C, lift the right hand on the rest, and land finger 5 on the G an octave up.",
         13: "Hold the high C, lift on the rest, and land finger 5 back on the G below.",
       },
@@ -272,7 +272,7 @@ export const esIstEinRosEntsprungen: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 4], wait: false },
         { text: "Play the broken chords of the second time alone, and lift the hand on each rest.", hands: "left", speed: 0.5, loop: [8, 13], wait: false },
         { text: "Join the hands on the first time through, slowly.", hands: "both", speed: 0.5, loop: [1, 7], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal in the middle part.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -313,7 +313,7 @@ export const esIstEinRosEntsprungen: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 4], wait: false },
         { text: "Play the right hand's octaves alone, and keep the thumb and finger 5 an octave apart.", hands: "right", speed: 0.5, loop: [8, 13], wait: true },
         { text: "Play the arpeggios of the second time in the left hand alone.", hands: "left", speed: 0.5, loop: [8, 13], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

@@ -74,21 +74,21 @@
           "fromBar": 5,
           "toBar": 7,
           "kind": "fingering",
-          "text": "Each bar of the run starts one key lower with the same finger. Let the hand creep down."
+          "text": "The run falls one key with each long note. Fingers 5, 4 and 3 take the first three, then the hand moves down a key at a time."
         }
       ],
       "tricky": [
         {
           "bar": 7,
-          "text": "Fingers 3, 2 and 1 walk down to A twice. Then finger 3 takes B, and the thumb lands on the low G."
+          "text": "Fingers 3, 2 and 1 play C, B and A, then B, C and A. Then they walk down B, A and G."
         },
         {
           "bar": 5,
-          "text": "The run starts on the high G with the little finger. Each next bar plays the same pattern one key lower."
+          "text": "The run starts on the high G with the little finger. Each long note starts the same pattern one key lower."
         },
         {
           "bar": 1,
-          "text": "Finger 4 plays C twice, then fingers 5, 4, 3 and 2 step down to A. The thumb holds the long G."
+          "text": "Finger 4 plays C twice, then fingers 5, 4, 3 and 2 step down from D to A. The thumb holds the long G."
         }
       ]
     },
@@ -148,7 +148,7 @@
           "fromBar": 5,
           "toBar": 7,
           "kind": "rhythm",
-          "text": "Each bar of the run starts with a long note, then five quick ones. Hold the long note for three counts."
+          "text": "The run moves in groups of a long note and five quick ones. Hold each long note as long as three quick ones."
         },
         {
           "fromBar": 1,
@@ -166,11 +166,11 @@
       "tricky": [
         {
           "bar": 7,
-          "text": "Fingers 3, 2 and 1 walk down to A twice. Then finger 3 takes B, and the thumb lands on the low G."
+          "text": "Fingers 3, 2 and 1 play C, B and A, then B, C and A. Then they walk down B, A and G."
         },
         {
           "bar": 5,
-          "text": "The run starts on the high G with the little finger. Each next bar plays the same pattern one key lower."
+          "text": "The run starts on the high G with the little finger. Each long note starts the same pattern one key lower."
         },
         {
           "bar": 15,
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -303,7 +303,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -348,7 +348,7 @@
         },
         {
           "bar": 14,
-          "text": "The run swings down to B, while the left hand climbs a G arpeggio below it."
+          "text": "The run swings down to B, while the left hand climbs a C and then a G arpeggio below it."
         }
       ]
     }

@@ -215,12 +215,12 @@ export const morgenKinder: OurSong = {
       tips: [
         { fromBar: 2, toBar: 2, kind: "rhythm", text: "The four quick notes of bar 2 are the shortest in the song. Count them evenly: one, two, three, four." },
         { fromBar: 2, toBar: 3, kind: "trick", text: "Bar 2 ends with a short G and a rest. Use the rest to open the hand up to the E." },
-        { fromBar: 11, toBar: 11, kind: "fingering", text: "The thumb plays the first C, and finger 2 plays the second. Finger 5 then reaches F with ease." },
+        { fromBar: 11, toBar: 11, kind: "fingering", text: "The thumb plays the first C and finger 2 the second, so finger 5 reaches F." },
       ],
       tricky: {
-        3: "Finger 3 lands on E after the rest. Fingers 4 and 5 climb to G, and finger 4 comes back to E.",
-        7: "The same as bar 3: finger 3 on E, then fingers 4 and 5 up to G.",
-        8: "Fingers 5 and 4 step down to E, and finger 2 takes D. Finger 3 is then ready for the F of bar 9.",
+        3: "After the rest, finger 3 plays E twice. Fingers 4 and 5 climb to F and G, and finger 4 comes back to E.",
+        7: "The same as bar 3: finger 3 on E, then fingers 4 and 5 up to F and G.",
+        8: "Fingers 5 and 4 play F and E, and finger 2 takes D. Finger 3 is then ready for the F of bar 9.",
       },
     },
     rare: {
@@ -245,7 +245,7 @@ export const morgenKinder: OurSong = {
         { fromBar: 21, toBar: 22, kind: "fingering", text: "The thumb plays the first C and finger 2 the second, so finger 5 reaches F." },
       ],
       tricky: {
-        5: "Finger 3 leaps up from G to E with no rest. Keep the thumb light, so the hand opens out.",
+        5: "After the thumb's G, finger 3 leaps up to E with no rest. Keep the thumb light, so the hand opens out.",
         6: "Finger 5 plays the high G, and finger 4 comes back to E over the C chord.",
         14: "The same as bar 6: finger 5 on the high G, then finger 4 on E.",
       },
@@ -264,12 +264,12 @@ export const morgenKinder: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the broken chords of the second time alone, up and back down.", hands: "left", speed: 0.5, loop: [13, 16], wait: false },
         { text: "Join the hands on the first time through, slowly.", hands: "both", speed: 0.5, loop: [1, 12], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 12, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
-        { fromBar: 12, toBar: 13, kind: "trick", text: "The right hand rests for an eighth at the end of bar 12, then jumps up an octave." },
+        { fromBar: 12, toBar: 13, kind: "trick", text: "The right hand rests for a quarter at the end of bar 12, then jumps up an octave." },
         { fromBar: 1, toBar: 24, kind: "sound", text: "Change the pedal on every half bar, as the left hand starts a new chord." },
       ],
       tricky: {
@@ -292,7 +292,7 @@ export const morgenKinder: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's octaves alone, and lift the hand on each short rest.", hands: "right", speed: 0.5, loop: [13, 16], wait: true },
         { text: "Play the arpeggios of the second time in the left hand alone.", hands: "left", speed: 0.5, loop: [13, 16], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

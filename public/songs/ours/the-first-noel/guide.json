@@ -2,7 +2,7 @@
   "song": "the-first-noel",
   "title": "The First Noel",
   "composer": "Traditional",
-  "about": "The First Noel is an English carol, and nobody knows who wrote its tune. It comes from Cornwall, in the far south-west of England. Davies Gilbert printed it in 1823, and William Sandys printed it in 1833. John Stainer set it for choirs in 1871, and his version is the one sung today.",
+  "about": "The First Noel is an English carol, and nobody knows who wrote its tune. It is thought to come from Cornwall, in the far south-west of England. Davies Gilbert printed it in 1823, and William Sandys printed it in 1833. John Stainer set it for choirs in 1871, and his version is the one sung today.",
   "funFact": "Noel comes from the French word Noël, and that comes from the Latin word for birth.",
   "mythic": null,
   "versions": {
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -303,14 +303,14 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

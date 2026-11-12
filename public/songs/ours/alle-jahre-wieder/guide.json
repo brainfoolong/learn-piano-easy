@@ -2,7 +2,7 @@
   "song": "alle-jahre-wieder",
   "title": "Alle Jahre wieder",
   "composer": "Friedrich Silcher",
-  "about": "Alle Jahre wieder means Every year again in German. It is one of the best-known German Christmas songs. Wilhelm Hey wrote its three verses in 1837, and they tell of the Christ Child who brings the gifts. Friedrich Silcher wrote the tune and published it in 1842, in a set of twelve songs for children.",
+  "about": "Alle Jahre wieder means Every year again in German. It is one of the best-known German Christmas songs. Wilhelm Hey wrote its three verses in 1837, and they tell of the Christ Child, who comes down to earth every year. Friedrich Silcher wrote the tune and published it in 1842, in a set of twelve songs for children.",
   "funFact": "The same words are also sung to a tune Christian Heinrich Rinck wrote in 1827. Today that tune mostly carries another poem, Abend wird es wieder.",
   "mythic": null,
   "versions": {
@@ -108,7 +108,7 @@
       },
       "practice": [
         {
-          "text": "Play the left hand alone, and press the three notes of each chord together.",
+          "text": "Play the left hand alone, and press the notes of each chord together.",
           "hands": "left",
           "speed": 0.6,
           "loop": [1, 8],
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -303,14 +303,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -348,7 +348,7 @@
         },
         {
           "bar": 12,
-          "text": "The right hand holds its octave, so give all your eyes to the two G arpeggios."
+          "text": "The right hand holds its octave, so watch the left hand through the two G arpeggios."
         }
       ]
     }

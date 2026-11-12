@@ -36,7 +36,7 @@
           "wait": true
         },
         {
-          "text": "Put both hands together. The left hand holds one low note for half a bar or more.",
+          "text": "Put both hands together. The left hand holds each low note for half a bar or more.",
           "hands": "both",
           "speed": 0.7,
           "loop": null,
@@ -55,7 +55,7 @@
           "fromBar": 1,
           "toBar": 1,
           "kind": "rhythm",
-          "text": "Long, short: the first G takes three counts, and the F slips in right after it."
+          "text": "Long, short: the first G is long, and the F is short and comes right after it."
         },
         {
           "fromBar": 13,
@@ -209,7 +209,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -296,14 +296,14 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,

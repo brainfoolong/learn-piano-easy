@@ -6,7 +6,7 @@
  * needs nothing faster. Each bar of 3/4 is half a bar of the edition, and bar 1 holds the upbeat after a
  * quarter rest. The hook is its first four bars, from the upbeat to the first A.
  *
- * Common plays the tune over held open fifths and drops three low notes it cannot reach. Rare plays every
+ * Common plays the tune over held open fifths and drops three notes it cannot reach. Rare plays every
  * note, and the left hand climbs its broken chords as the edition does. Epic puts an Alberti bass with the
  * pedal under it, then plays the tune again in thirds and sixths. Legendary sets it over a stride bass,
  * then plays it an octave up with full chords.
@@ -98,7 +98,7 @@ export const furElise: OurSong = {
       practice: [
         { text: "Play the first four bars with the right hand alone, and let the song wait for each note.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
         { text: "Play the right hand alone from bar 5, where the hand moves down to middle C.", hands: "right", speed: 0.6, loop: [5, 9], wait: true },
-        { text: "Now the left hand alone. It only holds two shapes, one per bar.", hands: "left", speed: 0.6, loop: null, wait: true },
+        { text: "Now the left hand alone. It holds two shapes, one per bar.", hands: "left", speed: 0.6, loop: null, wait: true },
         { text: "Put both hands together on the first eight bars.", hands: "both", speed: 0.7, loop: [1, 8], wait: true },
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
@@ -140,8 +140,8 @@ export const furElise: OurSong = {
       ],
       tricky: {
         5: "Use the rest after A to move the right thumb down to middle C.",
-        6: "The left thumb stretches from B up to G sharp. Let the hand open wide.",
-        14: "The same stretch as bar 6: the left thumb reaches from B up to G sharp.",
+        6: "The left hand opens wide: finger 2 plays B, and the thumb reaches up to G sharp.",
+        14: "The same stretch as bar 6: finger 2 plays B, and the left thumb reaches up to G sharp.",
       },
     },
     epic: {
@@ -174,7 +174,7 @@ export const furElise: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [4, 8], wait: false },
         { text: "Play the right hand's thirds alone, and press both notes of each pair as one.", hands: "right", speed: 0.6, loop: [17, 20], wait: true },
         { text: "Join the hands on bars 4 to 8, slowly.", hands: "both", speed: 0.5, loop: [4, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -185,7 +185,7 @@ export const furElise: OurSong = {
       tricky: {
         20: "Lift the hand after the thirds, then land with the thumb on middle C and the little finger on A.",
         28: "The same jump as bar 20: thumb on middle C and little finger on A, together.",
-        32: "Spread the hand for the last chord: thumb on C, then fingers 2 and 4 on E and A.",
+        32: "Spread the hand for the last chord: thumb on C, finger 2 on E and finger 4 on A.",
       },
     },
     legendary: {
@@ -217,10 +217,10 @@ export const furElise: OurSong = {
       skills: ["stride", "melody-in-chords", "octave-bass"],
       practice: [
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [4, 8], wait: false },
-        { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [20, 24], wait: true },
+        { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [20, 24], wait: true },
         { text: "Join the hands on the second half, where the tune climbs an octave.", hands: "both", speed: 0.6, loop: [17, 24], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 4, toBar: 8, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },

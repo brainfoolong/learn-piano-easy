@@ -74,7 +74,7 @@
           "fromBar": 6,
           "toBar": 7,
           "kind": "trick",
-          "text": "After the short rest, the thumb lands on the low A. Finger 5 has just let go of F."
+          "text": "After the short rest, the thumb lands on the low A. Finger 5 has let go of F a moment before."
         }
       ],
       "tricky": [
@@ -215,7 +215,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -302,7 +302,7 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

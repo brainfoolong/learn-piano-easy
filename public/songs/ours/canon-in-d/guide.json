@@ -2,7 +2,7 @@
   "song": "canon-in-d",
   "title": "Canon in D",
   "composer": "Johann Pachelbel",
-  "about": "Johann Pachelbel wrote this canon around 1700, for three violins over a bass line. The bass plays the same eight notes again and again, while each violin enters with the same tune. The piece lay forgotten until Max Seiffert first printed it in 1919.",
+  "about": "Johann Pachelbel wrote this canon around 1700, for three violins over a bass line. The bass plays the same eight notes again and again, while each violin enters with the same tune. The piece lay forgotten until Gustav Beckmann first printed it in 1919.",
   "funFact": "The canon was almost unknown until the late 1960s, and today it is one of the most played pieces at weddings.",
   "mythic": null,
   "versions": {
@@ -153,7 +153,7 @@
           "fromBar": 13,
           "toBar": 14,
           "kind": "trick",
-          "text": "The lower notes of these thirds are the second violin. It plays the same tune, a third below."
+          "text": "In the canon, the violins play the same tune at different times. Here two of them sound together, a third apart."
         }
       ],
       "tricky": [
@@ -209,7 +209,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -296,14 +296,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -315,7 +315,7 @@
           "fromBar": 1,
           "toBar": 4,
           "kind": "trick",
-          "text": "Keep thumb and little finger an octave apart, and move the hand as one shape."
+          "text": "In the left hand, keep the thumb and little finger an octave apart, and move the hand as one shape."
         },
         {
           "fromBar": 1,
@@ -327,7 +327,7 @@
           "fromBar": 9,
           "toBar": 16,
           "kind": "sound",
-          "text": "The left hand's sixteenths are a soft carpet. Keep them light and even."
+          "text": "Keep the left hand's sixteenths soft, light and even, under the tune."
         }
       ],
       "tricky": [

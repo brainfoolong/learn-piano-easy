@@ -3,7 +3,7 @@
   "title": "The Entertainer",
   "composer": "Scott Joplin",
   "about": "Scott Joplin, the King of Ragtime, published this rag in St. Louis in 1902. A rag puts a bouncy, off-beat tune over a steady bass that goes oom-pah. This is the first strain, the part everyone hums.",
-  "funFact": "The rag became a hit again in 1973, when the film The Sting used it, seventy years after Joplin wrote it.",
+  "funFact": "The rag became famous around the world in 1973, when the film The Sting used it, more than seventy years after Joplin wrote it.",
   "mythic": "mutopia/entertainer.mid",
   "versions": {
     "common": {
@@ -194,7 +194,7 @@
           "wait": false
         },
         {
-          "text": "Play the second phrase's right hand alone, where the tune turns to D.",
+          "text": "Play the second phrase's right hand alone, where an F sharp leads the tune to G.",
           "hands": "right",
           "speed": 0.6,
           "loop": [10, 16],
@@ -208,7 +208,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -295,14 +295,14 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -332,7 +332,7 @@
       "tricky": [
         {
           "bar": 4,
-          "text": "Both hands jump here: the low F octave, then the chord, while the right hand spreads over F, A and C."
+          "text": "The left hand jumps from the low F octave up to the chord, while the right hand spreads over F, A and C."
         },
         {
           "bar": 12,
@@ -340,7 +340,7 @@
         },
         {
           "bar": 20,
-          "text": "The third time this bar comes, the jumps are the same. Trust the hand and keep the beat."
+          "text": "The F chord comes a third time, with the same jumps as bar 4. Keep the beat steady."
         }
       ]
     }

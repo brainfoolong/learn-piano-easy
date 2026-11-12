@@ -62,13 +62,13 @@
           "fromBar": 2,
           "toBar": 2,
           "kind": "fingering",
-          "text": "The D sharp is the black key just below E. Finger 2 dips onto it and back."
+          "text": "The D sharp is the black key between D and E. Finger 2 dips onto it, and finger 3 comes back to E."
         },
         {
           "fromBar": 3,
           "toBar": 4,
           "kind": "trick",
-          "text": "Lift the hand for a moment before each low note, and land the thumb on it."
+          "text": "Lift the hand for a moment before the low A, and again after the low G. The thumb plays both."
         },
         {
           "fromBar": 4,
@@ -148,7 +148,7 @@
           "fromBar": 2,
           "toBar": 2,
           "kind": "sound",
-          "text": "Under the D sharp, the left hand plays only C and G, so the two hands never rub."
+          "text": "Under the D sharp, the left hand plays only C and G, so no E sounds against it."
         },
         {
           "fromBar": 2,
@@ -174,7 +174,7 @@
         },
         {
           "bar": 10,
-          "text": "Finger 5 takes over the E, and the tune walks down to C. The left hand changes to the G chord halfway."
+          "text": "Finger 5 takes over the E, and the tune walks down to C. The left hand changes to the G seventh chord halfway."
         }
       ]
     },
@@ -215,7 +215,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -301,7 +301,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

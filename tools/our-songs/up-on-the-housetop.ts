@@ -167,7 +167,7 @@ export const upOnTheHousetop: OurSong = {
     "It is thought to be the first Christmas song mainly about Santa Claus. " +
     "Hanby wrote some 80 songs before he died of tuberculosis in 1867.",
   funFact:
-    "One book counts it as the second-oldest Christmas song that is not religious. Only Jingle Bells, written in 1857, is older.",
+    "One book counts it as the second-oldest Christmas song that is not religious. Only Jingle Bells, published in 1857, is older.",
   mythic: null,
   collection: "christmas",
   tune: { text: tune, numerator: 4, denominator: 2, steps: 2, key: C_MAJOR, hookBars: [1, 4] },
@@ -214,19 +214,19 @@ export const upOnTheHousetop: OurSong = {
       skills: ["triads", "position-change"],
       practice: [
         { text: "Play the left hand alone on the verse, and press the notes of each chord together.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
-        { text: "Play the left hand alone on the chorus: a low note, then a higher one.", hands: "left", speed: 0.6, loop: [9, 16], wait: true },
+        { text: "Play the left hand alone on the chorus: the root of each chord, then its fifth.", hands: "left", speed: 0.6, loop: [9, 16], wait: true },
         { text: "Play bars 5 to 8 with the right hand alone, where the short notes come.", hands: "right", speed: 0.6, loop: [5, 8], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 8, kind: "sound", text: "Hold each chord softly for its whole half bar, so the tune sings above it." },
-        { fromBar: 7, toBar: 7, kind: "rhythm", text: "The A's and G's after the first A are twice as quick. Keep them even." },
-        { fromBar: 9, toBar: 16, kind: "sound", text: "In the chorus, play the low note a little louder than the one after it." },
+        { fromBar: 1, toBar: 8, kind: "sound", text: "Hold each chord softly to its end, so the tune sings above it." },
+        { fromBar: 7, toBar: 7, kind: "rhythm", text: "After the first A, the next two As and the two Gs are twice as quick. Keep them even." },
+        { fromBar: 9, toBar: 16, kind: "sound", text: "In the chorus, play each root a little louder than the fifth after it." },
       ],
       tricky: {
         2: "The thumb slides from D down to C. Finger 2 plays E and finger 4 holds G.",
-        6: "The same move as bar 2. Let the thumb slide down one key while the chord holds.",
+        6: "The same move as bar 2: the thumb slides from D down to C, as the next chord starts.",
         7: "Finger 5 plays A three times, then finger 4 plays G twice. Then finger 2 plays E.",
       },
     },
@@ -244,7 +244,7 @@ export const upOnTheHousetop: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [9, 16], wait: true },
         { text: "Join the hands on the verse, slowly.", hands: "both", speed: 0.5, loop: [1, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -275,7 +275,7 @@ export const upOnTheHousetop: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the verse with the right hand alone, and keep the quick fills light.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the arpeggios of the chorus in the left hand alone.", hands: "left", speed: 0.5, loop: [9, 16], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

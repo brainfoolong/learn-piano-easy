@@ -171,7 +171,7 @@
         },
         {
           "bar": 14,
-          "text": "Finger 3 plays G four times, while the left thumb slides back from A to G."
+          "text": "Finger 3 plays G three times, while the left thumb slides back from A to G."
         },
         {
           "bar": 16,
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -242,13 +242,13 @@
           "fromBar": 17,
           "toBar": 18,
           "kind": "trick",
-          "text": "Both hands lift on the rest. The right hand jumps up to the high G, and the left drops to a low C."
+          "text": "Both hands lift on a rest. The right hand jumps up to the high G, and the left drops to a low C."
         },
         {
           "fromBar": 2,
           "toBar": 33,
           "kind": "sound",
-          "text": "Change the pedal on each half bar, as the left hand starts a new chord."
+          "text": "Change the pedal on each half bar, as the left hand starts its pattern again."
         }
       ],
       "tricky": [
@@ -304,7 +304,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

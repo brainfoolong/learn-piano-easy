@@ -37,7 +37,7 @@
           "wait": true
         },
         {
-          "text": "Now the left hand alone. It holds one shape for a bar, or two shapes at most.",
+          "text": "Now the left hand alone. It holds one or two shapes in each bar.",
           "hands": "left",
           "speed": 0.6,
           "loop": null,
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -304,7 +304,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

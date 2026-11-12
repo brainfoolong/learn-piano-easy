@@ -142,7 +142,7 @@
           "fromBar": 4,
           "toBar": 4,
           "kind": "rhythm",
-          "text": "Long, short, long: the F sharp takes a beat and a half, and the E sneaks in after it."
+          "text": "Long, short, long: the F sharp lasts a beat and a half, and the E half a beat."
         },
         {
           "fromBar": 10,
@@ -210,7 +210,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -235,7 +235,7 @@
           "fromBar": 5,
           "toBar": 8,
           "kind": "fingering",
-          "text": "The tune is still the top note of each third, so let the upper finger lead."
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
         },
         {
           "fromBar": 8,
@@ -247,7 +247,7 @@
       "tricky": [
         {
           "bar": 8,
-          "text": "Change from finger 3 to 1 on the held D, so the hand is ready for bar 9."
+          "text": "Change from finger 3 to 1 on the repeated D, so the hand is ready for bar 9."
         },
         {
           "bar": 16,
@@ -297,14 +297,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -334,7 +334,7 @@
       "tricky": [
         {
           "bar": 14,
-          "text": "The tune falls from A to E over a held C sharp. Let the top finger carry it."
+          "text": "The tune falls from A to E while the thumb stays near C sharp. Let the top finger carry it."
         },
         {
           "bar": 6,

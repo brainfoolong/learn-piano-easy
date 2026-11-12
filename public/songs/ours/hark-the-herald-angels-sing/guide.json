@@ -62,13 +62,13 @@
           "fromBar": 1,
           "toBar": 1,
           "kind": "rhythm",
-          "text": "Long, short: the second C takes three counts, and the B slips in right after it."
+          "text": "Long, short: the second C lasts three times as long as the B after it."
         },
         {
           "fromBar": 8,
           "toBar": 8,
           "kind": "fingering",
-          "text": "Play the first B with finger 2 and the next B with finger 3. Then A and G fall under your fingers."
+          "text": "Play the B of bar 7 with finger 2, and the B of bar 8 with finger 3. Then fingers 2 and 1 play A and G."
         },
         {
           "fromBar": 9,
@@ -160,7 +160,7 @@
           "fromBar": 17,
           "toBar": 17,
           "kind": "rhythm",
-          "text": "Long, short, then even: the first A takes three counts, and the second one is quick."
+          "text": "Long, short, then even: the first A lasts three times as long as the second."
         }
       ],
       "tricky": [
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -247,7 +247,7 @@
           "fromBar": 1,
           "toBar": 20,
           "kind": "sound",
-          "text": "Change the pedal in the middle of each bar, as the left hand starts its pattern again."
+          "text": "Change the pedal at the start and the middle of each bar, as the left hand starts its pattern again."
         }
       ],
       "tricky": [
@@ -303,14 +303,14 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -328,19 +328,19 @@
           "fromBar": 1,
           "toBar": 20,
           "kind": "sound",
-          "text": "Each chord is short, and the pedal joins them. Change it in the middle of each bar."
+          "text": "Each chord is short, and the pedal joins them. Change it at the start and the middle of each bar."
         },
         {
           "fromBar": 9,
           "toBar": 20,
           "kind": "sound",
-          "text": "In octaves, play the little finger a bit louder, so the tune shines on top."
+          "text": "In octaves, play the little finger a little louder, so the tune shines on top."
         }
       ],
       "tricky": [
         {
           "bar": 7,
-          "text": "The hand drops from the high G chord to G, B and D. The little finger moves from G down to D."
+          "text": "The hand drops from the high G chord to G, B and D. The thumb moves from B down to G."
         },
         {
           "bar": 2,

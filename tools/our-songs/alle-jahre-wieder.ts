@@ -144,7 +144,7 @@ export const alleJahreWieder: OurSong = {
   about:
     "Alle Jahre wieder means Every year again in German. " +
     "It is one of the best-known German Christmas songs. " +
-    "Wilhelm Hey wrote its three verses in 1837, and they tell of the Christ Child who brings the gifts. " +
+    "Wilhelm Hey wrote its three verses in 1837, and they tell of the Christ Child, who comes down to earth every year. " +
     "Friedrich Silcher wrote the tune and published it in 1842, in a set of twelve songs for children.",
   funFact:
     "The same words are also sung to a tune Christian Heinrich Rinck wrote in 1827. " +
@@ -190,7 +190,7 @@ export const alleJahreWieder: OurSong = {
       left: [RARE_TRIADS, RARE_TURNS].join(" | "),
       skills: ["triads", "position-change"],
       practice: [
-        { text: "Play the left hand alone, and press the three notes of each chord together.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
+        { text: "Play the left hand alone, and press the notes of each chord together.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Play the second verse's bass alone: low note, high note, one on each beat.", hands: "left", speed: 0.6, loop: [9, 16], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
@@ -221,7 +221,7 @@ export const alleJahreWieder: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -249,8 +249,8 @@ export const alleJahreWieder: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [9, 12], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "trick", text: "In stride, look at the octave and let the hand find the chord by feel." },
@@ -259,7 +259,7 @@ export const alleJahreWieder: OurSong = {
       ],
       tricky: {
         10: "After the C arpeggio, the left hand drops to the low G in the short rest.",
-        12: "The right hand holds its octave, so give all your eyes to the two G arpeggios.",
+        12: "The right hand holds its octave, so watch the left hand through the two G arpeggios.",
         14: "The octaves leap up to the high C, while the left hand runs up F and then G seventh.",
       },
     },

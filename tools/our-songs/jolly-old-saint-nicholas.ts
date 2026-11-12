@@ -159,10 +159,10 @@ export const jollyOldSaintNicholas: OurSong = {
   },
   about:
     "Jolly Old Saint Nicholas is a Christmas song that began as a poem by Emily Huntington Miller. " +
-    "Her poem was published as Lilly's Secret in The Little Corporal Magazine in December 1865. " +
+    "Her poem was published as Lilly's Secret in the magazine The Little Corporal in December 1865. " +
     "The music is generally believed to be by James R. Murray. " +
     "It was first printed in 1874, in a school music book called School Chimes.",
-  funFact: "Ray Conniff recorded the song for his 1962 album We Wish You a Merry Christmas, and it helped the album go platinum.",
+  funFact: "The bandleader Ray Conniff recorded the song in 1962, for his album We Wish You a Merry Christmas.",
   mythic: null,
   collection: "christmas",
   aka: ["Jolly Old St. Nicholas"],
@@ -210,7 +210,7 @@ export const jollyOldSaintNicholas: OurSong = {
       skills: ["triads", "five-finger-position"],
       practice: [
         { text: "Play the left hand alone, and press the notes of each chord together.", hands: "left", speed: 0.6, loop: [1, 4], wait: true },
-        { text: "Play the bass and chord in turns of the second time alone.", hands: "left", speed: 0.6, loop: [17, 20], wait: true },
+        { text: "Play the left hand of the second time alone: a bass note, then its chord.", hands: "left", speed: 0.6, loop: [17, 20], wait: true },
         { text: "Join the hands on the first time through, slowly.", hands: "both", speed: 0.6, loop: [1, 16], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
@@ -249,13 +249,13 @@ export const jollyOldSaintNicholas: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the broken chords of the second time alone, and lift the hand on each rest.", hands: "left", speed: 0.5, loop: [17, 20], wait: false },
         { text: "Join the hands on the first time through, slowly.", hands: "both", speed: 0.5, loop: [1, 16], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 16, kind: "sound", text: "Keep the Alberti bass soft, so the tune rings above it like a sleigh bell." },
         { fromBar: 16, toBar: 17, kind: "trick", text: "Both hands lift on the rest. The right hand jumps up an octave, and the left hand drops to a low C." },
-        { fromBar: 1, toBar: 32, kind: "sound", text: "Change the pedal each half bar, as the left hand starts a new chord." },
+        { fromBar: 1, toBar: 32, kind: "sound", text: "Change the pedal each half bar, as the left hand starts its pattern again." },
       ],
       tricky: {
         17: "The right hand lands an octave up on E, and the left hand starts its broken chords on the low C.",
@@ -293,7 +293,7 @@ export const jollyOldSaintNicholas: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play bars 4 and 5 with the right hand alone, and keep the quick run light.", hands: "right", speed: 0.5, loop: [4, 5], wait: true },
         { text: "Play the arpeggios of the second time in the left hand alone.", hands: "left", speed: 0.5, loop: [17, 20], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

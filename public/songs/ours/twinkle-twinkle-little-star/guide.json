@@ -2,8 +2,8 @@
   "song": "twinkle-twinkle-little-star",
   "title": "Twinkle Twinkle Little Star",
   "composer": "Traditional",
-  "about": "This tune began as a French song, \"Ah! vous dirai-je, maman\", first printed in 1761. Mozart wrote twelve variations on it for the piano. In 1806 Jane Taylor wrote her poem about a little star, and children have sung it to this tune ever since.",
-  "funFact": "The alphabet song and \"Baa, Baa, Black Sheep\" are sung to this same tune.",
+  "about": "This tune began as a French song, Ah! vous dirai-je, maman, first printed in 1761. Mozart wrote twelve variations on it for the piano. In 1806 Jane Taylor published her poem about a little star, and it was later sung to this tune.",
+  "funFact": "The alphabet song and Baa, Baa, Black Sheep are sung to this same tune.",
   "mythic": null,
   "versions": {
     "common": {
@@ -108,7 +108,7 @@
           "wait": true
         },
         {
-          "text": "Play the left hand alone. It holds each chord for two beats.",
+          "text": "Play the left hand alone. It holds each chord for two or four beats.",
           "hands": "left",
           "speed": 0.6,
           "loop": [1, 8],
@@ -153,7 +153,7 @@
           "fromBar": 13,
           "toBar": 16,
           "kind": "sound",
-          "text": "The last four bars are a coda, a short goodbye. Slow down a little at the very end."
+          "text": "The last four bars are a coda, a short goodbye. Slow down a little at the end."
         }
       ],
       "tricky": [
@@ -209,7 +209,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -246,7 +246,7 @@
           "fromBar": 1,
           "toBar": 15,
           "kind": "sound",
-          "text": "The pedal changes twice a bar, each time the chord changes."
+          "text": "Change the pedal twice a bar, on beats one and three."
         }
       ],
       "tricky": [
@@ -260,7 +260,7 @@
         },
         {
           "bar": 14,
-          "text": "Finger 4 slides from G down to F, just as it did in bar 3."
+          "text": "Finger 4 slides from G down to F, as it did in bar 3."
         }
       ]
     },
@@ -302,7 +302,7 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

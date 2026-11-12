@@ -198,8 +198,8 @@ export const oLittleTownOfBethlehem: OurSong = {
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 2, toBar: 2, kind: "fingering", text: "The D sharp is the black key just below E. Finger 2 dips onto it and back." },
-        { fromBar: 3, toBar: 4, kind: "trick", text: "Lift the hand for a moment before each low note, and land the thumb on it." },
+        { fromBar: 2, toBar: 2, kind: "fingering", text: "The D sharp is the black key between D and E. Finger 2 dips onto it, and finger 3 comes back to E." },
+        { fromBar: 3, toBar: 4, kind: "trick", text: "Lift the hand for a moment before the low A, and again after the low G. The thumb plays both." },
         { fromBar: 4, toBar: 4, kind: "rhythm", text: "The two quick notes, B and C, share one beat between them." },
       ],
       tricky: {
@@ -225,13 +225,13 @@ export const oLittleTownOfBethlehem: OurSong = {
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 2, toBar: 2, kind: "sound", text: "Under the D sharp, the left hand plays only C and G, so the two hands never rub." },
+        { fromBar: 2, toBar: 2, kind: "sound", text: "Under the D sharp, the left hand plays only C and G, so no E sounds against it." },
         { fromBar: 2, toBar: 17, kind: "sound", text: "Hold each chord softly for its whole length, like a quiet organ." },
         { fromBar: 15, toBar: 15, kind: "trick", text: "Lift the right hand after the A, and land finger 5 on the A an octave up." },
       ],
       tricky: {
         6: "Finger 3 plays E twice, then finger 5 reaches up to A. The left hand moves from C to F halfway through.",
-        10: "Finger 5 takes over the E, and the tune walks down to C. The left hand changes to the G chord halfway.",
+        10: "Finger 5 takes over the E, and the tune walks down to C. The left hand changes to the G seventh chord halfway.",
         15: "Lift the right hand twice: once for the low A, and once for the A an octave above it.",
       },
     },
@@ -255,7 +255,7 @@ export const oLittleTownOfBethlehem: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the quicker Alberti bass of the second verse alone.", hands: "left", speed: 0.5, loop: [18, 21], wait: false },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 17], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -283,7 +283,7 @@ export const oLittleTownOfBethlehem: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's octaves alone, with the thumb and finger 5 kept in one shape.", hands: "right", speed: 0.5, loop: [18, 21], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [18, 21], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

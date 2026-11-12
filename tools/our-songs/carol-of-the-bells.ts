@@ -9,9 +9,10 @@
  * four-note figure that rings through almost every bar.
  *
  * Common plays the tune over held fifths, and the hand never moves. It leaves out the low E, F sharp and
- * G sharp that start bars 17 and 19. It ends in bar 24, without the last A. Rare plays every note over triads, and lifts the hand in
- * bars 17 and 19. Epic rocks a broken chord under sixths, with a falling bass and a thumb under in the
- * climb. Legendary rings the figure in both hands, with stride, the tune in chords and a scale in octaves.
+ * G sharp that start bars 17 and 19. It ends in bar 24, without the last A. Rare plays every note over
+ * a root and fifth in turns, with triads in the middle, and lifts the hand in bars 17 and 19. Epic rocks
+ * a broken chord under sixths, with a falling bass and a thumb under in the climb. Legendary rings the
+ * figure in both hands, with stride, the tune in chords and the climb in both hands two octaves apart.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -160,9 +161,9 @@ export const carolOfTheBells: OurSong = {
   about:
     "Shchedryk is a Ukrainian New Year song, and its name comes from Bountiful Evening. " +
     "Mykola Leontovych, a Ukrainian composer, conductor and teacher, built it on a four-note figure in 3/4 time. " +
-    "It was first sung on 29 December 1916 in Kyiv. " +
+    "It was first sung in December 1916 in Kyiv. " +
     "Peter J. Wilhousky later made it the English Carol of the Bells.",
-  funFact: "Wilhousky gave it words about bells because the melody reminded him of handbells.",
+  funFact: "Wilhousky gave it words about bells because the tune reminded him of handbells.",
   mythic: null,
   collection: "christmas",
   aka: ["Shchedryk"],
@@ -199,7 +200,7 @@ export const carolOfTheBells: OurSong = {
         { fromBar: 14, toBar: 14, kind: "trick", text: "On the third E, swap from finger 2 to finger 3. The hand stays where it is." },
       ],
       tricky: {
-        12: "Play the last C with the thumb, then rest a beat while the hand opens for the high A.",
+        12: "Play the last C with the thumb, and use the short rest to open the hand for the high A.",
         18: "Fingers 4 and 5 rock between D and E, then finger 3 lands on C.",
         20: "The same as bar 18. Hold the C for its full half note before the bells come back.",
       },
@@ -253,9 +254,9 @@ export const carolOfTheBells: OurSong = {
       skills: ["broken-chords", "thirds-and-sixths", "thumb-under"],
       practice: [
         { text: "Play the left hand alone until it rocks by itself: low, up, up, top, down, down.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
-        { text: "Play the right hand's sixths alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [5, 12], wait: true },
+        { text: "Play the right hand's sixths and thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [5, 12], wait: true },
         { text: "Play the climb of bars 17 to 20 with the right hand alone. The thumb passes under on A.", hands: "right", speed: 0.5, loop: [17, 20], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -265,7 +266,7 @@ export const carolOfTheBells: OurSong = {
       ],
       tricky: {
         9: "The hand jumps up from the low sixths to G and E. Lift it during the short rest at the end of bar 8.",
-        10: "The thumb steps from G down to F and back, while fingers 5 and 4 ring the tune on top.",
+        10: "The thumb steps G, F, G and E, while fingers 5 and 4 ring the tune on top.",
         19: "Pass the thumb under after the G sharp, without a bump in the sound.",
       },
     },
@@ -301,7 +302,7 @@ export const carolOfTheBells: OurSong = {
         { text: "Play the left hand's octaves alone. They ring the same four-note figure two octaves down.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [5, 8], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [13, 16], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

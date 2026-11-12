@@ -12,7 +12,7 @@
  * Common play the pickup before the hook.
  *
  * Common plays the phrase twice with a stretched right hand over open fifths. Rare adds the pickup and
- * the sharps over an oom-pah bass of triads. Epic plays the whole first strain over Joplin's own bass
+ * the sharps over an oom-pah bass of a low note and a two-note chord. Epic plays the whole first strain over Joplin's own bass
  * line, with the pedal. Legendary sets the tune in sixths over a stride bass in octaves, and ends in a
  * full chord.
  */
@@ -163,7 +163,7 @@ export const theEntertainer: OurSong = {
     "Scott Joplin, the King of Ragtime, published this rag in St. Louis in 1902. " +
     "A rag puts a bouncy, off-beat tune over a steady bass that goes oom-pah. " +
     "This is the first strain, the part everyone hums.",
-  funFact: "The rag became a hit again in 1973, when the film The Sting used it, seventy years after Joplin wrote it.",
+  funFact: "The rag became famous around the world in 1973, when the film The Sting used it, more than seventy years after Joplin wrote it.",
   mythic: "mutopia/entertainer.mid",
   tune: { text: tune, numerator: 4, denominator: 4, key: C_MAJOR, hookBars: [1, 2] },
   versions: {
@@ -241,9 +241,9 @@ export const theEntertainer: OurSong = {
       skills: ["pedal", "position-change"],
       practice: [
         { text: "Play the left hand alone: jump down for the bass note, then up for the chord.", hands: "left", speed: 0.5, loop: [2, 8], wait: false },
-        { text: "Play the second phrase's right hand alone, where the tune turns to D.", hands: "right", speed: 0.6, loop: [10, 16], wait: true },
+        { text: "Play the second phrase's right hand alone, where an F sharp leads the tune to G.", hands: "right", speed: 0.6, loop: [10, 16], wait: true },
         { text: "Join the hands on the first eight bars, slowly.", hands: "both", speed: 0.5, loop: [1, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -280,8 +280,8 @@ export const theEntertainer: OurSong = {
         { text: "Play the stride bass alone: an octave down low, then the chord up high.", hands: "left", speed: 0.5, loop: [2, 8], wait: false },
         { text: "Play the right hand's sixths alone, thumb and little finger moving together.", hands: "right", speed: 0.5, loop: [5, 6], wait: true },
         { text: "Join the hands on the first eight bars, slowly.", hands: "both", speed: 0.5, loop: [1, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 8, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },
@@ -289,9 +289,9 @@ export const theEntertainer: OurSong = {
         { fromBar: 13, toBar: 13, kind: "sound", text: "The bass octaves slide down from E to E flat, then on to D." },
       ],
       tricky: {
-        4: "Both hands jump here: the low F octave, then the chord, while the right hand spreads over F, A and C.",
+        4: "The left hand jumps from the low F octave up to the chord, while the right hand spreads over F, A and C.",
         12: "The F chord comes back. Land the low octave first, then let the hand spring up.",
-        20: "The third time this bar comes, the jumps are the same. Trust the hand and keep the beat.",
+        20: "The F chord comes a third time, with the same jumps as bar 4. Keep the beat steady.",
       },
     },
   },

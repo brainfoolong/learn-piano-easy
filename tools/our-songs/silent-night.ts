@@ -8,7 +8,7 @@
  *
  * Common plays the tune over held bass notes, with a rest before each leap up to D. Rare plays it over a
  * slow waltz bass with the pedal. Epic puts an Alberti bass under it, adds runs with the thumb under, and
- * plays the second half in thirds and sixths. Legendary sets the tune an octave up in chords over a stride
+ * plays bars 13 to 20 in thirds and chords. Legendary sets the tune an octave up in chords over a stride
  * bass, then over a broken octave bass.
  */
 import type { Key } from "../../src/theory/key";
@@ -101,7 +101,7 @@ const SILENT_CHORDS = "C5+E5+G5/1+2+4:6 A5/5:2 C5+E5+G5/1+2+4:4";
 /** "Round yon Virgin" in chords an octave up, in eighths, for Legendary. */
 const ROUND_CHORDS = "C5+F5+A5/1+3+5:8 C5+F5+A5/1+3+5:4 | F5+A5+C6/1+3+5:6 B5/4:2 F5+A5/1+4:4";
 
-/** The end of a long E, then a run up to C with the thumb under, an octave up, in eighths. */
+/** The end of a long E, then a run of five fingers up to C, an octave up, in eighths. */
 const RUN_UP = "G4+C5+E5/1+2+4:6 F5/1:1 G5/2:1 A5/3:1 B5/4:1 C6/5:1 r:1";
 
 export const silentNight: OurSong = {
@@ -135,8 +135,8 @@ export const silentNight: OurSong = {
       skills: ["held-bass", "dotted-rhythm"],
       practice: [
         { text: "Play the first four bars with the right hand alone, and let the song wait for each note.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
-        { text: "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks home.", hands: "right", speed: 0.6, loop: [17, 23], wait: true },
-        { text: "Put both hands together. The left hand holds one low note in each bar.", hands: "both", speed: 0.7, loop: null, wait: true },
+        { text: "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks down to middle C.", hands: "right", speed: 0.6, loop: [17, 23], wait: true },
+        { text: "Put both hands together. The left hand holds one low note or a fifth in each bar.", hands: "both", speed: 0.7, loop: null, wait: true },
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -145,7 +145,7 @@ export const silentNight: OurSong = {
         { fromBar: 1, toBar: 23, kind: "sound", text: "Play softly all the way through. This song is a lullaby." },
       ],
       tricky: {
-        6: "Finger 4 takes B after the D's. Down below, the left hand holds G with finger 4.",
+        6: "Finger 4 takes B after the two Ds. Down below, the left hand holds G with finger 4.",
         17: "After the rest, the hand stretches up from E, and finger 3 lands on the high D.",
         21: "Finger 5 moves down from E to C. Then the tune walks down to the thumb on middle C.",
       },
@@ -166,7 +166,7 @@ export const silentNight: OurSong = {
       skills: ["waltz-bass", "two-note-chords", "pedal"],
       practice: [
         { text: "Play the left hand alone: a low note, then two soft chords, like a slow waltz.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
-        { text: "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks home.", hands: "right", speed: 0.6, loop: [17, 23], wait: true },
+        { text: "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks down to middle C.", hands: "right", speed: 0.6, loop: [17, 23], wait: true },
         { text: "Join the hands on the first eight bars, slowly.", hands: "both", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
@@ -203,8 +203,8 @@ export const silentNight: OurSong = {
       practice: [
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the run of bar 4 with the right hand alone, and pass the thumb under to A.", hands: "right", speed: 0.5, loop: [3, 5], wait: true },
-        { text: "Play the thirds and sixths of bars 13 to 20 with the right hand alone.", hands: "right", speed: 0.6, loop: [13, 20], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the pairs and chords of bars 13 to 20 with the right hand alone.", hands: "right", speed: 0.6, loop: [13, 20], wait: true },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -240,8 +240,8 @@ export const silentNight: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the broken octaves of bars 13 to 16 with the left hand alone.", hands: "left", speed: 0.6, loop: [13, 16], wait: false },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 12, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },

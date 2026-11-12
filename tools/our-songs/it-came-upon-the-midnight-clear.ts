@@ -8,9 +8,10 @@
  * three bars, the opening line from the upbeat to its last note.
  *
  * Common plays the tune over held open fifths and single bass notes. It rests briefly before each leap,
- * and leaves out four notes, the two sharps among them, so the hand never moves. Rare plays every note over a bass note and the rest of
- * its chord, with a few two-note chords. Epic puts an Alberti bass with the pedal under it, and plays the
- * last phrase in thirds and sixths. Legendary sets the tune an octave up in chords over a stride bass.
+ * and leaves out four notes, the two sharps among them. The hand then keeps its place, and only the thumb
+ * stretches down to the low E. Rare plays every note over a bass note and the rest of its chord, with a
+ * few two-note chords. Epic puts an Alberti bass with the pedal under it, and plays the last phrase in
+ * thirds and sixths. Legendary sets the tune an octave up in chords over a stride bass.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -142,9 +143,9 @@ export const itCameUponTheMidnightClear: OurSong = {
   about:
     "Edmund Sears wrote the poem in 1849. " +
     "It was first printed in The Christian Register, in Boston, on December 29, 1849. " +
-    "Richard Storrs Willis published the tune a year later, as a study for choirs called Carol. " +
-    "Hymnals in the United States set the poem to it, and it became a well loved carol.",
-  funFact: "In Britain, the same words are usually sung to a different tune, Noel, which Arthur Sullivan arranged from an English melody.",
+    "Richard Storrs Willis published the tune a year later, as a study for choirs. " +
+    "Hymnals in the United States set the poem to it under the name Carol, and it became a well-loved carol.",
+  funFact: "In Britain, the same words are usually sung to a different tune, Noel, which Arthur Sullivan arranged from an English folk tune.",
   mythic: null,
   collection: "christmas",
   tune: { text: tune, numerator: 6, denominator: 4, key: C_MAJOR, hookBars: [1, 3] },
@@ -253,7 +254,7 @@ export const itCameUponTheMidnightClear: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand alone on bars 9 to 13, and pass the thumb under on the way up.", hands: "right", speed: 0.5, loop: [9, 13], wait: true },
         { text: "Play the right hand's thirds and sixths alone, and press both notes of each pair as one.", hands: "right", speed: 0.6, loop: [13, 17], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -296,8 +297,8 @@ export const itCameUponTheMidnightClear: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 5], wait: true },
         { text: "Join the hands on the third phrase, bars 9 to 13, where the tune drops and climbs.", hands: "both", speed: 0.6, loop: [9, 13], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 5, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },
@@ -305,7 +306,7 @@ export const itCameUponTheMidnightClear: OurSong = {
         { fromBar: 5, toBar: 6, kind: "trick", text: "A short rest comes before each upbeat. Use it to move the hand to the next chord." },
       ],
       tricky: {
-        3: "Finger 3 sings A over E and G. Then the thumb drops to B under F and G, and finger 3 keeps the tune's G.",
+        3: "Finger 3 sings A after E and G. Then the thumb drops to B under F and G, and finger 3 keeps the tune's G.",
         5: "Spread the hand over four notes: D, G, B and D. Then lift it and land the thumb on the G.",
         13: "Another four-note chord, G, B, D and G, with the little finger on top. Lift it in the rest before the upbeat.",
       },

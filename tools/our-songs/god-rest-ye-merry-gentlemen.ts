@@ -179,7 +179,7 @@ export const godRestYeMerryGentlemen: OurSong = {
       left: `r:8 | ${halfBars(RARE_BASS, CHORDS)} | A2+E3/5+1:6 r:2`,
       skills: ["eighth-notes", "position-change"],
       practice: [
-        { text: "Play the left hand alone: a low note on each strong beat, then two notes together.", hands: "left", speed: 0.6, loop: [2, 5], wait: true },
+        { text: "Play the left hand alone: a low note, then the notes above it, twice in each bar.", hands: "left", speed: 0.6, loop: [2, 5], wait: true },
         { text: "Play bars 2 to 5 with the right hand alone. The hand moves twice on the way.", hands: "right", speed: 0.6, loop: [2, 5], wait: true },
         { text: "Play bars 7 and 8 with the right hand alone, where a repeated note helps the hand move.", hands: "right", speed: 0.6, loop: [7, 8], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
@@ -216,7 +216,7 @@ export const godRestYeMerryGentlemen: OurSong = {
         { text: "Play the left hand alone until the broken chords roll by themselves: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play bars 3 and 4 with the right hand alone, where the fingers cross each way.", hands: "right", speed: 0.6, loop: [3, 4], wait: true },
         { text: "Join the hands on the first nine bars, slowly.", hands: "both", speed: 0.5, loop: [1, 9], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -254,7 +254,7 @@ export const godRestYeMerryGentlemen: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand alone on bars 4 to 6, and keep the quick turn light.", hands: "right", speed: 0.5, loop: [4, 6], wait: true },
         { text: "Join the hands on the first nine bars at half speed.", hands: "both", speed: 0.5, loop: [1, 9], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

@@ -108,7 +108,7 @@
       },
       "practice": [
         {
-          "text": "Play the left hand alone: a low note on each strong beat, then two notes together.",
+          "text": "Play the left hand alone: a low note, then the notes above it, twice in each bar.",
           "hands": "left",
           "speed": 0.6,
           "loop": [2, 5],
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -303,7 +303,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

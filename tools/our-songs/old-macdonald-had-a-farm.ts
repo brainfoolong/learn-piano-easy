@@ -4,8 +4,8 @@
  * The tune is one verse of sixteen bars in G major: the farm line twice, the animal's sounds, and the
  * farm line again. The hook is its first two bars, the opening "Old MacDonald had a farm".
  *
- * Common keeps the notes of the beginner arrangement for its first eight bars, and adds the rest of the
- * verse. It rests an eighth before each high B, so the hand has time to reach it. Rare plays the real
+ * Common plays the tune in quarters over held bass notes and fifths, and merges its quick notes. It
+ * rests an eighth before each high B, so the hand has time to reach it. Rare plays the real
  * rhythm over a bass and chords. Epic puts an Alberti bass under it with the pedal, and plays the second
  * line in thirds. Legendary sets the tune an octave up in chords over a stride bass, with quick runs.
  */
@@ -56,7 +56,7 @@ export const oldMacDonaldHadAFarm: OurSong = {
   },
   about:
     "Old MacDonald Had a Farm is a children's song about a farmer and his animals. " +
-    "An early form called \"Ohio\" was printed in 1917, in a book of songs sung by British soldiers. " +
+    "An early form called Ohio was printed in 1917, in a book of songs sung by British soldiers. " +
     "Each verse adds an animal and its sound, so the song lasts as long as the singers like.",
   funFact: "In the 1917 song the farmer was called Old Macdougal, and his farm was in Ohio.",
   mythic: null,
@@ -154,16 +154,16 @@ export const oldMacDonaldHadAFarm: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [5, 8], wait: true },
         { text: "Join the hands on the first four bars, slowly.", hands: "both", speed: 0.5, loop: [1, 4], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 4, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
-        { fromBar: 5, toBar: 7, kind: "fingering", text: "The tune is still the top note of each third, so let the upper finger lead." },
-        { fromBar: 1, toBar: 16, kind: "sound", text: "Change the pedal each time the left hand starts a new chord." },
+        { fromBar: 5, toBar: 7, kind: "fingering", text: "The tune is the top note of each pair, so let the upper finger lead." },
+        { fromBar: 1, toBar: 16, kind: "sound", text: "Change the pedal on every half bar, as the Alberti bass starts again." },
       ],
       tricky: {
-        7: "The thirds jump up from D to G and B. Move the whole hand, and keep it shaped.",
+        7: "The thirds jump up from D to G and B. Move the whole hand, and keep its shape.",
         15: "After the quick run, your little finger lands on B. Let the run carry the hand there.",
         16: "Your hand falls from A to the last chord. Thumb on B, third finger on G.",
       },
@@ -187,8 +187,8 @@ export const oldMacDonaldHadAFarm: OurSong = {
         { text: "Play the stride bass alone: jump down for the bass note, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone, and let the top finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the quick runs of the right hand alone, slowly at first.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 4, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },

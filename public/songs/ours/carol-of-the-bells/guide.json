@@ -2,8 +2,8 @@
   "song": "carol-of-the-bells",
   "title": "Carol of the Bells",
   "composer": "Mykola Leontovych",
-  "about": "Shchedryk is a Ukrainian New Year song, and its name comes from Bountiful Evening. Mykola Leontovych, a Ukrainian composer, conductor and teacher, built it on a four-note figure in 3/4 time. It was first sung on 29 December 1916 in Kyiv. Peter J. Wilhousky later made it the English Carol of the Bells.",
-  "funFact": "Wilhousky gave it words about bells because the melody reminded him of handbells.",
+  "about": "Shchedryk is a Ukrainian New Year song, and its name comes from Bountiful Evening. Mykola Leontovych, a Ukrainian composer, conductor and teacher, built it on a four-note figure in 3/4 time. It was first sung in December 1916 in Kyiv. Peter J. Wilhousky later made it the English Carol of the Bells.",
+  "funFact": "Wilhousky gave it words about bells because the tune reminded him of handbells.",
   "mythic": null,
   "versions": {
     "common": {
@@ -81,7 +81,7 @@
       "tricky": [
         {
           "bar": 12,
-          "text": "Play the last C with the thumb, then rest a beat while the hand opens for the high A."
+          "text": "Play the last C with the thumb, and use the short rest to open the hand for the high A."
         },
         {
           "bar": 18,
@@ -203,7 +203,7 @@
           "wait": false
         },
         {
-          "text": "Play the right hand's sixths alone, and keep both notes of each pair together.",
+          "text": "Play the right hand's sixths and thirds alone, and keep both notes of each pair together.",
           "hands": "right",
           "speed": 0.6,
           "loop": [5, 12],
@@ -217,7 +217,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -258,7 +258,7 @@
         },
         {
           "bar": 10,
-          "text": "The thumb steps from G down to F and back, while fingers 5 and 4 ring the tune on top."
+          "text": "The thumb steps G, F, G and E, while fingers 5 and 4 ring the tune on top."
         },
         {
           "bar": 19,
@@ -304,7 +304,7 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

@@ -262,7 +262,7 @@ export const goodKingWenceslas: OurSong = {
       tricky: {
         1: "Finger 4 plays C three times, then finger 5 plays D. The thumb waits over G.",
         5: "The same notes as bar 1. Keep the three Cs even and the D light.",
-        11: "After the lift, finger 2 lands on A and the thumb takes G. Then fingers 2 and 3 climb to B.",
+        11: "After the lift, finger 2 lands on A and the thumb takes G. Then fingers 2 and 3 climb to A and B.",
       },
     },
     rare: {
@@ -279,7 +279,7 @@ export const goodKingWenceslas: OurSong = {
       skills: ["triads"],
       practice: [
         { text: "Play the left hand alone on the first eight bars, and press the notes of each chord together.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
-        { text: "Play the left hand alone from bar 9: a low note, then the chord, on every beat.", hands: "left", speed: 0.6, loop: [9, 12], wait: true },
+        { text: "Play the left hand alone from bar 9: a low note and then the chord, one on each beat.", hands: "left", speed: 0.6, loop: [9, 12], wait: true },
         { text: "Join the hands on the first eight bars, slowly.", hands: "both", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Play the whole song with both hands, a little slower than written.", hands: "both", speed: 0.8, loop: null, wait: false },
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
@@ -290,7 +290,7 @@ export const goodKingWenceslas: OurSong = {
         { fromBar: 9, toBar: 16, kind: "sound", text: "Play the low note a little louder than the chord after it." },
       ],
       tricky: {
-        1: "Finger 4 plays C three times, then finger 5 plays D. The left hand holds the C chord all bar.",
+        1: "Finger 4 plays C three times, then finger 5 plays D. The left hand plays the C chord twice.",
         5: "The same notes as bar 1. Keep the three Cs even and the D light.",
         11: "After the lift, finger 2 lands on A. The left hand plays F, then C, then G, then its chord.",
       },
@@ -309,7 +309,7 @@ export const goodKingWenceslas: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the broken chords of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [18, 21], wait: false },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 17], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -341,7 +341,7 @@ export const goodKingWenceslas: OurSong = {
         { text: "Play the right hand's octaves alone, with the thumb and finger 5 kept in one shape.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the chords of the second verse in the right hand alone.", hands: "right", speed: 0.5, loop: [18, 21], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [

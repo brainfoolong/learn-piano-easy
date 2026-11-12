@@ -172,7 +172,7 @@ export const angelsWeHaveHeardOnHigh: OurSong = {
   },
   about:
     "Angels We Have Heard on High is a traditional French carol. " +
-    "In French it is Les Anges dans nos campagnes, which means the angels in our countryside. " +
+    "In French it is Les Anges dans nos campagnes, which means The angels in our countryside. " +
     "Its earliest known printing with words and notes is from 1842, in a collection by Louis Lambillotte. " +
     "The English words are a paraphrase from 1862 by James Chadwick, the Roman Catholic Bishop of Hexham and Newcastle.",
   funFact: "In the refrain Gloria in excelsis Deo, the o of Gloria is held through sixteen notes that rise and fall.",
@@ -230,7 +230,7 @@ export const angelsWeHaveHeardOnHigh: OurSong = {
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 4, kind: "fingering", text: "The left hand never moves: finger 5 on C, finger 4 on D, finger 2 on F and the thumb on G." },
+        { fromBar: 1, toBar: 4, kind: "fingering", text: "The left hand does not move: finger 5 on C, 4 on D, 3 on E, 2 on F and the thumb on G." },
         { fromBar: 11, toBar: 11, kind: "trick", text: "The right hand rests while the left hand plays a G seventh chord. It leads you back to the start." },
         { fromBar: 12, toBar: 22, kind: "sound", text: "The second time, play the low note a little louder than the chord after it." },
       ],
@@ -264,7 +264,7 @@ export const angelsWeHaveHeardOnHigh: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the broken chords of the second time through with the left hand alone.", hands: "left", speed: 0.5, loop: [12, 15], wait: false },
         { text: "Play the high Gloria, bars 16 to 18, with the right hand alone.", hands: "right", speed: 0.6, loop: [16, 18], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -302,8 +302,8 @@ export const angelsWeHaveHeardOnHigh: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's octaves alone, and let finger 5 sing the tune.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the broken octave bass of the second time through with the left hand alone.", hands: "left", speed: 0.5, loop: [12, 15], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 10, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },

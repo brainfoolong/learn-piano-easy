@@ -176,8 +176,8 @@ export const harkTheHeraldAngelsSing: OurSong = {
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 1, kind: "rhythm", text: "Long, short: the second C takes three counts, and the B slips in right after it." },
-        { fromBar: 8, toBar: 8, kind: "fingering", text: "Play the first B with finger 2 and the next B with finger 3. Then A and G fall under your fingers." },
+        { fromBar: 1, toBar: 1, kind: "rhythm", text: "Long, short: the second C lasts three times as long as the B after it." },
+        { fromBar: 8, toBar: 8, kind: "fingering", text: "Play the B of bar 7 with finger 2, and the B of bar 8 with finger 3. Then fingers 2 and 1 play A and G." },
         { fromBar: 9, toBar: 12, kind: "sound", text: "Bars 11 and 12 repeat bars 9 and 10. Play them a little louder the second time." },
       ],
       tricky: {
@@ -218,7 +218,7 @@ export const harkTheHeraldAngelsSing: OurSong = {
       tips: [
         { fromBar: 1, toBar: 8, kind: "sound", text: "Keep the left hand's chords soft, so the tune rings above them." },
         { fromBar: 14, toBar: 14, kind: "fingering", text: "Press D and F together with the thumb and finger 3. The F is the tune, so let it sing." },
-        { fromBar: 17, toBar: 17, kind: "rhythm", text: "Long, short, then even: the first A takes three counts, and the second one is quick." },
+        { fromBar: 17, toBar: 17, kind: "rhythm", text: "Long, short, then even: the first A lasts three times as long as the second." },
       ],
       tricky: {
         3: "Finger 3 plays D, then the little finger reaches up to G. Keep the hand still and open.",
@@ -253,13 +253,13 @@ export const harkTheHeraldAngelsSing: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play bars 8 and 9 with the right hand alone. The thumb passes under finger 3 onto C.", hands: "right", speed: 0.5, loop: [8, 9], wait: true },
         { text: "Play the thirds of bars 9 to 12 with the right hand alone, and press both notes as one.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
         { fromBar: 9, toBar: 12, kind: "fingering", text: "The tune is the top note of each third, so let the upper finger lead." },
-        { fromBar: 1, toBar: 20, kind: "sound", text: "Change the pedal in the middle of each bar, as the left hand starts its pattern again." },
+        { fromBar: 1, toBar: 20, kind: "sound", text: "Change the pedal at the start and the middle of each bar, as the left hand starts its pattern again." },
       ],
       tricky: {
         8: "After the low G, fingers 2 and 3 run up A and B. Then the thumb passes under onto C.",
@@ -301,18 +301,18 @@ export const harkTheHeraldAngelsSing: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's chords alone. Lift the hand after each one, and let the top finger sing.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the octaves of bars 9 to 20 with the right hand alone. Keep the hand open and light.", hands: "right", speed: 0.5, loop: [9, 20], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },
-        { fromBar: 1, toBar: 20, kind: "sound", text: "Each chord is short, and the pedal joins them. Change it in the middle of each bar." },
-        { fromBar: 9, toBar: 20, kind: "sound", text: "In octaves, play the little finger a bit louder, so the tune shines on top." },
+        { fromBar: 1, toBar: 20, kind: "sound", text: "Each chord is short, and the pedal joins them. Change it at the start and the middle of each bar." },
+        { fromBar: 9, toBar: 20, kind: "sound", text: "In octaves, play the little finger a little louder, so the tune shines on top." },
       ],
       tricky: {
         2: "From the big C chord, the hand jumps up to G, C and E. Lift it in the short rest first.",
         6: "Bar 6 is bar 2 again. Lift the hand in the rest, then jump up to G, C and E.",
-        7: "The hand drops from the high G chord to G, B and D. The little finger moves from G down to D.",
+        7: "The hand drops from the high G chord to G, B and D. The thumb moves from B down to G.",
       },
     },
   },

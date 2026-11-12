@@ -74,7 +74,7 @@
           "fromBar": 14,
           "toBar": 17,
           "kind": "sound",
-          "text": "This is the refrain. Each time it comes, play it a little louder."
+          "text": "The refrain makes the same call three times. Play each call a little louder than the one before."
         }
       ],
       "tricky": [
@@ -148,13 +148,13 @@
           "fromBar": 2,
           "toBar": 9,
           "kind": "fingering",
-          "text": "The left hand keeps its thumb on G for nearly every chord, so the hand hardly moves."
+          "text": "The left thumb stays on G for every chord here, so the hand hardly moves."
         },
         {
           "fromBar": 8,
           "toBar": 8,
           "kind": "rhythm",
-          "text": "Long, short: hold the A for three counts, and give the G just one."
+          "text": "Long, short: the A lasts three times as long as the G."
         },
         {
           "fromBar": 18,
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -235,7 +235,7 @@
           "fromBar": 2,
           "toBar": 13,
           "kind": "sound",
-          "text": "Keep the Alberti bass soft, so the tune rings out above it."
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
         },
         {
           "fromBar": 14,
@@ -303,14 +303,14 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, and make the last chord ring.",
+          "text": "Now play it at full speed, and let the last chord ring.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -328,7 +328,7 @@
           "fromBar": 14,
           "toBar": 21,
           "kind": "sound",
-          "text": "In octaves, play the little finger a bit louder, so the tune shines on top."
+          "text": "In octaves, play the little finger a little louder, so the tune shines on top."
         },
         {
           "fromBar": 14,

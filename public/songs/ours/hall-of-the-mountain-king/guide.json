@@ -2,7 +2,7 @@
   "song": "hall-of-the-mountain-king",
   "title": "In the Hall of the Mountain King",
   "composer": "Edvard Grieg",
-  "about": "Grieg wrote this music for Henrik Ibsen's play Peer Gynt, first staged in Christiania, today's Oslo, in 1876. Peer sneaks into the hall of the troll king, and the trolls creep closer and closer. The same short tune comes back again and again, each time louder and faster, until it crashes to an end.",
+  "about": "Grieg wrote this music for Henrik Ibsen's play Peer Gynt, first staged in Christiania, today's Oslo, in 1876. In this scene, the trolls crowd around Peer in the hall of their king. The same short tune comes back again and again, each time louder and faster, until it crashes to an end.",
   "funFact": "Grieg himself wrote that this piece reeked of cow pies and trollish self-satisfaction, and he could hardly bear to hear it.",
   "mythic": null,
   "versions": {
@@ -36,7 +36,7 @@
           "wait": true
         },
         {
-          "text": "The left hand only holds two notes. Join the hands on the first eight bars.",
+          "text": "The left hand holds one fifth or one note for each bar. Join the hands on the first eight bars.",
           "hands": "both",
           "speed": 0.7,
           "loop": [1, 8],
@@ -77,11 +77,11 @@
         },
         {
           "bar": 9,
-          "text": "The thumb lands on E, and fingers 1, 2, 3 and 4 climb one key each. The left hand moves down to E."
+          "text": "The thumb lands on E, and fingers 2, 3 and 4 climb one key each. The left hand moves down to E."
         },
         {
           "bar": 4,
-          "text": "Fingers 4 and 2 reach in for the black keys, D sharp in bar 3 and B flat here."
+          "text": "Finger 4 reached in for D sharp in bar 3, and finger 2 reaches in for B flat here."
         }
       ]
     },
@@ -141,19 +141,19 @@
           "fromBar": 3,
           "toBar": 4,
           "kind": "fingering",
-          "text": "D sharp and B flat are black keys. Fingers 4 and 2 simply reach a little further in."
+          "text": "D sharp and B flat are black keys. Fingers 4 and 2 reach a little further in."
         },
         {
           "fromBar": 1,
           "toBar": 8,
           "kind": "rhythm",
-          "text": "Both hands play on every beat. March along and keep the beats perfectly even."
+          "text": "Both hands play on every beat. March along and keep the beats even."
         },
         {
           "fromBar": 9,
           "toBar": 16,
           "kind": "sound",
-          "text": "This part is the trolls getting closer. Play it a bit louder than the start."
+          "text": "This part is the trolls getting closer. Play it a little louder than the start."
         }
       ],
       "tricky": [
@@ -209,7 +209,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -281,7 +281,7 @@
           "wait": false
         },
         {
-          "text": "Play the right hand's octaves alone. Keep the hand stiff and move it as one piece.",
+          "text": "Play the right hand's octaves alone. Keep the hand in one shape and move it as one piece.",
           "hands": "right",
           "speed": 0.5,
           "loop": [9, 12],
@@ -295,14 +295,14 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
           "wait": false
         },
         {
-          "text": "Now play it at full speed, from a whisper at the start to a roar at the end.",
+          "text": "Now play it at full speed, from soft at the start to loud at the end.",
           "hands": "both",
           "speed": 1,
           "loop": null,
@@ -314,7 +314,7 @@
           "fromBar": 1,
           "toBar": 8,
           "kind": "sound",
-          "text": "Start very quietly. The whole piece is one long build-up, so save your strength."
+          "text": "Start quietly. The whole piece grows louder to its end, so leave room to grow."
         },
         {
           "fromBar": 9,

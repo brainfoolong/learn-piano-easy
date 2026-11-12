@@ -7,9 +7,9 @@
  *
  * Common plays the tune over held bass notes. It drops the F sharp of bar 11 and the D of bar 16. Rare
  * writes each bar as two bars of 2/2, so its 32 bars leave the hand time to move. It plays every note over
- * a bass and a chord. Epic puts an Alberti bass with the pedal under the tune, and plays most of the
- * second half in thirds. Legendary sets the tune an octave up with quick fills over a stride bass, then over a broken
- * octave bass, and ends on a full chord.
+ * a bass and a chord. Epic puts an Alberti bass with the pedal under the tune, and plays much of the
+ * second half in thirds. Legendary sets the tune an octave up with quick fills over a stride bass, then
+ * over a broken octave bass, and ends on a full chord.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -116,11 +116,11 @@ export const deckTheHalls: OurSong = {
       practice: [
         { text: "Play the right hand alone, slowly, and let the song wait for each note.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
         { text: "Play bars 9 to 12 with the right hand alone, where the tune climbs to the high C.", hands: "right", speed: 0.6, loop: [9, 12], wait: true },
-        { text: "Put both hands together. The left hand holds one low note for half a bar or more.", hands: "both", speed: 0.7, loop: null, wait: true },
+        { text: "Put both hands together. The left hand holds each low note for half a bar or more.", hands: "both", speed: 0.7, loop: null, wait: true },
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 1, toBar: 1, kind: "rhythm", text: "Long, short: the first G takes three counts, and the F slips in right after it." },
+        { fromBar: 1, toBar: 1, kind: "rhythm", text: "Long, short: the first G is long, and the F is short and comes right after it." },
         { fromBar: 13, toBar: 14, kind: "trick", text: "Bars 13 and 14 are the opening again, so your hand already knows them." },
         { fromBar: 15, toBar: 16, kind: "sound", text: "Slow down a little on the last notes, and let the low C ring." },
       ],
@@ -183,7 +183,7 @@ export const deckTheHalls: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand's thirds alone, and keep both notes of each pair together.", hands: "right", speed: 0.6, loop: [9, 16], wait: true },
         { text: "Join the hands on the first four bars, slowly.", hands: "both", speed: 0.5, loop: [1, 4], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -224,8 +224,8 @@ export const deckTheHalls: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the right hand alone on bars 1 to 4, and keep the quick fills light.", hands: "right", speed: 0.5, loop: [1, 4], wait: true },
         { text: "Play the run of bars 11 and 12 with the right hand alone.", hands: "right", speed: 0.5, loop: [11, 12], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 8, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },

@@ -80,7 +80,7 @@
       "tricky": [
         {
           "bar": 11,
-          "text": "After the lift, finger 2 lands on A and the thumb takes G. Then fingers 2 and 3 climb to B."
+          "text": "After the lift, finger 2 lands on A and the thumb takes G. Then fingers 2 and 3 climb to A and B."
         },
         {
           "bar": 1,
@@ -114,7 +114,7 @@
           "wait": true
         },
         {
-          "text": "Play the left hand alone from bar 9: a low note, then the chord, on every beat.",
+          "text": "Play the left hand alone from bar 9: a low note and then the chord, one on each beat.",
           "hands": "left",
           "speed": 0.6,
           "loop": [9, 12],
@@ -169,7 +169,7 @@
         },
         {
           "bar": 1,
-          "text": "Finger 4 plays C three times, then finger 5 plays D. The left hand holds the C chord all bar."
+          "text": "Finger 4 plays C three times, then finger 5 plays D. The left hand plays the C chord twice."
         },
         {
           "bar": 5,
@@ -215,7 +215,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -302,7 +302,7 @@
           "wait": true
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

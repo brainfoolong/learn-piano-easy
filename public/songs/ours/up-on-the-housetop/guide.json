@@ -3,7 +3,7 @@
   "title": "Up on the Housetop",
   "composer": "Benjamin Hanby",
   "about": "Benjamin Hanby wrote this Christmas song in 1864, while he ran a singing school in New Paris, Ohio. It was first published by Root & Cady in the magazine Our Song Birds. It is thought to be the first Christmas song mainly about Santa Claus. Hanby wrote some 80 songs before he died of tuberculosis in 1867.",
-  "funFact": "One book counts it as the second-oldest Christmas song that is not religious. Only Jingle Bells, written in 1857, is older.",
+  "funFact": "One book counts it as the second-oldest Christmas song that is not religious. Only Jingle Bells, published in 1857, is older.",
   "mythic": null,
   "versions": {
     "common": {
@@ -115,7 +115,7 @@
           "wait": true
         },
         {
-          "text": "Play the left hand alone on the chorus: a low note, then a higher one.",
+          "text": "Play the left hand alone on the chorus: the root of each chord, then its fifth.",
           "hands": "left",
           "speed": 0.6,
           "loop": [9, 16],
@@ -148,19 +148,19 @@
           "fromBar": 1,
           "toBar": 8,
           "kind": "sound",
-          "text": "Hold each chord softly for its whole half bar, so the tune sings above it."
+          "text": "Hold each chord softly to its end, so the tune sings above it."
         },
         {
           "fromBar": 7,
           "toBar": 7,
           "kind": "rhythm",
-          "text": "The A's and G's after the first A are twice as quick. Keep them even."
+          "text": "After the first A, the next two As and the two Gs are twice as quick. Keep them even."
         },
         {
           "fromBar": 9,
           "toBar": 16,
           "kind": "sound",
-          "text": "In the chorus, play the low note a little louder than the one after it."
+          "text": "In the chorus, play each root a little louder than the fifth after it."
         }
       ],
       "tricky": [
@@ -170,7 +170,7 @@
         },
         {
           "bar": 6,
-          "text": "The same move as bar 2. Let the thumb slide down one key while the chord holds."
+          "text": "The same move as bar 2: the thumb slides from D down to C, as the next chord starts."
         },
         {
           "bar": 7,
@@ -216,7 +216,7 @@
           "wait": true
         },
         {
-          "text": "Play the whole song with both hands at three quarters speed.",
+          "text": "Play the whole song with both hands at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,
@@ -303,7 +303,7 @@
           "wait": false
         },
         {
-          "text": "Join the hands on the whole song at three quarters speed.",
+          "text": "Join the hands on the whole song at three-quarter speed.",
           "hands": "both",
           "speed": 0.75,
           "loop": null,

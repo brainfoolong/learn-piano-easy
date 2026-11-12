@@ -9,8 +9,8 @@
  * Each version writes two bars of the tune as one bar of 4/1. The hook then starts in the version's fifth
  * bar, inside the first 8 bars where the meter looks for it.
  *
- * Common plays the tune once over held fifths and bass notes. Its right hand creeps down the run one key
- * at a time, so it never leaves its place. Rare plays it twice, over block chords and then a bass and
+ * Common plays the tune once over held fifths and bass notes. Its right hand holds still for the first
+ * three steps of the run, then creeps down one key at a time, so it never jumps. Rare plays it twice, over block chords and then a bass and
  * chord in turns. Epic puts an Alberti bass under the first verse and plays the second an octave up over
  * broken chords, with the pedal. Legendary adds quick fills over a stride bass, then plays the tune in
  * octaves over arpeggios, and ends on a four-note chord.
@@ -205,12 +205,12 @@ export const dingDongMerrilyOnHigh: OurSong = {
       tips: [
         { fromBar: 1, toBar: 2, kind: "fingering", text: "The thumb starts on the G below the tune, and finger 4 plays the first C." },
         { fromBar: 4, toBar: 5, kind: "trick", text: "Play the last C with the thumb. The little finger then reaches up to the high G." },
-        { fromBar: 5, toBar: 7, kind: "fingering", text: "Each bar of the run starts one key lower with the same finger. Let the hand creep down." },
+        { fromBar: 5, toBar: 7, kind: "fingering", text: "The run falls one key with each long note. Fingers 5, 4 and 3 take the first three, then the hand moves down a key at a time." },
       ],
       tricky: {
-        1: "Finger 4 plays C twice, then fingers 5, 4, 3 and 2 step down to A. The thumb holds the long G.",
-        5: "The run starts on the high G with the little finger. Each next bar plays the same pattern one key lower.",
-        7: "Fingers 3, 2 and 1 walk down to A twice. Then finger 3 takes B, and the thumb lands on the low G.",
+        1: "Finger 4 plays C twice, then fingers 5, 4, 3 and 2 step down from D to A. The thumb holds the long G.",
+        5: "The run starts on the high G with the little finger. Each long note starts the same pattern one key lower.",
+        7: "Fingers 3, 2 and 1 play C, B and A, then B, C and A. Then they walk down B, A and G.",
       },
     },
     rare: {
@@ -233,13 +233,13 @@ export const dingDongMerrilyOnHigh: OurSong = {
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 5, toBar: 7, kind: "rhythm", text: "Each bar of the run starts with a long note, then five quick ones. Hold the long note for three counts." },
+        { fromBar: 5, toBar: 7, kind: "rhythm", text: "The run moves in groups of a long note and five quick ones. Hold each long note as long as three quick ones." },
         { fromBar: 1, toBar: 8, kind: "sound", text: "Hold each chord softly, so the bells of the tune ring above it." },
         { fromBar: 9, toBar: 16, kind: "sound", text: "In the second verse, play the low note a little louder than the chord after it." },
       ],
       tricky: {
-        5: "The run starts on the high G with the little finger. Each next bar plays the same pattern one key lower.",
-        7: "Fingers 3, 2 and 1 walk down to A twice. Then finger 3 takes B, and the thumb lands on the low G.",
+        5: "The run starts on the high G with the little finger. Each long note starts the same pattern one key lower.",
+        7: "Fingers 3, 2 and 1 play C, B and A, then B, C and A. Then they walk down B, A and G.",
         15: "The same notes as bar 7, now over a bass note and a chord in turns.",
       },
     },
@@ -263,7 +263,7 @@ export const dingDongMerrilyOnHigh: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the run of bars 5 to 7 with the right hand alone.", hands: "right", speed: 0.6, loop: [5, 7], wait: true },
         { text: "Join the hands on the first verse, slowly.", hands: "both", speed: 0.5, loop: [1, 8], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -315,7 +315,7 @@ export const dingDongMerrilyOnHigh: OurSong = {
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
         { text: "Play the run of bars 5 to 7 with the right hand alone, and keep the quick swings light.", hands: "right", speed: 0.5, loop: [5, 7], wait: true },
         { text: "Play the arpeggios of the second verse in the left hand alone.", hands: "left", speed: 0.5, loop: [9, 12], wait: false },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
@@ -326,7 +326,7 @@ export const dingDongMerrilyOnHigh: OurSong = {
       tricky: {
         9: "The octaves on C, D, B and A come quickly. Keep the hand in its octave shape and move it from the wrist.",
         11: "The opening comes back in octaves. Keep them even while the arpeggios run below.",
-        14: "The run swings down to B, while the left hand climbs a G arpeggio below it.",
+        14: "The run swings down to B, while the left hand climbs a C and then a G arpeggio below it.",
       },
     },
   },

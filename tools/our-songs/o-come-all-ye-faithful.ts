@@ -140,7 +140,7 @@ export const oComeAllYeFaithful: OurSong = {
       tips: [
         { fromBar: 1, toBar: 3, kind: "fingering", text: "Finger 2 starts on middle C, and the thumb waits on the G below it." },
         { fromBar: 8, toBar: 8, kind: "rhythm", text: "Long, short: hold the A, then let the quick G fall into the next bar." },
-        { fromBar: 14, toBar: 17, kind: "sound", text: "This is the refrain. Each time it comes, play it a little louder." },
+        { fromBar: 14, toBar: 17, kind: "sound", text: "The refrain makes the same call three times. Play each call a little louder than the one before." },
       ],
       tricky: {
         4: "Finger 3 lands on E after the short rest. Then fingers 2, 3 and 4 rock between D, E and F.",
@@ -171,8 +171,8 @@ export const oComeAllYeFaithful: OurSong = {
         { text: "Now play it at full speed.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 2, toBar: 9, kind: "fingering", text: "The left hand keeps its thumb on G for nearly every chord, so the hand hardly moves." },
-        { fromBar: 8, toBar: 8, kind: "rhythm", text: "Long, short: hold the A for three counts, and give the G just one." },
+        { fromBar: 2, toBar: 9, kind: "fingering", text: "The left thumb stays on G for every chord here, so the hand hardly moves." },
+        { fromBar: 8, toBar: 8, kind: "rhythm", text: "Long, short: the A lasts three times as long as the G." },
         { fromBar: 18, toBar: 21, kind: "sound", text: "The last line is the biggest. Let it swell, then rest on the last C." },
       ],
       tricky: {
@@ -202,11 +202,11 @@ export const oComeAllYeFaithful: OurSong = {
         { text: "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand alone on the first nine bars, an octave above middle C.", hands: "right", speed: 0.6, loop: [1, 9], wait: true },
         { text: "Play the thirds and sixths of bars 14 to 17 with the right hand alone. Press both notes as one.", hands: "right", speed: 0.6, loop: [14, 17], wait: true },
-        { text: "Play the whole song with both hands at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, with the pedal.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
-        { fromBar: 2, toBar: 13, kind: "sound", text: "Keep the Alberti bass soft, so the tune rings out above it." },
+        { fromBar: 2, toBar: 13, kind: "sound", text: "Keep the Alberti bass soft, so the tune sings above it." },
         { fromBar: 14, toBar: 17, kind: "fingering", text: "The tune is the top note of each pair, so let the upper finger lead." },
         { fromBar: 2, toBar: 20, kind: "sound", text: "Change the pedal in the middle of each bar, as the left hand starts a new chord." },
       ],
@@ -252,12 +252,12 @@ export const oComeAllYeFaithful: OurSong = {
         { text: "Play the stride bass alone: jump down for the octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
         { text: "Play the right hand's chords alone, and let the little finger sing the tune.", hands: "right", speed: 0.5, loop: [1, 13], wait: true },
         { text: "Play the octaves of bars 14 to 21 with the right hand alone. Keep the hand open and light.", hands: "right", speed: 0.5, loop: [14, 21], wait: true },
-        { text: "Join the hands on the whole song at three quarters speed.", hands: "both", speed: 0.75, loop: null, wait: false },
-        { text: "Now play it at full speed, and make the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
+        { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
+        { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 13, kind: "trick", text: "In stride, look at the bass note and let the hand find the chord by feel." },
-        { fromBar: 14, toBar: 21, kind: "sound", text: "In octaves, play the little finger a bit louder, so the tune shines on top." },
+        { fromBar: 14, toBar: 21, kind: "sound", text: "In octaves, play the little finger a little louder, so the tune shines on top." },
         { fromBar: 14, toBar: 20, kind: "fingering", text: "The broken octave bass rolls from the little finger to the thumb and back." },
       ],
       tricky: {
