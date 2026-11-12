@@ -32,9 +32,9 @@ import { controlsSection } from "./gallery/controls";
 import { dialogSection } from "./gallery/dialog";
 import { emptyStateSection } from "./gallery/empty-state";
 import { iconButtonSection } from "./gallery/icon-button";
-import { keyboardSection } from "./gallery/keyboard";
 import { linkSection } from "./gallery/link";
 import { group, section, specimen, type Locale } from "./gallery/parts";
+import { pianoKeysSection } from "./gallery/piano-keys";
 import { progressSection } from "./gallery/progress";
 import { sectionSection } from "./gallery/section";
 import { skeletonSection } from "./gallery/skeleton";
@@ -192,7 +192,7 @@ const SECTIONS: ((locale: Locale, settings: SettingsStore) => HTMLElement)[] = [
   tabsSection,
   controlsSection,
   dialogSection,
-  keyboardSection,
+  pianoKeysSection,
   staffSection,
 ];
 

@@ -147,8 +147,8 @@ landing page, and decision 0008 already answers it: a picture until a click.
 - [x] The devices band: a picture, and the view on a click. `src/landing/devices.ts:41`
 - [x] The picture in both themes. `tools/landing-pictures.ts:1`
 - [x] E2e test `the_devices_band_loads_the_piano_on_a_click`. `e2e/landing.e2e.ts:1`
-- [ ] The gallery test reads the view. `e2e/design.e2e.ts:37`
-- [ ] Delete `keyboard.ts`, `keyboard.css` and `keyboard.test.ts`. `src/ui/components/keyboard.ts:1`
+- [x] The gallery test reads the view. `e2e/design.e2e.ts:37`
+- [x] Delete `keyboard.ts`, `keyboard.css` and `keyboard.test.ts`. `src/ui/components/keyboard.ts:1`
 - [ ] The floor's `keyboard-2d` check goes. `docs/goals/README.md:244`
 - [ ] The site design's component table names the view. `docs/site-design.md:147`
 - [ ] The findings and the playbook name the view, not the 2D keyboard. `docs/findings.md:707`, `docs/agent/playbook.md:17`

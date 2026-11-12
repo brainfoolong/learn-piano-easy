@@ -2,8 +2,9 @@
  * The gallery at `design/`: it shows every component of the site in every state, and it passes the
  * layout checks of `e2e/layout-check.ts` at every width, theme and locale.
  *
- * A component is a module of `src/ui/components/`, and the controls are `src/ui/controls.ts`. Each
- * one's section carries its file name as `data-component`, and each specimen its state as `data-state`.
+ * A component is a module of `src/ui/components/`, the controls are `src/ui/controls.ts`, and the piano
+ * view is `src/render/piano-keys.ts`. Each one's section carries its file name as `data-component`, and
+ * each specimen its state as `data-state`.
  * A component may keep its own `data-state` inside, such as a step of progress, so only the gallery's
  * specimens count.
  */
@@ -12,13 +13,13 @@ import { resolve } from "node:path";
 import { expect, test } from "@playwright/test";
 import { checkLayout, LOCALES, THEMES, WIDTHS } from "./layout-check";
 
-/** Every component's file name, the controls included. */
+/** Every component's file name, the controls and the piano view included. */
 function componentNames(): string[] {
   const folder = resolve(import.meta.dirname, "..", "src", "ui", "components");
   const names = readdirSync(folder)
     .filter((file) => file.endsWith(".ts") && !file.endsWith(".test.ts"))
     .map((file) => file.slice(0, -".ts".length));
-  return [...names, "controls"].sort();
+  return [...names, "controls", "piano-keys"].sort();
 }
 
 test("the_gallery_passes_the_layout_checks", async ({ browser, baseURL }) => {
@@ -34,10 +35,10 @@ test("the_keyboard_plays_by_pointer_and_by_several_touches", async ({ browser, b
   const page = await context.newPage();
   await page.goto(new URL("design/?lang=en", baseURL).href);
   const playable = page.locator('[data-state="playable"]');
-  const readout = playable.locator("p:not(.keyboard__live)");
+  const readout = playable.locator("p:not(.piano-keys__live)");
   await playable.scrollIntoViewIfNeeded();
   const centre = async (pitch: number) => {
-    const box = (await playable.locator(`.keyboard__key[data-pitch="${pitch}"] rect`).boundingBox())!;
+    const box = (await playable.locator(`.piano-keys__key[data-pitch="${pitch}"]`).boundingBox())!;
     // Low on a white key, below the black keys.
     return { x: box.x + box.width / 2, y: box.y + box.height * 0.85 };
   };
@@ -48,7 +49,7 @@ test("the_keyboard_plays_by_pointer_and_by_several_touches", async ({ browser, b
   await page.mouse.move(c.x, c.y);
   await page.mouse.down();
   await expect(readout).toHaveText("You play: C4");
-  await expect(playable.locator('.keyboard__key[data-pitch="60"]')).toHaveAttribute("data-pressed", "");
+  await expect(playable.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-held", "");
   await page.mouse.move(d.x, d.y);
   await expect(readout).toHaveText("You play: D4");
   await page.mouse.up();
