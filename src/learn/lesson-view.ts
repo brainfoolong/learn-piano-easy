@@ -22,6 +22,8 @@
  *   and a browser without IndexedDB rewards the run it keeps in memory. A failed read shows no reward,
  *   and the save's own status stays right.
  * - **The steps are chosen at the start** by `stepsToRun`, on whether a MIDI keyboard is connected.
+ *   A step that needs touch or the pedal shows a button under it, for a keyboard without them. It
+ *   swaps in the step's listening and quiz, so no learner is ever stuck on a step.
  * - **The progress is written only at the end,** each step's event, then the lesson's. A write that
  *   fails keeps the rest queued, and Try again writes only those, so no event is written twice.
  *   Without IndexedDB the log lives in memory, and the end screen says the result lasts the tab.
@@ -61,7 +63,7 @@ import { badgesOf, type FixedBadgeId } from "./game/badges";
 import { type Moment, pulse, showMoments } from "./game/celebrate";
 import { gameSounds } from "./game/sfx";
 import { dailyGoalOf, readStanding, type Standing } from "./game/standing";
-import { inputHas, lessonKey, starsOf, stepsToRun } from "./lesson-run";
+import { inputHas, lessonKey, starsOf, stepsToRun, withoutNeed } from "./lesson-run";
 import { lessonSound } from "./lesson-sound";
 import { CHECKING_KINDS, type Lesson, type Step, type World } from "./model";
 import { SKIP_TEST_ID, SKIP_TEST_STARS } from "./skip-test";
@@ -172,7 +174,19 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
       },
       playSong,
     });
+    if (step.needs !== undefined && step.instead !== undefined) {
+      const lacks = button({ label: t.lacks[step.needs], variant: "ghost", size: "small", onClick: () => swapOut() });
+      lacks.classList.add("lesson__lacks");
+      stage.append(lacks);
+    }
     if (showing) stage.focus({ preventScroll: true });
+  };
+
+  /** Runs the current step's `instead` in its place, for a keyboard without its need. */
+  const swapOut = () => {
+    if (phase !== "running" || passed !== undefined) return;
+    steps = withoutNeed(steps, index);
+    mountStep();
   };
 
   const advance = () => {

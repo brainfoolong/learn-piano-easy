@@ -3,9 +3,11 @@
  *
  * Decisions, and what each costs:
  * - **The steps are chosen once, at the start.** A step that needs touch or the pedal runs its
- *   `instead` steps on an input without them. The step bar then keeps its length, even when a MIDI
- *   keyboard connects halfway through.
- * - **Only a MIDI keyboard reports touch and the pedal,** as `docs/curriculum.md` says.
+ *   `instead` steps on an input without them. A MIDI keyboard connecting halfway through then changes
+ *   nothing, and the step bar grows only when the learner swaps a step out.
+ * - **Only a MIDI keyboard reports touch and the pedal,** as `docs/curriculum.md` says. One that lacks
+ *   either, such as one with no pedal plugged in, gets the step's `instead` once the learner says so,
+ *   through `withoutNeed`. A guess from the input could be wrong, and the learner always knows.
  * - **The stars follow the accuracy of the steps that check:** the mean of their scores, read by
  *   `starsFor` in `src/learn/game/xp.ts`. A step that only shows never costs a star. A finished lesson
  *   always earns a star, since a step never fails.
@@ -17,6 +19,16 @@ import type { StepResult } from "./steps/step";
 /** The steps of `steps` the learner runs, each replaced by its `instead` where `has` lacks its need. */
 export function stepsToRun(steps: readonly Step[], has: (need: InputNeed) => boolean): Step[] {
   return steps.flatMap((step) => (step.needs === undefined || has(step.needs) ? [step] : (step.instead ?? [])));
+}
+
+/**
+ * `steps` with the step at `index` replaced by its `instead` steps, for a MIDI keyboard that lacks the
+ * step's need after all, such as one with no pedal. A step without them stays as it is.
+ */
+export function withoutNeed(steps: readonly Step[], index: number): Step[] {
+  const step = steps[index];
+  if (step?.instead === undefined) return [...steps];
+  return [...steps.slice(0, index), ...step.instead, ...steps.slice(index + 1)];
 }
 
 /** What an input has beyond notes: a MIDI keyboard has touch and the pedal, and the others have neither. */

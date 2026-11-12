@@ -108,6 +108,11 @@
     outline: none;
   }
 
+  /* The way out of a step that needs touch or the pedal: a quiet button under the step. */
+  .lesson__lacks {
+    margin-block-start: var(--s-3);
+  }
+
   /*
    * The band at the foot: a word on how it went, with its mark, and Continue once the step has passed.
    * It floats above the screen's foot as glass. While a step waits it is unseen and takes no pointer.

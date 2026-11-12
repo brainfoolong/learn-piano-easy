@@ -1,6 +1,6 @@
 import { expect, test } from "../testing";
 import type { DemoStep, QuizStep, Step } from "./model";
-import { inputHas, starsOf, stepsToRun } from "./lesson-run";
+import { inputHas, starsOf, stepsToRun, withoutNeed } from "./lesson-run";
 
 const demo: DemoStep = { id: "hear-soft", kind: "demo", bpm: 80, notes: [{ note: 60, at: 0, beats: 1 }] };
 const quiz: QuizStep = { id: "which-soft", kind: "quiz", right: 0 };
@@ -13,6 +13,13 @@ const steps: Step[] = [
 test("a_step_that_needs_touch_runs_its_replacements_without_midi", () => {
   expect(stepsToRun(steps, inputHas(true)).map((s) => s.id)).toEqual(["intro", "soft-key", "check"]);
   expect(stepsToRun(steps, inputHas(false)).map((s) => s.id)).toEqual(["intro", "hear-soft", "which-soft", "check"]);
+});
+
+test("a_keyboard_without_the_need_swaps_in_the_replacements_where_the_learner_says_so", () => {
+  const run = stepsToRun(steps, inputHas(true));
+  expect(withoutNeed(run, 1).map((s) => s.id)).toEqual(["intro", "hear-soft", "which-soft", "check"]);
+  expect(withoutNeed(run, 0).map((s) => s.id)).toEqual(["intro", "soft-key", "check"]);
+  expect(run.map((s) => s.id)).toEqual(["intro", "soft-key", "check"]);
 });
 
 test("the_stars_follow_the_accuracy_of_the_checking_steps", () => {

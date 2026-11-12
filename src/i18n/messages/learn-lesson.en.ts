@@ -13,6 +13,11 @@ export const learnLesson = {
     leave: "Leave",
     close: "Close",
   },
+  /** The button under a step that needs touch or the pedal, which swaps in its listening and quiz. */
+  lacks: {
+    touch: "My keyboard cannot play loud and soft",
+    pedal: "My keyboard has no pedal",
+  },
   loading: "Loading the lesson…",
   missing: "This lesson does not exist.",
   backToCourse: "Back to the course",

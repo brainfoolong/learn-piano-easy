@@ -12,6 +12,10 @@ export const learnLesson: typeof en = {
     leave: "Verlassen",
     close: "Schließen",
   },
+  lacks: {
+    touch: "Mein Keyboard kann nicht laut und leise spielen",
+    pedal: "Mein Keyboard hat kein Pedal",
+  },
   loading: "Die Lektion lädt…",
   missing: "Diese Lektion gibt es nicht.",
   backToCourse: "Zurück zum Kurs",
