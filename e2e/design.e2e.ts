@@ -81,6 +81,8 @@ test("the_select_opens_a_list_of_the_page_and_takes_a_click", async ({ page }) =
   await select.click();
   const left = select.getByRole("option", { name: "Left hand" });
   await expect(left).toBeVisible();
+  // The list scales in, and a click while it moves can miss the option and close the list.
+  await expect.poll(() => select.evaluate((element) => getComputedStyle(element, "::picker(select)").transform)).toBe("none");
   // The choice made carries the check, and the others keep its room hidden.
   const check = (name: string) => select.getByRole("option", { name }).evaluate((option) => getComputedStyle(option, "::checkmark").visibility);
   expect(await check("Both hands")).toBe("visible");
