@@ -17,10 +17,11 @@ import { STORAGE_KEY } from "../src/settings/store";
 import { bindSongKeys, courseLessons, hasSong, lessonPath, onStep, playMove, playSong, sampleLessons, songPlan, stage, walkLesson, watchErrors, type CourseLesson } from "./lesson-walk";
 
 /**
- * The time the walk of one lesson may take, in ms. A walk plays a boss's song and a rhythm lesson's tap
- * rounds.
+ * The time the walk of one lesson may take, in ms. A rhythm lesson's tap rounds play in real time. A
+ * lesson with a song gets `SONG_WALK_MS`, since CI draws the player's scene in software.
  */
 const WALK_MS = 45_000;
+const SONG_WALK_MS = 120_000;
 
 /** Walks `entry` in English in `page` and checks its end screen: three stars, and saved. */
 async function walkToEnd(page: Page, entry: CourseLesson): Promise<void> {
@@ -37,7 +38,7 @@ const SAMPLE = await sampleLessons();
 test.describe("each_step_kind_runs_to_its_end_with_its_solution", () => {
   for (const entry of SAMPLE) {
     test(`${entry.world}/${entry.lesson.id}`, async ({ page }) => {
-      test.setTimeout(WALK_MS);
+      test.setTimeout(hasSong(entry.lesson) ? SONG_WALK_MS : WALK_MS);
       const errors = watchErrors(page);
       if (hasSong(entry.lesson)) await bindSongKeys(page);
       await walkToEnd(page, entry);
