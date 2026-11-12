@@ -1,8 +1,8 @@
 # The features, and what we build
 
-This file lists what a complete piano-learning web app offers, and what learn-piano-easy does with each.
-The settings, one row each, are [settings.md](settings.md). Each feature names the goal that builds it,
-by slug.
+This file lists what a complete piano-learning web app offers, and what Learn Piano Easy does with each.
+That app's settings, one row each, are [settings.md](settings.md). Each feature names the goal that
+built it, by slug. [findings.md](../findings.md) holds each goal's findings under its slug.
 
 ## Modes
 
@@ -16,6 +16,9 @@ by slug.
 
 Ours adds the play modes at `modes/`: ready-made setups, each a song and a set of settings. A card
 opens the player set up for it, and one click undoes its settings. `src/play-modes/modes.ts` owns them.
+
+Ours also adds game mode, which scores each note live with points and combos, at a chosen difficulty.
+`src/game/game-mode.ts` owns it.
 
 ## Playback
 
@@ -35,8 +38,8 @@ Ours adds a loop trainer that raises the speed after each clean pass. All of it 
 Each track can be shown or hidden, muted, and assigned to a hand. It has its own colour, instrument and
 volume. It can require play-along and be drawn in the sheet music. A set of track defaults applies to
 each new song. Ours keeps it in `song-library`, where a hand of "none" means the track is not required.
-Ours has no instrument per track, because its only sound set is a piano. Its sheet switch is
-`sheet-music`'s.
+Ours has no instrument choice, for a track or for the learner, because its only sound set is a piano.
+Its sheet switch is `sheet-music`'s.
 
 ## Input and output
 
@@ -53,8 +56,8 @@ those keys, and notes beyond them can fold in by octaves.
 
 ## Picture
 
-Ours draws the whole scene in 3D with three.js. It has a modelled piano whose keys tilt when pressed, and rounded note
-bars on a lane in perspective. Glow and camera presets complete it. Every picture setting maps onto it.
+Ours draws the whole scene in 3D with three.js. It has a modelled piano whose keys tilt when pressed,
+and rounded note bars on a lane in perspective. Glow and camera presets complete it. Every picture setting maps onto it.
 
 - **Notes:** width, minimum height, rounded corners, stroke, shadow, glow, a hit effect, and shrink and
   fall-off of played notes below the piano.
@@ -103,20 +106,26 @@ Ours has its own engraver, in the `sheet-music` goal.
 - A metronome over the speakers or the MIDI device, synced to the song or free.
 - A background audio track with volume, speed, offset and loop.
 
-This is the `audio-engine` goal, and the background track is in `effects-and-extras`.
+Ours ships one sound set, the Salamander Grand Piano, so it has no soundfont choice and no second
+piano. The sound is the `audio-engine` goal, and the piano is `piano-sounds`. The background track is
+in `effects-and-extras`.
 
 ## Library and files
 
-- 242 example songs: 5 beginner songs and 237 classical pieces from piano-midi.de, with a difficulty
-  from 1 to 10.
+- Example songs, each with a difficulty from 1 to 10.
 - Song search, drag-and-drop upload, opening a directory, and uploads kept in the browser.
 - The last song reopened on start.
 - PDF export of the falling notes above a piano.
 - Export and import of settings, particles and uploaded MIDI files.
 - An offline cache manager per asset group, with auto caching on update.
 
-The library is `song-library`, settings are `settings`, and PDF export is `effects-and-extras`. The
-cache manager is `offline-release`.
+Ours takes its songs from four sources: our own arrangements, piano-midi.de, Mutopia and our original
+pieces. `public/songs/catalog.json` lists every song with its license and credit. Our arrangements
+follow [our-songs.md](../our-songs.md). Ours keeps everything the learner has in one backup file, as
+[design.md](../design.md) § *The learner's data* says.
+
+The library is `song-library` and `more-songs`, settings are `settings`, and PDF export is
+`effects-and-extras`. The cache manager is `offline-release`, and the Data page is `your-data`.
 
 ## Mistakes to avoid
 
@@ -144,9 +153,9 @@ Each one is easy to make, and ours avoids it in the goal named.
   ways to help that cost no money.
 - Every page and every lesson is in a sitemap for search engines, with its page in the other language.
   The landing page describes the app as structured data.
-- Every lesson step can be played on every input. In a lesson, the computer keyboard shifts by octaves
-  to reach the step's keys, and a bar under the piano shows what it reaches. A chord wider than its keys
-  is played a key at a time.
-- A step that needs the pedal or loud and soft playing offers a way out. A MIDI keyboard without them
-  gets the step's listening and quiz instead.
+- *Learn Piano*, a course of eight worlds that plays like a game. [curriculum.md](../curriculum.md)
+  holds the rules every lesson is written by.
+- Every lesson step can be played on every input, as [curriculum.md](../curriculum.md) says. In a
+  lesson, the computer keyboard shifts by octaves to reach the step's keys, and a bar under the piano
+  shows what it reaches. A chord wider than its keys is played a key at a time.
 - A step that asks for one key always shows the same keys, with middle C in the middle.

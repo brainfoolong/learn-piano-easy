@@ -34,8 +34,8 @@ player with years of practice. The reasons are in [decision 0002](decisions/0002
   The head comment of [src/library/library-panel.ts](../src/library/library-panel.ts) owns how.
 
 Each version has a tagline, which says what the version asks. The explorer shows it as the hover text
-of the version's step, and the guide beside the version's name. The taglines are in the message catalogs, under
-`rarity` in `src/i18n/messages/player-library.en.ts`.
+of the version's step, and the guide beside the version's name. The taglines are in the message
+catalogs, under `rarity` in `src/i18n/messages/player-library.en.ts`.
 
 ## What each version asks
 

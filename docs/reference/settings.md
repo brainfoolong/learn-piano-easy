@@ -1,17 +1,24 @@
-# The settings
+# The reference settings
 
-Every setting a complete piano-learning app offers, by the menu section it sits in.
-[features.md](features.md) says what the app does with them. Our own catalog is `src/settings/schema.ts`, and it covers every row.
-A default shown as "a colour" is an RGBA value.
+Every setting a complete piano-learning app offers, grouped by topic. Our own settings are measured
+against this list, and [features.md](features.md) says what we do with each feature.
+
+- **Our settings are `src/settings/schema.ts`,** and each locale's catalog holds their labels.
+- **`src/settings/coverage.test.ts` places every row here:** in our schema under its id, renamed, or
+  dropped with its reason.
+- **The labels and defaults are the reference's own,** flaws included. [features.md](features.md) §
+  *Mistakes to avoid* names the flaws ours avoids.
+- **A default shown as "a colour" is an RGBA value.** An empty default belongs to a button, which
+  stores no value.
 
 ## General
 
 | Id | Label | Default | Options |
 |---|---|---|---|
 | `volumePP` | Volume | 100 |  |
-| `volumeMain` | Volume | xr().volume |  |
-| `volumeMainSW` | Volume | xr().volume |  |
-| `keyOverride` | Key override | l |  |
+| `volumeMain` | Volume | worked out at start |  |
+| `volumeMainSW` | Volume | worked out at start |  |
+| `keyOverride` | Key override | worked out at start |  |
 | `enableScoreMode` | Enable Score Mode | false |  |
 | `renderOffset` | Render offset (ms) | 0 |  |
 | `disableHotkeys` | Disable hotkeys | false |  |
@@ -89,7 +96,12 @@ A default shown as "a colour" is an RGBA value.
 | `colorCodeFinger5Left` | E | a colour |  |
 | `colorCodeFingerDefaultLeft` | Default | a colour |  |
 | `enableAutoFingering` | Generate fingerings on load | false |  |
-| `fingeringButtons` | Button Group | null |  |
+| `fingeringButtons` | Button Group |  |  |
+
+## Lyrics
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `lyricsEnabled` | Enable lyrics | false |  |
 | `lyricsBackground` | Background color | a colour |  |
 | `lyricsFontColor` | Font color | a colour |  |
@@ -99,6 +111,11 @@ A default shown as "a colour" is an RGBA value.
 | `lyricsY` | Y-Position | 30 |  |
 | `lyricsCursorEnabled` | Enable cursor | true |  |
 | `lyricsBouncingCursor` | Bouncing cursor | true |  |
+
+## Loop
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `enableLoop` | Enable looping | false |  |
 | `autoLoop` | Auto reset to loop start | true |  |
 | `loopDelay` | Loop delay (beats) | 4 |  |
@@ -106,6 +123,11 @@ A default shown as "a colour" is an RGBA value.
 | `loopStart` | Loop start (Measure #) | 0 |  |
 | `loopEnd` | Loop end (Measure #) | 2 |  |
 | `muteLoop` | Mute notes outside of loop | true |  |
+
+## Play-along
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `forceDelay` | Force pause between notes (ms) | 0 |  |
 | `minNoteDuration` | Minimum note duration of forced pauses (ms) | 0 |  |
 | `restrictInputRange` | Restrict input to range for playalong | false |  |
@@ -174,10 +196,20 @@ A default shown as "a colour" is an RGBA value.
 | Id | Label | Default | Options |
 |---|---|---|---|
 | `exportPdfBackground` | Use background colors | false |  |
-| `pdfExportButtonGroup` | Button Group | null |  |
+| `pdfExportButtonGroup` | Button Group |  |  |
+
+## Zoom
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `noteToHeightConst` | Seconds shown on screen | 3 |  |
 | `zoomByMeasures` | Show by measures | false |  |
 | `measuresShownOnScreen` | Measures shown on screen | 4 |  |
+
+## Chords
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `showChords` | Show chords | false |  |
 | `chordLabelStyle` | Chord label style | "Bar" | Ribbon, Bar |
 | `chordLabelPlacement` | Chord label placement | "Middle" | Above, Top, Middle, Bottom, Below |
@@ -224,9 +256,14 @@ A default shown as "a colour" is an RGBA value.
 | `showSustainPeriods` | Draw Sustain Periods | false |  |
 | `showSustainedNotes` | Draw Sustained Notes | false |  |
 | `sustainedNotesOpacity` | Sustained Notes Opacity (%) | 50 |  |
+
+## Particles
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `showParticles` | Enable particles | false |  |
-| `particlesTexture` | Texture | i.PARTICLE_TEXTURES[0] |  |
-| `particlesBlending` | Blending | String(i.BLENDING.Normal) |  |
+| `particlesTexture` | Texture | the first texture |  |
+| `particlesBlending` | Blending | Normal |  |
 | `particleOverrideColor` | Enable custom color | false |  |
 | `particleColor` | Custom color | a colour |  |
 | `particlesOpacity` | Opacity | 1 |  |
@@ -253,10 +290,10 @@ A default shown as "a colour" is an RGBA value.
 | `turbulenceYAmplitude` | Turbulence Y Amplitude | 6 |  |
 | `turbulenceYFrequency` | Turbulence Y Frequency | .5 |  |
 | `particleYOffset` | Y Offset | 0 |  |
-| `particleDistributionX` | X-Distribution | i.DISTRIBUTIONS.X.ACROSS |  |
+| `particleDistributionX` | X-Distribution | Across |  |
 | `particleDistributionXSpread` | X-Spread (%) | 100 |  |
-| `particleDistributionY` | Y-Distribution | i.DISTRIBUTIONS.Y.KEYS_TOP |  |
-| `particleDistributionZ` | Layer | i.DISTRIBUTIONS.Z.BEHIND_PIANO |  |
+| `particleDistributionY` | Y-Distribution | Keys top |  |
+| `particleDistributionZ` | Layer | Behind piano |  |
 
 ## Piano Line
 
@@ -269,12 +306,22 @@ A default shown as "a colour" is an RGBA value.
 | `pianoLineColor` | Color | a colour |  |
 | `pianoLineOpacity` | Opacity | 1 |  |
 | `pianoLineYOffset` | Y-Offset | 0 |  |
+
+## Background
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `extendBgPastPiano` | Extend background past piano | false |  |
 | `bgCol1` | Background fill color 1 | a colour |  |
 | `bgCol2` | Background fill color 2 | a colour |  |
 | `bgCol3` | Background stroke color 1 | a colour |  |
 | `bgCol4` | Background stroke color 2 | a colour |  |
 | `bgCol5` | Background black key color | a colour |  |
+
+## Sound
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `masterGain` | Volume multiplier | 1 |  |
 | `inputGain` | Input Volume multiplier | 1 |  |
 | `velocityStrength` | Velocity strength | 1 |  |
@@ -282,7 +329,7 @@ A default shown as "a colour" is an RGBA value.
 | `useHQPianoSoundfont` | Use HQ Piano Soundfont (~13MB) | false |  |
 | `sustainEnabled` | Enable Sustain | true |  |
 | `enableReverb` | Enable convolver (reverb) | true |  |
-| `reverbImpulseResponse` | Impulse Response | i.REVERBS[0] |  |
+| `reverbImpulseResponse` | Impulse Response | the first impulse response |  |
 | `detune` | Detune (per cent) | 0 |  |
 | `enableMetronome` | Enable Metronome | false |  |
 | `metronomeMidiOutput` | Metronome output | "Both" | Both, MIDI, PC |
@@ -300,6 +347,11 @@ A default shown as "a colour" is an RGBA value.
 | `bgTrackSpeed` | Playback speed | 100 |  |
 | `bgTrackOffset` | Offset (seconds) | 0 |  |
 | `bgTrackLoop` | Loop background track | false |  |
+
+## Equalizer
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `enableEqualizer` | Enable Equalizer | false |  |
 | `equalizerGain0` | Low Band - 60Hz (db) | 0 |  |
 | `equalizerGain1` | Low-Mid Band - 250Hz (db) | 0 |  |
@@ -316,15 +368,25 @@ A default shown as "a colour" is an RGBA value.
 | `adsrSustain` | Sustain (%) | 100 |  |
 | `adsrReleaseKey` | Release - Key (Seconds) | .35 |  |
 | `adsrReleasePedal` | Release - Pedal (Seconds) | .35 |  |
+
+## Offline cache
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `autoCacheMain` | Auto Cache | false |  |
 | `autoCacheSongs` | Auto Cache | false |  |
 | `autoCacheHqPiano` | Auto Cache | false |  |
 | `autoCacheFluidR3` | Auto Cache | false |  |
 | `autoCacheFatBoy` | Auto Cache | false |  |
 | `autoCacheMusyngKite` | Auto Cache | false |  |
+
+## Stored state
+
+| Id | Label | Default | Options |
+|---|---|---|---|
 | `playMode` | Play Mode | "player" | player, pitchPractice |
 | `lastSong` | Last Song | "" |  |
 | `particlePresetName` | Preset Name | "Default" |  |
 | `particleTypeName` | Type Name | "Default" |  |
-| `keyBindings` | Key Bindings | {0:[36] |  |
-| `hotKeyBindings` | Hot Key Bindings | null |  |
+| `keyBindings` | Key Bindings | a map of computer keys to notes |  |
+| `hotKeyBindings` | Hot Key Bindings | none |  |

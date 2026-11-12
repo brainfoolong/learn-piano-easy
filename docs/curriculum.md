@@ -67,6 +67,9 @@ lesson is written by, until the lesson model's head comment in `src/learn/model.
 
 ## The worlds
 
+`COURSE` in `src/learn/course.ts` lists the worlds in order. Each row names the goal that built the
+world, and [findings.md](findings.md) holds that goal's findings under its slug.
+
 | World | Teaches | Boss | Goal |
 |---|---|---|---|
 | Meet the piano | The keys, their names, octaves, posture and finger numbers | A timed key hunt | `learn-first-steps` |

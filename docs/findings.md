@@ -12,17 +12,14 @@ and `bun run dev` serves it with rebuilds.
 
 - The build is `tools/build.ts`, the dev server and preview are `tools/dev.ts`, and the service worker is
   `src/pwa/sw.ts`. Each head comment says how it works.
-- The shell, the placeholder scene and the About dialog are `src/app/shell.ts` and `src/render/scene.ts`.
+- The shell and its About dialog are `src/app/shell.ts`, and the scene is `src/render/scene.ts`.
 - `tools/build.test.ts` and `tools/licenses.test.ts` hold the build and license tests.
-- Bun hides passing test names under an AI agent. Tests import `test` from `src/testing.ts`, as the
-  playbook says.
-- A `looper launch` started from a session ends with the session's shell job. Start the dev server with
-  `bun run dev` in a terminal.
 
 ### Decisions that still bind
 
 - three.js is pinned at an exact version and bundled. Its addons under `three/addons/` count as three.js.
-- Every URL in the app is relative. The demo domain appears only in `og:url` and the README.
+- Every URL in the app is relative. Only a build with `--site-url` names the domain, as
+  `tools/build.ts`'s head comment says.
 - Songs and sounds live under `public/songs/` and `public/sounds/`. The worker caches them on first use,
   and each folder holds a `LICENSE.md` named in `THIRD-PARTY-NOTICES.md`.
 - A development build registers no service worker. `bun run preview` is the way to test offline locally.
@@ -54,9 +51,7 @@ and beats. It also writes back losslessly.
 - An SMPTE file's measures count a quarter note as half a second, and a format 2 file plays its tracks
   together.
 - A posted song carries its tempo map's `inputs`, and `songFromReply` rebuilds the `TempoMap` on the page.
-- The catalog format is ours: composer, piece, title, file, difficulty and license. Its `piece` is `null`
-  for a song that stands alone, and its difficulty runs from 1 to 10 in half steps.
-- The 5 beginner songs are our own, written by `song-library`.
+- The catalog format is ours. `CatalogSong` and the head comment of `tools/catalog.ts` own it.
 
 ## settings
 
@@ -71,17 +66,15 @@ exports and imports as JSON.
 - The colour picker is `src/ui/color-picker.ts`, our own, with hue, saturation, value and alpha.
 - Export and import are `src/settings/export.ts`, and the themes are `src/settings/themes.ts`.
 - `src/settings/coverage.test.ts` maps every row of `docs/reference/settings.md` to the schema.
-- The schema has a text kind but no `text` helper. Add one when the first text setting lands.
 - A change in another tab is not picked up until the next visit. A `storage` event listener would fix it.
-- No test covers the panel's DOM, because Bun runs tests without a DOM. Nobody has looked at the panel
-  in a browser yet.
+- `e2e/settings-panel.e2e.ts` checks the panel in Chromium.
 - No test covers `applyThemes`, because it needs a root element. A plain object as the root would do.
 
 ### Decisions that still bind
 
 - Every setting is one entry in the schema, and every value's type derives from it.
-- A later goal adds its settings to the schema and removes them from the coverage test's pending list
-  in the same commit. `offline-release` empties the pending list.
+- The coverage test places every reference id in the schema, the rename map or the drop list. A drop
+  states its reason, and the pending list stays empty.
 - Ids are our own camelCase names. Where the reference's id is clear, ours matches it, and a rename is listed
   in the coverage test's rename map.
 - Labels and descriptions are in our own words, free of the reference's typos.
@@ -89,8 +82,8 @@ exports and imports as JSON.
   from their defaults. A failed read falls back to the defaults.
 - A colour is stored as `#rrggbbaa`, and a choice stores its value, never its label.
 - The two `lighter` blend settings are dropped, because our scene draws glow with a bloom pass.
-- The panel floats at the right and is built from `SETTINGS` alone. A new setting needs no panel code.
-- A control shows the value the store kept. Reset all asks first.
+- The panel is built from the schema alone, so a new setting needs no panel code. Its other decisions
+  are in `src/settings/panel.ts`'s head comment.
 - An exported file holds every value, and an import sets only the keys it has, in schema order. A file
   that is not ours is refused whole.
 - A theme lists only the colours it changes from the defaults, and the dark theme is the defaults.
@@ -112,9 +105,9 @@ equaliser, scheduled exactly against the audio clock.
 - `tools/import-sounds.ts` converts the Salamander Grand Piano into `public/sounds/salamander/` with its
   license.
 - The transport drives the engine's scheduler, as § `transport` says.
-- Nobody has heard the engine in a browser yet. Every test runs in Bun with fake nodes.
+- The unit tests run in Bun with fake nodes. `e2e/sounds.e2e.ts` loads and decodes the sound set in
+  Chromium.
 - A background tab throttles the scheduler's timer, so a song stutters there.
-- The metronome's MIDI output comes with `input-and-modes`. Until then it sounds only on the speakers.
 
 ### Decisions that still bind
 
@@ -130,7 +123,7 @@ equaliser, scheduled exactly against the audio clock.
 - Reverb plays generated noise responses with an exponential decay, in a few room presets. It mixes in
   at a fixed wet gain of 0.3, and `reverbImpulseResponse` picks the room.
 - `volumeMain` is the one main volume, on the bus. `volumeMainSW` and `useHQPianoSoundfont` are
-  dropped, and `metronomeInstrument` moves to `input-and-modes`.
+  dropped.
 
 ## renderer-3d
 
@@ -149,8 +142,8 @@ library song at full frame rate.
 - The glow's modes are `src/render/glow.ts`, its pass is `src/render/bloom.ts`, and what lights it is
   `src/render/glow-source.ts`.
 - `e2e/scene.e2e.ts` checks the overlays, the camera presets and the glow in Chromium.
-- The scene does not yet apply incoming-key marks, the key hit effect, black key length, or the
-  flare's size, colour and offset. The settings exist, and `scene.ts`'s head lists them.
+- The scene leaves a few piano settings unapplied. The `Gaps:` line of `scene.ts`'s head comment lists
+  them.
 - OrbitControls keeps the wheel for zoom, because the timeline seeks by click, drag and key only.
 - The transport drives `PianoScene.setSong` and `setTimeSource`. The scene draws the learner's key
   range, as § `keyboard-range` says.
@@ -179,7 +172,6 @@ library song at full frame rate.
   `noteEndedShrink` and `showHitKeys` became toggles.
 - Settings the 3D scene has no use for are dropped in `src/settings/coverage.test.ts`, each with its
   reason.
-- Pedal marks and input lane highlights move to `effects-and-extras`.
 
 ## keyboard-range
 
@@ -192,14 +184,13 @@ piano, the notes and the input follow it.
   note names. It is pure and tested in Bun.
 - The settings control is `src/keyboard/range-control.ts`. It holds the preset menu, the two note fields
   and the octave buttons.
-- The song fit is `src/keyboard/song-fit.ts`. `fitSong` splits a song's notes between the learner and
-  the app, and `songSpan` names its lowest and highest note.
+- The song fit is `src/keyboard/song-fit.ts`. `fitPitch` moves one note into the range, and `songSpan`
+  names a song's lowest and highest note.
+- `fitSong` has no caller outside its test. The judge and the bars call `fitPitch` per note instead.
 - `e2e/keyboard.e2e.ts` checks the presets, a typed range across a reload and the octave buttons.
 - The catalog carries `low` and `high` per song, written by `tools/catalog.ts`.
-- `fitSong` is not yet used by any judge. `input-and-modes` judges only the `learner` notes and plays
-  the `app` notes.
-- Folding has no end-to-end test, because the bars are not readable from the page. The input goal's
-  tests can cover it once folded notes are required.
+- Folding has no end-to-end test, because the bars are not readable from the page. Its unit tests are
+  in `src/keyboard/song-fit.test.ts`.
 - `src/audio/soundfont.ts` parses note names of its own. It could use `parsePitch` once the sample
   names are checked against it.
 
@@ -244,7 +235,8 @@ touch or hotkey, with sound and picture in step.
 - A loop that pauses and a song that stops play on past their end in a background tab, because
   `tick` runs on frames. A seamless repeat keeps its time there.
 - `forceDelay` and `minNoteDuration` are dropped in the coverage test, which states the reason.
-- The trainer raises the speed after every pass until the input modes can say a pass was clean.
+- The trainer raises the speed after every pass, because no judge reports a clean pass to the
+  transport.
 
 ### Decisions that still bind
 
@@ -304,9 +296,6 @@ and pitch practice modes, with accuracy kept per song.
 - A pause or a seek cannot take back MIDI clicks already sent, so up to the look-ahead of them sound.
 - After a seek in wait mode, the hold is set again only on the next frame. In that frame the scheduler
   may queue the app's notes up to its look-ahead past the next moment.
-- The trainer still raises the speed after every pass. The judge can now say a pass was clean, and
-  nothing wires the two yet.
-- `forceDelay` and `minNoteDuration` are dropped in the coverage test, which states the reason.
 
 ### Decisions that still bind
 
@@ -354,12 +343,12 @@ songs alongside the classical ones.
 
 ### Findings
 
-- Search and grouping are `src/library/search.ts`, and the songs dialog is
+- Search and grouping are `src/library/search.ts`, and the song explorer is
   `src/library/library-panel.ts`. Opening a song and the last song are `src/library/open-song.ts`.
 - The IndexedDB helper is `src/library/idb.ts`, and uploads are `src/library/uploads.ts`.
 - Track settings are `src/library/track-settings.ts`, and the tracks panel is
   `src/library/tracks-panel.ts`.
-- The easy folk tunes are songs of ours, from `tools/make-our-songs.ts`, in `public/songs/ours/`.
+- The songs of ours are written by `tools/make-our-songs.ts` into `public/songs/ours/`.
 - The e2e tests are `library` and `tracks` in `e2e/`.
 - The history still keys a take by `songKey`, a hash of the notes. The song id of `songIdOf` is not
   wired into it yet.
@@ -367,14 +356,14 @@ songs alongside the classical ones.
 
 ### Decisions that still bind
 
-- The catalog is `public/songs/catalog.json`. The browser groups it by collection, composer and piece,
-  with the difficulty and license of each file.
+- The catalog is `public/songs/catalog.json`. The song explorer shows it as one card per song, found by
+  search, tags and sort.
 - A catalog row's `low` and `high` notes tell which songs fit the learner's keyboard.
 - Uploads are kept in IndexedDB when that setting is on, as file name and bytes. An upload's id is a
   hash of its bytes, so the same file added twice is one song.
 - Opening a folder uses the File System Access API where the browser has it, and a folder file input
   elsewhere.
-- A track has visible, muted, hand, colour and volume. Defaults by track index apply to each new song,
+- A track has visible, muted, hand, colour, volume and its sheet switch. Defaults by track index apply to each new song,
   and its hands come from its notes.
 - A hand of `none` means the learner need not play the track. One field then says both which hand plays
   and whether the learner plays.
@@ -382,13 +371,12 @@ songs alongside the classical ones.
   is our `inputGain`.
 - Track settings live in `localStorage` by song id, so catalog songs and uploads share one store. A song
   is stored only once the learner changes a track.
-- The last song lives in `localStorage`, apart from the settings. The top bar names the open song.
+- The last song lives in `localStorage`, apart from the settings. The player's bar names the open song.
 - The library shows in the shell's dialog, built once and kept, so its search survives a close.
-- The beginner songs are written through our MIDI writer in two hands. The melodies are public domain,
-  and our arrangements are MIT.
+- The songs of ours are written through our MIDI writer. The tunes are public domain, and our
+  arrangements are MIT.
 - The catalog is precached with the shell, because every start reads it. A catalog change then fetches
   the shell once more.
-- The sheet switch belongs to `sheet-music`, whose standing decisions carry it.
 
 ## theory
 
@@ -554,7 +542,7 @@ importer, with its license credited.
 - Only the sampled notes ship, one every three semitones, in one velocity layer.
 - Each note starts at its onset and ends 60 dB below its peak, with one gain for the whole set.
 - ffmpeg is a development tool found on PATH, and the archive downloads into `.agent-tmp/sounds/`.
-- Salamander is the only set. MusyngKite, FluidR3 and `tools/fetch-sounds.ts` are gone.
+- Salamander is the only set.
 - The `soundfontName` setting is dropped while one set ships, and returns with a second set.
 
 ## more-songs
@@ -564,13 +552,12 @@ license checked, credited and shown.
 
 ### Findings
 
-- The library holds 390 songs. 138 come from Mutopia, in `public/songs/mutopia/`.
+- 138 songs come from Mutopia, in `public/songs/mutopia/`.
 - Ten original pieces of ours are in `public/songs/originals/`, written by `tools/make-original-songs.ts`.
 - The Mutopia fetch tool is `tools/fetch-mutopia.ts`, and its pick list is `tools/mutopia-picks.json`.
 - Every catalog row has a `license` and a `credit`, and `tools/song-licenses.test.ts` checks both.
 - Our MusicXML reader is `src/midi/musicxml.ts`, with our own XML and ZIP readers beside it.
-- The beginner path is `src/library/beginner-path.ts`, and it shows 36 steps first in the library.
-- A path step such as "1. La Candeur" does not name its composer. The row could show it.
+- The beginner path is `src/library/beginner-path.ts`, and the song explorer shows its next steps first.
 - Gershwin's Three Preludes and Rhapsody in Blue are public domain in the US and EU. No free MIDI was found.
 
 ### Decisions that still bind
@@ -582,7 +569,7 @@ license checked, credited and shown.
 - A site that refuses automated clients is never fetched by a tool in disguise.
 - OpenGameArt is not fetched, because its `robots.txt` refuses `Claude-Code` and `Codex` by name.
 - MAESTRO, kunstderfuge, bitmidi and freemidi are refused for their licenses.
-- The library keeps only the piano-midi.de songs of its source list, as decision d2 says.
+- The library keeps only the piano-midi.de songs of its source list.
 - The Open Well-Tempered Clavier and Open Goldberg Variations are not fetched from musescore.com.
 - Mutopia's files come from `sca.uwaterloo.ca/Mutopia/`, and its picks skip what piano-midi.de carries.
 - MusicXML serves the learner's own files, and the library stays MIDI only.
@@ -627,9 +614,9 @@ and carrying its guide.
 
 - The meter is `tools/song-meter.ts`, and its head comment holds the table of limits.
 - The notation, with fingers and the pedal line, is `tools/song-notation.ts`.
-- Each song is a module in `tools/our-songs/`, and `ourSongs` in `tools/make-our-songs.ts` lists the twelve.
-- The writer writes `public/songs/ours/<slug>/<rarity>.mid`, each song's `guide.json` and 48 catalog rows.
-- The catalog holds 433 rows. The five old beginner files are gone.
+- Each song is a module in `tools/our-songs/`, and `ourSongs` in `tools/make-our-songs.ts` lists them all.
+- The writer writes `public/songs/ours/<slug>/<rarity>.mid`, each song's `guide.json` and four catalog
+  rows per song.
 - The guide's shape is `src/library/guide.ts`, its panel `src/library/guide-panel.ts`, and the skills `src/library/skills.ts`.
 - `src/library/moved-songs.ts` moves a learner's fingers, tracks and last song from a beginner file to its Common version.
 - *Für Elise* and *The Entertainer* carry the catalog's originals as their Mythic step.
@@ -664,9 +651,8 @@ with *Jingle Bells* as the library's Christmas collection.
 
 ### Findings
 
-- `ourSongs` in `tools/make-our-songs.ts` lists 42 songs, and the catalog holds 553 rows.
-- The Christmas group holds 31 songs, and `CHRISTMAS` in `tools/our-songs.test.ts` names each slug.
-- The group is a `details` of class `library-collection`, after the beginner path and before every composer.
+- The Christmas collection holds 31 songs, and `CHRISTMAS` in `tools/our-songs.test.ts` names each slug.
+- The collection is a tag in the song explorer's rail, as `src/library/tags.ts` says.
 - Three songs are reserves: *It Came Upon the Midnight Clear*, *Ding Dong Merrily on High* and *Kommet, ihr Hirten*.
 - *We Wish You a Merry Christmas*, *Dance of the Sugar Plum Fairy* and *Lasst uns froh und munter sein* had no checkable public domain source.
 - Each tune was read from a printed score: a Wikipedia `<score>`, a Commons MIDI or a Commons print.
@@ -695,14 +681,12 @@ The gallery shows each in every state, and passes the layout checks at every wid
 ### Findings
 
 - The tokens of both themes are `src/ui/tokens.css`, and `src/ui/tokens.test.ts` checks their contrast and grid.
-- The components are the 18 modules of `src/ui/components/` and the controls of `src/ui/controls.ts`.
+- The components are the modules of `src/ui/components/` and the controls of `src/ui/controls.ts`.
 - The gallery at `design/` has its entry in `src/ui/gallery.ts` and one section module each in `src/ui/gallery/`.
 - `e2e/layout-check.ts` measures each page, and the pure judges of `src/ui/layout-geometry.ts` find the flaws.
-- The gallery's bundle is about 84 kB, since the staff brings the quantizer and the engraver.
-- `--c-success`, `--c-reward` and `--c-mistake` fail 4.5 to 1 as text on the light surfaces.
-- No token names a link's colour, so link.css and chip.css mix `--c-brand` with `--c-text`.
-- The progress track is `--c-line`, below 3 to 1 against its surface, and its label states the value.
-- The checker measures no layout shift of a view change yet, so `shiftDuring` waits for `site-shell`'s routes.
+- The gallery's bundle carries the quantizer and the engraver, because the staff needs them.
+- A progress bar's label states its value, so the track's contrast carries no meaning alone.
+- `shiftDuring` of `e2e/layout-check.ts` has no caller, so no check measures the shift of a view change.
 - The 88-key keyboard has keys about 6 pixels wide on a phone, and `fitRange` of `src/render/key-layout.ts` fits a range.
 - The staff imports `breakLines` from `src/sheet/sheet-view.ts`, and tree shaking keeps `SheetView` out.
 
@@ -719,7 +703,7 @@ The gallery shows each in every state, and passes the layout checks at every wid
 - A destructive action uses `--c-danger` with `--c-danger-ink`.
 - A navigation offline gets its own folder's page from `src/pwa/sw.ts`.
 - No pixel snapshots: the layout checks measure the flaws, and a session looks with `bun run shot`.
-- The controls' stylesheet styles only `[data-control]`, and `player-in-site` moves its import into `controls.ts`.
+- The controls' stylesheet styles only `[data-control]`, and `src/ui/controls.ts` imports it.
 - The 2D keyboard's keys are no focus stops, and a live text names the marked keys.
 - The keyboard and the staff share one `Mark`: `next`, `correct` or `mistake`.
 - The gallery is the route `design/`, which the site never links.
@@ -741,11 +725,11 @@ player is its part at `play/`, and every page reloads offline from any base path
 - Dropped and launched files go through `src/site/song-inbox.ts` from any page.
 - The site's `max-width: 100%` on every svg hid the sheet, so `src/sheet/sheet-view.css` lifts it there.
 - While the player hides, wait mode, scoring, key lighting, game mode and the sheet keep their own frames.
-- The About page's body is English, and `topBar.home` in the catalog is unused.
+- `topBar.home` in the catalog is unused.
 
 ### Decisions that still bind
 
-- The routes are `./`, `play/`, `learn/`, `learn/<world>/<lesson>/`, `learn/profile/`, `about/` and `design/`.
+- The route table of `src/site/routes.ts` is the one list of routes. `design/` is the one hidden route.
 - German sits under `de/`, and a third locale is one message file and one row of `CATALOGS`.
 - The build writes one page per route and locale, so a static host serves every route with no rewrite.
 - Every page carries `<base href>` to the site's root, and every URL in it is `./` from there.
@@ -756,14 +740,13 @@ player is its part at `play/`, and every page reloads offline from any base path
 - The first visit follows the browser's language once, and a stored choice always wins after that.
 - The theme and the language are settings in section `site`, which the player's panel never shows.
 - The top bar floats over every page and hides only in fullscreen.
-- Below 768 pixels, the two links become a segmented control.
+- Below 768 pixels of the bar's own width, its links move to a second row.
 - Below 1024 pixels, the switches and a page's menu move into a popover.
 - Under 480 pixels high, the bar keeps one row, and under 520 the player's panel covers its own bar.
 - The player stays alive once opened, and a hidden player runs nothing and leaves the song paused.
 - Only a page's chunk imports `src/site/services.ts`, so the landing page pulls no audio code.
 - Offline, an unknown path gets the root page with its `<base>` rewritten to the worker's scope.
-- The footer links the source code once `package.json` names a public repository.
-- A lesson's pages join the route table in `learn-engine`.
+- `REPO_URL` of `src/site/routes.ts` is the one link to the source code.
 - Song guides and titles stay English.
 
 ## landing-page
@@ -783,7 +766,6 @@ the two ways to play, the four rarities, the ways to connect, and why it is free
 - `revealOnEntry` of `src/landing/reveal.ts` plays each part in once as it scrolls in.
 - A check that measures the landing bands runs with reduced motion, or it measures them mid-fade.
 - The byte budget is `the_landing_page_stays_within_its_byte_budget` in `tools/build.test.ts`.
-- The Learn picture shows the song list until the course has a view.
 
 ### Decisions that still bind
 
@@ -797,7 +779,7 @@ the two ways to play, the four rarities, the ways to connect, and why it is free
 - Under reduced motion a box's picture stands still, and its click still plays.
 - A band waits unseen behind a paused animation, never a style rule, and the hero never waits.
 - The pictures of the two parts are screenshots, a light and a dark one each, in two lazy `<img>` elements.
-- `learn-game` retakes the pictures of the two parts.
+  `tools/landing-pictures.ts` takes them again whenever a part's look changes.
 - A call to action is `buttonLink` of `src/ui/components/button.ts`, a real link with a button's look.
 - The hero's heading is the site's name, and the lead sentence carries the pitch.
 - Every visible page of a locale shares one social picture, which only a hosted build names.
@@ -818,11 +800,10 @@ It is built from the design system's components on every screen size.
 - `src/settings/themes.ts` sets the scene's colours only, and the site's theme sets the chrome.
 - The phone's control row keeps play and the speed, and its other tools fold into a sheet.
 - `englishShown` of `e2e/layout-check.ts` finds English on a German page, skipping another `lang` and `translate="no"`.
-- The button component's `display` beats `[hidden]`, so the Guide button toggles `is-absent` in `src/app/shell.css`.
+- The button component's `display` beats `[hidden]`, so `src/app/player-bar.ts` toggles `is-absent` on the
+  Guide button, which `src/app/shell.css` styles.
 - The parser's error reasons stay English.
 - The demo song, the guide's marks on the lanes and pitch practice's feedback line keep their language.
-- The range tools' "Keyboard size", "keys" and "Custom" stay English, since they have no catalog entry.
-- The gallery's layout check once saw a shift of 0.06 at 360 pixels, dark and German.
 
 ### Decisions that still bind
 
@@ -874,7 +855,7 @@ safely on the device, and hands a song step to the player and back.
 
 ### Decisions that still bind
 
-- The progress stays on the device, as decision 0005 records.
+- The progress stays on the device, as [decision 0005](decisions/0005.md) records.
 - The store keeps an event log, never a running total, and XP, stars and streaks are computed from it.
 - The store is versioned, and each version has a migration with a test.
 - A write counts only once its transaction completes, and a failed write retries only what is left.
@@ -992,12 +973,13 @@ year. Each ships eight lessons, a boss and a skip test, in English and German.
 ### Findings
 
 - The four worlds follow the first four in `src/learn/course.ts`, under `src/learn/lessons/<world>/`.
-- The bosses are *Ode to Joy*, *Jingle Bells*, *Canon in D* and *Für Elise*, each at Rare.
+- The bosses are *Ode to Joy*, *Jingle Bells*, *Canon in D* and *Für Elise*, each in its Easy version.
 - A `play-notes` entry may be a chord, and `src/learn/steps/play-notes.ts` waits for each of its keys.
 - `expressionMiss` in `src/learn/steps/play-notes.ts` judges an entry's touch and pedal on a MIDI keyboard.
 - `stepsToRun` of `src/learn/lesson-run.ts` swaps a touch or pedal step for its `instead` demo and quiz on other inputs.
 - A demo's note may name its `velocity`, so a demo plays soft and loud notes.
-- A chord's hint is `hintChord`, which takes its note names as rest parameters.
+- A chord's hint is the message `hintChord` of `src/i18n/messages/learn-lesson.en.ts`, which takes its
+  note names as rest parameters.
 - The course walk plays a boss that plays on inside the page, on the audio clock.
 - `bindSongKeys` of `e2e/lesson-walk.ts` gives a song's notes outside the default keys a computer key each.
 - `englishShown` of `e2e/layout-check.ts` skips the texts a lesson writes in the page's locale, such as the German "B".
@@ -1026,7 +1008,7 @@ languages.
 - The settings panel leaves with its entry motion reversed, and at once under reduced motion.
 - The keyboard size control and the game's texts read the catalogs, under `player.settings.range` and `player.input.game`.
 - "Ragtime" passes the check for untranslated text, as a word both languages share.
-- Every icon in `src/ui/icons/icons.ts` equals the SVG of `lucide-static` 1.71.0.
+- Every icon in `src/ui/icons/icons.ts` is Lucide 1.71.0's path data, unchanged, as its `LICENSE.md` says.
 - The song tools write `seconds` and `skills` into `public/songs/catalog.json`, and the explorer reads them first.
 - `tapBeats` in `e2e/lesson-walk.ts` gives a round's first click 120 s, and the round 45 s from its count-in.
 - A lesson's sound asks its context to resume on every start, in `src/learn/lesson-sound.ts`.
@@ -1040,7 +1022,8 @@ languages.
 - The signals are green, red, orange and blue, for success, error, warning and information.
 - A `-soft` token mixes in sRGB, so `e2e/layout-check.ts` can read its colour.
 - A song preview pauses the transport, so two songs never sound at once.
-- The settings panel keeps every section in one scroll, and docks at `clamp(512px, 43vw, 768px)`.
+- The settings panel keeps every section in one scroll, and docks at 43% of the window, from 512 to 768
+  pixels wide.
 - Song tags are derived at run time, and no file stores them.
 - A test that fails because the look changed on purpose is updated, and no test is deleted or loosened.
 - `seconds` and `skills` are optional in the catalog, so an added file is measured in the browser.
@@ -1106,7 +1089,7 @@ moving screenshot until one click loads it.
 - The box is `playerBox(options)` of `src/landing/player-box.ts`, styled by `src/landing/player-box.css`.
 - The hero and the rarity band both use that box, and the 2D renderer of the landing page is deleted.
 - `tools/landing-pictures.ts` shoots each box's picture from the landing box itself, at 1200 by 900.
-- The lean embed's click adds 192,450 gzipped bytes, most of it three.js.
+- Most of the bytes a box's click adds are three.js.
 
 ### Decisions that still bind
 

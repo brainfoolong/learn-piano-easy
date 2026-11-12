@@ -106,7 +106,6 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   A shell whose folder is spelled with a lower-case drive, as `e:\`, fails this way on Windows, and
   the e2e step of `looper verify` with it. The same run from the upper-case spelling passes. Start a
   test of `e2e/` or the gate as `cd "E:/learn-piano-easy" && looper verify`.
-
 - **A test that fails only under load may be a race in the app, not a short limit.** The setup opened
   in the gap between Back and the swap in `src/site/router.ts`, then closed for good. Repeat the test with
   `--repeat-each 24 --workers 8`, and log what opens and when, before you raise a timeout.
@@ -119,7 +118,7 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A song step that plays on fails in the course walk and passes alone.** An earlier lesson's practice
   loop stays in the settings, and the next song starts at that loop's lead-in. Press Home before Play,
   as `playOnTime` in `e2e/lesson-walk.ts` does, and bisect a walk by its earlier lessons.
-- **A check is killed after the project's `[checks] timeout` of 600 s, whatever its tests' own timeouts.**
+- **A check is killed after looper's `[checks] timeout`, 600 s by default, whatever its tests' own timeouts.**
   A green `looper verify` can hide it, and acceptance then refuses the goal. Time a growing e2e file's
   check with `looper check --name <id>`. Split one long test into a test per world inside a
   `test.describe` of its name, as `e2e/learn-layout.e2e.ts` does, so the workers share it.

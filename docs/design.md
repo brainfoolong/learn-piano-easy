@@ -30,22 +30,31 @@ server code. It needs the network only for its first load, and the service worke
 
 ## The modules
 
+Each row names the goals that built the folder. [findings.md](findings.md) holds each goal's findings
+under its slug.
+
 | Folder | Holds | Goal |
 |---|---|---|
-| `src/app/` | The start-up, the app shell, the player's core, the embed and the wiring of the modules | `foundation`, `one-player` |
-| `src/midi/` | The Standard MIDI File reader and writer, the song model and the tempo map | `midi-core` |
-| `src/audio/` | The Web Audio engine: sampler, envelope, pedal, metronome and effects | `audio-engine` |
+| `src/site/` | The site: its router, route table, top bar, footer, the sponsor and legal pages, and the visitor count | `site-shell` |
+| `src/i18n/` | The locales, their message catalogs and the switch between them | `site-shell`, `player-in-site` |
+| `src/landing/` | The landing page, one module per band | `landing-page` |
+| `src/learn/` | *Learn Piano*: the course, its lessons and steps, the map, the progress and the game layer | `learn-engine`, `learn-game` |
+| `src/app/` | The player's shell, the player's core, the embed and the About page | `foundation`, `one-player` |
+| `src/play-modes/` | The play modes at `modes/`, each a ready-made setup of the player | none |
+| `src/game/` | Game mode: the referee, its rules and the score over the keys | none |
+| `src/midi/` | The Standard MIDI File reader and writer, the MusicXML reader, the song model and the tempo map | `midi-core`, `more-songs` |
+| `src/audio/` | The Web Audio engine: sampler, envelope, pedal, metronome and effects | `audio-engine`, `piano-sounds` |
 | `src/render/` | The three.js scene: piano, notes, lanes, camera and effects | `renderer-3d` |
 | `src/play/` | The clock, the transport, the loop and the hotkeys | `transport` |
 | `src/keyboard/` | The learner's keyboard: its range, the size presets, and how a song fits it | `keyboard-range` |
 | `src/input/` | Web MIDI, the computer keyboard, the on-screen piano and the modes | `input-and-modes` |
-| `src/library/` | The song catalog, search, uploads in IndexedDB, and per-track settings | `song-library` |
+| `src/library/` | The song explorer, search and tags, uploads in IndexedDB, per-track settings and the song guides | `song-library`, `song-rarities` |
 | `src/settings/` | The settings schema, its store, and the settings UI built from it | `settings` |
 | `src/data/` | The backup of everything the learner has, its restore, and the Data page | `your-data` |
 | `src/theory/` | Key, chords, note names and fingering | `theory` |
 | `src/sheet/` | The notation engraver, drawn as SVG | `sheet-music` |
 | `src/export/` | The PDF writer and its export dialog | `effects-and-extras` |
-| `src/ui/` | Our small DOM helpers, the menus, dialogs and styles | `foundation` |
+| `src/ui/` | The tokens, the components, the icons, our small DOM helpers and the gallery | `foundation`, `site-design-system` |
 | `src/pwa/` | The service worker and the offline cache manager | `foundation`, `offline-release` |
 | `public/` | Static files copied as they are: the page, the manifest, icons, songs and sounds | `foundation` |
 
@@ -53,7 +62,8 @@ server code. It needs the network only for its first load, and the service worke
 
 All playback time is in seconds of song time. The tempo map converts between ticks, seconds, measures and
 beats, and `src/midi/tempo-map.ts` owns how. The song model keeps every time in both ticks and seconds,
-and `src/midi/song.ts` owns its shape. The song clock maps song time to the audio context's time, and `src/play/clock.ts` owns how.
+and `src/midi/song.ts` owns its shape. The song clock maps song time to the audio context's time, and
+`src/play/clock.ts` owns how.
 
 ## The learner's data
 
@@ -65,9 +75,3 @@ file holds every part, and the Data page at `data/` saves and restores it.
   settings and the `localStorage` keys take the file's values.
 - **Every store reports a kept write** through `noteChange` of `src/data/changes.ts`.
 - **`src/data/parts.ts` owns which part lives where,** and how each restores.
-
-## Open
-
-- How the scene keeps tens of thousands of notes at full frame rate. The `renderer-3d` goal decides it,
-  starting from instanced meshes.
-- The storage format of our own piano samples, once they replace the temporary ones.

@@ -1,6 +1,6 @@
 # The site's design: the visual rules every page follows
 
-learn-piano-easy is a site of three parts: the landing page, "Learn Piano" and "Just Play Piano". Every
+Learn Piano Easy is a site of three parts: the landing page, "Learn Piano" and "Just Play Piano". Every
 page of each part is built from one set of tokens and one set of components. A page never sets a
 colour, a size or a timing of its own. This file holds the rules until `src/ui/tokens.css` and each
 component's head comment own them. Then each section here shrinks to a link, in the same commit.
@@ -175,7 +175,9 @@ widths 360, 768, 1280 and 1920, in both themes and in every locale:
 - No two interactive elements overlap.
 - Every touch target is large enough at the touch widths.
 - Every text meets its contrast against its computed background.
-- The layout shifts by nothing measurable while the page loads and while it changes view.
+- The layout shifts by at most `SHIFT_LIMIT` of `src/ui/layout-geometry.ts`, while the page loads and
+  while it changes view.
+- No English text shows in another locale.
 - The page logs no error.
 
 `bun run shot` shows a page to a session at each width, and the session looks at it before it commits.
