@@ -53,7 +53,7 @@ export const learnLesson: typeof en = {
     expression: {
       "too-loud": "Richtige Taste, aber zu laut. Spiel sie leise.",
       "too-soft": "Richtige Taste, aber zu leise. Spiel sie laut.",
-      "pedal-up": "Richtige Taste. Halte beim Spielen das Pedal unten.",
+      "pedal-up": "Richtige Taste. Halt beim Spielen das Pedal unten.",
       "pedal-down": "Richtige Taste. Heb vorher das Pedal.",
     },
   },
@@ -108,7 +108,7 @@ export const learnLesson: typeof en = {
     retry: "Noch einmal versuchen",
     xp: (number: string) => `+${number} XP`,
     level: (level: number, toNext: number) => `Level ${formatNumber("de", level)}: noch ${formatNumber("de", toNext)} XP bis Level ${formatNumber("de", level + 1)}`,
-    skipOpened: (world: string) => `Jede Lektion von „${world}“ ist jetzt offen.`,
+    skipOpened: (world: string) => `Jede Lektion von "${world}" ist jetzt offen.`,
     skipShort: (stars: number) => `Ab ${formatNumber("de", stars)} Sternen öffnet sich diese Welt. Versuch es wieder, wann du magst.`,
   },
   moment: {

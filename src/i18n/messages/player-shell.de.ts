@@ -36,7 +36,7 @@ export const playerShell: typeof en = {
   songs: {
     noneFound: "Es wurden keine Lieddateien gefunden.",
     wrongKind: "Nur MIDI- und MusicXML-Dateien lassen sich hinzufügen.",
-    added: (n) => `${formatNumber("de", n)} ${plural("de", n, { one: "Lied", other: "Lieder" })} zu „Deine Lieder“ hinzugefügt.`,
+    added: (n) => `${formatNumber("de", n)} ${plural("de", n, { one: "Lied", other: "Lieder" })} zu "Deine Lieder" hinzugefügt.`,
     notKept: (reason) => `Die Lieder ließen sich nicht speichern: ${reason}`,
     soundsFailed: "Die Klavierklänge ließen sich nicht laden, also bleiben die Lieder stumm.",
   },
@@ -140,7 +140,7 @@ export const playerShell: typeof en = {
     timing: (start, length) => `Beginnt bei ${seconds(start)} s, dauert ${seconds(length)} s`,
   },
   sheet: {
-    label: "Noten",
-    empty: "In den Noten ist keine Spur zu sehen. Schalte eine unter Spuren ein.",
+    label: "Notenblatt",
+    empty: "Im Notenblatt ist keine Spur zu sehen. Schalt eine unter Spuren ein.",
   },
 };

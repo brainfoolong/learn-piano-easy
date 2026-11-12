@@ -50,7 +50,7 @@ export const learnProfile: typeof en = {
   },
   data: {
     heading: "Deine Daten",
-    lead: "Dein Fortschritt bleibt in diesem Browser. Die Seite „Deine Daten“ sichert ihn mit allem anderen in einer Datei und stellt ihn wieder her.",
+    lead: "Dein Fortschritt bleibt in diesem Browser. Die Seite \"Deine Daten\" sichert ihn mit allem anderen in einer Datei und stellt ihn wieder her.",
     open: "Sichern oder wiederherstellen",
     reset: "Fortschritt zurücksetzen",
     failed: "Dein Browser hat das Speichern verweigert. Nichts hat sich geändert.",
