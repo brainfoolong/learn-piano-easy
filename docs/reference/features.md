@@ -144,3 +144,9 @@ Each one is easy to make, and ours avoids it in the goal named.
   ways to help that cost no money.
 - Every page and every lesson is in a sitemap for search engines, with its page in the other language.
   The landing page describes the app as structured data.
+- Every lesson step can be played on every input. In a lesson, the computer keyboard shifts by octaves
+  to reach the step's keys, and a bar under the piano shows what it reaches. A chord wider than its keys
+  is played a key at a time.
+- A step that needs the pedal or loud and soft playing offers a way out. A MIDI keyboard without them
+  gets the step's listening and quiz instead.
+- A step that asks for one key always shows the same keys, with middle C in the middle.
