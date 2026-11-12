@@ -18,7 +18,8 @@
  * - A gain change glides over `GAIN_GLIDE` seconds, so a slider never clicks.
  * - The `scheduler` plays a song on the song's sampler, by the song clock the transport hands in. The
  *   `metronome` is one of its parts, and feeds the bus directly, so the song volume leaves it alone.
- *   Its MIDI clicks go to the output the shell hands it through `metronome.midiOut`.
+ *   Its MIDI clicks go to the output the shell hands it through `metronome.midiOut`. It learns of wait
+ *   mode's hold from the song clock, through `metronome.heldFrom`.
  * - The `background` track is a part too. It feeds the speakers past the effects, at `bgTrackVolume`
  *   times `volumeMain`, and the shell hands it the file the learner picks.
  */
@@ -104,8 +105,11 @@ export class AudioEngine {
   /** Whether `resume` ran once, so the sound set loads. */
   #started = false;
 
-  /** `timeline` is the song clock on `context`'s clock, which the scheduler queues by. */
-  constructor(settings: SettingsStore, context: AudioContext, timeline: SongTimeline) {
+  /**
+   * `timeline` is the song clock on `context`'s clock, which the scheduler queues by. The metronome
+   * reads its `heldFrom` to know when wait mode holds the song.
+   */
+  constructor(settings: SettingsStore, context: AudioContext, timeline: SongTimeline & { readonly heldFrom: number | undefined }) {
     this.#settings = settings;
     this.context = context;
     this.bus = context.createGain();
@@ -122,6 +126,7 @@ export class AudioEngine {
     this.input = new Sampler(context, this.#inputGain, this.#samplerOptions());
     this.scheduler = new Scheduler(this.song, timeline, this.#scheduleOptions());
     this.metronome = new Metronome(context, this.bus, this.#metronomeOptions());
+    this.metronome.heldFrom = () => timeline.heldFrom;
     this.scheduler.addPart(this.metronome);
     this.background = new BackgroundTrack(context, context.destination, this.#backgroundOptions());
     this.background.gain.gain.value = this.#backgroundGain();

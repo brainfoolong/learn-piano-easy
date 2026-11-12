@@ -25,10 +25,16 @@
  * - The steady beat rests through a count-in, whether it clicks or not, so the pass starts on a fresh
  *   beat. The scheduler window that reaches the count-in's first beat ends it, as a seek does. Each pass
  *   then starts it anew at the tempo where the pass starts.
- * - While a loop has a count-in, the steady beat sends a MIDI click only once a scheduler window reaches
- *   it. It then knows of a coming count-in before it sends, and no MIDI click of it sounds there. The
- *   cost is that a wait mode's hold, which stops the windows, stops these MIDI clicks too. A click
- *   whose time passed while it waited is dropped, since it would sound late.
+ * - While a loop has a count-in, the steady beat sends a MIDI click only if it lies before the coming
+ *   count-in's first beat. A sent click cannot be taken back, and a later speed-up brings the count-in
+ *   sooner. So the song time left until the count-in is measured now, and taken at `MAX_SPEED`. Every
+ *   pump re-checks the clicks not yet sent, so a speed change moves the bound at once. The cost is that
+ *   a click just before a count-in goes out with less lead. At a slow speed it may wait too long and be
+ *   dropped.
+ * - While wait mode holds the song, the count-in waits with it. The bound then counts from the hold, so
+ *   the steady beat's MIDI clicks go on in step with its speaker clicks. `heldFrom` tells it when song
+ *   time stands at the hold. A MIDI click whose time passed while it waited is dropped, since it would
+ *   sound late.
  * - A click may also go to the MIDI output `midiOut` returns, as a note-on and a note-off timed ahead
  *   on the MIDI clock. The drum kit plays on channel 10, where the note picks the drum. Every other
  *   sound plays on channel 16, after one program change whenever the sound or the port changes.
@@ -38,14 +44,12 @@
  * Gaps:
  * - A pause or a seek cannot take back the MIDI clicks already sent, so up to the look-ahead of them
  *   still sound.
- * - A speed-up after a window moves a coming count-in earlier on the audio clock. A MIDI click of the
- *   steady beat sent within that window may then still sound in the count-in.
  */
 
 import type { Song } from "../midi/song";
 import type { Beat, TempoMap } from "../midi/tempo-map";
 import type { GainLike, NodeLike, ParamLike } from "./sampler";
-import { intervalTimer, type Clock, type ScheduledPart, type Timer } from "./scheduler";
+import { intervalTimer, MAX_SPEED, type Clock, type ScheduledPart, type Timer } from "./scheduler";
 
 /** How long a click sounds, in seconds. */
 export const CLICK_LENGTH = 0.05;
@@ -133,15 +137,25 @@ interface Run extends SteadyBeat {
   next: number;
   /** The index of the next beat to send to the MIDI output, which may trail `next`. */
   midiNext: number;
-  /** Whether its MIDI clicks wait for the scheduler's windows while a loop has a count-in: the steady beat's do. */
+  /** Whether its MIDI clicks stop before a loop's coming count-in: the steady beat's do. */
   readonly gated: boolean;
   stopTimer: () => void;
 }
 
-/** A loop's count-in: the song times of its beats, the first accented, and the song time its pass starts. */
+/**
+ * A loop's count-in: the song times of its beats, the first accented, the song time its pass starts,
+ * and the song time its pass ends, where the next pass's count-in starts.
+ */
 export interface CountIn {
   readonly beats: readonly number[];
   readonly start: number;
+  readonly end: number;
+}
+
+/** The end of the scheduler's latest window, as a song time and the map from song time to the audio clock. */
+interface Reach {
+  readonly to: number;
+  readonly at: (songTime: number) => number;
 }
 
 /** Clicks on beats into `output`. */
@@ -158,13 +172,18 @@ export class Metronome implements ScheduledPart {
   /** The loop's count-in, or undefined for none, and whether it clicks. */
   #countIn: CountIn | undefined;
   #countInClicks = false;
-  /** The audio time the scheduler's latest window reaches. */
-  #window = -Infinity;
+  /** Where the scheduler's latest window ends, or undefined before the first. */
+  #reach: Reach | undefined;
   readonly #now: () => number;
   /** The port and program of the last program change sent. */
   #programmed: { port: MidiOut; program: number } | undefined;
   /** Returns the MIDI output a click may go to, or undefined for none. */
   midiOut: (() => MidiOut | undefined) | undefined;
+  /**
+   * Returns the audio time from which song time stands at wait mode's hold, at the speed now, or
+   * undefined while no hold lies ahead. The song clock's `heldFrom` is one.
+   */
+  heldFrom: (() => number | undefined) | undefined;
 
   /** `now` reads the MIDI clock, `performance.now()` by default, in milliseconds. */
   constructor(ctx: MetronomeContext, output: NodeLike, options: MetronomeOptions, timer: Timer = intervalTimer, now: () => number = () => performance.now()) {
@@ -205,7 +224,7 @@ export class Metronome implements ScheduledPart {
     const beats = this.#countInClicks ? (this.#countIn?.beats ?? []) : [];
     const counting = (this.#options.speakers || this.#options.midi) && this.#options.volume > 0;
     const counted = (seconds: number) => beats.some((beat) => Math.abs(beat - seconds) < 1e-3);
-    this.#window = at(to);
+    this.#reach = { to, at };
     this.#keepSteady(from, to, at);
     if (this.#steady !== null) this.#pump(this.#steady);
     beats.forEach((seconds, i) => {
@@ -233,8 +252,8 @@ export class Metronome implements ScheduledPart {
       start = countIn.start;
       if (this.#steady !== null && from <= first + 1e-6) {
         // The beat's clicks before the count-in still sound. Its timer may have queued speaker clicks
-        // past the count-in's first beat, and those are silenced. Its MIDI clicks waited for the
-        // windows, so none of them lies past that beat.
+        // past the count-in's first beat, and those are silenced. Its MIDI clicks went out only before
+        // that beat, at the speed when each went out.
         const end = at(first) - 1e-3;
         this.#pump(this.#steady, end);
         this.#steady = this.#end(this.#steady);
@@ -284,8 +303,9 @@ export class Metronome implements ScheduledPart {
 
   /**
    * Queues `run`'s clicks up to the look-ahead, and before audio time `end`. It counts on while it may
-   * not sound. A gated run's MIDI clicks also wait, while a loop has a count-in, until the scheduler's
-   * window reaches them. One whose time passed while it waited is dropped, since it would sound late.
+   * not sound. A gated run's MIDI clicks also wait, while a loop has a count-in, until they lie before
+   * the soonest the coming count-in can sound, as `#countInTime` measures it now. One whose time passed
+   * while it waited is dropped, since it would sound late.
    */
   #pump(run: Run, end = Infinity): void {
     const now = this.#ctx.currentTime;
@@ -296,11 +316,32 @@ export class Metronome implements ScheduledPart {
     for (; time(run.next) < until; run.next++) {
       if (sounds && this.#options.speakers) this.#beep(time(run.next), accent(run.next));
     }
-    const gated = run.gated && (this.#countIn?.beats.length ?? 0) > 0;
-    const midiUntil = gated ? Math.min(until, this.#window) : until;
+    const countIn = run.gated ? this.#countInTime() : undefined;
+    const midiUntil = countIn === undefined ? until : Math.min(until, countIn - 1e-3);
     for (; time(run.midiNext) < midiUntil; run.midiNext++) {
-      if (sounds && this.#options.midi && (!gated || time(run.midiNext) >= now)) this.#sendMidi(time(run.midiNext), accent(run.midiNext));
+      if (sounds && this.#options.midi && (countIn === undefined || time(run.midiNext) >= now)) this.#sendMidi(time(run.midiNext), accent(run.midiNext));
     }
+  }
+
+  /**
+   * The soonest audio time the coming count-in's first beat can sound, or undefined while a loop has no
+   * count-in. It is this pass's count-in until the scheduler's window reaches it, and the next pass's
+   * after. The song time left until it is measured now, through the latest window's map at the speed
+   * now. While song time stands at a hold, that is the time from the hold. The song may speed up to
+   * `MAX_SPEED` at any moment, so the count-in can come no sooner than that song time at that speed.
+   */
+  #countInTime(): number | undefined {
+    const countIn = this.#countIn;
+    const first = countIn?.beats[0];
+    if (countIn === undefined || first === undefined) return undefined;
+    const reach = this.#reach;
+    if (reach === undefined) return -Infinity;
+    const now = this.#ctx.currentTime;
+    const coming = first < reach.to ? countIn.end : first;
+    const at = reach.at(coming);
+    const speed = 1 / (reach.at(coming + 1) - at);
+    const from = Math.min(now, this.heldFrom?.() ?? now);
+    return now + ((at - from) * speed) / MAX_SPEED;
   }
 
   /** Silences the clicks queued after audio time `after` and after now, and lets the one sounding finish. */

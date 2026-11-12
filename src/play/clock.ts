@@ -116,6 +116,16 @@ export class SongClock implements SongTimeline {
   }
 
   /**
+   * The audio time from which song time stands at its hold, as the song plays on from now. It is
+   * undefined while paused, and while no hold lies ahead or under song time.
+   */
+  get heldFrom(): number | undefined {
+    if (!this.#playing) return undefined;
+    const hold = this.#holdRun();
+    return hold === undefined || hold < this.#anchorRun ? undefined : this.audioTimeOfRun(hold);
+  }
+
+  /**
    * How far song time would have run past the hold by now, in song seconds. It is 0 while paused, and
    * while song time has not reached the hold.
    */

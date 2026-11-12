@@ -46,15 +46,11 @@
  */
 import type { AudioEngine } from "../audio/engine";
 import type { Metronome } from "../audio/metronome";
-import type { Cycle, NotePlayer, Scheduler } from "../audio/scheduler";
+import { MAX_SPEED, MIN_SPEED, type Cycle, type NotePlayer, type Scheduler } from "../audio/scheduler";
 import type { Note, Song } from "../midi/song";
 import type { PianoScene } from "../render/scene";
 import { SongClock } from "./clock";
 import { loopRange, trainerSpeed, type LoopRange, type LoopSpec } from "./loop";
-
-/** The slowest and fastest the song plays, as a multiple of its written tempo. */
-export const MIN_SPEED = 0.1;
-export const MAX_SPEED = 2;
 /** The most semitones the song moves up or down. */
 export const MAX_TRANSPOSE = 12;
 /** The most notes one scrub plays, so a long jump sounds no cluster. */

@@ -1,6 +1,7 @@
 import { expect, test } from "../testing";
 import type { Song } from "../midi/song";
 import { TempoMap } from "../midi/tempo-map";
+import { SongClock } from "../play/clock";
 import { ACCENT_VELOCITY, BEAT_VELOCITY, Metronome, MIDI_CLICK_MS, type MetronomeContext, type MetronomeOptions } from "./metronome";
 
 /** A context whose clock stands at `currentTime`. With the speakers off, the metronome makes no node. */
@@ -30,7 +31,7 @@ test("a_midi_click_goes_out_timed_on_the_midi_clock", () => {
   const sent: [number[], number | undefined][] = [];
   const m = metronome(sent);
   // A count-in of two beats, the first accented, sounding at 1.5 s and 2 s on the audio clock.
-  m.setCountIn({ beats: [0.5, 1], start: 1.5 }, true);
+  m.setCountIn({ beats: [0.5, 1], start: 1.5, end: 3 }, true);
   m.schedule(0, 2, (songTime) => songTime + 1);
   expect(sent).toEqual([
     [[0xcf, 115], undefined],
@@ -124,15 +125,20 @@ test("the_unsynced_metronome_keeps_a_steady_beat_from_the_play_position", () => 
 });
 
 /**
- * The steady beat in a looped song, played by a model of the scheduler. The song is 4/4 at 120 bpm. The
- * loop is measure 2, from 2 s to 4 s, after a count-in of two beats at 1 s and 1.5 s. Each pass repeats
- * song time 1 s to 4 s, the first from audio time 10 s, so pass n starts at 10 + 3n s. The MIDI clock
- * reads 4000 ms at audio time 0, and the count-in clicks when `countInClicks` is true.
+ * The steady beat in a looped song, played by a model of the scheduler on a song clock. The song is 4/4
+ * at 120 bpm. The loop is measure 2, from 2 s to 4 s, after a count-in of two beats at 1 s and 1.5 s.
+ * Each pass repeats song time 1 s to 4 s, the first from audio time 10 s, so at full speed pass n
+ * starts at 10 + 3n s. The MIDI clock reads 4000 ms at audio time 0, and the count-in clicks when
+ * `countInClicks` is true.
  */
 function loopedSteadyBeat(countInClicks: boolean) {
   const sent: [number[], number | undefined][] = [];
   const port = { send: (data: number[], time?: number) => void sent.push([data, time]) };
   const clock = { currentTime: 10 };
+  const song = new SongClock(clock);
+  song.cycle = { from: 1, to: 4 };
+  song.seek(1);
+  song.play();
   const runs = new Set<() => void>();
   const timer = {
     every: (_ms: number, run: () => void) => {
@@ -142,9 +148,10 @@ function loopedSteadyBeat(countInClicks: boolean) {
   };
   const m = new Metronome(clock as MetronomeContext, {} as never, { ...options, synced: false }, timer, () => 4000 + clock.currentTime * 1000);
   m.midiOut = () => port;
+  m.heldFrom = () => song.heldFrom;
   const tempoMap = new TempoMap({ kind: "ticks", ticksPerBeat: 480 }, [{ tick: 0, microsecondsPerBeat: 500_000 }], [{ tick: 0, numerator: 4, denominator: 4 }]);
   m.load({ tempoMap, endTick: 8 * 1920 } as Song);
-  m.setCountIn({ beats: [1, 1.5], start: 2 }, countInClicks);
+  m.setCountIn({ beats: [1, 1.5], start: 2, end: 4 }, countInClicks);
   // The run time the scheduler has queued to. Run time is song time plus 3 s for each pass before.
   let until = 1;
   let step = 0;
@@ -157,14 +164,22 @@ function loopedSteadyBeat(countInClicks: boolean) {
       for (let time = 10.01 + step * 0.025; time <= end; time = 10.01 + ++step * 0.025) {
         clock.currentTime = time;
         for (const run of runs) run();
-        const to = time + 0.1 - 9;
+        const to = song.runTimeAt(time + 0.1);
         while (until < to) {
           const offset = 3 * Math.floor((until - 1) / 3);
           const pieceEnd = Math.min(to, 4 + offset);
-          m.schedule(until - offset, pieceEnd - offset, (songTime) => 9 + songTime + offset);
+          m.schedule(until - offset, pieceEnd - offset, (songTime) => song.audioTimeOfRun(songTime + offset));
           until = pieceEnd;
         }
       }
+    },
+    /** Plays `speed` times as fast as written from the audio time `play` stopped at. */
+    speed(speed: number) {
+      song.speed = speed;
+    },
+    /** Holds song time at `songTime`, as wait mode does, or lets it run with undefined. */
+    hold(songTime: number | undefined) {
+      song.hold = songTime;
     },
     /** The MIDI note-ons sent since the last call, as [MIDI time in whole milliseconds, accented]. */
     clicks() {
@@ -221,5 +236,52 @@ test("no_midi_click_of_the_steady_beat_falls_in_a_count_in", () => {
     [20500, false],
     [23000, true],
     [23500, false],
+  ]);
+});
+
+test("the_steady_beat_sends_midi_clicks_on_while_wait_mode_holds_a_loop", () => {
+  const loop = loopedSteadyBeat(false);
+  loop.play(13.8);
+  loop.clicks();
+  // In the second pass, wait mode holds song time at 3 s, which it reaches at audio time 15 s, and
+  // lets go at about 17 s. The steady beat clicks every 0.5 s from 14 s through the hold, on MIDI as
+  // on the speakers. The next count-in starts about 1 s after the release, so nothing clicks there.
+  loop.play(14.5);
+  loop.hold(3);
+  loop.play(16.99);
+  loop.hold(undefined);
+  loop.play(18.9);
+  expect(loop.clicks()).toEqual([
+    [18000, true],
+    [18500, false],
+    [19000, false],
+    [19500, false],
+    [20000, true],
+    [20500, false],
+    [21000, false],
+    [21500, false],
+  ]);
+});
+
+test("a_speed_up_just_before_a_count_in_lets_no_steady_midi_click_into_it", () => {
+  const loop = loopedSteadyBeat(false);
+  loop.play(13.8);
+  loop.clicks();
+  // The second pass's steady beat clicks every 0.5 s from 14 s. A short slowdown moves the next
+  // count-in to 16.05 s, just after the click at 16 s. That click lies within the look-ahead at about
+  // 15.935 s, and doubling the speed then moves the count-in to about 15.99 s. The click at 16 s then
+  // lies in it, and is never sent.
+  loop.play(14.2);
+  loop.speed(0.8);
+  loop.play(14.45);
+  loop.speed(1);
+  loop.play(15.94);
+  loop.speed(2);
+  loop.play(16.3);
+  expect(loop.clicks()).toEqual([
+    [18000, true],
+    [18500, false],
+    [19000, false],
+    [19500, false],
   ]);
 });

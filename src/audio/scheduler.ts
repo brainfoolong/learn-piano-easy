@@ -71,6 +71,10 @@ function cycleLength(cycle: Cycle | undefined): number {
   return cycle === undefined ? 0 : Math.max(0, cycle.to - cycle.from);
 }
 
+/** The slowest and fastest a song timeline plays, as a multiple of its written tempo. */
+export const MIN_SPEED = 0.1;
+export const MAX_SPEED = 2;
+
 /** Song time on the audio clock. The transport's `SongClock` is one. Every time is in seconds. */
 export interface SongTimeline {
   /** The audio clock now. */

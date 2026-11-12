@@ -66,7 +66,8 @@ import "./control-bar.css";
 import { type ActionId, type ActionRuns, createHotkeys, SEEK_STEP } from "./hotkeys";
 import { LOOP_SETTINGS, loopSpec } from "./loop";
 import { createTimeline } from "./timeline";
-import { MAX_SPEED, MIN_SPEED, type Transport } from "./transport";
+import { MAX_SPEED, MIN_SPEED } from "../audio/scheduler";
+import type { Transport } from "./transport";
 import { fitToSong, SHIFT_STEP, zoomIn, zoomOut } from "./view";
 
 /** How long the bar waits without a pointer move, a touch or a key before it fades while playing. */
