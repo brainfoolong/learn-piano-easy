@@ -1,33 +1,39 @@
 /**
  * Learn Piano's lessons pass the layout checks at each step, in a real browser.
  *
- * - **The checks run at a phone's and a desktop's width,** in both themes and both locales, on each step
- *   and on the end screen. Every lesson is walked through `walkLesson` of `e2e/lesson-walk.ts`.
- * - **A song step is measured, and the walk ends there,** since playing a song in every combination
- *   would add minutes and no layout.
- * - **Each world at each width and locale is a test,** grouped under one name, so the workers share the
- *   course evenly. A rhythm world's tap rounds play in real time, so one test per world would take the
- *   longest by far. This file is its own check, apart from `e2e/learn.e2e.ts`.
- * - **A world's pages run `LANES` at once,** each in its own context.
+ * - **The checks walk `sampleLessons` of `e2e/lesson-walk.ts`,** the fewest lessons that hold every
+ *   step kind and role, through `walkLesson`. They measure each step and the end screen.
+ * - **Each lesson is measured in two `VIEWS`:** a phone in dark German, and a desktop in light English.
+ *   German's longer words stress the narrow page, and each theme is drawn once. Decision 0010 says why.
+ * - **A song step is measured, and the walk ends there,** since playing a song adds minutes and no
+ *   layout.
+ * - **Each sampled lesson is a test,** grouped under one name, so the workers share them. This file is
+ *   its own check, apart from `e2e/learn.e2e.ts`.
  */
 import { expect, test, type Browser } from "@playwright/test";
-import { COURSE } from "../src/learn/course";
 import { judgePage } from "../src/ui/layout-geometry";
-import { drawn, englishShown, LOCALES, measure, recordShifts, THEMES, TOUCH_MAX_WIDTH } from "./layout-check";
-import { courseLessons, inLanes, LANES, lessonPath, walkLesson, type CourseLesson } from "./lesson-walk";
+import { drawn, englishShown, type LOCALES, measure, recordShifts, type THEMES, TOUCH_MAX_WIDTH } from "./layout-check";
+import { lessonPath, sampleLessons, walkLesson, type CourseLesson } from "./lesson-walk";
 
-/** The widths of the layout checks: a phone's and a desktop's. */
-const LAYOUT_WIDTHS = [390, 1280] as const;
-
-/** The time the checks may spend on each lesson, in ms, so the timeout grows with the course. */
+/** The time the checks may spend on one lesson in one view, in ms. */
 const LAYOUT_MS = 60_000;
 
-/** One page the layout checks walk a lesson in: its width, theme and locale. */
-interface LayoutCase {
-  entry: CourseLesson;
-  width: (typeof LAYOUT_WIDTHS)[number];
+/** A page the layout checks walk a lesson in: its width, theme and locale. */
+interface View {
+  width: number;
   theme: (typeof THEMES)[number];
   locale: (typeof LOCALES)[number];
+}
+
+/** The views each lesson is measured in: a phone in dark German, and a desktop in light English. */
+const VIEWS: readonly View[] = [
+  { width: 390, theme: "dark", locale: "de" },
+  { width: 1280, theme: "light", locale: "en" },
+];
+
+/** A lesson in one view. */
+interface LayoutCase extends View {
+  entry: CourseLesson;
 }
 
 /** Every string inside `value`, however deeply its objects and lists nest. */
@@ -71,22 +77,14 @@ async function lessonFlaws(browser: Browser, baseURL: string, { entry, width, th
   return flaws;
 }
 
-test.describe("every_lesson_passes_the_layout_checks", () => {
-  for (const { id } of COURSE) {
-    for (const width of LAYOUT_WIDTHS) {
-      for (const locale of LOCALES) {
-        test(`${id} ${width} ${locale}`, async ({ browser, baseURL }) => {
-          const lessons = (await courseLessons()).filter(({ world }) => world === id);
-          expect(lessons.length).toBeGreaterThan(0);
-          test.setTimeout(lessons.length * LAYOUT_MS);
-          const cases = lessons.flatMap((entry) => THEMES.map((theme): LayoutCase => ({ entry, width, theme, locale })));
-          const flaws: string[] = [];
-          await inLanes(cases, LANES, async (c) => {
-            flaws.push(...(await lessonFlaws(browser, baseURL!, c)));
-          });
-          expect(flaws.sort()).toEqual([]);
-        });
-      }
-    }
+const SAMPLE = await sampleLessons();
+
+test.describe("each_step_kind_passes_the_layout_checks", () => {
+  for (const entry of SAMPLE) {
+    test(`${entry.world}/${entry.lesson.id}`, async ({ browser, baseURL }) => {
+      test.setTimeout(VIEWS.length * LAYOUT_MS);
+      const flaws = await Promise.all(VIEWS.map((view) => lessonFlaws(browser, baseURL!, { entry, ...view })));
+      expect(flaws.flat().sort()).toEqual([]);
+    });
   }
 });

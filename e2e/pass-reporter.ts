@@ -5,7 +5,7 @@
  * Playwright's list reporter marks a pass differently from one terminal to the next, so it is not read.
  *
  * A `test.describe` group passes as one test once every test in it has passed, such as
- * `every_lesson_passes_the_layout_checks`, which runs a test per world so the workers share its worlds.
+ * `each_step_kind_passes_the_layout_checks`, which runs a test per lesson so the workers share them.
  */
 import type { FullResult, Reporter, Suite, TestCase, TestResult } from "@playwright/test/reporter";
 

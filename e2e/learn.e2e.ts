@@ -1,26 +1,24 @@
 /**
- * Learn Piano's lessons in a real browser: every lesson of the course runs to its end on its steps'
+ * Learn Piano's lessons in a real browser: a lesson of each step kind runs to its end on its steps'
  * solutions, hands its song to the player and back, and asks before the learner leaves it. A timed key
  * whose clock runs out marks the key, on Playwright's clock. A song step that reads the sheet shows it
  * in the player, and its way back restores the learner's sheet settings. Its hidden falling notes live
  * in the scene's canvas, which this test cannot read. `e2e/learn-layout.e2e.ts` holds the layout checks.
  *
- * - **Every lesson is played through `walkLesson`** of `e2e/lesson-walk.ts`, on its steps' solutions.
- * - **The course walk is a test per world,** grouped under one name, so the workers share the worlds.
- * - **Each world's walk runs `LANES` lessons at once,** each in its own context. A lesson with a song
- *   opens the player and its WebGL scene, so those are walked alone, after the rest.
+ * - **The walk plays `sampleLessons` of `e2e/lesson-walk.ts`,** the fewest lessons that hold every step
+ *   kind and role. `src/learn/model.test.ts` proves every lesson valid without a browser.
+ * - **Each sampled lesson is a test,** grouped under one name, so the workers share them.
  */
 import { expect, test, type Page } from "@playwright/test";
 import { messagesOf } from "../src/i18n/locale";
-import { COURSE } from "../src/learn/course";
 import { inputHas, stepsToRun } from "../src/learn/lesson-run";
 import { solutionOf } from "../src/learn/steps/solution";
 import { STORAGE_KEY } from "../src/settings/store";
-import { bindSongKeys, courseLessons, hasSong, inLanes, LANES, lessonPath, onStep, playMove, playSong, songPlan, stage, walkLesson, watchErrors, type CourseLesson } from "./lesson-walk";
+import { bindSongKeys, courseLessons, hasSong, lessonPath, onStep, playMove, playSong, sampleLessons, songPlan, stage, walkLesson, watchErrors, type CourseLesson } from "./lesson-walk";
 
 /**
- * The time a course walk may spend on each lesson, in ms, so its timeout grows with the course. A walk
- * plays a boss's song and a rhythm lesson's tap rounds.
+ * The time the walk of one lesson may take, in ms. A walk plays a boss's song and a rhythm lesson's tap
+ * rounds.
  */
 const WALK_MS = 45_000;
 
@@ -34,30 +32,15 @@ async function walkToEnd(page: Page, entry: CourseLesson): Promise<void> {
   await expect(page.locator(".lesson-end__status")).toHaveText(t.end.saved);
 }
 
-test.describe("every_lesson_runs_to_its_end_with_its_solution", () => {
-  for (const { id } of COURSE) {
-    test(id, async ({ page, browser, baseURL }) => {
+const SAMPLE = await sampleLessons();
+
+test.describe("each_step_kind_runs_to_its_end_with_its_solution", () => {
+  for (const entry of SAMPLE) {
+    test(`${entry.world}/${entry.lesson.id}`, async ({ page }) => {
+      test.setTimeout(WALK_MS);
       const errors = watchErrors(page);
-      const lessons = (await courseLessons()).filter(({ world }) => world === id);
-      expect(lessons.length).toBeGreaterThan(0);
-      test.setTimeout(lessons.length * WALK_MS);
-      await inLanes(
-        lessons.filter(({ lesson }) => !hasSong(lesson)),
-        LANES,
-        async (entry) => {
-          const context = await browser.newContext({ baseURL: baseURL! });
-          try {
-            const lane = await context.newPage();
-            const own = watchErrors(lane);
-            await walkToEnd(lane, entry);
-            errors.push(...own);
-          } finally {
-            await context.close();
-          }
-        },
-      );
-      await bindSongKeys(page);
-      for (const entry of lessons.filter(({ lesson }) => hasSong(lesson))) await walkToEnd(page, entry);
+      if (hasSong(entry.lesson)) await bindSongKeys(page);
+      await walkToEnd(page, entry);
       expect(errors).toEqual([]);
     });
   }

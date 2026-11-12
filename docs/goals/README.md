@@ -307,14 +307,14 @@ floor:
     tests: [find_key_passes_on_the_asked_key_only, play_notes_judges_each_note_in_order, rhythm_tap_judges_against_the_beat, listen_and_quiz_score_one_answer_each, a_hint_shows_after_two_mistakes]
     from: learn-engine
   - id: learn-e2e
-    name: "every lesson runs to its end, and hands a song to the player"
+    name: "a lesson of each step kind runs to its end, and hands a song to the player"
     run: [bun, x, playwright, test, e2e/learn.e2e.ts]
-    tests: [every_lesson_runs_to_its_end_with_its_solution, a_song_step_opens_the_player_and_returns_its_result, leaving_a_lesson_asks_first]
+    tests: [each_step_kind_runs_to_its_end_with_its_solution, a_song_step_opens_the_player_and_returns_its_result, leaving_a_lesson_asks_first]
     from: learn-engine
   - id: learn-layout
-    name: every lesson passes the layout checks
+    name: a lesson of each step kind passes the layout checks
     run: [bun, x, playwright, test, e2e/learn-layout.e2e.ts]
-    tests: [every_lesson_passes_the_layout_checks]
+    tests: [each_step_kind_passes_the_layout_checks]
     from: learn-engine
   - id: xp
     name: "stars, XP and levels are computed from the event log"

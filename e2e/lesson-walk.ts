@@ -36,10 +36,11 @@ const SONGS = join(import.meta.dirname, "../public/songs");
 /** How long after the song reaches a note the test plays it, in ms. */
 const PRESS_MARGIN_MS = 400;
 
-/** One lesson of the course, with its world. */
+/** One lesson of the course, with its world and its role there. */
 export interface CourseLesson {
   world: string;
   lesson: Lesson;
+  role: "lesson" | "boss" | "skip-test";
 }
 
 /** Every lesson of the course: each world's lessons, its boss and its skip test. */
@@ -47,27 +48,33 @@ export async function courseLessons(): Promise<CourseLesson[]> {
   const all: CourseLesson[] = [];
   for (const world of COURSE) {
     const { lessons, boss, skipTest } = await world.load();
-    for (const lesson of [...lessons, boss, skipTest]) if (lesson !== undefined) all.push({ world: world.id, lesson });
+    for (const lesson of lessons) all.push({ world: world.id, lesson, role: "lesson" });
+    if (boss !== undefined) all.push({ world: world.id, lesson: boss, role: "boss" });
+    if (skipTest !== undefined) all.push({ world: world.id, lesson: skipTest, role: "skip-test" });
   }
   return all;
 }
 
 /**
- * How many lesson pages a course test runs at once, each in its own context. A lesson page draws no
- * WebGL, so four pages share a CPU well. More lanes would risk the rhythm steps' timing.
+ * The fewest lessons that hold every step kind and every role of the course, in course order. The
+ * browser walks prove that each kind of step works. `src/learn/model.test.ts` proves every lesson valid.
  */
-export const LANES = 4;
-
-/**
- * Runs `work` on each of `items`, at most `lanes` at once, and starts them in order. The first failure
- * rejects at once, while the lanes still running end with the test.
- */
-export async function inLanes<T>(items: readonly T[], lanes: number, work: (item: T) => Promise<void>): Promise<void> {
-  let next = 0;
-  const lane = async () => {
-    while (next < items.length) await work(items[next++]!);
-  };
-  await Promise.all(Array.from({ length: Math.min(lanes, items.length) }, lane));
+export async function sampleLessons(): Promise<CourseLesson[]> {
+  const all = await courseLessons();
+  const traits = (entry: CourseLesson) => new Set([`role:${entry.role}`, ...entry.lesson.steps.map((step) => step.kind)]);
+  const missing = new Set(all.flatMap((entry) => [...traits(entry)]));
+  const picked: CourseLesson[] = [];
+  while (missing.size > 0) {
+    let best = all[0]!;
+    let gain = 0;
+    for (const entry of all) {
+      const adds = [...traits(entry)].filter((trait) => missing.has(trait)).length;
+      if (adds > gain) [best, gain] = [entry, adds];
+    }
+    for (const trait of traits(best)) missing.delete(trait);
+    picked.push(best);
+  }
+  return all.filter((entry) => picked.includes(entry));
 }
 
 /** Whether `lesson` has a song step, which opens the player and its WebGL scene. */
