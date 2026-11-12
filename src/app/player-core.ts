@@ -6,7 +6,8 @@
  *
  * - **The learner's notes** come from the input bus. Each note on sounds on the engine's input sampler
  *   and holds its key in the scene, and each note off lets both go. The pedal reaches the sampler.
- * - **The on-screen piano** of `src/input/pointer-piano.ts` plays the key under the pointer on the bus.
+ * - **The on-screen piano** of `src/input/pointer-piano.ts` plays the key under the pointer on the bus,
+ *   while `clickablePiano` is on.
  * - **A stopped core stays silent.** `run(false)` stops the frames and pauses the song, and the bus's
  *   notes then neither sound nor hold a key. A note off still passes, so no key or note hangs.
  * - **The core owns no song and no frame of the transport.** Its host loads the song and calls the
@@ -49,7 +50,11 @@ export function createPlayerCore(box: HTMLElement, settings: SettingsStore, inpu
       scene.holdKey(event.pitch, false);
     } else engine.input.pedal(event.down);
   });
-  const stopPointer = attachPointerPiano(scene, input, settings);
+  const stopPointer = attachPointerPiano(scene, {
+    press: (pitch, velocity) => input.noteOn(pitch, velocity, "pointer"),
+    release: (pitch) => input.noteOff(pitch, "pointer"),
+    enabled: () => settings.get("clickablePiano"),
+  });
 
   return {
     scene,
