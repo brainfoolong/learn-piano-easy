@@ -1,0 +1,171 @@
+---
+looper: 1
+title: One piano
+summary: "Every piano the site draws is the 3D piano, and the 2D keyboard is gone from the code."
+context: [docs/decisions/0011.md, src/render/piano.ts, src/render/scene.ts, src/ui/components/keyboard.ts, src/learn/steps/keys.ts]
+stages:
+  - id: 1
+    title: The 3D piano view for a page
+    status: open
+  - id: 2
+    title: Lessons and the setup check play on the 3D piano
+    status: open
+  - id: 3
+    title: The landing band plays the 3D piano, and the 2D keyboard is deleted
+    status: open
+  - id: 4
+    title: "the goal is verified once, and every failure is fixed"
+    status: open
+    gate: true
+checks:
+  - id: piano-keys
+    stage: 1
+    name: the 3D piano view names its marks and spans its reach
+    run: [bun, test, src/render/piano-keys.test.ts]
+    tests: [marks_are_named_for_a_screen_reader, the_reach_spans_the_shown_keys, a_mark_takes_its_token_colour]
+  - id: lesson-on-3d-piano
+    stage: 2
+    name: a lesson step plays on the 3D piano
+    run: [bun, x, playwright, test, e2e/lesson-keys.e2e.ts]
+    tests: [a_step_shows_the_3d_piano, a_touch_on_a_3d_key_plays_the_step]
+  - id: devices-on-3d-piano
+    stage: 3
+    name: the landing band loads the 3D piano on a click
+    run: [bun, x, playwright, test, e2e/landing.e2e.ts]
+    tests: [the_devices_band_loads_the_piano_on_a_click]
+---
+
+# One piano
+
+## Why
+
+The site draws two pianos. The player and a lesson's song steps use the 3D piano. Every other lesson
+step, the setup check, the landing page's devices band and the gallery use a 2D SVG keyboard. A learner
+sees a different piano from step to step, and two pianos are kept in step by hand.
+
+The reason for the 2D keyboard was its weight. The service worker precaches every code chunk, so after
+the first visit the 3D piano costs no download. The one place that still pays on a first visit is the
+landing page, and decision 0008 already answers it: a picture until a click.
+
+[decision 0011](../decisions/0011.md) records the choice.
+
+## Standing decisions
+
+- **The model is `createPiano` of `src/render/piano.ts`.** The view below adds no second piano. It frames
+  the same meshes, materials, layout and key labels as the player.
+- **The view is `src/render/piano-keys.ts`, `pianoKeys()`.** It is the player's piano alone, without
+  notes, lanes, transport or settings store. It owns a renderer, the player's lights, a fixed camera and
+  one piano. It is a separate host because a step needs no lanes, and the player scene's 1100 lines would
+  carry them all in.
+- **The lights move to `src/render/lights.ts`,** which `scene.ts` and the view both call, so both pianos
+  are lit alike.
+- **The camera sits in front of and above the keys,** as the `player` preset looks at them, and frames
+  the range's width. The view's height follows its width by the range's aspect, as the SVG did. A phone
+  gets narrow keys, as before.
+- **A view is reconfigured, never rebuilt.** `show(options)` takes the 2D keyboard's options: `label`,
+  `range`, `marks`, `markNames`, `fingers`, `fingerName`, `names`, `nameOf`, `pressed`, `reach`,
+  `onPress`, `onRelease`. It drops the last options' signal subscriptions. A lesson makes one view and
+  hands it to each step, so a lesson holds one WebGL context. `dispose()` frees it.
+- **A mark tints its key** through `markIncoming` in the mark's token colour: `next` is `--c-brand`,
+  `correct` is `--c-success`, `mistake` is `--c-mistake`. The colours are read with `getComputedStyle`
+  and read again when the site theme or the colour scheme changes, as `embed.ts` does.
+- **A held key presses** through `press` in the player's input colour, under any mark's tint.
+- **Names are the player's key labels,** from `keyNameText` of `src/render/key-labels.ts`. `c` names
+  every C with its octave, and `white` every white key.
+- **A finger is a label sprite** from `src/render/labels.ts`, just behind its key's front, in a ring of
+  its mark's colour. **The reach is a thin bar mesh** in front of the white keys, spanning the reached
+  keys. Both have room in the frame whenever their option is given, so their coming and going moves
+  nothing.
+- **The pointer plays through `keyAt`,** one key per pointer, sliding from key to key.
+  `src/input/pointer-piano.ts` is generalised to take press and release callbacks, so the player and the
+  view share its rules.
+- **The frame draws only when the picture can differ,** as the scene's rule says: a setter, a resize, a
+  theme change or a key's spring. A still step costs no render. The pixel ratio is capped at 2, with no
+  glow, particles or fog.
+- **The key map is the view's test seam and screen-reader text.** An `aria-hidden` layer holds one empty
+  `span.piano-keys__key` per shown key, with `data-pitch`, at its key's projected top face. It is placed
+  on a resize or a new range, never per frame, and takes no pointer. Each span mirrors `data-mark`,
+  `data-held` and `data-finger`. The host element carries `data-first` and `data-last` of the range, and
+  `data-reach-first` and `data-reach-last` while a reach shows. A polite live text names the marked keys,
+  with `describeMarks` moved from the 2D keyboard.
+- **Without WebGL the view says so** in a short text in its place, from the catalog's new
+  `ui.pianoKeys.noWebgl`. The step still hears MIDI and the computer keyboard.
+- **`Mark` moves to `src/ui/mark.ts`,** because the staff uses it too.
+- **The landing devices band follows decision 0008:** a picture of the view until a click, then the view
+  loads with `import()` and plays. `tools/landing-pictures.ts` makes the picture in both themes. The
+  landing page stays within its byte budget.
+- **The lesson view's chunk imports the view statically.** It is precached, and a lesson always needs it.
+- **Lanes:** stage 1 runs alone. Stage 2 needs stage 1's view and touches the learn files and their e2e
+  tests. Stage 3 touches the landing, the gallery's leftovers and the docs. Stages 2 and 3 share no file
+  but `docs/findings.md`, so they run in order.
+
+## Stages
+
+### 1. The 3D piano view for a page
+
+**Does:** builds `pianoKeys()` with every option the 2D keyboard has, and shows it in the gallery.
+**Gate:** none.
+
+- [ ] Lights move to `src/render/lights.ts`, and `scene.ts` calls it. `src/render/scene.ts:219`
+- [ ] `src/input/pointer-piano.ts` takes press and release callbacks, and `player-core.ts` passes the bus's. `src/input/pointer-piano.ts:23`
+- [ ] `Mark` moves to `src/ui/mark.ts`, and every importer follows. `src/ui/components/keyboard.ts:37`
+- [ ] `src/render/piano-keys.ts` with `pianoKeys()`, `show`, `dispose`, the key map and the live text. `src/render/piano-keys.ts:1`
+- [ ] Its styles beside it. `src/render/piano-keys.css:1`
+- [ ] `ui.pianoKeys.noWebgl` in English and German. `src/i18n/messages/en.ts:1`
+- [ ] The three unit tests of the `piano-keys` check. `src/render/piano-keys.test.ts:1`
+- [ ] The gallery's keyboard section shows the view in every state. `src/ui/gallery/keyboard.ts:1`
+- [ ] Look at it with `bun run shot` on the gallery, in both themes and on a phone.
+
+### 2. Lessons and the setup check play on the 3D piano
+
+**Does:** the lesson view makes one view and hands it to its steps, and the setup check uses one too.
+**Gate:** `src/render/piano-keys.ts` exists and the gallery shows it.
+
+- [ ] The lesson view makes the view on the first step that needs keys, and disposes it at the end. `src/learn/lesson-view.ts:106`
+- [ ] `StepHost` hands it to a step. `src/learn/steps/step.ts:1`
+- [ ] `listeningKeys` shows its options on the host's view. `src/learn/steps/keys.ts:47`
+- [ ] The demo step shows its notes on it. `src/learn/steps/demo.ts:29`
+- [ ] The setup check's keys are a view. `src/learn/onboarding.ts:104`
+- [ ] The e2e key press clicks the key map's span. `e2e/lesson-walk.ts:102`
+- [ ] The e2e tests that read 2D keys read the key map. `e2e/learn.e2e.ts:156`, `e2e/lesson-keys.e2e.ts:36`, `e2e/game.e2e.ts:185`
+- [ ] E2e tests `a_step_shows_the_3d_piano` and `a_touch_on_a_3d_key_plays_the_step`. `e2e/lesson-keys.e2e.ts:1`
+- [ ] Look at a find-key, a play-notes and a demo step with `bun run shot`.
+
+### 3. The landing band plays the 3D piano, and the 2D keyboard is deleted
+
+**Does:** the devices band shows a picture until a click, and every trace of the 2D keyboard goes.
+**Gate:** no file but the gallery and the landing imports `src/ui/components/keyboard.ts`.
+
+- [ ] The devices band: a picture, and the view on a click. `src/landing/devices.ts:41`
+- [ ] The picture in both themes. `tools/landing-pictures.ts:1`
+- [ ] E2e test `the_devices_band_loads_the_piano_on_a_click`. `e2e/landing.e2e.ts:1`
+- [ ] The gallery test reads the view. `e2e/design.e2e.ts:37`
+- [ ] Delete `keyboard.ts`, `keyboard.css` and `keyboard.test.ts`. `src/ui/components/keyboard.ts:1`
+- [ ] The floor's `keyboard-2d` check goes. `docs/goals/README.md:244`
+- [ ] The site design's component table names the view. `docs/site-design.md:147`
+- [ ] The findings and the playbook name the view, not the 2D keyboard. `docs/findings.md:707`, `docs/agent/playbook.md:17`
+- [ ] The feature list says every piano is the 3D one. `docs/reference/features.md:1`
+
+### 4. the goal is verified once, and every failure is fixed
+
+- [ ] Run `looper verify` over the whole goal.
+- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
+- [ ] Run `looper verify` once more, and it is green.
+
+## Handoff
+
+### State
+
+The goal is written and first on the chain, ahead of `film-songs`. No stage has started.
+
+### Next
+
+**Stage 1: the 3D piano view for a page.** Files: `src/render/`, `src/input/pointer-piano.ts`,
+`src/app/player-core.ts`, `src/ui/mark.ts`, the gallery's keyboard section and the `ui` catalogs. No gate.
+The items are the stage's list above.
+
+Expected red: none until stage 2 changes the lesson's DOM.
+
+### Backlog
+
+- A lesson step could show its notes falling towards the keys, now that the piano is the player's.

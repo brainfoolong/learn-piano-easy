@@ -1,6 +1,6 @@
 ---
 looper: 1
-chain: [film-songs]
+chain: [one-piano, film-songs]
 floor:
   - id: build-output
     name: "the build writes the page, the bundle and the service worker"
@@ -421,11 +421,12 @@ floor:
 
 # Goals
 
-The chain holds 1 goal(s). `film-songs` is live.
+The chain holds 2 goal(s). `one-piano` is live.
 
 | # | Goal | Reached when | Stages |
 |---|---|---|---|
-| 1 | [`film-songs`](film-songs.md) **live** | Thirty public domain pieces famous from film, five sea shanties and three film-style tunes of our own ship in four versions, grouped as the library's film and sea collections. | **1 The film and sea collections** · 2 Five film pieces: Also sprach Zarathustra to Clair de lune · 3 Five film pieces: Moonlight Sonata to Eine kleine Nachtmusik · 4 Five film pieces: Lacrimosa to Sarabande · 5 Five film pieces: William Tell to Ave Maria · 6 Five film pieces: Boléro to Barcarolle · 7 Five film pieces: Can-can to Pomp and Circumstance · 8 Five sea shanties · 9 Three film-style tunes of our own · 10 the goal is verified once, and every failure is fixed |
+| 1 | [`one-piano`](one-piano.md) **live** | Every piano the site draws is the 3D piano, and the 2D keyboard is gone from the code. | **1 The 3D piano view for a page** · 2 Lessons and the setup check play on the 3D piano · 3 The landing band plays the 3D piano, and the 2D keyboard is deleted · 4 the goal is verified once, and every failure is fixed |
+| 2 | [`film-songs`](film-songs.md) | Thirty public domain pieces famous from film, five sea shanties and three film-style tunes of our own ship in four versions, grouped as the library's film and sea collections. | **1 The film and sea collections** · 2 Five film pieces: Also sprach Zarathustra to Clair de lune · 3 Five film pieces: Moonlight Sonata to Eine kleine Nachtmusik · 4 Five film pieces: Lacrimosa to Sarabande · 5 Five film pieces: William Tell to Ave Maria · 6 Five film pieces: Boléro to Barcarolle · 7 Five film pieces: Can-can to Pomp and Circumstance · 8 Five sea shanties · 9 Three film-style tunes of our own · 10 the goal is verified once, and every failure is fixed |
 
 The floor holds 83 check(s) carried from reached goals; every goal keeps them green.
 The format is `docs/goal-format.md`.
