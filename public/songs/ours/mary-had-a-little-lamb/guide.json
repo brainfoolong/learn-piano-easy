@@ -25,7 +25,7 @@
           "text": "Play the right hand alone, slowly, and let the song wait for each note.",
           "hands": "right",
           "speed": 0.6,
-          "loop": [1, 4],
+          "loop": [1, 8],
           "wait": true
         },
         {

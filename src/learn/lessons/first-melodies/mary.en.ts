@@ -5,10 +5,10 @@ export const maryEn = {
   title: "Boss: Mary Had a Little Lamb",
   steps: {
     intro: {
-      text: "This world ends with the first four bars of a real song. You play them in the player, and it waits for each of your notes.",
+      text: "This world ends with a whole song. You play it in the player, and it waits for each of your notes.",
     },
     song: {
-      text: "Play the first four bars of Mary Had a Little Lamb with your right hand. The player waits for each note.",
+      text: "Play all eight bars of Mary Had a Little Lamb with your right hand. The player waits for each note.",
     },
   },
 } satisfies LessonTexts;

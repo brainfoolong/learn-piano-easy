@@ -66,7 +66,7 @@ export const maryHadALittleLamb: OurSong = {
       left: "C3/1:4 | C3/1:4 | G2/5:4 | C3/1:4 | C3/1:4 | C3/1:4 | G2/5:4 | C3/1:4",
       skills: ["five-finger-position", "held-bass"],
       practice: [
-        { text: "Play the right hand alone, slowly, and let the song wait for each note.", hands: "right", speed: 0.6, loop: [1, 4], wait: true },
+        { text: "Play the right hand alone, slowly, and let the song wait for each note.", hands: "right", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Now the left hand alone. It holds one note for each whole bar.", hands: "left", speed: 0.6, loop: [1, 8], wait: true },
         { text: "Put both hands together, still slowly.", hands: "both", speed: 0.7, loop: [1, 8], wait: true },
         { text: "Play the whole song with both hands at full speed.", hands: "both", speed: 1, loop: null, wait: false },
