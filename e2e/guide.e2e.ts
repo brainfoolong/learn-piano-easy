@@ -64,13 +64,13 @@ test("a_practice_step_sets_hands_speed_and_loop", async ({ page }) => {
   const dialog = page.getByRole("dialog", { name: "Guide to Ode to Joy, Beginner" });
   await expect(dialog.getByRole("heading", { name: "Fun fact" })).toBeVisible();
   await expect(dialog.getByText("Five-finger position")).toBeVisible();
-  await expect(dialog.getByText("Right hand, 60 %, bars 1–4, waits for you")).toBeVisible();
+  await expect(dialog.getByText("Right hand, 60%, bars 1–4, waits for you")).toBeVisible();
   await dialog.getByRole("button", { name: "Apply step 1" }).click();
   await expect(dialog).toBeHidden();
 
   const speed = page.getByRole("group", { name: "Speed" }).locator("output");
   const loop = page.getByRole("button", { name: "Loop", exact: true });
-  await expect(speed).toHaveText("60 %");
+  await expect(speed).toHaveText("60%");
   await expect(loop).toHaveAttribute("aria-pressed", "true");
   const set = await storedSettings(page);
   expect(set).toMatchObject({ playHands: "right", enableLoop: true, loopEnd: 4, waitForNotes: true });
@@ -80,7 +80,7 @@ test("a_practice_step_sets_hands_speed_and_loop", async ({ page }) => {
   // The last step plays the whole song with both hands, so it turns the loop and wait mode off.
   await guide.click();
   await dialog.getByRole("button", { name: "Apply step 4" }).click();
-  // Back at 100 %, the speed leaves the bar with the other expert tools.
+  // Back at 100%, the speed leaves the bar with the other expert tools.
   await expect(page.getByRole("group", { name: "Speed" })).toBeHidden();
   await expect(loop).toHaveAttribute("aria-pressed", "false");
   const values = await storedSettings(page);

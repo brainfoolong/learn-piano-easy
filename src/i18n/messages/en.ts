@@ -56,7 +56,7 @@ export const en = {
     },
     learn: {
       title: "Learn Piano",
-      description: "A guided piano course that plays like a game, one small step at a time.",
+      description: "A guided piano course, built like a game, one small step at a time.",
     },
     profile: {
       title: "Your progress",
@@ -64,7 +64,7 @@ export const en = {
     },
     about: {
       title: "About",
-      description: "What Learn Piano Easy is, who made it, and the licenses of everything it ships.",
+      description: "What Learn Piano Easy is, and the licenses of everything it ships.",
     },
     data: {
       title: "Your data",
@@ -160,7 +160,7 @@ export const en = {
         { title: "Learn a skill", text: "A short lesson shows one new thing, such as a note, a rhythm or a hand position." },
         { title: "Practise it", text: "Play it on your own keyboard. The piano waits for you and marks each right note." },
         { title: "Play a real song", text: "Use the skill in a song from the library, at a level that fits you." },
-        { title: "Earn badges", text: "Each step earns XP, and each world you finish earns a badge." },
+        { title: "Earn badges", text: "Each lesson earns XP, and each world you finish earns a badge." },
       ],
     },
     rarities: {
@@ -175,17 +175,17 @@ export const en = {
         common: "Your first days. One hand position, slow notes and a bass that waits for you.",
         rare: "Your first weeks. Eighth notes, simple chords and a bass that moves.",
         epic: "Your first months. Broken chords, and a thumb that passes under.",
-        legendary: "About a year in. Both hands busy, fast and apart.",
+        legendary: "About a year in. Both hands busy, fast and independent.",
       },
     },
     devices: {
       eyebrow: "Play on what you have",
       heading: "No piano? Start anyway",
-      lead: "Any of these plays the notes. A real keyboard feels best, and the others get you started today.",
+      lead: "Any of these plays the notes. A real keyboard feels best, and the others let you start today.",
       ways: [
         { title: "A MIDI keyboard", text: "Plug it in by USB and allow MIDI once. From then on, the site finds it by itself." },
         { title: "A touch screen", text: "Tap the keys on the screen, with as many fingers as you like." },
-        { title: "Your computer keyboard", text: "The letter keys play two octaves, and you can move any note to another key." },
+        { title: "Your computer keyboard", text: "The letter and number keys play two octaves, and you can move any note to another key." },
       ],
       /** The small keyboard's accessible name. */
       piano: "A small piano to try",
@@ -194,7 +194,7 @@ export const en = {
     free: {
       eyebrow: "Free, and yours",
       heading: "Nothing to pay, nothing to sign",
-      lead: "The site is a gift from people who love the piano. It stays that way.",
+      lead: "The site is a gift from someone who loves the piano. It stays free.",
       promises: [
         { title: "Free, with no account", text: "Open the site and play. There is no sign-up and nothing to buy." },
         { title: "Open source", text: "Every line of code is public under the MIT License. Read it, change it, share it." },
@@ -224,11 +224,11 @@ export const en = {
         },
         {
           question: "Can I play my own songs?",
-          answer: "Yes. Open any MIDI file in Just Play Piano. It is read on your device and never uploaded.",
+          answer: "Yes. Open any MIDI or MusicXML file in Just Play Piano. It is read on your device and never uploaded.",
         },
         {
           question: "Which songs are in the library?",
-          answer: "Our own arrangements of old tunes, each in four versions, and classical pieces from open collections.",
+          answer: "Our own arrangements of well-known tunes, each in four versions, a few pieces of our own, and classical pieces from open collections.",
         },
         {
           question: "Is it really free?",

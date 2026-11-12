@@ -17,7 +17,7 @@ export const playerSettingsLook: typeof en = {
   },
   noteBorderRadius: {
     label: "Eckenradius (%)",
-    help: "Wie rund die Ecken einer Note sind, als Anteil ihrer Breite.",
+    help: "Wie rund die Ecken einer Note sind.",
   },
   minNoteHeight: {
     label: "Kürzeste Notenlänge",
@@ -29,7 +29,7 @@ export const playerSettingsLook: typeof en = {
   },
   strokeNotesWidth: {
     label: "Stärke des Rands",
-    help: "Wie breit und hell der Lichtrand um jede Note ist.",
+    help: "Wie hell der Lichtrand um jede Note ist.",
   },
   noteEndedShrink: {
     label: "Gespielte Noten schrumpfen in ihre Taste",
@@ -110,8 +110,8 @@ export const playerSettingsLook: typeof en = {
     help: "Ein Band quer über die Bahnen, solange das Lied das Haltepedal hält.",
   },
   showSustainOnOffs: {
-    label: "Pedal runter und hoch",
-    help: "Eine Linie mit Ped., wo das Pedal runtergeht, und ✱, wo es hochkommt.",
+    label: "Pedal treten und lösen",
+    help: "Eine Linie mit „Ped.“, wo das Pedal getreten wird, und „✱“, wo es sich löst.",
   },
   showSustainChannels: {
     label: "Pedalkanäle",
@@ -133,11 +133,11 @@ export const playerSettingsLook: typeof en = {
   },
   particlesEmbers: {
     label: "Glut",
-    help: "Glühende Glutstücke schweben langsam von jeder Taste auf.",
+    help: "Kleine Glutstücke schweben langsam von jeder Taste auf.",
   },
   particlesStars: {
     label: "Sterne",
-    help: "Kleine drehende Sterne steigen von jeder Taste auf.",
+    help: "Kleine drehende Sterne und Punkte steigen von jeder Taste auf und fallen zurück.",
   },
   particlesCustom: {
     label: "Eigene Partikel",
@@ -178,7 +178,7 @@ export const playerSettingsLook: typeof en = {
     help: "Wie lange jeder Partikel bleibt, bevor er verschwindet.",
   },
   particleSpeed: {
-    label: "Bewegungstempo",
+    label: "Bewegungsgeschwindigkeit",
     help: "Macht jede Bewegung der Partikel schneller oder langsamer.",
   },
   particleFadeOut: {
@@ -190,12 +190,12 @@ export const playerSettingsLook: typeof en = {
     help: "Der Anteil seiner Größe, den ein Partikel verliert. Unter 0 wächst er.",
   },
   particleSpeedX: {
-    label: "Seitliches Tempo",
-    help: "In Tastenbreiten pro Sekunde.",
+    label: "Seitliche Geschwindigkeit",
+    help: "Die höchste seitliche Geschwindigkeit, in Tastenbreiten pro Sekunde.",
   },
   particleSpeedY: {
-    label: "Steigtempo",
-    help: "In Tastenbreiten pro Sekunde.",
+    label: "Steiggeschwindigkeit",
+    help: "Die höchste Steiggeschwindigkeit, in Tastenbreiten pro Sekunde.",
   },
   particlesFriction: {
     label: "Bremsung",
@@ -219,7 +219,7 @@ export const playerSettingsLook: typeof en = {
   },
   particleNoiseResX: {
     label: "Feinheit des seitlichen Wanderns",
-    help: "Höhere Werte lassen das seitliche Wandern öfter die Richtung wechseln.",
+    help: "Höhere Werte lassen die Partikel benachbarter Tasten unterschiedlicher seitlich wandern.",
   },
   particleNoiseStrengthX: {
     label: "Seitliches Wandern",
@@ -227,11 +227,11 @@ export const playerSettingsLook: typeof en = {
   },
   particleNoiseResY: {
     label: "Feinheit des Wanderns beim Steigen",
-    help: "Höhere Werte lassen das Wandern beim Steigen öfter wechseln.",
+    help: "Höhere Werte lassen das Wandern beim Steigen von Taste zu Taste stärker abweichen.",
   },
   particleNoiseStrengthY: {
     label: "Wandern beim Steigen",
-    help: "Wie stark die Partikel beim Steigen zufällig schneller und langsamer werden.",
+    help: "Wie weit die Partikel beim Steigen zufällig nach oben und unten abweichen.",
   },
   particleNoiseStrengthSize: {
     label: "Größenschwankung",
@@ -242,7 +242,7 @@ export const playerSettingsLook: typeof en = {
     help: "Wie weit die Partikel hin und her schwingen.",
   },
   turbulenceXFrequency: {
-    label: "Takt des seitlichen Schwingens",
+    label: "Frequenz des seitlichen Schwingens",
     help: "Schwingungen pro Sekunde.",
   },
   turbulenceYAmplitude: {
@@ -250,7 +250,7 @@ export const playerSettingsLook: typeof en = {
     help: "Wie weit die Partikel beim Steigen auf und ab schwingen.",
   },
   turbulenceYFrequency: {
-    label: "Takt des Schwingens beim Steigen",
+    label: "Frequenz des Schwingens beim Steigen",
     help: "Schwingungen pro Sekunde.",
   },
   particleYOffset: {
@@ -315,7 +315,7 @@ export const playerSettingsLook: typeof en = {
   },
   showChords: {
     label: "Akkordnamen",
-    help: "Benennt jeden Akkord, den die Noten bilden, mit gehaltenem Pedal.",
+    help: "Benennt jeden Akkord, den die Noten bilden, mit den Tönen, die das Pedal hält.",
   },
   chordLabelStyle: {
     label: "Stil der Akkordnamen",
@@ -345,7 +345,7 @@ export const playerSettingsLook: typeof en = {
   chordToneNotation: {
     label: "Schreibweise der Notenblöcke",
     help: "Ob die Notenblöcke kurze Zeichen oder ganze Wörter zeigen.",
-    options: { simple: "Einfach: R ♭3 5", full: "Ausführlich: Grundton ♭Terz Quinte" },
+    options: { simple: "Einfach: R ♭3 5", full: "Ausführlich: Grundton ♭3. 5." },
   },
   chordMarkRoot: {
     label: "Grundton markieren",
@@ -379,7 +379,7 @@ export const playerSettingsLook: typeof en = {
   },
   lyricsY: {
     label: "Höhe (% von oben)",
-    help: "Wo der Liedtext auf dem Bildschirm steht. 0 ist der obere Rand.",
+    help: "Wo die Mitte der Liedtextzeile in der Szene steht. 0 ist der obere Rand.",
   },
   lyricsCursorEnabled: {
     label: "Cursor",
@@ -440,20 +440,20 @@ export const playerSettingsLook: typeof en = {
 
   // Sheet
   enableSheet: {
-    label: "Noten anzeigen",
-    help: "Das Lied als Noten, oben über der Szene.",
+    label: "Notenblatt anzeigen",
+    help: "Das Lied als Notenblatt, oben über der Szene.",
   },
   enableFullSheet: {
-    label: "Nur die Noten",
-    help: "Die Noten füllen den Bildschirm statt der Szene.",
+    label: "Nur das Notenblatt",
+    help: "Das Notenblatt füllt den Bildschirm statt der Szene.",
   },
   sheetMeasureScroll: {
-    label: "Noten mit dem Lied scrollen",
+    label: "Notenblatt mit dem Lied scrollen",
     help: "Ist das aus, stehen die Takte in Zeilen, und die aktuelle Zeile bleibt im Blick.",
   },
   sheetMeasureNumbers: {
     label: "Taktnummern",
-    help: "Wo die Noten die Nummer jedes Takts zeigen.",
+    help: "Wo das Notenblatt die Nummer jedes Takts zeigt.",
     options: { off: "Keine", lineStart: "Am Anfang jeder Zeile", every: "An jedem Takt" },
   },
   enableGrandStaff: {
@@ -466,7 +466,7 @@ export const playerSettingsLook: typeof en = {
   },
   overrideTimeSignature: {
     label: "Taktart",
-    help: "Die Taktart, in der die Noten geschrieben sind. Wähl eine, wenn die des Lieds falsch ist.",
+    help: "Die Taktart, in der das Notenblatt geschrieben ist. Wähl eine, wenn die des Lieds falsch ist.",
     options: {
       auto: "Aus dem Lied",
       "2/4": "2/4",
@@ -481,12 +481,12 @@ export const playerSettingsLook: typeof en = {
   },
   sheetMinNoteDenom: {
     label: "Kürzester Notenwert",
-    help: "Jede Note wird auf ein Raster dieses Werts gesetzt.",
+    help: "Der kürzeste Notenwert, den das Notenblatt schreibt. Triolen davon passen trotzdem.",
     options: { "4": "Viertel", "8": "Achtel", "16": "Sechzehntel", "32": "Zweiunddreißigstel", "64": "Vierundsechzigstel" },
   },
   hideRestsBelow: {
     label: "Pausen ausblenden, die kürzer sind als",
-    help: "Lässt kurze Pausen weg, damit die Noten leichter zu lesen sind.",
+    help: "Lässt kurze Pausen weg, damit das Notenblatt leichter zu lesen ist.",
     options: { none: "Keine ausblenden", "4": "Eine Viertel", "8": "Eine Achtel", "16": "Eine Sechzehntel", "32": "Eine Zweiunddreißigstel" },
   },
   renderSheetCursor: {
@@ -495,7 +495,7 @@ export const playerSettingsLook: typeof en = {
   },
   sheetColorActiveNotes: {
     label: "Klingende Noten färben",
-    help: "Noten im Notenbild wechseln die Farbe, solange sie klingen.",
+    help: "Noten auf dem Notenblatt wechseln die Farbe, solange sie klingen.",
   },
   sheetColorByTrack: {
     label: "Klingende Noten in der Farbe ihrer Spur",
@@ -503,11 +503,11 @@ export const playerSettingsLook: typeof en = {
   },
   sheetActiveNotesColor: {
     label: "Farbe klingender Noten",
-    help: "Die Farbe einer Note im Notenbild, solange sie klingt.",
+    help: "Die Farbe einer Note auf dem Notenblatt, solange sie klingt.",
   },
   sheetHighlightActiveNotes: {
     label: "Leuchten hinter klingenden Noten",
-    help: "Ein weiches Licht erscheint hinter jeder Note im Notenbild, solange sie klingt.",
+    help: "Ein weiches Licht erscheint hinter jeder Note auf dem Notenblatt, solange sie klingt.",
   },
   sheetActiveHighlightColor: {
     label: "Farbe des Leuchtens",
@@ -515,7 +515,7 @@ export const playerSettingsLook: typeof en = {
   },
   sheetActiveGrowEffect: {
     label: "Klingende Noten wachsen",
-    help: "Eine Note im Notenbild wird größer, solange sie klingt.",
+    help: "Eine Note auf dem Notenblatt wird größer, solange sie klingt.",
   },
   sheetRenderInputNotes: {
     label: "Deine gespielten Noten zeichnen",
@@ -523,17 +523,17 @@ export const playerSettingsLook: typeof en = {
   },
   sheetShowHoverInfo: {
     label: "Noten unter dem Mauszeiger benennen",
-    help: "Zeig auf eine Note im Notenbild, um ihren Namen zu sehen.",
+    help: "Zeig auf eine Note oder einen Akkord auf dem Notenblatt, um die Namen der Töne zu sehen.",
   },
   sheetBgColor: {
     label: "Papierfarbe",
-    help: "Auf dunklem Papier wird die Tinte hell.",
+    help: "Die Farbe hinter dem Notenblatt. Auf dunklem Papier wird die Tinte hell.",
   },
 
   // PDF
   pdfExportButtonGroup: {
     label: "Noten als PDF speichern",
-    help: "Öffnet einen Dialog, der die fallenden Noten des offenen Lieds speichert, einen Bildschirm pro Seite.",
+    help: "Öffnet einen Dialog, der die fallenden Noten des geöffneten Lieds als Seiten speichert, deren Länge du wählst.",
   },
   exportPdfBackground: {
     label: "Hintergrundfarben verwenden",

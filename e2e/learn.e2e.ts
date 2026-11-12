@@ -81,7 +81,7 @@ test("a_song_step_opens_the_player_and_returns_its_result", async ({ page }) => 
   await stage(page).locator('[data-answer="play"]').click();
   await playSong(page, songPlan(song.file, song.practice));
   await onStep(page, index);
-  await expect(stage(page).locator(".lesson-song__status")).toContainText(/\d+ %/);
+  await expect(stage(page).locator(".lesson-song__status")).toContainText(/\d+%/);
   await expect(page.locator(".lesson__band").getByRole("button", { name: t.band.continue })).toBeVisible();
   expect(errors).toEqual([]);
 });

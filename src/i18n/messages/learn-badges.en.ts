@@ -26,7 +26,7 @@ export const learnBadges = {
     "rhythm-ace": { name: "Rhythm ace", description: "Pass a rhythm step on your first try." },
     "sight-reader": { name: "Sight reader", description: "Read ten notes in a row without a mistake." },
     "early-bird": { name: "Early bird", description: "Finish a lesson before 8 in the morning." },
-    "night-owl": { name: "Night owl", description: "Finish a lesson after 10 at night." },
+    "night-owl": { name: "Night owl", description: "Finish a lesson at 10 at night or later." },
     comeback: { name: "Welcome back", description: "Come back for a lesson after a week away." },
     legendary: { name: "Hard song", description: "Play the Hard version of one of our songs to its end in Just Play Piano." },
   } satisfies Record<FixedBadgeId, BadgeText>,

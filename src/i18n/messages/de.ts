@@ -25,7 +25,7 @@ export const de: Messages = {
     home: {
       title: SITE_NAME,
       description:
-        "Lerne Klavier, indem du spielst. Ein geführter Kurs, ein 3D-Klavier und dein MIDI-Keyboard. Kostenlos, quelloffen und offline.",
+        "Lerne Klavier, indem du spielst. Ein geführter Kurs, ein 3D-Klavier und dein MIDI-Keyboard. Kostenlos, Open Source und offline.",
     },
     play: {
       title: "Einfach Klavier spielen",
@@ -34,19 +34,19 @@ export const de: Messages = {
     },
     modes: {
       title: "Spielmodi",
-      description: "Fertige Arten zu spielen: ein Spiel mit Punkten und Funken, oder ein Lied, das bei jeder benannten Note auf dich wartet.",
+      description: "Fertige Arten zu spielen: ein Spiel mit Punkten und Funken, oder ein Lied, das auf dich wartet und jede Note benennt.",
     },
     learn: {
       title: "Klavier lernen",
-      description: "Ein geführter Klavierkurs, der sich wie ein Spiel spielt, Schritt für Schritt.",
+      description: "Ein geführter Klavierkurs, aufgebaut wie ein Spiel, in kleinen Schritten.",
     },
     profile: {
       title: "Dein Fortschritt",
       description: "Dein Level, deine Abzeichen und wie viel du gespielt hast.",
     },
     about: {
-      title: "Über",
-      description: "Was Learn Piano Easy ist, wer es gemacht hat, und die Lizenzen von allem, was es mitbringt.",
+      title: "Über die App",
+      description: "Was Learn Piano Easy ist, und die Lizenzen von allem, was es mitbringt.",
     },
     data: {
       title: "Deine Daten",
@@ -54,7 +54,7 @@ export const de: Messages = {
     },
     sponsor: {
       title: "Unterstützen",
-      description: "Learn Piano Easy ist kostenlos und wird von einer Person gebaut. So kannst du helfen, dass es wächst.",
+      description: "Learn Piano Easy ist kostenlos und wird von einer Person gemacht. So kannst du helfen, dass es wächst.",
     },
     imprint: {
       title: "Impressum",
@@ -91,11 +91,11 @@ export const de: Messages = {
   },
   landing: {
     hero: {
-      eyebrow: "Kostenlos und quelloffen",
+      eyebrow: "Kostenlos und Open Source",
       lead: "Sieh zu, wie die Noten auf die Tasten fallen, und spiel sie dann selbst, Lied für Lied.",
       start: "Jetzt lernen",
       play: "Einfach spielen",
-      proofs: ["Ohne Konto", "Läuft offline", "Keine Werbung"],
+      proofs: ["Kein Konto", "Läuft offline", "Keine Werbung"],
       mascot: "Unser Klavierlehrer, ein Affe mit honigfarbenem Fell, spielt in einem sonnigen Zimmer Klavier",
       greeting: "Hallo, ich bin dein Klavierlehrer. Wollen wir spielen?",
       demo: {
@@ -135,7 +135,7 @@ export const de: Messages = {
         { title: "Etwas Neues lernen", text: "Eine kurze Lektion zeigt dir eine neue Sache, etwa eine Note, einen Rhythmus oder eine Handhaltung." },
         { title: "Üben", text: "Spiel es auf deinem eigenen Keyboard. Das Klavier wartet auf dich und markiert jede richtige Note." },
         { title: "Ein echtes Lied spielen", text: "Setz das Gelernte in einem Lied aus der Bibliothek ein, auf einer Stufe, die zu dir passt." },
-        { title: "Abzeichen sammeln", text: "Jeder Schritt bringt XP, und jede Welt, die du abschließt, ein Abzeichen." },
+        { title: "Abzeichen sammeln", text: "Jede Lektion bringt XP, und jede Welt, die du abschließt, ein Abzeichen." },
       ],
     },
     rarities: {
@@ -155,11 +155,11 @@ export const de: Messages = {
     devices: {
       eyebrow: "Spiel auf dem, was du hast",
       heading: "Kein Klavier? Fang trotzdem an",
-      lead: "Mit jedem davon spielst du die Noten. Ein echtes Keyboard fühlt sich am besten an, die anderen bringen dich heute schon los.",
+      lead: "Mit jedem davon spielst du die Noten. Ein echtes Keyboard fühlt sich am besten an, mit den anderen fängst du heute schon an.",
       ways: [
         { title: "Ein MIDI-Keyboard", text: "Steck es per USB an und erlaube MIDI einmal. Danach findet die Seite es von selbst." },
         { title: "Ein Touchscreen", text: "Tippe die Tasten auf dem Bildschirm an, mit so vielen Fingern, wie du magst." },
-        { title: "Deine Computertastatur", text: "Die Buchstabentasten spielen zwei Oktaven, und du kannst jede Note auf eine andere Taste legen." },
+        { title: "Deine Computertastatur", text: "Die Buchstaben- und Zifferntasten spielen zwei Oktaven, und du kannst jede Note auf eine andere Taste legen." },
       ],
       piano: "Ein kleines Klavier zum Ausprobieren",
       hint: "Tippe eine Taste an, um sie zu hören.",
@@ -167,11 +167,11 @@ export const de: Messages = {
     free: {
       eyebrow: "Kostenlos und deins",
       heading: "Nichts zu zahlen, nichts zu unterschreiben",
-      lead: "Die Seite ist ein Geschenk von Menschen, die das Klavier lieben. Und das bleibt sie.",
+      lead: "Die Seite ist ein Geschenk von jemandem, der das Klavier liebt. Sie bleibt kostenlos.",
       promises: [
         { title: "Kostenlos, ohne Konto", text: "Öffne die Seite und spiel los. Es gibt keine Anmeldung und nichts zu kaufen." },
         { title: "Open Source", text: "Jede Zeile Code ist öffentlich, unter der MIT-Lizenz. Lies sie, ändere sie, teile sie." },
-        { title: "Funktioniert offline", text: "Einmal geladen, läuft die Seite ohne Netz. Lieder, die du schon geöffnet hast, spielen auch offline." },
+        { title: "Läuft offline", text: "Einmal geladen, läuft die Seite ohne Netz. Lieder, die du schon geöffnet hast, spielen auch offline." },
         { title: "Keine Werbung, keine Profile", text: "Nichts, was du spielst, verlässt dein Gerät. Wir zählen nur Seitenaufrufe, ohne Cookies, und verkaufen nichts." },
       ],
     },
@@ -197,11 +197,11 @@ export const de: Messages = {
         },
         {
           question: "Kann ich eigene Lieder spielen?",
-          answer: "Ja. Öffne eine beliebige MIDI-Datei in „Einfach Klavier spielen“. Sie wird auf deinem Gerät gelesen und nie hochgeladen.",
+          answer: "Ja. Öffne eine beliebige MIDI- oder MusicXML-Datei in „Einfach Klavier spielen“. Sie wird auf deinem Gerät gelesen und nie hochgeladen.",
         },
         {
           question: "Welche Lieder hat die Bibliothek?",
-          answer: "Unsere eigenen Bearbeitungen alter Melodien, jede in vier Fassungen, und klassische Stücke aus freien Sammlungen.",
+          answer: "Unsere eigenen Arrangements bekannter Melodien, jedes in vier Fassungen, ein paar eigene Stücke und klassische Stücke aus freien Sammlungen.",
         },
         {
           question: "Ist es wirklich kostenlos?",
@@ -215,7 +215,7 @@ export const de: Messages = {
     },
   },
   footer: {
-    tagline: "Lerne Klavier, indem du spielst. Kostenlos, quelloffen und offline.",
+    tagline: "Lerne Klavier, indem du spielst. Kostenlos, Open Source und offline.",
     nav: "Seite",
     explore: "Entdecken",
     about: "Über die App und Lizenzen",

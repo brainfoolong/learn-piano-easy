@@ -10,7 +10,7 @@ export const learnMap = {
   /** A world's band: its number, and how many of its lessons are done, its boss included. */
   world: (n: number) => `World ${formatNumber("en", n)}`,
   progress: (done: number, all: number) => `${formatNumber("en", done)} of ${formatNumber("en", all)} ${plural("en", all, { one: "lesson", other: "lessons" })}`,
-  locked: "Beat the boss of the world before to open this one.",
+  locked: "Beat the boss of the world before this one, or pass its skip test, to open it.",
   beaten: "Beaten",
   /** A node's accessible name and its caption. */
   node: {

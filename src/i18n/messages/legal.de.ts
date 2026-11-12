@@ -76,7 +76,7 @@ export const legalDe: LegalTexts = {
           [
             "Wir möchten wissen, welche Seiten genutzt werden, damit wir den Kurs und die App verbessern können. Dafür nutzen wir ",
             { text: "Matomo", href: "https://matomo.org/" },
-            ", ein quelloffenes Analyseprogramm. Matomo läuft auf unserem eigenen Server unter stats.learn-piano-easy.app.",
+            ", ein Open-Source-Analyseprogramm. Matomo läuft auf unserem eigenen Server unter stats.learn-piano-easy.app.",
           ],
           "Diesen Server mieten wir von der Contabo GmbH, Welfenstraße 22, 81541 München, Deutschland. Der Server steht in der Europäischen Union. Contabo speichert die Daten für uns und verarbeitet sie nur nach unserer Weisung.",
           "Mit Contabo besteht ein Auftragsverarbeitungsvertrag (Art. 28 DSGVO). Keine Daten gehen an das Unternehmen Matomo oder an andere Dritte.",
@@ -90,7 +90,7 @@ export const legalDe: LegalTexts = {
           },
           "Der Server erhält außerdem, was jeder Webserver erhält: deine IP-Adresse, deinen Browser und dein Betriebssystem (den User-Agent), deine bevorzugte Sprache und die Uhrzeit.",
           "Matomo entfernt die letzten zwei Teile deiner IP-Adresse (zum Beispiel wird 192.0.2.17 zu 192.0.0.0), bevor es etwas speichert. Aus der gekürzten Adresse bestimmt Matomo dein Land. Deine volle IP-Adresse wird nie gespeichert.",
-          "Was wir nicht tun. Wir setzen keine Cookies und speichern für die Statistik nichts in deinem Browser. Was du spielst, deine Lieder und dein Fortschritt sind nie Teil der Statistik.",
+          "Was wir nicht tun. Wir setzen keine Cookies, und das Zählen eines Besuchs speichert nichts in deinem Browser. Was du spielst, deine Lieder und dein Fortschritt sind nie Teil der Statistik.",
           "Wir erstellen kein Profil von dir. Wir verknüpfen diese Daten nicht mit anderen Daten.",
           "Matomo fasst die Anfragen eines Besuchs mit einem Wert zusammen, der aus der gekürzten IP-Adresse und den Browserdaten berechnet wird. Dieser Wert ändert sich täglich, also erkennen wir dich am nächsten Tag nicht wieder.",
           "Wir sehen nicht, wer du bist, und versuchen auch nicht, es herauszufinden.",

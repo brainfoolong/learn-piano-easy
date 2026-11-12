@@ -27,13 +27,10 @@ import type { PianoScene } from "../render/scene";
 import type { SettingsStore } from "../settings/store";
 import { createGameHud } from "./game-hud";
 import { type GameEvent, Referee } from "./referee";
-import { type Difficulty, RULES } from "./rules";
+import { RULES } from "./rules";
 
 /** Song times closer than this are one time, in seconds. */
 const EPSILON = 1e-6;
-
-/** The name each difficulty shows as. */
-const LEVEL_NAMES: Record<Difficulty, string> = { easy: "Easy", normal: "Normal", hard: "Hard" };
 
 /**
  * Judges the learner's notes on `bus` against `transport.required` while `enableGameMode` is on, and shows
@@ -64,7 +61,7 @@ export function attachGameMode(
     const on = settings.get("enableGameMode");
     const difficulty = settings.get("gameDifficulty");
     referee.rules = RULES[difficulty];
-    hud.setLevel(LEVEL_NAMES[difficulty]);
+    hud.setLevel(difficulty);
     hud.endHolds();
     hud.setHidden(!on);
     if (!on || transport.song === undefined) {

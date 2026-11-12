@@ -264,7 +264,7 @@ test("an_added_file_stays_reopens_and_deletes", async ({ page }) => {
   await page.getByRole("button", { name: "Songs", exact: true }).click();
   const dialog = page.getByRole("dialog", { name: "Songs" });
   const chooser = page.waitForEvent("filechooser");
-  await dialog.getByRole("button", { name: "Add MIDI files" }).click();
+  await dialog.getByRole("button", { name: "Add MIDI or MusicXML files" }).click();
   await (await chooser).setFiles({ name: "my waltz.mid", mimeType: "audio/midi", buffer: bytes });
 
   await expect(page.getByLabel("Open song")).toHaveText("my waltz");
@@ -296,7 +296,7 @@ test("an_added_musicxml_score_opens_with_a_track_per_staff", async ({ page }) =>
   await page.goto("./play/");
   await page.getByRole("button", { name: "Songs", exact: true }).click();
   const chooser = page.waitForEvent("filechooser");
-  await page.getByRole("dialog", { name: "Songs" }).getByRole("button", { name: "Add MIDI files" }).click();
+  await page.getByRole("dialog", { name: "Songs" }).getByRole("button", { name: "Add MIDI or MusicXML files" }).click();
   await (await chooser).setFiles({ name: "my minuet.musicxml", mimeType: "application/xml", buffer: Buffer.from(score) });
 
   await expect(page.getByLabel("Open song")).toHaveText("my minuet");

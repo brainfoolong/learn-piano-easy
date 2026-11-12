@@ -101,7 +101,7 @@ export const playerSettings = {
     pianoFlare: "Flare",
     pianoWave: "Wave line",
     lanesColours: "Lane colours",
-    lanesLines: "Measure and beat lines",
+    lanesLines: "Bar and beat lines",
     lanesHeld: "Keys you hold",
     lanesMarkers: "Markers and pedal",
     particlesEffects: "Effects",

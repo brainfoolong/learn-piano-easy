@@ -60,7 +60,7 @@ test("the_expert_button_shows_the_expert_tools_and_a_reload_keeps_it", async ({ 
   // Off again, a speed off its default stays in the bar, so the song never plays slower unseen.
   await page.getByRole("button", { name: "Slower" }).click();
   await page.getByRole("button", { name: "Expert", exact: true }).click();
-  await expect(page.getByRole("group", { name: "Speed" }).locator("output")).toHaveText("95 %");
+  await expect(page.getByRole("group", { name: "Speed" }).locator("output")).toHaveText("95%");
   await expect(page.getByRole("group", { name: "Transpose" })).toBeHidden();
 });
 
@@ -82,9 +82,9 @@ test("speed_and_transpose_step_from_the_control_bar", async ({ page }) => {
   await page.goto("./play/");
   await page.getByRole("button", { name: "Expert", exact: true }).click();
   const speed = page.getByRole("group", { name: "Speed" }).locator("output");
-  await expect(speed).toHaveText("100 %");
+  await expect(speed).toHaveText("100%");
   await page.getByRole("button", { name: "Slower" }).click();
-  await expect(speed).toHaveText("95 %");
+  await expect(speed).toHaveText("95%");
   const transpose = page.getByRole("group", { name: "Transpose" }).locator("output");
   await page.getByRole("button", { name: "Transpose up" }).click();
   await expect(transpose).toHaveText("+1");
@@ -102,7 +102,7 @@ test("the_loop_buttons_set_a_loop_shown_on_the_timeline", async ({ page }) => {
   await expect(page.locator(".control-bar .timeline-time").first()).toHaveText("0:00");
   // The loop's measure buttons are expert tools.
   await page.getByRole("button", { name: "Expert", exact: true }).click();
-  await page.getByRole("button", { name: "Loop to this measure" }).click();
+  await page.getByRole("button", { name: "Loop to this bar" }).click();
   await expect(page.locator(".timeline-loop")).toHaveCount(1);
   // A second click repeats the whole song instead, so the loop's mark goes.
   await loop.click();

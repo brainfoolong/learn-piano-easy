@@ -82,7 +82,7 @@ export const learnLesson = {
     wrong: "Not quite. Listen again and try another answer.",
     hint: "The highlighted answer is right.",
     /** The band after a round with too few right, before it starts over. */
-    roundAgain: (right: number, asked: number) => `${formatNumber("en", right)} of ${formatNumber("en", asked)} were right. Let's go round again.`,
+    roundAgain: (right: number, asked: number) => `${formatNumber("en", right)} of ${formatNumber("en", asked)} were right. Let's play another round.`,
   },
   readNote: {
     /** The staff's accessible name, which never gives the note away. */
@@ -121,11 +121,11 @@ export const learnLesson = {
   song: {
     play: "Play it in the player",
     /** The goal before the first try, with the accuracy the step asks, as a whole percent. */
-    goal: (percent: number) => `Play it with ${formatNumber("en", percent)} % of the notes right.`,
+    goal: (percent: number) => `Play it with ${formatNumber("en", percent)}% of the notes right.`,
     /** After the learner came back without a take that met the goal. */
-    notYet: (percent: number) => `The song waits for you. Play it again whenever you like, and aim for ${formatNumber("en", percent)} %.`,
+    notYet: (percent: number) => `The song waits for you. Play it again whenever you like, and aim for ${formatNumber("en", percent)}%.`,
     /** After a take that met the goal, with its accuracy. */
-    played: (percent: number) => `You played it with ${formatNumber("en", percent)} % of the notes right.`,
+    played: (percent: number) => `You played it with ${formatNumber("en", percent)}% of the notes right.`,
   },
   recap: {
     heading: "What you learned",

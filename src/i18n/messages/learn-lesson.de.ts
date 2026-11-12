@@ -114,7 +114,7 @@ export const learnLesson: typeof en = {
   moment: {
     continue: "Weiter",
     level: {
-      heading: "Level geschafft!",
+      heading: "Neues Level!",
       name: (level: number) => `Level ${formatNumber("de", level)}`,
       text: "Jede Lektion bringt dich weiter. Mach weiter so!",
     },

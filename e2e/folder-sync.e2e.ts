@@ -68,7 +68,7 @@ function todaysCopy(page: Page): Promise<string> {
   });
 }
 
-const card = (page: Page) => page.getByRole("region", { name: "Keep a folder in step" });
+const card = (page: Page) => page.getByRole("region", { name: "Keep a folder in sync" });
 
 test("a_change_reaches_the_folder", async ({ page }) => {
   await givePicker(page);

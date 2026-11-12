@@ -15,7 +15,7 @@ export const playerInput = {
     /** A chosen device that is unplugged. */
     notConnected: (name: string) => `${name} (not connected)`,
     unsupported: "This browser cannot reach MIDI devices. Chrome, Edge and Firefox can.",
-    off: "Connect to play from a MIDI keyboard.",
+    off: "Connect your MIDI devices to play from a MIDI keyboard.",
     asking: "Waiting for the browser's permission…",
     denied: "MIDI access was refused. Allow it in the browser's site settings, then connect again.",
     noInputs: "No MIDI device is plugged in.",
@@ -92,6 +92,8 @@ export const playerInput = {
   },
   /** The game's screen over the scene: its panel, its popups and the card that sums up a take. */
   game: {
+    /** The name each difficulty shows as in the panel. */
+    levels: { easy: "Easy", normal: "Normal", hard: "Hard" },
     /** The word each judgement pops up as, over its key. */
     words: {
       perfect: "Perfect",
@@ -122,13 +124,13 @@ export const playerInput = {
     bestCombo: (combo: number) => `Best combo ${formatNumber("en", combo)}`,
     stats: { perfect: "Perfect", great: "Great", good: "Good", wrong: "Wrong", miss: "Miss", late: "Late", short: "Too short", long: "Too long" },
     /** The tag on the result of a take played with wait mode on. */
-    helped: "With Wait for your notes",
+    helped: "With “Wait for your notes”",
     close: "Close",
     closeName: "Close the take's result",
   },
   pdf: {
     noSong: "Open a song first, then save its notes as a PDF.",
-    intro: (title: string) => `Saves the falling notes of ${title} above a piano, one screen to a page.`,
+    intro: (title: string) => `Saves the falling notes of ${title} above a piano, a few seconds of the song on each page.`,
     secondsPerPage: "Seconds per page",
     background: "Use background colours",
     pages: (pages: number, seconds: number) =>

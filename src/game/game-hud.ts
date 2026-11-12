@@ -30,6 +30,7 @@ import type { Messages } from "../i18n/messages/en";
 import type { PianoScene } from "../render/scene";
 import { button, el } from "../ui/dom";
 import type { GameEvent, GameEventKind, GameScore } from "./referee";
+import type { Difficulty } from "./rules";
 import "./game-hud.css";
 
 /** The game's texts in `messages`. */
@@ -62,8 +63,8 @@ const ENDINGS = new Set(["game-pop-float", "game-pop-fade"]);
 export interface GameHud {
   /** Hides the whole screen, and drops every popup, or shows it again. */
   setHidden(hidden: boolean): void;
-  /** Shows the difficulty's name, such as "Easy". */
-  setLevel(name: string): void;
+  /** Shows the name of `difficulty`, such as "Easy", in the live locale. */
+  setLevel(difficulty: Difficulty): void;
   /** Starts a take's display: the score and the combo at zero, and the last result put away. */
   newTake(): void;
   /** Shows each of `events` over its key, and `score` in the panel. */
@@ -110,7 +111,8 @@ function replay(element: HTMLElement, name: string): void {
 /** Builds the game's screen into `container`, placing popups by `scene`. It starts hidden. */
 export function createGameHud(container: HTMLElement, scene: Pick<PianoScene, "keyPoint">): GameHud {
   const score = el("output", { class: "game-score", text: "0" });
-  const level = el("span", { class: "game-level" });
+  let difficulty: Difficulty = "normal";
+  const level = localize(el("span", { class: "game-level" }), (m) => says(m).levels[difficulty]);
   const comboCount = el("strong", { class: "game-combo-count", text: "0" });
   const comboLabel = localize(el("span", { class: "game-combo-label" }), (m) => says(m).combo);
   const combo = el("span", { class: "game-combo", children: [comboCount, comboLabel] });
@@ -275,8 +277,9 @@ export function createGameHud(container: HTMLElement, scene: Pick<PianoScene, "k
       lastFrame = undefined;
     },
 
-    setLevel(name) {
-      level.textContent = name;
+    setLevel(next) {
+      difficulty = next;
+      level.textContent = says(t()).levels[next];
     },
 
     newTake() {

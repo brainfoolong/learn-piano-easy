@@ -56,7 +56,7 @@ export const learnProfile = {
   /** The link to the Data page, and the reset. */
   data: {
     heading: "Your data",
-    lead: "Your progress stays in this browser. The Data page saves it with everything else to one file, and restores it.",
+    lead: "Your progress stays in this browser. The page “Your data” saves it with everything else to one file, and restores it.",
     open: "Back up or restore",
     reset: "Reset all progress",
     failed: "Your browser refused to save. Nothing changed.",

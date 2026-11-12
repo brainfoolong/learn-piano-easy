@@ -13,9 +13,9 @@ export const playerInput: typeof en = {
     noOutput: "Kein Ausgang",
     notConnected: (name: string) => `${name} (nicht verbunden)`,
     unsupported: "Dieser Browser erreicht keine MIDI-Geräte. Chrome, Edge und Firefox können das.",
-    off: "Verbinde dich, um auf einem MIDI-Keyboard zu spielen.",
+    off: "Verbinde die MIDI-Geräte, um auf einem MIDI-Keyboard zu spielen.",
     asking: "Warte auf die Erlaubnis des Browsers…",
-    denied: "Der MIDI-Zugriff wurde abgelehnt. Erlaube ihn in den Website-Einstellungen des Browsers und verbinde dich dann neu.",
+    denied: "Der MIDI-Zugriff wurde abgelehnt. Erlaube ihn in den Website-Einstellungen des Browsers und verbinde dann erneut.",
     noInputs: "Kein MIDI-Gerät ist angeschlossen.",
     inputsFound: (n: number) => `${formatNumber("de", n)} ${plural("de", n, { one: "MIDI-Eingang", other: "MIDI-Eingänge" })} gefunden.`,
   },
@@ -67,7 +67,7 @@ export const playerInput: typeof en = {
     found: (n: number, count: number) => `${formatNumber("de", n)} von ${formatNumber("de", count)} Tönen gefunden.`,
     play: (note: string) => `Spiel ${note}`,
     progress: (i: number, count: number) => `Ton ${formatNumber("de", i)} von ${formatNumber("de", count)}`,
-    wrong: (note: string) => `Nicht ${note}. Versuch es noch mal.`,
+    wrong: (note: string) => `Nicht ${note}. Versuch es noch einmal.`,
     right: (note: string) => `${note} ist richtig.`,
     results: "Ergebnis: Töne üben",
     mistakes: (n: number, count: number) =>
@@ -87,6 +87,7 @@ export const playerInput: typeof en = {
     saveError: "Dieser Durchgang ließ sich nicht speichern.",
   },
   game: {
+    levels: { easy: "Leicht", normal: "Normal", hard: "Schwer" },
     words: {
       perfect: "Perfekt",
       great: "Super",
@@ -118,7 +119,7 @@ export const playerInput: typeof en = {
   },
   pdf: {
     noSong: "Öffne zuerst ein Lied, dann kannst du seine Noten als PDF speichern.",
-    intro: (title: string) => `Speichert die fallenden Noten von ${title} über einem Klavier, ein Bildschirm pro Seite.`,
+    intro: (title: string) => `Speichert die fallenden Noten von ${title} über einem Klavier, ein paar Sekunden des Lieds auf jeder Seite.`,
     secondsPerPage: "Sekunden pro Seite",
     background: "Hintergrundfarben verwenden",
     pages: (pages: number, seconds: number) =>

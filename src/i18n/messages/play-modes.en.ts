@@ -1,7 +1,7 @@
 /** The play modes at `modes/`, and the player's toast that applies one, in English. */
 export const playModes = {
   eyebrow: "Ready, set, play",
-  lead: "Pick a mode, and the player sets itself up with the right song, the right help and the right look. Then you just play.",
+  lead: "Pick a mode, and the player sets itself up with the right song, the right help and the right look. Then you play.",
   /** The line under the cards. */
   note: "A mode changes a few settings of the player. Once it starts, you can undo it with one click, and change any setting later.",
   /** The list of what a mode sets, by its accessible name. */
@@ -39,7 +39,7 @@ export const playModes = {
       tag: "For experts",
       name: "Challenge",
       text: "Game mode on its hardest level, with no names and no hints. Only a clean run earns the top score.",
-      traits: ["Points and combos on hard", "No names and no key hints", "A faster version of the song"],
+      traits: ["Points and combos on hard", "No names and no key hints", "A harder version of the song"],
       song: "In the Hall of the Mountain King, Medium",
     },
     concert: {
@@ -52,7 +52,7 @@ export const playModes = {
     playAlong: {
       tag: "Step by step",
       name: "Play along",
-      text: "The song waits for you at every note. Each note shows its name and its finger, and so does each key.",
+      text: "The song waits for you at every note. Each note shows its name and its finger, and each key shows its name.",
       traits: ["The notes wait for you", "Note names and fingers on the notes", "Names on the keys, and the next keys light up"],
       song: "Ode to Joy, Beginner",
     },
@@ -60,7 +60,7 @@ export const playModes = {
       tag: "Start small",
       name: "One hand at a time",
       text: "Learn the right hand first while the app plays the left. The song waits for each of your notes.",
-      traits: ["Only your right hand plays", "The app plays the left hand", "Switch hands under Settings, Your hands"],
+      traits: ["Only your right hand plays", "The app plays the left hand", "Switch hands in the settings, under “Your hands”"],
       song: "Jingle Bells, Beginner",
     },
     readMusic: {
@@ -80,7 +80,7 @@ export const playModes = {
     rhythm: {
       tag: "Timing",
       name: "Rhythm keeper",
-      text: "A metronome ticks, and each note you play is scored on its timing. No names and no waiting, just the beat.",
+      text: "A metronome ticks, and each note you play is scored on its timing. No names and no waiting, only the beat.",
       traits: ["A metronome on every beat", "Each note scored on its timing", "The song never waits"],
       song: "Twinkle Twinkle Little Star, Easy",
     },

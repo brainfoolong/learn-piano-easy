@@ -6,7 +6,7 @@ const n = (value: number) => formatNumber("de", value);
 const days = (value: number) => `${n(value)} ${plural("de", value, { one: "Tag", other: "Tage" })}`;
 
 export const learnProfile: typeof en = {
-  loading: "Dein Fortschritt lädt …",
+  loading: "Dein Fortschritt lädt…",
   level: {
     heading: "Level",
     name: (level) => `Level ${n(level)}`,
@@ -23,7 +23,7 @@ export const learnProfile: typeof en = {
   calendar: {
     heading: "Die letzten acht Wochen",
     label: (met, played) =>
-      `In den letzten acht Wochen ${plural("de", met, { one: "hat", other: "haben" })} ${days(met)} das Ziel erreicht, und an ${days(played)} gab es eine Lektion.`,
+      `In den letzten acht Wochen ${plural("de", met, { one: "hat", other: "haben" })} ${days(met)} das Ziel erreicht, und an ${n(played)} ${plural("de", played, { one: "Tag", other: "Tagen" })} gab es eine Lektion.`,
     met: "Ziel erreicht",
     played: "Gespielt",
     none: "Keine Lektion",

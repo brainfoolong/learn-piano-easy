@@ -17,7 +17,7 @@ export const playerSettingsLook = {
   },
   noteBorderRadius: {
     label: "Corner radius (%)",
-    help: "How round the corners of a note are, as a share of its width.",
+    help: "How round the corners of a note are.",
   },
   minNoteHeight: {
     label: "Shortest note length",
@@ -29,7 +29,7 @@ export const playerSettingsLook = {
   },
   strokeNotesWidth: {
     label: "Edge glow strength",
-    help: "How wide and bright the rim of light around each note is.",
+    help: "How bright the rim of light around each note is.",
   },
   noteEndedShrink: {
     label: "Played notes shrink into their key",
@@ -62,16 +62,16 @@ export const playerSettingsLook = {
     help: "The colour of the line between each B and the next C.",
   },
   drawMeasureLines: {
-    label: "Measure lines",
-    help: "A line across the lanes at the start of each measure.",
+    label: "Bar lines",
+    help: "A line across the lanes at the start of each bar.",
   },
   measureLineThickness: {
-    label: "Measure line thickness",
-    help: "How thick the line at each measure is.",
+    label: "Bar line thickness",
+    help: "How thick the line at each bar is.",
   },
   measureLineColor: {
-    label: "Measure line colour",
-    help: "The colour of the line at each measure.",
+    label: "Bar line colour",
+    help: "The colour of the line at each bar.",
   },
   enableDrawBeatLines: {
     label: "Beat lines",
@@ -86,12 +86,12 @@ export const playerSettingsLook = {
     help: "The colour of the line on each beat.",
   },
   enableDrawMeasureNumbers: {
-    label: "Measure numbers",
-    help: "The number of each measure, beside its line.",
+    label: "Bar numbers",
+    help: "The number of each bar, beside its line.",
   },
   measureNumbersColor: {
-    label: "Measure number colour",
-    help: "The colour of the measure numbers.",
+    label: "Bar number colour",
+    help: "The colour of the bar numbers.",
   },
   highlightInputLanes: {
     label: "Light the lanes of the keys you hold",
@@ -111,7 +111,7 @@ export const playerSettingsLook = {
   },
   showSustainOnOffs: {
     label: "Pedal down and up",
-    help: "A line marked Ped. where the pedal goes down, and ✱ where it comes up.",
+    help: "A line marked “Ped.” where the pedal goes down, and “✱” where it comes up.",
   },
   showSustainChannels: {
     label: "Pedal channels",
@@ -137,7 +137,7 @@ export const playerSettingsLook = {
   },
   particlesStars: {
     label: "Stars",
-    help: "Small spinning stars rise from each key.",
+    help: "Small spinning stars and dots rise from each key and fall back.",
   },
   particlesCustom: {
     label: "Your own particles",
@@ -191,11 +191,11 @@ export const playerSettingsLook = {
   },
   particleSpeedX: {
     label: "Sideways speed",
-    help: "In key widths per second.",
+    help: "The fastest sideways speed, in key widths per second.",
   },
   particleSpeedY: {
     label: "Rising speed",
-    help: "In key widths per second.",
+    help: "The fastest rising speed, in key widths per second.",
   },
   particlesFriction: {
     label: "Drag",
@@ -219,7 +219,7 @@ export const playerSettingsLook = {
   },
   particleNoiseResX: {
     label: "Sideways wander detail",
-    help: "Higher values make the sideways wander change direction more often.",
+    help: "Higher values make the particles of neighbouring keys wander sideways more differently.",
   },
   particleNoiseStrengthX: {
     label: "Sideways wander",
@@ -227,11 +227,11 @@ export const playerSettingsLook = {
   },
   particleNoiseResY: {
     label: "Rising wander detail",
-    help: "Higher values make the rising wander change more often.",
+    help: "Higher values make the rising wander of neighbouring keys differ more.",
   },
   particleNoiseStrengthY: {
     label: "Rising wander",
-    help: "How much the particles speed up and slow down at random as they rise.",
+    help: "How far the particles drift up and down at random as they rise.",
   },
   particleNoiseStrengthSize: {
     label: "Size wander",
@@ -379,7 +379,7 @@ export const playerSettingsLook = {
   },
   lyricsY: {
     label: "Height (% from the top)",
-    help: "Where the lyrics sit on the screen. 0 is the top edge.",
+    help: "Where the middle of the lyrics line sits in the scene. 0 is the top edge.",
   },
   lyricsCursorEnabled: {
     label: "Cursor",
@@ -449,12 +449,12 @@ export const playerSettingsLook = {
   },
   sheetMeasureScroll: {
     label: "Scroll the sheet with the song",
-    help: "When off, the measures stand in lines, and the line in play stays in view.",
+    help: "When off, the bars stand in lines, and the line in play stays in view.",
   },
   sheetMeasureNumbers: {
-    label: "Measure numbers",
-    help: "Where the sheet shows the number of each measure.",
-    options: { off: "None", lineStart: "At the start of each line", every: "On every measure" },
+    label: "Bar numbers",
+    help: "Where the sheet shows the number of each bar.",
+    options: { off: "None", lineStart: "At the start of each line", every: "On every bar" },
   },
   enableGrandStaff: {
     label: "Join two staves with a brace",
@@ -481,7 +481,7 @@ export const playerSettingsLook = {
   },
   sheetMinNoteDenom: {
     label: "Shortest note value",
-    help: "Every note is placed on a grid of this value.",
+    help: "The shortest note the sheet writes. Triplets of it still fit.",
     options: { "4": "Quarter", "8": "Eighth", "16": "16th", "32": "32nd", "64": "64th" },
   },
   hideRestsBelow: {
@@ -523,17 +523,17 @@ export const playerSettingsLook = {
   },
   sheetShowHoverInfo: {
     label: "Name the notes under the pointer",
-    help: "Point at a note on the sheet to see its name.",
+    help: "Point at a note or chord on the sheet to see the names of its notes.",
   },
   sheetBgColor: {
     label: "Paper colour",
-    help: "The ink turns light on a dark paper.",
+    help: "The colour behind the sheet music. On dark paper the ink turns light.",
   },
 
   // PDF
   pdfExportButtonGroup: {
     label: "Save the notes as a PDF",
-    help: "Opens a dialog that saves the open song's falling notes, a screen to a page.",
+    help: "Opens a dialog that saves the open song's falling notes as pages you set the length of.",
   },
   exportPdfBackground: {
     label: "Use background colours",

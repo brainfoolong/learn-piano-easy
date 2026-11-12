@@ -17,9 +17,9 @@ export const dataPage = {
     text: "Open a backup file of Learn Piano Easy. A settings file or a progress backup of an older version works too.",
     action: "Restore a backup",
   },
-  /** The card that keeps a folder in step with this browser. */
+  /** The card that keeps a folder in sync with this browser. */
   folder: {
-    heading: "Keep a folder in step",
+    heading: "Keep a folder in sync",
     text: "Pick a folder, such as one your cloud drive syncs. Every change then reaches it on its own, with a dated copy for each of the last seven days.",
     connect: "Connect a folder",
     starting: "Looking for your folder…",

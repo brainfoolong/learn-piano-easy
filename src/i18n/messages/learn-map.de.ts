@@ -4,12 +4,12 @@ import type { learnMap as en } from "./learn-map.en";
 
 export const learnMap: typeof en = {
   lead: "Geh den Weg Lektion für Lektion. Jede Welt endet mit einem Boss.",
-  loading: "Der Kurs lädt …",
+  loading: "Der Kurs lädt…",
   continue: "Weiter",
   nextUp: "Als Nächstes",
   world: (n) => `Welt ${formatNumber("de", n)}`,
   progress: (done, all) => `${formatNumber("de", done)} von ${formatNumber("de", all)} ${plural("de", all, { one: "Lektion", other: "Lektionen" })}`,
-  locked: "Besiege den Boss der Welt davor, um diese zu öffnen.",
+  locked: "Besiege den Boss der Welt davor oder bestehe den Einstufungstest dieser Welt, um sie zu öffnen.",
   beaten: "Geschafft",
   node: {
     locked: (name) => `${name}, gesperrt`,

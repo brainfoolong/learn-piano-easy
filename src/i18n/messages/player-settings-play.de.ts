@@ -4,8 +4,8 @@ import type { playerSettingsPlay as en } from "./player-settings-play.en";
 export const playerSettingsPlay: typeof en = {
   // Site
   siteTheme: {
-    label: "Website-Design",
-    help: "Die Farben der Seiten dieser Website. Die Farben des Klaviers folgen dem Design des Players weiter unten.",
+    label: "Farbschema der Website",
+    help: "Die Farben der Seiten dieser Website. Das Farbschema der Szene setzt die Farben des Klaviers und seiner Bahnen.",
     options: { system: "Wie das System", light: "Hell", dark: "Dunkel" },
   },
   language: {
@@ -32,8 +32,8 @@ export const playerSettingsPlay: typeof en = {
   },
   // General
   theme: {
-    label: "Design der Szene",
-    help: "Setzt die Farben des Klaviers und seiner Bahnen. Das Design der Seite oben in der Leiste setzt den Rest des Players.",
+    label: "Farbschema der Szene",
+    help: "Setzt die Farben des Klaviers und seiner Bahnen. Das Farbschema der Website oben in der Leiste setzt den Rest des Players.",
     options: { dark: "Dunkel", light: "Hell" },
   },
   yourData: {
@@ -45,8 +45,8 @@ export const playerSettingsPlay: typeof en = {
     help: "Öffnet das zuletzt gespielte Lied, sobald du den Player öffnest.",
   },
   saveIndexedDb: {
-    label: "Hochgeladene Lieder in diesem Browser behalten",
-    help: "Lieder von deinem Computer bleiben in deiner Bibliothek, auch wenn die Seite neu lädt.",
+    label: "Deine Dateien in diesem Browser behalten",
+    help: "Lieder, die du von deinem Computer öffnest, bleiben in deiner Bibliothek, auch wenn die Seite neu lädt.",
   },
   disableHotkeys: {
     label: "Tastenkürzel ausschalten",
@@ -58,7 +58,7 @@ export const playerSettingsPlay: typeof en = {
   },
   leadIn: {
     label: "Zeit vor dem ersten Ton (s)",
-    help: "Jedes Lied beginnt so lange vor seinem ersten Ton. Bei jeder Wiederholung wartet es noch einmal so lange.",
+    help: "Jedes Lied beginnt so lange vor seinem ersten Ton. Startet es am Ende neu, wartet es noch einmal so lange.",
   },
   restartSongOnEnd: {
     label: "Lied am Ende neu starten",
@@ -70,7 +70,7 @@ export const playerSettingsPlay: typeof en = {
   },
   fitZoomOnNewSong: {
     label: "Zoom an jedes neue Lied anpassen",
-    help: "Ein neu geöffnetes Lied passt ganz auf die Zeitleiste.",
+    help: "Ein neu geöffnetes Lied passt ganz in die Bahnen vor dem Klavier.",
   },
   transposeOffset: {
     label: "Transponieren (Halbtöne)",
@@ -90,30 +90,30 @@ export const playerSettingsPlay: typeof en = {
   },
   showBPM: {
     label: "Tempo in BPM anzeigen",
-    help: "Zeigt die Schläge pro Minute des Lieds neben dem Tempo.",
+    help: "Zeigt die aktuellen Schläge pro Minute des Lieds über der Szene, neben den Bildern pro Sekunde.",
   },
   showFps: {
     label: "Bilder pro Sekunde anzeigen",
     help: "Zeigt, wie viele Bilder pro Sekunde die Szene zeichnet. Eine kleine Zahl heißt, dass das Bild ruckelt.",
   },
   showNoteDebugInfo: {
-    label: "Details einer Note beim Darüberfahren zeigen",
+    label: "Details einer Note beim Darüberfahren anzeigen",
     help: "Zeigst du auf eine Note, siehst du ihre Tonhöhe, Zeit, Länge und Anschlagstärke.",
   },
   showMilliseconds: {
-    label: "Millisekunden auf der Zeitleiste zeigen",
+    label: "Millisekunden auf der Zeitleiste anzeigen",
     help: "Die Zeit auf der Zeitleiste zeigt auch Tausendstelsekunden.",
   },
   progressBarMeasures: {
-    label: "Zeitleiste in Takten zeigen",
+    label: "Zeitleiste in Takten anzeigen",
     help: "Die Zeitleiste zählt Takte statt Minuten und Sekunden.",
   },
   progressBarMeasureLines: {
-    label: "Taktlinien auf der Zeitleiste zeigen",
+    label: "Taktstriche auf der Zeitleiste anzeigen",
     help: "Zeichnet eine dünne Linie auf die Zeitleiste, wo jeder Takt beginnt.",
   },
   showMarkersTimeline: {
-    label: "Marker auf der Zeitleiste zeigen",
+    label: "Marker auf der Zeitleiste anzeigen",
     help: "Zeigt die Marker des Lieds, etwa Strophe oder Refrain, auf der Zeitleiste.",
   },
   // Loop
@@ -184,7 +184,7 @@ export const playerSettingsPlay: typeof en = {
     options: { room: "Zimmer", hall: "Konzertsaal", church: "Kirche" },
   },
   detune: {
-    label: "Verstimmen (Cent)",
+    label: "Verstimmung (Cent)",
     help: "Stimmt alle Töne etwas höher oder tiefer. 100 Cent sind ein Halbton.",
   },
   adsrAttack: {
@@ -231,7 +231,7 @@ export const playerSettingsPlay: typeof en = {
   },
   synchedMetronome: {
     label: "Metronom im Takt des Lieds halten",
-    help: "Das Metronom folgt dem Tempo des Lieds. Ist das aus, hält es seinen eigenen gleichmäßigen Schlag.",
+    help: "Das Metronom folgt dem Tempo des Lieds. Ist das aus, schweigt das Metronom des Players.",
   },
   enableEqualizer: {
     label: "Equalizer",
@@ -320,7 +320,7 @@ export const playerSettingsPlay: typeof en = {
   },
   noteToHeightConst: {
     label: "Sekunden im Voraus",
-    help: "Wie viele Sekunden kommender Noten die Bahnen zeigen. Weniger Sekunden machen die Noten länger und langsamer.",
+    help: "Wie viele Sekunden kommender Noten die Bahnen zeigen. Weniger Sekunden machen die Noten länger und schneller.",
   },
   measuresShownOnScreen: {
     label: "Takte im Voraus",
@@ -390,7 +390,7 @@ export const playerSettingsPlay: typeof en = {
   },
   playHands: {
     label: "Deine Hände",
-    help: "Die App spielt die Hand, die du auslässt.",
+    help: "Die Hände, für die dein Spiel gewertet wird. Ist „Auf deine Töne warten“ an, spielt die App die Hand, die du auslässt.",
     options: { both: "Beide Hände", right: "Rechte Hand", left: "Linke Hand" },
   },
   playalongSilentNotes: {
@@ -526,7 +526,7 @@ export const playerSettingsPlay: typeof en = {
     help: "Eine Linie, die sich über jeder klingenden Taste kräuselt.",
   },
   pianoLineSpeed: {
-    label: "Wellentempo",
+    label: "Wellengeschwindigkeit",
     help: "Wie schnell sich die Wellen der Linie bewegen.",
   },
   pianoLineResolution: {

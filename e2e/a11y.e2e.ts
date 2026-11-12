@@ -64,7 +64,7 @@ test("every_control_has_a_name_and_a_focus_ring", async ({ page }) => {
   const dialogs: [opener: string, name: string][] = [
     ["Songs", "Songs"],
     ["Tracks", "Tracks"],
-    ["About", "About learn-piano-easy"],
+    ["About", "About Learn Piano Easy"],
   ];
   for (const [opener, name] of dialogs) {
     await page.getByRole("button", { name: opener, exact: true }).click();

@@ -17,7 +17,7 @@ export const learnSetup: typeof en = {
     computer: { name: "Die Computertastatur", text: "Die Buchstabentasten spielen die Noten." },
     screen: { name: "Der Bildschirm", text: "Tippe oder klicke auf die Tasten am Bildschirm." },
     noMidi: "Dieser Browser kann kein MIDI. Spiel stattdessen auf der Computertastatur oder am Bildschirm.",
-    check: "Drück eine Taste, damit wir prüfen, ob wir sie hören.",
+    check: "Drück eine beliebige Taste, um zu prüfen, ob wir sie hören.",
     checkMidi: "Drück eine beliebige Taste auf deinem MIDI-Keyboard.",
     checkComputer: "Drück eine Buchstabentaste wie Q, W oder E.",
     checkScreen: "Tippe unten auf eine Taste.",

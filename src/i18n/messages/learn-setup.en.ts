@@ -4,7 +4,7 @@ import { formatNumber } from "../format";
 export const learnSetup = {
   title: "Welcome to Learn Piano",
   /** What the mascot says on the first question, and what its picture shows. */
-  welcome: "Hi, I am your piano teacher. Three quick questions, and then we play.",
+  welcome: "Hi, I'm your piano teacher. Three quick questions, and then we play.",
   mascot: "Your piano teacher, an ape with honey fur in a corduroy jacket",
   close: "Skip the setup",
   progress: "Setup",
@@ -40,7 +40,7 @@ export const learnSetup = {
     question: "How much a day?",
     lead: "Reach your goal each day to grow your streak. A new lesson with three stars earns 30 XP.",
     label: "Daily goal",
-    names: { "10": "Easy", "20": "Steady", "30": "Keen", "50": "Bold" },
+    names: { "10": "Relaxed", "20": "Steady", "30": "Keen", "50": "Bold" },
     option: (xp: number, name: string) => `${formatNumber("en", xp)} XP, ${name}`,
     start: "Start learning",
   },

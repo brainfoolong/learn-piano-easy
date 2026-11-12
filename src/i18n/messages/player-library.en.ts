@@ -8,7 +8,7 @@ export const playerLibrary = {
       common: "One hand position, slow notes, and a bass that waits for you.",
       rare: "Both hands play. Eighth notes, simple chords, and a hand that moves now and then.",
       epic: "Broken chords, thumb crossings and the pedal.",
-      legendary: "Both hands busy, fast and apart.",
+      legendary: "Both hands busy, fast and independent.",
     },
     /** The name of a song's last step: the original score, which is not ours. */
     originalName: "Original",
@@ -100,8 +100,8 @@ export const playerLibrary = {
     empty: { title: "No song matches", message: "Try another word, or take a filter off." },
     own: {
       heading: "Your songs",
-      addFiles: { label: "Add files", title: "Add MIDI files" },
-      addFolder: { label: "Add a folder", title: "Add a folder of MIDI files" },
+      addFiles: { label: "Add files", title: "Add MIDI or MusicXML files" },
+      addFolder: { label: "Add a folder", title: "Add a folder of MIDI or MusicXML files" },
       hint: "Add your own MIDI or MusicXML files here, or drop them anywhere on the page.",
       export: "Export",
       exportTitle: (title: string) => `Export ${title}`,
@@ -140,8 +140,8 @@ export const playerLibrary = {
     wholeSong: "the whole song",
     waits: "waits for you",
     playsOn: "plays on",
-    /** One line that sums up a step, as in "Right hand, 60 %, bars 1–4, waits for you". */
-    summary: (hands: string, percent: number, loop: string, wait: string) => `${hands}, ${formatNumber("en", percent)} %, ${loop}, ${wait}`,
+    /** One line that sums up a step, as in "Right hand, 60%, bars 1–4, waits for you". */
+    summary: (hands: string, percent: number, loop: string, wait: string) => `${hands}, ${formatNumber("en", percent)}%, ${loop}, ${wait}`,
     apply: "Apply",
     applyTitle: (n: number) => `Apply step ${n}`,
     /** The lead of a tip's line: its bars and its kind. */

@@ -5,7 +5,7 @@ export const playerSettingsPlay = {
   // Site
   siteTheme: {
     label: "Site theme",
-    help: "The colours of the site's pages. The piano's colours follow the player's theme below.",
+    help: "The colours of the site's pages. The scene theme sets the colours of the piano and its lanes.",
     options: { system: "Like the system", light: "Light", dark: "Dark" },
   },
   language: {
@@ -28,7 +28,7 @@ export const playerSettingsPlay = {
   },
   expertControls: {
     label: "Expert tools",
-    help: "The control bar's Expert button shows the speed, transpose, the loop's measures, fit and the view's sideways move.",
+    help: "The control bar's Expert button shows the speed, transpose, the loop's first and last bar, fit and the view's sideways move.",
   },
   // General
   theme: {
@@ -45,7 +45,7 @@ export const playerSettingsPlay = {
     help: "Opens the song you played last each time you open the player.",
   },
   saveIndexedDb: {
-    label: "Keep uploaded songs in this browser",
+    label: "Keep your files in this browser",
     help: "Songs you open from your computer stay in your library after the page reloads.",
   },
   disableHotkeys: {
@@ -58,7 +58,7 @@ export const playerSettingsPlay = {
   },
   leadIn: {
     label: "Time before the first note (s)",
-    help: "Every song starts this long before its first note, and waits as long again each time it repeats.",
+    help: "Every song starts this long before its first note, and waits as long again each time it plays again from its end.",
   },
   restartSongOnEnd: {
     label: "Restart the song when it ends",
@@ -70,7 +70,7 @@ export const playerSettingsPlay = {
   },
   fitZoomOnNewSong: {
     label: "Fit the zoom to each new song",
-    help: "A song you open shows whole on the timeline.",
+    help: "A song you open fits whole in the lanes ahead of the piano.",
   },
   transposeOffset: {
     label: "Transpose (semitones)",
@@ -90,7 +90,7 @@ export const playerSettingsPlay = {
   },
   showBPM: {
     label: "Show the tempo in BPM",
-    help: "Shows the song's beats per minute next to the speed.",
+    help: "Shows the song's current beats per minute over the scene, beside the frames per second.",
   },
   showFps: {
     label: "Show frames per second",
@@ -105,12 +105,12 @@ export const playerSettingsPlay = {
     help: "The time on the timeline also shows thousandths of a second.",
   },
   progressBarMeasures: {
-    label: "Show the timeline in measures",
-    help: "The timeline counts measures instead of minutes and seconds.",
+    label: "Show the timeline in bars",
+    help: "The timeline counts bars instead of minutes and seconds.",
   },
   progressBarMeasureLines: {
-    label: "Show measure lines on the timeline",
-    help: "Draws a thin line on the timeline where each measure starts.",
+    label: "Show bar lines on the timeline",
+    help: "Draws a thin line on the timeline where each bar starts.",
   },
   showMarkersTimeline: {
     label: "Show markers on the timeline",
@@ -119,15 +119,15 @@ export const playerSettingsPlay = {
   // Loop
   enableLoop: {
     label: "Loop a passage",
-    help: "Repeats the measures below again and again, so you can practise them.",
+    help: "Repeats the bars below again and again, so you can practise them.",
   },
   loopStart: {
-    label: "First measure of the loop",
-    help: "The loop starts at the beginning of this measure.",
+    label: "First bar of the loop",
+    help: "The loop starts at the beginning of this bar.",
   },
   loopEnd: {
-    label: "Last measure of the loop",
-    help: "The loop ends at the end of this measure.",
+    label: "Last bar of the loop",
+    help: "The loop ends at the end of this bar.",
   },
   loopDelay: {
     label: "Count-in (beats)",
@@ -143,7 +143,7 @@ export const playerSettingsPlay = {
   },
   muteLoop: {
     label: "Silence the song outside the loop",
-    help: "Only the notes of the looped measures sound.",
+    help: "Only the notes of the looped bars sound.",
   },
   loopTrainer: {
     label: "Loop trainer",
@@ -231,7 +231,7 @@ export const playerSettingsPlay = {
   },
   synchedMetronome: {
     label: "Keep the metronome in time with the song",
-    help: "The metronome follows the song's tempo and speed. When off, it keeps its own steady beat.",
+    help: "The metronome follows the song's tempo and speed. When off, the player's metronome stays silent.",
   },
   enableEqualizer: {
     label: "Equaliser",
@@ -315,16 +315,16 @@ export const playerSettingsPlay = {
     help: "How brightly the notes and keys shine.",
   },
   zoomByMeasures: {
-    label: "Zoom by measures",
-    help: "The lanes show a number of measures instead of a number of seconds.",
+    label: "Zoom by bars",
+    help: "The lanes show a number of bars instead of a number of seconds.",
   },
   noteToHeightConst: {
     label: "Seconds shown ahead",
-    help: "How many seconds of coming notes the lanes show. Fewer seconds make the notes longer and slower.",
+    help: "How many seconds of coming notes the lanes show. Fewer seconds make the notes longer and faster.",
   },
   measuresShownOnScreen: {
-    label: "Measures shown ahead",
-    help: "How many measures of coming notes the lanes show when you zoom by measures.",
+    label: "Bars shown ahead",
+    help: "How many bars of coming notes the lanes show when you zoom by bars.",
   },
   // Keyboard
   keyboardFirstNote: {
@@ -390,7 +390,7 @@ export const playerSettingsPlay = {
   },
   playHands: {
     label: "Your hands",
-    help: "The app plays the hand you leave out.",
+    help: "The hands your playing is scored on. With “Wait for your notes” on, the app plays the hand you leave out.",
     options: { both: "Both hands", right: "Right hand", left: "Left hand" },
   },
   playalongSilentNotes: {

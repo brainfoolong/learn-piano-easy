@@ -26,7 +26,7 @@ test("app_shell_starts_without_errors_and_draws_the_scene", async ({ page }) => 
 test("about_dialog_shows_the_license_and_the_notices", async ({ page }) => {
   await page.goto("./play/");
   await page.getByRole("button", { name: "About" }).click();
-  const dialog = page.getByRole("dialog", { name: "About learn-piano-easy" });
+  const dialog = page.getByRole("dialog", { name: "About Learn Piano Easy" });
   await expect(dialog).toContainText("MIT License");
   await dialog.getByText("Third-party notices", { exact: true }).click();
   await expect(dialog.getByText(/three\.js/).first()).toBeVisible();

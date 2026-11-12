@@ -42,7 +42,7 @@ export const playerLibrary: typeof en = {
   },
   panel: {
     search: { placeholder: "Titel, Komponist, Schlagwort", label: "Lieder suchen", clear: "Suche leeren" },
-    fits: "Passt auf meine Tastatur",
+    fits: "Passt auf mein Keyboard",
     kinds: { level: "Schwierigkeit", yours: "Deins", collection: "Sammlung", style: "Stil", skill: "Technik", composer: "Komponist" },
     levels: { beginner: "Einsteiger", easy: "Leicht", medium: "Mittel", hard: "Schwer", advanced: "Fortgeschritten", expert: "Experte" },
     styles: {
@@ -93,8 +93,8 @@ export const playerLibrary: typeof en = {
     empty: { title: "Kein Lied passt", message: "Versuch ein anderes Wort, oder nimm einen Filter heraus." },
     own: {
       heading: "Deine Lieder",
-      addFiles: { label: "Dateien hinzufügen", title: "MIDI-Dateien hinzufügen" },
-      addFolder: { label: "Ordner hinzufügen", title: "Einen Ordner mit MIDI-Dateien hinzufügen" },
+      addFiles: { label: "Dateien hinzufügen", title: "MIDI- oder MusicXML-Dateien hinzufügen" },
+      addFolder: { label: "Ordner hinzufügen", title: "Einen Ordner mit MIDI- oder MusicXML-Dateien hinzufügen" },
       hint: "Füge hier deine eigenen MIDI- oder MusicXML-Dateien hinzu, oder zieh sie irgendwo auf die Seite.",
       export: "Exportieren",
       exportTitle: (title: string) => `${title} exportieren`,
@@ -136,13 +136,13 @@ export const playerLibrary: typeof en = {
     tip: (bars: string, kind: string) => `${bars}, ${kind}: `,
     loop: "Schleife",
     loopTitle: (bar: number) => `Takt ${bar} als Schleife spielen`,
-    headings: { about: "Über das Lied", funFact: "Wusstest du?", skills: "Fähigkeiten", practice: "Übeplan", tips: "Tipps", tricky: "Knifflige Stellen" },
+    headings: { about: "Über das Lied", funFact: "Wusstest du?", skills: "Techniken", practice: "Übeplan", tips: "Tipps", tricky: "Knifflige Stellen" },
     tipKinds: { fingering: "Fingersatz", rhythm: "Rhythmus", sound: "Klang", trick: "Kniff" },
     tipMark: (kind: string) => `Tipp: ${kind}`,
     trickyMark: "Knifflige Stelle",
   },
   openSong: {
-    outside: "Dieses Lied hat Noten außerhalb deiner Tastatur.",
+    outside: "Dieses Lied hat Noten außerhalb deines Keyboards.",
     fold: "Auf deine Tasten verschieben",
     failed: (title: string, reason: string) => `„${title}“ ließ sich nicht öffnen: ${reason}`,
     catalogFailed: (status: number) => `Die Liederliste wurde nicht geladen (${status}).`,

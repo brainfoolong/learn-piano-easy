@@ -18,9 +18,9 @@ export const learnBadges: typeof en = {
     "rhythm-ace": { name: "Rhythmus-Ass", description: "Bestehe einen Rhythmus-Schritt beim ersten Versuch." },
     "sight-reader": { name: "Notenleser", description: "Lies zehn Noten hintereinander ohne Fehler." },
     "early-bird": { name: "Frühaufsteher", description: "Schließe eine Lektion vor 8 Uhr morgens ab." },
-    "night-owl": { name: "Nachteule", description: "Schließe eine Lektion nach 22 Uhr ab." },
+    "night-owl": { name: "Nachteule", description: "Schließe eine Lektion um 22 Uhr oder später ab." },
     comeback: { name: "Willkommen zurück", description: "Komm nach einer Woche Pause für eine Lektion zurück." },
-    legendary: { name: "Schweres Lied", description: "Spiele die Fassung „Schwer“ eines unserer Lieder in Einfach Klavier spielen bis zum Ende." },
+    legendary: { name: "Schweres Lied", description: "Spiele die Fassung „Schwer“ eines unserer Lieder in „Einfach Klavier spielen“ bis zum Ende." },
   },
   world: {
     name: (world) => `${world} gemeistert`,

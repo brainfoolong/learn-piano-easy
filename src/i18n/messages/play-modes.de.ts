@@ -3,7 +3,7 @@ import type { playModes as en } from "./play-modes.en";
 
 export const playModes: typeof en = {
   eyebrow: "Auf die Plätze, fertig, los",
-  lead: "Wähle einen Modus, und der Player richtet sich selbst ein: mit dem passenden Lied, der passenden Hilfe und dem passenden Look. Dann spielst du einfach.",
+  lead: "Wähle einen Modus, und der Player richtet sich selbst ein: mit dem passenden Lied, der passenden Hilfe und dem passenden Look. Dann spielst du los.",
   note: "Ein Modus ändert ein paar Einstellungen des Players. Sobald er startet, machst du ihn mit einem Klick rückgängig, und jede Einstellung kannst du später ändern.",
   traits: "Was er einstellt",
   song: (title: string) => `Lied: ${title}`,
@@ -30,14 +30,14 @@ export const playModes: typeof en = {
       name: "Spielmodus",
       text: "Jede Note, die du triffst, bringt Punkte, und das Klavier funkelt zurück. Jag eine Combo und schlag deinen Rekord.",
       traits: ["Punkte und Combos auf Leicht", "Funken, Lichtblitze und ein leuchtendes Klavier", "Ein kurzes, eingängiges Lied"],
-      song: "In der Halle des Bergkönigs, Anfänger",
+      song: "In the Hall of the Mountain King, Einsteiger",
     },
     challenge: {
       tag: "Für Profis",
       name: "Herausforderung",
       text: "Der Spielmodus auf seiner schwersten Stufe, ohne Namen und ohne Hinweise. Nur ein sauberer Lauf bringt die Bestwertung.",
-      traits: ["Punkte und Combos auf Schwer", "Keine Namen und keine Tastenhinweise", "Eine schnellere Fassung des Lieds"],
-      song: "In der Halle des Bergkönigs, Mittel",
+      traits: ["Punkte und Combos auf Schwer", "Keine Namen und keine Tastenhinweise", "Eine schwerere Fassung des Lieds"],
+      song: "In the Hall of the Mountain King, Mittel",
     },
     concert: {
       tag: "Zurücklehnen",
@@ -51,21 +51,21 @@ export const playModes: typeof en = {
       name: "Mitspielen",
       text: "Das Lied wartet bei jeder Note auf dich. Jede Note zeigt ihren Namen und ihren Finger, und jede Taste ihren Namen.",
       traits: ["Die Noten warten auf dich", "Notennamen und Finger auf den Noten", "Namen auf den Tasten, und die nächsten Tasten leuchten"],
-      song: "Ode an die Freude, Anfänger",
+      song: "Ode to Joy, Einsteiger",
     },
     oneHand: {
       tag: "Klein anfangen",
       name: "Eine Hand nach der anderen",
       text: "Lerne zuerst die rechte Hand, während die App die linke spielt. Das Lied wartet auf jede deiner Noten.",
-      traits: ["Nur deine rechte Hand spielt", "Die App spielt die linke Hand", "Die Hand wechselst du unter Einstellungen, Deine Hände"],
-      song: "Jingle Bells, Anfänger",
+      traits: ["Nur deine rechte Hand spielt", "Die App spielt die linke Hand", "Die Hand wechselst du in den Einstellungen unter „Deine Hände“"],
+      song: "Jingle Bells, Einsteiger",
     },
     readMusic: {
       tag: "Noten",
       name: "Noten lesen",
       text: "Die Noten stehen über dem Klavier, und das Lied wartet auf dich. Die Noten tragen keine Namen, also liest du sie vom Notensystem.",
       traits: ["Noten über dem Klavier", "Die Noten warten auf dich", "Ein sanftes Licht hinter jeder klingenden Note"],
-      song: "Mary Had a Little Lamb, Anfänger",
+      song: "Mary Had a Little Lamb, Einsteiger",
     },
     slowSteady: {
       tag: "Üben",
@@ -86,7 +86,7 @@ export const playModes: typeof en = {
       name: "Farben nach Fingern",
       text: "Jeder Finger hat seine eigene Farbe, auf den Noten und auf den Tasten. Das Lied wartet, bis du den richtigen findest.",
       traits: ["Noten nach Fingern gefärbt", "Tasten leuchten in der Farbe des Fingers", "Die Noten warten auf dich"],
-      song: "Twinkle Twinkle Little Star, Anfänger",
+      song: "Twinkle Twinkle Little Star, Einsteiger",
     },
     noteTrainer: {
       tag: "Noten",
@@ -105,7 +105,7 @@ export const playModes: typeof en = {
       name: "Akkord-Entdecker",
       text: "Jeder Akkord des Lieds wird beim Spielen benannt, mit seiner Stufe in der Tonart. Blöcke über den Noten zeigen den Platz jeder Note in der Tonleiter.",
       traits: ["Akkordnamen, während das Lied spielt", "Eine römische Stufe für jeden Akkord", "Tonleiterstufen, mit markiertem Grundton"],
-      song: "Kanon in D, Leicht",
+      song: "Canon in D, Leicht",
     },
   },
   toast: {

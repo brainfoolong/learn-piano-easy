@@ -18,7 +18,7 @@ export const playerShell: typeof en = {
     tracks: "Spuren",
     songs: "Lieder",
     guide: (title) => `Anleitung zu ${title}`,
-    about: "Über learn-piano-easy",
+    about: "Über Learn Piano Easy",
   },
   toast: {
     dismiss: "Ausblenden",
@@ -36,14 +36,14 @@ export const playerShell: typeof en = {
   songs: {
     noneFound: "Es wurden keine Lieddateien gefunden.",
     wrongKind: "Nur MIDI- und MusicXML-Dateien lassen sich hinzufügen.",
-    added: (n) => `${formatNumber("de", n)} Lieder zu deinen Liedern hinzugefügt.`,
+    added: (n) => `${formatNumber("de", n)} ${plural("de", n, { one: "Lied", other: "Lieder" })} zu „Deine Lieder“ hinzugefügt.`,
     notKept: (reason) => `Die Lieder ließen sich nicht speichern: ${reason}`,
     soundsFailed: "Die Klavierklänge ließen sich nicht laden, also bleiben die Lieder stumm.",
   },
   guide: {
     step: (n, summary) => `Schritt ${formatNumber("de", n)}: ${summary}.`,
     barLoops: (bar) => `Takt ${formatNumber("de", bar)} läuft in Schleife.`,
-    topBeaten: (title) => `Du hast ${title} geschafft, die höchste Stufe dieses Lieds. Stark gespielt!`,
+    topBeaten: (title) => `Du hast ${title} geschafft, den letzten Schritt dieses Lieds. Stark gespielt!`,
     beaten: (title, next) => `Du hast ${title} geschafft! Als Nächstes kommt ${next}.`,
     playNext: (next) => `${next} spielen`,
   },
@@ -72,13 +72,13 @@ export const playerShell: typeof en = {
     packageLicense: (name) => `Lizenz von ${name}`,
     offline: "Dieser Text ist offline noch nicht verfügbar.",
     intro:
-      "learn-piano-easy ist eine kostenlose, quelloffene App, mit der du Klavier mit MIDI-Dateien lernst. Sie läuft offline in deinem Browser.",
+      "Learn Piano Easy ist eine kostenlose Open-Source-App zum Klavierlernen, mit einem geführten Kurs und deinen eigenen MIDI-Dateien. Sie läuft offline in deinem Browser.",
     build: (version) => `Build ${version}`,
   },
   cache: {
     groups: {
       app: { label: "App", description: "Die Seite, ihr Code und die Liedliste. Ohne sie öffnet sich die App offline nicht." },
-      songs: { label: "Lieder", description: "Alle Beispiellieder, damit sich jedes davon offline öffnet." },
+      songs: { label: "Lieder", description: "Alle Lieder, die die App mitbringt, damit sich jedes davon offline öffnet." },
       sounds: { label: "Klavierklänge", description: "Alle Klangsets, damit das Klavier offline spielt, egal welches Set gewählt ist." },
     },
     bytes: (n) => `${formatNumber("de", n, { useGrouping: false })} B`,

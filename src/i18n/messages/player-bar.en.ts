@@ -13,9 +13,9 @@ export const playerBar = {
     slower: "Slower",
     transposeUp: "Transpose up",
     transposeDown: "Transpose down",
-    loop: "Loop the measures, then the whole song, then off",
-    loopStart: "Loop from this measure",
-    loopEnd: "Loop to this measure",
+    loop: "Loop the chosen bars, then the whole song, then off",
+    loopStart: "Loop from this bar",
+    loopEnd: "Loop to this bar",
     zoomIn: "Zoom in",
     zoomOut: "Zoom out",
     fit: "Fit to song",
@@ -28,15 +28,15 @@ export const playerBar = {
     pause: "Pause",
     stop: "Stop",
     speed: "Speed",
-    /** The speed readout, such as `100 %`. */
-    speedPercent: (n: number) => `${formatNumber("en", n)} %`,
+    /** The speed readout, such as `100%`. */
+    speedPercent: (n: number) => `${formatNumber("en", n)}%`,
     transpose: "Transpose",
     loop: "Loop",
     /** The Loop button's label while it repeats the whole song. */
     repeatAll: "Repeat all",
     /** What the Loop button's next click does, by the mode it is in. */
     loopTitles: {
-      off: "Loop the measures set in the settings",
+      off: "Loop the bars set in the settings",
       measures: "Repeat the whole song instead",
       song: "Stop repeating",
     },

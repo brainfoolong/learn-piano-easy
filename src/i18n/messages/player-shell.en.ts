@@ -17,7 +17,7 @@ export const playerShell = {
     tracks: "Tracks",
     songs: "Songs",
     guide: (title: string) => `Guide to ${title}`,
-    about: "About learn-piano-easy",
+    about: "About Learn Piano Easy",
   },
   toast: {
     dismiss: "Dismiss",
@@ -37,14 +37,14 @@ export const playerShell = {
   songs: {
     noneFound: "No song files were found.",
     wrongKind: "Only MIDI and MusicXML files can be added.",
-    added: (n: number) => `Added ${formatNumber("en", n)} songs to Your songs.`,
+    added: (n: number) => `Added ${formatNumber("en", n)} ${plural("en", n, { one: "song", other: "songs" })} to “Your songs”.`,
     notKept: (reason: string) => `The songs could not be kept: ${reason}`,
     soundsFailed: "The piano sounds could not load, so songs play silently.",
   },
   guide: {
     step: (n: number, summary: string) => `Step ${formatNumber("en", n)}: ${summary}.`,
     barLoops: (bar: number) => `Bar ${formatNumber("en", bar)} loops.`,
-    topBeaten: (title: string) => `You beat ${title}, the top of this song. Well played!`,
+    topBeaten: (title: string) => `You beat ${title}, the last step of this song. Well played!`,
     beaten: (title: string, next: string) => `You beat ${title}! ${next} is next.`,
     playNext: (next: string) => `Play ${next}`,
   },
@@ -52,7 +52,7 @@ export const playerShell = {
   lesson: {
     label: "Lesson",
     /** The accuracy a scored take must reach, as a whole percent. */
-    target: (percent: number) => `Reach ${formatNumber("en", percent)} % of the notes in a scored take.`,
+    target: (percent: number) => `Reach ${formatNumber("en", percent)}% of the notes in a scored take.`,
     back: "Back to the lesson",
     missing: "The lesson's song is not in the catalog.",
   },
@@ -75,13 +75,13 @@ export const playerShell = {
     notices: "Third-party notices",
     packageLicense: (name: string) => `${name} license`,
     offline: "This text is not available offline yet.",
-    intro: "learn-piano-easy is a free, open-source app for learning piano with MIDI files. It runs offline in your browser.",
+    intro: "Learn Piano Easy is a free, open-source app to learn the piano, with a guided course and your own MIDI files. It runs offline in your browser.",
     build: (version: string) => `Build ${version}`,
   },
   cache: {
     groups: {
       app: { label: "App", description: "The page, its code and the song list. The app needs it to open offline." },
-      songs: { label: "Songs", description: "Every example song, so any of them opens offline." },
+      songs: { label: "Songs", description: "Every song the app ships, so any of them opens offline." },
       sounds: { label: "Piano sounds", description: "Every sound set, so the piano plays offline whichever set is chosen." },
     },
     bytes: (n: number) => `${formatNumber("en", n, { useGrouping: false })} B`,
