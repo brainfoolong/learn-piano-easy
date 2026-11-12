@@ -7,7 +7,8 @@
  * - **The player's steady beat.** The first scheduler window it may sound in starts it. It takes the
  *   song's tempo and time signature at that play position, and its first click lands on the song's
  *   next beat. From there it clicks on its own timer, so tempo changes, speed changes and a wait mode's
- *   hold leave it alone. A pause, a seek or a new song ends it, through `stop` and `load`.
+ *   hold leave it alone. A pause, a seek or a new song ends it, through `stop` and `load`. A loop's
+ *   count-in that clicks ends it too, and it starts again on the first beat of the pass.
  * - **Free.** `startFree` clicks at a steady tempo from a time on the audio clock until `stopFree`,
  *   whatever the song does.
  *
@@ -21,6 +22,9 @@
  * - A pause or a seek silences the clicks still queued, and lets the one sounding finish.
  * - A loop's count-in clicks through `setCountIn` even while the metronome is off. A song beat on a
  *   count-in beat clicks once.
+ * - The steady beat rests through a count-in, so only one click sounds at a time. The scheduler window
+ *   that reaches the count-in's first beat ends it, as a seek does. Each pass then starts it anew at
+ *   the tempo where the pass starts.
  * - A click may also go to the MIDI output `midiOut` returns, as a note-on and a note-off timed ahead
  *   on the MIDI clock. The drum kit plays on channel 10, where the note picks the drum. Every other
  *   sound plays on channel 16, after one program change whenever the sound or the port changes.
@@ -30,7 +34,8 @@
  * Gaps:
  * - A pause or a seek cannot take back the MIDI clicks already sent, so up to the look-ahead of them
  *   still sound.
- * - The player's steady beat clicks on through a loop's count-in, so the two may click together.
+ * - The steady beat queues on its own timer, so it may send a MIDI click past a count-in's first beat
+ *   before the scheduler's window reaches that beat. That click still sounds.
  */
 
 import type { Song } from "../midi/song";
@@ -125,6 +130,12 @@ interface Run extends SteadyBeat {
   stopTimer: () => void;
 }
 
+/** A loop's count-in: the song times of its beats, the first accented, and the song time its pass starts. */
+export interface CountIn {
+  readonly beats: readonly number[];
+  readonly start: number;
+}
+
 /** Clicks on beats into `output`. */
 export class Metronome implements ScheduledPart {
   readonly #ctx: MetronomeContext;
@@ -136,8 +147,8 @@ export class Metronome implements ScheduledPart {
   #clicks: Click[] = [];
   #free: Run | null = null;
   #steady: Run | null = null;
-  /** The song times of a loop's count-in beats, the first accented. */
-  #countIn: readonly number[] = [];
+  /** The loop's count-in that clicks, or undefined for none. */
+  #countIn: CountIn | undefined;
   readonly #now: () => number;
   /** The port and program of the last program change sent. */
   #programmed: { port: MidiOut; program: number } | undefined;
@@ -170,15 +181,17 @@ export class Metronome implements ScheduledPart {
     this.#steady = this.#end(this.#steady);
   }
 
-  /** Clicks on `beats`, song times in order, whether the metronome is on or not. An empty list stops it. */
-  setCountIn(beats: readonly number[]): void {
-    this.#countIn = beats;
+  /** Clicks on the beats of `countIn`, whether the metronome is on or not. Undefined stops it. */
+  setCountIn(countIn: CountIn | undefined): void {
+    this.#countIn = countIn;
   }
 
   schedule(from: number, to: number, at: (songTime: number) => number): void {
+    const beats = this.#countIn?.beats ?? [];
     const counting = (this.#options.speakers || this.#options.midi) && this.#options.volume > 0;
-    const counted = (seconds: number) => this.#countIn.some((beat) => Math.abs(beat - seconds) < 1e-3);
-    this.#countIn.forEach((seconds, i) => {
+    const counted = (seconds: number) => beats.some((beat) => Math.abs(beat - seconds) < 1e-3);
+    this.#keepSteady(from, to, at);
+    beats.forEach((seconds, i) => {
       if (counting && seconds >= from && seconds < to) this.#click(at(seconds), i === 0);
     });
     const sounds = this.#sounds(true);
@@ -187,9 +200,31 @@ export class Metronome implements ScheduledPart {
       if (beat.seconds >= to) break;
       if (sounds && !counted(beat.seconds)) this.#click(at(beat.seconds), beat.beat === 0);
     }
-    if (this.#steady === null && this.#sounds(false) && this.#tempoMap !== undefined) {
-      this.#steady = this.#start(steadyBeatFrom(this.#tempoMap, from, at));
+  }
+
+  /**
+   * Starts the player's steady beat in the first window it may sound in, and keeps it out of a count-in.
+   * A window that reaches the count-in's first beat ends the beat there, as a seek does. A window that
+   * overlaps the count-in starts the beat on the pass's first beat.
+   */
+  #keepSteady(from: number, to: number, at: (songTime: number) => number): void {
+    const countIn = this.#countIn;
+    const first = countIn?.beats[0];
+    let start = from;
+    let begin = this.#steady === null && this.#sounds(false);
+    if (countIn !== undefined && first !== undefined && first < to && from < countIn.start) {
+      start = countIn.start;
+      if (this.#steady !== null && from <= first + 1e-6) {
+        // The beat's clicks before the count-in still sound. Its timer may have queued speaker clicks
+        // past the count-in's first beat, and those are silenced.
+        const end = at(first) - 1e-3;
+        this.#pump(this.#steady, end);
+        this.#steady = this.#end(this.#steady);
+        this.#silence(end);
+        begin = true;
+      }
     }
+    if (begin && this.#tempoMap !== undefined) this.#steady = this.#start(steadyBeatFrom(this.#tempoMap, start, at));
   }
 
   /** Ends the player's steady beat, and silences every click still queued, as a pause or a seek needs. */
@@ -229,9 +264,9 @@ export class Metronome implements ScheduledPart {
     return this.#timer.every(this.#options.intervalMs, () => this.#pump(run));
   }
 
-  /** Queues `run`'s clicks up to the look-ahead. It counts on while it may not sound. */
-  #pump(run: Run): void {
-    const until = this.#ctx.currentTime + this.#options.aheadMs / 1000;
+  /** Queues `run`'s clicks up to the look-ahead, and before audio time `end`. It counts on while it may not sound. */
+  #pump(run: Run, end = Infinity): void {
+    const until = Math.min(end, this.#ctx.currentTime + this.#options.aheadMs / 1000);
     const sounds = this.#sounds(false);
     for (;;) {
       const time = run.start + run.next * run.secondsPerBeat;
@@ -241,11 +276,11 @@ export class Metronome implements ScheduledPart {
     }
   }
 
-  /** Silences the clicks still queued, and lets the one sounding finish. */
-  #silence(): void {
-    const now = this.#ctx.currentTime;
+  /** Silences the clicks queued after audio time `after` and after now, and lets the one sounding finish. */
+  #silence(after = this.#ctx.currentTime): void {
+    const from = Math.max(after, this.#ctx.currentTime);
     for (const click of this.#clicks) {
-      if (click.time > now) this.#forget(click);
+      if (click.time > from) this.#forget(click);
     }
   }
 

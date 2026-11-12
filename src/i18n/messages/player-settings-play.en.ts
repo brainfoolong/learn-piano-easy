@@ -227,7 +227,7 @@ export const playerSettingsPlay = {
   },
   synchedMetronome: {
     label: "Keep the metronome in time with the song",
-    help: "On, the metronome clicks on the song's beats and follows its tempo changes and speed. Off, it keeps a steady beat at the song's tempo where playback starts. Later tempo and speed changes leave that beat alone. It starts and stops with playback.",
+    help: "On, the metronome clicks on the song's beats and follows its tempo changes and speed. Off, it keeps a steady beat at the song's tempo where playback starts. Later tempo and speed changes leave that beat alone. It starts and stops with playback. It rests while a loop's count-in clicks, and starts again on the loop's first beat.",
   },
   enableEqualizer: {
     label: "Equaliser",
