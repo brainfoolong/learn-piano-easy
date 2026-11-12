@@ -9,7 +9,7 @@ export const learnMap: typeof en = {
   nextUp: "Als Nächstes",
   world: (n) => `Welt ${formatNumber("de", n)}`,
   progress: (done, all) => `${formatNumber("de", done)} von ${formatNumber("de", all)} ${plural("de", all, { one: "Lektion", other: "Lektionen" })}`,
-  locked: "Besieg den Boss der Welt davor oder besteh den Einstufungstest dieser Welt, um sie zu öffnen.",
+  locked: "Besiege den Boss der Welt davor oder bestehe den Einstufungstest dieser Welt, um sie zu öffnen.",
   beaten: "Geschafft",
   node: {
     locked: (name) => `${name}, gesperrt`,
@@ -19,7 +19,7 @@ export const learnMap: typeof en = {
   medal: (world, earned) => `Abzeichen ${world}, ${earned ? "verdient" : "noch nicht verdient"}`,
   skipTest: {
     title: (world) => `Einstufungstest: ${world}`,
-    text: "Kannst du das schon? Besteh den Einstufungstest, und jede Lektion hier ist offen.",
+    text: "Kannst du das schon? Bestehe den Einstufungstest, und jede Lektion hier ist offen.",
     action: "Einstufungstest machen",
   },
   bar: {

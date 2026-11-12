@@ -97,7 +97,7 @@ export const playModes: typeof en = {
     freeJam: {
       tag: "Nur du",
       name: "Freies Spiel",
-      text: "Kein Lied und keine Regeln. Spiel, was du willst, und das Klavier antwortet mit Funken und Licht. Nimm es auf und behalt es als MIDI-Datei.",
+      text: "Kein Lied und keine Regeln. Spiel, was du willst, und das Klavier antwortet mit Funken und Licht. Nimm es auf und behalte es als MIDI-Datei.",
       traits: ["Freies Spiel, ohne Lied", "Funken, Sterne und ein leuchtendes Klavier", "Nimm auf und speichere, was du spielst"],
     },
     chordExplorer: {

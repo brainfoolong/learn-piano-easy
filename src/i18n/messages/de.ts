@@ -25,7 +25,7 @@ export const de: Messages = {
     home: {
       title: SITE_NAME,
       description:
-        "Lerne Klavier, indem du spielst. Ein geführter Kurs, ein 3D-Klavier und dein MIDI-Keyboard. Kostenlos, Open Source und offline.",
+        "Lern Klavier, indem du spielst. Ein geführter Kurs, ein 3D-Klavier und dein MIDI-Keyboard. Kostenlos, Open Source und offline.",
     },
     play: {
       title: "Einfach Klavier spielen",
@@ -74,7 +74,7 @@ export const de: Messages = {
     },
   },
   lessonPage: {
-    description: (title: string, world: string, intro: string) => `${title}. Eine kostenlose Klavierlektion aus „${world}“. ${intro}`,
+    description: (title: string, world: string, intro: string) => `${title}. Eine kostenlose Klavierlektion aus "${world}". ${intro}`,
   },
   topBar: {
     home: `${SITE_NAME}, Startseite`,
@@ -103,7 +103,7 @@ export const de: Messages = {
         heading: "Die Noten fallen, und du spielst",
         text: "So sieht jedes Lied aus. Jede Note fällt auf ihre Taste, und du drückst die Taste, wenn sie ankommt.",
       },
-      piano: "Ein Klavier, auf dessen Tasten die Noten von „Funkel, funkel, kleiner Stern“ fallen",
+      piano: "Ein Klavier, auf dessen Tasten die Noten von \"Funkel, funkel, kleiner Stern\" fallen",
       hint: "Sobald es spielt, drück seine Tasten und spiel mit.",
       playSong: "Abspielen",
       stopSong: "Stopp",
@@ -157,12 +157,12 @@ export const de: Messages = {
       heading: "Kein Klavier? Fang trotzdem an",
       lead: "Mit jedem davon spielst du die Noten. Ein echtes Keyboard fühlt sich am besten an, mit den anderen fängst du heute schon an.",
       ways: [
-        { title: "Ein MIDI-Keyboard", text: "Steck es per USB an und erlaube MIDI einmal. Danach findet die Seite es von selbst." },
-        { title: "Ein Touchscreen", text: "Tippe die Tasten auf dem Bildschirm an, mit so vielen Fingern, wie du magst." },
+        { title: "Ein MIDI-Keyboard", text: "Steck es per USB an und erlaub MIDI einmal. Danach findet die Seite es von selbst." },
+        { title: "Ein Touchscreen", text: "Tipp die Tasten auf dem Bildschirm an, mit so vielen Fingern, wie du magst." },
         { title: "Deine Computertastatur", text: "Die Buchstaben- und Zifferntasten spielen zwei Oktaven, und du kannst jede Note auf eine andere Taste legen." },
       ],
       piano: "Ein kleines Klavier zum Ausprobieren",
-      hint: "Tippe eine Taste an, um sie zu hören.",
+      hint: "Tipp eine Taste an, um sie zu hören.",
     },
     free: {
       eyebrow: "Kostenlos und deins",
@@ -197,7 +197,7 @@ export const de: Messages = {
         },
         {
           question: "Kann ich eigene Lieder spielen?",
-          answer: "Ja. Öffne eine beliebige MIDI- oder MusicXML-Datei in „Einfach Klavier spielen“. Sie wird auf deinem Gerät gelesen und nie hochgeladen.",
+          answer: "Ja. Öffne eine beliebige MIDI- oder MusicXML-Datei in \"Einfach Klavier spielen\". Sie wird auf deinem Gerät gelesen und nie hochgeladen.",
         },
         {
           question: "Welche Lieder hat die Bibliothek?",
@@ -215,7 +215,7 @@ export const de: Messages = {
     },
   },
   footer: {
-    tagline: "Lerne Klavier, indem du spielst. Kostenlos, Open Source und offline.",
+    tagline: "Lern Klavier, indem du spielst. Kostenlos, Open Source und offline.",
     nav: "Seite",
     explore: "Entdecken",
     about: "Über die App und Lizenzen",
@@ -240,7 +240,7 @@ export const de: Messages = {
   ui: {
     pianoKeys: {
       noWebgl:
-        "Dieser Browser kann das Klavier nicht zeichnen. Schalte in seinen Einstellungen die Hardwarebeschleunigung ein, oder spiele auf deinem MIDI-Keyboard oder der Computertastatur.",
+        "Dieser Browser kann das Klavier nicht zeichnen. Schalte in seinen Einstellungen die Hardwarebeschleunigung ein, oder spiel auf deinem MIDI-Keyboard oder der Computertastatur.",
     },
   },
 };

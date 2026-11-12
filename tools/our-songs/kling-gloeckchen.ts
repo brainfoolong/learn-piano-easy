@@ -386,7 +386,7 @@ export const klingGloeckchen: OurSong = {
         tricky: {
           3: "Drück H, D und F zusammen, dann spielen Finger 2 und 4 D und G, während die linke Hand springt.",
           7: "Finger 2 und 4 spielen die Terz, dann wiederholt Finger 4 das F, und der kleine Finger nimmt das G.",
-          15: "Derselbe Akkord wie in Takt 3. Behalt den Sprung der linken Hand hinab zur tiefen G-Oktave im Blick.",
+          15: "Derselbe Akkord wie in Takt 3. Behalte den Sprung der linken Hand hinab zur tiefen G-Oktave im Blick.",
         },
       },
     },

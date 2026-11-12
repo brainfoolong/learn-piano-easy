@@ -285,7 +285,7 @@ export const yankeeDoodle: OurSong = {
           "Spiel die Oktaven kurz, und lass das Pedal sie verbinden.",
         ],
         tricky: {
-          3: "Die Melodie geht aufwärts, während der Bass springt. Behalt die linke Hand im Blick.",
+          3: "Die Melodie geht aufwärts, während der Bass springt. Behalte die linke Hand im Blick.",
           5: "Die Sexten bewegen sich als eine Form. Lass den Daumen jeden Schritt nach oben führen.",
           8: "Heb die Hand nach dem zweiten Akkord an, dann spring hinauf zum E für den Refrain.",
         },

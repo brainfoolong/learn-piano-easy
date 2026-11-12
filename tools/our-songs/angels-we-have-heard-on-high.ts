@@ -319,7 +319,7 @@ export const angelsWeHaveHeardOnHigh: OurSong = {
   },
   de: {
     about:
-      "Angels We Have Heard on High ist ein traditionelles französisches Weihnachtslied. " +
+      "Hört der Engel helle Lieder ist ein traditionelles französisches Weihnachtslied, auf Englisch Angels We Have Heard on High. " +
       "Auf Französisch heißt es Les Anges dans nos campagnes, das bedeutet Die Engel auf unseren Feldern. " +
       "Der früheste bekannte Druck mit Text und Noten stammt von 1842, aus einer Sammlung von Louis Lambillotte. " +
       "Der englische Text ist eine Nachdichtung von 1862 durch James Chadwick, den römisch-katholischen Bischof von Hexham und Newcastle.",

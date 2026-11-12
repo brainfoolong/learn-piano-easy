@@ -275,7 +275,7 @@ export const odeToJoy: OurSong = {
           "Das Arpeggio steigt mit 5, 3, 2, 1, also landet der Daumen auf dem obersten Ton.",
         ],
         tricky: {
-          2: "Die Melodie geht abwärts, während der Bass springt. Behalt die linke Hand im Blick.",
+          2: "Die Melodie geht abwärts, während der Bass springt. Behalte die linke Hand im Blick.",
           6: "Die Akkorde wechseln auf jedem Schlag. Lass den Daumen auf dem A, und beweg nur die oberen Finger.",
           14: "Die Melodie fällt vom A zum E, während der Daumen nah am Cis bleibt. Lass den obersten Finger sie tragen.",
         },

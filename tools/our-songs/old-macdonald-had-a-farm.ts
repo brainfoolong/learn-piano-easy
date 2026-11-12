@@ -260,7 +260,7 @@ export const oldMacDonaldHadAFarm: OurSong = {
           "Wechsle das Pedal jeden halben Takt, sobald der Alberti-Bass neu beginnt.",
         ],
         tricky: {
-          7: "Die Terzen springen vom D hinauf zu G und H. Beweg die ganze Hand, und behalt ihre Form.",
+          7: "Die Terzen springen vom D hinauf zu G und H. Beweg die ganze Hand, und behalte ihre Form.",
           15: "Nach dem schnellen Lauf landet dein kleiner Finger auf dem H. Lass den Lauf die Hand dorthin tragen.",
           16: "Deine Hand fällt vom A zum Schlussakkord. Daumen auf H, Finger 3 auf G.",
         },

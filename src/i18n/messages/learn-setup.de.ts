@@ -31,11 +31,11 @@ export const learnSetup: typeof en = {
     never: "Noch nie",
     little: "Ein bisschen",
     yes: "Ja, ich kann spielen",
-    skipTests: "Jede Welt auf der Karte hat einen Einstufungstest. Besteh ihn, um alle Lektionen dieser Welt auf einmal zu öffnen.",
+    skipTests: "Jede Welt auf der Karte hat einen Einstufungstest. Bestehe ihn, um alle Lektionen dieser Welt auf einmal zu öffnen.",
   },
   goal: {
     question: "Wie viel am Tag?",
-    lead: "Erreich dein Ziel jeden Tag, damit deine Serie wächst. Eine neue Lektion mit drei Sternen bringt 30 XP.",
+    lead: "Erreiche dein Ziel jeden Tag, damit deine Serie wächst. Eine neue Lektion mit drei Sternen bringt 30 XP.",
     label: "Tagesziel",
     names: { "10": "Locker", "20": "Stetig", "30": "Eifrig", "50": "Mutig" },
     option: (xp, name) => `${formatNumber("de", xp)} XP, ${name}`,

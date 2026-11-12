@@ -49,7 +49,7 @@ export const majorTriadsDe: MajorTriadsTexts = {
       text: "Hier kommen C-, F-, G- und C-Dur nacheinander. Die Hand behält ihre Form und rückt als Ganzes weiter.",
     },
     "chord-walk": {
-      text: "Jetzt du. Spiel die vier Dreiklänge mit der rechten Hand. Behalt die Form und rück von Grundton zu Grundton.",
+      text: "Jetzt du. Spiel die vier Dreiklänge mit der rechten Hand. Behalte die Form und rück von Grundton zu Grundton.",
     },
     recap: {
       text: "Gut gemacht. Jetzt kannst du auf jeder Taste einen Dur-Dreiklang bauen.",

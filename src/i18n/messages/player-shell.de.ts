@@ -141,6 +141,6 @@ export const playerShell: typeof en = {
   },
   sheet: {
     label: "Notenblatt",
-    empty: "Im Notenblatt ist keine Spur zu sehen. Schalt eine unter Spuren ein.",
+    empty: "Im Notenblatt ist keine Spur zu sehen. Schalte eine unter Spuren ein.",
   },
 };
