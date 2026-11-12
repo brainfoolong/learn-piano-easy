@@ -28,3 +28,8 @@ test("a_word_both_languages_share_never_counts_as_english", () => {
   expect(english.has(style)).toBe(false);
   expect(untranslated([style], english)).toEqual([]);
 });
+
+test("a_word_one_message_keeps_never_counts_where_another_translates_it", () => {
+  const english = translatedAway({ lesson: { start: "Start" }, modes: { start: "Start" } }, { lesson: { start: "Start" }, modes: { start: "Los" } });
+  expect([...english]).toEqual([]);
+});
