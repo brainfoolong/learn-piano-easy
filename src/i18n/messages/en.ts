@@ -91,6 +91,10 @@ export const en = {
       description: "A short lesson of Learn Piano, one step at a time.",
     },
   } satisfies Record<RouteId, PageMeta>,
+  /** A lesson page's own description, from its title, its world and its first step's text. */
+  lessonPage: {
+    description: (title: string, world: string, intro: string) => `${title}. A free piano lesson from “${world}”. ${intro}`,
+  },
   topBar: {
     home: `${SITE_NAME}, home`,
     nav: "Main",

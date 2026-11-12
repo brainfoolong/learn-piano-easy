@@ -14,10 +14,12 @@
  * there. The build writes the page of every lesson from `lessonPages`, which loads every world.
  *
  * Each page's title and description are in its locale's catalog of `src/i18n/messages/`, under the
- * route's id. A lesson's page the build writes takes the lesson's own title instead. Every page of a
- * locale shares that locale's social picture.
+ * route's id. A lesson's page the build writes takes the lesson's own title instead, and a description
+ * of its own: the lesson's title and world, then its first step's text. Every page of a locale shares
+ * that locale's social picture.
  */
 import { LOCALES, localeOfPath, localeRoot, messagesOf, type Locale } from "../i18n/locale";
+import type { PageMeta } from "../i18n/messages/en";
 import { COURSE } from "../learn/course";
 
 /** A route's id, which the router, the build and the catalogs name it by. */
@@ -34,15 +36,15 @@ export interface Route {
   /** Whether search engines skip the page. The site links nowhere to a hidden route. */
   hidden: boolean;
   /**
-   * A lesson's route names its world and its lesson. It carries the lesson's title in each locale only
-   * where the world is loaded, as in the build.
+   * A lesson's route names its world and its lesson. It carries the lesson's title and description in
+   * each locale only where the world is loaded, as in the build.
    */
-  lesson?: { world: string; lesson: string; title?: Record<Locale, string> };
+  lesson?: { world: string; lesson: string; meta?: Record<Locale, PageMeta> };
 }
 
-/** The route of lesson `lesson` of world `world`, with the lesson's `title` in each locale when it is known. */
-export function lessonRoute(world: string, lesson: string, title?: Record<Locale, string>): Route {
-  return { id: "lesson", path: `learn/${world}/${lesson}/`, hidden: false, lesson: { world, lesson, ...(title === undefined ? {} : { title }) } };
+/** The route of lesson `lesson` of world `world`, with its `meta` in each locale when it is known. */
+export function lessonRoute(world: string, lesson: string, meta?: Record<Locale, PageMeta>): Route {
+  return { id: "lesson", path: `learn/${world}/${lesson}/`, hidden: false, lesson: { world, lesson, ...(meta === undefined ? {} : { meta }) } };
 }
 
 /** A lesson's folder relative to the locale's root, with its world and its lesson. */
@@ -62,8 +64,14 @@ export async function lessonPages(): Promise<Page[]> {
     const { lessons, boss, skipTest } = await world.load();
     for (const lesson of [...lessons, boss, skipTest]) {
       if (lesson === undefined) continue;
-      const title = Object.fromEntries(LOCALES.map((locale) => [locale, lesson.texts[locale].title])) as Record<Locale, string>;
-      for (const locale of LOCALES) pages.push(pageOf(lessonRoute(world.id, lesson.id, title), locale));
+      const meta = Object.fromEntries(
+        LOCALES.map((locale) => {
+          const { title, steps } = lesson.texts[locale];
+          const intro = steps[lesson.steps[0]!.id]!.text;
+          return [locale, { title, description: messagesOf(locale).lessonPage.description(title, world.title[locale], intro) }];
+        }),
+      ) as Record<Locale, PageMeta>;
+      for (const locale of LOCALES) pages.push(pageOf(lessonRoute(world.id, lesson.id, meta), locale));
     }
   }
   return pages;
@@ -147,8 +155,13 @@ export function socialImageOf(locale: Locale): string {
  */
 export function pageTitle(page: Page): string {
   const { siteName, pages } = messagesOf(page.locale);
-  const title = page.route.lesson?.title?.[page.locale] ?? pages[page.route.id].title;
+  const title = page.route.lesson?.meta?.[page.locale].title ?? pages[page.route.id].title;
   return title === siteName ? title : `${title} · ${siteName}`;
+}
+
+/** The page's description: a lesson's own when the route knows it, else its route's. */
+export function pageDescription(page: Page): string {
+  return page.route.lesson?.meta?.[page.locale].description ?? messagesOf(page.locale).pages[page.route.id].description;
 }
 
 /** The project's repository on GitHub, which holds its code and its license. */

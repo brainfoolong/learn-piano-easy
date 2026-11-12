@@ -73,6 +73,9 @@ export const de: Messages = {
       description: "Eine kurze Lektion von Klavier lernen, Schritt für Schritt.",
     },
   },
+  lessonPage: {
+    description: (title: string, world: string, intro: string) => `${title}. Eine kostenlose Klavierlektion aus „${world}“. ${intro}`,
+  },
   topBar: {
     home: `${SITE_NAME}, Startseite`,
     nav: "Hauptnavigation",

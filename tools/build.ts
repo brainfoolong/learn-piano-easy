@@ -38,6 +38,7 @@ import { DEFAULT_LOCALE, LOCALES, messagesOf, type Locale } from "../src/i18n/lo
 import {
   allPages,
   lessonPages,
+  pageDescription,
   pageOf,
   pageTitle,
   REPO_URL,
@@ -219,11 +220,10 @@ export function crawlerFiles(pages: readonly Page[], siteUrl: string): Record<st
 /** The HTML of `page`, from the page template with its placeholders filled. */
 export function renderPage(template: string, page: Page, siteUrl?: string): string {
   const messages = messagesOf(page.locale);
-  const { description } = messages.pages[page.route.id];
   const values: Record<string, string> = {
     lang: page.locale,
     title: escapeHtml(pageTitle(page)),
-    description: escapeHtml(description),
+    description: escapeHtml(pageDescription(page)),
     base: page.base,
     head: headLines(page, siteUrl)
       .map((line) => `\n    ${line}`)

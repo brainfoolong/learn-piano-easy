@@ -67,18 +67,24 @@ test("build_writes_a_page_per_route_and_locale", async () => {
   expect(local).toContain(`<meta property="og:locale:alternate" content="en_US" />`);
 });
 
-test("a_lesson_page_carries_the_lessons_own_title", async () => {
+test("a_lesson_page_carries_the_lessons_own_title_and_description", async () => {
   const lessons = await lessonPages();
   const titles = new Set<string>();
+  const descriptions = new Set<string>();
   for (const page of lessons) {
     const html = await Bun.file(join(outDir, page.file)).text();
     const title = /<title>(.*)<\/title>/.exec(html)![1]!;
+    const description = /<meta name="description" content="([^"]*)"/.exec(html)![1]!;
+    const meta = page.route.lesson!.meta![page.locale];
     expect(title).toBe(pageTitle(page));
-    expect(title).toStartWith(page.route.lesson!.title![page.locale]);
+    expect(title).toStartWith(meta.title);
+    expect(description).toStartWith(meta.title);
     titles.add(`${page.locale} ${title}`);
+    descriptions.add(`${page.locale} ${description}`);
   }
-  // No two lessons of a locale share a title, so no two of its lesson pages look alike in a search result.
+  // No two lessons of a locale share a title or a description, so no two look alike in a search result.
   expect(titles.size).toBe(lessons.length);
+  expect(descriptions.size).toBe(lessons.length);
 });
 
 const SITE = "https://example.org/piano/";
