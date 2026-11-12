@@ -9,8 +9,8 @@
  * 7, the quick B in bar 16 and the last D in bar 17. Its hand then moves only three times. Rare plays every
  * note over a bass and a chord. In bars 7 and 8 it splits one A and one D into two eighths, so a finger
  * changes on the repeated key and the hand moves without a jump. Epic crosses the fingers in the runs
- * over a broken-chord bass. Legendary plays the tune an octave up with quick turns over a stride bass,
- * and ends on a full chord.
+ * over a broken-chord bass. Legendary plays the tune an octave up with a turn and a quick run over a
+ * stride bass, and ends on a full chord.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";

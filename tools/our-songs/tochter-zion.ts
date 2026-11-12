@@ -9,8 +9,8 @@
  * Common and Rare play A, B and the second half of A. All of A again would pass Common's 60 seconds,
  * and Rare's hand would move three times in eight bars. Common holds fifths and single bass notes, and
  * Rare plays block chords and fifths. Epic plays A and B over an Alberti bass, then the last A an octave
- * up over broken chords, with the pedal. Legendary sets A and B an octave up with quick turns over a stride bass,
- * then plays the last A in octaves over arpeggios, and ends on a four-note chord.
+ * up over broken chords, with the pedal. Legendary sets A and B an octave up with a turn and quick groups of notes
+ * over a stride bass, then plays the last A in octaves over arpeggios, and ends on a four-note chord.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -167,8 +167,8 @@ const SHORT_RIGHT = [A_FIRST, A_SECOND, B_PART, A_SECOND].join(" | ");
 /** The chords of Common and Rare, one letter per half bar, as the right hand plays them. */
 const SHORT_HALVES = `${A_HALVES} ${B_HALVES} FF CC GG CC`;
 
-/** A and B an octave up in sixteenths, with a quick turn in each long note at the end of a phrase. */
-const TURNS = octaveUp(scaled([A_FIRST, A_SECOND, B_PART].join(" | "), 4))
+/** A and B an octave up in sixteenths, with a quick group of notes in each long note at the end of a phrase. */
+const FIGURES =octaveUp(scaled([A_FIRST, A_SECOND, B_PART].join(" | "), 4))
   .replace("D5/2:32", "D5/2:24 E5/3:2 D5/2:2 C5/1:2 D5/2:2")
   .replace("C5/2:32", "C5/2:24 D5/3:2 E5/4:2 D5/3:2 C5/2:2")
   .replace("B4/1:32", "B4/1:24 C5/2:2 D5/3:2 C5/2:2 B4/1:2")
@@ -297,7 +297,7 @@ export const tochterZion: OurSong = {
       numerator: 4,
       denominator: 2,
       steps: 8,
-      right: [TURNS, A_OCTAVES, "C4+E4+G4+C5/1+2+3+5:32"].join(" | "),
+      right: [FIGURES,A_OCTAVES, "C4+E4+G4+C5/1+2+3+5:32"].join(" | "),
       left: [
         bars(STRIDE, perBeat(`${A_HALVES} ${B_HALVES}`).toUpperCase()),
         bars(ARPEGGIO, perBeat(A_HALVES).replace(/ [^ ]+$/, "")),

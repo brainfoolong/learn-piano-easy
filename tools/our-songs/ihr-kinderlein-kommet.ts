@@ -10,8 +10,8 @@
  *
  * Common plays the tune once over held fifths. Rare plays it once over block triads. Epic plays it
  * twice, over an Alberti bass and then an octave up over broken chords, with the pedal. Legendary adds
- * quick turns over a stride bass, then plays the tune in octaves over arpeggios, and ends on a four-note
- * chord.
+ * quick groups of notes over a stride bass, then plays the tune in octaves over arpeggios, and ends on a
+ * four-note chord.
  */
 import type { Key } from "../../src/theory/key";
 import type { OurSong } from "../make-our-songs";
@@ -127,8 +127,8 @@ const ARPEGGIO: Record<string, string> = {
   F: "F1/5:1 C2/3:1 F2/2:1 A2/1:1 C3/3:1 F3/2:1 r:2",
 };
 
-/** The verse an octave up in sixteenths, with a quick turn in the rests of bars 4 and 8. */
-const VERSE_TURNS = octaveUp(scaled(VERSE, 4))
+/** The verse an octave up in sixteenths, with a quick group of four notes in the rests of bars 4 and 8. */
+const VERSE_FIGURES =octaveUp(scaled(VERSE, 4))
   .replace("E5/2:8 r:4 G5/4:4", "E5/2:8 F5/3:1 E5/2:1 D5/1:2 G5/4:4")
   .replace("E5/2:8 r:4 E5/2:4", "E5/2:8 F5/3:1 E5/2:1 D5/1:2 E5/2:4");
 
@@ -256,7 +256,7 @@ export const ihrKinderleinKommet: OurSong = {
       steps: 8,
       right: [
         "r:12 G5/4:4",
-        VERSE_TURNS,
+        VERSE_FIGURES,
         "C5/2:10 r:2 G4+G5/1+5:4",
         VERSE_OCTAVES,
         "C4+E4+G4+C5/1+2+3+5:16",
