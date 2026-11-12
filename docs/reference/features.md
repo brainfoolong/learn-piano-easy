@@ -57,16 +57,18 @@ those keys, and notes beyond them can fold in by octaves.
 ## Picture
 
 Ours draws the whole scene in 3D with three.js. It has a modelled piano whose keys tilt when pressed,
-and rounded note bars on a lane in perspective. Glow and camera presets complete it. Every picture setting maps onto it.
+and rounded note bars on a lane in perspective. Glow and camera presets complete it. Most picture settings
+map onto it, and the bullets below name the ones ours drops.
 
 - **Notes:** width, minimum height, rounded corners, stroke, shadow, glow, a hit effect, and shrink and
   fall-off of played notes below the piano.
 - **Sustain:** pedal events, pedal periods and sustained notes, each optional.
 - **Lines:** measure lines, beat lines and measure numbers, each with colour and thickness.
 - **Piano:** key colours, key heights, position on screen, reversed direction, a hit effect, and a flare
-  on the keys.
+  on the keys. Ours keeps the white key length and the flare's switch. It drops the hit effect's switch,
+  the black key length and the flare's size, colour, opacity and offset.
 - **Incoming notes:** the keys of coming notes are coloured, or marked by a dot, by time window or next
-  notes, with fade-in.
+  notes, with fade-in. Ours leaves them out.
 - **Lanes:** background colours for groups of keys and for black keys, and highlighted lanes for input.
 - **Particles:** presets of particle types, each with texture, blending, colour, size, amount, life,
   physics, noise, turbulence and where they spawn. Ours runs four built-in presets and the learner's

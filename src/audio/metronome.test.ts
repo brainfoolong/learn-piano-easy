@@ -1,4 +1,6 @@
 import { expect, test } from "../testing";
+import type { Song } from "../midi/song";
+import { TempoMap } from "../midi/tempo-map";
 import { ACCENT_VELOCITY, BEAT_VELOCITY, Metronome, MIDI_CLICK_MS, type MetronomeContext, type MetronomeOptions } from "./metronome";
 
 /** A context whose clock stands at `currentTime`. With the speakers off, the metronome makes no node. */
@@ -43,4 +45,80 @@ test("a_midi_click_goes_out_timed_on_the_midi_clock", () => {
   m.configure({ midiSound: "drums" });
   m.schedule(0, 1, (songTime) => songTime + 1);
   expect(sent.map(([data]) => data[0])).toEqual([0x99, 0x89]);
+});
+
+test("the_unsynced_metronome_keeps_a_steady_beat_from_the_play_position", () => {
+  const sent: [number[], number | undefined][] = [];
+  const port = { send: (data: number[], time?: number) => void sent.push([data, time]) };
+  // An audio clock the test moves, and a timer the test fires. The MIDI clock reads 4000 ms at audio time 0.
+  const clock = { currentTime: 1 };
+  const runs = new Set<() => void>();
+  const timer = {
+    every: (_ms: number, run: () => void) => {
+      runs.add(run);
+      return () => void runs.delete(run);
+    },
+  };
+  const tick = (time: number) => {
+    clock.currentTime = time;
+    for (const run of runs) run();
+  };
+  const m = new Metronome(clock as MetronomeContext, {} as never, { ...options, synced: false }, timer, () => 4000 + clock.currentTime * 1000);
+  m.midiOut = () => port;
+  // 3/4 at 120 bpm, slowing to 60 bpm at 1 s. The song plays at half speed, starting at audio time 1 s.
+  const tempoMap = new TempoMap(
+    { kind: "ticks", ticksPerBeat: 480 },
+    [
+      { tick: 0, microsecondsPerBeat: 500_000 },
+      { tick: 960, microsecondsPerBeat: 1_000_000 },
+    ],
+    [{ tick: 0, numerator: 3, denominator: 4 }],
+  );
+  m.load({ tempoMap, endTick: 4800 } as Song);
+  const at = (songTime: number) => 1 + songTime * 2;
+  /** The note-ons sent since the last call, as [MIDI time, accented]. */
+  const clicks = () => {
+    const ons = sent.filter(([data]) => data[0] === 0x9f).map(([data, time]) => [time, data[2] === ACCENT_VELOCITY]);
+    sent.length = 0;
+    return ons;
+  };
+
+  // Playback starts half way through beat 0. The first click falls on beat 1, at song time 0.5 s,
+  // which sounds at audio time 2 s. It is beyond the look-ahead, so nothing is queued yet.
+  m.schedule(0.25, 0.3, at);
+  expect(clicks()).toEqual([]);
+
+  // The beat clicks on its own timer, with no further window. It stays 0.5 s on the audio clock,
+  // whatever the speed and the tempo change at audio time 3 s, and beat 0 of each measure is accented.
+  tick(1.95);
+  expect(clicks()).toEqual([[6000, false]]);
+  tick(3.45);
+  expect(clicks()).toEqual([
+    [6500, false],
+    [7000, true],
+    [7500, false],
+  ]);
+
+  // A pause ends the beat.
+  m.stop();
+  tick(5);
+  expect(clicks()).toEqual([]);
+
+  // Playing again from song time 3 s, on beat 1 of measure 1, starts a beat at 60 bpm there.
+  clock.currentTime = 6.95;
+  m.schedule(3, 3.05, at);
+  expect(clicks()).toEqual([[11000, false]]);
+  tick(8.95);
+  expect(clicks()).toEqual([
+    [12000, false],
+    [13000, true],
+  ]);
+
+  // With the metronome off, the beat counts on in silence, so it comes back in its own time.
+  m.configure({ enabled: false });
+  tick(10.95);
+  expect(clicks()).toEqual([]);
+  m.configure({ enabled: true });
+  tick(11.95);
+  expect(clicks()).toEqual([[16000, true]]);
 });

@@ -1,7 +1,7 @@
 import { expect, test } from "../testing";
 import { importSettings, exportSettings, SETTINGS_FILE_APP } from "./export";
 import { VALUE_SETTINGS, defaults, type SettingId, type ValueSetting } from "./schema";
-import { SettingsStore, clampValue } from "./store";
+import { SETTINGS_VERSION, STORAGE_KEY, SettingsStore, clampValue } from "./store";
 
 /** A valid value of `setting` that is not its default. */
 function awayFromDefault(setting: ValueSetting): unknown {
@@ -47,4 +47,24 @@ test("export_then_import_restores_every_value", () => {
     if (!refused.ok) expect(refused.message.length).toBeGreaterThan(10);
   }
   expect(target.values()).toEqual(before);
+});
+
+test("an_old_backup_with_removed_settings_loads_every_other_value", () => {
+  // Settings no code drew were removed from the schema. A file saved before still holds them.
+  const removed = { scrollSensitivity: 2, highlightIncomingPianoKeys: true, blackKeyHeight: 80, keyFlareColor: "#ff0000ff" };
+  const kept = { enableKeyFlare: true, whiteKeyHeight: 120 };
+  const file = JSON.stringify({ app: SETTINGS_FILE_APP, version: SETTINGS_VERSION, values: { ...removed, ...kept } });
+
+  // An import drops the removed keys, names them, and sets the rest.
+  const store = new SettingsStore(null);
+  expect(importSettings(store, file)).toEqual({ ok: true, applied: 2, dropped: Object.keys(removed) });
+  expect(store.values()).toEqual({ ...defaults(), ...kept });
+
+  // The browser's own save loads the same way, and its next write leaves the removed keys out.
+  const items = new Map([[STORAGE_KEY, JSON.stringify({ version: SETTINGS_VERSION, values: { ...removed, ...kept } })]]);
+  const storage = { getItem: (key: string) => items.get(key) ?? null, setItem: (key: string, value: string) => void items.set(key, value) };
+  const saved = new SettingsStore(storage);
+  expect(saved.values()).toEqual({ ...defaults(), ...kept });
+  saved.set("showFps", true);
+  expect(JSON.parse(items.get(STORAGE_KEY) ?? "null").values).toEqual({ ...kept, showFps: true });
 });

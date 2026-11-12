@@ -47,6 +47,20 @@ const DROPPED: Record<string, string> = {
   autoCacheMain: "the service worker precaches the app on every install, so there is nothing to switch on",
   autoCacheHqPiano: "the app has no high-quality piano set; autoCacheSounds keeps every sound set saved",
   autoCacheFatBoy: "the app has no FatBoy sound set; autoCacheSounds keeps every sound set saved",
+  scrollSensitivity: "no code drew it",
+  drawPianoKeyHitEffect: "no code drew it",
+  highlightIncomingPianoKeys: "no code drew it",
+  incomingPianoKeysStyle: "no code drew it",
+  incomingPianoKeysMode: "no code drew it",
+  incomingPianoKeysLookAhead: "no code drew it",
+  incomingPianoKeysFadeIn: "no code drew it",
+  incomingPianoKeysOpacity: "no code drew it",
+  blackKeyHeight: "no code drew it",
+  keyFlareOnlyPiano: "no code drew it",
+  keyFlareSize: "no code drew it",
+  keyFlareOpacity: "no code drew it",
+  keyFlareColor: "no code drew it",
+  keyFlareOffset: "no code drew it",
 };
 
 /** The reference's ids that a later goal adds to the schema, by the goal's slug. */

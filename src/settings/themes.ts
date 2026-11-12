@@ -26,7 +26,6 @@ export const THEMES: Record<ThemeId, Partial<Record<ColourId, string>>> = {
     pianoWhiteKeyColor: "#ffffffff",
     pianoBlackKeyColor: "#22262fff",
     pianoBackgroundColor: "#e6eaf2ff",
-    keyFlareColor: "#2f6fe0ff",
     bgCol1: "#f4f6fbff",
     bgCol5: "#e3e7f0ff",
     bgCol3: "#c5cddcff",

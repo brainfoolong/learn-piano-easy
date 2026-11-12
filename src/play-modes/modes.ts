@@ -67,7 +67,6 @@ export const BASE = {
   enableLoop: false,
   loopTrainer: false,
   enableMetronome: false,
-  highlightIncomingPianoKeys: false,
   noteLabel: "",
   showKeyNamesOnPianoWhite: false,
   showKeyNamesOnPianoBlack: false,
@@ -134,7 +133,6 @@ export const PLAY_MODES: readonly PlayMode[] = [
     song: "ours/ode-to-joy/common.mid",
     settings: {
       waitForNotes: true,
-      highlightIncomingPianoKeys: true,
       noteLabel: "name,fingering",
       showKeyNamesOnPianoWhite: true,
       showKeyNamesOnPianoBlack: true,
@@ -149,7 +147,6 @@ export const PLAY_MODES: readonly PlayMode[] = [
     settings: {
       waitForNotes: true,
       playHands: "right",
-      highlightIncomingPianoKeys: true,
       noteLabel: "name,fingering",
       showKeyNamesOnPianoWhite: true,
     },

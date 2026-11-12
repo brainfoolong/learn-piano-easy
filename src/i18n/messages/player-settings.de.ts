@@ -16,7 +16,7 @@ export const playerSettings: typeof en = {
     sections: "Bereiche der Einstellungen",
     found: (count: number) => (count === 1 ? "1 Einstellung gefunden" : `${count} Einstellungen gefunden`),
     emptyTitle: "Nichts gefunden",
-    empty: (query: string) => `Keine Einstellung passt zu „${query}“. Versuche ein anderes Wort.`,
+    empty: (query: string) => `Keine Einstellung passt zu "${query}". Versuch ein anderes Wort.`,
     showAll: "Alle Einstellungen zeigen",
     changed: (count: number) => `${count} geändert`,
     changedTotal: (count: number) =>
@@ -54,7 +54,7 @@ export const playerSettings: typeof en = {
   },
   about: {
     general: "Wie der Player startet, wie ein Lied läuft und was die Zeitleiste zeigt.",
-    loop: "Wiederhole eine Stelle, bis sie sitzt.",
+    loop: "Wiederhol eine Stelle, bis sie sitzt.",
     audio: "Lautstärke, der Klang des Klaviers, das Metronom und der Equalizer.",
     backing: "Eine eigene Audiodatei, die zum Lied mitläuft.",
     view: "Die Kamera, das Leuchten und wie viel vom Lied du im Voraus siehst.",
@@ -86,7 +86,6 @@ export const playerSettings: typeof en = {
     inputAlong: "Mitspielen",
     inputScore: "Wertung und Spiel",
     pianoPressed: "Gedrückte Tasten",
-    pianoComing: "Kommende Töne",
     pianoLook: "Farben und Größe",
     pianoFlare: "Lichtschein",
     pianoWave: "Wellenlinie",

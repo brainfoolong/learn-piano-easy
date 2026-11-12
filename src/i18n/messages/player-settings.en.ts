@@ -96,7 +96,6 @@ export const playerSettings = {
     inputAlong: "Playing along",
     inputScore: "Score and game",
     pianoPressed: "Keys you press",
-    pianoComing: "Coming notes",
     pianoLook: "Colours and size",
     pianoFlare: "Flare",
     pianoWave: "Wave line",

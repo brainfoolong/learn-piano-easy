@@ -1,14 +1,20 @@
 /**
  * The metronome: a short synthesised click on each beat, louder in pitch on the first beat of a measure.
  *
- * It runs in one of two ways:
+ * It runs in one of three ways:
  * - **In time with the song.** It is a `ScheduledPart` of the scheduler, so it clicks on the beats of
  *   the song's tempo map, in the same windows as the notes. It follows tempo changes, speed and seeks.
+ * - **The player's steady beat.** The first scheduler window it may sound in starts it. It takes the
+ *   song's tempo and time signature at that play position, and its first click lands on the song's
+ *   next beat. From there it clicks on its own timer, so tempo changes, speed changes and a wait mode's
+ *   hold leave it alone. A pause, a seek or a new song ends it, through `stop` and `load`.
  * - **Free.** `startFree` clicks at a steady tempo from a time on the audio clock until `stopFree`,
- *   whatever the song does. It queues ahead on its own timer, the same way the scheduler does.
+ *   whatever the song does.
  *
- * The `synced` option picks which of the two may sound. Both keep counting while silent, so switching
- * keeps each in its own time.
+ * The steady beat and the free clicks queue ahead on their own timers, the same way the scheduler
+ * does. The `synced` option picks which may sound: the song's beats when true, the steady beat and the
+ * free clicks when false. A steady or free run keeps counting while silent, so switching keeps it in
+ * its own time.
  *
  * Decisions, and what each costs:
  * - A click is a sine burst of `CLICK_LENGTH` seconds through its own gain, so it needs no sample file.
@@ -21,12 +27,14 @@
  * - `metronomeVolume` sets the speakers' clicks. A MIDI click has a fixed velocity, louder on the
  *   first beat, and the device's own volume sets how loud it sounds. A volume of 0 silences both.
  *
- * Gaps: a pause or a seek cannot take back the MIDI clicks already sent, so up to the look-ahead of
- * them still sound.
+ * Gaps:
+ * - A pause or a seek cannot take back the MIDI clicks already sent, so up to the look-ahead of them
+ *   still sound.
+ * - The player's steady beat clicks on through a loop's count-in, so the two may click together.
  */
 
 import type { Song } from "../midi/song";
-import type { Beat } from "../midi/tempo-map";
+import type { Beat, TempoMap } from "../midi/tempo-map";
 import type { GainLike, NodeLike, ParamLike } from "./sampler";
 import { intervalTimer, type Clock, type ScheduledPart, type Timer } from "./scheduler";
 
@@ -101,11 +109,18 @@ interface Click {
   readonly gain: GainLike;
 }
 
-interface FreeRun {
+/** A steady beat: its first click on the audio clock, its pace, and where its first click falls in a measure. */
+interface SteadyBeat {
   readonly start: number;
   readonly secondsPerBeat: number;
   readonly beatsPerMeasure: number;
-  /** The index of the next beat to queue. */
+  /** The place of the first click in its measure, 0 being the downbeat. */
+  readonly firstBeat: number;
+}
+
+/** A steady beat that clicks on its own timer: the free clicks or the player's steady beat. */
+interface Run extends SteadyBeat {
+  /** The index of the next beat to queue, counted from the first click. */
   next: number;
   stopTimer: () => void;
 }
@@ -117,8 +132,10 @@ export class Metronome implements ScheduledPart {
   readonly #timer: Timer;
   #options: MetronomeOptions;
   #beats: Beat[] = [];
+  #tempoMap: TempoMap | undefined;
   #clicks: Click[] = [];
-  #free: FreeRun | null = null;
+  #free: Run | null = null;
+  #steady: Run | null = null;
   /** The song times of a loop's count-in beats, the first accented. */
   #countIn: readonly number[] = [];
   readonly #now: () => number;
@@ -139,14 +156,18 @@ export class Metronome implements ScheduledPart {
   /** Changes how the next clicks play. */
   configure(options: Partial<MetronomeOptions>): void {
     this.#options = { ...this.#options, ...options };
-    if (this.#free !== null && options.intervalMs !== undefined) {
-      this.#free.stopTimer();
-      this.#free.stopTimer = this.#startFreeTimer();
+    if (options.intervalMs === undefined) return;
+    for (const run of [this.#free, this.#steady]) {
+      if (run === null) continue;
+      run.stopTimer();
+      run.stopTimer = this.#startTimer(run);
     }
   }
 
   load(song: Song): void {
     this.#beats = song.tempoMap.beatsUntil(song.endTick);
+    this.#tempoMap = song.tempoMap;
+    this.#steady = this.#end(this.#steady);
   }
 
   /** Clicks on `beats`, song times in order, whether the metronome is on or not. An empty list stops it. */
@@ -166,48 +187,69 @@ export class Metronome implements ScheduledPart {
       if (beat.seconds >= to) break;
       if (sounds && !counted(beat.seconds)) this.#click(at(beat.seconds), beat.beat === 0);
     }
+    if (this.#steady === null && this.#sounds(false) && this.#tempoMap !== undefined) {
+      this.#steady = this.#start(steadyBeatFrom(this.#tempoMap, from, at));
+    }
   }
 
+  /** Ends the player's steady beat, and silences every click still queued, as a pause or a seek needs. */
   stop(): void {
+    this.#steady = this.#end(this.#steady);
+    this.#silence();
+  }
+
+  /** Clicks `bpm` beats a minute, `beatsPerMeasure` to a measure, from `time` or now, until `stopFree`. */
+  startFree(bpm: number, beatsPerMeasure: number, time = this.#ctx.currentTime): void {
+    this.stopFree();
+    this.#free = this.#start({ start: time, secondsPerBeat: 60 / bpm, beatsPerMeasure, firstBeat: 0 });
+  }
+
+  /** Stops the free clicks, and silences every click still queued. */
+  stopFree(): void {
+    if (this.#free === null) return;
+    this.#free = this.#end(this.#free);
+    this.#silence();
+  }
+
+  /** Starts `beat` clicking on its own timer, and queues its first clicks at once. */
+  #start(beat: SteadyBeat): Run {
+    const run: Run = { ...beat, next: 0, stopTimer: () => {} };
+    run.stopTimer = this.#startTimer(run);
+    this.#pump(run);
+    return run;
+  }
+
+  /** Stops `run`'s timer. Returns null, the value of a run that is not there. */
+  #end(run: Run | null): null {
+    run?.stopTimer();
+    return null;
+  }
+
+  #startTimer(run: Run): () => void {
+    return this.#timer.every(this.#options.intervalMs, () => this.#pump(run));
+  }
+
+  /** Queues `run`'s clicks up to the look-ahead. It counts on while it may not sound. */
+  #pump(run: Run): void {
+    const until = this.#ctx.currentTime + this.#options.aheadMs / 1000;
+    const sounds = this.#sounds(false);
+    for (;;) {
+      const time = run.start + run.next * run.secondsPerBeat;
+      if (time >= until) break;
+      if (sounds) this.#click(time, (run.firstBeat + run.next) % run.beatsPerMeasure === 0);
+      run.next++;
+    }
+  }
+
+  /** Silences the clicks still queued, and lets the one sounding finish. */
+  #silence(): void {
     const now = this.#ctx.currentTime;
     for (const click of this.#clicks) {
       if (click.time > now) this.#forget(click);
     }
   }
 
-  /** Clicks `bpm` beats a minute, `beatsPerMeasure` to a measure, from `time` or now, until `stopFree`. */
-  startFree(bpm: number, beatsPerMeasure: number, time = this.#ctx.currentTime): void {
-    this.stopFree();
-    this.#free = { start: time, secondsPerBeat: 60 / bpm, beatsPerMeasure, next: 0, stopTimer: this.#startFreeTimer() };
-    this.#pumpFree();
-  }
-
-  /** Stops the free clicks, and silences the ones still queued. */
-  stopFree(): void {
-    if (this.#free === null) return;
-    this.#free.stopTimer();
-    this.#free = null;
-    this.stop();
-  }
-
-  #startFreeTimer(): () => void {
-    return this.#timer.every(this.#options.intervalMs, () => this.#pumpFree());
-  }
-
-  #pumpFree(): void {
-    const free = this.#free;
-    if (free === null) return;
-    const until = this.#ctx.currentTime + this.#options.aheadMs / 1000;
-    const sounds = this.#sounds(false);
-    for (;;) {
-      const time = free.start + free.next * free.secondsPerBeat;
-      if (time >= until) break;
-      if (sounds) this.#click(time, free.next % free.beatsPerMeasure === 0);
-      free.next++;
-    }
-  }
-
-  /** Whether the metronome in time with the song, or the free one, may sound now. */
+  /** Whether the clicks in time with the song, or the steady and free runs, may sound now. */
   #sounds(synced: boolean): boolean {
     const o = this.#options;
     return o.enabled && (o.speakers || o.midi) && o.volume > 0 && o.synced === synced;
@@ -259,6 +301,25 @@ export class Metronome implements ScheduledPart {
     click.gain.disconnect();
     this.#clicks = this.#clicks.filter((c) => c !== click);
   }
+}
+
+/**
+ * The steady beat that starts at song time `from` of `map`, with `at` mapping song time to the audio
+ * clock. It takes the tempo and time signature there, and its first click falls on the next beat.
+ */
+function steadyBeatFrom(map: TempoMap, from: number, at: (songTime: number) => number): SteadyBeat {
+  const tick = map.secondsToTicks(from);
+  const signature = map.signatureAt(tick);
+  const position = map.positionAtTick(tick);
+  // A position a hair past a beat counts as on it, so float error never skips the beat it stands on.
+  const beat = Math.ceil(position.beat - 1e-6);
+  const first = map.ticksToSeconds(map.tickOfPosition(position.measure, beat));
+  return {
+    start: at(first),
+    secondsPerBeat: (map.microsecondsPerBeatAt(tick) / 1e6) * (signature.ticksPerBeat / map.ticksPerQuarter),
+    beatsPerMeasure: signature.numerator,
+    firstBeat: beat % signature.numerator,
+  };
 }
 
 /** The index of the first beat at or after `seconds`, or the length when none is. */

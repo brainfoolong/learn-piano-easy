@@ -80,9 +80,7 @@
  *   spring or flash, the particles, the flames, the wave line, the glow's load or the shown frame rate.
  *   Any other frame returns after reading the time and moving the camera, so a paused song costs no
  *   render. The price is a rule: anything new that changes the picture sets `stale` or animates.
- *
- * Gaps: incoming-key marks, the key hit effect, the flare's size, colour and offset and black key length
- * are not yet applied. The picture offset is the transport's, in the time it hands `setTimeSource`.
+ * - The picture offset, `renderOffset`, is the transport's, in the time it hands `setTimeSource`.
  */
 import { AmbientLight, Color, DirectionalLight, Fog, Group, Plane, Raycaster, Scene, SRGBColorSpace, Vector2, Vector3, WebGLRenderer } from "three";
 

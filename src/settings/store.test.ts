@@ -21,17 +21,17 @@ test("a_value_outside_its_range_is_clamped", () => {
   expect(store.set("masterGain", -1)).toBe(0);
   expect(store.set("masterGain", 0.123)).toBe(0.12);
   expect(store.set("detune", 12.6)).toBe(13);
-  expect(store.set("scrollSensitivity", 0.30000000000000004)).toBe(0.3);
+  expect(store.set("particleSpeedX", 0.30000000000000004)).toBe(0.3);
   expect(store.set("renderOffset", Number.NaN)).toBe(0);
   expect(store.get("masterGain")).toBe(0.12);
 
   // A value of the wrong shape falls back to the default.
   expect(store.set("reverbImpulseResponse", "Unknown" as "room")).toBe("room");
   expect(store.set("showFps", "yes" as unknown as boolean)).toBe(false);
-  expect(store.set("keyFlareColor", "red")).toBe("#ffffffff");
+  expect(store.set("noteLabelColor", "red")).toBe("#ffffffff");
 
   // A colour gains full alpha and lower case.
-  expect(store.set("keyFlareColor", "#FF8000")).toBe("#ff8000ff");
+  expect(store.set("noteLabelColor", "#FF8000")).toBe("#ff8000ff");
 
   // Every default is already a valid value of its own setting.
   for (const setting of VALUE_SETTINGS.values()) expect(clampValue(setting, setting.default)).toBe(setting.default);

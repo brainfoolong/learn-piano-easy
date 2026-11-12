@@ -119,7 +119,8 @@ equaliser, scheduled exactly against the audio clock.
   settings.
 - At most 64 voices sound at once, and the oldest released voice stops first.
 - The metronome is a synthesised tone burst. Synced, it clicks on the song's beats in the scheduler's
-  windows. Free, it clicks at the tempo its caller gives, which the transport picks.
+  windows. Unsynced, the player's metronome keeps a steady beat at the song's tempo where playback
+  starts. A lesson's clicks run at the tempo the lesson gives.
 - Reverb plays generated noise responses with an exponential decay, in a few room presets. It mixes in
   at a fixed wet gain of 0.3, and `reverbImpulseResponse` picks the room.
 - `volumeMain` is the one main volume, on the bus. `volumeMainSW` and `useHQPianoSoundfont` are
@@ -142,8 +143,8 @@ library song at full frame rate.
 - The glow's modes are `src/render/glow.ts`, its pass is `src/render/bloom.ts`, and what lights it is
   `src/render/glow-source.ts`.
 - `e2e/scene.e2e.ts` checks the overlays, the camera presets and the glow in Chromium.
-- The scene leaves a few piano settings unapplied. The `Gaps:` line of `scene.ts`'s head comment lists
-  them.
+- The piano settings that no code drew are dropped: the hit effect's switch, incoming-key marks, black
+  key length and the flare's look. `src/settings/coverage.test.ts` lists them with `scrollSensitivity`.
 - OrbitControls keeps the wheel for zoom, because the timeline seeks by click, drag and key only.
 - The transport drives `PianoScene.setSong` and `setTimeSource`. The scene draws the learner's key
   range, as § `keyboard-range` says.
@@ -667,7 +668,7 @@ with *Jingle Bells* as the library's Christmas collection.
 - A tune follows its public domain source, never a later protected arrangement or harmony.
 - A tune's notes come from a score the session reads, never from memory.
 - A song's `published` year is the earliest dated print of the tune as our notes give it.
-- A German song keeps its German title, its guide is in English, and its tune moves to C major.
+- A German song keeps its German title, and its tune moves to C major.
 - A version may write long bars, such as 4/1, so its hook starts within 8 bars.
 - A version may end a tune note early with a rest before a leap, keeping each note's pitch and start.
 - Easy may halve its bars for a wide tune, and may strike a tune note twice only to change finger.
@@ -747,7 +748,8 @@ player is its part at `play/`, and every page reloads offline from any base path
 - Only a page's chunk imports `src/site/services.ts`, so the landing page pulls no audio code.
 - Offline, an unknown path gets the root page with its `<base>` rewritten to the worker's scope.
 - `REPO_URL` of `src/site/routes.ts` is the one link to the source code.
-- Song guides and titles stay English.
+- Song titles stay English. A guide's text is written in English and German, as
+  [our-songs.md](our-songs.md) says.
 
 ## landing-page
 
@@ -973,7 +975,8 @@ year. Each ships eight lessons, a boss and a skip test, in English and German.
 ### Findings
 
 - The four worlds follow the first four in `src/learn/course.ts`, under `src/learn/lessons/<world>/`.
-- The bosses are *Ode to Joy*, *Jingle Bells*, *Canon in D* and *Für Elise*, each in its Easy version.
+- The bosses are *Ode to Joy* and *Jingle Bells* in their Beginner versions, and *Canon in D* and
+  *Für Elise* in their Easy versions.
 - A `play-notes` entry may be a chord, and `src/learn/steps/play-notes.ts` waits for each of its keys.
 - `expressionMiss` in `src/learn/steps/play-notes.ts` judges an entry's touch and pedal on a MIDI keyboard.
 - `stepsToRun` of `src/learn/lesson-run.ts` swaps a touch or pedal step for its `instead` demo and quiz on other inputs.

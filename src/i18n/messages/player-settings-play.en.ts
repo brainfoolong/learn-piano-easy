@@ -84,10 +84,6 @@ export const playerSettingsPlay = {
     label: "Picture offset (ms)",
     help: "Delays the picture against the sound, or shows it early below 0.",
   },
-  scrollSensitivity: {
-    label: "Scroll sensitivity",
-    help: "How far the song moves for each turn of the mouse wheel.",
-  },
   showBPM: {
     label: "Show the tempo in BPM",
     help: "Shows the song's current beats per minute over the scene, beside the frames per second.",
@@ -231,7 +227,7 @@ export const playerSettingsPlay = {
   },
   synchedMetronome: {
     label: "Keep the metronome in time with the song",
-    help: "The metronome follows the song's tempo and speed. When off, the player's metronome stays silent.",
+    help: "On, the metronome clicks on the song's beats and follows its tempo changes and speed. Off, it keeps a steady beat at the song's tempo where playback starts. Later tempo and speed changes leave that beat alone. It starts and stops with playback.",
   },
   enableEqualizer: {
     label: "Equaliser",
@@ -439,36 +435,6 @@ export const playerSettingsPlay = {
     label: "Your black keys' colour",
     help: "The colour of a black key you hold.",
   },
-  drawPianoKeyHitEffect: {
-    label: "Key hit effect",
-    help: "A short flash shows on a key when its note starts.",
-  },
-  highlightIncomingPianoKeys: {
-    label: "Mark the keys of coming notes",
-    help: "Shows on the piano which keys you play next.",
-  },
-  incomingPianoKeysStyle: {
-    label: "Coming notes style",
-    help: "How a key you play next is marked.",
-    options: { key: "Colour the key", dot: "Dot on the key", both: "Both" },
-  },
-  incomingPianoKeysMode: {
-    label: "Which coming notes",
-    help: "Marks every note within the look-ahead time, or only the notes you play next.",
-    options: { timeWindow: "Within the look-ahead", nextNotes: "The next notes" },
-  },
-  incomingPianoKeysLookAhead: {
-    label: "Coming notes look-ahead (s)",
-    help: "How many seconds ahead a coming note is marked on its key.",
-  },
-  incomingPianoKeysFadeIn: {
-    label: "Fade in coming notes",
-    help: "A key's mark grows stronger as its note comes closer.",
-  },
-  incomingPianoKeysOpacity: {
-    label: "Coming notes opacity",
-    help: "How strongly a coming note's mark shows. Lower is fainter.",
-  },
   pianoWhiteKeyColor: {
     label: "White key colour",
     help: "The colour of the piano's white keys.",
@@ -493,33 +459,9 @@ export const playerSettingsPlay = {
     label: "White key length (%)",
     help: "How long the white keys are drawn.",
   },
-  blackKeyHeight: {
-    label: "Black key length (%)",
-    help: "How long the black keys are drawn, against the white keys.",
-  },
   enableKeyFlare: {
     label: "Flare on pressed keys",
     help: "A bright light glows over each key that sounds.",
-  },
-  keyFlareOnlyPiano: {
-    label: "Flare only on the keys",
-    help: "Keeps the flare on the piano, so it does not shine over the falling notes.",
-  },
-  keyFlareSize: {
-    label: "Flare size",
-    help: "How large the flare over a key is.",
-  },
-  keyFlareOpacity: {
-    label: "Flare opacity",
-    help: "How strongly the flare shows. Lower is fainter.",
-  },
-  keyFlareColor: {
-    label: "Flare colour",
-    help: "The colour of the light over a key that sounds.",
-  },
-  keyFlareOffset: {
-    label: "Flare offset",
-    help: "Moves the flare up or down from its key.",
   },
   pianoLineEnabled: {
     label: "Wave line above the keys",

@@ -53,7 +53,7 @@ export const playModes = {
       tag: "Step by step",
       name: "Play along",
       text: "The song waits for you at every note. Each note shows its name and its finger, and each key shows its name.",
-      traits: ["The notes wait for you", "Note names and fingers on the notes", "Names on the keys, and the next keys light up"],
+      traits: ["The notes wait for you", "Note names and fingers on the notes", "Names on the white and the black keys"],
       song: "Ode to Joy, Beginner",
     },
     oneHand: {

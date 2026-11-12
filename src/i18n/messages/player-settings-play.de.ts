@@ -10,7 +10,7 @@ export const playerSettingsPlay: typeof en = {
   },
   language: {
     label: "Sprache",
-    help: "Mit „Wie der Browser“ öffnet sich die Website in der Sprache des Browsers, wenn es sie gibt.",
+    help: "Mit \"Wie der Browser\" öffnet sich die Website in der Sprache des Browsers, wenn es sie gibt.",
     options: { auto: "Wie der Browser", en: "English", de: "Deutsch" },
   },
   learnSounds: {
@@ -83,10 +83,6 @@ export const playerSettingsPlay: typeof en = {
   renderOffset: {
     label: "Bildversatz (ms)",
     help: "Verzögert das Bild gegenüber dem Ton. Unter 0 kommt das Bild früher.",
-  },
-  scrollSensitivity: {
-    label: "Scroll-Empfindlichkeit",
-    help: "Wie weit sich das Lied bei jeder Drehung des Mausrads bewegt.",
   },
   showBPM: {
     label: "Tempo in BPM anzeigen",
@@ -231,7 +227,7 @@ export const playerSettingsPlay: typeof en = {
   },
   synchedMetronome: {
     label: "Metronom im Takt des Lieds halten",
-    help: "Das Metronom folgt dem Tempo des Lieds. Ist das aus, schweigt das Metronom des Players.",
+    help: "An: Das Metronom klickt auf den Schlägen des Lieds und folgt seinen Tempowechseln und der Geschwindigkeit. Aus: Es hält einen gleichmäßigen Schlag im Tempo des Lieds dort, wo die Wiedergabe startet. Spätere Tempo- und Geschwindigkeitswechsel ändern diesen Schlag nicht. Er startet und stoppt mit der Wiedergabe.",
   },
   enableEqualizer: {
     label: "Equalizer",
@@ -390,7 +386,7 @@ export const playerSettingsPlay: typeof en = {
   },
   playHands: {
     label: "Deine Hände",
-    help: "Die Hände, für die dein Spiel gewertet wird. Ist „Auf deine Töne warten“ an, spielt die App die Hand, die du auslässt.",
+    help: "Die Hände, für die dein Spiel gewertet wird. Ist \"Auf deine Töne warten\" an, spielt die App die Hand, die du auslässt.",
     options: { both: "Beide Hände", right: "Rechte Hand", left: "Linke Hand" },
   },
   playalongSilentNotes: {
@@ -439,36 +435,6 @@ export const playerSettingsPlay: typeof en = {
     label: "Farbe deiner schwarzen Tasten",
     help: "Die Farbe einer schwarzen Taste, die du hältst.",
   },
-  drawPianoKeyHitEffect: {
-    label: "Anschlageffekt",
-    help: "Ein kurzes Aufblitzen zeigt sich auf einer Taste, wenn ihr Ton beginnt.",
-  },
-  highlightIncomingPianoKeys: {
-    label: "Tasten kommender Töne markieren",
-    help: "Zeigt auf dem Klavier, welche Tasten du als Nächstes spielst.",
-  },
-  incomingPianoKeysStyle: {
-    label: "Stil der kommenden Töne",
-    help: "Wie eine Taste markiert wird, die du als Nächstes spielst.",
-    options: { key: "Taste färben", dot: "Punkt auf der Taste", both: "Beides" },
-  },
-  incomingPianoKeysMode: {
-    label: "Welche kommenden Töne",
-    help: "Markiert alle Töne innerhalb der Vorschauzeit oder nur die Töne, die du als Nächstes spielst.",
-    options: { timeWindow: "Innerhalb der Vorschau", nextNotes: "Die nächsten Töne" },
-  },
-  incomingPianoKeysLookAhead: {
-    label: "Vorschau kommender Töne (s)",
-    help: "Wie viele Sekunden im Voraus ein kommender Ton auf seiner Taste markiert wird.",
-  },
-  incomingPianoKeysFadeIn: {
-    label: "Kommende Töne einblenden",
-    help: "Die Markierung einer Taste wird stärker, je näher ihr Ton kommt.",
-  },
-  incomingPianoKeysOpacity: {
-    label: "Deckkraft kommender Töne",
-    help: "Wie kräftig die Markierung eines kommenden Tons erscheint. Weniger ist blasser.",
-  },
   pianoWhiteKeyColor: {
     label: "Farbe der weißen Tasten",
     help: "Die Farbe der weißen Tasten des Klaviers.",
@@ -493,33 +459,9 @@ export const playerSettingsPlay: typeof en = {
     label: "Länge der weißen Tasten (%)",
     help: "Wie lang die weißen Tasten gezeichnet werden.",
   },
-  blackKeyHeight: {
-    label: "Länge der schwarzen Tasten (%)",
-    help: "Wie lang die schwarzen Tasten im Verhältnis zu den weißen gezeichnet werden.",
-  },
   enableKeyFlare: {
     label: "Lichtschein auf gedrückten Tasten",
     help: "Über jeder klingenden Taste leuchtet ein heller Schein.",
-  },
-  keyFlareOnlyPiano: {
-    label: "Lichtschein nur auf den Tasten",
-    help: "Hält den Lichtschein auf dem Klavier, damit er nicht über die fallenden Noten scheint.",
-  },
-  keyFlareSize: {
-    label: "Größe des Lichtscheins",
-    help: "Wie groß der Lichtschein über einer Taste ist.",
-  },
-  keyFlareOpacity: {
-    label: "Deckkraft des Lichtscheins",
-    help: "Wie kräftig der Lichtschein erscheint. Weniger ist blasser.",
-  },
-  keyFlareColor: {
-    label: "Farbe des Lichtscheins",
-    help: "Die Farbe des Lichts über einer klingenden Taste.",
-  },
-  keyFlareOffset: {
-    label: "Versatz des Lichtscheins",
-    help: "Schiebt den Lichtschein von seiner Taste nach oben oder unten.",
   },
   pianoLineEnabled: {
     label: "Wellenlinie über den Tasten",

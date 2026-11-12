@@ -111,7 +111,7 @@ export const playerSettingsLook: typeof en = {
   },
   showSustainOnOffs: {
     label: "Pedal treten und lösen",
-    help: "Eine Linie mit „Ped.“, wo das Pedal getreten wird, und „✱“, wo es sich löst.",
+    help: "Eine Linie mit \"Ped.\", wo das Pedal getreten wird, und \"✱\", wo es sich löst.",
   },
   showSustainChannels: {
     label: "Pedalkanäle",

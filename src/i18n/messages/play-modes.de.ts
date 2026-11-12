@@ -3,7 +3,7 @@ import type { playModes as en } from "./play-modes.en";
 
 export const playModes: typeof en = {
   eyebrow: "Auf die Plätze, fertig, los",
-  lead: "Wähle einen Modus, und der Player richtet sich selbst ein: mit dem passenden Lied, der passenden Hilfe und dem passenden Look. Dann spielst du los.",
+  lead: "Wähl einen Modus, und der Player richtet sich selbst ein: mit dem passenden Lied, der passenden Hilfe und dem passenden Look. Dann spielst du los.",
   note: "Ein Modus ändert ein paar Einstellungen des Players. Sobald er startet, machst du ihn mit einem Klick rückgängig, und jede Einstellung kannst du später ändern.",
   traits: "Was er einstellt",
   song: (title: string) => `Lied: ${title}`,
@@ -50,21 +50,21 @@ export const playModes: typeof en = {
       tag: "Schritt für Schritt",
       name: "Mitspielen",
       text: "Das Lied wartet bei jeder Note auf dich. Jede Note zeigt ihren Namen und ihren Finger, und jede Taste ihren Namen.",
-      traits: ["Die Noten warten auf dich", "Notennamen und Finger auf den Noten", "Namen auf den Tasten, und die nächsten Tasten leuchten"],
+      traits: ["Die Noten warten auf dich", "Notennamen und Finger auf den Noten", "Namen auf den weißen und den schwarzen Tasten"],
       song: "Ode to Joy, Einsteiger",
     },
     oneHand: {
       tag: "Klein anfangen",
       name: "Eine Hand nach der anderen",
-      text: "Lerne zuerst die rechte Hand, während die App die linke spielt. Das Lied wartet auf jede deiner Noten.",
-      traits: ["Nur deine rechte Hand spielt", "Die App spielt die linke Hand", "Die Hand wechselst du in den Einstellungen unter „Deine Hände“"],
+      text: "Lern zuerst die rechte Hand, während die App die linke spielt. Das Lied wartet auf jede deiner Noten.",
+      traits: ["Nur deine rechte Hand spielt", "Die App spielt die linke Hand", "Die Hand wechselst du in den Einstellungen unter \"Deine Hände\""],
       song: "Jingle Bells, Einsteiger",
     },
     readMusic: {
-      tag: "Noten",
+      tag: "Notenblatt",
       name: "Noten lesen",
-      text: "Die Noten stehen über dem Klavier, und das Lied wartet auf dich. Die Noten tragen keine Namen, also liest du sie vom Notensystem.",
-      traits: ["Noten über dem Klavier", "Die Noten warten auf dich", "Ein sanftes Licht hinter jeder klingenden Note"],
+      text: "Das Notenblatt steht über dem Klavier, und das Lied wartet auf dich. Die Noten tragen keine Namen, also liest du sie vom Notensystem.",
+      traits: ["Notenblatt über dem Klavier", "Die Noten warten auf dich", "Ein sanftes Licht hinter jeder klingenden Note"],
       song: "Mary Had a Little Lamb, Einsteiger",
     },
     slowSteady: {
@@ -97,7 +97,7 @@ export const playModes: typeof en = {
     freeJam: {
       tag: "Nur du",
       name: "Freies Spiel",
-      text: "Kein Lied und keine Regeln. Spiel, was du willst, und das Klavier antwortet mit Funken und Licht. Nimm es auf und behalte es als MIDI-Datei.",
+      text: "Kein Lied und keine Regeln. Spiel, was du willst, und das Klavier antwortet mit Funken und Licht. Nimm es auf und behalt es als MIDI-Datei.",
       traits: ["Freies Spiel, ohne Lied", "Funken, Sterne und ein leuchtendes Klavier", "Nimm auf und speichere, was du spielst"],
     },
     chordExplorer: {
