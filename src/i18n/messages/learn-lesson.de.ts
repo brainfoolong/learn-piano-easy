@@ -92,6 +92,12 @@ export const learnLesson: typeof en = {
     shortNotes: (hits: number, notes: number) => `${formatNumber("de", hits)} von ${formatNumber("de", notes)} Tönen kamen pünktlich. Versuch es noch einmal.`,
     restSounded: "In einer Pause hat eine Taste geklungen. Heb den Finger und bleib dort still.",
     phraseHint: "Spiel jeden Ton auf seinem Klick und heb die Taste vor einer Pause. Die Punkte blinken im Takt.",
+    pattern: {
+      taps: (countIn, taps) => `Zähl ${formatNumber("de", countIn)} Schläge ein. Dann tipp ${formatNumber("de", taps)} Schläge lang im Takt.`,
+      phrase: (countIn, ...parts) => `Zähl ${formatNumber("de", countIn)} Schläge ein. Dann spiel: ${parts.join(", ")}.`,
+      held: (note, beats) => `${note} ${formatNumber("de", beats)} Schläge lang gehalten`,
+      rest: (beats) => (beats === 1 ? "Pause" : `Pause für ${formatNumber("de", beats)} Schläge`),
+    },
   },
   song: {
     play: "Im Player spielen",

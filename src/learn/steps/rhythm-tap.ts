@@ -19,6 +19,8 @@
  *   broke. A round short of it is one mistake, and Start runs another. After `HINT_AFTER` of them a hint
  *   shows and the dots flash on the beat. A passed round sets `data-passed`, which hides Start in its
  *   place, so nothing moves.
+ * - **A screen reader reads the pattern as text, never the dots.** `patternText` names the count-in,
+ *   then each note, held note and rest in order, so the dots stay `aria-hidden`.
  * - **The judges are `judgeTaps` and `judgePhrase`,** pure functions the unit tests call.
  *
  * The root carries `data-phase`, `data-beat` and `data-first-tap`, which the e2e test taps by.
@@ -26,7 +28,8 @@
  * Above 200 beats a minute, beats sit closer than two windows. The nearest beat then takes the tap, so
  * the window there is half a beat.
  */
-import { messagesOf } from "../../i18n/locale";
+import { messagesOf, type Locale } from "../../i18n/locale";
+import { noteName } from "../../theory/note-names";
 import { button } from "../../ui/components/button";
 import { el } from "../../ui/dom";
 import type { Clicks } from "../lesson-sound";
@@ -132,6 +135,23 @@ export function judgePhrase(first: number, bpm: number, notes: readonly PhraseNo
     return presses.some((press, i) => (!hits.taps[i] && press.at >= from && press.at < to) || (press.at < from && (press.end ?? now) > middle));
   });
   return { notes: hits.beats, presses: hits.taps, broken };
+}
+
+/**
+ * What a screen reader reads of a step's beats in `locale`: the count-in, then the `taps` beats, or the
+ * phrase `notes` in order. A note longer than a beat says how long it is held, and a rest how long it lasts.
+ */
+export function patternText(locale: Locale, taps: number, notes?: readonly PhraseNote[]): string {
+  const say = messagesOf(locale).lesson.rhythmTap.pattern;
+  if (notes === undefined) return say.taps(COUNT_IN, taps);
+  const parts = [
+    ...notes.map((note) => {
+      const name = noteName(note.note, { locale });
+      return { at: note.at, text: note.beats > 1 ? say.held(name, note.beats) : name };
+    }),
+    ...restsOf(notes).map((rest) => ({ at: rest.from, text: say.rest(rest.to - rest.from) })),
+  ].sort((a, b) => a.at - b.at);
+  return say.phrase(COUNT_IN, ...parts.map((part) => part.text));
 }
 
 type Phase = "idle" | "count-in" | "tapping" | "done";
@@ -299,6 +319,7 @@ export const rhythmTapStep: StepView<RhythmTapStep> = (element, step, host) => {
   root.append(
     el("p", { class: "lesson-step__text", text: host.texts.text }),
     el("div", { class: "lesson-rhythm__actions", children: [start, status] }),
+    el("p", { class: "visually-hidden", text: patternText(host.locale, step.taps, phrase) }),
     el("ol", { class: "lesson-rhythm__beats", attrs: { "aria-hidden": "true" }, children: dots }),
     el("div", { class: "lesson-step__keys", children: [keys.element] }),
     hint,

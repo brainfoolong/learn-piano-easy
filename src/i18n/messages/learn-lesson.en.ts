@@ -126,6 +126,17 @@ export const learnLesson = {
     /** The band after a round in which a key sounded during a rest. */
     restSounded: "A key sounded in a rest. Lift your finger and stay silent there.",
     phraseHint: "Play each note on its click, and lift the key before a rest. The dots flash on the beat.",
+    /** What a screen reader reads in place of the beats' dots: the count-in, then the beats in order. */
+    pattern: {
+      /** A step without a phrase, with its count-in and its tap beats. */
+      taps: (countIn: number, taps: number) => `Count in ${formatNumber("en", countIn)} beats. Then tap ${formatNumber("en", taps)} beats.`,
+      /** A step with a phrase, with its count-in and its notes and rests in order, such as `C4` and `rest`. */
+      phrase: (countIn: number, ...parts: string[]) => `Count in ${formatNumber("en", countIn)} beats. Then play: ${parts.join(", ")}.`,
+      /** A note longer than one beat, with its name, such as `C4`. */
+      held: (note: string, beats: number) => `${note} held for ${formatNumber("en", beats)} beats`,
+      /** A rest of `beats` beats. */
+      rest: (beats: number) => (beats === 1 ? "rest" : `rest for ${formatNumber("en", beats)} beats`),
+    },
   },
   song: {
     play: "Play it in the player",

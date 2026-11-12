@@ -7,7 +7,7 @@ import { HINT_AFTER, judgeChoice, passesRound, scoreOf, showsHint } from "./judg
 import { compareNotes } from "./listen";
 import { expressionMiss, playNote } from "./play-notes";
 import { namesNote, playsNote } from "./read-note";
-import { beatTimes, judgePhrase, judgeTaps, restsOf, WINDOW } from "./rhythm-tap";
+import { beatTimes, judgePhrase, judgeTaps, patternText, restsOf, WINDOW } from "./rhythm-tap";
 
 test("find_key_passes_on_the_asked_key_only", () => {
   const middleC = { key: 60, anyOctave: false };
@@ -172,6 +172,19 @@ test("rhythm_tap_phrase_breaks_a_rest_played_into_or_held_through", () => {
   expect(heldTo()).toEqual([true]);
   // A key still down is judged at `now`, so the rest is not broken before its middle.
   expect(judgePhrase(10, 60, PHRASE, [ontime[0]!, { pitch: 62, at: 11 }], 12.2).broken).toEqual([false]);
+});
+
+test("rhythm_tap_reads_its_rests_and_held_notes_in_order_to_a_screen_reader", () => {
+  // A rest before the first note, a quarter rest, a half rest, then B held for two beats.
+  const phrase = [
+    { note: 60, at: 1, beats: 1 },
+    { note: 62, at: 2, beats: 1 },
+    { note: 64, at: 4, beats: 1 },
+    { note: 71, at: 7, beats: 2 },
+  ];
+  expect(patternText("en", 9, phrase)).toBe("Count in 4 beats. Then play: rest, C4, D4, rest, E4, rest for 2 beats, B4 held for 2 beats.");
+  expect(patternText("de", 9, phrase)).toBe("Zähl 4 Schläge ein. Dann spiel: Pause, C4, D4, Pause, E4, Pause für 2 Schläge, H4 2 Schläge lang gehalten.");
+  expect(patternText("en", 8)).toBe("Count in 4 beats. Then tap 8 beats.");
 });
 
 test("a_rhythm_tap_phrase_keeps_its_notes_on_whole_beats_inside_its_taps", () => {
