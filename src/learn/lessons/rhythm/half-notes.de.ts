@@ -8,17 +8,17 @@ export const halfNotesDe: HalfNotesTexts = {
       text: "Schau zu und hör hin. Zuerst kommen vier kurze Töne, einer auf jeden Schlag. Danach klingt jeder Ton doppelt so lang.",
     },
     "what-a-half-note-is": {
-      text: "Eine halbe Note dauert zwei Schläge. Du spielst sie auf dem ersten Schlag und hältst sie über den zweiten hinweg. Zähl bei jeder halben Note „1-2“.",
+      text: "Eine halbe Note dauert zwei Schläge. Du spielst sie auf dem ersten Schlag und hältst sie über den zweiten hinweg. Zähl bei jeder halben Note \"1-2\".",
     },
     "half-beats-quiz": {
       text: "Wie viele Schläge dauert eine halbe Note?",
       answers: ["Einen Schlag", "Zwei Schläge", "Vier Schläge"],
     },
     "play-and-hold": {
-      text: "Leg deine rechte Hand in die C-Lage. Spiel C, D, E, D, C und halte jede Taste gedrückt, während du „1-2“ zählst. Die Übung wartet auf jeden Ton, also lass dir Zeit.",
+      text: "Leg deine rechte Hand in die C-Lage. Spiel C, D, E, D, C und halt jede Taste gedrückt, während du \"1-2\" zählst. Die Übung wartet auf jeden Ton, also lass dir Zeit.",
     },
     "count-one-two": {
-      text: "Tipp bei jedem Klick auf eine beliebige Taste. Zähl dabei „1-2, 1-2“. Jedes „1-2“ ist so lang wie eine halbe Note.",
+      text: "Tipp bei jedem Klick auf eine beliebige Taste. Zähl dabei \"1-2, 1-2\". Jedes \"1-2\" ist so lang wie eine halbe Note.",
     },
     "which-is-longer-quiz": {
       text: "Welche Note dauert länger?",

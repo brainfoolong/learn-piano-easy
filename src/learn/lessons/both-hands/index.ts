@@ -6,13 +6,13 @@ import { dottedRhythm } from "./dotted-rhythm";
 import { eighthNotes } from "./eighth-notes";
 import { handsApartThenTogether } from "./hands-apart-then-together";
 import { movingTheHand } from "./moving-the-hand";
-import { odeToJoyRare } from "./ode-to-joy";
+import { odeToJoyBothHands } from "./ode-to-joy";
 import { openFifths } from "./open-fifths";
 import { bothHandsSkipPicks } from "./skip-test";
 import { tuneAndBassTogether } from "./tune-and-bass-together";
 
 export const bothHands: WorldLessons = {
   lessons: [handsApartThenTogether, aHeldBassNote, openFifths, changingTheBassOnTheBeat, tuneAndBassTogether, movingTheHand, eighthNotes, dottedRhythm],
-  boss: odeToJoyRare,
+  boss: odeToJoyBothHands,
   skipPicks: bothHandsSkipPicks,
 };

@@ -5,7 +5,7 @@ export const readingStepsAndSkipsDe: ReadingStepsAndSkipsTexts = {
   title: "Schritte und Sprünge lesen",
   steps: {
     "moves-demo": {
-      text: "Hör zu. Zuerst steigen die Töne in Schritten, dann in Sprüngen. In den Noten sieht jede Bewegung anders aus.",
+      text: "Hör zu. Zuerst steigen die Töne in Schritten, dann in Sprüngen. Auf dem Notenblatt sieht jede Bewegung anders aus.",
     },
     "step-on-the-staff": {
       text: "Ein Schritt geht von einer Notenlinie in den nächsten Zwischenraum oder von einem Zwischenraum auf die nächste Linie. Auf den Tasten ist das die nächste weiße Taste.",
@@ -35,11 +35,17 @@ export const readingStepsAndSkipsDe: ReadingStepsAndSkipsTexts = {
     "first-note": {
       text: "Mit diesem Ton beginnt das nächste Lied. Wie heißt er?",
     },
+    "hand-on-d": {
+      text: "Schau, wie die rechte Hand aus der C-Lage nach oben rückt. Der Daumen liegt auf D, die Finger 2 bis 5 auf E, G, A und H. Das F fällt weg, darum spreizen sich die Finger 2 und 3 etwas weiter.",
+    },
+    "d-position": {
+      text: "Jetzt du. Leg den rechten Daumen auf D und spiel D E G A H mit den Fingern 1 bis 5. Dann geh zurück bis zum D.",
+    },
     "song-notes": {
       text: "Das nächste Lied braucht diese fünf Töne. Lies jeden und spiel ihn mit der rechten Hand.",
     },
     "song-opening": {
-      text: "So beginnt das nächste Lied. Leg den rechten Daumen auf das D und die Finger 2 bis 5 auf E, G, A und H. Folge der markierten Taste.",
+      text: "So beginnt das nächste Lied. Lass die rechte Hand auf D, E, G, A und H liegen und folg der markierten Taste.",
     },
     "opening-move-quiz": {
       text: "In dieser Melodie geht das E abwärts zum D. Das E steht auf der untersten Linie. Wo steht das D?",

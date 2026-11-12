@@ -18,21 +18,21 @@ export const tempoAndTheMetronomeDe: TempoAndTheMetronomeTexts = {
       answers: ["60 Schläge pro Minute", "120 Schläge pro Minute"],
     },
     "slow-first": {
-      text: "Ein Metronom klickt den Grundschlag in jedem Tempo, das du einstellst. Übe ein neues Stück zuerst langsam. Wenn es leicht geht, stell das Metronom etwas schneller.",
+      text: "Ein Metronom klickt den Grundschlag in jedem Tempo, das du einstellst. Üb ein neues Stück zuerst langsam. Wenn es leicht geht, stell das Metronom etwas schneller.",
     },
     "slow-first-quiz": {
       text: "Ein neues Stück fällt dir schwer. Wie übst du es?",
       answers: ["Erst langsam, dann etwas schneller", "Gleich im vollen Tempo"],
     },
     "slow-tap": {
-      text: "Das Metronom klickt mit 60 Schlägen pro Minute. Drück auf Start und tippe bei jedem Klick auf eine beliebige Taste.",
+      text: "Das Metronom klickt mit 60 Schlägen pro Minute. Drück auf Start und tipp bei jedem Klick auf eine beliebige Taste.",
     },
     "faster-tap": {
-      text: "Das Metronom klickt mit 104 Schlägen pro Minute. Drück auf Start und tippe bei jedem Klick einmal auf eine beliebige Taste.",
+      text: "Das Metronom klickt mit 104 Schlägen pro Minute. Drück auf Start und tipp bei jedem Klick einmal auf eine beliebige Taste.",
     },
     recap: {
       text: "Gut gemacht. Du hältst den Grundschlag jetzt in zwei Tempi. Als Nächstes wartet die Ode an die Freude, zuerst langsam.",
-      points: ["Das Tempo sagt, wie schnell der Grundschlag geht.", "Ein Metronom klickt den Grundschlag in dem Tempo, das du wählst.", "Übe zuerst langsam und dann etwas schneller."],
+      points: ["Das Tempo sagt, wie schnell der Grundschlag geht.", "Ein Metronom klickt den Grundschlag in dem Tempo, das du wählst.", "Üb zuerst langsam und dann etwas schneller."],
     },
   },
 };

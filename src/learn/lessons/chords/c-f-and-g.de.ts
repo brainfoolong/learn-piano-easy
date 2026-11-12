@@ -28,7 +28,7 @@ export const cFAndGDe: CFAndGTexts = {
       text: "Spiel C-Dur ab dem mittleren C, dann setz für G-Dur den Daumen auf das G über dem mittleren C und geh zurück zu C.",
     },
     "move-the-hand": {
-      text: "Heb die ganze Hand von einem Akkord zum nächsten. Halte die Finger 1, 3 und 5 in ihrer Form, und lass den Daumen den neuen Grundton finden.",
+      text: "Heb die ganze Hand von einem Akkord zum nächsten. Halt die Finger 1, 3 und 5 in ihrer Form, und lass den Daumen den neuen Grundton finden.",
     },
     "c-f-g-c": {
       text: "Spiel vier Akkorde mit der rechten Hand: C-E-G ab dem mittleren C, dann F-A-C, G-H-D und C-E-G. Lass dir Zeit dazwischen.",
@@ -50,7 +50,7 @@ export const cFAndGDe: CFAndGTexts = {
       points: [
         "C, F und G sind die Dreiklänge auf der 1., 4. und 5. Stufe von C-Dur.",
         "F-Dur ist F, A und C, und G-Dur ist G, H und D.",
-        "Heb die ganze Hand und halte ihre Form, um zwischen Akkorden zu wechseln.",
+        "Heb die ganze Hand und halt ihre Form, um zwischen Akkorden zu wechseln.",
         "Der Schritt von G zurück zu C klingt abgeschlossen.",
       ],
     },

@@ -35,11 +35,17 @@ export const readingStepsAndSkipsEn = {
     "first-note": {
       text: "The next song starts on this note. Name it.",
     },
+    "hand-on-d": {
+      text: "Watch the right hand move up from C position. The thumb sits on D, and fingers 2 to 5 cover E, G, A and B. F is left out, so fingers 2 and 3 open a little wider.",
+    },
+    "d-position": {
+      text: "Your turn. Put your right thumb on D and play D E G A B with fingers 1 to 5. Then walk back down to D.",
+    },
     "song-notes": {
       text: "The next song uses these five notes. Read each one and play it with your right hand.",
     },
     "song-opening": {
-      text: "Here is the start of the next song. Put your right thumb on D, and fingers 2 to 5 on E, G, A and B. Follow the marked key.",
+      text: "Here is the start of the next song. Keep your right hand on D, E, G, A and B, and follow the marked key.",
     },
     "opening-move-quiz": {
       text: "In that tune, E moves down to D. E sits on the bottom line. Where is D?",

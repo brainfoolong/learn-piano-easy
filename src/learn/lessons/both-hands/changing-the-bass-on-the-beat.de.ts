@@ -18,7 +18,7 @@ export const changingTheBassOnTheBeatDe: ChangingTheBassOnTheBeatTexts = {
       text: "Tipp zwei Takte lang jeden Schlag und zähl mit: eins, zwei, drei, vier. Spür, wie jeder Takt auf der Eins beginnt.",
     },
     "land-on-one": {
-      text: "Halte die alte Quinte bis zur Vier. Dann lass los und setz die neue Quinte genau auf die Eins.",
+      text: "Halt die alte Quinte bis zur Vier. Dann lass los und setz die neue Quinte genau auf die Eins.",
     },
     "c-to-g": {
       text: "Erst die linke Hand allein. Spiel die Quinte auf dem C unter dem mittleren C, wechsle hinunter zur Quinte auf dem G darunter und dann zurück zum C.",
@@ -37,7 +37,7 @@ export const changingTheBassOnTheBeatDe: ChangingTheBassOnTheBeatTexts = {
       points: [
         "Der Bass wechselt auf der Eins eines neuen Takts.",
         "Die neue Quinte setzt zusammen mit dem Ton der rechten Hand ein.",
-        "Halte die alte Quinte bis zum Ende des Takts, dann wechsle.",
+        "Halt die alte Quinte bis zum Ende des Takts, dann wechsle.",
       ],
     },
   },

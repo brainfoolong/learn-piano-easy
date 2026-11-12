@@ -18,7 +18,7 @@ export const skipsDe: SkipsTexts = {
       text: "Leg deine rechte Hand in die C-Lage. Spring nach oben: Finger 1 und 3, dann 2 und 4, dann 3 und 5.",
     },
     "skips-down": {
-      text: "Jetzt dieselben Sprünge wieder abwärts. Fang mit Finger 5 an und folge der markierten Taste.",
+      text: "Jetzt dieselben Sprünge wieder abwärts. Fang mit Finger 5 an und folg der markierten Taste.",
     },
     "step-or-skip-quiz": {
       text: "Finger 4 spielt F, danach spielt Finger 5 das G. Ist das ein Schritt oder ein Sprung?",

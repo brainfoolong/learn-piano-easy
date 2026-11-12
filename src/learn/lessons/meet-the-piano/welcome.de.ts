@@ -8,10 +8,10 @@ export const welcomeDe: WelcomeTexts = {
       text: "Willkommen! Hier lernst du Klavier in kleinen Schritten. Jede Lektion zeigt dir eine Idee, und du probierst sie gleich aus.",
     },
     "sound-check": {
-      text: "Zuerst ein Tontest. Das Klavier spielt vier Töne. Hörst du nichts, dreh den Ton lauter und drück auf „Noch einmal“.",
+      text: "Zuerst ein Tontest. Das Klavier spielt vier Töne. Hörst du nichts, dreh den Ton lauter und drück auf \"Noch einmal\".",
     },
     "ways-to-play": {
-      text: "Du kannst jede Lektion auf den Tasten am Bildschirm spielen, auf deiner Computertastatur oder auf einem MIDI-Keyboard. Für ein MIDI-Keyboard steckst du es an und drückst einmal „MIDI-Geräte verbinden“ in den Einstellungen des Players.",
+      text: "Du kannst jede Lektion auf den Tasten am Bildschirm spielen, auf deiner Computertastatur oder auf einem MIDI-Keyboard. Für ein MIDI-Keyboard steckst du es an und drückst einmal \"MIDI-Geräte verbinden\" in den Einstellungen des Players.",
     },
     "ways-quiz": {
       text: "Worauf kannst du eine Lektion spielen?",

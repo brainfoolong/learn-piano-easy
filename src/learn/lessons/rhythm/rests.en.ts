@@ -25,6 +25,12 @@ export const restsEn = {
       text: "You play a quarter note, then a quarter rest, then a half note. How many beats is that?",
       answers: ["Two beats", "Three beats", "Four beats"],
     },
+    "phrase-with-rests": {
+      text: "Watch and listen. The piano plays C D E, rests for one beat, then plays E D. It rests for two beats and ends on C.",
+    },
+    "play-with-rests": {
+      text: "Your turn. Play C D E, then count one beat of rest. Play E D, count two beats of rest, and end on C.",
+    },
     recap: {
       text: "Well done. You know your first rests now.",
       points: ["A rest is a silence that still counts.", "A quarter rest lasts one beat.", "A half rest lasts two beats."],

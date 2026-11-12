@@ -1,14 +1,14 @@
 /** The boss of *Scales and keys* in German. */
-import type { JingleBellsRareTexts } from "./jingle-bells.en";
+import type { JingleBellsTexts } from "./jingle-bells.en";
 
-export const jingleBellsRareDe: JingleBellsRareTexts = {
+export const jingleBellsDe: JingleBellsTexts = {
   title: "Boss: Jingle Bells mit beiden Händen",
   steps: {
     intro: {
-      text: "Jingle Bells steht in C-Dur, also hat es keine Vorzeichen. Die Melodie läuft die Stufen der C-Dur-Tonleiter auf und ab. Deine linke Hand spielt Akkorde darunter.",
+      text: "Jingle Bells steht in C-Dur, also hat es keine Vorzeichen. Die Melodie läuft die Stufen der C-Dur-Tonleiter auf und ab. Deine linke Hand hält in jedem Takt einen tiefen Ton oder eine Quinte.",
     },
     song: {
-      text: "Spiel Jingle Bells mit beiden Händen, etwas langsamer als notiert. Zähl das lange C in Takt 3 aus, und lass das D spät kommen.",
+      text: "Spiel Jingle Bells mit beiden Händen im vollen Tempo. Lass die rechte Hand in der C-Lage, und halt jeden Basston einen ganzen Takt lang.",
     },
   },
 };

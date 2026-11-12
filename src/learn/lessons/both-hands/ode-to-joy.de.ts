@@ -1,14 +1,14 @@
 /** The boss of *Both hands* in German. */
-import type { OdeToJoyRareTexts } from "./ode-to-joy.en";
+import type { OdeToJoyBothHandsTexts } from "./ode-to-joy.en";
 
-export const odeToJoyRareDe: OdeToJoyRareTexts = {
+export const odeToJoyBothHandsDe: OdeToJoyBothHandsTexts = {
   title: "Boss: Ode an die Freude mit beiden Händen",
   steps: {
     intro: {
-      text: "Diese Melodie kennst du aus der Rhythmus-Welt. Jetzt steht sie in D-Dur und hat ihren echten Rhythmus, mit der punktierten Note in Takt 4. Deine linke Hand hält Töne und Akkorde darunter.",
+      text: "Diese Melodie kennst du aus der Rhythmus-Welt. Jetzt spielt deine linke Hand mit, in der C-Lage unter der Melodie. Sie wechselt zwischen zwei Tastenpaaren: C mit G und D mit G.",
     },
     song: {
-      text: "Spiel die Ode an die Freude mit beiden Händen, etwas langsamer als notiert. Halte jede Bassnote, bis die nächste kommt.",
+      text: "Spiel die ersten acht Takte der Ode an die Freude mit beiden Händen. Halt jedes Tastenpaar im Bass, bis das nächste kommt. Das Lied wartet auf dich.",
     },
   },
 };

@@ -35,7 +35,7 @@ export const loudAndSoftDe: LoudAndSoftTexts = {
       answers: ["Leise", "Erst leise, dann laut", "Erst laut, dann leise", "Laut"],
     },
     "piano-and-forte": {
-      text: "In den Noten steht unter dem Notensystem, wie laut du spielst. Das p heißt piano, italienisch für leise. Das f heißt forte, also laut.",
+      text: "Auf dem Notenblatt steht unter dem Notensystem, wie laut du spielst. Das p heißt piano, italienisch für leise. Das f heißt forte, also laut.",
     },
     "what-f-asks": {
       text: "Unter dem Notensystem steht ein f. Was sollst du tun?",

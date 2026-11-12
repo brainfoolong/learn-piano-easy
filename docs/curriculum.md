@@ -12,6 +12,8 @@ lesson is written by, until the lesson model's head comment in `src/learn/model.
 - **A world is six to ten lessons, then a boss.** The boss is a song of ours, played in the player at a
   set version, with a practice step of its guide. The first world's boss is a timed key hunt, since its
   learner cannot play a song yet.
+- **A boss asks only what its world and the worlds before it taught.** Its version and practice step
+  keep to the hand positions, keys and chords taught so far.
 - **A world has a skip test:** a short set of its checking steps. Passing it opens the world, so a
   learner who can already play is never locked out.
 - **A lesson takes three to six minutes.** It teaches one idea, and its title names that idea.
@@ -76,8 +78,8 @@ world, and [findings.md](findings.md) holds that goal's findings under its slug.
 | First melodies | The C position of each hand, steps and skips | *Mary Had a Little Lamb*, Beginner | `learn-first-steps` |
 | Rhythm | The beat, note values, rests, counting and time signatures | *Ode to Joy*, Beginner | `learn-first-steps` |
 | Reading music | The staff, both clefs, landmark notes and reading by steps | *Old MacDonald Had a Farm*, Beginner | `learn-first-steps` |
-| Both hands | Hands apart, then together, over a held bass | *Ode to Joy*, Easy: the rhythm boss returns one version higher | `learn-both-hands` |
-| Scales and keys | Half and whole steps, sharps and flats, thumb under, key signatures | *Jingle Bells*, Easy | `learn-both-hands` |
+| Both hands | Hands apart, then together, over a held bass | *Ode to Joy*, Beginner: the rhythm boss returns with both hands | `learn-both-hands` |
+| Scales and keys | Half and whole steps, sharps and flats, thumb under, key signatures | *Jingle Bells*, Beginner | `learn-both-hands` |
 | Chords | Triads, major and minor, the three main chords, broken chords | *Canon in D*, Easy | `learn-both-hands` |
 | Expression | Dynamics, legato and staccato, the sustain pedal, phrasing | *Für Elise*, Easy | `learn-both-hands` |
 

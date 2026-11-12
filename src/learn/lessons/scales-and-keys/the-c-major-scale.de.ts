@@ -28,7 +28,7 @@ export const theCMajorScaleDe: TheCMajorScaleTexts = {
       answers: ["Finger 4", "Finger 1, der Daumen", "Finger 5"],
     },
     "tuck-to-f": {
-      text: "Spiel noch einmal C, D und E. Dann setz den Daumen unter und spiel das F. Halte das Handgelenk ruhig und gerade.",
+      text: "Spiel noch einmal C, D und E. Dann setz den Daumen unter und spiel das F. Halt das Handgelenk ruhig und gerade.",
     },
     "last-five": {
       text: "Dein Daumen liegt jetzt auf dem F. Spiel F, G, A, H und C mit den Fingern 1, 2, 3, 4 und 5.",

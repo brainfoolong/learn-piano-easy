@@ -4,8 +4,10 @@
  * to line, or space to space.
  *
  * A demo climbs by steps, then by skips, on the treble staff first. Explains show each move on the
- * staff, and a quiz checks each. The learner then reads a note by its move from a landmark. They name
- * the next song's first note, play its notes and its opening. The texts are
+ * staff, and a quiz checks each. The learner then reads a note by its move from a landmark, and names
+ * the next song's first note. The boss starts with the right thumb on D, which no earlier lesson
+ * teaches, so a demo shows the hand on D E G A B, and the learner plays those keys up and down. They
+ * then play the song's notes and its opening in that position. The texts are
  * `reading-steps-and-skips.en.ts` and `reading-steps-and-skips.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
@@ -36,6 +38,23 @@ export const readingStepsAndSkips: Lesson = {
     { id: "read-by-moves", kind: "explain" },
     { id: "skip-from-e-quiz", kind: "quiz", right: 2 },
     { id: "first-note", kind: "read-note", clef: "treble", answer: "name", notes: [67], pass: 1 },
+    {
+      id: "hand-on-d",
+      kind: "demo",
+      bpm: 80,
+      notes: [
+        { note: 62, at: 0, beats: 1 },
+        { note: 64, at: 1, beats: 1 },
+        { note: 67, at: 2, beats: 1 },
+        { note: 69, at: 3, beats: 1 },
+        { note: 71, at: 4, beats: 2 },
+        { note: 69, at: 6, beats: 1 },
+        { note: 67, at: 7, beats: 1 },
+        { note: 64, at: 8, beats: 1 },
+        { note: 62, at: 9, beats: 2 },
+      ],
+    },
+    { id: "d-position", kind: "play-notes", notes: [62, 64, 67, 69, 71, 69, 67, 64, 62] },
     { id: "song-notes", kind: "read-note", clef: "treble", answer: "play", notes: [62, 64, 67, 69, 71], pass: 0.6 },
     { id: "song-opening", kind: "play-notes", notes: [67, 67, 67, 62, 64, 64, 62] },
     { id: "opening-move-quiz", kind: "quiz", right: 0 },

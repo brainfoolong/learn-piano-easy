@@ -8,7 +8,7 @@ export const crescendoAndDiminuendoDe: CrescendoAndDiminuendoTexts = {
       text: "Hör dir C, D, E, F und G an. Jeder Ton klingt ein wenig lauter als der davor.",
     },
     "getting-louder": {
-      text: "Wird die Musik nach und nach lauter, ist das ein Crescendo. In den Noten steht cresc. oder eine öffnende Gabel <, die mit dem Klang breiter wird.",
+      text: "Wird die Musik nach und nach lauter, ist das ein Crescendo. Auf dem Notenblatt steht cresc. oder eine öffnende Gabel <, die mit dem Klang breiter wird.",
     },
     "what-cresc-asks": {
       text: "Unter dem Notensystem steht cresc. Was sollst du tun?",

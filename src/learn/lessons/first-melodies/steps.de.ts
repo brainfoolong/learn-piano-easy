@@ -28,7 +28,7 @@ export const stepsDe: StepsTexts = {
       answers: ["Finger 2", "Finger 4", "Finger 5"],
     },
     "step-up-and-down": {
-      text: "Geh in Schritten ganz nach oben und wieder ganz nach unten. Folge der markierten Taste.",
+      text: "Geh in Schritten ganz nach oben und wieder ganz nach unten. Folg der markierten Taste.",
     },
     "stepping-tune": {
       text: "Leg deine rechte Hand in die C-Lage. Diese Melodie besteht nur aus Schritten: C D E D E F E D C.",

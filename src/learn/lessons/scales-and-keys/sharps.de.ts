@@ -28,7 +28,7 @@ export const sharpsDe: SharpsTexts = {
       answers: ["F", "E", "Fis"],
     },
     "sharp-on-the-staff": {
-      text: "In den Noten steht das ♯ direkt links vor der Note, auf derselben Linie oder im selben Zwischenraum. Du liest die Note und gehst einen Halbton hinauf.",
+      text: "Auf dem Notenblatt steht das ♯ direkt links vor der Note, auf derselben Linie oder im selben Zwischenraum. Du liest die Note und gehst einen Halbton hinauf.",
     },
     "play-sharps": {
       text: "Lies jede Note mit ihrem Kreuz und spiel sie. Such zuerst die weiße Taste, dann geh einen Halbton hinauf.",
@@ -42,7 +42,7 @@ export const sharpsDe: SharpsTexts = {
         "Ein Kreuz ♯ erhöht einen Ton um einen Halbton, zur Taste direkt rechts daneben.",
         "Meist ist das eine schwarze Taste, so wie Cis und Fis.",
         "Eis ist F und His ist C, denn dazwischen liegt keine schwarze Taste.",
-        "In den Noten steht das ♯ direkt links vor seiner Note.",
+        "Auf dem Notenblatt steht das ♯ direkt links vor seiner Note.",
       ],
     },
   },

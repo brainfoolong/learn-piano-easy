@@ -15,7 +15,7 @@ export const slowingDownDe: SlowingDownTexts = {
       answers: ["Nach und nach langsamer werden", "Lauter spielen", "Sofort aufhören", "Schneller werden"],
     },
     "steady-tap": {
-      text: "Langsamer werden wirkt nur nach einem gleichmäßigen Schlag. Tippe mit den Klicks mit und bleib genau bei ihnen.",
+      text: "Langsamer werden wirkt nur nach einem gleichmäßigen Schlag. Tipp mit den Klicks mit und bleib genau bei ihnen.",
     },
     "play-the-ending": {
       text: "Spiel das Ende der Phrase: G, F, E, D und C, ab dem G über dem mittleren C. Lass dir bei jedem Ton etwas mehr Zeit und ruh dich auf dem letzten C aus.",
@@ -31,7 +31,7 @@ export const slowingDownDe: SlowingDownTexts = {
       answers: ["Kurz spielen", "Lauter spielen", "Den Ton weglassen", "Länger halten, als er notiert ist"],
     },
     "back-in-tempo": {
-      text: "Nach einem ritardando bringt a tempo das alte Tempo zurück. Auf Italienisch heißt das „im Zeitmaß“.",
+      text: "Nach einem ritardando bringt a tempo das alte Tempo zurück. Auf Italienisch heißt das \"im Zeitmaß\".",
     },
     "a-tempo-demo": {
       text: "Hör zu. Die Phrase wird in der Mitte langsamer. Dann bringt a tempo das erste Tempo zurück.",

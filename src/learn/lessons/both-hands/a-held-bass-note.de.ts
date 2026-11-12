@@ -15,10 +15,10 @@ export const aHeldBassNoteDe: AHeldBassNoteTexts = {
       answers: ["Nach der vierten Viertelnote", "Nach der ersten Viertelnote", "Sofort"],
     },
     "first-bar": {
-      text: "Drück links das C unter dem mittleren C und rechts das mittlere C. Halte das tiefe C, während die rechte Hand D E F spielt.",
+      text: "Drück links das C unter dem mittleren C und rechts das mittlere C. Halt das tiefe C, während die rechte Hand D E F spielt.",
     },
     "both-bars": {
-      text: "Spiel zwei Takte und halte jede Bassnote. Drück links das C unter dem mittleren C und rechts das mittlere C, dann spiel D E F. Dann drück ebenso das G unter und das G über dem mittleren C, dann spiel F E D.",
+      text: "Spiel zwei Takte und halt jede Bassnote. Drück links das C unter dem mittleren C und rechts das mittlere C, dann spiel D E F. Dann drück ebenso das G unter und das G über dem mittleren C, dann spiel F E D.",
     },
     "half-bass": {
       text: "Eine Bassnote kann auch eine halbe Note sein. Sie dauert zwei Schläge, also wechselt der Bass zweimal in jedem Takt.",
@@ -31,13 +31,13 @@ export const aHeldBassNoteDe: AHeldBassNoteTexts = {
       answers: ["Eine", "Zwei", "Vier"],
     },
     "half-bass-tune": {
-      text: "Jetzt du. Spiel jede Bassnote mit dem Melodieton darüber und halte sie, während der nächste Melodieton erklingt.",
+      text: "Jetzt du. Spiel jede Bassnote mit dem Melodieton darüber und halt sie, während der nächste Melodieton erklingt.",
     },
     recap: {
       text: "Gut gemacht. Deine linke Hand hält jetzt einen Bass unter der Melodie.",
       points: [
         "Die linke Hand kann eine lange Bassnote unter einer Melodie halten.",
-        "Drück die Bassnote mit dem Melodieton zusammen und halte sie dann.",
+        "Drück die Bassnote mit dem Melodieton zusammen und halt sie dann.",
         "Eine ganze Note im Bass dauert vier Schläge, eine halbe Note zwei.",
       ],
     },

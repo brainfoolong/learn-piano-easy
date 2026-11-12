@@ -5,7 +5,7 @@ import { fingerOverTheThumb } from "./finger-over-the-thumb";
 import { flats } from "./flats";
 import { gMajor } from "./g-major";
 import { halfAndWholeSteps } from "./half-and-whole-steps";
-import { jingleBellsRare } from "./jingle-bells";
+import { jingleBells } from "./jingle-bells";
 import { keySignatures } from "./key-signatures";
 import { sharps } from "./sharps";
 import { scalesAndKeysSkipPicks } from "./skip-test";
@@ -13,6 +13,6 @@ import { theCMajorScale } from "./the-c-major-scale";
 
 export const scalesAndKeys: WorldLessons = {
   lessons: [halfAndWholeSteps, sharps, flats, theCMajorScale, fingerOverTheThumb, gMajor, fMajor, keySignatures],
-  boss: jingleBellsRare,
+  boss: jingleBells,
   skipPicks: scalesAndKeysSkipPicks,
 };

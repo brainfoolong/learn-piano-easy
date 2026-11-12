@@ -5,10 +5,10 @@ export const oldMacDonaldDe: OldMacDonaldTexts = {
   title: "Boss: Old MacDonald Had a Farm",
   steps: {
     intro: {
-      text: "Diesmal fallen keine Noten. Du liest das Lied aus den Noten, so wie Pianisten es tun. Es beginnt mit G auf der zweiten Linie.",
+      text: "Diesmal fallen keine Noten. Du liest das Lied vom Notenblatt, so wie Pianisten es tun. Es beginnt mit G auf der zweiten Linie.",
     },
     song: {
-      text: "Lies die ersten vier Takte von „Old MacDonald“ aus den Noten und spiel sie mit der rechten Hand. Das Lied wartet auf jeden Ton.",
+      text: "Lies die ersten vier Takte von \"Old MacDonald\" vom Notenblatt und spiel sie mit der rechten Hand. Das Lied wartet auf jeden Ton.",
     },
   },
 };

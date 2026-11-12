@@ -5,7 +5,7 @@ export const maryFirstPhraseDe: MaryFirstPhraseTexts = {
   title: "Marys erste Phrase",
   steps: {
     "phrase-demo": {
-      text: "Hör dir die erste Hälfte von „Mary Had a Little Lamb“ an. Sie besteht aus Schritten, wiederholten Tönen und einem Sprung, und die kennst du schon.",
+      text: "Hör dir die erste Hälfte von \"Mary Had a Little Lamb\" an. Sie besteht aus Schritten, wiederholten Tönen und einem Sprung, und die kennst du schon.",
     },
     "first-note-quiz": {
       text: "Mit welchem Ton fängt die Melodie an?",

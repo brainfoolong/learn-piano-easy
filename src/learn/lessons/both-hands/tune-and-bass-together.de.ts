@@ -39,7 +39,7 @@ export const tuneAndBassTogetherDe: TuneAndBassTogetherTexts = {
     recap: {
       text: "Gut gemacht. Du hast eine Melodie mit Bass gespielt.",
       points: [
-        "Übe erst die Melodie allein, dann den Bass allein, dann beides zusammen.",
+        "Üb erst die Melodie allein, dann den Bass allein, dann beides zusammen.",
         "Die Bassnote kommt auf der Eins, zusammen mit dem Melodieton.",
         "Die linke Hand hält den Bass, während die rechte weiterspielt.",
       ],

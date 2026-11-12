@@ -22,7 +22,7 @@ export const theSustainPedalDe: TheSustainPedalTexts = {
       answers: ["Linker Fuß, Ferse in der Luft", "Rechter Fuß, Zehen neben dem Pedal", "Linker Fuß, Ferse auf dem Boden", "Rechter Fuß, Ferse auf dem Boden"],
     },
     "pedal-down-c": {
-      text: "Drück das rechte Pedal hinunter und halte es unten. Spiel mit der linken Hand das C unter dem mittleren C, dann E, dann G. Lass jede Taste los.",
+      text: "Drück das rechte Pedal hinunter und halt es unten. Spiel mit der linken Hand das C unter dem mittleren C, dann E, dann G. Lass jede Taste los.",
     },
     "hear-pedal-hold": {
       text: "Hör dir C, E und G nacheinander mit gedrücktem Pedal an. Jeder Ton klingt weiter, während der nächste beginnt.",
@@ -32,11 +32,11 @@ export const theSustainPedalDe: TheSustainPedalTexts = {
       answers: ["Das Haltepedal", "Fester gedrückte Tasten", "Schneller gespielte Töne", "Die rechte Hand"],
     },
     "pedal-marks": {
-      text: "Unter den Noten heißt Ped. „Pedal drücken“, und ein Stern heißt „Pedal heben“. Manche Noten zeigen stattdessen eine Klammerlinie vom Drücken bis zum Heben.",
+      text: "Unter den Noten heißt Ped. \"Pedal drücken\", und ein Stern heißt \"Pedal heben\". Manche Notenblätter zeigen stattdessen eine Klammerlinie vom Drücken bis zum Heben.",
     },
     "star-means": {
       text: "Unter den Noten siehst du einen Stern. Was sagt er deinem Fuß?",
-      answers: ["Drück das Pedal hinunter", "Heb das Pedal", "Tipp zweimal auf das Pedal", "Halte das Pedal bis zum Schluss unten"],
+      answers: ["Drück das Pedal hinunter", "Heb das Pedal", "Tipp zweimal auf das Pedal", "Halt das Pedal bis zum Schluss unten"],
     },
     "chords-without-pedal": {
       text: "Lern zuerst vier gebrochene Akkorde in der linken Hand, ohne Pedal und ab dem C unter dem mittleren C: C-E-G, dann C-F-A, dann H-D-G, dann wieder C-E-G.",
@@ -59,7 +59,7 @@ export const theSustainPedalDe: TheSustainPedalTexts = {
       points: [
         "Das rechte Pedal lässt Töne weiterklingen, wenn du die Tasten loslässt.",
         "Du drückst es mit dem rechten Fuß, die Ferse auf dem Boden.",
-        "Ped. heißt „Pedal drücken“, und ein Stern heißt „Pedal heben“.",
+        "Ped. heißt \"Pedal drücken\", und ein Stern heißt \"Pedal heben\".",
         "Wechsle das Pedal bei jedem neuen Akkord, damit nichts verschwimmt.",
       ],
     },

@@ -25,6 +25,12 @@ export const restsDe: RestsTexts = {
       text: "Du spielst eine Viertelnote, dann eine Viertelpause und dann eine halbe Note. Wie viele Schläge sind das?",
       answers: ["Zwei Schläge", "Drei Schläge", "Vier Schläge"],
     },
+    "phrase-with-rests": {
+      text: "Schau zu und hör hin. Das Klavier spielt C D E, macht einen Schlag Pause und spielt dann E D. Nach zwei Schlägen Pause endet es auf C.",
+    },
+    "play-with-rests": {
+      text: "Jetzt du. Spiel C D E und zähl einen Schlag Pause. Spiel E D, zähl zwei Schläge Pause und ende auf C.",
+    },
     recap: {
       text: "Gut gemacht. Jetzt kennst du deine ersten Pausen.",
       points: ["Eine Pause ist Stille, die mitgezählt wird.", "Eine Viertelpause dauert einen Schlag.", "Eine halbe Pause dauert zwei Schläge."],

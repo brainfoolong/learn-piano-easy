@@ -24,7 +24,7 @@ export const repeatedNotesDe: RepeatedNotesTexts = {
       answers: ["Eine Taste, dreimal", "Drei verschiedene Tasten"],
     },
     "mixed-phrase": {
-      text: "In dieser Melodie gibt es Schritte, Sprünge und Wiederholungen. Bleib in der C-Lage und folge der markierten Taste.",
+      text: "In dieser Melodie gibt es Schritte, Sprünge und Wiederholungen. Bleib in der C-Lage und folg der markierten Taste.",
     },
     recap: {
       text: "Gut gemacht. Jetzt kannst du Töne wiederholen.",

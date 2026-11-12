@@ -37,7 +37,7 @@ export const albertiBassDe: AlbertiBassTexts = {
       text: "Lass den fünften Finger auf dem C. Spiel zweimal C, A, F, A mit den Fingern 5, 1, 3, 1.",
     },
     "change-chords": {
-      text: "Spiel das Muster je einmal auf C, F, G7 und C. Halte die Achtel beim Wechseln gleichmäßig.",
+      text: "Spiel das Muster je einmal auf C, F, G7 und C. Halt die Achtel beim Wechseln gleichmäßig.",
     },
     "alberti-tune-demo": {
       text: "Hier ist eine kleine Melodie über dem Albertibass. Die rechte Hand spielt halbe Noten, und die linke Hand perlt weiter.",

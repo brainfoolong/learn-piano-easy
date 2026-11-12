@@ -1,17 +1,17 @@
 /** The boss of *Both hands* in English. Its object is the texts' type, which every other locale follows. */
 import type { LessonTexts } from "../../model";
 
-export const odeToJoyRareEn = {
+export const odeToJoyBothHandsEn = {
   title: "Boss: Ode to Joy with both hands",
   steps: {
     intro: {
-      text: "You know this tune from the Rhythm world. Now it moves to D major and gets its real rhythm, with the dotted note in bar 4. Your left hand holds notes and chords below it.",
+      text: "You know this tune from the Rhythm world. Now your left hand joins in, in C position below the tune. It moves between two pairs of keys: C with G, and D with G.",
     },
     song: {
-      text: "Play Ode to Joy with both hands, a little slower than written. Hold each bass note until the next one comes.",
+      text: "Play the first eight bars of Ode to Joy with both hands. Hold each pair of bass keys until the next one comes. The song waits for you.",
     },
   },
 } satisfies LessonTexts;
 
 /** The texts' type, which every locale's file of this lesson fills. */
-export type OdeToJoyRareTexts = typeof odeToJoyRareEn;
+export type OdeToJoyBothHandsTexts = typeof odeToJoyBothHandsEn;

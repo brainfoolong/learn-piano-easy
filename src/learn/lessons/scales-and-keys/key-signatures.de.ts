@@ -26,7 +26,7 @@ export const keySignaturesDe: KeySignaturesTexts = {
       text: "Nenn jede Note mit ihrem Buchstaben. Die Vorzeichen ändern die Taste, die du drückst, aber die Note behält ihren Platz.",
     },
     "f-in-g-major": {
-      text: "Am Zeilenanfang steht ein Kreuz. In den Noten steht ein F. Welche Taste spielst du?",
+      text: "Am Zeilenanfang steht ein Kreuz. Auf dem Notenblatt steht ein F. Welche Taste spielst du?",
       answers: ["Fis, die schwarze Taste", "F, die weiße Taste"],
     },
     "phrase-in-g": {
@@ -36,7 +36,7 @@ export const keySignaturesDe: KeySignaturesTexts = {
       text: "Jetzt du. Am Zeilenanfang steht ein Kreuz, also ist jedes F ein Fis.",
     },
     "b-in-f-major": {
-      text: "Am Zeilenanfang steht ein b. In den Noten steht ein H. Welche Taste spielst du?",
+      text: "Am Zeilenanfang steht ein b. Auf dem Notenblatt steht ein H. Welche Taste spielst du?",
       answers: ["H, die weiße Taste", "B, die schwarze Taste"],
     },
     "play-in-f": {

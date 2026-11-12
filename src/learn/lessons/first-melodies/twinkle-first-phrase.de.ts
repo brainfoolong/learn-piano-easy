@@ -5,7 +5,7 @@ export const twinkleFirstPhraseDe: TwinkleFirstPhraseTexts = {
   title: "Die erste Phrase von Twinkle",
   steps: {
     "phrase-demo": {
-      text: "Hör dir die erste Phrase von „Twinkle Twinkle Little Star“ an. Bei uns kennst du die Melodie als „Morgen kommt der Weihnachtsmann“. Ein Ton darin liegt außerhalb der C-Lage.",
+      text: "Hör dir die erste Phrase von \"Twinkle Twinkle Little Star\" an. Bei uns kennst du die Melodie als \"Morgen kommt der Weihnachtsmann\". Ein Ton darin liegt außerhalb der C-Lage.",
     },
     "one-key-past": {
       text: "Dieser Ton ist das A, die weiße Taste gleich nach dem G. Deine Hand bleibt in der C-Lage. Der kleine Finger streckt sich eine Taste nach rechts und spielt das A.",

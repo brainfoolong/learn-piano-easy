@@ -27,7 +27,7 @@ export const handsTakeTurnsDe: HandsTakeTurnsTexts = {
       text: "Während eine Hand spielt, liegt die andere ruhig auf ihren Tasten und wartet. So ist sie bereit, wenn sie wieder dran ist.",
     },
     "long-phrase": {
-      text: "Lass beide Hände in der C-Lage. Diese längere Melodie hat vier Teile: rechte Hand, linke Hand, rechts, dann links. Folge der markierten Taste von Hand zu Hand.",
+      text: "Lass beide Hände in der C-Lage. Diese längere Melodie hat vier Teile: rechte Hand, linke Hand, rechts, dann links. Folg der markierten Taste von Hand zu Hand.",
     },
     recap: {
       text: "Gut gemacht. Deine Hände teilen sich jetzt eine Melodie.",

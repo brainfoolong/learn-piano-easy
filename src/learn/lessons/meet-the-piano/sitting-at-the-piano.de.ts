@@ -11,7 +11,7 @@ export const sittingAtThePianoDe: SittingAtThePianoTexts = {
       text: "Drück das mittlere C, die Taste, vor der du sitzt.",
     },
     "bench-and-feet": {
-      text: "Setz dich auf die vordere Hälfte der Bank, nicht ganz nach hinten. Halte deinen Rücken aufrecht und locker. Stell beide Füße flach auf den Boden.",
+      text: "Setz dich auf die vordere Hälfte der Bank, nicht ganz nach hinten. Halt deinen Rücken aufrecht und locker. Stell beide Füße flach auf den Boden.",
     },
     "bench-quiz": {
       text: "Wo auf der Bank sitzt du?",
