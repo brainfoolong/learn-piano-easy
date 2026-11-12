@@ -81,7 +81,7 @@ export async function sampleLessons(): Promise<CourseLesson[]> {
 export const hasSong = (lesson: Lesson) => lesson.steps.some((step) => step.kind === "song");
 
 /** The address of `lesson` in `locale`, relative to the site's root. */
-export const lessonPath = ({ world, lesson }: CourseLesson, locale: Locale) => `./${pageOf(lessonRoute(world, lesson.id), locale).path}`;
+export const lessonPath = ({ world, lesson }: Pick<CourseLesson, "world" | "lesson">, locale: Locale) => `./${pageOf(lessonRoute(world, lesson.id), locale).path}`;
 
 /** Collects every uncaught error the page reports from now on. */
 export function watchErrors(page: Page): string[] {
