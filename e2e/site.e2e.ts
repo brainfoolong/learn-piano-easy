@@ -1,6 +1,7 @@
 /**
  * The site's shell in a real browser: the top bar, the language switch, the history, what the landing
- * page loads, every route offline, and the layout checks of the bar and the footer.
+ * page loads, every route offline, each page's headings and landmarks, and the layout checks of the bar
+ * and the footer.
  *
  * Every page is reached from the site's root, as a learner's link would. The top bar's controls are
  * found inside `.site-bar-host`, since the player draws a bar of its own on `play/`. Every page starts
@@ -153,6 +154,59 @@ test("every_route_reloads_offline", async ({ page, context }) => {
   await page.goto("./de/nowhere/");
   await expect(page).toHaveTitle(pageTitle(pageAt("de/")!));
   await expect(heading(page)).toHaveText(pageTitle(pageAt("de/")!));
+  expect(errors).toEqual([]);
+});
+
+/**
+ * What a search engine's crawler and a screen reader find wrong in the page's structure, read from the
+ * rendered DOM. A visible part counts, so a closed dialog and a hidden view are left out. The player's
+ * bar has no links, so a `nav` is asked for only where `withNav` holds.
+ */
+async function structureFlaws(page: Page, withNav: boolean): Promise<string[]> {
+  return page.evaluate((withNav) => {
+    const flaws: string[] = [];
+    const shown = (node: Element) => node.checkVisibility();
+    const describe = (node: Element) => `${node.tagName.toLowerCase()}.${node.className || "-"}`;
+    const headings = [...document.querySelectorAll("h1, h2, h3, h4, h5, h6")].filter(shown);
+    const ones = headings.filter((h) => h.tagName === "H1").length;
+    if (ones !== 1) flaws.push(`${ones} h1`);
+    let level = 0;
+    for (const h of headings) {
+      const next = Number(h.tagName[1]);
+      if (next > level + 1) flaws.push(`h${next} after h${level}: ${h.textContent?.trim().slice(0, 40)}`);
+      level = next;
+    }
+    const mains = [...document.querySelectorAll("main, [role=main]")].filter(shown).length;
+    if (mains !== 1) flaws.push(`${mains} main`);
+    if (withNav && [...document.querySelectorAll("nav, [role=navigation]")].filter(shown).length === 0) flaws.push("no nav");
+    for (const node of document.querySelectorAll("[role=link]")) if (shown(node)) flaws.push(`role=link on ${describe(node)}`);
+    for (const node of document.querySelectorAll("a:not([href])")) if (shown(node)) flaws.push(`a without href: ${describe(node)}`);
+    for (const node of document.querySelectorAll("img:not([alt])")) flaws.push(`img without alt: ${node.getAttribute("src")}`);
+    const nameOf = (node: HTMLElement) => {
+      const byIds = node.getAttribute("aria-labelledby")?.split(" ").map((id) => document.getElementById(id)?.textContent ?? "");
+      const alts = [...node.querySelectorAll("img[alt]")].map((img) => img.getAttribute("alt"));
+      return [node.getAttribute("aria-label"), ...(byIds ?? []), node.textContent, ...alts, node.title].join(" ").trim();
+    };
+    for (const node of document.querySelectorAll<HTMLElement>("a[href], button")) {
+      if (shown(node) && nameOf(node) === "") flaws.push(`no name: ${describe(node)}`);
+    }
+    return flaws;
+  }, withNav);
+}
+
+test("every_page_has_one_h1_a_main_a_nav_and_crawlable_links", async ({ page }) => {
+  test.setTimeout(120_000);
+  const errors = watchErrors(page);
+  const lessons = ["learn/meet-the-piano/find-c/", "de/learn/meet-the-piano/find-c/"].map((path) => pageAt(path)!);
+  const flaws: Record<string, string[]> = {};
+  for (const site of [...allPages().filter((p) => !p.route.hidden), ...lessons]) {
+    await page.goto(`./${site.path}`);
+    await expect(heading(page)).toBeAttached();
+    await page.waitForLoadState("networkidle");
+    const found = await structureFlaws(page, site.route.id !== "play");
+    if (found.length > 0) flaws[site.path] = found;
+  }
+  expect(flaws).toEqual({});
   expect(errors).toEqual([]);
 });
 

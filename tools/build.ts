@@ -17,17 +17,35 @@
  * makes the next visit fetch the new shell once. The index, `cache-groups.json`, joins the shell but not
  * the hash, because it holds the version. Its byte counts leave out the index itself.
  *
+ * Every page names the site, its locale and the other locales for social sites. A hidden route's page
+ * asks search engines not to index it.
+ *
  * `bun tools/build.ts [--dev] [--out <dir>] [--site-url <url>]`. `--dev` skips minifying and turns on
- * live reload. `--site-url` names where the site is hosted, and only then does a page carry canonical,
- * `hreflang`, `og:url` and `og:image` links, so a local build names no domain. A social site reads
- * only an absolute `og:image`, so a local build carries none.
+ * live reload. `--site-url` names where the site is hosted. Only then does an indexed page carry
+ * canonical, `hreflang`, `og:url` and `og:image` links, and a landing page its JSON-LD. A social site
+ * reads only an absolute `og:image`, so a local build carries none.
+ *
+ * Only a build with `--site-url` writes `sitemap.xml` and `robots.txt`, because a sitemap lists absolute
+ * URLs. A local build then names no domain, and a crawler that finds no `robots.txt` may read every
+ * page, as the hosted one allows. Neither file joins a cache group, since no learner fetches them.
+ * The sitemap carries no `lastmod`, because nothing in the build dates a page without the clock.
  */
 import { createHash } from "node:crypto";
 import { cp, mkdir, readdir, rm } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { GROUP_INDEX, groupIndex, groupOf } from "../src/pwa/cache-groups";
-import { DEFAULT_LOCALE, LOCALES, messagesOf } from "../src/i18n/locale";
-import { allPages, lessonPages, pageOf, pageTitle, SOCIAL_IMAGE_SIZE, socialImageOf, type Page } from "../src/site/routes";
+import { DEFAULT_LOCALE, LOCALES, messagesOf, type Locale } from "../src/i18n/locale";
+import {
+  allPages,
+  lessonPages,
+  pageOf,
+  pageTitle,
+  REPO_URL,
+  SOCIAL_IMAGE_SIZE,
+  socialImageOf,
+  type Page,
+  type Route,
+} from "../src/site/routes";
 
 /** The repository root, from which every path of the build is resolved. */
 export const root = resolve(import.meta.dir, "..");
@@ -101,27 +119,101 @@ function escapeHtml(text: string): string {
   return text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 }
 
-/** The head lines a page adds to the template's: search engines' hints. */
+/** Each locale's language and region as Open Graph names them. */
+const OG_LOCALES: Record<Locale, string> = { en: "en_US", de: "de_DE" };
+
+/** The license the JSON-LD names: the one in the repository. */
+const LICENSE_URL = `${REPO_URL}/blob/main/LICENSE`;
+
+/** `siteUrl` with exactly one trailing `/`, so a page's path joins it. */
+function siteRoot(siteUrl: string): string {
+  return siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
+}
+
+/** The URL of `route` in every locale, then the default locale's as `x-default`: a page's alternates. */
+function alternatesOf(route: Route, site: string): { hreflang: string; href: string }[] {
+  const each = LOCALES.map((locale) => ({ hreflang: locale, href: site + pageOf(route, locale).path }));
+  return [...each, { hreflang: "x-default", href: site + pageOf(route, DEFAULT_LOCALE).path }];
+}
+
+/**
+ * The structured data of `page` at `site`, which a search engine reads: a `WebSite` and a
+ * `WebApplication` on a landing page, and nothing elsewhere. It states only what holds for every visit.
+ */
+export function structuredData(page: Page, site: string): object | undefined {
+  if (page.route.id !== "home") return undefined;
+  const { siteName, pages } = messagesOf(page.locale);
+  const common = { name: siteName, url: site + page.path, description: pages.home.description, inLanguage: page.locale };
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", ...common },
+      {
+        "@type": "WebApplication",
+        ...common,
+        applicationCategory: "EducationalApplication",
+        operatingSystem: "Any (web browser)",
+        isAccessibleForFree: true,
+        offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
+        license: LICENSE_URL,
+      },
+    ],
+  };
+}
+
+/** The head lines a page adds to the template's: hints for search engines and social sites. */
 function headLines(page: Page, siteUrl: string | undefined): string[] {
-  const lines: string[] = [];
+  const messages = messagesOf(page.locale);
+  const lines = [
+    `<meta property="og:site_name" content="${escapeHtml(messages.siteName)}" />`,
+    `<meta property="og:locale" content="${OG_LOCALES[page.locale]}" />`,
+    ...LOCALES.filter((l) => l !== page.locale).map((l) => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}" />`),
+  ];
   if (page.route.hidden) lines.push(`<meta name="robots" content="noindex" />`);
   if (siteUrl !== undefined && !page.route.hidden) {
-    const site = siteUrl.endsWith("/") ? siteUrl : `${siteUrl}/`;
+    const site = siteRoot(siteUrl);
     lines.push(`<link rel="canonical" href="${escapeHtml(site + page.path)}" />`);
     lines.push(`<meta property="og:url" content="${escapeHtml(site + page.path)}" />`);
-    for (const locale of LOCALES) {
-      lines.push(`<link rel="alternate" hreflang="${locale}" href="${escapeHtml(site + pageOf(page.route, locale).path)}" />`);
+    for (const { hreflang, href } of alternatesOf(page.route, site)) {
+      lines.push(`<link rel="alternate" hreflang="${hreflang}" href="${escapeHtml(href)}" />`);
     }
-    lines.push(`<link rel="alternate" hreflang="x-default" href="${escapeHtml(site + pageOf(page.route, DEFAULT_LOCALE).path)}" />`);
     // The social picture's text is the site's name and the hero's lead, so they are its alt text too.
-    const messages = messagesOf(page.locale);
     lines.push(`<meta property="og:image" content="${escapeHtml(site + socialImageOf(page.locale))}" />`);
     lines.push(`<meta property="og:image:width" content="${SOCIAL_IMAGE_SIZE.width}" />`);
     lines.push(`<meta property="og:image:height" content="${SOCIAL_IMAGE_SIZE.height}" />`);
     lines.push(`<meta property="og:image:alt" content="${escapeHtml(`${messages.siteName}: ${messages.landing.hero.lead}`)}" />`);
     lines.push(`<meta name="twitter:card" content="summary_large_image" />`);
+    const data = structuredData(page, site);
+    // A `<` in the JSON is escaped, so no text in it can close the script element.
+    if (data !== undefined) lines.push(`<script type="application/ld+json">${JSON.stringify(data).replaceAll("<", "\\u003c")}</script>`);
   }
   return lines;
+}
+
+/**
+ * The files only a crawler reads, by their paths, for the site at `siteUrl` with `pages`. `sitemap.xml`
+ * lists every page search engines may show, each with its alternates. `robots.txt` allows every path and
+ * names the sitemap.
+ */
+export function crawlerFiles(pages: readonly Page[], siteUrl: string): Record<string, string> {
+  const site = siteRoot(siteUrl);
+  const urls = pages
+    .filter((page) => !page.route.hidden)
+    .map((page) => {
+      const links = alternatesOf(page.route, site).map(
+        ({ hreflang, href }) => `\n    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${escapeHtml(href)}" />`,
+      );
+      return `\n  <url>\n    <loc>${escapeHtml(site + page.path)}</loc>${links.join("")}\n  </url>`;
+    });
+  return {
+    "robots.txt": `User-agent: *\nAllow: /\n\nSitemap: ${site}sitemap.xml\n`,
+    "sitemap.xml": [
+      `<?xml version="1.0" encoding="UTF-8"?>`,
+      `\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">`,
+      ...urls,
+      `\n</urlset>\n`,
+    ].join(""),
+  };
 }
 
 /** The HTML of `page`, from the page template with its placeholders filled. */
@@ -145,14 +237,20 @@ export function renderPage(template: string, page: Page, siteUrl?: string): stri
   });
 }
 
-/** Writes every route's page in every locale into `outDir` from the template `public/index.html`. */
+/**
+ * Writes every route's page in every locale into `outDir` from the template `public/index.html`. With a
+ * site URL, it also writes the crawler's files.
+ */
 async function writePages(outDir: string, siteUrl: string | undefined): Promise<void> {
   const template = await Bun.file(join(root, "public/index.html")).text();
-  for (const page of [...allPages(), ...(await lessonPages())]) {
+  const pages = [...allPages(), ...(await lessonPages())];
+  for (const page of pages) {
     const file = join(outDir, page.file);
     await mkdir(dirname(file), { recursive: true });
     await Bun.write(file, renderPage(template, page, siteUrl));
   }
+  if (siteUrl === undefined) return;
+  for (const [path, text] of Object.entries(crawlerFiles(pages, siteUrl))) await Bun.write(join(outDir, path), text);
 }
 
 /** Copies our license, the notices, each runtime dependency's license and the icons' into `licenses/`. */

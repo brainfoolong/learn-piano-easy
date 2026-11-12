@@ -8,9 +8,9 @@
  * - **sounds** is every file under `sounds/`, cached the same way.
  *
  * Songs and sounds share one content cache that outlives versions, so an update never downloads them
- * again unless the learner asks. Source maps, the worker script and the social pictures belong to no
- * group: only a developer loads a map, the browser keeps the worker itself, and only a search or social
- * site fetches a social picture.
+ * again unless the learner asks. Source maps, the worker script, the social pictures, `robots.txt` and
+ * `sitemap.xml` belong to no group. Only a developer loads a map, and the browser keeps the worker
+ * itself. Only a search or social site fetches the rest.
  *
  * The build writes `cache-groups.json` into the shell. It names the version and lists each group's files
  * and bytes, so the cache manager reads sizes without a network call.
@@ -33,8 +33,11 @@ export interface CacheGroup {
 /** The groups the worker caches on first use, never up front. Each is a top-level folder of `public/`. */
 export const ON_DEMAND: readonly GroupId[] = ["songs", "sounds"];
 
-/** The files the build writes beside the groups' files, which no group caches. */
-const UNGROUPED = ["sw.js"];
+/**
+ * The files the build writes beside the groups' files, which no group caches: the worker, and the files
+ * only a search engine's crawler reads.
+ */
+const UNGROUPED = ["sw.js", "robots.txt", "sitemap.xml"];
 
 /**
  * The files of an on-demand folder that the shell precaches: the song catalog, and the songs the landing

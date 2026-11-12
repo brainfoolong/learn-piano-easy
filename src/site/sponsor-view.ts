@@ -21,13 +21,11 @@ import { card } from "../ui/components/card";
 import { link } from "../ui/components/link";
 import { el } from "../ui/dom";
 import { icon } from "../ui/icons/icons";
+import { REPO_URL } from "./routes";
 import "./sponsor-view.css";
 
 /** The maintainer's profile on GitHub Sponsors, the page's main action. */
 export const SPONSOR_URL = "https://github.com/sponsors/brainfoolong";
-
-/** The project's repository on GitHub. */
-export const REPO_URL = "https://github.com/brainfoolong/learn-piano-easy";
 
 /** A link that opens `href` on another site in a new tab. */
 function external(label: string, href: string): HTMLAnchorElement {

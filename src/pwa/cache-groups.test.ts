@@ -27,7 +27,7 @@ test("every_public_file_is_in_one_group", async () => {
   expect(groupOf("sounds/salamander/acoustic_grand_piano-mp3.json")).toBe("sounds");
 });
 
-test("built_files_join_the_app_group_except_maps_and_the_worker", () => {
+test("built_files_join_the_app_group_except_maps_the_worker_and_the_crawler_files", () => {
   expect(groupOf("app.js")).toBe("app");
   expect(groupOf("licenses/LICENSE.txt")).toBe("app");
   expect(groupOf("chunk-0a1b2c3d.js")).toBe("app");
@@ -35,6 +35,8 @@ test("built_files_join_the_app_group_except_maps_and_the_worker", () => {
   expect(groupOf("app.js.map")).toBeUndefined();
   expect(groupOf("sw.js")).toBeUndefined();
   expect(groupOf("images/social/en.png")).toBeUndefined();
+  expect(groupOf("robots.txt")).toBeUndefined();
+  expect(groupOf("sitemap.xml")).toBeUndefined();
 });
 
 test("the_index_lists_each_group_and_sums_its_bytes", () => {

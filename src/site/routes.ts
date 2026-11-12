@@ -14,7 +14,8 @@
  * there. The build writes the page of every lesson from `lessonPages`, which loads every world.
  *
  * Each page's title and description are in its locale's catalog of `src/i18n/messages/`, under the
- * route's id. Every page of a locale shares that locale's social picture.
+ * route's id. A lesson's page the build writes takes the lesson's own title instead. Every page of a
+ * locale shares that locale's social picture.
  */
 import { LOCALES, localeOfPath, localeRoot, messagesOf, type Locale } from "../i18n/locale";
 import { COURSE } from "../learn/course";
@@ -32,13 +33,16 @@ export interface Route {
   path: string;
   /** Whether search engines skip the page. The site links nowhere to a hidden route. */
   hidden: boolean;
-  /** A lesson's route names its world and its lesson. */
-  lesson?: { world: string; lesson: string };
+  /**
+   * A lesson's route names its world and its lesson. It carries the lesson's title in each locale only
+   * where the world is loaded, as in the build.
+   */
+  lesson?: { world: string; lesson: string; title?: Record<Locale, string> };
 }
 
-/** The route of lesson `lesson` of world `world`. */
-export function lessonRoute(world: string, lesson: string): Route {
-  return { id: "lesson", path: `learn/${world}/${lesson}/`, hidden: false, lesson: { world, lesson } };
+/** The route of lesson `lesson` of world `world`, with the lesson's `title` in each locale when it is known. */
+export function lessonRoute(world: string, lesson: string, title?: Record<Locale, string>): Route {
+  return { id: "lesson", path: `learn/${world}/${lesson}/`, hidden: false, lesson: { world, lesson, ...(title === undefined ? {} : { title }) } };
 }
 
 /** A lesson's folder relative to the locale's root, with its world and its lesson. */
@@ -58,7 +62,8 @@ export async function lessonPages(): Promise<Page[]> {
     const { lessons, boss, skipTest } = await world.load();
     for (const lesson of [...lessons, boss, skipTest]) {
       if (lesson === undefined) continue;
-      for (const locale of LOCALES) pages.push(pageOf(lessonRoute(world.id, lesson.id), locale));
+      const title = Object.fromEntries(LOCALES.map((locale) => [locale, lesson.texts[locale].title])) as Record<Locale, string>;
+      for (const locale of LOCALES) pages.push(pageOf(lessonRoute(world.id, lesson.id, title), locale));
     }
   }
   return pages;
@@ -136,9 +141,15 @@ export function socialImageOf(locale: Locale): string {
   return `images/social/${locale}.png`;
 }
 
-/** The text of the page's `<title>`: its own name, then the site's. */
+/**
+ * The text of the page's `<title>`: its own name, then the site's. A lesson's own name is its title when
+ * the route knows it, which matches the title the lesson's view sets.
+ */
 export function pageTitle(page: Page): string {
   const { siteName, pages } = messagesOf(page.locale);
-  const { title } = pages[page.route.id];
+  const title = page.route.lesson?.title?.[page.locale] ?? pages[page.route.id].title;
   return title === siteName ? title : `${title} · ${siteName}`;
 }
+
+/** The project's repository on GitHub, which holds its code and its license. */
+export const REPO_URL = "https://github.com/brainfoolong/learn-piano-easy";

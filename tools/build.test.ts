@@ -1,10 +1,12 @@
 import { rm } from "node:fs/promises";
 import { join } from "node:path";
 
+import { LOCALES } from "../src/i18n/locale";
 import { LANDING_SONGS } from "../src/landing/songs";
+import { groupOf } from "../src/pwa/cache-groups";
 import { afterAll, beforeAll, expect, test } from "../src/testing";
-import { allPages, pageOf, pageTitle, ROUTES, socialImageOf } from "../src/site/routes";
-import { build, renderPage, root, type BuildResult } from "./build";
+import { allPages, lessonPages, pageOf, pageTitle, ROUTES, socialImageOf } from "../src/site/routes";
+import { build, crawlerFiles, renderPage, root, structuredData, type BuildResult } from "./build";
 
 const outDir = join(root, ".agent-tmp", `build-test-${process.pid}`);
 let result: BuildResult;
@@ -58,6 +60,72 @@ test("build_writes_a_page_per_route_and_locale", async () => {
   const gallery = renderPage(template, pageOf(ROUTES.find((r) => r.id === "design")!, "en"), "https://example.org/");
   expect(gallery).toContain(`<meta name="robots" content="noindex" />`);
   expect(gallery).not.toContain("canonical");
+  // Every page names the site and its locale for social sites, a local one too.
+  const local = await Bun.file(join(outDir, "de/play/index.html")).text();
+  expect(local).toContain(`<meta property="og:site_name" content="Learn Piano Easy" />`);
+  expect(local).toContain(`<meta property="og:locale" content="de_DE" />`);
+  expect(local).toContain(`<meta property="og:locale:alternate" content="en_US" />`);
+});
+
+test("a_lesson_page_carries_the_lessons_own_title", async () => {
+  const lessons = await lessonPages();
+  const titles = new Set<string>();
+  for (const page of lessons) {
+    const html = await Bun.file(join(outDir, page.file)).text();
+    const title = /<title>(.*)<\/title>/.exec(html)![1]!;
+    expect(title).toBe(pageTitle(page));
+    expect(title).toStartWith(page.route.lesson!.title![page.locale]);
+    titles.add(`${page.locale} ${title}`);
+  }
+  // No two lessons of a locale share a title, so no two of its lesson pages look alike in a search result.
+  expect(titles.size).toBe(lessons.length);
+});
+
+const SITE = "https://example.org/piano/";
+
+test("the_sitemap_lists_every_indexed_page_with_its_alternates", async () => {
+  const pages = [...allPages(), ...(await lessonPages())];
+  const sitemap = crawlerFiles(pages, "https://example.org/piano")["sitemap.xml"]!;
+  const urls = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => m[1]!);
+  const indexed = pages.filter((page) => !page.route.hidden);
+  expect(urls.map((url) => /<loc>(.*)<\/loc>/.exec(url)![1])).toEqual(indexed.map((page) => SITE + page.path));
+  for (const [i, page] of indexed.entries()) {
+    const links = [...urls[i]!.matchAll(/<xhtml:link rel="alternate" hreflang="([\w-]+)" href="([^"]+)" \/>/g)].map((m) => [m[1], m[2]]);
+    expect(links).toEqual([
+      ...LOCALES.map((locale) => [locale, SITE + pageOf(page.route, locale).path]),
+      ["x-default", SITE + pageOf(page.route, "en").path],
+    ]);
+  }
+  expect(sitemap).not.toContain("design/");
+  expect(sitemap).toStartWith(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"`);
+});
+
+test("robots_allow_every_path_and_name_the_sitemap_only_on_a_hosted_build", () => {
+  const files = crawlerFiles(allPages(), "https://example.org/piano");
+  expect(files["robots.txt"]).toBe(`User-agent: *\nAllow: /\n\nSitemap: ${SITE}sitemap.xml\n`);
+  for (const path of Object.keys(files)) {
+    // A local build writes neither file, and no learner caches one.
+    expect(result.files).not.toContain(path);
+    expect(groupOf(path)).toBeUndefined();
+  }
+});
+
+test("a_landing_page_carries_json_ld_with_its_own_url", async () => {
+  const template = await Bun.file(join(root, "public/index.html")).text();
+  const jsonLd = /<script type="application\/ld\+json">(.*)<\/script>/;
+  for (const locale of LOCALES) {
+    const home = pageOf(ROUTES[0]!, locale);
+    const html = renderPage(template, home, SITE);
+    const raw = jsonLd.exec(html)![1]!;
+    expect(raw).not.toContain("<");
+    const data = JSON.parse(raw) as { "@graph": Record<string, unknown>[] };
+    expect(data["@graph"].map((node) => node["@type"])).toEqual(["WebSite", "WebApplication"]);
+    for (const node of data["@graph"]) expect(node).toMatchObject({ url: SITE + home.path, inLanguage: locale });
+    expect(data["@graph"][1]).toMatchObject({ applicationCategory: "EducationalApplication", isAccessibleForFree: true });
+    expect(structuredData(home, SITE)).toEqual(data);
+  }
+  expect(renderPage(template, pageOf(ROUTES.find((r) => r.id === "play")!, "en"), SITE)).not.toContain("ld+json");
+  expect(await Bun.file(join(outDir, "index.html")).text()).not.toContain("ld+json");
 });
 
 /**
