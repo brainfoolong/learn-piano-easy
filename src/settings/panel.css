@@ -1,0 +1,867 @@
+/*
+ * The settings panel, and the setting row that the panel's tools and the player's dialogs share.
+ * `src/settings/panel.ts` is the home of how the panel behaves.
+ *
+ * The panel floats at the right of the scene and ends above the control bar, so the transport stays in
+ * reach. It stacks a header with the search, the navigation, the body that scrolls, and a footer with
+ * the count of changes and Reset all.
+ *
+ * - **A group has one hue.** `data-hue` sets `--hue` and `--hue-soft` on a group's tab and on its cards.
+ *   The hue tints the tab, the group's title and each card's header. Text stays `--c-text`.
+ * - **A section is a card on the body's well.** Its rows part by hairlines, and a row away from its
+ *   default shows a teal dot in the card's gutter, so the mark moves no text.
+ * - **The navigation has two shapes.** It is a strip of tabs above the body, and a rail beside the body
+ *   on a wide window. In both, the open group shows its sections, and one marker slides between them.
+ * - **A row follows the body's width,** through a container query. A wide body sets every control at
+ *   the right. A narrow one puts a slider, a select and a field under their text, at full width.
+ * - **Only `transform` and `opacity` move.** The panel enters from its edge, the body fades in after a
+ *   jump, and the marker slides. With reduced motion each of them only fades or jumps.
+ */
+@layer pages {
+  .settings-panel {
+    --rail: calc(var(--s-12) + var(--s-9));
+    --reset: var(--s-7);
+    --reset-out: var(--s-2);
+    --enter-x: var(--s-7);
+    --enter-y: 0px;
+
+    position: absolute;
+    top: calc(var(--bar-height) + var(--s-3));
+    right: var(--s-3);
+    bottom: calc(var(--controls-height, 0px) + var(--s-3));
+    z-index: 50;
+    display: grid;
+    grid-template:
+      "head" auto
+      "nav" auto
+      "body" minmax(0, 1fr)
+      "foot" auto / minmax(0, 1fr);
+    width: min(calc(var(--s-12) * 4 + var(--s-9)), calc(100% - var(--s-6)));
+    background: var(--c-surface-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    box-shadow: var(--e-rim), var(--e-3);
+    outline: none;
+    animation: settings-enter var(--m-medium) var(--ease-emphasis);
+  }
+
+  @keyframes settings-enter {
+    from {
+      opacity: 0;
+      transform: translate(var(--enter-x), var(--enter-y));
+    }
+  }
+
+  /* The panel leaves as it entered, reversed. `src/app/shell.ts` hides it once the motion ends. */
+  .settings-panel.is-leaving {
+    pointer-events: none;
+    animation: settings-leave var(--m-medium) var(--ease-standard) forwards;
+  }
+
+  @keyframes settings-leave {
+    to {
+      opacity: 0;
+      transform: translate(var(--enter-x), var(--enter-y));
+    }
+  }
+
+  /* The hues. A group with no hue takes the soft text and the well. */
+  .settings-panel [data-hue] {
+    --hue: var(--c-text-soft);
+    --hue-soft: var(--c-sunken);
+  }
+
+  .settings-panel [data-hue="honey"] {
+    --hue: var(--c-brand-text);
+    --hue-soft: var(--c-brand-soft);
+  }
+
+  .settings-panel [data-hue="teal"] {
+    --hue: var(--c-accent);
+    --hue-soft: var(--c-accent-soft);
+  }
+
+  .settings-panel [data-hue="iris"] {
+    --hue: var(--c-iris);
+    --hue-soft: var(--c-iris-soft);
+  }
+
+  .settings-panel [data-hue="orchid"] {
+    --hue: var(--c-orchid);
+    --hue-soft: var(--c-orchid-soft);
+  }
+
+  .settings-panel [data-hue="blue"] {
+    --hue: var(--c-info);
+    --hue-soft: var(--c-info-soft);
+  }
+
+  /* The header: the title, the search field with its icon and its clear button, and the close button. */
+  .settings-head {
+    grid-area: head;
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-3) var(--s-3) var(--s-3) var(--s-4);
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .settings-head h2 {
+    margin: 0;
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .settings-search {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .settings-search > .icon {
+    position: absolute;
+    inset-inline-start: var(--s-3);
+    color: var(--c-text-soft);
+    pointer-events: none;
+  }
+
+  .settings-search input {
+    width: 100%;
+    padding-inline: calc(var(--s-8) + var(--s-1)) var(--s-8);
+    border-radius: var(--r-pill);
+  }
+
+  .settings-search input::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  .settings-search .icon-btn {
+    position: absolute;
+    inset-inline-end: var(--s-1);
+    border-radius: var(--r-pill);
+  }
+
+  /*
+   * The navigation as a strip: the groups' tabs in one row that scrolls sideways. The open group is a
+   * tinted run of its tab and its sections' links.
+   */
+  .settings-nav {
+    grid-area: nav;
+    position: relative;
+    overflow: auto hidden;
+    padding: var(--s-2) var(--s-3);
+    border-bottom: 1px solid var(--c-line);
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  .settings-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .settings-nav__groups {
+    gap: var(--s-1);
+    width: max-content;
+  }
+
+  .settings-nav__group {
+    display: flex;
+    align-items: center;
+    border-radius: var(--r-control);
+  }
+
+  .settings-nav__group:has(> [aria-expanded="true"]) {
+    background: var(--hue-soft);
+  }
+
+  .settings-nav__sections {
+    gap: var(--s-1);
+    padding-inline-end: var(--s-1);
+  }
+
+  .settings-nav__tab,
+  .settings-nav__link {
+    position: relative;
+    z-index: var(--z-raised);
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    border: none;
+    border-radius: var(--r-control);
+    background: none;
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    line-height: var(--lh-heading);
+    text-align: start;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .settings-nav__tab {
+    min-height: var(--s-8);
+    padding: var(--s-1) var(--s-3) var(--s-1) var(--s-1);
+    font-weight: var(--w-bold);
+  }
+
+  .settings-nav__link {
+    min-height: var(--s-7);
+    padding: var(--s-1) var(--s-3);
+    font-weight: var(--w-medium);
+  }
+
+  .settings-nav__link[aria-current="true"] {
+    font-weight: var(--w-bold);
+  }
+
+  /* The tint under the pointer and the press, in the text's own colour. */
+  .settings-nav__tab::after,
+  .settings-nav__link::after,
+  .setting-row .reset::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  @media (hover: hover) {
+    .settings-nav__tab:hover:not(:disabled)::after,
+    .settings-nav__link:hover:not([aria-current="true"])::after,
+    .setting-row .reset:hover::after {
+      opacity: var(--o-hover);
+    }
+  }
+
+  .settings-nav__tab:active:not(:disabled),
+  .settings-nav__link:active,
+  .setting-row .reset:active {
+    transform: scale(0.97);
+  }
+
+  .settings-nav__tab:active:not(:disabled)::after,
+  .settings-nav__link:active::after,
+  .setting-row .reset:active::after {
+    opacity: var(--o-press);
+  }
+
+  .settings-nav__tab:disabled {
+    opacity: var(--o-disabled);
+    cursor: not-allowed;
+  }
+
+  .settings-nav__tab:focus-visible,
+  .settings-nav__link:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: -2px;
+  }
+
+  /* The marker under the current section's link. `panel.ts` sets its place, its size and its hue. */
+  .settings-nav__marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--marker-width);
+    height: var(--marker-height);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-control);
+    background: var(--c-surface-2);
+    box-shadow:
+      inset var(--s-1) 0 0 var(--hue),
+      var(--e-1);
+    transform: translate(var(--marker-x), var(--marker-y));
+    transition: transform var(--m-medium) var(--ease-spring);
+    pointer-events: none;
+  }
+
+  /* The tile of an icon, in its group's hue. */
+  .settings-glyph {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-7);
+    height: var(--s-7);
+    border-radius: var(--s-2);
+    background: var(--hue-soft);
+    color: var(--hue);
+  }
+
+  .settings-glyph .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+  }
+
+  .settings-nav__tab[aria-expanded="true"] .settings-glyph {
+    background: var(--c-surface-1);
+    box-shadow: var(--e-1);
+  }
+
+  .settings-nav__link .settings-glyph {
+    width: var(--s-5);
+    height: var(--s-5);
+    background: none;
+  }
+
+  .settings-nav__link .settings-glyph .icon {
+    width: var(--s-4);
+    height: var(--s-4);
+  }
+
+  /* The count of changed settings, in the teal of every state. An open group leaves it to its sections. */
+  .settings-count {
+    display: grid;
+    flex: none;
+    place-items: center;
+    min-width: var(--s-5);
+    height: var(--s-5);
+    margin-inline-start: auto;
+    padding: 0 var(--s-1);
+    border-radius: var(--r-pill);
+    background: var(--c-accent);
+    color: var(--c-accent-ink);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .settings-nav__tab[aria-expanded="true"] .settings-count {
+    display: none;
+  }
+
+  /* The body: the well the cards sit in. It is the container every row measures. */
+  .settings-body {
+    grid-area: body;
+    position: relative;
+    overflow: hidden auto;
+    container: settings / inline-size;
+    background: var(--c-bg);
+    overscroll-behavior: contain;
+  }
+
+  .settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-7);
+    padding: var(--s-4) var(--s-4) var(--s-9);
+    animation: settings-rise var(--m-medium) var(--ease-emphasis) var(--m-micro) backwards;
+  }
+
+  /* A jump restarts the fade by taking the other of two equal animations. */
+  .settings-content[data-jump="a"] {
+    animation: settings-jump-a var(--m-medium) var(--ease-emphasis);
+  }
+
+  .settings-content[data-jump="b"] {
+    animation: settings-jump-b var(--m-medium) var(--ease-emphasis);
+  }
+
+  @keyframes settings-rise {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+
+  @keyframes settings-jump-a {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+
+  @keyframes settings-jump-b {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+
+  /* What a search found, above its results. */
+  .settings-found {
+    margin: 0 0 calc(-1 * var(--s-4));
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+  }
+
+  .settings-found:empty {
+    display: none;
+  }
+
+  .settings-empty {
+    padding: var(--s-7) 0;
+  }
+
+  /* A group: its title in its hue with a rule beside it, then its cards. */
+  .settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    scroll-margin-top: var(--s-4);
+  }
+
+  .settings-group__title {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    margin: 0;
+    color: var(--hue);
+    font-size: var(--t-sm);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .settings-group__title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--c-line);
+  }
+
+  /* A section: a card with a header in its group's tint. */
+  .settings-section {
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+    scroll-margin-top: var(--s-4);
+  }
+
+  .settings-section__head {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-3) var(--s-4);
+    border-radius: calc(var(--r-card) - 1px) calc(var(--r-card) - 1px) 0 0;
+    background: var(--hue-soft);
+  }
+
+  .settings-section__head .settings-glyph {
+    width: var(--s-8);
+    height: var(--s-8);
+    border-radius: var(--r-control);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+    font-size: var(--t-md);
+  }
+
+  .settings-section__titles {
+    min-width: 0;
+  }
+
+  .settings-section h4 {
+    margin: 0;
+    font-size: var(--t-lg);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .settings-section__about {
+    margin: var(--s-1) 0 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    line-height: var(--lh-heading);
+  }
+
+  /* A run of rows, under a small heading where the section is long. */
+  .settings-block {
+    padding: 0 var(--s-4);
+  }
+
+  .settings-block__title {
+    margin: 0;
+    padding: var(--s-5) 0 var(--s-2);
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  /* A match of the search, on honey. */
+  .settings-panel mark {
+    border-radius: var(--s-1);
+    background: color-mix(in oklab, var(--c-brand) 42%, transparent);
+    color: var(--c-text);
+  }
+
+  /* The row every panel and dialog shares: a text, a control, and room for a reset. */
+  .setting-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) fit-content(50%) var(--reset, var(--s-7));
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-2) 0;
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .setting-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .settings-section .setting-text {
+    gap: var(--s-1);
+  }
+
+  .settings-section .setting-label {
+    font-weight: var(--w-semibold);
+    line-height: var(--lh-heading);
+  }
+
+  .setting-description {
+    font-size: var(--t-sm);
+    color: var(--c-text-soft);
+  }
+
+  /* A section's tools, such as the keyboard size and the MIDI devices, put their buttons under the label. */
+  .range-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .range-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-2);
+  }
+
+  /* A card's rows part by a hairline above each, so the last one ends on the card's own edge. */
+  .settings-section .setting-row {
+    position: relative;
+    padding: var(--s-3) 0;
+    border-top: 1px solid var(--c-line);
+    border-bottom: none;
+  }
+
+  .settings-section > .setting-row,
+  .settings-block > .setting-row:first-child {
+    border-top: none;
+  }
+
+  .settings-section > .setting-row {
+    margin: 0 var(--s-4);
+  }
+
+  /*
+   * The reset button reaches out of its column on both sides, into the gap and into the card's edge.
+   * Its column is that much narrower, so a control ends close to the card's edge.
+   */
+  .settings-block > .setting-row {
+    grid-template-columns: minmax(0, 1fr) fit-content(50%) calc(var(--reset) - 2 * var(--reset-out));
+  }
+
+  .settings-block > .setting-row > .reset {
+    margin-inline: calc(-1 * var(--reset-out));
+  }
+
+  .settings-block > .setting-row > .setting-text {
+    grid-area: 1 / 1;
+  }
+
+  .settings-block > .setting-row > :nth-child(2) {
+    grid-area: 1 / 2;
+    justify-self: end;
+  }
+
+  .settings-block > .setting-row > :nth-child(3) {
+    grid-area: 1 / 3;
+  }
+
+  .settings-block [data-control="slider"] {
+    width: calc(var(--s-12) + var(--s-11));
+  }
+
+  .settings-block .note-field {
+    width: calc(var(--s-11) + var(--s-4));
+    text-align: center;
+  }
+
+  /* The mark of a changed setting: a dot in the card's gutter, level with the label's first line. */
+  .settings-block > .setting-row[data-changed]::before {
+    content: "";
+    position: absolute;
+    top: calc(var(--s-3) + (var(--t-md) * var(--lh-heading) - var(--s-2)) / 2);
+    left: calc(-1 * var(--s-3));
+    width: var(--s-2);
+    height: var(--s-2);
+    border-radius: var(--r-pill);
+    background: var(--c-accent);
+    animation: settings-pop var(--m-medium) var(--ease-spring);
+  }
+
+  /* The reset of one setting: a quiet round button that springs in beside a changed control. */
+  .setting-row .reset {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: var(--reset);
+    height: var(--reset);
+    padding: 0;
+    border: none;
+    border-radius: var(--r-pill);
+    background: none;
+    color: var(--c-text-soft);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+    animation: settings-pop var(--m-medium) var(--ease-spring);
+  }
+
+  .setting-row .reset:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+  }
+
+  @keyframes settings-pop {
+    from {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+  }
+
+  /* The footer: how many settings are changed, and Reset all, apart at the far end. */
+  .settings-foot {
+    grid-area: foot;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    padding: var(--s-2) var(--s-3) var(--s-2) var(--s-4);
+    border-top: 1px solid var(--c-line);
+  }
+
+  .settings-summary {
+    min-width: 0;
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    line-height: var(--lh-heading);
+  }
+
+  /*
+   * A narrow body: an action's button, a slider, a select, chips and a text field go under their text, which
+   * then takes the row's full width. They end on the edge the other controls end on, with the reset
+   * beside them. A switch, a colour and a note stay at the right of their text.
+   */
+  @container settings (max-width: 539px) {
+    .settings-block > .setting-row:is([data-kind="number"], [data-kind="choice"], [data-kind="multi"], [data-kind="text"], [data-kind="action"]) {
+      grid-template-columns: minmax(0, 1fr) calc(var(--reset) - 2 * var(--reset-out));
+    }
+
+    .settings-block > .setting-row:is([data-kind="number"], [data-kind="choice"], [data-kind="multi"], [data-kind="text"], [data-kind="action"]) > .setting-text {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .settings-block > .setting-row:is([data-kind="number"], [data-kind="choice"], [data-kind="multi"], [data-kind="text"], [data-kind="action"]) > :nth-child(2) {
+      grid-area: 2 / 1;
+      justify-self: stretch;
+      width: 100%;
+    }
+
+    .settings-block > .setting-row:is([data-kind="number"], [data-kind="choice"], [data-kind="multi"], [data-kind="text"], [data-kind="action"]) > :nth-child(3) {
+      grid-area: 2 / 2;
+    }
+
+    .settings-block > .setting-row--action > :nth-child(2) {
+      justify-self: start;
+      width: auto;
+    }
+
+    .settings-block > .setting-row--action > .reset-space {
+      display: none;
+    }
+  }
+
+  /* A touch screen asks a target a finger can hit. */
+  @media (pointer: coarse) {
+    .settings-panel {
+      --reset: var(--s-touch);
+      --reset-out: var(--s-3);
+    }
+
+    .settings-nav__tab,
+    .settings-nav__link {
+      min-height: var(--s-touch);
+    }
+  }
+
+  /*
+   * A wide window: the navigation is a rail beside the body. Each group's tab spans the rail, and the
+   * open group's sections stand under it. The panel is wide enough for both and still leaves the scene.
+   */
+  @media (min-width: 1200px) and (min-height: 521px) {
+    .settings-panel {
+      grid-template:
+        "head head" auto
+        "nav body" minmax(0, 1fr)
+        "foot foot" auto / var(--rail) minmax(0, 1fr);
+      width: clamp(calc(var(--s-12) * 4), 43vw, calc(var(--s-12) * 6));
+    }
+
+    .settings-content {
+      padding-inline: var(--s-3);
+    }
+
+    .settings-nav {
+      overflow: hidden auto;
+      padding: var(--s-3) var(--s-2);
+      border-right: 1px solid var(--c-line);
+      border-bottom: none;
+    }
+
+    .settings-nav__groups,
+    .settings-nav__group,
+    .settings-nav__sections {
+      flex-direction: column;
+      align-items: stretch;
+      width: auto;
+    }
+
+    .settings-nav__sections {
+      padding: 0 var(--s-1) var(--s-1);
+    }
+
+    .settings-nav__tab,
+    .settings-nav__link {
+      width: 100%;
+      white-space: normal;
+    }
+  }
+
+  /*
+   * A window this short, such as a phone held sideways, has no room below the site's bar. So the open
+   * panel takes the window's height and covers that bar, and its header keeps the close button. The
+   * player is fixed, which makes it a stacking context, so the player rises over the bar while it shows.
+   * Every part gives up height for the rows: the header, the strip and the footer close up, the strip
+   * alone names the group, and a card's header drops its description.
+   */
+  @media (max-height: 520px) {
+    .settings-panel {
+      position: fixed;
+      top: var(--s-3);
+      bottom: var(--s-3);
+    }
+
+    .player-view__app:has(> .settings-panel:not([hidden])) {
+      z-index: var(--z-dialog);
+    }
+
+    .settings-head {
+      padding-block: var(--s-2);
+    }
+
+    .settings-nav,
+    .settings-foot {
+      padding-block: var(--s-1);
+    }
+
+    .settings-content {
+      padding-block-start: var(--s-2);
+    }
+
+    .settings-group__title,
+    .settings-section__about {
+      display: none;
+    }
+
+    .settings-section__head {
+      padding-block: var(--s-2);
+    }
+
+    .settings-section__head .settings-glyph {
+      width: var(--s-7);
+      height: var(--s-7);
+    }
+  }
+
+  /*
+   * On a phone held upright the panel is a sheet that fills the player, and it enters from below. It
+   * starts a little under the site's bar, where the song's title hangs. The search takes a row of its
+   * own under the title.
+   */
+  @media (max-width: 520px) and (min-height: 521px) {
+    .settings-panel {
+      --enter-x: 0px;
+      --enter-y: var(--s-9);
+
+      inset: var(--s-8) 0 0;
+      width: 100%;
+      padding-block-end: env(safe-area-inset-bottom);
+      border-inline: none;
+      border-block-end: none;
+      border-radius: var(--r-card) var(--r-card) 0 0;
+    }
+
+    .settings-head {
+      flex-wrap: wrap;
+      row-gap: var(--s-2);
+    }
+
+    .settings-head h2 {
+      flex: 1;
+    }
+
+    .settings-search {
+      flex-basis: 100%;
+      order: 1;
+    }
+
+    .settings-content {
+      padding-inline: var(--s-3);
+    }
+  }
+
+  /* With reduced motion the panel only fades in, leaves at once, and the marker and the navigation jump. */
+  @media (prefers-reduced-motion: reduce) {
+    .settings-panel {
+      --enter-x: 0px;
+      --enter-y: 0px;
+    }
+
+    .settings-panel.is-leaving {
+      animation: none;
+    }
+
+    .settings-nav {
+      scroll-behavior: auto;
+    }
+
+    .settings-nav__marker {
+      transition: none;
+    }
+
+    .settings-nav__tab,
+    .settings-nav__link,
+    .setting-row .reset {
+      transition: none;
+    }
+
+    .settings-nav__tab:active:not(:disabled),
+    .settings-nav__link:active,
+    .setting-row .reset:active {
+      transform: none;
+    }
+
+    @keyframes settings-pop {
+      from {
+        opacity: 0;
+      }
+    }
+  }
+}

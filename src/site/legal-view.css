@@ -1,0 +1,69 @@
+/*
+ * The legal pages' styles. `src/site/legal-view.ts` is the home of what the pages show.
+ *
+ * The text is one column at reading width. Each section opens with its heading, and the switch of the
+ * visitor statistics sits on a raised card, as the Data page's actions do.
+ */
+@layer pages {
+  .legal {
+    display: grid;
+    gap: var(--s-4);
+    max-width: var(--measure);
+  }
+
+  .legal p,
+  .legal ul {
+    margin: 0;
+  }
+
+  .legal ul {
+    display: grid;
+    gap: var(--s-2);
+    padding-inline-start: var(--s-6);
+  }
+
+  .legal__section {
+    display: grid;
+    gap: var(--s-3);
+    margin-block-start: var(--s-4);
+  }
+
+  .legal__section h2 {
+    margin: 0;
+    font-size: var(--t-xl);
+    line-height: var(--lh-heading);
+  }
+
+  .legal__updated,
+  .legal__status {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .legal__updated {
+    margin-block-start: var(--s-4);
+  }
+
+  .legal__switch {
+    display: grid;
+    gap: var(--s-2);
+    padding: var(--s-5);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  .legal__switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-4);
+    min-height: var(--s-touch);
+  }
+
+  .legal__switch-label {
+    font-weight: var(--w-semibold);
+    cursor: pointer;
+  }
+}

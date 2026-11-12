@@ -1,0 +1,180 @@
+/*
+ * The card's styles. `src/ui/components/card.ts` is the home of how a card behaves.
+ *
+ * Each variant sets the card's own custom properties, and one rule draws every card from them. A card
+ * is raised: a lit top edge and a soft shadow, inside an edge of `--c-line`. A featured card carries a
+ * honey band across its top. A selected card takes the teal of everything chosen, as an edge, a ring
+ * and a tint.
+ *
+ * A target's lift and press move the card, and its deeper shadow fades in on a layer behind it, so
+ * nothing in the layout moves. The title's `::after` covers the card, which makes the whole card one
+ * target.
+ */
+@layer components {
+  .card {
+    --card-bg: var(--c-surface-1);
+    --card-edge: var(--c-line);
+    --card-band: 1px;
+    --card-band-edge: var(--card-edge);
+    --card-shadow: var(--e-rim), var(--e-1);
+    --card-glow: var(--e-2);
+
+    container: card / inline-size;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    max-width: 100%;
+    border: 1px solid var(--card-edge);
+    border-top: var(--card-band) solid var(--card-band-edge);
+    border-radius: var(--r-card);
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    color: var(--c-text);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* Featured: a firmer edge, the honey band, and the honey's own light as it lifts. */
+  .card[data-variant="featured"] {
+    --card-bg: var(--c-surface-2);
+    --card-edge: var(--c-line-strong);
+    --card-band: var(--s-1);
+    --card-band-edge: var(--c-brand);
+    --card-shadow: var(--e-1);
+    --card-glow: var(--e-glow), var(--e-2);
+  }
+
+  /*
+   * Selected: the teal edge, a ring inside it and a teal tint, in every variant. The tint is mixed in
+   * sRGB, the one form of a mix that the layout check reads behind a text.
+   */
+  .card[data-selected] {
+    --card-bg: color-mix(in srgb, var(--c-accent) 10%, var(--c-surface-1));
+    --card-edge: var(--c-accent);
+    --card-band-edge: var(--c-accent);
+    --card-shadow: inset 0 0 0 1px var(--c-accent), var(--e-1);
+  }
+
+  /* The media takes the card's top corners, inside the edge. */
+  .card__media {
+    overflow: hidden;
+    border-radius: calc(var(--r-card) - var(--card-band)) calc(var(--r-card) - var(--card-band)) 0 0;
+  }
+
+  .card__media > * {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--s-2);
+    min-width: 0;
+    padding: var(--s-5);
+  }
+
+  .card__title {
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+    overflow-wrap: break-word;
+  }
+
+  .card__text {
+    color: var(--c-text-soft);
+    font-size: var(--t-md);
+    line-height: var(--lh-body);
+  }
+
+  /* The title's link or button reads as the title, and its cover spans the whole card. */
+  .card__action {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    text-align: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* On a touch screen the title's own box reaches the touch size, and its margins keep the layout. */
+  @media (pointer: coarse) {
+    .card__action {
+      --card-touch-pad: max(0px, (var(--s-touch) - 1lh) / 2);
+      padding-block: var(--card-touch-pad);
+      margin-block: calc(var(--card-touch-pad) * -1);
+    }
+  }
+
+  .card__action::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: var(--z-raised);
+    border-radius: var(--r-card);
+  }
+
+  .card__action:focus-visible {
+    outline: none;
+  }
+
+  .card[data-target]:has(.card__action:focus-visible) {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+  }
+
+  /* The deeper shadow: the next elevation, faded in as the card lifts. */
+  .card[data-target]::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: var(--card-glow);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  @media (hover: hover) {
+    .card[data-target]:hover {
+      transform: translateY(calc(var(--motion-lift) * 2));
+    }
+
+    .card[data-target]:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .card[data-target]:active {
+    transform: translateY(0) scale(0.985);
+    transition-duration: var(--m-micro);
+  }
+
+  /* A wide card gives its body more room and its title more weight. */
+  @container card (min-width: 400px) {
+    .card__body {
+      gap: var(--s-3);
+      padding: var(--s-6);
+    }
+
+    .card__title {
+      font-size: var(--t-xl);
+    }
+  }
+
+  /* A narrow card keeps its text wide. */
+  @container card (max-width: 300px) {
+    .card__body {
+      padding: var(--s-4);
+    }
+  }
+}

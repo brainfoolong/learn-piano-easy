@@ -1,0 +1,195 @@
+/*
+ * The player's scene and what the shell lays over it. `src/app/shell.ts` is the home of how the player
+ * behaves.
+ *
+ * The stage fills the window, and the player's bar floats over it at the edge opposite the piano.
+ * `src/app/shell.ts` sets `--bar-height` and `--controls-height` to the room the bar takes at the top
+ * and at the bottom. Every panel over the scene keeps clear of both.
+ *
+ * - **A panel over the scene is one family.** It has a firm edge, a lit top edge and the highest
+ *   elevation. Its ground is `--scene-panel`, the raised surface with a little of the scene showing
+ *   through a blur. The site's glass is too clear for it: the scene keeps its own theme, and soft text
+ *   on glass over a scene of the other theme falls below its contrast.
+ * - **A panel enters from the top edge.** `player-panel-in` fades it in as it drops into place, and
+ *   every panel docked at the top of the scene uses it. With reduced motion it only fades.
+ * - **The player's buttons from `button` in `src/ui/dom.ts` are action controls.** A primary one fills
+ *   with honey, and a pressed one takes the accent.
+ */
+@layer pages {
+  .player-view__app {
+    --bar-height: 0px;
+    --controls-height: 0px;
+    --scene-panel: color-mix(in oklab, var(--c-surface-2) 88%, transparent);
+  }
+
+  /* `hidden` hides, whatever display a class gives, in the player and in its dialogs. */
+  :is(.player-view, dialog) [hidden] {
+    display: none !important;
+  }
+
+  .stage {
+    position: absolute;
+    inset: 0;
+  }
+
+  .stage canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+  }
+
+  /* The selected note's finger, at the top right of the scene. */
+  .finger-status {
+    position: absolute;
+    right: max(var(--s-3), env(safe-area-inset-right));
+    top: calc(var(--bar-height) + var(--s-3));
+    padding: var(--s-2) var(--s-4);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--scene-panel);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    pointer-events: none;
+    animation: player-panel-in var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  .finger-status[hidden] {
+    display: none;
+  }
+
+  /* Lesson mode's banner, at the top left of the scene: the step's goal and the way back. */
+  .lesson-banner {
+    position: absolute;
+    left: max(var(--s-3), env(safe-area-inset-left));
+    top: calc(var(--bar-height) + var(--s-3));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--s-1);
+    max-width: min(320px, calc(50% - var(--s-6)));
+    padding: var(--s-4);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-card);
+    background: var(--scene-panel);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    animation: player-panel-in var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  .lesson-banner p {
+    margin: 0;
+  }
+
+  .lesson-banner__label {
+    color: var(--c-brand-text);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .lesson-banner__goal {
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+  }
+
+  .lesson-banner__practice,
+  .lesson-banner__target {
+    color: var(--c-text-soft);
+  }
+
+  .lesson-banner__practice:empty {
+    display: none;
+  }
+
+  .lesson-banner__back {
+    margin-top: var(--s-2);
+  }
+
+  /*
+   * On a narrow stage the banner is one row across the top: the goal on one line, and the way back. It
+   * stands `--s-10` tall, and the score panel starts below it.
+   */
+  @media (max-width: 720px) {
+    .lesson-banner {
+      right: max(var(--s-3), env(safe-area-inset-right));
+      height: var(--s-10);
+      max-width: none;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--s-3);
+      padding: var(--s-2) var(--s-2) var(--s-2) var(--s-4);
+    }
+
+    .lesson-banner :is(.lesson-banner__label, .lesson-banner__practice, .lesson-banner__target) {
+      display: none;
+    }
+
+    .lesson-banner__goal {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .lesson-banner__back {
+      flex: none;
+      margin-top: 0;
+    }
+
+    .stage:has(> .lesson-banner:not([hidden])) .score-panel {
+      top: calc(var(--bar-height) + var(--s-3) + var(--s-10) + var(--s-2));
+    }
+  }
+
+  /* On a phone the song's title is a chip at the top of the scene, as `src/app/shell.css` says, so the banner starts below it. */
+  @media (max-width: 520px) {
+    .lesson-banner {
+      top: calc(var(--bar-height) + var(--s-8) + var(--s-2));
+    }
+
+    .stage:has(> .lesson-banner:not([hidden])) .score-panel {
+      top: calc(var(--bar-height) + var(--s-8) + var(--s-2) + var(--s-10) + var(--s-2));
+    }
+  }
+
+  /* Free play and pitch practice set the song aside, so its controls, its score and the game hide. */
+  [data-play-mode="freePlay"] :is(.control-bar, .score-panel, .game),
+  [data-play-mode="pitchPractice"] :is(.control-bar, .score-panel, .game) {
+    display: none;
+  }
+
+  /* A primary action button carries the honey sheen, as the button component's primary variant does. */
+  .button[data-control="action"].primary {
+    border-color: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    background: var(--g-brand) border-box var(--c-brand);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.5),
+      var(--e-1);
+    color: var(--c-brand-ink);
+  }
+
+  /* A pressed one, such as a key that waits for its binding, takes the accent's edge and tint. */
+  .button[data-control="action"][aria-pressed="true"] {
+    border-color: var(--c-accent);
+    background: var(--c-accent-soft);
+    color: var(--c-accent);
+  }
+
+  @keyframes player-panel-in {
+    from {
+      opacity: 0;
+      transform: translateY(calc(-1 * var(--motion-rise)));
+    }
+  }
+}

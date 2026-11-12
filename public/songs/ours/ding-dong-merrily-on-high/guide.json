@@ -1,0 +1,356 @@
+{
+  "song": "ding-dong-merrily-on-high",
+  "title": "Ding Dong Merrily on High",
+  "composer": "Traditional",
+  "about": "This carol began as a dance tune called Branle de l'Official. It was printed in 1589 in Orchésographie, a dance book by the French cleric Thoinot Arbeau. The English composer George Ratcliffe Woodward wrote the carol's words, and it was published in 1924. Charles Wood harmonised it.",
+  "funFact": "Thoinot Arbeau was a pen name. The man behind it was Jehan Tabourot.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/ding-dong-merrily-on-high/common.mid",
+      "skills": [
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4, 4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 1, 5, 4, 3, 4, 5, 3, 4, 3, 2, 3, 4, 2, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4],
+        "left": [5, 1, 4, 1, 2, 5, 1, 5, 1, 4, 1, 2, 5, 1, 5, 1, 4, 5, 1, 4, 1, 2, 4, 1, 2, 5, 1]
+      },
+      "start": {
+        "right": [67, 69, 71, 72, 74],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first two bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 2],
+          "wait": true
+        },
+        {
+          "text": "Play bars 5 to 7 with the right hand alone, where the tune runs down from the high G.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 7],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each half bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "The thumb starts on the G below the tune, and finger 4 plays the first C."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "trick",
+          "text": "Play the last C with the thumb. The little finger then reaches up to the high G."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 7,
+          "kind": "fingering",
+          "text": "Each bar of the run starts one key lower with the same finger. Let the hand creep down."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Fingers 3, 2 and 1 walk down to A twice. Then finger 3 takes B, and the thumb lands on the low G."
+        },
+        {
+          "bar": 5,
+          "text": "The run starts on the high G with the little finger. Each next bar plays the same pattern one key lower."
+        },
+        {
+          "bar": 1,
+          "text": "Finger 4 plays C twice, then fingers 5, 4, 3 and 2 step down to A. The thumb holds the long G."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/ding-dong-merrily-on-high/rare.mid",
+      "skills": [
+        "triads",
+        "dotted-rhythm"
+      ],
+      "fingers": {
+        "right": [4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4, 4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 1, 5, 4, 3, 4, 5, 3, 4, 3, 2, 3, 4, 2, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4, 4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4, 4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 1, 5, 4, 3, 4, 5, 3, 4, 3, 2, 3, 4, 2, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4],
+        "left": [5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 2, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 2, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 4, 2, 4, 2, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 2, 5, 2, 4, 2, 1, 4, 2, 1, 5, 2, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 1, 4, 2, 2, 4, 2, 1, 5, 3, 1, 5, 3, 1, 1, 4, 2, 2, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 5, 3, 1, 1, 4, 2, 2, 5, 1, 4, 2, 2, 4, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [67, 69, 71, 72, 74],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 5 to 7 with the right hand alone, where the tune runs down from the high G.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 7],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 5,
+          "toBar": 7,
+          "kind": "rhythm",
+          "text": "Each bar of the run starts with a long note, then five quick ones. Hold the long note for three counts."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Hold each chord softly, so the bells of the tune ring above it."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "In the second verse, play the low note a little louder than the chord after it."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Fingers 3, 2 and 1 walk down to A twice. Then finger 3 takes B, and the thumb lands on the low G."
+        },
+        {
+          "bar": 5,
+          "text": "The run starts on the high G with the little finger. Each next bar plays the same pattern one key lower."
+        },
+        {
+          "bar": 15,
+          "text": "The same notes as bar 7, now over a bass note and a chord in turns."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/ding-dong-merrily-on-high/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "broken-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4, 4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 1, 5, 4, 3, 4, 5, 3, 4, 3, 2, 3, 4, 2, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4, 4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 4, 4, 4, 5, 4, 3, 2, 1, 1, 2, 4, 4, 3, 4, 1, 5, 4, 3, 4, 5, 3, 4, 3, 2, 3, 4, 2, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 2, 3, 1, 3, 2, 1, 1, 2, 4, 4, 3, 4, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, 69, 71, 72, 74],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the run of bars 5 to 7 with the right hand alone.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 7],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune rings above it like a bell."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 9,
+          "kind": "trick",
+          "text": "After the last C, the right hand jumps up an octave, and the left hand drops to a low C."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Change the pedal each half bar, as the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The right hand plays the opening an octave up. The left hand drops to the low C for its broken chord."
+        },
+        {
+          "bar": 10,
+          "text": "The left hand plays F, then G with a rest, and jumps down to the low C."
+        },
+        {
+          "bar": 12,
+          "text": "The same jump down to C as bar 10. Then the right thumb takes the last C, ready for the high G."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/ding-dong-merrily-on-high/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [4, 4, 3, 4, 5, 4, 3, 2, 1, 2, 3, 2, 1, 2, 4, 4, 5, 4, 3, 4, 4, 5, 3, 4, 4, 3, 4, 5, 4, 3, 2, 1, 2, 3, 2, 1, 2, 4, 4, 5, 4, 3, 4, 1, 3, 4, 5, 4, 5, 4, 3, 4, 5, 3, 4, 3, 4, 3, 2, 3, 4, 2, 3, 2, 3, 2, 1, 2, 3, 1, 3, 2, 3, 2, 1, 2, 3, 1, 3, 2, 3, 2, 1, 2, 3, 1, 3, 2, 3, 2, 1, 1, 2, 4, 4, 5, 4, 3, 4, 1, 3, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 4, 5, 4, 5, 4, 3, 4, 5, 3, 4, 3, 4, 3, 2, 3, 4, 2, 3, 2, 3, 2, 1, 2, 3, 1, 3, 2, 3, 2, 1, 2, 3, 1, 3, 2, 3, 2, 1, 2, 3, 1, 3, 2, 3, 2, 1, 1, 2, 4, 4, 5, 4, 3, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, 69, 71, 72, 74],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the run of bars 5 to 7 with the right hand alone, and keep the quick swings light.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [5, 7],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second verse in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 7,
+          "kind": "sound",
+          "text": "Each long note swings back and forth once, like a bell. Play the swing lighter than the tune."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "fingering",
+          "text": "Keep the thumb and little finger stretched an octave apart, and let the wrist bounce."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 11,
+          "text": "The opening comes back in octaves. Keep them even while the arpeggios run below."
+        },
+        {
+          "bar": 9,
+          "text": "The octaves on C, D, B and A come quickly. Keep the hand in its octave shape and move it from the wrist."
+        },
+        {
+          "bar": 14,
+          "text": "The run swings down to B, while the left hand climbs a G arpeggio below it."
+        }
+      ]
+    }
+  }
+}

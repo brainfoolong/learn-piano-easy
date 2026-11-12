@@ -1,0 +1,357 @@
+{
+  "song": "o-christmas-tree",
+  "title": "O Christmas Tree",
+  "composer": "Traditional",
+  "about": "O Tannenbaum means O fir tree in German. The tune is an old German folk melody, and nobody knows who first wrote it. The Leipzig teacher Ernst Anschütz wrote the words sung today in 1824. His song praises the fir tree for staying green all through the winter.",
+  "funFact": "The same tune carries the state song of Iowa, and Maryland's state song used it until 2021.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/o-christmas-tree/common.mid",
+      "skills": [
+        "five-finger-position",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 3, 2, 5, 5, 3, 5, 4, 4, 3, 3, 3, 3, 1, 4, 3, 4, 3, 3, 1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 3, 2],
+        "left": [5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, 64, 65],
+        "left": [55, null, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first five bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play bars 5 to 9 with the right hand alone, where the tune climbs to A.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 9],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It only holds two shapes, one per bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 3,
+          "kind": "rhythm",
+          "text": "Long, short, long: the quick second note leans into the third, like a little skip."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 13,
+          "kind": "fingering",
+          "text": "Your thumb starts on the G below middle C, and finger 2 takes middle C."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 9,
+          "kind": "trick",
+          "text": "Lift the hand before the low G, and let the thumb drop down to it."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Finger 4 plays E four times. Keep it light, so the quick second E still sounds."
+        },
+        {
+          "bar": 4,
+          "text": "Fingers 3, 4 and 5 walk up to F, then the thumb reaches down to B."
+        },
+        {
+          "bar": 6,
+          "text": "The little finger plays G, finger 3 takes E, and the little finger stretches up to A."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/o-christmas-tree/rare.mid",
+      "skills": [
+        "triads",
+        "waltz-bass",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 3, 2, 5, 5, 3, 5, 4, 4, 3, 3, 3, 3, 1, 4, 3, 4, 3, 3, 1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 2, 1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 3, 2, 5, 5, 3, 5, 4, 4, 3, 3, 3, 3, 1, 4, 3, 4, 3, 3, 1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 3, 2],
+        "left": [5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, 64, 65],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the three notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 13],
+          "wait": true
+        },
+        {
+          "text": "Play the waltz bass of the second verse alone: low note, chord, chord.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [14, 25],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 13],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 13,
+          "toBar": 14,
+          "kind": "trick",
+          "text": "During the last C, slide the thumb up to the next G, and the second verse starts an octave higher."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 25,
+          "kind": "sound",
+          "text": "In the waltz bass, play the low note a little louder than the chords after it."
+        },
+        {
+          "fromBar": 6,
+          "toBar": 9,
+          "kind": "sound",
+          "text": "The middle phrase comes twice, a step lower the second time. Play the echo a little softer."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "Fingers 2 and 1 play D and C, then the thumb jumps up to the next G."
+        },
+        {
+          "bar": 16,
+          "text": "An octave up, fingers 3, 4 and 5 climb to F, and the thumb reaches back to B."
+        },
+        {
+          "bar": 24,
+          "text": "The same reach as bar 16: climb to F, then tuck the thumb down to B."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/o-christmas-tree/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 3, 2, 5, 5, 3, 5, 4, 4, 3, 3, 3, 3, 1, 4, 3, 4, 3, 3, 1, 2, 2, 2, 3, 4, 4, 4, 4, 3, 4, 5, 1, 2, 1, 1, 1, 4, 4, 1, 4, 1, 5, 1, 5, 5, 1, 5, 5, 1, 4, 5, 1, 5, 1, 3, 1, 4, 1, 3, 5, 5, 3, 1, 5, 4, 1, 5, 4, 1, 4, 4, 1, 4, 2, 1, 5, 4, 4, 3, 1, 3, 1, 1, 4, 4, 1, 4, 1, 5, 1, 5, 5, 1, 5, 5, 1, 4, 5, 1, 5, 1, 3, 1, 3, 5, 1, 2, 5],
+        "left": [5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 2, 1, 5, 1, 3, 1, 2, 1, 5, 1, 3, 1, 5, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, 64, 65],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's sixths alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [14, 17],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 13],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 13,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 25,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 17,
+          "kind": "sound",
+          "text": "Change the pedal on the second beat, where the chord turns from G to C."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 25,
+          "text": "Spread the hand for the last two chords, and let the C on top ring."
+        },
+        {
+          "bar": 17,
+          "text": "After the two pairs, the little finger reaches up to the high G."
+        },
+        {
+          "bar": 16,
+          "text": "The hand opens to a sixth, then the thumb drops from G to D for the last pair."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/o-christmas-tree/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "arpeggios"
+      ],
+      "fingers": {
+        "right": [5, 1, 2, 5, 5, 1, 2, 5, 5, 1, 2, 5, 5, 1, 2, 5, 5, 5, 5, 1, 2, 5, 1, 2, 5, 1, 3, 5, 1, 2, 5, 5, 5, 3, 1, 2, 5, 4, 1, 2, 5, 4, 1, 2, 4, 4, 4, 2, 1, 2, 5, 4, 4, 3, 1, 3, 1, 1, 2, 5, 5, 1, 2, 5, 5, 1, 2, 5, 5, 1, 2, 5, 5, 5, 5, 1, 2, 5, 1, 2, 5, 1, 3, 5, 1, 2, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 2, 1]
+      },
+      "start": {
+        "right": [64, 67, null, null, 67],
+        "left": [48, null, null, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the little finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second verse in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [14, 17],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 13,
+          "kind": "trick",
+          "text": "In stride, look at the octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 25,
+          "kind": "sound",
+          "text": "Up high, the octaves should ring like bells. Keep the wrist loose."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 25,
+          "kind": "fingering",
+          "text": "In each arpeggio, the third finger crosses over the thumb on the way up."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 4,
+          "text": "The little finger plays D and E on top, then holds the tune while the chords change under it."
+        },
+        {
+          "bar": 12,
+          "text": "The same chords as bar 4. Keep the little finger on the tune as the thumb steps down."
+        },
+        {
+          "bar": 5,
+          "text": "Lift the hand after the C chord, and reach up to the high G with the little finger."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,185 @@
+/*
+ * The chip's styles. `src/ui/components/chip.ts` is the home of how a chip behaves.
+ *
+ * A tag is a flat pill on the raised surface. A toggle is raised like a key, with a lit top edge and a
+ * soft shadow, so it reads as something to press. A toggle that is on fills with teal, the colour of
+ * everything chosen, and its check springs in. A version's colour fills only the dot and its halo.
+ *
+ * The fill is the chip's own background, so its text is measured against it. Only `transform` and
+ * `opacity` move.
+ */
+@layer components {
+  .chip {
+    --chip-rarity: var(--c-rarity-common);
+
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    max-width: 100%;
+    min-width: 0;
+    min-height: var(--s-7);
+    padding: var(--s-1) var(--s-3);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-2);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    line-height: var(--lh-heading);
+    text-align: start;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .chip__label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .chip .icon {
+    flex: none;
+    width: var(--s-4);
+    height: var(--s-4);
+  }
+
+  /* The `rarity` variant: a dot in the version's colour before the label, inside a halo of the same colour. */
+  .chip__dot {
+    flex: none;
+    width: var(--s-2);
+    height: var(--s-2);
+    border-radius: var(--r-pill);
+    background: var(--chip-rarity);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--chip-rarity) 24%, transparent);
+  }
+
+  .chip[data-rarity="rare"] {
+    --chip-rarity: var(--c-rarity-rare);
+  }
+
+  .chip[data-rarity="epic"] {
+    --chip-rarity: var(--c-rarity-epic);
+  }
+
+  .chip[data-rarity="legendary"] {
+    --chip-rarity: var(--c-rarity-legendary);
+  }
+
+  .chip[data-rarity="mythic"] {
+    --chip-rarity: var(--c-rarity-mythic);
+  }
+
+  /* The toggle: a raised pill, which lifts under the pointer and squashes when pressed. */
+  .chip[data-variant="selected"] {
+    border-color: var(--c-line-strong);
+    box-shadow: var(--e-rim), var(--e-1);
+    user-select: none;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* On: the teal fill with its ink, and the check, which springs in from nothing. */
+  .chip[aria-pressed="true"] {
+    border-color: var(--c-accent);
+    background: var(--c-accent);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.22),
+      var(--e-1);
+    color: var(--c-accent-ink);
+  }
+
+  .chip[data-variant="selected"] .icon {
+    display: none;
+    stroke-width: 2.5;
+    transition:
+      transform var(--m-medium) var(--ease-spring),
+      opacity var(--m-small) var(--ease-standard);
+  }
+
+  .chip[aria-pressed="true"] .icon {
+    display: block;
+  }
+
+  @starting-style {
+    .chip[aria-pressed="true"] .icon {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+  }
+
+  /* The remove button: a round target after the label, which the chip's end padding hugs. */
+  .chip[data-variant="removable"] {
+    gap: var(--s-1);
+    padding-inline-end: var(--s-1);
+  }
+
+  .chip__remove {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--s-6);
+    height: var(--s-6);
+    padding: 0;
+    border: 0;
+    border-radius: var(--r-pill);
+    background: transparent;
+    color: var(--c-text-soft);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* The tint under the pointer and the press, in the ink's own colour. */
+  .chip[data-variant="selected"]::before,
+  .chip__remove::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-micro) var(--ease-standard);
+  }
+
+  @media (hover: hover) {
+    .chip[data-variant="selected"]:hover {
+      transform: translateY(var(--motion-lift));
+    }
+
+    .chip[data-variant="selected"]:hover::before,
+    .chip__remove:hover::before {
+      opacity: var(--o-hover);
+    }
+
+    .chip__remove:hover {
+      color: var(--c-text);
+    }
+  }
+
+  .chip[data-variant="selected"]:active,
+  .chip__remove:active {
+    transform: scale(0.95);
+    transition-duration: var(--m-micro);
+  }
+
+  .chip[data-variant="selected"]:active::before,
+  .chip__remove:active::before {
+    opacity: var(--o-press);
+  }
+
+  /* A touch screen asks a target a finger can hit. */
+  @media (pointer: coarse) {
+    .chip[data-variant="selected"] {
+      min-width: var(--s-touch);
+      min-height: var(--s-touch);
+    }
+
+    .chip__remove {
+      width: var(--s-touch);
+      height: var(--s-touch);
+    }
+  }
+}

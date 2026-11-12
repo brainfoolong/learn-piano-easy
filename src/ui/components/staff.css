@@ -1,0 +1,53 @@
+/*
+ * The staff's styles. `src/ui/components/staff.ts` is the home of how the staff behaves.
+ *
+ * The engraver draws in `currentColor`, so the ink is `--c-text` and a marked chord takes its mark's
+ * colour. The next chord is the honey that is safe as ink, a right one green and a wrong one red. A bar
+ * wider than the staff shrinks to fit, so the page never scrolls sideways.
+ */
+@layer components {
+  .staff {
+    display: grid;
+    gap: var(--s-4);
+    width: 100%;
+    min-width: 0;
+    color: var(--c-text);
+  }
+
+  .staff__line {
+    display: flex;
+    min-width: 0;
+  }
+
+  .staff__bar {
+    min-width: 0;
+  }
+
+  .staff__bar svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .staff g.chord {
+    transition: color var(--m-small) var(--ease-standard);
+  }
+
+  .staff g.chord[data-mark="next"] {
+    color: var(--c-brand-text);
+  }
+
+  .staff g.chord[data-mark="correct"] {
+    color: var(--c-success);
+  }
+
+  .staff g.chord[data-mark="mistake"] {
+    color: var(--c-mistake);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .staff g.chord {
+      transition: none;
+    }
+  }
+}

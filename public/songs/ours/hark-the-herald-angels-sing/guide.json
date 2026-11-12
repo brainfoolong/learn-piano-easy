@@ -1,0 +1,356 @@
+{
+  "song": "hark-the-herald-angels-sing",
+  "title": "Hark! The Herald Angels Sing",
+  "composer": "Felix Mendelssohn",
+  "about": "Felix Mendelssohn wrote this tune in 1840 for a festival in Leipzig. The festival marked four hundred years of printing with movable type. In 1855 William H. Cummings fitted the tune to Christmas words that Charles Wesley wrote in 1739.",
+  "funFact": "The tune was first sung by a men's choir with two brass orchestras, in Leipzig's market square, on 24 June 1840.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/hark-the-herald-angels-sing/common.mid",
+      "skills": [
+        "five-finger-position",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 1, 2, 4, 4, 3, 5, 5, 5, 4, 3, 2, 3, 1, 2, 2, 1, 2, 4, 4, 3, 5, 3, 3, 2, 3, 2, 1, 5, 5, 5, 1, 4, 3, 3, 2, 5, 5, 5, 1, 4, 3, 3, 2, 5, 5, 5, 4, 3, 2, 3, 1, 2, 3, 4, 1, 1, 2, 3, 5, 5, 5, 4, 3, 2, 3, 1, 2, 3, 4, 1, 1, 2, 1],
+        "left": [5, 1, 5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 4, 1, 5, 2, 5, 2, 4, 1, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 5, 2, 5, 2, 4, 1, 4, 1, 4, 1, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first two bars with the right hand alone. The thumb starts on G.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 2],
+          "wait": true
+        },
+        {
+          "text": "Play bars 1 to 8 with the right hand alone. The hand never needs to move.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play bars 13 to 20 with the right hand alone, where the tune climbs to the high A.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [13, 20],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "rhythm",
+          "text": "Long, short: the second C takes three counts, and the B slips in right after it."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 8,
+          "kind": "fingering",
+          "text": "Play the first B with finger 2 and the next B with finger 3. Then A and G fall under your fingers."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "Bars 11 and 12 repeat bars 9 and 10. Play them a little louder the second time."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "The little finger plays G. Then finger 3 drops to D, and finger 2 to B."
+        },
+        {
+          "bar": 3,
+          "text": "Finger 3 plays D, then the little finger reaches up to G. Keep the hand still and open."
+        },
+        {
+          "bar": 13,
+          "text": "Finger 2 plays D, then the little finger stretches up to the high A."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/hark-the-herald-angels-sing/rare.mid",
+      "skills": [
+        "triads",
+        "two-note-chords"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 1, 2, 4, 4, 3, 5, 5, 5, 4, 3, 2, 3, 1, 2, 2, 1, 2, 4, 4, 3, 5, 3, 3, 2, 3, 2, 1, 5, 5, 5, 1, 4, 3, 3, 2, 5, 5, 5, 1, 4, 3, 3, 2, 5, 5, 5, 4, 3, 2, 1, 3, 1, 2, 3, 4, 1, 1, 2, 1, 3, 5, 5, 5, 4, 3, 2, 1, 3, 1, 2, 3, 4, 1, 2, 3, 1, 2],
+        "left": [5, 3, 1, 5, 3, 1, 5, 3, 1, 4, 1, 5, 3, 1, 5, 3, 1, 4, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 1, 4, 1, 5, 2, 5, 2, 4, 1, 4, 1, 4, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 2, 4, 1, 4, 1, 4, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone on the first four bars, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone. It holds one chord for each half of a bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on bars 13 to 20, where the right hand plays two notes at once.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [13, 20],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Keep the left hand's chords soft, so the tune rings above them."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 14,
+          "kind": "fingering",
+          "text": "Press D and F together with the thumb and finger 3. The F is the tune, so let it sing."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 17,
+          "kind": "rhythm",
+          "text": "Long, short, then even: the first A takes three counts, and the second one is quick."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "The little finger plays G. Then finger 3 drops to D, and finger 2 to B."
+        },
+        {
+          "bar": 3,
+          "text": "Finger 3 plays D, then the little finger reaches up to G. Keep the hand still and open."
+        },
+        {
+          "bar": 13,
+          "text": "Finger 2 plays D, then the little finger stretches up to the high A."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/hark-the-herald-angels-sing/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thumb-under",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 1, 2, 4, 4, 3, 5, 5, 5, 4, 3, 2, 3, 1, 2, 2, 1, 2, 4, 4, 3, 5, 3, 3, 2, 3, 2, 1, 2, 3, 1, 3, 5, 3, 5, 3, 5, 1, 2, 4, 1, 3, 1, 3, 1, 2, 3, 5, 3, 5, 3, 5, 1, 2, 4, 1, 3, 3, 1, 2, 5, 5, 5, 4, 3, 2, 3, 1, 2, 3, 4, 1, 1, 2, 3, 3, 5, 3, 5, 3, 5, 2, 4, 2, 4, 1, 3, 2, 4, 1, 2, 3, 5, 1, 2, 3, 1, 3],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 5, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play bars 8 and 9 with the right hand alone. The thumb passes under finger 3 onto C.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [8, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the thirds of bars 9 to 12 with the right hand alone, and press both notes as one.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "fingering",
+          "text": "The tune is the top note of each third, so let the upper finger lead."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 20,
+          "kind": "sound",
+          "text": "Change the pedal in the middle of each bar, as the left hand starts its pattern again."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 20,
+          "text": "Finger 2 plays C and finger 3 plays D. Then the thumb reaches down to E under the last C."
+        },
+        {
+          "bar": 18,
+          "text": "The thirds step down and back up: fingers 2 and 4, then the thumb and 3, then 2 and 4 again."
+        },
+        {
+          "bar": 8,
+          "text": "After the low G, fingers 2 and 3 run up A and B. Then the thumb passes under onto C."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/hark-the-herald-angels-sing/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "octave-bass"
+      ],
+      "fingers": {
+        "right": [1, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 2, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [72, 76, 76, null, 79],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone. Lift the hand after each one, and let the top finger sing.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the octaves of bars 9 to 20 with the right hand alone. Keep the hand open and light.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 20],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 20,
+          "kind": "sound",
+          "text": "Each chord is short, and the pedal joins them. Change it in the middle of each bar."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 20,
+          "kind": "sound",
+          "text": "In octaves, play the little finger a bit louder, so the tune shines on top."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "The hand drops from the high G chord to G, B and D. The little finger moves from G down to D."
+        },
+        {
+          "bar": 2,
+          "text": "From the big C chord, the hand jumps up to G, C and E. Lift it in the short rest first."
+        },
+        {
+          "bar": 6,
+          "text": "Bar 6 is bar 2 again. Lift the hand in the rest, then jump up to G, C and E."
+        }
+      ]
+    }
+  }
+}

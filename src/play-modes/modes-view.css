@@ -1,0 +1,553 @@
+/*
+ * The styles of the play modes' page. `src/play-modes/modes-view.ts` is the home of what it shows.
+ *
+ * - **A mode's hue is a set of custom properties.** `data-hue` on a card sets `--mode-fill` with
+ *   `--mode-ink` for a fill and its text, `--mode-text` for the hue as text, `--mode-vivid` for a glow
+ *   or an edge, and `--mode-soft` for a tint.
+ * - **The stage is a small scene of the player,** in the card's media: lanes of falling notes in the
+ *   hue, a hit line that glows, and seven keys beneath. It follows the site's theme, so its keys are
+ *   raised surfaces in both themes, and a pressed key takes the hue.
+ * - **Under the pointer the stage plays:** its notes fall a little, its sparks twinkle and the start's
+ *   arrow moves on. Only `transform` and `opacity` move, and reduced motion keeps it still.
+ * - **The page's parts rise in order** as it first shows: the heading's lines, then each card.
+ */
+@layer pages {
+  .play-modes {
+    --play-modes-step: calc(var(--m-micro) / 2);
+
+    gap: var(--s-9);
+  }
+
+  /* The heading: an overline, the title and a lead, centred under the palette's glow. */
+  .play-modes__hero {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    justify-items: center;
+    gap: var(--s-3);
+    padding-block: var(--s-6) 0;
+    text-align: center;
+  }
+
+  .play-modes__hero::before {
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--s-10)) 0 calc(-1 * var(--s-8));
+    z-index: -1;
+    background: var(--g-aura);
+    /* The glow fades out towards every edge, so it never shows the box it sits in. */
+    mask-image: radial-gradient(ellipse 60% 90% at 50% 20%, black 30%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .play-modes__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .play-modes__eyebrow::before,
+  .play-modes__eyebrow::after {
+    content: "";
+    flex: none;
+    width: var(--s-5);
+    height: var(--s-1);
+    border-radius: var(--r-pill);
+    background: var(--c-brand);
+  }
+
+  .play-modes__title {
+    font-size: var(--t-display);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .play-modes__lead {
+    max-width: 56ch;
+    color: var(--c-text-soft);
+    font-size: var(--t-lg);
+    line-height: var(--lh-body);
+  }
+
+  /* A group: its heading and lead on the reading edge, over its cards. */
+  .play-modes__group {
+    display: grid;
+    gap: var(--s-5);
+  }
+
+  .play-modes__group-head {
+    display: grid;
+    gap: var(--s-2);
+    padding-inline-start: var(--s-4);
+    border-inline-start: var(--s-1) solid var(--c-brand);
+  }
+
+  .play-modes__group-title {
+    font-size: var(--t-3xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .play-modes__group-lead {
+    max-width: var(--measure);
+    color: var(--c-text-soft);
+    font-size: var(--t-md);
+    line-height: var(--lh-body);
+  }
+
+  /* The cards: one column on a phone, and as many as fit from there, each as tall as its row. */
+  .play-modes__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: var(--s-6);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .play-modes__item {
+    display: grid;
+    min-width: 0;
+  }
+
+  /* The hues. */
+  .play-mode[data-hue="orchid"] {
+    --mode-fill: var(--c-orchid);
+    --mode-ink: var(--c-orchid-ink);
+    --mode-text: var(--c-orchid);
+    --mode-vivid: var(--c-orchid-vivid);
+    --mode-soft: var(--c-orchid-soft);
+  }
+
+  .play-mode[data-hue="iris"] {
+    --mode-fill: var(--c-iris);
+    --mode-ink: var(--c-iris-ink);
+    --mode-text: var(--c-iris);
+    --mode-vivid: var(--c-iris-vivid);
+    --mode-soft: var(--c-iris-soft);
+  }
+
+  .play-mode[data-hue="teal"] {
+    --mode-fill: var(--c-accent);
+    --mode-ink: var(--c-accent-ink);
+    --mode-text: var(--c-accent);
+    --mode-vivid: var(--c-accent-vivid);
+    --mode-soft: var(--c-accent-soft);
+  }
+
+  .play-mode {
+    --card-glow: 0 10px 32px color-mix(in srgb, var(--mode-vivid) 26%, transparent), var(--e-2);
+  }
+
+  @media (hover: hover) {
+    .play-mode:hover {
+      --card-edge: color-mix(in srgb, var(--mode-vivid) 45%, var(--c-line));
+    }
+  }
+
+  /* The media: the stage, with the mode's tag over its corner. */
+  .play-mode__media {
+    position: relative;
+  }
+
+  .play-mode__tag {
+    position: absolute;
+    inset-block-start: var(--s-4);
+    inset-inline-start: var(--s-4);
+    padding: var(--s-1) var(--s-3);
+    border-radius: var(--r-pill);
+    background: var(--mode-fill);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.3),
+      var(--e-1);
+    color: var(--mode-ink);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  /* The stage: lanes of notes over seven keys, on the hue's tint. */
+  .play-mode__stage {
+    --stage-pad: 10%;
+    --stage-lane: calc((100% - 2 * var(--stage-pad)) / 7);
+    --stage-keys: 26%;
+
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background:
+      radial-gradient(70% 60% at 50% 100%, color-mix(in srgb, var(--mode-vivid) 28%, transparent), transparent 70%),
+      linear-gradient(180deg, var(--mode-soft), color-mix(in srgb, var(--mode-vivid) 12%, var(--c-surface-1)));
+  }
+
+  .play-mode__lanes {
+    position: absolute;
+    inset: 0 var(--stage-pad) var(--stage-keys);
+    background: repeating-linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--mode-vivid) 16%, transparent) 0 1px,
+      transparent 1px calc(100% / 7)
+    );
+    transition: transform var(--m-large) var(--ease-standard);
+  }
+
+  .play-mode__note {
+    position: absolute;
+    inset-block-start: var(--top);
+    inset-inline-start: calc(var(--key) * 100% / 7 + 4px);
+    display: grid;
+    place-items: end center;
+    width: calc(100% / 7 - 8px);
+    height: var(--length);
+    padding-block-end: var(--s-1);
+    border-radius: var(--s-2);
+    background: var(--mode-fill);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.4),
+      0 0 18px color-mix(in srgb, var(--mode-vivid) 45%, transparent);
+    color: var(--mode-ink);
+    font-size: var(--t-sm);
+    font-weight: var(--w-heavy);
+    line-height: 1;
+  }
+
+  /* A note the app plays, such as the other hand's, is faded. */
+  .play-mode__note[data-faded] {
+    opacity: 0.35;
+    box-shadow: none;
+  }
+
+  /* A finger's note takes one of the worlds' accents, from the thumb to the little finger. */
+  .play-mode__note[data-finger="1"] {
+    background: var(--c-world-coral);
+  }
+
+  .play-mode__note[data-finger="2"] {
+    background: var(--c-world-amber);
+  }
+
+  .play-mode__note[data-finger="3"] {
+    background: var(--c-world-lime);
+  }
+
+  .play-mode__note[data-finger="4"] {
+    background: var(--c-world-sky);
+  }
+
+  .play-mode__note[data-finger="5"] {
+    background: var(--c-world-violet);
+  }
+
+  /* Beat lines cross the lanes at an even pace. */
+  .play-mode__lanes[data-beats] {
+    background:
+      repeating-linear-gradient(180deg, transparent 0 calc(16% - 1px), color-mix(in srgb, var(--mode-vivid) 30%, transparent) calc(16% - 1px) 16%),
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--mode-vivid) 16%, transparent) 0 1px, transparent 1px calc(100% / 7));
+  }
+
+  /* A loop: a dashed frame over the looped part of the lanes, with its sign at the side. */
+  .play-mode__loop {
+    position: absolute;
+    inset-block-start: var(--top);
+    inset-inline: calc(-1 * var(--s-2));
+    display: grid;
+    place-items: center end;
+    height: var(--length);
+    padding-inline-end: var(--s-2);
+    border: 2px dashed var(--mode-vivid);
+    border-radius: var(--r-control);
+    background: color-mix(in srgb, var(--mode-vivid) 8%, transparent);
+    color: var(--mode-text);
+  }
+
+  .play-mode__loop .icon {
+    width: var(--s-6);
+    height: var(--s-6);
+  }
+
+  /* A staff: five lines on a sheet over the lanes, with its note heads between and on them. */
+  .play-mode__staff {
+    --staff-gap: 22%;
+
+    position: absolute;
+    inset-block-start: 26%;
+    inset-inline: 0;
+    height: 44%;
+    border-radius: var(--r-control);
+    background:
+      repeating-linear-gradient(
+          180deg,
+          var(--c-text-soft) 0 1px,
+          transparent 1px var(--staff-gap)
+        )
+        center / calc(100% - 2 * var(--s-3)) calc(4 * var(--staff-gap) + 1px) no-repeat,
+      var(--c-surface-1);
+    box-shadow: var(--e-1);
+  }
+
+  .play-mode__head {
+    position: absolute;
+    inset-inline-start: var(--across);
+    inset-block-end: calc(50% - 2 * var(--staff-gap) + var(--step) * var(--staff-gap) / 2);
+    height: var(--staff-gap);
+    aspect-ratio: 1.35;
+    border-radius: 50%;
+    background: var(--c-text);
+    transform: translateY(50%) rotate(-20deg);
+  }
+
+  /* The keys, with the hit line glowing along their top. */
+  .play-mode__keys {
+    position: absolute;
+    inset: auto var(--stage-pad) 0;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 3px;
+    height: var(--stage-keys);
+    padding-block-start: var(--s-1);
+  }
+
+  .play-mode__keys::before {
+    content: "";
+    position: absolute;
+    inset: 0 calc(-1 * var(--s-2)) auto;
+    height: 2px;
+    border-radius: var(--r-pill);
+    background: var(--mode-vivid);
+    box-shadow: 0 0 12px var(--mode-vivid);
+  }
+
+  .play-mode__key {
+    display: grid;
+    place-items: end center;
+    padding-block-end: var(--s-1);
+    border: 1px solid var(--c-line-strong);
+    border-block-start: 0;
+    border-radius: 0 0 var(--s-1) var(--s-1);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-1);
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    line-height: 1;
+  }
+
+  .play-mode__key[data-pressed] {
+    border-color: var(--mode-fill);
+    background: var(--mode-fill);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--mode-vivid) 60%, transparent);
+    color: var(--mode-ink);
+  }
+
+  /* The game's sparks, over its pressed key. */
+  .play-mode__spark {
+    position: absolute;
+    display: grid;
+    color: var(--c-brand);
+    filter: drop-shadow(0 0 6px color-mix(in srgb, var(--c-brand) 70%, transparent));
+    transition:
+      transform var(--m-medium) var(--ease-spring),
+      opacity var(--m-medium) var(--ease-standard);
+  }
+
+  .play-mode__spark .icon {
+    width: 100%;
+    height: 100%;
+  }
+
+  .play-mode__spark:nth-of-type(1) {
+    inset-block-end: calc(var(--stage-keys) + 4%);
+    inset-inline-start: calc(var(--stage-pad) + 3 * var(--stage-lane) - 6%);
+    width: var(--s-5);
+    height: var(--s-5);
+  }
+
+  .play-mode__spark:nth-of-type(2) {
+    inset-block-end: calc(var(--stage-keys) + 14%);
+    inset-inline-start: calc(var(--stage-pad) + 4 * var(--stage-lane) + 1%);
+    width: var(--s-6);
+    height: var(--s-6);
+  }
+
+  .play-mode__spark:nth-of-type(3) {
+    inset-block-end: calc(var(--stage-keys) + 2%);
+    inset-inline-start: calc(var(--stage-pad) + 4 * var(--stage-lane) + 5%);
+    width: var(--s-4);
+    height: var(--s-4);
+    opacity: 0.7;
+  }
+
+  /* The mode's tile, at the stage's other corner. */
+  .play-mode__badge {
+    position: absolute;
+    inset-block-start: var(--s-4);
+    inset-inline-end: var(--s-4);
+    display: grid;
+    place-items: center;
+    width: var(--s-9);
+    height: var(--s-9);
+    border-radius: var(--r-control);
+    background: var(--mode-fill);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.3),
+      var(--e-2);
+    color: var(--mode-ink);
+  }
+
+  .play-mode__badge .icon {
+    width: var(--s-6);
+    height: var(--s-6);
+  }
+
+  /* What the mode sets: a list, each line after a check in the hue. */
+  .play-mode__traits {
+    display: grid;
+    gap: var(--s-2);
+    padding: var(--s-3) 0 0;
+    margin: var(--s-1) 0 0;
+    border-block-start: 1px solid var(--c-line);
+    list-style: none;
+  }
+
+  .play-mode__trait {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-2);
+    font-size: var(--t-sm);
+    line-height: var(--lh-body);
+  }
+
+  .play-mode__trait .icon {
+    flex: none;
+    width: var(--s-5);
+    height: var(--s-5);
+    color: var(--mode-text);
+  }
+
+  .play-mode__song {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-2);
+    margin-block: var(--s-1) var(--s-3);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    line-height: var(--lh-body);
+  }
+
+  .play-mode__song .icon {
+    flex: none;
+    width: var(--s-5);
+    height: var(--s-5);
+  }
+
+  /* The start's face: the hue's fill at the card's foot. The whole card answers its click. */
+  .play-mode__start {
+    display: inline-flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: var(--s-8);
+    padding-inline: var(--s-5) var(--s-4);
+    margin-block-start: auto;
+    border-radius: var(--r-pill);
+    background: var(--mode-fill);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.3),
+      var(--e-1);
+    color: var(--mode-ink);
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+  }
+
+  .play-mode__start .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* The line under the cards, on a quiet surface of its own. */
+  .play-modes__note {
+    display: flex;
+    align-items: flex-start;
+    justify-self: center;
+    gap: var(--s-3);
+    max-width: 72ch;
+    padding: var(--s-4) var(--s-5);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    line-height: var(--lh-body);
+  }
+
+  .play-modes__note .icon {
+    flex: none;
+    width: var(--s-5);
+    height: var(--s-5);
+    color: var(--c-info);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @media (hover: hover) {
+      .play-mode:hover .play-mode__lanes {
+        transform: translateY(6%);
+      }
+
+      .play-mode:hover .play-mode__start .icon {
+        transform: translateX(var(--s-1));
+      }
+
+      .play-mode:hover .play-mode__spark {
+        transform: scale(1.25) rotate(12deg);
+      }
+
+      .play-mode:hover .play-mode__spark:nth-of-type(3) {
+        opacity: 1;
+      }
+    }
+
+    /* The page's parts rise in order as it first shows. Those far down the page start no later than the eighth. */
+    .play-modes__hero > *,
+    .play-modes__group-head,
+    .play-modes__item,
+    .play-modes__note {
+      animation: play-modes-rise var(--m-large) var(--ease-emphasis) backwards;
+    }
+
+    .play-modes__hero > :nth-child(2) {
+      animation-delay: var(--play-modes-step);
+    }
+
+    .play-modes__hero > :nth-child(3) {
+      animation-delay: calc(var(--play-modes-step) * 2);
+    }
+
+    .play-modes__group-head,
+    .play-modes__item {
+      animation-delay: calc(var(--play-modes-step) * (3 + min(var(--order, 0), 8)));
+    }
+
+    .play-modes__note {
+      animation-delay: calc(var(--play-modes-step) * 12);
+    }
+  }
+
+  @keyframes play-modes-rise {
+    from {
+      opacity: 0;
+      transform: translateY(calc(var(--motion-rise) * 3));
+    }
+  }
+}

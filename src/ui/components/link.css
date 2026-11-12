@@ -1,0 +1,87 @@
+/*
+ * The link's styles. `src/ui/components/link.ts` is the home of how a link behaves.
+ *
+ * A link is teal, the colour of everything linked, which meets 4.5 to 1 on every surface. An inline
+ * link always carries an underline, so it never rests on colour alone. The underline is a soft teal
+ * at rest and the full teal under the pointer. A standalone link is bold, and its underline shows
+ * under the pointer.
+ *
+ * Only `transform` moves: the arrow slides and the standalone link presses.
+ */
+@layer components {
+  .link {
+    color: var(--c-accent);
+    border-radius: var(--s-1);
+    font-weight: var(--w-semibold);
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: color-mix(in oklab, currentColor 38%, transparent);
+    text-underline-offset: 0.22em;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .link[data-variant="inline"] {
+    display: inline;
+    overflow-wrap: anywhere;
+  }
+
+  .link[data-variant="standalone"] {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    max-width: 100%;
+    min-width: 0;
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    text-decoration-line: none;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* A touch screen asks a target a finger can hit. */
+  @media (pointer: coarse) {
+    .link[data-variant="standalone"] {
+      min-width: var(--s-touch);
+      min-height: var(--s-touch);
+    }
+  }
+
+  .link__label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-decoration-thickness: inherit;
+    text-decoration-color: currentColor;
+    text-underline-offset: inherit;
+  }
+
+  .link .icon {
+    flex: none;
+    width: var(--s-5);
+    height: var(--s-5);
+    stroke-width: 2.25;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* Under the pointer the underline takes the full teal, or appears, and the arrow slides forward. */
+  @media (hover: hover) {
+    .link[data-variant="inline"]:hover {
+      text-decoration-color: currentColor;
+    }
+
+    .link[data-variant="standalone"]:hover .link__label {
+      text-decoration-line: underline;
+    }
+
+    .link[data-variant="standalone"]:hover .icon {
+      transform: translateX(calc(var(--motion-lift) * -2));
+    }
+  }
+
+  .link[data-variant="inline"]:active {
+    text-decoration-color: currentColor;
+  }
+
+  .link[data-variant="standalone"]:active {
+    transform: scale(0.97);
+    transition-duration: var(--m-micro);
+  }
+}

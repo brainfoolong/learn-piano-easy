@@ -1,0 +1,79 @@
+/*
+ * The scene's overlays: the frame rate and tempo at the top left, and the card of the note under the
+ * pointer. `src/render/overlays.ts` is the home of how they behave.
+ *
+ * The overlays never catch the pointer, so the scene under them stays live. Each one is a chip on
+ * `--scene-panel` with a firm edge, as `src/app/player.css` describes, so its text reads on a light
+ * and on a dark scene. The note card fades and rises in each time it shows.
+ */
+@layer pages {
+  .overlays {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .overlay-stats {
+    position: absolute;
+    left: max(var(--s-3), env(safe-area-inset-left));
+    top: calc(var(--bar-height) + var(--s-3));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--s-1);
+  }
+
+  .overlay-stat,
+  .note-card {
+    border: 1px solid var(--c-line-strong);
+    background: var(--scene-panel);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .overlay-stat {
+    padding: var(--s-1) var(--s-3);
+    border-radius: var(--r-pill);
+    box-shadow: var(--e-rim), var(--e-1);
+    font-weight: var(--w-semibold);
+  }
+
+  .overlay-stat[hidden],
+  .note-card[hidden] {
+    display: none;
+  }
+
+  .note-card {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-1);
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-control);
+    box-shadow: var(--e-rim), var(--e-3);
+    line-height: var(--lh-heading);
+    white-space: nowrap;
+    animation: note-card-in var(--m-small) var(--ease-emphasis) both;
+  }
+
+  /* The note's name leads the card, and its facts follow in the soft colour. */
+  .note-card > strong {
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+  }
+
+  .note-card > span {
+    color: var(--c-text-soft);
+  }
+
+  @keyframes note-card-in {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+}

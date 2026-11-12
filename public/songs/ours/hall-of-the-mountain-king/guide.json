@@ -1,0 +1,348 @@
+{
+  "song": "hall-of-the-mountain-king",
+  "title": "In the Hall of the Mountain King",
+  "composer": "Edvard Grieg",
+  "about": "Grieg wrote this music for Henrik Ibsen's play Peer Gynt, first staged in Christiania, today's Oslo, in 1876. Peer sneaks into the hall of the troll king, and the trolls creep closer and closer. The same short tune comes back again and again, each time louder and faster, until it crashes to an end.",
+  "funFact": "Grieg himself wrote that this piece reeked of cow pies and trollish self-satisfaction, and he could hardly bear to hear it.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/hall-of-the-mountain-king/common.mid",
+      "skills": [
+        "five-finger-position",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [1, 2, 3, 4, 5, 3, 5, 4, 2, 4, 4, 2, 4, 1, 2, 3, 4, 5, 1, 3, 5, 4, 2, 1, 2, 4, 1, 2, 3, 4, 5, 2, 4, 5, 2, 5, 4, 2, 4, 1, 2, 3, 4, 5, 2, 4, 5, 2, 5, 4, 1, 2, 3, 4, 5, 3, 5, 4, 2, 4, 4, 2, 4, 1, 2, 3, 4, 5, 3, 5, 5, 4, 3, 2, 1],
+        "left": [5, 1, 5, 1, 4, 2, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 4, 2, 5, 1, 5, 1, 1, 5, 1]
+      },
+      "start": {
+        "right": [57, 59, 60, 62, 64],
+        "left": [52, 50, null, 47, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Now the right hand alone in bars 9 to 16, where the tune climbs higher.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "The left hand only holds two notes. Join the hands on the first eight bars.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "Each finger has its own key here: thumb on A, little finger on E."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play short and quiet, like a troll tiptoeing through a cave."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "The tune climbs higher here. Let it grow a little louder, as if the trolls are waking up."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": "The tune starts again. Take the thumb back down to A during the rest, and the left hand back to A."
+        },
+        {
+          "bar": 9,
+          "text": "The thumb lands on E, and fingers 1, 2, 3 and 4 climb one key each. The left hand moves down to E."
+        },
+        {
+          "bar": 4,
+          "text": "Fingers 4 and 2 reach in for the black keys, D sharp in bar 3 and B flat here."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/hall-of-the-mountain-king/rare.mid",
+      "skills": [
+        "five-finger-position",
+        "triads"
+      ],
+      "fingers": {
+        "right": [1, 2, 3, 4, 5, 3, 5, 4, 2, 4, 4, 2, 4, 1, 2, 3, 4, 5, 1, 3, 5, 4, 2, 1, 2, 2, 4, 1, 2, 3, 4, 5, 2, 4, 5, 2, 5, 4, 2, 4, 1, 2, 3, 4, 5, 2, 4, 5, 2, 5, 2, 4, 1, 2, 3, 4, 5, 3, 5, 4, 2, 4, 4, 2, 4, 1, 2, 3, 4, 5, 3, 5, 5, 4, 3, 2, 1, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [57, 59, 60, 62, 64],
+        "left": [52, null, null, null, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone. It steps between two notes on every beat, like a troll's march.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 3 and 4 with the right hand alone, and watch for the sharp and the flat.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [3, 4],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first eight bars, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on bars 9 to 16, where the tune climbs.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 3,
+          "toBar": 4,
+          "kind": "fingering",
+          "text": "D sharp and B flat are black keys. Fingers 4 and 2 simply reach a little further in."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": "Both hands play on every beat. March along and keep the beats perfectly even."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "This part is the trolls getting closer. Play it a bit louder than the start."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "Use the rest to drop the left hand to the low E. The right thumb starts the climb on E."
+        },
+        {
+          "bar": 17,
+          "text": "Both hands go back to A during the rest, and the tune starts once more."
+        },
+        {
+          "bar": 4,
+          "text": "Finger 2 reaches in for B flat, while the left hand steps between G and D."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/hall-of-the-mountain-king/epic.mid",
+      "skills": [
+        "broken-chords",
+        "left-hand-melody",
+        "thumb-under"
+      ],
+      "fingers": {
+        "right": [1, 2, 3, 4, 5, 3, 5, 4, 2, 4, 3, 1, 3, 1, 2, 1, 2, 3, 1, 3, 5, 4, 2, 1, 2, 2, 4, 1, 2, 3, 4, 5, 2, 4, 5, 2, 5, 4, 2, 4, 1, 2, 3, 4, 5, 2, 4, 5, 2, 5, 4, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 4, 1, 4, 1, 4, 1, 4, 1, 2, 4],
+        "left": [5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 5, 4, 3, 2, 1, 3, 1, 2, 4, 2, 3, 5, 3, 5, 4, 3, 2, 1, 3, 1, 5, 5, 3, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [71, 73, 74, 76, 78],
+        "left": [54, null, 50, null, 47]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand's broken chords alone until they roll by themselves: low, middle, high, middle.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand alone on bars 5 to 8, where the thumb passes under.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the theme in the left hand alone, from bar 17.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [17, 24],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let it get louder towards the end.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 3,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "The bass slides down from C sharp to C. That spooky slide is what makes the trolls sound sneaky."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 5,
+          "kind": "fingering",
+          "text": "After C sharp on finger 2, tuck the thumb under for D, and the hand moves up."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 22,
+          "kind": "trick",
+          "text": "The left hand plays the tune now. The right hand only taps short chords between the beats."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": "The hands swap jobs. The left hand plays the tune on the beats, and the right hand taps between them."
+        },
+        {
+          "bar": 23,
+          "text": "The left hand climbs F sharp, A sharp, C sharp and E, then lets go to find the low B."
+        },
+        {
+          "bar": 9,
+          "text": "Drop the left hand to the low F sharp during the short rest. The right thumb starts the climb."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/hall-of-the-mountain-king/legendary.mid",
+      "skills": [
+        "octave-bass",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [1, 2, 3, 4, 5, 3, 5, 4, 2, 4, 3, 1, 3, 1, 2, 1, 2, 3, 1, 3, 5, 4, 2, 1, 2, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [71, 73, 74, 76, 78],
+        "left": [47, null, null, null, 35]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand's octaves alone, short and plucked, with a rest after each.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's octaves alone. Keep the hand stiff and move it as one piece.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the driving octaves of the left hand alone, eight to a bar.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, from a whisper at the start to a roar at the end.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Start very quietly. The whole piece is one long build-up, so save your strength."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "trick",
+          "text": "For octaves, thumb and little finger keep the same shape. Let the wrist do the moving."
+        },
+        {
+          "fromBar": 25,
+          "toBar": 28,
+          "kind": "sound",
+          "text": "These are the trolls' final crashes. Play each chord loud and short."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The right hand starts its octaves, and the left hand starts its eighths. Keep both hands loose."
+        },
+        {
+          "bar": 13,
+          "text": "The octaves climb again on F sharp, G sharp, A sharp and B. Let the wrist bounce from key to key."
+        },
+        {
+          "bar": 27,
+          "text": "The chords swap between B minor and F sharp major. Keep fingers 1, 2, 3 and 5 in their shape."
+        }
+      ]
+    }
+  }
+}

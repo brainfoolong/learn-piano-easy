@@ -1,0 +1,349 @@
+{
+  "song": "deck-the-halls",
+  "title": "Deck the Halls",
+  "composer": "Traditional",
+  "about": "Deck the Halls is sung to Nos Galan, an old Welsh tune for New Year's Eve. The tune was first printed in 1794, and Joseph Haydn arranged it in 1803. Thomas Oliphant wrote the English Christmas words in 1862, and the tune is sung to them today.",
+  "funFact": "Oliphant's words began with Deck the hall, for one hall only. Later songbooks changed it to the plural we sing today.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/deck-the-halls/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 2, 1, 2, 3, 1, 3, 4, 5, 3, 4, 3, 2, 1, 2, 5, 4, 3, 2, 1, 2, 3, 1, 3, 4, 5, 3, 4, 3, 2, 1, 2, 3, 4, 5, 1, 2, 3, 4, 1, 1, 2, 3, 4, 5, 4, 3, 2, 5, 4, 3, 2, 1, 2, 3, 1, 5, 4, 3, 2, 1],
+        "left": [1, 1, 4, 1, 4, 1, 1, 1, 4, 1, 4, 1, 4, 1, 4, 1, 5, 1, 4, 1, 1, 5, 1, 1, 4, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [48, null, null, 43, 41]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 9 to 12 with the right hand alone, where the tune climbs to the high C.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together. The left hand holds one low note for half a bar or more.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "rhythm",
+          "text": "Long, short: the first G takes three counts, and the F slips in right after it."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 14,
+          "kind": "trick",
+          "text": "Bars 13 and 14 are the opening again, so your hand already knows them."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Slow down a little on the last notes, and let the low C ring."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 11,
+          "text": "The thumb slides up from D to E. Then fingers 2 to 5 climb G, A, B and the high C."
+        },
+        {
+          "bar": 9,
+          "text": "Finger 5 plays F, then the thumb reaches down to D while the hand stays still."
+        },
+        {
+          "bar": 3,
+          "text": "Fingers 3, 4 and 5 walk up D, E and F, then finger 3 drops back to D."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/deck-the-halls/rare.mid",
+      "skills": [
+        "triads",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 2, 1, 2, 3, 1, 3, 4, 5, 3, 4, 3, 2, 1, 2, 5, 4, 3, 2, 1, 2, 3, 1, 3, 4, 5, 3, 4, 3, 2, 1, 2, 3, 4, 5, 1, 2, 3, 4, 1, 1, 2, 3, 3, 4, 5, 4, 3, 2, 5, 4, 3, 2, 1, 2, 3, 1, 5, 5, 5, 5, 4, 3, 2, 1, 1],
+        "left": [4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, 52, 50, 48, 47]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone: a low note, then a chord, in every bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play bars 17 to 24 with the right hand alone, where the tune climbs to the high C.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [17, 24],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 21,
+          "toBar": 21,
+          "kind": "trick",
+          "text": "The F sharp is the black key between F and G. It lifts the tune towards the high C."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play the left hand's low note a little louder than the chord after it."
+        },
+        {
+          "fromBar": 29,
+          "toBar": 29,
+          "kind": "rhythm",
+          "text": "Four quick A's: keep them even, like four steps on the same stair."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 22,
+          "text": "After the G, finger 3 slides up one key to A, so fingers 4 and 5 reach B and C."
+        },
+        {
+          "bar": 21,
+          "text": "The thumb moves up from D to E, and finger 2 takes the black F sharp."
+        },
+        {
+          "bar": 32,
+          "text": "The thumb slides down from D to the last C, while the left hand plays its full chord."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/deck-the-halls/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 2, 1, 2, 3, 1, 3, 4, 5, 3, 4, 3, 2, 1, 2, 3, 4, 5, 4, 3, 2, 1, 2, 3, 1, 3, 4, 5, 3, 4, 3, 2, 1, 2, 1, 3, 2, 4, 3, 5, 1, 3, 1, 3, 2, 4, 3, 5, 1, 2, 1, 2, 3, 1, 2, 3, 2, 1, 1, 4, 2, 4, 1, 3, 2, 1, 2, 1, 2, 3, 1, 2, 4, 2, 4, 2, 4, 2, 4, 1, 3, 1, 2, 2, 1, 1, 2],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 5, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first four bars, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Change the pedal in the middle of each bar, as the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 16,
+          "text": "The thumb reaches down to G for the last chord, and the left hand drops to a low octave."
+        },
+        {
+          "bar": 11,
+          "text": "After the G, the thumb passes under finger 3 to A. Fingers 2 and 3 then finish on B and C."
+        },
+        {
+          "bar": 12,
+          "text": "From A, the thumb drops to D, while finger 4 lands on the G above it."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/deck-the-halls/legendary.mid",
+      "skills": [
+        "stride",
+        "octave-bass",
+        "sixteenth-notes"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 4, 3, 2, 1, 2, 3, 2, 3, 1, 2, 3, 4, 2, 3, 5, 4, 3, 2, 2, 1, 2, 3, 4, 5, 4, 3, 4, 3, 2, 1, 2, 3, 2, 3, 1, 2, 3, 4, 2, 3, 5, 4, 3, 2, 2, 1, 2, 2, 1, 2, 3, 4, 2, 3, 2, 3, 4, 5, 1, 1, 2, 3, 1, 2, 3, 2, 1, 3, 1, 2, 3, 4, 3, 2, 1, 1, 2, 3, 2, 3, 1, 3, 5, 3, 5, 3, 5, 3, 5, 2, 4, 1, 3, 3, 2, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [72, 74, 76, 77, 79],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand alone on bars 1 to 4, and keep the quick fills light.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the run of bars 11 and 12 with the right hand alone.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [11, 12],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play the quick fills softer than the tune notes, like a little echo."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Lift the hand after the last D, then land on the big chord with both hands."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 4,
+          "text": "Finger 2 slides down from D to C, and the thumb tucks in for B. The left hand leaps to the low G."
+        },
+        {
+          "bar": 5,
+          "text": "The fill of bar 4 runs straight into the high G, so keep finger 5 ready for it."
+        },
+        {
+          "bar": 8,
+          "text": "Finger 2 slides down to C again, while the left hand leaps for the low G octave."
+        }
+      ]
+    }
+  }
+}

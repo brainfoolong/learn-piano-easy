@@ -1,0 +1,349 @@
+{
+  "song": "old-macdonald-had-a-farm",
+  "title": "Old MacDonald Had a Farm",
+  "composer": "Traditional",
+  "about": "Old MacDonald Had a Farm is a children's song about a farmer and his animals. An early form called \"Ohio\" was printed in 1917, in a book of songs sung by British soldiers. Each verse adds an animal and its sound, so the song lasts as long as the singers like.",
+  "funFact": "In the 1917 song the farmer was called Old Macdougal, and his farm was in Ohio.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/old-macdonald-had-a-farm/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 1, 2, 2, 1, 5, 5, 4, 4, 3, 1, 3, 3, 3, 1, 2, 2, 1, 5, 5, 4, 4, 3, 1, 3, 3, 3, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 2, 2, 1, 5, 5, 4, 4, 3],
+        "left": [5, 2, 5, 5, 1, 5, 5, 2, 5, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 2, 5, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [62, 64, 67, 69, 71],
+        "left": [50, 48, null, null, 43]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds each note for two or four beats.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the first eight bars.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "Your thumb rests on D and your third finger on G. Each finger keeps its own key."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 3,
+          "kind": "rhythm",
+          "text": "Lift your hand a little before the high B, so you land on it in time."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "These are the animal's sounds. Make them bounce, and smile if you like."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Your little finger reaches up for the high B, while the thumb stays near D."
+        },
+        {
+          "bar": 7,
+          "text": "The same reach again: little finger on B, then fourth finger on A."
+        },
+        {
+          "bar": 15,
+          "text": "One last reach for B. Use the short rest before it to get ready."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/old-macdonald-had-a-farm/rare.mid",
+      "skills": [
+        "eighth-notes",
+        "triads"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 1, 2, 2, 1, 5, 5, 4, 4, 3, 1, 3, 3, 3, 1, 2, 2, 1, 5, 5, 4, 4, 3, 1, 1, 3, 3, 3, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 2, 2, 1, 5, 5, 4, 4, 1, 3],
+        "left": [5, 3, 1, 5, 2, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [62, 64, 67, 69, 71],
+        "left": [50, 48, 47, 45, 43]
+      },
+      "practice": [
+        {
+          "text": "Clap the quick notes of bars 11 and 12, then play the right hand alone.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone, and keep each chord until the next one.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first four bars, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 8,
+          "toBar": 9,
+          "kind": "rhythm",
+          "text": "The two quick D notes are eighths. Think of them as one beat split in two."
+        },
+        {
+          "fromBar": 11,
+          "toBar": 12,
+          "kind": "rhythm",
+          "text": "Here a short, short, long pattern repeats. Say the animal's sound in your head as you play."
+        },
+        {
+          "fromBar": 3,
+          "toBar": 3,
+          "kind": "sound",
+          "text": "The left hand's chord changes halfway through the bar. Let each one ring for two beats."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "The thumb leaves D and the little finger takes the high B at once. Keep the hand open."
+        },
+        {
+          "bar": 7,
+          "text": "The same jump up to B. Halfway through the bar, the left hand's fourth finger takes A."
+        },
+        {
+          "bar": 15,
+          "text": "The last jump to B. After it, both hands only have the final chord left."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/old-macdonald-had-a-farm/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 1, 2, 2, 1, 5, 5, 4, 4, 3, 1, 3, 5, 3, 5, 3, 5, 1, 2, 1, 3, 1, 3, 1, 2, 3, 5, 3, 5, 2, 4, 2, 4, 1, 4, 5, 4, 2, 3, 1, 1, 3, 3, 3, 1, 1, 3, 3, 3, 4, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 2, 2, 1, 2, 3, 4, 5, 5, 4, 4, 1, 2, 3],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [62, 64, 67, 69, 71],
+        "left": [50, null, 47, null, 43]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first four bars, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 7,
+          "kind": "fingering",
+          "text": "The tune is still the top note of each third, so let the upper finger lead."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Change the pedal each time the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 16,
+          "text": "Your hand falls from A to the last chord. Thumb on B, third finger on G."
+        },
+        {
+          "bar": 15,
+          "text": "After the quick run, your little finger lands on B. Let the run carry the hand there."
+        },
+        {
+          "bar": 7,
+          "text": "The thirds jump up from D to G and B. Move the whole hand, and keep it shaped."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/old-macdonald-had-a-farm/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "sixteenth-notes"
+      ],
+      "fingers": {
+        "right": [1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 2, 4, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 1, 3, 3, 3, 1, 1, 3, 3, 3, 2, 3, 4, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 1, 1, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 4, 1, 3, 5, 1, 3, 5, 1, 2, 4, 1, 2, 3, 4, 1, 3, 5, 1, 3, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [71, 74, null, null, 79],
+        "left": [43, 50, 47, null, 31]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the bass note, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the quick runs of the right hand alone, slowly at first.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play the top note of each chord a little louder than the others."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 10,
+          "kind": "fingering",
+          "text": "The quick notes climb by step, one finger per key, up to the little finger on B."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 4,
+          "text": "Hold the long chord for three beats, then drop the thumb to G for the chord on beat four."
+        },
+        {
+          "bar": 8,
+          "text": "Your thumb plays both quick D notes, ready for the single notes of bar 9."
+        },
+        {
+          "bar": 13,
+          "text": "The run ends with your thumb on D. Slide it down to B for the chord, with finger 2 on D."
+        }
+      ]
+    }
+  }
+}

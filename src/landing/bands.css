@@ -1,0 +1,455 @@
+/*
+ * The styles of the landing page's bands after the hero. Each band's own file under `src/landing/` is
+ * the home of what it holds. `src/landing/landing.css` holds the hues, the tile, the stage and the
+ * entrance these rules build on.
+ *
+ * Every card, step and panel is a raised surface: an edge, a lit top and a soft shadow. A grid of them
+ * stands in one column on a phone and widens as the window allows.
+ *
+ * - **The two ways:** two cards, each with a picture of its part in the site's theme: the system's
+ *   scheme, unless the site's theme switch names one. The picture stands on its part's tint, under
+ *   a tag that names the part.
+ * - **The steps and the promises:** cards with a tile over a title and a text.
+ * - **The versions:** the stage takes the chosen version's colour for its notes, its lit keys and the
+ *   dot before its tagline. The tagline holds two lines' room, so a switch moves nothing.
+ * - **The devices:** rows of a tile and its words, with the small keyboard on a panel beside them.
+ * - **The questions:** folds in one centred column. A fold's chevron turns as it opens and its answer
+ *   settles in, both at once with reduced motion.
+ * - **The last call:** a centred column under the glow, which closes the page as the hero opened it.
+ */
+@layer pages {
+  /* The two ways to play: two cards, each with a picture of its part. */
+  .landing-ways {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-6);
+    width: 100%;
+  }
+
+  .landing-ways .card__body {
+    align-items: start;
+  }
+
+  .landing-ways .card__body > .btn {
+    margin-block-start: auto;
+  }
+
+  .landing-ways .card__text {
+    margin-block-end: var(--s-3);
+  }
+
+  /* The picture stands on a ground in its part's tint, under a strip that holds the tag. */
+  .landing-ways__picture {
+    --way-fill: var(--c-brand);
+    --way-ink: var(--c-brand-ink);
+    --way-soft: var(--c-brand-soft);
+
+    position: relative;
+    padding: var(--s-10) var(--s-5) 0;
+    border-block-end: 1px solid var(--c-line);
+    background: var(--way-soft);
+  }
+
+  .landing-ways__picture[data-part="play"] {
+    --way-fill: var(--c-accent);
+    --way-ink: var(--c-accent-ink);
+    --way-soft: var(--c-accent-soft);
+  }
+
+  .landing-ways__image {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--c-line);
+    border-block-end: 0;
+    border-radius: var(--r-control) var(--r-control) 0 0;
+    box-shadow: var(--e-2);
+  }
+
+  /* The picture of the site's theme shows: the system's scheme, unless the site's theme names one. */
+  .landing-ways__image[data-theme="dark"] {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-site-theme="light"]) .landing-ways__image[data-theme="light"] {
+      display: none;
+    }
+
+    :root:not([data-site-theme="light"]) .landing-ways__image[data-theme="dark"] {
+      display: block;
+    }
+  }
+
+  :root[data-site-theme="dark"] .landing-ways__image[data-theme="light"] {
+    display: none;
+  }
+
+  :root[data-site-theme="dark"] .landing-ways__image[data-theme="dark"] {
+    display: block;
+  }
+
+  /* The tag: a pill in the strip over the picture, honey for Learn and teal for Play. */
+  .landing-ways__tag {
+    position: absolute;
+    inset-block-start: var(--s-5);
+    inset-inline-start: var(--s-5);
+    padding: var(--s-1) var(--s-3);
+    border-radius: var(--r-pill);
+    background: var(--way-fill);
+    box-shadow: var(--e-1);
+    color: var(--way-ink);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  /* How learning works, and why it is free: lists of cards, each a tile over a title and a text. */
+  .landing-steps,
+  .landing-free {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-4);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .landing-steps__step,
+  .landing-free__promise,
+  .landing-devices__way {
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  .landing-steps__step,
+  .landing-free__promise {
+    display: grid;
+    align-content: start;
+    gap: var(--s-2);
+    padding: var(--s-5);
+  }
+
+  /* A step's number on its tile, with the step's icon at the card's other edge. */
+  .landing-steps__mark {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: var(--s-3);
+    color: var(--band-text);
+  }
+
+  .landing-steps__mark > .icon {
+    width: var(--s-7);
+    height: var(--s-7);
+  }
+
+  .landing-free__promise > .landing-tile {
+    margin-block-end: var(--s-3);
+  }
+
+  .landing-steps__title,
+  .landing-free__title {
+    font-size: var(--t-xl);
+    font-weight: var(--w-bold);
+  }
+
+  .landing-steps__text,
+  .landing-free__text,
+  .landing-devices__text {
+    color: var(--c-text-soft);
+    line-height: var(--lh-body);
+  }
+
+  /*
+   * One tune, four levels: the control, then the piano in the chosen version's colour. The player
+   * reads `--rarity-right` and `--rarity-left` as the colours of the two hands' notes.
+   */
+  .landing-rarities {
+    display: grid;
+    gap: var(--s-5);
+    width: 100%;
+  }
+
+  .landing-rarities__piano {
+    --rarity: var(--c-rarity-common);
+    --rarity-right: var(--rarity);
+    --rarity-left: color-mix(in oklab, var(--rarity) 55%, var(--c-line-strong));
+
+    display: grid;
+    align-items: center;
+    gap: var(--s-4);
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-2);
+  }
+
+  .landing-rarities__piano[data-rarity="rare"] {
+    --rarity: var(--c-rarity-rare);
+  }
+
+  .landing-rarities__piano[data-rarity="epic"] {
+    --rarity: var(--c-rarity-epic);
+  }
+
+  .landing-rarities__piano[data-rarity="legendary"] {
+    --rarity: var(--c-rarity-legendary);
+  }
+
+  /* The play button, then the tagline, under the box or, on a wide screen, beside it. */
+  .landing-rarities__controls {
+    display: grid;
+    justify-items: start;
+    gap: var(--s-4);
+  }
+
+  .landing-rarities__tagline {
+    display: flex;
+    gap: var(--s-3);
+    min-height: calc(2 * var(--lh-body) * 1em);
+    padding-inline: var(--s-2);
+    color: var(--c-text-soft);
+    line-height: var(--lh-body);
+  }
+
+  /* The dot before the tagline, level with its first line. */
+  .landing-rarities__tagline::before {
+    content: "";
+    flex: none;
+    width: var(--s-3);
+    height: var(--s-3);
+    margin-block-start: calc((var(--lh-body) * 1em - var(--s-3)) / 2);
+    border-radius: var(--r-pill);
+    background: var(--rarity);
+  }
+
+  /* What you play on: rows of a tile and its words, and the small keyboard that plays. */
+  .landing-devices__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: var(--s-6);
+    width: 100%;
+  }
+
+  .landing-devices {
+    display: grid;
+    gap: var(--s-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .landing-devices__way {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-4);
+    padding: var(--s-4) var(--s-5);
+  }
+
+  .landing-devices__words {
+    display: grid;
+    gap: var(--s-1);
+    min-width: 0;
+  }
+
+  .landing-devices__title {
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+  }
+
+  /* The panel keeps a width a hand can span, and stands centred where the ways stack above it. */
+  .landing-devices__piano {
+    display: grid;
+    justify-self: center;
+    gap: var(--s-3);
+    width: 100%;
+    max-width: calc(var(--s-12) * 4.5);
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-2);
+  }
+
+  .landing-devices__piano .keyboard {
+    overflow: hidden;
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-control);
+  }
+
+  .landing-devices__hint {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    padding-inline: var(--s-1);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .landing-devices__hint .icon {
+    flex: none;
+    width: var(--s-4);
+    height: var(--s-4);
+    color: var(--band-text);
+  }
+
+  /* The questions: one centred column of folds, each a surface whose chevron turns as it opens. */
+  .landing-questions {
+    display: grid;
+    gap: var(--s-3);
+    /* A width of its own, since its centred parent takes its width from it. */
+    width: calc(var(--s-12) * 6);
+    max-width: 100%;
+    text-align: start;
+  }
+
+  .landing-questions__fold {
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  .landing-questions__fold[open] {
+    border-color: color-mix(in oklab, var(--band-vivid) 50%, var(--c-line));
+  }
+
+  .landing-questions__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    min-height: var(--s-touch);
+    padding: var(--s-4) var(--s-5);
+    border-radius: calc(var(--r-card) - 1px);
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .landing-questions__question::-webkit-details-marker {
+    display: none;
+  }
+
+  /* The chevron sits in a small well, and takes the band's hue while its fold is open. */
+  .landing-questions__question .icon {
+    flex: none;
+    box-sizing: content-box;
+    width: var(--s-5);
+    height: var(--s-5);
+    padding: var(--s-1);
+    border-radius: var(--r-pill);
+    background: var(--c-sunken);
+    color: var(--c-text-soft);
+    transition: transform var(--m-medium) var(--ease-spring);
+  }
+
+  .landing-questions__fold[open] .landing-questions__question .icon {
+    color: var(--band-text);
+    transform: rotate(180deg);
+  }
+
+  @media (hover: hover) {
+    .landing-questions__question:hover .icon {
+      background: var(--band-soft);
+      color: var(--band-text);
+    }
+  }
+
+  .landing-questions__answer {
+    padding: 0 var(--s-5) var(--s-5);
+    color: var(--c-text-soft);
+    line-height: var(--lh-body);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .landing-questions__fold[open] .landing-questions__answer {
+      animation: landing-settle var(--m-medium) var(--ease-emphasis) backwards;
+    }
+  }
+
+  @keyframes landing-settle {
+    from {
+      opacity: 0;
+      transform: translateY(calc(-1 * var(--motion-rise)));
+    }
+  }
+
+  /* With reduced motion, the chevron turns at once. */
+  @media (prefers-reduced-motion: reduce) {
+    .landing-questions__question .icon {
+      transition: none;
+    }
+  }
+
+  /* The last call: the mascot, the heading and both actions, centred under the glow. */
+  .landing-last::before {
+    inset-block: 0;
+  }
+
+  .landing-last__inner {
+    display: grid;
+    justify-items: center;
+    gap: var(--s-4);
+    max-width: var(--s-container);
+    margin-inline: auto;
+    padding: var(--s-10) var(--s-gutter) var(--s-11);
+    text-align: center;
+  }
+
+  .landing-last__heading {
+    margin-block-start: var(--s-3);
+    font-size: var(--t-5xl);
+    font-weight: var(--w-heavy);
+  }
+
+  .landing-last__lead {
+    color: var(--c-text-soft);
+    font-size: var(--t-lg);
+    line-height: var(--lh-body);
+  }
+
+  .landing-last__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--s-3);
+    padding-block-start: var(--s-3);
+  }
+
+  @media (min-width: 768px) {
+    .landing-ways,
+    .landing-steps,
+    .landing-free {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .landing-devices__layout {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+      gap: var(--s-9);
+    }
+
+    .landing-rarities__piano {
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: var(--s-6);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .landing-steps,
+    .landing-free {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+}

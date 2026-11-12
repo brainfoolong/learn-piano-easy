@@ -1,0 +1,93 @@
+/*
+ * The inside of scored mode's score panel. `src/input/scoring.ts` is the home of how scoring behaves,
+ * and `src/input/mode-panel.css` draws the panel itself.
+ *
+ * The accuracy is the panel's focal number. The last judgement is a tag beside it, in the colour of
+ * what the learner did: a perfect hit is the honey of a reward, a plain hit the green of success, and
+ * a miss or a mistake the red of an error. Its word says the same, so colour never stands alone.
+ *
+ * The tag springs in at every judgement. `scoring.ts` turns `data-beat` between `a` and `b`, and each
+ * value names its own copy of one animation, so the same judgement twice in a row pops twice.
+ */
+@layer pages {
+  .score-top {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+  }
+
+  .score-accuracy {
+    font-size: var(--t-3xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .score-last {
+    padding: var(--s-1) var(--s-3);
+    border-radius: var(--r-pill);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+  }
+
+  .score-last:empty {
+    display: none;
+  }
+
+  .score-last[data-judgement="perfect"] {
+    background: var(--c-brand);
+    color: var(--c-brand-ink);
+  }
+
+  .score-last[data-judgement="hit"] {
+    background: var(--c-success-soft);
+    color: var(--c-success);
+  }
+
+  .score-last[data-judgement="miss"],
+  .score-last[data-judgement="mistake"] {
+    background: var(--c-danger-soft);
+    color: var(--c-mistake);
+  }
+
+  .score-last[data-beat="a"] {
+    animation: score-pop-a var(--m-medium) var(--ease-spring);
+  }
+
+  .score-last[data-beat="b"] {
+    animation: score-pop-b var(--m-medium) var(--ease-spring);
+  }
+
+  .score-counts {
+    color: var(--c-text-soft);
+  }
+
+  .score-line {
+    font-weight: var(--w-semibold);
+  }
+
+  .score-line:empty {
+    display: none;
+  }
+
+  @keyframes score-pop-a {
+    from {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+  }
+
+  @keyframes score-pop-b {
+    from {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+  }
+
+  /* With reduced motion the tag only changes, and nothing pops. */
+  @media (prefers-reduced-motion: reduce) {
+    .score-last[data-beat] {
+      animation: none;
+    }
+  }
+}

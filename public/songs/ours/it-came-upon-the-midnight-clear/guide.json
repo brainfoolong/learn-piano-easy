@@ -1,0 +1,356 @@
+{
+  "song": "it-came-upon-the-midnight-clear",
+  "title": "It Came Upon the Midnight Clear",
+  "composer": "Richard Storrs Willis",
+  "about": "Edmund Sears wrote the poem in 1849. It was first printed in The Christian Register, in Boston, on December 29, 1849. Richard Storrs Willis published the tune a year later, as a study for choirs called Carol. Hymnals in the United States set the poem to it, and it became a well loved carol.",
+  "funFact": "In Britain, the same words are usually sung to a different tune, Noel, which Arthur Sullivan arranged from an English melody.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/it-came-upon-the-midnight-clear/common.mid",
+      "skills": [
+        "five-finger-position",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [1, 5, 4, 3, 2, 1, 2, 1, 1, 2, 3, 4, 4, 5, 5, 1, 5, 4, 3, 2, 1, 2, 1, 1, 2, 2, 3, 2, 1, 3, 5, 5, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 1, 1, 5, 4, 3, 2, 1, 2, 1, 1, 2, 2, 3, 2, 1, 3],
+        "left": [3, 1, 3, 1, 5, 2, 2, 3, 1, 5, 2, 3, 1, 3, 1, 5, 2, 2, 5, 2, 3, 1, 4, 1, 2, 5, 2, 3, 1, 3, 1, 5, 2, 2, 5, 2, 3, 1]
+      },
+      "start": {
+        "right": [67, 69, 72, 74, 76],
+        "left": [55, 50, 48, null, 43]
+      },
+      "practice": [
+        {
+          "text": "Play the first three bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 3],
+          "wait": true
+        },
+        {
+          "text": "Play bars 9 to 13 with the right hand alone, where the tune drops and climbs back.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 13],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one fifth or one note at a time, and stays in one place.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the first five bars.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "trick",
+          "text": "Lift the thumb off G a moment early. The little finger then has time to reach the high E."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 10,
+          "kind": "trick",
+          "text": "The tune drops a whole octave here. Lift the hand off the high E, and land the thumb on the low one."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 17,
+          "kind": "rhythm",
+          "text": "Count six beats in a bar: long, short, long, short. The tune sways like a lullaby."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 6,
+          "text": "After the short rest, finger 5 lands on the high E. Fingers 4, 3 and 2 then walk down to A."
+        },
+        {
+          "bar": 8,
+          "text": "Finger 2 plays A twice, and finger 3 steps up to B. Then fingers 2 and 1 walk down to G."
+        },
+        {
+          "bar": 14,
+          "text": "The same shape as bar 6: finger 5 on the high E, then 4, 3 and 2 down to A."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/it-came-upon-the-midnight-clear/rare.mid",
+      "skills": [
+        "triads",
+        "two-note-chords"
+      ],
+      "fingers": {
+        "right": [1, 5, 4, 3, 2, 1, 2, 1, 1, 2, 3, 4, 1, 2, 3, 1, 2, 1, 3, 5, 4, 3, 2, 1, 2, 1, 1, 2, 2, 3, 2, 1, 1, 3, 5, 5, 1, 1, 1, 2, 3, 4, 5, 5, 4, 3, 2, 1, 3, 2, 1, 1, 3, 5, 4, 3, 2, 1, 2, 1, 1, 2, 2, 3, 2, 1, 1, 3],
+        "left": [5, 2, 1, 5, 3, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 3, 1, 5, 2, 1, 5, 2, 1, 5, 3, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 3, 1, 5, 2, 1, 5, 2, 1, 5, 3, 1, 5, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, 69, 72, 74, 76],
+        "left": [55, 52, null, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone. A bass note comes first, then the rest of its chord.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [2, 5],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand alone on the first five bars, slowly.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play bars 9 to 13 with the right hand alone, where the tune drops and climbs.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 13],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on bars 1 to 5.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "fingering",
+          "text": "On the second C, swap finger 4 for the thumb. Fingers 2 and 3 then reach D and E."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 6,
+          "kind": "trick",
+          "text": "Use the long chord in bar 5 to get the hand ready for the high E."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 11,
+          "kind": "sound",
+          "text": "The tune climbs through F sharp and G sharp. Let it grow a little louder up to the high E."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 11,
+          "text": "Fingers 3, 4 and 5 climb to A, B and C. Then finger 5 moves on up to the high E."
+        },
+        {
+          "bar": 10,
+          "text": "The tune drops from the high E to the low one. Then the thumb slides up to F sharp, and finger 2 takes G sharp."
+        },
+        {
+          "bar": 12,
+          "text": "Fingers 4, 3, 2 and 1 walk down from D to A. Then finger 3 takes B, so finger 2 lands on A."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/it-came-upon-the-midnight-clear/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [1, 5, 4, 3, 2, 1, 2, 1, 1, 1, 2, 3, 3, 4, 5, 4, 1, 5, 4, 3, 2, 1, 2, 1, 1, 2, 2, 3, 2, 1, 3, 5, 5, 1, 1, 2, 3, 1, 2, 3, 5, 4, 3, 2, 1, 3, 2, 1, 1, 3, 5, 2, 4, 1, 3, 1, 3, 1, 3, 1, 5, 1, 5, 1, 3, 1, 3, 1, 3, 2, 4, 2, 4, 1, 3, 1, 3, 5],
+        "left": [5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [67, 69, 72, 74, 76],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand alone on bars 9 to 13, and pass the thumb under on the way up.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 13],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand's thirds and sixths alone, and press both notes of each pair as one.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [13, 17],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune floats above it."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 11,
+          "kind": "fingering",
+          "text": "Climb E, F sharp and G sharp with fingers 1, 2 and 3, then pass the thumb under to A."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 15,
+          "text": "The pairs change shape: 1 and 3 for a third, 1 and 5 for a sixth. The thumb walks down to B, then up to D."
+        },
+        {
+          "bar": 16,
+          "text": "Thirds on F and A, then fingers 2 and 4 step up to G and B and back. The thumb reaches down to B at the end."
+        },
+        {
+          "bar": 4,
+          "text": "The thumb moves from G up to A. Fingers 2 to 5 then climb to E, with finger 3 on both Cs."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/it-came-upon-the-midnight-clear/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "octave-bass"
+      ],
+      "fingers": {
+        "right": [1, 1, 2, 5, 4, 1, 2, 3, 2, 1, 2, 3, 1, 2, 3, 1, 3, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 5, 1, 1, 2, 5, 4, 1, 2, 3, 2, 1, 2, 3, 1, 2, 3, 1, 3, 1, 2, 4, 2, 4, 1, 3, 5, 4, 3, 1, 3, 5, 5, 1, 2, 5, 1, 2, 1, 2, 1, 3, 1, 4, 1, 2, 4, 5, 1, 2, 5, 5, 1, 2, 5, 4, 3, 1, 2, 3, 4, 3, 1, 2, 3, 5, 1, 1, 2, 5, 4, 1, 2, 3, 2, 1, 2, 3, 1, 2, 3, 1, 3, 1, 2, 4, 2, 4, 1, 3, 5, 4, 3, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [79, 84, null, 86, 88],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the third phrase, bars 9 to 13, where the tune drops and climbs.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [9, 13],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 5,
+          "kind": "trick",
+          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 17,
+          "kind": "sound",
+          "text": "Play the top note of each chord a little louder than the others."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 6,
+          "kind": "trick",
+          "text": "A short rest comes before each upbeat. Use it to move the hand to the next chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "Another four-note chord, G, B, D and G, with the little finger on top. Lift it in the rest before the upbeat."
+        },
+        {
+          "bar": 5,
+          "text": "Spread the hand over four notes: D, G, B and D. Then lift it and land the thumb on the G."
+        },
+        {
+          "bar": 3,
+          "text": "Finger 3 sings A over E and G. Then the thumb drops to B under F and G, and finger 3 keeps the tune's G."
+        }
+      ]
+    }
+  }
+}

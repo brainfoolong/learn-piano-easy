@@ -1,0 +1,357 @@
+{
+  "song": "es-ist-ein-ros-entsprungen",
+  "title": "Es ist ein Ros entsprungen",
+  "composer": "Traditional",
+  "about": "Es ist ein Ros entsprungen means A rose has sprung up in German. It is a church Christmas song from the 16th century. Its tune was first printed in the Speyer hymnal, in Cologne in 1599, and its composer is unknown. Michael Praetorius set it for four voices in 1609, and his setting spread widely.",
+  "funFact": "Johannes Brahms took Praetorius's melody as the starting point of a chorale prelude, the eighth of his Op. 122.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/es-ist-ein-ros-entsprungen/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2],
+        "left": [5, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [null, null, null, 79, 79],
+        "left": [55, null, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first two bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 2],
+          "wait": true
+        },
+        {
+          "text": "Play bars 3 to 6 with the right hand alone. The tune dips down to G in bar 5.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [3, 6],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for a half bar or a whole bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "Each long G starts on finger 5. Change to finger 4 on the next G, and the hand stays put."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "rhythm",
+          "text": "Each bar holds three bars of the old print. Count six slow beats, two quarters to each beat."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 5,
+          "kind": "trick",
+          "text": "After the low G, rest a moment, then let finger 5 reach up an octave to the high G."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Finger 2 holds C, then finger 5 stretches up to G. Swap to finger 4 on the next G."
+        },
+        {
+          "bar": 9,
+          "text": "The same stretch as bar 3: finger 5 reaches up from C to G, and finger 4 takes the next G."
+        },
+        {
+          "bar": 5,
+          "text": "Fingers 4 and 2 play D and B, then the thumb lands on the low G. Rest, and reach up with finger 5."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/es-ist-ein-ros-entsprungen/rare.mid",
+      "skills": [
+        "triads",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2],
+        "left": [4, 2, 1, 4, 2, 1, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1]
+      },
+      "start": {
+        "right": [null, null, null, 79, 79],
+        "left": [55, 52, 50, 48, 47]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together. The thumb stays on G.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 7],
+          "wait": true
+        },
+        {
+          "text": "Play bars 7 to 13 with the right hand alone. The tune moves up an octave and back.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [7, 13],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first time through, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 7],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "sound",
+          "text": "Under the tune's F, the chord shrinks to D and G. Keep the thumb on G and let the F ring."
+        },
+        {
+          "fromBar": 7,
+          "toBar": 7,
+          "kind": "trick",
+          "text": "Use the rest after the C to lift the right hand an octave higher."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 13,
+          "kind": "trick",
+          "text": "The same rest brings the right hand back down, for the last time through."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "Hold the high C, lift on the rest, and land finger 5 back on the G below."
+        },
+        {
+          "bar": 7,
+          "text": "Hold the C, lift the right hand on the rest, and land finger 5 on the G an octave up."
+        },
+        {
+          "bar": 3,
+          "text": "Finger 5 stretches up from C to G while the left hand presses a new C chord."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/es-ist-ein-ros-entsprungen/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "broken-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 4, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 4, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 4, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 4, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 4, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 4, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 4, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 4, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 4, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 4, 1, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [null, null, null, 79, 79],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the broken chords of the second time alone, and lift the hand on each rest.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [8, 13],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the first time through, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 7],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal in the middle part.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 7,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 13,
+          "kind": "sound",
+          "text": "Change the pedal on each beat, as the left hand starts a new chord."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 14,
+          "kind": "trick",
+          "text": "Both hands lift on the rest. The right hand drops an octave, and the left goes back to its Alberti bass."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "The right hand drops back down on the rest, while the broken chords end on F."
+        },
+        {
+          "bar": 8,
+          "text": "The left hand starts its broken chords on the low C. Lift it on each rest, and change the pedal on each beat."
+        },
+        {
+          "bar": 7,
+          "text": "The right hand leaps up an octave on the rest. The Alberti bass ends on a rest, so the left hand can drop."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/es-ist-ein-ros-entsprungen/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios",
+        "octave-bass"
+      ],
+      "fingers": {
+        "right": [5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 5, 4, 2, 3, 2, 1, 5, 4, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [null, null, null, 79, 79],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's octaves alone, and keep the thumb and finger 5 an octave apart.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [8, 13],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second time in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [8, 13],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 7,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 13,
+          "kind": "sound",
+          "text": "The arpeggios climb two octaves on each beat. Keep them soft, so the octaves above ring out."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 19,
+          "kind": "fingering",
+          "text": "Keep the thumb and finger 5 an octave apart, and let the wrist bounce."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 11,
+          "text": "The octaves step down to the low G, then leap up an octave after the rest."
+        },
+        {
+          "bar": 13,
+          "text": "Hold the C octave, then land the G octave as the arpeggios end on F."
+        },
+        {
+          "bar": 9,
+          "text": "Let go of the C octave an eighth early, so the hand lands on the G octave in time."
+        }
+      ]
+    }
+  }
+}

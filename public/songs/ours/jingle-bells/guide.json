@@ -1,0 +1,350 @@
+{
+  "song": "jingle-bells",
+  "title": "Jingle Bells",
+  "composer": "James Lord Pierpont",
+  "about": "James Lord Pierpont published this song in Boston in 1857, under the title One Horse Open Sleigh. It tells of a fast ride through the snow in a sleigh pulled by one horse. The song never mentions Christmas, yet it became one of the best known Christmas songs in the world.",
+  "funFact": "In 1965, two astronauts played Jingle Bells in space, on a small harmonica and a handful of bells.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/jingle-bells/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 3, 3, 3, 3, 5, 1, 3, 4, 4, 4, 4, 3, 3, 3, 2, 2, 3, 2, 5, 3, 3, 3, 3, 3, 3, 3, 5, 1, 3, 4, 4, 4, 4, 3, 3, 5, 5, 4, 2, 1],
+        "left": [1, 1, 1, 1, 5, 1, 1, 4, 4, 1, 1, 1, 1, 5, 1, 1, 4, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [48, null, null, 43, 41]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 5 to 8 with the right hand alone, where the tune climbs to F.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together. The left hand holds one low note in each bar.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "rhythm",
+          "text": "Short, short, long: the third E lasts two beats, like the jingle of a bell."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "Each finger has its own key here: thumb on C, little finger on G."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Slow down a little on the last notes, and let the low C ring."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 5,
+          "text": "Finger 4 plays F three times, while the left little finger reaches down to the low F."
+        },
+        {
+          "bar": 13,
+          "text": "The F's come back. Keep finger 4 on F, and drop the left little finger to the low F again."
+        },
+        {
+          "bar": 15,
+          "text": "Finger 5 plays G twice, then fingers 4 and 2 walk down, ready for the thumb's last C."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/jingle-bells/rare.mid",
+      "skills": [
+        "eighth-notes",
+        "dotted-rhythm",
+        "triads"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 3, 3, 3, 3, 5, 1, 2, 1, 3, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 2, 2, 3, 2, 2, 5, 3, 3, 3, 3, 3, 3, 3, 5, 1, 2, 1, 3, 4, 4, 4, 4, 4, 3, 3, 3, 3, 5, 5, 4, 2, 1],
+        "left": [5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 3, 1, 5, 3, 1, 5, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 3, 1, 5, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, 53, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Tap the rhythm of bar 3 on the lid, then play the right hand alone.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone, and keep each chord until the next one.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on bars 5 to 8, where the quick notes are.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 3,
+          "toBar": 3,
+          "kind": "rhythm",
+          "text": "Long, short: the C takes a beat and a half, and the D sneaks in after it."
+        },
+        {
+          "fromBar": 6,
+          "toBar": 6,
+          "kind": "rhythm",
+          "text": "The last two E's are eighths. Think of one beat split in two."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "Play the left hand's bass note a little louder than the chord after it."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 5,
+          "text": "Four F's with finger 4: the last one is quick, so it almost bumps into bar 6."
+        },
+        {
+          "bar": 13,
+          "text": "The F's return. Let finger 4 bounce on F, and count the short last one."
+        },
+        {
+          "bar": 9,
+          "text": "Your left little finger slides back up from B to C, as the tune starts again."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/jingle-bells/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 3, 3, 3, 3, 5, 1, 2, 3, 5, 4, 3, 2, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 2, 2, 3, 2, 5, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 3, 5, 1, 2, 1, 3, 1, 3, 5, 4, 3, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 2, 4, 2, 4, 2, 4, 2, 4, 1, 5, 1, 5, 1, 4, 1, 2, 1, 2, 4],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 5, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first four bars, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the bells of the tune ring above it."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Change the pedal in the middle of each bar, as the left hand starts its pattern again."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 16,
+          "text": "Lift both hands after the D, then land on the last chord with the left hand in octaves."
+        },
+        {
+          "bar": 14,
+          "text": "On beat two, the sixth becomes a third: the thumb leaves A, and fingers 2 and 4 take C and E."
+        },
+        {
+          "bar": 12,
+          "text": "After the third, the hand runs down G, F, E and D with fingers 5, 4, 3 and 2."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/jingle-bells/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "sixteenth-notes"
+      ],
+      "fingers": {
+        "right": [1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 3, 1, 2, 4, 1, 2, 5, 5, 4, 3, 2, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 4, 1, 2, 4, 1, 2, 5, 1, 2, 4, 1, 2, 4, 5, 3, 3, 3, 2, 1, 2, 3, 3, 3, 3, 2, 1, 2, 3, 3, 5, 1, 2, 3, 5, 4, 3, 2, 1, 3, 4, 4, 4, 4, 4, 3, 3, 3, 3, 5, 5, 4, 2, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, 76],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the bass note, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the little finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the sixteenth runs of bars 9 to 12 with the right hand alone.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play the top note of each chord a little louder than the others."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "rhythm",
+          "text": "Each run fits in one beat: four quick notes, then the bell rings again."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "The tune dips from E to D over a held G and B. Finger 4 takes the D."
+        },
+        {
+          "bar": 8,
+          "text": "Spread the hand for four notes at once: G, B, F and G. Let the little finger sing."
+        },
+        {
+          "bar": 6,
+          "text": "On beat two, the thumb and little finger step down one key, while finger 2 stays on C."
+        }
+      ]
+    }
+  }
+}

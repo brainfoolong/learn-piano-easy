@@ -1,0 +1,42 @@
+# Type-checks and tests every push and pull request, and runs the end-to-end tests in Playwright's image.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          # Keep in step with package.json's engines.bun.
+          bun-version: 1.4.4
+      - run: bun install --frozen-lockfile
+      - run: bun x tsc
+      - run: bun test
+      - run: bun run build
+
+  e2e:
+    runs-on: ubuntu-latest
+    # The image carries Chromium and its system libraries, so the job downloads no browser. Its tag is
+    # package.json's @playwright/test version, and tools/ci.test.ts fails when the two differ.
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble
+    steps:
+      - uses: actions/checkout@v4
+      # The image has no unzip for setup-bun, so Bun comes from npm. Keep in step with engines.bun.
+      - run: npm install --global bun@1.4.4
+      - run: bun install --frozen-lockfile
+      - run: bun x playwright test
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: e2e-results
+          path: .agent-tmp/e2e/results/
+          include-hidden-files: true

@@ -1,0 +1,105 @@
+/*
+ * The top bar's slot on the pages of *Learn Piano*. `src/learn/game/bar-slot.ts` is the home of what it
+ * shows.
+ *
+ * The streak and the XP are two pills, each a well on `--c-sunken`, and the ring of today's goal stands
+ * beside them. Their numbers are small text in tabular figures. The flame, the star and the arc are
+ * honey, the reward's colour, and a met goal turns the ring green around a check.
+ *
+ * Before the first read the slot is hidden by opacity alone, so it keeps its room and the bar never
+ * shifts.
+ */
+@layer pages {
+  .bar-slot {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    font-size: var(--t-sm);
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  .bar-slot[data-ready="false"] {
+    opacity: 0;
+  }
+
+  .bar-slot__item {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    color: var(--c-text);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .bar-slot__streak,
+  .bar-slot__xp {
+    min-height: var(--s-7);
+    padding: 0 var(--s-3) 0 var(--s-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-pill);
+    background: var(--c-sunken);
+  }
+
+  /* The flame: filled in honey, inside an edge of the honey that reads on a surface. */
+  .bar-slot__streak .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+    color: var(--c-brand-text);
+    fill: var(--c-brand);
+  }
+
+  .bar-slot .xp-counter {
+    gap: var(--s-1);
+    font-size: var(--t-sm);
+  }
+
+  .bar-slot .xp-counter .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+  }
+
+  .bar-slot__ring {
+    width: var(--s-7);
+    height: var(--s-7);
+  }
+
+  .bar-slot__groove,
+  .bar-slot__arc,
+  .bar-slot__check {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .bar-slot__groove,
+  .bar-slot__arc {
+    stroke-width: 3.5;
+  }
+
+  .bar-slot__groove {
+    stroke: var(--c-line-strong);
+  }
+
+  .bar-slot__arc {
+    stroke: var(--c-brand);
+  }
+
+  .bar-slot__arc[data-empty] {
+    opacity: 0;
+  }
+
+  .bar-slot__check {
+    stroke: var(--c-success);
+    stroke-width: 2.25;
+    opacity: 0;
+  }
+
+  .bar-slot__today[data-met="true"] .bar-slot__arc {
+    stroke: var(--c-success);
+  }
+
+  .bar-slot__today[data-met="true"] .bar-slot__check {
+    opacity: 1;
+  }
+}

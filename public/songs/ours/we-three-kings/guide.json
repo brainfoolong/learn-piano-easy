@@ -1,0 +1,356 @@
+{
+  "song": "we-three-kings",
+  "title": "We Three Kings",
+  "composer": "John Henry Hopkins Jr.",
+  "about": "John Henry Hopkins Jr., an American clergyman and hymn writer, wrote this carol in 1857 for a Christmas pageant at the seminary where he taught. Its original title is Three Kings of Orient, and it was published in 1863. The carol tells of the Magi of the Bible, who brought gold, frankincense and myrrh. Its verse is in a minor key, and the refrain turns to the major.",
+  "funFact": "Hopkins planned the carol so that three men each sing one verse alone, one for each king.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/we-three-kings/common.mid",
+      "skills": [
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 1, 2, 3, 2, 1, 5, 4, 3, 1, 2, 3, 2, 1, 3, 1, 2, 2, 3, 3, 5, 4, 3, 2, 4, 3, 2, 2, 1, 2, 4, 3, 3, 3, 1, 3, 1, 3, 3, 3, 3, 1, 3, 1, 3, 1, 1, 2, 3, 4, 3, 2, 3, 1, 3, 3, 1, 3, 1, 3],
+        "left": [5, 2, 5, 2, 2, 5, 2, 5, 2, 5, 2, 2, 5, 2, 4, 1, 3, 1, 4, 1, 4, 1, 3, 1, 5, 2, 5, 2, 2, 4, 1, 4, 1, 2, 4, 1, 4, 1, 4, 1, 2, 4, 1, 4, 1, 3, 1, 3, 3, 1, 4, 1, 4, 1, 2, 4, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [55, 52, 50, 48, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the first two bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 2],
+          "wait": true
+        },
+        {
+          "text": "Play bars 5 to 8 with the right hand alone, where the tune climbs to G and walks down to A.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It changes its shape on the first and the fourth beat only.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "rhythm",
+          "text": "Each bar holds two groups of three beats. Count one, two, three twice."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 5,
+          "kind": "fingering",
+          "text": "On the second C, swap from finger 3 to the thumb. The hand is then ready to climb to G."
+        },
+        {
+          "fromBar": 7,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "After the long C, the whole hand moves down one key, so finger 2 plays B."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Hold the long C with finger 2, then move the hand down so finger 2 plays B."
+        },
+        {
+          "bar": 3,
+          "text": "The same notes as bar 1. Keep the long notes full and the short ones light."
+        },
+        {
+          "bar": 1,
+          "text": "Finger 5 plays E, finger 4 plays D, finger 3 plays C, then the thumb reaches down to A."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/we-three-kings/rare.mid",
+      "skills": [
+        "triads",
+        "waltz-bass"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 1, 2, 3, 2, 1, 5, 4, 3, 1, 2, 3, 2, 1, 3, 1, 2, 2, 3, 3, 5, 4, 3, 2, 4, 3, 2, 2, 1, 2, 4, 3, 3, 3, 1, 3, 1, 3, 3, 3, 3, 1, 3, 1, 3, 1, 1, 2, 3, 4, 3, 2, 3, 1, 3, 3, 1, 3, 1, 3],
+        "left": [5, 4, 2, 5, 4, 2, 3, 2, 1, 5, 4, 2, 5, 4, 2, 5, 4, 2, 3, 2, 1, 5, 4, 2, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 1, 5, 3, 1, 3, 2, 1, 5, 4, 2, 3, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [56, 52, 50, 48, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone on the first eight bars, and press the three notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the waltz bass of the refrain alone: low note, chord, chord.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [17, 24],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first eight bars, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "The verse is in a minor key. Play it softly and evenly, and keep each chord down for the whole bar."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 14,
+          "kind": "fingering",
+          "text": "Hold C with finger 2, then move the hand down one key so finger 2 plays B."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 32,
+          "kind": "sound",
+          "text": "The refrain turns to the major. Let it ring brighter, and keep the waltz bass light."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 14,
+          "text": "Hold C with finger 2, then move the hand down so finger 2 plays B. The left hand changes to the E chord."
+        },
+        {
+          "bar": 5,
+          "text": "The same notes as bar 1, after a rest. Land finger 5 on E before you start."
+        },
+        {
+          "bar": 1,
+          "text": "Finger 5 plays E, finger 4 plays D, finger 3 plays C, then the thumb reaches down to A."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/we-three-kings/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thirds-and-sixths",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 1, 2, 3, 2, 1, 5, 4, 3, 1, 2, 3, 2, 1, 3, 1, 2, 2, 3, 3, 5, 4, 3, 2, 4, 3, 2, 2, 1, 2, 4, 1, 5, 1, 5, 1, 5, 1, 3, 3, 5, 1, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 3, 5, 1, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 3, 5, 1, 3, 1, 2, 5],
+        "left": [5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [52, null, 48, null, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [17, 20],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the verse, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 16,
+          "toBar": 17,
+          "kind": "trick",
+          "text": "Lift the hand after the short D, and land the thumb on the E below for the refrain."
+        },
+        {
+          "fromBar": 25,
+          "toBar": 28,
+          "kind": "fingering",
+          "text": "The thumb and finger 5 hold the sixth, and the hand slides as one piece from key to key."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": "Lift the hand after the D, and land the thumb on E and finger 5 on C."
+        },
+        {
+          "bar": 28,
+          "text": "The sixth slides from F and D up to G and E. Finger 5 plays the tune."
+        },
+        {
+          "bar": 27,
+          "text": "Slide the sixth up to A and F, then back down to G and E. Keep the wrist loose."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/we-three-kings/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 3, 1, 2, 2, 3, 3, 5, 4, 3, 2, 4, 3, 2, 2, 1, 2, 4, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 3, 1, 2, 3, 5, 1, 2, 4, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 3, 1, 2, 3, 5, 1, 2, 4, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 3, 1, 2, 3, 5, 1, 2, 4, 1, 2, 3, 5],
+        "left": [5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [64, null, null, null, 76],
+        "left": [45, null, null, null, 33]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand's octaves alone, with the thumb and finger 5 kept in one shape.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the arpeggios of bars 9 to 16 in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [9, 16],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "In the octaves, watch finger 5 on the tune. The thumb follows it by feel."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "In each arpeggio, finger 3 crosses over the thumb on the way up."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 32,
+          "kind": "sound",
+          "text": "In the chords, play the top finger a little louder, so the tune sings."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The left hand starts its first arpeggio, up two octaves from C and back, under the repeated C."
+        },
+        {
+          "bar": 3,
+          "text": "The octaves step from B to C and back, while the left hand jumps between the low E and its chord."
+        },
+        {
+          "bar": 7,
+          "text": "The same as bar 3. Keep the octaves even and the hand light."
+        }
+      ]
+    }
+  }
+}

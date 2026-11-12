@@ -1,0 +1,121 @@
+/*
+ * The sheet music over the top of the scene, or alone over all of it. `src/sheet/sheet-view.ts` is the
+ * home of how it behaves, and `src/sheet/sheet-live.ts` moves its cursor and lights its chords.
+ *
+ * The view sets its paper and ink from the settings, and `--sheet-height` from its staves. The live
+ * layer sets `--sheet-glow` for an active chord's highlight.
+ *
+ * The sheet is a panel over the scene: a firm edge, the highest elevation, and the entrance of
+ * `player-panel-in` from `src/app/player.css`. Its edge is a shadow, so it takes no room from the staves. The cursor is the accent mixed with the ink, so it
+ * stands out on any paper the learner picks. A note's tip is a small raised chip.
+ */
+@layer pages {
+  .sheet {
+    position: absolute;
+    top: calc(max(var(--s-3), env(safe-area-inset-top)) + var(--bar-height) + var(--s-2));
+    left: max(var(--s-3), env(safe-area-inset-left));
+    right: max(var(--s-3), env(safe-area-inset-right));
+    height: var(--sheet-height, 120px);
+    max-height: 50%;
+    overflow: hidden;
+    border-radius: var(--r-card);
+    box-shadow:
+      0 0 0 1px var(--c-line-strong),
+      var(--e-3);
+    animation: player-panel-in var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  .sheet[data-mode="full"] {
+    bottom: var(--s-3);
+    height: auto;
+    max-height: none;
+  }
+
+  .sheet-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform;
+  }
+
+  .sheet-page.lines {
+    transition: transform var(--m-medium) var(--ease-standard);
+  }
+
+  .sheet-measure,
+  .sheet-brace,
+  .sheet-cursor,
+  .sheet-input,
+  .sheet-tip {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* A measure's box has no width of its own, so the site's `max-width: 100%` on every svg is lifted. */
+  .sheet svg {
+    display: block;
+    max-width: none;
+    overflow: visible;
+  }
+
+  .sheet-number {
+    position: absolute;
+    left: 2px;
+    top: var(--s-2);
+    font-size: var(--t-xs);
+    opacity: 0.7;
+  }
+
+  .sheet-cursor {
+    width: 2px;
+    margin-left: -1px;
+    background: color-mix(in oklab, var(--c-accent-vivid) 70%, currentColor);
+    pointer-events: none;
+  }
+
+  .sheet-input {
+    opacity: 0.85;
+    pointer-events: none;
+  }
+
+  .sheet .chord {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform var(--m-micro) var(--ease-standard);
+  }
+
+  .sheet-page.grow .chord.active {
+    transform: scale(1.25);
+  }
+
+  .sheet-page.glow .chord.active {
+    filter: drop-shadow(0 0 3px var(--sheet-glow));
+  }
+
+  .sheet-tip {
+    padding: var(--s-1) var(--s-2);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--s-2);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-2);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .sheet-hint {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    font-size: var(--t-sm);
+  }
+
+  .sheet-hint[hidden] {
+    display: none;
+  }
+}

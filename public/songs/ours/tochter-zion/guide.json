@@ -1,0 +1,357 @@
+{
+  "song": "tochter-zion",
+  "title": "Tochter Zion, freue dich",
+  "composer": "George Frideric Handel",
+  "about": "Tochter Zion, freue dich means Daughter of Zion, rejoice in German. George Frideric Handel wrote the chorus See, the conqu'ring hero comes in 1747 for his oratorio Joshua. In 1751 he added it to his oratorio Judas Maccabaeus. Friedrich Heinrich Ranke set German words to the tune in Erlangen after 1820.",
+  "funFact": "The tune is a main theme of Henry Wood's Fantasia on British Sea Songs, played every year at the Last Night of the Proms.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/tochter-zion/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [5, 3, 4, 5, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 3, 4, 3, 3, 5, 3, 5, 4, 3, 3, 2, 4, 3, 4, 5, 4, 4, 3, 2, 5, 4, 3, 2, 1, 2, 1, 2, 3, 2, 2, 4, 2, 3, 4, 3, 2, 3, 3, 3, 2, 3, 4, 3, 3, 5, 3, 5, 4, 3, 3, 2],
+        "left": [5, 1, 5, 1, 4, 1, 4, 1, 2, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1, 4, 1, 5, 1, 4, 4, 1, 4, 4, 1, 2, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first four bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 9 to 16 with the right hand alone, where the tune dips down to B.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each half bar or longer.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 3,
+          "toBar": 3,
+          "kind": "rhythm",
+          "text": "Bar 3 climbs D, E, F and G, then comes back down. Keep the four climbing notes even."
+        },
+        {
+          "fromBar": 6,
+          "toBar": 7,
+          "kind": "fingering",
+          "text": "Lift the hand after the G of bar 6. Finger 5 lands on F, and the hand walks down to C."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 14,
+          "kind": "trick",
+          "text": "The last C of bar 13 is short. Use the rest to move the hand up, with finger 4 on A."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Finger 5 lands on F after the lift, then fingers 4 and 3 play E and D."
+        },
+        {
+          "bar": 19,
+          "text": "The same move as bar 7: lift after the G, and land finger 5 on F."
+        },
+        {
+          "bar": 14,
+          "text": "Finger 4 plays A, and finger 2 plays F sharp, the black key between F and G."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/tochter-zion/rare.mid",
+      "skills": [
+        "triads",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [5, 3, 4, 5, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 3, 4, 3, 3, 5, 3, 5, 4, 3, 3, 2, 4, 3, 4, 5, 4, 4, 3, 2, 5, 4, 3, 2, 1, 2, 1, 2, 3, 2, 2, 4, 2, 3, 4, 3, 2, 3, 3, 3, 2, 3, 4, 3, 3, 5, 3, 5, 4, 3, 3, 2],
+        "left": [5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 4, 1, 4, 1, 4, 2, 1, 4, 2, 1, 5, 2, 5, 2, 5, 3, 1, 5, 3, 1, 4, 1, 4, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 4, 4, 2, 1, 4, 4, 2, 1, 4, 2, 1, 5, 2, 5, 2, 5, 3, 1, 5, 3, 1, 4, 1, 4, 1, 5, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play bars 9 to 16 with the right hand alone. The tune turns towards G, with two F sharps.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play the chords softer than the tune, so the tune stands out like a trumpet call."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 11,
+          "kind": "rhythm",
+          "text": "Here the left hand changes chord in the middle of the bar. Count four, and change on three."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 15,
+          "kind": "fingering",
+          "text": "In bar 14 the left finger 2 takes F sharp, and in bar 15 it moves back to F."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Lift after the G, land finger 5 on F, and press the G chord with the left hand."
+        },
+        {
+          "bar": 19,
+          "text": "The same move as bar 7: lift after the G, and land finger 5 on F."
+        },
+        {
+          "bar": 14,
+          "text": "Both hands play an F sharp. Right finger 2 and left finger 2 each take the black key."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/tochter-zion/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "broken-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [5, 3, 4, 5, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 3, 4, 3, 3, 5, 3, 5, 4, 3, 3, 2, 4, 3, 4, 5, 4, 4, 3, 2, 5, 4, 3, 2, 1, 2, 1, 2, 3, 2, 2, 4, 2, 3, 4, 3, 2, 3, 3, 5, 3, 4, 5, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 3, 4, 3, 3, 5, 3, 5, 4, 3, 3, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the broken chords of the last part alone, and lift the hand on each rest.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [17, 20],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on bars 1 to 16, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 16,
+          "toBar": 17,
+          "kind": "trick",
+          "text": "Both hands lift at the end of bar 16. The right hand jumps up an octave, and the left drops to a low C."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 24,
+          "kind": "sound",
+          "text": "Change the pedal on each beat, as the left hand starts a new group of four."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 23,
+          "text": "Fingers 5, 4 and 3 walk down F, E and D. Lift on the last D to reach the final chord."
+        },
+        {
+          "bar": 17,
+          "text": "The tune starts again an octave up, while the left hand starts its broken chords on the low C."
+        },
+        {
+          "bar": 7,
+          "text": "Lift after the G, and land finger 5 on F, while the Alberti bass turns to G."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/tochter-zion/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios",
+        "sixteenth-notes"
+      ],
+      "fingers": {
+        "right": [5, 3, 4, 5, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 1, 2, 3, 2, 3, 4, 3, 3, 5, 3, 5, 4, 3, 3, 2, 3, 4, 3, 2, 4, 3, 4, 5, 4, 4, 3, 2, 5, 4, 3, 2, 1, 2, 3, 2, 1, 2, 1, 2, 3, 2, 2, 4, 2, 3, 4, 3, 2, 3, 3, 4, 3, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 3, 2, 1, 3, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [72, 74, 76, 77, 79],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play bars 1 to 8 with the right hand alone, and keep the quick turns light.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the last part in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [17, 20],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "The quick turn at the end of bar 4 decorates the long D. Play it softer than the tune."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 23,
+          "kind": "fingering",
+          "text": "Keep the thumb and little finger an octave apart, and let the wrist bounce."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Lift after the G, land finger 5 on F, and walk down while the stride bass turns to G."
+        },
+        {
+          "bar": 3,
+          "text": "The tune climbs D, E, F and G an octave up, while the stride bass jumps under it."
+        },
+        {
+          "bar": 11,
+          "text": "The left hand changes from C to G in the middle of the bar. Keep the stride even."
+        }
+      ]
+    }
+  }
+}

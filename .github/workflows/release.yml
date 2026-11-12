@@ -1,0 +1,30 @@
+# Checks and builds the app on every v* tag, zips dist/, and publishes the zip as the tag's GitHub release.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          # Keep in step with package.json's engines.bun.
+          bun-version: 1.4.4
+      - run: bun install --frozen-lockfile
+      - run: bun x tsc
+      - run: bun test
+      - run: bun run build
+      # The zip holds dist/'s contents at its root, so any static server serves the unpacked folder.
+      - name: Zip dist/
+        run: cd dist && zip -r "../learn-piano-easy-${GITHUB_REF_NAME}.zip" .
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" "learn-piano-easy-${GITHUB_REF_NAME}.zip" --title "$GITHUB_REF_NAME" --generate-notes --verify-tag

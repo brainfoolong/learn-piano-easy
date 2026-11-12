@@ -1,0 +1,349 @@
+{
+  "song": "mary-had-a-little-lamb",
+  "title": "Mary Had a Little Lamb",
+  "composer": "Traditional",
+  "about": "Sarah Josepha Hale published the poem about Mary and her lamb in Boston in 1830. The music teacher Lowell Mason set it to this simple tune soon after, for children to sing at school. It uses only four notes, which is why so many first piano books start with it.",
+  "funFact": "In 1877 Thomas Edison recited its first lines into his new phonograph, so it was the first verse ever recorded and played back.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/mary-had-a-little-lamb/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [3, 2, 1, 2, 3, 3, 3, 2, 2, 2, 3, 5, 5, 3, 2, 1, 2, 3, 3, 3, 3, 2, 2, 3, 2, 1],
+        "left": [1, 1, 5, 1, 1, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, null, 67],
+        "left": [48, null, null, null, 43]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one note for each whole bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together, still slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "fingering",
+          "text": "Each finger has its own key here: thumb on C, third finger on E."
+        },
+        {
+          "fromBar": 3,
+          "toBar": 3,
+          "kind": "fingering",
+          "text": "The left hand's little finger takes the low G, and the thumb waits above it on C."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": "The last C lasts the whole bar, so count four beats before you lift."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 4,
+          "text": "Your little finger jumps over F to G. Keep the other fingers resting on their keys."
+        },
+        {
+          "bar": 3,
+          "text": "The left hand moves to the low G as the right hand repeats D. Use the little finger."
+        },
+        {
+          "bar": 7,
+          "text": "The right hand rocks between D and E with fingers 2 and 3, while the bass drops to G."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/mary-had-a-little-lamb/rare.mid",
+      "skills": [
+        "eighth-notes",
+        "triads",
+        "two-note-chords"
+      ],
+      "fingers": {
+        "right": [3, 2, 1, 2, 3, 3, 3, 2, 2, 2, 3, 5, 5, 3, 2, 1, 2, 3, 3, 3, 3, 2, 2, 3, 2, 1, 3, 4, 2, 3, 1, 2, 2, 3, 3, 3, 2, 3, 2, 2, 2, 3, 2, 3, 5, 3, 5, 3, 4, 2, 3, 1, 2, 2, 3, 3, 3, 3, 2, 2, 3, 2, 1],
+        "left": [4, 1, 4, 1, 1, 3, 4, 1, 4, 1, 4, 1, 1, 3, 4, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1]
+      },
+      "start": {
+        "right": [67, 69, 71, 72, 74],
+        "left": [50, 47, 45, 43, 42]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone on the second half, where the eighths come in.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone, and keep each chord down until the next one.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first eight bars.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 9,
+          "toBar": 9,
+          "kind": "rhythm",
+          "text": "Each quick pair is one beat split in two. Count one-and, two-and."
+        },
+        {
+          "fromBar": 11,
+          "toBar": 11,
+          "kind": "fingering",
+          "text": "The left hand's little finger reaches down to F sharp for this chord."
+        },
+        {
+          "fromBar": 12,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "Press both notes of the last chord together, as if they were one key."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "Your fourth finger plays the quick C, then falls back to A. Keep the hand still."
+        },
+        {
+          "bar": 11,
+          "text": "The left hand reaches down to F sharp while the right hand adds a quick B."
+        },
+        {
+          "bar": 13,
+          "text": "The quick notes return here. Count one-and, two-and to keep them even."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/mary-had-a-little-lamb/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [3, 2, 1, 2, 3, 3, 3, 2, 2, 2, 3, 5, 5, 4, 3, 2, 1, 2, 3, 3, 3, 3, 2, 2, 3, 2, 1, 1, 3, 1, 2, 1, 1, 2, 1, 3, 1, 3, 1, 3, 1, 2, 1, 2, 1, 2, 1, 3, 3, 5, 3, 5, 1, 3, 1, 2, 1, 1, 2, 1, 3, 1, 3, 1, 3, 1, 3, 1, 2, 1, 2, 1, 3, 1, 2, 1],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first four bars, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "The quick F at the end of the bar leads you back to E for the next phrase."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "The tune is the top note of each third, so let the upper finger lead."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The thirds start here. Your thumb steps between C and B under each pair."
+        },
+        {
+          "bar": 13,
+          "text": "The thirds come back after a held bar. Press the two notes of each pair as one."
+        },
+        {
+          "bar": 15,
+          "text": "The pairs change on every beat, and the bass changes chord halfway through the bar."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/mary-had-a-little-lamb/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [3, 2, 1, 2, 3, 3, 3, 2, 2, 2, 3, 5, 5, 3, 2, 1, 2, 3, 3, 3, 3, 2, 2, 3, 2, 1, 1, 3, 5, 1, 4, 1, 3, 1, 4, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 4, 1, 3, 1, 4, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 4, 1, 2, 4, 1, 5, 1, 2, 4, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [72, 74, 76, null, 79],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the bass note, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first eight bars at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": [1, 8],
+          "wait": false
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 15,
+          "kind": "sound",
+          "text": "Play the top note of each chord a little louder than the others."
+        },
+        {
+          "fromBar": 16,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Hold the last chord with the pedal until it fades."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 15,
+          "text": "Lift the hand after the last D, so it has time to open wide for the final chord."
+        },
+        {
+          "bar": 11,
+          "text": "Keep the thumb on G and the chord shape still, so only the left hand travels."
+        },
+        {
+          "bar": 3,
+          "text": "The bass jumps down to the low G octave. Glance at the left hand before the bar starts."
+        }
+      ]
+    }
+  }
+}

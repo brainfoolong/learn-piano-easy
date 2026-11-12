@@ -1,0 +1,233 @@
+/*
+ * The player shell's styles. `src/app/shell.ts` is the home of how the shell behaves, and
+ * `src/app/player-bar.ts` builds the bar's buttons.
+ *
+ * The player's actions sit in the top bar's page slot as one row: the song's title, then *Songs*. The
+ * title is the row's focal text. It takes the room the bar has left, and ends in an ellipsis.
+ *
+ * - **The player's top bar has no site links,** as `src/site/site-bar.ts` says, so the title stands
+ *   right after the brand.
+ * - **The menu's buttons show their icons alone where the bar is wide,** each with a tooltip, so the
+ *   bar fits one row at 1280 pixels in English. In the narrow bar's menu they show their labels.
+ * - **The title asks a least width on a wide bar.** A bar that leaves it less wraps the actions onto a
+ *   row of their own, which the actions then fill from edge to edge.
+ * - **The player has one floating bar.** The site's bar takes the control bar in its dock, under its
+ *   row and a hairline. The bar's host is the one glass surface, and the top bar inside it draws none.
+ * - **The bar floats at the edge the dock's `data-edge` names,** the top or the bottom of the window.
+ * - **While the song plays, the whole bar fades** once the control bar goes idle, and comes back with it.
+ * - **In fullscreen the player's own bar floats** in the player, with the row, its menu as icons and the
+ *   control bar in it.
+ * - **On a phone the title is a chip** just beyond the bar, over the scene.
+ *
+ * The player's toasts rise above a bar at the bottom, whose room the shell sets as `--controls-height`.
+ * Every value is a token.
+ */
+@layer pages {
+  /* The floating bar: the site's bar host while it holds the player's dock, and the player's own in fullscreen. */
+  .site-bar-host:has(> .player-dock),
+  .player-float {
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-glass);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--e-rim), var(--e-3);
+    transition: opacity var(--m-medium) var(--ease-standard);
+  }
+
+  /* Without a blur, glass would leave the scene legible beneath the bar, so the bar turns opaque. */
+  @supports not ((backdrop-filter: none) or (-webkit-backdrop-filter: none)) {
+    .site-bar-host:has(> .player-dock),
+    .player-float {
+      background: var(--c-surface-2);
+    }
+  }
+
+  /* The top bar is the floating bar's row, so it draws no surface of its own. */
+  .site-bar-host:has(> .player-dock) > .top-bar {
+    border: 0;
+    background: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .site-bar-host:has(> .player-dock[data-edge="bottom"]) {
+    inset-block-start: auto;
+    inset-block-end: max(var(--s-3), env(safe-area-inset-bottom));
+  }
+
+  /* An idle control bar fades the whole bar, unless a control in it has the keyboard's focus. */
+  :is(.site-bar-host, .player-float):has(.control-bar.idle):not(:has(:focus-visible)) {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .player-float {
+    position: absolute;
+    inset-inline: max(var(--s-2), env(safe-area-inset-left)) max(var(--s-2), env(safe-area-inset-right));
+    top: max(var(--s-2), env(safe-area-inset-top));
+    z-index: var(--z-raised);
+  }
+
+  .player-float[data-edge="bottom"] {
+    top: auto;
+    bottom: max(var(--s-2), env(safe-area-inset-bottom));
+  }
+
+  .player-float > .player-bar {
+    padding: var(--s-2);
+  }
+
+  .player-bar {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: var(--s-2);
+    min-width: 0;
+  }
+
+  /* Songs keeps the row's end, also where the title leaves the row for a chip on a phone. */
+  .player-bar > .btn {
+    flex: none;
+    margin-inline-start: auto;
+  }
+
+  /* The Songs button opens the library, so its icon takes the accent among the bar's quiet icons. */
+  .player-bar > .btn .icon {
+    color: var(--c-accent);
+  }
+
+  /*
+   * The player's actions fill the room beside the brand. The title then takes what is left, and the
+   * switches stay at the bar's end.
+   */
+  .top-bar__actions:has(> .player-actions) {
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    min-width: 0;
+  }
+
+  .player-actions {
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .top-bar__actions:has(> .player-actions) > .site-bar__switches {
+    flex: none;
+  }
+
+  /*
+   * The title's own width is none, so its text never widens the bar. It grows into the free room, and
+   * its least width on a wide bar decides whether the actions fit beside the links.
+   */
+  .player-bar > .song-title {
+    flex: 1 1 auto;
+    width: 0;
+    min-width: 0;
+    padding-inline: var(--s-1);
+    overflow: hidden;
+    color: var(--c-text);
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* A song without a guide keeps the Guide button's place, so nothing beside it moves when one loads. */
+  .player-menu > .is-absent,
+  .player-bar__menu > .is-absent {
+    visibility: hidden;
+  }
+
+  /* The top bar's open menu is a list, where the empty place would only be a gap. */
+  :popover-open .player-menu > .is-absent {
+    display: none;
+  }
+
+  /* In fullscreen the menu's items join the floating row, as icons. */
+  .player-bar__menu {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: var(--s-1);
+  }
+
+  .player-bar__menu > .btn {
+    --btn-pad: 0px;
+  }
+
+  .player-bar__menu .btn__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  /* Wide and tall, the menu is a row of the bar: each button is its icon, and its tooltip names it. */
+  @media (min-width: 1024px) and (min-height: 481px) {
+    .player-menu > .btn {
+      --btn-pad: 0px;
+    }
+
+    .player-menu .btn__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+
+    .player-bar > .song-title {
+      min-width: var(--s-12);
+    }
+  }
+
+  /* In the narrow bar's menu each button shows its label, so its tooltip would only repeat it. */
+  @media (max-width: 1023px), (max-height: 480px) {
+    .player-menu .tip {
+      display: none;
+    }
+  }
+
+  /*
+   * On a phone, the song's title leaves the crowded bar for a chip just beyond it, over the scene. The
+   * chip is a raised surface, since the scene's own theme may be dark under a light site.
+   */
+  @media (max-width: 520px) {
+    .player-bar > .song-title {
+      position: absolute;
+      top: calc(100% + var(--s-2));
+      left: var(--s-4);
+      width: auto;
+      max-width: calc(100% - var(--s-4) * 2);
+      padding: var(--s-1) var(--s-3);
+      border: 1px solid var(--c-line);
+      border-radius: var(--r-pill);
+      background: var(--c-surface-2);
+      box-shadow: var(--e-rim), var(--e-1);
+      font-size: var(--t-sm);
+      pointer-events: none;
+    }
+
+    /* A bar at the bottom puts the chip above it. */
+    :is(.site-bar-host:has(> .player-dock[data-edge="bottom"]), .player-float[data-edge="bottom"]) .player-bar > .song-title {
+      top: auto;
+      bottom: calc(100% + var(--s-2));
+    }
+  }
+
+  .player-view__app > .toasts {
+    padding-block-end: calc(var(--controls-height, 0px) + var(--s-gutter));
+  }
+
+  /* A plain link in a dialog takes the accent, the colour of everything linked. */
+  .dialog__body a:not(.btn) {
+    color: var(--c-accent);
+    font-weight: var(--w-semibold);
+  }
+}

@@ -1,0 +1,159 @@
+/*
+ * The site's font faces, its reset and its base styles: what every element looks like before a
+ * component styles it.
+ *
+ * The font is Plus Jakarta Sans, one variable file for weights 200 to 800. Its URL is relative to the
+ * built stylesheet, which sits at the root of the app beside `fonts/`. Each page preloads it.
+ *
+ * - **The font never swaps in late.** Its `font-display` is `optional`, so a page draws in the font
+ *   when it arrives in time and in the fallback otherwise. A late swap would move every text below one
+ *   that wraps differently in the two faces.
+ * - **The fallback face is Arial,** scaled to the font's mean letter width and set to its ascent and
+ *   descent. A page drawn in it keeps nearly every size and line break of the font.
+ *
+ * The reset sits in the `reset` layer and the base styles in `base`, so every component overrides them
+ * without a stronger selector.
+ */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("./fonts/plus-jakarta-sans/plus-jakarta-sans.woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans Fallback";
+  src: local("Arial"), local("Liberation Sans"), local("Arimo");
+  size-adjust: 105.07%;
+  ascent-override: 98.79%;
+  descent-override: 21.13%;
+  line-gap-override: 0%;
+}
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  img,
+  picture,
+  svg,
+  canvas,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+}
+
+@layer base {
+  html {
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--font-sans);
+    font-size: var(--t-md);
+    font-weight: var(--w-regular);
+    line-height: var(--lh-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scrollbar-color: var(--c-line-strong) transparent;
+    scrollbar-width: thin;
+    accent-color: var(--c-accent);
+  }
+
+  body {
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    font-weight: var(--w-bold);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--t-4xl);
+    font-weight: var(--w-heavy);
+  }
+
+  h2 {
+    font-size: var(--t-3xl);
+  }
+
+  h3 {
+    font-size: var(--t-2xl);
+  }
+
+  h4 {
+    font-size: var(--t-xl);
+  }
+
+  p {
+    max-width: var(--measure);
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--c-brand) 40%, transparent);
+  }
+
+  /* With reduced motion, no animation loops and no scroll glides. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

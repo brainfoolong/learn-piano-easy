@@ -1,0 +1,21 @@
+/*
+ * The embedded player's box. `src/app/embed.ts` is the home of how the embed behaves.
+ *
+ * The box keeps the size its host gives it, and the scene's canvas fills it. The scene's overlays sit
+ * inside it, so the box holds their position. A vertical swipe over the canvas scrolls the host page,
+ * since the embed sits within one, and a press on a key still plays it.
+ */
+@layer pages {
+  .player-embed {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .player-embed canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    touch-action: pan-y;
+  }
+}

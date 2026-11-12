@@ -1,0 +1,273 @@
+/*
+ * The hero's styles. `src/landing/hero.ts` is the home of what the hero holds, and
+ * `src/landing/player-box.css` styles its player's box.
+ *
+ * The hero runs the full width, with the palette's glow behind it up to the window's top, under the
+ * floating bar. Its content sits in the page's container, in two rows.
+ *
+ * - **The first row** stacks the text over the mascot on a phone and a tablet, and sets them side by
+ *   side from 1024 pixels. The mascot's greeting is a speech bubble at a corner of its video.
+ * - **The second row** is the player on a raised panel. From 1024 pixels its words stand beside its
+ *   stage, and above the stage under that.
+ * - **The stroke** under the heading's last word is a honey bar behind the letters' feet.
+ * - **The entrance:** the parts rise in one after another as the page shows. Then the stroke draws
+ *   itself from its start, and the greeting pops in with a spring. Only `transform` and `opacity` move,
+ *   and with reduced motion nothing does.
+ */
+@layer pages {
+  /* The glow reaches up behind the bar, and ends before the piano's panel does. */
+  .landing-hero::before {
+    inset-block-start: calc(-1 * var(--site-bar-space, var(--s-12)));
+    height: calc(var(--s-12) * 7);
+  }
+
+  .landing-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+    gap: var(--s-9);
+    max-width: var(--s-container);
+    margin-inline: auto;
+    padding: var(--s-7) var(--s-gutter) var(--s-10);
+  }
+
+  .landing-hero__text {
+    display: grid;
+    gap: var(--s-5);
+    justify-items: start;
+  }
+
+  .landing-hero__title {
+    font-size: var(--t-display);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .landing-hero__stroke {
+    position: relative;
+    isolation: isolate;
+    display: inline-block;
+  }
+
+  .landing-hero__stroke::after {
+    content: "";
+    position: absolute;
+    inset-inline: -0.06em;
+    inset-block-end: 0.04em;
+    z-index: -1;
+    height: 0.2em;
+    border-radius: var(--r-pill);
+    background: var(--g-brand);
+    transform: rotate(-1.5deg);
+    transform-origin: left center;
+  }
+
+  .landing-hero__lead {
+    max-width: 34ch;
+    color: var(--c-text-soft);
+    font-size: var(--t-xl);
+    line-height: var(--lh-body);
+  }
+
+  .landing-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    padding-block-start: var(--s-2);
+  }
+
+  /* What the site never asks: a row of short promises, each after a teal check. */
+  .landing-hero__proofs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2) var(--s-5);
+    margin: 0;
+    padding: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    list-style: none;
+  }
+
+  .landing-hero__proofs > li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+  }
+
+  .landing-hero__proofs .icon {
+    flex: none;
+    width: var(--s-4);
+    height: var(--s-4);
+    color: var(--c-accent);
+  }
+
+  /* The mascot's video, with its greeting as a speech bubble at a corner. */
+  .landing-hero__picture {
+    position: relative;
+    display: grid;
+  }
+
+  /*
+   * Stacked, the bubble stands under the video and overlaps only its lower edge. The video ends on the
+   * mascot's face, which fills the frame, so a bubble further in would cover the face.
+   */
+  .landing-hero__greeting {
+    position: relative;
+    justify-self: end;
+    margin-block-start: calc(-1 * var(--s-5));
+    margin-inline-end: var(--s-3);
+    max-width: min(22ch, 72%);
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--s-1) var(--r-card) var(--r-card) var(--r-card);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-2);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    line-height: var(--lh-body);
+    transform-origin: top left;
+  }
+
+  /* The living piano: its words, its stage and its controls, on a raised panel. */
+  .landing-hero__piano {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-5);
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-3);
+  }
+
+  .landing-hero__intro {
+    display: grid;
+    gap: var(--s-3);
+    padding: var(--s-2) var(--s-2) 0;
+  }
+
+  .landing-hero__demo {
+    font-size: var(--t-3xl);
+    font-weight: var(--w-heavy);
+  }
+
+  .landing-hero__about {
+    color: var(--c-text-soft);
+    line-height: var(--lh-body);
+  }
+
+  .landing-hero__controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-3) var(--s-4);
+    padding: 0 var(--s-2) var(--s-2);
+  }
+
+  .landing-hero__hint {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .landing-hero__text > *,
+    .landing-hero__picture,
+    .landing-hero__piano {
+      animation: landing-rise var(--m-large) var(--ease-emphasis) backwards;
+    }
+
+    .landing-hero__text > :nth-child(2) {
+      animation-delay: var(--landing-step);
+    }
+
+    .landing-hero__text > :nth-child(3),
+    .landing-hero__picture {
+      animation-delay: calc(var(--landing-step) * 2);
+    }
+
+    .landing-hero__text > :nth-child(4) {
+      animation-delay: calc(var(--landing-step) * 3);
+    }
+
+    .landing-hero__text > :nth-child(5) {
+      animation-delay: calc(var(--landing-step) * 4);
+    }
+
+    .landing-hero__piano {
+      animation-delay: calc(var(--landing-step) * 5);
+    }
+
+    .landing-hero__stroke::after {
+      animation: landing-draw var(--m-large) var(--ease-emphasis) backwards;
+      animation-delay: calc(var(--m-medium) + var(--landing-step));
+    }
+
+    .landing-hero__greeting {
+      animation: landing-pop var(--m-large) var(--ease-spring) backwards;
+      animation-delay: calc(var(--m-large) + var(--landing-step) * 2);
+    }
+  }
+
+  @keyframes landing-draw {
+    from {
+      transform: rotate(-1.5deg) scaleX(0);
+    }
+  }
+
+  @keyframes landing-pop {
+    from {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .landing-hero__inner {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+      gap: var(--s-10);
+      padding-block: var(--s-9) var(--s-11);
+    }
+
+    /* Side by side, the bubble leans out of the picture's upper corner, towards the text. */
+    .landing-hero__greeting {
+      position: absolute;
+      margin: 0;
+      inset: calc(-1 * var(--s-4)) auto auto calc(-1 * var(--s-7));
+      max-width: 20ch;
+      border-radius: var(--r-card) var(--r-card) var(--s-1) var(--r-card);
+      font-size: var(--t-md);
+      transform-origin: bottom right;
+    }
+
+    /* The words and the controls stand in one column beside the stage, which spans both rows. */
+    .landing-hero__piano {
+      grid-column: 1 / -1;
+      grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+      grid-template-areas:
+        "intro stage"
+        "controls stage";
+      gap: var(--s-5) var(--s-9);
+      padding: var(--s-6);
+      padding-inline-start: var(--s-8);
+    }
+
+    .landing-hero__intro {
+      grid-area: intro;
+      align-self: end;
+      padding: 0;
+    }
+
+    .landing-hero__stage {
+      grid-area: stage;
+    }
+
+    .landing-hero__controls {
+      grid-area: controls;
+      align-self: start;
+      padding: 0;
+    }
+  }
+}

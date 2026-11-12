@@ -1,0 +1,29 @@
+/*
+ * The icon button's styles. `src/ui/components/icon-button.ts` is the home of how it behaves.
+ *
+ * It draws on the button's `.btn` rules and changes only its shape and its pressed look. Its width
+ * equals its height, so it is square in every size, and a touch screen grows both to the touch size.
+ * Each rule names `.btn` too, so it wins over the button's rules whatever order the two load in.
+ */
+@layer components {
+  .btn.icon-btn {
+    flex: none;
+    width: var(--btn-height);
+    height: var(--btn-height);
+    padding: 0;
+  }
+
+  /*
+   * A toggle that is on, and a link to the page on screen: the teal edge of everything chosen, and a
+   * teal tint and ink inside a quiet variant.
+   */
+  .btn.icon-btn:is([aria-pressed="true"], [aria-current="page"]) {
+    --btn-edge: var(--c-accent);
+  }
+
+  .btn.icon-btn:is([aria-pressed="true"], [aria-current="page"]):is([data-variant="secondary"], [data-variant="ghost"]) {
+    --btn-bg: var(--c-accent-soft);
+    --btn-ink: var(--c-accent);
+    --btn-shadow: none;
+  }
+}

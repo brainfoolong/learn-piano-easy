@@ -1,0 +1,56 @@
+/*
+ * The XP counter's styles. `src/ui/components/xp-counter.ts` is the home of how it counts.
+ *
+ * The number is `--c-text` in heavy tabular figures. The star is filled in the honey of every reward,
+ * inside a deeper honey line, so its shape reads on every surface. The number and a hidden sizer share
+ * one grid cell, so the wider of them sets the width and nothing shifts.
+ */
+@layer components {
+  .xp-counter {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    max-width: 100%;
+    color: var(--c-text);
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .xp-counter .icon {
+    flex: none;
+    width: var(--s-6);
+    height: var(--s-6);
+    color: color-mix(in oklab, var(--c-reward) 78%, var(--c-brand-ink));
+    fill: var(--c-reward);
+  }
+
+  .xp-counter__cell {
+    display: inline-grid;
+    min-width: 0;
+  }
+
+  .xp-counter__number,
+  .xp-counter__sizer {
+    grid-area: 1 / 1;
+    white-space: nowrap;
+  }
+
+  .xp-counter__sizer {
+    visibility: hidden;
+  }
+
+  /* Read by screen readers, and drawn nowhere. */
+  .xp-counter__live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

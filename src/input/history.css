@@ -1,0 +1,56 @@
+/*
+ * The table of past takes, and of a pitch quiz's results. `src/input/history.ts` is the home of how the
+ * table is built, and `src/input/pitch-practice.ts` builds its quiz table in the same shape.
+ *
+ * The table is a framed block: its head is a band of small caps on the well's colour, and each row
+ * ends in a hairline. Numbers line up in columns, and only the first column reads from the left.
+ * A table wider than its dialog scrolls sideways inside the dialog's body.
+ */
+@layer pages {
+  .history-table {
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    border-spacing: 0;
+    border-collapse: separate;
+    font-size: var(--t-sm);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .history-table th,
+  .history-table td {
+    padding: var(--s-2) var(--s-3);
+    border-bottom: 1px solid var(--c-line);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .history-table th {
+    background: var(--c-sunken);
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .history-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .history-table th:first-child,
+  .history-table td:first-child {
+    text-align: left;
+  }
+
+  .history-table td:first-child {
+    font-weight: var(--w-semibold);
+  }
+
+  @media (hover: hover) {
+    .history-table tbody tr:hover td {
+      background: var(--c-accent-soft);
+    }
+  }
+}

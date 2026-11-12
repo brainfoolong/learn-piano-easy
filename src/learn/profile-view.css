@@ -1,0 +1,384 @@
+/*
+ * The profile's styles. `src/learn/profile-view.ts` is the home of what the profile shows and how it
+ * behaves.
+ *
+ * The profile reads as a trophy room. Each part is a raised card on `--c-surface-1`. Two cards share a
+ * row where the page is wide, and stack where it is narrow.
+ *
+ * - **Rewards are honey, as a fill only.** The level's disc, the flame, a day that met its goal and an
+ *   earned badge's tile take it. Every text is `--c-text` or `--c-text-soft`, and the number on the
+ *   honey disc is `--c-brand-ink`.
+ * - **Numbers stand in tabular figures,** so a count never shifts sideways.
+ * - **The level and the streak are the two heroes.** Their headings are overlines, and their numbers
+ *   are the largest text of the page. The cards below carry plain headings.
+ * - **A tint behind text is mixed in sRGB,** which the layout check reads.
+ *
+ * Only `transform` and `opacity` move: the cards rise in once, and only where motion is allowed.
+ */
+@layer pages {
+  .profile {
+    max-width: var(--measure);
+  }
+
+  .profile__body {
+    display: grid;
+    gap: var(--s-6);
+  }
+
+  /* Until the first read, the body fills the screen, so the footer stays below it and never shifts. */
+  .profile__body[aria-busy="true"] {
+    min-height: 100dvh;
+  }
+
+  .profile__pair {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--s-6);
+  }
+
+  .profile__card {
+    display: grid;
+    align-content: start;
+    gap: var(--s-4);
+    min-width: 0;
+    padding: var(--s-6);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  @media (max-width: 479px) {
+    .profile__card {
+      padding: var(--s-5);
+    }
+  }
+
+  .profile__heading {
+    margin: 0;
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  /* The two heroes: an overline, then an emblem beside the card's number. */
+  :is(.profile__level, .profile__streak) > .profile__heading {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .profile__hero {
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+  }
+
+  .profile__hero-text {
+    display: grid;
+    gap: var(--s-1);
+    min-width: 0;
+  }
+
+  .profile__emblem {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-10);
+    height: var(--s-10);
+    border-radius: var(--r-pill);
+    font-size: var(--t-2xl);
+    font-weight: var(--w-heavy);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .profile__emblem--level {
+    border: 1px solid color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    background: var(--g-brand) border-box var(--c-brand);
+    box-shadow:
+      inset 0 2px 0 rgb(255 255 255 / 0.5),
+      var(--e-glow);
+    color: var(--c-brand-ink);
+  }
+
+  .profile__emblem--streak {
+    border: 1px solid color-mix(in srgb, var(--c-brand) 55%, var(--c-surface-1));
+    background: color-mix(in srgb, var(--c-brand) 18%, var(--c-surface-1));
+  }
+
+  .profile__emblem .icon {
+    width: var(--s-7);
+    height: var(--s-7);
+    color: var(--c-brand-text);
+    fill: var(--c-brand);
+  }
+
+  .profile__big {
+    margin: 0;
+    font-size: var(--t-3xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .profile__soft,
+  .profile__status {
+    margin: 0;
+    color: var(--c-text-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* The streak's two facts, under a line that parts them from the hero. */
+  .profile__facts {
+    display: grid;
+    gap: var(--s-1);
+    padding-block-start: var(--s-4);
+    border-top: 1px solid var(--c-line);
+  }
+
+  .profile__label {
+    display: block;
+    margin: 0;
+    font-weight: var(--w-bold);
+  }
+
+  /* What the last action did, as a note in the blue of information. */
+  .profile__status {
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-control);
+    background: color-mix(in srgb, var(--c-info) 9%, var(--c-surface-1));
+    color: var(--c-text);
+  }
+
+  .profile__status:empty {
+    display: none;
+  }
+
+  /* The calendar: a letter per weekday over eight rows of seven days, each a small rounded square. */
+  .profile__month {
+    display: grid;
+    gap: var(--s-2);
+    justify-self: start;
+    width: min(100%, calc(7 * var(--s-7) + 6 * var(--s-2)));
+  }
+
+  .profile__weekdays,
+  .profile__calendar {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--s-2);
+  }
+
+  .profile__weekdays {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    text-align: center;
+  }
+
+  .profile__day {
+    position: relative;
+    display: block;
+    aspect-ratio: 1;
+    min-width: var(--s-3);
+    border: 1px solid var(--c-line);
+    border-radius: var(--s-2);
+    background: var(--c-sunken);
+  }
+
+  .profile__day[data-state="met"] {
+    border-color: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    background: var(--g-brand) border-box var(--c-brand);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5);
+  }
+
+  .profile__day[data-state="played"] {
+    border: 2px solid var(--c-brand-text);
+    background: color-mix(in srgb, var(--c-brand) 18%, var(--c-surface-1));
+  }
+
+  .profile__day[data-state="ahead"] {
+    border-style: dashed;
+    background: none;
+    opacity: 0.5;
+  }
+
+  /* Today: a teal ring around its square, whatever its state. */
+  .profile__day[data-today="true"] {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 2px;
+  }
+
+  .profile__key {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2) var(--s-4);
+    margin: 0;
+    padding: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    list-style: none;
+  }
+
+  .profile__key li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+  }
+
+  .profile__key .profile__day {
+    width: var(--s-4);
+    border-radius: var(--s-1);
+  }
+
+  /* The stats: four tiles, each a well with its number over its name. They share the card's free height. */
+  .profile__numbers {
+    grid-template-rows: auto 1fr;
+    align-content: stretch;
+  }
+
+  .profile__stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: var(--s-3);
+    margin: 0;
+  }
+
+  .profile__stats div {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    gap: var(--s-1);
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-sunken);
+  }
+
+  .profile__stats dt {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .profile__stats dd {
+    margin: 0;
+    font-size: var(--t-3xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* The badges: the count in a honey pill beside the heading, then a tile per badge. */
+  .profile__all-badges {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .profile__all-badges > .profile__soft {
+    padding: var(--s-1) var(--s-3);
+    border: 1px solid color-mix(in srgb, var(--c-brand) 55%, var(--c-surface-1));
+    border-radius: var(--r-pill);
+    background: color-mix(in srgb, var(--c-brand) 18%, var(--c-surface-1));
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    white-space: nowrap;
+  }
+
+  .profile__badges {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
+    gap: var(--s-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /*
+   * A badge's tile: a well while the badge is locked, and a raised tile on a honey tint once earned.
+   * One column as wide as the tile, so a long word wraps inside it rather than widening it.
+   */
+  .profile__badge {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    align-content: start;
+    gap: var(--s-2);
+    min-width: 0;
+    padding: var(--s-4) var(--s-3);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-sunken);
+    overflow-wrap: anywhere;
+    text-align: center;
+  }
+
+  .profile__badge[data-earned="true"] {
+    border-color: color-mix(in srgb, var(--c-brand) 55%, var(--c-surface-1));
+    background: color-mix(in srgb, var(--c-brand) 12%, var(--c-surface-1));
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  .profile__badge-text {
+    justify-self: stretch;
+    font-size: var(--t-sm);
+    line-height: 1.4;
+  }
+
+  /* The settings: each choice a row, parted from the next by a line. */
+  .profile__choice {
+    display: grid;
+    gap: var(--s-2);
+  }
+
+  .profile__choice + .profile__choice {
+    padding-block-start: var(--s-4);
+    border-top: 1px solid var(--c-line);
+  }
+
+  .profile__switch {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--s-4);
+    cursor: pointer;
+  }
+
+  .profile__switch > span {
+    display: grid;
+    gap: var(--s-1);
+  }
+
+  .profile__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+  }
+
+  /*
+   * Where motion is allowed, the cards rise in once, as the first read ends. The body carries the move,
+   * since a later draw makes the cards anew and must not replay it.
+   */
+  @media (prefers-reduced-motion: no-preference) {
+    .profile__body:not([aria-busy]) {
+      animation: profile-rise var(--m-large) var(--ease-emphasis) both;
+    }
+  }
+
+  @keyframes profile-rise {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+}

@@ -1,0 +1,53 @@
+/** *Reading steps and skips* in German. */
+import type { ReadingStepsAndSkipsTexts } from "./reading-steps-and-skips.en";
+
+export const readingStepsAndSkipsDe: ReadingStepsAndSkipsTexts = {
+  title: "Schritte und Sprünge lesen",
+  steps: {
+    "moves-demo": {
+      text: "Hör zu. Zuerst steigen die Töne in Schritten, dann in Sprüngen. In den Noten sieht jede Bewegung anders aus.",
+    },
+    "step-on-the-staff": {
+      text: "Ein Schritt geht von einer Notenlinie in den nächsten Zwischenraum oder von einem Zwischenraum auf die nächste Linie. Auf den Tasten ist das die nächste weiße Taste.",
+    },
+    "step-from-line-quiz": {
+      text: "Ein Ton steht auf einer Linie. Wo steht der Ton einen Schritt höher?",
+      answers: ["Im Zwischenraum direkt darüber", "Auf der nächsten Linie darüber", "Zwei Linien höher"],
+    },
+    "skip-on-the-staff": {
+      text: "Ein Sprung geht von einer Linie zur nächsten Linie oder von einem Zwischenraum zum nächsten. Auf den Tasten lässt er eine weiße Taste aus.",
+    },
+    "step-or-skip-quiz": {
+      text: "Ein Ton geht von einer Linie zur nächsten Linie nach oben. Ist das ein Schritt oder ein Sprung?",
+      answers: ["Ein Schritt", "Ein Sprung"],
+    },
+    "space-to-line-quiz": {
+      text: "Ein Ton geht von einem Zwischenraum auf die Linie direkt darüber. Ist das ein Schritt oder ein Sprung?",
+      answers: ["Ein Schritt", "Ein Sprung"],
+    },
+    "read-by-moves": {
+      text: "Du musst nicht jeden Ton einzeln benennen. Lies den ersten Ton, dann jede Bewegung: nach oben oder unten, Schritt oder Sprung.",
+    },
+    "skip-from-e-quiz": {
+      text: "Ein Ton ist das E auf der untersten Linie im Violinschlüssel. Der nächste Ton steht auf der Linie darüber. Welcher Ton ist es?",
+      answers: ["D", "F", "G"],
+    },
+    "first-note": {
+      text: "Mit diesem Ton beginnt das nächste Lied. Wie heißt er?",
+    },
+    "song-notes": {
+      text: "Das nächste Lied braucht diese fünf Töne. Lies jeden und spiel ihn mit der rechten Hand.",
+    },
+    "song-opening": {
+      text: "So beginnt das nächste Lied. Ein Ton kommt dreimal, dann geht es abwärts. Danach geht es in Schritten weiter. Folge der markierten Taste.",
+    },
+    "opening-move-quiz": {
+      text: "In dieser Melodie geht das E abwärts zum D. Das E steht auf der untersten Linie. Wo steht das D?",
+      answers: ["Im Zwischenraum direkt darunter", "Auf der Linie darunter", "Auf derselben Linie"],
+    },
+    recap: {
+      text: "Gut gemacht. Jetzt liest du eine Melodie an ihren Bewegungen.",
+      points: ["Ein Schritt geht von der Linie in den nächsten Zwischenraum oder umgekehrt.", "Ein Sprung geht von Linie zu Linie oder von Zwischenraum zu Zwischenraum.", "Lies den ersten Ton, dann die Richtung und die Größe jeder Bewegung."],
+    },
+  },
+};

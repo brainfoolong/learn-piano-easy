@@ -1,0 +1,63 @@
+/*
+ * The offline files dialog's body. `src/pwa/cache-manager.ts` is the home of how it behaves.
+ *
+ * Each cache group is an inset block with its heading, what it holds, its status and its buttons. Its
+ * switch reuses the settings panel's row without the reset column, parted from the buttons by a hairline.
+ */
+@layer pages {
+  .cache-manager {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+
+  .cache-manager p {
+    margin: 0;
+  }
+
+  .cache-manager > p {
+    color: var(--c-text-soft);
+  }
+
+  .cache-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-bg);
+  }
+
+  .cache-group h3 {
+    margin: 0;
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+  }
+
+  .cache-status {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .cache-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin-top: var(--s-1);
+  }
+
+  .cache-group .setting-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    margin-top: var(--s-2);
+    padding: var(--s-3) 0 0;
+    border-top: 1px solid var(--c-line);
+    border-bottom: none;
+  }
+
+  .cache-group .setting-label {
+    font-weight: var(--w-semibold);
+  }
+}

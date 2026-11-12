@@ -1,0 +1,260 @@
+/*
+ * The celebrations' styles. `src/learn/game/celebrate.ts` is the home of how a moment behaves.
+ *
+ * A moment fills the viewport in the top layer, on the page's own colour. Its art stands on a stage: a
+ * plate ringed in honey, with rays turning behind it, stars around it and the mascot's portrait at its
+ * edge. The particles' canvas covers it all and takes no pointer.
+ *
+ * - **Honey is the reward's colour, as a fill only.** It fills the ring, the rays, the stars and the
+ *   pill of the reward's name, whose text is `--c-brand-ink`. The level's number is `--c-text`.
+ * - **This is the one big animation.** The stars spring in one after another and then twinkle, the rays
+ *   turn, and the mascot springs in and bobs. Only `transform` and `opacity` move.
+ * - **With reduced motion it only fades.** The stars and the mascot fade in, and nothing turns or bobs.
+ */
+@layer components {
+  .moment[open] {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    padding: var(--s-6) var(--s-gutter);
+    border: none;
+    background: var(--c-bg);
+    color: var(--c-text);
+    overflow: hidden auto;
+  }
+
+  .moment::backdrop {
+    background: var(--c-scrim);
+  }
+
+  .moment__burst {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .moment__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-4);
+    max-width: var(--measure);
+    text-align: center;
+  }
+
+  /* The stage: the room the plate, its rays, its stars and the mascot share. */
+  .moment__stage {
+    --moment-plate: calc(var(--s-12) + var(--s-9));
+
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    width: calc(var(--s-12) * 2.5);
+    max-width: 100%;
+    height: calc(var(--s-12) * 2);
+    margin-block-end: var(--s-2);
+  }
+
+  /* The rays: a honey sunburst that fades towards its rim. The mask reads only the alpha of its black. */
+  .moment__rays {
+    position: absolute;
+    inset: calc(-1 * var(--s-10));
+    z-index: -1;
+    border-radius: var(--r-pill);
+    background: repeating-conic-gradient(color-mix(in oklab, var(--c-brand) 34%, transparent) 0deg 9deg, transparent 9deg 18deg);
+    mask-image: radial-gradient(closest-side, rgb(0 0 0) 25%, transparent 100%);
+    pointer-events: none;
+    animation: moment-turn calc(var(--m-reward) * 30) linear infinite;
+  }
+
+  @keyframes moment-turn {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  /* The plate: a disc with a ring of the honey sheen and its glow. */
+  .moment__art {
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    width: var(--moment-plate);
+    height: var(--moment-plate);
+    border: var(--s-2) solid transparent;
+    border-radius: var(--r-pill);
+    background:
+      linear-gradient(var(--c-surface-1), var(--c-surface-1)) padding-box,
+      var(--g-brand) border-box;
+    box-shadow:
+      var(--e-3),
+      0 0 var(--s-10) color-mix(in oklab, var(--c-brand) 50%, transparent);
+  }
+
+  .moment__level {
+    font-size: var(--t-display);
+    font-weight: var(--w-heavy);
+    line-height: 1;
+    letter-spacing: var(--ls-heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* The stars: each springs in at its own place, a moment after the one before, and then twinkles. */
+  .moment__stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .moment__star {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: var(--size, var(--s-6));
+    height: var(--size, var(--s-6));
+    margin: calc(var(--size, var(--s-6)) / -2);
+    animation: moment-pop var(--m-large) var(--ease-spring) both;
+    animation-delay: calc(var(--m-medium) + var(--i) * var(--m-micro) / 1.5);
+  }
+
+  .moment__star .icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    fill: var(--c-brand);
+    stroke-width: 1.25;
+    animation: moment-twinkle var(--m-reward) var(--ease-standard) infinite alternate;
+    animation-delay: calc(var(--i) * var(--m-small));
+  }
+
+  .moment__star:nth-child(1) {
+    --x: 8%;
+    --y: 30%;
+    --size: var(--s-7);
+  }
+
+  .moment__star:nth-child(2) {
+    --x: 20%;
+    --y: 6%;
+    --size: var(--s-5);
+  }
+
+  .moment__star:nth-child(3) {
+    --x: 84%;
+    --y: 10%;
+    --size: var(--s-8);
+  }
+
+  .moment__star:nth-child(4) {
+    --x: 96%;
+    --y: 44%;
+    --size: var(--s-5);
+  }
+
+  .moment__star:nth-child(5) {
+    --x: 12%;
+    --y: 78%;
+    --size: var(--s-5);
+  }
+
+  .moment__star:nth-child(6) {
+    --x: 66%;
+    --y: 0%;
+    --size: var(--s-4);
+  }
+
+  @keyframes moment-pop {
+    from {
+      opacity: 0;
+      transform: scale(0) rotate(-60deg);
+    }
+  }
+
+  @keyframes moment-twinkle {
+    from {
+      transform: scale(1) rotate(0deg);
+    }
+
+    to {
+      transform: scale(0.78) rotate(12deg);
+    }
+  }
+
+  /* The mascot cheers at the plate's lower edge: it springs in, then bobs. */
+  .moment__cheer {
+    position: absolute;
+    inset-block-end: var(--s-2);
+    inset-inline-end: calc(50% - var(--moment-plate) / 2 - var(--s-5));
+    animation: moment-pop var(--m-large) var(--ease-spring) both;
+    animation-delay: var(--m-large);
+  }
+
+  .moment__cheer .mascot {
+    animation: moment-bob var(--m-large) var(--ease-standard) infinite alternate;
+  }
+
+  @keyframes moment-bob {
+    to {
+      transform: translateY(calc(-1 * var(--s-2))) rotate(4deg);
+    }
+  }
+
+  .moment__heading {
+    margin: 0;
+    font-size: var(--t-4xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  /* The reward's name, in a pill of the honey sheen. */
+  .moment__name {
+    margin: 0;
+    padding: var(--s-2) var(--s-5);
+    border: 1px solid color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    border-radius: var(--r-pill);
+    background: var(--g-brand) border-box var(--c-brand);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5), var(--e-1);
+    color: var(--c-brand-ink);
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+  }
+
+  .moment__text {
+    margin: 0 0 var(--s-4);
+    color: var(--c-text-soft);
+    font-size: var(--t-lg);
+  }
+
+  @keyframes moment-fade {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .moment__rays,
+    .moment__star .icon,
+    .moment__cheer .mascot {
+      animation: none;
+    }
+
+    .moment__star,
+    .moment__cheer {
+      animation-name: moment-fade;
+      animation-timing-function: var(--ease-standard);
+    }
+  }
+}

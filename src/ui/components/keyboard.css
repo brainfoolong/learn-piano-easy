@@ -1,0 +1,135 @@
+/*
+ * The keyboard's styles. `src/ui/components/keyboard.ts` is the home of how the keyboard behaves.
+ *
+ * White keys are `--c-surface-2` and black keys are dark in both themes, each with a firm edge. A mark
+ * sets `--key-mark`, its fill, and `--key-mark-edge`, the same hue where it draws a line. The next key
+ * is honey, a right one green and a wrong one red. A white key takes a tint of the fill and a black key
+ * all of it. A held key sinks by a `transform` and mixes towards `--c-text`.
+ *
+ * Sizes are user units of the drawing, so they scale with it.
+ */
+@layer components {
+  .keyboard {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .keyboard__drawing {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+  }
+
+  .keyboard[data-interactive="true"] .keyboard__drawing {
+    touch-action: none;
+    cursor: pointer;
+  }
+
+  .keyboard__key {
+    --key-fill: var(--c-surface-2);
+  }
+
+  .keyboard__key[data-black="true"] {
+    --key-fill: light-dark(var(--c-text), var(--c-bg));
+  }
+
+  /* Honey is a fill only, so the next key's line reads the honey that is safe as an edge. */
+  .keyboard__key[data-mark="next"],
+  .keyboard__finger[data-mark="next"] {
+    --key-mark: var(--c-brand);
+    --key-mark-edge: var(--c-brand-text);
+  }
+
+  .keyboard__key[data-mark="correct"],
+  .keyboard__finger[data-mark="correct"] {
+    --key-mark: var(--c-success);
+    --key-mark-edge: var(--c-success);
+  }
+
+  .keyboard__key[data-mark="mistake"],
+  .keyboard__finger[data-mark="mistake"] {
+    --key-mark: var(--c-mistake);
+    --key-mark-edge: var(--c-mistake);
+  }
+
+  /* The tint is stronger in the light theme, where a mark's colour is deep and the key is white. */
+  .keyboard__key[data-mark] {
+    --key-fill: light-dark(
+      color-mix(in oklab, var(--key-mark) 42%, var(--c-surface-2)),
+      color-mix(in oklab, var(--key-mark) 30%, var(--c-surface-2))
+    );
+  }
+
+  .keyboard__key[data-black="true"][data-mark] {
+    --key-fill: var(--key-mark);
+  }
+
+  .keyboard__key > * {
+    transition:
+      fill var(--m-micro) var(--ease-standard),
+      transform var(--m-micro) var(--ease-standard);
+  }
+
+  .keyboard__key rect {
+    fill: var(--key-fill);
+    stroke: var(--c-line-strong);
+    stroke-width: 1;
+  }
+
+  /* A held key and its name sink together. */
+  .keyboard__key[data-pressed] > * {
+    transform: translateY(2px);
+  }
+
+  .keyboard__key[data-pressed] rect {
+    fill: color-mix(in oklab, var(--key-fill) 82%, var(--c-text));
+  }
+
+  .keyboard__name {
+    fill: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    text-anchor: middle;
+  }
+
+  .keyboard__key[data-mark] .keyboard__name {
+    fill: var(--c-text);
+  }
+
+  .keyboard__finger[hidden] {
+    display: none;
+  }
+
+  .keyboard__finger circle {
+    fill: none;
+    stroke: var(--key-mark-edge, var(--c-text-soft));
+    stroke-width: 2;
+  }
+
+  .keyboard__finger text {
+    fill: var(--c-text);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    text-anchor: middle;
+    dominant-baseline: central;
+  }
+
+  /* Read by screen readers, and drawn nowhere. */
+  .keyboard__live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .keyboard__key > * {
+      transition: none;
+    }
+  }
+}

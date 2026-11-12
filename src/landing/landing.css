@@ -1,0 +1,163 @@
+/*
+ * The landing page's shared styles: its frame, its hues, the parts several bands share, and how a part
+ * enters. `src/landing/landing.ts` is the home of the bands, their order and their hues.
+ * `src/landing/hero.css` styles the hero, and `src/landing/bands.css` every band after it.
+ *
+ * - **A hue is a set of custom properties.** `data-hue` on a section sets `--band-text` for its
+ *   overline, `--band-vivid` for a mark or an edge, `--band-soft` for its ground, and `--band-fill`
+ *   with `--band-ink` for a tile. Honey's overline stays in the soft text colour, since honey is a fill.
+ * - **A tinted band** is a section of the tone `band`. It takes its hue's tint as its ground, so plain
+ *   and tinted bands alternate down the page.
+ * - **The glow** is `--g-aura` on a layer behind the hero and the last call, so their text keeps the
+ *   page's own colour behind it.
+ * - **A tile** is a small raised square in the band's fill, which holds an icon or a step's number.
+ * - **An entrance** is `landing-rise`: a part rises by `--landing-rise` and fades in. A part marked
+ *   `data-reveal` by `src/landing/reveal.ts` plays it, after its place in the order. Only `transform`
+ *   and `opacity` move. With reduced motion no entrance exists.
+ */
+@layer pages {
+  .landing {
+    --landing-step: calc(var(--m-micro) / 2);
+    --landing-rise: calc(var(--motion-rise) * 3);
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    /* A glow or a rising part may reach past the window's edge, and must never widen the page. */
+    overflow-x: clip;
+  }
+
+  /* The hues. The four promises of the free band take one each, in the palette's order. */
+  .landing [data-hue="honey"],
+  .landing-free__promise:nth-child(4n + 1) {
+    --band-text: var(--c-text-soft);
+    --band-vivid: var(--c-brand);
+    --band-soft: var(--c-brand-soft);
+    --band-fill: var(--g-brand);
+    --band-ink: var(--c-brand-ink);
+  }
+
+  .landing [data-hue="teal"],
+  .landing-free__promise:nth-child(4n + 2) {
+    --band-text: var(--c-accent);
+    --band-vivid: var(--c-accent-vivid);
+    --band-soft: var(--c-accent-soft);
+    --band-fill: var(--c-accent);
+    --band-ink: var(--c-accent-ink);
+  }
+
+  .landing [data-hue="iris"],
+  .landing-free__promise:nth-child(4n + 3) {
+    --band-text: var(--c-iris);
+    --band-vivid: var(--c-iris-vivid);
+    --band-soft: var(--c-iris-soft);
+    --band-fill: var(--c-iris);
+    --band-ink: var(--c-iris-ink);
+  }
+
+  .landing [data-hue="orchid"],
+  .landing-free__promise:nth-child(4n + 4) {
+    --band-text: var(--c-orchid);
+    --band-vivid: var(--c-orchid-vivid);
+    --band-soft: var(--c-orchid-soft);
+    --band-fill: var(--c-orchid);
+    --band-ink: var(--c-orchid-ink);
+  }
+
+  /* A section's overline takes its hue, and a tinted band its hue's ground. */
+  .landing .section[data-hue] .section__eyebrow {
+    color: var(--band-text);
+  }
+
+  .landing .section[data-hue] .section__eyebrow::before {
+    background: var(--band-vivid);
+  }
+
+  .landing .section[data-hue][data-tone="band"] {
+    border-block: 1px solid color-mix(in oklab, var(--band-vivid) 16%, var(--c-line));
+    background: var(--band-soft);
+  }
+
+  /* The glow behind the hero and the last call. */
+  .landing-hero,
+  .landing-last {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .landing-hero::before,
+  .landing-last::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    z-index: -1;
+    background: var(--g-aura);
+    pointer-events: none;
+  }
+
+  /* An overline of the hero: small caps after a honey mark, drawn as a section's overline is. */
+  .landing-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .landing-eyebrow::before {
+    content: "";
+    flex: none;
+    width: var(--s-5);
+    height: var(--s-1);
+    border-radius: var(--r-pill);
+    background: var(--c-brand);
+  }
+
+  /* A tile: a raised square in the band's fill, for an icon or a number. */
+  .landing-tile {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-9);
+    height: var(--s-9);
+    border-radius: var(--r-control);
+    background: var(--band-fill);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.3),
+      var(--e-1);
+    color: var(--band-ink);
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+  }
+
+  .landing-tile .icon {
+    width: var(--s-6);
+    height: var(--s-6);
+  }
+
+  /* The entrance of a part that scrolls into view, after its place among those that enter with it. */
+  @media (prefers-reduced-motion: no-preference) {
+    .landing [data-reveal] {
+      animation: landing-rise var(--m-large) var(--ease-emphasis) backwards;
+      animation-delay: calc(var(--landing-step) * (1 + var(--reveal-order, 0)));
+    }
+  }
+
+  @keyframes landing-rise {
+    from {
+      opacity: 0;
+      transform: translateY(var(--landing-rise));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .landing .section {
+      padding-block: var(--s-11);
+    }
+  }
+}

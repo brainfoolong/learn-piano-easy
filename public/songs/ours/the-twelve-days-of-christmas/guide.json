@@ -1,0 +1,355 @@
+{
+  "song": "the-twelve-days-of-christmas",
+  "title": "The Twelve Days of Christmas",
+  "composer": "Frederic Austin",
+  "about": "The Twelve Days of Christmas is an English carol and nursery rhyme. Its words were first printed in London in 1780, in a children's book called Mirth Without Mischief. The tune sung today comes from the English singer Frederic Austin, and his arrangement was published in 1909. Austin wrote that the song was current in his family when he was a child.",
+  "funFact": "People once played the song as a memory game. Each player repeated the gifts, and every slip cost a forfeit, such as a kiss or a sweet.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/the-twelve-days-of-christmas/common.mid",
+      "skills": [
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [1, 1, 1, 2, 2, 2, 1, 2, 3, 4, 5, 1, 2, 3, 5, 4, 5, 4, 3, 2, 1, 5, 1, 3, 4, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 2, 1],
+        "left": [5, 4, 1, 4, 1, 5, 1, 5, 1, 4, 4, 1, 4, 1, 5, 1, 2, 4, 1, 5, 1, 2, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [55, 60, null, null, null],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first three bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 3],
+          "wait": true
+        },
+        {
+          "text": "Play bars 4 to 7 with the right hand alone, from the gold rings down to the low A.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [4, 7],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It changes its shape only at the start and the middle of each bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "The thumb plays the three low Gs, and finger 2 takes each C of bar 2."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "rhythm",
+          "text": "Hold the long G for the whole bar while you count to eight. That is the gold ring."
+        },
+        {
+          "fromBar": 6,
+          "toBar": 7,
+          "kind": "trick",
+          "text": "After the short rest, the thumb lands on the low A. Finger 5 has just let go of F."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Fingers 3, 4 and 5 climb to F. Then the thumb slides up to D, and finger 2 holds the long E."
+        },
+        {
+          "bar": 6,
+          "text": "Play the G again with finger 5, then walk down to C with the thumb. Lift the hand before the low A."
+        },
+        {
+          "bar": 4,
+          "text": "Finger 3 holds G, then finger 5 reaches up to A. The left hand moves from its fifth to a lone D."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/the-twelve-days-of-christmas/rare.mid",
+      "skills": [
+        "triads"
+      ],
+      "fingers": {
+        "right": [1, 1, 1, 2, 2, 2, 1, 2, 3, 4, 5, 1, 2, 3, 5, 4, 5, 5, 4, 3, 2, 1, 5, 2, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1, 2, 3, 4, 5, 1, 2, 3, 5, 4, 5, 5, 4, 3, 2, 1, 5, 2, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 2, 1],
+        "left": [5, 3, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 4, 2, 1, 4, 1, 5, 1, 5, 2, 4, 2, 1, 5, 3, 5, 2, 4, 1, 5, 3, 1, 5, 3, 1, 4, 2, 5, 3, 1, 1, 4, 2, 1, 4, 2, 5, 3, 1, 5, 3, 1, 4, 1, 4, 2, 1, 4, 2, 1, 4, 5, 2, 2, 5, 1, 4, 2, 5, 3, 1, 2, 5, 1, 4, 5, 3, 1]
+      },
+      "start": {
+        "right": [55, 60, null, null, null],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone on the first verse, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play bars 3 to 5 with the right hand alone, where the gold rings climb to A and F sharp.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [3, 5],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "fingering",
+          "text": "Finger 4 plays the F sharp, a black key. Then finger 5 lands on the long G."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "After the low G, the hand moves up so finger 2 plays E. The G is long, so there is time."
+        },
+        {
+          "fromBar": 11,
+          "toBar": 18,
+          "kind": "sound",
+          "text": "In the second verse, play the low note a little louder than the chord after it."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 10,
+          "text": "The thumb leaves the last C and lands on the low G for the next verse. The left hand plays C, then D and F."
+        },
+        {
+          "bar": 3,
+          "text": "Fingers 3, 4 and 5 climb to F. Then the thumb slides up to D, and finger 2 holds the long E."
+        },
+        {
+          "bar": 12,
+          "text": "The same notes as bar 3, now over a bass and a chord in turns."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/the-twelve-days-of-christmas/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "broken-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [1, 1, 1, 2, 2, 2, 1, 2, 3, 4, 5, 1, 2, 3, 5, 4, 5, 5, 4, 3, 2, 1, 5, 2, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1, 2, 3, 4, 5, 1, 2, 3, 5, 4, 5, 5, 4, 3, 2, 1, 5, 2, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 2, 1],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 2, 3, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the broken chords of the second verse in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [11, 14],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune rings above it."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 10,
+          "kind": "trick",
+          "text": "Both hands move down here. The right thumb lands on the low G, and the left hand on a low G."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 18,
+          "kind": "sound",
+          "text": "Change the pedal each half bar, as the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": "The right hand moves up from the low G, so finger 2 plays E. The left hand turns from C to F."
+        },
+        {
+          "bar": 12,
+          "text": "Fingers 3, 4 and 5 climb to F, and the thumb slides up to D. The left hand turns from G to C."
+        },
+        {
+          "bar": 15,
+          "text": "The right hand walks down from G to C, then finger 5 reaches up to F. Lift the left hand after each chord."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/the-twelve-days-of-christmas/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [1, 1, 1, 2, 2, 2, 1, 2, 3, 4, 5, 1, 2, 3, 5, 4, 5, 5, 4, 3, 2, 1, 5, 2, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 2, 1, 1, 1, 1, 2, 2, 2, 1, 2, 3, 4, 5, 1, 2, 3, 5, 4, 1, 5, 5, 4, 3, 2, 1, 5, 2, 4, 5, 4, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 2, 1, 2, 3, 5],
+        "left": [5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [48, null, null, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the arpeggios of the second verse in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [11, 14],
+          "wait": false
+        },
+        {
+          "text": "Play bars 13 to 15 with both hands slowly, where the arpeggios run under the gold rings.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [13, 15],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 11,
+          "toBar": 18,
+          "kind": "fingering",
+          "text": "In each arpeggio, finger 3 crosses over the thumb on the way up."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 14,
+          "kind": "sound",
+          "text": "Let the octave on G ring for the whole bar, like a gold ring held up to the light."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 14,
+          "text": "The right hand holds the G octave, while the left hand runs G arpeggios below it."
+        },
+        {
+          "bar": 17,
+          "text": "The right hand moves up from the G, so finger 2 plays E. The left hand turns from C to F."
+        },
+        {
+          "bar": 15,
+          "text": "Finger 5 plays G again and the hand walks down to C. Below it, the arpeggios turn from G to C, then F."
+        }
+      ]
+    }
+  }
+}

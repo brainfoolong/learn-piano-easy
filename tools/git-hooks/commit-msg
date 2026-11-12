@@ -1,0 +1,33 @@
+#!/bin/sh
+# looper:begin commit-msg v3
+# Checks the commit message with `looper hook commit-msg`: the Conventional Commits subject, the blank
+# second line, and no trailer of any kind. docs/agent/conventions.md § *A commit message* is the home
+# of the shape.
+#
+# Enabled per clone, because git does not version `.git/hooks`:
+#
+#     git config core.hooksPath tools/git-hooks
+#
+# A project that carries the kit's copy in `tools/looper/` runs the copy's check, when Bun is on PATH.
+# With neither that nor looper on PATH, it checks the trailers alone with grep. It refuses a line whose
+# key is a trailer key, or that reads `Generated with [`, and lets any other message through. Never
+# bypass it with `--no-verify`.
+
+if [ -f tools/looper/main.ts ] && command -v bun >/dev/null 2>&1; then
+    exec bun tools/looper/main.ts hook commit-msg "$1"
+fi
+
+if ! command -v looper >/dev/null 2>&1; then
+    # The second grep runs in the C locale, since in a UTF-8 one `[^a-z`]` does not match an emoji.
+    keys='co-authored-by|signed-off-by|generated-by|generated-with|assisted-by|authored-by|reviewed-by|on-behalf-of|committed-by|created-by|made-with'
+    found=$(grep -v '^#' "$1" | LC_ALL=C grep -Ei "^[[:space:]]*($keys)[[:space:]]*:|^[^a-z\`]*(generated|created|made)[[:space:]]+(with|by)[[:space:]]+\\[")
+    if [ -n "$found" ]; then
+        echo "commit-msg: the message holds a trailer, and no trailer is allowed. The commit is refused:" >&2
+        echo "$found" >&2
+        exit 1
+    fi
+    echo "commit-msg: looper is not on PATH, so only the trailers were checked." >&2
+    exit 0
+fi
+
+exec looper hook commit-msg "$1"

@@ -1,0 +1,355 @@
+{
+  "song": "twinkle-twinkle-little-star",
+  "title": "Twinkle Twinkle Little Star",
+  "composer": "Traditional",
+  "about": "This tune began as a French song, \"Ah! vous dirai-je, maman\", first printed in 1761. Mozart wrote twelve variations on it for the piano. In 1806 Jane Taylor wrote her poem about a little star, and children have sung it to this tune ever since.",
+  "funFact": "The alphabet song and \"Baa, Baa, Black Sheep\" are sung to this same tune.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/twinkle-twinkle-little-star/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [1, 1, 4, 4, 5, 5, 4, 4, 4, 3, 3, 2, 2, 1, 5, 5, 4, 4, 3, 3, 2, 5, 5, 4, 4, 3, 3, 2, 1, 1, 4, 4, 5, 5, 4, 4, 4, 3, 3, 2, 2, 1],
+        "left": [1, 5, 1, 5, 1, 4, 1, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 5, 1, 4, 1]
+      },
+      "start": {
+        "right": [60, null, null, 67, 69],
+        "left": [48, null, null, 43, 41]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It only moves between C, F and G.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 12],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the first four bars.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "Put your thumb on middle C. Finger 4 plays G, and the little finger plays A."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "rhythm",
+          "text": "The last C is twice as long as the notes before it, so count two beats."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "The middle part says the same thing twice. Play it softer the second time, like an echo."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Your hand moves one key down here, so finger 4 leaves G and lands on F."
+        },
+        {
+          "bar": 11,
+          "text": "This is bar 3 again. Slide the hand one key down, so finger 4 lands on F."
+        },
+        {
+          "bar": 5,
+          "text": "Your little finger plays G now. Walk down from it, one finger per key: 5, 4, 3, 2."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/twinkle-twinkle-little-star/rare.mid",
+      "skills": [
+        "eighth-notes",
+        "triads"
+      ],
+      "fingers": {
+        "right": [1, 1, 4, 4, 5, 5, 4, 4, 4, 3, 3, 2, 2, 3, 1, 5, 5, 4, 4, 5, 3, 3, 2, 5, 5, 4, 3, 4, 3, 3, 2, 1, 1, 4, 4, 5, 5, 4, 4, 4, 3, 3, 2, 2, 3, 1, 5, 5, 4, 4, 4, 3, 3, 2, 3, 4, 3, 2, 1],
+        "left": [4, 2, 1, 5, 3, 2, 2, 1, 5, 3, 2, 2, 1, 5, 3, 2, 1, 2, 1, 5, 3, 2, 2, 1, 5, 3, 2, 1, 5, 3, 2, 2, 1, 5, 3, 2, 1, 5, 3, 2, 2, 1, 5, 3, 2, 2, 1, 5, 3, 2, 1, 5, 3, 2, 2, 1, 5, 3, 2, 2, 1, 5, 3, 5, 2, 1]
+      },
+      "start": {
+        "right": [60, null, null, 67, 69],
+        "left": [52, 48, 45, 43, 41]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and feel the two quick notes in bar 4.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone. It holds each chord for two beats.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the middle part.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "rhythm",
+          "text": "The D and the E share one beat. Say \"one-and\" as you play them."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "fingering",
+          "text": "The left hand stays in one place, and each chord keeps its own fingers."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "The last four bars are a coda, a short goodbye. Slow down a little at the very end."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Finger 4 moves from G down to F here. Let the whole hand slide one key down with it."
+        },
+        {
+          "bar": 11,
+          "text": "This is bar 3 again. Slide the hand one key down, so finger 4 lands on F."
+        },
+        {
+          "bar": 14,
+          "text": "Finger 4 slides from G down to F once more, as the coda walks home."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/twinkle-twinkle-little-star/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thumb-under"
+      ],
+      "fingers": {
+        "right": [1, 1, 4, 4, 5, 5, 4, 4, 4, 3, 3, 2, 2, 1, 2, 3, 4, 4, 3, 3, 2, 2, 1, 2, 3, 4, 4, 3, 3, 2, 2, 1, 1, 1, 2, 4, 2, 4, 3, 5, 3, 5, 2, 4, 2, 4, 2, 4, 1, 3, 1, 3, 1, 2, 1, 2, 1, 5, 5, 4, 4, 4, 3, 3, 1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [60, null, null, 67, 69],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds alone, and press both notes of each pair as one.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the scale of bar 15 alone, with the thumb passing under after finger 3.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [15, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "Play the Alberti bass softly, so the tune stays on top."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 6,
+          "kind": "rhythm",
+          "text": "The two quick notes at the end of bars 4 and 6 lead up to G. Play them lightly."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 15,
+          "kind": "fingering",
+          "text": "Your thumb tucks under on F, so the scale climbs to C without a gap."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 15,
+          "kind": "sound",
+          "text": "The pedal changes twice a bar, each time the chord changes."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Finger 4 slides from G down to F, while the Alberti bass keeps rolling."
+        },
+        {
+          "bar": 9,
+          "text": "Your thumb slides from D down to C. Then fingers 2 and 4 take the first third."
+        },
+        {
+          "bar": 14,
+          "text": "Finger 4 slides from G down to F, just as it did in bar 3."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/twinkle-twinkle-little-star/legendary.mid",
+      "skills": [
+        "stride",
+        "sixteenth-notes",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [1, 1, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 4, 5, 4, 3, 4, 5, 4, 3, 4, 4, 3, 2, 3, 4, 3, 2, 3, 3, 2, 1, 2, 3, 2, 1, 2, 2, 5, 4, 3, 4, 5, 4, 3, 4, 4, 3, 2, 3, 4, 3, 2, 3, 3, 2, 1, 2, 3, 2, 1, 2, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 5, 4, 3, 2, 1, 3, 2, 1, 1, 2, 3, 5, 4, 2, 1, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [72, null, 76, null, 79],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the sixteenths of the middle part slowly, with the right hand alone.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand's octaves alone, and lift the hand between them.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "Watch the left hand's jumps, and let the right hand find its chords by feel."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": "Each tune note starts a group of four sixteenths. Lean on it a little, so the tune still sounds."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "Play the octaves short and bright, like bells."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 15,
+          "text": "Finger 3 crosses over the thumb on B as the run falls. Then the hand climbs back up through G major."
+        },
+        {
+          "bar": 3,
+          "text": "The thumb steps from A down to G while finger 2 keeps C. Move the hand as one."
+        },
+        {
+          "bar": 14,
+          "text": "This is bar 3 again. The thumb steps down from A to G, and finger 2 stays on C."
+        }
+      ]
+    }
+  }
+}

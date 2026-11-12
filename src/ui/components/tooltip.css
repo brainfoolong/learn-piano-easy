@@ -1,0 +1,99 @@
+/*
+ * The tooltip's styles. `src/ui/components/tooltip.ts` is the home of how a tooltip behaves.
+ *
+ * The tip is the page turned inside out: the text's colour as its fill and the page's colour as its
+ * text, so it stands out on every surface in both themes. It sits outside its host's box, at the host's
+ * start edge, and moves nothing in the layout.
+ *
+ * It fades and rises in with `opacity` and `transform`. A hidden tip is `display: none`, which the
+ * transition flips at its end, so a closed tip adds no width to the page. An open tip shows at once and
+ * reserves its own room with a margin on its host.
+ */
+@layer components {
+  .tip-host {
+    --tip-gap: var(--s-2);
+    --tip-room: calc(var(--t-xs) * var(--lh-heading) + 2 * var(--s-1) + var(--tip-gap));
+
+    position: relative;
+  }
+
+  .tip-wrap {
+    display: inline-block;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .tip {
+    position: absolute;
+    inset-inline-start: 0;
+    z-index: var(--z-raised);
+    display: none;
+    width: max-content;
+    max-width: calc(var(--s-12) * 2);
+    padding: var(--s-1) var(--s-2);
+    border-radius: var(--s-2);
+    background: var(--c-text);
+    box-shadow: var(--e-2);
+    color: var(--c-bg);
+    font-size: var(--t-xs);
+    font-weight: var(--w-semibold);
+    line-height: var(--lh-heading);
+    letter-spacing: normal;
+    text-align: start;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(var(--tip-from));
+    transition:
+      opacity var(--m-small) var(--ease-standard),
+      transform var(--m-small) var(--ease-emphasis),
+      display var(--m-small) allow-discrete;
+  }
+
+  /* A tip comes from its host: one above rises, and one below drops. */
+  .tip-host[data-tip-placement="top"] > .tip {
+    --tip-from: calc(var(--motion-rise) / 2);
+
+    bottom: 100%;
+    margin-block-end: var(--tip-gap);
+  }
+
+  .tip-host[data-tip-placement="bottom"] > .tip {
+    --tip-from: calc(var(--motion-rise) / -2);
+
+    top: 100%;
+    margin-block-start: var(--tip-gap);
+  }
+
+  /* A shown tip rises above the hosts that follow its own. */
+  .tip-host[data-tip-shown] {
+    z-index: var(--z-raised);
+  }
+
+  .tip-host[data-tip-shown] > .tip {
+    display: block;
+    opacity: 1;
+    transform: none;
+  }
+
+  @starting-style {
+    .tip-host[data-tip-shown] > .tip {
+      opacity: 0;
+      transform: translateY(var(--tip-from));
+    }
+  }
+
+  /* An open tip shows at once, and its host keeps the room the tip takes. */
+  .tip-host[data-tip-open] > .tip {
+    transition: none;
+  }
+
+  .tip-host[data-tip-open][data-tip-placement="top"] {
+    margin-block-start: var(--tip-room);
+  }
+
+  .tip-host[data-tip-open][data-tip-placement="bottom"] {
+    margin-block-end: var(--tip-room);
+  }
+}

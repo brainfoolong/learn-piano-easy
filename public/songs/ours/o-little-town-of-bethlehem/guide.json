@@ -1,0 +1,354 @@
+{
+  "song": "o-little-town-of-bethlehem",
+  "title": "O Little Town of Bethlehem",
+  "composer": "Lewis Redner",
+  "about": "Phillips Brooks, an Episcopal priest in Philadelphia, wrote the words in 1868 for his church. A visit to the village of Bethlehem three years before had inspired him. His organist, Lewis Redner, wrote this tune for it, called St. Louis. The United States and Canada sing the carol to this tune, and the United Kingdom and Ireland sing it to another.",
+  "funFact": "Redner said he woke in the night hearing an angel-strain whispering in his ear, and jotted the tune down.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/o-little-town-of-bethlehem/common.mid",
+      "skills": [
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 2, 3, 5, 4, 1, 3, 2, 1, 2, 3, 1, 3, 3, 3, 3, 5, 4, 4, 3, 1, 3, 2, 1, 2, 4, 3, 2, 4, 5, 5, 4, 3, 2, 2, 2, 1, 2, 3, 4, 5, 3, 3, 3, 2, 3, 5, 4, 1, 5, 4, 1, 3, 2, 1],
+        "left": [5, 1, 4, 1, 4, 3, 4, 1, 5, 1, 5, 1, 2, 4, 1, 4, 3, 4, 1, 5, 1, 5, 1, 4, 1, 4, 1, 4, 4, 1, 5, 1, 5, 1, 4, 1, 2, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [69, 75, 76, 77, 79],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first five bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play bars 6 to 9 with the right hand alone, where the tune climbs to the high A.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [6, 9],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It changes its shape only at the start or the middle of a bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "The D sharp is the black key just below E. Finger 2 dips onto it and back."
+        },
+        {
+          "fromBar": 3,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "Lift the hand for a moment before each low note, and land the thumb on it."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "rhythm",
+          "text": "The two quick notes, B and C, share one beat between them."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 15,
+          "text": "Lift after the F and land the thumb on the low A. Then lift again, so finger 5 lands on the high A."
+        },
+        {
+          "bar": 10,
+          "text": "Finger 5 takes over the E, then fingers 5, 4 and 3 walk down to C."
+        },
+        {
+          "bar": 6,
+          "text": "Finger 3 plays E twice, then finger 5 reaches up to A, and finger 4 takes G."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/o-little-town-of-bethlehem/rare.mid",
+      "skills": [
+        "triads",
+        "two-note-chords"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 2, 3, 5, 4, 1, 3, 2, 1, 2, 3, 1, 3, 3, 3, 3, 5, 4, 4, 3, 1, 3, 2, 1, 2, 4, 3, 2, 4, 5, 5, 4, 3, 2, 2, 2, 1, 2, 3, 4, 5, 3, 3, 3, 2, 3, 5, 4, 1, 5, 4, 1, 3, 2, 1],
+        "left": [5, 3, 1, 5, 1, 4, 2, 1, 4, 2, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 2, 4, 2, 1, 4, 2, 3, 1, 4, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 1, 4, 2, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 1, 4, 2, 1, 5, 2, 5, 3, 1, 4, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [69, 75, 76, 77, 79],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand alone on the first five bars, the song's opening.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first nine bars, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "sound",
+          "text": "Under the D sharp, the left hand plays only C and G, so the two hands never rub."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 17,
+          "kind": "sound",
+          "text": "Hold each chord softly for its whole length, like a quiet organ."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 15,
+          "kind": "trick",
+          "text": "Lift the right hand after the A, and land finger 5 on the A an octave up."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 15,
+          "text": "Lift the right hand twice: once for the low A, and once for the A an octave above it."
+        },
+        {
+          "bar": 6,
+          "text": "Finger 3 plays E twice, then finger 5 reaches up to A. The left hand moves from C to F halfway through."
+        },
+        {
+          "bar": 10,
+          "text": "Finger 5 takes over the E, and the tune walks down to C. The left hand changes to the G chord halfway."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/o-little-town-of-bethlehem/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 2, 3, 5, 4, 1, 3, 2, 1, 2, 3, 1, 3, 3, 3, 3, 5, 4, 4, 3, 1, 3, 2, 1, 2, 4, 3, 2, 4, 5, 5, 4, 3, 2, 2, 2, 1, 2, 3, 4, 5, 3, 3, 3, 2, 3, 5, 4, 1, 5, 4, 1, 3, 2, 1, 3, 3, 3, 2, 3, 5, 4, 1, 3, 2, 1, 2, 3, 1, 3, 3, 3, 3, 5, 4, 4, 3, 1, 3, 2, 1, 2, 4, 3, 2, 4, 5, 5, 4, 3, 2, 2, 2, 1, 2, 3, 4, 5, 3, 3, 3, 2, 3, 5, 4, 1, 5, 4, 1, 3, 2, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [69, 75, 76, 77, 79],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the quicker Alberti bass of the second verse alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [18, 21],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 17],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 17,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 18,
+          "kind": "trick",
+          "text": "Lift the right hand after the long C, and land finger 3 on the E an octave up."
+        },
+        {
+          "fromBar": 18,
+          "toBar": 33,
+          "kind": "sound",
+          "text": "Change the pedal each half bar, as the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 33,
+          "text": "Lift after the short D, then play E, G and C together with fingers 1, 2 and 5."
+        },
+        {
+          "bar": 17,
+          "text": "Hold the long C with the thumb, then lift the hand and land finger 3 on the E an octave up."
+        },
+        {
+          "bar": 19,
+          "text": "The tune drops from F to A, while the left hand plays its Alberti bass twice as fast."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/o-little-town-of-bethlehem/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios"
+      ],
+      "fingers": {
+        "right": [3, 3, 3, 2, 3, 5, 4, 1, 3, 2, 1, 2, 3, 1, 3, 3, 3, 3, 5, 4, 4, 3, 1, 3, 2, 1, 2, 4, 3, 2, 4, 5, 5, 4, 3, 2, 2, 2, 1, 2, 3, 4, 5, 3, 3, 3, 2, 3, 5, 4, 1, 5, 4, 1, 3, 2, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 4, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [69, 75, 76, 77, 79],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's octaves alone, with the thumb and finger 5 kept in one shape.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [18, 21],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second verse in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [18, 21],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 17,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 18,
+          "toBar": 32,
+          "kind": "fingering",
+          "text": "Keep the thumb and finger 5 an octave apart, and lift the hand before each wider move."
+        },
+        {
+          "fromBar": 18,
+          "toBar": 32,
+          "kind": "sound",
+          "text": "Let the octaves ring like bells, and keep the arpeggios below them soft."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 31,
+          "text": "Lift the octave twice: down to the low A, then up a whole octave to the high A."
+        },
+        {
+          "bar": 22,
+          "text": "After the second E, lift the octave and land it on A, a fourth higher."
+        },
+        {
+          "bar": 20,
+          "text": "The octaves step C, B, C and D, then lift and drop to G. Keep the thumb and finger 5 in one shape."
+        }
+      ]
+    }
+  }
+}

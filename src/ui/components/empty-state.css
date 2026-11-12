@@ -1,0 +1,105 @@
+/*
+ * The empty state's styles. `src/ui/components/empty-state.ts` is the home of how it behaves.
+ *
+ * The illustration is a fixed box, so its shapes sit inside it and never widen the page. A raised
+ * circle holds the icon in teal, or the mascot's portrait takes its place. Three soft shapes sit around
+ * it, one in each of honey, iris and orchid. Nothing in it moves.
+ */
+@layer components {
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-3);
+    box-sizing: border-box;
+    width: calc(var(--s-12) * 3);
+    max-width: 100%;
+    min-width: 0;
+    padding: var(--s-6) var(--s-4);
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+  .empty-state__art {
+    position: relative;
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: calc(var(--s-12) + var(--s-9));
+    height: calc(var(--s-12) + var(--s-7));
+    margin-block-end: var(--s-2);
+  }
+
+  .empty-state__circle {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: var(--s-12);
+    height: var(--s-12);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-2);
+    color: var(--c-accent);
+  }
+
+  .empty-state__circle .icon {
+    width: var(--s-9);
+    height: var(--s-9);
+  }
+
+  /* The mascot's portrait fills the circle's place, at the circle's size. */
+  .empty-state__art .mascot[data-pose="portrait"][data-size] {
+    --mascot-size: var(--s-12);
+  }
+
+  /* The soft shapes behind and beside the circle, each a tint of one hue. */
+  .empty-state__shape {
+    position: absolute;
+  }
+
+  .empty-state__shape[data-shape="blob"] {
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: var(--s-10);
+    height: var(--s-10);
+    border-radius: var(--r-pill);
+    background: color-mix(in oklab, var(--c-brand) 36%, transparent);
+  }
+
+  .empty-state__shape[data-shape="square"] {
+    inset-block-end: var(--s-2);
+    inset-inline-end: var(--s-1);
+    width: var(--s-7);
+    height: var(--s-7);
+    border-radius: var(--r-control);
+    background: color-mix(in oklab, var(--c-iris-vivid) 30%, transparent);
+    transform: rotate(18deg);
+  }
+
+  .empty-state__shape[data-shape="dot"] {
+    inset-block-start: var(--s-3);
+    inset-inline-end: var(--s-3);
+    width: var(--s-3);
+    height: var(--s-3);
+    border-radius: var(--r-pill);
+    background: var(--c-orchid-vivid);
+  }
+
+  .empty-state__title {
+    margin: 0;
+    color: var(--c-text);
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .empty-state__message {
+    max-width: var(--measure);
+    margin: 0 0 var(--s-3);
+    color: var(--c-text-soft);
+    font-size: var(--t-md);
+    line-height: var(--lh-body);
+  }
+}

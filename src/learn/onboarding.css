@@ -1,0 +1,280 @@
+/*
+ * The first-visit setup's styles. `src/learn/onboarding.ts` is the home of what it asks and how.
+ *
+ * - **The mascot greets in a speech bubble** on a honey tint, mixed in sRGB behind its text.
+ * - **Each answer is a large raised button:** its glyph in a teal disc, its name over its text, and an
+ *   arrow that says it moves on. It lifts under the pointer and squashes when pressed.
+ * - **The key check's piano sits in a well.** A heard note turns the check's line into a green note
+ *   with a check mark, and its words say so too.
+ *
+ * Only `transform` and `opacity` move.
+ */
+@layer pages {
+  .setup {
+    display: grid;
+    gap: var(--s-6);
+  }
+
+  .setup__panel {
+    display: grid;
+    gap: var(--s-4);
+  }
+
+  /* The greeting: the mascot's portrait, and what it says in a bubble with a tail towards it. */
+  .setup__welcome {
+    display: flex;
+    align-items: center;
+    gap: var(--s-5);
+  }
+
+  .setup__greeting {
+    --bubble: color-mix(in srgb, var(--c-brand) 16%, var(--c-surface-2));
+
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-card);
+    background: var(--bubble);
+    font-size: var(--t-lg);
+    font-weight: var(--w-semibold);
+    line-height: 1.4;
+  }
+
+  .setup__greeting::before {
+    content: "";
+    position: absolute;
+    inset-block-start: calc(50% - var(--s-2));
+    inset-inline-start: calc(-1 * var(--s-2) + 1px);
+    width: var(--s-4);
+    height: var(--s-4);
+    border-radius: var(--s-1);
+    background: var(--bubble);
+    transform: rotate(45deg);
+  }
+
+  .setup__question {
+    margin: 0;
+    font-size: var(--t-2xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .setup__question:focus {
+    outline: none;
+  }
+
+  .setup__choices {
+    display: grid;
+    gap: var(--s-3);
+  }
+
+  .setup__choice {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    min-height: var(--s-10);
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+    color: var(--c-text);
+    font: inherit;
+    text-align: start;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* The tint under the pointer and the press, in the text's own colour. */
+  .setup__choice::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  @media (hover: hover) {
+    .setup__choice:hover {
+      transform: translateY(var(--motion-lift));
+    }
+
+    .setup__choice:hover::before {
+      opacity: var(--o-hover);
+    }
+
+    .setup__choice:hover .setup__choice-go {
+      transform: translateX(var(--s-1));
+    }
+  }
+
+  .setup__choice:active {
+    transform: scale(0.98);
+    transition-duration: var(--m-micro);
+  }
+
+  .setup__choice:active::before {
+    opacity: var(--o-press);
+  }
+
+  .setup__choice:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+  }
+
+  .setup__choice-icon {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-9);
+    height: var(--s-9);
+    border-radius: var(--r-control);
+    background: var(--c-accent);
+    color: var(--c-accent-ink);
+  }
+
+  .setup__choice-icon .icon {
+    width: var(--s-6);
+    height: var(--s-6);
+  }
+
+  .setup__choice-body {
+    display: grid;
+    flex: 1;
+    gap: var(--s-1);
+    min-width: 0;
+  }
+
+  .setup__choice-name {
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+  }
+
+  .setup__choice-text {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .setup__choice-go {
+    display: grid;
+    flex: none;
+    color: var(--c-text-soft);
+    transition: transform var(--m-small) var(--ease-standard);
+  }
+
+  .setup__choice-go .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+  }
+
+  .setup__keys {
+    width: min(100%, 24rem);
+    justify-self: center;
+    padding: var(--s-3);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-sunken);
+  }
+
+  .setup__lead {
+    margin: 0;
+    color: var(--c-text-soft);
+  }
+
+  /* The check's line: soft while it waits, then a green note with a check once a key was heard. */
+  .setup__status {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    min-height: var(--s-9);
+    margin: 0;
+    padding: var(--s-2) var(--s-4);
+    border-radius: var(--r-control);
+    background: var(--c-sunken);
+    color: var(--c-text-soft);
+  }
+
+  .setup__status-mark {
+    display: none;
+    flex: none;
+    place-items: center;
+    width: var(--s-6);
+    height: var(--s-6);
+    border-radius: var(--r-pill);
+    background: var(--c-success);
+    color: var(--c-success-ink);
+  }
+
+  .setup__status-mark .icon {
+    width: var(--s-4);
+    height: var(--s-4);
+    stroke-width: 3;
+  }
+
+  .setup__status[data-heard="true"] {
+    background: color-mix(in srgb, var(--c-success) 12%, var(--c-surface-2));
+    color: var(--c-text);
+    font-weight: var(--w-bold);
+  }
+
+  .setup__status[data-heard="true"] .setup__status-mark {
+    display: grid;
+  }
+
+  /* A note for a learner who has played before, in the blue of information. */
+  .setup__note {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-3);
+    margin: 0;
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-control);
+    background: color-mix(in srgb, var(--c-info) 9%, var(--c-surface-2));
+  }
+
+  .setup__note .icon {
+    flex: none;
+    width: var(--s-5);
+    height: var(--s-5);
+    margin-block-start: 0.1em;
+    color: var(--c-info);
+  }
+
+  .setup__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--s-3);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .setup__status[data-heard="true"] .setup__status-mark {
+      animation: setup-pop var(--m-medium) var(--ease-spring) both;
+    }
+  }
+
+  @keyframes setup-pop {
+    from {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .setup__choice,
+    .setup__choice-go {
+      transition: none;
+    }
+  }
+}

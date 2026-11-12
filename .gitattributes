@@ -1,0 +1,7 @@
+# looper:begin gitattributes v1
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+# looper:end gitattributes
+*.mid binary

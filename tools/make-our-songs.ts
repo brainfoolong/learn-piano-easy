@@ -1,0 +1,395 @@
+/**
+ * Our songs: writes each song of `tools/our-songs/` as four MIDI files and a guide in
+ * `public/songs/ours/<slug>/`, the folder's `LICENSE.md`, and four rows per song in
+ * `public/songs/catalog.json`. [docs/our-songs.md](../docs/our-songs.md) holds the rules a song follows.
+ *
+ * A song module exports an `OurSong`: its source, its tune with the hook, its four versions in the
+ * notation of `tools/song-notation.ts`, and the text of its guide. The writer measures every version with
+ * `tools/song-meter.ts` and refuses the whole run on any problem `songProblems` names.
+ *
+ * Decisions, and what each costs:
+ * - The guide's fingers, start position and tricky bars come from the versions and the meter, so the
+ *   module writes only what a person must: the fingers in the notation and the text.
+ * - A version's tricky spots are the bars the meter names, and the module writes one tip per bar. A
+ *   change to a version that moves its tricky bars then fails until the tips follow.
+ * - The start position of a hand maps each finger to the first key it plays, until a finger takes a
+ *   second key. That is where the opening position ends.
+ * - A version's catalog difficulty is the meter's `catalogDifficulty`, never set by hand.
+ * - A song's collection and other titles go on each of its rows, so the library groups and finds every
+ *   version alike.
+ * - A version's row names its skills, the same as its guide does, so the library tags it without
+ *   reading the guide.
+ * - The rows replace every catalog row under `ours/` and follow the modern pieces, so the other song
+ *   tools keep them in place. The rest of the catalog keeps its order.
+ * - The tunes are public domain, and the arrangements are ours under the MIT License.
+ *
+ * `bun tools/make-our-songs.ts`. It needs no network, and the app never runs it. `tools/check-our-song.ts`
+ * checks one module alone and writes nothing.
+ */
+import { mkdir } from "node:fs/promises";
+import { join } from "node:path";
+
+import { readMidi } from "../src/midi/smf-read";
+import { writeMidi } from "../src/midi/smf-write";
+import { songFromMidi } from "../src/midi/song";
+import { RARITIES, RARITY_NAMES, type Guide, type PracticeStep, type Rarity, type Tip, type VersionGuide } from "../src/library/guide";
+import type { Collection } from "../src/library/search";
+import type { SkillId } from "../src/library/skills";
+import type { Finger, Hand } from "../src/theory/fingering";
+import type { Key } from "../src/theory/key";
+import { readCatalog, songsDir, withSpan, writeCatalog, type CatalogSong } from "./catalog";
+import { originalsFolder } from "./make-original-songs";
+import {
+  barCount,
+  breaksOf,
+  catalogDifficulty,
+  earns,
+  fingerProblems,
+  matchTune,
+  measure,
+  meterOfNotation,
+  trickySpots,
+  tuneOf,
+  type MeterSong,
+} from "./song-meter";
+import { fingerKey, parseSong, twoHandMidi, writtenFingers, type HandNote, type TwoHandSong } from "./song-notation";
+import { canonInD } from "./our-songs/canon-in-d";
+import { alleJahreWieder } from "./our-songs/alle-jahre-wieder";
+import { angelsWeHaveHeardOnHigh } from "./our-songs/angels-we-have-heard-on-high";
+import { awayInAManger } from "./our-songs/away-in-a-manger";
+import { carolOfTheBells } from "./our-songs/carol-of-the-bells";
+import { deckTheHalls } from "./our-songs/deck-the-halls";
+import { dingDongMerrilyOnHigh } from "./our-songs/ding-dong-merrily-on-high";
+import { esIstEinRosEntsprungen } from "./our-songs/es-ist-ein-ros-entsprungen";
+import { furElise } from "./our-songs/fur-elise";
+import { godRestYeMerryGentlemen } from "./our-songs/god-rest-ye-merry-gentlemen";
+import { goodKingWenceslas } from "./our-songs/good-king-wenceslas";
+import { hallOfTheMountainKing } from "./our-songs/hall-of-the-mountain-king";
+import { happyBirthday } from "./our-songs/happy-birthday";
+import { harkTheHeraldAngelsSing } from "./our-songs/hark-the-herald-angels-sing";
+import { ihrKinderleinKommet } from "./our-songs/ihr-kinderlein-kommet";
+import { itCameUponTheMidnightClear } from "./our-songs/it-came-upon-the-midnight-clear";
+import { jingleBells } from "./our-songs/jingle-bells";
+import { jollyOldSaintNicholas } from "./our-songs/jolly-old-saint-nicholas";
+import { joyToTheWorld } from "./our-songs/joy-to-the-world";
+import { klingGloeckchen } from "./our-songs/kling-gloeckchen";
+import { kommetIhrHirten } from "./our-songs/kommet-ihr-hirten";
+import { leiseRieseltDerSchnee } from "./our-songs/leise-rieselt-der-schnee";
+import { maryHadALittleLamb } from "./our-songs/mary-had-a-little-lamb";
+import { morgenKinder } from "./our-songs/morgen-kinder";
+import { oChristmasTree } from "./our-songs/o-christmas-tree";
+import { oComeAllYeFaithful } from "./our-songs/o-come-all-ye-faithful";
+import { oDuFroehliche } from "./our-songs/o-du-froehliche";
+import { oHolyNight } from "./our-songs/o-holy-night";
+import { oLittleTownOfBethlehem } from "./our-songs/o-little-town-of-bethlehem";
+import { odeToJoy } from "./our-songs/ode-to-joy";
+import { oldMacDonaldHadAFarm } from "./our-songs/old-macdonald-had-a-farm";
+import { rowRowRowYourBoat } from "./our-songs/row-row-row-your-boat";
+import { silentNight } from "./our-songs/silent-night";
+import { theEntertainer } from "./our-songs/the-entertainer";
+import { theFirstNoel } from "./our-songs/the-first-noel";
+import { suesserDieGlocken } from "./our-songs/suesser-die-glocken";
+import { theTwelveDaysOfChristmas } from "./our-songs/the-twelve-days-of-christmas";
+import { tochterZion } from "./our-songs/tochter-zion";
+import { twinkleTwinkleLittleStar } from "./our-songs/twinkle-twinkle-little-star";
+import { upOnTheHousetop } from "./our-songs/up-on-the-housetop";
+import { weThreeKings } from "./our-songs/we-three-kings";
+import { yankeeDoodle } from "./our-songs/yankee-doodle";
+
+/** The folder of our songs, relative to `public/songs/`. */
+export const oursFolder = "ours";
+
+/** The license of every version of ours. */
+export const oursLicense = "MIT";
+
+/** Who every version of ours is credited to. */
+export const oursCredit = "Arranged by the learn-piano-easy authors";
+
+/** Where a song's tune comes from, and why it is public domain. */
+export interface OurSource {
+  /** The composer, or `Traditional`. */
+  composer: string;
+  /** The year the composer died, or null for a traditional tune. */
+  died: number | null;
+  /** The year the tune was first published. */
+  published: number;
+  /** The public domain edition the tune was checked against. */
+  edition: string;
+}
+
+/** A song's tune in one line of the notation, its key and its hook. */
+export interface OurTune {
+  text: string;
+  numerator: number;
+  denominator: number;
+  steps?: number;
+  key: Key;
+  /** The hook's first and last bar, from 1. */
+  hookBars: [number, number];
+}
+
+/** One version of a song: its notes in the notation and the text of its guide. */
+export interface OurVersion {
+  /** The version's key, which its file names, so the meter and the sheet read it without guessing. */
+  key: Key;
+  bpm: number;
+  numerator: number;
+  denominator: number;
+  steps?: number;
+  right: string;
+  left: string;
+  pedal?: string;
+  /** The bars, from 1, where the hands clash on purpose. */
+  markedClashBars?: number[];
+  skills: SkillId[];
+  practice: PracticeStep[];
+  tips: Tip[];
+  /** A tip for each bar the meter names as a tricky spot, by bar. */
+  tricky: Record<number, string>;
+}
+
+/** A song of ours, as its module exports it. */
+export interface OurSong {
+  /** The folder's name and the catalog rows' `song`. */
+  slug: string;
+  title: string;
+  source: OurSource;
+  about: string;
+  funFact: string;
+  /** The catalog file of the original score, rated above Legendary, or null. */
+  mythic: string | null;
+  /** The collection the library groups the song in, such as `christmas`, or none. */
+  collection?: Collection;
+  /** The song's other titles, which the library's search matches, such as `Stille Nacht`. */
+  aka?: string[];
+  tune: OurTune;
+  versions: Record<Rarity, OurVersion>;
+}
+
+/** Every song of ours, in the catalog's order. */
+export const ourSongs: readonly OurSong[] = [
+  maryHadALittleLamb,
+  twinkleTwinkleLittleStar,
+  oldMacDonaldHadAFarm,
+  rowRowRowYourBoat,
+  yankeeDoodle,
+  odeToJoy,
+  happyBirthday,
+  jingleBells,
+  canonInD,
+  hallOfTheMountainKing,
+  furElise,
+  theEntertainer,
+  silentNight,
+  oChristmasTree,
+  itCameUponTheMidnightClear,
+  deckTheHalls,
+  joyToTheWorld,
+  harkTheHeraldAngelsSing,
+  oComeAllYeFaithful,
+  theFirstNoel,
+  godRestYeMerryGentlemen,
+  awayInAManger,
+  carolOfTheBells,
+  dingDongMerrilyOnHigh,
+  weThreeKings,
+  oHolyNight,
+  angelsWeHaveHeardOnHigh,
+  goodKingWenceslas,
+  theTwelveDaysOfChristmas,
+  upOnTheHousetop,
+  jollyOldSaintNicholas,
+  oLittleTownOfBethlehem,
+  leiseRieseltDerSchnee,
+  alleJahreWieder,
+  klingGloeckchen,
+  oDuFroehliche,
+  ihrKinderleinKommet,
+  morgenKinder,
+  kommetIhrHirten,
+  suesserDieGlocken,
+  esIstEinRosEntsprungen,
+  tochterZion,
+];
+
+/** The version `rarity` of `song` as a song of the notation. */
+export function versionNotation(song: OurSong, rarity: Rarity): TwoHandSong {
+  const { markedClashBars: _clashes, skills: _skills, practice: _practice, tips: _tips, tricky: _tricky, ...notes } = song.versions[rarity];
+  return { title: `${song.title}, ${RARITY_NAMES[rarity]}`, file: `${rarity}.mid`, difficulty: 0, ...notes };
+}
+
+/** The MIDI file of the version `rarity` of `song`. */
+export function versionBytes(song: OurSong, rarity: Rarity): Uint8Array {
+  return writeMidi(twoHandMidi(versionNotation(song, rarity)));
+}
+
+/** The meter's view of the version `rarity` of `song`. */
+export function versionMeter(song: OurSong, rarity: Rarity): MeterSong {
+  return meterOfNotation(versionNotation(song, rarity), song.versions[rarity].markedClashBars ?? []);
+}
+
+/** The catalog file of the version `rarity` of `song`, from `songs/`. */
+function versionFile(song: OurSong, rarity: Rarity): string {
+  return `${oursFolder}/${song.slug}/${rarity}.mid`;
+}
+
+/** Whether a tune published in `published` by a composer who died in `died` is free in the US and the EU in `year`. */
+export function isPublicDomain(source: OurSource, year: number): boolean {
+  return source.published + 95 < year && (source.died === null || source.died + 70 < year);
+}
+
+/** What the version `rarity` of `song` breaks: its rarity, its tune, its fingers, or a bar its guide names. */
+export function versionProblems(song: OurSong, rarity: Rarity): string[] {
+  const where = `${song.title}, ${RARITY_NAMES[rarity]}`;
+  const meter = versionMeter(song, rarity);
+  const measures = measure(meter);
+  const problems: string[] = [];
+  if (!earns(measures, rarity)) {
+    const breaks = breaksOf(measures, rarity);
+    const below = RARITIES[RARITIES.indexOf(rarity) - 1];
+    if (breaks.length > 0) problems.push(`breaks ${breaks.map((b) => `${b.name} (${+b.value.toFixed(2)} past ${b.limit})`).join(", ")}`);
+    else problems.push(`fits ${below}, so it does not earn ${rarity}`);
+  }
+  const { tune } = song;
+  problems.push(...matchTune(meter, tuneOf(tune.text, tune, tune.key, tune.hookBars), rarity).problems);
+  problems.push(...fingerProblems(meter));
+  const bars = barCount(meter);
+  const version = song.versions[rarity];
+  const named = [
+    ...version.tips.map((tip) => [tip.fromBar, tip.toBar]),
+    ...version.practice.flatMap((step) => (step.loop === null ? [] : [step.loop])),
+    ...Object.keys(version.tricky).map((bar) => [Number(bar), Number(bar)]),
+  ];
+  for (const [from, to] of named) if (to! > bars || from! < 1) problems.push(`bars ${from} to ${to} lie outside its ${bars} bars`);
+  const spots = trickySpots(meter).map((spot) => spot.bar).sort((a, b) => a - b);
+  const written = Object.keys(version.tricky).map(Number).sort((a, b) => a - b);
+  if (spots.join() !== written.join()) problems.push(`its tricky spots are bars ${spots.join(", ")}, and the tips name bars ${written.join(", ")}`);
+  return problems.map((problem) => `${where}: ${problem}`);
+}
+
+/** What `song` breaks in `year`: its source, or any of its versions. */
+export function songProblems(song: OurSong, year = new Date().getFullYear()): string[] {
+  const problems = isPublicDomain(song.source, year) ? [] : [`${song.title}: its tune is not public domain in ${year}`];
+  return [...problems, ...RARITIES.flatMap((rarity) => versionProblems(song, rarity))];
+}
+
+/** The key under each finger of `notes` at their start, until a finger takes a second key. */
+function startOf(notes: readonly HandNote[]): (number | null)[] {
+  const keys: (number | null)[] = [null, null, null, null, null];
+  for (const note of notes) {
+    for (let at = 0; at < note.pitches.length; at++) {
+      const finger = note.fingers[at];
+      if (finger === undefined) continue;
+      const held = keys[finger - 1];
+      if (held !== null && held !== note.pitches[at]) return keys;
+      keys[finger - 1] = note.pitches[at]!;
+    }
+  }
+  return keys;
+}
+
+/** The guide of the version `rarity` of `song`. */
+function versionGuide(song: OurSong, rarity: Rarity): VersionGuide {
+  const notation = versionNotation(song, rarity);
+  const written = writtenFingers(notation);
+  const file = songFromMidi(readMidi(versionBytes(song, rarity)));
+  const fingersOf = (track: number, hand: Hand): Finger[] =>
+    (file.tracks[track]?.notes ?? []).map((note) => {
+      const finger = written[hand].get(fingerKey(note.startTick, note.pitch));
+      if (finger === undefined) throw new Error(`${notation.title}: the ${hand} hand's note at tick ${note.startTick} has no finger`);
+      return finger;
+    });
+  const parsed = parseSong(notation);
+  const version = song.versions[rarity];
+  return {
+    file: versionFile(song, rarity),
+    skills: version.skills,
+    fingers: { right: fingersOf(0, "right"), left: fingersOf(1, "left") },
+    start: { right: startOf(parsed.right), left: startOf(parsed.left) },
+    practice: version.practice,
+    tips: version.tips,
+    tricky: trickySpots(versionMeter(song, rarity)).map(({ bar }) => ({ bar, text: version.tricky[bar]! })),
+  };
+}
+
+/** The guide of `song`. */
+export function guideOf(song: OurSong): Guide {
+  return {
+    song: song.slug,
+    title: song.title,
+    composer: song.source.composer,
+    about: song.about,
+    funFact: song.funFact,
+    mythic: song.mythic,
+    versions: Object.fromEntries(RARITIES.map((rarity) => [rarity, versionGuide(song, rarity)])) as Record<Rarity, VersionGuide>,
+  };
+}
+
+/** `guide` as the text of its file: two-space JSON with each list of numbers on one line. */
+export function guideText(guide: Guide): string {
+  const text = JSON.stringify(guide, null, 2).replace(/\[\s*((?:-?\d+|null)(?:,\s*(?:-?\d+|null))*)\s*\]/g, (_, items: string) => `[${items.split(/,\s*/).join(", ")}]`);
+  return `${text}\n`;
+}
+
+/** The four catalog rows of `song`. */
+export function rowsOf(song: OurSong): CatalogSong[] {
+  return RARITIES.map((rarity) => {
+    const row = {
+      composer: song.source.composer,
+      piece: song.title,
+      title: RARITY_NAMES[rarity],
+      file: versionFile(song, rarity),
+      difficulty: catalogDifficulty(measure(versionMeter(song, rarity)), rarity),
+      license: oursLicense,
+      credit: oursCredit,
+    };
+    const ours: CatalogSong = { ...withSpan(row, versionBytes(song, rarity)), song: song.slug, rarity, skills: [...song.versions[rarity].skills] };
+    if (song.mythic !== null) ours.mythic = song.mythic;
+    if (song.collection !== undefined) ours.collection = song.collection;
+    if (song.aka !== undefined) ours.aka = song.aka;
+    return ours;
+  });
+}
+
+/** The text of the folder's `LICENSE.md` for `songs`. */
+export function licenseText(songs: readonly OurSong[]): string {
+  const rows = songs.flatMap((song) => [
+    ...RARITIES.map((rarity) => `| \`${song.slug}/${rarity}.mid\` | ${song.title}, ${RARITY_NAMES[rarity]} | ${song.source.composer} | MIT |`),
+    `| \`${song.slug}/guide.json\` | ${song.title}, the guide | | MIT |`,
+  ]);
+  return `# Our songs
+
+The files in this folder are our own arrangements of tunes in the public domain, and the guides to them.
+They are under the MIT License, the same as the app: see \`LICENSE\` at the repository root.
+
+\`tools/make-our-songs.ts\` writes them from \`tools/our-songs/\`, so a change goes there, never into a file here.
+
+| File | Title | Tune by | License |
+|---|---|---|---|
+${rows.join("\n")}
+`;
+}
+
+/** Writes every song of ours, its guide, the folder's license and the catalog rows. Returns the rows. */
+export async function makeOurSongs(songs: readonly OurSong[] = ourSongs): Promise<CatalogSong[]> {
+  const problems = songs.flatMap((song) => songProblems(song));
+  if (problems.length > 0) throw new Error(`The meter refuses:\n${problems.join("\n")}`);
+  const rows: CatalogSong[] = [];
+  for (const song of songs) {
+    const dir = join(songsDir, oursFolder, song.slug);
+    await mkdir(dir, { recursive: true });
+    for (const rarity of RARITIES) await Bun.write(join(dir, `${rarity}.mid`), versionBytes(song, rarity));
+    await Bun.write(join(dir, "guide.json"), guideText(guideOf(song)));
+    rows.push(...rowsOf(song));
+  }
+  await Bun.write(join(songsDir, oursFolder, "LICENSE.md"), licenseText(songs));
+  const others = (await readCatalog()).filter((row) => !row.file.startsWith(`${oursFolder}/`));
+  const first = (row: CatalogSong) => row.file.startsWith(`${originalsFolder}/`);
+  await writeCatalog([...others.filter(first), ...rows, ...others.filter((row) => !first(row))]);
+  return rows;
+}
+
+if (import.meta.main) {
+  const rows = await makeOurSongs();
+  console.log(`${rows.length} versions in public/songs/${oursFolder}/`);
+}

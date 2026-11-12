@@ -1,0 +1,356 @@
+{
+  "song": "away-in-a-manger",
+  "title": "Away in a Manger",
+  "composer": "William J. Kirkpatrick",
+  "about": "The words of Away in a Manger are American, and nobody knows who wrote them. Their first two verses were printed in 1882. Many tunes were written for them, and this one is Cradle Song by William J. Kirkpatrick, from 1895. It is the tune sung in Britain, Ireland and Canada.",
+  "funFact": "The words were long called Luther's Cradle Hymn, but Martin Luther never wrote them.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/away-in-a-manger/common.mid",
+      "skills": [
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 3, 4, 1, 1, 2, 3, 4, 4, 5, 3, 1, 2, 3, 3, 5, 4, 4, 2, 4, 3, 1, 3, 2, 1, 2, 2, 3, 4, 1, 1, 2, 3, 4, 4, 5, 3, 1, 2, 3, 3, 5, 4, 4, 2, 4, 3, 1, 2, 3],
+        "left": [5, 1, 5, 1, 5, 1, 2, 4, 1, 5, 1, 4, 4, 1, 5, 1, 5, 1, 5, 1, 2, 4, 1, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, 64, null],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first five bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play bars 5 to 9 with the right hand alone, where the tune walks down to the low G.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 9],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "The thumb plays the low G, and finger 2 takes middle C."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 3,
+          "kind": "rhythm",
+          "text": "Two long notes, then two quick ones that lean into the next bar."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 9,
+          "kind": "trick",
+          "text": "The thumb reaches down to A, and the hand follows it down to the low G."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Finger 4 plays E, finger 2 reaches down to C, and finger 4 comes back to E."
+        },
+        {
+          "bar": 15,
+          "text": "The same notes as bar 7: E twice with finger 4, then C with finger 2."
+        },
+        {
+          "bar": 6,
+          "text": "Finger 3 plays F twice, then the little finger stretches up to G."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/away-in-a-manger/rare.mid",
+      "skills": [
+        "triads",
+        "waltz-bass"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 3, 4, 1, 1, 2, 3, 4, 4, 5, 3, 1, 2, 3, 3, 5, 4, 4, 2, 4, 3, 1, 3, 2, 1, 2, 2, 3, 4, 1, 1, 2, 3, 4, 4, 5, 3, 1, 2, 3, 3, 5, 4, 4, 2, 4, 3, 1, 2, 3],
+        "left": [5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 4, 2, 1, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1, 4, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, 64, null],
+        "left": [55, 53, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the three notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the waltz bass alone: low note, chord, chord.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [10, 17],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first half, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 5,
+          "toBar": 6,
+          "kind": "fingering",
+          "text": "For the F chord, the thumb moves up from G to A. It moves back for the next chord."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 17,
+          "kind": "sound",
+          "text": "In the waltz bass, play the low note a little louder than the chords after it."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "sound",
+          "text": "Hold each chord for the whole bar, softly, like a lullaby."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Finger 4 plays E, finger 2 reaches down to C, and finger 4 comes back to E."
+        },
+        {
+          "bar": 15,
+          "text": "The same notes as bar 7, now over a waltz bass. Keep the bass soft."
+        },
+        {
+          "bar": 6,
+          "text": "The left thumb steps back from A to G as the right hand climbs to G."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/away-in-a-manger/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thirds-and-sixths",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 3, 4, 1, 1, 2, 3, 4, 4, 5, 3, 1, 2, 3, 3, 5, 4, 4, 2, 4, 3, 1, 3, 2, 1, 2, 2, 3, 4, 1, 1, 2, 3, 4, 4, 5, 3, 1, 2, 3, 3, 5, 4, 4, 2, 4, 3, 1, 2, 3, 1, 1, 3, 3, 4, 5, 1, 3, 2, 3, 4, 1, 4, 4, 1, 5, 1, 4, 2, 3, 2, 4, 4, 1, 5, 1, 3, 3, 1, 5, 1, 4, 1, 2, 1, 2, 1, 1, 3, 3, 4, 5, 1, 3, 2, 3, 4, 1, 4, 4, 1, 5, 1, 4, 2, 3, 2, 4, 4, 1, 5, 1, 3, 3, 1, 5, 1, 5, 2, 1, 3, 1, 2, 5],
+        "left": [5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 5, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, 64, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds and sixths alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [18, 21],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 17],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 17,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 18,
+          "kind": "trick",
+          "text": "Lift the hand after the C, and land on the G an octave up."
+        },
+        {
+          "fromBar": 18,
+          "toBar": 33,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": "Lift the right hand after the C, and land the thumb on the G an octave up."
+        },
+        {
+          "bar": 32,
+          "text": "Spread the hand for the sixth, then close it for the last third on G and B."
+        },
+        {
+          "bar": 19,
+          "text": "The thumb lets go of the low E, and fingers 2, 3 and 4 walk up to F."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/away-in-a-manger/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "arpeggios"
+      ],
+      "fingers": {
+        "right": [2, 1, 2, 3, 1, 2, 4, 5, 1, 2, 3, 1, 2, 4, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 3, 4, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 2, 5, 1, 2, 5, 1, 3, 1, 2, 4, 1, 2, 4, 1, 3, 1, 2, 3, 1, 2, 4, 5, 1, 2, 3, 1, 2, 4, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 3, 4, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 2, 5, 1, 2, 5, 1, 3, 1, 2, 4, 1, 2, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [64, 67, 72, null, null],
+        "left": [48, null, null, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second verse in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [18, 21],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 17,
+          "kind": "trick",
+          "text": "In stride, look at the octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 18,
+          "toBar": 33,
+          "kind": "sound",
+          "text": "Up high, the octaves should ring like bells. Keep the wrist loose."
+        },
+        {
+          "fromBar": 18,
+          "toBar": 33,
+          "kind": "fingering",
+          "text": "In each arpeggio, the third finger crosses over the thumb on the way up."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 22,
+          "text": "The octaves sit still on F, while the left hand climbs a G seventh and falls back."
+        },
+        {
+          "bar": 30,
+          "text": "The same as bar 22. Keep the octaves even while the arpeggio runs below them."
+        },
+        {
+          "bar": 6,
+          "text": "The left hand jumps to the low G octave while the right hand holds the B, D and F chord."
+        }
+      ]
+    }
+  }
+}

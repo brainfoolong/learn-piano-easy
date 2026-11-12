@@ -1,0 +1,77 @@
+/*
+ * The tracks panel, shown in a dialog. `src/library/tracks-panel.ts` is the home of how it behaves.
+ *
+ * The song's key is a row of its own at the top. Each track is an inset block: its colour, its name
+ * and its note count as its head, and its fields below. A field is a label and a control on one line,
+ * and the fields share a grid that folds to one column where the dialog is narrow.
+ */
+@layer pages {
+  .tracks-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+
+  .tracks-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+  }
+
+  .tracks-key,
+  .tracks-row {
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-bg);
+  }
+
+  .tracks-head {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    min-width: 0;
+  }
+
+  .tracks-row h3 {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .tracks-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, calc(var(--s-12) * 2.25)), 1fr));
+    gap: 0 var(--s-6);
+    margin-top: var(--s-3);
+    border-top: 1px solid var(--c-line);
+  }
+
+  .tracks-field {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-1) var(--s-3);
+    min-width: 0;
+    min-height: var(--s-9);
+    font-weight: var(--w-semibold);
+  }
+
+  .tracks-controls > .tracks-field {
+    padding-block: var(--s-1);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .tracks-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--s-2);
+  }
+}

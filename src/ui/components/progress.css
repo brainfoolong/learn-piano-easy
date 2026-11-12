@@ -1,0 +1,260 @@
+/*
+ * Progress's styles. `src/ui/components/progress.ts` is the home of how progress behaves.
+ *
+ * Text is `--c-text` or `--c-text-soft` with tabular figures, so a number never shifts sideways. A
+ * track is a well, and its fill is the one vivid thing: the honey sheen, or the bright green of what a
+ * learner finished. Among the steps, a done one is a green disc with a check, and the current one
+ * wears the teal of the item at hand.
+ *
+ * The bar's fill is the one part that moves, and it moves by `transform`.
+ */
+@layer components {
+  .progress {
+    --progress-fill: var(--g-brand);
+    --progress-stroke: var(--c-brand);
+
+    min-width: 0;
+    max-width: 100%;
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    line-height: var(--lh-heading);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .progress[data-tone="success"] {
+    --progress-fill: var(--c-success-vivid);
+    --progress-stroke: var(--c-success-vivid);
+  }
+
+  .progress__label {
+    min-width: 0;
+    font-weight: var(--w-semibold);
+    overflow-wrap: anywhere;
+  }
+
+  .progress__value {
+    flex: none;
+    color: var(--c-text-soft);
+    font-weight: var(--w-bold);
+    white-space: nowrap;
+  }
+
+  /* Bar: the label and value on one line, wrapping when narrow, over the full-width track. */
+  .progress[data-kind="bar"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    width: 100%;
+  }
+
+  .progress__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s-1) var(--s-3);
+  }
+
+  /* The track: a well with an edge, which clips the fill to its own round ends. */
+  .progress__track {
+    position: relative;
+    display: block;
+    height: var(--s-3);
+    overflow: hidden;
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-pill);
+    background: var(--c-sunken);
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.08);
+  }
+
+  .progress__fill {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--progress-fill);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--m-large) var(--ease-emphasis);
+  }
+
+  :dir(rtl) .progress__fill {
+    transform-origin: right center;
+  }
+
+  /* Ring: the dial with its percentage at the centre, and the label wrapping below it. */
+  .progress[data-kind="ring"] {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-2);
+    max-width: calc(var(--s-12) * 1.25);
+    text-align: center;
+  }
+
+  .progress__dial {
+    position: relative;
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-11);
+    height: var(--s-11);
+  }
+
+  .progress__circle {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+
+  .progress__groove,
+  .progress__arc {
+    fill: none;
+    stroke-width: 4;
+  }
+
+  .progress__groove {
+    stroke: var(--c-line);
+  }
+
+  .progress__arc {
+    stroke: var(--progress-stroke);
+    stroke-linecap: round;
+  }
+
+  .progress__arc[data-empty] {
+    opacity: 0;
+  }
+
+  .progress[data-kind="ring"] .progress__value {
+    position: relative;
+    color: var(--c-text);
+    font-size: var(--t-lg);
+    font-weight: var(--w-heavy);
+    letter-spacing: var(--ls-heading);
+  }
+
+  /* Steps: a column by default, and a row with connecting lines once the list has room. */
+  .progress[data-kind="steps"] {
+    --progress-marker: var(--s-7);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    width: 100%;
+    container-type: inline-size;
+  }
+
+  .progress__steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .progress__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    min-width: 0;
+    color: var(--c-text-soft);
+    font-weight: var(--w-medium);
+  }
+
+  .progress__name {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* A waiting step's marker is a well with its number. */
+  .progress__marker {
+    position: relative;
+    z-index: var(--z-raised);
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--progress-marker);
+    height: var(--progress-marker);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--c-sunken);
+    color: var(--c-text-soft);
+    font-weight: var(--w-bold);
+  }
+
+  .progress__marker .icon {
+    width: var(--s-4);
+    height: var(--s-4);
+    stroke-width: 3;
+  }
+
+  .progress__step[data-state="done"],
+  .progress__step[data-state="current"] {
+    color: var(--c-text);
+  }
+
+  .progress__step[data-state="current"] .progress__name {
+    font-weight: var(--w-bold);
+  }
+
+  /*
+   * The current step: a teal ring around a teal tint, with its number in teal. The tint is mixed in
+   * sRGB, the one form of a mix that the layout check reads behind a text.
+   */
+  .progress__step[data-state="current"] .progress__marker {
+    border: 2px solid var(--c-accent);
+    background: color-mix(in srgb, var(--c-accent) 10%, var(--c-surface-1));
+    box-shadow: 0 0 0 var(--s-1) color-mix(in oklab, var(--c-accent) 16%, transparent);
+    color: var(--c-accent);
+  }
+
+  /* A done step: a green disc with the check in its ink. */
+  .progress__step[data-state="done"] .progress__marker {
+    border-color: var(--c-success);
+    background: var(--c-success);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.22);
+    color: var(--c-success-ink);
+  }
+
+  @container (min-width: 480px) {
+    .progress__steps {
+      flex-direction: row;
+      gap: 0;
+    }
+
+    .progress__step {
+      flex: 1 1 0;
+      flex-direction: column;
+      gap: var(--s-2);
+      padding-inline: var(--s-1);
+      text-align: center;
+    }
+
+    /* The line from the step before to this one, in bright green once this step is reached. */
+    .progress__step + .progress__step::before {
+      content: "";
+      position: absolute;
+      top: calc(var(--progress-marker) / 2 - 1.5px);
+      left: calc(-50% + var(--progress-marker) / 2 + var(--s-2));
+      right: calc(50% + var(--progress-marker) / 2 + var(--s-2));
+      height: 3px;
+      border-radius: var(--r-pill);
+      background: var(--c-line);
+    }
+
+    .progress__step[data-state="done"]::before,
+    .progress__step[data-state="current"]::before {
+      background: var(--c-success-vivid);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .progress__fill {
+      transition: none;
+    }
+  }
+}

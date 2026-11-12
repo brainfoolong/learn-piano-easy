@@ -1,0 +1,106 @@
+/*
+ * A landing box's styles. `src/landing/player-box.ts` is the home of what the box holds and how it starts.
+ *
+ * - **The box keeps one shape,** 4 by 3, the pictures' own. The picture, then the player, fills it, so
+ *   neither the picture's arrival nor the start moves anything. Its colour is the embed's background.
+ * - **The picture of the site's theme shows:** the system's scheme, unless the site's theme names one.
+ * - **The picture pans and zooms slowly,** to and fro on a loop of 20 seconds, so it never looks frozen.
+ *   Only `transform` moves, and with reduced motion it holds still.
+ * - **A round play cue** stands on the picture, and grows a little under the pointer.
+ * - **Once the player runs,** the picture and the cue hide, and the player's canvas fills the box.
+ */
+@layer pages {
+  .player-box {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-2);
+    cursor: pointer;
+  }
+
+  .player-box[data-state="player"] {
+    cursor: auto;
+  }
+
+  .player-box__picture {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.06);
+    transform-origin: 50% 70%;
+  }
+
+  .player-box__picture[data-theme="dark"] {
+    display: none;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-site-theme="light"]) .player-box__picture[data-theme="light"] {
+      display: none;
+    }
+
+    :root:not([data-site-theme="light"]) .player-box__picture[data-theme="dark"] {
+      display: block;
+    }
+  }
+
+  :root[data-site-theme="dark"] .player-box__picture[data-theme="light"] {
+    display: none;
+  }
+
+  :root[data-site-theme="dark"] .player-box__picture[data-theme="dark"] {
+    display: block;
+  }
+
+  .player-box__cue {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    display: grid;
+    place-items: center;
+    width: var(--s-10);
+    height: var(--s-10);
+    margin: calc(var(--s-10) / -2) 0 0 calc(var(--s-10) / -2);
+    border-radius: var(--r-pill);
+    background: var(--c-accent);
+    box-shadow: var(--e-3);
+    color: var(--c-accent-ink);
+  }
+
+  .player-box__cue .icon {
+    width: var(--s-6);
+    height: var(--s-6);
+    margin-inline-start: 0.1em;
+  }
+
+  .player-box[data-state="player"] > :not(canvas) {
+    visibility: hidden;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .player-box__picture {
+      animation: player-box-pan 10s ease-in-out infinite alternate;
+    }
+
+    .player-box__cue {
+      transition: transform var(--m-small) var(--ease-standard);
+    }
+
+    .player-box:hover .player-box__cue {
+      transform: scale(1.08);
+    }
+  }
+
+  @keyframes player-box-pan {
+    from {
+      transform: scale(1.06) translate(-2%, 1%);
+    }
+
+    to {
+      transform: scale(1.16) translate(2%, -1.5%);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+/*
+ * The lyrics over the scene. `src/render/lyrics.ts` is the home of how they behave.
+ *
+ * The line is a chip: the view sets its ground, its size and the three ink colours as `--lyric`,
+ * `--lyric-played` and `--lyric-active` from the settings. The learner picks them for the scene, so
+ * none is a token. The chip's padding and the cursor are in `em`, since they follow the chosen size.
+ * The chip blurs the scene behind a ground that lets it through, so the words stay readable.
+ * The spans' offsets are measured from `.lyrics`, so the cursor bounces above them.
+ */
+@layer pages {
+  .lyrics {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    padding: 0.5em 0.7em 0.25em;
+    border-radius: var(--r-card);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--e-2);
+    font-weight: var(--w-bold);
+    line-height: 1.3;
+    letter-spacing: var(--ls-heading);
+    white-space: pre;
+    pointer-events: none;
+  }
+
+  .lyrics[hidden] {
+    display: none;
+  }
+
+  .lyrics-text span {
+    color: var(--lyric);
+  }
+
+  .lyrics-text .played {
+    color: var(--lyric-played);
+  }
+
+  .lyrics-text .active {
+    color: var(--lyric-active);
+  }
+
+  .lyrics-cursor {
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    width: 0.3em;
+    height: 0.3em;
+    margin-left: -0.15em;
+    border-radius: var(--r-pill);
+    background: var(--lyric-active);
+  }
+
+  .lyrics-cursor[hidden] {
+    display: none;
+  }
+}

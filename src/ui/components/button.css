@@ -1,0 +1,192 @@
+/*
+ * The button's styles. `src/ui/components/button.ts` is the home of how a button behaves.
+ *
+ * Each variant and size sets the button's own custom properties, and one rule draws every button from
+ * them. A raised button has a lit top edge and a soft shadow, so it reads as a key to press. The
+ * primary one carries the honey sheen and gains a glow as it lifts.
+ *
+ * Only `transform` and `opacity` move: the lift and the press move the button, and two layers fade in
+ * for the tint and the glow, so nothing in the layout moves.
+ */
+@layer components {
+  .btn {
+    --btn-bg: var(--c-surface-2);
+    --btn-ink: var(--c-text);
+    --btn-edge: var(--c-line-strong);
+    --btn-shadow: var(--e-rim), var(--e-1);
+    --btn-glow: var(--e-2);
+    --btn-height: var(--s-8);
+    --btn-pad: var(--s-4);
+    --btn-font: var(--t-md);
+    --btn-icon: var(--s-5);
+
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-width: var(--btn-height);
+    min-height: var(--btn-height);
+    padding: var(--s-1) var(--btn-pad);
+    border: 1px solid var(--btn-edge);
+    border-radius: var(--r-control);
+    background: var(--btn-bg);
+    box-shadow: var(--btn-shadow);
+    color: var(--btn-ink);
+    font-size: var(--btn-font);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    letter-spacing: -0.005em;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .btn[data-variant="primary"] {
+    --btn-bg: var(--g-brand) border-box var(--c-brand);
+    --btn-ink: var(--c-brand-ink);
+    --btn-edge: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    --btn-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5), var(--e-1);
+    --btn-glow: var(--e-glow);
+  }
+
+  .btn[data-variant="ghost"] {
+    --btn-bg: transparent;
+    --btn-edge: transparent;
+    --btn-shadow: none;
+    --btn-glow: none;
+  }
+
+  .btn[data-variant="danger"] {
+    --btn-bg: var(--c-danger);
+    --btn-ink: var(--c-danger-ink);
+    --btn-edge: var(--c-danger);
+    --btn-shadow: inset 0 1px 0 rgb(255 255 255 / 0.22), var(--e-1);
+    --btn-glow: 0 6px 20px color-mix(in oklab, var(--c-danger) 34%, transparent);
+  }
+
+  .btn[data-size="small"] {
+    --btn-height: var(--s-7);
+    --btn-pad: var(--s-3);
+    --btn-font: var(--t-sm);
+    --btn-icon: var(--s-4);
+  }
+
+  .btn[data-size="large"] {
+    --btn-height: var(--s-9);
+    --btn-pad: var(--s-6);
+    --btn-font: var(--t-lg);
+    --btn-icon: var(--s-6);
+
+    border-radius: var(--s-4);
+  }
+
+  /* A touch screen asks a target a finger can hit, whatever the size. */
+  @media (pointer: coarse) {
+    .btn {
+      min-width: max(var(--btn-height), var(--s-touch));
+      min-height: max(var(--btn-height), var(--s-touch));
+    }
+  }
+
+  .btn__content {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  .btn .icon {
+    flex: none;
+    width: var(--btn-icon);
+    height: var(--btn-icon);
+  }
+
+  /* The tint under the pointer and the press, in the ink's own colour. */
+  .btn::before,
+  .btn::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  .btn::before {
+    background: currentColor;
+  }
+
+  /* The glow: a deeper shadow, or the honey's own light, faded in as the button lifts. */
+  .btn::after {
+    box-shadow: var(--btn-glow);
+    z-index: -2;
+  }
+
+  @media (hover: hover) {
+    .btn:hover:not(:disabled, [aria-busy="true"]) {
+      transform: translateY(var(--motion-lift));
+    }
+
+    .btn:hover:not(:disabled, [aria-busy="true"])::before {
+      opacity: var(--o-hover);
+    }
+
+    .btn:hover:not(:disabled, [aria-busy="true"])::after {
+      opacity: 1;
+    }
+  }
+
+  .btn:active:not(:disabled, [aria-busy="true"]) {
+    transform: translateY(0) scale(0.97);
+    transition-duration: var(--m-micro);
+  }
+
+  .btn:active:not(:disabled, [aria-busy="true"])::before {
+    opacity: var(--o-press);
+  }
+
+  .btn:disabled {
+    opacity: var(--o-disabled);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  .btn[aria-busy="true"] {
+    cursor: progress;
+  }
+
+  /* Busy: the label fades but stays, so the button keeps its size and its accessible name. */
+  .btn[aria-busy="true"] .btn__content {
+    opacity: 0;
+  }
+
+  .btn__spinner {
+    position: absolute;
+    inset: 0;
+    width: var(--btn-icon);
+    height: var(--btn-icon);
+    margin: auto;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: var(--r-pill);
+    opacity: 0;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  .btn[aria-busy="true"] .btn__spinner {
+    opacity: 1;
+    animation: btn-spin calc(var(--m-large) * 2) linear infinite;
+  }
+
+  @keyframes btn-spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}

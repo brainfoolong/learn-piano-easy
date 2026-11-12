@@ -1,0 +1,166 @@
+/*
+ * The dialog's styles. `src/ui/components/dialog.ts` is the home of how a dialog behaves.
+ *
+ * One rule draws the panel, for the modal and for the gallery's preview alike. The panel is the site's
+ * highest surface: a lit top edge and the deepest shadow. Its head holds a firm title and a round close
+ * button, and a hairline parts it from the body.
+ *
+ * The modal sits in the top layer, which stacks above every `z-index`, so it needs none. Its backdrop
+ * dims and blurs the page. Below 768 pixels the modal becomes a sheet on the bottom edge. A media query
+ * decides this, because the top layer has no container.
+ *
+ * Only `transform` and `opacity` animate: the panel rises and fades in. With reduced motion
+ * `--motion-rise` is zero, so the panel only fades in.
+ */
+@layer components {
+  .dialog[open],
+  .dialog[data-preview] {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: calc(var(--s-12) * 4.5);
+    max-width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+  }
+
+  .dialog[data-size="wide"] {
+    width: calc(var(--s-12) * 6);
+  }
+
+  .dialog[open] {
+    max-width: calc(100% - 2 * var(--s-gutter));
+    max-height: calc(100dvh - 2 * var(--s-gutter));
+    margin: auto;
+    overflow: hidden;
+    overscroll-behavior: contain;
+    animation: dialog-enter var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  /* The dialog itself takes the focus on open only so a screen reader reads its name. It is no control. */
+  .dialog[open]:focus-visible {
+    outline: none;
+  }
+
+  /* A dim and a blur over the page. `::backdrop` inherits the tokens from its dialog. */
+  .dialog::backdrop {
+    background: var(--c-scrim);
+    -webkit-backdrop-filter: blur(calc(var(--glass-blur) / 4));
+    backdrop-filter: blur(calc(var(--glass-blur) / 4));
+    animation: dialog-fade var(--m-medium) var(--ease-standard) both;
+  }
+
+  .dialog__head {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: var(--s-3);
+    padding: var(--s-4) var(--s-4) var(--s-4) var(--s-6);
+    border-bottom: 1px solid var(--c-line);
+  }
+
+  .dialog__title {
+    flex: 1;
+    min-width: 0;
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    overflow-wrap: anywhere;
+  }
+
+  /* The close button: a round well at the head's end, which keeps to the top beside a long title. */
+  .dialog__head .btn.icon-btn {
+    --btn-bg: var(--c-sunken);
+    --btn-ink: var(--c-text-soft);
+
+    flex: none;
+    align-self: flex-start;
+    border-radius: var(--r-pill);
+  }
+
+  /* The body scrolls inside the panel when it is tall, so the head and the actions stay in view. */
+  .dialog__body {
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: var(--s-5) var(--s-6) var(--s-6);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    font-size: var(--t-md);
+    line-height: var(--lh-body);
+    overflow-wrap: anywhere;
+  }
+
+  .dialog__body:focus-visible {
+    outline-offset: -2px;
+  }
+
+  .dialog__body > * + * {
+    margin-block-start: var(--s-3);
+  }
+
+  .dialog__actions {
+    display: flex;
+    flex: none;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--s-3);
+    padding: var(--s-4) var(--s-6) var(--s-5);
+    border-top: 1px solid var(--c-line);
+  }
+
+  /* Below 768 pixels, the modal is a sheet: full width on the bottom edge, its top corners rounded. */
+  @media (max-width: 767px) {
+    .dialog[open] {
+      width: 100%;
+      max-width: 100%;
+      max-height: calc(100dvh - var(--s-9));
+      margin: auto 0 0;
+      border-bottom: none;
+      border-radius: var(--r-panel) var(--r-panel) 0 0;
+      padding-block-end: env(safe-area-inset-bottom);
+      animation-name: sheet-enter;
+    }
+
+    .dialog__head {
+      padding-inline-start: var(--s-5);
+    }
+
+    .dialog__body {
+      padding-inline: var(--s-5);
+    }
+
+    .dialog__actions {
+      padding-inline: var(--s-5);
+    }
+
+    .dialog__actions > * {
+      flex: 1 1 auto;
+    }
+  }
+
+  @keyframes dialog-enter {
+    from {
+      opacity: 0;
+      transform: translateY(calc(var(--motion-rise) * 2));
+    }
+  }
+
+  @keyframes sheet-enter {
+    from {
+      opacity: 0;
+      transform: translateY(calc(var(--motion-rise) * 8));
+    }
+  }
+
+  @keyframes dialog-fade {
+    from {
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+/*
+ * The colour picker's styles. `src/ui/color-picker.ts` is the home of how the picker behaves.
+ *
+ * A swatch opens a panel below it with a saturation and value square, a hue strip, an alpha strip and
+ * a hex field. The swatch is a well with a firm edge, and the panel is a raised menu. A checkerboard
+ * shows through a see-through colour. The picker's gradients, its checkerboard and its thumb's white
+ * ring are the colours it picks or must stand out on, so they stay literal in both themes.
+ */
+@layer pages {
+  .colour-picker {
+    position: relative;
+    --checker: repeating-conic-gradient(#999 0 25%, #ddd 0 50%) 0 0 / 10px 10px;
+  }
+
+  .swatch {
+    width: var(--s-touch);
+    height: var(--s-7);
+    padding: 0;
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--s-2);
+    background: var(--checker);
+    box-shadow: var(--e-1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  @media (hover: hover) {
+    .swatch:hover {
+      transform: translateY(var(--motion-lift));
+    }
+  }
+
+  .swatch:active {
+    transform: scale(0.95);
+  }
+
+  .swatch-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* The panel sits one step above the raised things of its form, such as a toggle's thumb. */
+  .colour-popover {
+    position: absolute;
+    right: 0;
+    top: calc(100% + var(--s-2));
+    z-index: calc(var(--z-raised) + 1);
+    display: grid;
+    gap: var(--s-3);
+    width: calc(var(--s-12) + var(--s-11));
+    padding: var(--s-3);
+    background: var(--c-surface-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    box-shadow: var(--e-rim), var(--e-3);
+  }
+
+  .colour-popover[hidden] {
+    display: none;
+  }
+
+  .sv-square,
+  .hue-strip,
+  .alpha-strip {
+    position: relative;
+    border-radius: var(--s-2);
+    touch-action: none;
+    cursor: crosshair;
+  }
+
+  .sv-square {
+    height: calc(var(--s-12) + var(--s-3));
+  }
+
+  .sv-square::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(to top, #000, transparent), linear-gradient(to right, #fff, transparent);
+  }
+
+  .hue-strip {
+    height: var(--s-4);
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+  }
+
+  .alpha-strip {
+    height: var(--s-4);
+    background: var(--checker);
+  }
+
+  .alpha-fill {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+
+  .picker-thumb {
+    position: absolute;
+    top: 50%;
+    width: var(--s-4);
+    height: var(--s-4);
+    border: 2px solid #fff;
+    border-radius: var(--r-pill);
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .colour-popover input.hex {
+    width: 100%;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  }
+}

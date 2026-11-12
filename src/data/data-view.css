@@ -1,0 +1,85 @@
+/*
+ * The Data page's styles. `src/data/data-view.ts` is the home of what the page shows and how it behaves.
+ *
+ * The page is a short column at reading width. Each action is a raised card on `--c-surface-1`, as the
+ * profile's are. The two cards share a row where the page is wide, and stack where it is narrow.
+ */
+@layer pages {
+  .data {
+    display: grid;
+    gap: var(--s-6);
+    max-width: var(--measure);
+  }
+
+  .data__lead,
+  .data__text,
+  .data__age {
+    margin: 0;
+    color: var(--c-text-soft);
+  }
+
+  .data__lead {
+    font-size: var(--t-lg);
+  }
+
+  .data__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--s-6);
+  }
+
+  .data__card {
+    display: grid;
+    align-content: start;
+    gap: var(--s-4);
+    min-width: 0;
+    padding: var(--s-6);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  @media (max-width: 479px) {
+    .data__card {
+      padding: var(--s-5);
+    }
+  }
+
+  .data__heading {
+    margin: 0;
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+  }
+
+  .data__age {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .data__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+  }
+
+  .data__status {
+    margin: 0;
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-control);
+    background: color-mix(in srgb, var(--c-info) 9%, var(--c-surface-1));
+    color: var(--c-text);
+  }
+
+  .data__status:empty {
+    display: none;
+  }
+
+  .data__ask {
+    display: grid;
+    gap: var(--s-3);
+  }
+
+  .data__ask > p {
+    margin: 0;
+  }
+}

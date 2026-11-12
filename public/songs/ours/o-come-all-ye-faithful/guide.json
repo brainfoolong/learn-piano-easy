@@ -1,0 +1,356 @@
+{
+  "song": "o-come-all-ye-faithful",
+  "title": "O Come, All Ye Faithful",
+  "composer": "John Francis Wade",
+  "about": "John Francis Wade copied this tune by hand around 1751, with Latin words that begin Adeste fideles. Wade was an English Catholic who copied music for a living in France. Frederick Oakeley wrote the English words most people sing today in 1841.",
+  "funFact": "In London it was once called the Portuguese Hymn, because people heard it at the Portuguese embassy's chapel.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/o-come-all-ye-faithful/common.mid",
+      "skills": [
+        "open-fifths",
+        "dotted-rhythm"
+      ],
+      "fingers": {
+        "right": [2, 2, 1, 2, 3, 1, 3, 2, 3, 4, 3, 2, 1, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 1, 5, 4, 3, 5, 4, 3, 4, 2, 3, 2, 1, 2, 3, 2, 3, 4, 3, 1, 4, 4, 3, 4, 5, 4, 3, 4, 5, 4, 3, 2, 1, 2, 5, 4, 3, 2, 2],
+        "left": [5, 1, 5, 1, 4, 1, 4, 1, 5, 1, 4, 1, 5, 1, 5, 1, 5, 1, 4, 1, 4, 1, 5, 1, 4, 1, 4, 1, 4, 1, 4, 1, 5, 1, 4, 1, 4, 1, 5, 1, 4, 1, 5, 2, 4, 1, 5, 1, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 4, 1, 5, 2, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, null, null],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first three bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 3],
+          "wait": true
+        },
+        {
+          "text": "Play bars 1 to 9 with the right hand alone, down to the long low G.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each half of a bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 3,
+          "kind": "fingering",
+          "text": "Finger 2 starts on middle C, and the thumb waits on the G below it."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": "Long, short: hold the A, then let the quick G fall into the next bar."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 17,
+          "kind": "sound",
+          "text": "This is the refrain. Each time it comes, play it a little louder."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 11,
+          "text": "The little finger takes F this time, so finger 4 is ready for E."
+        },
+        {
+          "bar": 10,
+          "text": "Lift the hand during the rest, and land with the little finger on the high G. Fingers 4 and 3 step down to F and E."
+        },
+        {
+          "bar": 4,
+          "text": "Finger 3 lands on E after the short rest. Then fingers 2, 3 and 4 rock between D, E and F."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/o-come-all-ye-faithful/rare.mid",
+      "skills": [
+        "triads",
+        "dotted-rhythm"
+      ],
+      "fingers": {
+        "right": [2, 2, 1, 2, 3, 1, 3, 2, 3, 4, 3, 2, 1, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 1, 5, 4, 3, 5, 4, 3, 4, 2, 3, 2, 1, 2, 3, 2, 3, 4, 3, 1, 4, 4, 3, 4, 5, 4, 3, 4, 5, 4, 3, 2, 1, 2, 5, 4, 3, 2, 2],
+        "left": [4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 5, 3, 1, 4, 2, 1, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 1, 3, 1, 5, 3, 1, 4, 2, 4, 2, 1, 5, 3, 1, 4, 2, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, null, null],
+        "left": [55, 52, 50, 48, 47]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand alone on the first nine bars, and feel the long, short pair in bar 8.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the refrain, bars 14 to 17.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [14, 17],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "fingering",
+          "text": "The left hand keeps its thumb on G for nearly every chord, so the hand hardly moves."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": "Long, short: hold the A for three counts, and give the G just one."
+        },
+        {
+          "fromBar": 18,
+          "toBar": 21,
+          "kind": "sound",
+          "text": "The last line is the biggest. Let it swell, then rest on the last C."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 11,
+          "text": "The little finger takes F this time, so finger 4 is ready for E."
+        },
+        {
+          "bar": 12,
+          "text": "Finger 2 tucks back to C between E and D. Keep the hand still and let the fingers move."
+        },
+        {
+          "bar": 4,
+          "text": "Open the hand wide: the thumb leaves the low G as finger 3 reaches up to E."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/o-come-all-ye-faithful/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thirds-and-sixths",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [2, 2, 1, 2, 3, 1, 3, 2, 3, 4, 3, 2, 1, 3, 2, 1, 2, 3, 4, 5, 3, 2, 1, 1, 5, 4, 3, 5, 4, 3, 4, 2, 3, 2, 1, 2, 1, 5, 2, 4, 1, 5, 1, 5, 1, 5, 1, 3, 5, 2, 4, 1, 4, 1, 4, 3, 5, 2, 4, 1, 3, 1, 5, 5, 4, 3, 2, 1, 2, 5, 4, 3, 2, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 5, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 5, 1]
+      },
+      "start": {
+        "right": [67, 72, 74, null, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand alone on the first nine bars, an octave above middle C.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the thirds and sixths of bars 14 to 17 with the right hand alone. Press both notes as one.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [14, 17],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 13,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune rings out above it."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 17,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 20,
+          "kind": "sound",
+          "text": "Change the pedal in the middle of each bar, as the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 21,
+          "text": "Lift the left hand after the last D, then land on the low C octave with the final chord."
+        },
+        {
+          "bar": 16,
+          "text": "The pairs change from thirds to sixths and back. Look at the next pair before you play it."
+        },
+        {
+          "bar": 7,
+          "text": "The right hand climbs from B to E, one finger per key, while the left hand changes chord."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/o-come-all-ye-faithful/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "octave-bass"
+      ],
+      "fingers": {
+        "right": [1, 2, 5, 1, 2, 3, 5, 3, 1, 2, 5, 1, 2, 3, 5, 1, 2, 1, 2, 4, 3, 1, 2, 4, 2, 3, 5, 1, 2, 3, 5, 4, 1, 2, 3, 1, 2, 5, 1, 2, 5, 3, 1, 2, 3, 4, 5, 1, 2, 5, 1, 2, 4, 1, 3, 2, 1, 4, 1, 3, 5, 1, 2, 4, 1, 3, 1, 2, 3, 5, 1, 2, 4, 1, 2, 4, 5, 1, 3, 4, 1, 2, 4, 1, 2, 1, 2, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [64, 67, null, null, 72],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the little finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 13],
+          "wait": true
+        },
+        {
+          "text": "Play the octaves of bars 14 to 21 with the right hand alone. Keep the hand open and light.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [14, 21],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 13,
+          "kind": "trick",
+          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 21,
+          "kind": "sound",
+          "text": "In octaves, play the little finger a bit louder, so the tune shines on top."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 20,
+          "kind": "fingering",
+          "text": "The broken octave bass rolls from the little finger to the thumb and back."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 12,
+          "text": "The little finger reaches up to E between the chords. Then the hand drops onto A and C."
+        },
+        {
+          "bar": 8,
+          "text": "The chord slides from G and B down to F and A. Then finger 2 settles on G."
+        },
+        {
+          "bar": 3,
+          "text": "Spread the hand for the four-note G chord. Then let it close onto D and G."
+        }
+      ]
+    }
+  }
+}

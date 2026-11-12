@@ -1,0 +1,350 @@
+{
+  "song": "ode-to-joy",
+  "title": "Ode to Joy",
+  "composer": "Ludwig van Beethoven",
+  "about": "Beethoven wrote this tune for the last movement of his Ninth Symphony, first played in Vienna in 1824. A choir sings it to Friedrich Schiller's poem about joy and friendship. Today it is the anthem of the European Union, played without words.",
+  "funFact": "Beethoven was almost completely deaf when the Ninth was first played, and he had to be turned round to see the applause.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/ode-to-joy/common.mid",
+      "skills": [
+        "five-finger-position",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 3, 2, 2, 3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 2, 1, 1, 2, 2, 3, 1, 2, 3, 1, 2, 3, 2, 1, 2, 1, 3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 2, 1, 1],
+        "left": [5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 4, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, null, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It only changes between two shapes.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the first eight bars.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "Each finger has its own key here: thumb on C, little finger on G."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "rhythm",
+          "text": "The last D is twice as long as the notes before it, so count two beats."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "The middle part is the quiet one. Play it softly, then come back strong in bar 13."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "After the rest, find E with your third finger, and the tune starts again."
+        },
+        {
+          "bar": 12,
+          "text": "Your thumb stretches down to the low G, while the other fingers stay where they are."
+        },
+        {
+          "bar": 2,
+          "text": "Walk down from the little finger, one finger per key: 5, 4, 3, 2."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/ode-to-joy/rare.mid",
+      "skills": [
+        "eighth-notes",
+        "dotted-rhythm",
+        "triads"
+      ],
+      "fingers": {
+        "right": [3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 3, 2, 2, 3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 2, 1, 1, 2, 2, 3, 1, 2, 3, 4, 3, 1, 2, 3, 4, 3, 2, 1, 2, 1, 3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 2, 1, 1],
+        "left": [4, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 1, 5, 3, 1, 4, 2, 1, 5, 4, 2, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 5, 3, 4, 1, 5, 3, 1, 4, 2, 1, 5, 4, 2, 1]
+      },
+      "start": {
+        "right": [62, 64, 66, 67, 69],
+        "left": [57, 54, 52, 50, 49]
+      },
+      "practice": [
+        {
+          "text": "Clap or tap the dotted rhythm of bar 4, then play the right hand alone.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone, and keep each chord until the next one.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the middle part, where the chords change every two beats.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "rhythm",
+          "text": "Long, short, long: the F sharp takes a beat and a half, and the E sneaks in after it."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 11,
+          "kind": "rhythm",
+          "text": "The two quick notes are eighths. Think of them as one beat split in two."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "Each chord of the middle part lasts two beats. Let it ring until the next one."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 12,
+          "text": "Your thumb slides from D down to the low A, and the hand follows it."
+        },
+        {
+          "bar": 13,
+          "text": "From the low A, your third finger reaches up for F sharp. Look before you jump."
+        },
+        {
+          "bar": 10,
+          "text": "The F sharp and G go by quickly. Keep fingers 3 and 4 close to their keys."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/ode-to-joy/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 3, 2, 2, 1, 2, 1, 3, 1, 3, 2, 4, 3, 5, 3, 5, 2, 4, 3, 1, 2, 1, 2, 1, 2, 3, 2, 4, 2, 3, 3, 1, 2, 2, 3, 1, 2, 3, 4, 3, 1, 2, 3, 4, 3, 2, 1, 2, 1, 2, 3, 1, 3, 1, 3, 2, 4, 3, 5, 3, 5, 2, 4, 3, 1, 2, 1, 2, 1, 2, 3, 2, 4, 2, 3, 3, 1, 3],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 3]
+      },
+      "start": {
+        "right": [62, 64, 66, 67, 69],
+        "left": [57, null, 54, null, 50]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first four bars, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 8,
+          "kind": "fingering",
+          "text": "The tune is still the top note of each third, so let the upper finger lead."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "The pedal changes in the middle of each bar here. Lift it as the new chord starts."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 8,
+          "text": "Change from finger 3 to 1 on the held D, so the hand is ready for bar 9."
+        },
+        {
+          "bar": 16,
+          "text": "Your thumb drops to the low A for the last chord, under the third finger's D."
+        },
+        {
+          "bar": 13,
+          "text": "The thirds come back here. Press the two notes of each pair as one."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/ode-to-joy/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "arpeggios"
+      ],
+      "fingers": {
+        "right": [3, 3, 4, 5, 5, 4, 3, 2, 1, 1, 2, 3, 3, 2, 3, 1, 2, 4, 1, 2, 4, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 3, 5, 1, 2, 4, 1, 2, 1, 2, 2, 2, 3, 1, 2, 3, 4, 3, 1, 2, 3, 4, 3, 2, 1, 2, 1, 2, 3, 1, 3, 1, 3, 1, 4, 1, 5, 1, 5, 1, 4, 2, 3, 1, 2, 1, 2, 1, 2, 1, 2, 4, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 3, 2, 1, 1, 2, 3, 5, 5, 3, 2, 1, 1, 2, 3, 5, 5, 3, 2, 1, 1, 2, 3, 5, 1, 2, 3, 5, 5, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [74, 76, 78, 79, 81],
+        "left": [50, 57, 54, null, 38]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the bass note, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the middle part's arpeggios in the left hand alone.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play the top note of each chord a little louder than the others."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "fingering",
+          "text": "The arpeggio climbs with 5, 3, 2, 1, so the thumb lands on the top note."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 14,
+          "text": "The tune falls from A to E over a held C sharp. Let the top finger carry it."
+        },
+        {
+          "bar": 6,
+          "text": "The chords change on every beat. Keep the thumb on A and move only the upper fingers."
+        },
+        {
+          "bar": 2,
+          "text": "The tune walks down while the bass jumps. Keep your eyes on the left hand."
+        }
+      ]
+    }
+  }
+}

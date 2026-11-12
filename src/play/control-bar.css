@@ -1,0 +1,485 @@
+/*
+ * The control bar's styles. `src/play/control-bar.ts` is the home of how the bar behaves.
+ *
+ * The bar is the instrument panel of the player's floating bar, under a hairline. The floating bar's
+ * glass of `src/app/shell.css` is its surface. Its buttons are the button component's, and this file
+ * sets their custom properties, so every key keeps the component's lift, press and focus ring. Every
+ * value is a token, so the bar follows the site's theme.
+ *
+ * - **A cluster is a caption above a well.** The well is sunken, and each button in it is a raised key,
+ *   so a cluster reads as one control with its name.
+ * - **Play is the one honey action.** It is a pill as tall as a well, and its glow always shows a little.
+ * - **What is on is teal.** The timeline fills in teal up to the song time, and a loop that is on lights
+ *   the Loop key and its lamp. The loop's band on the track is iris, so it reads apart from the fill.
+ * - **The timeline shows a thumb** under the pointer, under the focus and on a touch screen.
+ * - **`--control-key` is a key's height,** and `--control-key-width` its least width. A touch screen
+ *   sets both to the touch target, so every key is one a finger can hit.
+ *
+ * The Expert key ends the row, and the expert tools it shows hide while it is off.
+ *
+ * Below 1024 pixels wide the bar keeps play, stop and the speed, and the other clusters open as a
+ * sheet above them. On a window under 481 pixels tall the timeline joins that row, so the bar takes one line.
+ * Only `transform` and `opacity` animate.
+ */
+@layer pages {
+  .control-bar {
+    --control-key: var(--s-8);
+    --control-key-width: var(--s-7);
+    --control-well: calc(var(--control-key) + var(--s-2));
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    padding: var(--s-3) var(--s-4);
+    border-block-start: 1px solid var(--c-line);
+    color: var(--c-text);
+  }
+
+  /* A touch screen asks a key a finger can hit. */
+  @media (pointer: coarse) {
+    .control-bar {
+      --control-key: var(--s-touch);
+      --control-key-width: var(--s-touch);
+    }
+  }
+
+  /* The row: play, then the clusters, each standing on the same line as the wells. */
+  .control-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--s-2) var(--s-4);
+  }
+
+  /* The spacer parts the row: what plays the song stands at its start, and what moves the view at its end. */
+  .control-more > .spacer {
+    flex: 1;
+  }
+
+  /* Play: the bar's primary action, a honey pill with its glow. */
+  .control-play {
+    --btn-height: var(--control-well);
+    --btn-pad: var(--s-5);
+
+    flex: none;
+    min-width: var(--s-12);
+    border-radius: var(--r-pill);
+  }
+
+  .control-play::after {
+    opacity: 0.6;
+  }
+
+  /* Play and Stop stand together, closer than the clusters stand to each other. */
+  .control-transport {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: var(--s-2);
+  }
+
+  /* Stop: a round raised key as tall as a well, with its icon alone. */
+  .control-stop {
+    --btn-height: var(--control-well);
+    --btn-pad: 0px;
+
+    flex: none;
+    border-radius: var(--r-pill);
+  }
+
+  /* A cluster: its caption in small caps, above its well. */
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-1);
+    min-width: 0;
+  }
+
+  .control-group__label {
+    padding-inline: var(--s-1);
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    line-height: var(--s-4);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .control-well {
+    display: flex;
+    align-items: center;
+    gap: var(--s-1);
+    box-sizing: border-box;
+    height: var(--control-well);
+    padding: calc(var(--s-1) - 1px);
+    border: 1px solid var(--c-line);
+    border-radius: var(--s-4);
+    background: var(--c-sunken);
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.05);
+  }
+
+  /* A key of a well: the ghost button, raised to a surface with a lit top edge. */
+  .control-well > .btn {
+    --btn-height: var(--control-key);
+    --btn-pad: var(--s-2);
+    --btn-font: var(--t-lg);
+    --btn-icon: var(--s-5);
+    --btn-bg: var(--c-surface-2);
+    --btn-edge: var(--c-line);
+    --btn-shadow: var(--e-rim), var(--e-1);
+    --btn-glow: var(--e-2);
+
+    flex: none;
+    min-width: var(--control-key-width);
+  }
+
+  /* A key that shows a word, such as Loop and Fit, is as wide as its word. */
+  .control-well > .control-word {
+    --btn-pad: var(--s-3);
+    --btn-font: var(--t-sm);
+  }
+
+  /* A toggle that is on turns teal. One with a word, such as Loop, carries a lamp, so its state shows without its colour. */
+  .control-toggle .btn__label::before {
+    content: "";
+    display: inline-block;
+    box-sizing: border-box;
+    width: var(--s-2);
+    height: var(--s-2);
+    margin-inline-end: var(--s-2);
+    border: 2px solid currentColor;
+    border-radius: var(--r-pill);
+    opacity: var(--o-disabled);
+  }
+
+  .control-toggle[aria-pressed="true"] {
+    --btn-bg: var(--c-accent);
+    --btn-ink: var(--c-accent-ink);
+    --btn-edge: var(--c-accent);
+  }
+
+  .control-toggle[aria-pressed="true"] .btn__label::before {
+    background: currentColor;
+    opacity: 1;
+  }
+
+  .readout {
+    flex: 1 0 auto;
+    min-width: var(--s-9);
+    padding-inline: var(--s-2);
+    color: var(--c-text);
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+    font-variant-numeric: tabular-nums;
+    line-height: var(--lh-heading);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* The timeline: the song time, the track and the song's length. */
+  .timeline {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+  }
+
+  .timeline-time {
+    min-width: var(--s-10);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .timeline-time:last-child {
+    color: var(--c-text-soft);
+    font-weight: var(--w-semibold);
+    text-align: end;
+  }
+
+  .timeline-track {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    height: var(--s-6);
+    cursor: pointer;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* A touch screen asks a target a finger can hit, so the track grows while its line keeps its size. */
+  @media (pointer: coarse) {
+    .timeline-track {
+      height: var(--s-touch);
+    }
+  }
+
+  /* The line is a well, and the fill lies in it up to the song time. */
+  .timeline-track::before,
+  .timeline-fill {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(50% - var(--s-3) / 2);
+    height: var(--s-3);
+    border-radius: var(--r-pill);
+  }
+
+  .timeline-track::before {
+    right: 0;
+    background: var(--c-sunken);
+    box-shadow:
+      inset 0 0 0 1px var(--c-line-strong),
+      inset 0 1px 2px rgb(0 0 0 / 0.12);
+  }
+
+  .timeline-fill {
+    background: var(--c-accent-vivid);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.35);
+  }
+
+  /* The thumb rides the end of the fill. It springs in under the pointer and the focus. */
+  .timeline-fill::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - var(--s-5) / 2);
+    right: calc(var(--s-5) / -2);
+    box-sizing: border-box;
+    width: var(--s-5);
+    height: var(--s-5);
+    border: 2px solid var(--c-accent);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-1);
+    opacity: 0;
+    transform: scale(0.5);
+    transition:
+      opacity var(--m-small) var(--ease-standard),
+      transform var(--m-small) var(--ease-spring);
+  }
+
+  .timeline-track:is(:hover, :active, :focus-visible) .timeline-fill::after {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* A touch screen has no pointer to hover with, so its thumb always shows. */
+  @media (hover: none) {
+    .timeline-fill::after {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .timeline-track:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+    border-radius: var(--r-control);
+  }
+
+  .timeline-marks {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  /* The loop's measures, as an iris band around the track. */
+  .timeline-loop {
+    position: absolute;
+    top: calc(50% - var(--s-5) / 2);
+    box-sizing: border-box;
+    height: var(--s-5);
+    border: 2px solid var(--c-iris);
+    border-radius: var(--s-2);
+    background: color-mix(in oklab, var(--c-iris-vivid) 24%, transparent);
+  }
+
+  /* A line at each measure, inside the track's line. */
+  .timeline-measure {
+    position: absolute;
+    top: calc(50% - var(--s-1));
+    width: 1px;
+    height: var(--s-2);
+    background: var(--c-text-soft);
+    opacity: var(--o-disabled);
+  }
+
+  /* A MIDI marker stands taller than the line, in orchid, and shows its text under the pointer. */
+  .timeline-marker {
+    position: absolute;
+    top: calc(50% - var(--s-2));
+    width: var(--s-1);
+    height: var(--s-4);
+    margin-left: calc(var(--s-1) / -2);
+    border-radius: var(--r-pill);
+    background: var(--c-orchid);
+    pointer-events: auto;
+  }
+
+  /* Wide, the clusters of the sheet are plain members of the row, and the More button hides. */
+  .control-more {
+    display: contents;
+  }
+
+  .control-more-toggle {
+    display: none;
+  }
+
+  /* The expert tools hide while the Expert button is off. A speed or transpose off its default stays. */
+  .control-bar:not(.is-expert) .control-expert:not(.is-changed) {
+    display: none;
+  }
+
+  /* The flat camera ignores the view's sideways move, so its buttons hide there. */
+  .control-bar.is-flat .control-shift {
+    display: none;
+  }
+
+  /*
+   * Below the desktop width, or on a short window, the row keeps play, stop and the speed. The other
+   * clusters fold into a sheet, which opens as a block of its own above them.
+   */
+  @media (max-width: 1023px), (max-height: 480px) {
+    .control-row {
+      align-items: center;
+    }
+
+    /* The speed's readout names itself, so its caption gives its line back to the scene. */
+    .control-row > .control-group > .control-group__label {
+      display: none;
+    }
+
+    /* The More button is a key as tall as a well, at the end of the row. */
+    .control-more-toggle {
+      --btn-height: var(--control-well);
+      --btn-font: var(--t-lg);
+      --btn-bg: var(--c-surface-2);
+      --btn-edge: var(--c-line-strong);
+      --btn-shadow: var(--e-rim), var(--e-1);
+      --btn-glow: var(--e-2);
+
+      display: inline-flex;
+      margin-inline-start: auto;
+      border-radius: var(--s-4);
+    }
+
+    .control-more-toggle[aria-expanded="true"] {
+      --btn-bg: var(--c-accent-soft);
+      --btn-ink: var(--c-accent);
+      --btn-edge: var(--c-accent);
+    }
+
+    .control-bar:not(.is-more-open) .control-more {
+      display: none;
+    }
+
+    /* The open sheet: every cluster grows to share its line, and each well's parts share its width. */
+    .control-bar.is-more-open .control-more {
+      order: -1;
+      display: flex;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      gap: var(--s-2) var(--s-3);
+      padding-block-end: var(--s-3);
+      border-block-end: 1px solid var(--c-line);
+      animation: control-sheet-in var(--m-medium) var(--ease-emphasis) both;
+    }
+
+    .control-more > .spacer {
+      display: none;
+    }
+
+    .control-more > .control-group {
+      flex: 1 1 auto;
+    }
+
+    .control-more .control-well > * {
+      flex: 1 1 auto;
+    }
+  }
+
+  /* On a phone the bar's own padding gives a little to the row. */
+  @media (max-width: 479px) {
+    .control-bar {
+      padding-inline: var(--s-3);
+    }
+  }
+
+  /*
+   * Below 1280 pixels, play is a round key with its icon alone. The clusters then fit one row in the
+   * longest language, and on a phone stop, the speed and the More button fit beside it.
+   */
+  @media (max-width: 1279px) {
+    .control-play {
+      --btn-pad: 0px;
+
+      min-width: var(--control-well);
+    }
+
+    .control-play .btn__label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+  }
+
+  /*
+   * On a phone, play, stop and the More button are as tall as the keys in a well, and the row's gaps
+   * close. The row then stays one line at 360 pixels, and every target keeps the touch size.
+   */
+  @media (max-width: 479px) {
+    .control-row {
+      column-gap: var(--s-2);
+    }
+
+    .control-play,
+    .control-stop,
+    .control-more-toggle {
+      --btn-height: var(--control-key);
+
+      min-width: var(--control-key);
+    }
+  }
+
+  /*
+   * On a short window, such as a phone held sideways, the timeline joins the row between the speed and
+   * the More button. The bar is then one line tall, and the scene keeps the height.
+   */
+  @media (max-height: 480px) {
+    .control-bar {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: var(--s-2) var(--s-3);
+      padding-block: var(--s-2);
+    }
+
+    .control-row {
+      display: contents;
+    }
+
+    .timeline {
+      order: 1;
+      flex: 1 1 0;
+      min-width: 0;
+    }
+
+    .control-more-toggle {
+      order: 2;
+      margin-inline-start: 0;
+    }
+  }
+
+  @keyframes control-sheet-in {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+}

@@ -1,0 +1,206 @@
+/*
+ * The guide of a version of ours, with the rarity tag and the quiet hint the library's dialogs share.
+ * `src/library/guide-panel.ts` is the home of how the guide behaves, and `src/library/tracks-panel.ts`
+ * shows the hint too.
+ *
+ * A rarity's tag takes its colour from `data-rarity`. The guide is a column of parts, each under a
+ * strong heading, and `data-part` names a part so it can take its own shape:
+ *
+ * - **The fun fact is a band of honey tint,** the one warm block of the guide.
+ * - **The skills are tags in the accent,** side by side.
+ * - **A practice step is a row with its number in iris,** its text, and its Apply button on one line.
+ * - **A tricky spot is the same row** without a number, with its Loop button.
+ */
+@layer pages {
+  .library-rarity {
+    --rarity: var(--c-rarity-common);
+    padding: 0 var(--s-2);
+    border: 1px solid var(--rarity);
+    border-radius: var(--r-pill);
+    background: color-mix(in oklab, var(--rarity) 14%, transparent);
+    color: var(--rarity);
+    font: inherit;
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    white-space: nowrap;
+  }
+
+  .library-rarity[data-rarity="rare"] {
+    --rarity: var(--c-rarity-rare);
+  }
+
+  .library-rarity[data-rarity="epic"] {
+    --rarity: var(--c-rarity-epic);
+  }
+
+  .library-rarity[data-rarity="legendary"] {
+    --rarity: var(--c-rarity-legendary);
+  }
+
+  .library-rarity[data-rarity="mythic"] {
+    --rarity: var(--c-rarity-mythic);
+  }
+
+  .library-hint {
+    padding: var(--s-2) 0;
+    color: var(--c-text-soft);
+  }
+
+  .guide-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-5);
+  }
+
+  .guide-panel p {
+    margin: 0;
+  }
+
+  .guide-rarity {
+    color: var(--c-text-soft);
+    font-weight: var(--w-semibold);
+  }
+
+  .guide-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+  }
+
+  .guide-section h3 {
+    margin: 0;
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+  }
+
+  .guide-section > p {
+    max-width: var(--measure);
+  }
+
+  .guide-section :is(ul, ol) {
+    margin: 0;
+  }
+
+  .guide-composer,
+  .guide-step-summary {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .guide-section[data-part="funFact"] {
+    padding: var(--s-4);
+    border-radius: var(--r-card);
+    background: var(--c-brand-soft);
+  }
+
+  .guide-section[data-part="funFact"] h3 {
+    color: var(--c-brand-text);
+    font-size: var(--t-xs);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .guide-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    padding: 0;
+    list-style: none;
+  }
+
+  .guide-skills > li {
+    padding: var(--s-1) var(--s-3);
+    border-radius: var(--r-pill);
+    background: var(--c-accent-soft);
+    color: var(--c-accent);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+  }
+
+  /* The practice steps and the tricky spots are lists of rows, each an inset block. */
+  .guide-steps,
+  .guide-section[data-part="tricky"] > ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    padding: 0;
+    list-style: none;
+    counter-reset: guide-step;
+  }
+
+  .guide-step,
+  .guide-section[data-part="tricky"] .guide-step-row {
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    background: var(--c-bg);
+  }
+
+  .guide-step-row {
+    display: flex;
+    gap: var(--s-3);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .guide-step-row > :first-child {
+    min-width: 0;
+  }
+
+  .guide-step-row > .button {
+    flex: none;
+  }
+
+  /* A step's number, counted by the list itself, in a disc before its text. */
+  .guide-step > .guide-step-row::before {
+    counter-increment: guide-step;
+    content: counter(guide-step);
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-7);
+    height: var(--s-7);
+    border-radius: var(--r-pill);
+    background: var(--c-iris);
+    color: var(--c-iris-ink);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .guide-step > .guide-step-row > :first-child {
+    flex: 1;
+  }
+
+  /* A tip names its bars and its kind in iris, above its text. */
+  .guide-section[data-part="tips"] > ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+    padding: 0;
+    list-style: none;
+  }
+
+  .guide-section[data-part="tips"] li {
+    padding-inline-start: var(--s-3);
+    border-inline-start: 2px solid var(--c-iris);
+  }
+
+  .guide-section[data-part="tips"] li > strong {
+    display: block;
+    color: var(--c-iris);
+    font-size: var(--t-sm);
+  }
+
+  /* On a phone a row's button moves under its text, so the text keeps the row's width. */
+  @media (max-width: 479px) {
+    .guide-step-row {
+      flex-wrap: wrap;
+    }
+
+    .guide-step > .guide-step-row > :first-child {
+      flex-basis: calc(100% - var(--s-7) - var(--s-3));
+    }
+  }
+}

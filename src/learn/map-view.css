@@ -1,0 +1,583 @@
+/*
+ * The map's styles. `src/learn/map-view.ts` is the home of what the map shows and how it behaves.
+ *
+ * The map reads as a game board. Each world is a framed band whose header carries a tint and a stripe
+ * of its accent, `--c-world`. Under it a road winds through the world's nodes, coloured up to the
+ * learner's place.
+ *
+ * - **A node is a key to press.** Its face rests on an edge of its own colour, lifts under the pointer
+ *   and sinks onto the edge when pressed. Each state sets the node's own custom properties, and one
+ *   rule draws every node from them.
+ * - **Honey marks the next lesson,** on the *Continue* button and on the next node, which is larger,
+ *   ringed and pulses. A done node is filled in the world's accent, and a locked one is a grey well.
+ * - **A boss is a rounded square** with a dashed ring, so its shape tells it from a lesson.
+ * - **The accent only fills shapes.** Every text is `--c-text` or `--c-text-soft`, on a surface or on a
+ *   tint mixed in sRGB, which the layout check reads.
+ *
+ * The path takes one row of `--map-row` per node, and each node sits at its row and its share `--x` of
+ * the width. Only `transform` and `opacity` move.
+ */
+@layer pages {
+  .map {
+    --map-row: calc(var(--s-12) + var(--s-7));
+    --map-node: var(--s-10);
+    --map-stop: calc(var(--s-12) + var(--s-9));
+    --map-boss-drop: var(--s-7);
+    --map-depth: var(--s-2);
+    --map-road: var(--s-5);
+    /* The glyph on a fill of the world's accent: white in light, deep ink in dark. */
+    --map-ink: var(--c-iris-ink);
+
+    max-width: var(--measure);
+  }
+
+  @media (min-width: 768px) {
+    .map {
+      --map-stop: calc(var(--s-12) + var(--s-10));
+    }
+  }
+
+  /* The heading and the lead, greeted by the mascot. */
+  .map__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-5);
+  }
+
+  .map__head-text {
+    display: grid;
+    gap: var(--s-3);
+    min-width: 0;
+  }
+
+  .map__lead {
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-lg);
+  }
+
+  .map__body {
+    display: grid;
+    gap: var(--s-8);
+  }
+
+  /* Until the first read, the body fills the screen, so the footer stays below it and never shifts. */
+  .map__body[aria-busy="true"] {
+    min-height: 100dvh;
+  }
+
+  .map__loading {
+    margin: 0;
+    color: var(--c-text-soft);
+  }
+
+  /* The Continue card: what comes next, beside the one primary action of the map. */
+  .map__continue {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-4) var(--s-5);
+    padding: var(--s-5) var(--s-6);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-2);
+    animation: map-rise var(--m-large) var(--ease-emphasis) both;
+  }
+
+  .map__continue:empty {
+    display: none;
+  }
+
+  /* On a phone, Continue spans the card, so a thumb finds it. */
+  @media (max-width: 479px) {
+    .map__continue {
+      padding: var(--s-5);
+    }
+
+    .map__continue > .btn {
+      flex: 1 1 100%;
+    }
+  }
+
+  .map__next {
+    display: grid;
+    flex: 1 1 12rem;
+    gap: var(--s-1);
+    min-width: 0;
+  }
+
+  .map__next-label,
+  .map__eyebrow {
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .map__next-title {
+    margin: 0;
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .map__worlds {
+    display: grid;
+    gap: var(--s-8);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* A world: a framed band on a board of fine dots. Each rises a moment after the one before it. */
+  .map__world {
+    overflow: hidden;
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background:
+      radial-gradient(circle, var(--c-line) 1px, transparent 1.5px) 0 0 / var(--s-6) var(--s-6),
+      var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+    animation: map-rise var(--m-large) var(--ease-emphasis) both;
+    animation-delay: calc(var(--i, 0) * var(--m-micro) / 2);
+  }
+
+  @keyframes map-rise {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+
+  /* The header: the world's medal, its number, title and progress, on a tint under a stripe. */
+  .map__band {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-4) var(--s-5);
+    padding: var(--s-6);
+    border-bottom: 1px solid var(--c-line);
+    background: color-mix(in srgb, var(--c-world) 9%, var(--c-surface-1));
+    box-shadow: inset 0 var(--s-1) 0 var(--c-world);
+  }
+
+  .map__band-text {
+    display: grid;
+    flex: 1 1 12rem;
+    gap: var(--s-1);
+    min-width: 0;
+  }
+
+  .map__world-title {
+    margin: 0;
+    font-size: var(--t-2xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    overflow-wrap: anywhere;
+  }
+
+  /* The world's progress: a well that fills in the accent, beside its count. */
+  .map__progress {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-1) var(--s-3);
+    margin-block-start: var(--s-2);
+  }
+
+  .map__meter {
+    position: relative;
+    flex: 1 1 8rem;
+    height: var(--s-3);
+    overflow: hidden;
+    border-radius: var(--r-pill);
+    background: var(--c-sunken);
+    box-shadow: inset 0 0 0 1px var(--c-line-strong);
+  }
+
+  .map__meter-fill {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--c-world);
+    transform: scaleX(var(--share));
+    transform-origin: left center;
+  }
+
+  :dir(rtl) .map__meter-fill {
+    transform-origin: right center;
+  }
+
+  .map__count {
+    margin: 0;
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  /* The world's standing: a lock and why, or a green check once its boss is beaten. */
+  .map__status {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-2);
+    margin: var(--s-2) 0 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .map__status .icon {
+    flex: none;
+    width: var(--s-4);
+    height: var(--s-4);
+    margin-block-start: 0.2em;
+  }
+
+  .map__status[data-tone="beaten"] {
+    justify-self: start;
+    align-items: center;
+    padding: var(--s-1) var(--s-3) var(--s-1) var(--s-2);
+    border-radius: var(--r-pill);
+    background: var(--c-success);
+    color: var(--c-success-ink);
+    font-weight: var(--w-bold);
+  }
+
+  .map__status[data-tone="beaten"] .icon {
+    margin: 0;
+    stroke-width: 2.5;
+  }
+
+  /* The skip test: its own row at the foot of the header. */
+  .map__skip {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3) var(--s-4);
+    padding-block-start: var(--s-4);
+    border-top: 1px solid color-mix(in srgb, var(--c-world) 24%, var(--c-line));
+  }
+
+  .map__skip-text {
+    flex: 1 1 14rem;
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .map__path {
+    position: relative;
+    height: calc(var(--rows) * var(--map-row));
+    margin: var(--s-2) var(--s-gutter) calc(var(--s-11) + var(--map-boss-drop));
+  }
+
+  /* The road: a bed with an edge, the part reached in the accent, and a dashed line down its middle. */
+  .map__trail {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+  }
+
+  .map__trail path {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: var(--map-road);
+  }
+
+  .map__trail-edge {
+    stroke: var(--c-line);
+    stroke-width: calc(var(--map-road) + var(--s-2));
+  }
+
+  .map__trail-all {
+    stroke: var(--c-sunken);
+  }
+
+  .map__trail-reached-edge {
+    stroke: color-mix(in oklab, var(--c-world) 68%, var(--c-brand-ink));
+    stroke-width: calc(var(--map-road) + var(--s-2));
+  }
+
+  .map__trail-reached {
+    stroke: var(--c-world);
+  }
+
+  .map__trail path:is(.map__trail-marks, .map__trail-reached-marks) {
+    stroke-linecap: butt;
+    stroke-width: 2px;
+    stroke-dasharray: var(--s-2) var(--s-3);
+  }
+
+  .map__trail-marks {
+    stroke: var(--c-line-strong);
+  }
+
+  .map__trail-reached-marks {
+    stroke: var(--map-ink);
+    opacity: 0.7;
+  }
+
+  .map__stops {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .map__stop {
+    position: absolute;
+    top: calc((var(--row) + 0.5) * var(--map-row));
+    left: calc(var(--x) * 100%);
+    display: grid;
+    justify-items: center;
+    gap: calc(var(--map-depth) + var(--s-2));
+    width: var(--map-stop);
+    transform: translate(-50%, calc(var(--map-node) / -2));
+  }
+
+  /* A boss stands a little lower, clear of the caption above it. The road ends under its face. */
+  .map__stop:has(> [data-boss="true"]) {
+    top: calc((var(--row) + 0.5) * var(--map-row) + var(--map-boss-drop));
+  }
+
+  /*
+   * A node. An open one waits on a white face with the accent's edge. The node keeps its place, its
+   * `::before` is the edge below the face, and the face is the part that moves.
+   */
+  .map__node {
+    --node: var(--map-node);
+    --node-radius: var(--r-pill);
+    --node-face: var(--c-surface-2);
+    --node-ink: var(--c-world);
+    --node-line: var(--c-world);
+    --node-edge: color-mix(in oklab, var(--c-world) 68%, var(--c-brand-ink));
+    --node-icon: var(--s-6);
+    --node-rim: var(--e-rim);
+    --node-press: var(--map-depth);
+
+    position: relative;
+    display: block;
+    width: var(--node);
+    height: var(--node);
+    margin-block-start: calc((var(--map-node) - var(--node)) / 2);
+    border-radius: var(--node-radius);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .map__node::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--node-edge);
+    box-shadow: var(--e-2);
+    transform: translateY(var(--map-depth));
+  }
+
+  .map__face {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border: 3px solid var(--node-line);
+    border-radius: inherit;
+    background: var(--node-face);
+    box-shadow: var(--node-rim);
+    color: var(--node-ink);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .map__face .icon {
+    width: var(--node-icon);
+    height: var(--node-icon);
+    stroke-width: 2.25;
+  }
+
+  .map__node[data-state="done"] {
+    --node-face: var(--c-world);
+    --node-ink: var(--map-ink);
+    --node-rim: inset 0 2px 0 rgb(255 255 255 / 0.28);
+  }
+
+  .map__node[data-state="done"] .icon {
+    stroke-width: 3;
+  }
+
+  /* Locked: a grey well on a shallow edge, with no shadow under it. */
+  .map__node[data-state="locked"] {
+    --map-depth: var(--s-1);
+    --node-face: var(--c-sunken);
+    --node-ink: var(--c-text-soft);
+    --node-line: var(--c-line-strong);
+    --node-edge: var(--c-line-strong);
+    --node-rim: none;
+  }
+
+  .map__node[data-state="locked"]::before {
+    box-shadow: none;
+  }
+
+  /* The next node: larger, in the honey of the primary action, inside a ring. */
+  .map__node[data-next="true"] {
+    --node: calc(var(--map-node) + var(--s-2));
+    --node-face: var(--g-brand) border-box var(--c-brand);
+    --node-ink: var(--c-brand-ink);
+    --node-line: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    --node-edge: color-mix(in oklab, var(--c-brand) 62%, var(--c-brand-ink));
+    --node-icon: var(--s-7);
+    --node-rim: inset 0 2px 0 rgb(255 255 255 / 0.5), 0 0 0 var(--s-1) var(--c-surface-1), 0 0 0 calc(var(--s-1) + 3px) var(--c-brand);
+  }
+
+  .map__node[data-next="true"] .icon {
+    fill: currentColor;
+  }
+
+  /* The ring that swells out from the next node and fades, again and again. It only decorates, so it is honey. */
+  .map__node[data-next="true"]::after {
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--s-2));
+    border: 3px solid var(--c-brand);
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    animation: map-pulse calc(var(--m-reward) * 1.5) var(--ease-standard) infinite;
+  }
+
+  @keyframes map-pulse {
+    from {
+      opacity: 0.7;
+      transform: scale(0.9);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+  }
+
+  /* A boss: a large rounded square inside a dashed ring. */
+  .map__node[data-boss="true"] {
+    --node: var(--s-11);
+    --node-radius: var(--r-panel);
+    --node-icon: var(--s-8);
+
+    outline: 2px dashed color-mix(in oklab, var(--c-world) 60%, transparent);
+    outline-offset: var(--s-3);
+  }
+
+  /* A locked boss keeps its trophy, and a small lock on its corner says it is closed. */
+  .map__lock {
+    position: absolute;
+    inset-block-end: calc(-1 * var(--s-2));
+    inset-inline-end: calc(-1 * var(--s-2));
+    display: grid;
+    place-items: center;
+    width: var(--s-7);
+    height: var(--s-7);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-1);
+    color: var(--c-text-soft);
+  }
+
+  .map__lock .icon {
+    width: var(--s-4);
+    height: var(--s-4);
+  }
+
+  @media (hover: hover) {
+    a.map__node:hover .map__face {
+      transform: translateY(var(--motion-lift));
+    }
+  }
+
+  a.map__node:active .map__face {
+    transform: translateY(var(--node-press));
+    transition-duration: var(--m-micro);
+  }
+
+  a.map__node:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: var(--s-3);
+  }
+
+  /* The caption: a tag under the node, so its name stays readable where the road runs behind it. */
+  .map__caption {
+    display: grid;
+    justify-items: center;
+    gap: var(--s-1);
+    max-width: 100%;
+    padding: var(--s-1) var(--s-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-1);
+    text-align: center;
+  }
+
+  .map__name {
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .map__node[data-state="locked"] + .map__caption {
+    box-shadow: none;
+  }
+
+  .map__node[data-state="locked"] + .map__caption .map__name {
+    color: var(--c-text-soft);
+    font-weight: var(--w-semibold);
+  }
+
+  .map__node[data-boss="true"] + .map__caption {
+    margin-block-start: var(--s-2);
+  }
+
+  .map__stars {
+    display: inline-flex;
+    gap: 2px;
+  }
+
+  .map__star .icon {
+    display: block;
+    width: var(--s-4);
+    height: var(--s-4);
+    color: var(--c-line-strong);
+    fill: currentColor;
+  }
+
+  .map__star[data-earned="true"] .icon {
+    color: var(--c-reward);
+  }
+
+  /* With reduced motion the worlds only fade in, nothing pulses, and a pressed node stays in place. */
+  @media (prefers-reduced-motion: reduce) {
+    .map__node {
+      --node-press: 0px;
+    }
+
+    .map__face {
+      transition: none;
+    }
+
+    .map__node[data-next="true"]::after {
+      animation: none;
+    }
+  }
+}

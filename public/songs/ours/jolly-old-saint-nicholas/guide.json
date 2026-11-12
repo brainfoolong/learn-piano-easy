@@ -1,0 +1,357 @@
+{
+  "song": "jolly-old-saint-nicholas",
+  "title": "Jolly Old Saint Nicholas",
+  "composer": "James R. Murray",
+  "about": "Jolly Old Saint Nicholas is a Christmas song that began as a poem by Emily Huntington Miller. Her poem was published as Lilly's Secret in The Little Corporal Magazine in December 1865. The music is generally believed to be by James R. Murray. It was first printed in 1874, in a school music book called School Chimes.",
+  "funFact": "Ray Conniff recorded the song for his 1962 album We Wish You a Merry Christmas, and it helped the album go platinum.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/jolly-old-saint-nicholas/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 2, 3, 4, 5, 4, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 4, 3, 4, 5, 3],
+        "left": [5, 1, 4, 1, 5, 1, 5, 1, 2, 5, 1, 4, 1, 4, 1, 5, 1, 4, 1, 5, 1, 5, 1, 2, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [67, 69, 72, 74, 76],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first four bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 5 to 8 with the right hand alone, where the tune drops to A and climbs back.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 3,
+          "kind": "rhythm",
+          "text": "Four even notes on one key. Keep them light, like footsteps on a roof."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 7,
+          "kind": "fingering",
+          "text": "Finger 2 plays A in bar 5 and B in bar 7. The rest of the hand never moves."
+        },
+        {
+          "fromBar": 16,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Hold the last C for all four counts, and let both hands lift together."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 2,
+          "text": "Finger 5 leaves E, and finger 4 plays D three times. Hold the last D for two counts."
+        },
+        {
+          "bar": 10,
+          "text": "The same as bar 2. The left hand moves to D and G under it."
+        },
+        {
+          "bar": 15,
+          "text": "Fingers 4, 3, 4 and 5 play D, C, D and E. Then finger 3 drops to the last C."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/jolly-old-saint-nicholas/rare.mid",
+      "skills": [
+        "triads",
+        "five-finger-position"
+      ],
+      "fingers": {
+        "right": [5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 2, 3, 4, 5, 4, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 4, 3, 4, 5, 3, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 2, 3, 4, 5, 4, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 4, 3, 4, 5, 3],
+        "left": [5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 2, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 2, 5, 3, 1, 5, 3, 1, 4, 2, 1, 4, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 1, 4, 2, 5, 3, 1, 5, 3, 1, 2, 5, 5, 3, 1, 1, 4, 1, 1, 4, 2, 5, 3, 1, 1, 4, 2, 5, 3, 1, 5, 3, 1, 2, 5, 5, 3, 1, 1, 4, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [67, 69, 72, 74, 76],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the bass and chord in turns of the second time alone.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [17, 20],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first time through, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Hold each chord softly, so the repeated notes of the tune stay clear above it."
+        },
+        {
+          "fromBar": 7,
+          "toBar": 7,
+          "kind": "fingering",
+          "text": "The left hand lets go of F in the middle of the bar. The right hand climbs to E over it."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 32,
+          "kind": "rhythm",
+          "text": "The bass note falls on the first count and the chord on the third. Count four in each bar."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 2,
+          "text": "Finger 4 plays D three times, while the left hand holds a G seventh chord without its B."
+        },
+        {
+          "bar": 10,
+          "text": "The same as bar 2. Keep the repeated D even and light."
+        },
+        {
+          "bar": 15,
+          "text": "Fingers 4, 3, 4 and 5 play D, C, D and E. In the middle of the bar, the left hand lets go of F."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/jolly-old-saint-nicholas/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "broken-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 2, 3, 4, 5, 4, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 4, 3, 4, 5, 3, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 2, 3, 4, 5, 4, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 2, 2, 2, 2, 1, 1, 3, 4, 3, 4, 5, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, 69, 72, 74, 76],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the broken chords of the second time alone, and lift the hand on each rest.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [17, 20],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the first time through, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune rings above it like a sleigh bell."
+        },
+        {
+          "fromBar": 16,
+          "toBar": 17,
+          "kind": "trick",
+          "text": "Both hands lift on the rest. The right hand jumps up an octave, and the left hand drops to a low C."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 32,
+          "kind": "sound",
+          "text": "Change the pedal each half bar, as the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": "The right hand lands an octave up on E, and the left hand starts its broken chords on the low C."
+        },
+        {
+          "bar": 25,
+          "text": "The same as bar 17, now after the long D. Land finger 5 on the high E."
+        },
+        {
+          "bar": 19,
+          "text": "Finger 3 plays the high C four times, while the left hand lifts on the rest and lands on C again."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/jolly-old-saint-nicholas/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios",
+        "sixteenth-notes"
+      ],
+      "fingers": {
+        "right": [5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 4, 3, 2, 3, 2, 2, 2, 2, 1, 1, 3, 2, 3, 4, 5, 4, 5, 4, 3, 4, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 3, 5, 4, 3, 2, 3, 2, 2, 2, 2, 1, 1, 3, 4, 3, 4, 5, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [null, 71, 72, 74, 76],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play bars 4 and 5 with the right hand alone, and keep the quick run light.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [4, 5],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second time in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [17, 20],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "The quick run after the long E slides down like Santa down the chimney. Play it lighter than the tune."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 32,
+          "kind": "fingering",
+          "text": "Keep the thumb and little finger stretched an octave apart, and let the wrist bounce."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 21,
+          "text": "The octaves drop from E to A after a short lift. Keep the hand in its octave shape as it travels."
+        },
+        {
+          "bar": 29,
+          "text": "The same drop to A as bar 21, while the left hand climbs an F arpeggio below."
+        },
+        {
+          "bar": 31,
+          "text": "The octaves step D, C, D and E. Then the hand lifts and lands on the four-note chord."
+        }
+      ]
+    }
+  }
+}

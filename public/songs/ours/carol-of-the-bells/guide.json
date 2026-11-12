@@ -1,0 +1,357 @@
+{
+  "song": "carol-of-the-bells",
+  "title": "Carol of the Bells",
+  "composer": "Mykola Leontovych",
+  "about": "Shchedryk is a Ukrainian New Year song, and its name comes from Bountiful Evening. Mykola Leontovych, a Ukrainian composer, conductor and teacher, built it on a four-note figure in 3/4 time. It was first sung on 29 December 1916 in Kyiv. Peter J. Wilhousky later made it the English Carol of the Bells.",
+  "funFact": "Wilhousky gave it words about bells because the melody reminded him of handbells.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/carol-of-the-bells/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 5, 4, 5, 3, 5, 4, 5, 3, 5, 4, 5, 3, 5, 4, 5, 1, 5, 5, 5, 4, 3, 2, 2, 3, 2, 1, 2, 2, 2, 3, 2, 1, 1, 1, 1, 1, 2, 3, 4, 5, 4, 3, 1, 2, 3, 4, 5, 4, 3, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 5, 1, 3, 5, 1, 2, 3, 1, 5, 1, 1, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [52, 50, 48, null, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the first four bars with the right hand alone: C, B, C, A, again and again.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 12 to 16 with the right hand alone, up to the high A and back down.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [12, 16],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "The four notes ring like small bells. Play them light and even."
+        },
+        {
+          "fromBar": 12,
+          "toBar": 13,
+          "kind": "fingering",
+          "text": "The thumb takes the last C, so the little finger can reach up to the high A."
+        },
+        {
+          "fromBar": 14,
+          "toBar": 14,
+          "kind": "trick",
+          "text": "On the third E, swap from finger 2 to finger 3. The hand stays where it is."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 12,
+          "text": "Play the last C with the thumb, then rest a beat while the hand opens for the high A."
+        },
+        {
+          "bar": 18,
+          "text": "Fingers 4 and 5 rock between D and E, then finger 3 lands on C."
+        },
+        {
+          "bar": 20,
+          "text": "The same as bar 18. Hold the C for its full half note before the bells come back."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/carol-of-the-bells/rare.mid",
+      "skills": [
+        "triads",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 5, 4, 5, 3, 5, 4, 5, 3, 5, 4, 5, 3, 5, 4, 5, 1, 5, 5, 5, 4, 3, 2, 2, 3, 2, 1, 2, 2, 2, 3, 2, 1, 1, 1, 3, 1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 1],
+        "left": [5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 4, 2, 1, 5, 4, 2, 4, 2, 1, 5, 4, 2, 5, 4, 1, 5, 4, 2, 5, 3, 1, 5, 4, 2, 2, 1, 5, 4, 2, 2, 1, 5, 4, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 4, 2]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [55, 52, null, 48, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone. Press the three notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Play bars 17 to 20 with the right hand alone, and lift the hand after the G sharp.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [17, 20],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first twelve bars, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "The left hand leaves out the C, so it never rubs against the B of the tune."
+        },
+        {
+          "fromBar": 16,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "Move the last A to finger 3. The thumb is then free for the low E."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 20,
+          "kind": "trick",
+          "text": "Make the G sharp short, lift the hand, and land the thumb on A."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 19,
+          "text": "The same climb as bar 17. Lift after the G sharp, and keep the beat steady."
+        },
+        {
+          "bar": 12,
+          "text": "The thumb takes the last C, so the little finger can reach the high A in the next bar."
+        },
+        {
+          "bar": 17,
+          "text": "Make the G sharp short, then lift the hand and land the thumb on A."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/carol-of-the-bells/epic.mid",
+      "skills": [
+        "broken-chords",
+        "thirds-and-sixths",
+        "thumb-under"
+      ],
+      "fingers": {
+        "right": [3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 2, 4, 1, 3, 2, 4, 1, 3, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 5, 5, 5, 4, 3, 2, 2, 3, 2, 1, 2, 2, 2, 3, 2, 1, 1, 1, 3, 1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 1, 5, 1, 4, 2, 4, 1, 3, 2, 4, 1, 3, 1, 5, 1, 4, 1, 5, 1, 4, 1, 2, 5],
+        "left": [5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 2, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, null, null],
+        "left": [60, 57, 52, null, 45]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone until it rocks by itself: low, up, up, top, down, down.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's sixths alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the climb of bars 17 to 20 with the right hand alone. The thumb passes under on A.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [17, 20],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 5,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "The bass falls one step each bar, from A down to E, while the bells ring on above it."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "fingering",
+          "text": "The tune is the top note of each sixth, so let the upper finger lead."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 20,
+          "kind": "fingering",
+          "text": "After the G sharp, pass the thumb under to A, and the hand climbs on."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The hand jumps up from the low sixths to G and E. Lift it during the short rest at the end of bar 8."
+        },
+        {
+          "bar": 10,
+          "text": "The thumb steps from G down to F and back, while fingers 5 and 4 ring the tune on top."
+        },
+        {
+          "bar": 19,
+          "text": "Pass the thumb under after the G sharp, without a bump in the sound."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/carol-of-the-bells/legendary.mid",
+      "skills": [
+        "counter-melody",
+        "stride",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 3, 2, 3, 1, 5, 1, 4, 5, 4, 1, 5, 1, 4, 5, 4, 1, 5, 1, 4, 5, 4, 1, 5, 1, 4, 5, 4, 1, 3, 5, 2, 4, 3, 5, 1, 3, 3, 5, 2, 4, 3, 5, 1, 3, 3, 5, 2, 4, 3, 5, 1, 3, 3, 5, 2, 4, 3, 5, 1, 3, 1, 3, 5, 1, 3, 5, 1, 3, 5, 5, 4, 1, 2, 4, 1, 2, 4, 1, 2, 4, 3, 2, 1, 2, 4, 1, 2, 4, 1, 2, 4, 5, 4, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 5, 1, 4, 5, 4, 1, 5, 1, 4, 5, 4, 1, 5, 1, 4, 5, 4, 1, 5, 1, 4, 5, 4, 1, 1, 2, 3, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 2, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 2, 1, 4, 2, 1, 5, 1, 4, 2, 1, 4, 2, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 1, 4, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 3, 2, 5, 4, 3, 2, 1, 3, 2, 1, 2, 3, 5, 4, 3, 2, 1, 3, 2, 1, 2, 3, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 1, 4, 2, 1, 5, 1, 4, 2, 1, 4, 2, 5, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, null, 72],
+        "left": [60, null, null, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand's octaves alone. They ring the same four-note figure two octaves down.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [5, 8],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [13, 16],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "Both hands ring the same figure, two octaves apart, like a big bell and a small one."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "trick",
+          "text": "The left hand keeps the four-note figure going under the tune, so the bells never stop."
+        },
+        {
+          "fromBar": 17,
+          "toBar": 20,
+          "kind": "fingering",
+          "text": "Both hands climb together. The right thumb passes under, and the left third finger crosses over."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 16,
+          "text": "The right hand repeats one chord while the left hand jumps. Keep the A on top ringing."
+        },
+        {
+          "bar": 6,
+          "text": "The right hand rings its low E between the tune's notes while the left hand jumps for the stride."
+        },
+        {
+          "bar": 15,
+          "text": "Keep the G chord light, then play E and D with fingers 5 and 4, and lift for the next chord."
+        }
+      ]
+    }
+  }
+}

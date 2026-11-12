@@ -1,0 +1,55 @@
+/**
+ * The course of *Learn Piano*: its worlds, in the order the learner meets them on the map.
+ *
+ * Decisions, and what each costs:
+ * - A world joins the course by one entry here, and its lessons stay in their own chunk until a page
+ *   of *Learn Piano* loads it. A page outside the course then costs only the worlds' titles.
+ * - Every world's `load` adds the skip test of `src/learn/skip-test.ts`, so the map, a lesson's page
+ *   and the build all see the same one.
+ */
+import { lessonKey } from "./lesson-run";
+import type { Lesson, World, WorldLessons } from "./model";
+import { withSkipTest } from "./skip-test";
+
+/** A world whose `load` adds the built skip test to the lessons `lessons` loads. */
+function world(spec: Omit<World, "load">, lessons: () => Promise<WorldLessons>): World {
+  const made: World = { ...spec, load: async () => withSkipTest(made, await lessons()) };
+  return made;
+}
+
+/** Every world of the course, in order. */
+export const COURSE: readonly World[] = [
+  world({ id: "meet-the-piano", title: { en: "Meet the piano", de: "Das Klavier kennenlernen" }, accent: "violet" }, async () => (await import("./lessons/meet-the-piano/index")).meetThePiano),
+  world({ id: "first-melodies", title: { en: "First melodies", de: "Erste Melodien" }, accent: "teal" }, async () => (await import("./lessons/first-melodies/index")).firstMelodies),
+  world({ id: "rhythm", title: { en: "Rhythm", de: "Rhythmus" }, accent: "amber" }, async () => (await import("./lessons/rhythm/index")).rhythm),
+  world({ id: "reading-music", title: { en: "Reading music", de: "Noten lesen" }, accent: "sky" }, async () => (await import("./lessons/reading-music/index")).readingMusic),
+  world({ id: "both-hands", title: { en: "Both hands", de: "Beide Hände" }, accent: "coral" }, async () => (await import("./lessons/both-hands/index")).bothHands),
+  world({ id: "scales-and-keys", title: { en: "Scales and keys", de: "Tonleitern und Tonarten" }, accent: "lime" }, async () => (await import("./lessons/scales-and-keys/index")).scalesAndKeys),
+  world({ id: "chords", title: { en: "Chords", de: "Akkorde" }, accent: "rose" }, async () => (await import("./lessons/chords/index")).chords),
+  world({ id: "expression", title: { en: "Expression", de: "Ausdruck" }, accent: "indigo" }, async () => (await import("./lessons/expression/index")).expression),
+];
+
+/** The world `world` and its lesson `lesson`, a boss or a skip test included, or undefined when either is missing. */
+export async function findLesson(world: string, lesson: string): Promise<{ world: World; lesson: Lesson } | undefined> {
+  const found = COURSE.find((w) => w.id === world);
+  if (found === undefined) return undefined;
+  const { lessons, boss, skipTest } = await found.load();
+  const match = [...lessons, boss, skipTest].find((l) => l?.id === lesson);
+  return match === undefined ? undefined : { world: found, lesson: match };
+}
+
+/** One world with its lessons loaded. */
+export interface LoadedWorld {
+  world: World;
+  lessons: WorldLessons;
+}
+
+/** Every world of the course with its lessons, in order. */
+export function loadCourse(): Promise<LoadedWorld[]> {
+  return Promise.all(COURSE.map(async (world) => ({ world, lessons: await world.load() })));
+}
+
+/** The world of each boss lesson of `course`, by its `<world>/<lesson>` key. */
+export function bossesOf(course: readonly LoadedWorld[]): Map<string, string> {
+  return new Map(course.flatMap(({ world, lessons }) => (lessons.boss === undefined ? [] : [[lessonKey(world.id, lessons.boss.id), world.id] as const])));
+}

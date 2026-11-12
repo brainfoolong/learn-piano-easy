@@ -1,0 +1,59 @@
+/*
+ * The PDF export dialog's body. `src/export/pdf-dialog.ts` is the home of how it behaves.
+ *
+ * The two options sit in one inset block, each a row with its label and its control on one line. They
+ * reuse the settings panel's row without its reset column. The page count under them is a note in the
+ * info colour, and the Save button, the dialog's primary action, sits at the end.
+ */
+@layer pages {
+  .pdf-dialog {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+
+  .pdf-dialog > p {
+    margin: 0;
+  }
+
+  .pdf-options {
+    padding: 0 var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-bg);
+  }
+
+  .pdf-options > .setting-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: var(--s-3) 0;
+    border-bottom: none;
+  }
+
+  .pdf-options > .setting-row + .setting-row {
+    border-top: 1px solid var(--c-line);
+  }
+
+  .pdf-options .setting-label {
+    font-weight: var(--w-semibold);
+  }
+
+  .pdf-dialog > .pdf-page-count {
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-control);
+    background: var(--c-info-soft);
+    color: var(--c-info);
+    font-weight: var(--w-semibold);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pdf-dialog > .button {
+    align-self: flex-end;
+  }
+
+  /* On a phone a row's control moves under its label, so the slider keeps its width. */
+  @media (max-width: 479px) {
+    .pdf-options > .setting-row {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

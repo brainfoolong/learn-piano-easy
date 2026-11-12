@@ -1,0 +1,357 @@
+{
+  "song": "kommet-ihr-hirten",
+  "title": "Kommet, ihr Hirten",
+  "composer": "Traditional",
+  "about": "Kommet, ihr Hirten means Come, you shepherds in German. The song comes from Bohemia, where its Czech title is Nesem vám noviny. The tune was first printed in 1847, in a Catholic hymnal in Olomouc. The Leipzig conductor Carl Riedel wrote the German words freely after the original, and first printed them in 1870.",
+  "funFact": "The scholar Konrad Ameln dated the tune to around 1700 from its style alone.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/kommet-ihr-hirten/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 5, 2, 4, 1, 2, 1],
+        "left": [5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 4, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [74, 76, 77, 79, 81],
+        "left": [55, null, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first four bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 9 to 12 with the right hand alone. The thumb moves down to the low G.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 3,
+          "kind": "rhythm",
+          "text": "Each bar starts with a long G worth two counts, then four short notes worth one count each."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "The left hand holds C and G like a bagpipe drone. Let it ring under the tune."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "fingering",
+          "text": "Finger 2 plays C here, so the thumb is free for the low G in bar 10."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "Finger 5 lands on the high G. Then fingers 2 and 4 play E and G, and the thumb plays D."
+        },
+        {
+          "bar": 9,
+          "text": "Finger 2 takes over the C from the thumb. Then fingers 4 and 5 play E and G."
+        },
+        {
+          "bar": 11,
+          "text": "The same as bar 9: finger 2 on C, finger 4 on E and finger 5 on G."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/kommet-ihr-hirten/rare.mid",
+      "skills": [
+        "waltz-bass",
+        "triads"
+      ],
+      "fingers": {
+        "right": [4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 4, 2, 4, 1, 2, 1, 4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 4, 2, 4, 1, 2, 1, 2],
+        "left": [5, 3, 1, 5, 2, 5, 3, 1, 5, 2, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 3, 1, 5, 2, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 3, 1, 5, 2, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 3, 1, 5, 2, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 5, 2, 5, 3, 1, 5, 2, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 3, 1, 5, 2, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [74, 76, 77, 79, 81],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone: a low C, then two chords in each bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 9 to 14 with the left hand alone, where the chords change on each beat.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [9, 14],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first time through, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 14],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 14,
+          "kind": "rhythm",
+          "text": "In most bars the left hand plays C on the first beat, then a chord on each of the other two."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Play the low C a little stronger than the chords, like the drone of a bagpipe."
+        },
+        {
+          "fromBar": 12,
+          "toBar": 13,
+          "kind": "trick",
+          "text": "The tune leaps from the low G up to the high G. Finger 4 stretches the whole octave."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 28,
+          "text": "The thumb drops to G and finger 2 plays C, together, for the last chord."
+        },
+        {
+          "bar": 13,
+          "text": "The thumb leaves the low G, and finger 4 reaches up an octave to the high G."
+        },
+        {
+          "bar": 27,
+          "text": "The same octave reach as bar 13. Keep the wrist loose as the hand opens."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/kommet-ihr-hirten/epic.mid",
+      "skills": [
+        "broken-chords",
+        "left-hand-melody",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 4, 2, 4, 1, 2, 1, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 3, 5, 1, 3, 5, 1, 2, 5, 1, 3, 5],
+        "left": [5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 2, 4, 1, 3, 2, 2, 4, 1, 3, 2, 4, 2, 5, 4, 5, 2, 2, 4, 1, 3, 2, 2, 4, 1, 3, 2, 4, 2, 5, 4, 5, 4, 2, 4, 2, 1, 4, 2, 4, 3, 5, 4, 2, 4, 2, 1, 4, 2, 4, 3, 5, 1, 3, 1, 4, 3, 5]
+      },
+      "start": {
+        "right": [74, 76, 77, 79, 81],
+        "left": [48, 43, null, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the broken chords alone until they roll by themselves: low, high, top, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the tune in the left hand alone, from bar 15 on.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [15, 28],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first time through, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 14],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 14,
+          "kind": "sound",
+          "text": "Keep the broken chords soft, so the tune sings above them."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 28,
+          "kind": "sound",
+          "text": "Now the left hand has the tune. Play it out, and keep the right-hand chords quiet."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 28,
+          "kind": "sound",
+          "text": "Change the pedal on each beat, as a new chord starts."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 15,
+          "text": "The hands swap jobs. The left hand starts the tune on G, and the right hand plays chords."
+        },
+        {
+          "bar": 9,
+          "text": "The left hand jumps to A for the A minor chord, while finger 2 of the right hand takes the C."
+        },
+        {
+          "bar": 11,
+          "text": "Two beats of A minor, then the left hand lifts and lands back on the low C."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/kommet-ihr-hirten/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios",
+        "sixteenth-notes"
+      ],
+      "fingers": {
+        "right": [4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 1, 2, 3, 4, 4, 2, 5, 3, 4, 4, 2, 5, 3, 4, 2, 4, 1, 2, 1, 3, 2, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 2, 4, 2, 4, 5, 2, 4, 2, 3, 1, 4, 2, 4, 1, 2, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 3, 2, 1, 3, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [74, 76, 77, 79, 81],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play bars 1 to 9 with the right hand alone, and keep the quick runs light.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second time in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [15, 18],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 14,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "fingering",
+          "text": "The run climbs D, E and F, then the hand lifts and lands finger 4 on G."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 28,
+          "kind": "fingering",
+          "text": "Keep the thumb and little finger an octave apart. The short rests give the hand time to leap."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 19,
+          "text": "The octaves leap up to A and back down to F. Lift the hand on each short rest."
+        },
+        {
+          "bar": 26,
+          "text": "The same as bar 24. Then the hand leaps a whole octave up to the high G."
+        },
+        {
+          "bar": 24,
+          "text": "The octaves step C, E, C and D, then drop to the low G. Let the wrist bounce."
+        }
+      ]
+    }
+  }
+}

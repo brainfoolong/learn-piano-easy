@@ -1,0 +1,67 @@
+# learn-piano-easy's looper config. A key that is not set here takes looper's default.
+[project]
+name = "learn-piano-easy"
+stacks = ["bun"]
+
+# The session's context budget. Set `hard` here to change it.
+[budget]
+
+# Words `looper prose` flags in this project, on top of the shared ones.
+[prose]
+banned = []
+
+# What `looper verify` runs, in order. Each step runs only when a change reaches its `inputs`.
+[[verify.step]]
+name = "bun-install"
+run = ["bun", "install"]
+inputs = ["package.json", "bun.lock"]
+
+[[verify.step]]
+name = "tsc"
+run = ["bun", "x", "tsc"]
+
+[[verify.step]]
+name = "bun-test"
+run = ["bun", "test"]
+
+# The end-to-end tests drive the production build in Chromium. Decision 0001 says why Playwright.
+[[verify.step]]
+name = "e2e"
+run = ["bun", "x", "playwright", "test"]
+inputs = ["src/**", "public/**", "e2e/**", "tools/build.ts", "tools/dev.ts", "playwright.config.ts", "package.json", "bun.lock"]
+
+[[verify.step]]
+name = "links"
+run = ["bun", "tools/looper/main.ts", "links"]
+
+[[verify.step]]
+name = "layout"
+run = ["bun", "tools/looper/main.ts", "layout", "--check"]
+
+[[verify.step]]
+name = "prose"
+run = ["bun", "tools/looper/main.ts", "prose"]
+
+[[verify.step]]
+name = "lint"
+run = ["bun", "tools/looper/main.ts", "lint"]
+
+[[launch]]
+name = "dev"
+title = "Dev server"
+about = "Builds the app, serves it with live reload, and rebuilds on every change."
+run = ["bun", "tools/dev.ts", "--port", "{port}"]
+port = 4173
+ready = 'Local:\s+http://localhost:(?<port>\d+)'
+open = "http://localhost:{port}/"
+heavy = false
+
+[[launch]]
+name = "preview"
+title = "Production preview"
+about = "Serves a production build, service worker included, as a static host would."
+run = ["bun", "tools/dev.ts", "--preview", "--port", "{port}"]
+port = 4174
+ready = 'Local:\s+http://localhost:(?<port>\d+)'
+open = "http://localhost:{port}/"
+heavy = false

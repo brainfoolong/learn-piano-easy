@@ -1,0 +1,487 @@
+/*
+ * The site's look of the form controls. `src/ui/controls.ts` is the home of how a control behaves.
+ *
+ * Every rule selects `[data-control]`, never a class, so an element is a control only by that
+ * attribute. Each native control drops its platform look with `appearance: none` and is drawn from the
+ * tokens, so it follows both themes. Only `transform` and `opacity` move.
+ *
+ * - **A field is a well.** A select, a text field and a number sit on `--c-sunken` with a firm edge,
+ *   so a form reads as places to fill and never as a row of buttons.
+ * - **What is on is teal.** A toggle's track, a slider's filled part and a focused field's edge take
+ *   `--c-accent`, the colour of everything chosen.
+ * - **The select's list is a menu of the site** where the browser knows `appearance: base-select`.
+ *   Elsewhere the select keeps the system's list, and only the closed well is ours.
+ * - **The slider's track fills up to its thumb.** The range reads `--fill`, a number from 0 to 1 that
+ *   `sliderControl` keeps on it.
+ *
+ * A touch screen asks a target of 44 pixels. The toggle gets it from a transparent border around its
+ * track, so the switch keeps its drawn size and only its hit area grows.
+ */
+@layer components {
+  /* The chips: a row of toggle chips that wraps, drawn by the chip's own stylesheet. */
+  [data-control="chips"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-1);
+  }
+
+  /* The toggle: a track with a thumb that springs across. */
+  [data-control="toggle"] {
+    --toggle-width: var(--s-9);
+    --toggle-height: calc(var(--s-6) + var(--s-1));
+    --toggle-hit: 0px;
+    --toggle-inset: 3px;
+
+    position: relative;
+    flex: none;
+    box-sizing: content-box;
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+    margin: 0;
+    border: var(--toggle-hit) solid transparent;
+    border-radius: var(--r-pill);
+    background: var(--c-line-strong) padding-box;
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.12);
+    appearance: none;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* The lit track of a switch that is on. It fades in above the track, so no colour animates. */
+  [data-control="toggle"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--r-pill);
+    background: var(--c-accent);
+    opacity: 0;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  [data-control="toggle"]::before {
+    content: "";
+    position: absolute;
+    z-index: var(--z-raised);
+    inset-block-start: var(--toggle-inset);
+    inset-inline-start: var(--toggle-inset);
+    width: calc(var(--toggle-height) - 2 * var(--toggle-inset));
+    height: calc(var(--toggle-height) - 2 * var(--toggle-inset));
+    border-radius: var(--r-pill);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-1);
+    transition: transform var(--m-medium) var(--ease-spring);
+  }
+
+  [data-control="toggle"]:checked::after {
+    opacity: 1;
+  }
+
+  [data-control="toggle"]:checked::before {
+    background: var(--c-accent-ink);
+    transform: translateX(calc(var(--toggle-width) - var(--toggle-height)));
+  }
+
+  [data-control="toggle"]:checked:dir(rtl)::before {
+    transform: translateX(calc(var(--toggle-height) - var(--toggle-width)));
+  }
+
+  /* The slider: a range and its number field side by side. */
+  [data-control="slider"] {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    width: calc(var(--s-12) * 2);
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  [data-control="slider"] input[type="range"] {
+    --range-track: var(--s-2);
+    --range-thumb: var(--s-5);
+    --range-fill: calc(var(--fill, 0) * 100%);
+    --range-to: right;
+
+    flex: 1 1 auto;
+    min-width: 0;
+    height: var(--s-6);
+    margin: 0;
+    background: transparent;
+    appearance: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  [data-control="slider"] input[type="range"]:dir(rtl) {
+    --range-to: left;
+  }
+
+  [data-control="slider"] input[type="range"]::-webkit-slider-runnable-track {
+    height: var(--range-track);
+    border-radius: var(--r-pill);
+    background: linear-gradient(to var(--range-to), var(--c-accent) var(--range-fill), var(--c-line-strong) var(--range-fill));
+  }
+
+  [data-control="slider"] input[type="range"]::-moz-range-track {
+    height: var(--range-track);
+    border-radius: var(--r-pill);
+    background: var(--c-line-strong);
+  }
+
+  [data-control="slider"] input[type="range"]::-moz-range-progress {
+    height: var(--range-track);
+    border-radius: var(--r-pill);
+    background: var(--c-accent);
+  }
+
+  [data-control="slider"] input[type="range"]::-webkit-slider-thumb {
+    width: var(--range-thumb);
+    height: var(--range-thumb);
+    margin-top: calc((var(--range-track) - var(--range-thumb)) / 2);
+    border: 2px solid var(--c-accent);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-1);
+    appearance: none;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  [data-control="slider"] input[type="range"]::-moz-range-thumb {
+    box-sizing: border-box;
+    width: var(--range-thumb);
+    height: var(--range-thumb);
+    border: 2px solid var(--c-accent);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-1);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  @media (hover: hover) {
+    [data-control="slider"] input[type="range"]:hover:not(:disabled)::-webkit-slider-thumb {
+      transform: scale(1.15);
+    }
+
+    [data-control="slider"] input[type="range"]:hover:not(:disabled)::-moz-range-thumb {
+      transform: scale(1.15);
+    }
+  }
+
+  [data-control="slider"] input[type="range"]:active:not(:disabled)::-webkit-slider-thumb {
+    transform: scale(1.25);
+  }
+
+  [data-control="slider"] input[type="range"]:active:not(:disabled)::-moz-range-thumb {
+    transform: scale(1.25);
+  }
+
+  /* The fields: the slider's number, the select and the text field share one look, a well to fill. */
+  [data-control="slider"] input[type="number"],
+  [data-control="select"],
+  [data-control="text"] {
+    min-width: 0;
+    max-width: 100%;
+    min-height: var(--s-8);
+    margin: 0;
+    padding: 0 var(--s-3);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-control);
+    background-color: var(--c-sunken);
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.05);
+    color: var(--c-text);
+    font-size: var(--t-md);
+    font-weight: var(--w-medium);
+    line-height: var(--lh-heading);
+    appearance: none;
+  }
+
+  [data-control="slider"] input[type="number"] {
+    flex: none;
+    width: calc(5ch + 2 * var(--s-3) + 2px);
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+  }
+
+  [data-control="slider"] input[type="number"]::-webkit-inner-spin-button,
+  [data-control="slider"] input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    appearance: none;
+  }
+
+  /* With the system's list, the select's chevron is a picture in a grey that reads on both themes' wells. */
+  [data-control="select"] {
+    padding-inline-end: var(--s-8);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238e88a3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-position: calc(100% - var(--s-3)) 50%;
+    background-size: var(--s-4) var(--s-4);
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  [data-control="select"]:dir(rtl) {
+    background-position: var(--s-3) 50%;
+  }
+
+  [data-control="select"] option {
+    background-color: var(--c-surface-2);
+    color: var(--c-text);
+  }
+
+  /*
+   * The select's list is our own where the browser can style one. There the select is a button that
+   * opens a menu on `--e-2`, and the choice made reads in teal with a check at its row's end. The
+   * browser opens the menu on the side of the select with more room, in the top layer.
+   */
+  @supports (appearance: base-select) {
+    [data-control="select"],
+    [data-control="select"]::picker(select) {
+      appearance: base-select;
+    }
+
+    [data-control="select"] {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-2);
+      padding-inline-end: var(--s-3);
+      background-image: none;
+      white-space: nowrap;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* The chevron takes the ink of secondary text, and turns over while the list is open. */
+    [data-control="select"]::picker-icon {
+      content: "";
+      flex: none;
+      width: var(--s-4);
+      height: var(--s-4);
+      margin-inline-start: auto;
+      background: var(--c-text-soft);
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+        center / contain no-repeat;
+      transition: transform var(--m-small) var(--ease-spring);
+    }
+
+    [data-control="select"]:open {
+      border-color: var(--c-accent);
+      background-color: var(--c-surface-1);
+    }
+
+    [data-control="select"]:open::picker-icon {
+      transform: rotate(180deg);
+    }
+
+    /* The list: a menu that fades in at the select's edge, and scrolls inside itself when it is long. */
+    [data-control="select"]::picker(select) {
+      margin-block: var(--s-1);
+      padding: var(--s-1);
+      border: 1px solid var(--c-line);
+      border-radius: var(--r-control);
+      background: var(--c-surface-2);
+      box-shadow: var(--e-rim), var(--e-2);
+      color: var(--c-text);
+      opacity: 0;
+      overscroll-behavior: contain;
+      scrollbar-color: var(--c-line-strong) transparent;
+      scrollbar-width: thin;
+      transform: scale(0.97);
+      transition:
+        opacity var(--m-small) var(--ease-standard),
+        transform var(--m-small) var(--ease-emphasis),
+        overlay var(--m-small) allow-discrete,
+        display var(--m-small) allow-discrete;
+    }
+
+    [data-control="select"]:open::picker(select) {
+      opacity: 1;
+      transform: none;
+    }
+
+    @starting-style {
+      [data-control="select"]:open::picker(select) {
+        opacity: 0;
+        transform: scale(0.97);
+      }
+    }
+
+    [data-control="select"] option {
+      display: flex;
+      align-items: center;
+      gap: var(--s-3);
+      min-height: var(--s-8);
+      padding: var(--s-1) var(--s-3);
+      border-radius: calc(var(--r-control) - var(--s-1));
+      background-color: transparent;
+      font-weight: var(--w-medium);
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    [data-control="select"] option + option {
+      margin-block-start: 2px;
+    }
+
+    /* The tint under the pointer and under the row the arrow keys stand on, in the ink's own colour. */
+    [data-control="select"] option:is(:hover, :focus-visible):not(:disabled) {
+      background-color: color-mix(in srgb, currentColor calc(var(--o-hover) * 100%), transparent);
+    }
+
+    [data-control="select"] option:active:not(:disabled) {
+      background-color: color-mix(in srgb, currentColor calc(var(--o-press) * 100%), transparent);
+    }
+
+    [data-control="select"] option:focus-visible {
+      outline: 2px solid var(--c-focus);
+      outline-offset: -2px;
+    }
+
+    [data-control="select"] option:checked {
+      background-color: var(--c-accent-soft);
+      color: var(--c-accent);
+      font-weight: var(--w-bold);
+    }
+
+    [data-control="select"] option:disabled {
+      opacity: var(--o-disabled);
+      cursor: not-allowed;
+    }
+
+    /* The check ends the chosen row. Every other row keeps its room, so the list has one width. */
+    [data-control="select"] option::checkmark {
+      content: "";
+      order: 1;
+      flex: none;
+      width: var(--s-4);
+      height: var(--s-4);
+      margin-inline-start: auto;
+      background: currentColor;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E")
+        center / contain no-repeat;
+    }
+
+    [data-control="select"] option:not(:checked)::checkmark {
+      visibility: hidden;
+    }
+  }
+
+  [data-control="text"] {
+    width: calc(var(--s-12) * 2);
+  }
+
+  [data-control="text"]::placeholder {
+    color: var(--c-text-soft);
+    opacity: 1;
+  }
+
+  @media (hover: hover) {
+    [data-control="slider"] input[type="number"]:hover:not(:disabled, :focus),
+    [data-control="select"]:hover:not(:disabled, :focus),
+    [data-control="text"]:hover:not(:disabled, :focus) {
+      border-color: var(--c-text-soft);
+    }
+  }
+
+  [data-control="slider"] input[type="number"]:focus,
+  [data-control="select"]:focus,
+  [data-control="text"]:focus {
+    border-color: var(--c-accent);
+    background-color: var(--c-surface-1);
+  }
+
+  /* The action: a secondary button, with the tint under the pointer in the ink's own colour. */
+  [data-control="action"] {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    min-height: var(--s-8);
+    padding: var(--s-1) var(--s-4);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-control);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-1);
+    color: var(--c-text);
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    text-align: center;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  [data-control="action"]::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  @media (hover: hover) {
+    [data-control="action"]:hover:not(:disabled) {
+      transform: translateY(var(--motion-lift));
+    }
+
+    [data-control="action"]:hover:not(:disabled)::before {
+      opacity: var(--o-hover);
+    }
+  }
+
+  [data-control="action"]:active:not(:disabled) {
+    transform: translateY(0) scale(0.97);
+  }
+
+  [data-control="action"]:active:not(:disabled)::before {
+    opacity: var(--o-press);
+  }
+
+  /* Focus: the site's ring, on the control itself and on each input of the slider. */
+  [data-control]:focus-visible,
+  [data-control="slider"] input:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+  }
+
+  /* Disabled: faded, and deaf to the pointer's tint. */
+  [data-control]:disabled,
+  [data-control="slider"] input:disabled {
+    opacity: var(--o-disabled);
+    cursor: not-allowed;
+  }
+
+  [data-control="action"]:disabled {
+    box-shadow: none;
+  }
+
+  /* A touch screen asks a target a finger can hit. */
+  @media (pointer: coarse) {
+    [data-control="toggle"] {
+      --toggle-hit: 8px;
+    }
+
+    [data-control="slider"] input[type="range"],
+    [data-control="slider"] input[type="number"],
+    [data-control="select"],
+    [data-control="select"] option,
+    [data-control="text"],
+    [data-control="action"] {
+      min-height: var(--s-touch);
+    }
+
+    [data-control="slider"] input[type="range"] {
+      height: var(--s-touch);
+    }
+
+    [data-control="slider"] input[type="number"],
+    [data-control="action"] {
+      min-width: var(--s-touch);
+    }
+  }
+}

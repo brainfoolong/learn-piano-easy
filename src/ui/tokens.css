@@ -1,0 +1,225 @@
+/*
+ * The site's tokens: every colour, size, distance, radius, shadow and timing a page or component reads.
+ *
+ * A component reads a token and never a raw value, so a page cannot drift from the scale. Each colour
+ * holds both themes in one `light-dark()`, so a component never knows the theme. The page follows the
+ * system's theme, and `data-site-theme="light"` or `"dark"` on the root element picks one instead.
+ * A theme is set on the root only, because each colour token resolves there.
+ *
+ * The palette comes from the mascot's picture: honey fur, a teal that answers it, and an iris and an
+ * orchid beside them. The page stays neutral, warm paper in light and violet ink in dark, so the four
+ * hues read as accents and never as a wash.
+ *
+ * - **A hue token is safe as text.** `--c-accent`, `--c-iris`, `--c-orchid`, `--c-brand-text` and the
+ *   four signals reach 4.5 to 1 on every surface, and each has an `-ink` for text on its fill.
+ * - **`--c-brand` is a fill only.** Honey is too light for text on paper, so text and edges in honey
+ *   read `--c-brand-text`.
+ * - **A `-vivid` token decorates.** It fills a shape, a glow or a bar, and never carries or backs text.
+ * - **A `-soft` token is a tint of its hue** on the first surface, for a band or a tag behind text.
+ *   It mixes in sRGB, so it computes to an `rgb()` colour that the layout check can read.
+ *
+ * Cascade layers order every stylesheet of the site: `reset`, `tokens`, `base`, `components`, `pages`.
+ * A later layer wins, so a page's style never needs a stronger selector than a component's.
+ *
+ * Breakpoints are 480, 768, 1024 and 1280 pixels. A media query cannot read a custom property, so each
+ * query writes its width as a number. A component adapts to its own width through container queries.
+ *
+ * `src/ui/tokens.test.ts` checks every text colour's contrast and every distance's grid.
+ */
+@layer reset, tokens, base, components, pages;
+
+@layer tokens {
+  :root {
+    color-scheme: light dark;
+
+    /* Colour: the page, the surfaces, the well a field sits in, and their edges. */
+    --c-bg: light-dark(#faf6ee, #0e0c16);
+    --c-surface-1: light-dark(#ffffff, #171423);
+    --c-surface-2: light-dark(#ffffff, #201c30);
+    --c-sunken: light-dark(#f3ede2, #0a0911);
+    --c-line: light-dark(#e8dfd0, #2d2841);
+    --c-line-strong: light-dark(#cdc2af, #473f66);
+    --c-glass: light-dark(rgb(255 255 255 / 0.74), rgb(23 20 35 / 0.74));
+    /* The dim behind a dialog. It is dark in both themes, so the panel stands out above it. */
+    --c-scrim: rgb(10 8 18 / 0.6);
+
+    /* Colour: text. */
+    --c-text: light-dark(#1c1826, #f5f2fb);
+    --c-text-soft: light-dark(#5c566c, #ada7c2);
+
+    /* Colour: honey, the brand. It fills the primary action, the rewards and the logo. */
+    --c-brand: light-dark(#f6a723, #ffb83d);
+    --c-brand-ink: light-dark(#2a1a00, #2a1a00);
+    --c-brand-text: light-dark(#8f5400, #ffc45e);
+
+    /* Colour: teal, the accent. It marks what is chosen, linked or switched on. */
+    --c-accent: light-dark(#09716c, #4adbc9);
+    --c-accent-ink: light-dark(#ffffff, #06201d);
+    --c-accent-vivid: light-dark(#14b8a6, #4adbc9);
+
+    /* Colour: iris and orchid, the two supporting hues, and the focus ring in iris. */
+    --c-iris: light-dark(#5f42e0, #a795ff);
+    --c-iris-ink: light-dark(#ffffff, #130c33);
+    --c-iris-vivid: light-dark(#7c5cff, #a795ff);
+    --c-orchid: light-dark(#b82a75, #ff7fba);
+    --c-orchid-ink: light-dark(#ffffff, #33061c);
+    --c-orchid-vivid: light-dark(#ec4899, #ff7fba);
+    --c-focus: var(--c-iris);
+
+    /* Colour: the signals. Green is success, red an error, orange a warning and blue a note. */
+    --c-success: light-dark(#0b7446, #45d99a);
+    --c-success-ink: light-dark(#ffffff, #04210f);
+    --c-success-vivid: light-dark(#22c55e, #45d99a);
+    --c-danger: light-dark(#c2283a, #ff7482);
+    --c-danger-ink: light-dark(#ffffff, #33060c);
+    --c-warning: light-dark(#a34a05, #ff9d47);
+    --c-warning-ink: light-dark(#ffffff, #331703);
+    --c-warning-vivid: light-dark(#f97316, #ff9d47);
+    --c-info: light-dark(#1a62be, #6fb0ff);
+    --c-info-ink: light-dark(#ffffff, #061a33);
+
+    /* Colour: what a learner did. A reward is honey, and a wrong note takes the error's red. */
+    --c-reward: var(--c-brand);
+    --c-mistake: var(--c-danger);
+
+    /* Colour: a tint of each hue on the first surface, for a band, a tag or a row behind text. */
+    --c-brand-soft: color-mix(in srgb, var(--c-brand) 16%, var(--c-surface-1));
+    --c-accent-soft: color-mix(in srgb, var(--c-accent) 10%, var(--c-surface-1));
+    --c-iris-soft: color-mix(in srgb, var(--c-iris) 10%, var(--c-surface-1));
+    --c-orchid-soft: color-mix(in srgb, var(--c-orchid) 10%, var(--c-surface-1));
+    --c-success-soft: color-mix(in srgb, var(--c-success) 10%, var(--c-surface-1));
+    --c-danger-soft: color-mix(in srgb, var(--c-danger) 10%, var(--c-surface-1));
+    --c-warning-soft: color-mix(in srgb, var(--c-warning) 10%, var(--c-surface-1));
+    --c-info-soft: color-mix(in srgb, var(--c-info) 10%, var(--c-surface-1));
+
+    /* Colour: the versions of our songs, by the version's id, and the accent of a world of Learn Piano. */
+    --c-rarity-common: light-dark(#6b7385, #b4bccb);
+    --c-rarity-rare: light-dark(#1f6fd6, #5aa2ff);
+    --c-rarity-epic: light-dark(#7a3fd6, #b67cff);
+    --c-rarity-legendary: light-dark(#a86f00, #f2b636);
+    --c-rarity-mythic: light-dark(#d42a36, #ff5c64);
+    --c-world: var(--c-iris);
+    --c-world-violet: light-dark(#5f42e0, #a795ff);
+    --c-world-sky: light-dark(#1f7fd6, #5aaeff);
+    --c-world-teal: light-dark(#0f9e8e, #2ed3c0);
+    --c-world-lime: light-dark(#4f9d1c, #8fd94a);
+    --c-world-amber: light-dark(#c97a00, #ffb020);
+    --c-world-coral: light-dark(#e0603a, #ff8a65);
+    --c-world-rose: light-dark(#d13f7a, #ff7aa8);
+    --c-world-indigo: light-dark(#3f4fd6, #7d8bff);
+
+    /* Gradients: the sheen of the primary action, and the glow of colour behind a hero or a header. */
+    --g-brand: linear-gradient(180deg, light-dark(#ffc94f, #ffd06b) 0%, light-dark(#f59a14, #ffad2b) 100%);
+    --g-aura:
+      radial-gradient(60% 80% at 12% 0%, color-mix(in srgb, var(--c-brand) 22%, transparent), transparent 70%),
+      radial-gradient(50% 70% at 88% 4%, color-mix(in srgb, var(--c-accent-vivid) 18%, transparent), transparent 70%),
+      radial-gradient(45% 60% at 55% 0%, color-mix(in srgb, var(--c-iris-vivid) 14%, transparent), transparent 72%);
+
+    /* Type: one family, with a fallback face of matched metrics while it loads. */
+    --font-sans: "Plus Jakarta Sans", "Plus Jakarta Sans Fallback", sans-serif;
+    --t-xs: 12px;
+    --t-sm: 14px;
+    --t-md: 16px;
+    --t-lg: 18px;
+    --t-xl: 20px;
+    --t-2xl: 24px;
+    --t-3xl: 30px;
+    --t-4xl: 38px;
+    --t-5xl: clamp(32px, 2.5vw + 22px, 48px);
+    --t-display: clamp(40px, 4vw + 24px, 68px);
+    --w-regular: 400;
+    --w-medium: 500;
+    --w-semibold: 600;
+    --w-bold: 700;
+    --w-heavy: 800;
+    --lh-body: 1.55;
+    --lh-heading: 1.12;
+    --ls-heading: -0.025em;
+    --ls-caps: 0.08em;
+    --measure: 68ch;
+
+    /* Space: every distance is a multiple of 4 pixels. */
+    --s-1: 4px;
+    --s-2: 8px;
+    --s-3: 12px;
+    --s-4: 16px;
+    --s-5: 20px;
+    --s-6: 24px;
+    --s-7: 32px;
+    --s-8: 40px;
+    --s-9: 48px;
+    --s-10: 64px;
+    --s-11: 96px;
+    --s-12: 128px;
+    --s-container: 1200px;
+    --s-gutter: 16px;
+    --s-touch: 44px;
+
+    /* Shape and depth. A shadow is tinted with the ink's violet, never a flat grey. */
+    --r-control: 12px;
+    --r-card: 20px;
+    --r-panel: 28px;
+    --r-pill: 999px;
+    --e-1: 0 1px 2px light-dark(rgb(38 26 78 / 0.06), rgb(0 0 0 / 0.36)),
+      0 2px 8px light-dark(rgb(38 26 78 / 0.05), rgb(0 0 0 / 0.26));
+    --e-2: 0 2px 4px light-dark(rgb(38 26 78 / 0.05), rgb(0 0 0 / 0.34)),
+      0 10px 28px light-dark(rgb(38 26 78 / 0.1), rgb(0 0 0 / 0.4));
+    --e-3: 0 4px 10px light-dark(rgb(38 26 78 / 0.06), rgb(0 0 0 / 0.38)),
+      0 24px 64px light-dark(rgb(38 26 78 / 0.16), rgb(0 0 0 / 0.52));
+    /* The lit top edge of a raised thing, and the glow under the primary action. */
+    --e-rim: inset 0 1px 0 light-dark(rgb(255 255 255 / 0.9), rgb(255 255 255 / 0.07));
+    --e-glow: 0 6px 20px color-mix(in srgb, var(--c-brand) 38%, transparent);
+    --glass-blur: 20px;
+    --z-raised: 1;
+    --z-bar: 100;
+    --z-dialog: 200;
+    --z-toast: 300;
+
+    /* State: the tint a control takes under the pointer and when pressed, and a disabled one's fade. */
+    --o-hover: 0.07;
+    --o-press: 0.13;
+    --o-disabled: 0.48;
+
+    /* Motion: only transform and opacity animate, so these distances move nothing in the layout. */
+    --m-micro: 120ms;
+    --m-small: 200ms;
+    --m-medium: 320ms;
+    --m-large: 480ms;
+    --m-reward: 1200ms;
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+    --ease-emphasis: cubic-bezier(0.05, 0.7, 0.1, 1);
+    /* A small overshoot, for a thumb, a check or a chip that snaps into its place. */
+    --ease-spring: linear(0, 0.35 8%, 0.72 16%, 0.96 24%, 1.08 32%, 1.11 40%, 1.08 50%, 1.03 62%, 1 76%, 1);
+    --motion-rise: 8px;
+    --motion-lift: -2px;
+  }
+
+  :root[data-site-theme="light"] {
+    color-scheme: light;
+  }
+
+  :root[data-site-theme="dark"] {
+    color-scheme: dark;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --s-gutter: 24px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    :root {
+      --s-gutter: 32px;
+    }
+  }
+
+  /* With reduced motion, nothing moves: what rose or lifted only fades. */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --motion-rise: 0px;
+      --motion-lift: 0px;
+      --ease-spring: var(--ease-standard);
+    }
+  }
+}

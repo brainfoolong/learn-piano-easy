@@ -1,0 +1,230 @@
+/*
+ * The top bar's styles. `src/ui/components/top-bar.ts` is the home of how the bar behaves.
+ *
+ * The bar is glass: a translucent surface over a blur, with a hairline edge and a lit top. The brand's
+ * icon sits on a honey tile, the site's logo. The current page's link reads in the text's colour over
+ * a teal bar.
+ *
+ * The bar is a size container, so it lays itself out by its own width. A size container cannot take
+ * its width from its content, so it fills the width of its parent.
+ *
+ * - **Wide, the bar is one row and never wraps.** The brand and the links keep their width, and the
+ *   page slot takes the rest and gives way first. So a page with many actions keeps the bar's height.
+ * - **Narrow, the navigation takes a row of its own** beneath the brand and the actions.
+ *
+ * Only `transform` and `opacity` move: a link and the brand fade in a tint under the pointer, and
+ * squash when pressed.
+ */
+@layer components {
+  .top-bar {
+    container: top-bar / inline-size;
+    max-width: 100%;
+    min-width: 0;
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-glass);
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+  }
+
+  /* Without a blur, glass would leave the page legible beneath the bar, so the bar turns opaque. */
+  @supports not ((backdrop-filter: none) or (-webkit-backdrop-filter: none)) {
+    .top-bar {
+      background: var(--c-surface-2);
+    }
+  }
+
+  .top-bar__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-1) var(--s-2);
+    padding: var(--s-2);
+  }
+
+  .top-bar__brand,
+  .top-bar__link {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    min-width: 0;
+    min-height: var(--s-8);
+    border-radius: var(--r-control);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .top-bar__brand {
+    gap: var(--s-2);
+    padding: var(--s-1) var(--s-3) var(--s-1) var(--s-1);
+    border-radius: var(--r-pill);
+    color: var(--c-text);
+    font-size: var(--t-lg);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  /* The logo: the piano in the honey's ink on a round honey tile. */
+  .top-bar__brand .icon {
+    flex: none;
+    width: var(--s-7);
+    height: var(--s-7);
+    padding: calc(var(--s-1) + 2px);
+    border-radius: var(--r-pill);
+    background: var(--g-brand);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.5),
+      var(--e-1);
+    color: var(--c-brand-ink);
+  }
+
+  .top-bar__brand-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .top-bar__nav {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .top-bar__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .top-bar__links > li {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .top-bar__link {
+    justify-content: center;
+    padding: var(--s-1) var(--s-3);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .top-bar__link[aria-current="page"] {
+    color: var(--c-text);
+  }
+
+  /* The mark beneath the current page's link: a teal bar, the colour of the item at hand. */
+  .top-bar__link[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    inset-inline: var(--s-3);
+    bottom: var(--s-1);
+    height: 3px;
+    border-radius: var(--r-pill);
+    background: var(--c-accent);
+  }
+
+  /* The tint under the pointer and the press, in the ink's own colour. */
+  .top-bar__brand::before,
+  .top-bar__link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-micro) var(--ease-standard);
+  }
+
+  @media (hover: hover) {
+    .top-bar__link:hover {
+      color: var(--c-text);
+    }
+
+    .top-bar__brand:hover::before,
+    .top-bar__link:hover::before {
+      opacity: var(--o-hover);
+    }
+  }
+
+  .top-bar__brand:active,
+  .top-bar__link:active {
+    transform: scale(0.97);
+    transition-duration: var(--m-micro);
+  }
+
+  .top-bar__brand:active::before,
+  .top-bar__link:active::before {
+    opacity: var(--o-press);
+  }
+
+  /* The page slot, at the bar's end. Empty, it takes no room. */
+  .top-bar__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--s-1) var(--s-2);
+    min-width: 0;
+    margin-inline-start: auto;
+  }
+
+  .top-bar__actions:empty {
+    display: none;
+  }
+
+  /* A touch screen asks a target a finger can hit. */
+  @media (pointer: coarse) {
+    .top-bar__brand,
+    .top-bar__link {
+      min-width: var(--s-touch);
+      min-height: var(--s-touch);
+    }
+  }
+
+  /*
+   * Wide: one row. The brand and the links keep their width, and the slot takes the rest. A slot too
+   * full for its room wraps or shrinks inside itself, so the bar's other parts stay on the row.
+   */
+  @container top-bar (min-width: 768px) {
+    .top-bar__inner {
+      flex-wrap: nowrap;
+    }
+
+    .top-bar__brand,
+    .top-bar__nav {
+      flex: none;
+    }
+
+    .top-bar__links {
+      flex-wrap: nowrap;
+    }
+
+    .top-bar__link {
+      white-space: nowrap;
+    }
+
+    .top-bar__actions {
+      flex: 1 1 0;
+    }
+  }
+
+  /* Narrow: the navigation takes a row of its own beneath the brand and the actions. */
+  @container top-bar (max-width: 767px) {
+    .top-bar__nav {
+      order: 1;
+      flex-basis: 100%;
+    }
+  }
+}

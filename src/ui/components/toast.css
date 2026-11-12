@@ -1,0 +1,183 @@
+/*
+ * The toast's styles. `src/ui/components/toast.ts` is the home of how a toast and its stack behave.
+ *
+ * Each variant sets the mark's fill and glyph, and one rule draws every toast from them. The mark is a
+ * round disc in the variant's signal colour: blue for a note, green for success, orange for a warning
+ * and red for an error. A reward's mark is the honey sheen with the honey's light. Each mark holds an
+ * icon, and the text keeps the text colour on a raised surface, so a colour never carries the meaning
+ * alone.
+ *
+ * Only the stack animates, with `transform` and `opacity`.
+ */
+@layer components {
+  .toast {
+    --toast-fill: var(--c-info);
+    --toast-glyph: var(--c-info-ink);
+    --toast-glow: 0 0 0 0 transparent;
+
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-3);
+    box-sizing: border-box;
+    width: calc(var(--s-12) * 3);
+    max-width: 100%;
+    min-width: 0;
+    padding: var(--s-3);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+  }
+
+  .toast[data-variant="success"] {
+    --toast-fill: var(--c-success);
+    --toast-glyph: var(--c-success-ink);
+  }
+
+  /* A warning's mark is the bright orange, under a dark glyph in both themes. */
+  .toast[data-variant="warning"] {
+    --toast-fill: var(--c-warning-vivid);
+    --toast-glyph: light-dark(var(--c-text), var(--c-warning-ink));
+  }
+
+  .toast[data-variant="error"] {
+    --toast-fill: var(--c-danger);
+    --toast-glyph: var(--c-danger-ink);
+  }
+
+  .toast[data-variant="reward"] {
+    --toast-fill: var(--g-brand);
+    --toast-glyph: var(--c-brand-ink);
+    --toast-glow: var(--e-glow);
+  }
+
+  .toast__badge {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--s-8);
+    height: var(--s-8);
+    border-radius: var(--r-pill);
+    background: var(--toast-fill);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.22),
+      var(--toast-glow);
+    color: var(--toast-glyph);
+  }
+
+  .toast__badge .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+    stroke-width: 2.25;
+  }
+
+  .toast__body {
+    display: grid;
+    flex: 1;
+    gap: var(--s-1);
+    min-width: 0;
+    padding-block: var(--s-2);
+    overflow-wrap: anywhere;
+  }
+
+  .toast__title {
+    margin: 0;
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+  }
+
+  .toast__message {
+    margin: 0;
+    font-size: var(--t-sm);
+    font-weight: var(--w-medium);
+    line-height: var(--lh-body);
+  }
+
+  /* Under a title, the message steps back. */
+  .toast__title + .toast__message {
+    color: var(--c-text-soft);
+  }
+
+  .toast .btn {
+    flex: none;
+  }
+
+  /* The action sits under the message at its own width. */
+  .toast__body > .btn {
+    justify-self: start;
+    margin-block-start: var(--s-1);
+  }
+
+  /* The stack: a column at the bottom of the viewport that lets the pointer through between toasts. */
+  .toasts {
+    position: fixed;
+    inset-inline: 0;
+    inset-block-end: 0;
+    z-index: var(--z-toast);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-2);
+    padding: var(--s-gutter);
+    padding-block-end: max(var(--s-gutter), env(safe-area-inset-bottom));
+    pointer-events: none;
+  }
+
+  .toasts > .toast {
+    pointer-events: auto;
+    animation: toast-enter var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  .toasts > .toast[data-leaving] {
+    pointer-events: none;
+    animation: toast-leave var(--m-small) var(--ease-standard) both;
+  }
+
+  /* The one bigger animation: a reward's mark pops in, overshoots and settles. */
+  .toasts > .toast[data-variant="reward"]:not([data-leaving]) .toast__badge {
+    animation: toast-pop var(--m-reward) var(--ease-emphasis) both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toasts > .toast[data-variant="reward"]:not([data-leaving]) .toast__badge {
+      animation: none;
+    }
+  }
+
+  @keyframes toast-enter {
+    from {
+      opacity: 0;
+      transform: translateY(calc(var(--motion-rise) * 2));
+    }
+  }
+
+  @keyframes toast-leave {
+    to {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+
+  @keyframes toast-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0) rotate(-30deg);
+    }
+
+    35% {
+      opacity: 1;
+      transform: scale(1.3) rotate(10deg);
+    }
+
+    60% {
+      transform: scale(0.9) rotate(-4deg);
+    }
+
+    100% {
+      transform: scale(1) rotate(0);
+    }
+  }
+}

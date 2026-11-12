@@ -1,0 +1,152 @@
+/*
+ * The gallery page's own layout: a column of sections, each a raised panel of specimen rows.
+ * `src/ui/gallery.ts` is the home of what the page shows.
+ *
+ * The page's head sits before the palette's glow, which lies on a layer behind it, so its text keeps a
+ * plain background. A panel's title is firm over a hairline, and each group's title is a line of small
+ * caps. A swatch is a block of its token's colour over the token's name.
+ */
+@layer pages {
+  .gallery {
+    display: grid;
+    gap: var(--s-7);
+    max-width: var(--s-container);
+    margin-inline: auto;
+    padding: var(--s-9) var(--s-gutter) var(--s-11);
+  }
+
+  /* A track never grows past the page for a specimen that asks a wide frame. */
+  .gallery,
+  .gallery__component,
+  .gallery__group {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gallery__head {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    gap: var(--s-3);
+    padding-block: var(--s-4) var(--s-2);
+  }
+
+  /*
+   * The palette's glow behind the head. It keeps inside the page's gutters, so it widens nothing, and
+   * a mask fades it out towards each side.
+   */
+  .gallery__head::before {
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--s-9)) 0 calc(-1 * var(--s-7));
+    z-index: -1;
+    background: var(--g-aura);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    pointer-events: none;
+  }
+
+  .gallery__lead {
+    color: var(--c-text-soft);
+    font-size: var(--t-lg);
+  }
+
+  .gallery__component {
+    display: grid;
+    gap: var(--s-7);
+    padding: var(--s-6);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  .gallery__component-title {
+    padding-block-end: var(--s-4);
+    border-block-end: 1px solid var(--c-line);
+    font-size: var(--t-2xl);
+    font-weight: var(--w-heavy);
+  }
+
+  .gallery__group {
+    display: grid;
+    gap: var(--s-3);
+  }
+
+  .gallery__group-title {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .gallery__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-4);
+  }
+
+  .gallery__specimen {
+    display: flex;
+    max-width: 100%;
+  }
+
+  /* A control with its visible label before it, which wraps under the label where the row is narrow. */
+  .gallery__labelled {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-3);
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* The palette: as many columns of swatches as the row holds. */
+  .gallery__swatches {
+    display: grid;
+    flex: 1 1 100%;
+    grid-template-columns: repeat(auto-fill, minmax(var(--s-12), 1fr));
+    gap: var(--s-4) var(--s-3);
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .gallery__swatch {
+    display: grid;
+    gap: var(--s-2);
+    min-width: 0;
+  }
+
+  .gallery__swatch-colour {
+    display: block;
+    height: var(--s-9);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-control);
+    box-shadow: var(--e-1);
+  }
+
+  .gallery__swatch-name {
+    color: var(--c-text-soft);
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: var(--t-xs);
+    line-height: var(--lh-heading);
+    overflow-wrap: anywhere;
+  }
+
+  /* The mascot's scene in a frame of a set width, since a scene fills its container. */
+  .gallery__scene {
+    width: calc(var(--s-12) * 4);
+    max-width: 100%;
+  }
+
+  /* Narrow, a panel gives its specimens more of the width. */
+  @media (max-width: 479px) {
+    .gallery__component {
+      padding: var(--s-5) var(--s-4);
+      border-radius: var(--r-card);
+    }
+  }
+}

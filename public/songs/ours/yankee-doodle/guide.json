@@ -1,0 +1,349 @@
+{
+  "song": "yankee-doodle",
+  "title": "Yankee Doodle",
+  "composer": "Traditional",
+  "about": "Yankee Doodle is a traditional tune that British soldiers sang to make fun of the American colonists. During the American Revolution, the Americans took the song as their own and sang it with pride. One of its first printings is in a book of tunes James Aird published in Glasgow in 1782.",
+  "funFact": "Yankee Doodle is the official state song of Connecticut.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/yankee-doodle/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [2, 2, 3, 4, 2, 4, 3, 1, 2, 2, 3, 4, 2, 1, 2, 2, 3, 4, 5, 4, 3, 2, 2, 1, 2, 3, 4, 4],
+        "left": [1, 1, 5, 1, 1, 5, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [55, 60, 62, 64, null],
+        "left": [48, null, null, 45, 43]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone, slowly, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. Each of its notes lasts two beats or more.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the first four bars.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "Finger 2 sits on C, and your thumb reaches down for the low G at the end of bar 2."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "rhythm",
+          "text": "Both notes of bar 4 last two beats, so count them out."
+        },
+        {
+          "fromBar": 6,
+          "toBar": 7,
+          "kind": "trick",
+          "text": "Lift the hand for a moment after the C in bar 6. It lands one key lower."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Land with finger 2 on B, and the thumb takes the low G."
+        },
+        {
+          "bar": 6,
+          "text": "Walk down F, E, D and C with fingers 5, 4, 3 and 2, then lift the hand."
+        },
+        {
+          "bar": 8,
+          "text": "Finger 4 plays both C's. Hold each one for two beats."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/yankee-doodle/rare.mid",
+      "skills": [
+        "triads",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [2, 2, 3, 4, 2, 4, 3, 1, 2, 2, 3, 4, 2, 1, 2, 2, 3, 4, 5, 4, 3, 2, 2, 1, 2, 3, 4, 1, 3, 4, 3, 2, 3, 4, 5, 3, 4, 3, 2, 1, 1, 3, 4, 3, 2, 3, 4, 5, 3, 1, 4, 3, 5, 4, 4],
+        "left": [5, 5, 3, 1, 5, 4, 2, 1, 5, 5, 3, 1, 5, 4, 2, 1, 5, 3, 2, 5, 5, 1, 5, 3, 2, 4, 2, 1, 5, 3, 2, 5, 2, 1, 2, 1, 5, 4, 2, 1, 5, 3, 2, 5, 2, 1, 2, 1, 5, 2, 4, 2, 1, 5, 3, 2]
+      },
+      "start": {
+        "right": [62, 67, 69, 71, null],
+        "left": [50, 50, 47, 45, 43]
+      },
+      "practice": [
+        {
+          "text": "Play the right hand alone through the verse, slowly.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the left hand alone. Keep each chord until the next note.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the chorus, which sits higher on the keys.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "The bass note comes first and the chord answers it. Play the chord a little softer."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 9,
+          "kind": "trick",
+          "text": "Change to the thumb on the second G, so the hand can reach up for the chorus."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "The tune climbs to its highest note here. Let it ring out, then land softly on G."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 12,
+          "text": "Your thumb plays B and then G. Slide it down while the long B rings."
+        },
+        {
+          "bar": 7,
+          "text": "Move finger 2 from G down to F sharp, and the thumb lands on D below it."
+        },
+        {
+          "bar": 15,
+          "text": "The thumb takes D, then finger 4 reaches up to G. Keep the hand open."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/yankee-doodle/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thumb-under",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [2, 2, 3, 4, 2, 4, 3, 1, 2, 2, 3, 4, 2, 1, 2, 2, 3, 4, 5, 4, 3, 2, 2, 1, 2, 3, 4, 1, 2, 3, 1, 3, 4, 3, 2, 3, 4, 5, 3, 4, 3, 2, 1, 1, 1, 3, 2, 4, 1, 3, 1, 2, 1, 3, 2, 4, 1, 5, 1, 3, 1, 2, 1, 5, 2, 4, 4, 5, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [62, 67, 69, 71, null],
+        "left": [50, null, 47, null, 43]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the run of bar 8 alone, and pass the thumb under to C.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [8, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the chorus in thirds alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [13, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 8,
+          "kind": "fingering",
+          "text": "The thumb passes under finger 3 to reach C, and the run climbs on into the chorus."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 14,
+          "kind": "sound",
+          "text": "The F sharps rub against the bass for a moment. That bite is meant."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "Move finger 2 from G down to F sharp. The rest of the hand follows it."
+        },
+        {
+          "bar": 15,
+          "text": "The hand opens to a sixth on B and G, then climbs to F sharp and A."
+        },
+        {
+          "bar": 11,
+          "text": "The chorus drops back to D. Finger 3 takes it, so the hand is ready for C."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/yankee-doodle/legendary.mid",
+      "skills": [
+        "stride",
+        "octave-bass",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [2, 2, 3, 4, 2, 4, 3, 1, 2, 2, 3, 4, 2, 1, 1, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 4, 1, 3, 1, 2, 1, 3, 2, 4, 1, 2, 4, 1, 2, 4, 3, 4, 3, 2, 3, 4, 5, 3, 4, 3, 2, 1, 1, 1, 3, 2, 4, 1, 3, 1, 2, 1, 3, 2, 4, 1, 5, 1, 3, 1, 2, 1, 5, 2, 4, 4, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1, 3, 2, 1, 5, 1, 3, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 3, 2, 1, 5, 1, 4, 2, 1, 5, 1, 4, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [62, 67, 69, 71, null],
+        "left": [43, 50, 47, null, 31]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's sixths and thirds alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the octaves of the chorus in the left hand alone.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "In stride, look at the octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 6,
+          "kind": "fingering",
+          "text": "The thumb plays every lower note, and fingers 4 and 5 carry the tune."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "Play the octaves short, and let the pedal join them."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 5,
+          "text": "The sixths move as one shape. Let the thumb lead each step up."
+        },
+        {
+          "bar": 8,
+          "text": "Lift the hand after the second chord, then jump up to E for the chorus."
+        },
+        {
+          "bar": 3,
+          "text": "The tune walks up while the bass jumps. Keep your eyes on the left hand."
+        }
+      ]
+    }
+  }
+}

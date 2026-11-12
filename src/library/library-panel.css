@@ -1,0 +1,1100 @@
+/*
+ * The song explorer's styles. `src/library/library-panel.ts` is the home of how the explorer behaves.
+ *
+ * The explorer fills its dialog: a head that stays, a rail of filters and the cards, which scroll alone.
+ * The dialog is large on a desktop and a full-height sheet on a phone. The explorer is a container, so
+ * the rail sits beside the cards when it has the room and folds above them when it has not.
+ *
+ * - **The dialog's title and the search are one head.** No line parts them, and they share a left edge.
+ * - **A phone's head stays short.** The quick filters are one row that scrolls sideways. The open
+ *   song's button shows only its bars, and the sort shows only its select.
+ * - **A card is raised.** It rests on the first surface with a lit edge, and lifts under the pointer.
+ *   Its main button is a layer over the whole card, so the focus ring is the card's own edge.
+ * - **Every card is the same height.** A title, a composer and the tags each keep to one line, so no
+ *   card moves when a length or a tag arrives.
+ * - **Each kind of tag has a hue.** A kind sets `--tag-hue`, and one rule draws every chip from it. A
+ *   chip's text stays `--c-text`, so the hue never carries the contrast. A level's hue climbs from
+ *   teal to orchid. A card's kicker deepens its hue towards the text colour, so it stays readable.
+ * - **Teal marks the song that plays,** and the preview that sounds. Honey marks a favourite.
+ * - **The preview's progress is a fill that sweeps the button.** It runs for `--preview-ms`, and
+ *   starts `--preview-at` in, so a card drawn while its song previews joins at the right place.
+ *
+ * Only `transform` and `opacity` move. With reduced motion nothing loops, and the sweep is a still tint.
+ * A touch screen asks a target of 44 pixels. A card's small tag gets it from a clear border, so the
+ * chip keeps its drawn size and only its hit area grows.
+ */
+@layer pages {
+  /* The dialog around the explorer: large, with a body that hands its scroll to the cards. */
+  .dialog[open]:has(.song-explorer) {
+    width: calc(var(--s-12) * 9.5);
+    height: calc(100dvh - 2 * var(--s-gutter));
+  }
+
+  .dialog__body:has(> .song-explorer) {
+    display: flex;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* The dialog's title and the search are one head, so no line parts them. */
+  .dialog:has(.song-explorer) .dialog__head {
+    border-block-end: 0;
+  }
+
+  /* The explorer's side padding is the dialog head's, so the search starts under the title. */
+  .song-explorer {
+    --explorer-pad: var(--s-6);
+
+    container: explorer / inline-size;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    line-height: var(--lh-heading);
+  }
+
+  @media (max-width: 767px) {
+    .dialog[open]:has(.song-explorer) {
+      height: calc(100dvh - var(--s-3));
+      max-height: calc(100dvh - var(--s-3));
+    }
+
+    .song-explorer {
+      --explorer-pad: var(--s-5);
+    }
+  }
+
+  /* The head: the search, the quick filters and the status, above everything that scrolls. */
+  .song-explorer__head {
+    display: grid;
+    flex: none;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-3);
+    padding: var(--s-1) var(--explorer-pad) var(--s-3);
+    border-block-end: 1px solid var(--c-line);
+  }
+
+  .song-explorer__search {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-2) var(--s-3);
+  }
+
+  .song-explorer__box {
+    position: relative;
+    display: block;
+    flex: 1 1 calc(var(--s-12) * 2);
+    min-width: 0;
+  }
+
+  .song-explorer__box .icon {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: var(--s-4);
+    width: var(--s-5);
+    height: var(--s-5);
+    margin-block: auto;
+    color: var(--c-text-soft);
+    pointer-events: none;
+  }
+
+  .song-explorer__box .song-explorer__field {
+    width: 100%;
+    min-height: var(--s-9);
+    padding-inline: var(--s-9) var(--s-4);
+    border-radius: var(--r-pill);
+    font-size: var(--t-lg);
+    text-overflow: ellipsis;
+  }
+
+  /* The open song, named in teal. It leads to its card. */
+  .song-explorer__now {
+    display: inline-flex;
+    flex: 0 1 auto;
+    align-items: center;
+    gap: var(--s-2);
+    max-width: 100%;
+    min-width: 0;
+    min-height: var(--s-8);
+    padding: var(--s-1) var(--s-4);
+    border: 1px solid var(--c-accent);
+    border-radius: var(--r-pill);
+    background: var(--c-accent-soft);
+    color: var(--c-accent);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .song-explorer__now-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Three bars that rise and fall while a song plays. */
+  .song-bars {
+    display: inline-flex;
+    flex: none;
+    align-items: flex-end;
+    gap: 2px;
+    height: var(--s-3);
+  }
+
+  .song-bars i {
+    width: 3px;
+    height: 100%;
+    border-radius: var(--r-pill);
+    background: currentColor;
+    transform-origin: bottom;
+    animation: song-bars calc(var(--m-large) * 2) var(--ease-standard) infinite alternate;
+  }
+
+  .song-bars i:nth-child(2) {
+    animation-delay: calc(var(--m-small) * -1);
+  }
+
+  .song-bars i:nth-child(3) {
+    animation-delay: calc(var(--m-large) * -1);
+  }
+
+  /* The quick filters: one row that scrolls sideways when it is too long, and fades out at its end. */
+  .song-explorer__bar {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2) var(--s-5);
+    margin-inline: calc(-1 * var(--explorer-pad));
+    padding: var(--s-1) var(--explorer-pad);
+    overflow-x: auto;
+    scrollbar-width: none;
+    mask-image: linear-gradient(to right, black calc(100% - var(--explorer-pad)), transparent);
+  }
+
+  .song-explorer__quick {
+    display: contents;
+  }
+
+  /* A level and a license in soft small text. The tracks panel shows its note counts with it too. */
+  .library-difficulty,
+  .library-license {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    white-space: nowrap;
+  }
+
+  .song-explorer .library-filter {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: var(--s-2);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    white-space: nowrap;
+  }
+
+  .song-explorer__status {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-2) var(--s-3);
+    min-height: var(--s-8);
+  }
+
+  .library-count {
+    color: var(--c-text);
+    font-size: var(--t-md);
+    font-weight: var(--w-heavy);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .song-explorer__note {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .song-explorer__sort {
+    display: inline-flex;
+    flex: 0 1 auto;
+    align-items: center;
+    gap: var(--s-2);
+    min-width: 0;
+    margin-inline-start: auto;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    white-space: nowrap;
+  }
+
+  .song-explorer__sort [data-control="select"] {
+    font-size: var(--t-sm);
+  }
+
+  /*
+   * A phone's head stays short. The open song's button shrinks to its bars beside the search, and
+   * keeps its name for a screen reader. The select alone names the sort, so the count, the filters
+   * and the sort share a row. "Clear all" takes a row of its own, so that row never moves.
+   */
+  @container explorer (max-width: 479px) {
+    .song-explorer__box .song-explorer__field {
+      padding-inline-end: var(--s-3);
+      font-size: var(--t-md);
+    }
+
+    .song-explorer__now {
+      flex: none;
+      justify-content: center;
+      width: var(--s-9);
+      height: var(--s-9);
+      padding: 0;
+    }
+
+    .song-explorer__now-title {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      clip-path: inset(50%);
+    }
+
+    .song-explorer__sort {
+      flex: 1 1 var(--s-12);
+      max-width: calc(var(--s-12) + var(--s-8));
+    }
+
+    .song-explorer__sort span {
+      display: none;
+    }
+
+    .song-explorer__sort [data-control="select"] {
+      flex: 1;
+    }
+
+    .song-explorer__clear {
+      order: 1;
+    }
+
+    /* The two buttons of "Your songs" share a row under its name. */
+    .library-own .song-section__name {
+      flex-basis: 100%;
+    }
+
+    .library-own .song-section__head > .btn {
+      --btn-pad: var(--s-2);
+
+      flex: 1 1 auto;
+    }
+  }
+
+  /* The button that folds the rail, on a narrow explorer only. */
+  .song-explorer__filters,
+  .tag-group__more {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    min-height: var(--s-7);
+    padding: 0 var(--s-3);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-1);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .song-explorer__filters .icon {
+    width: var(--s-4);
+    height: var(--s-4);
+    transition: transform var(--m-small) var(--ease-standard);
+  }
+
+  .song-explorer__filters[aria-expanded="true"] .icon {
+    transform: rotate(0.5turn);
+  }
+
+  .tag-group__more {
+    align-self: flex-start;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    color: var(--c-accent);
+  }
+
+  /* The rail and the cards. On a narrow explorer the rail folds above the cards. */
+  .song-explorer__main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .song-explorer__rail {
+    display: none;
+    flex: none;
+    gap: var(--s-5);
+    max-height: 42dvh;
+    padding: var(--s-4) var(--explorer-pad);
+    border-block-end: 1px solid var(--c-line);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+  }
+
+  .song-explorer__rail[data-open] {
+    display: grid;
+    align-content: start;
+  }
+
+  .song-explorer__results {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--s-7);
+    min-height: 0;
+    padding: var(--s-5) var(--explorer-pad) var(--s-7);
+    background: var(--c-bg);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .song-explorer__sentinel {
+    flex: none;
+    height: 1px;
+    margin-block-start: calc(-1 * var(--s-7));
+  }
+
+  @container explorer (min-width: 880px) {
+    .song-explorer__main {
+      flex-direction: row;
+    }
+
+    .song-explorer__rail {
+      display: grid;
+      align-content: start;
+      width: calc(var(--s-12) * 2 + var(--s-7));
+      max-height: none;
+      padding-inline-end: var(--s-4);
+      border-block-end: 0;
+      border-inline-end: 1px solid var(--c-line);
+    }
+
+    .song-explorer__filters {
+      display: none;
+    }
+
+    .song-explorer__bar {
+      flex-wrap: wrap;
+      overflow-x: visible;
+      mask-image: none;
+    }
+  }
+
+  /* A group of tags: its kind in small caps, then its chips. */
+  .tag-group {
+    --tag-hue: var(--c-text-soft);
+
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: var(--s-2);
+    min-width: 0;
+  }
+
+  .song-explorer__rail .tag-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tag-group__name {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-heavy);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .tag-group__chips {
+    display: flex;
+    gap: var(--s-2);
+  }
+
+  .song-explorer__rail .tag-group__chips {
+    flex-wrap: wrap;
+  }
+
+  /* A rail chip whose name is longer than the rail wraps it, so no name is cut. */
+  .song-explorer__rail .tag {
+    padding-block: var(--s-1);
+    text-align: start;
+    white-space: normal;
+  }
+
+  .tag-group:not([data-all]) [data-extra]:not([aria-pressed="true"]) {
+    display: none;
+  }
+
+  /* A tag: a pill with a dot in its kind's hue. Pressed, it takes the hue's tint and edge. */
+  .tag {
+    position: relative;
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    gap: var(--s-2);
+    max-width: 100%;
+    min-height: var(--s-7);
+    padding: 0 var(--s-3);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-2) padding-box;
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .song-explorer [data-kind="yours"],
+  .song-explorer [data-kind="style"] {
+    --tag-hue: var(--c-brand-text);
+  }
+
+  .song-explorer [data-kind="collection"] {
+    --tag-hue: var(--c-orchid);
+  }
+
+  .song-explorer [data-kind="skill"] {
+    --tag-hue: var(--c-accent);
+  }
+
+  .song-explorer [data-kind="composer"] {
+    --tag-hue: var(--c-iris);
+  }
+
+  /* A level's hue climbs from teal over iris to orchid, as the fill of a card's meter does. */
+  .song-explorer [data-level="beginner"] {
+    --tag-hue: var(--c-accent);
+  }
+
+  .song-explorer [data-level="easy"] {
+    --tag-hue: color-mix(in oklab, var(--c-accent), var(--c-iris));
+  }
+
+  .song-explorer [data-level="medium"] {
+    --tag-hue: var(--c-iris);
+  }
+
+  .song-explorer [data-level="hard"] {
+    --tag-hue: color-mix(in oklab, var(--c-iris), var(--c-orchid));
+  }
+
+  .song-explorer [data-level="advanced"] {
+    --tag-hue: var(--c-orchid);
+  }
+
+  .song-explorer [data-level="expert"] {
+    --tag-hue: var(--c-danger);
+  }
+
+  /* The original score of a song of ours is its last step, in honey. */
+  .song-explorer [data-level="original"] {
+    --tag-hue: var(--c-brand-text);
+  }
+
+  .tag__dot {
+    flex: none;
+    width: var(--s-2);
+    height: var(--s-2);
+    border-radius: var(--r-pill);
+    background: var(--tag-hue);
+    transition: transform var(--m-medium) var(--ease-spring);
+  }
+
+  .tag__label {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tag__count {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .tag[aria-pressed="true"] {
+    border-color: var(--tag-hue);
+    background: color-mix(in oklab, var(--tag-hue) 16%, var(--c-surface-2)) padding-box;
+    box-shadow: inset 0 0 0 1px var(--tag-hue);
+  }
+
+  .tag[aria-pressed="true"] .tag__dot {
+    transform: scale(1.5);
+  }
+
+  /* A card's tag: smaller, on a tint of its hue, with no edge. */
+  .tag--small {
+    z-index: var(--z-raised);
+    gap: var(--s-1);
+    min-height: var(--s-6);
+    padding: 0 var(--s-2);
+    border-color: transparent;
+    background: color-mix(in oklab, var(--tag-hue) 12%, var(--c-surface-1)) padding-box;
+    font-size: var(--t-xs);
+  }
+
+  .tag--small .tag__dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* A section of cards: a strong name, an optional line and action, then the grid. */
+  .song-section {
+    display: grid;
+    flex: none;
+    gap: var(--s-3);
+    min-width: 0;
+  }
+
+  .song-section__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-2) var(--s-3);
+  }
+
+  .song-section__name {
+    margin: 0;
+    margin-inline-end: auto;
+    font-size: var(--t-lg);
+    font-weight: var(--w-heavy);
+  }
+
+  .song-section__lead {
+    order: 3;
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    line-height: var(--lh-body);
+  }
+
+  .song-section .library-hint {
+    flex-basis: 100%;
+    max-width: none;
+    margin: 0;
+    padding: var(--s-4);
+    border: 1px dashed var(--c-line-strong);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    line-height: var(--lh-body);
+  }
+
+  .song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--s-12) * 2 + var(--s-2))), 1fr));
+    gap: var(--s-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* A card: a raised surface that lifts under the pointer. */
+  .song-card {
+    --tag-hue: var(--c-text-soft);
+
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-2);
+    min-width: 0;
+    padding: var(--s-2) var(--s-3) var(--s-3) var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+    color: var(--c-text);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* The deeper shadow of a lifted card, faded in so no shadow animates. */
+  .song-card::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: var(--e-2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  .song-card[aria-current="true"] {
+    border-color: var(--c-accent);
+    background: var(--c-accent-soft);
+    box-shadow: inset 0 0 0 1px var(--c-accent), var(--e-1);
+  }
+
+  .song-card__open {
+    position: absolute;
+    inset: -1px;
+    padding: 0;
+    border: 0;
+    border-radius: inherit;
+    background: transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .song-card__top {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: var(--s-7);
+  }
+
+  .song-card__kicker,
+  .song-card__step {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    min-width: 0;
+    color: var(--tag-hue);
+    font-size: var(--t-xs);
+    font-weight: var(--w-heavy);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* The kicker's text is its hue deepened towards the text colour, so gold and grey stay readable. */
+  .song-card__kicker {
+    flex: 0 1 auto;
+    color: color-mix(in oklab, var(--tag-hue) 75%, var(--c-text));
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* The steps: one pill per version of the song. The chosen one spells its name, the others their first letter. */
+  .song-card__steps {
+    z-index: var(--z-raised);
+    display: flex;
+    flex: 0 1 auto;
+    gap: var(--s-1);
+    min-width: 0;
+  }
+
+  .song-step {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-1);
+    min-width: calc(var(--s-6) + var(--s-1));
+    height: calc(var(--s-6) + var(--s-1));
+    padding: 0 var(--s-2);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-2) padding-box;
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-heavy);
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* The chosen step gives way first where the card is narrow, and its name ends in an ellipsis. */
+  .song-step[aria-pressed="true"] {
+    flex: 0 1 auto;
+    min-width: 0;
+    border-color: var(--tag-hue);
+    background: color-mix(in oklab, var(--tag-hue) 16%, var(--c-surface-2)) padding-box;
+    color: var(--c-text);
+  }
+
+  .song-step__name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .song-step:active {
+    transform: scale(0.94);
+  }
+
+  .song-card__step {
+    flex: none;
+    padding: var(--s-1) var(--s-2);
+    border-radius: var(--r-pill);
+    background: var(--c-iris-soft);
+    color: var(--c-iris);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* The star: an outline, and filled with honey once the song is a favourite. */
+  .song-card__star {
+    z-index: var(--z-raised);
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--s-7);
+    height: var(--s-7);
+    margin-inline-start: auto;
+    padding: 0;
+    border: 0;
+    border-radius: var(--r-pill);
+    background: transparent;
+    color: var(--c-text-soft);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .song-card__star .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+    transition: transform var(--m-medium) var(--ease-spring);
+  }
+
+  .song-card__star[aria-pressed="true"] {
+    color: var(--c-brand-text);
+  }
+
+  .song-card__star[aria-pressed="true"] .icon {
+    fill: var(--c-brand);
+    transform: scale(1.15);
+  }
+
+  .song-card__text {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+    min-width: 0;
+  }
+
+  .song-card__title,
+  .song-card__by {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .song-card__title {
+    font-size: var(--t-md);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .song-card__by {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .song-explorer mark {
+    border-radius: var(--s-1);
+    background: color-mix(in oklab, var(--c-brand) 42%, transparent);
+    color: var(--c-text);
+  }
+
+  .song-card__meta {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: var(--s-5);
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-semibold);
+    white-space: nowrap;
+  }
+
+  .song-card__meta .library-license {
+    z-index: var(--z-raised);
+    color: inherit;
+    font-size: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* The meter: a track whose filled part runs from teal to orchid as the level climbs. */
+  .song-card__meter {
+    flex: none;
+    width: var(--s-9);
+    height: 6px;
+    border-radius: var(--r-pill);
+    background: var(--c-line);
+  }
+
+  .song-card__meter i {
+    display: block;
+    height: 100%;
+    border-radius: var(--r-pill);
+    background: linear-gradient(to right, var(--c-accent-vivid), var(--c-iris-vivid) 55%, var(--c-orchid-vivid));
+    clip-path: inset(0 calc(100% - var(--level) * 10%) 0 0 round var(--r-pill));
+  }
+
+  .song-card__length {
+    flex: none;
+    min-width: 4ch;
+    margin-inline-start: auto;
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .song-card__foot {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: var(--s-7);
+  }
+
+  .song-card__foot .btn {
+    z-index: var(--z-raised);
+    flex: none;
+  }
+
+  /* The tags keep to one line, and fade out where the line ends. */
+  .song-card__tags {
+    display: flex;
+    flex: 1;
+    gap: var(--s-1);
+    min-width: 0;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, black calc(100% - var(--s-5)), transparent);
+  }
+
+  /* The preview: a raised pill. While its song sounds it is teal, and a fill sweeps it. */
+  .song-card__preview {
+    position: relative;
+    z-index: var(--z-raised);
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--s-9);
+    height: var(--s-7);
+    padding: 0;
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-2) padding-box;
+    box-shadow: var(--e-rim), var(--e-1);
+    color: var(--c-text);
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .song-card__preview .icon {
+    position: relative;
+    width: var(--s-4);
+    height: var(--s-4);
+    fill: currentColor;
+  }
+
+  .song-card__sweep {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in oklab, var(--c-accent-vivid) 34%, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  .song-card__sweep:dir(rtl) {
+    transform-origin: right;
+  }
+
+  .song-card__preview:not([data-state="idle"]) {
+    border-color: var(--c-accent);
+    color: var(--c-accent);
+  }
+
+  .song-card__preview[data-state="playing"] .song-card__sweep {
+    animation: song-sweep var(--preview-ms) linear var(--preview-at) both;
+  }
+
+  /* Loading: the icon gives way to a ring that turns until the song is read. */
+  .song-card__preview[data-state="loading"] .icon {
+    opacity: 0;
+  }
+
+  .song-card__preview[data-state="loading"]::before {
+    content: "";
+    position: absolute;
+    width: var(--s-4);
+    height: var(--s-4);
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: var(--r-pill);
+    animation: song-spin calc(var(--m-large) * 2) linear infinite;
+  }
+
+  @media (hover: hover) {
+    .song-card:hover {
+      transform: translateY(var(--motion-lift));
+    }
+
+    .song-card:hover::after {
+      opacity: 1;
+    }
+
+    .tag:hover,
+    .song-explorer__now:hover,
+    .song-explorer__filters:hover {
+      transform: translateY(var(--motion-lift));
+    }
+
+    .song-card__preview:hover,
+    .song-card__star:hover .icon {
+      transform: scale(1.1);
+    }
+
+    .song-card__star:hover {
+      color: var(--c-brand-text);
+    }
+
+    .song-step:hover {
+      border-color: var(--tag-hue);
+      color: var(--c-text);
+    }
+
+    .tag-group__more:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .tag:active,
+  .song-explorer__now:active,
+  .song-explorer__filters:active,
+  .song-card__preview:active {
+    transform: scale(0.95);
+  }
+
+  .song-card:has(.song-card__open:active) {
+    transform: scale(0.985);
+  }
+
+  .song-card__star:active .icon {
+    transform: scale(0.85);
+  }
+
+  /* Nothing matched: the mascot, a line and one way back. */
+  .song-explorer__empty {
+    display: grid;
+    justify-items: center;
+    gap: var(--s-3);
+    margin: auto;
+    padding: var(--s-7) var(--s-4);
+    text-align: center;
+  }
+
+  .song-explorer__empty h3 {
+    margin: var(--s-2) 0 0;
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+  }
+
+  .song-explorer__empty p {
+    margin: 0 0 var(--s-2);
+    color: var(--c-text-soft);
+  }
+
+  .library-error {
+    margin: 0;
+    color: var(--c-danger);
+  }
+
+  /* As the dialog opens, the sections rise one after another. A later redraw shows them at once. */
+  .song-explorer__results[data-enter] > .song-section {
+    animation: song-rise var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  .song-explorer__results[data-enter] > .song-section:nth-child(2) {
+    animation-delay: calc(var(--m-micro) / 2);
+  }
+
+  .song-explorer__results[data-enter] > .song-section:nth-child(3) {
+    animation-delay: var(--m-micro);
+  }
+
+  .song-explorer__results[data-enter] > .song-section:nth-child(n + 4) {
+    animation-delay: calc(var(--m-micro) * 1.5);
+  }
+
+  /* A touch screen asks a target a finger can hit. */
+  @media (pointer: coarse) {
+    .tag,
+    .song-explorer__now,
+    .song-explorer__filters,
+    .tag-group__more {
+      min-height: var(--s-touch);
+    }
+
+    .tag--small {
+      border-block: 10px solid transparent;
+    }
+
+    .song-card__star,
+    .song-card__preview {
+      width: var(--s-touch);
+      height: var(--s-touch);
+    }
+
+    .song-card__preview {
+      width: var(--s-9);
+    }
+
+    .song-step {
+      min-width: var(--s-8);
+      height: var(--s-touch);
+    }
+
+    .song-card__foot {
+      min-height: var(--s-touch);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .song-bars i,
+    .song-card__preview[data-state="loading"]::before,
+    .song-card__preview[data-state="playing"] .song-card__sweep {
+      animation: none;
+    }
+
+    .song-card__preview[data-state="playing"] .song-card__sweep {
+      transform: none;
+    }
+  }
+
+  @keyframes song-rise {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+
+  @keyframes song-sweep {
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes song-spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  @keyframes song-bars {
+    from {
+      transform: scaleY(0.35);
+    }
+  }
+}

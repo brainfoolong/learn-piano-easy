@@ -1,0 +1,125 @@
+/*
+ * The skeleton's styles. `src/ui/components/skeleton.ts` is the home of how a skeleton behaves.
+ *
+ * Every shape is a soft fill between an edge and its surface, so it rests quietly on a card and on the
+ * page. A shine crosses it on a pseudo-element twice the shape's width, which moves by `transform`
+ * only, so the shimmer never touches the layout. The shape clips its shine.
+ */
+@layer components {
+  .skel {
+    --skel-fill: color-mix(in oklab, var(--c-line) 72%, var(--c-surface-1));
+    --skel-shine: light-dark(
+      color-mix(in oklab, var(--c-surface-1) 82%, transparent),
+      color-mix(in oklab, var(--c-text-soft) 16%, transparent)
+    );
+
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .skel[data-shape="block"],
+  .skel[data-shape="circle"],
+  .skel__bar {
+    position: relative;
+    overflow: hidden;
+    background: var(--skel-fill);
+  }
+
+  /* Text: each line is as tall as a line of the text, and its bar sits in the middle of it. */
+  .skel[data-shape="text"] {
+    --skel-font: var(--t-md);
+    --skel-leading: var(--lh-body);
+
+    display: grid;
+    width: 100%;
+  }
+
+  .skel[data-shape="text"][data-heading] {
+    --skel-leading: var(--lh-heading);
+  }
+
+  .skel[data-size="xs"] {
+    --skel-font: var(--t-xs);
+  }
+
+  .skel[data-size="sm"] {
+    --skel-font: var(--t-sm);
+  }
+
+  .skel[data-size="lg"] {
+    --skel-font: var(--t-lg);
+  }
+
+  .skel[data-size="xl"] {
+    --skel-font: var(--t-xl);
+  }
+
+  .skel[data-size="2xl"] {
+    --skel-font: var(--t-2xl);
+  }
+
+  .skel[data-size="3xl"] {
+    --skel-font: var(--t-3xl);
+  }
+
+  .skel__line {
+    display: flex;
+    align-items: center;
+    height: calc(var(--skel-font) * var(--skel-leading));
+  }
+
+  .skel__bar {
+    width: 100%;
+    height: calc(var(--skel-font) * 0.75);
+    border-radius: var(--r-pill);
+  }
+
+  .skel__line:last-child:not(:first-child) .skel__bar {
+    width: 60%;
+  }
+
+  .skel[data-shape="block"] {
+    width: var(--skel-width, 100%);
+    height: var(--skel-height, var(--s-10));
+    aspect-ratio: var(--skel-ratio, auto);
+    border-radius: var(--r-card);
+  }
+
+  .skel[data-shape="circle"] {
+    flex: none;
+    width: var(--skel-size, var(--s-9));
+    height: var(--skel-size, var(--s-9));
+    border-radius: var(--r-pill);
+  }
+
+  /* The shine: a wide, soft band that glides across the shape and starts again. */
+  .skel[data-shape="block"]::after,
+  .skel[data-shape="circle"]::after,
+  .skel__bar::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: -50%;
+    width: 200%;
+    background: linear-gradient(100deg, transparent 30%, var(--skel-shine) 50%, transparent 70%);
+    transform: translateX(-75%);
+    animation: skel-shine calc(var(--m-reward) * 1.5) var(--ease-standard) infinite;
+    pointer-events: none;
+  }
+
+  @keyframes skel-shine {
+    to {
+      transform: translateX(75%);
+    }
+  }
+
+  /* With reduced motion the shape holds still, and nothing loops. */
+  @media (prefers-reduced-motion: reduce) {
+    .skel[data-shape="block"]::after,
+    .skel[data-shape="circle"]::after,
+    .skel__bar::after {
+      animation: none;
+      opacity: 0;
+    }
+  }
+}

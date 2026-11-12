@@ -1,0 +1,665 @@
+/*
+ * Game mode's screen. `src/game/game-hud.ts` is the home of how it behaves.
+ *
+ * The panel sits at the top right of the scene, below the finger status. The popups, the bursts and
+ * the result card lie over the scene, and only the card takes the pointer. Every animation moves
+ * transform and opacity alone, and with reduced motion only the fades remain.
+ *
+ * - **Every colour is a token.** A judgement names its hue as `--pop`: honey for a perfect hit, blue
+ *   and green for the other hits, iris for a hold, teal for a clean release, and red and orange for
+ *   the slips. Each word says the judgement too, so colour never stands alone.
+ * - **Honey is the reward.** The score, a perfect hit and the top multiplier take it. A perfect popup
+ *   is filled with the honey sheen, and honey as text reads `--c-brand-text`.
+ * - **Floating text sits on a chip.** A popup and a burst stand on `--scene-panel` with an edge in
+ *   their hue, as `src/app/player.css` describes, so each reads on a light and on a dark scene.
+ * - **A multiplier's badge names three colours:** `--badge` fills it, `--badge-ink` is its text, and
+ *   `--badge-text` is the hue as text on a panel.
+ */
+@layer pages {
+  .game {
+    --game-stripe: linear-gradient(90deg, var(--c-accent-vivid), var(--c-brand), var(--c-orchid-vivid));
+
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .game[hidden] {
+    display: none;
+  }
+
+  .game [data-kind="perfect"] {
+    --pop: var(--c-brand-text);
+    --pop-burst: 1.45;
+  }
+
+  .game [data-kind="great"] {
+    --pop: var(--c-info);
+  }
+
+  .game [data-kind="good"] {
+    --pop: var(--c-success);
+  }
+
+  .game [data-kind="hold"] {
+    --pop: var(--c-iris);
+  }
+
+  .game [data-kind="release"] {
+    --pop: var(--c-accent);
+  }
+
+  .game :is([data-kind="wrong"], [data-kind="miss"]) {
+    --pop: var(--c-danger);
+  }
+
+  .game :is([data-kind="short"], [data-kind="long"], [data-kind="late"]) {
+    --pop: var(--c-warning);
+  }
+
+  /* The panel: the score, the combo and the multiplier, under a stripe of the brand's hues. */
+  .game-hud {
+    position: absolute;
+    right: max(var(--s-3), env(safe-area-inset-right));
+    top: calc(var(--bar-height) + var(--s-3) + var(--s-8) + var(--s-2));
+    min-width: calc(var(--s-12) + var(--s-9));
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-1);
+    padding: var(--s-4) var(--s-4) var(--s-3);
+    overflow: hidden;
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-card);
+    background: var(--scene-panel);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+    font-variant-numeric: tabular-nums;
+    animation: player-panel-in var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  .game-hud::before,
+  .game-summary::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: var(--s-1);
+    background: var(--game-stripe);
+  }
+
+  .game-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .game-level {
+    padding: 0 var(--s-2);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    color: var(--c-text);
+  }
+
+  .game-score {
+    display: block;
+    color: var(--c-brand-text);
+    font-size: var(--t-3xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .game-combo-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+  }
+
+  .game-combo {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--s-2);
+  }
+
+  /* A broken combo flashes red behind its count, and the count shakes. */
+  .game-combo::after {
+    content: "";
+    position: absolute;
+    inset: calc(-1 * var(--s-1)) calc(-1 * var(--s-3));
+    border-radius: var(--r-control);
+    background: var(--c-danger);
+    opacity: 0;
+  }
+
+  .game-combo-count {
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+  }
+
+  .game-combo-label {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .game-combo.is-broken {
+    animation: game-shake var(--m-large) var(--ease-standard);
+  }
+
+  .game-combo.is-broken::after {
+    animation: game-flash var(--m-large) var(--ease-standard);
+  }
+
+  .game-multiplier {
+    --badge: var(--c-info);
+    --badge-ink: var(--c-info-ink);
+
+    padding: 0 var(--s-3);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-heavy);
+  }
+
+  .game-multiplier:not([data-level="1"]) {
+    border-color: transparent;
+    background: var(--badge);
+    box-shadow: 0 0 var(--s-4) calc(var(--s-1) / -2) var(--badge);
+    color: var(--badge-ink);
+  }
+
+  .game-multiplier[data-level="3"],
+  .game-burst[data-level="3"] {
+    --badge: var(--c-iris);
+    --badge-ink: var(--c-iris-ink);
+    --badge-text: var(--c-iris);
+  }
+
+  .game-multiplier[data-level="4"],
+  .game-burst[data-level="4"] {
+    --badge: var(--c-brand);
+    --badge-ink: var(--c-brand-ink);
+    --badge-text: var(--c-brand-text);
+  }
+
+  .game-multiplier.is-rising {
+    animation: game-badge-pop var(--m-large) var(--ease-standard);
+  }
+
+  /* A popup's place is its outer transform, and its body pops, floats and fades on its own. */
+  .game-pop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    --pop: var(--c-success);
+  }
+
+  /* The chip holds its word and its points on one line, so stacked popups keep to their rows. */
+  .game-pop-body {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    gap: var(--s-2);
+    padding: var(--s-1) var(--s-3);
+    border: 1px solid var(--pop);
+    border-radius: var(--r-control);
+    background: var(--scene-panel);
+    box-shadow: var(--e-2);
+    color: var(--pop);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    white-space: nowrap;
+    transform: translate(-50%, -100%);
+    animation: game-pop-float var(--m-reward) var(--ease-emphasis) forwards;
+  }
+
+  .game-pop-word {
+    font-size: var(--t-lg);
+    font-style: italic;
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .game-pop-points {
+    font-size: var(--t-md);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .game-pop-detail {
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+  }
+
+  /* A perfect hit is the reward: its chip is filled with the honey sheen, and a flare and a ring burst behind it. */
+  .game-pop[data-kind="perfect"]:not([data-live]) .game-pop-body {
+    border-color: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    background: var(--g-brand) border-box var(--c-brand);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.5),
+      var(--e-glow);
+    color: var(--c-brand-ink);
+  }
+
+  .game-pop[data-kind="perfect"] .game-pop-word {
+    font-size: var(--t-xl);
+  }
+
+  .game-pop[data-kind="perfect"] .game-pop-body::before,
+  .game-pop[data-kind="perfect"] .game-pop-body::after {
+    content: "";
+    position: absolute;
+    left: calc(50% - var(--s-9));
+    top: calc(50% - var(--s-9));
+    z-index: -1;
+    width: var(--s-11);
+    height: var(--s-11);
+    border-radius: var(--r-pill);
+    opacity: 0;
+  }
+
+  .game-pop[data-kind="perfect"] .game-pop-body::before {
+    background: radial-gradient(circle, var(--c-brand) 0%, transparent 62%);
+    animation: game-flare var(--m-large) var(--ease-standard);
+  }
+
+  .game-pop[data-kind="perfect"] .game-pop-body::after {
+    border: 2px solid var(--c-brand);
+    animation: game-ring var(--m-large) var(--ease-standard);
+  }
+
+  /* A hold's popup pops in and stays over its key, counting up, until its release floats it away. */
+  .game-pop[data-live] .game-pop-body {
+    margin-top: calc(-1 * var(--s-2));
+    border-radius: var(--r-pill);
+    animation: game-pop-in var(--m-small) var(--ease-spring) forwards;
+  }
+
+  .game-pop[data-live] .game-pop-word {
+    font-size: var(--t-xs);
+    font-style: normal;
+  }
+
+  .game-pop[data-live] .game-pop-points {
+    font-size: var(--t-lg);
+  }
+
+  /* A new multiplier bursts at the centre of the scene: its figure in its hue, on a chip with a ring. */
+  .game-burst {
+    --badge: var(--c-info);
+    --badge-text: var(--c-info);
+
+    position: absolute;
+    left: 50%;
+    top: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-1);
+    padding: var(--s-3) var(--s-7);
+    border: 2px solid var(--badge);
+    border-radius: var(--r-card);
+    background: var(--scene-panel);
+    box-shadow: var(--e-3);
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .game-burst::before {
+    content: "";
+    position: absolute;
+    left: calc(50% - var(--s-11));
+    top: calc(50% - var(--s-11));
+    width: calc(var(--s-11) * 2);
+    height: calc(var(--s-11) * 2);
+    border: 3px solid var(--badge);
+    border-radius: var(--r-pill);
+    opacity: 0;
+  }
+
+  .game-burst.is-on {
+    animation: game-burst var(--m-reward) var(--ease-emphasis) forwards;
+  }
+
+  .game-burst.is-on::before {
+    animation: game-ring var(--m-large) var(--ease-standard);
+  }
+
+  .game-burst-text {
+    color: var(--badge-text);
+    font-size: var(--t-4xl);
+    font-style: italic;
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .game-burst-sub {
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .game-live {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  /* The result card: the take's score in honey, its best combo, and a tile for each judgement. */
+  .game-summary {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    width: min(calc(var(--s-12) * 3), calc(100% - var(--s-7)));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-1);
+    padding: var(--s-6) var(--s-5) var(--s-5);
+    overflow: hidden;
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-2);
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    pointer-events: auto;
+    transform: translate(-50%, -50%);
+    animation: game-card-in var(--m-large) var(--ease-spring);
+  }
+
+  .game-summary[hidden] {
+    display: none;
+  }
+
+  .game-summary-eyebrow {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .game-summary-score {
+    color: var(--c-brand-text);
+    font-size: var(--t-5xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .game-summary-combo {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-semibold);
+  }
+
+  .game-stats {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--s-2);
+    width: 100%;
+    margin: var(--s-3) 0;
+  }
+
+  .game-stat {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: var(--s-2) var(--s-1);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    background: var(--c-bg);
+  }
+
+  .game-stat:nth-child(-n + 3) {
+    grid-column: span 4;
+  }
+
+  /* A take wait mode helped has a late tile, so its slips take two rows: the notes', then the holds'. */
+  .game-stats:has(> [data-kind="late"]) > .game-stat:nth-child(n + 4) {
+    grid-column: span 4;
+  }
+
+  .game-stats:has(> [data-kind="late"]) > .game-stat:nth-child(n + 7) {
+    grid-column: span 6;
+  }
+
+  .game-summary-helped {
+    padding: 0 var(--s-2);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-semibold);
+  }
+
+  .game-stat strong {
+    color: var(--pop);
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+  }
+
+  .game-stat span {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-semibold);
+  }
+
+  @keyframes game-pop-float {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -100%) scale(0.4);
+    }
+    14% {
+      opacity: 1;
+      transform: translate(-50%, calc(-100% - var(--s-2))) scale(var(--pop-burst, 1.15));
+    }
+    28% {
+      transform: translate(-50%, calc(-100% - var(--s-3))) scale(1);
+    }
+    65% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, calc(-100% - var(--s-10))) scale(0.95);
+    }
+  }
+
+  @keyframes game-pop-in {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -100%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -100%) scale(1);
+    }
+  }
+
+  @keyframes game-pop-fade {
+    0% {
+      opacity: 0;
+    }
+    15%,
+    65% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes game-flare {
+    0% {
+      opacity: 0.9;
+      transform: scale(0.3);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.4);
+    }
+  }
+
+  @keyframes game-ring {
+    0% {
+      opacity: 0.9;
+      transform: scale(0.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.7);
+    }
+  }
+
+  @keyframes game-badge-pop {
+    0% {
+      transform: scale(1);
+    }
+    35% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes game-shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(calc(-1 * var(--s-2)));
+    }
+    40% {
+      transform: translateX(var(--s-1));
+    }
+    60% {
+      transform: translateX(calc(-1 * var(--s-1)));
+    }
+    80% {
+      transform: translateX(calc(var(--s-1) / 2));
+    }
+  }
+
+  @keyframes game-flash {
+    0% {
+      opacity: 0.45;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes game-burst {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.3);
+    }
+    14% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.15);
+    }
+    26% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    75% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.03);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, calc(-50% - var(--s-6))) scale(1.08);
+    }
+  }
+
+  @keyframes game-fade {
+    0% {
+      opacity: 0;
+    }
+    20%,
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes game-card-in {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.85);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @keyframes game-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* With reduced motion, the popups, the bursts and the card only fade, and nothing shakes or pops. */
+  @media (prefers-reduced-motion: reduce) {
+    .game-pop-body {
+      animation-name: game-pop-fade;
+    }
+
+    .game-pop[data-live] .game-pop-body {
+      animation-name: game-fade-in;
+    }
+
+    .game-pop .game-pop-body::before,
+    .game-pop .game-pop-body::after,
+    .game-burst.is-on::before {
+      animation: none;
+    }
+
+    .game-combo.is-broken,
+    .game-multiplier.is-rising {
+      animation: none;
+    }
+
+    .game-burst.is-on {
+      animation-name: game-fade;
+    }
+
+    .game-summary {
+      animation-name: game-fade-in;
+    }
+  }
+}

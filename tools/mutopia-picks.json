@@ -1,0 +1,206 @@
+[
+  {
+    "composer": "Johann S. Bach",
+    "piece": "Notebook for Anna Magdalena Bach",
+    "songs": [
+      { "dir": "BachJS/BWVAnh113/anna-magdalena-03", "title": "Menuet in F major, BWV Anh. 113", "difficulty": 2 },
+      { "dir": "BachJS/BWVAnh114/anna-magdalena-04", "title": "Menuet in G major, BWV Anh. 114", "difficulty": 2 },
+      { "dir": "BachJS/BWVAnh115/anna-magdalena-05", "title": "Menuet in G minor, BWV Anh. 115", "difficulty": 2.5 },
+      { "dir": "BachJS/BWVAnh116/anna-magdalena-07", "title": "Menuet in G major, BWV Anh. 116", "difficulty": 2.5 },
+      { "dir": "BachJS/BWVAnh117b/BWV-117b", "title": "Polonaise in F major, BWV Anh. 117b", "difficulty": 2.5 },
+      { "dir": "BachJS/BWVAnh118/BWV-118", "title": "Minuet in B-flat major, BWV Anh. 118", "difficulty": 3 },
+      { "dir": "BachJS/BWVAnh119/BWV-119", "title": "Polonaise in G minor, BWV Anh. 119", "difficulty": 3 },
+      { "dir": "BachJS/BWVAnh120/BWV-120", "title": "Minuet in A minor, BWV Anh. 120", "difficulty": 2.5 },
+      { "dir": "BachJS/BWVAnh121/BWV-121", "title": "Minuet in C minor, BWV Anh. 121", "difficulty": 3 },
+      { "dir": "BachJS/BWVAnh126/anna-magdalena-22", "title": "Musette in D major, BWV Anh. 126", "difficulty": 3 },
+      { "dir": "BachJS/BWVAnh127/BWV-127", "title": "March in E-flat major, BWV Anh. 127", "difficulty": 3 },
+      { "dir": "BachJS/BWVAnh128/BWV-128", "title": "Polonaise in D minor, BWV Anh. 128", "difficulty": 3 },
+      { "dir": "BachJS/BWVAnh131/air", "title": "Air, BWV Anh. 131", "difficulty": 3 }
+    ]
+  },
+  {
+    "composer": "Johann S. Bach",
+    "piece": "Two-Part Inventions",
+    "songs": [
+      { "dir": "BachJS/BWV772/bach-invention-01", "title": "Invention 1 in C major, BWV 772", "difficulty": 4.5 },
+      { "dir": "BachJS/BWV773/bach-invention-02", "title": "Invention 2 in C minor, BWV 773", "difficulty": 5 },
+      { "dir": "BachJS/BWV774/bach-invention-03", "title": "Invention 3 in D major, BWV 774", "difficulty": 5 },
+      { "dir": "BachJS/BWV775/bach-invention-04", "title": "Invention 4 in D minor, BWV 775", "difficulty": 4.5 },
+      { "dir": "BachJS/BWV776/bach-invention-05", "title": "Invention 5 in E-flat major, BWV 776", "difficulty": 5 },
+      { "dir": "BachJS/BWV777/bach-invention-06", "title": "Invention 6 in E major, BWV 777", "difficulty": 5 },
+      { "dir": "BachJS/BWV778/bach-invention-07", "title": "Invention 7 in E minor, BWV 778", "difficulty": 5 },
+      { "dir": "BachJS/BWV779/bach-invention-08", "title": "Invention 8 in F major, BWV 779", "difficulty": 4.5 },
+      { "dir": "BachJS/BWV780/bach-invention-09", "title": "Invention 9 in F minor, BWV 780", "difficulty": 5 },
+      { "dir": "BachJS/BWV781/bach-invention-10", "title": "Invention 10 in G major, BWV 781", "difficulty": 4.5 },
+      { "dir": "BachJS/BWV782/bach-invention-11", "title": "Invention 11 in G minor, BWV 782", "difficulty": 5 },
+      { "dir": "BachJS/BWV783/bach-invention-12", "title": "Invention 12 in A major, BWV 783", "difficulty": 5 },
+      { "dir": "BachJS/BWV784/bach-invention-13", "title": "Invention 13 in A minor, BWV 784", "difficulty": 4.5 },
+      { "dir": "BachJS/BWV785/bach-invention-14", "title": "Invention 14 in B-flat major, BWV 785", "difficulty": 5 },
+      { "dir": "BachJS/BWV786/bach-invention-15", "title": "Invention 15 in B minor, BWV 786", "difficulty": 5 }
+    ]
+  },
+  {
+    "composer": "Johann S. Bach",
+    "piece": "The Well-Tempered Clavier, Book 1",
+    "songs": [
+      { "dir": "BachJS/BWV848/bwv848a", "title": "Prelude 3 in C-sharp major, BWV 848", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV848/bwv848b", "title": "Fugue 3 in C-sharp major, BWV 848", "difficulty": 7 },
+      { "dir": "BachJS/BWV849/bwv849a", "title": "Prelude 4 in C-sharp minor, BWV 849", "difficulty": 6 },
+      { "dir": "BachJS/BWV849/bwv849b", "title": "Fugue 4 in C-sharp minor, BWV 849", "difficulty": 8 },
+      { "dir": "BachJS/BWV851/bwv851a", "title": "Prelude 6 in D minor, BWV 851", "difficulty": 6 },
+      { "dir": "BachJS/BWV851/bwv851_fugue06", "title": "Fugue 6 in D minor, BWV 851", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV853/bwv853a", "title": "Prelude 8 in E-flat minor, BWV 853", "difficulty": 6 },
+      { "dir": "BachJS/BWV853/bwv853b", "title": "Fugue 8 in D-sharp minor, BWV 853", "difficulty": 8 },
+      { "dir": "BachJS/BWV854/BWV854_Praeludium_IX_rh", "title": "Prelude 9 in E major, BWV 854", "difficulty": 5.5 },
+      { "dir": "BachJS/BWV855/bwv855a", "title": "Prelude 10 in E minor, BWV 855", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV855/bwv855b", "title": "Fugue 10 in E minor, BWV 855", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV856/BWV856_Praeludium11", "title": "Prelude 11 in F major, BWV 856", "difficulty": 5.5 },
+      { "dir": "BachJS/BWV856/BWV856_Fugue11", "title": "Fugue 11 in F major, BWV 856", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV857/BWV857_Praeludium12", "title": "Prelude 12 in F minor, BWV 857", "difficulty": 6 },
+      { "dir": "BachJS/BWV857/BWV857_Fuga12", "title": "Fugue 12 in F minor, BWV 857", "difficulty": 7.5 },
+      { "dir": "BachJS/BWV860/BWV860_Praeludium15", "title": "Prelude 15 in G major, BWV 860", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV860/BWV860_Fuga15", "title": "Fugue 15 in G major, BWV 860", "difficulty": 7 },
+      { "dir": "BachJS/BWV861/BWV861_Praeludium16", "title": "Prelude 16 in G minor, BWV 861", "difficulty": 6 },
+      { "dir": "BachJS/BWV861/BWV861_Fuga16", "title": "Fugue 16 in G minor, BWV 861", "difficulty": 7 },
+      { "dir": "BachJS/BWV862/bach-prelude17", "title": "Prelude 17 in A-flat major, BWV 862", "difficulty": 6 },
+      { "dir": "BachJS/BWV862/bach-fugue17", "title": "Fugue 17 in A-flat major, BWV 862", "difficulty": 7 },
+      { "dir": "BachJS/BWV865/BWV865_Praeludium20", "title": "Prelude 20 in A minor, BWV 865", "difficulty": 6 },
+      { "dir": "BachJS/BWV865/BWV865_Fuga20", "title": "Fugue 20 in A minor, BWV 865", "difficulty": 8 },
+      { "dir": "BachJS/BWV869/BWV869_Praeludium24", "title": "Prelude 24 in B minor, BWV 869", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV869/bwv869b", "title": "Fugue 24 in B minor, BWV 869", "difficulty": 8 }
+    ]
+  },
+  {
+    "composer": "Johann S. Bach",
+    "piece": "Goldberg Variations, BWV 988",
+    "songs": [
+      { "dir": "BachJS/BWV988/bwv-988-aria", "title": "Aria", "difficulty": 6 },
+      { "dir": "BachJS/BWV988/bwv-988-v01", "title": "Variation 1", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v02", "title": "Variation 2", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v03", "title": "Variation 3", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v04", "title": "Variation 4", "difficulty": 6 },
+      { "dir": "BachJS/BWV988/bwv-988-v05", "title": "Variation 5", "difficulty": 8 },
+      { "dir": "BachJS/BWV988/bwv-988-v06", "title": "Variation 6", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v07", "title": "Variation 7", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v08", "title": "Variation 8", "difficulty": 8 },
+      { "dir": "BachJS/BWV988/bwv-988-v09", "title": "Variation 9", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v10", "title": "Variation 10", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v11", "title": "Variation 11", "difficulty": 8 },
+      { "dir": "BachJS/BWV988/bwv-988-v12", "title": "Variation 12", "difficulty": 7.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v13", "title": "Variation 13", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v14", "title": "Variation 14", "difficulty": 9 },
+      { "dir": "BachJS/BWV988/bwv-988-v15", "title": "Variation 15", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v16", "title": "Variation 16", "difficulty": 7.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v17", "title": "Variation 17", "difficulty": 8 },
+      { "dir": "BachJS/BWV988/bwv-988-v18", "title": "Variation 18", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v19", "title": "Variation 19", "difficulty": 6.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v20", "title": "Variation 20", "difficulty": 9 },
+      { "dir": "BachJS/BWV988/bwv-988-v21", "title": "Variation 21", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v22", "title": "Variation 22", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v23", "title": "Variation 23", "difficulty": 9 },
+      { "dir": "BachJS/BWV988/bwv-988-v24", "title": "Variation 24", "difficulty": 7 },
+      { "dir": "BachJS/BWV988/bwv-988-v25", "title": "Variation 25", "difficulty": 7.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v26", "title": "Variation 26", "difficulty": 9 },
+      { "dir": "BachJS/BWV988/bwv-988-v27", "title": "Variation 27", "difficulty": 7.5 },
+      { "dir": "BachJS/BWV988/bwv-988-v28", "title": "Variation 28", "difficulty": 9 },
+      { "dir": "BachJS/BWV988/bwv-988-v29", "title": "Variation 29", "difficulty": 9 },
+      { "dir": "BachJS/BWV988/bwv-988-v30", "title": "Variation 30, Quodlibet", "difficulty": 7 }
+    ]
+  },
+  {
+    "composer": "Muzio Clementi",
+    "piece": "Sonatina in C major, Opus 36 No. 1",
+    "songs": [
+      { "dir": "ClementiM/O36/sonatina-1", "entry": "sonatina-1.mid", "title": "1. Allegro", "difficulty": 3 },
+      { "dir": "ClementiM/O36/sonatina-1", "entry": "sonatina-1-1.mid", "title": "2. Andante", "difficulty": 3 },
+      { "dir": "ClementiM/O36/sonatina-1", "entry": "sonatina-1-2.mid", "title": "3. Vivace", "difficulty": 3.5 }
+    ]
+  },
+  {
+    "composer": "Friedrich Burgmüller",
+    "piece": "25 Easy Studies, Opus 100",
+    "songs": [
+      { "dir": "BurgmullerJFF/O100/25EF-01", "title": "1. La Candeur", "difficulty": 2.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-02", "title": "2. L'Arabesque", "difficulty": 3 },
+      { "dir": "BurgmullerJFF/O100/25EF-03", "title": "3. La Pastorale", "difficulty": 3 },
+      { "dir": "BurgmullerJFF/O100/25EF-04", "title": "4. La Petite Réunion", "difficulty": 3 },
+      { "dir": "BurgmullerJFF/O100/25EF-05", "title": "5. Innocence", "difficulty": 3 },
+      { "dir": "BurgmullerJFF/O100/25EF-06", "title": "6. Progrès", "difficulty": 3.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-07", "title": "7. Le Courant Limpide", "difficulty": 3.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-08", "title": "8. La Gracieuse", "difficulty": 3.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-09", "title": "9. La Chasse", "difficulty": 4 },
+      { "dir": "BurgmullerJFF/O100/25EF-10", "title": "10. Tendre Fleur", "difficulty": 3.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-11", "title": "11. La Bergeronnette", "difficulty": 4 },
+      { "dir": "BurgmullerJFF/O100/25EF-12", "title": "12. L'Adieu", "difficulty": 4 },
+      { "dir": "BurgmullerJFF/O100/25EF-13", "title": "13. Consolation", "difficulty": 3.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-14", "title": "14. La Styrienne", "difficulty": 4 },
+      { "dir": "BurgmullerJFF/O100/25EF-15", "title": "15. Ballade", "difficulty": 4.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-16", "title": "16. Douce Plainte", "difficulty": 4 },
+      { "dir": "BurgmullerJFF/O100/25EF-17", "title": "17. La Babillarde", "difficulty": 4.5 },
+      { "dir": "BurgmullerJFF/O100/25EF-18", "title": "18. Inquiétude", "difficulty": 4.5 }
+    ]
+  },
+  {
+    "composer": "Carl Czerny",
+    "piece": "50 Melodic Studies, Opus 840",
+    "songs": [
+      { "dir": "CzernyC/O840/op840-1", "title": "No. 1", "difficulty": 3 },
+      { "dir": "CzernyC/O840/op840-2", "title": "No. 2", "difficulty": 3 },
+      { "dir": "CzernyC/O840/op840-3", "title": "No. 3", "difficulty": 3 },
+      { "dir": "CzernyC/O840/op840-4", "title": "No. 4", "difficulty": 3.5 },
+      { "dir": "CzernyC/O840/op840-5", "title": "No. 5", "difficulty": 3.5 }
+    ]
+  },
+  {
+    "composer": "Robert Schumann",
+    "piece": "Album for the young, Opus 68",
+    "songs": [
+      { "dir": "SchumannR/O68/schumann-op68-01-melodie", "title": "1. Melody", "difficulty": 2 },
+      { "dir": "SchumannR/O68/schumann-op68-02-marche-militaire", "title": "2. Soldiers' March", "difficulty": 2.5 },
+      { "dir": "SchumannR/O68/schumann-op68-03-chanson-fredonnee", "title": "3. Humming Song", "difficulty": 2.5 },
+      { "dir": "SchumannR/O68/schumann-op68-04-choral", "title": "4. Chorale", "difficulty": 2.5 },
+      { "dir": "SchumannR/O68/schumann-op68-05-petite-piece", "title": "5. A Little Piece", "difficulty": 2.5 },
+      { "dir": "SchumannR/O68/schumann-op68-06-pauvre-orpheline", "title": "6. Poor Orphan Child", "difficulty": 3 },
+      { "dir": "SchumannR/O68/schumann-op68-07-chanson-du-chasseur", "title": "7. Hunting Song", "difficulty": 3.5 },
+      { "dir": "SchumannR/O68/schumann-op68-08-cavalier-sauvage", "title": "8. The Wild Horseman", "difficulty": 3 },
+      { "dir": "SchumannR/O68/schumann-op68-09-chanson-populaire", "title": "9. Folk Song", "difficulty": 3.5 },
+      { "dir": "SchumannR/O68/schumann-op68-11-sicilienne", "title": "11. Sicilienne", "difficulty": 3.5 },
+      { "dir": "SchumannR/O68/schumann-op68-14-petite-etude", "title": "14. Little Study", "difficulty": 4 },
+      { "dir": "SchumannR/O68/schumann-op68-16-premier-chagrin", "title": "16. First Loss", "difficulty": 3.5 }
+    ]
+  },
+  {
+    "composer": "Pjotr I. Tschaikowski",
+    "piece": "Album for the Young, Opus 39",
+    "songs": [
+      { "dir": "TchaikovskyPI/O39/01MorningPrayer", "title": "1. Morning Prayer", "difficulty": 3 },
+      { "dir": "TchaikovskyPI/O39/05MarchOfTheWoodenSoldiers", "title": "5. March of the Wooden Soldiers", "difficulty": 3.5 },
+      { "dir": "TchaikovskyPI/O39/16OldFrenchSong", "title": "16. Old French Song", "difficulty": 3 }
+    ]
+  },
+  {
+    "composer": "Erik Satie",
+    "piece": "Gnossiennes",
+    "songs": [
+      { "dir": "SatieE/Gnossienne/no_1", "title": "Gnossienne No. 1", "difficulty": 4 },
+      { "dir": "SatieE/Gnossienne/no_2", "title": "Gnossienne No. 2", "difficulty": 4 },
+      { "dir": "SatieE/Gnossienne/no_3", "title": "Gnossienne No. 3", "difficulty": 4 }
+    ]
+  },
+  {
+    "composer": "Scott Joplin",
+    "piece": "Rags",
+    "songs": [
+      { "dir": "JoplinS/entertainer", "title": "The Entertainer", "difficulty": 5.5 },
+      { "dir": "JoplinS/maple", "title": "Maple Leaf Rag", "difficulty": 7 },
+      { "dir": "JoplinS/winners", "title": "The Easy Winners", "difficulty": 6 },
+      { "dir": "JoplinS/solace", "title": "Solace", "difficulty": 5.5 },
+      { "dir": "JoplinS/bethena", "title": "Bethena", "difficulty": 6 },
+      { "dir": "JoplinS/peacherine", "title": "Peacherine Rag", "difficulty": 6 },
+      { "dir": "JoplinS/sugar-cane", "title": "Sugar Cane", "difficulty": 6.5 },
+      { "dir": "JoplinS/search", "title": "Search-Light Rag", "difficulty": 6.5 },
+      { "dir": "JoplinS/PineappleRag", "title": "Pineapple Rag", "difficulty": 6.5 },
+      { "dir": "JoplinS/EliteSyncopations", "title": "Elite Syncopations", "difficulty": 6.5 }
+    ]
+  }
+]

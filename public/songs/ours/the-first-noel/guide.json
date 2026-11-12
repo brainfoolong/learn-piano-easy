@@ -1,0 +1,356 @@
+{
+  "song": "the-first-noel",
+  "title": "The First Noel",
+  "composer": "Traditional",
+  "about": "The First Noel is an English carol, and nobody knows who wrote its tune. It comes from Cornwall, in the far south-west of England. Davies Gilbert printed it in 1823, and William Sandys printed it in 1833. John Stainer set it for choirs in 1871, and his version is the one sung today.",
+  "funFact": "Noel comes from the French word Noël, and that comes from the Latin word for birth.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/the-first-noel/common.mid",
+      "skills": [
+        "open-fifths",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [1, 2, 3, 4, 5, 3, 4, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 3, 2, 1, 3, 2, 1, 2, 3, 4, 5, 3, 4, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 3, 2, 1, 3, 2, 1, 2, 3, 4, 5, 5, 4, 3, 3, 2, 2, 5, 4, 3, 2, 3, 4, 5, 3, 2, 1],
+        "left": [5, 1, 5, 1, 2, 5, 1, 2, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 2, 5, 1, 2, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 2, 5, 1, 2, 4, 1, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first eight bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the refrain, bars 17 to 24, with the right hand alone.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [17, 24],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for each whole bar.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "rhythm",
+          "text": "The first C is long. Count three, then let D, E and F walk up evenly."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "trick",
+          "text": "Bars 9 to 16 are the first eight bars again, so your hand already knows them."
+        },
+        {
+          "fromBar": 24,
+          "toBar": 24,
+          "kind": "sound",
+          "text": "Slow down a little on the last E, and let it ring with the low C."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 2,
+          "text": "Finger 5 holds the long G. Lift the hand in the short rest, and land finger 3 on A."
+        },
+        {
+          "bar": 10,
+          "text": "The same move as bar 2: lift the hand after the long G, and land finger 3 on A."
+        },
+        {
+          "bar": 18,
+          "text": "Finger 5 holds the long G. Lift the hand, and let the same finger land on the high C."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/the-first-noel/rare.mid",
+      "skills": [
+        "waltz-bass",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [3, 2, 1, 2, 3, 4, 5, 3, 4, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 3, 2, 1, 3, 2, 1, 2, 3, 4, 5, 3, 4, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 3, 2, 1, 3, 2, 1, 2, 3, 4, 5, 5, 4, 3, 3, 2, 2, 5, 4, 3, 2, 3, 4, 5, 3, 2, 1, 2],
+        "left": [5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 65, 67],
+        "left": [55, 53, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the waltz bass alone: low note, chord, chord.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [2, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand alone from the pickup, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "rhythm",
+          "text": "The song starts on the last beat. Count one, two, then play E and D."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 25,
+          "kind": "sound",
+          "text": "In the waltz bass, play the low note a little louder than the chords after it."
+        },
+        {
+          "fromBar": 22,
+          "toBar": 24,
+          "kind": "trick",
+          "text": "Bars 22 to 24 repeat bars 6 to 8, so your hand already knows them."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Finger 5 holds the long G. Lift the hand in the short rest, and land finger 3 on A."
+        },
+        {
+          "bar": 11,
+          "text": "The same move as bar 3: lift the hand after the long G, and land finger 3 on A."
+        },
+        {
+          "bar": 19,
+          "text": "Finger 5 holds the long G. Lift the hand, and let the same finger land on the high C."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/the-first-noel/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thumb-under",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [3, 2, 1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 1, 2, 3, 4, 3, 5, 2, 4, 1, 3, 1, 2, 3, 4, 3, 5, 2, 4, 1, 3, 1, 3, 2, 4, 3, 5, 2, 5, 2, 4, 1, 3, 1, 3, 3, 2, 1, 2, 3, 1, 2, 5, 4, 1, 3, 1, 3, 1, 2, 1, 2, 3, 5, 2, 4, 1, 3, 1, 3, 2, 4, 3, 5, 2, 5, 2, 4, 1, 3, 1, 3],
+        "left": [5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 5, 2, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 5, 2, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 5, 2, 5, 3, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, null, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the climb of bars 2 and 3 with the right hand alone, and pass the thumb under on F.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [2, 3],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand's thirds alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [10, 17],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 25,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        },
+        {
+          "fromBar": 8,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Change the pedal on the third beat, where the chord turns from C to G."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 16,
+          "text": "A sixth, then two thirds. Finger 2 stays on E for the first two, and the thumb drops to D."
+        },
+        {
+          "bar": 24,
+          "text": "The same pairs as bar 16: a sixth, two thirds, and the thumb down to D."
+        },
+        {
+          "bar": 2,
+          "text": "Fingers 1, 2 and 3 play C, D and E. Then the thumb passes under finger 3 to F."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/the-first-noel/legendary.mid",
+      "skills": [
+        "stride",
+        "octave-bass",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 2, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 2, 4, 5, 1, 2, 4, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [64, null, null, null, 76],
+        "left": [48, null, null, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 5],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's octaves alone on the first verse, with a loose wrist.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the little finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [10, 13],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "trick",
+          "text": "In stride, look at the octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 9,
+          "kind": "fingering",
+          "text": "Every octave is the thumb and the little finger. Keep the hand in that shape."
+        },
+        {
+          "fromBar": 10,
+          "toBar": 25,
+          "kind": "sound",
+          "text": "Play the low notes of each chord softer, so the top note carries the tune."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 7,
+          "text": "The octaves climb G, A and B. Let the hand glide up the keys without lifting high."
+        },
+        {
+          "bar": 5,
+          "text": "After the long G, the octaves step quickly to A and B. Move the whole hand, with a loose wrist."
+        },
+        {
+          "bar": 10,
+          "text": "Spread the hand for the full C chord, then close it to an octave for D, E and F."
+        }
+      ]
+    }
+  }
+}

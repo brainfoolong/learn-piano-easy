@@ -1,0 +1,81 @@
+/*
+ * The panels at the top centre of the scene: scored mode's score, and the panels of free play and
+ * pitch practice. `src/input/scoring.ts`, `src/input/free-play.ts` and `src/input/pitch-practice.ts`
+ * are the homes of how each behaves.
+ *
+ * Each is a panel over the scene, as `src/app/player.css` describes that family, and enters with its
+ * `player-panel-in`. The panel is centred with `translate`, so the entrance keeps `transform` to itself.
+ * Each panel starts below the player's own bar, which sets `--bar-height` in fullscreen.
+ */
+@layer pages {
+  .score-panel,
+  .mode-panel {
+    position: absolute;
+    left: 50%;
+    top: calc(var(--bar-height) + var(--s-3));
+    translate: -50% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-1);
+    box-sizing: border-box;
+    max-width: calc(100% - 2 * var(--s-3));
+    padding: var(--s-3) var(--s-5);
+    border: 1px solid var(--c-line-strong);
+    border-radius: var(--r-card);
+    background: var(--scene-panel);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--e-rim), var(--e-3);
+    color: var(--c-text);
+    font-size: var(--t-sm);
+    font-variant-numeric: tabular-nums;
+    animation: player-panel-in var(--m-medium) var(--ease-emphasis) both;
+  }
+
+  .score-panel[hidden],
+  .mode-panel[hidden] {
+    display: none;
+  }
+
+  .mode-panel {
+    width: max-content;
+    max-width: min(420px, calc(100% - 2 * var(--s-3)));
+    text-align: center;
+    white-space: normal;
+  }
+
+  /* A panel's name, as a small caps line above what it shows. */
+  .mode-heading {
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+  }
+
+  .mode-line {
+    font-size: var(--t-md);
+    font-weight: var(--w-semibold);
+  }
+
+  .mode-line:empty {
+    display: none;
+  }
+
+  .mode-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--s-2);
+    margin-top: var(--s-2);
+  }
+
+  /* The note pitch practice asks for: the panel's focal text. */
+  .pitch-prompt {
+    font-size: var(--t-3xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+}

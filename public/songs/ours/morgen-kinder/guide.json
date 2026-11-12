@@ -1,0 +1,355 @@
+{
+  "song": "morgen-kinder",
+  "title": "Morgen, Kinder, wird's was geben",
+  "composer": "Carl Gottlieb Hering",
+  "about": "Morgen, Kinder, wird's was geben means Tomorrow, children, there will be something in German. Karl Friedrich Splittegarb's words were first printed in 1795, under the title Die Weihnachtsfreude. Carl Gottlieb Hering set them to this tune in 1809, in a singing school for children. The song is about children looking forward to their presents, and it never mentions the birth of Jesus.",
+  "funFact": "In 1927 Erich Kästner wrote a parody about poor children, which begins Morgen, Kinder, wird's nichts geben: there will be nothing.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/morgen-kinder/common.mid",
+      "skills": [
+        "five-finger-position",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 3, 2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 2, 3, 3, 5, 5, 1, 1, 4, 1, 2, 5, 5, 4, 3, 2, 1, 2],
+        "left": [5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 5, 1, 4, 1, 4, 1, 5, 1, 5, 1, 4, 1, 5, 1, 5, 1, 5, 1, 4, 1, 4, 1, 2, 2, 4, 1, 4, 1, 5, 1, 2, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first four bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the last four bars with the right hand alone, where the tune climbs to the high A.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds a fifth, or a single F.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "rhythm",
+          "text": "The four quick notes of bar 2 are the shortest in the song. Count them evenly: one, two, three, four."
+        },
+        {
+          "fromBar": 2,
+          "toBar": 3,
+          "kind": "trick",
+          "text": "Bar 2 ends with a short G and a rest. Use the rest to open the hand up to the E."
+        },
+        {
+          "fromBar": 11,
+          "toBar": 11,
+          "kind": "fingering",
+          "text": "The thumb plays the first C, and finger 2 plays the second. Finger 5 then reaches F with ease."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": "Finger 3 lands on E after the rest. Fingers 4 and 5 climb to G, and finger 4 comes back to E."
+        },
+        {
+          "bar": 7,
+          "text": "The same as bar 3: finger 3 on E, then fingers 4 and 5 up to G."
+        },
+        {
+          "bar": 8,
+          "text": "Fingers 5 and 4 step down to E, and finger 2 takes D. Finger 3 is then ready for the F of bar 9."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/morgen-kinder/rare.mid",
+      "skills": [
+        "triads",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 3, 2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 2, 3, 3, 5, 5, 1, 1, 4, 1, 2, 5, 5, 4, 3, 2, 1, 2],
+        "left": [5, 3, 1, 5, 3, 1, 4, 1, 5, 3, 1, 5, 1, 5, 3, 1, 4, 1, 4, 1, 5, 3, 1, 5, 3, 1, 4, 1, 5, 3, 1, 5, 1, 5, 3, 1, 4, 1, 4, 1, 5, 2, 5, 2, 4, 1, 4, 1, 5, 3, 1, 5, 2, 4, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the right hand alone on the first eight bars, the opening phrase.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first eight bars, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Hold each chord softly for the whole bar, so the tune stays on top."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "trick",
+          "text": "Bar 4 ends on a low G, and bar 5 starts high on E. Look at the E before you play the G."
+        },
+        {
+          "fromBar": 21,
+          "toBar": 22,
+          "kind": "fingering",
+          "text": "The thumb plays the first C and finger 2 the second, so finger 5 reaches F."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 6,
+          "text": "Finger 5 plays the high G, and finger 4 comes back to E over the C chord."
+        },
+        {
+          "bar": 14,
+          "text": "The same as bar 6: finger 5 on the high G, then finger 4 on E."
+        },
+        {
+          "bar": 5,
+          "text": "Finger 3 leaps up from G to E with no rest. Keep the thumb light, so the hand opens out."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/morgen-kinder/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "broken-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 3, 2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 2, 3, 3, 5, 5, 1, 1, 4, 1, 2, 5, 5, 4, 3, 2, 1, 2, 2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 3, 2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 2, 3, 3, 5, 5, 1, 1, 4, 1, 2, 5, 5, 4, 3, 2, 1, 2],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1, 3, 5, 3, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the broken chords of the second time alone, up and back down.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [13, 16],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the first time through, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 12],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 12,
+          "toBar": 13,
+          "kind": "trick",
+          "text": "The right hand rests for an eighth at the end of bar 12, then jumps up an octave."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 24,
+          "kind": "sound",
+          "text": "Change the pedal on every half bar, as the left hand starts a new chord."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "The tune starts again an octave up. Finger 2 takes the high C, and the thumb drops to G."
+        },
+        {
+          "bar": 23,
+          "text": "The thumb plays the first C and finger 2 the second, so finger 5 reaches the high F."
+        },
+        {
+          "bar": 24,
+          "text": "Fingers 4, 3, 2 and 1 walk down to B, and finger 2 ends on C over the last chord."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/morgen-kinder/legendary.mid",
+      "skills": [
+        "stride",
+        "arpeggios"
+      ],
+      "fingers": {
+        "right": [2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 3, 2, 1, 2, 1, 2, 4, 3, 5, 4, 1, 3, 3, 4, 5, 4, 5, 4, 2, 3, 3, 5, 5, 1, 1, 4, 1, 2, 5, 5, 4, 3, 2, 1, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 3, 2, 1, 3, 1, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, 72, null, null, null],
+        "left": [48, null, null, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's octaves alone, and lift the hand on each short rest.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [13, 16],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second time in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [13, 16],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and let the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 12,
+          "kind": "trick",
+          "text": "In stride, look at the low octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 23,
+          "kind": "fingering",
+          "text": "Keep the thumb and little finger an octave apart. The short rests give the hand time to jump."
+        },
+        {
+          "fromBar": 24,
+          "toBar": 24,
+          "kind": "sound",
+          "text": "Spread the hand over C, E, G and C for the last chord, and let it ring."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "Finger 3 plays F twice and finger 5 plays A twice, while the stride bass drops to a low F."
+        },
+        {
+          "bar": 8,
+          "text": "Finger 2 takes the long D this time, so finger 3 is ready for the F of bar 9."
+        },
+        {
+          "bar": 4,
+          "text": "Finger 3 holds the long D, while the left hand leaps from the low G to its chord and back."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "song": "leise-rieselt-der-schnee",
+  "title": "Leise rieselt der Schnee",
+  "composer": "Traditional",
+  "about": "Leise rieselt der Schnee means Softly falls the snow in German. It is one of the best-known Advent songs in the German language. The pastor Eduard Ebel wrote the words in 1895, and his book printed them with no melody. Many books credit the tune to Ebel too, but no source shows it, and others call it a folk tune.",
+  "funFact": "Some say the tune grew from a Musette by Daniel Gottlob Türk from 1792, but only its first bar and a half match.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/leise-rieselt-der-schnee/common.mid",
+      "skills": [
+        "five-finger-position",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [3, 3, 2, 3, 2, 1, 4, 2, 4, 3, 2, 1, 2, 1, 2, 4, 3, 2, 1, 4, 1, 1, 2, 1, 2, 3, 3, 3, 2, 3, 2, 1, 4, 2, 4, 3, 2, 1, 2, 1, 2, 4, 3, 2, 1, 4, 1, 1, 2, 1, 2, 3],
+        "left": [5, 1, 5, 1, 5, 2, 4, 1, 5, 1, 4, 1, 5, 1, 4, 4, 1, 5, 1, 5, 1, 5, 1, 5, 2, 4, 1, 5, 1, 4, 1, 5, 1, 4, 4, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, 62, 64, 60, null],
+        "left": [55, 53, null, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the first two bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 2],
+          "wait": true
+        },
+        {
+          "text": "Play bars 1 to 8 with the right hand alone. That is the whole verse once.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Now the left hand alone. It holds one shape for a bar, or two shapes at most.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Put both hands together on the whole song, slowly.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": "Your right thumb starts on middle C, and finger 3 takes the first E."
+        },
+        {
+          "fromBar": 3,
+          "toBar": 4,
+          "kind": "trick",
+          "text": "Finger 4 takes the C your thumb just held, and the hand settles down until the thumb sits on G."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Each phrase ends on a long note and a short rest. Let the note ring, then breathe, like falling snow."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The verse starts again. Lift finger 3 off C during the rest, and place it on E."
+        },
+        {
+          "bar": 7,
+          "text": "Finger 4 holds D, then the thumb drops to A twice. Keep the quick A light."
+        },
+        {
+          "bar": 15,
+          "text": "The same hop as bar 7: a long D, then a quick A on the thumb."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/leise-rieselt-der-schnee/rare.mid",
+      "skills": [
+        "triads",
+        "waltz-bass"
+      ],
+      "fingers": {
+        "right": [3, 3, 2, 3, 2, 1, 4, 2, 4, 3, 2, 1, 2, 1, 2, 4, 3, 2, 1, 4, 1, 1, 2, 1, 2, 3, 3, 3, 2, 3, 2, 1, 4, 2, 4, 3, 2, 1, 2, 1, 2, 4, 3, 2, 1, 4, 1, 1, 2, 1, 2, 3],
+        "left": [5, 3, 1, 5, 3, 1, 5, 2, 4, 2, 1, 5, 3, 1, 2, 1, 4, 1, 5, 3, 1, 4, 2, 4, 2, 1, 5, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 4, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 4, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [72, 74, 76, 72, null],
+        "left": [55, 53, 52, 50, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone, and press the notes of each chord together.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the waltz bass of the second verse alone: low note, chord, chord.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "fingering",
+          "text": "The left thumb stays on G for the whole first verse. Only the other fingers move."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "In the waltz bass, play the low note a little louder than the chords after it."
+        },
+        {
+          "fromBar": 5,
+          "toBar": 5,
+          "kind": "fingering",
+          "text": "C sharp is the one black key of the song. Let the thumb slide onto it and off again."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The verse starts again, and the waltz begins. Move finger 3 from C up to E during the rest."
+        },
+        {
+          "bar": 7,
+          "text": "Finger 4 holds D, then the thumb drops to A twice, while the left hand changes chord at the half bar."
+        },
+        {
+          "bar": 15,
+          "text": "The quick A comes again, now over the waltz bass. Count the long D fully before it."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/leise-rieselt-der-schnee/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [3, 3, 2, 3, 2, 1, 4, 2, 4, 3, 2, 1, 2, 1, 2, 4, 3, 2, 1, 4, 1, 1, 2, 1, 2, 3, 2, 4, 2, 4, 3, 2, 4, 3, 1, 3, 2, 4, 1, 2, 2, 4, 1, 3, 1, 2, 1, 2, 2, 4, 1, 3, 2, 4, 3, 5, 2, 4, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 2, 4, 1, 3, 2, 4, 1, 2, 5],
+        "left": [5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 4, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 4, 1, 2, 1, 2, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 1, 3, 1, 5, 1, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 4, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 4, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [72, 74, 76, 72, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's thirds alone, and keep both notes of each pair together.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first verse, slowly.",
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Change the pedal at each half bar, where the chord changes."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": "The pairs circle C sharp. Fingers 1 and 3 take A and C sharp, then 2 and 4 return to B and D."
+        },
+        {
+          "bar": 14,
+          "text": "The hand opens from a third to a sixth, with the thumb on E and finger 3 on C."
+        },
+        {
+          "bar": 7,
+          "text": "The quick A falls on the thumb while the left hand rolls through D minor. Keep the bass even under it."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/leise-rieselt-der-schnee/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "arpeggios"
+      ],
+      "fingers": {
+        "right": [1, 3, 5, 1, 3, 5, 1, 4, 1, 3, 5, 1, 4, 1, 2, 4, 1, 2, 4, 1, 3, 1, 2, 4, 1, 2, 4, 1, 3, 1, 3, 2, 4, 1, 3, 2, 4, 1, 3, 5, 1, 4, 1, 2, 4, 1, 2, 4, 1, 2, 5, 1, 2, 1, 2, 1, 3, 1, 2, 1, 3, 1, 2, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 2, 1, 5, 2, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 4, 2, 1, 2, 4, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 2, 1]
+      },
+      "start": {
+        "right": [67, null, 72, 74, 76],
+        "left": [48, null, null, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the top finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play the arpeggios of the second verse in the left hand alone.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": false
+        },
+        {
+          "text": "Join the hands on the whole song at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "trick",
+          "text": "In stride, look at the octave and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "sound",
+          "text": "Up high, the octaves should ring like bells. Keep the wrist loose."
+        },
+        {
+          "fromBar": 15,
+          "toBar": 15,
+          "kind": "rhythm",
+          "text": "Let go of the D octave a moment early, so the hand lands on the quick A in time."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 9,
+          "text": "The hands change jobs. The right hand plays octaves, and the left starts its first arpeggio over two octaves."
+        },
+        {
+          "bar": 12,
+          "text": "Hold the G octave for the whole bar while the left hand climbs to E and back down."
+        },
+        {
+          "bar": 14,
+          "text": "The same climb as bar 12, now under the C octave. Let finger 3 cross over the thumb smoothly."
+        }
+      ]
+    }
+  }
+}

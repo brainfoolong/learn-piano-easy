@@ -1,0 +1,57 @@
+{
+  "env": {
+    "CLAUDE_CODE_USE_POWERSHELL_TOOL": "0",
+    "CLAUDE_CODE_SHELL_PREFIX": "sh -c 'exec bun \"$(git rev-parse \"--show-toplevel\")/tools/looper/main.ts\" sh \"$0\"'"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(bun tools/looper/main.ts orient:*)",
+      "Bash(bun tools/looper/main.ts status:*)",
+      "Bash(bun tools/looper/main.ts lint:*)",
+      "Bash(bun tools/looper/main.ts render:*)",
+      "Bash(bun tools/looper/main.ts goal:*)",
+      "Bash(bun tools/looper/main.ts check:*)",
+      "Bash(bun tools/looper/main.ts harvested:*)",
+      "Bash(bun tools/looper/main.ts verify:*)",
+      "Bash(bun tools/looper/main.ts affected:*)",
+      "Bash(bun tools/looper/main.ts wrap:*)",
+      "Bash(bun tools/looper/main.ts doctor:*)",
+      "Bash(bun tools/looper/main.ts log:*)",
+      "Bash(bun tools/looper/main.ts links:*)",
+      "Bash(bun tools/looper/main.ts layout:*)",
+      "Bash(bun tools/looper/main.ts prose:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git grep:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git rm:*)",
+      "Bash(git mv:*)",
+      "Bash(git restore --staged:*)",
+      "Bash(cargo build:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo check:*)",
+      "Bash(cargo clippy:*)",
+      "Bash(cargo fmt:*)",
+      "Bash(cargo run:*)",
+      "Bash(cargo tree:*)",
+      "Bash(cargo metadata:*)",
+      "Bash(bun install:*)",
+      "Bash(bun run:*)",
+      "Bash(bun x tsc:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Read|Edit|Write|NotebookEdit",
+        "hooks": [{ "type": "command", "command": "bun \"$CLAUDE_PROJECT_DIR/tools/looper/main.ts\" guard" }]
+      }
+    ]
+  }
+}

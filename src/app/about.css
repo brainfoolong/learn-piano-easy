@@ -1,0 +1,107 @@
+/*
+ * The About page's body. `src/app/about.ts` is the home of how it is built.
+ *
+ * The page opens with the mascot beside what the app is, in one inset block. Its build line is quieter
+ * than its text. Each license is a fold: a row with its heading and a chevron that turns as it opens,
+ * and the license text in a well under it. Only `transform` animates.
+ */
+@layer pages {
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+  }
+
+  .about p {
+    margin: 0;
+  }
+
+  .about__lead {
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    margin-block-end: var(--s-2);
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-bg);
+  }
+
+  .about__lead > .mascot {
+    flex: none;
+  }
+
+  .about__text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-2);
+    min-width: 0;
+  }
+
+  .about .dim {
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .about details {
+    overflow: hidden;
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    background: var(--c-bg);
+  }
+
+  .about summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+    min-height: var(--s-9);
+    padding: var(--s-1) var(--s-4);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+    list-style: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .about summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* The chevron: two edges of a small square, turned to point down, and up once the fold is open. */
+  .about summary::after {
+    content: "";
+    flex: none;
+    width: var(--s-2);
+    height: var(--s-2);
+    margin-inline-end: var(--s-1);
+    border-right: 2px solid var(--c-text-soft);
+    border-bottom: 2px solid var(--c-text-soft);
+    transform: rotate(45deg);
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  .about details[open] > summary::after {
+    transform: rotate(225deg);
+  }
+
+  .about summary:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: -2px;
+    border-radius: var(--r-control);
+  }
+
+  /* A license keeps its own line breaks, and sits in a well under its heading. */
+  .about pre {
+    margin: 0;
+    padding: var(--s-3) var(--s-4);
+    border-top: 1px solid var(--c-line);
+    background: var(--c-sunken);
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    line-height: var(--lh-body);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+}

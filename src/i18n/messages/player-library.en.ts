@@ -1,0 +1,165 @@
+/** The player's library in English: the song list, its chips and filters, the tracks panel and the guide panel's labels. */
+import { formatNumber, plural } from "../format";
+
+export const playerLibrary = {
+  rarity: {
+    /** What each version of a song of ours asks, by the version's id. Its name is its level's, in `panel.levels`. */
+    taglines: {
+      common: "One hand position, slow notes, and a bass that waits for you.",
+      rare: "Both hands play. Eighth notes, simple chords, and a hand that moves now and then.",
+      epic: "Broken chords, thumb crossings and the pedal.",
+      legendary: "Both hands busy, fast and apart.",
+    },
+    /** The name of a song's last step: the original score, which is not ours. */
+    originalName: "Original",
+    originalTagline: "The composer's own notes.",
+    /** A step's hover text on a card: its name, then what it asks. */
+    stepTitle: (name: string, tagline: string) => `${name}: ${tagline}`,
+  },
+  collections: { christmas: "Christmas" },
+  /** The skills a guide names, by the camelCase form of their id in `src/library/skills.ts`. */
+  skills: {
+    fiveFingerPosition: "Five-finger position",
+    heldBass: "Held bass notes",
+    openFifths: "Open fifths",
+    eighthNotes: "Eighth notes",
+    dottedRhythm: "Dotted rhythm",
+    triads: "Triads",
+    twoNoteChords: "Two-note chords",
+    positionChange: "Changing position",
+    thumbUnder: "Thumb under",
+    fingerOver: "Finger over the thumb",
+    brokenChords: "Broken chords",
+    albertiBass: "Alberti bass",
+    waltzBass: "Waltz bass",
+    pedal: "The sustain pedal",
+    leftHandMelody: "The tune in the left hand",
+    thirdsAndSixths: "Thirds and sixths",
+    octaveBass: "Octave bass",
+    stride: "Stride",
+    arpeggios: "Arpeggios",
+    counterMelody: "Counter-melody",
+    melodyInChords: "The tune in chords",
+    handCrossing: "Hand crossing",
+    sixteenthNotes: "Sixteenth notes",
+  },
+  panel: {
+    search: { placeholder: "Search title, composer or tag", label: "Search songs", clear: "Clear the search" },
+    fits: "Fits my keyboard",
+    /** The name of each kind of tag, above its chips. */
+    kinds: { level: "Difficulty", yours: "Yours", collection: "Collection", style: "Style", skill: "Skill", composer: "Composer" },
+    /** The levels of difficulty. The first four also name the four versions of a song of ours. */
+    levels: { beginner: "Beginner", easy: "Easy", medium: "Medium", hard: "Hard", advanced: "Advanced", expert: "Expert" },
+    styles: {
+      baroque: "Baroque",
+      classical: "Classical",
+      romantic: "Romantic",
+      impressionist: "Impressionist",
+      ragtime: "Ragtime",
+      folk: "Folk tune",
+      contemporary: "Contemporary",
+    },
+    /** The sets beside the collections: the beginner path, and our arrangements in four versions. */
+    sets: { path: "Beginner path", ours: "Our arrangements" },
+    yours: { favourite: "Favourites", played: "Played", upload: "Your files" },
+    /** A tag's hover text on a card. */
+    tagTitle: (name: string) => `Show only: ${name}`,
+    sort: {
+      label: "Sort by",
+      suggested: "Suggested",
+      title: "Title",
+      difficulty: "Difficulty",
+      length: "Length",
+      recent: "Recently played",
+    },
+    measuring: "Measuring the songs…",
+    filters: "Filters",
+    filtersOn: (n: number) => `Filters (${formatNumber("en", n)})`,
+    clear: "Clear all",
+    more: (n: number) => `${formatNumber("en", n)} more`,
+    fewer: "Show fewer",
+    sections: {
+      continue: "Continue playing",
+      favourites: "Favourites",
+      path: "Beginner path",
+      pathLead: "Your next steps, from the first notes to a first sonatina.",
+      pathAll: (n: number) => `Show all ${formatNumber("en", n)} songs`,
+      all: "All songs",
+      results: "Results",
+    },
+    step: (n: number) => `Step ${formatNumber("en", n)}`,
+    nowPlayingTitle: (title: string) => `Now playing: ${title}`,
+    preview: {
+      start: "Preview",
+      stop: "Stop the preview",
+      title: (title: string) => `Hear the opening of ${title}`,
+      failed: (title: string) => `"${title}" is not on this device yet. Go online to hear its preview.`,
+    },
+    favourite: { label: "Favourite", title: (title: string) => `Favourite: ${title}` },
+    lengthTitle: "Length",
+    empty: { title: "No song matches", message: "Try another word, or take a filter off." },
+    own: {
+      heading: "Your songs",
+      addFiles: { label: "Add files", title: "Add MIDI files" },
+      addFolder: { label: "Add a folder", title: "Add a folder of MIDI files" },
+      hint: "Add your own MIDI or MusicXML files here, or drop them anywhere on the page.",
+      export: "Export",
+      exportTitle: (title: string) => `Export ${title}`,
+      delete: "Delete",
+      deleteTitle: (title: string) => `Delete ${title}`,
+    },
+    count: (n: number) => `${formatNumber("en", n)} ${plural("en", n, { one: "song", other: "songs" })}`,
+  },
+  tracks: {
+    hands: { right: "Right hand", left: "Left hand", split: "Both hands, split at middle C", none: "Not mine: the app plays it" },
+    fromNotes: "From the notes",
+    fromNotesKey: (key: string) => `From the notes: ${key}`,
+    useForNew: { label: "Use for new songs", title: "Use these colours, volumes and switches for new songs" },
+    reset: { label: "Reset this song", title: "Reset this song's tracks to the defaults" },
+    keyControl: "Key of the song",
+    key: "Key",
+    /** The name of a track without a name event, by its number from 1. */
+    track: (n: number) => `Track ${formatNumber("en", n)}`,
+    show: (name: string) => `Show ${name}`,
+    mute: (name: string) => `Mute ${name}`,
+    hand: (name: string) => `Hand of ${name}`,
+    colour: (name: string) => `Colour of ${name}`,
+    volume: (name: string) => `Volume of ${name} (%)`,
+    sheet: (name: string) => `Draw ${name} in the sheet music`,
+    notes: (n: number) => `${formatNumber("en", n)} ${plural("en", n, { one: "note", other: "notes" })}`,
+    drums: ", drums, not played",
+    fields: { show: "Show", mute: "Mute", hand: "Hand", volume: "Volume", sheet: "Sheet" },
+    empty: "This song has no notes.",
+  },
+  guide: {
+    hands: { both: "Both hands", right: "Right hand", left: "Left hand" },
+    /** The bars a tip or a tricky spot names, from 1: "Bar 4" or "Bars 1–2". */
+    bars: (from: number, to: number) => (from === to ? `Bar ${from}` : `Bars ${from}–${to}`),
+    /** The bars a step loops, inside its summary. */
+    loopBars: (from: number, to: number) => (from === to ? `bar ${from}` : `bars ${from}–${to}`),
+    wholeSong: "the whole song",
+    waits: "waits for you",
+    playsOn: "plays on",
+    /** One line that sums up a step, as in "Right hand, 60 %, bars 1–4, waits for you". */
+    summary: (hands: string, percent: number, loop: string, wait: string) => `${hands}, ${formatNumber("en", percent)} %, ${loop}, ${wait}`,
+    apply: "Apply",
+    applyTitle: (n: number) => `Apply step ${n}`,
+    /** The lead of a tip's line: its bars and its kind. */
+    tip: (bars: string, kind: string) => `${bars}, ${kind}: `,
+    loop: "Loop",
+    loopTitle: (bar: number) => `Loop bar ${bar}`,
+    headings: { about: "About", funFact: "Fun fact", skills: "Skills", practice: "Practice plan", tips: "Tips", tricky: "Tricky spots" },
+    tipKinds: { fingering: "fingering", rhythm: "rhythm", sound: "sound", trick: "trick" },
+    /** A tip's mark on the lanes, by its kind. */
+    tipMark: (kind: string) => `Tip: ${kind}`,
+    trickyMark: "Tricky spot",
+  },
+  openSong: {
+    outside: "This song has notes outside your keyboard.",
+    fold: "Move them onto your keys",
+    failed: (title: string, reason: string) => `"${title}" could not open: ${reason}`,
+    catalogFailed: (status: number) => `The song list did not load (${status}).`,
+    /** The reason a catalog song's file failed, which `failed` quotes. */
+    fileFailed: (status: number) => `the file did not load (${status})`,
+  },
+};

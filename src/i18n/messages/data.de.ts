@@ -1,0 +1,51 @@
+/** The Data page at `data/`, in German. It satisfies the English section's type, so it holds every text. */
+import type { dataPage as en } from "./data.en";
+
+export const dataPage: typeof en = {
+  lead: "Deine Einstellungen, dein Fortschritt im Kurs, deine Lieder und deine Ergebnisse bleiben in diesem Browser. Speichere sie in einer Datei, um sie zu sichern oder auf ein anderes Gerät mitzunehmen.",
+  save: {
+    heading: "Sicherung speichern",
+    text: "Eine Datei enthält alles. Bewahre sie an einem sicheren Ort auf, etwa in einem Cloud-Ordner.",
+    action: "Sicherung speichern",
+    never: "Dieser Browser hat noch keine Sicherung gespeichert.",
+    today: "Die letzte Sicherung wurde heute gespeichert.",
+    on: (date) => `Die letzte Sicherung wurde am ${date} gespeichert.`,
+    done: "Die Sicherungsdatei ist gespeichert.",
+  },
+  restore: {
+    heading: "Sicherung wiederherstellen",
+    text: "Öffne eine Sicherungsdatei von Learn Piano Easy. Eine Einstellungsdatei oder eine Fortschrittssicherung einer älteren Version geht auch.",
+    action: "Sicherung wiederherstellen",
+  },
+  folder: {
+    heading: "Einen Ordner aktuell halten",
+    text: "Wähle einen Ordner, etwa einen, den dein Cloud-Speicher abgleicht. Jede Änderung landet dann von selbst darin, mit einer datierten Kopie für jeden der letzten sieben Tage.",
+    connect: "Ordner verbinden",
+    starting: "Dein Ordner wird gesucht …",
+    synced: (name) => `Deine Daten werden im Ordner „${name}“ aktuell gehalten.`,
+    waiting: "Jede Änderung landet einen Moment später darin.",
+    written: (time) => `Der Ordner wurde zuletzt um ${time} geschrieben.`,
+    reconnect: (name) => `Dein Browser fragt erneut, bevor er in den Ordner „${name}“ schreibt.`,
+    reconnectAction: "Ordner neu verbinden",
+    asking: (name) => `Der Ordner „${name}“ enthält Daten, die dieser Browser nicht geschrieben hat. Nichts wird hineingeschrieben, bis du wählst.`,
+    askingFrom: (date) => `Diese Daten wurden am ${date} gespeichert.`,
+    restoreAction: "Aus dem Ordner wiederherstellen",
+    replaceAction: "Durch die Daten dieses Browsers ersetzen",
+    replaced: "Der Ordner enthält jetzt die Daten dieses Browsers. Seine alte Datei liegt in seinem Sicherungsordner.",
+    failed: "Dein Browser hat das Schreiben in den Ordner verweigert. Verbinde ihn neu oder wähle ihn noch einmal.",
+    disconnect: "Trennen",
+    gone: "Die Datei des Ordners ließ sich nicht lesen. Nichts hat sich geändert.",
+  },
+  ask: {
+    title: "Diese Sicherung wiederherstellen?",
+    merge: "Dein Fortschritt, deine Lieder und deine Ergebnisse kommen zu dem hinzu, was schon da ist. So geht nichts Neueres verloren.",
+    replace: "Deine Einstellungen und die Einstellungen deiner Lieder übernehmen die Werte der Datei. Danach lädt die Seite neu.",
+    confirm: "Wiederherstellen",
+    cancel: "Alles so lassen",
+    close: "Schließen",
+  },
+  reading: "Die Datei wird gelesen …",
+  restored: "Die Sicherung ist wiederhergestellt.",
+  notOurs: "Diese Datei ist keine Sicherung von Learn Piano Easy. Nichts hat sich geändert.",
+  failed: "Dein Browser hat das Speichern verweigert. Deine Sicherungsdatei enthält weiterhin alles.",
+};

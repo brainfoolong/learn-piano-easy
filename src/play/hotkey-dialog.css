@@ -1,0 +1,86 @@
+/*
+ * The hotkey dialog's list, which the key binding dialog shares. `src/play/hotkey-dialog.ts` and
+ * `src/input/key-binding-dialog.ts` are the homes of how each behaves.
+ *
+ * The list is an inset block on the page's colour, as every block of a player dialog is. Each row holds an action or a note, its key and a
+ * button that clears it, on one line. A key is drawn as a key cap: a raised surface with a thick lower
+ * edge, as wide as the longest combination, so the caps line up. A cap that waits for its key takes the
+ * accent, as `src/app/player.css` draws every pressed action button.
+ */
+@layer pages {
+  .hotkey-dialog {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+
+  .hotkey-dialog > p {
+    margin: 0;
+    color: var(--c-text-soft);
+  }
+
+  /* The note that the hotkeys are off is a warning band, with its edge in the signal's colour. */
+  .hotkey-dialog > .hotkey-off {
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--c-warning);
+    border-radius: var(--r-control);
+    background: var(--c-warning-soft);
+    color: var(--c-warning);
+    font-weight: var(--w-semibold);
+  }
+
+  .hotkey-list {
+    margin: 0;
+    padding: 0 var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-bg);
+    list-style: none;
+  }
+
+  .hotkey-row {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    padding: var(--s-2) 0;
+  }
+
+  .hotkey-row + .hotkey-row {
+    border-top: 1px solid var(--c-line);
+  }
+
+  .hotkey-label {
+    flex: 1;
+    min-width: 0;
+    font-weight: var(--w-semibold);
+  }
+
+  .hotkey-key {
+    flex: none;
+    min-width: var(--s-12);
+    box-shadow:
+      var(--e-rim),
+      inset 0 -2px 0 var(--c-line-strong),
+      var(--e-1);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .hotkey-dialog > .button {
+    align-self: flex-end;
+  }
+
+  /* On a phone the key and its Clear button move under the action's name, so no name is squeezed. */
+  @media (max-width: 479px) {
+    .hotkey-row {
+      flex-wrap: wrap;
+    }
+
+    .hotkey-label {
+      flex-basis: 100%;
+    }
+
+    .hotkey-key {
+      flex: 1 1 auto;
+    }
+  }
+}

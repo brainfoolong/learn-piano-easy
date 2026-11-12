@@ -1,0 +1,350 @@
+{
+  "song": "silent-night",
+  "title": "Silent Night",
+  "composer": "Franz Xaver Gruber",
+  "about": "Franz Xaver Gruber wrote this tune for Christmas Eve 1818, in Oberndorf near Salzburg. The young priest Joseph Mohr had written the words, and Gruber set them to music. Mohr played the guitar at the first performance, and the song later travelled far beyond Austria.",
+  "funFact": "In 2011, the Austrian Commission for UNESCO added Silent Night to Austria's list of intangible cultural heritage.",
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/silent-night/common.mid",
+      "skills": [
+        "held-bass",
+        "dotted-rhythm"
+      ],
+      "fingers": {
+        "right": [2, 3, 2, 1, 2, 3, 2, 1, 5, 5, 4, 5, 5, 2, 3, 3, 5, 4, 3, 2, 3, 2, 1, 3, 3, 5, 4, 3, 2, 3, 2, 1, 3, 3, 5, 3, 2, 3, 5, 5, 3, 2, 4, 3, 2, 1],
+        "left": [1, 1, 1, 1, 4, 4, 1, 1, 5, 1, 5, 1, 1, 1, 5, 1, 5, 1, 1, 1, 4, 4, 1, 1, 1, 4, 1]
+      },
+      "start": {
+        "right": [64, 67, 69, 71, 74],
+        "left": [48, null, null, 43, 41]
+      },
+      "practice": [
+        {
+          "text": "Play the first four bars with the right hand alone, and let the song wait for each note.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks home.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [17, 23],
+          "wait": true
+        },
+        {
+          "text": "Put both hands together. The left hand holds one low note in each bar.",
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "rhythm",
+          "text": "The first G is long and the A is short. It rocks like a cradle."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "trick",
+          "text": "Lift the hand in the short rest after E, and reach up for the high D."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 23,
+          "kind": "sound",
+          "text": "Play softly all the way through. This song is a lullaby."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 21,
+          "text": "Finger 5 moves down from E to C. Then the tune walks down to the thumb on middle C."
+        },
+        {
+          "bar": 6,
+          "text": "Finger 4 takes B after the D's. Down below, the left hand holds G with finger 4."
+        },
+        {
+          "bar": 17,
+          "text": "After the rest, the hand stretches up from E, and finger 3 lands on the high D."
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/silent-night/rare.mid",
+      "skills": [
+        "waltz-bass",
+        "two-note-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [2, 3, 2, 1, 2, 3, 2, 1, 5, 5, 4, 5, 5, 1, 2, 3, 3, 5, 4, 3, 2, 3, 2, 1, 3, 3, 5, 4, 3, 2, 3, 2, 1, 3, 3, 5, 3, 2, 3, 3, 5, 5, 3, 2, 4, 3, 2, 1],
+        "left": [5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [64, 67, 69, 71, 74],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the left hand alone: a low note, then two soft chords, like a slow waltz.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play bars 17 to 23 with the right hand alone, where the tune climbs high and walks home.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [17, 23],
+          "wait": true
+        },
+        {
+          "text": "Join the hands on the first eight bars, slowly.",
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands, a little slower than written.",
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": "Play the left hand's chords softer than its low note."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 23,
+          "kind": "sound",
+          "text": "Change the pedal on every bar line. Lift it as the new bass note sounds."
+        },
+        {
+          "fromBar": 20,
+          "toBar": 20,
+          "kind": "fingering",
+          "text": "Fingers 3 and 5 take C and E together. Let the E sing above the C."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 21,
+          "text": "Finger 5 moves down from E to C. Then the tune walks down G and E."
+        },
+        {
+          "bar": 17,
+          "text": "The right hand stretches up from E, and finger 3 lands on the high D."
+        },
+        {
+          "bar": 22,
+          "text": "Fingers 4, 3 and 2 walk down G, F and D, while the left hand plays its G seventh chord."
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/silent-night/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thumb-under",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [2, 3, 2, 1, 2, 3, 2, 1, 2, 3, 1, 2, 3, 4, 4, 2, 3, 3, 1, 2, 3, 3, 5, 4, 3, 2, 3, 2, 1, 1, 3, 1, 3, 1, 5, 4, 3, 1, 2, 3, 2, 1, 2, 3, 4, 1, 2, 3, 2, 4, 2, 4, 3, 5, 3, 2, 1, 2, 4, 1, 2, 5, 5, 3, 2, 4, 3, 2, 1],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 1, 2, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [64, 67, 69, null, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the run of bar 4 with the right hand alone, and pass the thumb under to A.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [3, 5],
+          "wait": true
+        },
+        {
+          "text": "Play the thirds and sixths of bars 13 to 20 with the right hand alone.",
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [13, 20],
+          "wait": true
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, with the pedal.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": "Keep the Alberti bass soft, so the tune sings above it."
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "fingering",
+          "text": "Fingers 1, 2 and 3 play E, F and G. Then the thumb passes under to A."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 20,
+          "kind": "fingering",
+          "text": "The tune is the top note of each pair, so let the upper finger lead."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 16,
+          "text": "The same run as bar 4, from a third on C and E. Pass the thumb under to A."
+        },
+        {
+          "bar": 4,
+          "text": "The run climbs from F to C. Pass the thumb under finger 3 to take the A."
+        },
+        {
+          "bar": 21,
+          "text": "The hand drops from the chord to C with finger 5, then walks down to G and E."
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/silent-night/legendary.mid",
+      "skills": [
+        "stride",
+        "melody-in-chords",
+        "octave-bass"
+      ],
+      "fingers": {
+        "right": [1, 2, 4, 5, 1, 2, 4, 1, 2, 4, 1, 2, 4, 5, 1, 2, 4, 1, 2, 4, 1, 2, 3, 4, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 1, 2, 3, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 4, 1, 4, 1, 2, 4, 5, 1, 2, 4, 1, 2, 4, 1, 3, 5, 1, 3, 5, 1, 3, 5, 4, 1, 4, 1, 2, 4, 5, 1, 2, 4, 1, 2, 4, 1, 2, 3, 4, 5, 1, 3, 5, 1, 3, 5, 1, 3, 5, 3, 1, 2, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 5, 2, 1, 1, 2, 5, 4, 1, 2, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [72, 76, null, 79, 81],
+        "left": [48, 55, 52, null, 36]
+      },
+      "practice": [
+        {
+          "text": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": "Play the right hand's chords alone, and let the little finger sing the tune.",
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": "Play the broken octaves of bars 13 to 16 with the left hand alone.",
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [13, 16],
+          "wait": false
+        },
+        {
+          "text": "Play the whole song with both hands at three quarters speed.",
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": "Now play it at full speed, and make the last chord ring.",
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 12,
+          "kind": "trick",
+          "text": "In stride, look at the bass note and let the hand find the chord by feel."
+        },
+        {
+          "fromBar": 1,
+          "toBar": 12,
+          "kind": "sound",
+          "text": "Play the top note of each chord a little louder than the others."
+        },
+        {
+          "fromBar": 13,
+          "toBar": 22,
+          "kind": "sound",
+          "text": "Let the broken octaves roll gently under the tune, like a rocking cradle."
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 10,
+          "text": "Finger 4 alone takes B between the chords. Keep the thumb close to F."
+        },
+        {
+          "bar": 9,
+          "text": "The hand opens to C, F and A, and the little finger sings the tune."
+        },
+        {
+          "bar": 5,
+          "text": "After the run, land on G, B and D with fingers 1, 3 and 5."
+        }
+      ]
+    }
+  }
+}

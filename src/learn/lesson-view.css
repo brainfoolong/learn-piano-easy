@@ -1,0 +1,925 @@
+/*
+ * The lesson view's styles, its steps' and its illustrations'. `src/learn/lesson-view.ts` is the home
+ * of how a lesson behaves.
+ *
+ * The lesson fills a column of reading width under the site's bar. Each step is one card, and what a
+ * step shows inside it, its keys, staff or drawing, sits in a well on `--c-sunken`. The step host takes
+ * the free height, so the feedback band sits at the foot of the screen.
+ *
+ * - **The step bar is in the world's accent,** `--c-world`, up to the current step, which is honey.
+ * - **An answer is a large raised button** with a mark before its text. A right one turns green with a
+ *   check and a wrong one red with a cross, so no answer is told by colour alone.
+ * - **The band is the lesson's action bar.** It is unseen while a step waits, so the step is the one
+ *   thing to look at. It keeps its room, so nothing moves when it shows.
+ * - **A tint behind text is mixed in sRGB,** which the layout check reads.
+ *
+ * Only `transform` and `opacity` move. What fades in does so only where motion is allowed, since a text
+ * measured in the middle of a fade fails its contrast.
+ */
+@layer pages {
+  .lesson {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-5);
+    max-width: var(--measure);
+    min-height: calc(100dvh - var(--site-bar-space, var(--s-12)));
+    margin-inline: auto;
+    padding: var(--s-5) var(--s-gutter) var(--s-6);
+  }
+
+  /* The step bar: the Leave button, then one segment per step. */
+  .lesson__bar {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+  }
+
+  .lesson__progress {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .lesson__segments {
+    display: flex;
+    gap: var(--s-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .lesson__segment {
+    flex: 1;
+    height: var(--s-3);
+    border-radius: var(--r-pill);
+    background: var(--c-sunken);
+    box-shadow: inset 0 0 0 1px var(--c-line-strong);
+  }
+
+  .lesson__segment[data-state="done"] {
+    background: var(--c-world);
+    box-shadow: none;
+  }
+
+  .lesson__segment[data-state="current"] {
+    background: var(--g-brand);
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+  }
+
+  /* The head: the step's count as an overline with a dot of the world's accent, then the title. */
+  .lesson__head {
+    display: grid;
+    gap: var(--s-1);
+  }
+
+  .lesson__count {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: 1lh;
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-xs);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lesson__count::before {
+    content: "";
+    flex: none;
+    width: var(--s-2);
+    height: var(--s-2);
+    border-radius: var(--r-pill);
+    background: var(--c-world);
+  }
+
+  .lesson__title {
+    margin: 0;
+    font-size: var(--t-2xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+    overflow-wrap: anywhere;
+  }
+
+  .lesson__stage {
+    flex: 1;
+    outline: none;
+  }
+
+  /*
+   * The band at the foot: a word on how it went, with its mark, and Continue once the step has passed.
+   * It floats above the screen's foot as glass. While a step waits it is unseen and takes no pointer.
+   */
+  .lesson__band {
+    --band-edge: var(--c-line-strong);
+    --band-bg: var(--c-glass);
+    --band-mark: var(--c-text-soft);
+    --band-mark-ink: var(--c-surface-1);
+
+    position: sticky;
+    inset-block-end: var(--s-4);
+    z-index: var(--z-raised);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3) var(--s-4);
+    min-height: calc(var(--s-9) + 2 * var(--s-3) + 2px);
+    padding: var(--s-3) var(--s-3) var(--s-3) var(--s-5);
+    border: 1px solid var(--band-edge);
+    border-radius: var(--r-card);
+    background: var(--band-bg);
+    box-shadow: var(--e-rim), var(--e-3);
+    backdrop-filter: blur(var(--glass-blur));
+  }
+
+  .lesson__band[data-tone="idle"] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .lesson__band[data-tone="right"] {
+    --band-edge: var(--c-success);
+    --band-bg: color-mix(in srgb, var(--c-success) 12%, var(--c-surface-2));
+    --band-mark: var(--c-success);
+    --band-mark-ink: var(--c-success-ink);
+  }
+
+  .lesson__band[data-tone="try-again"] {
+    --band-edge: var(--c-danger);
+    --band-bg: color-mix(in srgb, var(--c-danger) 10%, var(--c-surface-2));
+    --band-mark: var(--c-danger);
+    --band-mark-ink: var(--c-danger-ink);
+  }
+
+  .lesson__band-say {
+    display: flex;
+    flex: 1 1 12rem;
+    align-items: center;
+    gap: var(--s-3);
+    min-width: 0;
+  }
+
+  .lesson__band-mark {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-7);
+    height: var(--s-7);
+    border-radius: var(--r-pill);
+    background: var(--band-mark);
+    color: var(--band-mark-ink);
+  }
+
+  .lesson__band-mark:empty {
+    display: none;
+  }
+
+  .lesson__band-mark .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+    stroke-width: 3;
+  }
+
+  .lesson__band-text {
+    min-width: 0;
+    margin: 0;
+    font-size: var(--t-lg);
+    font-weight: var(--w-bold);
+    line-height: var(--lh-heading);
+  }
+
+  .lesson__continue {
+    margin-inline-start: auto;
+  }
+
+  .lesson__continue.is-absent,
+  .lesson-end__save > .is-absent {
+    display: none;
+  }
+
+  /* On a phone, Continue spans the band, so a thumb finds it. */
+  @media (max-width: 479px) {
+    .lesson__band {
+      padding-inline-start: var(--s-3);
+    }
+
+    .lesson__band-say:has(.lesson__band-text:empty) {
+      display: none;
+    }
+
+    .lesson__continue {
+      flex: 1 1 100%;
+    }
+  }
+
+  /* A step's card: its text, then what it shows or asks. */
+  .lesson-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-5);
+    padding: var(--s-6);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-1);
+  }
+
+  @media (max-width: 479px) {
+    .lesson-step {
+      padding: var(--s-5) var(--s-4);
+    }
+  }
+
+  /* A text that explains reads as body text, and one that asks or tells what to play is a heading. */
+  .lesson-step__text {
+    max-width: var(--measure);
+    margin: 0;
+    font-size: var(--t-lg);
+    line-height: var(--lh-body);
+  }
+
+  :is(.lesson-quiz, .lesson-listen, .lesson-read-note, .lesson-find-key, .lesson-play-notes, .lesson-rhythm, .lesson-song) > .lesson-step__text {
+    font-size: var(--t-xl);
+    font-weight: var(--w-bold);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  /* A drawing, a keyboard and a staff each sit in a well. */
+  .illustration,
+  .lesson-step__keys,
+  .lesson-demo__keys,
+  .lesson-read-note__staff {
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-sunken);
+  }
+
+  .illustration__drawing {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .illustration__line {
+    fill: none;
+    stroke: var(--c-line-strong);
+  }
+
+  .illustration__surface {
+    fill: var(--c-surface-2);
+  }
+
+  .illustration__soft {
+    fill: var(--c-text-soft);
+  }
+
+  .illustration__white-key {
+    fill: var(--c-surface-2);
+    stroke: var(--c-line-strong);
+  }
+
+  .illustration__black-key {
+    fill: var(--c-text);
+  }
+
+  .illustration__brand {
+    fill: var(--c-brand);
+  }
+
+  .illustration__success {
+    fill: var(--c-success);
+  }
+
+  .illustration__reward {
+    fill: var(--c-reward);
+  }
+
+  .lesson-song__status {
+    margin: 0;
+    color: var(--c-text-soft);
+  }
+
+  .lesson-song__actions > .is-absent {
+    display: none;
+  }
+
+  .lesson-song__actions,
+  .lesson-demo__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+  }
+
+  /* A short range would stand tall at the column's width, so its keys stop at a height and centre. */
+  .lesson-step__keys .keyboard__drawing {
+    max-height: calc(2 * var(--s-12));
+  }
+
+  /* A hint, once the learner is stuck: a note in the blue of information. Empty, it takes no room. */
+  .lesson-step__hint,
+  .lesson-quiz__hint {
+    margin: 0;
+    padding: var(--s-3) var(--s-4);
+    border-inline-start: var(--s-1) solid var(--c-info);
+    border-radius: var(--s-1) var(--r-control) var(--r-control) var(--s-1);
+    background: color-mix(in srgb, var(--c-info) 9%, var(--c-surface-1));
+  }
+
+  .lesson-step__hint:empty,
+  .lesson-quiz__hint:empty {
+    display: none;
+  }
+
+  /* A timed step's countdown: a bar that shrinks to nothing, beside the seconds left. */
+  .lesson-timer {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    font-weight: var(--w-bold);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lesson-timer__track {
+    flex: 1;
+    height: var(--s-3);
+    overflow: hidden;
+    border-radius: var(--r-pill);
+    background: var(--c-sunken);
+    box-shadow: inset 0 0 0 1px var(--c-line-strong);
+  }
+
+  .lesson-timer__bar {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--g-brand);
+    transform-origin: left;
+    animation: lesson-timer-run linear forwards;
+  }
+
+  .lesson-timer[data-done] .lesson-timer__left {
+    color: var(--c-mistake);
+  }
+
+  @keyframes lesson-timer-run {
+    from {
+      transform: scaleX(1);
+    }
+    to {
+      transform: scaleX(0);
+    }
+  }
+
+  /* The answers of a quiz and of a listen step: a column of large buttons. */
+  .lesson-quiz__answers {
+    display: grid;
+    gap: var(--s-3);
+  }
+
+  .lesson-quiz__answer {
+    --answer-edge: var(--c-line-strong);
+    --answer-bg: var(--c-surface-2);
+    --answer-mark: var(--c-sunken);
+    --answer-mark-edge: var(--c-line-strong);
+    --answer-mark-ink: var(--c-text);
+
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    min-width: 0;
+    min-height: var(--s-10);
+    padding: var(--s-3) var(--s-5) var(--s-3) var(--s-4);
+    border: 2px solid var(--answer-edge);
+    border-radius: var(--r-card);
+    background: var(--answer-bg);
+    box-shadow: var(--e-rim), var(--e-1);
+    color: var(--c-text);
+    font: inherit;
+    font-size: var(--t-lg);
+    font-weight: var(--w-semibold);
+    line-height: 1.3;
+    text-align: start;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform var(--m-small) var(--ease-spring);
+  }
+
+  /* The tint under the pointer and the press, in the text's own colour. */
+  .lesson-quiz__answer::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    border-radius: inherit;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--m-small) var(--ease-standard);
+  }
+
+  .lesson-quiz__label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* The mark: an empty ring, which a judged answer fills with its check or its cross. */
+  .lesson-quiz__mark {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: var(--s-7);
+    height: var(--s-7);
+    border: 2px solid var(--answer-mark-edge);
+    border-radius: var(--r-pill);
+    background: var(--answer-mark);
+    color: var(--answer-mark-ink);
+  }
+
+  .lesson-quiz__tick,
+  .lesson-quiz__cross {
+    display: grid;
+    grid-area: 1 / 1;
+    opacity: 0;
+    transform: scale(0.4);
+    transition:
+      transform var(--m-medium) var(--ease-spring),
+      opacity var(--m-micro) var(--ease-standard);
+  }
+
+  .lesson-quiz__mark .icon {
+    width: var(--s-5);
+    height: var(--s-5);
+    stroke-width: 3;
+  }
+
+  .lesson-quiz__answer[data-mark="correct"] .lesson-quiz__tick,
+  .lesson-quiz__answer[data-mark="mistake"] .lesson-quiz__cross {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (hover: hover) {
+    .lesson-quiz__answer:hover:not(:disabled, [aria-disabled="true"]) {
+      transform: translateY(var(--motion-lift));
+    }
+
+    .lesson-quiz__answer:hover:not(:disabled, [aria-disabled="true"])::before {
+      opacity: var(--o-hover);
+    }
+  }
+
+  .lesson-quiz__answer:active:not(:disabled, [aria-disabled="true"]) {
+    transform: scale(0.98);
+    transition-duration: var(--m-micro);
+  }
+
+  .lesson-quiz__answer:active:not(:disabled, [aria-disabled="true"])::before {
+    opacity: var(--o-press);
+  }
+
+  .lesson-quiz__answer:focus-visible {
+    outline: 2px solid var(--c-focus);
+    outline-offset: 2px;
+  }
+
+  /* The right answer, pointed out once the learner is stuck: the blue of a hint. */
+  .lesson-quiz__answer[data-hint] {
+    --answer-edge: var(--c-info);
+    --answer-bg: color-mix(in srgb, var(--c-info) 9%, var(--c-surface-2));
+    --answer-mark: color-mix(in srgb, var(--c-info) 30%, var(--c-surface-2));
+    --answer-mark-edge: var(--c-info);
+  }
+
+  .lesson-quiz__answer[data-mark="correct"] {
+    --answer-edge: var(--c-success);
+    --answer-bg: color-mix(in srgb, var(--c-success) 12%, var(--c-surface-2));
+    --answer-mark: var(--c-success);
+    --answer-mark-edge: var(--c-success);
+    --answer-mark-ink: var(--c-success-ink);
+  }
+
+  .lesson-quiz__answer[data-mark="mistake"] {
+    --answer-edge: var(--c-danger);
+    --answer-bg: color-mix(in srgb, var(--c-danger) 8%, var(--c-surface-2));
+    --answer-mark: var(--c-danger);
+    --answer-mark-edge: var(--c-danger);
+    --answer-mark-ink: var(--c-danger-ink);
+
+    box-shadow: none;
+    cursor: default;
+  }
+
+  .lesson-quiz__answer:disabled:not([data-mark]) {
+    opacity: var(--o-disabled);
+    box-shadow: none;
+    cursor: default;
+  }
+
+  /* A read-note step: its one note on a staff, then its letter buttons or its keys. The staff box stays a
+     block, since the staff sizes itself from its parent's width. */
+  .lesson-read-note__count {
+    margin: 0;
+    color: var(--c-text-soft);
+  }
+
+  .lesson-read-note__answers {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--s-3);
+  }
+
+  @media (min-width: 480px) {
+    .lesson-read-note__answers {
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+    }
+  }
+
+  /* A letter button: the letter alone, and the mark on its corner once the letter is judged. */
+  .lesson-read-note__answers .lesson-read-note__answer {
+    justify-content: center;
+    padding: var(--s-2);
+    font-size: var(--t-xl);
+    font-weight: var(--w-heavy);
+    text-align: center;
+  }
+
+  .lesson-read-note__answer .lesson-quiz__mark {
+    position: absolute;
+    inset-block-start: calc(-1 * var(--s-2));
+    inset-inline-end: calc(-1 * var(--s-2));
+    width: var(--s-6);
+    height: var(--s-6);
+    opacity: 0;
+  }
+
+  .lesson-read-note__answer .lesson-quiz__mark .icon {
+    width: var(--s-4);
+    height: var(--s-4);
+  }
+
+  .lesson-read-note__answer:is([data-mark], [data-hint]) .lesson-quiz__mark {
+    opacity: 1;
+  }
+
+  /* A rhythm step: Start above what the round is doing, then a dot per beat above the tap pad. The
+     status keeps a line while empty, and a passed round hides Start in its place, so nothing below
+     moves while the learner taps. */
+  .lesson-rhythm__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--s-3);
+  }
+
+  .lesson-rhythm__status {
+    min-height: 1lh;
+    margin: 0;
+    font-weight: var(--w-semibold);
+  }
+
+  .lesson-rhythm[data-passed] .lesson-rhythm__actions > button {
+    visibility: hidden;
+  }
+
+  .lesson-rhythm__beats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-3);
+    margin: 0;
+    padding: var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-card);
+    background: var(--c-sunken);
+    list-style: none;
+  }
+
+  /* A beat: an empty well, honey on its turn, a green disc when tapped and a red ring when missed. */
+  .lesson-rhythm__beat {
+    width: var(--s-6);
+    height: var(--s-6);
+    border: 2px solid var(--c-line-strong);
+    border-radius: var(--r-pill);
+    background: var(--c-surface-1);
+  }
+
+  .lesson-rhythm__beat[data-kind="count-in"] {
+    width: var(--s-3);
+    height: var(--s-3);
+    border: none;
+    background: var(--c-line-strong);
+  }
+
+  /* A gap parts the count-in from the beats the learner taps. */
+  .lesson-rhythm__beat[data-kind="count-in"] + [data-kind="tap"] {
+    margin-inline-start: var(--s-4);
+  }
+
+  .lesson-rhythm__beat[data-now] {
+    border-color: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    background: var(--c-brand);
+  }
+
+  .lesson-rhythm__beat[data-mark="correct"] {
+    border-color: var(--c-success);
+    background: var(--c-success);
+  }
+
+  .lesson-rhythm__beat[data-mark="mistake"] {
+    border-color: var(--c-mistake);
+    background: var(--c-surface-1);
+  }
+
+  /* Once the hint shows, the current dot flashes on each beat. With reduced motion it only fades. */
+  .lesson-rhythm[data-flash] .lesson-rhythm__beat[data-now] {
+    animation: lesson-rhythm-flash var(--m-small) var(--ease-standard);
+  }
+
+  @keyframes lesson-rhythm-flash {
+    from {
+      transform: scale(1.6);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes lesson-rhythm-fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lesson-rhythm[data-flash] .lesson-rhythm__beat[data-now] {
+      animation-name: lesson-rhythm-fade;
+    }
+  }
+
+  /* A listen step: which pair is asked, beside the button that plays it again. */
+  .lesson-listen__question {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-3);
+  }
+
+  .lesson-listen__counter {
+    margin: 0;
+    color: var(--c-text-soft);
+    font-weight: var(--w-semibold);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .lesson-recap__heading {
+    margin: 0;
+    font-size: var(--t-2xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  .lesson-recap__points {
+    display: grid;
+    gap: var(--s-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .lesson-recap__point {
+    display: flex;
+    gap: var(--s-3);
+    align-items: start;
+    padding: var(--s-3) var(--s-4);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-control);
+    background: var(--c-sunken);
+  }
+
+  /* The check keeps its size beside a point that wraps. */
+  .lesson-recap__check {
+    display: inline-flex;
+    flex-shrink: 0;
+    color: var(--c-success);
+  }
+
+  /*
+   * The end screen and the lesson that is missing: one card, centred in the lesson's free height. The
+   * end's card holds the lesson's name, its stars over a honey glow, the XP, whether the run was saved,
+   * and where to go next.
+   */
+  .lesson-end,
+  .lesson__missing {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--s-5);
+  }
+
+  .lesson__missing {
+    align-items: flex-start;
+  }
+
+  .lesson-end__card {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-5);
+    overflow: hidden;
+    padding: var(--s-8) var(--s-6);
+    border: 1px solid var(--c-line);
+    border-radius: var(--r-panel);
+    background: var(--c-surface-1);
+    box-shadow: var(--e-rim), var(--e-2);
+    text-align: center;
+  }
+
+  /* The honey glow behind the stars. It only decorates, so it sits on a layer of its own. */
+  .lesson-end__card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: -1;
+    height: calc(var(--s-12) * 2.5);
+    background: radial-gradient(60% 100% at 50% 0%, color-mix(in oklab, var(--c-brand) 26%, transparent), transparent 100%);
+    pointer-events: none;
+  }
+
+  .lesson-end__title {
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+    font-weight: var(--w-bold);
+    letter-spacing: var(--ls-caps);
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+
+  .lesson-end__heading {
+    margin: calc(-1 * var(--s-3)) 0 0;
+    font-size: var(--t-4xl);
+    font-weight: var(--w-heavy);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-heading);
+  }
+
+  /* The three stars, the middle one raised and larger. Each shrinks with a narrow card. */
+  .lesson-end__stars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, var(--s-11)));
+    align-items: end;
+    justify-content: center;
+    gap: var(--s-2);
+    width: 100%;
+    padding-block-start: var(--s-4);
+  }
+
+  .lesson-end__star {
+    display: block;
+    color: var(--c-line-strong);
+  }
+
+  .lesson-end__star svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: var(--c-sunken);
+    stroke-width: 1;
+  }
+
+  .lesson-end__star:nth-child(2) svg {
+    transform: translateY(calc(-1 * var(--s-4))) scale(1.15);
+  }
+
+  .lesson-end__star[data-earned="true"] {
+    color: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+  }
+
+  .lesson-end__star[data-earned="true"] svg {
+    fill: var(--c-reward);
+    filter: drop-shadow(0 var(--s-1) var(--s-2) color-mix(in oklab, var(--c-brand) 45%, transparent));
+  }
+
+  /* The XP the run earned above the level bar. Empty until the save ends, then it holds both. */
+  .lesson-end__rewards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-4);
+    width: 100%;
+    max-width: calc(var(--s-12) * 3);
+    font-size: var(--t-xl);
+    font-weight: var(--w-bold);
+  }
+
+  .lesson-end__rewards:empty {
+    display: none;
+  }
+
+  /* The XP in a pill of honey tint, mixed in sRGB behind its text. */
+  .lesson-end__rewards > .xp-counter {
+    padding: var(--s-2) var(--s-5) var(--s-2) var(--s-4);
+    border: 1px solid color-mix(in srgb, var(--c-brand) 55%, var(--c-surface-1));
+    border-radius: var(--r-pill);
+    background: color-mix(in srgb, var(--c-brand) 18%, var(--c-surface-1));
+  }
+
+  .lesson-end__rewards > .progress {
+    width: 100%;
+    font-size: var(--t-md);
+    font-weight: var(--w-regular);
+    text-align: start;
+  }
+
+  .lesson-end__skip {
+    margin: 0;
+    font-weight: var(--w-semibold);
+  }
+
+  .lesson-end__save {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--s-3);
+  }
+
+  .lesson-end__status {
+    margin: 0;
+    color: var(--c-text-soft);
+    font-size: var(--t-sm);
+  }
+
+  .lesson-end__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--s-3);
+  }
+
+  /* On a phone the two actions stack and span the card, the primary one on top. */
+  @media (max-width: 479px) {
+    .lesson-end__card {
+      padding: var(--s-7) var(--s-5);
+    }
+
+    .lesson-end__actions {
+      flex-direction: column-reverse;
+      align-self: stretch;
+    }
+  }
+
+  /* Where motion is allowed, a step's card and the end's card rise in, and the band fades. */
+  @media (prefers-reduced-motion: no-preference) {
+    .lesson-step,
+    .lesson-end__card {
+      animation: lesson-rise var(--m-medium) var(--ease-emphasis) both;
+    }
+
+    .lesson__band {
+      transition: opacity var(--m-small) var(--ease-standard);
+    }
+
+    .lesson__band-mark .icon {
+      animation: lesson-pop var(--m-medium) var(--ease-spring) both;
+    }
+  }
+
+  @keyframes lesson-rise {
+    from {
+      opacity: 0;
+      transform: translateY(var(--motion-rise));
+    }
+  }
+
+  @keyframes lesson-pop {
+    from {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lesson-quiz__answer,
+    .lesson-quiz__tick,
+    .lesson-quiz__cross {
+      transition: none;
+    }
+  }
+}
