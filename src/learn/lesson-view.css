@@ -597,7 +597,9 @@
     visibility: hidden;
   }
 
+  /* The row isolates its stacking, so a held beat's bar paints above the well and below the dots. */
   .lesson-rhythm__beats {
+    isolation: isolate;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -626,8 +628,8 @@
     background: var(--c-line-strong);
   }
 
-  /* A gap parts the count-in from the beats the learner taps. */
-  .lesson-rhythm__beat[data-kind="count-in"] + [data-kind="tap"] {
+  /* A gap parts the count-in from the round's beats, whatever kind the first of them is. */
+  .lesson-rhythm__beat[data-kind="count-in"] + :not([data-kind="count-in"]) {
     margin-inline-start: var(--s-4);
   }
 
@@ -644,6 +646,52 @@
   .lesson-rhythm__beat[data-mark="mistake"] {
     border-color: var(--c-mistake);
     background: var(--c-surface-1);
+  }
+
+  /* A rest's beat is a hollow dashed ring, dimmed, so its shape says "stay silent" without colour.
+     On its turn it lights a honey ring and stays hollow. A broken rest shows the red ring at full
+     strength. */
+  .lesson-rhythm__beat[data-kind="rest"] {
+    border-style: dashed;
+    background: none;
+    opacity: 0.6;
+  }
+
+  .lesson-rhythm__beat[data-kind="rest"]:is([data-now], [data-mark]) {
+    background: none;
+    opacity: 1;
+  }
+
+  /* A held beat is a bar from the centre of the dot before it to its own rounded end. It paints below
+     that dot, so a held note reads as one long capsule. The box keeps its size, so nothing moves. On
+     its turn the bar lights in honey. */
+  .lesson-rhythm__beat[data-kind="hold"] {
+    position: relative;
+    border-color: transparent;
+    background: none;
+  }
+
+  .lesson-rhythm__beat[data-kind="hold"]::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset-block: -2px;
+    inset-inline: calc(-2px - var(--s-3) - var(--s-6) / 2) -2px;
+    border: 2px solid var(--c-line-strong);
+    border-inline-start: none;
+    border-start-end-radius: var(--r-pill);
+    border-end-end-radius: var(--r-pill);
+    background: var(--c-surface-1);
+  }
+
+  .lesson-rhythm__beat[data-kind="hold"][data-now] {
+    border-color: transparent;
+    background: none;
+  }
+
+  .lesson-rhythm__beat[data-kind="hold"][data-now]::before {
+    border-color: color-mix(in oklab, var(--c-brand) 78%, var(--c-brand-ink));
+    background: var(--c-brand);
   }
 
   /* Once the hint shows, the current dot flashes on each beat. With reduced motion it only fades. */
@@ -675,6 +723,15 @@
     .lesson-rhythm[data-flash] .lesson-rhythm__beat[data-now] {
       animation-name: lesson-rhythm-fade;
     }
+  }
+
+  /* A held beat's bar only fades, on itself. Moving the dot would lift the bar above the dot before. */
+  .lesson-rhythm[data-flash] .lesson-rhythm__beat[data-kind="hold"][data-now] {
+    animation: none;
+  }
+
+  .lesson-rhythm[data-flash] .lesson-rhythm__beat[data-kind="hold"][data-now]::before {
+    animation: lesson-rhythm-fade var(--m-small) var(--ease-standard);
   }
 
   /* A listen step: which pair is asked, beside the button that plays it again. */
