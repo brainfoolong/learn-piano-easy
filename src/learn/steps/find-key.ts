@@ -8,6 +8,8 @@
  * - **A wrong key never fails.** It is marked a mistake until the next press, and the band says try
  *   again. After `HINT_AFTER` mistakes the asked key is marked as the one to play.
  * - **The right key passes,** with `anyOctave` letting the same note in any octave count.
+ * - **The computer keyboard shifts to reach the asked key,** and its reach is marked under the keys. A
+ *   step with `anyOctave` fits any octave, so it never shifts.
  * - **A timed step counts down its `seconds`** with a bar and a number. When they run out, the time
  *   counts one mistake and the asked key is marked, but the step keeps listening, since a step never
  *   fails. A boss's key hunt is made of such steps, so its stars reward speed.
@@ -64,6 +66,7 @@ export const findKeyStep: StepView<FindKeyStep> = (element, step, host) => {
     label: t.piano,
     range: findKeyRange(step.key),
     markNames: t.marks,
+    notes: step.anyOctave ? [] : [step.key],
     onNote: (pitch) => {
       if (passed) return;
       if (findsKey(step, pitch)) {

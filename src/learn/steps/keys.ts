@@ -7,6 +7,9 @@
  *   notes, so each note sounds once, whatever played it.
  * - **A key sinks while any source holds it,** as the bus keeps it.
  * - **The step marks the keys** through `marks`, the keyboard's own signal.
+ * - **A step that asks for notes passes them as `notes`.** The host then shifts the computer keyboard
+ *   by octaves to reach them, and the keyboard marks the keys it reaches. The mark shows the whole
+ *   span the bound keys play, never which key is asked. A step that takes any key passes none.
  */
 import type { InputEvent } from "../../input/input-bus";
 import { KEY_VELOCITY } from "../../input/keyboard";
@@ -23,6 +26,11 @@ export interface ListeningKeysOptions {
   names?: KeyNames;
   /** What a screen reader calls each mark. */
   markNames: Readonly<Record<Mark, string>>;
+  /**
+   * The notes the step asks for, which the computer keyboard shifts by octaves to reach. The keys it
+   * reaches are then marked. Absent for a step that takes any key, which neither shifts nor marks.
+   */
+  notes?: readonly number[];
   /** Called with each note the learner starts, from any input. */
   onNote(pitch: number, event: Extract<InputEvent, { type: "noteOn" }>): void;
 }
@@ -47,6 +55,7 @@ export function listeningKeys(host: StepHost, options: ListeningKeysOptions): Li
     marks,
     markNames: options.markNames,
     pressed,
+    ...(options.notes === undefined ? {} : { reach: host.reachKeys(options.notes) }),
     onPress: (pitch) => bus.noteOn(pitch, KEY_VELOCITY, "pointer"),
     onRelease: (pitch) => bus.noteOff(pitch, "pointer"),
   });

@@ -33,6 +33,9 @@
  * - **The focus moves to the step host** when a step mounts, so a screen reader starts at the new step.
  * - **The learner's notes sound while the lesson shows,** from every input on the bus, and the computer
  *   keyboard plays. The player's shell stays silent then, so a note never sounds twice.
+ * - **The computer keyboard shifts by octaves for the step that shows.** A step names its notes through
+ *   `reachKeys`, and `octaveShift` picks the shift. Each new step starts unshifted. The reach is marked
+ *   under the step's keys while no MIDI keyboard is on, and follows the MIDI state as it changes.
  * - **A song step moves to the player and back** through `songHandoff` of `src/learn/song-handoff.ts`.
  *   The lesson keeps its step while the song is out, and moves back once the player ends the request.
  *   Shown again by Back or a link meanwhile, it ends the request without a take. The way back is a new
@@ -40,7 +43,8 @@
  */
 import "./lesson-view.css";
 import { messagesOf, type Locale } from "../i18n/locale";
-import { attachKeyboard } from "../input/keyboard";
+import { attachKeyboard, keyReach, octaveShift } from "../input/keyboard";
+import type { KeyRange } from "../render/key-layout";
 import { inputService } from "../site/services";
 import { lessonRoute, pageOf } from "../site/routes";
 import { hrefOf } from "../site/site-bar";
@@ -54,7 +58,7 @@ import { badgeMedal } from "../ui/components/badge-medal";
 import { progressBar } from "../ui/components/progress";
 import { xpCounter } from "../ui/components/xp-counter";
 import { animate, durationMs } from "../ui/motion";
-import { signal } from "../ui/signal";
+import { type Signal, signal } from "../ui/signal";
 import { formatNumber } from "../i18n/format";
 import { worldBadgeText } from "../i18n/messages/learn-badges.en";
 import { findLesson } from "./course";
@@ -147,8 +151,25 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
     count.textContent = t.stepOf(index + 1, steps.length);
   };
 
+  /** The semitones the computer keyboard's notes move by, for the step that shows. */
+  let keyShift = 0;
+  /** The notes the step that shows asks for, and the keys the computer keyboard reaches for them. */
+  let asked: { notes: readonly number[]; reach: Signal<KeyRange | undefined> } | undefined;
+  /** Shifts the computer keyboard to reach the asked notes, and shows its reach while no MIDI keyboard is on. */
+  const fitKeys = () => {
+    const bound = keyReach(context.settings.get("keyBindings"));
+    keyShift = asked === undefined || bound === undefined ? 0 : octaveShift(asked.notes, bound);
+    const midi = inputService(context.settings).midi.state === "on";
+    asked?.reach.set(bound === undefined || midi ? undefined : { first: bound.first + keyShift, last: bound.last + keyShift });
+  };
+  const unshift = () => {
+    asked = undefined;
+    keyShift = 0;
+  };
+
   const mountStep = () => {
     mounted?.dispose();
+    unshift();
     stage.replaceChildren();
     passed = undefined;
     setBand("idle", "");
@@ -160,6 +181,11 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
       texts,
       input: inputService(context.settings).bus,
       sound,
+      reachKeys: (notes) => {
+        asked = { notes, reach: signal<KeyRange | undefined>(undefined) };
+        fitKeys();
+        return asked.reach;
+      },
       tryAgain: (message) => {
         if (passed === undefined) setBand("try-again", message);
       },
@@ -213,12 +239,14 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
   const stop = () => {
     mounted?.dispose();
     mounted = undefined;
+    unshift();
     if (phase === "running" || phase === "ended") phase = "idle";
   };
 
   const end = () => {
     mounted?.dispose();
     mounted = undefined;
+    unshift();
     phase = "ended";
     const stars = starsOf(steps, results);
     const key = lessonKey(at.world, at.lesson);
@@ -386,12 +414,13 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
     if (await mayLeave()) context.go(learnPath);
   };
 
-  /** Plays the learner's notes and binds the computer keyboard while the lesson shows. */
+  /** Plays the learner's notes and binds the computer keyboard, shifted for the step, while the lesson shows. */
   let stopHearing: (() => void) | undefined;
   const hear = () => {
-    const bus = inputService(context.settings).bus;
+    const { bus, midi } = inputService(context.settings);
     const stops = [
-      attachKeyboard(bus, context.settings),
+      attachKeyboard(bus, context.settings, window, undefined, () => keyShift),
+      midi.subscribe(fitKeys),
       bus.subscribe((event) => {
         if (event.type === "noteOn") sound.press(event.pitch, event.velocity);
         else if (event.type === "noteOff") sound.release(event.pitch);

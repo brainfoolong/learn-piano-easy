@@ -1,7 +1,7 @@
 import { FULL_RANGE, isBlack, layoutKeys } from "../../render/key-layout";
 import { noteName } from "../../theory/note-names";
 import { expect, test } from "../../testing";
-import { BLACK_LENGTH, describeMarks, FINGER_BAND, keyboardGeometry, type Mark, WHITE_LENGTH, WHITE_WIDTH } from "./keyboard";
+import { BLACK_LENGTH, describeMarks, FINGER_BAND, keyboardGeometry, type Mark, REACH_BAND, reachSpan, WHITE_LENGTH, WHITE_WIDTH } from "./keyboard";
 
 test("keys_sit_where_the_3d_piano_puts_them", () => {
   for (const range of [FULL_RANGE, { first: 48, last: 72 }, { first: 61, last: 66 }, { first: 60, last: 60 }]) {
@@ -13,6 +13,7 @@ test("keys_sit_where_the_3d_piano_puts_them", () => {
       expect(geometry.width).toBe(layout.width * WHITE_WIDTH);
       expect(geometry.top).toBe(fingers ? FINGER_BAND : 0);
       expect(geometry.height).toBe(geometry.top + WHITE_LENGTH);
+      expect(keyboardGeometry(range, fingers, true).height).toBe(geometry.height + REACH_BAND);
       expect(geometry.keys.length).toBe(layout.keys.length);
 
       // Each key's place and width scale the 3D piano's by one white key's width.
@@ -30,6 +31,16 @@ test("keys_sit_where_the_3d_piano_puts_them", () => {
       if (firstBlack >= 0) expect(geometry.keys.slice(firstBlack).every((box) => box.black)).toBe(true);
     }
   }
+});
+
+test("the_reach_bar_spans_the_shown_keys_within_reach", () => {
+  const geometry = keyboardGeometry({ first: 48, last: 72 });
+  const box = (pitch: number) => geometry.keys.find((key) => key.pitch === pitch)!;
+  // From the left edge of C4 to the right edge of C5.
+  expect(reachSpan(geometry, { first: 60, last: 72 })).toEqual({ x: box(60).x, width: box(72).x + box(72).width - box(60).x });
+  // A reach wider than the keys shown stops at their edges, and one beside them shows nothing.
+  expect(reachSpan(geometry, { first: 36, last: 96 })).toEqual({ x: 0, width: geometry.width });
+  expect(reachSpan(geometry, { first: 84, last: 96 })).toBeUndefined();
 });
 
 test("every_highlighted_key_is_named_for_a_screen_reader", () => {

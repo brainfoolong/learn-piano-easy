@@ -11,6 +11,8 @@
  *   records the result. A step that explains passes as it mounts, so its Continue shows at once.
  * - **A mistake never fails a step.** `tryAgain` says so in the band, and the step keeps listening. The
  *   mistakes it counted travel in its result, and the stars come from them.
+ * - **A step that asks for keys says which notes,** through `reachKeys`. The view then shifts the
+ *   computer keyboard by octaves to reach them, and every step starts unshifted.
  * - **A step's view only shows what its judge decided.** A step's judge is a pure function, which its
  *   unit tests call without a browser.
  * - **A step's solution is in `src/learn/steps/solution.ts`,** pure, never in the step's view module.
@@ -18,6 +20,8 @@
  */
 import type { Locale } from "../../i18n/locale";
 import type { InputBus } from "../../input/input-bus";
+import type { KeyRange } from "../../render/key-layout";
+import type { Signal } from "../../ui/signal";
 import type { LessonSound } from "../lesson-sound";
 import type { Step, StepTexts } from "../model";
 import type { SongRequest, SongTake } from "../song-handoff";
@@ -39,6 +43,11 @@ export interface StepHost {
   input: InputBus;
   /** The lesson's sound, which plays a phrase or a key. */
   sound: LessonSound;
+  /**
+   * Shifts the computer keyboard by whole octaves so it reaches the most of `notes`, until the next step
+   * mounts. Returns the keys it reaches, undefined while a MIDI keyboard is on.
+   */
+  reachKeys(notes: readonly number[]): Signal<KeyRange | undefined>;
   /** Says the last answer was wrong, with `message`, and keeps the step open. */
   tryAgain(message: string): void;
   /** Passes the step with `result`. The band shows Continue. Later calls do nothing. */

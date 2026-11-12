@@ -5,6 +5,7 @@
  *   note in the step's clef, with no key signature.
  * - **The learner names the note** with one of seven letter buttons of `src/learn/steps/answer.ts`,
  *   each carrying its letter in `data-answer`. Or the learner **plays it** on keys around every note.
+ *   The computer keyboard then shifts to reach the step's notes, and its reach is marked under the keys.
  * - **A wrong answer never fails.** It is marked, the band says try again, and the learner answers the
  *   same question again. After `HINT_AFTER` mistakes on one question, the right answer is marked.
  * - **The step runs in rounds,** as `judge.ts` says. A question counts right only on its first answer,
@@ -166,6 +167,7 @@ export const readNoteStep: StepView<ReadNoteStep> = (element, step, host) => {
       range: readNoteRange(step.notes),
       names: "c",
       markNames: t.marks,
+      notes: step.notes,
       onNote: (pitch) => judge(pitch, playsNote(note(), pitch)),
     });
     // A press keeps only the hint's mark, and a new question keeps only the last right key's.

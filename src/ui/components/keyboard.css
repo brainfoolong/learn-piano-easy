@@ -4,7 +4,8 @@
  * White keys are `--c-surface-2` and black keys are dark in both themes, each with a firm edge. A mark
  * sets `--key-mark`, its fill, and `--key-mark-edge`, the same hue where it draws a line. The next key
  * is honey, a right one green and a wrong one red. A white key takes a tint of the fill and a black key
- * all of it. A held key sinks by a `transform` and mixes towards `--c-text`.
+ * all of it. A held key sinks by a `transform` and mixes towards `--c-text`. The reach bar is
+ * a faded `--c-text-soft`, quiet beside every mark's colour.
  *
  * Sizes are user units of the drawing, so they scale with it.
  */
@@ -98,8 +99,13 @@
     fill: var(--c-text);
   }
 
-  .keyboard__finger[hidden] {
+  .keyboard__finger[hidden],
+  .keyboard__reach[hidden] {
     display: none;
+  }
+
+  .keyboard__reach {
+    fill: color-mix(in oklab, var(--c-text-soft) 55%, transparent);
   }
 
   .keyboard__finger circle {

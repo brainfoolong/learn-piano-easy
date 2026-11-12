@@ -13,6 +13,9 @@
  *   A name is written by `nameOf`, and the drawing is `translate="no"`, since a letter is no message.
  * - **Fingers:** a band above the keys shows each finger number in a ring of its key's mark colour.
  *   The band is there whenever `fingers` is given, so a change of fingers moves nothing.
+ * - **Reach:** a thin bar in a band under the keys spans the keys the computer keyboard plays. It marks
+ *   a span, never a key, so it gives no answer away. The band is there whenever `reach` is given, so the
+ *   bar coming and going moves nothing.
  * - **Presses:** a held key sinks and darkens. A key is held when the `pressed` signal holds it, or
  *   while a pointer holds it down. The motion is a `transform`, and it jumps with reduced motion.
  * - **Pointer and touch:** with `onPress` given, each pointer presses the key under it, several at
@@ -44,6 +47,8 @@ export const WHITE_LENGTH = 112;
 export const BLACK_LENGTH = 70;
 /** The band of finger numbers above the keys, in user units. */
 export const FINGER_BAND = 24;
+/** The band under the keys that marks the computer keyboard's reach, in user units. */
+export const REACH_BAND = 10;
 
 export interface KeyboardOptions {
   /** The accessible name of the whole keyboard. */
@@ -64,6 +69,8 @@ export interface KeyboardOptions {
   nameOf?: (pitch: number) => string;
   /** The keys held from outside, such as a MIDI keyboard's. */
   pressed?: Signal<ReadonlySet<number>>;
+  /** The keys the computer keyboard reaches, marked by a bar under them. No bar while it is undefined. */
+  reach?: Signal<KeyRange | undefined>;
   /** Called when a pointer presses a key. Without it, the keyboard only shows. */
   onPress?: (pitch: number) => void;
   /** Called when a pointer lets a key go. */
@@ -90,8 +97,8 @@ export interface KeyboardGeometry {
   keys: KeyBox[];
 }
 
-/** The boxes of the keys of `range`, as `layoutKeys` places them, with room for fingers if asked. */
-export function keyboardGeometry(range: KeyRange = FULL_RANGE, fingers = false): KeyboardGeometry {
+/** The boxes of the keys of `range`, as `layoutKeys` places them, with room for fingers and the reach if asked. */
+export function keyboardGeometry(range: KeyRange = FULL_RANGE, fingers = false, reach = false): KeyboardGeometry {
   const layout = layoutKeys(range);
   const top = fingers ? FINGER_BAND : 0;
   const box = (key: (typeof layout.keys)[number]): KeyBox => ({
@@ -104,7 +111,15 @@ export function keyboardGeometry(range: KeyRange = FULL_RANGE, fingers = false):
   });
   // White keys come first, so each black key draws over its neighbours and takes their pointer.
   const keys = [...layout.keys.filter((k) => !k.black), ...layout.keys.filter((k) => k.black)].map(box);
-  return { range: layout.range, width: layout.width * WHITE_WIDTH, height: top + WHITE_LENGTH, top, keys };
+  return { range: layout.range, width: layout.width * WHITE_WIDTH, height: top + WHITE_LENGTH + (reach ? REACH_BAND : 0), top, keys };
+}
+
+/** The left edge and width of the shown keys within `reach`, in user units, or undefined when none is shown. */
+export function reachSpan(geometry: KeyboardGeometry, reach: KeyRange): { x: number; width: number } | undefined {
+  const inside = geometry.keys.filter((box) => box.pitch >= reach.first && box.pitch <= reach.last);
+  if (inside.length === 0) return undefined;
+  const x = Math.min(...inside.map((box) => box.x));
+  return { x, width: Math.max(...inside.map((box) => box.x + box.width)) - x };
 }
 
 /** The text a screen reader hears for `marks`: each marked key by name, with its mark and finger. */
@@ -161,7 +176,7 @@ function named(pitch: number, black: boolean, names: KeyNames): boolean {
 /** A keyboard of `options.range`, filling its parent's width. */
 export function keyboard(options: KeyboardOptions): HTMLElement {
   const hasFingers = options.fingers !== undefined;
-  const geometry = keyboardGeometry(options.range, hasFingers);
+  const geometry = keyboardGeometry(options.range, hasFingers, options.reach !== undefined);
   const names = options.names ?? "none";
   const nameOf = options.nameOf ?? ((pitch: number) => noteName(pitch));
   const plainName = options.nameOf ?? ((pitch: number) => noteName(pitch, { octave: pitch % 12 === 0 }));
@@ -193,6 +208,20 @@ export function keyboard(options: KeyboardOptions): HTMLElement {
       svg.append(ring);
       rings.set(box.pitch, { ring, text });
     }
+  }
+
+  if (options.reach) {
+    const bar = svgEl("rect", { class: "keyboard__reach", y: geometry.top + WHITE_LENGTH + 4, height: REACH_BAND - 6, rx: 2, hidden: "" });
+    svg.append(bar);
+    follow(options.reach, undefined, (reach) => {
+      const span = reach === undefined ? undefined : reachSpan(geometry, reach);
+      bar.toggleAttribute("hidden", reach === undefined || span === undefined);
+      if (reach === undefined || span === undefined) return;
+      bar.setAttribute("x", String(span.x + 2));
+      bar.setAttribute("width", String(Math.max(0, span.width - 4)));
+      bar.setAttribute("data-first", String(reach.first));
+      bar.setAttribute("data-last", String(reach.last));
+    });
   }
 
   const live = el("p", { class: "keyboard__live", attrs: { "aria-live": "polite" } });

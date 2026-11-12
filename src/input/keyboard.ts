@@ -17,9 +17,15 @@
  *   a key typed into a text field or a dialog, and a held key's repeats play nothing.
  * - Every note plays at velocity `KEY_VELOCITY`, because a key has no force to read.
  * - The window losing focus lets every key go, because its key-up never arrives.
+ * - A caller may shift every key by whole octaves, so a lesson step's notes fall within reach.
+ *   `octaveShift` picks the shift that leaves the fewest notes out, and no shift when all fit. The
+ *   learner then reads which keys play from the screen, not from the key caps. The player, the embed
+ *   and the setup never shift.
+ * - A held key ends the note it started, whatever the shift or the bindings are by its key-up.
  * - The pure parts read only a key event's fields, so their tests run without a browser.
  */
 import { takesKey, type KeyPress } from "../play/hotkeys";
+import type { KeyRange } from "../render/key-layout";
 import type { SettingsStore } from "../settings/store";
 import type { InputBus } from "./input-bus";
 
@@ -84,6 +90,36 @@ export function rebindKey(text: string, pitch: number, code: string): string {
   return Object.keys(changes).length === 0 ? "" : JSON.stringify(changes);
 }
 
+/** The lowest and highest notes the bound keys play under the changes in `text`, or undefined when no key is bound. */
+export function keyReach(text: string): KeyRange | undefined {
+  const pitches = [...keysOf(text).keys()];
+  return pitches.length === 0 ? undefined : { first: Math.min(...pitches), last: Math.max(...pitches) };
+}
+
+/** The farthest a shift moves the keys, in octaves either way. From the default keys it reaches both ends of the piano. */
+const MOST_OCTAVES = 4;
+
+/**
+ * The whole octaves to shift the keys of `reach` by, in semitones, so the fewest of `notes` fall outside
+ * them. A tie goes to the smallest shift, so every note already in reach shifts nothing.
+ */
+export function octaveShift(notes: readonly number[], reach: KeyRange): number {
+  const outside = (shift: number) => notes.filter((pitch) => pitch < reach.first + shift || pitch > reach.last + shift).length;
+  let best = 0;
+  let fewest = outside(0);
+  for (let octaves = 1; octaves <= MOST_OCTAVES; octaves++) {
+    for (const shift of [12 * octaves, -12 * octaves]) {
+      if (reach.first + shift < 0 || reach.last + shift > 127) continue;
+      const count = outside(shift);
+      if (count < fewest) {
+        best = shift;
+        fewest = count;
+      }
+    }
+  }
+  return best;
+}
+
 /** Whether `press` may play a note: no Ctrl, Alt or Meta held, and not typed into a text field. */
 export function playsNote(press: KeyPress): boolean {
   return !press.ctrlKey && !press.altKey && !press.metaKey && !takesKey(press.target, press.code);
@@ -92,11 +128,18 @@ export function playsNote(press: KeyPress): boolean {
 /**
  * Plays the bound keys of `settings` on `bus` from `target`'s key events. Returns what stops it.
  * A key pressed inside a dialog plays nothing, unless the dialog is `playsIn`, one that listens for notes.
+ * Each key plays its note moved by `shiftOf()` semitones, read as the key goes down.
  */
-export function attachKeyboard(bus: InputBus, settings: Pick<SettingsStore, "get">, target: Window = window, playsIn?: Element): () => void {
+export function attachKeyboard(
+  bus: InputBus,
+  settings: Pick<SettingsStore, "get">,
+  target: Window = window,
+  playsIn?: Element,
+  shiftOf: () => number = () => 0,
+): () => void {
   let text: string | undefined;
   let notes = new Map<string, number>();
-  /** The note each held key plays, by code, so a rebinding while held still ends the right note. */
+  /** The note each held key plays, by code, so a rebinding or a shift while held still ends the right note. */
   const held = new Map<string, number>();
 
   const onDown = (event: KeyboardEvent) => {
@@ -106,8 +149,9 @@ export function attachKeyboard(bus: InputBus, settings: Pick<SettingsStore, "get
       text = now;
       notes = notesOf(now);
     }
-    const pitch = notes.get(event.code);
-    if (pitch === undefined) return;
+    const bound = notes.get(event.code);
+    if (bound === undefined) return;
+    const pitch = bound + shiftOf();
     event.preventDefault();
     if (event.repeat || held.has(event.code)) return;
     held.set(event.code, pitch);
