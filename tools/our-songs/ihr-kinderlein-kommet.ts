@@ -271,14 +271,14 @@ export const ihrKinderleinKommet: OurSong = {
       skills: ["stride", "arpeggios", "sixteenth-notes"],
       practice: [
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
-        { text: "Play bars 2 to 9 with the right hand alone, and keep the quick turns light.", hands: "right", speed: 0.5, loop: [2, 9], wait: true },
+        { text: "Play bars 2 to 9 with the right hand alone, and keep the quick groups of notes light.", hands: "right", speed: 0.5, loop: [2, 9], wait: true },
         { text: "Play the arpeggios of the second time in the left hand alone.", hands: "left", speed: 0.5, loop: [18, 21], wait: false },
         { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 17, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },
-        { fromBar: 5, toBar: 5, kind: "sound", text: "The quick turn after the long E is a little skip. Play it softer than the tune." },
+        { fromBar: 5, toBar: 5, kind: "sound", text: "The quick group of notes after the long E is a little skip. Play it softer than the tune." },
         { fromBar: 18, toBar: 33, kind: "fingering", text: "Keep the thumb and little finger an octave apart, and let the wrist bounce." },
       ],
       tricky: {
@@ -356,14 +356,14 @@ export const ihrKinderleinKommet: OurSong = {
       legendary: {
         practice: [
           "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
-          "Spiel die Takte 2 bis 9 nur mit der rechten Hand, und spiel die schnellen Doppelschläge leicht.",
+          "Spiel die Takte 2 bis 9 nur mit der rechten Hand, und spiel die schnellen Notengruppen leicht.",
           "Spiel die Arpeggien des zweiten Durchgangs nur mit der linken Hand.",
           "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
           "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
         ],
         tips: [
           "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
-          "Der schnelle Doppelschlag nach dem langen E ist ein kleiner Hüpfer. Spiel ihn leiser als die Melodie.",
+          "Die schnelle Notengruppe nach dem langen E ist ein kleiner Hüpfer. Spiel sie leiser als die Melodie.",
           "Halt Daumen und kleinen Finger eine Oktave auseinander, und lass das Handgelenk federn.",
         ],
         tricky: {

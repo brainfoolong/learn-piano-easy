@@ -249,7 +249,7 @@ export const theEntertainer: OurSong = {
       tips: [
         { fromBar: 2, toBar: 8, kind: "sound", text: "Press the pedal with each bass note and lift it for the chord, so the chord stays crisp." },
         { fromBar: 13, toBar: 13, kind: "sound", text: "The bass slides down one key, from E to E flat. Let it be heard." },
-        { fromBar: 26, toBar: 31, kind: "rhythm", text: "The last phrase repeats one little turn three times. Count it so you know which one you are on." },
+        { fromBar: 26, toBar: 31, kind: "rhythm", text: "The last phrase repeats one short group of notes three times. Count it so you know which one you are on." },
       ],
       tricky: {
         4: "The left hand leaps from low F up to the chord, while the right hand holds A and C.",
@@ -350,7 +350,7 @@ export const theEntertainer: OurSong = {
         tips: [
           "Drück das Pedal mit jedem Basston, und heb es zum Akkord an, damit der Akkord knackig bleibt.",
           "Der Bass gleitet eine Taste hinab, vom E zum Es. Lass ihn gut hörbar sein.",
-          "Die letzte Phrase wiederholt eine kleine Wendung dreimal. Zähl mit, damit du weißt, bei welcher du bist.",
+          "Die letzte Phrase wiederholt eine kurze Notengruppe dreimal. Zähl mit, damit du weißt, bei welcher du bist.",
         ],
         tricky: {
           4: "Die linke Hand springt vom tiefen F hinauf zum Akkord, während die rechte Hand A und C hält.",

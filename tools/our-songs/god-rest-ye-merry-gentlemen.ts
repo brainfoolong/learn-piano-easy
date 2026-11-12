@@ -252,18 +252,18 @@ export const godRestYeMerryGentlemen: OurSong = {
       skills: ["stride", "sixteenth-notes", "pedal"],
       practice: [
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [2, 5], wait: false },
-        { text: "Play the right hand alone on bars 4 to 6, and keep the quick turn light.", hands: "right", speed: 0.5, loop: [4, 6], wait: true },
+        { text: "Play the right hand alone on bars 4 to 6, and keep the turn light.", hands: "right", speed: 0.5, loop: [4, 6], wait: true },
         { text: "Join the hands on the first nine bars at half speed.", hands: "both", speed: 0.5, loop: [1, 9], wait: true },
         { text: "Play the whole song with both hands at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 2, toBar: 19, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },
-        { fromBar: 5, toBar: 5, kind: "sound", text: "The quick turn around E is a decoration. Play it softer than the tune." },
+        { fromBar: 5, toBar: 5, kind: "sound", text: "The turn around E is a decoration. Play it softer than the tune." },
         { fromBar: 19, toBar: 20, kind: "sound", text: "Lift the hand after the B, then land on the last chord with both hands together." },
       ],
       tricky: {
-        9: "The turn starts on the high G. Fingers 5, 4, 3 and the thumb run down, then finger 2 takes E.",
+        9: "A quick run starts on the high G. Fingers 5, 4, 3 and the thumb run down, then finger 2 takes E.",
         15: "Change to the little finger on the repeated E, and walk down one finger per key. The left hand jumps to the low E.",
         19: "Finger 2 crosses over the thumb for B. Play it short, and move the hand down for the last chord.",
       },
@@ -338,18 +338,18 @@ export const godRestYeMerryGentlemen: OurSong = {
       legendary: {
         practice: [
           "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
-          "Spiel die Takte 4 bis 6 nur mit der rechten Hand, und halt den schnellen Doppelschlag leicht.",
+          "Spiel die Takte 4 bis 6 nur mit der rechten Hand, und halt den Doppelschlag leicht.",
           "Spiel die ersten neun Takte mit beiden Händen zusammen, im halben Tempo.",
           "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
           "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
         ],
         tips: [
           "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
-          "Der schnelle Doppelschlag um das E ist eine Verzierung. Spiel ihn leiser als die Melodie.",
+          "Der Doppelschlag um das E ist eine Verzierung. Spiel ihn leiser als die Melodie.",
           "Heb die Hand nach dem H, dann lande mit beiden Händen zugleich auf dem letzten Akkord.",
         ],
         tricky: {
-          9: "Der Doppelschlag beginnt auf dem hohen G. Finger 5, 4, 3 und der Daumen laufen hinab, dann nimmt Finger 2 das E.",
+          9: "Ein schneller Lauf beginnt auf dem hohen G. Finger 5, 4, 3 und der Daumen laufen hinab, dann nimmt Finger 2 das E.",
           15: "Wechsle beim wiederholten E auf den kleinen Finger, und geh mit einem Finger pro Taste hinab. Die linke Hand springt zum tiefen E.",
           19: "Finger 2 kreuzt für das H über den Daumen. Spiel es kurz, und führ die Hand hinab zum letzten Akkord.",
         },

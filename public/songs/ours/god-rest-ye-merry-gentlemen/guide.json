@@ -398,8 +398,8 @@
         },
         {
           "text": {
-            "en": "Play the right hand alone on bars 4 to 6, and keep the quick turn light.",
-            "de": "Spiel die Takte 4 bis 6 nur mit der rechten Hand, und halt den schnellen Doppelschlag leicht."
+            "en": "Play the right hand alone on bars 4 to 6, and keep the turn light.",
+            "de": "Spiel die Takte 4 bis 6 nur mit der rechten Hand, und halt den Doppelschlag leicht."
           },
           "hands": "right",
           "speed": 0.5,
@@ -452,8 +452,8 @@
           "toBar": 5,
           "kind": "sound",
           "text": {
-            "en": "The quick turn around E is a decoration. Play it softer than the tune.",
-            "de": "Der schnelle Doppelschlag um das E ist eine Verzierung. Spiel ihn leiser als die Melodie."
+            "en": "The turn around E is a decoration. Play it softer than the tune.",
+            "de": "Der Doppelschlag um das E ist eine Verzierung. Spiel ihn leiser als die Melodie."
           }
         },
         {
@@ -470,8 +470,8 @@
         {
           "bar": 9,
           "text": {
-            "en": "The turn starts on the high G. Fingers 5, 4, 3 and the thumb run down, then finger 2 takes E.",
-            "de": "Der Doppelschlag beginnt auf dem hohen G. Finger 5, 4, 3 und der Daumen laufen hinab, dann nimmt Finger 2 das E."
+            "en": "A quick run starts on the high G. Fingers 5, 4, 3 and the thumb run down, then finger 2 takes E.",
+            "de": "Ein schneller Lauf beginnt auf dem hohen G. Finger 5, 4, 3 und der Daumen laufen hinab, dann nimmt Finger 2 das E."
           }
         },
         {

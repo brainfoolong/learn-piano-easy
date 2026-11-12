@@ -307,14 +307,14 @@ export const tochterZion: OurSong = {
       skills: ["stride", "arpeggios", "sixteenth-notes"],
       practice: [
         { text: "Play the stride bass alone: jump down for the low octave, then back up for the chord.", hands: "left", speed: 0.5, loop: [1, 4], wait: false },
-        { text: "Play bars 1 to 8 with the right hand alone, and keep the quick turns light.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
+        { text: "Play bars 1 to 8 with the right hand alone, and keep the quick groups of notes light.", hands: "right", speed: 0.5, loop: [1, 8], wait: true },
         { text: "Play the arpeggios of the last part in the left hand alone.", hands: "left", speed: 0.5, loop: [17, 20], wait: false },
         { text: "Join the hands on the whole song at three-quarter speed.", hands: "both", speed: 0.75, loop: null, wait: false },
         { text: "Now play it at full speed, and let the last chord ring.", hands: "both", speed: 1, loop: null, wait: false },
       ],
       tips: [
         { fromBar: 1, toBar: 16, kind: "trick", text: "In stride, look at the low octave and let the hand find the chord by feel." },
-        { fromBar: 4, toBar: 4, kind: "sound", text: "The quick turn at the end of bar 4 decorates the long D. Play it softer than the tune." },
+        { fromBar: 4, toBar: 4, kind: "sound", text: "The turn at the end of bar 4 decorates the long D. Play it softer than the tune." },
         { fromBar: 17, toBar: 23, kind: "fingering", text: "Keep the thumb and little finger an octave apart, and let the wrist bounce." },
       ],
       tricky: {
@@ -392,14 +392,14 @@ export const tochterZion: OurSong = {
       legendary: {
         practice: [
           "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
-          "Spiel die Takte 1 bis 8 nur mit der rechten Hand, und halt die schnellen Doppelschläge leicht.",
+          "Spiel die Takte 1 bis 8 nur mit der rechten Hand, und halt die schnellen Notengruppen leicht.",
           "Spiel die Arpeggien des letzten Teils nur mit der linken Hand.",
           "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
           "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
         ],
         tips: [
           "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
-          "Der schnelle Doppelschlag am Ende von Takt 4 schmückt das lange D. Spiel ihn leiser als die Melodie.",
+          "Der Doppelschlag am Ende von Takt 4 schmückt das lange D. Spiel ihn leiser als die Melodie.",
           "Halt Daumen und kleinen Finger eine Oktave auseinander, und lass das Handgelenk federn.",
         ],
         tricky: {

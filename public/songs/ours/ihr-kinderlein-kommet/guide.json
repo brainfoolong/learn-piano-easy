@@ -399,8 +399,8 @@
         },
         {
           "text": {
-            "en": "Play bars 2 to 9 with the right hand alone, and keep the quick turns light.",
-            "de": "Spiel die Takte 2 bis 9 nur mit der rechten Hand, und spiel die schnellen Doppelschläge leicht."
+            "en": "Play bars 2 to 9 with the right hand alone, and keep the quick groups of notes light.",
+            "de": "Spiel die Takte 2 bis 9 nur mit der rechten Hand, und spiel die schnellen Notengruppen leicht."
           },
           "hands": "right",
           "speed": 0.5,
@@ -453,8 +453,8 @@
           "toBar": 5,
           "kind": "sound",
           "text": {
-            "en": "The quick turn after the long E is a little skip. Play it softer than the tune.",
-            "de": "Der schnelle Doppelschlag nach dem langen E ist ein kleiner Hüpfer. Spiel ihn leiser als die Melodie."
+            "en": "The quick group of notes after the long E is a little skip. Play it softer than the tune.",
+            "de": "Die schnelle Notengruppe nach dem langen E ist ein kleiner Hüpfer. Spiel sie leiser als die Melodie."
           }
         },
         {

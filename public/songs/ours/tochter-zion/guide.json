@@ -399,8 +399,8 @@
         },
         {
           "text": {
-            "en": "Play bars 1 to 8 with the right hand alone, and keep the quick turns light.",
-            "de": "Spiel die Takte 1 bis 8 nur mit der rechten Hand, und halt die schnellen Doppelschläge leicht."
+            "en": "Play bars 1 to 8 with the right hand alone, and keep the quick groups of notes light.",
+            "de": "Spiel die Takte 1 bis 8 nur mit der rechten Hand, und halt die schnellen Notengruppen leicht."
           },
           "hands": "right",
           "speed": 0.5,
@@ -453,8 +453,8 @@
           "toBar": 4,
           "kind": "sound",
           "text": {
-            "en": "The quick turn at the end of bar 4 decorates the long D. Play it softer than the tune.",
-            "de": "Der schnelle Doppelschlag am Ende von Takt 4 schmückt das lange D. Spiel ihn leiser als die Melodie."
+            "en": "The turn at the end of bar 4 decorates the long D. Play it softer than the tune.",
+            "de": "Der Doppelschlag am Ende von Takt 4 schmückt das lange D. Spiel ihn leiser als die Melodie."
           }
         },
         {

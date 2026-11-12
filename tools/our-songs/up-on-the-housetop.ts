@@ -285,7 +285,7 @@ export const upOnTheHousetop: OurSong = {
       ],
       tricky: {
         3: "Finger 5 plays A twice, then the hand rolls down to E. The left hand jumps from F to C.",
-        4: "After the long G, fingers 3, 2 and 3 play a quick turn that leads back to G.",
+        4: "After the long G, fingers 3, 2 and 3 play F, E and F quickly, then the tune returns to G.",
         7: "Finger 5 repeats A, then finger 4 repeats G. Keep the quick notes light over the stride.",
       },
     },
@@ -371,7 +371,7 @@ export const upOnTheHousetop: OurSong = {
         ],
         tricky: {
           3: "Finger 5 spielt zweimal das A, dann rollt die Hand hinab zum E. Die linke Hand springt von F nach C.",
-          4: "Nach dem langen G spielen Finger 3, 2 und 3 eine schnelle kleine Wendung, die zurück zum G führt.",
+          4: "Nach dem langen G spielen Finger 3, 2 und 3 schnell F, E und F, dann kehrt die Melodie zum G zurück.",
           7: "Finger 5 wiederholt das A, dann wiederholt Finger 4 das G. Halt die schnellen Töne über dem Stride leicht.",
         },
       },
