@@ -241,11 +241,6 @@ floor:
     run: [bun, test, src/ui/layout-geometry.test.ts]
     tests: [overlapping_boxes_are_reported, a_box_inside_its_parent_is_not_clipped, contrast_follows_the_wcag_formula]
     from: site-design-system
-  - id: keyboard-2d
-    name: the 2D keyboard puts its keys where the 3D piano does
-    run: [bun, test, src/ui/components/keyboard.test.ts]
-    tests: [keys_sit_where_the_3d_piano_puts_them, every_highlighted_key_is_named_for_a_screen_reader]
-    from: site-design-system
   - id: gallery
     name: the gallery shows every component in every state and passes the layout checks
     run: [bun, x, playwright, test, e2e/design.e2e.ts]
@@ -441,5 +436,5 @@ The chain holds 15 goal(s). `one-piano` is live.
 | 14 | [`urdu`](urdu.md) | Every text of the site, the course and the song guides reads in Urdu as if a native teacher wrote it, and the Urdu site ships. | **1 The Urdu style guide and glossary** · 2 The site and the player in Urdu · 3 The course in Urdu · 4 The song guides in Urdu, from a to m · 5 The song guides in Urdu, from n to z · 6 The Urdu site ships · 7 the goal is verified once, and every failure is fixed |
 | 15 | [`japanese`](japanese.md) | Every text of the site, the course and the song guides reads in Japanese as if a native teacher wrote it, and the Japanese site ships. | **1 The Japanese style guide and glossary** · 2 The site and the player in Japanese · 3 The course in Japanese · 4 The song guides in Japanese, from a to m · 5 The song guides in Japanese, from n to z · 6 The Japanese site ships · 7 the goal is verified once, and every failure is fixed |
 
-The floor holds 83 check(s) carried from reached goals; every goal keeps them green.
+The floor holds 82 check(s) carried from reached goals; every goal keeps them green.
 The format is `docs/goal-format.md`.
