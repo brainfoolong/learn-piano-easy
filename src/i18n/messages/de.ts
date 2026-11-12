@@ -237,4 +237,10 @@ export const de: Messages = {
   playModes,
   setup: learnSetup,
   player: { shell: playerShell, bar: playerBar, library: playerLibrary, input: playerInput, settings: playerSettings },
+  ui: {
+    pianoKeys: {
+      noWebgl:
+        "Dieser Browser kann das Klavier nicht zeichnen. Schalte in seinen Einstellungen die Hardwarebeschleunigung ein, oder spiele auf deinem MIDI-Keyboard oder der Computertastatur.",
+    },
+  },
 };

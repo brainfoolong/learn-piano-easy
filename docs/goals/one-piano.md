@@ -109,12 +109,12 @@ landing page, and decision 0008 already answers it: a picture until a click.
 - [ ] Lights move to `src/render/lights.ts`, and `scene.ts` calls it. `src/render/scene.ts:219`
 - [x] `src/input/pointer-piano.ts` takes press and release callbacks, and `player-core.ts` passes the bus's. `src/input/pointer-piano.ts:23`
 - [x] `Mark` moves to `src/ui/mark.ts`, and every importer follows. `src/ui/components/keyboard.ts:37`
-- [ ] `src/render/piano-keys.ts` with `pianoKeys()`, `show`, `dispose`, the key map and the live text. `src/render/piano-keys.ts:1`
-- [ ] Its styles beside it. `src/render/piano-keys.css:1`
-- [ ] `ui.pianoKeys.noWebgl` in English and German. `src/i18n/messages/en.ts:1`
-- [ ] The three unit tests of the `piano-keys` check. `src/render/piano-keys.test.ts:1`
-- [ ] The gallery's keyboard section shows the view in every state. `src/ui/gallery/keyboard.ts:1`
-- [ ] Look at it with `bun run shot` on the gallery, in both themes and on a phone.
+- [x] `src/render/piano-keys.ts` with `pianoKeys()`, `show`, `dispose`, the key map and the live text. `src/render/piano-keys.ts:1`
+- [x] Its styles beside it. `src/render/piano-keys.css:1`
+- [x] `ui.pianoKeys.noWebgl` in English and German. `src/i18n/messages/en.ts:1`
+- [x] The three unit tests of the `piano-keys` check. `src/render/piano-keys.test.ts:1`
+- [x] The gallery's keyboard section shows the view in every state. `src/ui/gallery/keyboard.ts:1`
+- [x] Look at it with `bun run shot` on the gallery, in both themes and on a phone.
 
 ### 2. Lessons and the setup check play on the 3D piano
 

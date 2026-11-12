@@ -275,6 +275,13 @@ export const en = {
   playModes,
   /** The player at `play/`, which reads them through `src/i18n/live.ts`. */
   player: { shell: playerShell, bar: playerBar, library: playerLibrary, input: playerInput, settings: playerSettings },
+  /** The parts that several pages share. */
+  ui: {
+    /** The 3D piano of a lesson, the setup and the gallery, from `src/render/piano-keys.ts`. */
+    pianoKeys: {
+      noWebgl: "This browser cannot draw the piano. Turn on hardware acceleration in its settings, or play on your MIDI or computer keyboard.",
+    },
+  },
 };
 
 /** A locale's catalog: the shape of the English one. */

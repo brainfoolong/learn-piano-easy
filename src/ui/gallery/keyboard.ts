@@ -1,9 +1,15 @@
 /**
  * The gallery's section of the keyboard: three ranges, names, marks with fingers, held keys, one to
- * play, and the real player embedded in a box.
+ * play, the 3D piano view in each of those states, and the real player embedded in a box.
+ *
+ * Each 3D view holds a WebGL context of its own, and a page holds about 16. So the section shows one
+ * view per state, each state's options folded into as few views as show it, and the embed adds one
+ * more context on its first click.
  */
 import type { EmbeddedPlayer } from "../../app/embed";
 import { HERO_RANGE, HERO_SONG } from "../../landing/songs";
+import type { KeyRange } from "../../render/key-layout";
+import { pianoKeys, type PianoKeysOptions } from "../../render/piano-keys";
 import type { SettingsStore } from "../../settings/store";
 import { button } from "../components/button";
 import { keyboard, type KeyboardOptions } from "../components/keyboard";
@@ -27,6 +33,7 @@ const MESSAGES = {
     finger: "finger",
     pressAKey: "Press a key, or several at once.",
     youPlay: "You play:",
+    piano: "3D piano",
     embed: "Embedded player",
     start: "Play",
     stop: "Stop",
@@ -44,6 +51,7 @@ const MESSAGES = {
     finger: "Finger",
     pressAKey: "Drücke eine Taste oder mehrere zugleich.",
     youPlay: "Du spielst:",
+    piano: "3D-Klavier",
     embed: "Eingebetteter Player",
     start: "Abspielen",
     stop: "Stopp",
@@ -123,8 +131,62 @@ export function keyboardSection(locale: Locale, settings: SettingsStore): HTMLEl
         sized(el("div", { attrs: { style: "display: grid; gap: var(--s-2)" }, children: [playable, played] }), wide),
       ),
     ]),
+    group(t.piano, pianoSpecimens(t, base, marks, fingers)),
     group(t.embed, [specimen("embed", embedSpecimen(settings, t.start, t.stop))]),
   ]);
+}
+
+/** The 3D piano view in each state: marks, fingers, names, the reach, held keys, and one to play. */
+function pianoSpecimens(
+  t: (typeof MESSAGES)[Locale],
+  base: KeyboardOptions,
+  marks: ReadonlyMap<number, Mark>,
+  fingers: ReadonlyMap<number, number>,
+): HTMLElement[] {
+  const octave: KeyRange = { first: 60, last: 72 };
+  const twoOctaves: KeyRange = { first: 48, last: 72 };
+  const one = "calc(var(--s-12) * 3)";
+  const wide = "calc(var(--s-12) * 6)";
+  const view = (state: string, options: PianoKeysOptions, width: string, after?: HTMLElement) => {
+    const piano = pianoKeys();
+    piano.show({ ...base, ...options });
+    const children = after ? [piano.element, after] : [piano.element];
+    return specimen(state, sized(el("div", { attrs: { style: "display: grid; gap: var(--s-2)" }, children }), width));
+  };
+
+  // The keys a pointer holds, named under the view.
+  const held = new Set<number>();
+  const played = el("p", { attrs: { style: "color: var(--c-text-soft); font-size: var(--t-sm)" }, text: t.pressAKey });
+  const show = () => {
+    const names = [...held].sort((a, b) => a - b).map((pitch) => noteName(pitch));
+    played.textContent = names.length === 0 ? t.pressAKey : `${t.youPlay} ${names.join(", ")}`;
+  };
+
+  return [
+    view("piano-marks", { label: base.label, range: octave, marks }, one),
+    view("piano-fingers", { label: base.label, range: octave, marks, fingers, names: "white" }, one),
+    view("piano-names", { label: base.label, range: twoOctaves, names: "c" }, wide),
+    view("piano-reach", { label: base.label, range: twoOctaves, reach: signal<KeyRange | undefined>({ first: 60, last: 72 }) }, wide),
+    view("piano-pressed", { label: base.label, range: octave, pressed: signal<ReadonlySet<number>>(new Set([60, 64, 67, 70])) }, one),
+    view(
+      "piano-playable",
+      {
+        label: base.label,
+        range: twoOctaves,
+        names: "c",
+        onPress(pitch) {
+          held.add(pitch);
+          show();
+        },
+        onRelease(pitch) {
+          held.delete(pitch);
+          show();
+        },
+      },
+      wide,
+      played,
+    ),
+  ];
 }
 
 /**

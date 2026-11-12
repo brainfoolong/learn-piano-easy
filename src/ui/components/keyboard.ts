@@ -30,13 +30,13 @@
  */
 import "./keyboard.css";
 import { FULL_RANGE, type KeyRange, layoutKeys } from "../../render/key-layout";
+import type { KeyNames } from "../../render/piano-keys";
 import { noteName } from "../../theory/note-names";
 import { el } from "../dom";
 import { describeMarks, type Mark } from "../mark";
 import type { Signal } from "../signal";
 
-/** Which keys carry their name. */
-export type KeyNames = "none" | "c" | "white";
+export type { KeyNames };
 
 /** A white key's width, in user units. */
 export const WHITE_WIDTH = 24;

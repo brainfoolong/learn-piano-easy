@@ -5,8 +5,9 @@
  * - A key's name is spelt by `showPianoKeyNameFlats`, never by the song's key. The piano stays the same
  *   from song to song, so a learner reads its names the same way every time.
  * - White and black keys are switched apart, and the octave shows on every key, on C only or never.
- * - The texts are worked out here as plain data, so they are tested without a canvas. The scene draws
- *   them on sprites from `src/render/labels.ts` whenever a setting or the range changes, never per frame.
+ * - The texts are worked out here as plain data, so they are tested without a canvas. The scene and
+ *   the piano view of `src/render/piano-keys.ts` draw them on sprites from `src/render/labels.ts`,
+ *   at the same height and inset, whenever the range or an option changes, never per frame.
  *
  * Bounds: one name and one computer key at most per key of the range.
  */
@@ -14,6 +15,11 @@ import { keysOf } from "../input/keyboard";
 import { keyLabel } from "../play/hotkeys";
 import { noteName, type NamingSystem, pitchClass } from "../theory/note-names";
 import { isBlack } from "./key-layout";
+
+/** A key label's height, in world units. */
+export const KEY_LABEL_HEIGHT = 0.5;
+/** How far from its key's front end a key's name sits, in world units. */
+export const KEY_NAME_INSET = { white: 0.7, black: 0.55 } as const;
 
 /** Where a key's name shows its octave. */
 export type OctaveLabel = "none" | "all" | "onlyC";
