@@ -112,7 +112,7 @@ landing page, and decision 0008 already answers it: a picture until a click.
 **Does:** builds `pianoKeys()` with every option the 2D keyboard has, and shows it in the gallery.
 **Gate:** none.
 
-- [ ] Lights move to `src/render/lights.ts`, and `scene.ts` calls it. `src/render/scene.ts:219`
+- [x] Lights move to `src/render/lights.ts`, and `scene.ts` calls it. `src/render/scene.ts:219`
 - [x] `src/input/pointer-piano.ts` takes press and release callbacks, and `player-core.ts` passes the bus's. `src/input/pointer-piano.ts:23`
 - [x] `Mark` moves to `src/ui/mark.ts`, and every importer follows. `src/ui/components/keyboard.ts:37`
 - [x] `src/render/piano-keys.ts` with `pianoKeys()`, `show`, `dispose`, the key map and the live text. `src/render/piano-keys.ts:1`

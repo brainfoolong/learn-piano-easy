@@ -82,7 +82,7 @@
  *   render. The price is a rule: anything new that changes the picture sets `stale` or animates.
  * - The picture offset, `renderOffset`, is the transport's, in the time it hands `setTimeSource`.
  */
-import { AmbientLight, Color, DirectionalLight, Fog, Group, Plane, Raycaster, Scene, SRGBColorSpace, Vector2, Vector3, WebGLRenderer } from "three";
+import { Color, Fog,Group, Plane, Raycaster, Scene, SRGBColorSpace, Vector2, Vector3, WebGLRenderer } from "three";
 
 import type { Cycle } from "../audio/scheduler";
 import { onLocale, t } from "../i18n/live";
@@ -103,11 +103,11 @@ import { type CameraPreset, createCameraRig } from "./cameras";
 import { type BlockKind, type BlockNotation, chordMarks, type ChordPlacement, type ChordStyle, createChordLabels } from "./chord-labels";
 import { codedColor, codesFingers, NO_CODING, type Played, readColorCoding } from "./color-coding";
 import { createGlow, type GlowMode } from "./glow";
-import { lightsGlow } from "./glow-source";
 import { isBlack } from "./key-layout";
-import { keyTexts, type OctaveLabel } from "./key-labels";
+import { KEY_LABEL_HEIGHT, KEY_NAME_INSET, keyTexts, type OctaveLabel } from "./key-labels";
 import { createLabelLayer } from "./labels";
 import { createLanes } from "./lanes";
+import { pianoLights } from "./lights";
 import { createLyrics } from "./lyrics";
 import { NoteWindow } from "./note-window";
 import { createNoteBars, type NoteColor, type SustainEnd } from "./notes";
@@ -193,9 +193,7 @@ const MAX_FRAME = 0.1;
 const LABEL_HEIGHT = 0.9;
 const LABEL_FILL = 0.95;
 const LABEL_LIFT = 0.05;
-/** A key label's height, and how far from its key's front end a name and a computer key sit, in world units. */
-const KEY_LABEL_HEIGHT = 0.5;
-const KEY_NAME_INSET = { white: 0.7, black: 0.55 };
+/** How far from its key's front end a computer key sits, in world units. `key-labels.ts` holds the name's. */
 const KEY_BINDING_INSET = { white: 1.5, black: 1.3 };
 /** How high above the white key tops `keyPoint` sits, clear of the black keys, in world units. */
 const KEY_POINT_HEIGHT = BLACK_KEY_TOP + 0.6;
@@ -214,14 +212,7 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
   const fog = new Fog(background, 40, 110);
   scene.fog = fog;
 
-  const ambient = new AmbientLight(0xb8c6ff, 0.55);
-  const sun = new DirectionalLight(0xffffff, 2.2);
-  sun.position.set(-10, 30, 18);
-  const rim = new DirectionalLight(0xb38cff, 1.2);
-  rim.position.set(12, 8, -30);
-  // The glow pass sees the same lights, so the lit shaders keep one program across both passes.
-  lightsGlow(ambient, sun, rim);
-  scene.add(ambient, sun, rim);
+  scene.add(...pianoLights());
 
   const world = new Group();
   world.name = "world";
