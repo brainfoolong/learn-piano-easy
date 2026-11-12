@@ -45,12 +45,23 @@ export const albertiBassEn = {
     "alberti-tune": {
       text: "Put your right thumb on middle C. Play each tune note together with the low bass note under it.",
     },
+    "d-major-demo": {
+      text: "The boss, Canon in D, is in D major. Its key signature has two sharps, on F and on C, so every F is F♯ and every C is C♯. Listen to the D major scale.",
+    },
+    "two-sharps": {
+      text: "The key signature shows two sharps, on F and on C. Which keys do you play for F and C?",
+      answers: ["F♯ and C♯, the black keys", "F and C, the white keys", "F♯ only, and C stays white"],
+    },
+    "d-major-scale": {
+      text: "Your turn. Put your right thumb on the D above middle C, and play the scale up and down with the fingering of C major.",
+    },
     recap: {
       text: "Well done. You can now play the Alberti bass.",
       points: [
         "The Alberti bass breaks a chord low, high, middle, high.",
         "It runs in eighths, with fingers 5, 1, 3, 1.",
         "G7 and F in second inversion keep the hand close to C.",
+        "D major has two sharps in its key signature: F♯ and C♯.",
       ],
     },
   },

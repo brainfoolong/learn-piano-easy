@@ -13,7 +13,7 @@
  * - **Worlds:** `world-<world>`, a finished run of that world's boss.
  * - **Notes:** `notes-1000` and `notes-10000`, the notes a passed step asked for, summed over the log.
  *   A `find-key` asks for one, a `play-notes` for its notes, a `read-note` answered by playing for its
- *   notes, and a `rhythm-tap` for its taps.
+ *   notes, and a `rhythm-tap` for its taps, or for its phrase's notes.
  * - **Skill:** `rhythm-ace`, a `rhythm-tap` passed in its first round. `sight-reader`, ten notes read
  *   in a row by `read-note` steps passed without a mistake. A mistake starts the count over.
  * - **Habits:** `early-bird`, a lesson finished before 8 in the morning, and `night-owl`, one finished
@@ -164,7 +164,7 @@ export function stepFacts(world: string, lessons: WorldLessons): Map<string, Ste
         step.kind === "find-key" ? 1
         : step.kind === "play-notes" ? step.notes.flatMap(pitchesOf).length
         : step.kind === "read-note" && step.answer === "play" ? step.notes.length
-        : step.kind === "rhythm-tap" ? step.taps
+        : step.kind === "rhythm-tap" ? (step.notes?.length ?? step.taps)
         : 0;
       const read = step.kind === "read-note" ? step.notes.length : 0;
       facts.set(`${world}/${lesson.id}/${step.id}`, { kind: step.kind, notes, read });

@@ -51,9 +51,24 @@ export const readingStepsAndSkipsEn = {
       text: "In that tune, E moves down to D. E sits on the bottom line. Where is D?",
       answers: ["In the space just below", "On the line below", "On the same line"],
     },
+    "dotted-demo": {
+      text: "Listen to two bars of the song. A dot makes a note half as long again: a dotted half note lasts three beats. The dotted quarter D lasts one and a half beats, and an eighth rest fills the last half beat.",
+    },
+    "dotted-half-quiz": {
+      text: "A half note lasts two beats. How many beats does a dotted half note last?",
+      answers: ["Two beats", "Three beats", "Four beats"],
+    },
+    "dotted-tap": {
+      text: "Your turn, after one bar of count-in. Play E, E and D on the clicks, and lift D after one and a half beats. Hold G for three beats, then play D.",
+    },
     recap: {
       text: "Well done. You can read a tune by its moves now.",
-      points: ["A step goes from a line to the next space, or a space to the next line.", "A skip goes from line to line, or space to space.", "Name the first note, then read each move: its direction and its size."],
+      points: [
+        "A step goes from a line to the next space, or a space to the next line.",
+        "A skip goes from line to line, or space to space.",
+        "Name the first note, then read each move: its direction and its size.",
+        "A dot makes a note half as long again.",
+      ],
     },
   },
 } satisfies LessonTexts;

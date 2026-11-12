@@ -45,12 +45,23 @@ export const albertiBassDe: AlbertiBassTexts = {
     "alberti-tune": {
       text: "Leg den rechten Daumen auf das mittlere C. Spiel jeden Melodieton zusammen mit der tiefen Bassnote darunter.",
     },
+    "d-major-demo": {
+      text: "Der Boss, der Kanon in D, steht in D-Dur. Am Zeilenanfang stehen zwei Kreuze, auf F und auf C: Jedes F ist ein Fis und jedes C ein Cis. Hör dir die D-Dur-Tonleiter an.",
+    },
+    "two-sharps": {
+      text: "Am Zeilenanfang stehen zwei Kreuze, auf F und auf C. Welche Tasten spielst du für F und C?",
+      answers: ["Fis und Cis, die schwarzen Tasten", "F und C, die weißen Tasten", "Nur Fis, das C bleibt weiß"],
+    },
+    "d-major-scale": {
+      text: "Jetzt du. Leg den rechten Daumen auf das D über dem mittleren C und spiel die Tonleiter hinauf und hinunter, mit dem Fingersatz von C-Dur.",
+    },
     recap: {
       text: "Gut gemacht. Jetzt kannst du den Albertibass spielen.",
       points: [
         "Der Albertibass bricht einen Akkord tief, hoch, Mitte, hoch.",
         "Er läuft in Achteln, mit den Fingern 5, 1, 3, 1.",
         "G7 und F in der zweiten Umkehrung halten die Hand nah beim C.",
+        "D-Dur hat zwei Kreuze am Zeilenanfang: Fis und Cis.",
       ],
     },
   },

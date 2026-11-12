@@ -87,6 +87,11 @@ export const learnLesson: typeof en = {
     marks: { next: "Hier tippen", correct: "Auf dem Schlag", mistake: "Neben dem Schlag" },
     short: (hits: number, beats: number) => `${formatNumber("de", hits)} von ${formatNumber("de", beats)} Schlägen getroffen. Versuch es noch einmal.`,
     hint: "Tipp genau dann, wenn du den Klick hörst. Die Punkte blinken im Takt.",
+    play: "Jetzt spiel jeden Ton auf seinem Klick.",
+    phrasePiano: "Die Tasten. Spiel die Phrase im Takt der Klicks.",
+    shortNotes: (hits: number, notes: number) => `${formatNumber("de", hits)} von ${formatNumber("de", notes)} Tönen kamen pünktlich. Versuch es noch einmal.`,
+    restSounded: "In einer Pause hat eine Taste geklungen. Heb den Finger und bleib dort still.",
+    phraseHint: "Spiel jeden Ton auf seinem Klick und heb die Taste vor einer Pause. Die Punkte blinken im Takt.",
   },
   song: {
     play: "Im Player spielen",

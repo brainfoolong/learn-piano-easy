@@ -36,6 +36,8 @@ export interface ListeningKeysOptions {
   notes?: readonly number[];
   /** Called with each note the learner starts, from any input. */
   onNote(pitch: number, event: Extract<InputEvent, { type: "noteOn" }>): void;
+  /** Called with each note the learner lets go, once no input holds it, for a step that judges how long a key is held. */
+  onNoteOff?(pitch: number, event: Extract<InputEvent, { type: "noteOff" }>): void;
 }
 
 /** The keys of a step that listens, and what stops it hearing. */
@@ -68,6 +70,7 @@ export function listeningKeys(host: StepHost, options: ListeningKeysOptions): Li
     if (event.type === "pedal") return;
     pressed.set(bus.held);
     if (event.type === "noteOn") options.onNote(event.pitch, event);
+    else options.onNoteOff?.(event.pitch, event);
   });
   return {
     element: piano.element,

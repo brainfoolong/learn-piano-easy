@@ -7,7 +7,7 @@ import { HINT_AFTER, judgeChoice, passesRound, scoreOf, showsHint } from "./judg
 import { compareNotes } from "./listen";
 import { expressionMiss, playNote } from "./play-notes";
 import { namesNote, playsNote } from "./read-note";
-import { beatTimes, judgeTaps, WINDOW } from "./rhythm-tap";
+import { beatTimes, judgePhrase, judgeTaps, restsOf, WINDOW } from "./rhythm-tap";
 
 test("find_key_passes_on_the_asked_key_only", () => {
   const middleC = { key: 60, anyOctave: false };
@@ -126,6 +126,63 @@ test("rhythm_tap_judges_against_the_beat", () => {
   expect(passesRound(hits([10, 10.5, 11, 10.01]), beats.length, 0.75)).toBe(true);
   expect(passesRound(hits([10, 10.5]), beats.length, 0.75)).toBe(false);
   expect(passesRound(hits([10, 10.5, 11, 11.5]), beats.length, 1)).toBe(true);
+});
+
+/** A phrase at 60 beats a minute, one second a beat: C, D, a quarter rest from beat 2, then E. */
+const PHRASE = [
+  { note: 60, at: 0, beats: 1 },
+  { note: 62, at: 1, beats: 1 },
+  { note: 64, at: 3, beats: 1 },
+];
+
+test("rhythm_tap_phrase_hits_each_note_by_its_own_key_in_time", () => {
+  expect(restsOf(PHRASE)).toEqual([{ from: 2, to: 3 }]);
+  expect(restsOf([{ note: 60, at: 1, beats: 2 }, { note: 62, at: 3, beats: 1 }])).toEqual([{ from: 0, to: 1 }]);
+  const clean = judgePhrase(10, 60, PHRASE, [
+    { pitch: 60, at: 10.05, end: 10.5 },
+    { pitch: 62, at: 11 - WINDOW + 0.01, end: 11.9 },
+    { pitch: 64, at: 13.1 },
+  ]);
+  expect(clean).toEqual({ notes: [true, true, true], presses: [true, true, true], broken: [false] });
+  // A wrong key on time is an extra, and the right key after it still hits the note.
+  const wrongFirst = judgePhrase(10, 60, PHRASE, [
+    { pitch: 62, at: 10, end: 10.1 },
+    { pitch: 60, at: 10.05, end: 10.2 },
+  ]);
+  expect(wrongFirst.notes).toEqual([true, false, false]);
+  expect(wrongFirst.presses).toEqual([false, true]);
+  // The right key outside the window misses its note.
+  expect(judgePhrase(10, 60, PHRASE, [{ pitch: 60, at: 10 + WINDOW + 0.05, end: 10.5 }]).notes).toEqual([false, false, false]);
+});
+
+test("rhythm_tap_phrase_breaks_a_rest_played_into_or_held_through", () => {
+  const ontime = [
+    { pitch: 60, at: 10, end: 10.5 },
+    { pitch: 62, at: 11, end: 11.9 },
+  ];
+  // A key pressed inside the rest breaks it, whichever key it is.
+  expect(judgePhrase(10, 60, PHRASE, [...ontime, { pitch: 61, at: 12.4, end: 12.45 }]).broken).toEqual([true]);
+  expect(judgePhrase(10, 60, PHRASE, [...ontime, { pitch: 64, at: 12.4, end: 12.45 }]).broken).toEqual([true]);
+  // A press that hits the next note a little early does not.
+  expect(judgePhrase(10, 60, PHRASE, [...ontime, { pitch: 64, at: 13 - WINDOW + 0.01, end: 13.5 }]).broken).toEqual([false]);
+  // D held into the rest breaks it once it is still down at the rest's middle, 12.5.
+  const heldTo = (end?: number) => judgePhrase(10, 60, PHRASE, [ontime[0]!, { pitch: 62, at: 11, ...(end === undefined ? {} : { end }) }], 12.6).broken;
+  expect(heldTo(12.3)).toEqual([false]);
+  expect(heldTo(12.7)).toEqual([true]);
+  expect(heldTo()).toEqual([true]);
+  // A key still down is judged at `now`, so the rest is not broken before its middle.
+  expect(judgePhrase(10, 60, PHRASE, [ontime[0]!, { pitch: 62, at: 11 }], 12.2).broken).toEqual([false]);
+});
+
+test("a_rhythm_tap_phrase_keeps_its_notes_on_whole_beats_inside_its_taps", () => {
+  const texts = { title: "Rests", steps: { play: { text: "Play." } } };
+  const lesson = (notes: { note: number; at: number; beats: number }[]) => ({ id: "rests", steps: [{ id: "play", kind: "rhythm-tap", bpm: 80, taps: 4, pass: 0.8, notes } as Step], texts: { en: texts, de: texts } });
+  expect(lessonProblems(lesson(PHRASE), ["en", "de"])).toEqual([]);
+  const wrong = "step play has a note off a whole beat, over another or past its taps";
+  expect(lessonProblems(lesson([{ note: 60, at: 0.5, beats: 1 }]), ["en"])).toContain(wrong);
+  expect(lessonProblems(lesson([{ note: 60, at: 0, beats: 2 }, { note: 62, at: 1, beats: 1 }]), ["en"])).toContain(wrong);
+  expect(lessonProblems(lesson([{ note: 60, at: 3, beats: 2 }]), ["en"])).toContain(wrong);
+  expect(lessonProblems(lesson([]), ["en"])).toContain("step play has no note");
 });
 
 test("listen_and_quiz_score_one_answer_each", () => {

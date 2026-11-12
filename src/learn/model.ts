@@ -20,6 +20,9 @@
  *   from its lessons' last checks when it names none, unless the world writes its own.
  * - A `play-notes` entry may be a chord, which passes once each of its notes is pressed, in any order.
  *   Two hands then play together, while how long a key is held is never judged.
+ * - A phrase whose rests are judged is a `rhythm-tap` step with `notes`, never a timed `play-notes`.
+ *   It reuses the count-in, the metronome and the rounds of `rhythm-tap`, and `play-notes` keeps waiting.
+ *   Its notes start on whole beats, so a beat's dot marks each one, and the e2e walk presses on a beat.
  * - A lesson names the skills of `src/library/skills.ts` it teaches, the same ids our songs' guides use.
  * - `lessonProblems` returns every problem as a sentence, never only the first. A lesson author then
  *   fixes a lesson in one pass, and the course's test prints them all.
@@ -123,13 +126,18 @@ export interface PlayNotesStep extends StepBase {
   pedal?: boolean[];
 }
 
-/** Taps any key on the beat with a metronome. */
+/** Taps any key on the beat with a metronome, or plays a phrase's keys in time with it. */
 export interface RhythmTapStep extends StepBase {
   kind: "rhythm-tap";
   bpm: number;
-  /** The beats the learner taps, after one bar of count-in. */
+  /** The beats of a round, after one bar of count-in. Without `notes`, the learner taps each of them. */
   taps: number;
-  /** The share of taps that must land inside the window, from 0 to 1. */
+  /**
+   * The phrase the learner plays in time, in place of a tap on every beat. Each note starts on a whole
+   * beat, after the last one ends, and ends by `taps`. A gap between notes is a rest, judged as silence.
+   */
+  notes?: PhraseNote[];
+  /** The share of beats, or of the phrase's notes, that must be hit inside the window, from 0 to 1. */
   pass: number;
 }
 
@@ -315,6 +323,17 @@ function optionProblems(step: Step): string[] {
       if (!isTempo(step.bpm)) problems.push(`${at} has a tempo of ${step.bpm}`);
       if (!Number.isInteger(step.taps) || step.taps < 1) problems.push(`${at} asks for ${step.taps} taps`);
       if (!isShare(step.pass)) problems.push(`${at} passes at ${step.pass}`);
+      if (step.notes !== undefined) {
+        notes(
+          step.notes.map((n) => n.note),
+          "note",
+        );
+        let end = 0;
+        for (const n of step.notes) {
+          if (!Number.isInteger(n.at) || n.at < end || !(n.beats > 0) || n.at + n.beats > step.taps) problems.push(`${at} has a note off a whole beat, over another or past its taps`);
+          end = n.at + n.beats;
+        }
+      }
       break;
     case "read-note":
       notes(step.notes, "note");

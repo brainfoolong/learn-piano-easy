@@ -6,8 +6,10 @@
  * note equal, then shaped by hairpins and a *rit.*, and a quiz names what changed. Two more demos play a
  * bright tune in C major and its sad twin in A minor. After a quiz on which suits a sad tune, the learner
  * plays both. A demo then plays the opening of *Für Elise* softly over a broken chord. The learner plays
- * it softly, judged on touch, or on another input hears it loud and soft and picks the fitting one. A
- * quiz on how to play the boss and a recap close the year. The texts are `playing-with-feeling.en.ts`
+ * it softly, judged on touch, or on another input hears it loud and soft and picks the fitting one. The
+ * boss's left hand breaks A minor and E major from fingers 5, 2 and 1, and E major spans E2 to G♯3,
+ * wider than any shape before. A demo plays both shapes, and the learner plays them. A quiz on how to
+ * play the boss and a recap close the year. The texts are `playing-with-feeling.en.ts`
  * and `playing-with-feeling.de.ts` beside it.
  */
 import type { Lesson, PhraseNote } from "../../model";
@@ -25,6 +27,9 @@ const SAD = [57, 60, 64, 69, 64, 60, 57];
 
 /** The first notes of *Für Elise*: E, D sharp, E, D sharp, E, B, D, C, A. */
 const ELISE = [76, 75, 76, 75, 76, 71, 74, 72, 69];
+
+/** The boss's left hand: A minor as A2, E3 and A3, then E major as E2, B2 and G♯3, then A minor again. */
+const ELISE_LEFT = [45, 52, 57, 40, 47, 56, 45, 52, 57];
 
 /** *Für Elise*'s first notes, a half beat each and the last A longer, at `velocity`, starting at `from`. */
 function elise(velocity: number, from: number): PhraseNote[] {
@@ -92,6 +97,13 @@ export const playingWithFeeling: Lesson = {
         { id: "which-fits-elise", kind: "quiz", right: 0 },
       ],
     },
+    {
+      id: "elise-left-demo",
+      kind: "demo",
+      bpm: 72,
+      notes: ELISE_LEFT.map((note, i) => ({ note, at: Math.floor(i / 3) * 3 + (i % 3) * 0.5, beats: i % 3 === 2 ? 2 : 0.5, velocity: 40 })),
+    },
+    { id: "elise-left-hand", kind: "play-notes", notes: ELISE_LEFT },
     { id: "how-to-play-the-boss", kind: "quiz", right: 2 },
     { id: "recap", kind: "recap" },
   ],

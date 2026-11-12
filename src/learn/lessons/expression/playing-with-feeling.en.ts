@@ -53,6 +53,12 @@ export const playingWithFeelingEn = {
       text: "Für Elise is marked p. Which time fitted it?",
       answers: ["The second time, the soft one", "The first time, the loud one", "Both, as they were the same", "Neither of them"],
     },
+    "elise-left-demo": {
+      text: "Listen to the boss's left hand, with fingers 5, 2 and 1. It breaks A minor as A, E and A, then E major as E, B and G♯. The E major shape is wider than an octave, so let your hand move up as it plays.",
+    },
+    "elise-left-hand": {
+      text: "Your turn. Play A, E and A from the second A below middle C, then E, B and G♯ from the second E below middle C. End on A, E and A again.",
+    },
     "how-to-play-the-boss": {
       text: "Für Elise is in A minor and starts with p. How will you play it?",
       answers: ["Loud and bright", "Fast and short", "Softly and gently, like a quiet song", "With every note equal and hard"],

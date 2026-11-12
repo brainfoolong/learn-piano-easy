@@ -29,7 +29,7 @@ export const restsEn = {
       text: "Watch and listen. The piano plays C D E, rests for one beat, then plays E D. It rests for two beats and ends on C.",
     },
     "play-with-rests": {
-      text: "Your turn. Play C D E, then count one beat of rest. Play E D, count two beats of rest, and end on C.",
+      text: "Your turn, after one bar of count-in. Play C D E on the clicks, then lift your finger for one silent beat. Play E D, stay silent for two beats, and end on C.",
     },
     recap: {
       text: "Well done. You know your first rests now.",

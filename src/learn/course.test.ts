@@ -26,6 +26,7 @@ test("every_key_a_lesson_asks_for_is_in_reach_of_the_default_computer_keys", asy
           step.kind === "play-notes" ? step.notes.map(pitchesOf)
           : step.kind === "find-key" && !step.anyOctave ? [[step.key]]
           : step.kind === "read-note" && step.answer === "play" ? step.notes.map((note) => [note])
+          : step.kind === "rhythm-tap" && step.notes !== undefined ? step.notes.map((note) => [note.note])
           : [];
         // The step shifts the keys for all its notes, and a phrase re-aims them at the keys of each entry not yet pressed.
         let shift = octaveShift(entries.flat(), reach);

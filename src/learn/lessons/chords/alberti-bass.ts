@@ -6,7 +6,9 @@
  * After the fingering, the learner plays the pattern on C. Explains show the G7 shape B, F and D, and F
  * in second inversion as C, F and A, so the hand barely moves. A quiz checks the thumb's key on F. The
  * learner plays each shape, changes chords in a row, hears a short tune over the bass and plays it. The
- * texts are `alberti-bass.en.ts` and `alberti-bass.de.ts` beside it.
+ * boss is in D major, whose key signature no earlier lesson teaches. A demo plays the D major scale and
+ * names its two sharps, a quiz checks them, and the learner plays the scale. The texts are
+ * `alberti-bass.en.ts` and `alberti-bass.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
 import { albertiBassDe } from "./alberti-bass.de";
@@ -16,6 +18,9 @@ import { albertiBassEn } from "./alberti-bass.en";
 function bar(low: number, middle: number, high: number, at: number) {
   return [low, high, middle, high, low, high, middle, high].map((note, i) => ({ note, at: at + i / 2, beats: 0.5 }));
 }
+
+/** The D major scale from the D above middle C, up and back down, with F♯ and C♯. */
+const D_MAJOR = [62, 64, 66, 67, 69, 71, 73, 74, 73, 71, 69, 67, 66, 64, 62];
 
 export const albertiBass: Lesson = {
   id: "alberti-bass",
@@ -57,6 +62,14 @@ export const albertiBass: Lesson = {
       kind: "play-notes",
       notes: [[48, 64], 55, 52, 55, [48, 67], 55, 52, 55, [47, 62], 53, 50, 53, [47, 65], 53, 50, 53, [48, 60]],
     },
+    {
+      id: "d-major-demo",
+      kind: "demo",
+      bpm: 80,
+      notes: D_MAJOR.map((note, i) => ({ note, at: i, beats: i === D_MAJOR.length - 1 ? 2 : 1 })),
+    },
+    { id: "two-sharps", kind: "quiz", right: 0 },
+    { id: "d-major-scale", kind: "play-notes", notes: D_MAJOR },
     { id: "recap", kind: "recap" },
   ],
   texts: { en: albertiBassEn, de: albertiBassDe },

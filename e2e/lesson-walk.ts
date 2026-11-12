@@ -7,7 +7,7 @@
  *   MIDI keyboard, since this browser has none.
  * - **A `play` move clicks an on-screen key near its bottom edge,** where no black key covers a white one.
  * - **A `tap-beats` move taps inside the page,** on each change of the step's `data-beat`, so a tap
- *   never waits on a round trip to the test.
+ *   never waits on a round trip to the test. A phrase's move presses its notes' keys on their beats only.
  * - **A `play-song` move plays the practice step's notes in its loop on the computer keys.** Where wait
  *   mode holds the song at each note, each press comes a margin after the song reaches it. Where the
  *   song plays on, the page presses each note on the audio clock the song follows, since a round trip
@@ -22,7 +22,7 @@ import { DEFAULT_KEYS, keysOf } from "../src/input/keyboard";
 import { momentsOf, requiredNotes, type Hands } from "../src/input/wait-mode";
 import { COURSE } from "../src/learn/course";
 import { inputHas, stepsToRun } from "../src/learn/lesson-run";
-import type { Lesson } from "../src/learn/model";
+import type { Lesson, Step } from "../src/learn/model";
 import { solutionOf, type SolutionMove } from "../src/learn/steps/solution";
 import type { CatalogSong } from "../src/library/search";
 import { readMidi } from "../src/midi/smf-read";
@@ -56,12 +56,14 @@ export async function courseLessons(): Promise<CourseLesson[]> {
 }
 
 /**
- * The fewest lessons that hold every step kind and every role of the course, in course order. The
- * browser walks prove that each kind of step works. `src/learn/model.test.ts` proves every lesson valid.
+ * The fewest lessons that hold every step kind, a `rhythm-tap` phrase, and every role of the course, in
+ * course order. The browser walks prove that each kind of step works. `src/learn/model.test.ts` proves
+ * every lesson valid.
  */
 export async function sampleLessons(): Promise<CourseLesson[]> {
   const all = await courseLessons();
-  const traits = (entry: CourseLesson) => new Set([`role:${entry.role}`, ...entry.lesson.steps.map((step) => step.kind)]);
+  const trait = (step: Step) => (step.kind === "rhythm-tap" && step.notes !== undefined ? "rhythm-tap:phrase" : step.kind);
+  const traits = (entry: CourseLesson) => new Set([`role:${entry.role}`, ...entry.lesson.steps.map(trait)]);
   const missing = new Set(all.flatMap((entry) => [...traits(entry)]));
   const picked: CourseLesson[] = [];
   while (missing.size > 0) {
@@ -127,11 +129,24 @@ const ROUND_LIMIT_MS = 45_000;
  */
 const START_LIMIT_MS = 120_000;
 
-/** Taps a computer key inside the page on each beat of the shown `rhythm-tap` step, until it ends. */
-async function tapBeats(page: Page, start: string): Promise<void> {
+/**
+ * Taps a computer key inside the page on each beat of the shown `rhythm-tap` step, until it ends. With
+ * `notes`, it presses each note's default computer key on its beat only, and lets go at once.
+ */
+async function tapBeats(page: Page, start: string, notes?: { beat: number; pitch: number }[]): Promise<void> {
+  const codes =
+    notes === undefined
+      ? null
+      : Object.fromEntries(
+          notes.map(({ beat, pitch }) => {
+            const code = DEFAULT_KEYS.get(pitch);
+            if (code === undefined) throw new Error(`No default computer key plays note ${pitch}.`);
+            return [beat, code];
+          }),
+        );
   await stage(page).getByRole("button", { name: start }).click();
   await page.evaluate(
-    ({ startLimit, roundLimit }) =>
+    ({ startLimit, roundLimit, codes }) =>
       new Promise<void>((resolve, reject) => {
         const root = document.querySelector<HTMLElement>(".lesson__stage [data-first-tap]");
         if (root === null) return resolve();
@@ -156,7 +171,8 @@ async function tapBeats(page: Page, start: string): Promise<void> {
           const beat = root.dataset.beat === undefined ? -1 : Number(root.dataset.beat);
           if (beat >= first && beat !== tapped) {
             tapped = beat;
-            for (const type of ["keydown", "keyup"]) window.dispatchEvent(new KeyboardEvent(type, { code: "KeyQ", key: "q" }));
+            const code = codes === null ? "KeyQ" : codes[beat - first];
+            if (code !== undefined) for (const type of ["keydown", "keyup"]) window.dispatchEvent(new KeyboardEvent(type, { code, key: code === "KeyQ" ? "q" : "" }));
           }
           if (root.dataset.phase === "done" || (started && root.dataset.phase === "idle")) {
             clearTimeout(timer);
@@ -166,7 +182,7 @@ async function tapBeats(page: Page, start: string): Promise<void> {
         });
         observer.observe(root, { attributes: true });
       }),
-    { startLimit: START_LIMIT_MS, roundLimit: ROUND_LIMIT_MS },
+    { startLimit: START_LIMIT_MS, roundLimit: ROUND_LIMIT_MS, codes },
   );
 }
 
@@ -324,7 +340,7 @@ export async function playMove(page: Page, move: SolutionMove, locale: Locale): 
       for (const answer of move.answers) await stage(page).locator(`[data-answer="${answer}"]`).click();
       return;
     case "tap-beats":
-      return tapBeats(page, t.rhythmTap.start);
+      return tapBeats(page, t.rhythmTap.start, move.notes);
     case "play-song":
       throw new Error("A song move is played by `walkLesson`, which knows its practice step.");
   }

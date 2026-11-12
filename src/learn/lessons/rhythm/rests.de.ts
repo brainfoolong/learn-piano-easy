@@ -29,7 +29,7 @@ export const restsDe: RestsTexts = {
       text: "Schau zu und hör hin. Das Klavier spielt C D E, macht einen Schlag Pause und spielt dann E D. Nach zwei Schlägen Pause endet es auf C.",
     },
     "play-with-rests": {
-      text: "Jetzt du. Spiel C D E und zähl einen Schlag Pause. Spiel E D, zähl zwei Schläge Pause und ende auf C.",
+      text: "Jetzt du, nach einem Takt zum Einzählen. Spiel C D E auf die Klicks und heb dann den Finger für einen stillen Schlag. Spiel E D, bleib zwei Schläge still und ende auf C.",
     },
     recap: {
       text: "Gut gemacht. Jetzt kennst du deine ersten Pausen.",

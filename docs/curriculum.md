@@ -29,7 +29,7 @@ lesson is written by, until the lesson model's head comment in `src/learn/model.
 | `demo` | Watches and hears the piano play, with keys and notes highlighted | It ends, or they skip it |
 | `find-key` | Presses the key the step names | They press it, with mistakes counted |
 | `play-notes` | Plays a short phrase, which waits for each note or chord | Every note and chord is played, with mistakes counted |
-| `rhythm-tap` | Taps any key on the beat with a metronome | Enough taps land inside the window |
+| `rhythm-tap` | Taps any key on the beat with a metronome, or plays a phrase's keys in time with it | Enough taps or notes land inside the window, and no key sounds in a rest |
 | `read-note` | Names a note shown on the staff, or plays it | Enough answers are right |
 | `listen` | Hears two sounds and answers: higher, lower or the same | Enough answers are right |
 | `quiz` | Picks one of two to four answers | They pick the right one |
@@ -77,11 +77,11 @@ world, and [findings.md](findings.md) holds that goal's findings under its slug.
 | Meet the piano | The keys, their names, octaves, posture and finger numbers | A timed key hunt | `learn-first-steps` |
 | First melodies | The C position of each hand, steps and skips | *Mary Had a Little Lamb*, Beginner | `learn-first-steps` |
 | Rhythm | The beat, note values, rests, counting and time signatures | *Ode to Joy*, Beginner | `learn-first-steps` |
-| Reading music | The staff, both clefs, landmark notes and reading by steps | *Old MacDonald Had a Farm*, Beginner | `learn-first-steps` |
+| Reading music | The staff, both clefs, landmark notes, reading by steps, and the dotted notes of its boss | *Old MacDonald Had a Farm*, Beginner | `learn-first-steps` |
 | Both hands | Hands apart, then together, over a held bass | *Ode to Joy*, Beginner: the rhythm boss returns with both hands | `learn-both-hands` |
 | Scales and keys | Half and whole steps, sharps and flats, thumb under, key signatures | *Jingle Bells*, Beginner | `learn-both-hands` |
-| Chords | Triads, major and minor, the three main chords, broken chords | *Canon in D*, Easy | `learn-both-hands` |
-| Expression | Dynamics, legato and staccato, the sustain pedal, phrasing | *Für Elise*, Easy | `learn-both-hands` |
+| Chords | Triads, major and minor, the three main chords, broken chords, and the key of D major | *Canon in D*, Easy | `learn-both-hands` |
+| Expression | Dynamics, legato and staccato, the sustain pedal, phrasing, and the wide left hand of its boss | *Für Elise*, Easy | `learn-both-hands` |
 
 ## Open
 

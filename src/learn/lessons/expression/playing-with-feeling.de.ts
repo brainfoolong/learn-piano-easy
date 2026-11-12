@@ -53,6 +53,12 @@ export const playingWithFeelingDe: PlayingWithFeelingTexts = {
       text: "Über Für Elise steht p. Welches Mal hat gepasst?",
       answers: ["Das zweite, leise Mal", "Das erste, laute Mal", "Beide, sie waren gleich", "Keines von beiden"],
     },
+    "elise-left-demo": {
+      text: "Hör dir die linke Hand des Bosses an, mit den Fingern 5, 2 und 1. Sie bricht a-Moll als A, E und A, dann E-Dur als E, H und Gis. Die E-Dur-Lage ist weiter als eine Oktave, darum lass die Hand beim Spielen nach oben wandern.",
+    },
+    "elise-left-hand": {
+      text: "Jetzt du. Spiel A, E und A ab dem zweiten A unter dem mittleren C, dann E, H und Gis ab dem zweiten E unter dem mittleren C. Ende wieder auf A, E und A.",
+    },
     "how-to-play-the-boss": {
       text: "Für Elise steht in a-Moll und beginnt mit p. Wie spielst du das Stück?",
       answers: ["Laut und hell", "Schnell und kurz", "Leise und sanft, wie ein stilles Lied", "Jeden Ton gleich und hart"],

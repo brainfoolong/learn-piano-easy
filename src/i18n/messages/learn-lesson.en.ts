@@ -117,6 +117,15 @@ export const learnLesson = {
     /** The band after a round with too few beats tapped. */
     short: (hits: number, beats: number) => `${formatNumber("en", hits)} of ${formatNumber("en", beats)} beats got a tap. Try again.`,
     hint: "Tap the moment you hear the click. The dots flash on the beat.",
+    /** The status while the learner plays a phrase in time. */
+    play: "Now play each note on its click.",
+    /** The keyboard's accessible name, for a phrase played in time. */
+    phrasePiano: "The keys. Play the phrase in time with the clicks.",
+    /** The band after a phrase's round with too few notes on time. */
+    shortNotes: (hits: number, notes: number) => `${formatNumber("en", hits)} of ${formatNumber("en", notes)} notes came on time. Try again.`,
+    /** The band after a round in which a key sounded during a rest. */
+    restSounded: "A key sounded in a rest. Lift your finger and stay silent there.",
+    phraseHint: "Play each note on its click, and lift the key before a rest. The dots flash on the beat.",
   },
   song: {
     play: "Play it in the player",

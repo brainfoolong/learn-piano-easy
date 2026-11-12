@@ -20,9 +20,11 @@ export type SolutionMove =
   | { do: "answer"; answers: string[] }
   /**
    * Presses the step's Start button, then presses a key of its keyboard each time its `data-beat`
-   * reaches a new value at or above its `data-first-tap`, until its `data-phase` is `done`.
+   * reaches a new value at or above its `data-first-tap`, until its `data-phase` is `done`. With
+   * `notes`, it presses only on a beat that starts a note, counted from the first tap beat, and that
+   * note's key, and lets go at once.
    */
-  | { do: "tap-beats" }
+  | { do: "tap-beats"; notes?: { beat: number; pitch: number }[] }
   /**
    * Presses the step's button whose `data-answer` is `play`, which opens the player on `file`. Then
    * plays the version's notes in time until a scored take reaches `accuracy` and the lesson shows again.
@@ -50,7 +52,7 @@ export function solutionOf(step: Step): SolutionMove[] {
     case "listen":
       return [{ do: "answer", answers: step.pairs.map(([first, second]) => (second > first ? "higher" : second < first ? "lower" : "same")) }];
     case "rhythm-tap":
-      return [{ do: "tap-beats" }];
+      return step.notes === undefined ? [{ do: "tap-beats" }] : [{ do: "tap-beats", notes: step.notes.map((note) => ({ beat: note.at, pitch: note.note })) }];
     case "song":
       return [{ do: "play-song", file: step.file, accuracy: step.accuracy }];
   }

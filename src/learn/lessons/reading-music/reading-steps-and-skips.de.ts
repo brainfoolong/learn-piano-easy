@@ -51,9 +51,24 @@ export const readingStepsAndSkipsDe: ReadingStepsAndSkipsTexts = {
       text: "In dieser Melodie geht das E abwärts zum D. Das E steht auf der untersten Linie. Wo steht das D?",
       answers: ["Im Zwischenraum direkt darunter", "Auf der Linie darunter", "Auf derselben Linie"],
     },
+    "dotted-demo": {
+      text: "Hör dir zwei Takte des Lieds an. Ein Punkt macht eine Note um die Hälfte länger: Eine punktierte halbe Note dauert drei Schläge. Die punktierte Viertel D dauert anderthalb Schläge, und eine Achtelpause füllt den letzten halben Schlag.",
+    },
+    "dotted-half-quiz": {
+      text: "Eine halbe Note dauert zwei Schläge. Wie viele Schläge dauert eine punktierte halbe Note?",
+      answers: ["Zwei Schläge", "Drei Schläge", "Vier Schläge"],
+    },
+    "dotted-tap": {
+      text: "Jetzt du, nach einem Takt zum Einzählen. Spiel E, E und D auf die Klicks und heb das D nach anderthalb Schlägen. Halt das G drei Schläge lang und spiel dann D.",
+    },
     recap: {
       text: "Gut gemacht. Jetzt liest du eine Melodie an ihren Bewegungen.",
-      points: ["Ein Schritt geht von der Linie in den nächsten Zwischenraum oder umgekehrt.", "Ein Sprung geht von Linie zu Linie oder von Zwischenraum zu Zwischenraum.", "Lies den ersten Ton, dann die Richtung und die Größe jeder Bewegung."],
+      points: [
+        "Ein Schritt geht von der Linie in den nächsten Zwischenraum oder umgekehrt.",
+        "Ein Sprung geht von Linie zu Linie oder von Zwischenraum zu Zwischenraum.",
+        "Lies den ersten Ton, dann die Richtung und die Größe jeder Bewegung.",
+        "Ein Punkt macht eine Note um die Hälfte länger.",
+      ],
     },
   },
 };
