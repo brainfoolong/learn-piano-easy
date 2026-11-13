@@ -12,3 +12,4 @@ The tool writes them, so a change is a new run of it, never an edit of a file he
 |---|---|---|
 | `en.png` | The site's name and the hero's lead in English, beside a keyboard with falling notes | MIT |
 | `de.png` | The site's name and the hero's lead in German, beside a keyboard with falling notes | MIT |
+| `es.png` | The site's name and the hero's lead in Spanish, beside a keyboard with falling notes | MIT |

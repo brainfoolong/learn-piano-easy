@@ -46,7 +46,7 @@ export interface LocaleRow {
 export const LOCALE_TABLE = [
   { code: "en", english: "English", endonym: "English", lang: "en", intl: "en", dir: "ltr", ogLocale: "en_US", naming: "letters", alphabet: "latin", shipped: true, complete: true },
   { code: "de", english: "German", endonym: "Deutsch", lang: "de", intl: "de", dir: "ltr", ogLocale: "de_DE", naming: "german", alphabet: "latin", shipped: true, complete: true },
-  { code: "es", english: "Spanish", endonym: "Español", lang: "es", intl: "es-419", dir: "ltr", ogLocale: "es_LA", naming: "solfege", alphabet: "latin", shipped: false, complete: false },
+  { code: "es", english: "Spanish", endonym: "Español", lang: "es", intl: "es-419", dir: "ltr", ogLocale: "es_LA", naming: "solfege", alphabet: "latin", shipped: true, complete: false },
   { code: "zh", english: "Chinese", endonym: "简体中文", lang: "zh-Hans", intl: "zh-Hans-CN", dir: "ltr", ogLocale: "zh_CN", naming: "letters", alphabet: "han", shipped: false, complete: false },
   { code: "hi", english: "Hindi", endonym: "हिन्दी", lang: "hi", intl: "hi-IN", dir: "ltr", ogLocale: "hi_IN", naming: "letters", alphabet: "devanagari", shipped: false, complete: false },
   { code: "ar", english: "Arabic", endonym: "العربية", lang: "ar", intl: "ar", dir: "rtl", ogLocale: "ar_AR", naming: "solfege", alphabet: "arabic", shipped: false, complete: false },

@@ -47,6 +47,15 @@ export const THEMES = ["light", "dark"] as const;
 export const LOCALES = [...SHIPPED_LOCALES.filter((locale) => COMPLETE_LOCALES.includes(locale)), PSEUDO_LOCALE];
 
 /**
+ * The shipped locales a translation pass keeps, such as Spanish. `e2e/locales.e2e.ts` checks their pages
+ * at `PASSED_WIDTHS` only, since the pseudo-locale's longer texts cover every width.
+ */
+export const PASSED_LOCALES = SHIPPED_LOCALES.filter((locale) => !COMPLETE_LOCALES.includes(locale));
+
+/** The widths a passed locale is checked at: a phone's and a desktop's. */
+export const PASSED_WIDTHS = [360, 1280] as const;
+
+/**
  * `url`, the absolute URL of a page of the default locale, in the pseudo-locale. The end-to-end server
  * serves the site from its root, so the locale's folder goes first.
  */

@@ -55,14 +55,14 @@ export async function loadCourseTexts(locale: Locale): Promise<void> {
 
 /** Every world of the course, in order. */
 export const COURSE: readonly World[] = [
-  world({ id: "meet-the-piano", title: { en: "Meet the piano", de: "Das Klavier kennenlernen" }, accent: "violet" }, async () => (await import("./lessons/meet-the-piano/index")).meetThePiano),
-  world({ id: "first-melodies", title: { en: "First melodies", de: "Erste Melodien" }, accent: "teal" }, async () => (await import("./lessons/first-melodies/index")).firstMelodies),
-  world({ id: "rhythm", title: { en: "Rhythm", de: "Rhythmus" }, accent: "amber" }, async () => (await import("./lessons/rhythm/index")).rhythm),
-  world({ id: "reading-music", title: { en: "Reading music", de: "Noten lesen" }, accent: "sky" }, async () => (await import("./lessons/reading-music/index")).readingMusic),
-  world({ id: "both-hands", title: { en: "Both hands", de: "Beide Hände" }, accent: "coral" }, async () => (await import("./lessons/both-hands/index")).bothHands),
-  world({ id: "scales-and-keys", title: { en: "Scales and keys", de: "Tonleitern und Tonarten" }, accent: "lime" }, async () => (await import("./lessons/scales-and-keys/index")).scalesAndKeys),
-  world({ id: "chords", title: { en: "Chords", de: "Akkorde" }, accent: "rose" }, async () => (await import("./lessons/chords/index")).chords),
-  world({ id: "expression", title: { en: "Expression", de: "Ausdruck" }, accent: "indigo" }, async () => (await import("./lessons/expression/index")).expression),
+  world({ id: "meet-the-piano", title: { en: "Meet the piano", de: "Das Klavier kennenlernen", es: "Conoce el piano" }, accent: "violet" }, async () => (await import("./lessons/meet-the-piano/index")).meetThePiano),
+  world({ id: "first-melodies", title: { en: "First melodies", de: "Erste Melodien", es: "Primeras melodías" }, accent: "teal" }, async () => (await import("./lessons/first-melodies/index")).firstMelodies),
+  world({ id: "rhythm", title: { en: "Rhythm", de: "Rhythmus", es: "Ritmo" }, accent: "amber" }, async () => (await import("./lessons/rhythm/index")).rhythm),
+  world({ id: "reading-music", title: { en: "Reading music", de: "Noten lesen", es: "Leer partituras" }, accent: "sky" }, async () => (await import("./lessons/reading-music/index")).readingMusic),
+  world({ id: "both-hands", title: { en: "Both hands", de: "Beide Hände", es: "Las dos manos" }, accent: "coral" }, async () => (await import("./lessons/both-hands/index")).bothHands),
+  world({ id: "scales-and-keys", title: { en: "Scales and keys", de: "Tonleitern und Tonarten", es: "Escalas y tonalidades" }, accent: "lime" }, async () => (await import("./lessons/scales-and-keys/index")).scalesAndKeys),
+  world({ id: "chords", title: { en: "Chords", de: "Akkorde", es: "Acordes" }, accent: "rose" }, async () => (await import("./lessons/chords/index")).chords),
+  world({ id: "expression", title: { en: "Expression", de: "Ausdruck", es: "Expresión" }, accent: "indigo" }, async () => (await import("./lessons/expression/index")).expression),
 ];
 
 /**
