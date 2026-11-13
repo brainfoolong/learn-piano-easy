@@ -5,11 +5,15 @@
  *
  * Every page is reached from the site's root, as a learner's link would. The top bar's controls are
  * found inside `.site-bar-host`, since the player draws a bar of its own on `play/`. Every page starts
- * past the first-visit setup of *Learn Piano*, whose modal dialog would cover the bar.
+ * past the first-visit setup of *Learn Piano*, whose modal dialog would cover the bar. Every shipped
+ * locale's catalog loads before the first test, since a page's expected title is read from it.
  */
 import { expect, test, type Page } from "@playwright/test";
+import { loadEveryLocale } from "../src/i18n/all-catalogs";
 import { allPages, pageAt, pageTitle } from "../src/site/routes";
 import { checkLayout, LOCALES, pastSetup, THEMES, WIDTHS } from "./layout-check";
+
+test.beforeAll(loadEveryLocale);
 
 test.beforeEach(({ page }) => pastSetup(page));
 
