@@ -87,6 +87,18 @@ A pass works in batches. A batch is one catalog section, one world's lessons, or
 The review is blind because a reviewer who reads the English first reads its meaning into the
 translation. A back-translation made without the source shows what the text says, not what it should say.
 
+## Before a locale ships
+
+- **A consistency read crosses every batch.** Fresh readers take the catalogs and the course in one
+  read, and the song guides in halves. Each lists the terms, phrasings and marks that drift between files.
+  Parallel writers drift most in the guides' recurring steps, such as "Play the whole song".
+- **A writer's brief carries the recurring steps' settled wording,** once the first batch has it. That
+  keeps the consistency read short.
+- **A text keyed by `ShippedLocale` must hold the new locale,** so the type checker names each one. A
+  text only the complete locales hold, such as the gallery's or a legal text, is keyed by `CompleteLocale`.
+- **The shots include a lesson.** A label the code draws, such as a key's name, follows the locale's
+  naming, and no catalog test reads it.
+
 ### The writer's rules
 
 - **Translate the meaning, then write it as a native teacher would.** Reorder, split or join sentences
@@ -154,4 +166,5 @@ lands, and the glossary changes first when the report is about a term.
 
 ## Open
 
-- No locale has a style guide yet. Each locale's goal writes its own as its first stage.
+- Each locale's goal writes its own style guide as its first stage. Spanish's is
+  [docs/reference/translation/es.md](../reference/translation/es.md).

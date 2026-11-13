@@ -10,6 +10,7 @@
 <p align="center">
   <a href="https://learn-piano-easy.app"><strong>Open the app</strong></a> ·
   <a href="https://learn-piano-easy.app/de/">Deutsch</a> ·
+  <a href="https://learn-piano-easy.app/es/">Español</a> ·
   <a href="https://learn-piano-easy.app/sponsor/">Sponsor</a>
 </p>
 
@@ -48,7 +49,7 @@ loop a hard bar, or let the song wait until you hit each note.
 - **Offline first.** After the first visit, the app runs offline, and so does every song you have opened.
 - **Private by design.** Your progress stays in your browser. The hosted site counts page visits,
   without cookies.
-- **English and German,** in light and dark themes, on a phone or a desktop.
+- **English, German and Spanish,** in light and dark themes, on a phone or a desktop.
 
 [docs/reference/features.md](docs/reference/features.md) lists every feature in detail.
 
