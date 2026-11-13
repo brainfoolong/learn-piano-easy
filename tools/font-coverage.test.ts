@@ -8,6 +8,8 @@
  * - **Every letter, mark and punctuation sign the locale's texts use is checked too,** in the catalogs,
  *   the lessons and the guides. A symbol such as ♯ or an emoji is left to the system's fonts.
  * - **The other scripts take the system's fonts** through `src/ui/tokens.css`, so they are not checked.
+ *   A Latin locale's text in another script, such as the endonym `简体中文` in its language list, is a
+ *   whole word of that script, so it draws in one face and is skipped too.
  */
 import { brotliDecompressSync } from "node:zlib";
 import { join } from "node:path";
@@ -27,6 +29,9 @@ const ALPHABETS: Partial<Record<LanguageCode, string>> = {
   id: "“”‘’–…",
   fr: "àâæçéèêëîïôœùûüÿÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ«»’–…",
 };
+
+/** A letter, mark or punctuation sign of the Latin script, or one every script shares. */
+const OWN_SCRIPT = /(?=[\p{Script=Latin}\p{Script=Common}\p{Script=Inherited}])[\p{L}\p{M}\p{P}]/gu;
 
 /** A variable-length number of a WOFF2 table directory, and the offset after it. */
 function base128(bytes: Uint8Array, at: number): [number, number] {
@@ -124,7 +129,7 @@ test("the_latin_font_covers_every_latin_locale", async () => {
     for (const text of units.flatMap((unit) => unit.texts)) {
       const leaf = row.code === "en" ? text.english : text.own[row.code];
       if (leaf === undefined) continue;
-      for (const each of textsOfLeaf(leaf)) for (const char of each.match(/[\p{L}\p{M}\p{P}]/gu) ?? []) used.add(char);
+      for (const each of textsOfLeaf(leaf)) for (const char of each.match(OWN_SCRIPT) ?? []) used.add(char);
     }
     const missing = [...used].filter((char) => !font.has(char.codePointAt(0)!));
     if (missing.length > 0) lacking.push(`${row.code}: ${missing.join(" ")}`);
