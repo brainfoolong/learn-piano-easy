@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Indonesian style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Indonesian
     status: open
@@ -57,10 +57,17 @@ keeps to the standard language without sounding stiff. The method in
   records the reason.
 - **The variety is standard Indonesian, *bahasa baku*.** Its spelling is EYD, the official spelling
   rules, and its word forms are those of KBBI, the official dictionary.
-- **The interface terms are the established Indonesian ones,** such as *unduh* and *berkas*, where the
-  guide's sources use them.
-- **The learner is *kamu*,** as friendly learning apps use it. The guide may switch to *Anda* with a
-  recorded reason.
+- **The interface terms are the established Indonesian ones,** such as *unduh*, where the guide's sources
+  use them. Microsoft and Android both write *file* and *folder*, never *berkas*, so the guide follows them.
+- **The learner is *kamu*,** although Microsoft and Android write *Anda*. They speak to adults managing a
+  device, and this app is a teacher beside a learner, often a child. Android uses *kamu* where it speaks
+  to young users. The teacher speaks as *aku*.
+- **Settings is *Pengaturan*,** as Microsoft writes it. Android's *Setelan* also means a suit of clothes.
+- **A label is sentence case,** as Android writes it. Microsoft's title case for menus is not followed.
+- **The term list is the Portuguese guide's English column.** The English changed by one line since that
+  list was made, so no new count was run.
+- **The locale row is confirmed unchanged:** `id`, `Bahasa Indonesia`, `id_ID`, letters, Latin. It lives in
+  `src/i18n/locale-table.ts`.
 - **An instruction is a short imperative:** *Tekan*, *Pilih*, *Mainkan*.
 - **The particle *-lah* and the other particles are used sparingly.** The text uses no slang, *bahasa
   gaul*.
@@ -86,12 +93,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/id.md:1`
-- [ ] Microsoft's Indonesian style guide: the address, the marks and the interface terms. `docs/reference/translation/id.md:1`
-- [ ] Indonesian Wikipedia's music articles and Indonesian piano methods: each music term with two sources. `docs/reference/translation/id.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/id.md:1`
-- [ ] The Indonesian entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Indonesian row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/id.md:1`
+- [x] Microsoft's Indonesian style guide: the address, the marks and the interface terms. `docs/reference/translation/id.md:1`
+- [x] Indonesian Wikipedia's music articles and Indonesian piano methods: each music term with two sources. `docs/reference/translation/id.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/id.md:1`
+- [x] The Indonesian entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The Indonesian row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
 
 ### 2. The site and the player in Indonesian
 
@@ -168,15 +175,24 @@ term, address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `portuguese` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/id.md` holds every section the method names. The `id` entry of
+`src/i18n/typography.ts` holds its kept words and twelve mark rules. Test
+`the_indonesian_marks_hold_and_spare_kept_words` in `src/i18n/translation-rules.test.ts` pins them, and it
+passes. No Indonesian text exists yet.
 
 ### Next
 
-**Stage 1: the Indonesian style guide and glossary.** Files: `docs/reference/translation/id.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `portuguese` is reached.
+**Stage 2: the site and the player in Indonesian.** Run `bun tools/i18n.ts status id`, then `work id
+<unit>` for each catalog section. Three writers go side by side: `src/i18n/messages/id.ts` with
+`learn-lesson.id.ts`, `player-shell.id.ts`, and `player-settings.id.ts`. Each brief carries
+`docs/reference/translation/id.md` whole. Then three fresh blind reviewers, settle, and stamp.
 
-Expected red: none.
+- A mark rule that misfires on a real text is fixed in `src/i18n/typography.ts` and the guide's § 9 together.
+- `CATALOG_CHUNKS` in `src/i18n/locale.ts:44` needs an `id` line once `messages/id.ts` exists.
+
+Expected red: none. `indonesian_texts_keep_their_rules` passes on an empty locale.
 
 ### Backlog
 
 - A native Indonesian speaker's read of the course would catch what a blind review cannot.
+- No Indonesian piano method loaded. The guide's *Open* lists the course terms a teacher should confirm.

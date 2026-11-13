@@ -221,7 +221,39 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       { says: "A range between digits takes – with no spaces", mustNot: /\d\s+[–—-]\s*\d|\d\s*[–—-]\s+\d|\d—\d/ },
     ],
   },
-  id: { kept: [], marks: [] },
+  id: {
+    kept: [
+      "Learn Piano Easy", "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman", "Web MIDI", "MIDI", "MusicXML",
+      "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari", "XP", "BPM", "FPS", "PDF", "USB", "kHz", "Hz", "dB", "ms", "KB", "MB",
+      "legato", "staccato", "crescendo", "diminuendo", "forte", "piano", "Piano", "tempo", "Tempo", "coda", "fermata",
+      "Normal", "Volume", "volume", "OK", "Ctrl", "Alt", "Shift", "Meta", "Esc", "Enter", "Zoom", "Ragtime", "quiz", "Kuis",
+    ],
+    marks: [
+      { says: "A quote stands in “ ”, never in straight quotes or « »", mustNot: /["«»„]/ },
+      { says: "No space stands before a period, a comma, a colon, a semicolon, ?, ! or %", mustNot: /\s[.,:;?!%]/ },
+      { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
+      { says: "The learner is kamu, never Anda, engkau or slang", mustNot: /(?<!\p{L})(?:anda|engkau|gue|gua|gw|lo|lu|elo|elu)(?!\p{L})/iu },
+      { says: "No word asks please: no silakan, mohon or tolong", mustNot: /(?<!\p{L})(?:silakan|silahkan|mohon|tolong)(?!\p{L})/iu },
+      {
+        says: "The text is standard Indonesian, with no bahasa gaul",
+        mustNot: /(?<!\p{L})(?:nggak|ngga|gak|enggak|banget|aja|udah|udh|kayak|gimana|bikin|dong|deh|sih|kok|nih|tuh|yuk|kalo)(?!\p{L})/iu,
+      },
+      {
+        says: "A word takes its standard EYD spelling: praktik, silakan, mengubah, risiko, izin, zaman, teknik",
+        mustNot: /(?<!\p{L})(?:prakte[kg]\p{L}*|silahkan|merubah|resiko|ijin|jaman|nasehat|aktifitas|kwalitas|sistim|tehnik|obyek|standart|karir|kreatifitas)(?!\p{L})/iu,
+      },
+      {
+        says: "The preposition di or ke stands apart from the place it names",
+        mustNot: /(?<!\p{L})(?:dimana|disini|disana|disitu|kemana|kesini|kesana|diatas|dibawah|didalam|diluar|diantara|disamping|didepan|dibelakang|keatas|kebawah|kedalam)(?!\p{L})/iu,
+      },
+      { says: "The particle pun stands apart after a question word", mustNot: /(?<!\p{L})(?:apa|siapa|mana|kapan)pun(?!\p{L})/iu },
+      {
+        says: "A noun is never doubled where a count already shows the plural",
+        mustNot: /(?<!\p{L})(?:\d+|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan|sepuluh|beberapa|banyak|semua|para|setiap|tiap)\s+(\p{L}+)-\1(?!\p{L})/iu,
+      },
+      { says: "A range between digits takes – with no spaces", mustNot: /\d\s+[–—-]\s*\d|\d\s*[–—-]\s+\d|\d—\d/ },
+    ],
+  },
   bn: { kept: [], marks: [] },
   ru: { kept: [], marks: [] },
   fr: { kept: [], marks: [] },

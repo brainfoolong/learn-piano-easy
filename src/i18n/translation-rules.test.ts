@@ -280,6 +280,23 @@ test("the_portuguese_marks_hold_and_spare_kept_words", () => {
   for (const text of kept) expect(problemsOf([textOf("English", text, "pt")], "pt")).toEqual([]);
 });
 
+test("the_indonesian_marks_hold_and_spare_kept_words", () => {
+  const broken = [
+    "Hitung \"1-2\".", "Hitung «1-2».", "Memuat...", "Siap !", "Level :", "Anda bisa mulai.", "Gue main piano.",
+    "Mainkan aja.", "Nggak apa-apa.", "Silahkan coba lagi.", "Ayo praktek.", "Tekan tuts diatas C.", "Pilih lagu apapun.",
+    "Ada 3 lagu-lagu.", "Mainkan beberapa not-not.", "birama 1 - 4", "Mohon tunggu.", "Silakan pilih lagu.",
+  ];
+  for (const text of broken) expect(problemsOf([textOf("English", text, "id")], "id")).not.toEqual([]);
+  const kept = [
+    "Halo! Aku guru pianomu. Ayo kita main?", "Giliranmu. Letakkan ibu jari kanan di C tengah, lalu mainkan C dan E bersamaan.",
+    "Hitung “1-2” pada setiap not setengah.", "Mainkan Hark! The Herald Angels Sing dengan tangan kanan.", "Memuat…", "Pada 80%.",
+    "birama 1–4", "Tekan tuts di atas C.", "Pilih lagu apa pun.", "Bagaimanapun, coba lagi.", "Ada 3 lagu.", "Lagu-lagu Natal",
+    "Mainkan dengan pelan-pelan.", "Mainkan dengan keyboard MIDI.", "1.234,5 not", "Keluar dari pelajaran ini?",
+    "Mainkan C, E, dan G.", "Pilih “Putar”.", "Tunggu notmu", "Kamu yakin?", "Lihat dulu sebelum melompat.",
+  ];
+  for (const text of kept) expect(problemsOf([textOf("English", text, "id")], "id")).toEqual([]);
+});
+
 const units = await loadUnits();
 const everyText = units.flatMap((unit) => unit.texts);
 
