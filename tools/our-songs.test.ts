@@ -6,7 +6,7 @@ import { readMidi } from "../src/midi/smf-read";
 import { songFromMidi, songLength } from "../src/midi/song";
 import { expect, test } from "../src/testing";
 import { readCatalog, songsDir } from "./catalog";
-import { guideOf, guideText, isPublicDomain, licenseText, ourSongs, oursFolder, rowsOf, songProblems, versionBytes, versionMeter } from "./make-our-songs";
+import { guideOf, guideText, guideTranslationsOf, isPublicDomain, licenseText, ourSongs, oursFolder, rowsOf, songProblems, versionBytes, versionMeter } from "./make-our-songs";
 import { trickySpots } from "./song-meter";
 
 /** The catalog difficulty each rarity's versions take, from its lowest to its highest. */
@@ -280,6 +280,32 @@ test("every_guide_is_complete", async () => {
   expect({ untranslated }).toEqual({ untranslated: [] });
 });
 
+test("a_guide_without_a_translation_shows_english", () => {
+  const song = ourSongs[0]!;
+  const bare = guideOf(song);
+  const partial = guideOf(song, { es: { about: "Una canción para empezar." } });
+  // A locale without a file adds no text, and every text then reads in English.
+  expect(guideOf(song, {})).toEqual(bare);
+  expect(textIn(bare.funFact, "es")).toBe(song.funFact);
+  // A file that holds one text adds only that one.
+  expect(partial.about).toEqual({ ...bare.about, es: "Una canción para empezar." });
+  expect(partial.funFact).toEqual(bare.funFact);
+  expect(partial.versions.common).toEqual(bare.versions.common);
+  expect(textIn(partial.versions.common.practice[0]!.text, "es")).toBe(song.versions.common.practice[0]!.text);
+});
+
+test("a_translated_list_of_another_length_shows_english", () => {
+  const song = ourSongs[0]!;
+  const { practice, tips } = song.versions.common;
+  const guide = guideOf(song, {
+    es: { versions: { common: { practice: [...practice.map((_, at) => `Paso ${at + 1}.`), "Un paso de más."], tips: tips.map((_, at) => `Consejo ${at + 1}.`) } } },
+  });
+  // The practice list is one too long, so every step shows the English.
+  expect(guide.versions.common.practice.map((step) => step.text.es)).toEqual(practice.map(() => undefined));
+  // The tips match the English by count, so each tip shows its own.
+  expect(guide.versions.common.tips.map((tip) => tip.text.es)).toEqual(tips.map((_, at) => `Consejo ${at + 1}.`));
+});
+
 test("the_files_match_their_source", async () => {
   const catalog = await readCatalog();
   for (const song of ourSongs) {
@@ -291,7 +317,7 @@ test("the_files_match_their_source", async () => {
         same: true,
       });
     }
-    expect(await Bun.file(join(dir, "guide.json")).text()).toBe(guideText(guideOf(song)));
+    expect(await Bun.file(join(dir, "guide.json")).text()).toBe(guideText(guideOf(song, await guideTranslationsOf(song.slug))));
   }
   expect(await Bun.file(join(songsDir, oursFolder, "LICENSE.md")).text()).toBe(licenseText(ourSongs));
   const ours = catalog.filter((row) => row.file.startsWith(`${oursFolder}/`));

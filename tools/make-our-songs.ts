@@ -20,7 +20,13 @@
  * - A sentence ends at `.`, `!` or `?`. The abbreviations `z. B.`, `d. h.`, `u. a.` and `St.` end none, nor
  *   a day or century before its noun, as in `24. Dezember`. Every other abbreviation is written out.
  *
- * The writer stores each text as `{ "en": …, "de": … }`, and leaves `de` out where the module has none.
+ * Every other locale's text is `tools/our-songs/<slug>.<locale>.ts`, which exports `translation`, a
+ * `Translation<GuideTranslation>` in the shape of the German block. It may lack any text, and the guide
+ * shows the English in its place. A practice or tip list of another length than the English shows the
+ * English list, since its texts match the steps by position.
+ *
+ * The writer stores each text as `{ "en": …, "de": …, … }` in the locale table's order. It leaves a
+ * locale out where no translation holds the text.
  *
  * Decisions, and what each costs:
  * - The guide's fingers, start position and tricky bars come from the versions and the meter, so the
@@ -49,6 +55,8 @@ import { join } from "node:path";
 import { readMidi } from "../src/midi/smf-read";
 import { writeMidi } from "../src/midi/smf-write";
 import { songFromMidi } from "../src/midi/song";
+import { LOCALE_TABLE, type LocaleCode } from "../src/i18n/locale-table";
+import type { Translation } from "../src/i18n/translation";
 import { RARITIES, RARITY_NAMES, type Guide, type GuideText, type PracticeStep, type Rarity, type Tip, type VersionGuide } from "../src/library/guide";
 import type { Collection } from "../src/library/search";
 import type { SkillId } from "../src/library/skills";
@@ -208,8 +216,8 @@ export interface OurVersion {
   tricky: Record<number, string>;
 }
 
-/** The German text of one version's guide, in the shape of its English text. */
-export interface OurVersionGerman {
+/** One locale's text of one version's guide, in the shape of its English text. */
+export interface VersionTranslation {
   /** One text per practice step, in the order of `practice`. */
   practice: string[];
   /** One text per tip, in the order of `tips`. */
@@ -218,12 +226,15 @@ export interface OurVersionGerman {
   tricky: Record<number, string>;
 }
 
-/** The German text of a song's guide. */
-export interface OurGerman {
+/** One locale's text of a song's guide. German holds every text, and every other locale may lack any. */
+export interface GuideTranslation {
   about: string;
   funFact: string;
-  versions: Record<Rarity, OurVersionGerman>;
+  versions: Record<Rarity, VersionTranslation>;
 }
+
+/** The translations of a song's guide beyond German, by locale, as its `<slug>.<locale>.ts` files hold them. */
+export type GuideTranslations = Partial<Record<LocaleCode, Translation<GuideTranslation>>>;
 
 /** A song of ours, as its module exports it. */
 export interface OurSong {
@@ -242,7 +253,7 @@ export interface OurSong {
   tune: OurTune;
   versions: Record<Rarity, OurVersion>;
   /** The guide's German text. A song without it still builds, and the guide's test names it as missing. */
-  de?: OurGerman;
+  de?: GuideTranslation;
 }
 
 /** Every song of ours, in the catalog's order. */
@@ -416,13 +427,42 @@ function startOf(notes: readonly HandNote[]): (number | null)[] {
   return keys;
 }
 
-/** The text `en` with its German `de`, which is left out when the module has none. */
-function bilingual(en: string, de: string | undefined): GuideText {
-  return de === undefined ? { en } : { en, de };
+/** Each translation of `song`'s guide in the table's order: German from its module, then `others`. */
+function translationsOf(song: OurSong, others: GuideTranslations): [LocaleCode, Translation<GuideTranslation>][] {
+  return LOCALE_TABLE.flatMap(({ code }): [LocaleCode, Translation<GuideTranslation>][] => {
+    const own = code === "de" ? song.de : code === "en" ? undefined : others[code];
+    return own === undefined ? [] : [[code, own]];
+  });
 }
 
-/** The guide of the version `rarity` of `song`. */
-function versionGuide(song: OurSong, rarity: Rarity): VersionGuide {
+/** The text `en` with each locale's text that `pick` finds in `translations`, and no key where it finds none. */
+function guideTextOf(en: string, translations: readonly [LocaleCode, Translation<GuideTranslation>][], pick: (translation: Translation<GuideTranslation>) => string | undefined): GuideText {
+  const text: GuideText = { en };
+  for (const [locale, translation] of translations) {
+    const own = pick(translation);
+    if (own !== undefined) text[locale] = own;
+  }
+  return text;
+}
+
+/** `list` when it holds `length` texts, else undefined, so a list of another length shows the English. */
+function sameLength(list: readonly string[] | undefined, length: number): readonly string[] | undefined {
+  return list?.length === length ? list : undefined;
+}
+
+/** The translations beyond German of the song `slug`: each `tools/our-songs/<slug>.<locale>.ts` that exists. */
+export async function guideTranslationsOf(slug: string): Promise<GuideTranslations> {
+  const found: GuideTranslations = {};
+  for (const { code } of LOCALE_TABLE) {
+    if (code === "en" || code === "de") continue;
+    const path = join(import.meta.dir, "our-songs", `${slug}.${code}.ts`);
+    if (await Bun.file(path).exists()) found[code] = ((await import(path)) as { translation: Translation<GuideTranslation> }).translation;
+  }
+  return found;
+}
+
+/** The guide of the version `rarity` of `song`, with the texts of `translations`. */
+function versionGuide(song: OurSong, rarity: Rarity, translations: readonly [LocaleCode, Translation<GuideTranslation>][]): VersionGuide {
   const notation = versionNotation(song, rarity);
   const written = writtenFingers(notation);
   const file = songFromMidi(readMidi(versionBytes(song, rarity)));
@@ -434,28 +474,29 @@ function versionGuide(song: OurSong, rarity: Rarity): VersionGuide {
     });
   const parsed = parseSong(notation);
   const version = song.versions[rarity];
-  const german = song.de?.versions[rarity];
+  const own = (translation: Translation<GuideTranslation>) => translation.versions?.[rarity];
   return {
     file: versionFile(song, rarity),
     skills: version.skills,
     fingers: { right: fingersOf(0, "right"), left: fingersOf(1, "left") },
     start: { right: startOf(parsed.right), left: startOf(parsed.left) },
-    practice: version.practice.map((step, at) => ({ ...step, text: bilingual(step.text, german?.practice[at]) })),
-    tips: version.tips.map((tip, at) => ({ ...tip, text: bilingual(tip.text, german?.tips[at]) })),
-    tricky: trickySpots(versionMeter(song, rarity)).map(({ bar }) => ({ bar, text: bilingual(version.tricky[bar]!, german?.tricky[bar]) })),
+    practice: version.practice.map((step, at) => ({ ...step, text: guideTextOf(step.text, translations, (t) => sameLength(own(t)?.practice, version.practice.length)?.[at]) })),
+    tips: version.tips.map((tip, at) => ({ ...tip, text: guideTextOf(tip.text, translations, (t) => sameLength(own(t)?.tips, version.tips.length)?.[at]) })),
+    tricky: trickySpots(versionMeter(song, rarity)).map(({ bar }) => ({ bar, text: guideTextOf(version.tricky[bar]!, translations, (t) => own(t)?.tricky?.[bar]) })),
   };
 }
 
-/** The guide of `song`. */
-export function guideOf(song: OurSong): Guide {
+/** The guide of `song`, with German from its module and each locale of `others`. */
+export function guideOf(song: OurSong, others: GuideTranslations = {}): Guide {
+  const translations = translationsOf(song, others);
   return {
     song: song.slug,
     title: song.title,
     composer: song.source.composer,
-    about: bilingual(song.about, song.de?.about),
-    funFact: bilingual(song.funFact, song.de?.funFact),
+    about: guideTextOf(song.about, translations, (t) => t.about),
+    funFact: guideTextOf(song.funFact, translations, (t) => t.funFact),
     mythic: song.mythic,
-    versions: Object.fromEntries(RARITIES.map((rarity) => [rarity, versionGuide(song, rarity)])) as Record<Rarity, VersionGuide>,
+    versions: Object.fromEntries(RARITIES.map((rarity) => [rarity, versionGuide(song, rarity, translations)])) as Record<Rarity, VersionGuide>,
   };
 }
 
@@ -513,7 +554,7 @@ export async function makeOurSongs(songs: readonly OurSong[] = ourSongs): Promis
     const dir = join(songsDir, oursFolder, song.slug);
     await mkdir(dir, { recursive: true });
     for (const rarity of RARITIES) await Bun.write(join(dir, `${rarity}.mid`), versionBytes(song, rarity));
-    await Bun.write(join(dir, "guide.json"), guideText(guideOf(song)));
+    await Bun.write(join(dir, "guide.json"), guideText(guideOf(song, await guideTranslationsOf(song.slug))));
     rows.push(...rowsOf(song));
   }
   await Bun.write(join(songsDir, oursFolder, "LICENSE.md"), licenseText(songs));

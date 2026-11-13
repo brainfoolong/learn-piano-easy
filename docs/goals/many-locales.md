@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: Lesson texts and song guides fall back to English and load per locale
-    status: open
+    status: done
   - id: 3
     title: The translation tool, the stamps and the rules test
     status: open
@@ -145,6 +145,8 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 - **A guide's translation is `tools/our-songs/<slug>.<locale>.ts`,** with the shape of the German block,
   `GuideTranslation`. The German block stays in the song module. The writer puts every locale's text side
   by side in `guide.json`, as `GuideText` already holds them. Each guide then grows with each locale.
+  The file exports `translation`, a `Translation<GuideTranslation>`, and `guideTranslationsOf` finds it.
+  `GuideText` is keyed by `LocaleCode`, so a guide holds a locale's text before the locale ships.
 - **A non-German translated list whose length differs from the English shows the English list,** and
   `status` lists it. The writer still refuses a German list of another length.
 - **A text's id is its path:** a catalog's dotted key, `lesson/<world>/<lesson>/<key>`, or
@@ -219,10 +221,10 @@ the live locale's texts.
 - [x] Every lesson module stops importing its German file. `src/learn/lessons/meet-the-piano/octaves.ts:9`
 - [x] The lesson view awaits the live locale's texts. `src/learn/lesson-view.ts:1`
 - [x] A test that every lesson text file is in its world's `texts.<locale>.ts`. `src/learn/course.test.ts:1`
-- [ ] `GuideTranslation`, and the writer reads each `<slug>.<locale>.ts`. `tools/make-our-songs.ts:338`
-- [ ] A non-German list of another length falls back to English. `tools/make-our-songs.ts:306`
+- [x] `GuideTranslation`, and the writer reads each `<slug>.<locale>.ts`. `tools/make-our-songs.ts:338`
+- [x] A non-German list of another length falls back to English. `tools/make-our-songs.ts:306`
 - [x] Test `a_missing_lesson_text_shows_in_english`. `src/learn/model.test.ts:1`
-- [ ] Tests `a_guide_without_a_translation_shows_english` and `a_translated_list_of_another_length_shows_english`. `tools/our-songs.test.ts:1`
+- [x] Tests `a_guide_without_a_translation_shows_english` and `a_translated_list_of_another_length_shows_english`. `tools/our-songs.test.ts:1`
 
 ### 3. The translation tool, the stamps and the rules test
 
@@ -289,28 +291,36 @@ and sorting by the live locale.
 
 ### State
 
-Stage 1 is done. The table is `src/i18n/locale-table.ts`, and German is its own chunk, which the
-router and the boot await. `src/i18n/i18n.test.ts` and `tools/build.test.ts` pass, and `tsc` is clean.
-A shot showed a German first visit and the switch from English to German, with no page errors.
+Stages 1 and 2 are done, and their checks `lesson-fallback` and `guide-fallback` pass.
 
-The explorer's list of what stage 1 left to later stages:
+- Each world's German lesson texts are `src/learn/lessons/<world>/texts.de.ts`, its own chunk. The
+  world's `index.ts` names it under `translations`.
+- `World.loadTexts` in `src/learn/course.ts` merges them into `Lesson.texts[locale]` with `mergeTexts`.
+  The lesson view, the map, `lessonPages` and the e2e `courseLessons` await it. `textsOf` reads them.
+- The guide writer reads `tools/our-songs/<slug>.<locale>.ts` through `guideTranslationsOf`. Every
+  guide on disk still matches its source byte for byte.
+- `tsc` and the build are clean. A shot of `de/learn/meet-the-piano/octaves/` and `de/learn/` showed
+  German, with no page errors.
 
-- Every lesson module imports its `.de.ts` statically, and keys its texts `{ en, de }`, as
-  `src/learn/course.ts:22` keys the world titles. That is stage 2.
+What stage 2 left to later stages:
+
 - `src/site/legal-view.ts:25` imports `legal.de` statically. Legal stays English and German only.
 - `src/theory/note-names.ts:71` compares the locale with `"de"`, and the two `player-settings-play`
   catalogs label the language options with endonyms. That is stage 5, which may read the table there.
 
 ### Next
 
-**Stage 2: lesson texts and song guides fall back to English and load per locale.** Files:
-`src/learn/model.ts`, `src/learn/course.ts`, `src/learn/lessons/*/`, `src/learn/lesson-view.ts`,
-`src/site/routes.ts:66` (`lessonPages` reads `lesson.texts[locale]`), `tools/make-our-songs.ts` and
-`src/library/guide.ts:91`. The items are the stage's list above. The splits: one writing subagent per
-world folder strips the `.de` imports once `World.loadTexts` lands, side by side.
+**Stage 3: the translation tool, the stamps and the rules test.** Files: `tools/i18n.ts` (new),
+`tools/i18n.test.ts` (new), `src/i18n/stamps/`, `src/i18n/typography.ts` (new),
+`src/i18n/translation-rules.test.ts` (new), `package.json`, then the docs the stage lists. A unit's
+texts come from three homes: `src/i18n/all-catalogs.ts` (`CATALOGS`), each world's `texts.<locale>.ts`
+beside `<lesson>.en.ts`, and `guideTranslationsOf` in `tools/make-our-songs.ts`. Lists of another
+length show English in `mergeTexts` (`src/learn/model.ts`) and `sameLength` (`tools/make-our-songs.ts`),
+which `status` reports as fallen back. The split: the tool and the rules test touch disjoint files, so
+two writing subagents may build them side by side once the session settles the shape of a unit.
 
-Expected red: none known. Every unit test file now runs after `tools/test-preload.ts`, which loads
-every shipped catalog. A test of a locale that has no chunk calls `loadLocale` itself.
+Expected red: none known. Of the files this session touched, only `src/learn/course.test.ts` ran by one
+test name. Its other tests now await `loadCourseTexts` and should stay green.
 
 ### Backlog
 

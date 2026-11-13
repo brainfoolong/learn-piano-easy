@@ -33,7 +33,7 @@
  *   the bars are whole numbers from 1 in order, and the writer's test checks the rest.
  */
 import { t } from "../i18n/live";
-import { LOCALES, type Locale } from "../i18n/locale";
+import { LOCALE_TABLE, type LocaleCode } from "../i18n/locale";
 import { playerLibrary } from "../i18n/messages/player-library.en";
 import type { Finger, Hand } from "../theory/fingering";
 import { isSkillId, type SkillId } from "./skills";
@@ -88,10 +88,10 @@ export type TipKind = (typeof TIP_KINDS)[number];
 export type StepHands = Hand | "both";
 
 /** A text of the guide in each locale it is written in. The English is always there. */
-export type GuideText = { en: string } & Partial<Record<Locale, string>>;
+export type GuideText = { en: string } & Partial<Record<LocaleCode, string>>;
 
 /** `text` in `locale`, or in English where `text` has none in `locale`. */
-export function textIn(text: GuideText, locale: Locale): string {
+export function textIn(text: GuideText, locale: LocaleCode): string {
   return text[locale] ?? text.en;
 }
 
@@ -160,7 +160,7 @@ function isText(value: unknown): value is string {
 
 /** Whether `value` is a guide's text: English with text in it, and text in each other locale it names. */
 function isGuideText(value: unknown): value is GuideText {
-  return isRecord(value) && isText(value.en) && LOCALES.every((locale) => value[locale] === undefined || isText(value[locale]));
+  return isRecord(value) && isText(value.en) && LOCALE_TABLE.every(({ code }) => value[code] === undefined || isText(value[code]));
 }
 
 /** Whether `value` is a bar number: a whole number from 1. */
