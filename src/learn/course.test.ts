@@ -64,6 +64,14 @@ const TECHNIQUE_LESSONS = [
   "open-fifths",
   "loud-and-soft",
   "phrases",
+  "what-a-chord-is",
+  "major-triads",
+  "minor-triads",
+  "c-f-and-g",
+  "inversions",
+  "broken-chords",
+  "alberti-bass",
+  "the-waltz-bass",
 ];
 
 test("every_technique_lesson_demo_names_its_fingers", async () => {

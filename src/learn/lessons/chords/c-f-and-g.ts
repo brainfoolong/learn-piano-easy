@@ -8,7 +8,8 @@
  * with the left. A demo and a play-notes end on a short tune over the left hand's chords. The texts are
  * `c-f-and-g.en.ts` and `c-f-and-g.de.ts` beside it.
  */
-import type { Lesson } from "../../model";
+import type { Hand } from "../../../theory/fingering";
+import type { Lesson, PhraseNote } from "../../model";
 import { cFAndGDe } from "./c-f-and-g.de";
 import { cFAndGEn } from "./c-f-and-g.en";
 
@@ -19,6 +20,12 @@ const C_LEFT = [48, 52, 55];
 const F_LEFT = [53, 57, 60];
 const G_LEFT = [55, 59, 62];
 
+/** A root-position triad's notes from the bottom up, played by `hand` with 1 3 5 on the right and 5 3 1 on the left. */
+function triad(chord: readonly number[], hand: Hand, at: number, beats: number): PhraseNote[] {
+  const fingers = hand === "right" ? ([1, 3, 5] as const) : ([5, 3, 1] as const);
+  return chord.map((note, i) => ({ note, at, beats, finger: fingers[i]!, hand }));
+}
+
 export const cFAndG: Lesson = {
   id: "c-f-and-g",
   skills: ["triads", "position-change"],
@@ -28,10 +35,10 @@ export const cFAndG: Lesson = {
       kind: "demo",
       bpm: 72,
       notes: [
-        ...C_RIGHT.map((note) => ({ note, at: 0, beats: 2 })),
-        ...F_RIGHT.map((note) => ({ note, at: 2, beats: 2 })),
-        ...G_RIGHT.map((note) => ({ note, at: 4, beats: 2 })),
-        ...C_RIGHT.map((note) => ({ note, at: 6, beats: 4 })),
+        ...triad(C_RIGHT, "right", 0, 2),
+        ...triad(F_RIGHT, "right", 2, 2),
+        ...triad(G_RIGHT, "right", 4, 2),
+        ...triad(C_RIGHT, "right", 6, 4),
       ],
     },
     { id: "three-main-chords", kind: "explain" },
@@ -49,17 +56,17 @@ export const cFAndG: Lesson = {
       kind: "demo",
       bpm: 72,
       notes: [
-        ...C_LEFT.map((note) => ({ note, at: 0, beats: 4 })),
-        { note: 72, at: 0, beats: 2 },
-        { note: 67, at: 2, beats: 2 },
-        ...F_LEFT.map((note) => ({ note, at: 4, beats: 4 })),
-        { note: 69, at: 4, beats: 2 },
-        { note: 72, at: 6, beats: 2 },
-        ...G_LEFT.map((note) => ({ note, at: 8, beats: 4 })),
-        { note: 71, at: 8, beats: 2 },
-        { note: 74, at: 10, beats: 2 },
-        ...C_LEFT.map((note) => ({ note, at: 12, beats: 4 })),
-        { note: 72, at: 12, beats: 4 },
+        ...triad(C_LEFT, "left", 0, 4),
+        { note: 72, at: 0, beats: 2, finger: 4 },
+        { note: 67, at: 2, beats: 2, finger: 1 },
+        ...triad(F_LEFT, "left", 4, 4),
+        { note: 69, at: 4, beats: 2, finger: 2 },
+        { note: 72, at: 6, beats: 2, finger: 4 },
+        ...triad(G_LEFT, "left", 8, 4),
+        { note: 71, at: 8, beats: 2, finger: 3 },
+        { note: 74, at: 10, beats: 2, finger: 5 },
+        ...triad(C_LEFT, "left", 12, 4),
+        { note: 72, at: 12, beats: 4, finger: 4 },
       ],
     },
     {

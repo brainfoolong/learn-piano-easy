@@ -13,14 +13,27 @@
  * thirds on F♯ and C♯, which a demo plays before the learner does. The texts are `alberti-bass.en.ts`
  * and `alberti-bass.de.ts` beside it.
  */
-import type { Lesson } from "../../model";
+import type { Finger } from "../../../theory/fingering";
+import type { Lesson, PhraseNote } from "../../model";
 import { albertiBassDe } from "./alberti-bass.de";
 import { albertiBassEn } from "./alberti-bass.en";
 
-/** One bar of eighths: low, high, middle, high, twice, starting at beat `at`. */
-function bar(low: number, middle: number, high: number, at: number) {
-  return [low, high, middle, high, low, high, middle, high].map((note, i) => ({ note, at: at + i / 2, beats: 0.5 }));
+/** One bar of eighths in the left hand: low, high, middle, high, twice, with fingers 5, 1, 3, 1, starting at beat `at`. */
+function bar(low: number, middle: number, high: number, at: number): PhraseNote[] {
+  const fingers: Finger[] = [5, 1, 3, 1];
+  return [low, high, middle, high, low, high, middle, high].map((note, i) => ({ note, at: at + i / 2, beats: 0.5, finger: fingers[i % 4]!, hand: "left" }));
 }
+
+/** The fingers of the D major scale up and back down, as C major's are: 1 2 3 1 2 3 4 5, then 4 3 2 1 3 2 1. */
+const D_MAJOR_FINGERS: Finger[] = [1, 2, 3, 1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 2, 1];
+
+/** The fingers of the boss's thirds: 3 and 5 first, as the text places them, then one finger lower each. The hand moves down for the last. */
+const THIRDS_FINGERS: [Finger, Finger][] = [
+  [3, 5],
+  [2, 4],
+  [1, 3],
+  [1, 3],
+];
 
 /** The D major scale from the D above middle C, up and back down, with F♯ and C♯. */
 const D_MAJOR = [62, 64, 66, 67, 69, 71, 73, 74, 73, 71, 69, 67, 66, 64, 62];
@@ -47,7 +60,14 @@ export const albertiBass: Lesson = {
       id: "alberti-demo",
       kind: "demo",
       bpm: 80,
-      notes: [...bar(48, 52, 55, 0), ...bar(48, 53, 57, 4), ...bar(47, 50, 53, 8), { note: 48, at: 12, beats: 2 }, { note: 52, at: 12, beats: 2 }, { note: 55, at: 12, beats: 2 }],
+      notes: [
+        ...bar(48, 52, 55, 0),
+        ...bar(48, 53, 57, 4),
+        ...bar(47, 50, 53, 8),
+        { note: 48, at: 12, beats: 2, finger: 5, hand: "left" },
+        { note: 52, at: 12, beats: 2, finger: 3, hand: "left" },
+        { note: 55, at: 12, beats: 2, finger: 1, hand: "left" },
+      ],
     },
     { id: "what-alberti-is", kind: "explain" },
     { id: "pattern-order", kind: "quiz", right: 2 },
@@ -65,13 +85,13 @@ export const albertiBass: Lesson = {
       bpm: 72,
       notes: [
         ...bar(48, 52, 55, 0),
-        { note: 64, at: 0, beats: 2 },
-        { note: 67, at: 2, beats: 2 },
+        { note: 64, at: 0, beats: 2, finger: 3 },
+        { note: 67, at: 2, beats: 2, finger: 5 },
         ...bar(47, 50, 53, 4),
-        { note: 62, at: 4, beats: 2 },
-        { note: 65, at: 6, beats: 2 },
-        { note: 48, at: 8, beats: 2 },
-        { note: 60, at: 8, beats: 2 },
+        { note: 62, at: 4, beats: 2, finger: 2 },
+        { note: 65, at: 6, beats: 2, finger: 4 },
+        { note: 48, at: 8, beats: 2, finger: 5, hand: "left" },
+        { note: 60, at: 8, beats: 2, finger: 1 },
       ],
     },
     {
@@ -83,7 +103,7 @@ export const albertiBass: Lesson = {
       id: "d-major-demo",
       kind: "demo",
       bpm: 80,
-      notes: D_MAJOR.map((note, i) => ({ note, at: i, beats: i === D_MAJOR.length - 1 ? 2 : 1 })),
+      notes: D_MAJOR.map((note, i) => ({ note, at: i, beats: i === D_MAJOR.length - 1 ? 2 : 1, finger: D_MAJOR_FINGERS[i]! })),
     },
     { id: "two-sharps", kind: "quiz", right: 0 },
     { id: "d-major-scale", kind: "play-notes", notes: D_MAJOR },
@@ -91,7 +111,10 @@ export const albertiBass: Lesson = {
       id: "canon-bass-demo",
       kind: "demo",
       bpm: 76,
-      notes: [...CANON_BASS.map((note, i) => ({ note, at: i, beats: 1 })), ...LEFT_D_MAJOR.map((note) => ({ note, at: CANON_BASS.length, beats: 2 }))],
+      notes: [
+        ...CANON_BASS.map((note, i): PhraseNote => ({ note, at: i, beats: 1, finger: i % 2 === 0 ? 5 : 1, hand: "left" })),
+        ...LEFT_D_MAJOR.map((note, i): PhraseNote => ({ note, at: CANON_BASS.length, beats: 2, finger: ([5, 3, 1] as const)[i]!, hand: "left" })),
+      ],
     },
     { id: "canon-bass", kind: "play-notes", notes: CANON_BASS },
     { id: "left-d-major", kind: "play-notes", notes: [...LEFT_D_MAJOR, LEFT_D_MAJOR] },
@@ -99,7 +122,7 @@ export const albertiBass: Lesson = {
       id: "black-key-thirds-demo",
       kind: "demo",
       bpm: 72,
-      notes: CANON_THIRDS.flatMap((third, i) => third.map((note) => ({ note, at: i * 2, beats: 2 }))),
+      notes: CANON_THIRDS.flatMap((third, i) => third.map((note, j) => ({ note, at: i * 2, beats: 2, finger: THIRDS_FINGERS[i]![j]! }))),
     },
     { id: "black-key-thirds", kind: "play-notes", notes: CANON_THIRDS },
     { id: "recap", kind: "recap" },

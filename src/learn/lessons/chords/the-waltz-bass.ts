@@ -8,9 +8,20 @@
  * short tune over the bass, and play it with both hands. The texts are `the-waltz-bass.en.ts` and
  * `the-waltz-bass.de.ts` beside it.
  */
-import type { Lesson } from "../../model";
+import type { Lesson, PhraseNote } from "../../model";
 import { theWaltzBassDe } from "./the-waltz-bass.de";
 import { theWaltzBassEn } from "./the-waltz-bass.en";
+
+/** One bar of waltz bass from beat `at`: finger 5 plays the root, then fingers 3 and 1 play the upper two notes twice. */
+function waltzBar(root: number, middle: number, top: number, at: number): PhraseNote[] {
+  return [
+    { note: root, at, beats: 1, finger: 5, hand: "left" },
+    ...[1, 2].flatMap((beat): PhraseNote[] => [
+      { note: middle, at: at + beat, beats: 1, finger: 3, hand: "left" },
+      { note: top, at: at + beat, beats: 1, finger: 1, hand: "left" },
+    ]),
+  ];
+}
 
 export const theWaltzBass: Lesson = {
   id: "the-waltz-bass",
@@ -20,28 +31,7 @@ export const theWaltzBass: Lesson = {
       id: "waltz-demo",
       kind: "demo",
       bpm: 100,
-      notes: [
-        { note: 48, at: 0, beats: 1 },
-        { note: 52, at: 1, beats: 1 },
-        { note: 55, at: 1, beats: 1 },
-        { note: 52, at: 2, beats: 1 },
-        { note: 55, at: 2, beats: 1 },
-        { note: 41, at: 3, beats: 1 },
-        { note: 45, at: 4, beats: 1 },
-        { note: 48, at: 4, beats: 1 },
-        { note: 45, at: 5, beats: 1 },
-        { note: 48, at: 5, beats: 1 },
-        { note: 43, at: 6, beats: 1 },
-        { note: 47, at: 7, beats: 1 },
-        { note: 50, at: 7, beats: 1 },
-        { note: 47, at: 8, beats: 1 },
-        { note: 50, at: 8, beats: 1 },
-        { note: 48, at: 9, beats: 1 },
-        { note: 52, at: 10, beats: 1 },
-        { note: 55, at: 10, beats: 1 },
-        { note: 52, at: 11, beats: 1 },
-        { note: 55, at: 11, beats: 1 },
-      ],
+      notes: [...waltzBar(48, 52, 55, 0), ...waltzBar(41, 45, 48, 3), ...waltzBar(43, 47, 50, 6), ...waltzBar(48, 52, 55, 9)],
     },
     { id: "three-beats", kind: "explain" },
     { id: "oom-pah-pah", kind: "explain" },
@@ -61,32 +51,16 @@ export const theWaltzBass: Lesson = {
       kind: "demo",
       bpm: 92,
       notes: [
-        { note: 48, at: 0, beats: 1 },
-        { note: 52, at: 1, beats: 1 },
-        { note: 55, at: 1, beats: 1 },
-        { note: 52, at: 2, beats: 1 },
-        { note: 55, at: 2, beats: 1 },
-        { note: 64, at: 0, beats: 2 },
-        { note: 67, at: 2, beats: 1 },
-        { note: 43, at: 3, beats: 1 },
-        { note: 47, at: 4, beats: 1 },
-        { note: 50, at: 4, beats: 1 },
-        { note: 47, at: 5, beats: 1 },
-        { note: 50, at: 5, beats: 1 },
-        { note: 62, at: 3, beats: 3 },
-        { note: 48, at: 6, beats: 1 },
-        { note: 52, at: 7, beats: 1 },
-        { note: 55, at: 7, beats: 1 },
-        { note: 52, at: 8, beats: 1 },
-        { note: 55, at: 8, beats: 1 },
-        { note: 64, at: 6, beats: 2 },
-        { note: 62, at: 8, beats: 1 },
-        { note: 48, at: 9, beats: 1 },
-        { note: 52, at: 10, beats: 1 },
-        { note: 55, at: 10, beats: 1 },
-        { note: 52, at: 11, beats: 1 },
-        { note: 55, at: 11, beats: 1 },
-        { note: 60, at: 9, beats: 3 },
+        ...waltzBar(48, 52, 55, 0),
+        { note: 64, at: 0, beats: 2, finger: 3 },
+        { note: 67, at: 2, beats: 1, finger: 5 },
+        ...waltzBar(43, 47, 50, 3),
+        { note: 62, at: 3, beats: 3, finger: 2 },
+        ...waltzBar(48, 52, 55, 6),
+        { note: 64, at: 6, beats: 2, finger: 3 },
+        { note: 62, at: 8, beats: 1, finger: 2 },
+        ...waltzBar(48, 52, 55, 9),
+        { note: 60, at: 9, beats: 3, finger: 1 },
       ],
     },
     {
