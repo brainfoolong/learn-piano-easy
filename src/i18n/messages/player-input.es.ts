@@ -36,12 +36,11 @@ export const playerInput: Translation<typeof en> = {
     recording: (clock: string) => `Grabando ${clock}`,
     recorded: (n: number) => {
       const count = formatNumber("es", n);
-      const notes = plural("es", n, {
-        one: `Se grabó ${count} nota.`,
-        many: `Se grabaron ${count} de notas.`,
-        other: `Se grabaron ${count} notas.`,
+      return plural("es", n, {
+        one: `Se grabó ${count} nota. Con «Guardar» la conservas como archivo MIDI.`,
+        many: `Se grabaron ${count} de notas. Con «Guardar» las conservas como archivo MIDI.`,
+        other: `Se grabaron ${count} notas. Con «Guardar» las conservas como archivo MIDI.`,
       });
-      return `${notes} Con «Guardar» las conservas como archivo MIDI.`;
     },
     hint: "Toca libremente, o selecciona «Grabar» para conservar lo que tocas.",
   },
@@ -144,7 +143,7 @@ export const playerInput: Translation<typeof en> = {
   },
   pdf: {
     noSong: "Primero abre una canción y luego guarda sus notas como PDF.",
-    intro: (title: string) => `Guarda las notas que caen de ${title} sobre un piano, unos segundos de la canción en cada página.`,
+    intro: (title: string) => `Guarda en PDF las notas que caen de ${title} sobre un piano, con unos segundos de la canción en cada página.`,
     secondsPerPage: "Segundos por página",
     background: "Usar colores de fondo",
     pages: (pages: number, seconds: number) =>

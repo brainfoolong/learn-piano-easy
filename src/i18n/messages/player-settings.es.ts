@@ -83,7 +83,7 @@ export const playerSettings: Translation<typeof en> = {
     generalApp: "Aplicación y datos",
     generalSong: "La canción",
     generalReadouts: "Indicadores y línea de tiempo",
-    audioVolume: "Volumen y pulsación",
+    audioVolume: "Volumen y toque",
     audioRoom: "Reverberación y afinación",
     audioEnvelope: "Envolvente",
     audioMetronome: "Metrónomo",

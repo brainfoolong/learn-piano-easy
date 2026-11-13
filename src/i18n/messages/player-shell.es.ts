@@ -87,7 +87,7 @@ export const playerShell: Translation<typeof en> = {
     groups: {
       app: { label: "Aplicación", description: "La página, su código y la lista de canciones. La aplicación los necesita para abrirse sin conexión." },
       songs: { label: "Canciones", description: "Todas las canciones que trae la aplicación, para que cualquiera de ellas se abra sin conexión." },
-      sounds: { label: "Sonidos del piano", description: "Todos los juegos de sonidos, para que el piano suene sin conexión con el juego que elijas." },
+      sounds: { label: "Sonidos del piano", description: "Todos los conjuntos de sonidos, para que el piano suene sin conexión con el conjunto que elijas." },
     },
     bytes: (n) => `${formatNumber("es", n, { useGrouping: false })} B`,
     kilobytes: (n) => `${tenths(n)} KB`,

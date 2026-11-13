@@ -49,7 +49,6 @@ export const playerBar: Translation<typeof en> = {
     },
   },
   hotkeys: {
-    modifiers: { Shift: "Mayús" },
     none: "Ninguna",
   },
   hotkeyDialog: {

@@ -15,7 +15,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     options: { auto: "Como el navegador" },
   },
   learnSounds: {
-    label: "Sonidos de premio",
+    label: "Sonidos de recompensa",
     help: "Los sonidos de Aprende piano por un paso superado, una estrella, un nuevo nivel y una insignia. El piano siempre suena.",
   },
   learnDailyGoal: {
@@ -37,7 +37,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     options: { dark: "Oscuro", light: "Claro" },
   },
   yourData: {
-    label: "Hacer o restaurar una copia de tus datos",
+    label: "Crear o restaurar una copia de seguridad de tus datos",
     help: "Abre la página que guarda tu configuración, tu progreso, tus canciones y tus puntuaciones en un archivo, y los restaura.",
   },
   startWithLastSong: {
@@ -65,7 +65,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "La canción vuelve a sonar desde el principio después de su última nota.",
   },
   playNotesOnScrollEnabled: {
-    label: "Tocar las notas al arrastrar la línea de tiempo",
+    label: "Reproducir las notas al arrastrar la línea de tiempo",
     help: "Escuchas cada nota que pasas mientras arrastras por la canción.",
   },
   fitZoomOnNewSong: {
@@ -168,19 +168,19 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   sustainEnabled: {
     label: "Pedal de resonancia",
-    help: "Las notas siguen sonando mientras la canción o tú mantienen pisado el pedal.",
+    help: "Las notas siguen sonando mientras el pedal está pisado, ya sea por la canción o por ti.",
   },
   enableReverb: {
     label: "Reverberación",
-    help: "Añade al sonido el eco de una sala.",
+    help: "Agrega al sonido el eco de una sala.",
   },
   reverbImpulseResponse: {
     label: "Sala de la reverberación",
-    help: "La sala a la que suena la reverberación. Una sala más grande resuena más tiempo.",
+    help: "La sala que imita la reverberación. Una sala más grande resuena más tiempo.",
     options: { room: "Habitación", hall: "Sala de conciertos", church: "Iglesia" },
   },
   detune: {
-    label: "Desafinación (cents)",
+    label: "Ajuste de afinación (cents)",
     help: "Afina todas las notas un poco más alto o más bajo. 100 cents son un semitono.",
   },
   adsrAttack: {
@@ -205,7 +205,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   enableMetronome: {
     label: "Metrónomo",
-    help: "Hace clic en cada tiempo de la canción.",
+    help: "Suena un clic en cada tiempo de la canción.",
   },
   metronomeMidiOutput: {
     label: "Salida del metrónomo",
@@ -227,7 +227,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   synchedMetronome: {
     label: "Mantener el metrónomo al ritmo de la canción",
-    help: "Activado, el metrónomo marca los tiempos de la canción y sigue sus cambios de tempo y de velocidad. Desactivado, marca un pulso fijo al tempo de la canción donde empieza la reproducción. Los cambios posteriores de tempo y de velocidad no afectan ese pulso. Empieza y se detiene con la reproducción. Calla durante el conteo previo de un bucle y vuelve a sonar en el primer tiempo del bucle.",
+    help: "Activado, el metrónomo marca los tiempos de la canción y sigue sus cambios de tempo y de velocidad. Desactivado, marca un pulso fijo al tempo de la canción donde empieza la reproducción. Los cambios posteriores de tempo y de velocidad no afectan ese pulso. Empieza y se detiene con la reproducción. Se silencia durante el conteo previo de un bucle y vuelve a sonar en el primer tiempo del bucle.",
   },
   enableEqualizer: {
     label: "Ecualizador",
@@ -255,11 +255,11 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   scheduleAheadMs: {
     label: "Anticipación del audio (ms)",
-    help: "Con cuánta anticipación se ponen en cola las notas. Más es más estable, y menos reacciona más rápido.",
+    help: "Con cuánta anticipación se programan las notas. Un valor mayor es más estable, y uno menor reacciona más rápido.",
   },
   scheduleIntervalMs: {
     label: "Intervalo de programación del audio (ms)",
-    help: "Cada cuánto se ponen en cola las notas siguientes.",
+    help: "Cada cuánto se programan las notas siguientes.",
   },
   // Backing track
   bgTrackFile: {
@@ -293,7 +293,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     options: {
       classic: "Clásica, desde arriba",
       player: "Desde el banco del piano",
-      cinematic: "Cinematográfica, en lento movimiento",
+      cinematic: "Cinematográfica, con movimiento lento",
       flat: "Plana, las teclas llenan el ancho de la pantalla",
     },
   },
@@ -316,7 +316,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   noteToHeightConst: {
     label: "Segundos visibles por adelantado",
-    help: "Cuántos segundos de las próximas notas muestran los carriles. Menos segundos hacen las notas más largas y más rápidas.",
+    help: "Cuántos segundos de las próximas notas muestran los carriles. Con menos segundos, las notas se ven más largas y más rápidas.",
   },
   measuresShownOnScreen: {
     label: "Compases visibles por adelantado",
@@ -338,12 +338,12 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // Input
   playMode: {
     label: "Modo",
-    help: "El toque libre deja la canción a un lado para que toques y grabes. La práctica de notas te pide notas para encontrar.",
+    help: "El modo «Tocar libremente» deja la canción a un lado para que toques y grabes. La práctica de oído te pide encontrar notas.",
     options: { player: "Tocar una canción", freePlay: "Tocar libremente y grabar", pitchPractice: "Práctica de oído" },
   },
   pitchPracticeKey: {
-    label: "Tonalidad de la práctica de notas",
-    help: "La práctica de notas pide solo las notas de esta tonalidad.",
+    label: "Tonalidad de la práctica de oído",
+    help: "La práctica de oído pide solo las notas de esta tonalidad.",
     options: {
       chromatic: "Todas las teclas, blancas y negras",
       C: "Do mayor",
@@ -362,15 +362,15 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   pitchPracticeFirstNote: {
     label: "Nota más grave de la práctica",
-    help: "La nota más grave que pide la práctica de notas, dentro de tu teclado.",
+    help: "La nota más grave que pide la práctica de oído, dentro de tu teclado.",
   },
   pitchPracticeLastNote: {
     label: "Nota más aguda de la práctica",
-    help: "La nota más aguda que pide la práctica de notas, dentro de tu teclado.",
+    help: "La nota más aguda que pide la práctica de oído, dentro de tu teclado.",
   },
   pitchPracticeCount: {
     label: "Notas por ronda de la práctica",
-    help: "Cuántas notas pide la práctica de notas antes de mostrar tu resultado.",
+    help: "Cuántas notas pide la práctica de oído antes de mostrar tu resultado.",
   },
   saveMidiDevices: {
     label: "Recordar los dispositivos MIDI elegidos",
@@ -390,7 +390,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     options: { both: "Ambas manos", right: "Mano derecha", left: "Mano izquierda" },
   },
   playalongSilentNotes: {
-    label: "Iluminar en tu teclado MIDI las teclas que tocar",
+    label: "Iluminar en tu teclado MIDI las teclas por tocar",
     help: "Envía cada nota siguiente muy suave a la salida MIDI, para que un teclado con teclas iluminadas la muestre.",
   },
   playalongSilentNotesChannel: {
@@ -411,11 +411,11 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   enableGameMode: {
     label: "Modo juego",
-    help: "Da puntos por aciertos precisos y notas mantenidas, resta por cada error y multiplica un combo de aciertos seguidos.",
+    help: "Da puntos por aciertos precisos y notas mantenidas, resta por cada error y multiplica los puntos según tu combo de aciertos seguidos.",
   },
   gameDifficulty: {
     label: "Dificultad del juego",
-    help: "Qué tan exigente es el ritmo, y cuánto da una nota y cuánto cuesta un error.",
+    help: "Qué tan exigente es el margen de tiempo, y cuánto da una nota y cuánto cuesta un error.",
     options: { easy: "Fácil: unas horas tocando", normal: "Normal: unos meses", hard: "Difícil: cerca de un año" },
   },
   // Piano
@@ -485,7 +485,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   pianoLineOpacity: {
     label: "Opacidad de la línea de onda",
-    help: "Qué tan visible es la línea de onda. Menos la hace más tenue.",
+    help: "Qué tan visible es la línea de onda. Un valor menor la hace más tenue.",
   },
   pianoLineYOffset: {
     label: "Altura de la línea de onda",

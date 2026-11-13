@@ -37,7 +37,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Una nota se hunde en su tecla mientras suena. Si lo desactivas, sigue de largo más allá de las teclas.",
   },
   playedNoteFalloffSpeed: {
-    label: "Recorrido de las notas tocadas tras las teclas",
+    label: "Recorrido de las notas tocadas más allá de las teclas",
     help: "En anchos de tecla, cuando las notas tocadas no se hunden.",
   },
   showSustainedNotes: {
@@ -126,7 +126,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesFlames: {
     label: "Llamas",
-    help: "Cada tecla arde con su nota, en el color de la nota. Son lo que más exige a la tarjeta gráfica.",
+    help: "Cada tecla arde con su nota, en el color de la nota. Es el efecto que más exige a la tarjeta gráfica.",
   },
   particlesSparks: {
     label: "Chispas",
@@ -220,7 +220,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleNoiseResX: {
     label: "Detalle de la deriva lateral",
-    help: "Con valores más altos, las partículas de teclas vecinas se desvían hacia los lados de forma más distinta.",
+    help: "Con valores más altos, las partículas de teclas vecinas se desvían hacia los lados de manera más diferente.",
   },
   particleNoiseStrengthX: {
     label: "Deriva lateral",
@@ -512,7 +512,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   sheetShowHoverInfo: {
     label: "Nombrar las notas bajo el puntero",
-    help: "Señala una nota o un acorde de la partitura para ver los nombres de sus notas.",
+    help: "Pasa el puntero sobre una nota o un acorde de la partitura para ver los nombres de sus notas.",
   },
   sheetBgColor: {
     label: "Color del papel",
@@ -522,7 +522,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   // PDF
   pdfExportButtonGroup: {
     label: "Guardar las notas como PDF",
-    help: "Abre un diálogo que guarda las notas que caen de la canción abierta en páginas del largo que elijas.",
+    help: "Abre un cuadro de diálogo para guardar las notas que caen de la canción abierta, en páginas de la longitud que elijas.",
   },
   exportPdfBackground: {
     label: "Usar colores de fondo",
@@ -540,6 +540,6 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   autoCacheSounds: {
     label: "Mantener guardados los sonidos del piano",
-    help: "Guarda ahora todos los juegos de sonidos, y otra vez después de cada actualización.",
+    help: "Guarda ahora todos los conjuntos de sonidos, y otra vez después de cada actualización.",
   },
 };

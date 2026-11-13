@@ -22,7 +22,7 @@ export const playModes: Translation<typeof en> = {
     },
     skills: {
       heading: "Entrenar una habilidad",
-      lead: "Encuentra notas rápido, toca libremente o descubre cómo funcionan los acordes. Algunos no necesitan ninguna canción.",
+      lead: "Encuentra notas rápido, toca libremente o escucha cómo funcionan los acordes. Algunos no necesitan ninguna canción.",
     },
   },
   modes: {

@@ -101,7 +101,7 @@ export const playerLibrary: Translation<typeof en> = {
     count: (n: number) => `${formatNumber("es", n)} ${plural("es", n, { one: "canción", many: "de canciones", other: "canciones" })}`,
   },
   tracks: {
-    hands: { right: "Mano derecha", left: "Mano izquierda", split: "Las dos manos, divididas en el do central", none: "No es mía: la aplicación la toca" },
+    hands: { right: "Mano derecha", left: "Mano izquierda", split: "Las dos manos, divididas en el do central", none: "No la toco yo: la toca la aplicación" },
     fromNotes: "Según las notas",
     fromNotesKey: (key: string) => `Según las notas: ${key}`,
     useForNew: { label: "Usar en canciones nuevas", title: "Usar estos colores, volúmenes e interruptores en las canciones nuevas" },

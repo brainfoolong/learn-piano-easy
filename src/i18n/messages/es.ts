@@ -39,7 +39,7 @@ export const es: Translation<Messages> = {
     },
     profile: {
       title: "Tu progreso",
-      description: "Tu nivel, tus insignias y cuánto has tocado.",
+      description: "Tu nivel, tus insignias y cuánto tocaste.",
     },
     about: {
       title: "Acerca de",
@@ -55,11 +55,11 @@ export const es: Translation<Messages> = {
     },
     imprint: {
       title: "Aviso legal",
-      description: "Quién gestiona Learn Piano Easy, con la dirección y el contacto.",
+      description: "Quién está detrás de Learn Piano Easy, con la dirección y el contacto.",
     },
     privacy: {
       title: "Política de privacidad",
-      description: "Qué guarda Learn Piano Easy en tu dispositivo, qué cuenta y cómo desactivar el conteo.",
+      description: "Qué guarda Learn Piano Easy en tu dispositivo, qué visitas cuenta y cómo desactivar el conteo.",
     },
     design: {
       title: "Sistema de diseño",
@@ -138,9 +138,9 @@ export const es: Translation<Messages> = {
     rarities: {
       eyebrow: "Una melodía, cuatro niveles",
       heading: "Cada canción crece contigo",
-      lead: "Cada canción nuestra viene en cuatro versiones. Cambia entre ellas y mira cómo crece el Himno a la alegría.",
+      lead: "Cada canción nuestra viene en cuatro versiones. Cambia entre ellas y mira cómo crece Ode to Joy.",
       control: "Versión",
-      piano: "Un piano que toca el Himno a la alegría",
+      piano: "Un piano que toca Ode to Joy",
       names: { common: "Principiante", rare: "Fácil", epic: "Intermedio", legendary: "Difícil" },
       taglines: {
         common: "Tus primeros días. Una posición de la mano, notas lentas y un bajo que te espera.",
