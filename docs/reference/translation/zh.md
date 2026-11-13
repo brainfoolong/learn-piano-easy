@@ -254,6 +254,17 @@ strings. AP is Apple's `support.apple.com/zh-cn` pages. GO is Google's help page
 | difficulty; length (of a song) | 难度; 时长 | everyday words |
 | add; remove | 添加; 移除 | MS; AN |
 | open source | 开源 | WP *开源*; MS gives 开放源代码, which reads formal |
+| guided course; play modes | 引导课程; 弹奏模式 | the app's own terms |
+| scene; top bar; control bar | 场景; 顶栏; 控制栏 | the player's own terms |
+| combo; multiplier; accuracy | 连击; 倍数; 准确率 | the word of rhythm games |
+| record; preview; export | 录制; 试听; 导出 | MS |
+| filter; tag | 筛选; 标签 | MS |
+| range (of a keyboard) | 音域 | WP *音域* |
+| click (of the metronome) | 滴答声; `滴答作响` | everyday word |
+| hit line | 击键线 | the player's own term |
+| hand crossing | 双手交叉 | everyday word, unsourced |
+| low, high band (of the equaliser) | 低频, 高频 | MS; never 低音 or 高音, which name notes |
+| chord tone as an interval | `♭3 度`, `5 度`; the root is `根音` | the course's own form of 三度 |
 
 ### Which "play" is which
 

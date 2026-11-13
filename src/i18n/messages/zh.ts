@@ -42,7 +42,7 @@ export const zh: Translation<Messages> = {
     },
     about: {
       title: "关于",
-      description: "Learn Piano Easy 是什么，以及它包含的所有内容的许可证。",
+      description: "Learn Piano Easy 是什么，以及它所含全部内容的许可证。",
     },
     data: {
       title: "你的数据",
@@ -107,7 +107,7 @@ export const zh: Translation<Messages> = {
     twoWays: {
       eyebrow: "两种弹法",
       heading: "一步步学，或者随心弹",
-      lead: "选一个适合你今天的部分。随时都可以切换。",
+      lead: "选一个适合你今天的方式。随时都可以切换。",
       learn: {
         tag: "引导课程",
         title: "学钢琴",
@@ -142,9 +142,9 @@ export const zh: Translation<Messages> = {
       piano: "一架正在弹《欢乐颂》的钢琴",
       names: { common: "入门", rare: "简单", epic: "中等", legendary: "困难" },
       taglines: {
-        common: "最初的几天。一个手位、慢速的音，还有一个等你的低音。",
+        common: "最初的几天。一个手位、慢慢的音符，还有一个等你的低音。",
         rare: "最初的几周。八分音符、简单的和弦，还有会动的低音。",
-        epic: "最初的几个月。分解和弦，还有从下面穿过的拇指。",
+        epic: "最初的几个月。分解和弦，还有穿指。",
         legendary: "大约一年后。两只手都很忙，又快又独立。",
       },
     },
@@ -153,7 +153,7 @@ export const zh: Translation<Messages> = {
       heading: "没有钢琴？照样开始",
       lead: "这些都能弹出音。真正的键盘手感最好，其他的让你今天就能开始。",
       ways: [
-        { title: "MIDI 键盘", text: "用 USB 连上，允许一次 MIDI。之后网站会自己找到它。" },
+        { title: "MIDI 键盘", text: "用 USB 连上，只需允许一次 MIDI。之后网站会自动找到它。" },
         { title: "触摸屏", text: "点击屏幕上的琴键，想用几根手指都行。" },
         { title: "你的电脑键盘", text: "字母键和数字键能弹两个八度，你也可以把任何音换到另一个按键上。" },
       ],

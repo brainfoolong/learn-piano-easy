@@ -3,14 +3,14 @@ import type { Translation } from "../translation";
 import type { dataPage as en } from "./data.en";
 
 export const dataPage: Translation<typeof en> = {
-  lead: "你的设置、课程进度、歌曲和得分都保存在这个浏览器里。把它们存成一个文件，可以保证安全，也可以搬到另一台设备上。",
+  lead: "你的设置、课程进度、歌曲和得分都保存在这个浏览器里。把它们存成一个文件，既能妥善保管，也能搬到另一台设备上。",
   save: {
     heading: "保存备份",
     text: "一个文件就能装下全部内容。把它放在安全的地方，比如云盘文件夹。",
     action: "保存备份",
     never: "这个浏览器还没有保存过备份。",
-    today: "上次备份保存于今天。",
-    on: (date: string) => `上次备份保存于 ${date}。`,
+    today: "上次备份是今天保存的。",
+    on: (date: string) => `上次备份是在 ${date} 保存的。`,
     done: "备份文件已保存。",
   },
   restore: {

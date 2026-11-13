@@ -218,7 +218,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   metronomeInstrument: {
     label: "节拍器在 MIDI 设备上的音色",
-    help: "选择架子鼓时，由音来决定用哪种鼓。",
+    help: "选择架子鼓时，节拍器的音决定用哪种鼓。",
     options: { woodblock: "木鱼", drums: "架子鼓", piano: "钢琴" },
   },
   metronomeVolume: {
@@ -234,31 +234,31 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "让低音、中音和高音更响或更轻。",
   },
   equalizerGain0: {
-    label: "低音，60 Hz（dB）",
+    label: "低频，60 Hz（dB）",
     help: "提高或降低最低沉的声音。",
   },
   equalizerGain1: {
-    label: "中低音，250 Hz（dB）",
+    label: "中低频，250 Hz（dB）",
     help: "提高或降低声音中温暖的中低部分。",
   },
   equalizerGain2: {
-    label: "中音，1 kHz（dB）",
+    label: "中频，1 kHz（dB）",
     help: "提高或降低声音的中间部分。",
   },
   equalizerGain3: {
-    label: "中高音，4 kHz（dB）",
+    label: "中高频，4 kHz（dB）",
     help: "提高或降低声音中明亮的中高部分。",
   },
   equalizerGain4: {
-    label: "高音，12 kHz（dB）",
+    label: "高频，12 kHz（dB）",
     help: "提高或降低最高的声音。",
   },
   scheduleAheadMs: {
-    label: "音频预排时间（ms）",
+    label: "音频提前量（ms）",
     help: "音符提前多久排入队列。时间长更稳定，时间短反应更快。",
   },
   scheduleIntervalMs: {
-    label: "音频调度间隔（ms）",
+    label: "音频排队间隔（ms）",
     help: "多久把接下来的音符排入队列一次。",
   },
   // Backing track
@@ -276,7 +276,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   bgTrackSpeed: {
     label: "速度（%）",
-    help: "音轨相对歌曲的播放快慢，用来对上另一种速度的录音。",
+    help: "音轨相对歌曲的快慢，用来配合另一种速度的录音。",
   },
   bgTrackOffset: {
     label: "偏移（秒）",
@@ -338,7 +338,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // Input
   playMode: {
     label: "模式",
-    help: "自由弹奏会把歌曲放在一边，让你弹奏和录音。听音练习会让你找出给出的音。",
+    help: "自由弹奏会把歌曲放在一边，让你弹奏和录音。听音练习会给出音，让你找到它们。",
     options: { player: "弹一首歌", freePlay: "自由弹奏和录音", pitchPractice: "听音练习" },
   },
   pitchPracticeKey: {
@@ -477,7 +477,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   pianoLineAmplitude: {
     label: "波浪高度",
-    help: "以琴键宽度为单位，指以最大力度发声的琴键上方的高度。",
+    help: "高度以琴键宽度为单位，指琴键以最大力度发声时，线在它上方起伏的幅度。",
   },
   pianoLineColor: {
     label: "波浪线颜色",
@@ -488,7 +488,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "波浪线显示得有多明显。数值越低越淡。",
   },
   pianoLineYOffset: {
-    label: "波浪线高度",
-    help: "以琴键宽度为单位，距琴键上方的高度。",
+    label: "波浪线离琴键的高度",
+    help: "波浪线离琴键上方有多高，以琴键宽度为单位。",
   },
 };

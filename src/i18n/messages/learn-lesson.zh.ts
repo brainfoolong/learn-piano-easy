@@ -95,7 +95,7 @@ export const learnLesson: Translation<typeof en> = {
     phrasePiano: "琴键。跟着响声按节奏弹这个乐句。",
     shortNotes: (hits: number, notes: number) =>
       `${formatNumber("zh", notes)} 个音里只有 ${formatNumber("zh", hits)} 个弹准了时间。再试一次。`,
-    restSounded: "休止的地方响了一个琴键。抬起手指，在那里保持安静。",
+    restSounded: "休止的地方有琴键响了。抬起手指，在那里保持安静。",
     phraseHint: "每响一声就弹一个音，休止之前先抬起琴键。圆点会在每一拍上闪动。",
     pattern: {
       taps: (countIn: number, taps: number) =>

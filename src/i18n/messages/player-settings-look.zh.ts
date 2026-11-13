@@ -126,7 +126,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesFlames: {
     label: "火焰",
-    help: "每个琴键以它的音符的颜色燃烧。它们最占用显卡。",
+    help: "每个琴键都会燃起火焰，颜色和对应的音符一致。火焰最占用显卡。",
   },
   particlesSparks: {
     label: "火花",
@@ -156,7 +156,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleOverrideColor: {
     label: "自定颜色",
-    help: "关闭时，每个粒子取它的琴键的颜色。",
+    help: "关闭时，粒子使用所在琴键的颜色。",
   },
   particleColor: {
     label: "颜色",
@@ -184,7 +184,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleFadeOut: {
     label: "淡出",
-    help: "粒子在寿命末尾用来淡出的那一部分时间所占的比例。",
+    help: "粒子在寿命的最后一段时间里淡出，这里设置这段时间占寿命的比例。",
   },
   particlesShrink: {
     label: "缩小",
@@ -256,7 +256,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleYOffset: {
     label: "起始高度",
-    help: "琴键上方多少个琴键宽度。",
+    help: "粒子从琴键上方多少个琴键宽度处出现。",
   },
   particleDistributionX: {
     label: "横向起始位置",
@@ -360,7 +360,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   lyricsBackground: {
     label: "背景颜色",
-    help: "歌词后面那条底色的颜色。",
+    help: "歌词后面色带的颜色。",
   },
   lyricsFontColor: {
     label: "文字颜色",
@@ -376,7 +376,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   lyricsFontSize: {
     label: "文字大小（px）",
-    help: "歌词写得多大。",
+    help: "歌词的字号。",
   },
   lyricsY: {
     label: "高度（距顶部的百分比）",
@@ -398,7 +398,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   enableColorCodingNotePiano: {
     label: "按音高给琴键上色",
-    help: "琴键发声时，以它的音高的颜色点亮。",
+    help: "琴键发声时，按音高对应的颜色亮起。",
   },
   colorCodeNote0: { help: "每个 C 的颜色。" },
   colorCodeNote1: { label: "C♯ 或 D♭", help: "每个 C♯ 或 D♭ 的颜色。" },
@@ -418,7 +418,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   enableColorCodingFingerPiano: {
     label: "按手指给琴键上色",
-    help: "琴键以弹它的手指的颜色点亮。",
+    help: "琴键按弹它的手指对应的颜色亮起。",
   },
   colorCodeFinger1Right: { label: "右手 1 指", help: "右手拇指所弹音符的颜色。" },
   colorCodeFinger2Right: { label: "右手 2 指", help: "右手食指所弹音符的颜色。" },
@@ -463,7 +463,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   sheetAutoClef: {
     label: "按音符选择谱号",
-    help: "关闭时，第一行谱表用高音谱号，其余用低音谱号。",
+    help: "关闭时，第一个谱表用高音谱号，其余用低音谱号。",
   },
   overrideTimeSignature: {
     label: "拍号",
@@ -472,7 +472,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   sheetMinNoteDenom: {
     label: "最短音符时值",
-    help: "乐谱写出的最短音符。它的三连音也能写出。",
+    help: "乐谱写出的最短音符。它对应的三连音也能写出。",
     options: { "4": "四分音符", "8": "八分音符", "16": "十六分音符", "32": "三十二分音符", "64": "六十四分音符" },
   },
   hideRestsBelow: {

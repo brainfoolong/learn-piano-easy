@@ -12,7 +12,7 @@ export const learnProfile: Translation<typeof en> = {
     heading: "等级",
     name: (level: number) => `等级 ${n(level)}`,
     total: (xp: number) => `共 ${n(xp)} XP`,
-    toNext: (level: number) => `距离等级 ${n(level)}`,
+    toNext: (level: number) => `距离升到等级 ${n(level)}`,
   },
   streak: {
     heading: "连续练习天数",
@@ -26,7 +26,7 @@ export const learnProfile: Translation<typeof en> = {
     heading: "最近八周",
     label: (met: number, played: number) => `最近八周里，有 ${days(met)}达成了目标，有 ${days(played)}上了课。`,
     met: "达成目标",
-    played: "练习过",
+    played: "上过课",
     none: "没有上课",
   },
   stats: {
@@ -60,7 +60,7 @@ export const learnProfile: Translation<typeof en> = {
     cancel: "保留我的进度",
     ask: {
       title: "要重置全部进度吗？",
-      text: "这会从这个浏览器里移除每一课、每颗星、所有 XP 和徽章。你的设置会保留。",
+      text: "这会从这个浏览器里移除每一课的完成记录、每颗星、所有 XP 和徽章。你的设置会保留。",
       next: "继续",
     },
     askAgain: {

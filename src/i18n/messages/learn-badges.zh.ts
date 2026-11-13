@@ -21,7 +21,7 @@ export const learnBadges: Translation<typeof en> = {
     "early-bird": { name: "早起的鸟儿", description: "在早上 8 点前学完一课。" },
     "night-owl": { name: "夜猫子", description: "在晚上 10 点或更晚学完一课。" },
     comeback: { name: "欢迎回来", description: "离开一周后，回来学一课。" },
-    legendary: { name: "困难之歌", description: "在随心弹琴里，把我们一首歌的“困难”版本从头弹到尾。" },
+    legendary: { name: "困难之歌", description: "在随心弹琴里，把我们的一首歌的“困难”版本从头弹到尾。" },
   },
   world: {
     name: (world: string) => `精通“${world}”`,

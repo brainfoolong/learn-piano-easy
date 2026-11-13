@@ -27,7 +27,7 @@ export const sponsorPage: Translation<typeof en> = {
     heading: "其他帮忙的方式",
     lead: "钱只是一种帮忙的方式。这些同样重要：",
     star: { text: "在 GitHub 上给项目加星，让其他学琴的人找到它。", action: "在 GitHub 上加星" },
-    bug: { text: "如果有什么听起来不对，就报告这个问题。", action: "报告问题" },
+    bug: { text: "如果有什么听起来不对，就反馈给我们。", action: "反馈问题" },
     friend: "告诉一位一直想学钢琴的朋友。",
   },
   thanks: "谢谢你来弹琴。正是因为你，才有了这一切。",

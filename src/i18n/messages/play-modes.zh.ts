@@ -28,7 +28,7 @@ export const playModes: Translation<typeof en> = {
     game: {
       tag: "图个开心",
       name: "游戏模式",
-      text: "每弹对一个音都能得分，钢琴还会闪闪发光来回应你。冲击连击，打破你的最高分。",
+      text: "每弹对一个音都能得分，钢琴还会闪闪发光来回应你。打出连击，刷新你的最高分。",
       traits: ["简单难度下的得分和连击", "火花、光芒和发光的钢琴", "一首简短上口的歌"],
       song: "In the Hall of the Mountain King（入门）",
     },
@@ -42,7 +42,7 @@ export const playModes: Translation<typeof en> = {
     concert: {
       tag: "放松欣赏",
       name: "音乐会",
-      text: "钢琴为你弹一首歌，伴着火焰、星光和移动的镜头。看表演吧，敢的话也可以一起弹。",
+      text: "钢琴自己弹一首歌给你听，伴着火焰、星光和移动的镜头。看表演吧，敢的话也可以一起弹。",
       traits: ["电影般的镜头", "火焰、星光和火花", "发光的钢琴和一道光波"],
       song: "Carol of the Bells（困难）",
     },
@@ -70,14 +70,14 @@ export const playModes: Translation<typeof en> = {
     slowSteady: {
       tag: "练习",
       name: "慢慢来",
-      text: "前四个小节循环播放，从一半速度开始。每一遍都会稍快一点，直到你能用原速弹。",
-      traits: ["前四个小节循环播放", "先用一半速度，每遍加快", "每一遍前都有预备拍"],
+      text: "前四个小节循环播放，从半速开始。每一遍都会稍快一点，直到你能用原速弹。",
+      traits: ["前四个小节循环播放", "先用半速，每遍加快", "每一遍前都有预备拍"],
       song: "Für Elise（简单）",
     },
     rhythm: {
       tag: "节奏",
       name: "节奏达人",
-      text: "节拍器嘀嗒作响，你弹的每个音都按时机准不准来打分。没有音名，也不会等你，只有节拍。",
+      text: "节拍器滴答作响，你弹的每个音都按时机是否准确来打分。没有音名，也不会等你，只有节拍。",
       traits: ["每一拍都有节拍器", "每个音都按时机打分", "歌曲从不等待"],
       song: "Twinkle Twinkle Little Star（简单）",
     },
@@ -91,7 +91,7 @@ export const playModes: Translation<typeof en> = {
     noteTrainer: {
       tag: "认音",
       name: "认音训练",
-      text: "应用说出一个音，你在琴键上找到它。最后你会看到自己把哪些音弄混了。",
+      text: "应用给出一个音名，你在琴键上找到它。最后你会看到自己把哪些音弄混了。",
       traits: ["C 大调的音，从中央 C 往上", "每轮十个音", "最后列出弄混的音"],
     },
     freeJam: {

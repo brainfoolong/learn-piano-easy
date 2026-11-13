@@ -8,8 +8,8 @@ export const learnSetup: Translation<typeof en> = {
   welcome: "你好！我是你的钢琴老师。先回答三个小问题，然后我们就开始弹琴。",
   mascot: "你的钢琴老师，一只蜂蜜色毛发、穿着灯芯绒外套的猿",
   close: "跳过设置",
-  progress: "设置",
-  steps: ["你的钢琴", "你的经验", "你的每日目标"],
+  progress: "初始设置",
+  steps: ["你的钢琴", "你的基础", "你的每日目标"],
   doneStep: "完成",
   next: "继续",
   device: {

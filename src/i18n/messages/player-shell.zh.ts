@@ -48,7 +48,7 @@ export const playerShell: Translation<typeof en> = {
   },
   lesson: {
     label: "课",
-    target: (percent) => `在一遍计分的演奏中弹对 ${formatNumber("zh", percent)}% 的音。`,
+    target: (percent) => `在计分的一遍里弹对 ${formatNumber("zh", percent)}% 的音。`,
     back: "返回这一课",
     missing: "曲库中没有这一课的歌曲。",
   },
@@ -96,7 +96,7 @@ export const playerShell: Translation<typeof en> = {
     remove: "移除",
     saveGroup: (label) => `保存“${label}”`,
     removeGroup: (label) => `移除“${label}”`,
-    keep: "每次更新后仍保持保存",
+    keep: "更新后仍保留已保存的文件",
   },
   update: {
     ready: "新版本已就绪。",
@@ -134,6 +134,6 @@ export const playerShell: Translation<typeof en> = {
   },
   sheet: {
     label: "乐谱",
-    empty: "乐谱中没有显示任何音轨。在“音轨”中打开一条。",
+    empty: "乐谱中没有显示任何音轨。在“音轨”中显示一条。",
   },
 };
