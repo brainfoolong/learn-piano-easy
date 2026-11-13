@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Arabic
-    status: open
+    status: done
   - id: 3
     title: The course in Arabic
     status: open
@@ -125,12 +125,21 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/ar.md` exists, and `right-to-left` is reached.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/ar.ts:1`, `src/i18n/messages/learn-lesson.ar.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.ar.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.ar.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `arabic_texts_keep_their_rules` pass, with every argument isolated. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp ar` for each catalog section. `src/i18n/stamps/ar.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/ar.ts:1`, `src/i18n/messages/learn-lesson.ar.ts:1`
+  - [x] Eight files written by one writer, with every argument isolated.
+  - [x] `ar` added to `CATALOG_CHUNKS` and to `CATALOGS`.
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.ar.ts:1`
+  - [x] Five files written by one writer.
+- [x] The player's settings. `src/i18n/messages/player-settings.ar.ts:1`
+  - [x] The panel and its look settings by one writer, the play settings by another.
+  - [x] A key's tonic in Arabic solfège, as Spanish writes it.
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+  - [x] Four blind reviews, 5 *wrong* findings, all settled with the glossary first.
+  - [x] Four second reviews. The one *wrong* left was a missing space after a colon, fixed without a third read.
+- [x] `bun x tsc` and `arabic_texts_keep_their_rules` pass, with every argument isolated. `src/i18n/translation-rules.test.ts:1`
+  - [x] The isolation check accepts a number's decimals, such as `12.50`.
+  - [x] The fixture of Arabic-Indic digits runs without the mark rules that refuse them.
+- [x] `bun run i18n stamp ar` for each catalog section. `src/i18n/stamps/ar.json:1`
 
 ### 3. The course in Arabic
 
@@ -139,10 +148,10 @@ then review them blind, as the method says.
 blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.ar.ts:1`, `src/learn/lessons/first-melodies/texts.ar.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.ar.ts:1`, `src/learn/lessons/reading-music/texts.ar.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.ar.ts:1`, `src/learn/lessons/chords/texts.ar.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.ar.ts:1`, `src/learn/lessons/expression/texts.ar.ts:1`
+- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/black-key-groups.ar.ts:1`, `src/learn/lessons/first-melodies/hands-take-turns.ar.ts:1`
+- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/counting-to-four.ar.ts:1`, `src/learn/lessons/reading-music/bass-landmarks.ar.ts:1`
+- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/a-held-bass-note.ar.ts:1`, `src/learn/lessons/chords/alberti-bass.ar.ts:1`
+- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/f-major.ar.ts:1`, `src/learn/lessons/expression/crescendo-and-diminuendo.ar.ts:1`
 - [ ] Each world reviewed blind, and every finding settled.
 - [ ] `bun run i18n stamp ar` for each world. `src/i18n/stamps/ar.json:1`
 
@@ -194,23 +203,27 @@ address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/ar.md` is the style guide and glossary, and the `ar`
-entry of `src/i18n/typography.ts` holds its kept words and eleven mark rules. The Hindi entry now shares
-the kept list `KEPT_IN_OWN_SCRIPT`. `bun x tsc` is green. No Arabic text exists yet.
+Stages 1 and 2 are done. Every catalog section has its Arabic file in `src/i18n/messages/*.ar.ts`,
+reviewed blind twice and stamped in `src/i18n/stamps/ar.json`. `ar` loads as its own chunk but is not
+shipped. `bun x tsc` and `arabic_texts_keep_their_rules` are green. The texts `status` still lists for the
+catalog are left out on purpose, since their Arabic equals the English, such as `10 XP` or `Ctrl`.
 
 ### Next
 
-**Stage 2: the site and the player in Arabic.** Gate: `right-to-left` is reached, and it is.
+**Stage 3: the course in Arabic.** Gate: stage 2's catalogs are stamped, and they are.
 
-- Run `bun tools/i18n.ts status ar`, then `bun tools/i18n.ts work ar <unit>` per catalog section.
-- Three writing subagents, one per item, each given the whole of `docs/reference/translation/ar.md`.
-  Files: `src/i18n/messages/ar.ts`, `src/i18n/messages/learn-lesson.ar.ts`,
-  `src/i18n/messages/player-shell.ar.ts` and `src/i18n/messages/player-settings.ar.ts`.
-- Each argument that may hold Latin text goes through `isolate()` from `src/i18n/format.ts`.
-- A counted message gives all six forms, as the guide's § 8 table shows.
-- Add the `ar` catalog chunk to `CATALOG_CHUNKS` in `src/i18n/locale.ts:44` once `messages/ar.ts` exists.
-- `arabic_texts_keep_their_rules` already runs, one test per row of `src/i18n/translation-rules.test.ts:271`.
-  It passes with no Arabic file, and each new file must keep it green.
+- Run `bun tools/i18n.ts work ar lesson/<world>` for each of the eight worlds.
+- Each world has nine lessons, one file each: `src/learn/lessons/<world>/<lesson>.ar.ts`, shaped like
+  the `.hi.ts` sibling.
+- The briefs of stage 2 are in `.agent-tmp/i18n/ar/`: `brief-writer.md`, `brief-reviewer.md` and
+  `brief-fixer.md`. Adapt their file paths from catalog sections to lessons.
+- Every `${…}` argument is isolated, numbers included: `isolate(formatNumber("ar", n))`. CLDR gives `ar`
+  Western digits, so the rules test demands it.
+- A kept Latin word inside a text is wrapped in `⁨…⁩`, written as escapes.
+- The glossary gained terms in stage 2. A setting off is `معطّل`, a composer `الملحن`, a lyric syllable
+  `المقطع اللفظي`, and the learner's instrument `آلتك`.
+- Reviewers raised `أربعة موازير` for *four bars*. It was rejected: `مازورة` is feminine, so its numeral
+  is `أربع`.
 
 Expected red: none.
 
