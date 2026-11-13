@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Hindi site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -90,6 +90,11 @@ and hangs vowel signs on them. Its verbs agree with gender, and its numbers grou
   Chinese and Hindi both spread it, and a stage 4 or 5 writer adds a missing title there.
 - **A count whose form changes picks it by `n === 1`, where 0 can show.** `Intl` puts 0 in `one`, but
   Hindi says `0 गाने`. A noun that keeps its form still goes through `plural`, as `hi.md` § 8 says.
+- **Stage 6's gate allows deliberate copies, as Chinese's did.** `status hi` lists 79 texts that equal
+  their English in Hindi: note letters, key names, kept units, endonyms, time signatures and numbers.
+  Writing each again would add 79 lines that change nothing a learner sees.
+- **A number with grouping takes `hi-IN`'s form wherever it can pass 1,00,000.** Only the XP count can,
+  so `counts.xp` is Hindi. A percent or a tempo stays the English function, whose output is the same.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -178,14 +183,14 @@ side, and seven fresh reviewers review them blind.
 address or mark that drifts between files.
 **Gate:** `bun run i18n status hi` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `hi` is `shipped`. `src/i18n/locale.ts:18`
-- [ ] The Hindi social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `hi` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_hindi_site_reads_in_hindi`: `lang`, the switch's *हिन्दी*, a lesson step and the player in Hindi. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `hi` with `bun run shot --locale hi-IN`, on a phone and a desktop, in both themes. Every conjunct and matra draws whole.
-- [ ] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
-- [ ] The feature list and the README name Hindi. `docs/reference/features.md:1`, `README.md:12`
+- [x] Every drift the reader lists is settled in the files it names.
+- [x] `hi` is `shipped`. `src/i18n/locale.ts:18`
+- [x] The Hindi social image. `tools/make-social-image.ts:104`
+- [x] The layout checks run in `hi` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
+- [x] Test `the_hindi_site_reads_in_hindi`: `lang`, the switch's *हिन्दी*, a lesson step and the player in Hindi. `e2e/locales.e2e.ts:1`
+- [x] Look at every route in `hi` with `bun run shot --locale hi-IN`, on a phone and a desktop, in both themes. Every conjunct and matra draws whole.
+- [x] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
+- [x] The feature list and the README name Hindi. `docs/reference/features.md:1`, `README.md:12`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -197,37 +202,30 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. Every one of the 80 song guides has a `tools/our-songs/<slug>.hi.ts`. Each
-`guide.json` is rewritten, and each `guide/<slug>` unit is stamped in `src/i18n/stamps/hi.json`.
+Stages 1 to 6 are done, and `hi` ships. `src/i18n/locale-table.ts` marks it `shipped`. The worlds
+carry their Hindi titles in `src/learn/course.ts`, and the language setting lists `हिन्दी`.
+`public/images/social/hi.png` is drawn, and the README and the feature list name Hindi.
 
-Stage 5 ran four writers of seven or eight songs each, side by side. The first blind reviews found four
-*wrong* texts, in batch A (`neon-chase` to `o-little-town-of-bethlehem`), B (`ode-to-joy` to
-`suesser-die-glocken`) and D (`tochter-zion` to `yankee-doodle`). Batch C found none. A, B and D
-were reviewed again. The second reviews found no *wrong* text, and the session settled their *awkward*
-ones by hand. The rules test passes for every locale, and `tsc` and the build are green.
+`bun tools/i18n.ts status hi` lists 79 missing texts and none stale. Each is a deliberate copy, such as
+a note letter, an endonym or a time signature, as the standing decision says. Only `counts.xp` was
+written, since its number can pass a lakh.
 
-The session overruled two findings. The fir of *O Tannenbaum* stays `फ़र`, since `देवदार` is a cedar.
-A dance's kind keeps its plain adjective, as in `धीमा वाल्ट्ज़` and `तेज़ गैलप`. `hi.md` § 5 now
-holds that row, and rows for `सेवेंथ`, two quick notes (`छोटे नोट`) and a synth stab.
+The drift read found one true drift. `ढूँढ` lacked its nukta in 57 places across the catalogs and
+lessons, while the guides wrote `ढूँढ़`. Every file now writes `ढूँढ़`. A site page is `पेज` and a
+printed page `पन्ना`, and `hi.md` § 5 holds both rows. The read judged its other items acceptable.
 
-`SONG_NAMES` gained about 60 titles and names. The long ones open the list, and the short ones, such
-as `Wade` and `Gruber`, close it after the titles that hold them.
+Every route was shot in `hi-IN` on a phone and a desktop, in both themes, with no page error. No
+missing-glyph box shows, and the conjuncts and matras draw whole. `tsc`, the build,
+`hindi_texts_keep_their_rules` and `the_hindi_site_reads_in_hindi` pass.
 
 ### Next
 
-**Stage 6: the Hindi site ships.** Its gate is `bun tools/i18n.ts status hi` with no missing text
-outside `legal`. It lists 79 missing texts now, all in catalogs and lessons:
+**Stage 7: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run
+it once more. Then harvest the goal into `docs/findings.md` § `hindi`, as § `chinese` was.
 
-- 23 in `catalog/player-settings`, 8 in `catalog/learn-lesson`, 6 in `catalog/player-shell`, 5 in
-  `catalog/player-bar`, and 8 more across `site`, `player-library`, `play-modes` and `player-input`.
-- 29 in the lesson worlds, such as 6 each in `reading-music` and `scales-and-keys`.
-
-First run `bun tools/i18n.ts work hi <unit>` for each unit, and check whether each text only equals
-its English, such as `MIDI`. Translate the rest with one writer and one blind reviewer. Then follow
-stage 6's items in order. The drift read goes to a fresh `reader`, and `hi` turns `shipped` in
-`src/i18n/locale.ts:18`. The test `the_hindi_site_reads_in_hindi` goes in `e2e/locales.e2e.ts`.
-
-Expected red: none.
+Expected red: perhaps a test that counts the shipped locales, such as a sitemap's or `hreflang`'s
+total, or a layout check of a `hi` page in `e2e/locales.e2e.ts`. No test was changed to expect four
+shipped locales beside English.
 
 ### Backlog
 
@@ -237,3 +235,8 @@ Expected red: none.
 - An Indian piano teacher's read of the glossary's notation loanwords, and of `स्केल` for a song's key.
 - A native reader's check of the guides' place names: `Leipzig` and `Weimar` stay Latin, while
   `ओहायो` and `बेथलेहम` are Devanagari.
+- The drift read left three judgement calls to a native reader. *Up on the Housetop* is a
+  `क्रिसमस गीत` where carols are `कैरल`. A few guides call a song `गीत`, where the glossary says
+  `गाना`. `पंक्ति` names a line of music in `key-signatures.hi.ts`, which § 5 has no row for.
+- The drift read checked the guides' free prose by pattern only, not line by line.
+- No Android device drew the pages. The phone shots used Chrome's phone viewport with Windows fonts.
