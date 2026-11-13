@@ -115,6 +115,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   `src/render/scene.ts` does.
 - **A shader's local named `half`, `step`, `round` or `inverse` fails to compile.** `half` is reserved in
   GLSL ES, and the rest name built-in functions. Pick another name, as `src/render/flames.ts` does.
+- **A three.js class used only behind `import()` still grows the landing player's scripts.** Bun builds
+  three.js as one shared chunk, which holds every class any chunk uses. Measure the embed's chunks
+  against `LANDING_PLAYER_BUDGET_BYTES` in `tools/build.test.ts` before a new three.js addon lands.
 
 ## End-to-end tests
 
