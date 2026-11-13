@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in Portuguese, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in Portuguese, from n to z"
     status: open
@@ -133,9 +133,9 @@ keys* with *First melodies*. Five fresh reviewers then review the five batches b
 most eight guides each work side by side, and one fresh reviewer per batch reviews it blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.pt.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.pt.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp pt` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+- [x] One `tools/our-songs/<slug>.pt.ts` per slug from `air-on-the-g-string` to `mozart-21-andante`. `tools/our-songs/alle-jahre-wieder.pt.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp pt` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
 
 ### 5. The song guides in Portuguese, from n to z
 
@@ -143,7 +143,7 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.pt.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.pt.ts:1`
+- [ ] One `tools/our-songs/<slug>.pt.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.pt.ts:1`
 - [ ] Each batch reviewed blind, and every finding settled.
 - [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp pt` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
@@ -172,36 +172,37 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 3 are done. Every catalog section and every lesson has its `pt` file, and each world's
-`index.ts` loads `texts.pt` as its own chunk. Five writers wrote the course, and five fresh reviewers
-read it blind. The one batch with a *wrong* finding, *Reading music* with *Meet the piano*, was read
-again and came back with none. Every world is stamped.
+Stages 1 to 4 are done. Every catalog section, every lesson and the 51 guides from a to m have their
+`pt` file. Each is reviewed blind and stamped, and `public/songs/ours/<slug>/guide.json` carries it.
 
 `status pt` lists 11 texts that stay out on purpose. Eight are catalog texts: the site's name and the
 six languages' own names. Three are in *Expression*: the titles *Legato* and *Staccato* and the quiz
 answers `p`, `mp`, `mf`, `f`. The site shows the English, which reads the same.
 
-The review settled three rulings into `pt.md`. Every lesson recap opens *Muito bem.* (§ 11), and a near
-miss stays *Quase*. A sign such as *Fá♯* stays in running text where the English writes it, and
-*a tempo* takes *a indicação* before it (§ 7). After a lesson names the step, *um grau acima* may drop
-*vizinho* (§ 5).
+Stage 4 ran seven writers, seven blind reviewers, seven fixers, then a second blind round. Every batch
+had a *wrong* finding in the first round. Most were terms the session ruled after the writers ended,
+such as a hand shape and a lowercase *lá* for "there". The second round found one *wrong* text, and one
+fixer settled it with every other second-round finding.
 
-The Portuguese course is not looked at in a browser yet. `pt` has no pages until stage 6 ships it, and
-stage 6 looks at a lesson.
+The guides settled these rulings into `pt.md` § 5. A hand shape is *a posição*, a stretch is *a
+abertura*, and a melody's shape is *o desenho*. Even notes are *regulares* or *por igual*, never
+*iguais*. Four left-hand and octave steps joined *A guide's recurring steps*. Below that table stand
+the rules on *lá*, *Toque só …*, *na segunda vez*, *forte* for loud, *ta* syllables and title capitals.
+
+The Portuguese course and guides are not looked at in a browser yet. `pt` has no pages until stage 6
+ships it.
 
 ### Next
 
-**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status pt` lists 51 `guide/<slug>` units
-from `air-on-the-g-string` to `mozart-21-andante`. The item's range names `alle-jahre-wieder` to
-`morgen-kinder`, but the stage covers every slug from a to m. Run `bun tools/i18n.ts work pt
-guide/<slug>` for each, and send seven writers of at most eight guides side by side. Each guide is
-`tools/our-songs/<slug>.pt.ts`, in the shape of `<slug>.es.ts`. Brief each writer with `pt.md` whole,
-its § *A guide's recurring steps*, and the method's § *The writer's rules*. Ask each writer to list the
-terms it needed that the glossary lacks, so the session settles them across batches. Tell each fixer
-that edits a text's first words to keep the space after the period, since the course's fixer lost it
-eight times.
+**Stage 5: the song guides from n to z.** `bun tools/i18n.ts status pt` lists 29 `guide/<slug>` units,
+from `neon-chase` to `yankee-doodle`. Run `bun tools/i18n.ts work pt guide/<slug>` for each. Send four
+writers of seven or eight guides side by side, each writing `tools/our-songs/<slug>.pt.ts` in the shape
+of `<slug>.es.ts`. Brief each with `pt.md` whole, naming § 5's new rows and the rules under *A guide's
+recurring steps*. Those rulings came after stage 4's writers and cost a whole fix round. Send one fresh
+blind reviewer per batch, writing to `.agent-tmp/i18n/pt/review-<n>.md`, then one fixer per batch. A
+batch with a *wrong* finding is reviewed blind again.
 
-Then run `bun tools/make-our-songs.ts` and commit the guides' JSON, as the playbook says.
+Then run `bun tools/make-our-songs.ts`, stamp each guide, and commit the guides' JSON with the stamps.
 
 Expected red: none.
 

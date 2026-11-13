@@ -126,7 +126,7 @@ on common usage alone, and *Open* lists it.
 | slur | ligadura de expressão | WP *Ligadura (música)*; WP *Legato* |
 | repeat sign | o sinal de repetição | WP *Barra de compasso*; WP *Ritornelo* writes *ritornelo*, which a beginner does not know |
 | first, second ending | casa 1, casa 2 | Brazilian theory books, unsourced |
-| first, second time through | na primeira vez, na segunda vez | everyday words |
+| first, second, last time through | na primeira vez, na segunda vez, na última vez | everyday words |
 | pickup | a anacruse | Brazilian theory books, unsourced |
 | syncopation | a síncope | Brazilian theory books, unsourced |
 | scale | a escala | WP *Escala maior*; WP *Escala menor* |
@@ -174,6 +174,20 @@ on common usage alone, and *Open* lists it.
 | right hand, left hand, both hands | mão direita, mão esquerda, as duas mãos | WP *Piano*; AM |
 | hand position; C position | posição da mão; posição de Dó | the course's own terms |
 | thumb under, finger over | passagem do polegar, cruzamento de dedo | the course's own terms, unsourced |
+| a shape the hand holds; the octave shape | a posição; a posição de oitava | the guides' own terms. *Formato* and *forma* read as translated. |
+| a stretch between two fingers; the same shape of an interval | a abertura; a mesma abertura | the guides' own terms |
+| the shape of a melody | o desenho: *o mesmo desenho do compasso 6* | the guides' own term |
+| even notes; play them evenly | notas regulares; por igual | the guides' own terms. *Notas iguais* reads as the same note. |
+| on the beat; on beat 1 | no tempo; no tempo 1 | § 8 keeps a beat's digit |
+| three times as long | dura o triplo | *Três vezes mais* can read as four times |
+| little finger, in prose | o dedo mínimo | after *5 mínimo* above |
+| a pair (two notes struck together) | o par | the guides' own term. *Double notes* stays *notas duplas*. |
+| a rub (a soft dissonance); rubs against | o atrito; faz atrito com | the guides' own terms |
+| bounce (the wrist, a finger) | quicar: *deixe o pulso quicar* | everyday word |
+| plucked (bass, octaves) | pinçado | the guides' own term |
+| conductor, bandleader | o maestro | everyday word. *Regente* is right too, but one term reads calmer. |
+| film score | a trilha sonora | everyday word |
+| hymnal; set words to music | o hinário; musicar | everyday words |
 | wrist | o pulso | everyday word |
 | fingertips | as pontas dos dedos | everyday word |
 | by feel | pelo tato | everyday word |
@@ -310,6 +324,24 @@ guide. A step that only differs in its bars or its section follows the nearest r
 | Play the left hand alone, and press the notes of each chord together. | Toque só a mão esquerda, e pressione juntas as notas de cada acorde. |
 | Keep the Alberti bass soft, so the tune sings above it. | Toque o baixo Alberti suave, para a melodia cantar por cima. |
 | Change the pedal on each new bass note, twice in every bar. | Troque o pedal a cada nova nota do baixo, duas vezes por compasso. |
+| Now the left hand alone. It holds one shape for each bar. | Agora só a mão esquerda. Ela mantém uma posição em cada compasso. |
+| Now the left hand alone. It holds one shape for half a bar or a whole bar. | Agora só a mão esquerda. Ela mantém uma posição por meio compasso ou por um compasso inteiro. |
+| Now the left hand alone. It keeps one shape and changes it at most once a bar. | Agora só a mão esquerda. Ela mantém uma posição e a troca no máximo uma vez por compasso. |
+| Play the right hand's octaves alone, with the thumb and finger 5 kept in one shape. | Toque só as oitavas da mão direita, com o polegar e o dedo 5 numa só posição. |
+
+A guide never writes *lá* for "there", since it reads as the note *Lá*. It writes *ali*, *no agudo*,
+*mais acima* or *chegar até ele*. *Para lá e para cá* becomes *de um lado para o outro*.
+
+More rules the guides settled:
+
+- **A step that plays one part names the part after *só*:** *Toque só o baixo Alberti*. *Toque sozinho*
+  gives the learner a gender.
+- **"First time through" is *na primeira vez*,** with nothing after it, as the glossary's row says. The
+  second and the last time follow it. A step names the part, then the hand, then the time: *Toque só os
+  arpejos da mão esquerda, na segunda vez.* *Da segunda vez* is never used.
+- **Loud is *forte*, never *alto*.** *Alto* also means high.
+- **Rhythm syllables are *ta*,** such as *“taa, ta-ta”*. The rules test reads *ti* as the pronoun.
+- **A work's title capitalises its main words:** *Danças Húngaras*, *Nona Sinfonia*.
 
 ## 6. Kept words
 
