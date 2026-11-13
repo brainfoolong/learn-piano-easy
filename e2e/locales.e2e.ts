@@ -2,7 +2,7 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish, Chinese, Hindi, Arabic and Portuguese each read in their own language** from the language
+ * - **Spanish, Chinese, Hindi, Arabic, Portuguese and Indonesian each read in their own language** from the language
  *   switch to a lesson's step, its piano's key names and the player's controls. Arabic also sets `dir="rtl"`.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
  *   A right-to-left one runs them at every width, as `passedWidthsOf` says. A flaw counts only where the
@@ -162,6 +162,32 @@ test("the_portuguese_site_reads_in_portuguese", async ({ page }) => {
   await expect(page.getByRole("button", { name: "Reproduzir", exact: true })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Músicas" })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Configurações" })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test("the_indonesian_site_reads_in_indonesian", async ({ page }) => {
+  test.setTimeout(60_000);
+  await pastSetup(page);
+  const errors = watchErrors(page);
+
+  await page.goto("./learn/");
+  const choice = bar(page).getByRole("combobox", { name: "Language" });
+  await expect(choice.locator('option[value="id"]')).toHaveText("Bahasa Indonesia");
+  await choice.selectOption("id");
+  await expect(page).toHaveURL(/\/id\/learn\/$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "id");
+  await expect(heading(page)).toHaveText("Belajar Piano");
+  await expect(page.locator("main")).toContainText("Kenali piano");
+
+  await page.goto("./id/learn/meet-the-piano/find-c/");
+  await expect(page.locator(".lesson__title")).toHaveText("Temukan C");
+  await expect(page.locator("main")).toContainText("Semuanya punya nama yang sama: C.");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "C4");
+
+  await page.goto("./id/play/");
+  await expect(page.getByRole("button", { name: "Putar", exact: true })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "Lagu" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "Pengaturan" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
