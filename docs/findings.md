@@ -1135,3 +1135,28 @@ moving screenshot until one click loads it.
 - The key map is an `aria-hidden` layer of one span per key, and the end-to-end tests find keys through it.
 - Without WebGL the view shows `ui.pianoKeys.noWebgl`, and the step still hears MIDI and the computer keyboard.
 - The devices band shows a picture until a click, as decision 0008 says for every landing piano.
+
+## mascot-hand
+
+**Target:** the mascot's rigged hand ships within its byte budget, with its license named, and its rig
+puts any fingertip on any key.
+
+### Findings
+
+- `public/models/hand.glb` is MakeHuman's right forearm and hand: 445 vertices, 46 bones and 35 KB.
+- `bun tools/hand-model.ts` rebuilds it in Blender with MPFB 2.0.18, pinned by hash, to the same bytes.
+- `createHand` of `src/render/hand/hand-rig.ts` dresses a copy as a right or a mirrored left hand.
+- `reach` bends a digit so its pad meets a world point, and an undefined target lets it relax.
+- In the C position of `tools/hand-lab/c-position.ts`, every pad lands within 0.003 of a key width.
+- `bun tools/hand-lab.ts` serves the lab, and its head comment holds the shot command for its five views.
+
+### Decisions that still bind
+
+- The hand is a rigged MakeHuman model posed by a solver, as [decision 0013](decisions/0013.md) records.
+- `bun tools/hand-model.ts` is the only way to make `hand.glb`, and the built file is committed.
+- `hand.glb` stays within 64 KB, since every visitor downloads it with the app shell.
+- The hand is faceted and carries no normals. The skin material lights each face flat.
+- The colours live in `src/render/hand/hand-materials.ts` alone.
+- The runtime holds no measurements of the model. Each one is a marker bone's head.
+- A pad that starts over half a key from its target takes `SEEK_STEPS` in one frame.
+- The rig's tests load the shipped `hand.glb`, never a stand-in.

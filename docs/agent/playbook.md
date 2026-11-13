@@ -67,6 +67,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A stylesheet's `url()` to a file of `public/` fails the bundle with "Could not resolve".** Bun's CSS
   bundler resolves every URL from the CSS file's source folder. Bundle a page through `bundlePage` in
   `tools/build.ts`, whose `PAGE_EXTERNAL` leaves such a URL as it is.
+- **A unit test that reads every built page one by one can time out only in `looper verify`.** It passes
+  alone in under a second, but the full run loads the disk past bun's 5 s limit. Read the files with
+  `Promise.all`, as `build_uses_only_relative_urls` in `tools/build.test.ts` does.
 
 ## Rendering
 

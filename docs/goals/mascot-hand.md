@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: hand-model
@@ -112,9 +112,9 @@ project names a third-party file.
 
 ### 3. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
@@ -125,11 +125,13 @@ The C position the lab shows lives in `tools/hand-lab/c-position.ts`, and the ri
 one. Its pads land within 0.003 of a key width, and the test allows 0.005. A pad further than half a
 key from its target takes `SEEK_STEPS` in one frame (`src/render/hand/hand-rig.ts:182`).
 
+Stage 3 is done. The first verify failed only on `build_uses_only_relative_urls`, a timeout under
+load, and that test now reads the pages side by side. The second verify is green. `docs/findings.md`
+§ `mascot-hand` holds the harvest.
+
 ### Next
 
-**Stage 3: the goal is verified once.** Run `looper verify`, fix every failure in one pass, and run it
-again. The hand's own tests are `src/render/hand/hand-model.test.ts` and
-`src/render/hand/hand-rig.test.ts`. Then harvest the goal into `docs/findings.md` § `mascot-hand`.
+The goal is reached. Retire it, moving its three checks into the floor. Then `hand-motion` is live.
 
 Expected red: none.
 
