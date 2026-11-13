@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: portuguese-rules
@@ -164,28 +164,28 @@ term, address or mark that drifts between files.
 
 ### 7. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 6 are done, and `pt` ships. The build writes every page under `pt/`, and the switch
-offers *Português (Brasil)*. The worlds carry their titles from `pt.md` in `src/learn/course.ts`.
+Every stage is done, and the goal is reached. `pt` ships, and `looper verify` is green over the whole
+goal on its first run. No failure needed a fix, so the run after the fixes is that same run. The
+build writes every page under `pt/`, and the switch offers *Português (Brasil)*.
 `public/images/social/pt.png` draws the lead. The README and the feature list name Portuguese.
 
-`the_portuguese_site_reads_in_portuguese` passed once, run by name. The layout checks take `pt` by
-themselves, since `PASSED_LOCALES` in `e2e/layout-check.ts` holds every shipped locale outside the
-complete ones. They have not run in `pt` yet.
+`every_page_passes_the_layout_checks_in_pt` passed in the full e2e run, so no label in `pt` is too
+long. `the_portuguese_site_reads_in_portuguese` and `portuguese_texts_keep_their_rules` pass.
 
 Every route in `pt` was shot on a phone and a desktop, in both themes, with no page error. A lesson
 names its keys *Dó3* to *Dó6*. No label is clipped.
 
-Three fresh readers read the whole locale. Every drift they listed is settled in commit `fix(i18n): the
-Portuguese texts name each idea one way`. `pt.md` gained rows for the mordent, a figure (*o padrão* or
-*o desenho*, never *a figura*), and a song that plays by itself (*a música toca*). *Tochter Zion*'s
+Three fresh readers read the whole locale. Every drift they listed is settled in commit `8100254`. The
+glossary `pt.md` gained rows for the mordent and a figure, which is *o padrão* or *o desenho*, never
+*a figura*. It also gained a row for a song that plays by itself, which is *a música toca*. *Tochter Zion*'s
 *alegra-te* stays, since it quotes Zechariah 9:9 as Brazilian Bibles print it.
 
 `status pt` lists 12 texts that stay out on purpose. Nine are catalog texts: the site's name and the
@@ -194,12 +194,10 @@ A stamp hashes the English alone, so editing a translation never moves one.
 
 ### Next
 
-**Stage 7: the goal is verified once.** Run `looper verify`, fix every failure in one pass, and run it
-once more. `every_page_passes_the_layout_checks_in_pt` in `e2e/locales.e2e.ts` runs for the first time
-there. A flaw it finds in `pt` is settled with a shorter text in the `.pt.ts` file it names.
-`portuguese_texts_keep_their_rules` in `src/i18n/translation-rules.test.ts` reads the edited texts.
+**Harvest the goal.** Its target, findings and binding decisions go into `docs/findings.md` §
+`portuguese`, its checks into the floor, and its file is deleted. Then `indonesian` is live.
 
-Expected red: none known. The layout checks in `pt` may find a long label, since no run has measured it.
+Expected red: none known.
 
 ### Backlog
 
