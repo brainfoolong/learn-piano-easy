@@ -91,7 +91,7 @@ const CHRISTMAS = new Set([
   "tochter-zion",
 ]);
 
-/** The slugs of every film song of ours that is or will be written, by the goal `film-songs`. */
+/** The slugs of every film song of ours, which the collection "At the movies" holds. */
 const FILM = new Set([
   "canon-in-d",
   "ode-to-joy",
@@ -132,7 +132,7 @@ const FILM = new Set([
   "last-horizon",
 ]);
 
-/** The slugs of every sea shanty of ours that is or will be written, by the goal `film-songs`. */
+/** The slugs of every sea shanty of ours, which the collection "Sea shanties" holds. */
 const SEA = new Set(["drunken-sailor", "blow-the-man-down", "sailors-hornpipe", "spanish-ladies", "haul-away-joe"]);
 
 test("every_catalog_song_names_its_length_and_our_versions_their_skills", async () => {

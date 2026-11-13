@@ -1219,3 +1219,40 @@ with the exact fingers, slowed on request.
 - The demo waits for the hand up to two seconds, then plays without it until it loads.
 - Without WebGL the demo plays with the view's fallback text.
 - The landing player's budget is 210,000 bytes, which holds the hand's share of three.js.
+
+## film-songs
+
+**Target:** thirty public domain pieces famous from film, five sea shanties and three tunes of our own
+ship in four versions. The library groups them as its film and sea collections.
+
+### Findings
+
+- "At the movies" holds 37 songs and "Sea shanties" 5. `FILM` and `SEA` in `tools/our-songs.test.ts` name each slug.
+- The catalog holds 705 rows, and `src/learn/game/legendary-keys.ts` holds the key of each of the 80 Hard versions.
+- Four songs of ours joined the film collection: *Canon in D*, *Ode to Joy*, *Hall of the Mountain King* and *The Entertainer*.
+- The three tunes of our own are *Neon Chase*, *Black Flag Jig* and *Last Horizon*.
+- Their hooks share no run of five intervals with the twelve film themes the session wrote down.
+- Six pieces were swapped for a reserve or a replacement, since no allowed source printed them or the meter refused them.
+- *Ride of the Valkyries* gave way to *Habanera*, and Rachmaninoff's concerto to Chopin's *Funeral March*.
+- The *Cavalleria rusticana* Intermezzo gave way to Beethoven's Fifth.
+- The *Bumblebee*, the *Barcarolle* and *Pomp and Circumstance* gave way to *Vltava*, *Aquarium* and Mahler's Adagietto.
+- The theme book `File:Orchesterwerke Romantik Themen.pdf` on Commons prints orchestral themes of 1842 to 1912. Its contents list gives each page.
+- R. R. Terry's *The Shanty Book, Part I*, 1921, on Commons gives three of the shanties.
+- Medium and Hard move a tune whose key has more sharps or flats than they allow.
+- No session has listened to the songs.
+
+### Decisions that still bind
+
+- No protected theme ships, in any version or as a quote.
+- A tune's notes come from a score the session reads: Wikipedia's `<score>`, Mutopia or Commons. IMSLP is never fetched.
+- A tune follows its public domain source, never a film's protected arrangement.
+- An orchestral piece's tune is its melody, and our versions write their own accompaniment.
+- A film piece names its film in one sentence of its about text, and the app shows no film poster or still.
+- A tune of our own carries `own: true` in its source, names no film, and says it is ours.
+- A tune of our own quotes no run of five intervals of a protected film theme the session knows.
+- A tune whose leaps break Beginner's or Easy's position limit is cut to its hook phrase.
+- A tie the notation cannot write is rebarred or struck again, and a quick run it cannot write is cut to rests.
+- A tune keeps its print's key, even when every version moves it.
+- A tune with notes shorter than a quarter is written in longer lengths, in proportion.
+- A work whose first print no allowed source dates takes its earliest dated print read.
+- The collections are `film` and `sea`, after `christmas`.

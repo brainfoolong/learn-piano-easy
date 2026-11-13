@@ -137,8 +137,8 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
   to `Intl.PluralRules(...).resolvedOptions().pluralCategories`.
 - **The rules test reads its rules from `src/i18n/typography.ts`,** one entry per locale: the script's
   Unicode ranges, the kept words, and the patterns of its marks. A locale's style guide fills its entry.
-- **The script check passes what music writes in Latin in every locale:** note letters with ♯ and ♭,
-  chord symbols such as `Am7`, digits, and the kept words. Everything else must be the locale's script.
+- **The script check passes what music writes in Latin in every locale.** That is note letters with ♯
+  and ♭, chord symbols such as `Am7`, digits, and the kept words. Everything else must be the locale's script.
 - **The rules test names one test per locale,** from the row's English name: `spanish_texts_keep_their_rules`,
   `chinese_texts_keep_their_rules`, and so on. Each locale's goal checks its own.
 - **The legal notice and the privacy text are English and German only.** A wrong word there has legal
@@ -269,7 +269,7 @@ and sorting by the live locale.
 
 ### State
 
-The goal is written, behind `film-songs` on the chain. No stage has started. The policy it builds on is
+The goal is written and live on the chain. No stage has started. The policy it builds on is
 decision 0012 and rule 9 of `AGENTS.md`.
 
 ### Next
