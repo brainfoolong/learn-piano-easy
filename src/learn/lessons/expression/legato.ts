@@ -1,7 +1,7 @@
 /**
  * *Legato*, a lesson of *Expression*: notes played smooth and connected, with no gap between them.
  *
- * A demo plays C to G legato. The learner names what legato means, learns to let go of one key just as
+ * A demo plays C to G and back legato, with fingers 1 to 5 and back. The learner names what legato means, learns to let go of one key just as
  * the next goes down, and plays C to G that way. They learn the slur as the mark for legato and play a
  * slurred phrase down and back up. They learn that the fingering makes legato possible and play the C
  * major scale with the thumb passing under, then pick the move that keeps it smooth. They play C to G in
@@ -21,15 +21,15 @@ export const legato: Lesson = {
       kind: "demo",
       bpm: 72,
       notes: [
-        { note: 60, at: 0, beats: 1 },
-        { note: 62, at: 1, beats: 1 },
-        { note: 64, at: 2, beats: 1 },
-        { note: 65, at: 3, beats: 1 },
-        { note: 67, at: 4, beats: 1 },
-        { note: 65, at: 5, beats: 1 },
-        { note: 64, at: 6, beats: 1 },
-        { note: 62, at: 7, beats: 1 },
-        { note: 60, at: 8, beats: 3 },
+        { note: 60, at: 0, beats: 1, finger: 1 },
+        { note: 62, at: 1, beats: 1, finger: 2 },
+        { note: 64, at: 2, beats: 1, finger: 3 },
+        { note: 65, at: 3, beats: 1, finger: 4 },
+        { note: 67, at: 4, beats: 1, finger: 5 },
+        { note: 65, at: 5, beats: 1, finger: 4 },
+        { note: 64, at: 6, beats: 1, finger: 3 },
+        { note: 62, at: 7, beats: 1, finger: 2 },
+        { note: 60, at: 8, beats: 3, finger: 1 },
       ],
     },
     { id: "smooth-and-connected", kind: "explain" },
