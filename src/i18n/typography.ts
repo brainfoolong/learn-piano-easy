@@ -101,6 +101,24 @@ const SONG_NAMES: readonly string[] = [
       "Popeye", "Oberndorf", "Gruber", "Mohr", "Joplin", "Dukas", "Wade", "Redner", "Jaws", "Quint", "Bald Mountain",
 ];
 
+/**
+ * The kept words of a locale whose script is not Latin and whose guide keeps every song title in Latin
+ * letters. Each title with a mark of its own stands first, so a mark rule never reads it.
+ */
+const KEPT_IN_OWN_SCRIPT: readonly string[] = [
+  "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman", ...SONG_NAMES,
+  "Old MacDonald Had a Farm", "Old MacDonald",
+  "In the Hall of the Mountain King", "Carol of the Bells", "Ode to Joy", "Jingle Bells", "Mary Had a Little Lamb",
+  "Für Elise", "Twinkle, Twinkle, Little Star", "Twinkle Twinkle Little Star", "Canon in D",
+  "Mary", "Elise", "Carol", "Noel", "o",
+  "Learn Piano Easy", "Wikimedia Commons", "Wikipedia", "Mutopia", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo",
+  "Chrome", "Edge", "Firefox", "Safari", "JavaScript", "MIT", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz",
+  "dB", "ms", "KB", "MB", "px", "3D", "Esc", "BWV", "K.", "HWV",
+  "mezzo-piano", "mezzo-forte", "ritardando", "rallentando", "piano", "forte", "rit.", "rall.", "decresc.", "cresc.",
+  "dim.", "a tempo", "Ped.", "mp", "mf", "pp", "ff", "p", "f",
+  "Q", "W", "Z", "M", "I", "R", "V",
+];
+
 /** Each locale's rules. English is the source, and German is checked by eye, so the test skips both. */
 export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
   en: { kept: [], marks: [] },
@@ -147,19 +165,7 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
     ],
   },
   hi: {
-    kept: [
-      "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman", ...SONG_NAMES,
-      "Old MacDonald Had a Farm", "Old MacDonald",
-      "In the Hall of the Mountain King", "Carol of the Bells", "Ode to Joy", "Jingle Bells", "Mary Had a Little Lamb",
-      "Für Elise", "Twinkle, Twinkle, Little Star", "Twinkle Twinkle Little Star", "Canon in D",
-      "Mary", "Elise", "Carol", "Noel", "o",
-      "Learn Piano Easy", "Wikimedia Commons", "Wikipedia", "Mutopia", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo",
-      "Chrome", "Edge", "Firefox", "Safari", "JavaScript", "MIT", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz",
-      "dB", "ms", "KB", "MB", "px", "3D", "Esc", "BWV", "K.", "HWV",
-      "mezzo-piano", "mezzo-forte", "ritardando", "rallentando", "piano", "forte", "rit.", "rall.", "decresc.", "cresc.",
-      "dim.", "a tempo", "Ped.", "mp", "mf", "pp", "ff", "p", "f", "Do", "Re", "Mi",
-      "Q", "W", "Z", "M", "I", "R", "V",
-    ],
+    kept: [...KEPT_IN_OWN_SCRIPT, "Do", "Re", "Mi"],
     marks: [
       { says: "A sentence ends with the danda ।, and an ASCII period stands only inside a number", mustNot: /(?<!\d)\.|\.(?!\d)/ },
       { says: "The double danda ॥ is never used", mustNot: /॥/ },
@@ -172,7 +178,22 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       { says: "A range of numbers takes –", mustNot: /\d-\d/ },
     ],
   },
-  ar: { kept: [], marks: [] },
+  ar: {
+    kept: [...KEPT_IN_OWN_SCRIPT, "legato", "staccato"],
+    marks: [
+      { says: "A comma is ،, and a Latin comma stands only inside a number", mustNot: /(?<!\d),|,(?!\d)/ },
+      { says: "A semicolon is ؛", mustNot: /;/ },
+      { says: "A question ends with ؟", mustNot: /\?/ },
+      { says: "No space stands before ،, ؛, ؟, !, :, a period or %", mustNot: /\s[،؛؟!:.%]/ },
+      { says: "A space follows ، and ؛ before the next word", mustNot: /[،؛](?=\p{L})/u },
+      { says: "A quote stands in « », never in straight or curly double quotes", mustNot: /["“”„]/ },
+      { says: "Digits are Western", mustNot: /[٠-٩۰-۹]/ },
+      { says: "No tatweel stretches a word", mustNot: /ـ/ },
+      { says: "The tanween of the accusative sits on the letter before the alef", mustNot: /اً/ },
+      { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
+      { says: "A range between digits takes words, never a dash", mustNot: /\d\s?[-–—]\s?\d/ },
+    ],
+  },
   pt: { kept: [], marks: [] },
   id: { kept: [], marks: [] },
   bn: { kept: [], marks: [] },
