@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "The song guides in Arabic, from n to z"
-    status: open
+    status: done
   - id: 6
     title: The Arabic site ships
     status: open
@@ -183,9 +183,15 @@ side by side, and three fresh reviewers review them blind.
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.ar.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.ar.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ar` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+- [x] One `tools/our-songs/<slug>.ar.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.ar.ts:1`
+  - [x] A work list per slug, 29 slugs of 22 texts each, under `.agent-tmp/i18n/ar/`.
+  - [x] Four writers of seven or eight guides each, as batches 7 to 10.
+  - [x] Every Latin word the guides keep is in `src/i18n/typography.ts`.
+- [x] Each batch reviewed blind, and every finding settled.
+  - [x] Four blind reviews, one per writer's batch.
+  - [x] Every *wrong* finding fixed, and each *unnatural* one ruled on.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ar` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+  - [x] `bun x tsc` and the build are green.
 
 ### 6. The Arabic site ships
 
@@ -214,36 +220,43 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 4 are done. Every catalog section, every lesson and the 51 guides from `air-on-the-g-string`
-to `mozart-21-andante` have their Arabic files, reviewed blind and stamped in `src/i18n/stamps/ar.json`.
-The six guide reviews found two *wrong* texts, both fixed: a bare `ولا` before the note `لا`, and a
-relative clause on the wrong noun. `ar` is not shipped yet. `bun x tsc` and the build are green. `status`
-lists one lesson text as missing on purpose: the answers `1`, `3`, `5` of `finger-numbers`.
+Stages 1 to 5 are done. Every catalog section, every lesson and all 80 song guides have their Arabic
+files, reviewed blind and stamped in `src/i18n/stamps/ar.json`. Stage 5's four reviews found four
+*wrong* texts, all fixed: a bare `لا دييز` after a verb and after `إلى`, a spread hand written as
+"stands alone", and a rolled chord written as a turning hand. Two rulings joined the style guide: `لا دييز`
+follows the rules of a bare `لا` (§ 7), and "twice as" is `بضعف` (§ 8). `ar` is not shipped yet.
+`bun x tsc` and the build are green.
+
+`bun tools/i18n.ts status ar` lists 31 texts as missing. One is the lesson answers `1`, `3`, `5` of
+`finger-numbers`, left out on purpose. The other 30 are catalog texts with nothing to translate: `siteName`,
+`pages.home.title`, the language names, `Ctrl`, `Alt`, `Shift`, `Meta`, the time signatures, the XP
+goals, and the percent, KB, MB, BPM and FPS formatters. The shipped `hi` lists the same kind.
 
 ### Next
 
-**Stage 5: the 29 guides from `neon-chase` to `yankee-doodle`.** Gate: stage 4's guides are stamped, and
-they are.
+**Stage 6: the Arabic site ships.** Its gate asks for no missing text outside `legal`, which the 30
+catalog texts above break.
 
-- Run `bun tools/i18n.ts work ar guide/<slug>` for each slug. `ls tools/our-songs/` lists them.
-- Four writers of seven or eight guides each, side by side, then four blind reviewers, then four fixers.
-- The guide briefs are in `.agent-tmp/i18n/ar/`: `brief-guide-writer.md`, `brief-guide-reviewer.md` and
-  `brief-guide-fixer.md`. Put each batch's findings and rulings in `.agent-tmp/i18n/ar/review/batch-<n>.md`.
-  Stage 4's batch files are the model.
-- Add stage 4's new rulings, now in § 5 and § 7 of `docs/reference/translation/ar.md`, to the writer's
-  brief:
-  - `و` never joins a bare `لا`, which reads as "nor". Write `ونغمة لا`, or put `لا` first in the list.
-  - "Let go of" a key is `ارفع`, never `اترك`. "For a chord" is `لعزف`, never `من أجل`.
-  - An instruction to lower a hand is `أنزل` with its object, or `انزل` without one.
-- Stamp one unit at a time: `bun tools/i18n.ts stamp ar guide/<slug>`. Without a unit, `stamp` refuses.
-- Writers who type `⁨` with Write or Edit get the raw character. Tell them to type `\u2068`
-  and Grep for a raw U+2068 afterwards.
+- Settle the gate first. Write each of the 30 into its `src/i18n/messages/<section>.ar.ts`, with
+  `formatNumber("ar", …)` in the formatters, then stamp each section with
+  `bun tools/i18n.ts stamp ar catalog/<section>`. `bun tools/i18n.ts work ar catalog/<section>` lists
+  them, as rows whose `state` is `missing`.
+- Then follow stage 6's items in order. The consistency read is one `reader` subagent per third of the
+  files, since 80 guides overrun one reader. Brief it with the glossary and the ten review files'
+  rulings in `.agent-tmp/i18n/ar/review/`.
+- `ar` ships in `src/i18n/locale.ts:18`. Pass `--locale ar-EG` to `tools/shot.ts`.
+- A writer who types an isolate follows the playbook's first *Tooling* bullet, which this stage corrected.
 
-Expected red: none.
+Expected red: none until `ar` ships. Once it does, `the_arabic_site_reads_in_arabic` is red until its
+test is written.
 
 ### Backlog
 
 - A native Arabic speaker's read of the course would catch what a blind review cannot.
 - No Arabic piano method was reachable. The guide's *Open* lists the terms a teacher should confirm.
-- Stage 6's consistency read checks the Arabic Wikipedia spelling of Sullivan, Praetorius, Leontovych and
-  Saint-Saëns. The reviewers could not check them, so the guides keep their current spelling.
+- Stage 6's consistency read checks the Arabic Wikipedia spelling of Sullivan, Praetorius, Leontovych,
+  Saint-Saëns, Mussorgsky (`موسورسكي`), Dukas (`بول دوكا`) and Mendelssohn (`مندلسون`). It also checks
+  whether Adolphe Adam has an article, so `o-holy-night` would take his Arabic name. The reviewers
+  could not check them, so the guides keep their current spelling.
+- Round is `كانون`, glossed `تُغنّى دائريًا (كانون)` at its first use. Synthesizer, ragtime, scherzo,
+  mordent and oratorio took loanwords that the glossary lacks. Stage 6's read adds them to it.

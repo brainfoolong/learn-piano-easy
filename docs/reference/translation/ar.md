@@ -434,8 +434,10 @@ A step that only differs in its bars or its section follows the nearest row's sh
   `نغمة لا`: `اضغط نغمة لا`. A quiz answer or a list that holds only note names may write it bare.
 - **`و` never joins a bare `لا`,** since `ولا` reads as "nor". In running text it is `ونغمة لا`:
   `نغمتا ري ونغمة لا`. A list may also put `لا` first: `لا وري`.
+- **`لا دييز` and `لا بيمول` follow the rules of a bare `لا`:** `إلى نغمة لا دييز`.
 - **The bass as a part may be a bare `الباص`,** which a piano text never reads as a bus. One note
-  of it is `نغمة الباص`.- **A note name never takes the article.** `الدو` reads stiff to a learner: `اعزف دو`, `من دو إلى صول`.
+  of it is `نغمة الباص`.
+- **A note name never takes the article.** `الدو` reads stiff to a learner: `اعزف دو`, `من دو إلى صول`.
 - **A letter that code checks,** such as a quiz answer, stays the catalog's own.
 
 ## 8. Numbers
@@ -446,6 +448,7 @@ A step that only differs in its bars or its section follows the nearest row's sh
   separator is set by hand. `ar-EG` and `ar-SA` would write `١٬٢٣٤٫٥`, so the row never names a region.
 - **A percent sign follows its number without a space:** `80%`. Microsoft § 4.1.15 asks it, and `Intl`
   writes it so, with its own direction marks.
+- **"Twice as long" or "twice as quick" is `بضعف`:** `بضعف السرعة`. `أسرع بمرتين` reads as three times.
 - **Fingers, octaves, bars, beats and lessons keep their digits:** `المازورة 3`, `الإصبع 3`, `الدرس 5`.
 - **Arabic has six plural forms:** `zero`, `one`, `two`, `few`, `many` and `other`. A counted message
   gives all six, and `Intl.PluralRules` picks one.
