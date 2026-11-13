@@ -417,7 +417,7 @@ and leave the two replacements to the next session.
 - [ ] Writing subagents, one module each, from a shared brief file. `tools/our-songs/fur-elise.ts:1`
 - [ ] Add the modules to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:299`
 
-Stage 6's brief, `.agent-tmp/brief-s6.md` in its worktree, is the shape to copy. Give each prompt its
+Stage 6's brief, `.agent-tmp/brief-s6.md` in the main checkout, is the shape to copy. Give each prompt its
 tune, chords, about text and fun fact, word for word. Before you brief a writer, count the tune's notes
 outside its key in every four bars: Beginner and Easy allow three. Mutopia holds no Liszt, Chopin
 sonata, Mascagni, Offenbach or Ravel. Commons' file pages give a scan's print year in `action=raw`.
