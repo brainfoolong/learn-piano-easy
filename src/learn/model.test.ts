@@ -5,7 +5,8 @@ import { readGuide } from "../library/guide";
 import type { CatalogSong } from "../library/search";
 import { expect, test } from "../testing";
 import { COURSE } from "./course";
-import { allSteps, type Lesson, lessonProblems, STEP_KINDS, type SongStep } from "./model";
+import type { Finger } from "../theory/fingering";
+import { allSteps, type DemoStep, type Lesson, lessonProblems, STEP_KINDS, type SongStep } from "./model";
 
 const SONGS = join(import.meta.dir, "../../public/songs");
 const CATALOG = JSON.parse(readFileSync(join(SONGS, "catalog.json"), "utf8")) as CatalogSong[];
@@ -114,6 +115,25 @@ test("every_lesson_of_the_course_is_valid", async () => {
   );
 
   for (const lesson of await courseLessons()) expect([lesson.id, ...lessonProblems(lesson, LOCALES)]).toEqual([lesson.id]);
+});
+
+/** `sampleLesson` with its demo's two notes replaced by `notes`. */
+function withDemoNotes(notes: DemoStep["notes"]): Lesson {
+  const sample = sampleLesson();
+  return { ...sample, steps: sample.steps.map((step) => (step.id === "hear" && step.kind === "demo" ? { ...step, notes } : step)) };
+}
+
+test("a_demo_names_a_finger_for_every_note_or_none", () => {
+  expect(lessonProblems(withDemoNotes([{ note: 60, at: 0, beats: 1, finger: 1 }, { note: 62, at: 1, beats: 1, finger: 2, hand: "right" }]), LOCALES)).toEqual([]);
+  expect(lessonProblems(withDemoNotes([{ note: 48, at: 0, beats: 1, finger: 5, hand: "left" }, { note: 55, at: 1, beats: 1, finger: 1, hand: "left" }]), LOCALES)).toEqual([]);
+  expect(lessonProblems(withDemoNotes([{ note: 60, at: 0, beats: 1, finger: 1 }, { note: 62, at: 1, beats: 1 }]), LOCALES)).toEqual(["step hear names fingers for 1 of 2 notes"]);
+  expect(lessonProblems(withDemoNotes([{ note: 60, at: 0, beats: 1, hand: "left" }, { note: 62, at: 1, beats: 1 }]), LOCALES)).toEqual(["step hear names a hand but no fingers"]);
+});
+
+test("a_demo_finger_is_one_to_five", () => {
+  const off = (finger: number) => withDemoNotes([{ note: 60, at: 0, beats: 1, finger: 1 }, { note: 62, at: 1, beats: 1, finger: finger as Finger }]);
+  for (const finger of [1, 5]) expect(lessonProblems(off(finger), LOCALES)).toEqual([]);
+  for (const finger of [0, 6, 2.5]) expect(lessonProblems(off(finger), LOCALES)).toEqual(["step hear has a finger outside 1 to 5"]);
 });
 
 test("every_lesson_has_its_texts_in_every_locale", async () => {

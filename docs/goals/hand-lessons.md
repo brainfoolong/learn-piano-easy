@@ -6,7 +6,7 @@ context: [src/learn/model.ts, src/learn/steps/demo.ts, src/learn/lesson-sound.ts
 stages:
   - id: 1
     title: A demo note names its finger and hand
-    status: open
+    status: done
   - id: 2
     title: The piano view plays the hand in a demo step
     status: open
@@ -87,6 +87,8 @@ hand playing its phrase with the exact fingers. The learner can slow it down and
   `the-waltz-bass`. Every demo step in each of them names its fingers.
 - **`sitting-at-the-piano` and `the-sustain-pedal` show no hand.** Posture and the foot are not what
   the hand shows.
+- **A demo that names a hand but no fingers is refused,** since the hand shows only with fingers and a
+  lone hand would be dead data.
 - **Lanes:** stages 1 and 2 touch the model, the demo step, the sound and the view, so they run in
   order. Stages 3 to 5 touch disjoint lesson files and can run as side goals once stage 2 lands. Each
   ends by adding its lessons to the one test list, so they commit that file one after another.
@@ -99,10 +101,10 @@ hand playing its phrase with the exact fingers. The learner can slow it down and
 but not all, or a finger outside one to five.
 **Gate:** none.
 
-- [ ] `finger` and `hand` on `PhraseNote`. `src/learn/model.ts:55`
-- [ ] The demo's checks refuse a partial or out-of-range fingering. `src/learn/model.ts:292`
-- [ ] Unit tests `a_demo_names_a_finger_for_every_note_or_none` and `a_demo_finger_is_one_to_five`. `src/learn/model.test.ts:1`
-- [ ] `the-c-major-scale`'s demo names its fingers, 1 2 3 1 2 3 4 5, as the first user of the field. `src/learn/lessons/scales-and-keys/the-c-major-scale.ts:18`
+- [x] `finger` and `hand` on `PhraseNote`. `src/learn/model.ts:55`
+- [x] The demo's checks refuse a partial or out-of-range fingering. `src/learn/model.ts:292`
+- [x] Unit tests `a_demo_names_a_finger_for_every_note_or_none` and `a_demo_finger_is_one_to_five`. `src/learn/model.test.ts:1`
+- [x] `the-c-major-scale`'s demo names its fingers, 1 2 3 1 2 3 4 5, as the first user of the field. `src/learn/lessons/scales-and-keys/the-c-major-scale.ts:18`
 
 ### 2. The piano view plays the hand in a demo step
 
@@ -188,13 +190,20 @@ text, and writes the docs.
 
 ### State
 
-The goal is written. It waits on `hand-motion` for its stage 2. Stage 1 has no gate and can start once
-`mascot-hand` lands.
+Stage 1 is done. A demo's `PhraseNote` takes `finger` and `hand`, and `lessonProblems` refuses a
+partial fingering, a finger outside 1 to 5, and a hand named without fingers. The C major scale's demo
+names 1 2 3 1 2 3 4 5. `hand-motion` is reached, so stage 2's gate is open.
 
 ### Next
 
-**Stage 1: a demo note names its finger and hand.** Files: `src/learn/model.ts`, its test, and the C
-major scale lesson. No gate. The items are the stage's list above.
+**Stage 2: the piano view plays the hand in a demo step.** The items are the stage's list above.
+
+- The lesson's `PhraseNote` counts beats, and `planHands` at `src/render/hand/hand-plan.ts:200` takes
+  its own `PhraseNote` at `:48`, in seconds with `pitch`. Convert at the bpm the demo plays, with the
+  hand defaulting to `right`.
+- `Playback` is `src/learn/lesson-sound.ts:29`, and `play` is at `:49`.
+- The demo step calls `piano.show` at `src/learn/steps/demo.ts:31` and plays at `:46`.
+- `show` of the view is declared at `src/render/piano-keys.ts:119` and built at `:623`.
 
 Expected red: none.
 

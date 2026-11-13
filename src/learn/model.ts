@@ -23,6 +23,8 @@
  * - A phrase whose rests are judged is a `rhythm-tap` step with `notes`, never a timed `play-notes`.
  *   It reuses the count-in, the metronome and the rounds of `rhythm-tap`, and `play-notes` keeps waiting.
  *   Its notes start on whole beats, so a beat's dot marks each one, and the e2e walk presses on a beat.
+ * - A demo's note may name its finger and hand, written in the lesson to match its text, never guessed.
+ *   A demo names a finger for every note or for none, so a demo either shows the hand whole or not at all.
  * - A lesson names the skills of `src/library/skills.ts` it teaches, the same ids our songs' guides use.
  * - `lessonProblems` returns every problem as a sentence, never only the first. A lesson author then
  *   fixes a lesson in one pass, and the course's test prints them all.
@@ -36,6 +38,7 @@
  */
 import type { Locale } from "../i18n/locale";
 import type { SkillId } from "../library/skills";
+import type { Finger, Hand } from "../theory/fingering";
 import { SCENES } from "./scenes";
 
 /** The kinds of step, in the order of the curriculum's table. */
@@ -64,6 +67,10 @@ export interface PhraseNote {
   beats: number;
   /** How hard it is played, from 1 to 127, so a demo can play soft and loud. Absent, it plays at the lesson's usual strength. */
   velocity?: number;
+  /** The finger that plays it in a demo, from 1 for the thumb to 5. A demo names one for every note or for none. */
+  finger?: Finger;
+  /** The hand that plays it in a demo. Absent, it is the right hand. */
+  hand?: Hand;
 }
 
 /** What every step has. */
@@ -304,6 +311,12 @@ function optionProblems(step: Step): string[] {
       );
       if (!step.notes.every((n) => n.at >= 0 && n.beats > 0)) problems.push(`${at} has a note with no length or before the start`);
       if (!step.notes.every((n) => n.velocity === undefined || (Number.isInteger(n.velocity) && n.velocity >= 1 && n.velocity <= 127))) problems.push(`${at} has a velocity outside 1 to 127`);
+      {
+        const fingered = step.notes.filter((n) => n.finger !== undefined).length;
+        if (fingered > 0 && fingered < step.notes.length) problems.push(`${at} names fingers for ${fingered} of ${step.notes.length} notes`);
+        if (!step.notes.every((n) => n.finger === undefined || (Number.isInteger(n.finger) && n.finger >= 1 && n.finger <= 5))) problems.push(`${at} has a finger outside 1 to 5`);
+        if (fingered === 0 && step.notes.some((n) => n.hand !== undefined)) problems.push(`${at} names a hand but no fingers`);
+      }
       break;
     case "find-key":
       notes([step.key], "key");
