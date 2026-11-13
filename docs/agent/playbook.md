@@ -132,6 +132,12 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A short kept word placed before a longer title breaks that title's texts.** The rules test masks
   kept words in list order, so `Mary` leaves `Had a Little Lamb` as stray Latin. Put a short word such
   as `Mary` or `Elise` after every title that holds it in `src/i18n/typography.ts`.
+- **A copied text that brings `status` to 0 missing turns the rules test red.**
+  `src/i18n/translation-rules.test.ts` refuses a copy of the English, such as `Ctrl` or a language's own name. Leave such a text out, so the site shows the
+  English, and expect a few missing texts at the end of a pass.
+- **A number isolated with its unit fails the rules test in a right-to-left locale.** The test wants the
+  digits right after the isolate. Isolate the number, then the number with its unit, as
+  `src/i18n/messages/player-shell.ar.ts` does for `KB`.
 
 ## Rendering
 
