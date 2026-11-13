@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The scale and touch lessons show the hand
-    status: open
+    status: done
   - id: 4
     title: The first melodies, both hands and expression lessons show the hand
     status: open
@@ -90,6 +90,9 @@ hand playing its phrase with the exact fingers. The learner can slow it down and
   `the-waltz-bass`. Every demo step in each of them names its fingers.
 - **`sitting-at-the-piano` and `the-sustain-pedal` show no hand.** Posture and the foot are not what
   the hand shows.
+- **The G major and F major scale demos go up and down.** Their texts teach the thumb under going up
+  and a finger over going down, so the demo shows both. Each demo takes about seven seconds longer.
+- **A demo's held fifth names the left hand's 5 and 1,** as the texts of the G and F major tunes place it.
 - **A demo that names a hand but no fingers is refused,** since the hand shows only with fingers and a
   lone hand would be dead data.
 - **Lanes:** stages 1 and 2 touch the model, the demo step, the sound and the view, so they run in
@@ -132,13 +135,13 @@ step passes its phrase, offers Slow and Side, and the e2e tests pin it.
 **Does:** every demo of the six lessons names its fingers, and a test lists the technique lessons.
 **Gate:** the `demo-hand` check passes.
 
-- [ ] `finger-over-the-thumb`: the descending demo crosses 3 over 1, and the left-hand demo too. `src/learn/lessons/scales-and-keys/finger-over-the-thumb.ts:19`
-- [ ] `g-major`: its demos, with the thumb under to C and 3 over onto B. `src/learn/lessons/scales-and-keys/g-major.ts:1`
-- [ ] `f-major`: its demos, with the thumb under to C and 4 over onto B flat. `src/learn/lessons/scales-and-keys/f-major.ts:1`
-- [ ] `legato`: its demo, each finger handing over to the next. `src/learn/lessons/expression/legato.ts:1`
-- [ ] `staccato`: its demos, bouncing from the wrist. `src/learn/lessons/expression/staccato.ts:1`
-- [ ] Unit test `every_technique_lesson_demo_names_its_fingers`, listing these six and `the-c-major-scale`. `src/learn/course.test.ts:1`
-- [ ] Look at each lesson's demo with `bun run shot`, and check that each finger matches the lesson's text.
+- [x] `finger-over-the-thumb`: the descending demo crosses 3 over 1, and the left-hand demo too. `src/learn/lessons/scales-and-keys/finger-over-the-thumb.ts:19`
+- [x] `g-major`: its demos, with the thumb under to C and 3 over onto B. `src/learn/lessons/scales-and-keys/g-major.ts:1`
+- [x] `f-major`: its demos, with the thumb under to C and 4 over onto B flat. `src/learn/lessons/scales-and-keys/f-major.ts:1`
+- [x] `legato`: its demo, each finger handing over to the next. `src/learn/lessons/expression/legato.ts:1`
+- [x] `staccato`: its demos, bouncing from the wrist. `src/learn/lessons/expression/staccato.ts:1`
+- [x] Unit test `every_technique_lesson_demo_names_its_fingers`, listing these six and `the-c-major-scale`. `src/learn/course.test.ts:1`
+- [x] Look at each lesson's demo with `bun run shot`, and check that each finger matches the lesson's text.
 
 ### 4. The first melodies, both hands and expression lessons show the hand
 
@@ -193,25 +196,29 @@ text, and writes the docs.
 
 ### State
 
-Stages 1 and 2 are done. A demo whose notes all name fingers shows the hand on the lesson's piano
-view, to the phrase's audio clock, with Slow and Side view toggles. The C major scale's demo is the one
-lesson that does so far. `src/render/hand/hand-stage.ts` is the lazy part: the model, the rigs and the
-plan. `src/render/hand/hand-frame.ts` places the camera for both angles. The three `demo-hand` e2e
-tests pass, run by name. Shots in both views, both themes and on a phone look right.
+Stages 1 to 3 are done. Every demo of the six scale and touch lessons and of `the-c-major-scale` names
+its fingers, as its texts in English and German say. The G and F major tunes name the left hand's held
+fifth as 5 and 1. `TECHNIQUE_LESSONS` in `src/learn/course.test.ts` lists the seven, and
+`every_technique_lesson_demo_names_its_fingers` passes, run by name. The build is green. Shots of
+`finger-over-the-thumb`'s first demo show the descent and the crossing, in both views and slowed. Every
+demo of the seven was planned with `planHands` and sampled. Each plans without a throw or a bad pose,
+and the two tunes plan both hands. The left-hand demo and the two tunes sit behind quizzes and
+play-notes steps, so no shot reached them.
 
 ### Next
 
-**Stage 3: the scale and touch lessons show the hand.** The items are the stage's list above. A demo
-names a finger on every note, as `src/learn/lessons/scales-and-keys/the-c-major-scale.ts:22` does.
+**Stage 4: the first melodies, both hands and expression lessons show the hand.** Follow the stage's
+`**Split:**` line. The demos are at `first-melodies/right-hand-c-position.ts:17`,
+`left-hand-c-position.ts:18`, `twinkle-first-phrase.ts:18`, `repeated-notes.ts:18`,
+`both-hands/moving-the-hand.ts:19`, `open-fifths.ts:19` and `:40`, `expression/loud-and-soft.ts:20`,
+`:46`, `:68` and `:87`, and `phrases.ts:20` and `:58`, all under `src/learn/lessons/`.
 
-- `finger-over-the-thumb` has demos at `:20` and `:41`, `g-major` at `:19` and `:54`, `f-major` at
-  `:19` and `:41`, `legato` at `:21`, and `staccato` at `:22` and `:44`.
-- Read each lesson's step texts in its `.ts` and `.de.ts` before choosing fingers, since the text wins.
-- A left-hand demo adds `hand: "left"` on every note. Its side view looks from the right.
-- The test goes in `src/learn/course.test.ts` beside its other `test(` calls, and `loadCourse` there
-  gives the lessons.
-- Look at each demo with `bun run shot --path "./learn/<world>/<lesson>/" --locale en-US`, then
-  `--click "Play again"` and a `--wait` to the crossing.
+- `loud-and-soft` has demos nested in a group at `:46` and `:68`. `allSteps` in the test finds them.
+- Add the eight ids to `TECHNIQUE_LESSONS` in `src/learn/course.test.ts`.
+- `left-hand-c-position`'s demo is its first step, so a shot can look at the left hand and its side
+  view from the right. Click "Play again" once to wake the audio, then again before the timed waits.
+- A lesson URL cannot open a later step. Check a demo behind other steps by planning it with
+  `planHands` in a scratch script under `.agent-tmp/`, with a `layoutKeys` range around its pitches.
 
 Expected red: none.
 

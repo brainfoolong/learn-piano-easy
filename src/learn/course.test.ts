@@ -48,6 +48,22 @@ test("every_key_a_lesson_asks_for_is_in_reach_of_the_default_computer_keys", asy
   expect(stuck).toEqual([]);
 });
 
+/** The lessons that teach a movement of the hand, whose every demo shows the hand play it. */
+const TECHNIQUE_LESSONS = ["the-c-major-scale", "finger-over-the-thumb", "g-major", "f-major", "legato", "staccato"];
+
+test("every_technique_lesson_demo_names_its_fingers", async () => {
+  const lessons = (await loadCourse()).flatMap(({ lessons }) => lessons.lessons);
+  const bare: string[] = [];
+  for (const id of TECHNIQUE_LESSONS) {
+    const lesson = lessons.find((each) => each.id === id);
+    expect({ id, found: lesson !== undefined }).toEqual({ id, found: true });
+    for (const step of allSteps(lesson!.steps)) {
+      if (step.kind === "demo" && step.notes.some((note) => note.finger === undefined)) bare.push(`${id}/${step.id}`);
+    }
+  }
+  expect(bare).toEqual([]);
+});
+
 test("the_eight_worlds_are_in_order", async () => {
   const course = await loadCourse();
   expect(course.map(({ world }) => world.id)).toEqual([
