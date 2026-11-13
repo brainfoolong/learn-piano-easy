@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Spanish
-    status: open
+    status: done
   - id: 3
     title: The course in Spanish
     status: open
@@ -72,6 +72,13 @@ What the pilot teaches goes back into that file before the next locale starts.
   `intl` is `es-419`, CLDR's form for Latin America, which writes `1,234.5`. `og` is `es_LA`, and `naming` is `solfege`.
 - **Numbers follow `Intl` for `es-419`.** No digit or separator is set by hand.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
+- **A text whose Spanish equals the English stays out of its file,** such as *Audio*, *Normal* or *Cursor*.
+  The site shows the same text either way, and the rules test refuses a copy. `status` counts each as
+  missing, so stage 6's gate allows the 42 of stage 2's catalogs, by unit: site 3, learn-lesson 2,
+  player-bar 5, player-input 3, player-library 5, player-settings 20, player-shell 4.
+- **"Just Play Piano" is *Piano libre*,** a noun that reads well inside a sentence (guide § 6).
+- **A setting is *una opción*, and Medium is *Intermedio*.** The glossary's interface table holds every
+  term the writers of stage 2 settled, so later stages follow them.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -100,12 +107,12 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/es.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/es.ts:1`, `src/i18n/messages/learn-lesson.es.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.es.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.es.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `spanish_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp es` for each catalog section. `src/i18n/stamps/es.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/es.ts:1`, `src/i18n/messages/learn-lesson.es.ts:1`
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.es.ts:1`
+- [x] The player's settings. `src/i18n/messages/player-settings.es.ts:1`
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+- [x] `bun x tsc` and `spanish_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+- [x] `bun run i18n stamp es` for each catalog section. `src/i18n/stamps/es.json:1`
 
 ### 3. The course in Spanish
 
@@ -168,24 +175,32 @@ address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/es.md` holds all twelve sections, with 21 calibration texts.
-The `es` entry of `src/i18n/typography.ts` holds the kept words and six mark rules. A mark rule now
-reads a text with each kept word written as `X`, so *Hark! The Herald Angels Sing* passes. Test
-`the_spanish_marks_hold_and_spare_kept_titles` covers the rules. The locale row is confirmed unchanged.
+Stages 1 and 2 are done. Every catalog section has its Spanish file under `src/i18n/messages/`, and
+`es.ts` mounts them. `es` loads as a chunk (`src/i18n/locale.ts:46`) and sits in `CATALOGS`
+(`src/i18n/all-catalogs.ts:15`). It is not shipped, so no Spanish page is written yet.
 
-Some rows have one source or none. The guide's `## Open` lists them: the finger names, *calderón*,
-*partitura*, *racha* and other common words marked "unsourced".
+Six writers took the stage, since the settings alone are 712 texts. Six blind reviews and two second
+reviews settled every finding. Every catalog unit is stamped in `src/i18n/stamps/es.json`, and `status`
+lists no stale text. The 42 missing texts are the deliberate copies of *Standing decisions*.
+
+The guide gained its sources for most "unsourced" rows, *transponer* in place of *transportar*, and the
+interface terms the writers settled. Its `## Open` lists what still has one source or none.
+
+The writers' reusable files are `.agent-tmp/i18n/es/writer-brief.md` and `reviewer-brief.md`. They are
+scratch, so a new session rewrites them from this handoff when they are gone.
 
 ### Next
 
-**Stage 2: the site and the player in Spanish.** Gate: `docs/reference/translation/es.md` exists.
+**Stage 3: the course in Spanish.** Gate: stage 2's catalogs are stamped, which holds.
 
-- Run `bun tools/i18n.ts status es`, then `bun tools/i18n.ts work es <unit>` per catalog section.
-- Before the writers start, a `web-fetch` subagent finds a second source for each "unsourced" row of
-  the guide. Settle each in the glossary first.
-- Three writers, one per item of stage 2, each with the whole guide. Files: `src/i18n/messages/<section>.es.ts`.
-- The catalog chunk of `es` goes into `CATALOG_CHUNKS` of `src/i18n/locale.ts:44`, as `de`'s does.
-- "Just Play Piano" is transcreated, and its writer proposes the form (guide § 6).
+- `bun tools/i18n.ts work es lesson/<world>` for each of the eight worlds.
+- Each world's files: one `<lesson>.es.ts` per `<lesson>.en.ts`, and `texts.es.ts` that gathers them,
+  as `src/learn/lessons/rhythm/texts.de.ts` does. Wire each in its `index.ts:17` `translations`.
+- The writer's brief: read the guide whole, then the method's writer's rules. Leave out a text whose
+  Spanish equals the English. A demo's "Play again" is *Escuchar otra vez*, and "Your turn" is *Ahora tú*.
+- Writers of disjoint worlds run side by side. The session runs `bun x tsc` and the rules test once
+  they all end, then sends one fresh `reader` reviewer per batch with the reviewer's brief.
+- Stamp each world with `bun tools/i18n.ts stamp es lesson/<world>` once its findings are settled.
 
 Expected red: none. `spanish_texts_keep_their_rules` turns red if a writer breaks a mark rule.
 
