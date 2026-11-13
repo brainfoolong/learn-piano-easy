@@ -347,3 +347,23 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `wedding-march/epic.mid` | Wedding March, Medium | Felix Mendelssohn | MIT |
 | `wedding-march/legendary.mid` | Wedding March, Hard | Felix Mendelssohn | MIT |
 | `wedding-march/guide.json` | Wedding March, the guide | | MIT |
+| `can-can/common.mid` | Can-can, Beginner | Jacques Offenbach | MIT |
+| `can-can/rare.mid` | Can-can, Easy | Jacques Offenbach | MIT |
+| `can-can/epic.mid` | Can-can, Medium | Jacques Offenbach | MIT |
+| `can-can/legendary.mid` | Can-can, Hard | Jacques Offenbach | MIT |
+| `can-can/guide.json` | Can-can, the guide | | MIT |
+| `vltava/common.mid` | Vltava, Beginner | Bedřich Smetana | MIT |
+| `vltava/rare.mid` | Vltava, Easy | Bedřich Smetana | MIT |
+| `vltava/epic.mid` | Vltava, Medium | Bedřich Smetana | MIT |
+| `vltava/legendary.mid` | Vltava, Hard | Bedřich Smetana | MIT |
+| `vltava/guide.json` | Vltava, the guide | | MIT |
+| `aquarium/common.mid` | Aquarium, Beginner | Camille Saint-Saëns | MIT |
+| `aquarium/rare.mid` | Aquarium, Easy | Camille Saint-Saëns | MIT |
+| `aquarium/epic.mid` | Aquarium, Medium | Camille Saint-Saëns | MIT |
+| `aquarium/legendary.mid` | Aquarium, Hard | Camille Saint-Saëns | MIT |
+| `aquarium/guide.json` | Aquarium, the guide | | MIT |
+| `mahler-adagietto/common.mid` | Adagietto, Beginner | Gustav Mahler | MIT |
+| `mahler-adagietto/rare.mid` | Adagietto, Easy | Gustav Mahler | MIT |
+| `mahler-adagietto/epic.mid` | Adagietto, Medium | Gustav Mahler | MIT |
+| `mahler-adagietto/legendary.mid` | Adagietto, Hard | Gustav Mahler | MIT |
+| `mahler-adagietto/guide.json` | Adagietto, the guide | | MIT |

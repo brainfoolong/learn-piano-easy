@@ -98,6 +98,10 @@ import { beethoven5 } from "./our-songs/beethoven-5";
 import { chopinNocturneCSharpMinor } from "./our-songs/chopin-nocturne-c-sharp-minor";
 import { morningMood } from "./our-songs/morning-mood";
 import { weddingMarch } from "./our-songs/wedding-march";
+import { canCan } from "./our-songs/can-can";
+import { vltava } from "./our-songs/vltava";
+import { aquarium } from "./our-songs/aquarium";
+import { mahlerAdagietto } from "./our-songs/mahler-adagietto";
 import { deckTheHalls } from "./our-songs/deck-the-halls";
 import { diesIrae } from "./our-songs/dies-irae";
 import { dingDongMerrilyOnHigh } from "./our-songs/ding-dong-merrily-on-high";
@@ -303,6 +307,10 @@ export const ourSongs: readonly OurSong[] = [
   chopinNocturneCSharpMinor,
   morningMood,
   weddingMarch,
+  canCan,
+  vltava,
+  aquarium,
+  mahlerAdagietto,
 ];
 
 /** The version `rarity` of `song` as a song of the notation. */

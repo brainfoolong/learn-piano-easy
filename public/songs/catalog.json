@@ -6211,6 +6211,424 @@
     ]
   },
   {
+    "composer": "Jacques Offenbach",
+    "piece": "Can-can",
+    "title": "Beginner",
+    "file": "ours/can-can/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 76,
+    "seconds": 29,
+    "song": "can-can",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Can-Can",
+      "Cancan",
+      "Galop infernal",
+      "Infernal Galop",
+      "Orpheus in the Underworld",
+      "Orphée aux Enfers"
+    ]
+  },
+  {
+    "composer": "Jacques Offenbach",
+    "piece": "Can-can",
+    "title": "Easy",
+    "file": "ours/can-can/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 76,
+    "seconds": 27,
+    "song": "can-can",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "triads"
+    ],
+    "collection": "film",
+    "aka": [
+      "Can-Can",
+      "Cancan",
+      "Galop infernal",
+      "Infernal Galop",
+      "Orpheus in the Underworld",
+      "Orphée aux Enfers"
+    ]
+  },
+  {
+    "composer": "Jacques Offenbach",
+    "piece": "Can-can",
+    "title": "Medium",
+    "file": "ours/can-can/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 42,
+    "high": 79,
+    "seconds": 40,
+    "song": "can-can",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Can-Can",
+      "Cancan",
+      "Galop infernal",
+      "Infernal Galop",
+      "Orpheus in the Underworld",
+      "Orphée aux Enfers"
+    ]
+  },
+  {
+    "composer": "Jacques Offenbach",
+    "piece": "Can-can",
+    "title": "Hard",
+    "file": "ours/can-can/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 91,
+    "seconds": 48,
+    "song": "can-can",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Can-Can",
+      "Cancan",
+      "Galop infernal",
+      "Infernal Galop",
+      "Orpheus in the Underworld",
+      "Orphée aux Enfers"
+    ]
+  },
+  {
+    "composer": "Bedřich Smetana",
+    "piece": "Vltava",
+    "title": "Beginner",
+    "file": "ours/vltava/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 52,
+    "high": 84,
+    "seconds": 51,
+    "song": "vltava",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Die Moldau",
+      "The Moldau",
+      "Má vlast",
+      "Moldau"
+    ]
+  },
+  {
+    "composer": "Bedřich Smetana",
+    "piece": "Vltava",
+    "title": "Easy",
+    "file": "ours/vltava/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 52,
+    "high": 84,
+    "seconds": 55,
+    "song": "vltava",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "Die Moldau",
+      "The Moldau",
+      "Má vlast",
+      "Moldau"
+    ]
+  },
+  {
+    "composer": "Bedřich Smetana",
+    "piece": "Vltava",
+    "title": "Medium",
+    "file": "ours/vltava/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 51,
+    "high": 84,
+    "seconds": 68,
+    "song": "vltava",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Die Moldau",
+      "The Moldau",
+      "Má vlast",
+      "Moldau"
+    ]
+  },
+  {
+    "composer": "Bedřich Smetana",
+    "piece": "Vltava",
+    "title": "Hard",
+    "file": "ours/vltava/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 84,
+    "seconds": 62,
+    "song": "vltava",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Die Moldau",
+      "The Moldau",
+      "Má vlast",
+      "Moldau"
+    ]
+  },
+  {
+    "composer": "Camille Saint-Saëns",
+    "piece": "Aquarium",
+    "title": "Beginner",
+    "file": "ours/aquarium/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 77,
+    "seconds": 50,
+    "song": "aquarium",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "The Carnival of the Animals",
+      "Le Carnaval des animaux",
+      "Der Karneval der Tiere"
+    ]
+  },
+  {
+    "composer": "Camille Saint-Saëns",
+    "piece": "Aquarium",
+    "title": "Easy",
+    "file": "ours/aquarium/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 77,
+    "seconds": 48,
+    "song": "aquarium",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "two-note-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "The Carnival of the Animals",
+      "Le Carnaval des animaux",
+      "Der Karneval der Tiere"
+    ]
+  },
+  {
+    "composer": "Camille Saint-Saëns",
+    "piece": "Aquarium",
+    "title": "Medium",
+    "file": "ours/aquarium/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 77,
+    "seconds": 71,
+    "song": "aquarium",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "The Carnival of the Animals",
+      "Le Carnaval des animaux",
+      "Der Karneval der Tiere"
+    ]
+  },
+  {
+    "composer": "Camille Saint-Saëns",
+    "piece": "Aquarium",
+    "title": "Hard",
+    "file": "ours/aquarium/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 81,
+    "seconds": 68,
+    "song": "aquarium",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "The Carnival of the Animals",
+      "Le Carnaval des animaux",
+      "Der Karneval der Tiere"
+    ]
+  },
+  {
+    "composer": "Gustav Mahler",
+    "piece": "Adagietto",
+    "title": "Beginner",
+    "file": "ours/mahler-adagietto/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 74,
+    "seconds": 58,
+    "song": "mahler-adagietto",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Mahler Adagietto",
+      "Symphony No. 5",
+      "Sinfonie Nr. 5",
+      "Death in Venice",
+      "Tod in Venedig"
+    ]
+  },
+  {
+    "composer": "Gustav Mahler",
+    "piece": "Adagietto",
+    "title": "Easy",
+    "file": "ours/mahler-adagietto/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 74,
+    "seconds": 74,
+    "song": "mahler-adagietto",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "triads"
+    ],
+    "collection": "film",
+    "aka": [
+      "Mahler Adagietto",
+      "Symphony No. 5",
+      "Sinfonie Nr. 5",
+      "Death in Venice",
+      "Tod in Venedig"
+    ]
+  },
+  {
+    "composer": "Gustav Mahler",
+    "piece": "Adagietto",
+    "title": "Medium",
+    "file": "ours/mahler-adagietto/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 36,
+    "high": 74,
+    "seconds": 111,
+    "song": "mahler-adagietto",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Mahler Adagietto",
+      "Symphony No. 5",
+      "Sinfonie Nr. 5",
+      "Death in Venice",
+      "Tod in Venedig"
+    ]
+  },
+  {
+    "composer": "Gustav Mahler",
+    "piece": "Adagietto",
+    "title": "Hard",
+    "file": "ours/mahler-adagietto/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 86,
+    "seconds": 107,
+    "song": "mahler-adagietto",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Mahler Adagietto",
+      "Symphony No. 5",
+      "Sinfonie Nr. 5",
+      "Death in Venice",
+      "Tod in Venedig"
+    ]
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",
