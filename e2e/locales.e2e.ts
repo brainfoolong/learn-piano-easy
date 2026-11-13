@@ -2,8 +2,8 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish, Chinese, Hindi and Arabic each read in their own language** from the language switch to a
- *   lesson's step, its piano's key names and the player's controls. Arabic also sets `dir="rtl"`.
+ * - **Spanish, Chinese, Hindi, Arabic and Portuguese each read in their own language** from the language
+ *   switch to a lesson's step, its piano's key names and the player's controls. Arabic also sets `dir="rtl"`.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
  *   A right-to-left one runs them at every width, as `passedWidthsOf` says. A flaw counts only where the
  *   locale's text adds it, since each page's own test holds its English. The pseudo-locale's longer texts
@@ -136,6 +136,32 @@ test("the_arabic_site_reads_in_arabic", async ({ page }) => {
   await page.goto("./ar/imprint/");
   await expect(page.locator(".legal")).toHaveAttribute("dir", "ltr");
   await expect(page.locator(".legal")).toHaveAttribute("lang", "en");
+  expect(errors).toEqual([]);
+});
+
+test("the_portuguese_site_reads_in_portuguese", async ({ page }) => {
+  test.setTimeout(60_000);
+  await pastSetup(page);
+  const errors = watchErrors(page);
+
+  await page.goto("./learn/");
+  const choice = bar(page).getByRole("combobox", { name: "Language" });
+  await expect(choice.locator('option[value="pt"]')).toHaveText("Português (Brasil)");
+  await choice.selectOption("pt");
+  await expect(page).toHaveURL(/\/pt\/learn\/$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "pt-BR");
+  await expect(heading(page)).toHaveText("Aprenda piano");
+  await expect(page.locator("main")).toContainText("Conheça o piano");
+
+  await page.goto("./pt/learn/meet-the-piano/find-c/");
+  await expect(page.locator(".lesson__title")).toHaveText("Encontre o Dó");
+  await expect(page.locator("main")).toContainText("Todas têm o mesmo nome: Dó.");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "Dó4");
+
+  await page.goto("./pt/play/");
+  await expect(page.getByRole("button", { name: "Reproduzir", exact: true })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "Músicas" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "Configurações" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 

@@ -19,3 +19,4 @@ The tool writes them, so a change is a new run of it, never an edit of a file he
 | `zh.png` | The site's name and the hero's lead in Chinese, beside a keyboard with falling notes | MIT |
 | `hi.png` | The site's name and the hero's lead in Hindi, beside a keyboard with falling notes | MIT |
 | `ar.png` | The site's name and the hero's lead in Arabic, right to left, beside a keyboard with falling notes | MIT |
+| `pt.png` | The site's name and the hero's lead in Brazilian Portuguese, beside a keyboard with falling notes | MIT |
