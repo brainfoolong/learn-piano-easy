@@ -14,6 +14,9 @@ import { theCMajorScale } from "./the-c-major-scale";
 export const scalesAndKeys: WorldLessons = {
   lessons: [halfAndWholeSteps, sharps, flats, theCMajorScale, fingerOverTheThumb, gMajor, fMajor, keySignatures],
   boss: jingleBells,
-  translations: { de: () => import("./texts.de").then((module) => module.texts) },
+  translations: {
+    de: () => import("./texts.de").then((module) => module.texts),
+    es: () => import("./texts.es").then((module) => module.texts),
+  },
   skipPicks: scalesAndKeysSkipPicks,
 };

@@ -139,6 +139,19 @@ GO is Google's Latin American help pages (`hl=es-419`).
 | sheet music | la partitura | WP *Partitura*; AP (GarageBand, *Editor de partituras*) |
 | pitch | la altura | WP *Altura (música)*; TC |
 | transpose | transponer; la transposición | WP *Transposición (música)*; AP (GarageBand). WP allows *transportar* too, but a player's *transporte* is its play controls. |
+| fourth | cuarta | WP *Intervalo (música)*; TC |
+| open fifth | quinta abierta | the course's own term, since its lessons say it "sounds open". Theory books say *quinta vacía*. |
+| major third, minor third | tercera mayor, tercera menor | WP *Intervalo (música)*; TC |
+| scale degree | el grado: *el 5.º grado* | WP *Grado (música)*; TC |
+| bass note | la nota del bajo | the course's own term |
+| low C, high C | el do grave, el do agudo | the course's own landmarks, as § 7 says |
+| hairpin (crescendo, diminuendo) | el regulador | WP *Dinámica (música)*, one source |
+| stem, note head | la plica, la cabeza de la nota | WP *Figura musical* |
+| mark (p, f, rit.) | la indicación | the course's own term |
+| waltz | el vals | WP *Vals* |
+| piano bench | el banco | everyday word; *banqueta* is a sidewalk in Mexico |
+| fingertips | las yemas de los dedos | everyday word |
+| call and answer (phrases) | pregunta y respuesta | PP |
 
 ### The interface glossary
 
@@ -173,7 +186,8 @@ GO is Google's Latin American help pages (`hl=es-419`).
 | tap or click a control | selecciona | MS § 4.3, a verb for every input |
 | press a computer key | presiona | MS; AN |
 | lesson, step, world | lección, paso, mundo | MS *lección*; the course's own terms |
-| boss (a world's last lesson) | jefe final | the term of games in Spanish |
+| boss (a world's last lesson) | jefe final; a boss's title is *Jefe final: <song>* | the term of games in Spanish |
+| the worlds' titles | Conoce el piano, Primeras melodías, Ritmo, Leer partituras, Las dos manos, Escalas y tonalidades, Acordes, Expresión | the course's own titles; `src/learn/course.ts` takes them when Spanish ships |
 | skip test | prueba de salto | the course's own term |
 | level; Level up! | nivel; ¡Subiste de nivel! | MS *nivel* |
 | badge | la insignia | MS |
@@ -234,6 +248,16 @@ GO is Google's Latin American help pages (`hl=es-419`).
 - **The octave number is scientific:** the do central is `Do4`, as WP *Do (nota)* gives it. A lesson names
   a note by its place, such as *el do central*, as the English does.
 - **A letter that code checks,** such as a quiz answer, stays the catalog's own.
+- **The note *la* never stands where it reads as the article.** Write *el la* or *la nota la*: *presiona
+  el la*, *del sol al la*. Its chord or key is *el acorde de la menor*, since *la menor* alone can read
+  as "the smaller one".
+- **A plural of notes keeps the name and counts it:** *los dos do*, *tres sol cortos*, or *cuatro teclas
+  do* where *dos do* would read as a number.
+- **"Low C" is *el do grave*,** the C below middle C, as the bass clef's landmark. Where the English
+  spells out "the C below middle C", the Spanish does too: *el do debajo del do central*. So does a note
+  placed from it: *el sol debajo del do que queda bajo el do central*.
+- **A group or an order uses the neutral form:** *de tres en tres*, *una por una*. *De a tres* and *de a
+  una* are the River Plate's.
 
 ## 8. Numbers
 

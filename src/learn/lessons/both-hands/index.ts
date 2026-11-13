@@ -14,6 +14,9 @@ import { tuneAndBassTogether } from "./tune-and-bass-together";
 export const bothHands: WorldLessons = {
   lessons: [handsApartThenTogether, aHeldBassNote, openFifths, changingTheBassOnTheBeat, tuneAndBassTogether, movingTheHand, eighthNotes, dottedRhythm],
   boss: odeToJoyBothHands,
-  translations: { de: () => import("./texts.de").then((module) => module.texts) },
+  translations: {
+    de: () => import("./texts.de").then((module) => module.texts),
+    es: () => import("./texts.es").then((module) => module.texts),
+  },
   skipPicks: bothHandsSkipPicks,
 };

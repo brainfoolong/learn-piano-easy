@@ -14,6 +14,9 @@ import { theSustainPedal } from "./the-sustain-pedal";
 export const expression: WorldLessons = {
   lessons: [loudAndSoft, crescendoAndDiminuendo, legato, staccato, phrases, theSustainPedal, slowingDown, playingWithFeeling],
   boss: furEliseRare,
-  translations: { de: () => import("./texts.de").then((module) => module.texts) },
+  translations: {
+    de: () => import("./texts.de").then((module) => module.texts),
+    es: () => import("./texts.es").then((module) => module.texts),
+  },
   skipPicks: expressionSkipPicks,
 };

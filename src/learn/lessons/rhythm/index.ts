@@ -14,6 +14,9 @@ import { wholeNotes } from "./whole-notes";
 export const rhythm: WorldLessons = {
   lessons: [theBeat, quarterNotes, halfNotes, wholeNotes, rests, countingToFour, threeFourTime, tempoAndTheMetronome],
   boss: odeToJoy,
-  translations: { de: () => import("./texts.de").then((module) => module.texts) },
+  translations: {
+    de: () => import("./texts.de").then((module) => module.texts),
+    es: () => import("./texts.es").then((module) => module.texts),
+  },
   skipPicks: rhythmSkipPicks,
 };
