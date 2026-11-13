@@ -26,6 +26,7 @@ export const PLURAL_FORMS = {
   ur: ["one", "other"],
   ja: ["other"],
   "en-XA": ["one", "other"],
+  "ar-XB": ["one", "other"],
 } as const satisfies Record<Locale, readonly Intl.LDMLPluralRule[]>;
 
 /** The forms of a counted word in `L`: one text for each of its plural categories. */

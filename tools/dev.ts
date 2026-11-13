@@ -11,7 +11,7 @@
  * `--preview` serves a production build without watching, so the app runs locally exactly as it does
  * when hosted, service worker included.
  *
- * The dev server also writes the pages of the pseudo-locale under `en-XA/`. A preview writes them only
+ * The dev server also writes the pages of the pseudo-locales under `en-XA/` and `ar-XB/`. A preview writes them only
  * with `--pseudo`, as the end-to-end tests ask.
  *
  * `bun tools/dev.ts [--port <n>] [--preview] [--pseudo] [--out <dir>] [--no-tls]`. The port defaults to 4173, and

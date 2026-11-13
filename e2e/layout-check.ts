@@ -29,7 +29,7 @@
  */
 import type { Browser, Page } from "@playwright/test";
 import { CATALOGS } from "../src/i18n/all-catalogs";
-import { COMPLETE_LOCALES, DEFAULT_LOCALE, isLocale, LOCALES as SHIPPED_LOCALES, PSEUDO_LOCALE } from "../src/i18n/locale";
+import { COMPLETE_LOCALES, DEFAULT_LOCALE, isLocale, isPseudoLocale, LOCALES as SHIPPED_LOCALES, PSEUDO_LOCALES, type PseudoLocale } from "../src/i18n/locale";
 import { fold, translatedAway, untranslated } from "../src/i18n/untranslated";
 import { SETTINGS_VERSION, STORAGE_KEY } from "../src/settings/store";
 import { judgePage, type MeasuredText, type Named, type PageMeasure } from "../src/ui/layout-geometry";
@@ -41,10 +41,10 @@ export const WIDTHS = [360, 768, 1280, 1920] as const;
 export const THEMES = ["light", "dark"] as const;
 
 /**
- * The locales every width is checked in: the complete ones, English and German, and the pseudo-locale,
- * whose texts run 40% longer than the English.
+ * The locales every width is checked in: the complete ones, English and German, and the pseudo-locales.
+ * The texts of `en-XA` run 40% longer than the English, and `ar-XB` reads from right to left.
  */
-export const LOCALES = [...SHIPPED_LOCALES.filter((locale) => COMPLETE_LOCALES.includes(locale)), PSEUDO_LOCALE];
+export const LOCALES = [...SHIPPED_LOCALES.filter((locale) => COMPLETE_LOCALES.includes(locale)), ...PSEUDO_LOCALES];
 
 /**
  * The shipped locales a translation pass keeps, such as Spanish. `e2e/locales.e2e.ts` checks their pages
@@ -56,12 +56,12 @@ export const PASSED_LOCALES = SHIPPED_LOCALES.filter((locale) => !COMPLETE_LOCAL
 export const PASSED_WIDTHS = [360, 1280] as const;
 
 /**
- * `url`, the absolute URL of a page of the default locale, in the pseudo-locale. The end-to-end server
- * serves the site from its root, so the locale's folder goes first.
+ * `url`, the absolute URL of a page of the default locale, in the pseudo-locale `locale`, `en-XA` when
+ * absent. The end-to-end server serves the site from its root, so the locale's folder goes first.
  */
-export function inPseudo(url: string): string {
+export function inPseudo(url: string, locale: PseudoLocale = "en-XA"): string {
   const at = new URL(url);
-  at.pathname = `/${PSEUDO_LOCALE}${at.pathname}`;
+  at.pathname = `/${locale}${at.pathname}`;
   return at.href;
 }
 
@@ -296,8 +296,8 @@ export async function checkLayout(browser: Browser, url: string, options: Layout
           page.on("console", (message) => {
             if (message.type() === "error") errors.push(message.text());
           });
-          // A browser's language never moves a visit to the pseudo-locale, so its check opens its page.
-          await page.goto(locale === PSEUDO_LOCALE ? inPseudo(url) : url);
+          // A browser's language never moves a visit to a pseudo-locale, so its check opens its page.
+          await page.goto(isPseudoLocale(locale) ? inPseudo(url, locale) : url);
           if (options.ready !== undefined) await drawn(page, options.ready);
           await settle(page);
           const where = `${width} ${theme} ${locale}`;

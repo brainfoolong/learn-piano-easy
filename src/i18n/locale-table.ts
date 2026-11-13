@@ -8,8 +8,10 @@
  * - **`complete` marks the locales whose catalogs hold every text.** The type checker and the catalog
  *   test hold them to it, and only their pages are checked for English that shows.
  * - **The first row is the default locale,** served from the site's root.
- * - **The pseudo-locale `en-XA` has a row beside the table,** so no list of languages meets it. A page
- *   may be in it, so `Locale` holds it, and `ShippedLocale` keys the texts every shipped locale holds.
+ * - **The pseudo-locales `en-XA` and `ar-XB` have rows beside the table,** so no list of languages meets
+ *   them. A page may be in one, so `Locale` holds them, and `ShippedLocale` keys the texts every shipped
+ *   locale holds.
+ * - **`dir` is the direction of a locale's pages,** which the build writes on each page's `<html>`.
  */
 
 /** The note names a locale shows a new learner. */
@@ -60,24 +62,30 @@ export const LOCALE_TABLE = [
 ] as const satisfies readonly LocaleRow[];
 
 /**
- * The pseudo-locale, whose texts `src/i18n/pseudo.ts` derives from the English. It is no row of the
- * table, so no language list, tool or translation check meets it. Only a build with `--pseudo` writes
- * its pages.
+ * The pseudo-locales, whose texts `src/i18n/pseudo.ts` derives from the English. `en-XA` runs longer than
+ * the English, and `ar-XB` reads from right to left. They are no rows of the table, so no language list,
+ * tool or translation check meets them. Only a build with `--pseudo` writes their pages.
  */
-export const PSEUDO_ROW = {
-  code: "en-XA", english: "Pseudo", endonym: "Ƥšéüðö", lang: "en-XA", intl: "en", dir: "ltr", ogLocale: "en_US", naming: "letters", alphabet: "latin", shipped: false, complete: false,
-} as const satisfies LocaleRow;
+export const PSEUDO_ROWS = [
+  { code: "en-XA", english: "Pseudo", endonym: "Ƥšéüðö", lang: "en-XA", intl: "en", dir: "ltr", ogLocale: "en_US", naming: "letters", alphabet: "latin", shipped: false, complete: false },
+  { code: "ar-XB", english: "Pseudo right to left", endonym: "Pseudo RTL", lang: "ar-XB", intl: "en", dir: "rtl", ogLocale: "en_US", naming: "letters", alphabet: "latin", shipped: false, complete: false },
+] as const satisfies readonly LocaleRow[];
 
-/** The pseudo-locale's code. */
-export const PSEUDO_LOCALE = PSEUDO_ROW.code;
-export type PseudoLocale = typeof PSEUDO_LOCALE;
+/** The pseudo-locales' codes. */
+export const PSEUDO_LOCALES = PSEUDO_ROWS.map((row) => row.code);
+export type PseudoLocale = (typeof PSEUDO_ROWS)[number]["code"];
+
+/** Whether `value` names a pseudo-locale. */
+export function isPseudoLocale(value: string): value is PseudoLocale {
+  return (PSEUDO_LOCALES as readonly string[]).includes(value);
+}
 
 type Row = (typeof LOCALE_TABLE)[number];
 
 /** A language of the table, shipped or not. */
 export type LanguageCode = Row["code"];
 
-/** A locale a catalog may be loaded in: a language of the table, or the pseudo-locale. */
+/** A locale a catalog may be loaded in: a language of the table, or a pseudo-locale. */
 export type LocaleCode = LanguageCode | PseudoLocale;
 
 /**
@@ -92,12 +100,12 @@ export type ShippedLocale = Extract<Row, { shipped: true }>["code"];
  */
 export type CompleteLocale = Extract<Row, { complete: true }>["code"];
 
-/** A locale a page may be written in: a shipped one, or the pseudo-locale of a `--pseudo` build. */
+/** A locale a page may be written in: a shipped one, or a pseudo-locale of a `--pseudo` build. */
 export type Locale = ShippedLocale | PseudoLocale;
 
 /** The row of `locale`. */
 export function rowOf(locale: LocaleCode): LocaleRow {
-  return locale === PSEUDO_LOCALE ? PSEUDO_ROW : LOCALE_TABLE.find((row) => row.code === locale)!;
+  return [...LOCALE_TABLE, ...PSEUDO_ROWS].find((row) => row.code === locale)!;
 }
 
 /** The site's shipped locales, the default first. */

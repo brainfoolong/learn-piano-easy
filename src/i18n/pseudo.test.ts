@@ -10,6 +10,13 @@ test("a_pseudo_text_is_wrapped_accented_and_longer", () => {
   expect(pseudo("")).toBe("");
 });
 
+test("a_right_to_left_pseudo_text_is_the_english_overridden", () => {
+  expect(pseudo("Play again", "ar-XB")).toBe("‮Play again‬");
+  expect(pseudo(" ", "ar-XB")).toBe(" ");
+  expect(textFor({ en: "Rhythm", de: "Rhythmus" }, "ar-XB")).toBe("‮Rhythm‬");
+  expect(pseudoTree({ count: (n: number) => `${n} songs` }, "ar-XB").count(3)).toBe("‮3 songs‬");
+});
+
 test("a_pseudo_tree_keeps_its_addresses_and_wraps_its_functions", () => {
   const tree = pseudoTree({ run: { text: "Your data", route: "data" }, count: (n: number) => `${n} songs` });
   expect(tree.run.route).toBe("data");

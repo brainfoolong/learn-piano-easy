@@ -10,7 +10,7 @@
  *   place. A page awaits `loadTexts` of its locale before it reads a lesson's texts.
  * - The pseudo-locale's lesson texts derive from the English through `pseudoTree`, so they need no chunk.
  */
-import { loadLocale, PSEUDO_LOCALE, type Locale } from "../i18n/locale";
+import { isPseudoLocale, loadLocale, type Locale } from "../i18n/locale";
 import { pseudoTree } from "../i18n/pseudo";
 import { lessonKey } from "./lesson-run";
 import { type Lesson, mergeTexts, type World, type WorldLessons } from "./model";
@@ -40,7 +40,7 @@ function world(spec: Omit<World, "load" | "loadTexts">, lessons: () => Promise<W
       if (own.every((lesson) => lesson.texts[locale] !== undefined)) return;
       const translation = (await built.translations?.[locale]?.()) ?? {};
       for (const lesson of own) {
-        lesson.texts[locale] = locale === PSEUDO_LOCALE ? pseudoTree(lesson.texts.en) : mergeTexts(lesson.texts.en, translation[lesson.id] ?? {});
+        lesson.texts[locale] = isPseudoLocale(locale) ? pseudoTree(lesson.texts.en, locale) : mergeTexts(lesson.texts.en, translation[lesson.id] ?? {});
       }
       translateSkipTest(made, written, built, locale);
     },

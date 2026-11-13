@@ -11,13 +11,13 @@
  *   own folder, so `play/` in German is `de/play/`.
  * - **A path here is relative to the site's root, never the address's whole path.** The site runs from
  *   any base path, so only the caller knows where its root is.
- * - **A browser language matches by its first subtag,** so `es-MX` would find `es`. It never matches the
+ * - **A browser language matches by its first subtag,** so `es-MX` would find `es`. It never matches a
  *   pseudo-locale, whose pages only a path reaches, and only a `--pseudo` build writes.
  * - **The language choice is `auto` until the learner picks one.** With `auto`, a page of the default
  *   locale moves to the first site locale in the browser's languages. A page of another locale stays,
  *   since a learner reached it by a link or a choice. A picked locale wins on every page.
  */
-import { DEFAULT_LOCALE, LOCALES, PSEUDO_LOCALE, type Locale, type LocaleCode, type ShippedLocale } from "./locale-table";
+import { DEFAULT_LOCALE, isPseudoLocale, LOCALES, type Locale, type LocaleCode, type ShippedLocale } from "./locale-table";
 import { en, type Messages } from "./messages/en";
 import { pseudoTree } from "./pseudo";
 import { withEnglish, type Translation } from "./translation";
@@ -32,13 +32,13 @@ export function isLocale(value: string): value is ShippedLocale {
   return (LOCALES as readonly string[]).includes(value);
 }
 
-/** Whether `value` names a locale a page may be written in: a shipped one, or the pseudo-locale. */
+/** Whether `value` names a locale a page may be written in: a shipped one, or a pseudo-locale. */
 export function isPageLocale(value: string): value is Locale {
-  return isLocale(value) || value === PSEUDO_LOCALE;
+  return isLocale(value) || isPseudoLocale(value);
 }
 
 /**
- * The catalog chunk of each locale that has one. English is in the main bundle and needs none. The
+ * The catalog chunk of each locale that has one. English is in the main bundle and needs none. A
  * pseudo-locale's catalog derives from the English, so it needs no chunk either.
  */
 const CATALOG_CHUNKS: Partial<Record<LocaleCode, () => Promise<Translation<Messages>>>> = {
@@ -46,7 +46,8 @@ const CATALOG_CHUNKS: Partial<Record<LocaleCode, () => Promise<Translation<Messa
   es: () => import("./messages/es").then((module) => module.es),
   zh: () => import("./messages/zh").then((module) => module.zh),
   hi: () => import("./messages/hi").then((module) => module.hi),
-  [PSEUDO_LOCALE]: async () => pseudoTree(en),
+  "en-XA": async () => pseudoTree(en, "en-XA"),
+  "ar-XB": async () => pseudoTree(en, "ar-XB"),
 };
 
 /** Each loaded locale's catalog, its gaps filled with English. */

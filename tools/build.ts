@@ -21,8 +21,8 @@
  * asks search engines not to index it.
  *
  * `bun tools/build.ts [--dev] [--out <dir>] [--site-url <url>] [--pseudo]`. `--dev` skips minifying and
- * turns on live reload. `--pseudo` also writes every page in the pseudo-locale `en-XA` of
- * `src/i18n/pseudo.ts`, under `en-XA/`. No sitemap, link or `hreflang` names those pages, and the release
+ * turns on live reload. `--pseudo` also writes every page in the pseudo-locales `en-XA` and
+ * `ar-XB` of `src/i18n/pseudo.ts`, under `en-XA/` and `ar-XB/`. No sitemap, link or `hreflang` names those pages, and the release
  * build never writes them. `--site-url` names where the site is hosted. Only then does an indexed page carry
  * canonical, `hreflang`, `og:url` and `og:image` links, and a landing page its JSON-LD. A social site
  * reads only an absolute `og:image`, so a local build carries none.
@@ -37,7 +37,7 @@ import { cp, mkdir, readdir, rm } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { GROUP_INDEX, groupIndex, groupOf } from "../src/pwa/cache-groups";
 import { loadEveryLocale } from "../src/i18n/all-catalogs";
-import { DEFAULT_LOCALE, isLocale, loadLocale, LOCALES, messagesOf, PSEUDO_LOCALE, rowOf, type Locale } from "../src/i18n/locale";
+import { DEFAULT_LOCALE, isLocale, loadLocale, LOCALES, messagesOf, PSEUDO_LOCALES, rowOf, type Locale } from "../src/i18n/locale";
 import {
   allPages,
   lessonPages,
@@ -61,7 +61,7 @@ export interface BuildOptions {
   dev: boolean;
   /** Where the site is hosted, such as `https://example.org/piano/`. Without it, no page names a domain. */
   siteUrl?: string | undefined;
-  /** Whether it also writes the pages of the pseudo-locale `en-XA`. The release build never does. */
+  /** Whether it also writes the pages of the pseudo-locales. The release build never does. */
   pseudo?: boolean;
 }
 
@@ -227,6 +227,7 @@ export function renderPage(template: string, page: Page, siteUrl?: string): stri
   const messages = messagesOf(page.locale);
   const values: Record<string, string> = {
     lang: rowOf(page.locale).lang,
+    dir: rowOf(page.locale).dir,
     title: escapeHtml(pageTitle(page)),
     description: escapeHtml(pageDescription(page)),
     base: page.base,
@@ -250,8 +251,8 @@ async function writePages(outDir: string, siteUrl: string | undefined, pseudo: b
   const template = await Bun.file(join(root, "public/index.html")).text();
   const locales: Locale[] = [...LOCALES];
   if (pseudo) {
-    await loadLocale(PSEUDO_LOCALE);
-    locales.push(PSEUDO_LOCALE);
+    for (const locale of PSEUDO_LOCALES) await loadLocale(locale);
+    locales.push(...PSEUDO_LOCALES);
   }
   const pages = [...allPages(locales), ...(await lessonPages(locales))];
   for (const page of pages) {

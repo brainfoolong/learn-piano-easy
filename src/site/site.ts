@@ -138,6 +138,7 @@ export async function startSite(root: HTMLElement, settings: SettingsStore): Pro
     footerHost.replaceChildren(page.route.id === "play" ? "" : siteFooter(page, storeLanguage));
     root.dataset.route = page.route.id;
     document.documentElement.lang = rowOf(locale).lang;
+    document.documentElement.dir = rowOf(locale).dir;
     document.title = pageTitle(page);
     document.querySelector('meta[name="description"]')?.setAttribute("content", messagesOf(locale).pages[page.route.id].description);
     countVisit();
