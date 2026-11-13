@@ -52,8 +52,12 @@ test("a_note_wait_mode_waits_long_for_scores_late", async ({ page }) => {
 
   await page.getByRole("button", { name: "Play" }).click();
   await expect(page.getByRole("button", { name: "Pause" })).toBeVisible();
-  // The demo song's first right-hand note is C4, on the key Q, 2 s in. The song then waits there for over a second.
-  await page.waitForTimeout(3500);
+  // The demo song's first right-hand note is C4, on the key Q, at song time 0 after a 2 s lead-in.
+  // The song reaches it, which a slow page takes longer for, then waits there for over a second.
+  const position = page.getByRole("slider", { name: "Song position" });
+  await expect(position).toHaveAttribute("aria-valuenow", "0", { timeout: 20_000 });
+  await page.waitForTimeout(1500);
+  await expect(position).toHaveAttribute("aria-valuenow", "0");
   await page.keyboard.down("q");
   await page.keyboard.up("q");
   await expect(page.locator('.game-pop[data-kind="late"]')).toBeAttached();
