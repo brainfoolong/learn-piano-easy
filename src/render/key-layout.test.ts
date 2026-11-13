@@ -64,4 +64,5 @@ test("fit_range_covers_every_note_of_a_song", async () => {
     const missed = song.notes.filter((n) => n.pitch >= FIRST_NOTE && n.pitch <= LAST_NOTE && !layout.key(n.pitch));
     expect({ file: entry.file, missed: missed.length }).toEqual({ file: entry.file, missed: 0 });
   }
-});
+  // It reads every library song, as `src/midi/library-songs.test.ts` does, so a busy suite needs the time.
+}, 60_000);
