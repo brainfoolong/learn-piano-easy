@@ -30,7 +30,7 @@ stages:
     status: done
   - id: 9
     title: Three film-style tunes of our own
-    status: open
+    status: done
   - id: 10
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -258,6 +258,12 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
 - **A tune of our own quotes no protected theme.** Its hook shares no run of five intervals with a
   theme by Faltermeyer, Silvestri, Badelt, Zimmer, Williams or Horner that the session knows. The
   writing subagent's brief names this rule, and the session checks each hook before the module ships.
+- **The session composed the three tunes, and the writers set them.** Each tune is eight bars with a
+  hook of bars 1 to 4. *Last Horizon* plays in D minor for Beginner and Easy, and in C minor above.
+- **The hook check compared runs of five intervals,** against themes the session wrote down from what
+  it knows. They were *Axel F*, *He's a Pirate*, *Star Wars*, the *Raiders March*, the *Imperial March*,
+  *Jaws*, *Hedwig's Theme*, *Jurassic Park*, *Superman*, *My Heart Will Go On*, *Back to the Future*
+  and a theme of *Gladiator*. No hook shares a run with any of them.
 - **A tune of our own needs no public domain years.** `OurSource` gains `own: true`, and its composer is
   `learn-piano-easy`. `isPublicDomain` passes such a source, and the source's `edition` says the tune
   is ours. Its rows keep the MIT license and our credit, as every song of ours does.
@@ -453,12 +459,12 @@ took their places. The *Bumblebee* cannot pass Beginner, so it and the 25th piec
 **Split:** three writing subagents, one module each. Each brief names the style, the key, the tempo
 and the rule that it quotes no protected theme.
 
-- [ ] *Neon Chase*. `tools/our-songs/neon-chase.ts:1`
-- [ ] *Black Flag Jig*. `tools/our-songs/black-flag-jig.ts:1`
-- [ ] *Last Horizon*. `tools/our-songs/last-horizon.ts:1`
-- [ ] The session checks each hook against the protected themes it knows. `tools/our-songs/neon-chase.ts:1`
-- [ ] Add the three to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
-- [ ] Screenshots of both groups, and one film piece at each version, with `bun run shot`. `tools/shot.ts:1`
+- [x] *Neon Chase*. `tools/our-songs/neon-chase.ts:1`
+- [x] *Black Flag Jig*. `tools/our-songs/black-flag-jig.ts:1`
+- [x] *Last Horizon*. `tools/our-songs/last-horizon.ts:1`
+- [x] The session checks each hook against the protected themes it knows. `tools/our-songs/neon-chase.ts:1`
+- [x] Add the three to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [x] Screenshots of both groups, and one film piece at each version, with `bun run shot`. `tools/shot.ts:1`
 
 ### 10. the goal is verified once, and every failure is fixed
 
@@ -470,27 +476,24 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 to 8 are done. Thirty film pieces and five sea shanties ship in four versions, and the
-catalog holds 693 rows. Each shanty's tune was compared note for note with the print the session
-read. The standing decisions record the sources and the years. No reserve was needed. The writer,
+Stages 1 to 9 are done. Thirty film pieces, five sea shanties and three tunes of our own ship in four
+versions, and the catalog holds 705 rows. "At the movies" lists 37 songs and "Sea shanties" 5, in the
+screenshots. Every version of the three tunes opened in the player with no page error. The writer,
 `tsc` and the worktree's build are green. The catalog count in `src/midi/library-songs.test.ts`
-reads 693, and no test ran.
+reads 705, and no test ran.
 
 ### Next
 
-**Stage 9: the three tunes of our own.** Work in a detached worktree under `.agent-tmp/`. Copy
-`.agent-tmp/brief-s8.md` from the main checkout as `brief-s9.md`. Its tune comes from the writer, not
-a print, and its source carries `own: true`.
+**Stage 10: the gate.** Run `looper verify` on a clean tree, fix every failure in one pass, and run it
+once more.
 
-- [ ] Write the brief: style, key, tempo, `own: true`, composer `learn-piano-easy`, and the rule on protected themes. `tools/make-our-songs.ts:171`
-- [ ] Three writing subagents, one module each, with `collection: "film"`. `tools/our-songs/neon-chase.ts:1`
-- [ ] Check each hook against the protected themes the session knows, for a run of five intervals. `tools/our-songs/black-flag-jig.ts:1`
-- [ ] Add the three to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:323`
-- [ ] Screenshots of both groups, and one film piece at each version, with `bun run shot`. `tools/shot.ts:1`
+- [ ] Run `looper verify` over the whole goal. `tools/our-songs.test.ts:1`
+- [ ] Fix every failure in one pass, never loosening a test. `e2e/library.e2e.ts:261`
+- [ ] Run `looper verify` again until it is green, then harvest the goal into `docs/findings.md`. `docs/findings.md:1`
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 693 by four rows per new
-tune. The e2e test `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once
-the film group outgrows one view.
+Tests that may go red: `the_library_lists_the_film_songs` reads card titles, so it may need a scroll
+now that the film group holds 37 cards. `last-horizon.ts` imports `handMove` and `pitchOf`, which no
+other module does, so a test that checks a module's imports may name it.
 
 ### Backlog
 
