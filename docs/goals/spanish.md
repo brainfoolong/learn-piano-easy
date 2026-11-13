@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "The song guides in Spanish, from n to z"
-    status: open
+    status: done
   - id: 6
     title: The Spanish site ships
     status: open
@@ -159,9 +159,15 @@ side by side, and three fresh reviewers review them blind.
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.es.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/neon-chase.es.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp es` stamps them. `public/songs/ours/neon-chase/guide.json:1`
+- [x] One `tools/our-songs/<slug>.es.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/neon-chase.es.ts:1`
+  - [x] The writer brief carries the settle brief's sweep patterns.
+  - [x] Four writers write the 29 files, and `bun x tsc --noEmit` is green.
+- [x] Each batch reviewed blind, and every finding settled.
+  - [x] Four blind reviews, one per batch.
+  - [x] A settle pass applies every finding.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp es` stamps them. `public/songs/ours/neon-chase/guide.json:1`
+  - [x] `spanish_texts_keep_their_rules` passes.
+  - [x] Every n-to-z guide is built and stamped.
 
 ### 6. The Spanish site ships
 
@@ -171,7 +177,7 @@ address or mark that drifts between files.
 **Gate:** `bun run i18n status es` lists no missing and no stale text outside `legal`.
 
 - [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `es` is `shipped`. `src/i18n/locale.ts:18`
+- [ ] `es` is `shipped`. `src/i18n/locale-table.ts:49`
 - [ ] Each world's `title` takes its Spanish from the guide's interface glossary. `src/learn/course.ts:58`
 - [ ] The Spanish social image. `tools/make-social-image.ts:104`
 - [ ] The layout checks run in `es` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
@@ -203,38 +209,39 @@ The reviews showed three recurring traps, now rules in the guide's § 7: *la* re
 *do grave* for a spelled-out place, and *de a tres*. A sweep fixed them in every world. The guide's
 piano glossary gained the course's new terms, and its interface glossary the worlds' titles.
 
-Stage 4 is done. All 51 guides from `air-on-the-g-string` to `mozart-21-andante` have their `.es.ts`.
-Eight blind reviews found four *wrong* texts, all the *la*-as-article trap, and a set of stiff phrasings.
-A settle pass applied every finding and swept the recurring patterns from every guide. The guides are
-built into `public/songs/ours/*/guide.json` and stamped in `src/i18n/stamps/es.json`.
-`spanish_texts_keep_their_rules` passes. `status es` lists 685 missing texts: the 47 deliberate copies
-and the 638 texts of the n-to-z guides.
+Stages 4 and 5 are done. All 80 guides have their `.es.ts`, and each is built into
+`public/songs/ours/*/guide.json` and stamped in `src/i18n/stamps/es.json`.
 
-The briefs are scratch under `.agent-tmp/i18n/es/`. The guides use `guide-writer-brief.md`,
-`guide-reviewer-brief.md` and `guide-settle-brief.md`. The settle brief's sweep list holds the patterns
-the a-to-m reviews kept finding. A new session rewrites a brief from the `lesson-*` ones when they are gone.
+The n-to-z guides took four writers and four blind reviews. The reviews found ten *wrong* texts, all the
+*la*-as-article trap, and about 60 stiff phrasings or nits. Four settle passes applied every finding.
+`spanish_texts_keep_their_rules` passes, and `status es` lists only the 47 deliberate copies.
+
+The settle passes also swept two patterns. A note after a verb or a preposition now takes its article, as
+*toca el fa sostenido*. Only the n-to-z guides were swept for it. The Alberti step reads *Toca con la mano
+izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: …* in every guide.
+
+The title *Ah! vous dirai-je, maman* joined the `es` kept list in `src/i18n/typography.ts`.
+
+The briefs are scratch under `.agent-tmp/i18n/es/`, with each batch's findings in `guide-findings-*.md`.
 
 ### Next
 
-**Stage 5: the 29 guides from n to z.** Gate: stage 4's guides are stamped, which holds.
+**Stage 6: the Spanish site ships.** Gate: `status es` lists only the 47 deliberate copies, which holds.
 
-- The slugs: `neon-chase`, `night-on-bald-mountain`, `o-christmas-tree`, `o-come-all-ye-faithful`,
-  `o-du-froehliche`, `o-holy-night`, `o-little-town-of-bethlehem`, `ode-to-joy`, `old-macdonald-had-a-farm`,
-  `row-row-row-your-boat`, `sailors-hornpipe`, `silent-night`, `spanish-ladies`, `suesser-die-glocken`,
-  `swan-lake`, `the-blue-danube`, `the-entertainer`, `the-first-noel`, `the-sorcerers-apprentice`,
-  `the-twelve-days-of-christmas`, `toccata-in-d-minor`, `tochter-zion`, `twinkle-twinkle-little-star`,
-  `up-on-the-housetop`, `vltava`, `we-three-kings`, `wedding-march`, `william-tell`, `yankee-doodle`.
-- Writers follow `.agent-tmp/i18n/es/guide-writer-brief.md`, about seven songs per batch, side by side.
-  Add the settle brief's sweep patterns to the writer brief first, so writers avoid them.
-- A guide's German sits in its module's `de` field, `tools/our-songs/<slug>.ts`. The Spanish is a file
-  `tools/our-songs/<slug>.es.ts` exporting `translation: Translation<GuideTranslation>`, which
-  `guideTranslationsOf` finds (`tools/make-our-songs.ts:454`).
-- Then `bun x tsc --noEmit`, one fresh `reader` per batch with `guide-reviewer-brief.md`, and a settle
-  pass with `guide-settle-brief.md`.
-- Then `spanish_texts_keep_their_rules` once by name, `bun tools/make-our-songs.ts`, and
-  `bun tools/i18n.ts stamp es guide/<slug>` per song.
+- First the consistency read, split across fresh `reader` subagents: the catalogs and the course in one,
+  and the 80 guides in two halves. Each lists the terms, address and marks that drift between files.
+  - Brief them to look for a note left without its article after a verb or a preposition in the a-to-m
+    guides, such as *toca fa sostenido*. Only the n-to-z guides were swept for it.
+  - Also *2001: A Space Odyssey*, which carries asterisks in `the-blue-danube.es.ts` and none in
+    `also-sprach-zarathustra.es.ts`.
+- Settle every drift, rebuild the guides with `bun tools/make-our-songs.ts`, and stamp each unit whose
+  file changed.
+- Then ship: `shipped: true` in `es`'s row, `src/i18n/locale-table.ts:49`. The worlds' titles in
+  `src/learn/course.ts:58`, the social image, the layout checks, the e2e test and the shots follow,
+  as stage 6 lists them.
 
-Expected red: none. `spanish_texts_keep_their_rules` turns red if a writer breaks a mark rule.
+Expected red once `es` ships: any test that counts the shipped locales or reads the language switch's
+items, such as those in `e2e/locales.e2e.ts`.
 
 ### Backlog
 
