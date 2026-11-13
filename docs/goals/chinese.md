@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Chinese style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Chinese
     status: open
@@ -60,17 +60,25 @@ Latin. It puts no space between words, uses full-width marks and has no plural f
 - **The learner is `你`, never `您`.** No `他` or `她` stands for the learner.
 - **To play the piano is `弹`, as in `弹钢琴`.** Starting a song's playback is `播放`, and a game is
   `游戏`. The glossary settles each "play" by where it is used.
-- **Notes are letters:** C D E F G A B. A key is `C 大调` or `a 小调`. The syllables of `唱名`, do re mi,
-  appear only where the English means singing. The note letters count as kept words in the rule table.
+- **Notes are letters:** C D E F G A B. A key is `C 大调` or `A 小调`, its letter always uppercase. The
+  syllables of `唱名`, do re mi, appear only where the English means singing. Stage 1 changed the minor
+  key's lowercase letter: one form is simpler, and the rules test already skips an uppercase note letter.
 - **The marks are full width:** `，。？！：；`. Quotes are `“ ”`, as the standard GB/T 15834 sets.
-- **No space stands between two Han characters.** The style guide settles the space between a Han
-  character and a Latin letter or a digit.
+- **No space stands between two Han characters.** A half-width space stands between a Han character and a
+  Latin letter or a digit, as Microsoft's, Apple's and Google's Chinese texts set it. So it is `中央 C`,
+  though Chinese Wikipedia writes `中央C`.
 - **Chinese runs shorter than English,** so the layout's risk is a line that breaks in a bad place. The
   `line-break: strict` rule of `many-locales` applies.
 - **Numbers follow `Intl` for `zh-Hans-CN`.** No digit or separator is set by hand.
 - **Chinese has no plural forms.** `Intl` names only `other`, so a counted message has one form.
-- **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names. The script
-  is Han, and the kept words are written in Latin letters.
+- **The kept words:** *Learn Piano Easy*, *MIDI*, the units, the printed marks such as `f` and `rit.`,
+  and the library's song titles. The script is Han, and the kept words are written in Latin letters.
+- **In prose, a work and a composer take their usual Chinese names,** as Chinese Wikipedia gives them:
+  `贝多芬`, `《欢乐颂》`. Stage 1 changed this from keeping the Latin names, since a native teacher never
+  writes *Beethoven* in a Chinese sentence. A work with no Chinese name keeps its English title in `《》`,
+  and its writer adds the title to the `kept` list.
+- **The rules test counts a kept word only where no Latin letter touches it.** Stage 1 made this change,
+  so the syllable `re` never cuts into an English word.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -85,12 +93,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/zh.md:1`
-- [ ] Microsoft's Simplified Chinese style guide and GB/T 15834: the address, the marks and the interface terms. `docs/reference/translation/zh.md:1`
-- [ ] Chinese Wikipedia's music articles and Chinese piano methods: each music term with two sources. `docs/reference/translation/zh.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/zh.md:1`
-- [ ] The Chinese entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Chinese row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/zh.md:1`
+- [x] Microsoft's Simplified Chinese style guide and GB/T 15834: the address, the marks and the interface terms. `docs/reference/translation/zh.md:1`
+- [x] Chinese Wikipedia's music articles and Chinese piano methods: each music term with two sources. `docs/reference/translation/zh.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/zh.md:1`
+- [x] The Chinese entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The Chinese row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
 
 ### 2. The site and the player in Chinese
 
@@ -167,15 +175,23 @@ address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `spanish` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/zh.md` holds every section the method names. Its glossary
+covers the Spanish guide's terms and the gaps a term count found, such as lift, hand shape and the
+judgement words. The `zh` entry of `src/i18n/typography.ts` holds the kept words and eleven mark rules.
+Test `the_chinese_marks_hold_and_spare_kept_words` pins them. The locale table's `zh` row is confirmed
+as it stands, so `src/i18n/locale-table.ts` did not change.
 
 ### Next
 
-**Stage 1: the Chinese style guide and glossary.** Files: `docs/reference/translation/zh.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `spanish` is reached.
+**Stage 2: the site and the player in Chinese.** Follow `docs/agent/translation.md` § *A pass, step by
+step*, with `bun tools/i18n.ts status zh` and `work zh <unit>`. Catalogs: `src/i18n/messages/<section>.en.ts`,
+written as `<section>.zh.ts` beside the `.es.ts` files. Each writer's brief carries the whole of
+`docs/reference/translation/zh.md`. `src/i18n/locale.ts:44` needs a `zh` entry in `CATALOG_CHUNKS` once
+`src/i18n/messages/zh.ts` exists. Copy `es`'s line.
 
 Expected red: none.
 
 ### Backlog
 
 - A Traditional Chinese locale, `zh-Hant`, could follow if readers in Taiwan and Hong Kong ask for one.
+- A mainland piano teacher could confirm the guide's unsourced terms, which its § *Open* lists.

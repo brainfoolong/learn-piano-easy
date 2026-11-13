@@ -13,6 +13,8 @@
  *   shows in the locale's own digits, and needs none.
  * - **A mark rule reads a text with each kept word written as `X`,** so a kept title such as *Hark! The
  *   Herald Angels Sing* never breaks a rule about `¡`.
+ * - **A kept word counts only where no Latin letter touches it,** so a short one such as the syllable `re`
+ *   never cuts into `Press`.
  * - **Music's Latin passes in every script:** note letters with ♯ and ♭, chord symbols such as `Am7`, and
  *   digits. A text made only of them may equal its English.
  */
@@ -108,11 +110,14 @@ function pluralCalls(source: string): { locale: string; forms: string[] | undefi
   });
 }
 
+/** `text` with each of its kept words written as `by`, where no Latin letter touches the word. */
+function replaceKept(text: string, kept: readonly string[], by: string): string {
+  return kept.reduce((out, word) => out.replace(new RegExp(`(?<!\\p{scx=Latin})${RegExp.escape(word)}(?!\\p{scx=Latin})`, "gu"), by), text);
+}
+
 /** `text` with its kept words and music's Latin taken out. */
 function withoutKept(text: string, kept: readonly string[]): string {
-  let out = text;
-  for (const word of kept) out = out.split(word).join(" ");
-  return out.replace(/(?<![\p{L}\p{N}])[A-H][♯♭#b]?(?:maj|min|dim|aug|sus|add|m|M)?\d*(?![\p{L}])/gu, " ");
+  return replaceKept(text, kept, " ").replace(/(?<![\p{L}\p{N}])[A-H][♯♭#b]?(?:maj|min|dim|aug|sus|add|m|M)?\d*(?![\p{L}])/gu, " ");
 }
 
 /** A locale's rules: its typography, its scripts, its direction and its plural forms. */
@@ -139,7 +144,7 @@ function problemsOf(texts: readonly Text[], locale: LocaleCode, rules: Rules = r
     for (const shown of rendered(own)) {
       const stray = [...withoutKept(shown, rules.kept).matchAll(/\p{L}+/gu)].map(([word]) => word).find((word) => [...word].some((char) => !script.test(char)));
       if (stray !== undefined) say(`"${stray}" is not written in ${rules.scripts.join(" or ")}`);
-      const marked = rules.kept.reduce((out, word) => out.split(word).join("X"), shown);
+      const marked = replaceKept(shown, rules.kept, "X");
       for (const mark of rules.marks) {
         if (mark.when !== undefined && !mark.when.test(marked)) continue;
         if ((mark.must !== undefined && !mark.must.test(marked)) || mark.mustNot?.test(marked) === true) say(`breaks the rule "${mark.says}" in "${shown}"`);
@@ -217,6 +222,17 @@ test("the_spanish_marks_hold_and_spare_kept_titles", () => {
   for (const text of broken) expect(problemsOf([textOf("English", text)], "es")).not.toEqual([]);
   const kept = ["¿Qué es? ¿Y esto?", "¡Subiste de nivel!", "Cuenta «1-2» en cada blanca.", "Toca Hark! The Herald Angels Sing con la mano derecha.", "Cargando…", "Al 80%."];
   for (const text of kept) expect(problemsOf([textOf("English", text)], "es")).toEqual([]);
+});
+
+test("the_chinese_marks_hold_and_spare_kept_words", () => {
+  const broken = ["弹C键", "你好!", "名称:", "完成.", "数\"1\"", "(强)", "加载中...", "加载中…", "第 1-4 小节", "弹 。", "钢琴 老师", "一个—两个"];
+  for (const text of broken) expect(problemsOf([textOf("English", text, "zh")], "zh")).not.toEqual([]);
+  const kept = [
+    "你好！我是你的钢琴老师。我们一起弹琴吧？", "轮到你了。把右手拇指放在中央 C 上，同时弹 C 和 E。", "每个二分音符数“1、2”。",
+    "这段旋律出自贝多芬《第九交响曲》的最后一个乐章，1824 年在维也纳首演。", "第 1～4 小节", "升 C 小调", "A 小三和弦由 A、C、E 组成。",
+    "f（强）和 mf（中强）", "rit. 表示渐慢。", "唱 do re mi。", "正在查找文件夹……", "共有 1,234 首歌", "80% 的速度", "点击“播放”", "用 MIDI 键盘弹。",
+  ];
+  for (const text of kept) expect(problemsOf([textOf("English", text, "zh")], "zh")).toEqual([]);
 });
 
 const units = await loadUnits();

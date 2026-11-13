@@ -108,6 +108,8 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **An e2e test's first wait after `page.goto` can miss Playwright's 5 s default under load.** Song walks
   in other workers slow the page's first draw. Give that wait a longer `timeout`, as `onStep` in
   `e2e/lesson-walk.ts` does.
+- **A kept word that ends in a Han character breaks the Chinese spacing rule.** The rules test writes a
+  kept word as `X`, which then touches the next Han character. Keep only Latin words in `src/i18n/typography.ts`.
 
 ## Rendering
 
