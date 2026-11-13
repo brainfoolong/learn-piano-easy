@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Spanish style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Spanish
     status: open
@@ -60,10 +60,16 @@ What the pilot teaches goes back into that file before the next locale starts.
   *reproducir*. The glossary settles each "play" by where it is used.
 - **The learner's gender stays out of the text.** *Te damos la bienvenida*, not *Bienvenido*. *Todo
   listo*, not *Estás listo*.
-- **Notes are solfège:** *do, re, mi, fa, sol, la, si*, with ♯ and ♭. A key is *Do mayor* or *la menor*.
-  The style guide confirms both against Spanish-language music teaching, with sources.
-- **The marks:** an opening `¿` and `¡` for every question and exclamation. Quotes are `« »`, as the
-  RAE prefers, unless the guide's sources settle on another form.
+- **Notes are solfège:** *do, re, mi, fa, sol, la, si*, with ♯ and ♭. In prose a note and a key are
+  lowercase, *el do central* and *do mayor*, as FundéuRAE, Spanish Wikipedia and teoria.com write them.
+  A name the code builds, such as `Mi4`, keeps `src/theory/note-names.ts`'s capital, since it stands as a
+  label. Changing the helper would touch every locale for one style point.
+- **The marks:** an opening `¿` and `¡` for every question and exclamation. Quotes are `« »`, the RAE's
+  first form. Microsoft's documents use “ ”, but the norm decides, and « » stands apart from code's `"`.
+- **A button or a menu item is an infinitive or a noun,** such as *Continuar*. Running text is a *tú*
+  imperative. Microsoft's neutral guide and Android's Latin American strings both do this.
+- **The locale row stays as it is.** `lang` is `es`, so the one Spanish site also serves readers in Spain.
+  `intl` is `es-419`, CLDR's form for Latin America, which writes `1,234.5`. `og` is `es_LA`, and `naming` is `solfege`.
 - **Numbers follow `Intl` for `es-419`.** No digit or separator is set by hand.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
@@ -80,12 +86,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/es.md:1`
-- [ ] Microsoft's Spanish style guide: the address, the marks and the interface terms. `docs/reference/translation/es.md:1`
-- [ ] Spanish Wikipedia's music articles and Spanish-language piano methods: each music term with two sources. `docs/reference/translation/es.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/es.md:1`
-- [ ] The Spanish entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Spanish row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/es.md:1`
+- [x] Microsoft's Spanish style guide: the address, the marks and the interface terms. `docs/reference/translation/es.md:1`
+- [x] Spanish Wikipedia's music articles and Spanish-language piano methods: each music term with two sources. `docs/reference/translation/es.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/es.md:1`
+- [x] The Spanish entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The Spanish row of the locale table, confirmed or changed with its reason. `src/i18n/locale-table.ts:48`
 
 ### 2. The site and the player in Spanish
 
@@ -162,14 +168,26 @@ address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `many-locales` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/es.md` holds all twelve sections, with 21 calibration texts.
+The `es` entry of `src/i18n/typography.ts` holds the kept words and six mark rules. A mark rule now
+reads a text with each kept word written as `X`, so *Hark! The Herald Angels Sing* passes. Test
+`the_spanish_marks_hold_and_spare_kept_titles` covers the rules. The locale row is confirmed unchanged.
+
+Some rows have one source or none. The guide's `## Open` lists them: the finger names, *calderón*,
+*partitura*, *racha* and other common words marked "unsourced".
 
 ### Next
 
-**Stage 1: the Spanish style guide and glossary.** Files: `docs/reference/translation/es.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `many-locales` is reached.
+**Stage 2: the site and the player in Spanish.** Gate: `docs/reference/translation/es.md` exists.
 
-Expected red: none.
+- Run `bun tools/i18n.ts status es`, then `bun tools/i18n.ts work es <unit>` per catalog section.
+- Before the writers start, a `web-fetch` subagent finds a second source for each "unsourced" row of
+  the guide. Settle each in the glossary first.
+- Three writers, one per item of stage 2, each with the whole guide. Files: `src/i18n/messages/<section>.es.ts`.
+- The catalog chunk of `es` goes into `CATALOG_CHUNKS` of `src/i18n/locale.ts:44`, as `de`'s does.
+- "Just Play Piano" is transcreated, and its writer proposes the form (guide § 6).
+
+Expected red: none. `spanish_texts_keep_their_rules` turns red if a writer breaks a mark rule.
 
 ### Backlog
 

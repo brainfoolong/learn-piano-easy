@@ -11,6 +11,8 @@
  * - **An argument that shows in ASCII digits was put in as it came,** so it may hold left-to-right text.
  *   In a right-to-left locale it must sit between an isolate and U+2069. A number that `Intl` formats
  *   shows in the locale's own digits, and needs none.
+ * - **A mark rule reads a text with each kept word written as `X`,** so a kept title such as *Hark! The
+ *   Herald Angels Sing* never breaks a rule about `¡`.
  * - **Music's Latin passes in every script:** note letters with ♯ and ♭, chord symbols such as `Am7`, and
  *   digits. A text made only of them may equal its English.
  */
@@ -137,9 +139,10 @@ function problemsOf(texts: readonly Text[], locale: LocaleCode, rules: Rules = r
     for (const shown of rendered(own)) {
       const stray = [...withoutKept(shown, rules.kept).matchAll(/\p{L}+/gu)].map(([word]) => word).find((word) => [...word].some((char) => !script.test(char)));
       if (stray !== undefined) say(`"${stray}" is not written in ${rules.scripts.join(" or ")}`);
+      const marked = rules.kept.reduce((out, word) => out.split(word).join("X"), shown);
       for (const mark of rules.marks) {
-        if (mark.when !== undefined && !mark.when.test(shown)) continue;
-        if ((mark.must !== undefined && !mark.must.test(shown)) || mark.mustNot?.test(shown) === true) say(`breaks the rule "${mark.says}" in "${shown}"`);
+        if (mark.when !== undefined && !mark.when.test(marked)) continue;
+        if ((mark.must !== undefined && !mark.must.test(marked)) || mark.mustNot?.test(marked) === true) say(`breaks the rule "${mark.says}" in "${shown}"`);
       }
     }
     if (typeof own === "function" && typeof text.english === "function") {
@@ -207,6 +210,13 @@ test("a_broken_mark_rule_fails", () => {
   const rules = { ...rulesOf("es"), marks: [{ says: "A question opens with ¿", when: /\?/, must: /¿/ }] };
   expect(problemsOf([textOf("What is it?", "Qué es?")], "es", rules)).toEqual(['fixture.text: breaks the rule "A question opens with ¿" in "Qué es?"']);
   expect(problemsOf([textOf("What is it?", "¿Qué es?")], "es", rules)).toEqual([]);
+});
+
+test("the_spanish_marks_hold_and_spare_kept_titles", () => {
+  const broken = ["Qué es?", "¿Qué es? Y esto?", "¡Bien", "Cuenta \"1-2\".", "Nivel :", "Cargando...", "¿ Listo?"];
+  for (const text of broken) expect(problemsOf([textOf("English", text)], "es")).not.toEqual([]);
+  const kept = ["¿Qué es? ¿Y esto?", "¡Subiste de nivel!", "Cuenta «1-2» en cada blanca.", "Toca Hark! The Herald Angels Sing con la mano derecha.", "Cargando…", "Al 80%."];
+  for (const text of kept) expect(problemsOf([textOf("English", text)], "es")).toEqual([]);
 });
 
 const units = await loadUnits();

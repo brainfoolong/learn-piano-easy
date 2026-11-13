@@ -42,7 +42,21 @@ export interface Typography {
 export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
   en: { kept: [], marks: [] },
   de: { kept: [], marks: [] },
-  es: { kept: [], marks: [] },
+  es: {
+    kept: [
+      "Learn Piano Easy", "Hark! The Herald Angels Sing", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari",
+      "XP", "BPM", "FPS", "PDF", "kHz", "Hz", "dB", "ms", "KB", "MB", "combo", "Combo", "tempo", "Tempo",
+      "legato", "staccato", "crescendo", "diminuendo", "forte", "piano", "Piano", "Error",
+    ],
+    marks: [
+      { says: "A question opens with ¿ and closes with ?, one pair per question", mustNot: /^[^¿]*\?|\?[^¿]*\?|¿[^?]*¿|¿[^?]*$/ },
+      { says: "An exclamation opens with ¡ and closes with !, one pair per exclamation", mustNot: /^[^¡]*!|![^¡]*!|¡[^!]*¡|¡[^!]*$/ },
+      { says: "An opening mark is never followed by a space, and a closing mark never follows one", mustNot: /[¿¡«]\s|\s[?!»]/ },
+      { says: "A quote stands in « », never in straight or curly double quotes", mustNot: /["“”]/ },
+      { says: "No space stands before a colon, a semicolon or a percent sign", mustNot: /\s[:;%]/ },
+      { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
+    ],
+  },
   zh: { kept: [], marks: [] },
   hi: { kept: [], marks: [] },
   ar: { kept: [], marks: [] },
