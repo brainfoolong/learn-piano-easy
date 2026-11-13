@@ -47,10 +47,10 @@ export const majorTriadsPt: Translation<MajorTriadsTexts> = {
       text: "Coloque o dedo 5 da mão esquerda no Dó abaixo do Dó central. Toque Dó, Mi e Sol um por um, depois juntos.",
     },
     "chord-walk-demo": {
-      text: "Aqui estão Dó, Fá, Sol e Dó maior em sequência. A mão mantém o formato e se move inteira.",
+      text: "Aqui estão Dó, Fá, Sol e Dó maior em sequência. A mão mantém a posição e se move inteira.",
     },
     "chord-walk": {
-      text: "Sua vez. Toque as quatro tríades com a mão direita. Mantenha o formato e leve a mão de uma fundamental à outra.",
+      text: "Sua vez. Toque as quatro tríades com a mão direita. Mantenha a posição e leve a mão de uma fundamental à outra.",
     },
     recap: {
       text: "Muito bem. Agora você já sabe montar uma tríade maior em qualquer tecla.",

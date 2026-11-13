@@ -4,7 +4,7 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "Offenbach escreveu o Galop infernal para a festa desenfreada dos deuses que fecha sua opereta Orfeu no Inferno, estreada em 1858. " +
+    "Offenbach escreveu o Galop infernal para a festa desenfreada dos deuses que fecha a opereta Orfeu no Inferno, estreada em 1858. " +
     "Nos anos 1890, os cabarés parisienses Moulin Rouge e Folies Bergère passaram a usar a peça para acompanhar o cancã. " +
     "O filme Moulin Rouge!, de 2001, usa a peça na trilha sonora.",
   funFact: "A melodia tem as mesmas notas principais de duas canções bem mais lentas do mesmo ato, mas não se parece nada com elas.",

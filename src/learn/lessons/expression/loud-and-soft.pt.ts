@@ -49,7 +49,7 @@ export const loudAndSoftPt: Translation<LoudAndSoftTexts> = {
       text: "Qual ordem vai da indicação mais suave à mais forte?",
     },
     "echo-demo": {
-      text: "Ouça uma frase com a indicação f e depois o seu eco, com a indicação p. As notas são as mesmas. Só o volume muda.",
+      text: "Ouça uma frase com a indicação f e depois o eco dela, com a indicação p. As notas são as mesmas. Só o volume muda.",
     },
     "play-the-echo": {
       text: "Toque Dó, Mi e Sol forte e depois toque de novo suavemente, como um eco. Este passo confere só as notas, então deixe seus ouvidos julgarem o volume.",

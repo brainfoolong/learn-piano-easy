@@ -9,7 +9,7 @@ export const bassLandmarksPt: Translation<BassLandmarksTexts> = {
       text: "Observe e ouça. O piano toca três notas de referência da clave de Fá: o Dó grave, o Fá e o Dó central. Uma nota de referência é uma nota que você reconhece de relance.",
     },
     "low-c": {
-      text: "O Dó grave fica no segundo espaço da pauta da clave de Fá, contando de baixo para cima. É o Dó abaixo do Dó central. Na posição de Dó, o mínimo da mão esquerda toca essa nota.",
+      text: "O Dó grave fica no segundo espaço da pauta da clave de Fá, contando de baixo para cima. É o Dó abaixo do Dó central. Na posição de Dó, o dedo mínimo da mão esquerda toca essa nota.",
     },
     "play-low-c": {
       text: "Aqui está o Dó grave, no segundo espaço. Toque-o nas teclas.",

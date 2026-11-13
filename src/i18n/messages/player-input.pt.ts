@@ -47,7 +47,7 @@ export const playerInput: Translation<typeof en> = {
   },
   history: {
     empty: "Ainda não há tentativas concluídas desta música. Toque até o fim com a pontuação ativada.",
-    hands: { both: "Ambas", right: "Direita", left: "Esquerda" },
+    hands: { both: "As duas", right: "Direita", left: "Esquerda" },
     columns: {
       date: "Data",
       speed: "Velocidade",
@@ -94,7 +94,7 @@ export const playerInput: Translation<typeof en> = {
   },
   scoring: {
     heading: "Pontuação",
-    judgements: { perfect: "Perfeita", hit: "Acerto", mistake: "Erro", miss: "Perdida" },
+    judgements: { perfect: "Perfeito", hit: "Acerto", mistake: "Erro", miss: "Perdida" },
     counts: (hits: number, perfect: number, misses: number, mistakes: number) =>
       `Acertos ${formatNumber("pt", hits)} · Perfeitas ${formatNumber("pt", perfect)} · Perdidas ${formatNumber("pt", misses)} · Erros ${formatNumber("pt", mistakes)}`,
     history: "Histórico",

@@ -6,7 +6,7 @@ export const handsTakeTurnsPt: Translation<HandsTakeTurnsTexts> = {
   title: "As mãos se revezam",
   steps: {
     "call-and-answer": {
-      text: "Ouça uma pergunta e a sua resposta. A mão direita toca três notas, e depois a mão esquerda toca as mesmas notas, uma oitava abaixo.",
+      text: "Ouça uma pergunta e a resposta dela. A mão direita toca três notas, e depois a mão esquerda toca as mesmas notas, uma oitava abaixo.",
     },
     "both-positions": {
       text: "Coloque as duas mãos na posição de Dó ao mesmo tempo. O polegar direito fica no Dó central, e o dedo mínimo esquerdo fica no Dó uma oitava abaixo.",

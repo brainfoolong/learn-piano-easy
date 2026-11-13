@@ -77,7 +77,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "No stride, olhe para a oitava e deixe a mão achar o acorde pelo tato.",
-        "Em oitavas, a figura do sininho deve soar como sinos de verdade. Mantenha o pulso solto.",
+        "Em oitavas, o desenho do sininho deve soar como sinos de verdade. Mantenha o pulso solto.",
         "O polegar e o mínimo tocam todas as oitavas. Mantenha a mão aberta, numa só posição.",
       ],
       tricky: {

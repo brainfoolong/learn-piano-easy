@@ -4,7 +4,7 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "Sarah Josepha Hale publicou o poema sobre Mary e seu cordeirinho em Boston, em 1830. " +
+    "Sarah Josepha Hale publicou o poema sobre Mary e o cordeirinho dela em Boston, em 1830. " +
     "A melodia com que ele é cantado hoje é tradicional, e ninguém sabe quem juntou os dois pela primeira vez. " +
     "Ela usa só quatro notas, e é por isso que tantos livros de piano para iniciantes começam com ela.",
   funFact:
@@ -25,7 +25,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         3: "A mão esquerda vai para o Sol grave enquanto a mão direita repete o Ré. Use o dedo mínimo.",
-        4: "A melodia pula o Fá, de Mi para Sol. Toque o Sol com o dedo mínimo, e mantenha os outros dedos nas suas teclas.",
+        4: "A melodia pula o Fá, de Mi para Sol. Toque o Sol com o dedo mínimo, e deixe os outros dedos nas mesmas teclas.",
         7: "A mão direita balança entre Ré e Mi com os dedos 2 e 3, enquanto o baixo desce para o Sol.",
       },
     },
@@ -38,14 +38,14 @@ export const translation: Translation<GuideTranslation> = {
         "Agora toque na velocidade normal.",
       ],
       tips: [
-        "Cada dupla de notas rápidas é um tempo dividido em dois. Conte “um-e, dois-e”.",
+        "Cada dupla de notas rápidas é um tempo dividido em dois. Conte “um e, dois e”.",
         "Neste acorde, o dedo mínimo da mão esquerda desce até o Fá sustenido.",
         "Pressione Si e Ré juntos no fim do compasso, como se fossem uma tecla só.",
       ],
       tricky: {
         9: "O dedo 4 toca o Dó rápido, e depois o dedo 2 toca o Lá. Mantenha a mão parada.",
         11: "A mão esquerda desce até o Fá sustenido enquanto a mão direita acrescenta um Si rápido.",
-        13: "As notas rápidas voltam aqui. Conte “um-e, dois-e” para mantê-las regulares.",
+        13: "As notas rápidas voltam aqui. Conte “um e, dois e” para mantê-las regulares.",
       },
     },
     epic: {

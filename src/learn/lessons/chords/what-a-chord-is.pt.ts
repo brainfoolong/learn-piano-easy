@@ -41,7 +41,7 @@ export const whatAChordIsPt: Translation<WhatAChordIsTexts> = {
       answers: ["Ré, Mi e Fá", "Ré, Sol e Lá", "Ré, Fá e Lá"],
     },
     "triads-up": {
-      text: "Mantenha o formato da mão direita. Toque Dó-Mi-Sol a partir do Dó central, depois suba para Ré-Fá-Lá e Mi-Sol-Si, tudo em teclas brancas. Termine em Dó-Mi-Sol.",
+      text: "Mantenha a posição da mão direita. Toque Dó-Mi-Sol a partir do Dó central, depois suba para Ré-Fá-Lá e Mi-Sol-Si, tudo em teclas brancas. Termine em Dó-Mi-Sol.",
     },
     recap: {
       text: "Muito bem. Você tocou seus primeiros acordes.",

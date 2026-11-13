@@ -48,7 +48,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só a mão esquerda até os acordes quebrados fluírem sozinhos.",
+        "Toque só a mão esquerda até os acordes quebrados rolarem sozinhos.",
         "Toque só a mão direita nos compassos 9 a 16, e passe o polegar por baixo na subida.",
         "Toque só as terças e sextas da mão direita, e pressione as duas notas de cada par como se fossem uma.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",

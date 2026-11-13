@@ -58,7 +58,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Conte três notas regulares na mão esquerda a cada tempo. Elas devem ondular de leve.",
         "A melodia é a nota de cima de cada par, então deixe o dedo de cima conduzir.",
-        "Troque o pedal em cada barra de compasso, quando soa a nova nota do baixo.",
+        "Troque o pedal em cada barra de compasso, quando a nova nota do baixo soar.",
       ],
       tricky: {
         5: "O dedo 3 sobe de Sol para Si bemol. Por baixo, a mão esquerda continua rolando Dó, Mi e Si bemol.",

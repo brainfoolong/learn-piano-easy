@@ -57,7 +57,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Toque os acordes suaves e curtos, para a melodia flutuar por cima.",
-        "Troque o pedal em cada barra de compasso, quando a nova nota do baixo soa.",
+        "Troque o pedal em cada barra de compasso, quando a nova nota do baixo soar.",
         "A mão se levanta depois do Lá, e o polegar cai no Ré acima dele.",
       ],
       tricky: {

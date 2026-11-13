@@ -37,7 +37,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Toque os acordes da mão esquerda mais suaves que a nota grave.",
-        "Troque o pedal a cada barra de compasso. Solte-o quando a nova nota do baixo soar.",
+        "Troque o pedal em cada barra de compasso. Solte-o quando a nova nota do baixo soar.",
         "Os dedos 3 e 5 pegam Dó e Mi juntos. Deixe o Mi cantar por cima do Dó.",
       ],
       tricky: {
@@ -68,7 +68,7 @@ export const translation: Translation<GuideTranslation> = {
     legendary: {
       practice: [
         "Toque só o baixo stride: salte para baixo até a oitava, e volte para cima até o acorde.",
-        "Toque só os acordes da mão direita, e deixe o mínimo cantar a melodia.",
+        "Toque só os acordes da mão direita, e deixe o dedo mínimocantar a melodia.",
         "Toque só as oitavas quebradas da mão esquerda, nos compassos 13 a 16.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
         "Agora toque na velocidade normal, e deixe o último acorde soar.",
@@ -80,7 +80,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         5: "Depois da passagem rápida, caia em Sol, Si e Ré com os dedos 1, 3 e 5.",
-        9: "A mão se abre sobre Dó, Fá e Lá, e o mínimo canta a melodia.",
+        9: "A mão se abre sobre Dó, Fá e Lá, e o dedo mínimocanta a melodia.",
         10: "Só o dedo 4 pega o Si entre os acordes. Mantenha o polegar perto do Fá.",
       },
     },

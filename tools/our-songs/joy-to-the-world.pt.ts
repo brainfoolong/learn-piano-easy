@@ -6,7 +6,7 @@ export const translation: Translation<GuideTranslation> = {
   about:
     "Lowell Mason publicou esta melodia em Boston, com o nome de Antioch. " +
     "Ela é cantada com uma letra que Isaac Watts escreveu em 1719. " +
-    "Suas quatro primeiras notas são iguais ao início do coro Lift up your heads, do Messias de Handel.",
+    "As quatro primeiras notas dela são iguais ao início do coro Lift up your heads, do Messias de Handel.",
   funFact: "Isaac Watts escreveu a letra como uma releitura do Salmo 98, e nunca pensou nela como canção de Natal.",
   versions: {
     common: {

@@ -19,7 +19,7 @@ export const eighthNotesPt: Translation<EighthNotesTexts> = {
       text: "Para contar colcheias, diga “e” entre os tempos: “1 e 2 e 3 e 4 e”. Os números caem nos tempos, e cada “e” cai bem no meio, entre eles.",
     },
     "counting-demo": {
-      text: "Conte junto: “1, 2, 3 e, 4”. Os dois Mis rápidos ficam no “3” e no seu “e”.",
+      text: "Conte junto: “1, 2, 3 e, 4”. Os dois Mis rápidos ficam no “3” e no “e” que vem depois dele.",
     },
     "eighth-taps": {
       text: "Agora a pulsação está lenta, 60 por minuto, e os cliques vêm duas vezes mais rápido. Cada clique é uma colcheia. Conte “1 e 2 e” e toque qualquer tecla a cada clique.",

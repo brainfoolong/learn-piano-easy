@@ -50,7 +50,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só o baixo Alberti até ele fluir sozinho: grave, agudo, meio, agudo.",
+        "Toque só o baixo Alberti até ele rolar sozinho: grave, agudo, meio, agudo.",
         "Toque só a mão direita nos compassos 8 e 9. O polegar passa por baixo do dedo 3 até o Dó.",
         "Toque só as terças da mão direita nos compassos 9 a 12, e pressione as duas notas como se fossem uma.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
@@ -59,7 +59,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Toque o baixo Alberti suave, para a melodia cantar por cima.",
         "A melodia é a nota de cima de cada terça. Por isso, deixe o dedo de cima conduzir.",
-        "Troque o pedal no começo e no meio de cada compasso, quando a mão esquerda recomeça o padrão.",
+        "Troque o pedal no início e no meio de cada compasso, quando a mão esquerda recomeça o padrão.",
       ],
       tricky: {
         8: "Depois do Sol grave, os dedos 2 e 3 sobem por Lá e Si. Depois o polegar passa por baixo até o Dó.",
@@ -77,7 +77,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "No stride, olhe para a oitava grave e deixe a mão encontrar o acorde pelo tato.",
-        "Cada acorde é curto, e o pedal une os acordes. Troque o pedal no começo e no meio de cada compasso.",
+        "Cada acorde é curto, e o pedal une os acordes. Troque o pedal no início e no meio de cada compasso.",
         "Nas oitavas, toque a nota do dedo mínimo um pouco mais forte, para a melodia brilhar em cima.",
       ],
       tricky: {

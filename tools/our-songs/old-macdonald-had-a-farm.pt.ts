@@ -4,7 +4,7 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "Old MacDonald Had a Farm é uma canção infantil sobre um fazendeiro e seus animais. " +
+    "Old MacDonald Had a Farm é uma canção infantil sobre um fazendeiro e os animais dele. " +
     "Uma versão antiga, chamada Ohio, foi impressa em 1917, num livro de canções cantadas por soldados britânicos. " +
     "Cada estrofe acrescenta um animal e o som dele, então a música dura o quanto quem canta quiser.",
   funFact: "Na canção de 1917, o fazendeiro se chamava Old Macdougal, e sua fazenda ficava em Ohio.",
@@ -23,7 +23,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         3: "Seu dedo mínimo se estica para cima até o Si agudo, enquanto o polegar fica perto do Ré.",
-        7: "A mesma abertura de novo: o mínimo no Si, depois o dedo 4 no Lá.",
+        7: "A mesma abertura de novo: o dedo mínimono Si, depois o dedo 4 no Lá.",
         15: "Uma última abertura até o Si. Use a pausa curta antes dele para preparar a mão.",
       },
     },
@@ -41,7 +41,7 @@ export const translation: Translation<GuideTranslation> = {
         "O acorde da mão esquerda muda no meio do compasso. Deixe cada um soar por dois tempos.",
       ],
       tricky: {
-        3: "O polegar deixa o Ré, e o mínimo pega logo o Si agudo. Mantenha a mão aberta.",
+        3: "O polegar deixa o Ré, e o dedo mínimopega logo o Si agudo. Mantenha a mão aberta.",
         7: "O mesmo salto até o Si. No meio do compasso, o dedo 4 da mão esquerda pega o Lá.",
         15: "O último salto até o Si. Depois dele, só falta o acorde final para as duas mãos.",
       },
@@ -61,7 +61,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         7: "As terças saltam do Ré até Sol e Si. Mova a mão inteira, e mantenha a posição.",
-        15: "Depois da passagem rápida, seu mínimo cai no Si. Deixe a passagem levar a mão até ele.",
+        15: "Depois da passagem rápida, seu dedo mínimo cai no Si. Deixe a passagem levar a mão até ele.",
         16: "Sua mão cai do Lá para o último acorde. Polegar no Si, dedo 3 no Sol.",
       },
     },
@@ -76,7 +76,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "No stride, olhe para a nota do baixo e deixe a mão achar o acorde pelo tato.",
         "Toque a nota de cima de cada acorde um pouco mais forte que as outras.",
-        "As notas rápidas sobem grau a grau, um dedo por tecla, até o mínimo no Si.",
+        "As notas rápidas sobem grau a grau, um dedo por tecla, até o dedo mínimono Si.",
       ],
       tricky: {
         4: "Segure o acorde longo por três tempos. Depois desça o polegar até o Sol para o acorde do tempo 4.",

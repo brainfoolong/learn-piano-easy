@@ -53,7 +53,7 @@ export const readingStepsAndSkipsPt: Translation<ReadingStepsAndSkipsTexts> = {
       answers: ["No espaço logo abaixo", "Na linha abaixo", "Na mesma linha"],
     },
     "dotted-demo": {
-      text: "Ouça dois compassos da música. Um ponto aumenta a nota em metade da sua duração: uma mínima pontuada dura três tempos. O Ré em semínima pontuada dura um tempo e meio, e uma pausa de colcheia preenche o último meio tempo.",
+      text: "Ouça dois compassos da música. Um ponto aumenta a nota em metade da duração dela: uma mínima pontuada dura três tempos. O Ré em semínima pontuada dura um tempo e meio, e uma pausa de colcheia preenche o último meio tempo.",
     },
     "dotted-half-quiz": {
       text: "Uma mínima dura dois tempos. Quantos tempos dura uma mínima pontuada?",
@@ -63,12 +63,12 @@ export const readingStepsAndSkipsPt: Translation<ReadingStepsAndSkipsTexts> = {
       text: "Sua vez, depois de um compasso de contagem inicial. Toque Mi, Mi e Ré nos cliques, e solte o Ré depois de um tempo e meio. Segure o Sol por três tempos, depois toque o Ré.",
     },
     recap: {
-      text: "Muito bem. Agora você consegue ler uma melodia pelos seus movimentos.",
+      text: "Muito bem. Agora você consegue ler uma melodia pelos movimentos dela.",
       points: [
         "Um grau vizinho vai de uma linha ao espaço seguinte, ou de um espaço à linha seguinte.",
         "Um pulo vai de linha a linha, ou de espaço a espaço.",
         "Diga o nome da primeira nota, depois leia cada movimento: a direção e o tamanho.",
-        "Um ponto aumenta a nota em metade da sua duração.",
+        "Um ponto aumenta a nota em metade da duração dela.",
       ],
     },
   },

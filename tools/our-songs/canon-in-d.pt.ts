@@ -70,7 +70,7 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Toque só o baixo em oitavas: segure cada oitava, depois levante a mão para a próxima.",
         "Toque só os acordes da mão direita, e deixe o dedo de cima cantar a melodia.",
-        "Toque só as semicolcheias da mão esquerda, até elas fluírem.",
+        "Toque só as semicolcheias da mão esquerda, até elas rolarem.",
         "Junte as mãos na música inteira, a três quartos da velocidade.",
         "Agora toque na velocidade normal, e deixe o último acorde soar.",
       ],

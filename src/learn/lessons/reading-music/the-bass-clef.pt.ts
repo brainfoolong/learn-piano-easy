@@ -35,7 +35,7 @@ export const theBassClefPt: Translation<TheBassClefTexts> = {
       text: "Muito bem. Você já lê suas primeiras notas na clave de Fá.",
       points: [
         "A clave de Fá serve para as notas graves, principalmente da mão esquerda.",
-        "Seus dois pontos ficam em volta da quarta linha, que é Fá.",
+        "Os dois pontos da clave ficam em volta da quarta linha, que é Fá.",
         "A partir do Fá, conte para cima ou para baixo para encontrar as vizinhas.",
       ],
     },

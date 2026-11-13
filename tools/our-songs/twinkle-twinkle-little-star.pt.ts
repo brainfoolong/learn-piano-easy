@@ -75,7 +75,7 @@ export const translation: Translation<GuideTranslation> = {
         "Agora toque na velocidade normal, e deixe o último acorde soar.",
       ],
       tips: [
-        "Observe os saltos da mão esquerda, e deixe a mão direita achar seus acordes pelo tato.",
+        "Observe os saltos da mão esquerda, e deixe a mão direita achar os acordes pelo tato.",
         "Cada nota da melodia começa um grupo de quatro semicolcheias. Acentue-a um pouco, para a melodia continuar soando.",
         "Toque as oitavas curtas e brilhantes, como sinos.",
       ],

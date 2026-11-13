@@ -8,7 +8,7 @@ export const translation: Translation<GuideTranslation> = {
     "A suíte foi publicada em 1922, um ano depois da morte dele. " +
     "O filme Days of Heaven (1978), de Terrence Malick, usa esta música nos créditos de abertura.",
   funFact:
-    "Saint-Saëns proibiu apresentações públicas da suíte enquanto viveu, com medo de que as brincadeiras prejudicassem sua reputação de compositor sério.",
+    "Saint-Saëns proibiu apresentações públicas da suíte enquanto viveu, com medo de que as brincadeiras prejudicassem a reputação dele de compositor sério.",
   versions: {
     common: {
       practice: [

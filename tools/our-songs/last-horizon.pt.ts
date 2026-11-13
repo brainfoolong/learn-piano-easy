@@ -5,8 +5,8 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "Last Horizon é uma melodia nossa, no estilo de uma trilha sonora de filme moderna. " +
-    "Uma figura lenta se repete sob acordes longos e segurados, como no fim de uma longa viagem.",
-  funFact: "Uma figura que se repete sem parar sob uma melodia se chama ostinato, palavra italiana que quer dizer “teimoso”.",
+    "Um padrão lento se repete sob acordes longos e segurados, como no fim de uma longa viagem.",
+  funFact: "Um padrão que se repete sem parar sob uma melodia se chama ostinato, palavra italiana que quer dizer “teimoso”.",
   versions: {
     common: {
       practice: [
@@ -56,7 +56,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Troque o pedal no início de cada compasso, onde o acorde muda.",
-        "Mantenha a mão esquerda suave. A figura dela se repete como um motor silencioso sob a melodia.",
+        "Mantenha a mão esquerda suave. O padrão dela se repete como um motor silencioso sob a melodia.",
         "Depois do Mi bemol, passe o polegar por baixo até o Fá. Em seguida, os dedos 2 e 4 alcançam Sol e Dó.",
       ],
       tricky: {
@@ -67,7 +67,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     legendary: {
       practice: [
-        "Toque só a mão esquerda nos compassos 9 a 12. Ela repete a mesma figura em cada tempo.",
+        "Toque só a mão esquerda nos compassos 9 a 12. Ela repete o mesmo padrão em cada tempo.",
         "Toque só a mão direita nos 8 primeiros compassos, uma oitava acima da melodia.",
         "Toque só os acordes grandes da mão direita nos compassos 17 a 24, e deixe o dedo de cima cantar.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
@@ -75,7 +75,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Aqui a mão esquerda toca colcheias em ondas. No compasso 9 elas viram semicolcheias, e a música cresce.",
-        "Conte quatro semicolcheias em cada tempo: fundamental, quinta, oitava, quinta. Nunca deixe a figura correr.",
+        "Conte quatro semicolcheias em cada tempo: fundamental, quinta, oitava, quinta. Nunca deixe o padrão correr.",
         "Esta é a última aparição do tema, e a mais cheia. Toque a nota de cima de cada acorde um pouco mais forte.",
       ],
       tricky: {

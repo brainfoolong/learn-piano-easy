@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "Drunken Sailor é uma canção de marinheiro que as tripulações cantavam enquanto puxavam cordas ou giravam o cabrestante. " +
-    "Ninguém sabe quem a escreveu, e sua melodia está no modo dórico.",
+    "Ninguém sabe quem a escreveu, e a melodia está no modo dórico.",
   funFact: "O primeiro registro escrito desta canção de marinheiro vem de uma viagem baleeira de 1839, que partiu de New London, em Connecticut.",
   versions: {
     common: {
@@ -48,7 +48,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só o baixo Alberti até ele fluir sozinho: grave, agudo, meio, agudo.",
+        "Toque só o baixo Alberti até ele rolar sozinho: grave, agudo, meio, agudo.",
         "Toque os compassos 9 a 16 só com a mão direita, e passe o polegar por baixo na subida.",
         "Junte as mãos nos 8 primeiros compassos, devagar.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",

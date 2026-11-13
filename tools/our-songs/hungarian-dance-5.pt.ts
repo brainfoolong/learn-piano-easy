@@ -49,7 +49,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só o baixo Alberti até ele fluir sozinho: grave, agudo, meio, agudo.",
+        "Toque só o baixo Alberti até ele rolar sozinho: grave, agudo, meio, agudo.",
         "Toque só as sextas da mão direita, e pressione as duas notas de cada par como se fossem uma.",
         "Junte as mãos nos 8 primeiros compassos, devagar.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
@@ -70,13 +70,13 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Toque só a mão esquerda: salte para baixo até a oitava, e depois volte para cima até o acorde.",
         "Toque só as oitavas da mão direita, com o polegar e o dedo mínimo numa só posição.",
-        "Toque só as figuras rápidas da mão direita nos compassos 5 a 7, devagar.",
+        "Toque só os desenhos rápidos da mão direita nos compassos 5 a 7, devagar.",
         "Junte as mãos na música inteira, a três quartos da velocidade.",
         "Agora toque na velocidade normal, e deixe o último acorde soar.",
       ],
       tips: [
         "Toque as oitavas com garra. É uma dança rápida, e cada nota longa deve soar.",
-        "Nas figuras rápidas, o polegar passa por baixo, e assim a passagem rápida corre por igual.",
+        "Nos desenhos rápidos, o polegar passa por baixo, e assim a passagem rápida corre por igual.",
         "Toque a nota de cima de cada acorde um pouco mais forte que as outras.",
       ],
       tricky: {

@@ -12,7 +12,7 @@ export const theCMajorScalePt: Translation<TheCMajorScaleTexts> = {
       text: "Uma escala é uma sequência de notas que sobe um grau de cada vez. A escala de Dó maior começa no Dó e termina no Dó seguinte.",
     },
     "scale-pattern": {
-      text: "Seus graus seguem um padrão: tom, tom, semitom, tom, tom, tom, semitom. Os semitons são de Mi a Fá e de Si a Dó.",
+      text: "Os graus dela seguem um padrão: tom, tom, semitom, tom, tom, tom, semitom. Os semitons são de Mi a Fá e de Si a Dó.",
     },
     "first-half-step": {
       text: "Onde fica o primeiro semitom da escala de Dó maior?",
@@ -44,7 +44,7 @@ export const theCMajorScalePt: Translation<TheCMajorScaleTexts> = {
       text: "Muito bem. Você tocou a sua primeira escala.",
       points: [
         "A escala de Dó maior tem oito teclas brancas, de Dó a Dó.",
-        "Seu padrão é tom, tom, semitom, tom, tom, tom, semitom.",
+        "O padrão dela é tom, tom, semitom, tom, tom, tom, semitom.",
         "Subindo, o polegar passa por baixo até o Fá.",
         "Descendo, o dedo 3 cruza por cima do polegar até o Mi.",
       ],

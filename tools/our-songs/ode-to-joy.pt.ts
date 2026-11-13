@@ -18,7 +18,7 @@ export const translation: Translation<GuideTranslation> = {
         "Toque a música inteira com as duas mãos, na velocidade normal.",
       ],
       tips: [
-        "Aqui cada dedo tem sua própria tecla: o polegar no Dó, o mínimo no Sol.",
+        "Aqui cada dedo tem sua própria tecla: o polegar no Dó, o dedo mínimo no Sol.",
         "O último Ré dura o dobro das notas anteriores, então conte dois tempos.",
         "A parte do meio é a mais suave. Toque-a suave, e volte forte no compasso 13.",
       ],
@@ -42,7 +42,7 @@ export const translation: Translation<GuideTranslation> = {
         "Cada acorde da parte do meio dura dois tempos. Deixe-o soar até o próximo.",
       ],
       tricky: {
-        10: "O Fá sustenido e o Sol passam rápido. Mantenha os dedos 3 e 4 perto das suas teclas.",
+        10: "O Fá sustenido e o Sol passam rápido. Mantenha os dedos 3 e 4 perto das teclas deles.",
         12: "Seu polegar desliza do Ré para baixo até o Lá grave, e a mão o acompanha.",
         13: "Do Lá grave, o dedo 3 sobe até o Fá sustenido. Olhe antes de saltar.",
       },

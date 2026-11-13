@@ -4,9 +4,9 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "Esta marcha fúnebre é o terceiro movimento da Sonata para piano n.º 2 de Chopin, publicada em 1840. " +
+    "Esta marcha fúnebre é o terceiro movimento da Sonata para Piano n.º 2 de Chopin, publicada em 1840. " +
     "Ela foi tocada no próprio funeral de Chopin, e também no funeral de Estado de John F. Kennedy. " +
-    "Filmes e desenhos animados costumam citar o seu começo numa cena de funeral.",
+    "Filmes e desenhos animados costumam citar o começo dela numa cena de funeral.",
   funFact: "Muitos estudiosos datam a marcha de 1837, dois anos antes de Chopin terminar o resto da sonata.",
   versions: {
     common: {

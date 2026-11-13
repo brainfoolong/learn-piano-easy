@@ -4,7 +4,7 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "Beethoven escreveu esta pequena peça para piano em 1810, e o seu manuscrito a dedica a Elise. " +
+    "Beethoven escreveu esta pequena peça para piano em 1810, e o manuscrito dedica a peça a Elise. " +
     "Ninguém sabe ao certo quem era Elise. " +
     "Ludwig Nohl encontrou a peça e a publicou em 1867, quarenta anos depois da morte de Beethoven.",
   funFact: "Uma teoria diz que Nohl leu o nome errado, e que a peça era, na verdade, para Therese Malfatti, com quem Beethoven queria se casar.",
@@ -57,7 +57,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Toque o baixo Alberti suave, para a melodia cantar por cima.",
-        "Troque o pedal em cada barra de compasso. Solte-o quando soar a nova nota do baixo.",
+        "Troque o pedal em cada barra de compasso. Solte-o quando a nova nota do baixo soar.",
         "A melodia é a nota de cima de cada terça, então deixe o dedo de cima conduzir.",
       ],
       tricky: {

@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "Handel escreveu esta suíte para cravo quando tinha pouco mais de vinte anos, e ela foi publicada pela primeira vez em 1733. " +
-    "Sua sarabanda é uma dança lenta e solene, em três tempos. " +
+    "A sarabanda é uma dança lenta e solene, em três tempos. " +
     "O filme Barry Lyndon (1975), de Stanley Kubrick, usa a peça num arranjo para orquestra.",
   funFact: "O número de catálogo da suíte, HWV 437, vem do Händel-Werke-Verzeichnis, a lista de todas as obras de Handel.",
   versions: {
@@ -37,7 +37,7 @@ export const translation: Translation<GuideTranslation> = {
         "Toque a música inteira com as duas mãos, na velocidade normal.",
       ],
       tips: [
-        "Mantenha o pedal pisado durante cada compasso inteiro, e troque o pedal bem na barra de compasso.",
+        "Mantenha o pedal pisado durante cada compasso inteiro, e troque-o bem na barra de compasso.",
         "Toque a nota grave um pouco mais forte que o acorde depois dela. É ela que conduz a dança.",
         "Nestes dois compassos não há pedal, para os acordes soarem limpos. Segure cada um com os dedos.",
       ],
@@ -49,7 +49,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só o baixo Alberti até ele fluir sozinho: grave, agudo, meio, agudo.",
+        "Toque só o baixo Alberti até ele rolar sozinho: grave, agudo, meio, agudo.",
         "Toque só as terças da mão direita, e pressione as duas notas de cada par como se fossem uma.",
         "Junte as mãos nos 4 primeiros compassos, devagar.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",

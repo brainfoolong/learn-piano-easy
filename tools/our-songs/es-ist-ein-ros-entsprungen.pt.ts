@@ -50,7 +50,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só o baixo Alberti até ele fluir sozinho: grave, agudo, meio, agudo.",
+        "Toque só o baixo Alberti até ele rolar sozinho: grave, agudo, meio, agudo.",
         "Toque só os acordes quebrados, na segunda vez, e levante a mão em cada pausa.",
         "Junte as mãos na primeira vez, devagar.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",

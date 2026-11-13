@@ -6,7 +6,7 @@ export const movingTheHandPt: Translation<MovingTheHandTexts> = {
   title: "Mover a mão",
   steps: {
     "phrase-then-move": {
-      text: "Observe a mão direita. Ela toca cinco notas na posição de Dó, sobe durante a pausa e toca o mesmo formato de novo, mais acima.",
+      text: "Observe a mão direita. Ela toca cinco notas na posição de Dó, sobe durante a pausa e toca a mesma posição de novo, mais acima.",
     },
     "new-position": {
       text: "Uma posição de cinco dedos também pode começar em outras teclas. Na posição de Sol, o polegar direito fica no Sol acima do Dó central. Seus dedos cobrem Sol, Lá, Si, Dó, Ré.",
@@ -29,10 +29,10 @@ export const movingTheHandPt: Translation<MovingTheHandTexts> = {
       text: "Comece na posição de Dó. Toque do polegar até o quarto dedo e volte descendo até o Dó central.",
     },
     "g-position-phrase": {
-      text: "Agora leve a mão para a posição de Sol e toque o mesmo formato. Polegar no Sol, suba até o Dó e volte.",
+      text: "Agora leve a mão para a posição de Sol e toque a mesma posição. Polegar no Sol, suba até o Dó e volte.",
     },
     "move-in-a-rest": {
-      text: "Mude a mão de lugar durante uma pausa ou no fim de uma nota longa. Levante a mão inteira, mantenha o formato e pouse o polegar na nova tecla.",
+      text: "Mude a mão de lugar durante uma pausa ou no fim de uma nota longa. Levante a mão inteira, mantenha a posição e pouse o polegar na nova tecla.",
     },
     "move-and-play": {
       text: "Toque duas frases seguidas com a mão direita. Comece no Dó central e toque Dó, Ré, Mi, Fá, Mi, Ré, Dó. Depois leve o polegar para o Sol acima do Dó central e toque Sol, Lá, Si, Dó, Si, Lá, Sol.",
@@ -42,7 +42,7 @@ export const movingTheHandPt: Translation<MovingTheHandTexts> = {
       points: [
         "Na posição de Sol, o polegar direito fica no Sol acima do Dó central.",
         "Seus dedos tocam então Sol, Lá, Si, Dó, Ré.",
-        "Mova a mão inteira durante uma pausa ou uma nota longa, e mantenha o formato.",
+        "Mova a mão inteira durante uma pausa ou uma nota longa, e mantenha a posição.",
       ],
     },
   },

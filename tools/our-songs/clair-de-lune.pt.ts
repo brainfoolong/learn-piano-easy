@@ -37,7 +37,7 @@ export const translation: Translation<GuideTranslation> = {
         "Toque a música inteira com as duas mãos, na velocidade normal.",
       ],
       tips: [
-        "Mantenha o pedal pisado durante cada compasso inteiro, e troque bem na barra de compasso.",
+        "Mantenha o pedal pisado durante cada compasso inteiro, e troque-o bem na barra de compasso.",
         "Conte este compasso em colcheias. O Mi começa na metade do tempo 4.",
         "No agudo, toque mais suave ainda. A melodia deve flutuar como o luar.",
       ],

@@ -56,7 +56,7 @@ export const translation: Translation<GuideTranslation> = {
         "Agora toque na velocidade normal, e deixe o som crescer até o final.",
       ],
       tips: [
-        "O baixo desliza do Dó sustenido para o Dó. É esse deslize assustador que dá aos trolls o seu ar sorrateiro.",
+        "O baixo desliza do Dó sustenido para o Dó. É esse deslize assustador que dá aos trolls um ar sorrateiro.",
         "Depois do Dó sustenido com o dedo 2, passe o polegar por baixo até o Ré, e a mão sobe.",
         "Agora a mão esquerda toca a melodia. A mão direita só toca acordes curtos entre os tempos.",
       ],

@@ -32,7 +32,7 @@ export const sharpsPt: Translation<SharpsTexts> = {
       text: "Na pauta, o ♯ fica logo à esquerda da nota, na mesma linha ou no mesmo espaço. Você lê a nota e depois sobe um semitom.",
     },
     "play-sharps": {
-      text: "Leia cada nota com o seu sustenido e toque. Encontre primeiro a tecla branca, depois suba um semitom.",
+      text: "Leia cada nota com o sustenido dela e toque. Encontre primeiro a tecla branca, depois suba um semitom.",
     },
     "through-f-sharp": {
       text: "Coloque o polegar direito no Ré acima do Dó central e o dedo médio no Fá sustenido. Toque Ré, Mi, Fá♯ e Sol, depois desça de volta até o Ré.",
@@ -43,7 +43,7 @@ export const sharpsPt: Translation<SharpsTexts> = {
         "Um sustenido ♯ sobe uma nota um semitom, até a tecla logo à direita dela.",
         "A maioria dos sustenidos são teclas pretas, como Dó♯ e Fá♯.",
         "Mi♯ é Fá, e Si♯ é Dó, porque não há tecla preta entre eles.",
-        "Na pauta, o ♯ fica logo à esquerda da sua nota.",
+        "Na pauta, o ♯ fica logo à esquerda da nota que ele altera.",
       ],
     },
   },

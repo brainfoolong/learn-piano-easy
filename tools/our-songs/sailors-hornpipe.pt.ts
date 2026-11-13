@@ -37,7 +37,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "O dedo 5 toca o Sol agudo, e o polegar desce até o Sol grave. Mantenha a mão aberta na largura de uma oitava.",
-        "Duas colcheias preenchem um tempo. Conte-as como “um-e”, e toque-as por igual.",
+        "Duas colcheias preenchem um tempo. Conte-as como “um e”, e toque-as por igual.",
         "Termine com Si e Sol juntos. O polegar e o dedo 5 pressionam as duas notas como uma só.",
       ],
       tricky: {
@@ -48,7 +48,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só a mão esquerda, até os acordes quebrados fluírem sozinhos.",
+        "Toque só a mão esquerda, até os acordes quebrados rolarem sozinhos.",
         "Toque só a mão direita nos compassos 10 a 16, e passe o polegar por baixo na subida.",
         "Toque os 9 primeiros compassos com as duas mãos, e troque o pedal a cada novo acorde.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",

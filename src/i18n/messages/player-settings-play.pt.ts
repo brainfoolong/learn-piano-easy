@@ -232,7 +232,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   enableEqualizer: {
     label: "Equalizador",
-    help: "Deixa os sons graves, médios e agudos mais altos ou mais baixos.",
+    help: "Deixa os sons graves, médios e agudos mais fortes ou mais suaves.",
   },
   equalizerGain0: {
     label: "Graves, 60 Hz (dB)",
@@ -477,7 +477,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "Quantas ondas cabem em uma oitava. Mais ondas deixam a linha mais fina.",
   },
   pianoLineAmplitude: {
-    label: "Altura da onda",
+    label: "Amplitude da onda",
     help: "Em larguras de tecla, sobre uma tecla que soa com força total.",
   },
   pianoLineColor: {

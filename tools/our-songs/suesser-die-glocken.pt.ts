@@ -78,7 +78,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "No stride, olhe para a oitava grave e deixe a mão achar o acorde pelo tato.",
         "A passagem rápida depois do Mi longo é um pequeno repique de sinos. Toque-a mais suave que a melodia.",
-        "Mantenha o polegar e o mínimo a uma oitava de distância, e deixe o pulso quicar.",
+        "Mantenha o polegar e o dedo mínimo a uma oitava de distância, e deixe o pulso quicar.",
       ],
       tricky: {
         6: "A mão direita salta até o Dó agudo, enquanto o baixo stride salta para baixo até um Fá grave.",

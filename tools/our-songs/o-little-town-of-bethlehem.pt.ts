@@ -39,7 +39,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Sob o Ré sustenido, a mão esquerda toca só Dó e Sol, para nenhum Mi soar contra ele.",
-        "Segure cada acorde suave durante toda a sua duração, como um órgão tocando de leve.",
+        "Segure cada acorde suave durante toda a duração dele, como um órgão tocando de leve.",
         "Levante a mão direita depois do Lá, e caia com o dedo 5 no Lá uma oitava acima.",
       ],
       tricky: {

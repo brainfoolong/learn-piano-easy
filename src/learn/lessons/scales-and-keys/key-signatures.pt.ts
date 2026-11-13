@@ -31,7 +31,7 @@ export const keySignaturesPt: Translation<KeySignaturesTexts> = {
       answers: ["Fá♯, a tecla preta", "Fá, a tecla branca"],
     },
     "phrase-in-g": {
-      text: "Aqui está uma frase em Sol maior. Seu polegar direito começa no segundo Ré acima do Dó central. Preste atenção no Fá♯ lá em cima.",
+      text: "Aqui está uma frase em Sol maior. Seu polegar direito começa no segundo Ré acima do Dó central. Preste atenção no Fá♯ mais acima.",
     },
     "play-in-g": {
       text: "Sua vez. A armadura tem um sustenido, então todo Fá é Fá♯.",
@@ -47,7 +47,7 @@ export const keySignaturesPt: Translation<KeySignaturesTexts> = {
       text: "Muito bem. Agora você já pode ler uma armadura de clave. Em seguida vem uma música em Dó maior, sem sustenidos nem bemóis.",
       points: [
         "A armadura de clave fica no início de cada linha.",
-        "Seus sustenidos ou bemóis valem para toda nota com aquele nome, em todas as oitavas.",
+        "Os sustenidos ou bemóis da armadura valem para toda nota com aquele nome, em todas as oitavas.",
         "Um sustenido no Fá quer dizer Sol maior, e um bemol no Si quer dizer Fá maior.",
         "Nenhum sustenido e nenhum bemol quer dizer Dó maior.",
       ],

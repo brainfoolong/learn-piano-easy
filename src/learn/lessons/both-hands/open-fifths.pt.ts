@@ -19,14 +19,14 @@ export const openFifthsPt: Translation<OpenFifthsTexts> = {
       text: "Sua vez. Toque a quinta Dó e Sol três vezes. Pressione as duas teclas juntas toda vez.",
     },
     "move-the-fifth": {
-      text: "Uma quinta é um formato que você pode mover. Mantenha o dedo mínimo e o polegar sempre à mesma distância um do outro e deslize a mão inteira.",
+      text: "Uma quinta é uma abertura que você pode mover. Mantenha o dedo mínimo e o polegar sempre à mesma distância um do outro e deslize a mão inteira.",
     },
     "fifth-from-g": {
       text: "Seu dedo mínimo esquerdo está no Sol. Que tecla o polegar toca para formar uma quinta?",
       answers: ["Ré", "Dó", "Mi"],
     },
     "three-fifths": {
-      text: "Com a mão esquerda, toque a quinta do Dó abaixo do Dó central até o Sol. Depois toque a quinta no Sol abaixo desse Dó, depois no Fá abaixo dele e volte ao Dó. Mantenha o mesmo formato toda vez.",
+      text: "Com a mão esquerda, toque a quinta do Dó abaixo do Dó central até o Sol. Depois toque a quinta no Sol abaixo desse Dó, depois no Fá abaixo dele e volte ao Dó. Mantenha a mesma abertura toda vez.",
     },
     "fifth-under-tune": {
       text: "Agora a mão direita toca uma melodia sobre a quinta. A mão esquerda toca a quinta junto com a primeira nota e a segura.",
@@ -39,7 +39,7 @@ export const openFifthsPt: Translation<OpenFifthsTexts> = {
       points: [
         "Uma quinta abrange cinco teclas brancas, contando as duas pontas, e você toca suas duas teclas juntas.",
         "O dedo mínimo esquerdo toca a tecla grave, e o polegar, a aguda.",
-        "O formato se move: Dó e Sol, Sol e Ré, Fá e Dó.",
+        "A abertura se move: Dó e Sol, Sol e Ré, Fá e Dó.",
         "Uma quinta sob uma melodia soa aberta e firme.",
       ],
     },

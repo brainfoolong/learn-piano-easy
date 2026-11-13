@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "Shchedryk é uma canção ucraniana de Ano-Novo, e o nome vem de “noite generosa”. " +
-    "Mykola Leontovych, compositor, maestro e professor ucraniano, construiu a canção sobre uma figura de quatro notas em compasso 3/4. " +
+    "Mykola Leontovych, compositor, maestro e professor ucraniano, construiu a canção sobre um padrão de quatro notas em compasso 3/4. " +
     "Ela foi cantada pela primeira vez em dezembro de 1916, em Kiev. " +
     "Mais tarde, Peter J. Wilhousky fez dela a canção em inglês Carol of the Bells.",
   funFact: "Wilhousky deu à canção uma letra sobre sinos, porque a melodia o fazia lembrar de sinos de mão.",
@@ -69,15 +69,15 @@ export const translation: Translation<GuideTranslation> = {
     },
     legendary: {
       practice: [
-        "Toque só as oitavas da mão esquerda. Elas repetem a mesma figura de quatro notas, duas oitavas abaixo.",
+        "Toque só as oitavas da mão esquerda. Elas repetem o mesmo padrão de quatro notas, duas oitavas abaixo.",
         "Toque só o baixo stride: salte para baixo até a oitava, depois volte para cima até o acorde.",
         "Toque só os acordes da mão direita, e deixe o dedo de cima cantar a melodia.",
         "Junte as mãos na música inteira, a três quartos da velocidade.",
         "Agora toque na velocidade normal, e deixe o último acorde soar.",
       ],
       tips: [
-        "As duas mãos tocam a mesma figura, a duas oitavas de distância, como um sino grande e um pequeno.",
-        "A mão esquerda mantém a figura de quatro notas por baixo da melodia, para os sinos nunca pararem.",
+        "As duas mãos tocam o mesmo padrão, a duas oitavas de distância, como um sino grande e um pequeno.",
+        "A mão esquerda mantém o padrão de quatro notas por baixo da melodia, para os sinos nunca pararem.",
         "As duas mãos sobem juntas. O polegar direito passa por baixo, e o dedo 3 da mão esquerda cruza por cima.",
       ],
       tricky: {

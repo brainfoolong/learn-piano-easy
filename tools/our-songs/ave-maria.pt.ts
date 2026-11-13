@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "Schubert musicou esta canção em 1825, a partir de uma tradução alemã do poema A Dama do Lago, de Walter Scott. " +
-    "É o terceiro canto de Ellen e saiu em 1826, como parte do seu Opus 52. " +
+    "É o terceiro canto de Ellen e saiu em 1826, como parte do Op. 52 de Schubert. " +
     "O filme Fantasia (1940), de Walt Disney, usa a canção na parte final, logo depois de Uma Noite no Monte Calvo.",
   funFact:
     "Em Fantasia, os sinos do fim de Uma Noite no Monte Calvo parecem virar sinos de igreja que levam à Ave Maria.",

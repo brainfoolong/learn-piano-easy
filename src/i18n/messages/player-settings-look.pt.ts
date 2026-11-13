@@ -255,7 +255,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Balanços por segundo.",
   },
   particleYOffset: {
-    label: "Altura inicial",
+    label: "Posição inicial",
     help: "Em larguras de tecla acima da tecla.",
   },
   particleDistributionX: {
@@ -379,7 +379,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "O tamanho em que a letra é escrita.",
   },
   lyricsY: {
-    label: "Altura (% a partir do topo)",
+    label: "Posição vertical (% a partir do topo)",
     help: "Onde fica o meio da linha da letra na cena. 0 é a borda de cima.",
   },
   lyricsCursorEnabled: {

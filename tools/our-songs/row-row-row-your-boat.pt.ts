@@ -17,14 +17,14 @@ export const translation: Translation<GuideTranslation> = {
         "Toque a música inteira com as duas mãos, na velocidade normal.",
       ],
       tips: [
-        "Aqui cada dedo tem sua própria tecla: o polegar no Dó, o mínimo no Sol.",
+        "Aqui cada dedo tem sua própria tecla: o polegar no Dó, o dedo mínimono Sol.",
         "O Sol dura o compasso inteiro, então conte os seis tempos antes de seguir.",
         "Aqui cada nota dura três tempos, então conte até três em cada tecla.",
       ],
       tricky: {
-        5: "Leve a mão para cima durante o Sol longo, para o mínimo cair no Dó agudo.",
+        5: "Leve a mão para cima durante o Sol longo, para o dedo mínimocair no Dó agudo.",
         6: "Segure o Mi com o dedo 2, depois o Dó com o polegar, três tempos cada. Mantenha a mão parada.",
-        7: "O mínimo encontra o Sol de novo, e a melodia desce: 5, 4, 3, 2.",
+        7: "O dedo mínimo encontra o Sol de novo, e a melodia desce: 5, 4, 3, 2.",
       },
     },
     rare: {
@@ -40,8 +40,8 @@ export const translation: Translation<GuideTranslation> = {
         "Deixe as notas que descem ficarem um pouco mais suaves, como um barco que se afasta à deriva.",
       ],
       tricky: {
-        5: "Leve a mão direita para cima durante o Sol longo, para o mínimo cair no Dó agudo.",
-        7: "Na mão esquerda, o mínimo desliza do Dó para o Si, e o dedo 3 do Mi para o Ré.",
+        5: "Leve a mão direita para cima durante o Sol longo, para o dedo mínimocair no Dó agudo.",
+        7: "Na mão esquerda, o dedo mínimodesliza do Dó para o Si, e o dedo 3 do Mi para o Ré.",
         13: "O Dó agudo volta. Leve a mão direita para cima durante o Sol longo do compasso 12.",
       },
     },
@@ -59,14 +59,14 @@ export const translation: Translation<GuideTranslation> = {
         "A melodia passa para a mão esquerda. Toque-a mais forte que os acordes quebrados da mão direita.",
       ],
       tricky: {
-        5: "Leve a mão direita para cima durante o Sol longo, para o mínimo ficar pronto no Dó agudo.",
+        5: "Leve a mão direita para cima durante o Sol longo, para o dedo mínimoficar pronto no Dó agudo.",
         9: "Aqui as mãos trocam de papel: a esquerda pega a melodia, e a direita pega os acordes.",
         13: "Seu polegar esquerdo se estica para cima até o Dó central, e depois a mão desce com 2, 3 e 5.",
       },
     },
     legendary: {
       practice: [
-        "Toque só os acordes da mão direita, e deixe o mínimo cantar a melodia.",
+        "Toque só os acordes da mão direita, e deixe o dedo mínimocantar a melodia.",
         "Toque só a mão esquerda a partir do compasso 9, onde ela começa o cânone.",
         "Junte as mãos no cânone, devagar, e escute as duas vozes.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
@@ -78,7 +78,7 @@ export const translation: Translation<GuideTranslation> = {
         "Cada mão toca a melodia inteira. Faça as duas vozes soarem claras.",
       ],
       tricky: {
-        5: "Tire a mão do acorde do compasso 4, e caia com o mínimo no Dó agudo.",
+        5: "Tire a mão do acorde do compasso 4, e caia com o dedo mínimono Dó agudo.",
         17: "A mão direita termina a melodia sobre um Sol grave. Levante-a depois do Ré, pronta para o último acorde.",
         18: "Abra a mão direita sobre uma oitava inteira para o último acorde: Dó, Mi, Sol e Dó.",
       },

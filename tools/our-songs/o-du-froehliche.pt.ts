@@ -23,7 +23,7 @@ export const translation: Translation<GuideTranslation> = {
         "Tire o polegar do Fá um pouco antes, e deixe o dedo 3 cair no Mi abaixo.",
       ],
       tricky: {
-        7: "Os dedos 4 e 3 descem de volta do Si para o Lá. Mantenha a mão parada sobre suas cinco teclas.",
+        7: "Os dedos 4 e 3 descem de volta do Si para o Lá. Mantenha a mão parada sobre as cinco teclas.",
         12: "O dedo 4 toca o Sol, o dedo 5 o Lá rápido, e depois o dedo 2 pega o Sol, pronto para o Dó agudo.",
         15: "Depois do Fá curto, o dedo 3 cai no Mi, e o dedo 2 no Ré.",
       },
@@ -57,7 +57,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Toque o baixo Alberti suave, para a melodia cantar por cima.",
-        "Troque o pedal a cada meio compasso, quando soa a nova nota do baixo.",
+        "Troque o pedal a cada meio compasso, quando a nova nota do baixo soar.",
         "A melodia é a nota de cima de cada par, então deixe o dedo de cima conduzir.",
       ],
       tricky: {

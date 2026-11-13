@@ -30,7 +30,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     rare: {
       practice: [
-        "Toque só a mão direita nos 7 primeiros compassos, e dê a cada nota curta o seu lugar.",
+        "Toque só a mão direita nos 7 primeiros compassos, e dê a cada nota curta o lugar dela.",
         "Toque só a mão esquerda. Segure cada acorde até chegar o próximo.",
         "Junte as mãos na subida dos compassos 8 a 10.",
         "Toque a música inteira com as duas mãos, um pouco mais devagar que o escrito.",

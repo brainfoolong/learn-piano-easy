@@ -38,7 +38,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Aqui a mão esquerda desce um pouco. O dedo 5 vai do Sol sustenido para o Sol.",
-        "Mantenha o pedal pisado durante cada compasso inteiro, e troque bem na barra de compasso.",
+        "Mantenha o pedal pisado durante cada compasso inteiro, e troque-o bem na barra de compasso.",
         "Agora a mão esquerda toca em cada tempo. Mantenha tudo regular, como uma marcha lenta.",
       ],
       tricky: {

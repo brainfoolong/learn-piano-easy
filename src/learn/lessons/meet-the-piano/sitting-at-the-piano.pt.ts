@@ -12,13 +12,13 @@ export const sittingAtThePianoPt: Translation<SittingAtThePianoTexts> = {
       text: "Toque o Dó central, a tecla bem à sua frente.",
     },
     "bench-and-feet": {
-      text: "Sente-se na metade da frente do banco, não lá no fundo. Mantenha as costas retas e relaxadas. Apoie os dois pés no chão, com a sola inteira.",
+      text: "Sente-se na metade da frente do banco, não bem no fundo. Mantenha as costas retas e relaxadas. Apoie os dois pés no chão, com a sola inteira.",
     },
     "bench-quiz": {
       text: "Em que parte do banco você se senta?",
       answers: [
         "Na metade da frente, com os dois pés apoiados no chão",
-        "Lá no fundo, com as costas encostadas em algo",
+        "No fundo do banco, com as costas encostadas em algo",
         "Bem na beirada, com os pés fora do chão",
       ],
     },
@@ -46,7 +46,7 @@ export const sittingAtThePianoPt: Translation<SittingAtThePianoTexts> = {
     "posture-quiz": {
       text: "Qual destas é uma boa forma de sentar ao piano?",
       answers: [
-        "Lá no fundo do banco, com os dedos retos",
+        "No fundo do banco, com os dedos retos",
         "De frente para o Dó central, na parte da frente do banco, antebraços na altura das teclas, dedos curvados",
         "Bem baixo, com os braços subindo até as teclas",
       ],

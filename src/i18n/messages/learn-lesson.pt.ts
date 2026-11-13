@@ -32,7 +32,7 @@ export const learnLesson: Translation<typeof en> = {
     piano: "O piano tocando o exemplo",
     playing: "Tocando",
     slow: "Devagar",
-    side: "Vista lateral",
+    side: "Exibição lateral",
   },
   quiz: {
     answers: "Respostas",
@@ -92,12 +92,12 @@ export const learnLesson: Translation<typeof en> = {
     short: (hits: number, beats: number) =>
       `Você tocou ${formatNumber("pt", hits)} de ${formatNumber("pt", beats)} tempos. Tente de novo.`,
     hint: "Toque no momento em que ouvir o clique. Os pontos piscam a cada tempo.",
-    play: "Agora toque cada nota no seu clique.",
+    play: "Agora toque cada nota no clique dela.",
     phrasePiano: "As teclas. Toque a frase junto com os cliques.",
     shortNotes: (hits: number, notes: number) =>
       `${formatNumber("pt", hits)} de ${formatNumber("pt", notes)} notas vieram no tempo certo. Tente de novo.`,
     restSounded: "Uma tecla soou durante uma pausa. Levante o dedo e fique em silêncio ali.",
-    phraseHint: "Toque cada nota no seu clique, e solte a tecla antes de uma pausa. Os pontos piscam a cada tempo.",
+    phraseHint: "Toque cada nota no clique dela, e solte a tecla antes de uma pausa. Os pontos piscam a cada tempo.",
     pattern: {
       taps: (countIn: number, taps: number) =>
         `Contagem inicial de ${formatNumber("pt", countIn)} tempos. Depois toque ${formatNumber("pt", taps)} tempos.`,

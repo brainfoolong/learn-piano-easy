@@ -16,7 +16,7 @@ export const cFAndGPt: Translation<CFAndGTexts> = {
       answers: ["Mi", "Sol", "Ré", "Fá"],
     },
     "the-f-triad": {
-      text: "A tríade de Fá é Fá, Lá e Dó. É uma tríade maior, como Dó maior, então os dedos mantêm o mesmo formato.",
+      text: "A tríade de Fá é Fá, Lá e Dó. É uma tríade maior, como Dó maior, então os dedos mantêm a mesma posição.",
     },
     "c-and-f": {
       text: "Sua vez. Toque Dó maior a partir do Dó central com os dedos 1, 3 e 5. Depois leve o polegar ao Fá acima do Dó central para a tríade de Fá, e volte ao Dó.",
@@ -29,7 +29,7 @@ export const cFAndGPt: Translation<CFAndGTexts> = {
       text: "Toque Dó maior a partir do Dó central, depois leve o polegar ao Sol acima do Dó central para a tríade de Sol, e volte ao Dó.",
     },
     "move-the-hand": {
-      text: "Levante a mão inteira de um acorde para o outro. Mantenha os dedos 1, 3 e 5 no mesmo formato, e deixe o polegar achar a nova fundamental.",
+      text: "Levante a mão inteira de um acorde para o outro. Mantenha os dedos 1, 3 e 5 na mesma posição, e deixe o polegar achar a nova fundamental.",
     },
     "c-f-g-c": {
       text: "Toque quatro acordes com a mão direita: Dó-Mi-Sol a partir do Dó central, depois Fá-Lá-Dó, Sol-Si-Ré e Dó-Mi-Sol. Não tenha pressa entre eles.",
@@ -51,7 +51,7 @@ export const cFAndGPt: Translation<CFAndGTexts> = {
       points: [
         "Dó, Fá e Sol são as tríades do 1.º, do 4.º e do 5.º grau de Dó maior.",
         "A tríade de Fá é Fá, Lá e Dó, e a tríade de Sol é Sol, Si e Ré.",
-        "Para mudar de acorde, levante a mão inteira e mantenha o formato.",
+        "Para mudar de acorde, levante a mão inteira e mantenha a posição.",
         "Ir do Sol de volta ao Dó soa como um final.",
       ],
     },

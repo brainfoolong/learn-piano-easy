@@ -7,7 +7,7 @@ export const translation: Translation<GuideTranslation> = {
     "Dies irae é um canto medieval em latim sobre o Juízo Final, cantado por séculos na missa de réquiem. " +
     "Desde Berlioz, os compositores citam esse canto sempre que a música deles fala da morte. " +
     "Os créditos de abertura do filme The Shining (1980), de Stanley Kubrick, são construídos sobre ele.",
-  funFact: "Suas primeiras palavras querem dizer “dia de ira, aquele dia”, e o primeiro verso termina com o mundo reduzido a cinzas.",
+  funFact: "As primeiras palavras do canto querem dizer “dia de ira, aquele dia”, e o primeiro verso termina com o mundo reduzido a cinzas.",
   versions: {
     common: {
       practice: [
@@ -31,7 +31,7 @@ export const translation: Translation<GuideTranslation> = {
     rare: {
       practice: [
         "Toque só a mão esquerda. Ela fica num lugar só, com o dedo mínimo no Ré.",
-        "Toque só a mão direita na primeira vez.",
+        "Toque só a mão direita, na primeira vez.",
         "Junte as mãos na primeira frase, e pressione juntas as três notas de cada acorde, como se fossem uma.",
         "Toque a música inteira com as duas mãos, um pouco mais devagar que o escrito.",
         "Agora toque na velocidade normal.",
@@ -49,14 +49,14 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só os acordes quebrados até eles fluírem sozinhos: grave, meio, agudo, meio.",
+        "Toque só os acordes quebrados até eles rolarem sozinhos: grave, meio, agudo, meio.",
         "Toque só os acordes de duas notas da mão direita, e pressione as duas notas como se fossem uma.",
         "Junte as mãos na primeira frase, devagar.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
         "Agora toque na velocidade normal, com o pedal.",
       ],
       tips: [
-        "Troque o pedal em cada barra de compasso. Solte o pedal assim que a nova nota do baixo soar.",
+        "Troque o pedal em cada barra de compasso. Solte-o quando a nova nota do baixo soar.",
         "Quartas e quintas abertas soam ocas e antigas. Era assim que os cantores harmonizavam o canto há mil anos.",
         "Mantenha os dedos 1 e 5 numa só posição, e mova a mão inteira de nota em nota.",
       ],

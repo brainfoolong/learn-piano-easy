@@ -153,6 +153,7 @@ on common usage alone, and *Open* lists it.
 | step, skip, leap (between keys) | grau vizinho, pulo, salto; *um grau acima* once a lesson has named the step | the course's own terms, defined where they first appear |
 | tune, melody | a melodia | WP *Melodia*; WP *Pauta (música)* |
 | phrase | a frase | WP *Frase (música)*, one source |
+| figure (a short musical idea) | *o padrão* when it repeats, else *o desenho*; never *a figura* | *figura* names a note value, as in *figura rítmica* |
 | call and answer (phrases) | pergunta e resposta | everyday words |
 | pattern (of notes) | o padrão | everyday word |
 | verse, chorus | a estrofe, o refrão | WP *Estrofe*; WP *Refrão* |
@@ -165,6 +166,7 @@ on common usage alone, and *Open* lists it.
 | mark (p, f, rit.) | a indicação | the course's own term |
 | fermata | a fermata | WP *Fermata*, one source |
 | turn (ornament) | o grupeto | WP *Ornamento (música)*, one source |
+| mordent | o mordente | WP *Ornamento (música)*, one source |
 | double notes | notas duplas | the guides' own term |
 | a run (fast notes) | a passagem rápida | the guides' own term |
 | octave bass | o baixo em oitavas | the guides' own term |
@@ -301,6 +303,8 @@ on common usage alone, and *Open* lists it.
 
 - **A key, a note, a song on the piano:** *tocar*. *Toque Dó e Mi juntos.*
 - **Starting playback of a song:** *reproduzir*. The transport's *Play* is *Reproduzir*.
+- **A song that sounds on its own:** *a música toca*, as in *Tocando agora*. Only the act of starting it
+  is *reproduzir*.
 - **A game or a mode:** *jogar*, and *Modo jogo* for *Game mode*.
 - **A lesson's "Play again" that replays a demo:** *Ouvir de novo*, since the learner listens.
 - **"Your turn":** *Sua vez.*

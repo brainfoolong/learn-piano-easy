@@ -50,14 +50,14 @@ export const translation: Translation<GuideTranslation> = {
     epic: {
       practice: [
         "Toque só a mão esquerda até os acordes quebrados rolarem por igual, do grave ao agudo.",
-        "Toque a figura rápida do compasso 3 só com a mão direita, bem devagar.",
+        "Toque o desenho rápido do compasso 3 só com a mão direita, bem devagar.",
         "Junte as mãos nos 4 primeiros compassos, devagar.",
         "Toque só as terças da mão direita, e pressione as duas notas de cada par como se fossem uma.",
         "Agora toque a música inteira com as duas mãos, na velocidade normal, com o pedal.",
       ],
       tips: [
         "Troque o pedal a cada nova nota do baixo, duas vezes por compasso.",
-        "A figura depois do Si longo é criação nossa. Toque com liberdade, como quem canta e toma fôlego.",
+        "O desenho depois do Si longo é criação nossa. Toque com liberdade, como quem canta e toma fôlego.",
         "A melodia é a nota de cima de cada par, então deixe o dedo de cima conduzir.",
       ],
       tricky: {
@@ -69,7 +69,7 @@ export const translation: Translation<GuideTranslation> = {
     legendary: {
       practice: [
         "Toque só os arpejos da mão esquerda. Na subida, o dedo 3 cruza por cima do polegar.",
-        "Toque a figura rápida do compasso 3 só com a mão direita, bem devagar.",
+        "Toque o desenho rápido do compasso 3 só com a mão direita, bem devagar.",
         "Toque só os acordes da mão direita, e deixe o dedo de cima cantar a melodia.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
         "Agora toque na velocidade normal, e deixe o último acorde soar.",
@@ -80,9 +80,9 @@ export const translation: Translation<GuideTranslation> = {
         "Toque a nota de cima de cada acorde um pouco mais forte que as outras.",
       ],
       tricky: {
-        3: "Segure o Dó sustenido agudo com o dedo 5. Depois toque a figura com leveza: Si, Lá e então Fá sustenido com o polegar.",
+        3: "Segure o Dó sustenido agudo com o dedo 5. Depois toque o desenho com leveza: Si, Lá e então Fá sustenido com o polegar.",
         8: "A mão esquerda sobe a partir do Fá sustenido grave, depois a partir do Sol sustenido grave. Salte para baixo na pausa curta.",
-        15: "Abra a mão sobre quatro notas, de Dó sustenido a Dó sustenido. Depois comece a figura com o dedo 4.",
+        15: "Abra a mão sobre quatro notas, de Dó sustenido a Dó sustenido. Depois comece o desenho com o dedo 4.",
       },
     },
   },

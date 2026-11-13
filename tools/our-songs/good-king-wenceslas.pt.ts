@@ -38,7 +38,7 @@ export const translation: Translation<GuideTranslation> = {
         "Agora toque na velocidade normal.",
       ],
       tips: [
-        "Segure cada acorde suave pelos seus dois tempos, para a melodia soar por cima.",
+        "Segure cada acorde suave por dois tempos, para a melodia soar por cima.",
         "Toque o segundo Dó com o polegar. Depois o dedo mínimo alcança o Sol agudo.",
         "Toque a nota grave um pouco mais forte que o acorde que vem depois.",
       ],

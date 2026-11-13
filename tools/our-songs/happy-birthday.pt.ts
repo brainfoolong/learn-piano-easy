@@ -49,7 +49,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toque só o baixo Alberti até ele fluir sozinho: grave, agudo, meio, agudo.",
+        "Toque só o baixo Alberti até ele rolar sozinho: grave, agudo, meio, agudo.",
         "Toque só as terças e sextas da mão direita, e mantenha juntas as duas notas de cada par.",
         "Junte as mãos na primeira estrofe, devagar.",
         "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
@@ -70,7 +70,7 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Toque só o baixo stride: salte para baixo até a oitava, e depois volte para cima até o acorde.",
         "Toque só os acordes da mão direita, e deixe o dedo de cima cantar a melodia.",
-        "Toque só os arpejos da mão esquerda na segunda estrofe.",
+        "Toque só os arpejos da mão esquerda, na segunda estrofe.",
         "Junte as mãos na música inteira, a três quartos da velocidade.",
         "Agora toque na velocidade normal, e deixe o último acorde soar.",
       ],

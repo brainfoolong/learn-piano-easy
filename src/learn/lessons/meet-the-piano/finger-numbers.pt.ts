@@ -29,7 +29,7 @@ export const fingerNumbersPt: Translation<FingerNumbersTexts> = {
       text: "Deixe a mão onde está. Toque com os dedos 1, 3, 5, 3, 1.",
     },
     "left-hand-five": {
-      text: "Agora, a mão esquerda. Coloque o mínimo, o dedo 5, no Dó marcado. Toque até o polegar: 5, 4, 3, 2, 1.",
+      text: "Agora, a mão esquerda. Coloque o dedo mínimo, o dedo 5, no Dó marcado. Toque até o polegar: 5, 4, 3, 2, 1.",
     },
     recap: {
       text: "Muito bem. Agora seus dedos têm números.",

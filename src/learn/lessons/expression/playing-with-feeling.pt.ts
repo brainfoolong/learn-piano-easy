@@ -26,7 +26,7 @@ export const playingWithFeelingPt: Translation<PlayingWithFeelingTexts> = {
       text: "Ouça uma melodia em Dó maior, tocada forte e com as notas um pouco curtas.",
     },
     "sad-demo": {
-      text: "Agora a sua gêmea em Lá menor, tocada suave, lenta e ligada.",
+      text: "Agora a gêmea dela em Lá menor, tocada suave, lenta e ligada.",
     },
     "major-and-minor": {
       text: "A tonalidade dá cor ao clima da música. Dó maior muitas vezes soa luminoso e alegre, e Lá menor muitas vezes soa triste. Você escolhe um toque e uma velocidade que combinem com isso.",
@@ -55,7 +55,7 @@ export const playingWithFeelingPt: Translation<PlayingWithFeelingTexts> = {
       answers: ["A segunda vez, a suave", "A primeira vez, a forte", "As duas, porque eram iguais", "Nenhuma delas"],
     },
     "elise-left-demo": {
-      text: "Ouça a mão esquerda do desafio final, com os dedos 5, 2 e 1. Ela quebra o acorde de Lá menor em Lá, Mi e Lá, e depois o de Mi maior em Mi, Si e Sol sustenido. A forma de Mi maior é mais larga que uma oitava, então deixe a mão subir enquanto toca.",
+      text: "Ouça a mão esquerda do desafio final, com os dedos 5, 2 e 1. Ela quebra o acorde de Lá menor em Lá, Mi e Lá, e depois o de Mi maior em Mi, Si e Sol sustenido. A abertura de Mi maior é maior que uma oitava, então deixe a mão subir enquanto toca.",
     },
     "elise-left-hand": {
       text: "Sua vez. Toque Lá, Mi e Lá a partir do segundo Lá abaixo do Dó central. Depois toque Mi, Si e Sol sustenido a partir do segundo Mi abaixo do Dó central. Termine de novo em Lá, Mi e Lá.",

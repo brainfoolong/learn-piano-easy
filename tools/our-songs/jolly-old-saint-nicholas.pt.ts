@@ -32,7 +32,7 @@ export const translation: Translation<GuideTranslation> = {
     rare: {
       practice: [
         "Toque só a mão esquerda, e pressione juntas as notas de cada acorde.",
-        "Toque só a mão esquerda, na segunda vez: uma nota do baixo, depois o seu acorde.",
+        "Toque só a mão esquerda, na segunda vez: uma nota do baixo, depois o acorde.",
         "Junte as mãos na primeira vez, devagar.",
         "Toque a música inteira com as duas mãos, um pouco mais devagar que o escrito.",
         "Agora toque na velocidade normal.",
