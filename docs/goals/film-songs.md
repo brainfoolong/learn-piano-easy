@@ -121,6 +121,27 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
   aside, since its print is dense with triplets and its scan is poor. The Turkish March and the
   *Pastoral* Symphony were set aside too: Wikipedia names no film for the march, and prints only bird
   calls of the symphony.
+- ***Pomp and Circumstance* is not a song of ours.** Wikipedia prints only the march's opening, not
+  its trio. Commons holds recordings alone, and Mutopia holds no march by Elgar. It is the third
+  piece a replacement takes the place of.
+- **The theme book on Commons is a source for orchestral pieces.** `File:Orchesterwerke Romantik
+  Themen.pdf` scans printed themes of 1842 to 1912, and its page holds a contents list. Its
+  `iiurlparam=page<n>-1800px` thumbnail renders one page. Its pages 287 and 452 give *Morning Mood* and
+  the *Wedding March*. A replacement may come from its list, such as Saint-Saëns, Dvořák or Smetana.
+- **The sources of stage 7.** The theme book gives *Morning Mood*'s bars 1 to 4 and the *Wedding
+  March*'s tutti theme. A typeset of the Nocturne's opening on Commons gives its bars 5 to 8.
+  Heugel's piano score of *Orphée aux Enfers*, 1862, on Commons holds the galop on its page 80, file
+  82 of 86.
+- **The Can-can's first strain in Heugel's print is not the tune a learner knows.** It reads A, E, E,
+  F sharp, then E, D, D, F sharp. The next session reads the strains that follow, on the score's pages
+  80 to 82, and takes the famous one. If no strain matches, a replacement takes its place.
+- **The films of stage 7.** The Wikipedia list of *Moulin Rouge!*'s music names the *Galop
+  infernal*. *The Pianist*'s soundtrack album opens with the Nocturne. Wikipedia's page on Grieg in
+  popular culture names *Soylent Green* for *Morning Mood*.
+- ***Wedding March*'s tune is the tutti theme's second phrase.** The first phrase ends on an arpeggio
+  from C4 to G5, which breaks Beginner's position limit. The second closes on C, within one octave.
+- **The Nocturne's run in bar 7 is cut to a rest,** as *Night on Bald Mountain*'s runs are. It mixes a
+  dotted sixteenth figure and an eighth triplet, which one grid of the tune cannot write.
 - **The sources of stage 6.** Nicolas Sceaux's CC0 typeset of the full score on Commons gives the
   *Boléro* flute solo, bars 5 to 12. Two engravings on Commons give the *Funeral March*'s bars 1 to 4. Wikipedia's
   `<score>` gives the Fifth's bars 1 to 5.
@@ -353,13 +374,28 @@ took their places. The *Bumblebee* cannot pass Beginner, so it and the 25th piec
 **Split:** five writing subagents, one module each.
 
 - [ ] *Can-can*. `tools/our-songs/can-can.ts:1`
-- [ ] Nocturne in C-sharp minor. `tools/our-songs/chopin-nocturne-c-sharp-minor.ts:1`
-- [ ] *Morning Mood*. `tools/our-songs/morning-mood.ts:1`
-- [ ] *Wedding March*. `tools/our-songs/wedding-march.ts:1`
-- [ ] *Pomp and Circumstance*. `tools/our-songs/pomp-and-circumstance.ts:1`
-- [ ] Two film pieces, in place of the *Bumblebee* and the *Barcarolle*, found on the film list's
-  terms. Their slugs replace `flight-of-the-bumblebee` and `barcarolle` in `FILM`. `tools/our-songs.test.ts:95`
+  - [x] Its source, Heugel's piano score of 1862 on Commons, and its film are confirmed.
+  - [ ] The famous strain is found in the print and read into notation.
+  - [ ] Its module is written, checked against the read tune, and joins `ourSongs`.
+- [x] Nocturne in C-sharp minor. `tools/our-songs/chopin-nocturne-c-sharp-minor.ts:1`
+  - [x] Its theme is read from the Commons typeset, and its years and film are confirmed.
+  - [x] Its module is written, and its tune matches the read tune.
+  - [x] It joins `ourSongs`, and the writer accepts it.
+- [x] *Morning Mood*. `tools/our-songs/morning-mood.ts:1`
+  - [x] Its theme is read from the Commons theme book, and its years and film are confirmed.
+  - [x] Its module is written, and its tune matches the read tune.
+  - [x] It joins `ourSongs`, and the writer accepts it.
+- [x] *Wedding March*. `tools/our-songs/wedding-march.ts:1`
+  - [x] Its theme is read from the Commons theme book, and its years are confirmed.
+  - [x] Its module is written, and its tune matches the read tune.
+  - [x] It joins `ourSongs`, and the writer accepts it.
+- [x] *Pomp and Circumstance* is not a song of ours, as the standing decisions say.
+- [ ] Three film pieces, in place of the *Bumblebee*, the *Barcarolle* and *Pomp and Circumstance*,
+  found on the film list's terms. Their slugs replace `flight-of-the-bumblebee`, `barcarolle` and
+  `pomp-and-circumstance` in `FILM`. `tools/our-songs.test.ts:95`
 - [ ] Add the seven to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+  - [x] The Nocturne, *Morning Mood* and the *Wedding March* join `ourSongs`, and `tsc` and the build are green.
+  - [ ] The Can-can and the three replacements join `ourSongs`, and `FILM` names their slugs.
 
 ### 8. Five sea shanties
 
@@ -398,33 +434,31 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 to 6 are done. Twenty-three film pieces ship in four versions, and the catalog holds 645
-rows. Stage 6 added the *Boléro* flute solo, Chopin's *Funeral March* and the opening of Beethoven's
-Fifth. The concerto, the Intermezzo and the *Barcarolle* had no source, and the *Bumblebee* cannot pass
-Beginner. The standing decisions record each swap. Each tune was compared note for note with its
-score. `tsc` and the worktree's build are green. The catalog count test,
-`every_film_song_is_in_the_collection` and `every_guide_is_complete` passed once.
+Stages 1 to 6 are done, and stage 7 is half done. Twenty-six film pieces ship in four versions, and
+the catalog holds 657 rows. Stage 7 added the Nocturne in C-sharp minor, *Morning Mood* and the
+*Wedding March*. Each tune was compared note for note with its score. *Pomp and Circumstance* had no
+source, so three replacements are now owed. The Can-can's print is found, but its famous strain is
+not yet read. The standing decisions record each. The writer, `tsc` and the worktree's build are green.
+The catalog count in `src/midi/library-songs.test.ts` now reads 657, and no test ran.
 
 ### Next
 
-**Stage 7: the last seven film pieces.** Follow the stage's `**Split:**` line, and work in a worktree
-under `.agent-tmp/`. Seven pieces may not fit one session. If they do not, ship the five listed first,
-and leave the two replacements to the next session.
+**Stage 7: the Can-can and three replacements.** Work in a worktree under `.agent-tmp/`, and copy
+`.agent-tmp/brief-s7.md` in the main checkout as the writers' brief.
 
-- [ ] Read each score on Wikipedia, Mutopia or Commons, and confirm its years and film. `tools/our-songs/bolero.ts:1`
-- [ ] Find two replacements on the film list's terms, each mostly inside its key. `tools/our-songs.test.ts:95`
-- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/funeral-march.ts:1`
-- [ ] Writing subagents, one module each, from a shared brief file. `tools/our-songs/fur-elise.ts:1`
-- [ ] Add the modules to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:299`
+- [ ] Read the Galop's strains on the score's pages 80 to 82, and take the famous one. `tools/our-songs/funeral-march.ts:1`
+- [ ] Pick three replacements from the theme book's contents, each with a film Wikipedia names. `tools/our-songs.test.ts:95`
+- [ ] Read each from its theme book page, cut a leaping one to its hook, and count notes outside its key. `tools/our-songs/morning-mood.ts:1`
+- [ ] Writing subagents, one module each, and replace the three slugs in `FILM`. `tools/our-songs/wedding-march.ts:1`
+- [ ] Add the modules to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:305`
 
-Stage 6's brief, `.agent-tmp/brief-s6.md` in the main checkout, is the shape to copy. Give each prompt its
-tune, chords, about text and fun fact, word for word. Before you brief a writer, count the tune's notes
-outside its key in every four bars: Beginner and Easy allow three. Mutopia holds no Liszt, Chopin
-sonata, Mascagni, Offenbach or Ravel. Commons' file pages give a scan's print year in `action=raw`.
+Render a theme book page through the Commons API: `prop=imageinfo&iiurlparam=page<n>-1800px`, then crop
+it with `magick`. Heugel's galop is file 82 of 86 of the `bpt6k1187743z` scans, and the right hand
+plays octaves there. If the Can-can's famous strain cannot be read with confidence, swap it too.
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 645 to 645 plus four rows
-per new piece. The e2e test `the_library_lists_the_film_songs` reads card titles, so it may need a
-scroll once the film group outgrows one view.
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 657 by four rows per new
+piece. The e2e test `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once
+the film group outgrows one view.
 
 ### Backlog
 
