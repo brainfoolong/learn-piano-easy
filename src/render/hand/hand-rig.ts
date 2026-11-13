@@ -24,6 +24,7 @@ import type { GLTF } from "three/addons/loaders/GLTFLoader.js";
 import { clone as cloneSkinned } from "three/addons/utils/SkeletonUtils.js";
 
 import { type NailFrame, skinMaterial } from "./hand-materials";
+import type { HandPose } from "./hand-plan";
 
 /** The digits, in finger-number order: the thumb is finger 1. */
 export const DIGITS = ["thumb", "index", "middle", "ring", "little"] as const;
@@ -177,6 +178,12 @@ export function createHand(gltf: GLTF, side: Side): HandRig {
 }
 
 type MeshMaterial = { dispose(): void };
+
+/** Places `rig` at `pose`'s wrist and turn, and reaches each digit for its target. */
+export function applyPose(rig: HandRig, pose: HandPose): void {
+  rig.place(pose.wrist, pose.turn);
+  for (const digit of DIGITS) rig.reach(digit, pose.digits[digit]);
+}
 
 /** Damped least squares on a digit's three angles, so its pad meets `target`. */
 function solve(c: Chain, target: Vector3, padAt: (c: Chain, angles: Angles, out: Vector3) => Vector3): void {

@@ -7,18 +7,15 @@
  */
 import { Euler, Quaternion, Vector3 } from "three";
 
+import { contactPoint, REST } from "../../src/render/hand/hand-plan";
 import { DIGITS, type Digit, type HandRig } from "../../src/render/hand/hand-rig";
 import type { KeyLayout, KeyRange } from "../../src/render/key-layout";
-import { WHITE_KEY_LENGTH } from "../../src/render/piano-geometry";
 
 /** The lab's piano: the two octaves and a half around middle C. */
 export const LAB_RANGE: KeyRange = { first: 48, last: 79 };
 
 /** The key each digit rests on. */
 const KEYS: Record<Digit, number> = { thumb: 60, index: 62, middle: 64, ring: 65, little: 67 };
-
-/** How far in from a white key's front edge each digit plays. */
-const INSET: Record<Digit, number> = { thumb: 0.8, index: 1.3, middle: 1.5, ring: 1.35, little: 0.95 };
 
 /** Where the wrist and the hand sit, which the lab can change to try another pose. */
 export interface Placement {
@@ -34,12 +31,12 @@ export interface Placement {
   shift: number;
 }
 
-export const PLACEMENT: Placement = { yaw: 0, roll: -0.12, lift: 2.6, back: 5.0, shift: 0 };
+/** The plan's resting hand, rolled the right hand's way. */
+export const PLACEMENT: Placement = { yaw: 0, roll: -REST.roll, lift: REST.lift, back: REST.back, shift: 0 };
 
 /** The point on its key that each digit's pad meets, in world space. */
 export function cPositionTargets(layout: KeyLayout): Map<Digit, Vector3> {
-  const keyX = (pitch: number) => layout.key(pitch)!.center - layout.width / 2;
-  return new Map(DIGITS.map((d) => [d, new Vector3(keyX(KEYS[d]), 0.02, WHITE_KEY_LENGTH - INSET[d])]));
+  return new Map(DIGITS.map((d) => [d, contactPoint(layout, KEYS[d], d)]));
 }
 
 /** Places `hand` over the C position and bends every digit onto its key. Returns the targets. */

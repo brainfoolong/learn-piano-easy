@@ -6,7 +6,7 @@ context: [src/render/hand/hand-rig.ts, tools/hand-lab/main.ts, src/theory/finger
 stages:
   - id: 1
     title: A phrase becomes a plan of presses and hand positions
-    status: open
+    status: done
   - id: 2
     title: Crossings, stretches, position changes and chords
     status: open
@@ -67,6 +67,11 @@ it.
   0.6 in from the black key's front. These move from `tools/hand-lab/main.ts:113` into the plan.
 - **The resting hand is 2.6 above the keys and 5.0 behind its middle finger's key, rolled 0.12 towards
   its little finger.** These are the lab's measured values, where every joint angle stays natural.
+- **The plan's wrist sits straight behind the middle finger's home key,** in line with the model's
+  middle knuckle. The lab's static C position still shifts it by the rest pad's small offset. The plan
+  needs no rig to measure, and the solver absorbs the difference.
+- **A move leaves at the earlier of the last note's release and 0.15 s before the new note,** but never
+  before the last note sounds. A finger's next press begins as its held key releases.
 - **A press is a short down-stroke.** The finger lifts over its key and strikes in a time that shrinks
   with velocity. It follows the key's dip, holds, and lifts on release. The key's dip at the pad comes
   from `PRESS_DEPTH` and the key's length (`src/render/piano.ts:58`).
@@ -94,13 +99,13 @@ it.
 presses that follow the key's dip, hovering free fingers, and a seek that gives the pose of playing.
 **Gate:** `src/render/hand/hand-rig.test.ts` exists, from `mascot-hand`.
 
-- [ ] The phrase types, `planHands` and `poseAt`. `src/render/hand/hand-plan.ts:1`
-- [ ] Anchors and their eased moves. `src/render/hand/hand-plan.ts:1`
-- [ ] The contact arc and the black-key inset, moved from the lab. `tools/hand-lab/main.ts:113`
-- [ ] The resting wrist height, distance and roll, moved from the lab. `tools/hand-lab/main.ts:120`
-- [ ] Presses that follow the key's dip, and hovering free fingers. `src/render/hand/hand-plan.ts:1`
-- [ ] `applyPose(rig, pose)` places the wrist and reaches every digit. `src/render/hand/hand-rig.ts:146`
-- [ ] Unit tests `a_press_puts_the_pad_on_its_key_at_its_time`, `the_hand_moves_only_when_a_finger_cannot_reach`, `a_black_key_is_played_further_in`, `a_free_finger_hovers_over_its_key` and `a_seek_gives_the_same_pose_as_playing`. `src/render/hand/hand-plan.test.ts:1`
+- [x] The phrase types, `planHands` and `poseAt`. `src/render/hand/hand-plan.ts:1`
+- [x] Anchors and their eased moves. `src/render/hand/hand-plan.ts:1`
+- [x] The contact arc and the black-key inset, moved from the lab. `tools/hand-lab/main.ts:113`
+- [x] The resting wrist height, distance and roll, moved from the lab. `tools/hand-lab/main.ts:120`
+- [x] Presses that follow the key's dip, and hovering free fingers. `src/render/hand/hand-plan.ts:1`
+- [x] `applyPose(rig, pose)` places the wrist and reaches every digit. `src/render/hand/hand-rig.ts:146`
+- [x] Unit tests `a_press_puts_the_pad_on_its_key_at_its_time`, `the_hand_moves_only_when_a_finger_cannot_reach`, `a_black_key_is_played_further_in`, `a_free_finger_hovers_over_its_key` and `a_seek_gives_the_same_pose_as_playing`. `src/render/hand/hand-plan.test.ts:1`
 
 ### 2. Crossings, stretches, position changes and chords
 
@@ -148,14 +153,22 @@ pause, slow down and seek, so every motion can be looked at.
 
 ### State
 
-The goal is written. It waits on `mascot-hand`, whose rig it drives. The lab already holds a static C
-position whose numbers stage 1 moves into the plan.
+Stage 1 is done. `planHands` in `src/render/hand/hand-plan.ts` plans each hand's anchors, presses and
+hovering fingers, and `applyPose` in `src/render/hand/hand-rig.ts` puts a pose on a rig. The lab's C
+position reads its contact arc and resting hand from the plan. `PRESS_DEPTH` moved to
+`src/render/piano-geometry.ts`, so the plan reads the key's dip without the piano. The `hand-plan`
+check passes. The lab does not play the plan yet; stage 4 does.
 
 ### Next
 
-**Stage 1: a phrase becomes a plan of presses and hand positions.** Files:
-`src/render/hand/hand-plan.ts`, its test, `src/render/hand/hand-rig.ts`, `tools/hand-lab/main.ts`. Gate:
-`src/render/hand/hand-rig.test.ts` exists. The items are the stage's list above.
+**Stage 2: crossings, stretches, position changes and chords.** Files: `src/render/hand/hand-plan.ts`
+and its test. Gate: the `hand-plan` check passes.
+
+- The reach test is `REACH` in `planHand` (`src/render/hand/hand-plan.ts:214`). A stretch widens it by
+  one white key for the outer fingers without a new anchor.
+- A crossing is read where a press's position passes the previous finger's on the wrong side. Its path
+  replaces the straight lerp in `pressPoint`'s first branch (`src/render/hand/hand-plan.ts:263`).
+- A chord's notes share `at`, so they already strike together. The test only has to show it.
 
 Expected red: none.
 

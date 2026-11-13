@@ -50,12 +50,11 @@ import {
   feltMaterial,
   KeyGeometries,
   keyMaterials,
+  PRESS_DEPTH,
   WHITE_KEY_HEIGHT,
   WHITE_KEY_LENGTH,
 } from "./piano-geometry";
 
-/** How far a pressed key's front edge dips, in world units. */
-const PRESS_DEPTH = 0.32;
 /** The spring's stiffness and damping ratio: stiff and a little under-damped, for a short spring. */
 const SPRING_STIFFNESS = 1400;
 const SPRING_DAMPING = 2 * Math.sqrt(SPRING_STIFFNESS) * 0.55;

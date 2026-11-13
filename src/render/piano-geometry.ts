@@ -27,6 +27,8 @@ export const BLACK_KEY_LENGTH = 4;
 export const BLACK_KEY_TOP = 0.55;
 /** A black key's height, reaching down into its notch. */
 export const BLACK_KEY_HEIGHT = 1.05;
+/** How far a pressed key's front edge dips, as the key tilts about its back edge. */
+export const PRESS_DEPTH = 0.32;
 /** The gap between two white keys. */
 export const KEY_GAP = 0.05;
 /** The clearance a notch leaves around its black key. */
