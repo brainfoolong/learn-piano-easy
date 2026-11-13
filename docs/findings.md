@@ -1421,3 +1421,40 @@ and the song's timeline keep their direction.
 - A box centred by `left: 50%` and `translate(-50%)` stays physical.
 - A position measured or projected from physical coordinates stays physical.
 - The fallback face of matched metrics covers Latin alone by `unicode-range`, and every stack names it.
+
+## arabic
+
+**Target:** the site, the course and the song guides read in Arabic as if a native teacher wrote
+them, and the Arabic site ships.
+
+### Findings
+
+- `ar` ships as the first translated right-to-left locale. Every catalog section, all eight worlds and every song guide hold their Arabic.
+- `docs/reference/translation/ar.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- `bun tools/i18n.ts status ar` lists 10 missing of 4480 texts: the key names and the languages' own names.
+- An Arabic copy of `Ctrl`, `Alt`, `Shift` or `Meta` broke `arabic_texts_keep_their_rules`, so they show the English.
+- A percent, KB, MB, BPM or FPS value isolates the number, and then the number with its unit.
+- `a_lesson_page_carries_the_lessons_own_title_and_description` compares the title without its isolates.
+- The English legal bodies and license texts carry `lang="en" dir="ltr"`, set by `legalBody` and `aboutPage`.
+- A right-to-left shipped locale runs the layout checks at every width, through `passedWidthsOf` in `e2e/layout-check.ts`.
+- `public/images/social/ar.png` is drawn right to left.
+- Segoe UI spaces the gap after `ر` wider, so `سريعة` reads as two parts on a desktop. The font causes it.
+- No native Arabic speaker has read the texts, and no Android device drew the pages.
+- The Arabic spelling of eight composers' names is unchecked, since no session could reach Wikipedia.
+- The shots found two flaws in the player and on `learn/` that are not Arabic's own. The goal's backlog named them.
+
+### Decisions that still bind
+
+- The variety is Modern Standard Arabic. `lang` and `intl` are `ar`, `og` is `ar_AR`, and `naming` is `solfege`.
+- The learner's gender stays out of the text. A label, a button or a tooltip is a verbal noun or a plain noun.
+- An instruction step in a lesson or a guide is the masculine singular imperative.
+- Notes are solfège in Arabic script, `دو ري مي فا صول لا سي`. Sharp is `دييز`, and flat is `بيمول`.
+- The marks are `،` `؛` `؟`, and quotes are `« »`.
+- No tashkeel is written, except where a word would be ambiguous without it.
+- Digits are Western, as CLDR gives `ar`.
+- A counted message carries all six plural forms. Zero, one and two show no digit, such as `درسان`.
+- Every argument that may hold left-to-right text goes through `isolate()`, and no text uses `letter-spacing`.
+- *Learn Piano Easy*, *MIDI* and the song titles stay in Latin letters, each one isolated in a sentence.
+- A composer with an Arabic Wikipedia article takes its Arabic spelling. Every other name stays in Latin.
+- Where a batch ruling and the style guide disagree, the guide wins.
+- The site keeps the system's Arabic font.

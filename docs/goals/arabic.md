@@ -259,8 +259,8 @@ goal. `bun tools/i18n.ts status ar` lists 10 missing and 0 stale of 4480 texts.
 
 ### Next
 
-**Harvest the goal.** Its target, findings and binding decisions go into `docs/findings.md` § `arabic`,
-its checks into the floor, and its file is deleted. Then `portuguese` is live.
+**Retire the goal.** Its target, findings and binding decisions are in `docs/findings.md` § `arabic`.
+Its checks move into the floor, and its file is deleted. Then `portuguese` is live.
 
 Expected red: none known.
 
