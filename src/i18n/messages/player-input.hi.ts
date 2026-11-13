@@ -1,0 +1,142 @@
+/** The player's input in Hindi. A text it leaves out shows in English. */
+import { formatNumber, plural } from "../format";
+import type { Translation } from "../translation";
+import type { playerInput as en } from "./player-input.en";
+
+export const playerInput: Translation<typeof en> = {
+  devices: {
+    heading: "MIDI डिवाइस",
+    connect: "MIDI डिवाइस कनेक्ट करें",
+    input: "MIDI इनपुट",
+    output: "MIDI आउटपुट",
+    everyInput: "सारे इनपुट",
+    noOutput: "कोई आउटपुट नहीं",
+    notConnected: (name: string) => `${name} (कनेक्ट नहीं है)`,
+    unsupported: "यह ब्राउज़र MIDI डिवाइस से नहीं जुड़ सकता। Chrome, Edge और Firefox जुड़ सकते हैं।",
+    off: "MIDI कीबोर्ड से बजाने के लिए अपने MIDI डिवाइस कनेक्ट करें।",
+    asking: "ब्राउज़र की अनुमति का इंतज़ार है…",
+    denied: "MIDI की अनुमति नहीं मिली। ब्राउज़र की साइट सेटिंग में इसकी अनुमति दें और फिर से कनेक्ट करें।",
+    noInputs: "कोई MIDI डिवाइस लगा नहीं है।",
+    inputsFound: (n: number) => `${formatNumber("hi", n)} MIDI इनपुट ${plural("hi", n, { one: "मिला", other: "मिले" })}।`,
+  },
+  freePlay: {
+    heading: "खुलकर बजाएँ",
+    record: "रिकॉर्ड करें",
+    stop: "बंद करें",
+    stopRecording: "रिकॉर्डिंग बंद करें",
+    save: "सेव करें",
+    saveTitle: "MIDI फ़ाइल के रूप में सेव करें",
+    recording: (clock: string) => `रिकॉर्डिंग ${clock}`,
+    recorded: (n: number) => `रिकॉर्ड किए गए नोट: ${formatNumber("hi", n)}। ‘सेव करें’ दबाकर इन्हें MIDI फ़ाइल में रखें।`,
+    hint: "खुलकर बजाएँ, या जो बजाएँ उसे रखने के लिए ‘रिकॉर्ड करें’ दबाएँ।",
+  },
+  history: {
+    empty: "इस गाने की अभी कोई पूरी कोशिश नहीं है। स्कोरिंग चालू करके इसे आखिर तक बजाएँ।",
+    hands: { both: "दोनों", right: "दायाँ", left: "बायाँ" },
+    columns: {
+      date: "तारीख",
+      speed: "स्पीड",
+      hands: "हाथ",
+      accuracy: "सटीकता",
+      hits: "सही नोट",
+      perfect: "परफ़ेक्ट",
+      misses: "छूटे नोट",
+      mistakes: "गलत नोट",
+    },
+  },
+  keyBinding: {
+    help: "किसी नोट की कुंजी दबाएँ, फिर कंप्यूटर कीबोर्ड का वह बटन दबाएँ जिससे यह नोट बजे। Esc दबाने पर यह डायलॉग बंद हो जाता है।",
+    open: "बटन बदलें",
+  },
+  learnRange: {
+    lowest: "अपनी सबसे नीचे वाली कुंजी दबाएँ…",
+    highest: "अब सबसे ऊपर वाली कुंजी…",
+    start: "अपने कीबोर्ड से पता करें",
+    title: "अपने कीबोर्ड से रेंज पता करें",
+  },
+  pitchPractice: {
+    heading: "सुर पहचानने का अभ्यास",
+    hear: "सुनें",
+    hearTitle: "नोट सुनें",
+    again: "फिर से शुरू करें",
+    againTitle: "नया राउंड शुरू करें",
+    empty: "पूछने के लिए कोई नोट नहीं",
+    emptyHint: "आपके कीबोर्ड पर चुने गए नोटों के बीच इस स्केल का कोई नोट नहीं है।",
+    done: "राउंड पूरा हुआ",
+    found: (n: number, count: number) => `मिले नोट: ${formatNumber("hi", count)} में से ${formatNumber("hi", n)}।`,
+    play: (note: string) => `${note} बजाएँ`,
+    progress: (i: number, count: number) => `नोट ${formatNumber("hi", i)}, कुल ${formatNumber("hi", count)}`,
+    wrong: (note: string) => `यह ${note} नहीं है। फिर से कोशिश करें।`,
+    right: (note: string) => `${note} सही है।`,
+    results: "सुर अभ्यास के नतीजे",
+    mistakes: (n: number, count: number) =>
+      n === 0
+        ? `कुल ${formatNumber("hi", count)} नोट, कोई गलती नहीं।`
+        : `कुल ${formatNumber("hi", count)} नोट, ${formatNumber("hi", n)} ${plural("hi", n, { one: "गलती", other: "गलतियाँ" })}।`,
+    columns: { note: "नोट", asked: "कितनी बार पूछा", mistakes: "गलतियाँ", playedInstead: "इसकी जगह बजाया" },
+    firstTry: (n: number, count: number) => `पहली कोशिश में मिले: ${formatNumber("hi", count)} में से ${formatNumber("hi", n)}।`,
+  },
+  scoring: {
+    heading: "स्कोर",
+    judgements: { perfect: "परफ़ेक्ट", hit: "सही", mistake: "गलत", miss: "छूटा" },
+    counts: (hits: number, perfect: number, misses: number, mistakes: number) =>
+      `सही ${formatNumber("hi", hits)} · परफ़ेक्ट ${formatNumber("hi", perfect)} · छूटे ${formatNumber("hi", misses)} · गलत ${formatNumber("hi", mistakes)}`,
+    history: "इतिहास",
+    historyTitle: "इस गाने की आपकी कोशिशें",
+    readError: "इतिहास पढ़ा नहीं जा सका।",
+    saved: "कोशिश इतिहास में सेव हो गई।",
+    saveError: "यह कोशिश सेव नहीं की जा सकी।",
+  },
+  game: {
+    levels: { easy: "आसान", normal: "सामान्य", hard: "कठिन" },
+    words: {
+      perfect: "परफ़ेक्ट",
+      great: "बढ़िया",
+      good: "अच्छा",
+      hold: "होल्ड",
+      release: "साफ़",
+      wrong: "गलत नोट",
+      miss: "छूटा",
+      short: "बहुत छोटा",
+      long: "बहुत लंबा",
+      late: "देर से",
+    },
+    name: "गेम",
+    score: "स्कोर",
+    combo: "कॉम्बो",
+    multiplier: "मल्टीप्लायर",
+    held: (points: string) => `होल्ड ${points}`,
+    burst: (multiplier: number) => `कॉम्बो ×${formatNumber("hi", multiplier)}!`,
+    inARow: (combo: number) => `लगातार ${formatNumber("hi", combo)}`,
+    announce: (multiplier: number, combo: number) =>
+      `कॉम्बो ${formatNumber("hi", multiplier)} गुना, लगातार ${formatNumber("hi", combo)} सही नोट।`,
+    result: "कोशिश का नतीजा",
+    complete: "कोशिश पूरी हुई",
+    bestCombo: (combo: number) => `सबसे बड़ा कॉम्बो ${formatNumber("hi", combo)}`,
+    stats: {
+      perfect: "परफ़ेक्ट",
+      great: "बढ़िया",
+      good: "अच्छा",
+      wrong: "गलत",
+      miss: "छूटे",
+      late: "देर से",
+      short: "बहुत छोटा",
+      long: "बहुत लंबा",
+    },
+    helped: "‘आपके नोट का इंतज़ार’ के साथ",
+    close: "बंद करें",
+    closeName: "कोशिश का नतीजा बंद करें",
+  },
+  pdf: {
+    noSong: "पहले कोई गाना खोलें, फिर उसके नोट PDF में सेव करें।",
+    intro: (title: string) =>
+      `यह ${title} के गिरते नोट पियानो के ऊपर दिखाकर सेव करता है। हर पेज पर गाने के कुछ सेकंड होते हैं।`,
+    secondsPerPage: "हर पेज पर सेकंड",
+    background: "बैकग्राउंड के रंग इस्तेमाल करें",
+    pages: (pages: number, seconds: number) =>
+      `${formatNumber("hi", pages)} पेज, हर पेज पर गाने के ${formatNumber("hi", seconds)} सेकंड।`,
+    save: "PDF सेव करें",
+    pageHeading: (title: string, from: string, to: string, page: number, count: number) =>
+      `${title}   ${from} से ${to}   पेज ${formatNumber("hi", page)}, कुल ${formatNumber("hi", count)}`,
+  },
+};

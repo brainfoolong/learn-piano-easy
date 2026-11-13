@@ -131,7 +131,8 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       "Chrome", "Edge", "Firefox", "Safari", "JavaScript", "MIT", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz",
       "dB", "ms", "KB", "MB", "px", "3D", "Esc", "BWV", "K.", "HWV",
       "mezzo-piano", "mezzo-forte", "ritardando", "rallentando", "piano", "forte", "rit.", "rall.", "decresc.", "cresc.",
-      "dim.", "a tempo", "Ped.", "mp", "mf", "pp", "ff", "p", "f",
+      "dim.", "a tempo", "Ped.", "mp", "mf", "pp", "ff", "p", "f", "Do", "Re", "Mi",
+      "Q", "W", "Z", "M", "I", "R", "V",
     ],
     marks: [
       { says: "A sentence ends with the danda ।, and an ASCII period stands only inside a number", mustNot: /(?<!\d)\.|\.(?!\d)/ },
