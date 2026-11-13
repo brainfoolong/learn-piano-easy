@@ -57,7 +57,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Bas bergeser turun dari C kres ke C. Geseran yang seram itulah yang membuat para troll terdengar mengendap-endap.",
-        "Setelah C kres dengan jari 2, ibu jari menyusup untuk memainkan D, lalu tangan naik.",
+        "Setelah C kres dengan jari 2, susupkan ibu jari untuk memainkan D, lalu tangan naik.",
         "Sekarang tangan kiri memainkan melodi. Tangan kanan hanya mengetuk akor pendek di antara ketukan.",
       ],
       tricky: {

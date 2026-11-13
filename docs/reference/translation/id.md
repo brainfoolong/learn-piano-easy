@@ -171,6 +171,8 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | right hand, left hand, both hands | tangan kanan, tangan kiri, kedua tangan | EP; WH; DN |
 | hand position; C position | posisi tangan; posisi C | the course's own terms |
 | thumb under, finger over | ibu jari menyusup, jari menyeberang | the course's own terms, unsourced |
+| pass the thumb under (an instruction) | susupkan ibu jari | *Ibu jari menyusup* only describes the move |
+| climb a chord or notes (an instruction) | mainkan … dari bawah ke atas; mainkan … yang naik | *Naiki* means to ride or mount |
 | a shape the hand holds; the octave shape | posisi; posisi oktaf | the guides' own terms. *Bentuk* reads as translated. |
 | a stretch between two fingers; the same shape of an interval | rentangan; rentangan yang sama | the guides' own terms |
 | the shape of a melody | alur: *alur yang sama dengan birama 6* | the guides' own term |
@@ -206,6 +208,11 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | organ (the church's) | orgel; *orgel pipa* | KBBI. *Organ* reads as an electric keyboard, unsourced |
 | the Christ Child | Kanak-kanak Yesus | church usage, unsourced |
 | a move of the hand | gerakan | *langkah* is kept for a lesson's step |
+| symphonic poem, tone poem | puisi simfonis | the guides' own term, unsourced |
+| a loose wrist | pergelangan tangan yang lemas | the guides' own term. *Lentur* and *luwes* drifted in and were unified. |
+| a tune or a run climbs (or walks down) D, E and F | naik (turun) melalui D, E, dan F | *naik ke D, E, dan F* reads as moving to the notes. Fingers named one per note keep *ke*. |
+| a dotted pair | pasangan not bertitik | after *pasangan not* |
+| broken octaves | oktaf terurai | after *akor terurai* |
 | attack, decay, sustain, release | attack, decay, sustain, release | synthesizer usage keeps the English |
 | enharmonic | enharmonis | WP *Akor*, one source |
 

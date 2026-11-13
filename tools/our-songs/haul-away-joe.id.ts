@@ -56,12 +56,12 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Ganti pedal di setiap not bas baru, dua kali dalam setiap birama.",
-        "Setelah F, ibu jari menyusup ke G. Lalu jari 2, 3, dan 4 meraih A, B, dan C.",
+        "Setelah F, susupkan ibu jari ke G. Lalu jari 2, 3, dan 4 meraih A, B, dan C.",
         "Melodinya adalah not teratas setiap pasangan, jadi biarkan jari yang di atas memimpin.",
       ],
       tricky: {
         13: "Turun dari D dengan jari 5 sampai 1. Lalu jari 3 menyeberang di atas ibu jari ke F.",
-        16: "Naiki akor D minor dengan jari 1, 2, 3, dan 5. Tanganmu terbuka lebar untuk D tinggi.",
+        16: "Mainkan akor D minor dari bawah ke atas dengan jari 1, 2, 3, dan 5. Tanganmu terbuka lebar untuk D tinggi.",
         20: "Jari 1 dan 5 menahan setiap sekst dan meluncur naik satu tuts demi satu tuts. Jaga posisi tanganmu tetap sama.",
       },
     },

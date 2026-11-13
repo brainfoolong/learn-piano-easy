@@ -59,7 +59,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Mainkan bas Alberti dengan lembut, agar melodi melayang di atasnya.",
-        "Naiki E, F kres, dan G kres dengan jari 1, 2, dan 3, lalu ibu jari menyusup ke A.",
+        "Mainkan E, F kres, dan G kres yang naik dengan jari 1, 2, dan 3, lalu susupkan ibu jari ke A.",
         "Melodinya adalah not teratas setiap pasangan, jadi biarkan jari yang di atas memimpin.",
       ],
       tricky: {
