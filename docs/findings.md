@@ -1256,3 +1256,39 @@ ship in four versions. The library groups them as its film and sea collections.
 - A tune with notes shorter than a quarter is written in longer lengths, in proportion.
 - A work whose first print no allowed source dates takes its earliest dated print read.
 - The collections are `film` and `sea`, after `christmas`.
+
+## many-locales
+
+**Target:** a locale may lack any text and shows the English instead. Each locale loads only its own
+texts, and the tools and checks of a translation pass exist.
+
+### Findings
+
+- `src/i18n/locale-table.ts` holds thirteen rows, and only `en` and `de` ship. Both are `complete`.
+- English is in the main bundle, and each other locale's catalog is its own chunk.
+- A world loads its lesson texts per locale through `World.loadTexts`, and English stays in the world's chunk.
+- `bun run i18n` runs `status`, `work` and `stamp` of `tools/i18n.ts`. German has no stamps, so it reads all stale.
+- `src/i18n/translation-rules.test.ts` checks script, arguments, plurals, marks and isolation of every translation file.
+- The pseudo-locale `en-XA` found every hard-coded text, and each moved into the catalogs in English and German.
+- Every layout holds text 40% longer, and the layout checks run in `en`, `de` and `en-XA` at every width.
+- Each script has a system font stack under `:root:lang(<code>)` in `src/ui/tokens.css`. No new font ships.
+- A bar slot of `src/learn/game/bar-slot.ts` fades in after its first read. A test measures a `learn/` page once it is ready.
+- An e2e file that reads a German text in Node loads every catalog first, as `e2e/site.e2e.ts` does.
+
+### Decisions that still bind
+
+- The locale table is the one home of a locale's facts, and every list elsewhere derives from it.
+- `shipped` gates everything a visitor meets, and `complete` marks the locales that must hold every text.
+- A translation is `Translation<T>`, a deep partial of the English. A function or an array is translated whole or not at all.
+- The fallback merges once, when a catalog or a world's texts load. `messagesOf` and `textsOf` throw before the load.
+- Only `tools/`, tests and e2e files import `src/i18n/all-catalogs.ts`, and a test holds `src/` to that.
+- A translated list of another length than the English shows the English list.
+- A text's id is its path, and a stamp records the first 12 hex digits of the SHA-256 of its English.
+- A guide's translation is `tools/our-songs/<slug>.<locale>.ts`, and the German block stays in the song module.
+- The legal notice and the privacy text stay English and German only.
+- The rules test skips English and German, and names one test per locale from its English name.
+- `en-XA` sits beside the table, never in it. The release build writes no page of it.
+- A joining script gets no `letter-spacing`, and Han text gets no italic.
+- Solfège is written in the locale's script and spelling, and the naming setting's `auto` follows the live locale.
+- Sorting uses `collator` of `src/i18n/format.ts`, with numbers compared as numbers.
+- A shipped locale adds its own layout run at 360 and 1280 pixels in its own goal.

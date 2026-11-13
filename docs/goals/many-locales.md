@@ -330,6 +330,9 @@ and sorting by the live locale.
 
 Every stage is done, and the goal is reached. The second `looper verify` is green on every check.
 
+- The first DONE was refused: `every_route_reloads_offline` of the floor's `site-e2e` read a German
+  title before its catalog loaded. `e2e/site.e2e.ts:15` now loads every catalog first, and it is green.
+- `docs/findings.md` § `many-locales` holds the harvest, and `looper harvested many-locales` exits 0.
 - The first run's one red test was `every_page_holds_longer_text` in `e2e/pseudo.e2e.ts:92`. Its low
   contrast was the bar slot's fade-in, caught mid-way. No colour was wrong.
 - The bar slot of `src/learn/game/bar-slot.ts` hides by opacity until its first read, then fades in.
@@ -339,8 +342,8 @@ Every stage is done, and the goal is reached. The second `looper verify` is gree
 
 ### Next
 
-The goal is reached. Harvest it into `docs/findings.md` § `many-locales`, move its checks into the
-floor, and delete this file. The next goal on the chain is `spanish`. No test is expected to go red.
+The goal is reached and harvested. The driver retires it: its checks join the floor, and this file
+goes. The next goal on the chain is `spanish`. No test is expected to go red.
 
 ### Backlog
 
