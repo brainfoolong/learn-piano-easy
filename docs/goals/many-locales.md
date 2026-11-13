@@ -320,7 +320,7 @@ and sorting by the live locale.
 
 ### 6. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
+- [x] Run `looper verify` over the whole goal.
 - [ ] Fix every failure it names in one pass, never deleting or loosening a test.
 - [ ] Run `looper verify` once more, and it is green.
 
@@ -349,17 +349,19 @@ What earlier stages left to later ones:
 
 ### Next
 
-**Stage 6: the gate.** Run `looper verify`, fix every failure in one pass, and run it once more.
+**Stage 6: the gate.** The first `looper verify` ran. `bun install`, `tsc` and `bun test` are green.
+The e2e run had 154 passed and 1 failed. Fix that one failure, then run `looper verify` once more.
 
-Expected red:
+The one red test:
 
-- Every layout test runs `en-XA` too, through `LOCALES` of `e2e/layout-check.ts`, and none has run yet.
-  A flaw only `en-XA` shows may fail `e2e/design.e2e.ts`, `e2e/site.e2e.ts`, `e2e/landing.e2e.ts`,
-  `e2e/play.e2e.ts` or `e2e/game.e2e.ts`. Each runs 1.5 times longer, so a tight `test.setTimeout`
-  may fail too.
-- A test that reads the naming setting's options or its default, such as one of
-  `src/settings/*.test.ts` or an e2e test of the panel's *Note names* select, now meets `auto`.
-- The 3D labels now draw in Plus Jakarta Sans, not `system-ui`. A test that measures a label may shift.
+- `every_page_holds_longer_text` in `e2e/pseudo.e2e.ts:92`. On `learn/meet-the-piano/welcome/` at
+  1920 pixels, light theme, `en-XA` only, the XP counter's spans `0` and `⟦0 XP ĺ⟧` have a contrast
+  of 1.22 to 1. So low a contrast suggests the counter was caught mid fade or under an overlay, not a
+  wrong colour. Find the XP counter's view, check its opacity or transition at that moment, and fix
+  the cause. Never loosen the test.
+
+The trace is under `.agent-tmp/e2e/runs/30436/results/`, and the full log in `.agent-tmp/verify-e2e.log`.
+A later run may have cleaned both away.
 
 ### Backlog
 
