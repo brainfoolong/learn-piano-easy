@@ -48,7 +48,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toca el bajo de Alberti con la mano izquierda sola hasta que ruede solo: grave, agudo, medio, agudo.",
+        "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
         "Toca las terceras y sextas de la mano derecha sola, y mantén juntas las dos notas de cada doble nota.",
         "Junta las manos en los primeros cuatro compases, despacio.",
         "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",

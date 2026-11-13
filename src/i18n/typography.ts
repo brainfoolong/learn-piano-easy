@@ -44,7 +44,7 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
   de: { kept: [], marks: [] },
   es: {
     kept: [
-      "Learn Piano Easy", "Hark! The Herald Angels Sing", "Moulin Rouge!", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari",
+      "Learn Piano Easy", "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman","Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari",
       "XP", "BPM", "FPS", "PDF", "kHz", "Hz", "dB", "ms", "KB", "MB", "combo", "Combo", "tempo", "Tempo",
       "legato", "staccato", "crescendo", "diminuendo", "forte", "piano", "Piano", "Error",
     ],

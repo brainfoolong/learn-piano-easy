@@ -51,7 +51,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toca la mano izquierda sola hasta que los acordes arpegiados rueden solos: grave, agudo, medio, agudo.",
+        "Toca con la mano izquierda sola los acordes arpegiados, hasta que rueden por sí mismos: grave, agudo, medio, agudo.",
         "Toca los compases 3 y 4 con la mano derecha sola. Ahí los dedos se cruzan en los dos sentidos.",
         "Junta las manos en los primeros nueve compases, despacio.",
         "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
