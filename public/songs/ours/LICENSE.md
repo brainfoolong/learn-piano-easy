@@ -392,3 +392,18 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `haul-away-joe/epic.mid` | Haul Away Joe, Medium | Traditional | MIT |
 | `haul-away-joe/legendary.mid` | Haul Away Joe, Hard | Traditional | MIT |
 | `haul-away-joe/guide.json` | Haul Away Joe, the guide | | MIT |
+| `neon-chase/common.mid` | Neon Chase, Beginner | learn-piano-easy | MIT |
+| `neon-chase/rare.mid` | Neon Chase, Easy | learn-piano-easy | MIT |
+| `neon-chase/epic.mid` | Neon Chase, Medium | learn-piano-easy | MIT |
+| `neon-chase/legendary.mid` | Neon Chase, Hard | learn-piano-easy | MIT |
+| `neon-chase/guide.json` | Neon Chase, the guide | | MIT |
+| `black-flag-jig/common.mid` | Black Flag Jig, Beginner | learn-piano-easy | MIT |
+| `black-flag-jig/rare.mid` | Black Flag Jig, Easy | learn-piano-easy | MIT |
+| `black-flag-jig/epic.mid` | Black Flag Jig, Medium | learn-piano-easy | MIT |
+| `black-flag-jig/legendary.mid` | Black Flag Jig, Hard | learn-piano-easy | MIT |
+| `black-flag-jig/guide.json` | Black Flag Jig, the guide | | MIT |
+| `last-horizon/common.mid` | Last Horizon, Beginner | learn-piano-easy | MIT |
+| `last-horizon/rare.mid` | Last Horizon, Easy | learn-piano-easy | MIT |
+| `last-horizon/epic.mid` | Last Horizon, Medium | learn-piano-easy | MIT |
+| `last-horizon/legendary.mid` | Last Horizon, Hard | learn-piano-easy | MIT |
+| `last-horizon/guide.json` | Last Horizon, the guide | | MIT |

@@ -1,0 +1,493 @@
+{
+  "song": "neon-chase",
+  "title": "Neon Chase",
+  "composer": "learn-piano-easy",
+  "about": {
+    "en": "Neon Chase is a tune of our own, written for this app in the style of a 1980s synth film score. A driving bass pulses under it like a car chase at night.",
+    "de": "Neon Chase ist eine eigene Melodie, für diese App geschrieben im Stil einer Synthesizer-Filmmusik der 1980er Jahre. Ein treibender Bass pulsiert darunter wie eine Verfolgungsjagd bei Nacht."
+  },
+  "funFact": {
+    "en": "Many film scores of the 1980s were played on synthesizers instead of an orchestra, often by the composer alone in a small studio.",
+    "de": "Viele Filmmusiken der 1980er Jahre wurden auf Synthesizern statt von einem Orchester gespielt, oft vom Komponisten allein in einem kleinen Studio."
+  },
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/neon-chase/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [1, 1, 3, 5, 4, 3, 2, 1, 1, 3, 4, 5, 5, 4, 3, 4, 5, 1, 2, 4, 3, 1, 2, 2, 3, 4, 2, 4, 2, 4, 5, 3, 1, 3, 2, 1, 2, 4, 5, 4, 2, 4, 5, 5, 3, 1, 3, 2],
+        "left": [5, 2, 5, 2, 4, 1, 3, 5, 2, 5, 2, 3, 5, 3, 5, 2, 5, 2, 5, 2, 3, 4, 1, 5, 3, 5, 2, 5, 2, 5, 2, 5, 2, 4, 1, 4, 1, 3, 3, 5, 3, 5, 3, 5, 2, 5, 2, 4, 1, 4, 1, 3, 5, 3, 5, 2]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [60, 57, 55, 53, 52]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play bars 1 to 4 with the right hand alone, and let the song wait for each note.",
+            "de": "Spiel die Takte 1 bis 4 nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play bars 5 to 8 with the right hand alone. The hand moves down one key in bar 6.",
+            "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. In Takt 6 rückt die Hand eine Taste tiefer."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Now the left hand alone. It strikes a shape twice in every bar and never moves.",
+            "de": "Jetzt die linke Hand allein. Sie schlägt in jedem Takt zweimal einen Griff an und bewegt sich nie."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Put both hands together on the first eight bars, slowly.",
+            "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "fingering",
+          "text": {
+            "en": "Start with the thumb on A. Fingers 1 to 5 then sit on A, B, C, D and E.",
+            "de": "Fang mit dem Daumen auf dem A an. Finger 1 bis 5 liegen dann auf A, H, C, D und E."
+          }
+        },
+        {
+          "fromBar": 6,
+          "toBar": 6,
+          "kind": "trick",
+          "text": {
+            "en": "Let go of the long E a little early. In the short gap, move the hand down one key, so the thumb lands on G.",
+            "de": "Lass das lange E etwas früher los. In der kurzen Lücke rückt die Hand eine Taste tiefer, sodass der Daumen auf dem G landet."
+          }
+        },
+        {
+          "fromBar": 1,
+          "toBar": 16,
+          "kind": "rhythm",
+          "text": {
+            "en": "The left hand strikes on beats 1 and 3, like a slow engine. Keep it steady.",
+            "de": "Die linke Hand schlägt auf Schlag 1 und 3 an, wie ein langsamer Motor. Halt sie gleichmäßig."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 10,
+          "text": {
+            "en": "Finger 4 plays C, and finger 2 plays A in between. Finger 3 rests over B and waits.",
+            "de": "Finger 4 spielt das C, und Finger 2 spielt dazwischen das A. Finger 3 ruht über dem H und wartet."
+          }
+        },
+        {
+          "bar": 5,
+          "text": {
+            "en": "Fingers 5, 4, 3 and 4 rock between E, D and C. Keep the hand still, and let the fingers do the work.",
+            "de": "Finger 5, 4, 3 und 4 schaukeln zwischen E, D und C. Halt die Hand still, und lass die Finger arbeiten."
+          }
+        },
+        {
+          "bar": 13,
+          "text": {
+            "en": "Fingers 2, 4 and 5 climb from A over C to D, then step back to C. The thumb rests over G.",
+            "de": "Finger 2, 4 und 5 steigen vom A über das C zum D, dann zurück zum C. Der Daumen ruht über dem G."
+          }
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/neon-chase/rare.mid",
+      "skills": [
+        "eighth-notes",
+        "two-note-chords"
+      ],
+      "fingers": {
+        "right": [1, 1, 3, 5, 4, 3, 2, 1, 1, 3, 4, 3, 5, 5, 4, 3, 4, 5, 1, 2, 4, 3, 1, 2, 2, 4, 3, 2, 4, 4, 2, 4, 5, 4, 5, 3, 2, 1, 3, 3, 2, 1, 2, 2, 3, 4, 5, 4, 2, 4, 5, 4, 2, 3, 5, 3, 2, 1, 2, 4],
+        "left": [5, 2, 2, 5, 2, 2, 4, 1, 4, 3, 3, 5, 2, 2, 5, 2, 2, 3, 3, 5, 3, 5, 5, 2, 2, 5, 2, 2, 5, 2, 2, 3, 3, 4, 1, 4, 5, 3, 5, 5, 2, 2, 5, 2, 2, 5, 2, 2, 5, 2, 2, 4, 1, 4, 4, 1, 4, 3, 3, 3, 3, 5, 3, 5, 5, 3, 5, 5, 2, 2, 5, 2, 2, 4, 1, 4, 4, 1, 4, 3, 3, 5, 3, 5, 5, 2]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [60, 57, 55, 53, 52]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the left hand alone. It plays on every beat, like the engine of a car.",
+            "de": "Spiel die linke Hand allein. Sie spielt auf jedem Schlag, wie der Motor eines Autos."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand alone on the first eight bars, and let the song wait for each note.",
+            "de": "Spiel die ersten acht Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand alone on bars 9 to 16, where the eighths come in.",
+            "de": "Spiel die Takte 9 bis 16 nur mit der rechten Hand. Dort kommen die Achtel dazu."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on the whole song, a little slower than written.",
+            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed.",
+            "de": "Jetzt spiel es im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": {
+            "en": "The left hand plays four even beats in each bar. Let the tune ride on top of them.",
+            "de": "Die linke Hand spielt vier gleichmäßige Schläge in jedem Takt. Lass die Melodie darauf reiten."
+          }
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "fingering",
+          "text": {
+            "en": "Press C and E together with fingers 3 and 5, and hold them for three beats.",
+            "de": "Drück C und E zusammen mit Finger 3 und 5, und halt sie drei Schläge lang."
+          }
+        },
+        {
+          "fromBar": 16,
+          "toBar": 16,
+          "kind": "sound",
+          "text": {
+            "en": "End with A and C together, and let them ring for the whole bar.",
+            "de": "Am Ende spielst du A und C zusammen. Lass sie den ganzen Takt klingen."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 10,
+          "text": {
+            "en": "Fingers 4 and 2 swap between C and A, then finger 5 reaches up to D. Keep the eighths even.",
+            "de": "Finger 4 und 2 wechseln zwischen C und A, dann greift Finger 5 hinauf zum D. Halt die Achtel gleichmäßig."
+          }
+        },
+        {
+          "bar": 14,
+          "text": {
+            "en": "Fingers 2, 4 and 5 climb to D in eighths, then walk back down to A.",
+            "de": "Finger 2, 4 und 5 steigen in Achteln zum D, dann gehen sie zurück hinunter zum A."
+          }
+        },
+        {
+          "bar": 7,
+          "text": {
+            "en": "Finger 2 plays A, finger 4 C, finger 3 B and the thumb G. The hand stays where bar 6 left it.",
+            "de": "Finger 2 spielt das A, Finger 4 das C, Finger 3 das H und der Daumen das G. Die Hand bleibt, wo Takt 6 sie gelassen hat."
+          }
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/neon-chase/epic.mid",
+      "skills": [
+        "thumb-under",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [1, 1, 3, 5, 4, 3, 2, 1, 1, 3, 4, 5, 5, 4, 3, 4, 5, 1, 2, 4, 3, 1, 2, 1, 2, 4, 1, 2, 4, 1, 3, 1, 2, 1, 2, 5, 1, 4, 1, 3, 1, 3, 5, 1, 3, 1, 2, 3, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 4, 1, 3, 5, 1, 3, 5, 1, 3, 1, 2, 5, 1, 2, 5, 1, 3, 5, 4, 3, 2, 1, 3, 2, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 2, 5, 2, 4, 2, 4, 1, 3, 1, 2, 1, 3, 2, 5, 1, 2, 1, 3, 2, 4, 1, 3, 1, 2, 1, 2, 5],
+        "left": [5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 5, 1, 5, 5, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [52, null, null, null, 45]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the left hand alone until the pulse of eighths runs by itself.",
+            "de": "Spiel die linke Hand allein, bis der Puls aus Achteln von selbst läuft."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand alone on bars 9 to 16, and count the stabs: three, three, two.",
+            "de": "Spiel die Takte 9 bis 16 nur mit der rechten Hand, und zähl die Akkordschläge: drei, drei, zwei."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand's thirds and sixths alone, and press both notes of each pair as one.",
+            "de": "Spiel die Terzen und Sexten der rechten Hand allein, und drück beide Töne jedes Paars wie einen an."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [17, 24],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, and keep the pulse driving.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den Puls treiben."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": {
+            "en": "The left hand never stops: eight even eighths in every bar, like headlights flashing past.",
+            "de": "Die linke Hand hört nie auf: acht gleichmäßige Achtel in jedem Takt, wie vorbeiblitzende Scheinwerfer."
+          }
+        },
+        {
+          "fromBar": 9,
+          "toBar": 11,
+          "kind": "rhythm",
+          "text": {
+            "en": "The chords fall on 1, the and of 2, and 4. Count eight eighths and stab on 1, 4 and 7.",
+            "de": "Die Akkorde fallen auf 1, das Und von 2 und auf 4. Zähl acht Achtel und schlag auf 1, 4 und 7 an."
+          }
+        },
+        {
+          "fromBar": 12,
+          "toBar": 12,
+          "kind": "fingering",
+          "text": {
+            "en": "Pass the thumb under to C after B. Fingers 2 and 3 then reach D and E.",
+            "de": "Setz nach dem H den Daumen unter zum C. Dann erreichen Finger 2 und 3 das D und das E."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": {
+            "en": "Keep fingers 1 and 5 a sixth apart, and move the whole hand up for each new pair.",
+            "de": "Halt Finger 1 und 5 eine Sexte auseinander, und rück die ganze Hand für jedes neue Paar höher."
+          }
+        },
+        {
+          "bar": 18,
+          "text": {
+            "en": "The pairs walk down from D to B. Keep the hand's shape, and move it one key at a time.",
+            "de": "Die Paare gehen vom D hinunter zum H. Behalt die Form der Hand, und rück sie jeweils eine Taste weiter."
+          }
+        },
+        {
+          "bar": 19,
+          "text": {
+            "en": "The pairs climb as in bar 17. The last one is a fifth, G and D, so close the hand a little.",
+            "de": "Die Paare steigen wie in Takt 17. Das letzte ist eine Quinte, G und D, also schließ die Hand ein wenig."
+          }
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/neon-chase/legendary.mid",
+      "skills": [
+        "octave-bass",
+        "sixteenth-notes",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [1, 1, 3, 5, 4, 5, 4, 3, 2, 1, 1, 3, 4, 5, 4, 3, 2, 3, 5, 4, 3, 4, 5, 1, 2, 4, 3, 1, 2, 1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 5, 4, 3, 2, 1, 2, 3, 5, 1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 5, 4, 3, 2, 1, 2, 1, 2, 1, 2, 5, 1, 2, 5, 1, 2, 5, 5, 4, 3, 2, 1, 3, 2, 1, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 4, 5, 4, 2, 1, 2, 1, 2, 3, 5, 3, 2, 1, 2, 1, 2, 5, 1, 2, 5, 2, 5, 1, 2, 3, 5, 3, 2, 1, 2, 1, 2, 3, 4, 3, 2, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 2, 5, 2, 4, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 5, 1, 5, 5, 1]
+      },
+      "start": {
+        "right": [69, 71, 72, 74, 76],
+        "left": [57, null, null, null, 45]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the left hand alone. Rock between finger 5 and the thumb, an octave apart.",
+            "de": "Spiel die linke Hand allein. Schaukel zwischen Finger 5 und dem Daumen, eine Oktave auseinander."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand's runs alone, slowly, and pass the thumb under on the way up.",
+            "de": "Spiel die Läufe der rechten Hand langsam allein, und setz auf dem Weg nach oben den Daumen unter."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand's chords alone, and let the top finger sing the tune.",
+            "de": "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [17, 24],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, and let the last chord ring.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "trick",
+          "text": {
+            "en": "Keep the left wrist loose and let it rock. The octaves then pump by themselves.",
+            "de": "Halt das linke Handgelenk locker und lass es schaukeln. Dann pumpen die Oktaven von selbst."
+          }
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "sound",
+          "text": {
+            "en": "Play the runs lightly and the stabs short and bright, like a synthesizer.",
+            "de": "Spiel die Läufe leicht und die Akkordschläge kurz und hell, wie ein Synthesizer."
+          }
+        },
+        {
+          "fromBar": 17,
+          "toBar": 24,
+          "kind": "sound",
+          "text": {
+            "en": "The tune is the top note of each chord. Play it a little louder than the rest.",
+            "de": "Die Melodie ist der obere Ton jedes Akkords. Spiel ihn etwas lauter als den Rest."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": {
+            "en": "Stab each chord short, and use the rest after it to move to the next one.",
+            "de": "Schlag jeden Akkord kurz an, und nutz die Pause danach, um zum nächsten zu wechseln."
+          }
+        },
+        {
+          "bar": 22,
+          "text": {
+            "en": "Stab the four-note chord twice with fingers 1, 2, 3 and 5. Then drop the hand to B, D and G.",
+            "de": "Schlag den Akkord aus vier Tönen zweimal mit Finger 1, 2, 3 und 5 an. Dann senk die Hand zu H, D und G."
+          }
+        },
+        {
+          "bar": 23,
+          "text": {
+            "en": "Four short chords carry A, C, B and G on top. Let go after each, and land the next in the rest.",
+            "de": "Vier kurze Akkorde tragen A, C, H und G oben. Lass nach jedem los, und lande den nächsten in der Pause."
+          }
+        }
+      ]
+    }
+  }
+}

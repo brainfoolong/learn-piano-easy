@@ -17,7 +17,7 @@ interface CatalogSong {
 
 test("every_library_song_parses_with_notes_and_a_duration", async () => {
   const catalog = (await Bun.file(join(songsDir, "catalog.json")).json()) as CatalogSong[];
-  expect(catalog.length).toBe(693);
+  expect(catalog.length).toBe(705);
   for (const entry of catalog) {
     expect({ file: entry.file, difficulty: entry.difficulty >= 1 && entry.difficulty <= 10 }).toEqual({
       file: entry.file,

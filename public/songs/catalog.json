@@ -7063,6 +7063,251 @@
     "collection": "sea"
   },
   {
+    "composer": "learn-piano-easy",
+    "piece": "Neon Chase",
+    "title": "Beginner",
+    "file": "ours/neon-chase/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 52,
+    "high": 76,
+    "seconds": 40,
+    "song": "neon-chase",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Neon Chase",
+    "title": "Easy",
+    "file": "ours/neon-chase/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 52,
+    "high": 76,
+    "seconds": 37,
+    "song": "neon-chase",
+    "rarity": "rare",
+    "skills": [
+      "eighth-notes",
+      "two-note-chords"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Neon Chase",
+    "title": "Medium",
+    "file": "ours/neon-chase/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 81,
+    "seconds": 49,
+    "song": "neon-chase",
+    "rarity": "epic",
+    "skills": [
+      "thumb-under",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Neon Chase",
+    "title": "Hard",
+    "file": "ours/neon-chase/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 33,
+    "high": 81,
+    "seconds": 49,
+    "song": "neon-chase",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "sixteenth-notes",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Black Flag Jig",
+    "title": "Beginner",
+    "file": "ours/black-flag-jig/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 48,
+    "high": 70,
+    "seconds": 53,
+    "song": "black-flag-jig",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Black Flag Jig",
+    "title": "Easy",
+    "file": "ours/black-flag-jig/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 70,
+    "seconds": 55,
+    "song": "black-flag-jig",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Black Flag Jig",
+    "title": "Medium",
+    "file": "ours/black-flag-jig/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 76,
+    "seconds": 74,
+    "song": "black-flag-jig",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "thumb-under",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Black Flag Jig",
+    "title": "Hard",
+    "file": "ours/black-flag-jig/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 82,
+    "seconds": 69,
+    "song": "black-flag-jig",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Last Horizon",
+    "title": "Beginner",
+    "file": "ours/last-horizon/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 70,
+    "seconds": 53,
+    "song": "last-horizon",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Last Horizon",
+    "title": "Easy",
+    "file": "ours/last-horizon/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 70,
+    "seconds": 53,
+    "song": "last-horizon",
+    "rarity": "rare",
+    "skills": [
+      "eighth-notes",
+      "two-note-chords"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Last Horizon",
+    "title": "Medium",
+    "file": "ours/last-horizon/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 74,
+    "seconds": 82,
+    "song": "last-horizon",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "thumb-under",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
+    "composer": "learn-piano-easy",
+    "piece": "Last Horizon",
+    "title": "Hard",
+    "file": "ours/last-horizon/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 80,
+    "seconds": 76,
+    "song": "last-horizon",
+    "rarity": "legendary",
+    "skills": [
+      "sixteenth-notes",
+      "melody-in-chords",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": []
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",

@@ -107,6 +107,9 @@ import { blowTheManDown } from "./our-songs/blow-the-man-down";
 import { sailorsHornpipe } from "./our-songs/sailors-hornpipe";
 import { spanishLadies } from "./our-songs/spanish-ladies";
 import { haulAwayJoe } from "./our-songs/haul-away-joe";
+import { neonChase } from "./our-songs/neon-chase";
+import { blackFlagJig } from "./our-songs/black-flag-jig";
+import { lastHorizon } from "./our-songs/last-horizon";
 import { deckTheHalls } from "./our-songs/deck-the-halls";
 import { diesIrae } from "./our-songs/dies-irae";
 import { dingDongMerrilyOnHigh } from "./our-songs/ding-dong-merrily-on-high";
@@ -321,6 +324,9 @@ export const ourSongs: readonly OurSong[] = [
   sailorsHornpipe,
   spanishLadies,
   haulAwayJoe,
+  neonChase,
+  blackFlagJig,
+  lastHorizon,
 ];
 
 /** The version `rarity` of `song` as a song of the notation. */
