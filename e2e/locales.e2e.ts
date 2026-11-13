@@ -8,11 +8,13 @@
  *   A right-to-left one runs them at every width, as `passedWidthsOf` says. A flaw counts only where the
  *   locale's text adds it, since each page's own test holds its English. The pseudo-locale's longer texts
  *   already cover every width.
+ * - **Each page is a test that checks every passed locale,** so the workers share the pages. English is
+ *   measured once per width, not once per locale, and a new locale adds only its own measures.
  */
 import { expect, test, type Page } from "@playwright/test";
 import { COURSE } from "../src/learn/course";
 import { ROUTES } from "../src/site/routes";
-import { checkLayout, PASSED_LOCALES, PAST_SETUP, pastSetup, passedWidthsOf, THEMES } from "./layout-check";
+import { checkLayout, PASSED_LOCALES, PAST_SETUP, pastSetup, passedWidthsOf, THEMES, WIDTHS } from "./layout-check";
 
 /** Collects every uncaught error the page reports from now on. */
 function watchErrors(page: Page): string[] {
@@ -155,22 +157,26 @@ function shapeOf(flaw: string): string {
 /** The body of each page that draws after a read of its own, which is `aria-busy` until it draws. */
 const BUSY_BODIES: Readonly<Record<string, string>> = { "learn/": ".map__body", "learn/profile/": ".profile__body" };
 
-for (const locale of PASSED_LOCALES) {
-  test(`every_page_passes_the_layout_checks_in_${locale}`, async ({ browser, baseURL }) => {
-    const paths = await checkedPaths();
-    const widths = passedWidthsOf(locale);
-    test.setTimeout(paths.length * widths.length * THEMES.length * 2 * 20_000);
+for (const path of await checkedPaths()) {
+  test(`every_passed_locale_passes_the_layout_checks_on_${path || "./"}`, async ({ browser, baseURL }) => {
+    // A page of *Learn Piano* fades its bar slot in once the slot's read ends, and the map and the
+    // profile fade their body in once their own read ends. The page is measured after both.
+    const body = BUSY_BODIES[path];
+    const slot = '.bar-slot[data-ready="true"]';
+    const ready = !path.startsWith("learn/") ? undefined : body === undefined ? slot : `body:has(${body}:not([aria-busy])):has(${slot})`;
+    // Each width measures English once, with every passed locale checked at that width.
+    const runs = WIDTHS.map((width) => ({ width, locales: PASSED_LOCALES.filter((locale) => passedWidthsOf(locale).includes(width)) })).filter((run) => run.locales.length > 0);
+    test.setTimeout(runs.reduce((sum, run) => sum + run.locales.length + 1, 0) * THEMES.length * 20_000);
+    const found: string[] = [];
+    for (const run of runs) {
+      const options = { widths: [run.width], locales: ["en", ...run.locales], reducedMotion: true, storage: PAST_SETUP, ...(ready === undefined ? {} : { ready }) };
+      found.push(...(await checkLayout(browser, new URL(path, baseURL).href, options)));
+    }
     const flaws: string[] = [];
-    for (const path of paths) {
-      // A page of *Learn Piano* fades its bar slot in once the slot's read ends, and the map and the
-      // profile fade their body in once their own read ends. The page is measured after both.
-      const body = BUSY_BODIES[path];
-      const slot = '.bar-slot[data-ready="true"]';
-      const ready = !path.startsWith("learn/") ? undefined : body === undefined ? slot : `body:has(${body}:not([aria-busy])):has(${slot})`;
-      const options = { widths, locales: ["en", locale], reducedMotion: true, storage: PAST_SETUP, ...(ready === undefined ? {} : { ready }) };
-      const found = await checkLayout(browser, new URL(path, baseURL).href, options);
-      const english = new Set(found.filter((flaw) => flaw.includes(" en: ")).map(shapeOf));
-      flaws.push(...found.filter((flaw) => flaw.includes(` ${locale}: `) && !english.has(shapeOf(flaw))).map((flaw) => `${path || "./"} ${flaw}`));
+    for (const locale of PASSED_LOCALES) {
+      const widths = passedWidthsOf(locale);
+      const english = new Set(found.filter((flaw) => flaw.includes(" en: ") && widths.some((width) => flaw.startsWith(`${width} `))).map(shapeOf));
+      flaws.push(...found.filter((flaw) => flaw.includes(` ${locale}: `) && !english.has(shapeOf(flaw))));
     }
     expect(flaws).toEqual([]);
   });
