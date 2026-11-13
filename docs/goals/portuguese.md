@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Portuguese site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -154,13 +154,13 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 term, address or mark that drifts between files.
 **Gate:** `bun run i18n status pt` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `pt` is `shipped`. `src/i18n/locale.ts:18`
-- [ ] The Portuguese social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `pt` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_portuguese_site_reads_in_portuguese`: `lang`, the switch's *Português (Brasil)*, a lesson step and the player in Portuguese. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `pt` with `bun run shot --locale pt-BR`, on a phone and a desktop, in both themes.
-- [ ] The feature list and the README name Portuguese. `docs/reference/features.md:1`, `README.md:12`
+- [x] Every drift the reader lists is settled in the files it names.
+- [x] `pt` is `shipped`. `src/i18n/locale.ts:18`
+- [x] The Portuguese social image. `tools/make-social-image.ts:104`
+- [x] The layout checks run in `pt` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
+- [x] Test `the_portuguese_site_reads_in_portuguese`: `lang`, the switch's *Português (Brasil)*, a lesson step and the player in Portuguese. `e2e/locales.e2e.ts:1`
+- [x] Look at every route in `pt` with `bun run shot --locale pt-BR`, on a phone and a desktop, in both themes.
+- [x] The feature list and the README name Portuguese. `docs/reference/features.md:1`, `README.md:12`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -172,44 +172,34 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. Every catalog section, every lesson and all 80 song guides have their `pt`
-file. Each is reviewed blind and stamped, and `public/songs/ours/<slug>/guide.json` carries it.
+Stages 1 to 6 are done, and `pt` ships. The build writes every page under `pt/`, and the switch
+offers *Português (Brasil)*. The worlds carry their titles from `pt.md` in `src/learn/course.ts`.
+`public/images/social/pt.png` draws the lead. The README and the feature list name Portuguese.
 
-`status pt` lists 11 texts that stay out on purpose. Eight are catalog texts: the site's name and the
-six languages' own names. Three are in *Expression*: the titles *Legato* and *Staccato* and the quiz
-answers `p`, `mp`, `mf`, `f`. The site shows the English, which reads the same.
+`the_portuguese_site_reads_in_portuguese` passed once, run by name. The layout checks take `pt` by
+themselves, since `PASSED_LOCALES` in `e2e/layout-check.ts` holds every shipped locale outside the
+complete ones. They have not run in `pt` yet.
 
-The guides follow `pt.md` § 5. A hand shape is *a posição*, a stretch is *a abertura*, and a melody's
-shape is *o desenho*. Even notes are *regulares* or *por igual*, never *iguais*. Below *A guide's
-recurring steps* stand the rules on *lá*, *Toque só …*, *na segunda vez*, *forte*, *ta* and capitals.
+Every route in `pt` was shot on a phone and a desktop, in both themes, with no page error. A lesson
+names its keys *Dó3* to *Dó6*. No label is clipped.
 
-Stage 5's writers had § 5 whole, and only one of its four batches had a *wrong* finding. That was a
-*Sua versão* that reads as the learner's version. So `pt.md` § 2 gained a rule: *seu* and *sua* mean
-the learner's, unless the owner is the subject of the same sentence. Stage 5's 29 guides were checked
-against it. The 51 guides of stage 4 were written before it.
+Three fresh readers read the whole locale. Every drift they listed is settled in commit `fix(i18n): the
+Portuguese texts name each idea one way`. `pt.md` gained rows for the mordent, a figure (*o padrão* or
+*o desenho*, never *a figura*), and a song that plays by itself (*a música toca*). *Tochter Zion*'s
+*alegra-te* stays, since it quotes Zechariah 9:9 as Brazilian Bibles print it.
 
-Film titles stay as the original release names, as stage 4 wrote them, such as *The Sting*. A counted
-"one-and" is *“um e”*, unhyphenated, as three guides write it.
-
-The Portuguese course and guides are not looked at in a browser yet. `pt` has no pages until stage 6
-ships it.
+`status pt` lists 12 texts that stay out on purpose. Nine are catalog texts: the site's name and the
+seven languages' own names. Three are in *Expression*: *Legato*, *Staccato* and the dynamics answers.
+A stamp hashes the English alone, so editing a translation never moves one.
 
 ### Next
 
-**Stage 6: the Portuguese site ships.** `bun tools/i18n.ts status pt` lists only the 11 texts left out
-on purpose, so the gate holds. Send the consistency read the method names in
-[translation.md](../agent/translation.md) § *Before a locale ships*. One fresh reader takes the catalogs
-and the course, and two take the guides in halves, a to m and n to z. Name § 2's possessive rule in
-their briefs, since the guides of a to m predate it. Settle each drift, rerun `bun tools/make-our-songs.ts`,
-and stamp each guide unit again with `bun tools/i18n.ts stamp pt guide/<slug>`. A bare `stamp pt` refuses
-without a unit.
+**Stage 7: the goal is verified once.** Run `looper verify`, fix every failure in one pass, and run it
+once more. `every_page_passes_the_layout_checks_in_pt` in `e2e/locales.e2e.ts` runs for the first time
+there. A flaw it finds in `pt` is settled with a shorter text in the `.pt.ts` file it names.
+`portuguese_texts_keep_their_rules` in `src/i18n/translation-rules.test.ts` reads the edited texts.
 
-Then ship `pt` at `src/i18n/locale.ts:18`, make its social image at `tools/make-social-image.ts:104`,
-add `pt` to the layout checks at `e2e/layout-check.ts:43`, and write
-`the_portuguese_site_reads_in_portuguese` in `e2e/locales.e2e.ts`. Look at every route with
-`bun run shot --locale pt-BR`. Name Portuguese in `docs/reference/features.md` and `README.md:12`.
-
-Expected red: `the_portuguese_site_reads_in_portuguese` until stage 6 writes it.
+Expected red: none known. The layout checks in `pt` may find a long label, since no run has measured it.
 
 ### Backlog
 
