@@ -367,3 +367,28 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `mahler-adagietto/epic.mid` | Adagietto, Medium | Gustav Mahler | MIT |
 | `mahler-adagietto/legendary.mid` | Adagietto, Hard | Gustav Mahler | MIT |
 | `mahler-adagietto/guide.json` | Adagietto, the guide | | MIT |
+| `drunken-sailor/common.mid` | Drunken Sailor, Beginner | Traditional | MIT |
+| `drunken-sailor/rare.mid` | Drunken Sailor, Easy | Traditional | MIT |
+| `drunken-sailor/epic.mid` | Drunken Sailor, Medium | Traditional | MIT |
+| `drunken-sailor/legendary.mid` | Drunken Sailor, Hard | Traditional | MIT |
+| `drunken-sailor/guide.json` | Drunken Sailor, the guide | | MIT |
+| `blow-the-man-down/common.mid` | Blow the Man Down, Beginner | Traditional | MIT |
+| `blow-the-man-down/rare.mid` | Blow the Man Down, Easy | Traditional | MIT |
+| `blow-the-man-down/epic.mid` | Blow the Man Down, Medium | Traditional | MIT |
+| `blow-the-man-down/legendary.mid` | Blow the Man Down, Hard | Traditional | MIT |
+| `blow-the-man-down/guide.json` | Blow the Man Down, the guide | | MIT |
+| `sailors-hornpipe/common.mid` | The Sailor's Hornpipe, Beginner | Traditional | MIT |
+| `sailors-hornpipe/rare.mid` | The Sailor's Hornpipe, Easy | Traditional | MIT |
+| `sailors-hornpipe/epic.mid` | The Sailor's Hornpipe, Medium | Traditional | MIT |
+| `sailors-hornpipe/legendary.mid` | The Sailor's Hornpipe, Hard | Traditional | MIT |
+| `sailors-hornpipe/guide.json` | The Sailor's Hornpipe, the guide | | MIT |
+| `spanish-ladies/common.mid` | Spanish Ladies, Beginner | Traditional | MIT |
+| `spanish-ladies/rare.mid` | Spanish Ladies, Easy | Traditional | MIT |
+| `spanish-ladies/epic.mid` | Spanish Ladies, Medium | Traditional | MIT |
+| `spanish-ladies/legendary.mid` | Spanish Ladies, Hard | Traditional | MIT |
+| `spanish-ladies/guide.json` | Spanish Ladies, the guide | | MIT |
+| `haul-away-joe/common.mid` | Haul Away Joe, Beginner | Traditional | MIT |
+| `haul-away-joe/rare.mid` | Haul Away Joe, Easy | Traditional | MIT |
+| `haul-away-joe/epic.mid` | Haul Away Joe, Medium | Traditional | MIT |
+| `haul-away-joe/legendary.mid` | Haul Away Joe, Hard | Traditional | MIT |
+| `haul-away-joe/guide.json` | Haul Away Joe, the guide | | MIT |

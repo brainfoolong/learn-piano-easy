@@ -102,6 +102,11 @@ import { canCan } from "./our-songs/can-can";
 import { vltava } from "./our-songs/vltava";
 import { aquarium } from "./our-songs/aquarium";
 import { mahlerAdagietto } from "./our-songs/mahler-adagietto";
+import { drunkenSailor } from "./our-songs/drunken-sailor";
+import { blowTheManDown } from "./our-songs/blow-the-man-down";
+import { sailorsHornpipe } from "./our-songs/sailors-hornpipe";
+import { spanishLadies } from "./our-songs/spanish-ladies";
+import { haulAwayJoe } from "./our-songs/haul-away-joe";
 import { deckTheHalls } from "./our-songs/deck-the-halls";
 import { diesIrae } from "./our-songs/dies-irae";
 import { dingDongMerrilyOnHigh } from "./our-songs/ding-dong-merrily-on-high";
@@ -311,6 +316,11 @@ export const ourSongs: readonly OurSong[] = [
   vltava,
   aquarium,
   mahlerAdagietto,
+  drunkenSailor,
+  blowTheManDown,
+  sailorsHornpipe,
+  spanishLadies,
+  haulAwayJoe,
 ];
 
 /** The version `rarity` of `song` as a song of the notation. */

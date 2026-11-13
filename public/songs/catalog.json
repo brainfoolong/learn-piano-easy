@@ -6629,6 +6629,440 @@
     ]
   },
   {
+    "composer": "Traditional",
+    "piece": "Drunken Sailor",
+    "title": "Beginner",
+    "file": "ours/drunken-sailor/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 74,
+    "seconds": 56,
+    "song": "drunken-sailor",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "sea",
+    "aka": [
+      "What Shall We Do with the Drunken Sailor?",
+      "What Shall We Do with a Drunken Sailor",
+      "Early in the Morning"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Drunken Sailor",
+    "title": "Easy",
+    "file": "ours/drunken-sailor/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 48,
+    "high": 74,
+    "seconds": 69,
+    "song": "drunken-sailor",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "sea",
+    "aka": [
+      "What Shall We Do with the Drunken Sailor?",
+      "What Shall We Do with a Drunken Sailor",
+      "Early in the Morning"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Drunken Sailor",
+    "title": "Medium",
+    "file": "ours/drunken-sailor/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 86,
+    "seconds": 80,
+    "song": "drunken-sailor",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "pedal"
+    ],
+    "collection": "sea",
+    "aka": [
+      "What Shall We Do with the Drunken Sailor?",
+      "What Shall We Do with a Drunken Sailor",
+      "Early in the Morning"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Drunken Sailor",
+    "title": "Hard",
+    "file": "ours/drunken-sailor/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 86,
+    "seconds": 72,
+    "song": "drunken-sailor",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "sea",
+    "aka": [
+      "What Shall We Do with the Drunken Sailor?",
+      "What Shall We Do with a Drunken Sailor",
+      "Early in the Morning"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Blow the Man Down",
+    "title": "Beginner",
+    "file": "ours/blow-the-man-down/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 79,
+    "seconds": 57,
+    "song": "blow-the-man-down",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "open-fifths",
+      "dotted-rhythm"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Blow the Man Down",
+    "title": "Easy",
+    "file": "ours/blow-the-man-down/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 79,
+    "seconds": 63,
+    "song": "blow-the-man-down",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "triads",
+      "eighth-notes"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Blow the Man Down",
+    "title": "Medium",
+    "file": "ours/blow-the-man-down/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 75,
+    "seconds": 75,
+    "song": "blow-the-man-down",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "thumb-under",
+      "pedal"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Blow the Man Down",
+    "title": "Hard",
+    "file": "ours/blow-the-man-down/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 27,
+    "high": 75,
+    "seconds": 65,
+    "song": "blow-the-man-down",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "The Sailor's Hornpipe",
+    "title": "Beginner",
+    "file": "ours/sailors-hornpipe/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 83,
+    "seconds": 32,
+    "song": "sailors-hornpipe",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "open-fifths"
+    ],
+    "collection": "sea",
+    "aka": [
+      "Sailor's Hornpipe",
+      "The College Hornpipe",
+      "College Hornpipe"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "The Sailor's Hornpipe",
+    "title": "Easy",
+    "file": "ours/sailors-hornpipe/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 83,
+    "seconds": 29,
+    "song": "sailors-hornpipe",
+    "rarity": "rare",
+    "skills": [
+      "eighth-notes",
+      "two-note-chords"
+    ],
+    "collection": "sea",
+    "aka": [
+      "Sailor's Hornpipe",
+      "The College Hornpipe",
+      "College Hornpipe"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "The Sailor's Hornpipe",
+    "title": "Medium",
+    "file": "ours/sailors-hornpipe/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 83,
+    "seconds": 28,
+    "song": "sailors-hornpipe",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thumb-under"
+    ],
+    "collection": "sea",
+    "aka": [
+      "Sailor's Hornpipe",
+      "The College Hornpipe",
+      "College Hornpipe"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "The Sailor's Hornpipe",
+    "title": "Hard",
+    "file": "ours/sailors-hornpipe/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 83,
+    "seconds": 37,
+    "song": "sailors-hornpipe",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "sea",
+    "aka": [
+      "Sailor's Hornpipe",
+      "The College Hornpipe",
+      "College Hornpipe"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Spanish Ladies",
+    "title": "Beginner",
+    "file": "ours/spanish-ladies/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 52,
+    "high": 71,
+    "seconds": 38,
+    "song": "spanish-ladies",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "open-fifths"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Spanish Ladies",
+    "title": "Easy",
+    "file": "ours/spanish-ladies/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 71,
+    "seconds": 38,
+    "song": "spanish-ladies",
+    "rarity": "rare",
+    "skills": [
+      "waltz-bass",
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Spanish Ladies",
+    "title": "Medium",
+    "file": "ours/spanish-ladies/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 81,
+    "seconds": 58,
+    "song": "spanish-ladies",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "thirds-and-sixths"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Spanish Ladies",
+    "title": "Hard",
+    "file": "ours/spanish-ladies/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 81,
+    "seconds": 58,
+    "song": "spanish-ladies",
+    "rarity": "legendary",
+    "skills": [
+      "stride",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Haul Away Joe",
+    "title": "Beginner",
+    "file": "ours/haul-away-joe/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 48,
+    "high": 74,
+    "seconds": 53,
+    "song": "haul-away-joe",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "open-fifths"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Haul Away Joe",
+    "title": "Easy",
+    "file": "ours/haul-away-joe/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 74,
+    "seconds": 58,
+    "song": "haul-away-joe",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Haul Away Joe",
+    "title": "Medium",
+    "file": "ours/haul-away-joe/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 76,
+    "seconds": 77,
+    "song": "haul-away-joe",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "thumb-under",
+      "thirds-and-sixths"
+    ],
+    "collection": "sea"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Haul Away Joe",
+    "title": "Hard",
+    "file": "ours/haul-away-joe/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 76,
+    "seconds": 72,
+    "song": "haul-away-joe",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "sea"
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",
