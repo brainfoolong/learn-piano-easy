@@ -27,7 +27,7 @@ stages:
     status: done
   - id: 8
     title: Five sea shanties
-    status: open
+    status: done
   - id: 9
     title: Three film-style tunes of our own
     status: open
@@ -235,6 +235,22 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
   Hornpipe*, *Spanish Ladies* and *Haul Away Joe*. Each takes its earliest dated print with notes as
   `published`. The reserves are *Shenandoah*, then *Leave Her, Johnny*.
 - ***Wellerman* is not a shanty of ours.** Its tune was first printed in the 1970s, so it is protected.
+- **The sources of stage 8.** R. R. Terry's *The Shanty Book, Part I*, 1921, scanned on Commons, gives
+  *Drunken Sailor*, *Blow the Man Down* and *Haul Away Joe*. Its PDF pages 52, 56 and 78 hold them.
+  Wikipedia's `<score>` gives *Spanish Ladies*. The Commons typeset `File:College Hornpipe.svg` gives
+  the hornpipe, in G major.
+- **The years of the shanties.** Wikipedia dates the first print of *Drunken Sailor*'s tune to Davis
+  and Tozer's third edition, 1891. *Blow the Man Down* and *Haul Away Joe* take Terry's 1921. The
+  hornpipe takes McGlashan's print of 1781, which Wikipedia shows.
+- ***Spanish Ladies* takes 1840, the year *Poor Jack* printed its words in full.** No source a session
+  may read dates a print of its notes, and Wikipedia's score names a modern source.
+- **Terry's *Haul Away Joe* is in 6/8 and in D minor,** with an F sharp and a B natural. Its tune is
+  the solo's four bars and the chorus's four, ending on the last verse's held D.
+- **The hornpipe's tune is its upbeat and first four bars.** It leaps an octave in almost every bar.
+  Its hook is the upbeat and two bars.
+- **Each shanty's tune keeps its print's sixteenths or eighths as quarters.** *Drunken Sailor* and the
+  hornpipe write bars of 2/1, *Blow the Man Down* bars of 6/2, *Spanish Ladies* bars of 3/2, and
+  *Haul Away Joe* bars of 6/4.
 - **The three tunes of our own are new melodies in a film style.** A style is free, and a melody is
   not. *Neon Chase* is an 80s synth groove in A minor, at about 118 beats a minute. *Black Flag Jig*
   is a swashbuckling adventure theme in 6/8, in D minor. *Last Horizon* is a slow ostinato under held
@@ -423,12 +439,12 @@ took their places. The *Bumblebee* cannot pass Beginner, so it and the 25th piec
 
 **Split:** five writing subagents, one module each.
 
-- [ ] *Drunken Sailor*. `tools/our-songs/drunken-sailor.ts:1`
-- [ ] *Blow the Man Down*. `tools/our-songs/blow-the-man-down.ts:1`
-- [ ] *The Sailor's Hornpipe*. `tools/our-songs/sailors-hornpipe.ts:1`
-- [ ] *Spanish Ladies*. `tools/our-songs/spanish-ladies.ts:1`
-- [ ] *Haul Away Joe*. `tools/our-songs/haul-away-joe.ts:1`
-- [ ] Add the five to `ourSongs` and `SEA`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [x] *Drunken Sailor*. `tools/our-songs/drunken-sailor.ts:1`
+- [x] *Blow the Man Down*. `tools/our-songs/blow-the-man-down.ts:1`
+- [x] *The Sailor's Hornpipe*. `tools/our-songs/sailors-hornpipe.ts:1`
+- [x] *Spanish Ladies*. `tools/our-songs/spanish-ladies.ts:1`
+- [x] *Haul Away Joe*. `tools/our-songs/haul-away-joe.ts:1`
+- [x] Add the five to `ourSongs` and `SEA`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
 
 ### 9. Three film-style tunes of our own
 
@@ -454,29 +470,26 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 to 7 are done. Thirty film pieces ship in four versions, and the catalog holds 673 rows.
-Stage 7's last group added the Can-can, *Vltava*, *Aquarium* and Mahler's Adagietto. Each tune was
-compared note for note with the score the session read. The standing decisions record the sources,
-the years, the films and the three swaps. The writer, `tsc` and the worktree's build are green. The
-catalog count in `src/midi/library-songs.test.ts` reads 673, and no test ran.
+Stages 1 to 8 are done. Thirty film pieces and five sea shanties ship in four versions, and the
+catalog holds 693 rows. Each shanty's tune was compared note for note with the print the session
+read. The standing decisions record the sources and the years. No reserve was needed. The writer,
+`tsc` and the worktree's build are green. The catalog count in `src/midi/library-songs.test.ts`
+reads 693, and no test ran.
 
 ### Next
 
-**Stage 8: the five sea shanties.** Work in a detached worktree under `.agent-tmp/`. Copy
-`.agent-tmp/brief-s7.md` from the main checkout as `brief-s8.md`, with `collection: "sea"` in place
-of the film module's shape.
+**Stage 9: the three tunes of our own.** Work in a detached worktree under `.agent-tmp/`. Copy
+`.agent-tmp/brief-s8.md` from the main checkout as `brief-s9.md`. Its tune comes from the writer, not
+a print, and its source carries `own: true`.
 
-- [ ] Read each shanty's tune from a Wikipedia `<score>` block, with `action=raw`, and its earliest dated print. `tools/our-songs/drunken-sailor.ts:1`
-- [ ] Count each tune's leaps and its notes outside the key, and cut a leaping one to its hook. `tools/our-songs/the-blue-danube.ts:1`
-- [ ] Writing subagents, one module each, briefed with the read tune, its source block, `about` and `funFact`. `tools/our-songs/vltava.ts:1`
-- [ ] Compare each module's `tune` with the read tune, note for note. `tools/our-songs/can-can.ts:32`
-- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:313`
+- [ ] Write the brief: style, key, tempo, `own: true`, composer `learn-piano-easy`, and the rule on protected themes. `tools/make-our-songs.ts:171`
+- [ ] Three writing subagents, one module each, with `collection: "film"`. `tools/our-songs/neon-chase.ts:1`
+- [ ] Check each hook against the protected themes the session knows, for a run of five intervals. `tools/our-songs/black-flag-jig.ts:1`
+- [ ] Add the three to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:323`
+- [ ] Screenshots of both groups, and one film piece at each version, with `bun run shot`. `tools/shot.ts:1`
 
-A shanty whose tune no allowed source prints takes the next reserve, *Shenandoah* and then *Leave Her,
-Johnny*. Its slug replaces the old one in `SEA` in `tools/our-songs.test.ts`.
-
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 673 by four rows per new
-piece. The e2e test `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 693 by four rows per new
+tune. The e2e test `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once
 the film group outgrows one view.
 
 ### Backlog
