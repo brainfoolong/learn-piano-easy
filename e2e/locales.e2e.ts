@@ -93,14 +93,20 @@ function shapeOf(flaw: string): string {
     .replace(/\d+(?:\.\d+)?/g, "#");
 }
 
+/** The body of each page that draws after a read of its own, which is `aria-busy` until it draws. */
+const BUSY_BODIES: Readonly<Record<string, string>> = { "learn/": ".map__body", "learn/profile/": ".profile__body" };
+
 for (const locale of PASSED_LOCALES) {
   test(`every_page_passes_the_layout_checks_in_${locale}`, async ({ browser, baseURL }) => {
     const paths = await checkedPaths();
     test.setTimeout(paths.length * PASSED_WIDTHS.length * THEMES.length * 2 * 20_000);
     const flaws: string[] = [];
     for (const path of paths) {
-      // A page of *Learn Piano* fades its bar slot in once the slot's read ends, so it is measured after.
-      const ready = path.startsWith("learn/") ? '.bar-slot[data-ready="true"]' : undefined;
+      // A page of *Learn Piano* fades its bar slot in once the slot's read ends, and the map and the
+      // profile fade their body in once their own read ends. The page is measured after both.
+      const body = BUSY_BODIES[path];
+      const slot = '.bar-slot[data-ready="true"]';
+      const ready = !path.startsWith("learn/") ? undefined : body === undefined ? slot : `body:has(${body}:not([aria-busy])):has(${slot})`;
       const options = { widths: PASSED_WIDTHS, locales: ["en", locale], reducedMotion: true, storage: PAST_SETUP, ...(ready === undefined ? {} : { ready }) };
       const found = await checkLayout(browser, new URL(path, baseURL).href, options);
       const english = new Set(found.filter((flaw) => flaw.includes(" en: ")).map(shapeOf));
