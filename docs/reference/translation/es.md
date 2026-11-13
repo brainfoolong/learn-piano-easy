@@ -152,6 +152,16 @@ GO is Google's Latin American help pages (`hl=es-419`).
 | piano bench | el banco | everyday word; *banqueta* is a sidewalk in Mexico |
 | fingertips | las yemas de los dedos | everyday word |
 | call and answer (phrases) | pregunta y respuesta | PP |
+| verse, chorus, refrain | la estrofa, el estribillo | WP *Estrofa*, *Estribillo* |
+| G seventh (chord) | sol séptima; el acorde de sol séptima | common usage, the guides' own term |
+| a pair of notes in one hand | la doble nota, las dobles notas | piano usage, the guides' own term |
+| stride (the bass style) | el bajo stride | the guides' own term |
+| a run (fast notes) | el pasaje rápido, or *el pasaje* | the guides' own term |
+| turn (ornament) | el grupeto | WP *Grupeto* |
+| first, second time through | la primera vuelta, la segunda vuelta | the guides' own term |
+| by feel | al tacto | everyday word |
+| at full speed; at three-quarter speed | a velocidad completa; a tres cuartos de velocidad | the guides' own terms, after *Velocidad* |
+| carol; sea shanty; jig | el villancico; la canción marinera; la giga | WP *Villancico*, *Giga (danza)* |
 
 ### The interface glossary
 
@@ -230,6 +240,10 @@ GO is Google's Latin American help pages (`hl=es-419`).
   as Spanish teaching keeps them.
 - **The song titles and the composers' names.** A title is data shared by every locale, and the library
   searches it.
+- **A film keeps the title the English guide writes,** such as *The Shining*. Its release title differs
+  from one Latin American country to the next. A book, an opera or a symphony takes its usual Spanish
+  name, such as *Cuento de Navidad* or *su Novena Sinfonía*. A kept title with a mark, such as
+  *Moulin Rouge!*, goes in the `kept` list.
 - **The sections "Learn Piano" and "Just Play Piano" are translated,** since they describe what a learner
   does. "Learn Piano" is *Aprende piano*.
 - **"Just Play Piano" is *Piano libre*.** It keeps the sense of playing with no lesson. A noun reads well
