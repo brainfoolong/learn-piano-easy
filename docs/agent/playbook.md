@@ -48,6 +48,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A commit took another session's message.** Both sessions wrote `.agent-tmp/commit-msg.txt`, and the
   later write won between the edit and the commit. Name a scratch file after its goal or slice, such as
   `.agent-tmp/msg-one-player.txt`.
+- **A refused commit can still delete its message file.** In `git commit -F <file> | tail && rm <file>`,
+  the pipe's status is `tail`'s, so `rm` runs after `tools/git-hooks/commit-msg` refuses. Commit alone,
+  and delete the file in a later call.
 - **The `commit-msg` hook rejects a one-line last paragraph such as `Trade-offs: …`.** Git reads a
   closing `Word: text` line as a trailer, and `tools/git-hooks/commit-msg` refuses every trailer. Start the last paragraph
   with a plain sentence, such as "The cost is …".

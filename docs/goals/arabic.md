@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Arabic site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -88,6 +88,10 @@ what the `spanish` pilot taught.
 - **An Android phone's look goes to the backlog.** The loop runs on Windows, and Chromium's phone
   emulation keeps Windows' fonts, so it cannot show Android's missing glyphs. Chrome on Windows at a
   phone's width found none.
+- **The gap after `ر` in Segoe UI is the font's, not a fault of ours.** `ر` never joins the next letter,
+  and Segoe UI spaces it wider, at every weight. At a desktop's one-to-one pixel ratio, `سريعة` then
+  reads as two parts. Tahoma and a phone's sharper screen show it closer. The site keeps the system's
+  Arabic font, since a learner on Windows reads it everywhere.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 2 also waits for `right-to-left`. Stage 6 needs all of
   them.
@@ -212,15 +216,15 @@ address or mark that drifts between files.
 - [x] The Arabic social image. `public/images/social/ar.png`
 - [x] The layout checks run in `ar` at every width, not only at 360 and 1280 pixels. `e2e/layout-check.ts` `passedWidthsOf`
 - [x] Test `the_arabic_site_reads_in_arabic`: `lang`, the switch's *العربية*, a lesson step and the player in Arabic. `e2e/locales.e2e.ts`
-- [ ] Look at every route in `ar` with `bun run shot --locale ar-EG`, on a phone and a desktop, in both themes.
+- [x] Look at every route in `ar` with `bun run shot --locale ar-EG`, on a phone and a desktop, in both themes.
   - [x] 48 shots of 12 routes, with no page error.
-  - [ ] The English blocks of `about/`, `imprint/` and `privacy/` read left to right.
-  - [ ] `سريعة` in the setup bubble on a desktop is drawn whole.
-  - [ ] The light shots of modes, profile, about, data, sponsor, imprint and privacy are looked at.
+  - [x] The English blocks of `about/`, `imprint/` and `privacy/` read left to right. `src/site/legal-view.ts` `legalBody`
+  - [x] `سريعة` in the setup bubble on a desktop: the gap is Segoe UI's own, as the standing decision says.
+  - [x] The light shots of modes, profile, about, data, sponsor, imprint and privacy are looked at.
 - [x] Look at every route mirrored, and check that the music did not mirror.
-- [ ] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
+- [x] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
   - [x] Chrome on Windows, at phone and desktop widths: no box.
-  - [ ] An Android phone.
+  - [x] An Android phone goes to the backlog, as the standing decision says.
 - [x] The feature list and the README name Arabic. `docs/reference/features.md:160`, `README.md:12`
 
 ### 7. the goal is verified once, and every failure is fixed
@@ -233,9 +237,9 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done, and stage 6 is nearly done. `ar` ships. `bun tools/i18n.ts status ar` lists 0
-missing and 0 stale of 4480 texts, so the gate holds. The test `the_arabic_site_reads_in_arabic` passed
-once by name, and `bun x tsc` and the build are green.
+Stages 1 to 6 are done, and stage 7 is next. `ar` ships. `bun tools/i18n.ts status ar` lists 0 missing
+and 0 stale of 4480 texts, so the gate holds. The test `the_arabic_site_reads_in_arabic` passed once by
+name, and `bun x tsc` and the build are green.
 
 - The 30 catalog texts with nothing to translate keep their English form. The percent, KB, MB, BPM and
   FPS values are isolated whole, so a unit stays on the number's right.
@@ -243,34 +247,23 @@ once by name, and `bun x tsc` and the build are green.
   the rulings. Where a batch ruling and the guide disagreed, the guide won.
 - The social picture `public/images/social/ar.png` is drawn right to left. A right-to-left passed
   locale runs the layout checks at every width, through `passedWidthsOf` in `e2e/layout-check.ts`.
-- 48 shots of 12 routes in `ar-EG` showed mirrored layouts, unmirrored music, no missing glyph and no
-  page error. They also found the flaws that *Next* lists.
+- Shots of all 12 routes in `ar-EG`, on a phone and a desktop, in both themes, show mirrored layouts,
+  unmirrored music, no missing glyph and no page error.
+- The English legal bodies and the license texts carry `lang="en" dir="ltr"`, so they read left to
+  right on an Arabic page. `legalBody` in `src/site/legal-view.ts` and `aboutPage` in `src/app/about.ts`
+  set them. The test `the_arabic_site_reads_in_arabic` checks the imprint's body.
+- The setup bubble's `سريعة` has no fault of ours. The standing decision on Segoe UI records why.
 
 ### Next
 
-**Finish stage 6, then run stage 7.** Three shot flaws stay open, each a checkpoint under stage 6's
-shot item.
-
-- **English blocks on an Arabic page read right to left.** The MIT License text on `about/`, and the
-  English bodies of `imprint/` and `privacy/`, take the page's `rtl`, so each period jumps to the
-  line's left end. The fix is `lang="en" dir="ltr"` on each English block where the page's locale
-  lacks its text. Find where the legal pages fall back to English, and where `about/` prints the
-  license. Hindi never showed this, since it is left to right. Add an assertion to
-  `the_arabic_site_reads_in_arabic` that such a block has `dir="ltr"`.
-- **`سريعة` shows as `سر يعة` in the setup bubble, on a desktop only.** The bubble is in
-  `src/learn/onboarding.ts`. Look for a per-letter reveal or a `letter-spacing`, either of which
-  breaks the joined letters. The phone view draws it whole.
-- **The light shots** of modes, profile, about, data, sponsor, imprint and privacy are not looked at
-  yet. Take them with `bun run shot --locale ar-EG --scheme light`.
-- Then look again at `about/`, `imprint/`, `privacy/` and the setup bubble, and tick stage 6.
-- An Android phone cannot be checked from this machine. Its checkpoint goes to the backlog when
-  stage 6 closes, as the standing decision says.
-- Stage 7 runs `looper verify` once over the goal. Every check runs then, from the layout checks at
-  every width in `ar` to the translation rules.
+**Run stage 7.** `looper verify` runs once over the whole goal. Every check runs then, from the layout
+checks at every width in `ar` to the translation rules. Fix every failure in one pass, then run it once
+more. Once it is green, the goal is reached: write `DONE`.
 
 Expected red: none known. The layout checks of `ar` now run at four widths, so
 `every_page_passes_the_layout_checks_in_ar` may find a flaw at 768 or 1920 pixels that no session
-has looked at.
+has looked at. A test that reads the legal page's `.legal` attributes in another locale may now see
+`lang="en"` there.
 
 ### Backlog
 
