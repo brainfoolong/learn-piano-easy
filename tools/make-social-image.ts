@@ -10,7 +10,8 @@
  *   in the dark theme and the site's font, and the SVG fills with tokens. A change of a token shows in
  *   the next run.
  * - **The text is each locale's catalog,** so a change of the copy needs a new run.
- * - **The text wraps in a `foreignObject`,** since an SVG `text` never wraps.
+ * - **The text wraps in a `foreignObject`,** since an SVG `text` never wraps. It takes its locale's
+ *   direction, so an Arabic lead reads right to left, while the keyboard stays where it is.
  *
  *   bun tools/make-social-image.ts
  *
@@ -72,7 +73,7 @@ function socialSvg(locale: Locale): string {
   ${white.join("\n  ")}
   ${black.join("\n  ")}
   <foreignObject x="80" y="150" width="${keysX - 140}" height="360">
-    <div xmlns="http://www.w3.org/1999/xhtml" class="text">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="text" dir="${rowOf(locale).dir}">
       <p class="name">${t.siteName}</p>
       <p class="lead">${t.landing.hero.lead}</p>
     </div>

@@ -2,16 +2,17 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish, Chinese and Hindi each read in their own language** from the language switch to a lesson's step,
- *   its piano's key names and the player's controls.
+ * - **Spanish, Chinese, Hindi and Arabic each read in their own language** from the language switch to a
+ *   lesson's step, its piano's key names and the player's controls. Arabic also sets `dir="rtl"`.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
- *   A flaw counts only where the locale's text adds it, since each page's own test holds its English.
- *   The pseudo-locale's longer texts already cover every width.
+ *   A right-to-left one runs them at every width, as `passedWidthsOf` says. A flaw counts only where the
+ *   locale's text adds it, since each page's own test holds its English. The pseudo-locale's longer texts
+ *   already cover every width.
  */
 import { expect, test, type Page } from "@playwright/test";
 import { COURSE } from "../src/learn/course";
 import { ROUTES } from "../src/site/routes";
-import { checkLayout, PASSED_LOCALES, PASSED_WIDTHS, PAST_SETUP, pastSetup, THEMES } from "./layout-check";
+import { checkLayout, PASSED_LOCALES, PAST_SETUP, pastSetup, passedWidthsOf, THEMES } from "./layout-check";
 
 /** Collects every uncaught error the page reports from now on. */
 function watchErrors(page: Page): string[] {
@@ -104,6 +105,33 @@ test("the_hindi_site_reads_in_hindi", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
+test("the_arabic_site_reads_in_arabic", async ({ page }) => {
+  test.setTimeout(60_000);
+  await pastSetup(page);
+  const errors = watchErrors(page);
+
+  await page.goto("./learn/");
+  const choice = bar(page).getByRole("combobox", { name: "Language" });
+  await expect(choice.locator('option[value="ar"]')).toHaveText("العربية");
+  await choice.selectOption("ar");
+  await expect(page).toHaveURL(/\/ar\/learn\/$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "ar");
+  await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
+  await expect(heading(page)).toHaveText("تعلم البيانو");
+  await expect(page.locator("main")).toContainText("التعرف على البيانو");
+
+  await page.goto("./ar/learn/meet-the-piano/find-c/");
+  await expect(page.locator(".lesson__title")).toHaveText("البحث عن دو");
+  await expect(page.locator("main")).toContainText("لها كلها الاسم نفسه: دو.");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "دو4");
+
+  await page.goto("./ar/play/");
+  await expect(page.getByRole("button", { name: "تشغيل", exact: true })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "الأغاني" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "الإعدادات" })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
 /** The pages each passed locale opens, as paths in the default locale: every shown route, and a lesson. */
 async function checkedPaths(): Promise<string[]> {
   const world = COURSE[0]!;
@@ -125,7 +153,8 @@ const BUSY_BODIES: Readonly<Record<string, string>> = { "learn/": ".map__body", 
 for (const locale of PASSED_LOCALES) {
   test(`every_page_passes_the_layout_checks_in_${locale}`, async ({ browser, baseURL }) => {
     const paths = await checkedPaths();
-    test.setTimeout(paths.length * PASSED_WIDTHS.length * THEMES.length * 2 * 20_000);
+    const widths = passedWidthsOf(locale);
+    test.setTimeout(paths.length * widths.length * THEMES.length * 2 * 20_000);
     const flaws: string[] = [];
     for (const path of paths) {
       // A page of *Learn Piano* fades its bar slot in once the slot's read ends, and the map and the
@@ -133,7 +162,7 @@ for (const locale of PASSED_LOCALES) {
       const body = BUSY_BODIES[path];
       const slot = '.bar-slot[data-ready="true"]';
       const ready = !path.startsWith("learn/") ? undefined : body === undefined ? slot : `body:has(${body}:not([aria-busy])):has(${slot})`;
-      const options = { widths: PASSED_WIDTHS, locales: ["en", locale], reducedMotion: true, storage: PAST_SETUP, ...(ready === undefined ? {} : { ready }) };
+      const options = { widths, locales: ["en", locale], reducedMotion: true, storage: PAST_SETUP, ...(ready === undefined ? {} : { ready }) };
       const found = await checkLayout(browser, new URL(path, baseURL).href, options);
       const english = new Set(found.filter((flaw) => flaw.includes(" en: ")).map(shapeOf));
       flaws.push(...found.filter((flaw) => flaw.includes(` ${locale}: `) && !english.has(shapeOf(flaw))).map((flaw) => `${path || "./"} ${flaw}`));

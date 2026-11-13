@@ -29,7 +29,7 @@
  */
 import type { Browser, Page } from "@playwright/test";
 import { CATALOGS } from "../src/i18n/all-catalogs";
-import { COMPLETE_LOCALES, DEFAULT_LOCALE, isLocale, isPseudoLocale, LOCALES as SHIPPED_LOCALES, PSEUDO_LOCALES, type PseudoLocale } from "../src/i18n/locale";
+import { COMPLETE_LOCALES, DEFAULT_LOCALE, isLocale, isPseudoLocale, LOCALES as SHIPPED_LOCALES, PSEUDO_LOCALES, rowOf, type PseudoLocale, type ShippedLocale } from "../src/i18n/locale";
 import { fold, translatedAway, untranslated } from "../src/i18n/untranslated";
 import { SETTINGS_VERSION, STORAGE_KEY } from "../src/settings/store";
 import { judgePage, type MeasuredText, type Named, type PageMeasure } from "../src/ui/layout-geometry";
@@ -48,12 +48,20 @@ export const LOCALES = [...SHIPPED_LOCALES.filter((locale) => COMPLETE_LOCALES.i
 
 /**
  * The shipped locales a translation pass keeps, such as Spanish. `e2e/locales.e2e.ts` checks their pages
- * at `PASSED_WIDTHS` only, since the pseudo-locale's longer texts cover every width.
+ * at `passedWidthsOf` each, since the pseudo-locale's longer texts cover every width.
  */
 export const PASSED_LOCALES = SHIPPED_LOCALES.filter((locale) => !COMPLETE_LOCALES.includes(locale));
 
 /** The widths a passed locale is checked at: a phone's and a desktop's. */
 export const PASSED_WIDTHS = [360, 1280] as const;
+
+/**
+ * The widths the passed locale `locale` is checked at. A right-to-left one takes every width, since its
+ * own script's widths and mirrored layout differ from the pseudo-locale's at each.
+ */
+export function passedWidthsOf(locale: ShippedLocale): readonly number[] {
+  return rowOf(locale).dir === "rtl" ? WIDTHS : PASSED_WIDTHS;
+}
 
 /**
  * `url`, the absolute URL of a page of the default locale, in the pseudo-locale `locale`, `en-XA` when

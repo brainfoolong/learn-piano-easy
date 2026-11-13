@@ -12,7 +12,7 @@ function lesson(id: string): Lesson {
 
 /** A loaded world `id` of the lessons `ids`, with a boss and a skip test. */
 function world(id: string, ids: string[]): LoadedWorld {
-  const spec: World = { id, title: { en: id, de: id, es: id, zh: id, hi: id }, accent: "violet", load: async () => ({ lessons: [] }), loadTexts: async () => {} };
+  const spec: World = { id, title: { en: id, de: id, es: id, zh: id, hi: id, ar: id }, accent: "violet", load: async () => ({ lessons: [] }), loadTexts: async () => {} };
   return { world: spec, lessons: { lessons: ids.map(lesson), boss: lesson("boss"), skipTest: lesson("skip-test") } };
 }
 

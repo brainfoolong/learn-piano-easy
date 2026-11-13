@@ -12,7 +12,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   language: {
     label: "اللغة",
     help: "مع «مثل المتصفح»، يُفتح الموقع بلغة المتصفح إن كانت متوفرة فيه.",
-    options: { auto: "مثل المتصفح", en: "English", de: "Deutsch", es: "Español", zh: "简体中文", hi: "हिन्दी" },
+    options: { auto: "مثل المتصفح", en: "English", de: "Deutsch", es: "Español", zh: "简体中文", hi: "हिन्दी", ar: "العربية" },
   },
   learnSounds: {
     label: "أصوات المكافأة",

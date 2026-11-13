@@ -11,7 +11,7 @@ export const playerSettingsPlay: typeof en = {
   language: {
     label: "Sprache",
     help: "Mit \"Wie der Browser\" öffnet sich die Website in der Sprache des Browsers, wenn es sie gibt.",
-    options: { auto: "Wie der Browser", en: "English", de: "Deutsch", es: "Español", zh: "简体中文", hi: "हिन्दी" },
+    options: { auto: "Wie der Browser", en: "English", de: "Deutsch", es: "Español", zh: "简体中文", hi: "हिन्दी", ar: "العربية" },
   },
   learnSounds: {
     label: "Belohnungsklänge",

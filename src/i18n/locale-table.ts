@@ -51,7 +51,7 @@ export const LOCALE_TABLE = [
   { code: "es", english: "Spanish", endonym: "Español", lang: "es", intl: "es-419", dir: "ltr", ogLocale: "es_LA", naming: "solfege", alphabet: "latin", shipped: true, complete: false },
   { code: "zh", english: "Chinese", endonym: "简体中文", lang: "zh-Hans", intl: "zh-Hans-CN", dir: "ltr", ogLocale: "zh_CN", naming: "letters", alphabet: "han", shipped: true, complete: false },
   { code: "hi", english: "Hindi", endonym: "हिन्दी", lang: "hi", intl: "hi-IN", dir: "ltr", ogLocale: "hi_IN", naming: "letters", alphabet: "devanagari", shipped: true, complete: false },
-  { code: "ar", english: "Arabic", endonym: "العربية", lang: "ar", intl: "ar", dir: "rtl", ogLocale: "ar_AR", naming: "solfege", alphabet: "arabic", shipped: false, complete: false },
+  { code: "ar", english: "Arabic", endonym: "العربية", lang: "ar", intl: "ar", dir: "rtl", ogLocale: "ar_AR", naming: "solfege", alphabet: "arabic", shipped: true, complete: false },
   { code: "pt", english: "Portuguese", endonym: "Português (Brasil)", lang: "pt-BR", intl: "pt-BR", dir: "ltr", ogLocale: "pt_BR", naming: "solfege", alphabet: "latin", shipped: false, complete: false },
   { code: "id", english: "Indonesian", endonym: "Bahasa Indonesia", lang: "id", intl: "id", dir: "ltr", ogLocale: "id_ID", naming: "letters", alphabet: "latin", shipped: false, complete: false },
   { code: "bn", english: "Bengali", endonym: "বাংলা", lang: "bn", intl: "bn-BD", dir: "ltr", ogLocale: "bn_BD", naming: "letters", alphabet: "bengali", shipped: false, complete: false },
