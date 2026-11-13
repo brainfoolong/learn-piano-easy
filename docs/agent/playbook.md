@@ -10,6 +10,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 <!-- looper:end playbook -->
 
 ## Tooling
+- **Write and Edit turn a typed `⁨` into the raw isolate character.** A translation file then hides
+  its isolates, though `src/i18n/messages/*.ar.ts` writes them as escapes. Type `\u2068` to get the
+  escape text, and Grep the file for a raw U+2068 afterwards.
 
 - **`bun run shot` on a page of the default locale may show it in German.** The site moves a first
   visit to the browser's language, which follows the system's. Pass `--locale en-US` or

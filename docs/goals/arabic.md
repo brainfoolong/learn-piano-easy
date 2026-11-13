@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Arabic
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Arabic, from a to m"
     status: open
@@ -148,12 +148,17 @@ then review them blind, as the method says.
 blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/black-key-groups.ar.ts:1`, `src/learn/lessons/first-melodies/hands-take-turns.ar.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/counting-to-four.ar.ts:1`, `src/learn/lessons/reading-music/bass-landmarks.ar.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/a-held-bass-note.ar.ts:1`, `src/learn/lessons/chords/alberti-bass.ar.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/f-major.ar.ts:1`, `src/learn/lessons/expression/crescendo-and-diminuendo.ar.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp ar` for each world. `src/i18n/stamps/ar.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/black-key-groups.ar.ts:1`, `src/learn/lessons/first-melodies/hands-take-turns.ar.ts:1`
+  - [x] Nine lesson files and `texts.ar.ts` per world, by one writer each.
+  - [x] `ar` added to each world's `translations` in its `index.ts`.
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/counting-to-four.ar.ts:1`, `src/learn/lessons/reading-music/bass-landmarks.ar.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/a-held-bass-note.ar.ts:1`, `src/learn/lessons/chords/alberti-bass.ar.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/f-major.ar.ts:1`, `src/learn/lessons/expression/crescendo-and-diminuendo.ar.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+  - [x] Eight blind reviews, 5 *wrong* findings, all settled.
+  - [x] *Reading music* and *Both hands* reviewed again. The four *wrong* findings of the second read broke a rule set after their fixer ran, and were fixed without a third read.
+  - [x] The rulings that bind every world written into the style guide.
+- [x] `bun run i18n stamp ar` for each world. `src/i18n/stamps/ar.json:1`
 
 ### 4. The song guides in Arabic, from a to m
 
@@ -203,27 +208,31 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its Arabic file in `src/i18n/messages/*.ar.ts`,
-reviewed blind twice and stamped in `src/i18n/stamps/ar.json`. `ar` loads as its own chunk but is not
-shipped. `bun x tsc` and `arabic_texts_keep_their_rules` are green. The texts `status` still lists for the
-catalog are left out on purpose, since their Arabic equals the English, such as `10 XP` or `Ctrl`.
+Stages 1 to 3 are done. Every catalog section and every lesson of the eight worlds has its Arabic file,
+reviewed blind and stamped in `src/i18n/stamps/ar.json`. Each world's `index.ts` loads `texts.ar`. `ar` is
+not shipped yet. `bun x tsc`, the build and `arabic_texts_keep_their_rules` are green. `status` lists one
+lesson text as missing on purpose: the answers `1`, `3`, `5` of `finger-numbers`, which equal the English.
 
 ### Next
 
-**Stage 3: the course in Arabic.** Gate: stage 2's catalogs are stamped, and they are.
+**Stage 4: the song guides from a to m.** Gate: stage 3's worlds are stamped, and they are.
 
-- Run `bun tools/i18n.ts work ar lesson/<world>` for each of the eight worlds.
-- Each world has nine lessons, one file each: `src/learn/lessons/<world>/<lesson>.ar.ts`, shaped like
-  the `.hi.ts` sibling.
-- The briefs of stage 2 are in `.agent-tmp/i18n/ar/`: `brief-writer.md`, `brief-reviewer.md` and
-  `brief-fixer.md`. Adapt their file paths from catalog sections to lessons.
-- Every `${…}` argument is isolated, numbers included: `isolate(formatNumber("ar", n))`. CLDR gives `ar`
-  Western digits, so the rules test demands it.
-- A kept Latin word inside a text is wrapped in `⁨…⁩`, written as escapes.
-- The glossary gained terms in stage 2. A setting off is `معطّل`, a composer `الملحن`, a lyric syllable
-  `المقطع اللفظي`, and the learner's instrument `آلتك`.
-- Reviewers raised `أربعة موازير` for *four bars*. It was rejected: `مازورة` is feminine, so its numeral
-  is `أربع`.
+- A read-only `Explore` subagent lists the slugs of `tools/our-songs/*.ts` from `a` to `m`. Split them in
+  three, and run `bun tools/i18n.ts work ar guide/<slug>` for each.
+- Each guide is `tools/our-songs/<slug>.ar.ts`, shaped like its `.hi.ts` sibling.
+- The lesson briefs are in `.agent-tmp/i18n/ar/`: `brief-lesson-writer.md`, `brief-lesson-reviewer.md`
+  and `brief-lesson-fixer.md`. Adapt their paths from a world to a batch of guides. The fixer brief
+  holds the rulings that bind every text, so give its rules section to the writers too.
+- The rulings stage 3 settled, now in `docs/reference/translation/ar.md`:
+  - A count from 3 to 10 is a digit (§ 8), quiz answers included: `4 موازير`. A count with the article,
+    such as `النغمات الثلاث`, names a known set and stays a word.
+  - A note value's plural is `بيضاوات`, `سوداوات`, `مستديرات` (§ 5). `نغمات بيضاء` reads as white keys.
+  - The note `لا` is `نغمة لا` after a verb, a preposition or `هي` (§ 7).
+  - `الإصبع` is masculine: `الإصبع الأوسط` (§ 5). `أخفض` is the plain comparative for pitch.
+- Writers who type `⁨` with Write or Edit get the raw character. Tell them to type `\u2068`
+  and Grep for a raw U+2068 afterwards.
+- The song titles stay in Latin letters and isolated. A composer with an Arabic Wikipedia article takes
+  its Arabic spelling, as the standing decisions say.
 
 Expected red: none.
 
