@@ -290,6 +290,17 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | particles; markers; labels | partikel; penanda; label | plain words |
 | tag (search); round (a game) | tag; ronde | plain words |
 | Preview (a song) | Dengarkan; Berhenti mendengarkan | plain words |
+| the scene (the 3D piano and its notes) | tampilan 3D; *tampilan* in prose | *Adegan* reads as a film's scene |
+| default | bawaan; *nilai bawaan* | AN *bawaan* |
+| custom | kustom | AN |
+| input; output (MIDI) | masukan; keluaran | KBBI |
+| MIDI channel | kanal MIDI | KBBI *kanal* |
+| combo; multiplier; accuracy | kombo; pengali; ketepatan | the words of rhythm games |
+| root (of a chord); a chord tone | akar; *ke-5*, *ke-♭3* | the player's own short labels |
+| particles wander; sway | simpangan; ayunan | plain words, unsourced |
+| the teacher, an ape | kera | everyday word |
+| Sponsor (the page) | Dukungan; *Dukung di GitHub* | *Sponsor* reads as a company's |
+| setup (the first visit) | persiapan | everyday word |
 
 ### Which "play" is which
 
@@ -364,7 +375,7 @@ More rules the guides settle:
 - **The worlds' titles are** Kenali piano, Melodi pertama, Ritme, Membaca not, Kedua tangan, Tangga nada
   dan nada dasar, Akor and Ekspresi. `src/learn/course.ts` takes them when Indonesian ships.
 - The `kept` list of `src/i18n/typography.ts` holds each kept word a test could misread, and each label
-  that is the same in both languages, such as *Normal* and *Volume*.
+  that is the same in both languages, such as *Normal*, *Volume*, *Menu*, *Level* and *Audio*.
 
 ## 7. Note names
 
