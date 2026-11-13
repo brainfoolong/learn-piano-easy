@@ -171,9 +171,10 @@ test("the_landing_page_stays_within_its_byte_budget", async () => {
 
 /**
  * The most a click on a landing piano may add to the landing page's scripts, gzipped. It holds the
- * embed's chunk and every script it imports that the landing page has not loaded already.
+ * embed's chunk and every script it imports that the landing page has not loaded already. three.js is
+ * one shared chunk, so it carries the classes the lesson hand's glTF loader needs too, about 6 kB.
  */
-const LANDING_PLAYER_BUDGET_BYTES = 200_000;
+const LANDING_PLAYER_BUDGET_BYTES = 210_000;
 
 /** The script in `entry`'s graph, static or dynamic, whose source map holds `source` alone. */
 async function chunkOf(entry: string, source: string): Promise<string | undefined> {
