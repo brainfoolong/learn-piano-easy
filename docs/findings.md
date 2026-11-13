@@ -691,7 +691,7 @@ The gallery shows each in every state, and passes the layout checks at every wid
 - The gallery's bundle carries the quantizer and the engraver, because the staff needs them.
 - A progress bar's label states its value, so the track's contrast carries no meaning alone.
 - `shiftDuring` of `e2e/layout-check.ts` has no caller, so no check measures the shift of a view change.
-- The 88-key keyboard has keys about 6 pixels wide on a phone, and `fitRange` of `src/render/key-layout.ts` fits a range.
+- The piano view's 88 keys are about 6 pixels wide on a phone, and `fitRange` of `src/render/key-layout.ts` fits a range.
 - The staff imports `breakLines` from `src/sheet/sheet-view.ts`, and tree shaking keeps `SheetView` out.
 
 ### Decisions that still bind
@@ -708,8 +708,8 @@ The gallery shows each in every state, and passes the layout checks at every wid
 - A navigation offline gets its own folder's page from `src/pwa/sw.ts`.
 - No pixel snapshots: the layout checks measure the flaws, and a session looks with `bun run shot`.
 - The controls' stylesheet styles only `[data-control]`, and `src/ui/controls.ts` imports it.
-- The 2D keyboard's keys are no focus stops, and a live text names the marked keys.
-- The keyboard and the staff share one `Mark`: `next`, `correct` or `mistake`.
+- The piano view's keys are no focus stops, and a polite live text names the marked keys.
+- The piano view and the staff share one `Mark` of `src/ui/mark.ts`: `next`, `correct` or `mistake`.
 - The gallery is the route `design/`, which the site never links.
 
 ## site-shell
@@ -764,7 +764,8 @@ the two ways to play, the four rarities, the ways to connect, and why it is free
 - The view is `src/landing/landing.ts`, with one module per band in `src/landing/`.
 - The hero's and the rarity band's pianos are landing boxes of `src/landing/player-box.ts`.
 - A box shows a panning picture of the real player until one click loads the embed of `src/app/embed.ts`.
-- Every landing keyboard sounds through `src/landing/touch-sound.ts`, which loads the audio service on the first press.
+- The devices band shows a picture of the piano view until a click loads the view.
+- Every landing piano sounds through `src/landing/touch-sound.ts`, which loads the audio service on the first press.
 - The sampler drops a note while it has no sound set, so a press waits for the set, not only the context.
 - The pictures of both parts come from `bun tools/landing-pictures.ts`, as WebP in `public/images/landing/`.
 - The social picture comes from `tools/make-social-image.ts`.
@@ -869,7 +870,7 @@ safely on the device, and hands a song step to the player and back.
 - Importing a backup merges by event id, so it never removes newer progress.
 - A missing text in any locale fails the type check.
 - A step judges with pure functions, and its view only shows what the judge decided.
-- Every step works on every input, with the on-screen keyboard under each step that listens.
+- Every step works on every input, with the piano view under each step that listens.
 - Every input reaches a step through the input bus.
 - Rhythm is judged on the audio clock, from the input event's time.
 - A step never punishes: a mistake shows the answer gently and lets the learner try again.

@@ -1,8 +1,9 @@
 /**
  * The piano view: the player's 3D piano alone, framed for a page, with marks, names, fingers and a reach.
  *
- * A lesson step, the setup check and the gallery show their keys through it. It takes the options the
- * 2D keyboard took, holds no text but its fallback, and reports a pointer's presses through callbacks.
+ * A lesson step, the setup check and the gallery show their keys through it. It takes a range, marks,
+ * names, fingers and a reach, holds no text but its fallback, and reports a pointer's presses through
+ * callbacks.
  *
  * Decisions, and what each costs:
  * - **One piano.** It frames `createPiano` of `src/render/piano.ts`, lit by `src/render/lights.ts`, so a

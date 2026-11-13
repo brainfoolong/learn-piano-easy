@@ -14,7 +14,7 @@ export type SolutionMove =
   | { do: "skip" }
   /** Picks the answer at `answer`, an index of the texts' `answers`. */
   | { do: "choose"; answer: number }
-  /** Presses and lets go of each of `notes` in turn, on the step's on-screen keyboard. */
+  /** Presses and lets go of each of `notes` in turn, on the step's piano view. */
   | { do: "play"; notes: number[] }
   /** Presses, in turn, the step's button whose `data-answer` is each of `answers`. */
   | { do: "answer"; answers: string[] }

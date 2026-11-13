@@ -6,13 +6,13 @@ context: [docs/decisions/0011.md, src/render/piano.ts, src/render/scene.ts, src/
 stages:
   - id: 1
     title: The 3D piano view for a page
-    status: open
+    status: done
   - id: 2
     title: Lessons and the setup check play on the 3D piano
-    status: open
+    status: done
   - id: 3
     title: The landing band plays the 3D piano, and the 2D keyboard is deleted
-    status: open
+    status: done
   - id: 4
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -151,9 +151,9 @@ landing page, and decision 0008 already answers it: a picture until a click.
 - [x] Delete `keyboard.ts`, `keyboard.css` and `keyboard.test.ts`. `src/ui/components/keyboard.ts:1`
 - [x] The floor's `keyboard-2d` check goes. `docs/goals/README.md:244`
 - [x] The site design's component table names the view. `docs/site-design.md:147`
-- [ ] The findings and the playbook name the view, not the 2D keyboard. `docs/findings.md:707`, `docs/agent/playbook.md:17`
+- [x] The findings and the playbook name the view, not the 2D keyboard. `docs/findings.md:707`, `docs/agent/playbook.md:17`
   - [x] The playbook's pointer trap names the view. `docs/agent/playbook.md:17`
-  - [ ] The findings' lines 692, 709, 710, 765 and 870 name the view. `docs/findings.md:709`
+  - [x] The findings' lines 692, 709, 710, 765 and 870 name the view. `docs/findings.md:709`
 - [x] The feature list says every piano is the 3D one. `docs/reference/features.md:145`
 - [x] The view's key names and finger digits read clearly at a lesson's width. `src/render/piano-keys.ts:240`
 
@@ -178,10 +178,10 @@ goal's uncommitted file. No failure is this goal's.
 **Stage 3's last item, then stage 4.** Files: `docs/findings.md`. Gate: `docs/findings.md` and
 `tools/hand-model.ts` have no other session's uncommitted change.
 
-- [ ] Findings line 692 says the view's 88 keys, not "The 88-key keyboard". `docs/findings.md:692`
-- [ ] Lines 709 and 710 give the view the live text, the keys that are no focus stops, and the shared `Mark`. `docs/findings.md:709`
-- [ ] Line 765 says "Every landing piano", and the devices band shows a picture until a click. `docs/findings.md:765`
-- [ ] Line 870 says the piano view, not the on-screen keyboard. `docs/findings.md:870`
+- [x] Findings line 692 says the view's 88 keys, not "The 88-key keyboard". `docs/findings.md:692`
+- [x] Lines 709 and 710 give the view the live text, the keys that are no focus stops, and the shared `Mark`. `docs/findings.md:709`
+- [x] Line 765 says "Every landing piano", and the devices band shows a picture until a click. `docs/findings.md:765`
+- [x] Line 870 says the piano view, not the on-screen keyboard. `docs/findings.md:870`
 - [ ] Run `looper verify` once more, and it is green. `docs/goals/one-piano.md:164`
 
 Expected red: none of this goal's.
