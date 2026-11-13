@@ -9,7 +9,6 @@
  * `treble-landmarks.en.ts` and `treble-landmarks.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { trebleLandmarksDe } from "./treble-landmarks.de";
 import { trebleLandmarksEn } from "./treble-landmarks.en";
 
 export const trebleLandmarks: Lesson = {
@@ -34,5 +33,5 @@ export const trebleLandmarks: Lesson = {
     { id: "read-treble-landmarks", kind: "read-note", clef: "treble", answer: "play", notes: [60, 67, 72, 65, 69, 74], pass: 0.66 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: trebleLandmarksEn, de: trebleLandmarksDe },
+  texts: { en: trebleLandmarksEn },
 };

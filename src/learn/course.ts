@@ -6,15 +6,47 @@
  *   of *Learn Piano* loads it. A page outside the course then costs only the worlds' titles.
  * - Every world's `load` adds the skip test of `src/learn/skip-test.ts`, so the map, a lesson's page
  *   and the build all see the same one.
+ * - A world loads its lessons once, and each locale's texts once, so a lesson's texts gain a locale in
+ *   place. A page awaits `loadTexts` of its locale before it reads a lesson's texts.
  */
+import { loadLocale, type Locale } from "../i18n/locale";
 import { lessonKey } from "./lesson-run";
-import type { Lesson, World, WorldLessons } from "./model";
-import { withSkipTest } from "./skip-test";
+import { type Lesson, mergeTexts, type World, type WorldLessons } from "./model";
+import { translateSkipTest, withSkipTest } from "./skip-test";
 
-/** A world whose `load` adds the built skip test to the lessons `lessons` loads. */
-function world(spec: Omit<World, "load">, lessons: () => Promise<WorldLessons>): World {
-  const made: World = { ...spec, load: async () => withSkipTest(made, await lessons()) };
+/**
+ * A world whose `load` adds the built skip test to the lessons `lessons` loads, once. Its `loadTexts`
+ * fills each lesson's texts of a locale from the world's chunk of that locale, merged with the English.
+ */
+function world(spec: Omit<World, "load" | "loadTexts">, lessons: () => Promise<WorldLessons>): World {
+  let loading: Promise<WorldLessons> | undefined;
+  const made: World = {
+    ...spec,
+    load: () => {
+      loading ??= lessons().then(
+        (written) => withSkipTest(made, written),
+        (error: unknown) => {
+          loading = undefined;
+          throw error;
+        },
+      );
+      return loading;
+    },
+    loadTexts: async (locale: Locale) => {
+      const [written, built] = await Promise.all([lessons(), made.load(), loadLocale(locale)]);
+      const own = [...built.lessons, built.boss, written.skipTest].filter((lesson): lesson is Lesson => lesson !== undefined);
+      if (own.every((lesson) => lesson.texts[locale] !== undefined)) return;
+      const translation = (await built.translations?.[locale]?.()) ?? {};
+      for (const lesson of own) lesson.texts[locale] = mergeTexts(lesson.texts.en, translation[lesson.id] ?? {});
+      translateSkipTest(made, written, built, locale);
+    },
+  };
   return made;
+}
+
+/** Loads every world's lessons and their texts in `locale`. */
+export async function loadCourseTexts(locale: Locale): Promise<void> {
+  await Promise.all(COURSE.map((world) => world.loadTexts(locale)));
 }
 
 /** Every world of the course, in order. */
@@ -29,10 +61,14 @@ export const COURSE: readonly World[] = [
   world({ id: "expression", title: { en: "Expression", de: "Ausdruck" }, accent: "indigo" }, async () => (await import("./lessons/expression/index")).expression),
 ];
 
-/** The world `world` and its lesson `lesson`, a boss or a skip test included, or undefined when either is missing. */
-export async function findLesson(world: string, lesson: string): Promise<{ world: World; lesson: Lesson } | undefined> {
+/**
+ * The world `world` and its lesson `lesson`, a boss or a skip test included, with its texts in `locale`
+ * loaded. Undefined when either is missing.
+ */
+export async function findLesson(world: string, lesson: string, locale: Locale): Promise<{ world: World; lesson: Lesson } | undefined> {
   const found = COURSE.find((w) => w.id === world);
   if (found === undefined) return undefined;
+  await found.loadTexts(locale);
   const { lessons, boss, skipTest } = await found.load();
   const match = [...lessons, boss, skipTest].find((l) => l?.id === lesson);
   return match === undefined ? undefined : { world: found, lesson: match };

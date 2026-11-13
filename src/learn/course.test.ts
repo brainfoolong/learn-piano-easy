@@ -1,10 +1,13 @@
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
 import { LOCALES } from "../i18n/locale";
 import { expect, test } from "../testing";
-import { loadCourse } from "./course";
-import { allSteps, lessonProblems, pitchesOf } from "./model";
+import { COURSE, loadCourse, loadCourseTexts } from "./course";
+import { allSteps, type Lesson, lessonProblems, pitchesOf } from "./model";
 import { keyReach, octaveShift } from "../input/keyboard";
 
 test("every_world_has_six_to_ten_lessons_a_boss_and_a_skip_test", async () => {
+  for (const locale of LOCALES) await loadCourseTexts(locale);
   for (const { world, lessons } of await loadCourse()) {
     expect({ world: world.id, count: lessons.lessons.length >= 6 && lessons.lessons.length <= 10 }).toEqual({ world: world.id, count: true });
     expect(lessons.boss).toBeDefined();
@@ -13,6 +16,24 @@ test("every_world_has_six_to_ten_lessons_a_boss_and_a_skip_test", async () => {
       expect({ lesson: `${world.id}/${lesson.id}`, problems: lessonProblems(lesson, LOCALES) }).toEqual({ lesson: `${world.id}/${lesson.id}`, problems: [] });
     }
   }
+});
+
+test("every_lesson_text_file_is_in_its_world_texts", async () => {
+  const misplaced: string[] = [];
+  for (const world of COURSE) {
+    const folder = join(import.meta.dir, "lessons", world.id);
+    const { translations = {} } = await world.load();
+    for (const file of readdirSync(folder)) {
+      const match = /^(.+)\.([a-z]{2})\.ts$/.exec(file);
+      if (match === null || match[2] === "en" || match[1] === "texts") continue;
+      const [, name, locale] = match;
+      const lesson = Object.values(await import(join(folder, `${name}.ts`))).find((value): value is Lesson => typeof value === "object" && value !== null && "steps" in value);
+      const own = Object.values(await import(join(folder, file)))[0];
+      const gathered = await translations[locale as keyof typeof translations]?.();
+      if (lesson === undefined || gathered?.[lesson.id] !== own) misplaced.push(`${world.id}/${file}`);
+    }
+  }
+  expect(misplaced).toEqual([]);
 });
 
 test("every_key_a_lesson_asks_for_is_in_reach_of_the_default_computer_keys", async () => {

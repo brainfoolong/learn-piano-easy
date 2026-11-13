@@ -10,7 +10,6 @@
  */
 import type { Hand } from "../../../theory/fingering";
 import type { Lesson, PhraseNote } from "../../model";
-import { cFAndGDe } from "./c-f-and-g.de";
 import { cFAndGEn } from "./c-f-and-g.en";
 
 const C_RIGHT = [60, 64, 67];
@@ -76,5 +75,5 @@ export const cFAndG: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: cFAndGEn, de: cFAndGDe },
+  texts: { en: cFAndGEn },
 };

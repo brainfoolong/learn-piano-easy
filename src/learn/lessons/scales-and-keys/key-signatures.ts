@@ -8,7 +8,6 @@
  * `key-signatures.en.ts` and `key-signatures.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { keySignaturesDe } from "./key-signatures.de";
 import { keySignaturesEn } from "./key-signatures.en";
 
 export const keySignatures: Lesson = {
@@ -40,5 +39,5 @@ export const keySignatures: Lesson = {
     { id: "play-in-f", kind: "play-notes", notes: [65, 67, 69, 70, 72, 70, 69, 67, 65] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: keySignaturesEn, de: keySignaturesDe },
+  texts: { en: keySignaturesEn },
 };

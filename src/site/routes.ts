@@ -21,6 +21,7 @@
 import { LOCALES, localeOfPath, localeRoot, messagesOf, type Locale } from "../i18n/locale";
 import type { PageMeta } from "../i18n/messages/en";
 import { COURSE } from "../learn/course";
+import { textsOf } from "../learn/model";
 
 /** A route's id, which the router, the build and the catalogs name it by. */
 export type RouteId = "home" | "play" | "modes" | "learn" | "profile" | "about" | "data" | "sponsor" | "imprint" | "privacy" | "design" | "lesson";
@@ -61,12 +62,13 @@ function lessonRouteAt(routePath: string): Route | undefined {
 export async function lessonPages(): Promise<Page[]> {
   const pages: Page[] = [];
   for (const world of COURSE) {
+    for (const locale of LOCALES) await world.loadTexts(locale);
     const { lessons, boss, skipTest } = await world.load();
     for (const lesson of [...lessons, boss, skipTest]) {
       if (lesson === undefined) continue;
       const meta = Object.fromEntries(
         LOCALES.map((locale) => {
-          const { title, steps } = lesson.texts[locale];
+          const { title, steps } = textsOf(lesson, locale);
           const intro = steps[lesson.steps[0]!.id]!.text;
           return [locale, { title, description: messagesOf(locale).lessonPage.description(title, world.title[locale], intro) }];
         }),

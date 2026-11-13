@@ -5,7 +5,6 @@
  * keys of a chord pressed as one.
  */
 import type { Lesson } from "../../model";
-import { canonInDRareDe } from "./canon-in-d.de";
 import { canonInDRareEn } from "./canon-in-d.en";
 
 export const canonInDRare: Lesson = {
@@ -14,5 +13,5 @@ export const canonInDRare: Lesson = {
     { id: "intro", kind: "explain" },
     { id: "song", kind: "song", file: "ours/canon-in-d/rare.mid", practice: 3, accuracy: 0.8 },
   ],
-  texts: { en: canonInDRareEn, de: canonInDRareDe },
+  texts: { en: canonInDRareEn },
 };

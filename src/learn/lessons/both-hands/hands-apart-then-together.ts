@@ -9,7 +9,6 @@
  * `hands-apart-then-together.en.ts` and `hands-apart-then-together.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { handsApartThenTogetherDe } from "./hands-apart-then-together.de";
 import { handsApartThenTogetherEn } from "./hands-apart-then-together.en";
 
 export const handsApartThenTogether: Lesson = {
@@ -70,5 +69,5 @@ export const handsApartThenTogether: Lesson = {
     { id: "mirror-together", kind: "play-notes", notes: [[52, 64], [50, 65], [48, 67], [50, 65], [52, 64]] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: handsApartThenTogetherEn, de: handsApartThenTogetherDe },
+  texts: { en: handsApartThenTogetherEn },
 };

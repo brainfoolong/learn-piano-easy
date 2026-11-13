@@ -8,7 +8,6 @@
  * plays chords, which the *Chords* world teaches later.
  */
 import type { Lesson } from "../../model";
-import { jingleBellsDe } from "./jingle-bells.de";
 import { jingleBellsEn } from "./jingle-bells.en";
 
 export const jingleBells: Lesson = {
@@ -17,5 +16,5 @@ export const jingleBells: Lesson = {
     { id: "intro", kind: "explain" },
     { id: "song", kind: "song", file: "ours/jingle-bells/common.mid", practice: 3, accuracy: 0.8 },
   ],
-  texts: { en: jingleBellsEn, de: jingleBellsDe },
+  texts: { en: jingleBellsEn },
 };

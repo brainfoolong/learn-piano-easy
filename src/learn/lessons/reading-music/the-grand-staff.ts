@@ -8,7 +8,6 @@
  * C in both. The texts are `the-grand-staff.en.ts` and `the-grand-staff.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theGrandStaffDe } from "./the-grand-staff.de";
 import { theGrandStaffEn } from "./the-grand-staff.en";
 
 export const theGrandStaff: Lesson = {
@@ -37,5 +36,5 @@ export const theGrandStaff: Lesson = {
     { id: "treble-play", kind: "read-note", clef: "treble", answer: "play", notes: [60, 67, 72], pass: 0.66 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theGrandStaffEn, de: theGrandStaffDe },
+  texts: { en: theGrandStaffEn },
 };

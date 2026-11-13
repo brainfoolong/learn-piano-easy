@@ -48,11 +48,12 @@ import { buttonLink } from "../ui/components/button";
 import { mascot } from "../ui/components/mascot";
 import { el } from "../ui/dom";
 import { icon, type IconName } from "../ui/icons/icons";
-import type { LoadedWorld } from "./course";
+import { loadCourseTexts, type LoadedWorld } from "./course";
 import { badgeArt } from "./game/badge-art";
 import { worldBadgeId } from "./game/badges";
 import { dailyGoalOf, readStanding, type Standing } from "./game/standing";
 import type { MapNode, MapWorld } from "./game/unlock";
+import { textsOf } from "./model";
 import type { RunningSetup } from "./onboarding";
 
 const SVG = "http://www.w3.org/2000/svg";
@@ -140,7 +141,7 @@ function worldOf(loaded: LoadedWorld, state: MapWorld, number: number, first: nu
   const t = messagesOf(locale);
   const { world, lessons } = loaded;
   const title = world.title[locale];
-  const titles = new Map([...lessons.lessons, ...(lessons.boss === undefined ? [] : [lessons.boss])].map((lesson) => [lesson.id, lesson.texts[locale].title]));
+  const titles = new Map([...lessons.lessons, ...(lessons.boss === undefined ? [] : [lessons.boss])].map((lesson) => [lesson.id, textsOf(lesson, locale).title]));
   const xs = state.nodes.map((_, i) => swingAt(first + i));
   const reached = state.nodes.reduce((last, node, i) => (node.state === "locked" ? last : i), 0);
   // The world's badge needs its boss, so a world without one never shows it earned.
@@ -246,7 +247,7 @@ export function mapPage(locale: Locale, context: ViewContext, onSetupDone: () =>
     }
     const loaded = course.find((w) => w.world.id === next.world)!;
     const lesson = [...loaded.lessons.lessons, loaded.lessons.boss].find((l) => l?.id === next.node.lesson);
-    const title = lesson?.texts[locale].title ?? next.node.lesson;
+    const title = lesson === undefined ? next.node.lesson : textsOf(lesson, locale).title;
     continueHost.replaceChildren(
       el("div", { class: "map__next", children: [el("p", { class: "map__next-label", text: t.map.nextUp }), el("p", { class: "map__next-title", text: title })] }),
       buttonLink({ label: t.map.continue, href: lessonHref(next.world, next.node.lesson, locale), variant: "primary", size: "large", icon: "arrow-right", iconAt: "end" }),
@@ -270,7 +271,7 @@ export function mapPage(locale: Locale, context: ViewContext, onSetupDone: () =>
   let setup: RunningSetup | undefined;
   const read = () => {
     const own = ++reading;
-    void readStanding(dailyGoalOf(context.settings)).then((standing) => {
+    void Promise.all([readStanding(dailyGoalOf(context.settings)), loadCourseTexts(locale)]).then(([standing]) => {
       if (own === reading && showing) draw(standing);
     });
     if (context.settings.get("learnSetupDone") || settingUp) return;

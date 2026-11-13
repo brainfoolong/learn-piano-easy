@@ -9,7 +9,6 @@
  * `finger-over-the-thumb.en.ts` and `finger-over-the-thumb.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { fingerOverTheThumbDe } from "./finger-over-the-thumb.de";
 import { fingerOverTheThumbEn } from "./finger-over-the-thumb.en";
 
 export const fingerOverTheThumb: Lesson = {
@@ -61,5 +60,5 @@ export const fingerOverTheThumb: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: fingerOverTheThumbEn, de: fingerOverTheThumbDe },
+  texts: { en: fingerOverTheThumbEn },
 };

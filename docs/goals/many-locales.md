@@ -134,6 +134,14 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 - **Lesson texts load per world and locale.** Each world has `texts.<locale>.ts`, which imports that
   world's lesson text files of the locale. `World.loadTexts(locale)` loads it, and English stays in the
   world's chunk.
+- **A world fills `Lesson.texts[locale]` in place, merged once by `mergeTexts`.** `World.load` runs once,
+  so every reader shares one lesson object. `textsOf` throws before the load, as `messagesOf` does. A
+  WeakMap beside the lesson would keep it immutable, but every test that builds a lesson inline would
+  then need a load as well.
+- **A built skip test gains a locale's texts in `loadTexts`,** through `translateSkipTest`, once its
+  lessons hold theirs.
+- **A translated lesson list of another length shows the English list,** in every locale. A quiz names
+  its right answer by index, so a list of another length would mark the wrong answer right.
 - **A guide's translation is `tools/our-songs/<slug>.<locale>.ts`,** with the shape of the German block,
   `GuideTranslation`. The German block stays in the song module. The writer puts every locale's text side
   by side in `guide.json`, as `GuideText` already holds them. Each guide then grows with each locale.
@@ -206,14 +214,14 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 the live locale's texts.
 **Gate:** `loadLocale` exists in `src/i18n/locale.ts`.
 
-- [ ] `LessonTexts` takes a `Translation`, and a step's texts merge with the English. `src/learn/model.ts:6`
-- [ ] Each world's `texts.de.ts`, and `World.loadTexts`. `src/learn/lessons/meet-the-piano/index.ts:1`
-- [ ] Every lesson module stops importing its German file. `src/learn/lessons/meet-the-piano/octaves.ts:9`
-- [ ] The lesson view awaits the live locale's texts. `src/learn/lesson-view.ts:1`
-- [ ] A test that every lesson text file is in its world's `texts.<locale>.ts`. `src/learn/course.test.ts:1`
+- [x] `LessonTexts` takes a `Translation`, and a step's texts merge with the English. `src/learn/model.ts:6`
+- [x] Each world's `texts.de.ts`, and `World.loadTexts`. `src/learn/lessons/meet-the-piano/index.ts:1`
+- [x] Every lesson module stops importing its German file. `src/learn/lessons/meet-the-piano/octaves.ts:9`
+- [x] The lesson view awaits the live locale's texts. `src/learn/lesson-view.ts:1`
+- [x] A test that every lesson text file is in its world's `texts.<locale>.ts`. `src/learn/course.test.ts:1`
 - [ ] `GuideTranslation`, and the writer reads each `<slug>.<locale>.ts`. `tools/make-our-songs.ts:338`
 - [ ] A non-German list of another length falls back to English. `tools/make-our-songs.ts:306`
-- [ ] Test `a_missing_lesson_text_shows_in_english`. `src/learn/model.test.ts:1`
+- [x] Test `a_missing_lesson_text_shows_in_english`. `src/learn/model.test.ts:1`
 - [ ] Tests `a_guide_without_a_translation_shows_english` and `a_translated_list_of_another_length_shows_english`. `tools/our-songs.test.ts:1`
 
 ### 3. The translation tool, the stamps and the rules test

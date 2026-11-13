@@ -5,7 +5,6 @@
  * right thumb moves down to middle C in the rests.
  */
 import type { Lesson } from "../../model";
-import { furEliseRareDe } from "./fur-elise.de";
 import { furEliseRareEn } from "./fur-elise.en";
 
 export const furEliseRare: Lesson = {
@@ -14,5 +13,5 @@ export const furEliseRare: Lesson = {
     { id: "intro", kind: "explain" },
     { id: "song", kind: "song", file: "ours/fur-elise/rare.mid", practice: 3, accuracy: 0.8 },
   ],
-  texts: { en: furEliseRareEn, de: furEliseRareDe },
+  texts: { en: furEliseRareEn },
 };

@@ -6,7 +6,6 @@
  * `octaves.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { octavesDe } from "./octaves.de";
 import { octavesEn } from "./octaves.en";
 
 export const octaves: Lesson = {
@@ -42,5 +41,5 @@ export const octaves: Lesson = {
     { id: "octave-quiz", kind: "quiz", right: 2 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: octavesEn, de: octavesDe },
+  texts: { en: octavesEn },
 };

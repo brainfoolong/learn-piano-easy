@@ -3,9 +3,15 @@
  * options, and `lessonProblems`, which checks a lesson against the rules of `docs/curriculum.md`.
  *
  * Decisions, and what each costs:
- * - A lesson is data. Its structure is `<lesson>.ts`, and its texts are `<lesson>.en.ts` and
- *   `<lesson>.de.ts` beside it. The English file's object is the texts' type, so a German file that
- *   misses a text fails the type check. More files than one JSON, and a missing text never ships.
+ * - A lesson is data. Its structure is `<lesson>.ts`, and its texts are `<lesson>.<locale>.ts` beside
+ *   it. The English file's object is the texts' type. A German file takes that type whole, so a German
+ *   text never goes missing. Every other locale's file is a `Translation` of it and may lack any text.
+ * - A lesson module imports only its English texts, which load with the world's lessons. Each world's
+ *   `texts.<locale>.ts` gathers its lessons' texts of one locale, keyed by lesson id, as one chunk.
+ *   `World.loadTexts` loads it and fills `Lesson.texts` of that locale, merged with the English by
+ *   `mergeTexts`. Reading a lesson's texts then stays synchronous, and `textsOf` throws before the load.
+ * - A translated list of answers or points whose length differs from the English shows the English
+ *   list, since a quiz names its right answer by its index.
  * - A step's texts sit under its id in `LessonTexts.steps`. Every step has a `text`. A `quiz` adds its
  *   `answers`, and a `recap` adds its `points`. The structure then holds no prose, and a translator
  *   edits text files only.
@@ -36,7 +42,8 @@
  * - Whether a song step's file is a version of ours is checked against the catalog by
  *   `src/learn/model.test.ts`, since this module never reads the catalog.
  */
-import type { Locale } from "../i18n/locale";
+import type { Locale, LocaleCode } from "../i18n/locale";
+import { type Translation, withEnglish } from "../i18n/translation";
 import type { SkillId } from "../library/skills";
 import type { Finger, Hand } from "../theory/fingering";
 import { SCENES } from "./scenes";
@@ -217,18 +224,44 @@ export interface LessonTexts {
   steps: Record<string, StepTexts>;
 }
 
-/** One lesson: its structure, and its texts in every locale. */
+/** One world's texts of one locale: each lesson's translation, by the lesson's id. */
+export type WorldTexts = Record<string, Translation<LessonTexts>>;
+
+/** One lesson: its structure, its English texts, and the texts of each locale its world has loaded. */
 export interface Lesson {
   /** Unique in its world, kebab-case. */
   id: string;
   /** The skills of our songs' guides that the lesson teaches, so the library can name the lesson for each. */
   skills?: SkillId[];
   steps: Step[];
-  texts: Record<Locale, LessonTexts>;
+  texts: { en: LessonTexts } & Partial<Record<LocaleCode, LessonTexts>>;
+}
+
+/** The texts of `lesson` in `locale`, which its world's `loadTexts(locale)` must have loaded. */
+export function textsOf(lesson: Lesson, locale: LocaleCode): LessonTexts {
+  const texts = lesson.texts[locale];
+  if (texts === undefined) throw new Error(`The ${locale} texts of lesson ${lesson.id} are not loaded yet.`);
+  return texts;
+}
+
+/** `english` with each text `translation` holds taken from it, and a list of another length left English. */
+export function mergeTexts(english: LessonTexts, translation: Translation<LessonTexts>): LessonTexts {
+  const merged = withEnglish<LessonTexts>(english, translation);
+  const steps = Object.fromEntries(
+    Object.entries(merged.steps).map(([id, own]): [string, StepTexts] => {
+      const source = english.steps[id]!;
+      const answers = own.answers?.length === source.answers?.length ? own.answers : source.answers;
+      const points = own.points?.length === source.points?.length ? own.points : source.points;
+      return [id, { ...own, ...(answers === undefined ? {} : { answers }), ...(points === undefined ? {} : { points }) }];
+    }),
+  );
+  return { ...merged, steps };
 }
 
 /** A world's lessons, which load as one chunk. */
 export interface WorldLessons {
+  /** The chunk of each locale's texts, `texts.<locale>.ts`. A locale without one shows the English. */
+  translations?: Partial<Record<LocaleCode, () => Promise<WorldTexts>>>;
   lessons: Lesson[];
   /** The world's last challenge, a song of ours or a timed key hunt. */
   boss?: Lesson;
@@ -256,8 +289,10 @@ export interface World {
   id: string;
   title: Record<Locale, string>;
   accent: WorldAccent;
-  /** The world's lessons, loaded on demand. */
+  /** The world's lessons, loaded once on demand. */
   load: () => Promise<WorldLessons>;
+  /** Loads the world's lessons and their texts in `locale`, so `textsOf` may read them. */
+  loadTexts: (locale: Locale) => Promise<void>;
 }
 
 /** The kinds of step that check the learner. A skip test is made of them. */

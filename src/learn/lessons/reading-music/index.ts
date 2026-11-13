@@ -14,5 +14,6 @@ import { trebleLandmarks } from "./treble-landmarks";
 export const readingMusic: WorldLessons = {
   lessons: [theStaff, theTrebleClef, middleC, trebleLandmarks, theBassClef, bassLandmarks, theGrandStaff, readingStepsAndSkips],
   boss: oldMacDonald,
+  translations: { de: () => import("./texts.de").then((module) => module.texts) },
   skipPicks: readingMusicSkipPicks,
 };

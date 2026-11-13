@@ -8,7 +8,6 @@
  * texts are `moving-the-hand.en.ts` and `moving-the-hand.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { movingTheHandDe } from "./moving-the-hand.de";
 import { movingTheHandEn } from "./moving-the-hand.en";
 
 export const movingTheHand: Lesson = {
@@ -43,5 +42,5 @@ export const movingTheHand: Lesson = {
     { id: "move-and-play", kind: "play-notes", notes: [60, 62, 64, 65, 64, 62, 60, 67, 69, 71, 72, 71, 69, 67] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: movingTheHandEn, de: movingTheHandDe },
+  texts: { en: movingTheHandEn },
 };

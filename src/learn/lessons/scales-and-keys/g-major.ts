@@ -8,7 +8,6 @@
  * `g-major.en.ts` and `g-major.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { gMajorDe } from "./g-major.de";
 import { gMajorEn } from "./g-major.en";
 
 export const gMajor: Lesson = {
@@ -77,5 +76,5 @@ export const gMajor: Lesson = {
     { id: "g-tune", kind: "play-notes", notes: [[43, 50, 67], 66, 64, 66, [43, 50, 67], 69, 67] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: gMajorEn, de: gMajorDe },
+  texts: { en: gMajorEn },
 };

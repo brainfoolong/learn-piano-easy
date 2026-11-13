@@ -4,9 +4,9 @@ import { LOCALES } from "../i18n/locale";
 import { readGuide } from "../library/guide";
 import type { CatalogSong } from "../library/search";
 import { expect, test } from "../testing";
-import { COURSE } from "./course";
+import { COURSE, loadCourseTexts } from "./course";
 import type { Finger } from "../theory/fingering";
-import { allSteps, type DemoStep, type Lesson, lessonProblems, STEP_KINDS, type SongStep } from "./model";
+import { allSteps, type DemoStep, type Lesson, lessonProblems, mergeTexts, STEP_KINDS, type SongStep } from "./model";
 
 const SONGS = join(import.meta.dir, "../../public/songs");
 const CATALOG = JSON.parse(readFileSync(join(SONGS, "catalog.json"), "utf8")) as CatalogSong[];
@@ -72,8 +72,9 @@ function sampleLesson(): Lesson {
   };
 }
 
-/** Every lesson of the course: each world's lessons, its boss and its skip test. */
+/** Every lesson of the course with its texts in every locale: each world's lessons, its boss and its skip test. */
 async function courseLessons(): Promise<Lesson[]> {
+  for (const locale of LOCALES) await loadCourseTexts(locale);
   const worlds = await Promise.all(COURSE.map((world) => world.load()));
   return worlds.flatMap((world) => [...world.lessons, ...(world.boss ? [world.boss] : []), ...(world.skipTest ? [world.skipTest] : [])]);
 }
@@ -139,8 +140,9 @@ test("a_demo_finger_is_one_to_five", () => {
 test("every_lesson_has_its_texts_in_every_locale", async () => {
   const sample = sampleLesson();
   const [first, second] = LOCALES;
-  const { sum: _, ...withoutRecap } = sample.texts[second!].steps;
-  const missing: Lesson = { ...sample, texts: { ...sample.texts, [second!]: { ...sample.texts[second!], steps: withoutRecap } } };
+  const secondTexts = sample.texts[second!]!;
+  const { sum: _, ...withoutRecap } = secondTexts.steps;
+  const missing: Lesson = { ...sample, texts: { ...sample.texts, [second!]: { ...secondTexts, steps: withoutRecap } } };
   expect(lessonProblems(missing, LOCALES)).toEqual([`${second} step sum has no texts`]);
   const { [second!]: __, ...onlyFirst } = sample.texts;
   expect(lessonProblems({ ...sample, texts: onlyFirst as Lesson["texts"] }, LOCALES)).toEqual([`it has no ${second} texts`]);
@@ -149,6 +151,25 @@ test("every_lesson_has_its_texts_in_every_locale", async () => {
   for (const lesson of await courseLessons()) {
     for (const locale of LOCALES) expect(Object.keys(lesson.texts[locale]?.steps ?? {}).sort()).toEqual(allSteps(lesson.steps).map((step) => step.id).sort());
   }
+});
+
+test("a_missing_lesson_text_shows_in_english", () => {
+  const english = sampleLesson().texts.en;
+  const merged = mergeTexts(english, {
+    title: "Ejemplo",
+    steps: { idea: { text: "Una idea." }, ask: { answers: ["Re", "Do"] }, sum: { text: "Aprendiste:", points: ["Dónde está Do", "Cómo marcar el pulso"] }, gone: { text: "Sin paso." } },
+  } as Parameters<typeof mergeTexts>[1]);
+  expect(merged.title).toBe("Ejemplo");
+  expect(merged.steps.idea).toEqual({ text: "Una idea." });
+  // A step the translation lacks, and a step's text it lacks, show the English.
+  expect(merged.steps.find).toEqual(english.steps.find);
+  expect(merged.steps.ask!.text).toBe(english.steps.ask!.text);
+  // A list of another length shows the English list, since the quiz names its right answer by index.
+  expect(merged.steps.ask!.answers).toEqual(english.steps.ask!.answers);
+  expect(merged.steps.sum!.points).toEqual(["Dónde está Do", "Cómo marcar el pulso"]);
+  // A step the lesson lacks is dropped.
+  expect(Object.keys(merged.steps).sort()).toEqual(Object.keys(english.steps).sort());
+  expect(lessonProblems({ ...sampleLesson(), texts: { en: english, de: merged } }, LOCALES)).toEqual([]);
 });
 
 test("every_song_step_names_a_version_of_ours", async () => {

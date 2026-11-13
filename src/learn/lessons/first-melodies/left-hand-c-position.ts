@@ -8,7 +8,6 @@
  * `left-hand-c-position.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { leftHandCPositionDe } from "./left-hand-c-position.de";
 import { leftHandCPositionEn } from "./left-hand-c-position.en";
 
 export const leftHandCPosition: Lesson = {
@@ -39,5 +38,5 @@ export const leftHandCPosition: Lesson = {
     { id: "left-skips-repeats", kind: "play-notes", notes: [48, 52, 52, 55, 55, 52, 48] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: leftHandCPositionEn, de: leftHandCPositionDe },
+  texts: { en: leftHandCPositionEn },
 };

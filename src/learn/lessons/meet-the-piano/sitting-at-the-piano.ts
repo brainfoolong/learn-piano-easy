@@ -7,7 +7,6 @@
  * *Finger numbers*. The texts are `sitting-at-the-piano.en.ts` and `sitting-at-the-piano.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { sittingAtThePianoDe } from "./sitting-at-the-piano.de";
 import { sittingAtThePianoEn } from "./sitting-at-the-piano.en";
 
 export const sittingAtThePiano: Lesson = {
@@ -25,5 +24,5 @@ export const sittingAtThePiano: Lesson = {
     { id: "posture-quiz", kind: "quiz", right: 1 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: sittingAtThePianoEn, de: sittingAtThePianoDe },
+  texts: { en: sittingAtThePianoEn },
 };

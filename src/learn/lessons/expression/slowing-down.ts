@@ -10,7 +10,6 @@
  * `slowing-down.en.ts` and `slowing-down.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { slowingDownDe } from "./slowing-down.de";
 import { slowingDownEn } from "./slowing-down.en";
 
 export const slowingDown: Lesson = {
@@ -80,5 +79,5 @@ export const slowingDown: Lesson = {
     { id: "rall-means", kind: "quiz", right: 0 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: slowingDownEn, de: slowingDownDe },
+  texts: { en: slowingDownEn },
 };

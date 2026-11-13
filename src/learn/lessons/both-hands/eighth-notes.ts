@@ -9,7 +9,6 @@
  * `eighth-notes.en.ts` and `eighth-notes.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { eighthNotesDe } from "./eighth-notes.de";
 import { eighthNotesEn } from "./eighth-notes.en";
 
 export const eighthNotes: Lesson = {
@@ -74,5 +73,5 @@ export const eighthNotes: Lesson = {
     { id: "eighth-phrase", kind: "play-notes", notes: [[48, 60], 62, 64, 65, 67, [48, 67], 65, 64, 62, 60] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: eighthNotesEn, de: eighthNotesDe },
+  texts: { en: eighthNotesEn },
 };

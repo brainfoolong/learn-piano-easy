@@ -8,7 +8,6 @@
  * `counting-to-four.en.ts` and `counting-to-four.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { countingToFourDe } from "./counting-to-four.de";
 import { countingToFourEn } from "./counting-to-four.en";
 
 export const countingToFour: Lesson = {
@@ -32,5 +31,5 @@ export const countingToFour: Lesson = {
     { id: "fill-a-bar-quiz", kind: "quiz", right: 0 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: countingToFourEn, de: countingToFourDe },
+  texts: { en: countingToFourEn },
 };

@@ -10,7 +10,6 @@
  * beside it.
  */
 import type { Lesson } from "../../model";
-import { majorTriadsDe } from "./major-triads.de";
 import { majorTriadsEn } from "./major-triads.en";
 
 export const majorTriads: Lesson = {
@@ -79,5 +78,5 @@ export const majorTriads: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: majorTriadsEn, de: majorTriadsDe },
+  texts: { en: majorTriadsEn },
 };

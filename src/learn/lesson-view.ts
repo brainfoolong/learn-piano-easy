@@ -75,7 +75,7 @@ import { gameSounds } from "./game/sfx";
 import { dailyGoalOf, readStanding, type Standing } from "./game/standing";
 import { inputHas, lessonKey, starsOf, stepsToRun, withoutNeed } from "./lesson-run";
 import { lessonSound } from "./lesson-sound";
-import { CHECKING_KINDS, type Lesson, type Step, type World } from "./model";
+import { CHECKING_KINDS, type Lesson, type Step, textsOf, type World } from "./model";
 import { SKIP_TEST_ID, SKIP_TEST_STARS } from "./skip-test";
 import type { NewEvent } from "./progress/event";
 import { indexedDbBackend, memoryBackend, ProgressStore } from "./progress/store";
@@ -187,7 +187,7 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
     setBand("idle", "");
     paintProgress();
     const step = steps[index]!;
-    const texts = lesson!.texts[locale].steps[step.id] ?? { text: "" };
+    const texts = textsOf(lesson!, locale).steps[step.id] ?? { text: "" };
     mounted = viewOf(step)(stage, step, {
       locale,
       texts,
@@ -457,10 +457,10 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
   };
 
   const nameTab = () => {
-    if (lesson !== undefined) document.title = `${lesson.texts[locale].title} · ${messagesOf(locale).siteName}`;
+    if (lesson !== undefined) document.title = `${textsOf(lesson, locale).title} · ${messagesOf(locale).siteName}`;
   };
 
-  void findLesson(at.world, at.lesson).then((found) => {
+  void findLesson(at.world, at.lesson, locale).then((found) => {
     if (found === undefined) {
       phase = "missing";
       title.textContent = t.missing;
@@ -472,7 +472,7 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
     world = found.world;
     lesson = found.lesson;
     element.style.setProperty("--c-world", `var(--c-world-${world.accent})`);
-    title.textContent = lesson.texts[locale].title;
+    title.textContent = textsOf(lesson, locale).title;
     phase = "idle";
     if (showing) {
       nameTab();

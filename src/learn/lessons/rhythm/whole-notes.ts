@@ -9,7 +9,6 @@
  * and `whole-notes.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { wholeNotesDe } from "./whole-notes.de";
 import { wholeNotesEn } from "./whole-notes.en";
 
 export const wholeNotes: Lesson = {
@@ -47,5 +46,5 @@ export const wholeNotes: Lesson = {
     { id: "count-to-four", kind: "rhythm-tap", bpm: 80, taps: 8, pass: 0.75 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: wholeNotesEn, de: wholeNotesDe },
+  texts: { en: wholeNotesEn },
 };

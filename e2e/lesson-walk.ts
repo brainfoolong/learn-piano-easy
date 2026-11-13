@@ -18,7 +18,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { expect, type Locator, type Page } from "@playwright/test";
 import { catalogOf as messagesOf } from "../src/i18n/all-catalogs";
-import type { Locale } from "../src/i18n/locale";
+import { LOCALES, type Locale } from "../src/i18n/locale";
 import { DEFAULT_KEYS, keysOf } from "../src/input/keyboard";
 import { momentsOf, requiredNotes, type Hands } from "../src/input/wait-mode";
 import { COURSE } from "../src/learn/course";
@@ -44,10 +44,11 @@ export interface CourseLesson {
   role: "lesson" | "boss" | "skip-test";
 }
 
-/** Every lesson of the course: each world's lessons, its boss and its skip test. */
+/** Every lesson of the course, with its texts in every locale: each world's lessons, its boss and its skip test. */
 export async function courseLessons(): Promise<CourseLesson[]> {
   const all: CourseLesson[] = [];
   for (const world of COURSE) {
+    for (const locale of LOCALES) await world.loadTexts(locale);
     const { lessons, boss, skipTest } = await world.load();
     for (const lesson of lessons) all.push({ world: world.id, lesson, role: "lesson" });
     if (boss !== undefined) all.push({ world: world.id, lesson: boss, role: "boss" });

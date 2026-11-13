@@ -8,7 +8,6 @@
  * short phrase through F♯. The texts are `sharps.en.ts` and `sharps.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { sharpsDe } from "./sharps.de";
 import { sharpsEn } from "./sharps.en";
 
 export const sharps: Lesson = {
@@ -36,5 +35,5 @@ export const sharps: Lesson = {
     { id: "through-f-sharp", kind: "play-notes", notes: [62, 64, 66, 67, 66, 64, 62] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: sharpsEn, de: sharpsDe },
+  texts: { en: sharpsEn },
 };

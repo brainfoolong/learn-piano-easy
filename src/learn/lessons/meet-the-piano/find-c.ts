@@ -6,7 +6,6 @@
  * `find-c.en.ts` and `find-c.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { findCDe } from "./find-c.de";
 import { findCEn } from "./find-c.en";
 
 export const findC: Lesson = {
@@ -33,5 +32,5 @@ export const findC: Lesson = {
     { id: "c-quiz", kind: "quiz", right: 1 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: findCEn, de: findCDe },
+  texts: { en: findCEn },
 };

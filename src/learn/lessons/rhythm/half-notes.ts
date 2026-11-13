@@ -8,7 +8,6 @@
  * longer and how many half notes fill four beats. The texts are `half-notes.en.ts` and `half-notes.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { halfNotesDe } from "./half-notes.de";
 import { halfNotesEn } from "./half-notes.en";
 
 export const halfNotes: Lesson = {
@@ -37,5 +36,5 @@ export const halfNotes: Lesson = {
     { id: "halves-in-four-quiz", kind: "quiz", right: 1 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: halfNotesEn, de: halfNotesDe },
+  texts: { en: halfNotesEn },
 };

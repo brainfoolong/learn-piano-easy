@@ -8,7 +8,6 @@
  * `the-bass-clef.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theBassClefDe } from "./the-bass-clef.de";
 import { theBassClefEn } from "./the-bass-clef.en";
 
 export const theBassClef: Lesson = {
@@ -35,5 +34,5 @@ export const theBassClef: Lesson = {
     { id: "name-bass-notes", kind: "read-note", clef: "bass", answer: "name", notes: [53, 55, 52, 53, 50, 57], pass: 0.66 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theBassClefEn, de: theBassClefDe },
+  texts: { en: theBassClefEn },
 };

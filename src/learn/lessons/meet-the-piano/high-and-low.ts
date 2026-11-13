@@ -7,7 +7,6 @@
  * whole idea. The texts are `high-and-low.en.ts` and `high-and-low.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { highAndLowDe } from "./high-and-low.de";
 import { highAndLowEn } from "./high-and-low.en";
 
 export const highAndLow: Lesson = {
@@ -56,5 +55,5 @@ export const highAndLow: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: highAndLowEn, de: highAndLowDe },
+  texts: { en: highAndLowEn },
 };

@@ -9,7 +9,6 @@
  * `inversions.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { inversionsDe } from "./inversions.de";
 import { inversionsEn } from "./inversions.en";
 
 export const inversions: Lesson = {
@@ -69,5 +68,5 @@ export const inversions: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: inversionsEn, de: inversionsDe },
+  texts: { en: inversionsEn },
 };

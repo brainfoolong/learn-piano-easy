@@ -6,7 +6,6 @@
  * `welcome.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { welcomeDe } from "./welcome.de";
 import { welcomeEn } from "./welcome.en";
 
 export const welcome: Lesson = {
@@ -30,5 +29,5 @@ export const welcome: Lesson = {
     { id: "three-keys", kind: "play-notes", notes: [60, 62, 64] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: welcomeEn, de: welcomeDe },
+  texts: { en: welcomeEn },
 };

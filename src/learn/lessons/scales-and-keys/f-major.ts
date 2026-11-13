@@ -8,7 +8,6 @@
  * both keys must be pressed. The texts are `f-major.en.ts` and `f-major.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { fMajorDe } from "./f-major.de";
 import { fMajorEn } from "./f-major.en";
 
 export const fMajor: Lesson = {
@@ -64,5 +63,5 @@ export const fMajor: Lesson = {
     { id: "tune-and-fifth", kind: "play-notes", notes: [[41, 48, 65], 69, 72, 70, [41, 48, 69], 67, 65] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: fMajorEn, de: fMajorDe },
+  texts: { en: fMajorEn },
 };

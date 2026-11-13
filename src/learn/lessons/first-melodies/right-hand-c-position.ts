@@ -7,7 +7,6 @@
  * finger numbers. The texts are `right-hand-c-position.en.ts` and `right-hand-c-position.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { rightHandCPositionDe } from "./right-hand-c-position.de";
 import { rightHandCPositionEn } from "./right-hand-c-position.en";
 
 export const rightHandCPosition: Lesson = {
@@ -34,5 +33,5 @@ export const rightHandCPosition: Lesson = {
     { id: "finger-walk-down", kind: "play-notes", notes: [67, 65, 64, 62, 60] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: rightHandCPositionEn, de: rightHandCPositionDe },
+  texts: { en: rightHandCPositionEn },
 };

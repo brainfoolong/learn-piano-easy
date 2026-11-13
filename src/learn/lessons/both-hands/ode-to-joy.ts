@@ -9,7 +9,6 @@
  * and left-hand chords.
  */
 import type { Lesson } from "../../model";
-import { odeToJoyBothHandsDe } from "./ode-to-joy.de";
 import { odeToJoyBothHandsEn } from "./ode-to-joy.en";
 
 export const odeToJoyBothHands: Lesson = {
@@ -18,5 +17,5 @@ export const odeToJoyBothHands: Lesson = {
     { id: "intro", kind: "explain" },
     { id: "song", kind: "song", file: "ours/ode-to-joy/common.mid", practice: 2, accuracy: 0.8 },
   ],
-  texts: { en: odeToJoyBothHandsEn, de: odeToJoyBothHandsDe },
+  texts: { en: odeToJoyBothHandsEn },
 };

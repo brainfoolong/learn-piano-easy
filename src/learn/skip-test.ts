@@ -7,7 +7,8 @@
  *   lesson, in the course's order, since a lesson's last checks use all it taught. A step that needs
  *   touch or the pedal is left out, so the test runs the same on every input.
  * - **Its id is `skip-test`,** so its page is `learn/<world>/skip-test/`, and its event names it.
- * - **Its texts are each step's own,** under the step's new id, and its title names the world.
+ * - **Its texts are each step's own,** under the step's new id, and its title names the world. It is
+ *   built with English texts, and `translateSkipTest` adds a locale's once its lessons hold theirs.
  * - **It passes at `SKIP_TEST_STARS` stars,** as `src/learn/game/unlock.ts` reads the log. A test that
  *   let every step be retried until it passed would test nothing.
  *
@@ -20,8 +21,8 @@
  * Bounds it keeps: a test has at most `MAX_STEPS` steps, so a world of more than twelve lessons keeps
  * the steps of its last twelve.
  */
-import { LOCALES, messagesOf } from "../i18n/locale";
-import { CHECKING_KINDS, type Lesson, type LessonTexts, MAX_STEPS, type SkipPick, type Step, type World, type WorldLessons } from "./model";
+import { DEFAULT_LOCALE, type Locale, messagesOf } from "../i18n/locale";
+import { CHECKING_KINDS, type Lesson, type LessonTexts, MAX_STEPS, type SkipPick, type Step, textsOf, type World, type WorldLessons } from "./model";
 
 /** The id of every built skip test. */
 export const SKIP_TEST_ID = "skip-test";
@@ -36,10 +37,10 @@ function testable(step: Step): boolean {
 }
 
 /**
- * The skip test titled for `world`, of the steps `picks` name, or of `lessons`' last checks when
- * `picks` is undefined. Undefined when no step is left. A pick of a missing or untestable step throws.
+ * The steps of `lessons` a skip test asks, each with its lesson: those `picks` name, or the lessons'
+ * last checks when `picks` is undefined. A pick of a missing or untestable step throws.
  */
-export function skipTestOf(world: World, lessons: readonly Lesson[], picks?: readonly SkipPick[]): Lesson | undefined {
+function pickedSteps(world: World, lessons: readonly Lesson[], picks?: readonly SkipPick[]): { lesson: Lesson; step: Step }[] {
   const picked =
     picks === undefined
       ? lessons.flatMap((lesson) =>
@@ -53,19 +54,26 @@ export function skipTestOf(world: World, lessons: readonly Lesson[], picks?: rea
           if (step === undefined || !testable(step)) throw new Error(`The skip test of ${world.id} picks ${lesson.id}/${id}, which is no checking step.`);
           return { lesson, step };
         });
-  const kept = picked.slice(-MAX_STEPS);
-  if (kept.length === 0) return undefined;
-  const steps: Step[] = kept.map(({ lesson, step }) => ({ ...step, id: `${lesson.id}-${step.id}` }));
-  const texts = Object.fromEntries(
-    LOCALES.map((locale): [string, LessonTexts] => [
-      locale,
-      {
-        title: messagesOf(locale).map.skipTest.title(world.title[locale]),
-        steps: Object.fromEntries(kept.map(({ lesson, step }) => [`${lesson.id}-${step.id}`, lesson.texts[locale].steps[step.id] ?? { text: "" }])),
-      },
-    ]),
-  ) as Lesson["texts"];
-  return { id: SKIP_TEST_ID, steps, texts };
+  return picked.slice(-MAX_STEPS);
+}
+
+/** The texts in `locale` of the skip test of `picked`: its title names `world`, and each step keeps its own texts. */
+function skipTestTexts(world: World, picked: readonly { lesson: Lesson; step: Step }[], locale: Locale): LessonTexts {
+  return {
+    title: messagesOf(locale).map.skipTest.title(world.title[locale]),
+    steps: Object.fromEntries(picked.map(({ lesson, step }) => [`${lesson.id}-${step.id}`, textsOf(lesson, locale).steps[step.id] ?? { text: "" }])),
+  };
+}
+
+/**
+ * The skip test titled for `world`, of the steps `picks` name, or of `lessons`' last checks when
+ * `picks` is undefined. Its texts are English. Undefined when no step is left.
+ */
+export function skipTestOf(world: World, lessons: readonly Lesson[], picks?: readonly SkipPick[]): Lesson | undefined {
+  const picked = pickedSteps(world, lessons, picks);
+  if (picked.length === 0) return undefined;
+  const steps: Step[] = picked.map(({ lesson, step }) => ({ ...step, id: `${lesson.id}-${step.id}` }));
+  return { id: SKIP_TEST_ID, steps, texts: { en: skipTestTexts(world, picked, DEFAULT_LOCALE) } };
 }
 
 /** `lessons` of `world`, with the skip test built from them when the world writes none. */
@@ -73,4 +81,10 @@ export function withSkipTest(world: World, lessons: WorldLessons): WorldLessons 
   if (lessons.skipTest !== undefined) return lessons;
   const skipTest = skipTestOf(world, lessons.lessons, lessons.skipPicks);
   return skipTest === undefined ? lessons : { ...lessons, skipTest };
+}
+
+/** Gives the built skip test of `built` its texts in `locale`, once its lessons hold theirs. A written one is left as it is. */
+export function translateSkipTest(world: World, written: WorldLessons, built: WorldLessons, locale: Locale): void {
+  if (written.skipTest !== undefined || built.skipTest === undefined) return;
+  built.skipTest.texts[locale] = skipTestTexts(world, pickedSteps(world, built.lessons, built.skipPicks), locale);
 }

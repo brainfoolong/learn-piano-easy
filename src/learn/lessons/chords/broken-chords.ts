@@ -9,7 +9,6 @@
  * The texts are `broken-chords.en.ts` and `broken-chords.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { brokenChordsDe } from "./broken-chords.de";
 import { brokenChordsEn } from "./broken-chords.en";
 
 export const brokenChords: Lesson = {
@@ -67,5 +66,5 @@ export const brokenChords: Lesson = {
     { id: "tune-over-broken-chords", kind: "play-notes", notes: [[48, 64], 52, [55, 67], 52, [43, 62], 47, [50, 67], 47, [48, 60], 52, 55, 52] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: brokenChordsEn, de: brokenChordsDe },
+  texts: { en: brokenChordsEn },
 };

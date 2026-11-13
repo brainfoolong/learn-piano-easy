@@ -6,7 +6,6 @@
  * faster. The texts are `the-beat.en.ts` and `the-beat.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theBeatDe } from "./the-beat.de";
 import { theBeatEn } from "./the-beat.en";
 
 export const theBeat: Lesson = {
@@ -41,5 +40,5 @@ export const theBeat: Lesson = {
     { id: "tap-a-longer-beat", kind: "rhythm-tap", bpm: 80, taps: 12, pass: 0.75 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theBeatEn, de: theBeatDe },
+  texts: { en: theBeatEn },
 };

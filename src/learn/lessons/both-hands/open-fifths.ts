@@ -8,7 +8,6 @@
  * `open-fifths.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { openFifthsDe } from "./open-fifths.de";
 import { openFifthsEn } from "./open-fifths.en";
 
 export const openFifths: Lesson = {
@@ -56,5 +55,5 @@ export const openFifths: Lesson = {
     { id: "fifth-and-tune", kind: "play-notes", notes: [[48, 55, 64], 62, 60, [48, 55, 64], 64, 64] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: openFifthsEn, de: openFifthsDe },
+  texts: { en: openFifthsEn },
 };

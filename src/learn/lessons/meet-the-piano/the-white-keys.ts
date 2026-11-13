@@ -6,7 +6,6 @@
  * `the-white-keys.en.ts` and `the-white-keys.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theWhiteKeysDe } from "./the-white-keys.de";
 import { theWhiteKeysEn } from "./the-white-keys.en";
 
 export const theWhiteKeys: Lesson = {
@@ -38,5 +37,5 @@ export const theWhiteKeys: Lesson = {
     { id: "letters-quiz", kind: "quiz", right: 1 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theWhiteKeysEn, de: theWhiteKeysDe },
+  texts: { en: theWhiteKeysEn },
 };

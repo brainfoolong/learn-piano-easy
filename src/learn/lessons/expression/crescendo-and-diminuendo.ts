@@ -11,7 +11,6 @@
  * The texts are `crescendo-and-diminuendo.en.ts` and `crescendo-and-diminuendo.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { crescendoAndDiminuendoDe } from "./crescendo-and-diminuendo.de";
 import { crescendoAndDiminuendoEn } from "./crescendo-and-diminuendo.en";
 
 export const crescendoAndDiminuendo: Lesson = {
@@ -94,5 +93,5 @@ export const crescendoAndDiminuendo: Lesson = {
     { id: "how-it-ends", kind: "quiz", right: 3 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: crescendoAndDiminuendoEn, de: crescendoAndDiminuendoDe },
+  texts: { en: crescendoAndDiminuendoEn },
 };

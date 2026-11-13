@@ -10,7 +10,6 @@
  * The texts are `a-held-bass-note.en.ts` and `a-held-bass-note.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { aHeldBassNoteDe } from "./a-held-bass-note.de";
 import { aHeldBassNoteEn } from "./a-held-bass-note.en";
 
 export const aHeldBassNote: Lesson = {
@@ -61,5 +60,5 @@ export const aHeldBassNote: Lesson = {
     { id: "half-bass-tune", kind: "play-notes", notes: [[48, 64], 65, [55, 67], 65, [53, 64], 62, [48, 60]] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: aHeldBassNoteEn, de: aHeldBassNoteDe },
+  texts: { en: aHeldBassNoteEn },
 };

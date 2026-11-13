@@ -9,7 +9,6 @@
  * beside it.
  */
 import type { Lesson } from "../../model";
-import { minorTriadsDe } from "./minor-triads.de";
 import { minorTriadsEn } from "./minor-triads.en";
 
 export const minorTriads: Lesson = {
@@ -80,5 +79,5 @@ export const minorTriads: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: minorTriadsEn, de: minorTriadsDe },
+  texts: { en: minorTriadsEn },
 };

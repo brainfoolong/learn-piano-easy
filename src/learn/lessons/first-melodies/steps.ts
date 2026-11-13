@@ -7,7 +7,6 @@
  * in C position. The texts are `steps.en.ts` and `steps.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { stepsDe } from "./steps.de";
 import { stepsEn } from "./steps.en";
 
 export const steps: Lesson = {
@@ -51,5 +50,5 @@ export const steps: Lesson = {
     { id: "stepping-tune", kind: "play-notes", notes: [60, 62, 64, 62, 64, 65, 64, 62, 60] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: stepsEn, de: stepsDe },
+  texts: { en: stepsEn },
 };

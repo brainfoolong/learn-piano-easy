@@ -13,7 +13,6 @@
  * `reading-steps-and-skips.en.ts` and `reading-steps-and-skips.de.ts` beside it.
  */
 import type { Lesson, PhraseNote } from "../../model";
-import { readingStepsAndSkipsDe } from "./reading-steps-and-skips.de";
 import { readingStepsAndSkipsEn } from "./reading-steps-and-skips.en";
 
 /** Bars 2 and 4 of the boss: E, E, a dotted quarter D and an eighth rest, then a dotted half G and D. */
@@ -74,5 +73,5 @@ export const readingStepsAndSkips: Lesson = {
     { id: "dotted-tap", kind: "rhythm-tap", bpm: 80, taps: 8, notes: DOTTED, pass: 0.8 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: readingStepsAndSkipsEn, de: readingStepsAndSkipsDe },
+  texts: { en: readingStepsAndSkipsEn },
 };

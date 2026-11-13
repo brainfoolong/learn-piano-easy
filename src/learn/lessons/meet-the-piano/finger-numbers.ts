@@ -7,7 +7,6 @@
  * texts are `finger-numbers.en.ts` and `finger-numbers.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { fingerNumbersDe } from "./finger-numbers.de";
 import { fingerNumbersEn } from "./finger-numbers.en";
 
 export const fingerNumbers: Lesson = {
@@ -34,5 +33,5 @@ export const fingerNumbers: Lesson = {
     { id: "left-hand-five", kind: "play-notes", notes: [48, 50, 52, 53, 55] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: fingerNumbersEn, de: fingerNumbersDe },
+  texts: { en: fingerNumbersEn },
 };

@@ -9,7 +9,6 @@
  * `what-a-chord-is.en.ts` and `what-a-chord-is.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { whatAChordIsDe } from "./what-a-chord-is.de";
 import { whatAChordIsEn } from "./what-a-chord-is.en";
 
 export const whatAChordIs: Lesson = {
@@ -62,5 +61,5 @@ export const whatAChordIs: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: whatAChordIsEn, de: whatAChordIsDe },
+  texts: { en: whatAChordIsEn },
 };

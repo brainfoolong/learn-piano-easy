@@ -15,7 +15,6 @@
  */
 import type { Finger } from "../../../theory/fingering";
 import type { Lesson, PhraseNote } from "../../model";
-import { albertiBassDe } from "./alberti-bass.de";
 import { albertiBassEn } from "./alberti-bass.en";
 
 /** One bar of eighths in the left hand: low, high, middle, high, twice, with fingers 5, 1, 3, 1, starting at beat `at`. */
@@ -127,5 +126,5 @@ export const albertiBass: Lesson = {
     { id: "black-key-thirds", kind: "play-notes", notes: CANON_THIRDS },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: albertiBassEn, de: albertiBassDe },
+  texts: { en: albertiBassEn },
 };

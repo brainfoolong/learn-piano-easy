@@ -8,7 +8,6 @@
  * `mary-first-phrase.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { maryFirstPhraseDe } from "./mary-first-phrase.de";
 import { maryFirstPhraseEn } from "./mary-first-phrase.en";
 
 export const maryFirstPhrase: Lesson = {
@@ -42,5 +41,5 @@ export const maryFirstPhrase: Lesson = {
     { id: "whole-phrase", kind: "play-notes", notes: [64, 62, 60, 62, 64, 64, 64, 62, 62, 62, 64, 67, 67] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: maryFirstPhraseEn, de: maryFirstPhraseDe },
+  texts: { en: maryFirstPhraseEn },
 };

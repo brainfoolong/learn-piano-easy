@@ -8,7 +8,6 @@
  * `hands-take-turns.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { handsTakeTurnsDe } from "./hands-take-turns.de";
 import { handsTakeTurnsEn } from "./hands-take-turns.en";
 
 export const handsTakeTurns: Lesson = {
@@ -36,5 +35,5 @@ export const handsTakeTurns: Lesson = {
     { id: "long-phrase", kind: "play-notes", notes: [60, 62, 64, 64, 48, 50, 52, 52, 67, 65, 64, 62, 60, 55, 53, 52, 50, 48] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: handsTakeTurnsEn, de: handsTakeTurnsDe },
+  texts: { en: handsTakeTurnsEn },
 };

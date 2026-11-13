@@ -8,7 +8,6 @@
  * beside it.
  */
 import type { Lesson } from "../../model";
-import { repeatedNotesDe } from "./repeated-notes.de";
 import { repeatedNotesEn } from "./repeated-notes.en";
 
 export const repeatedNotes: Lesson = {
@@ -48,5 +47,5 @@ export const repeatedNotes: Lesson = {
     { id: "mixed-phrase", kind: "play-notes", notes: [60, 60, 62, 64, 64, 67, 65, 64, 62, 60] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: repeatedNotesEn, de: repeatedNotesDe },
+  texts: { en: repeatedNotesEn },
 };

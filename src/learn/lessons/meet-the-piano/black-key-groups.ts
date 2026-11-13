@@ -7,7 +7,6 @@
  * the whole idea. The texts are `black-key-groups.en.ts` and `black-key-groups.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { blackKeyGroupsDe } from "./black-key-groups.de";
 import { blackKeyGroupsEn } from "./black-key-groups.en";
 
 export const blackKeyGroups: Lesson = {
@@ -25,5 +24,5 @@ export const blackKeyGroups: Lesson = {
     { id: "three-right", kind: "find-key", key: 70, anyOctave: true },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: blackKeyGroupsEn, de: blackKeyGroupsDe },
+  texts: { en: blackKeyGroupsEn },
 };

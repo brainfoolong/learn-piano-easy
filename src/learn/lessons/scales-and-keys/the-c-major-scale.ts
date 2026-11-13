@@ -8,7 +8,6 @@
  * up, then going down. The texts are `the-c-major-scale.en.ts` and `the-c-major-scale.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theCMajorScaleDe } from "./the-c-major-scale.de";
 import { theCMajorScaleEn } from "./the-c-major-scale.en";
 
 export const theCMajorScale: Lesson = {
@@ -42,5 +41,5 @@ export const theCMajorScale: Lesson = {
     { id: "scale-down", kind: "play-notes", notes: [72, 71, 69, 67, 65, 64, 62, 60] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theCMajorScaleEn, de: theCMajorScaleDe },
+  texts: { en: theCMajorScaleEn },
 };

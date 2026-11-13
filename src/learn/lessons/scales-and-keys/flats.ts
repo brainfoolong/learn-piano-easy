@@ -8,7 +8,6 @@
  * `flats.en.ts` and `flats.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { flatsDe } from "./flats.de";
 import { flatsEn } from "./flats.en";
 
 export const flats: Lesson = {
@@ -47,5 +46,5 @@ export const flats: Lesson = {
     { id: "half-steps-down", kind: "play-notes", notes: [71, 70, 69, 64, 63, 62] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: flatsEn, de: flatsDe },
+  texts: { en: flatsEn },
 };

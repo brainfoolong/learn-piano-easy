@@ -8,7 +8,6 @@
  * `twinkle-first-phrase.en.ts` and `twinkle-first-phrase.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { twinkleFirstPhraseDe } from "./twinkle-first-phrase.de";
 import { twinkleFirstPhraseEn } from "./twinkle-first-phrase.en";
 
 export const twinkleFirstPhrase: Lesson = {
@@ -43,5 +42,5 @@ export const twinkleFirstPhrase: Lesson = {
     { id: "whole-phrase", kind: "play-notes", notes: [60, 60, 67, 67, 69, 69, 67, 65, 65, 64, 64, 62, 62, 60] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: twinkleFirstPhraseEn, de: twinkleFirstPhraseDe },
+  texts: { en: twinkleFirstPhraseEn },
 };

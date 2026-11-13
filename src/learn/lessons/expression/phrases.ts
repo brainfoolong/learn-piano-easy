@@ -10,7 +10,6 @@
  * when to breathe. The texts are `phrases.en.ts` and `phrases.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { phrasesDe } from "./phrases.de";
 import { phrasesEn } from "./phrases.en";
 
 export const phrases: Lesson = {
@@ -75,5 +74,5 @@ export const phrases: Lesson = {
     { id: "when-to-breathe", kind: "quiz", right: 1 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: phrasesEn, de: phrasesDe },
+  texts: { en: phrasesEn },
 };

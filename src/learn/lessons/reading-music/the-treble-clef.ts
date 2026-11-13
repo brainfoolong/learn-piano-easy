@@ -9,7 +9,6 @@
  * are `the-treble-clef.en.ts` and `the-treble-clef.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theTrebleClefDe } from "./the-treble-clef.de";
 import { theTrebleClefEn } from "./the-treble-clef.en";
 
 export const theTrebleClef: Lesson = {
@@ -48,5 +47,5 @@ export const theTrebleClef: Lesson = {
     { id: "name-treble-notes", kind: "read-note", clef: "treble", answer: "name", notes: [67, 69, 65, 67, 71, 64], pass: 0.66 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theTrebleClefEn, de: theTrebleClefDe },
+  texts: { en: theTrebleClefEn },
 };

@@ -10,7 +10,6 @@
  * The texts are `loud-and-soft.en.ts` and `loud-and-soft.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { loudAndSoftDe } from "./loud-and-soft.de";
 import { loudAndSoftEn } from "./loud-and-soft.en";
 
 export const loudAndSoft: Lesson = {
@@ -99,5 +98,5 @@ export const loudAndSoft: Lesson = {
     { id: "play-the-echo", kind: "play-notes", notes: [60, 64, 67, 60, 64, 67] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: loudAndSoftEn, de: loudAndSoftDe },
+  texts: { en: loudAndSoftEn },
 };

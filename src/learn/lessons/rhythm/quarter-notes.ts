@@ -8,7 +8,6 @@
  * `quarter-notes.en.ts` and `quarter-notes.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { quarterNotesDe } from "./quarter-notes.de";
 import { quarterNotesEn } from "./quarter-notes.en";
 
 export const quarterNotes: Lesson = {
@@ -50,5 +49,5 @@ export const quarterNotes: Lesson = {
     { id: "quarter-phrase", kind: "play-notes", notes: [64, 64, 65, 67, 67, 65, 64, 62] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: quarterNotesEn, de: quarterNotesDe },
+  texts: { en: quarterNotesEn },
 };

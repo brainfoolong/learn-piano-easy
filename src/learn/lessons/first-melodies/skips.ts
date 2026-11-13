@@ -7,7 +7,6 @@
  * The texts are `skips.en.ts` and `skips.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { skipsDe } from "./skips.de";
 import { skipsEn } from "./skips.en";
 
 export const skips: Lesson = {
@@ -33,5 +32,5 @@ export const skips: Lesson = {
     { id: "mixed-phrase", kind: "play-notes", notes: [60, 62, 64, 67, 65, 64, 62, 60] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: skipsEn, de: skipsDe },
+  texts: { en: skipsEn },
 };

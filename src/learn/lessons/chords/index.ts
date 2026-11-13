@@ -14,5 +14,6 @@ import { whatAChordIs } from "./what-a-chord-is";
 export const chords: WorldLessons = {
   lessons: [whatAChordIs, majorTriads, minorTriads, cFAndG, inversions, brokenChords, theWaltzBass, albertiBass],
   boss: canonInDRare,
+  translations: { de: () => import("./texts.de").then((module) => module.texts) },
   skipPicks: chordsSkipPicks,
 };

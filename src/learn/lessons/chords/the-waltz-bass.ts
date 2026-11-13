@@ -9,7 +9,6 @@
  * `the-waltz-bass.de.ts` beside it.
  */
 import type { Lesson, PhraseNote } from "../../model";
-import { theWaltzBassDe } from "./the-waltz-bass.de";
 import { theWaltzBassEn } from "./the-waltz-bass.en";
 
 /** One bar of waltz bass from beat `at`: finger 5 plays the root, then fingers 3 and 1 play the upper two notes twice. */
@@ -83,5 +82,5 @@ export const theWaltzBass: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theWaltzBassEn, de: theWaltzBassDe },
+  texts: { en: theWaltzBassEn },
 };

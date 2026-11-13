@@ -8,7 +8,6 @@
  * and `half-and-whole-steps.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { halfAndWholeStepsDe } from "./half-and-whole-steps.de";
 import { halfAndWholeStepsEn } from "./half-and-whole-steps.en";
 
 export const halfAndWholeSteps: Lesson = {
@@ -48,5 +47,5 @@ export const halfAndWholeSteps: Lesson = {
     { id: "whole-step-above-e", kind: "find-key", key: 66, anyOctave: true },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: halfAndWholeStepsEn, de: halfAndWholeStepsDe },
+  texts: { en: halfAndWholeStepsEn },
 };

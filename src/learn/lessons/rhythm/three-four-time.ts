@@ -8,7 +8,6 @@
  * `three-four-time.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { threeFourTimeDe } from "./three-four-time.de";
 import { threeFourTimeEn } from "./three-four-time.en";
 
 export const threeFourTime: Lesson = {
@@ -47,5 +46,5 @@ export const threeFourTime: Lesson = {
     { id: "tap-in-threes", kind: "rhythm-tap", bpm: 90, taps: 12, pass: 0.75 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: threeFourTimeEn, de: threeFourTimeDe },
+  texts: { en: threeFourTimeEn },
 };

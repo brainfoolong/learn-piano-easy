@@ -7,7 +7,6 @@
  * hunt never stops a learner.
  */
 import type { FindKeyStep, Lesson } from "../../model";
-import { keyHuntDe } from "./key-hunt.de";
 import { keyHuntEn } from "./key-hunt.en";
 
 /** The seconds each key of the hunt gives the learner. */
@@ -34,5 +33,5 @@ export const keyHunt: Lesson = {
     hunt("high-c", 72, false),
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: keyHuntEn, de: keyHuntDe },
+  texts: { en: keyHuntEn },
 };

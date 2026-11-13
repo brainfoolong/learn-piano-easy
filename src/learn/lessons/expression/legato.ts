@@ -10,7 +10,6 @@
  * `legato.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { legatoDe } from "./legato.de";
 import { legatoEn } from "./legato.en";
 
 export const legato: Lesson = {
@@ -47,5 +46,5 @@ export const legato: Lesson = {
     { id: "which-is-legato", kind: "quiz", right: 3 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: legatoEn, de: legatoDe },
+  texts: { en: legatoEn },
 };

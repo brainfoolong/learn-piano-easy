@@ -11,7 +11,6 @@
  * `the-sustain-pedal.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theSustainPedalDe } from "./the-sustain-pedal.de";
 import { theSustainPedalEn } from "./the-sustain-pedal.en";
 
 export const theSustainPedal: Lesson = {
@@ -92,5 +91,5 @@ export const theSustainPedal: Lesson = {
     },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theSustainPedalEn, de: theSustainPedalDe },
+  texts: { en: theSustainPedalEn },
 };

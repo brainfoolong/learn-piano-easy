@@ -14,7 +14,6 @@
  * texts are `playing-with-feeling.en.ts` and `playing-with-feeling.de.ts` beside it.
  */
 import type { Lesson, PhraseNote } from "../../model";
-import { playingWithFeelingDe } from "./playing-with-feeling.de";
 import { playingWithFeelingEn } from "./playing-with-feeling.en";
 
 /** The tune both shaping demos play: up from E above middle C to A, and back down to C. */
@@ -118,5 +117,5 @@ export const playingWithFeeling: Lesson = {
     { id: "how-to-play-the-boss", kind: "quiz", right: 2 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: playingWithFeelingEn, de: playingWithFeelingDe },
+  texts: { en: playingWithFeelingEn },
 };

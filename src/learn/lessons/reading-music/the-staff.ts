@@ -9,7 +9,6 @@
  * `the-staff.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { theStaffDe } from "./the-staff.de";
 import { theStaffEn } from "./the-staff.en";
 
 export const theStaff: Lesson = {
@@ -53,5 +52,5 @@ export const theStaff: Lesson = {
     { id: "first-line-quiz", kind: "quiz", right: 0 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: theStaffEn, de: theStaffDe },
+  texts: { en: theStaffEn },
 };

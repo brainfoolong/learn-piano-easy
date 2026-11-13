@@ -9,7 +9,6 @@
  * and `bass-landmarks.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { bassLandmarksDe } from "./bass-landmarks.de";
 import { bassLandmarksEn } from "./bass-landmarks.en";
 
 export const bassLandmarks: Lesson = {
@@ -36,5 +35,5 @@ export const bassLandmarks: Lesson = {
     { id: "name-by-counting", kind: "read-note", clef: "bass", answer: "name", notes: [50, 59, 52, 47, 57, 55], pass: 0.66 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: bassLandmarksEn, de: bassLandmarksDe },
+  texts: { en: bassLandmarksEn },
 };

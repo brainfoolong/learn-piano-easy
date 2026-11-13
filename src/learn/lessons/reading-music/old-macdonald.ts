@@ -4,7 +4,6 @@
  * falling notes, so the learner reads.
  */
 import type { Lesson } from "../../model";
-import { oldMacDonaldDe } from "./old-macdonald.de";
 import { oldMacDonaldEn } from "./old-macdonald.en";
 
 export const oldMacDonald: Lesson = {
@@ -13,5 +12,5 @@ export const oldMacDonald: Lesson = {
     { id: "intro", kind: "explain" },
     { id: "song", kind: "song", file: "ours/old-macdonald-had-a-farm/common.mid", practice: 0, accuracy: 0.8, view: "sheet" },
   ],
-  texts: { en: oldMacDonaldEn, de: oldMacDonaldDe },
+  texts: { en: oldMacDonaldEn },
 };

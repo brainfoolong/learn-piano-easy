@@ -11,7 +11,6 @@
  * texts are `staccato.en.ts` and `staccato.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { staccatoDe } from "./staccato.de";
 import { staccatoEn } from "./staccato.en";
 
 export const staccato: Lesson = {
@@ -64,5 +63,5 @@ export const staccato: Lesson = {
     { id: "which-lets-go-early", kind: "quiz", right: 0 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: staccatoEn, de: staccatoDe },
+  texts: { en: staccatoEn },
 };

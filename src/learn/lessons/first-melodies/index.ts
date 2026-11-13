@@ -14,5 +14,6 @@ import { twinkleFirstPhrase } from "./twinkle-first-phrase";
 export const firstMelodies: WorldLessons = {
   lessons: [rightHandCPosition, steps, skips, repeatedNotes, leftHandCPosition, handsTakeTurns, maryFirstPhrase, twinkleFirstPhrase],
   boss: mary,
+  translations: { de: () => import("./texts.de").then((module) => module.texts) },
   skipPicks: firstMelodiesSkipPicks,
 };

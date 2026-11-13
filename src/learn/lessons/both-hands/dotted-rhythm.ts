@@ -10,7 +10,6 @@
  * plays them. The texts are `dotted-rhythm.en.ts` and `dotted-rhythm.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { dottedRhythmDe } from "./dotted-rhythm.de";
 import { dottedRhythmEn } from "./dotted-rhythm.en";
 
 /** The boss's two bass pairs, twice: C3 with G3, a fifth, and D3 with G3, a fourth. */
@@ -86,5 +85,5 @@ export const dottedRhythm: Lesson = {
     { id: "fifth-and-fourth", kind: "play-notes", notes: FIFTH_AND_FOURTH },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: dottedRhythmEn, de: dottedRhythmDe },
+  texts: { en: dottedRhythmEn },
 };

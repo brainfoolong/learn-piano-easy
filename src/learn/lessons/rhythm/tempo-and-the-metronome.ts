@@ -8,7 +8,6 @@
  * `tempo-and-the-metronome.en.ts` and `tempo-and-the-metronome.de.ts` beside it.
  */
 import type { Lesson, PhraseNote } from "../../model";
-import { tempoAndTheMetronomeDe } from "./tempo-and-the-metronome.de";
 import { tempoAndTheMetronomeEn } from "./tempo-and-the-metronome.en";
 
 /** The phrase both demos play: up from middle C to G and back, one beat each and the last note two. */
@@ -27,5 +26,5 @@ export const tempoAndTheMetronome: Lesson = {
     { id: "faster-tap", kind: "rhythm-tap", bpm: 104, taps: 12, pass: 0.75 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: tempoAndTheMetronomeEn, de: tempoAndTheMetronomeDe },
+  texts: { en: tempoAndTheMetronomeEn },
 };

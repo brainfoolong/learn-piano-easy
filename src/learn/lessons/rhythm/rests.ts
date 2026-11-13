@@ -10,7 +10,6 @@
  * `rests.de.ts` beside it.
  */
 import type { Lesson, PhraseNote } from "../../model";
-import { restsDe } from "./rests.de";
 import { restsEn } from "./rests.en";
 
 /** C D E, a quarter rest, E D, a half rest, then C as a half note. */
@@ -49,5 +48,5 @@ export const rests: Lesson = {
     { id: "play-with-rests", kind: "rhythm-tap", bpm: 80, taps: 10, notes: PHRASE, pass: 0.8 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: restsEn, de: restsDe },
+  texts: { en: restsEn },
 };

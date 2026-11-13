@@ -8,7 +8,6 @@
  * `tune-and-bass-together.en.ts` and `tune-and-bass-together.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { tuneAndBassTogetherDe } from "./tune-and-bass-together.de";
 import { tuneAndBassTogetherEn } from "./tune-and-bass-together.en";
 
 export const tuneAndBassTogether: Lesson = {
@@ -59,5 +58,5 @@ export const tuneAndBassTogether: Lesson = {
     { id: "whole-tune-together", kind: "play-notes", notes: [[48, 60], 62, 64, 65, [55, 67], 65, 64, 62, [55, 62], 64, 65, 62, [48, 60]] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: tuneAndBassTogetherEn, de: tuneAndBassTogetherDe },
+  texts: { en: tuneAndBassTogetherEn },
 };

@@ -14,5 +14,6 @@ import { welcome } from "./welcome";
 export const meetThePiano: WorldLessons = {
   lessons: [welcome, highAndLow, blackKeyGroups, findC, theWhiteKeys, octaves, sittingAtThePiano, fingerNumbers],
   boss: keyHunt,
+  translations: { de: () => import("./texts.de").then((module) => module.texts) },
   skipPicks: meetThePianoSkipPicks,
 };

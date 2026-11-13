@@ -9,7 +9,6 @@
  * and `changing-the-bass-on-the-beat.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { changingTheBassOnTheBeatDe } from "./changing-the-bass-on-the-beat.de";
 import { changingTheBassOnTheBeatEn } from "./changing-the-bass-on-the-beat.en";
 
 export const changingTheBassOnTheBeat: Lesson = {
@@ -69,5 +68,5 @@ export const changingTheBassOnTheBeat: Lesson = {
     { id: "four-bars", kind: "play-notes", notes: [[48, 55, 60], 64, [41, 48, 65], 64, [43, 50, 62], 67, [48, 55, 60]] },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: changingTheBassOnTheBeatEn, de: changingTheBassOnTheBeatDe },
+  texts: { en: changingTheBassOnTheBeatEn },
 };

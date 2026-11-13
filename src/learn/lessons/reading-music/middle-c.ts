@@ -8,7 +8,6 @@
  * `middle-c.en.ts` and `middle-c.de.ts` beside it.
  */
 import type { Lesson } from "../../model";
-import { middleCDe } from "./middle-c.de";
 import { middleCEn } from "./middle-c.en";
 
 export const middleC: Lesson = {
@@ -37,5 +36,5 @@ export const middleC: Lesson = {
     { id: "play-c-d-e", kind: "read-note", clef: "treble", answer: "play", notes: [64, 60, 62, 60, 64, 62], pass: 0.66 },
     { id: "recap", kind: "recap" },
   ],
-  texts: { en: middleCEn, de: middleCDe },
+  texts: { en: middleCEn },
 };
