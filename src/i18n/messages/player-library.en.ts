@@ -16,7 +16,7 @@ export const playerLibrary = {
     /** A step's hover text on a card: its name, then what it asks. */
     stepTitle: (name: string, tagline: string) => `${name}: ${tagline}`,
   },
-  collections: { christmas: "Christmas" },
+  collections: { christmas: "Christmas", film: "At the movies", sea: "Sea shanties" },
   /** The skills a guide names, by the camelCase form of their id in `src/library/skills.ts`. */
   skills: {
     fiveFingerPosition: "Five-finger position",

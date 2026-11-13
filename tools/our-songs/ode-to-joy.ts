@@ -53,9 +53,11 @@ export const odeToJoy: OurSong = {
   about:
     "Beethoven wrote this tune for the last movement of his Ninth Symphony, first played in Vienna in 1824. " +
     "A choir sings it to Friedrich Schiller's poem about joy and friendship. " +
-    "Today it is the anthem of the European Union, played without words.",
+    "Today it is the anthem of the European Union, played without words. " +
+    "In the film Die Hard, it plays as the thieves open the vault.",
   funFact: "Beethoven was almost completely deaf when the Ninth was first played, and he had to be turned round to see the applause.",
   mythic: null,
+  collection: "film",
   tune: { text: tune, numerator: 4, denominator: 4, steps: 2, key: D_MAJOR, hookBars: [1, 2] },
   versions: {
     common: {
@@ -201,7 +203,8 @@ export const odeToJoy: OurSong = {
     about:
       "Beethoven schrieb diese Melodie für den letzten Satz seiner Neunten Sinfonie, die 1824 in Wien uraufgeführt wurde. " +
       "Ein Chor singt dazu Friedrich Schillers Gedicht über Freude und Freundschaft. " +
-      "Heute ist sie die Hymne der Europäischen Union, gespielt ohne Worte.",
+      "Heute ist sie die Hymne der Europäischen Union, gespielt ohne Worte. " +
+      "Im Film Stirb langsam erklingt sie, als die Diebe den Tresor öffnen.",
     funFact:
       "Beethoven war fast völlig taub, als die Neunte zum ersten Mal erklang. Man musste ihn umdrehen, damit er den Beifall sah.",
     versions: {

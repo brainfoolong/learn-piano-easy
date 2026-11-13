@@ -123,11 +123,13 @@ in `effects-and-extras`.
 
 Ours takes its songs from four sources: our own arrangements, piano-midi.de, Mutopia and our original
 pieces. `public/songs/catalog.json` lists every song with its license and credit. Our arrangements
-follow [our-songs.md](../our-songs.md). Ours keeps everything the learner has in one backup file, as
+follow [our-songs.md](../our-songs.md). The library groups some of them as collections: Christmas, film
+music and sea shanties. Ours keeps everything the learner has in one backup file, as
 [design.md](../design.md) § *The learner's data* says.
 
 The library is `song-library` and `more-songs`, settings are `settings`, and PDF export is
-`effects-and-extras`. The cache manager is `offline-release`, and the Data page is `your-data`.
+`effects-and-extras`. The cache manager is `offline-release`, and the Data page is `your-data`. The
+Christmas collection is `christmas-songs`, and the film and sea collections are `film-songs`.
 
 ## Mistakes to avoid
 

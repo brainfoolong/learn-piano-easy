@@ -98,9 +98,11 @@ export const hallOfTheMountainKing: OurSong = {
   about:
     "Grieg wrote this music for Henrik Ibsen's play Peer Gynt, first staged in Christiania, today's Oslo, in 1876. " +
     "In this scene, the trolls crowd around Peer in the hall of their king. " +
-    "The same short tune comes back again and again, each time louder and faster, until it crashes to an end.",
+    "The same short tune comes back again and again, each time louder and faster, until it crashes to an end. " +
+    "The film The Social Network plays it under a rowing race.",
   funFact: "Grieg himself wrote that this piece reeked of cow pies and trollish self-satisfaction, and he could hardly bear to hear it.",
   mythic: null,
+  collection: "film",
   tune: { text: tune, numerator: 4, denominator: 4, key: B_MINOR, hookBars: [1, 2] },
   versions: {
     common: {
@@ -274,7 +276,8 @@ export const hallOfTheMountainKing: OurSong = {
     about:
       "Grieg schrieb diese Musik für Henrik Ibsens Schauspiel Peer Gynt, das 1876 in Christiania, dem heutigen Oslo, zuerst aufgeführt wurde. " +
       "In dieser Szene drängen sich die Trolle in der Halle ihres Königs um Peer. " +
-      "Dieselbe kurze Melodie kehrt immer wieder, jedes Mal lauter und schneller, bis sie krachend endet.",
+      "Dieselbe kurze Melodie kehrt immer wieder, jedes Mal lauter und schneller, bis sie krachend endet. " +
+      "Der Film The Social Network spielt sie zu einem Ruderrennen.",
     funFact:
       "Grieg schrieb selbst, dieses Stück rieche nach Kuhfladen und trollhafter Selbstzufriedenheit, und er könne es kaum anhören.",
     versions: {

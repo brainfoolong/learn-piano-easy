@@ -90,9 +90,11 @@ export const canonInD: OurSong = {
   about:
     "Johann Pachelbel wrote this canon around 1700, for three violins over a bass line. " +
     "The bass plays the same eight notes again and again, while each violin enters with the same tune. " +
-    "The piece lay forgotten until Gustav Beckmann first printed it in 1919.",
+    "The piece lay forgotten until Gustav Beckmann first printed it in 1919. " +
+    "The film Ordinary People made it famous in 1980.",
   funFact: "The canon was almost unknown until the late 1960s, and today it is one of the most played pieces at weddings.",
   mythic: null,
+  collection: "film",
   tune: { text: tune, numerator: 4, denominator: 4, key: D_MAJOR, hookBars: [1, 2] },
   versions: {
     common: {
@@ -244,7 +246,8 @@ export const canonInD: OurSong = {
     about:
       "Johann Pachelbel schrieb diesen Kanon um 1700 für drei Violinen über einer Basslinie. " +
       "Der Bass spielt immer wieder dieselben acht Töne, während jede Violine mit derselben Melodie einsetzt. " +
-      "Das Stück war vergessen, bis Gustav Beckmann es 1919 zum ersten Mal druckte.",
+      "Das Stück war vergessen, bis Gustav Beckmann es 1919 zum ersten Mal druckte. " +
+      "Der Film Eine ganz normale Familie machte es 1980 berühmt.",
     funFact:
       "Bis Ende der 1960er-Jahre kannte kaum jemand den Kanon, und heute gehört er zu den meistgespielten Stücken auf Hochzeiten.",
     versions: {

@@ -14,7 +14,7 @@ export const playerLibrary: typeof en = {
     originalTagline: "Die Noten des Komponisten selbst.",
     stepTitle: (name: string, tagline: string) => `${name}: ${tagline}`,
   },
-  collections: { christmas: "Weihnachten" },
+  collections: { christmas: "Weihnachten", film: "Filmmusik", sea: "Seemannslieder" },
   skills: {
     fiveFingerPosition: "Fünffingerlage",
     heldBass: "Gehaltene Bassnoten",

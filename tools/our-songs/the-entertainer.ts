@@ -162,9 +162,11 @@ export const theEntertainer: OurSong = {
   about:
     "Scott Joplin, the King of Ragtime, published this rag in St. Louis in 1902. " +
     "A rag puts a bouncy, off-beat tune over a steady bass that goes oom-pah. " +
-    "This is the first strain, the part everyone hums.",
-  funFact: "The rag became famous around the world in 1973, when the film The Sting used it, more than seventy years after Joplin wrote it.",
+    "This is the first strain, the part everyone hums. " +
+    "The film The Sting made it famous around the world in 1973.",
+  funFact: "Joplin was given a special Pulitzer Prize in 1976, almost sixty years after his death.",
   mythic: "mutopia/entertainer.mid",
+  collection: "film",
   tune: { text: tune, numerator: 4, denominator: 4, key: C_MAJOR, hookBars: [1, 2] },
   versions: {
     common: {
@@ -299,8 +301,9 @@ export const theEntertainer: OurSong = {
     about:
       "Scott Joplin, der König des Ragtime, veröffentlichte diesen Rag 1902 in St. Louis. " +
       "Ein Rag legt eine hüpfende Melodie gegen den Schlag über einen gleichmäßigen Bass, der Um-pa macht. " +
-      "Dies ist der erste Teil, den alle summen.",
-    funFact: "Weltberühmt wurde der Rag 1973 durch den Film Der Clou, mehr als siebzig Jahre nachdem Joplin ihn geschrieben hatte.",
+      "Dies ist der erste Teil, den alle summen. " +
+      "Der Film Der Clou machte ihn 1973 weltberühmt.",
+    funFact: "Joplin erhielt 1976 einen Sonderpreis des Pulitzer-Preises, fast sechzig Jahre nach seinem Tod.",
     versions: {
       common: {
         practice: [

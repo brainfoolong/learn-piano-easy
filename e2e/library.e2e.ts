@@ -258,6 +258,27 @@ test("the_library_lists_the_christmas_songs", async ({ page }) => {
   await expect(page.getByLabel("Open song")).toHaveText("Jingle Bells, Beginner");
 });
 
+test("the_library_lists_the_film_songs", async ({ page }) => {
+  await page.goto("./play/");
+  await page.getByRole("button", { name: "Songs", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "Songs" });
+  // "At the movies" is the collection after Christmas, and it holds the film songs of ours.
+  const collections = dialog.locator(".song-explorer__rail").getByRole("group", { name: "Collection" }).getByRole("button");
+  const film = collections.nth(1);
+  await expect(film).toHaveAccessibleName("At the movies", { timeout: 15_000 });
+  await film.click();
+  await expect(film).toHaveAttribute("aria-pressed", "true");
+  const titles = dialog.locator(".song-card .library-title");
+  await expect(titles.filter({ hasText: /^Canon in D$/ })).toHaveCount(1);
+  await expect(titles.filter({ hasText: /^The Entertainer$/ })).toHaveCount(1);
+  await expect(titles.filter({ hasText: /^Jingle Bells$/ })).toHaveCount(0);
+
+  // The search finds the collection by the name the learner reads.
+  await film.click();
+  await dialog.getByRole("searchbox", { name: "Search songs" }).fill("at the movies");
+  await expect(titles.filter({ hasText: /^Ode to Joy$/ })).toHaveCount(1);
+});
+
 test("an_added_file_stays_reopens_and_deletes", async ({ page }) => {
   const bytes = readFileSync(join(import.meta.dirname, "..", "public", "songs", "piano-midi", "alb_esp2.mid"));
   await page.goto("./play/");

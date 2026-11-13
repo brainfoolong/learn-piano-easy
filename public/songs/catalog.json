@@ -505,7 +505,8 @@
     "skills": [
       "five-finger-position",
       "open-fifths"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Ludwig van Beethoven",
@@ -524,7 +525,8 @@
       "eighth-notes",
       "dotted-rhythm",
       "triads"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Ludwig van Beethoven",
@@ -543,7 +545,8 @@
       "alberti-bass",
       "pedal",
       "thirds-and-sixths"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Ludwig van Beethoven",
@@ -562,7 +565,8 @@
       "stride",
       "melody-in-chords",
       "arpeggios"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Mildred J. Hill",
@@ -746,7 +750,8 @@
     "skills": [
       "five-finger-position",
       "held-bass"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Johann Pachelbel",
@@ -764,7 +769,8 @@
     "skills": [
       "two-note-chords",
       "position-change"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Johann Pachelbel",
@@ -783,7 +789,8 @@
       "alberti-bass",
       "thirds-and-sixths",
       "thumb-under"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Johann Pachelbel",
@@ -802,7 +809,8 @@
       "octave-bass",
       "melody-in-chords",
       "sixteenth-notes"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Edvard Grieg",
@@ -820,7 +828,8 @@
     "skills": [
       "five-finger-position",
       "open-fifths"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Edvard Grieg",
@@ -838,7 +847,8 @@
     "skills": [
       "five-finger-position",
       "triads"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Edvard Grieg",
@@ -857,7 +867,8 @@
       "broken-chords",
       "left-hand-melody",
       "thumb-under"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Edvard Grieg",
@@ -875,7 +886,8 @@
     "skills": [
       "octave-bass",
       "melody-in-chords"
-    ]
+    ],
+    "collection": "film"
   },
   {
     "composer": "Ludwig van Beethoven",
@@ -972,7 +984,8 @@
       "open-fifths",
       "held-bass"
     ],
-    "mythic": "mutopia/entertainer.mid"
+    "mythic": "mutopia/entertainer.mid",
+    "collection": "film"
   },
   {
     "composer": "Scott Joplin",
@@ -991,7 +1004,8 @@
       "triads",
       "position-change"
     ],
-    "mythic": "mutopia/entertainer.mid"
+    "mythic": "mutopia/entertainer.mid",
+    "collection": "film"
   },
   {
     "composer": "Scott Joplin",
@@ -1010,7 +1024,8 @@
       "pedal",
       "position-change"
     ],
-    "mythic": "mutopia/entertainer.mid"
+    "mythic": "mutopia/entertainer.mid",
+    "collection": "film"
   },
   {
     "composer": "Scott Joplin",
@@ -1030,7 +1045,8 @@
       "octave-bass",
       "thirds-and-sixths"
     ],
-    "mythic": "mutopia/entertainer.mid"
+    "mythic": "mutopia/entertainer.mid",
+    "collection": "film"
   },
   {
     "composer": "Franz Xaver Gruber",

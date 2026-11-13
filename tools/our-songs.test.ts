@@ -91,6 +91,50 @@ const CHRISTMAS = new Set([
   "tochter-zion",
 ]);
 
+/** The slugs of every film song of ours that is or will be written, by the goal `film-songs`. */
+const FILM = new Set([
+  "canon-in-d",
+  "ode-to-joy",
+  "hall-of-the-mountain-king",
+  "the-entertainer",
+  "also-sprach-zarathustra",
+  "the-blue-danube",
+  "ride-of-the-valkyries",
+  "dies-irae",
+  "clair-de-lune",
+  "moonlight-sonata",
+  "beethoven-7-allegretto",
+  "gymnopedie-1",
+  "hungarian-dance-5",
+  "eine-kleine-nachtmusik",
+  "lacrimosa",
+  "mozart-21-andante",
+  "air-on-the-g-string",
+  "toccata-in-d-minor",
+  "handel-sarabande",
+  "william-tell",
+  "swan-lake",
+  "night-on-bald-mountain",
+  "the-sorcerers-apprentice",
+  "ave-maria",
+  "bolero",
+  "flight-of-the-bumblebee",
+  "rachmaninoff-2",
+  "cavalleria-intermezzo",
+  "barcarolle",
+  "can-can",
+  "chopin-nocturne-c-sharp-minor",
+  "morning-mood",
+  "wedding-march",
+  "pomp-and-circumstance",
+  "neon-chase",
+  "black-flag-jig",
+  "last-horizon",
+]);
+
+/** The slugs of every sea shanty of ours that is or will be written, by the goal `film-songs`. */
+const SEA = new Set(["drunken-sailor", "blow-the-man-down", "sailors-hornpipe", "spanish-ladies", "haul-away-joe"]);
+
 test("every_catalog_song_names_its_length_and_our_versions_their_skills", async () => {
   const catalog = await readCatalog();
   expect(catalog.length).toBeGreaterThan(0);
@@ -125,6 +169,44 @@ test("every_christmas_song_is_in_the_collection", async () => {
   const first = groupSongs(catalog)[0]!;
   expect(first.name).toBe("Christmas");
   expect(first.pieces[0]!.songs[0]!.song).toBe("jingle-bells");
+});
+
+/** Checks that the songs of ours and the catalog's rows name `collection` exactly for the slugs of `slugs`. */
+async function expectCollection(collection: "film" | "sea", slugs: Set<string>): Promise<void> {
+  for (const song of ourSongs) {
+    expect({ song: song.slug, in: song.collection === collection }).toEqual({ song: song.slug, in: slugs.has(song.slug) });
+  }
+  const catalog = await readCatalog();
+  for (const row of catalog.filter((row) => row.song !== undefined)) {
+    expect({ file: row.file, in: row.collection === collection }).toEqual({ file: row.file, in: slugs.has(row.song!) });
+  }
+}
+
+test("every_film_song_is_in_the_collection", async () => {
+  expect(ourSongs.some((song) => song.slug === "canon-in-d")).toBe(true);
+  await expectCollection("film", FILM);
+  // The library shows the film songs as the group after Christmas.
+  const groups = groupSongs(await readCatalog());
+  expect(groups[1]!.name).toBe("At the movies");
+  expect(groups[1]!.collection).toBe("film");
+});
+
+test("every_shanty_is_in_the_collection", async () => {
+  await expectCollection("sea", SEA);
+  // A shanty is never a film song, so each shows in one group only.
+  expect([...SEA].filter((slug) => FILM.has(slug))).toEqual([]);
+});
+
+test("a_tune_of_our_own_needs_no_public_domain_years", () => {
+  const own = { composer: "learn-piano-easy", died: null, published: 2026, edition: "Our own tune, in the style of a film score", own: true } as const;
+  expect(isPublicDomain(own, 2026)).toBe(true);
+  // Without the flag, the same years are refused.
+  const { own: _, ...borrowed } = own;
+  expect(isPublicDomain(borrowed, 2026)).toBe(false);
+  // Every tune of ours is credited to the project, and only such a tune carries the flag.
+  for (const song of ourSongs) {
+    expect({ song: song.slug, own: song.source.own === true }).toEqual({ song: song.slug, own: song.source.composer === "learn-piano-easy" });
+  }
 });
 
 test("a_song_is_found_by_another_title", async () => {

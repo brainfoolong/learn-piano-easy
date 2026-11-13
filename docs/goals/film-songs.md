@@ -6,7 +6,7 @@ context: [docs/our-songs.md, tools/make-our-songs.ts, tools/our-songs/fur-elise.
 stages:
   - id: 1
     title: The film and sea collections
-    status: open
+    status: done
   - id: 2
     title: "Five film pieces: Also sprach Zarathustra to Clair de lune"
     status: open
@@ -147,6 +147,9 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
   from memory, and the meter cannot catch a wrong note.
 - **Every film slug is listed in `FILM`, and every shanty in `SEA`, in `tools/our-songs.test.ts`.** A
   new module takes the slug its stage names, or the test goes red. A reserve's swap edits that list.
+  Stage 1 listed all 42 slugs, so a later stage adds its modules to `ourSongs` alone.
+- ***The Entertainer*'s fun fact moved.** Its about text now names *The Sting*, so its fun fact tells of
+  Joplin's special Pulitzer Prize of 1976 instead.
 - **Trade-offs.** *Performance:* the explorer groups 80 songs instead of 42, still once per catalog
   read. *Memory:* the offline cache grows by about 1.2 MB, from about 31 KB per song. *Usability:* a
   learner finds film music under one name, and no protected theme they ask for. *Simplicity:* one
@@ -161,18 +164,18 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
 **Does:** the library shows the "At the movies" and "Sea shanties" groups, and our four film songs are
 in the first.
 
-- [ ] `film` and `sea` join `Collection` and `COLLECTIONS`, after `christmas`. `src/library/search.ts:69`
-- [ ] Their names in English and German. `src/i18n/messages/player-library.en.ts:19`, `src/i18n/messages/player-library.de.ts:17`
-- [ ] `own` on `OurSource`, and `isPublicDomain` passes an own source. `tools/make-our-songs.ts:109`, `tools/make-our-songs.ts:237`
-- [ ] *Canon in D* names `film` and its film. `tools/our-songs/canon-in-d.ts:1`
-- [ ] *Ode to Joy* names `film` and its film. `tools/our-songs/ode-to-joy.ts:1`
-- [ ] *In the Hall of the Mountain King* names `film` and its film. `tools/our-songs/hall-of-the-mountain-king.ts:1`
-- [ ] *The Entertainer* names `film` and its film. `tools/our-songs/the-entertainer.ts:1`
-- [ ] Run the writer, so the catalog rows carry the collection. `tools/make-our-songs.ts:1`
-- [ ] Tests `every_film_song_is_in_the_collection`, `every_shanty_is_in_the_collection` and
+- [x] `film` and `sea` join `Collection` and `COLLECTIONS`, after `christmas`. `src/library/search.ts:69`
+- [x] Their names in English and German. `src/i18n/messages/player-library.en.ts:19`, `src/i18n/messages/player-library.de.ts:17`
+- [x] `own` on `OurSource`, and `isPublicDomain` passes an own source. `tools/make-our-songs.ts:109`, `tools/make-our-songs.ts:237`
+- [x] *Canon in D* names `film` and its film. `tools/our-songs/canon-in-d.ts:1`
+- [x] *Ode to Joy* names `film` and its film. `tools/our-songs/ode-to-joy.ts:1`
+- [x] *In the Hall of the Mountain King* names `film` and its film. `tools/our-songs/hall-of-the-mountain-king.ts:1`
+- [x] *The Entertainer* names `film` and its film. `tools/our-songs/the-entertainer.ts:1`
+- [x] Run the writer, so the catalog rows carry the collection. `tools/make-our-songs.ts:1`
+- [x] Tests `every_film_song_is_in_the_collection`, `every_shanty_is_in_the_collection` and
   `a_tune_of_our_own_needs_no_public_domain_years`. `tools/our-songs.test.ts:98`
-- [ ] E2e test `the_library_lists_the_film_songs`. `e2e/library.e2e.ts:1`
-- [ ] The film and sea collections join the feature list. `docs/reference/features.md:1`
+- [x] E2e test `the_library_lists_the_film_songs`. `e2e/library.e2e.ts:1`
+- [x] The film and sea collections join the feature list. `docs/reference/features.md:1`
 
 ### 2. Five film pieces: Also sprach Zarathustra to Clair de lune
 
@@ -289,26 +292,24 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-The goal is written and live, and no stage has started. The list, the collections and the rules for
-tunes of our own are settled under `## Standing decisions`.
+Stage 1 is done. The library groups "At the movies" after Christmas, and "Sea shanties" shows once a
+shanty ships. The four film songs we had are in it, each naming its film. `OurSource.own` lets a tune
+of our own pass `isPublicDomain`. `FILM` and `SEA` in `tools/our-songs.test.ts` already list every slug
+of the goal. The three unit tests and the e2e test passed once by name.
 
 ### Next
 
-**Stage 1: the film and sea collections.** Files: `src/library/search.ts`, the two
-`player-library` message files, `tools/make-our-songs.ts`, four song modules and
-`tools/our-songs.test.ts`. No gate.
+**Stage 2: five film pieces, *Also sprach Zarathustra* to *Clair de lune*.** Follow the stage's
+`**Split:**` line and the playbook's song-module traps: write in a worktree under `.agent-tmp/`, check
+each tune against a printed score, and run `bun x tsc` once the batch lands.
 
-- [ ] `film` and `sea` join `Collection` and `COLLECTIONS`. `src/library/search.ts:69`
-- [ ] Their names in English and German. `src/i18n/messages/player-library.en.ts:19`
-- [ ] `own` on `OurSource`, and `isPublicDomain` passes it. `tools/make-our-songs.ts:109`
-- [ ] The four film songs we have name `film` and their films. `tools/our-songs/canon-in-d.ts:1`
-- [ ] Run the writer. `tools/make-our-songs.ts:1`
-- [ ] The three unit tests. `tools/our-songs.test.ts:98`
-- [ ] E2e test `the_library_lists_the_film_songs`. `e2e/library.e2e.ts:1`
-- [ ] The feature list. `docs/reference/features.md:1`
+- [ ] Read a score for each of the five, and confirm its years. `tools/our-songs/fur-elise.ts:1`
+- [ ] Five writing subagents, one module each. `tools/our-songs/also-sprach-zarathustra.ts:1`
+- [ ] Add the five to `ourSongs`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:97`
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` once stage 2 adds rows, and the
-e2e counts in `e2e/library.e2e.ts` that count collections or Original steps.
+Expected red: the catalog count in `src/midi/library-songs.test.ts` once stage 2 adds rows. The e2e
+test `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once the film group
+outgrows one view.
 
 ### Backlog
 

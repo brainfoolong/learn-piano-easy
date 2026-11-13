@@ -66,10 +66,10 @@ export interface CatalogSong {
 }
 
 /** A collection of songs the library groups apart from their composers. */
-export type Collection = "christmas";
+export type Collection = "christmas" | "film" | "sea";
 
 /** Every collection, in the order the library shows them. */
-export const COLLECTIONS: readonly Collection[] = ["christmas"];
+export const COLLECTIONS: readonly Collection[] = ["christmas", "film", "sea"];
 
 /** The name the learner reads for `collection`, in the live locale. */
 export function collectionName(collection: Collection): string {

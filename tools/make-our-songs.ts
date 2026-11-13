@@ -122,16 +122,18 @@ export const oursLicense = "MIT";
 /** Who every version of ours is credited to. */
 export const oursCredit = "Arranged by the learn-piano-easy authors";
 
-/** Where a song's tune comes from, and why it is public domain. */
+/** Where a song's tune comes from, and why it is public domain or ours. */
 export interface OurSource {
-  /** The composer, or `Traditional`. */
+  /** The composer, `Traditional`, or `learn-piano-easy` for a tune of our own. */
   composer: string;
-  /** The year the composer died, or null for a traditional tune. */
+  /** The year the composer died, or null for a traditional tune or one of our own. */
   died: number | null;
   /** The year the tune was first published. */
   published: number;
-  /** The public domain edition the tune was checked against. */
+  /** The public domain edition the tune was checked against, or a note that the tune is ours. */
   edition: string;
+  /** True for a tune of our own, which is MIT as every version of ours is and needs no public domain years. */
+  own?: true;
 }
 
 /** A song's tune in one line of the notation, its key and its hook. */
@@ -272,8 +274,12 @@ function versionFile(song: OurSong, rarity: Rarity): string {
   return `${oursFolder}/${song.slug}/${rarity}.mid`;
 }
 
-/** Whether a tune published in `published` by a composer who died in `died` is free in the US and the EU in `year`. */
+/**
+ * Whether a tune published in `published` by a composer who died in `died` is free in the US and the EU
+ * in `year`. A tune of our own is always free to ship.
+ */
 export function isPublicDomain(source: OurSource, year: number): boolean {
+  if (source.own === true) return true;
   return source.published + 95 < year && (source.died === null || source.died + 70 < year);
 }
 
