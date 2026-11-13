@@ -6,7 +6,7 @@ context: [docs/decisions/0012.md, docs/agent/translation.md, src/i18n/locale.ts,
 stages:
   - id: 1
     title: A locale table, and catalogs that fall back to English
-    status: open
+    status: done
   - id: 2
     title: Lesson texts and song guides fall back to English and load per locale
     status: open
@@ -79,9 +79,21 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 
 ## Standing decisions
 
-- **The locale table is the one home of a locale's facts,** in `src/i18n/locale.ts`. A row holds the
+- **The locale table is the one home of a locale's facts,** in `src/i18n/locale-table.ts`. A row holds the
   code, the English name, the endonym, the `lang` tag, the `Intl` tag and the direction. It also holds
   the Open Graph locale, the default naming system, the alphabet and the flags `shipped` and `complete`. Every list elsewhere derives from it.
+- **The table's file imports nothing,** and `src/i18n/locale.ts` re-exports it. The settings' schema
+  and `format.ts` read it without loading a catalog, so no import cycle runs through the catalogs.
+- **`Locale` is a shipped locale, and `LocaleCode` is any row's.** A text keyed by `Locale`, such as a
+  lesson's or a world's title, then fails the type check when a row ships without it. Catalogs,
+  `loadLocale`, `messagesOf` and the `Intl` helpers take a `LocaleCode`.
+- **The language switch and the footer name a locale by the table's endonym.** The catalogs hold no
+  `languageName`.
+- **The router awaits `prepare(path)` before a move,** which loads the page's catalog. A later move wins,
+  and the page it left never shows. Every move across locales goes through it.
+- **Tools, tests and e2e files read catalogs through `src/i18n/all-catalogs.ts`:** `CATALOGS` as the
+  files hold them, and `catalogOf` merged with English. `tools/build.ts` loads every shipped catalog
+  when it loads. `tools/test-preload.ts` does the same before each unit test file, through `bunfig.toml`.
 - **The rows, decided now.** Each locale's goal may change its own row with a recorded reason.
 
   | Code | Endonym | `lang` | `Intl` tag | Dir | Notes by default |
@@ -177,16 +189,16 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 `LOCALES`, and every hard-coded `"en"` or `"de"` list. Its list is the anchor set of the callers item.
 **Gate:** none.
 
-- [ ] The locale table, with every row above and only `en` and `de` shipped. `src/i18n/locale.ts:18`
-- [ ] `Translation<T>` and `withEnglish`. `src/i18n/translation.ts:1`
-- [ ] `loadLocale`, and `messagesOf` that throws for a locale not loaded. `src/i18n/locale.ts:38`
-- [ ] `src/i18n/all-catalogs.ts` for the build, and the test that no `src/` module imports it. `src/i18n/all-catalogs.ts:1`
-- [ ] The site's boot awaits its page's locale, and the language switch awaits the new one. `src/site/site.ts:73`, `src/site/site-bar.ts:84`
-- [ ] Every caller the subagent lists reads the table. `tools/build.ts:124`, `src/settings/schema.ts:239`, `e2e/layout-check.ts:43`, `tools/make-social-image.ts:104`
-- [ ] `PLURAL_FORMS`, and `plural()` typed by the locale. `src/i18n/format.ts:19`
-- [ ] `every_locale_has_every_message` holds the complete locales, and the untranslated check runs on them only. `src/i18n/i18n.test.ts:17`, `src/i18n/untranslated.test.ts:19`
-- [ ] Tests `a_missing_text_shows_in_english`, `a_page_loads_only_its_own_catalog` and `every_locale_names_its_plural_forms`. `src/i18n/i18n.test.ts:1`
-- [ ] The landing page stays within its byte budget. `tools/build.test.ts:1`
+- [x] The locale table, with every row above and only `en` and `de` shipped. `src/i18n/locale-table.ts:44`
+- [x] `Translation<T>` and `withEnglish`. `src/i18n/translation.ts:1`
+- [x] `loadLocale`, and `messagesOf` that throws for a locale not loaded. `src/i18n/locale.ts:40`
+- [x] `src/i18n/all-catalogs.ts` for the build, and the test that no `src/` module imports it. `src/i18n/all-catalogs.ts:1`
+- [x] The site's boot awaits its page's locale, and the language switch awaits the new one. `src/site/site.ts:73`, `src/site/router.ts:84`
+- [x] Every caller the subagent lists reads the table. `tools/build.ts:124`, `src/settings/schema.ts:239`, `e2e/layout-check.ts:43`, `tools/make-social-image.ts:104`
+- [x] `PLURAL_FORMS`, and `plural()` typed by the locale. `src/i18n/format.ts:14`
+- [x] `every_locale_has_every_message` holds the complete locales, and the untranslated check runs on them only. `src/i18n/i18n.test.ts:22`, `e2e/layout-check.ts:238`
+- [x] Tests `a_missing_text_shows_in_english`, `a_page_loads_only_its_own_catalog` and `every_locale_names_its_plural_forms`. `src/i18n/i18n.test.ts:1`
+- [x] The landing page stays within its byte budget. `tools/build.test.ts:1`
 
 ### 2. Lesson texts and song guides fall back to English and load per locale
 
@@ -269,16 +281,28 @@ and sorting by the live locale.
 
 ### State
 
-The goal is written and live on the chain. No stage has started. The policy it builds on is
-decision 0012 and rule 9 of `AGENTS.md`.
+Stage 1 is done. The table is `src/i18n/locale-table.ts`, and German is its own chunk, which the
+router and the boot await. `src/i18n/i18n.test.ts` and `tools/build.test.ts` pass, and `tsc` is clean.
+A shot showed a German first visit and the switch from English to German, with no page errors.
+
+The explorer's list of what stage 1 left to later stages:
+
+- Every lesson module imports its `.de.ts` statically, and keys its texts `{ en, de }`, as
+  `src/learn/course.ts:22` keys the world titles. That is stage 2.
+- `src/site/legal-view.ts:25` imports `legal.de` statically. Legal stays English and German only.
+- `src/theory/note-names.ts:71` compares the locale with `"de"`, and the two `player-settings-play`
+  catalogs label the language options with endonyms. That is stage 5, which may read the table there.
 
 ### Next
 
-**Stage 1: a locale table, and catalogs that fall back to English.** Files: `src/i18n/`, `src/site/`,
-`tools/build.ts`, `src/settings/schema.ts` and `e2e/layout-check.ts`. No gate. The items are the stage's
-list above.
+**Stage 2: lesson texts and song guides fall back to English and load per locale.** Files:
+`src/learn/model.ts`, `src/learn/course.ts`, `src/learn/lessons/*/`, `src/learn/lesson-view.ts`,
+`src/site/routes.ts:66` (`lessonPages` reads `lesson.texts[locale]`), `tools/make-our-songs.ts` and
+`src/library/guide.ts:91`. The items are the stage's list above. The splits: one writing subagent per
+world folder strips the `.de` imports once `World.loadTexts` lands, side by side.
 
-Expected red: every test that imports `CATALOGS.de` directly, until it loads German first.
+Expected red: none known. Every unit test file now runs after `tools/test-preload.ts`, which loads
+every shipped catalog. A test of a locale that has no chunk calls `loadLocale` itself.
 
 ### Backlog
 

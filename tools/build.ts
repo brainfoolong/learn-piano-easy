@@ -34,7 +34,8 @@ import { createHash } from "node:crypto";
 import { cp, mkdir, readdir, rm } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { GROUP_INDEX, groupIndex, groupOf } from "../src/pwa/cache-groups";
-import { DEFAULT_LOCALE, LOCALES, messagesOf, type Locale } from "../src/i18n/locale";
+import { loadEveryLocale } from "../src/i18n/all-catalogs";
+import { DEFAULT_LOCALE, LOCALES, messagesOf, rowOf } from "../src/i18n/locale";
 import {
   allPages,
   lessonPages,
@@ -120,8 +121,8 @@ function escapeHtml(text: string): string {
   return text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
 }
 
-/** Each locale's language and region as Open Graph names them. */
-const OG_LOCALES: Record<Locale, string> = { en: "en_US", de: "de_DE" };
+// Every page of every locale reads its catalog, so the build loads them all before it renders one.
+await loadEveryLocale();
 
 /** The license the JSON-LD names: the one in the repository. */
 const LICENSE_URL = `${REPO_URL}/blob/main/LICENSE`;
@@ -133,7 +134,7 @@ function siteRoot(siteUrl: string): string {
 
 /** The URL of `route` in every locale, then the default locale's as `x-default`: a page's alternates. */
 function alternatesOf(route: Route, site: string): { hreflang: string; href: string }[] {
-  const each = LOCALES.map((locale) => ({ hreflang: locale, href: site + pageOf(route, locale).path }));
+  const each = LOCALES.map((locale) => ({ hreflang: rowOf(locale).lang, href: site + pageOf(route, locale).path }));
   return [...each, { hreflang: "x-default", href: site + pageOf(route, DEFAULT_LOCALE).path }];
 }
 
@@ -144,7 +145,7 @@ function alternatesOf(route: Route, site: string): { hreflang: string; href: str
 export function structuredData(page: Page, site: string): object | undefined {
   if (page.route.id !== "home") return undefined;
   const { siteName, pages } = messagesOf(page.locale);
-  const common = { name: siteName, url: site + page.path, description: pages.home.description, inLanguage: page.locale };
+  const common = { name: siteName, url: site + page.path, description: pages.home.description, inLanguage: rowOf(page.locale).lang };
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -167,8 +168,8 @@ function headLines(page: Page, siteUrl: string | undefined): string[] {
   const messages = messagesOf(page.locale);
   const lines = [
     `<meta property="og:site_name" content="${escapeHtml(messages.siteName)}" />`,
-    `<meta property="og:locale" content="${OG_LOCALES[page.locale]}" />`,
-    ...LOCALES.filter((l) => l !== page.locale).map((l) => `<meta property="og:locale:alternate" content="${OG_LOCALES[l]}" />`),
+    `<meta property="og:locale" content="${rowOf(page.locale).ogLocale}" />`,
+    ...LOCALES.filter((l) => l !== page.locale).map((l) => `<meta property="og:locale:alternate" content="${rowOf(l).ogLocale}" />`),
   ];
   if (page.route.hidden) lines.push(`<meta name="robots" content="noindex" />`);
   if (siteUrl !== undefined && !page.route.hidden) {
@@ -221,7 +222,7 @@ export function crawlerFiles(pages: readonly Page[], siteUrl: string): Record<st
 export function renderPage(template: string, page: Page, siteUrl?: string): string {
   const messages = messagesOf(page.locale);
   const values: Record<string, string> = {
-    lang: page.locale,
+    lang: rowOf(page.locale).lang,
     title: escapeHtml(pageTitle(page)),
     description: escapeHtml(pageDescription(page)),
     base: page.base,

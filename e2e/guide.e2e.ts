@@ -1,7 +1,7 @@
 /** The guide of a song of ours in a real browser: the learner reads it and applies a practice step. */
 import { expect, test, type Page } from "@playwright/test";
 
-import { CATALOGS } from "../src/i18n/locale";
+import { CATALOGS } from "../src/i18n/all-catalogs";
 
 /** The settings the page keeps in `localStorage`: only those that differ from their defaults. */
 function storedSettings(page: Page): Promise<Record<string, unknown>> {

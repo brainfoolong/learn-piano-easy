@@ -34,8 +34,6 @@ export interface PageMeta {
 const SITE_NAME = "Learn Piano Easy";
 
 export const en = {
-  /** The locale's own name, as the language switch lists it. */
-  languageName: "English",
   /** The site's name, the last part of every page's title. */
   siteName: SITE_NAME,
   /** What a page shows when the browser runs no script. */

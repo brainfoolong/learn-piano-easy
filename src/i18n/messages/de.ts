@@ -18,7 +18,6 @@ import { sponsorPage } from "./sponsor.de";
 const SITE_NAME = en.siteName;
 
 export const de: Messages = {
-  languageName: "Deutsch",
   siteName: SITE_NAME,
   noscript: `${SITE_NAME} braucht JavaScript.`,
   pages: {

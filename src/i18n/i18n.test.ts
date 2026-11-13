@@ -1,7 +1,12 @@
+import { readdir } from "node:fs/promises";
+import { dirname, join, relative } from "node:path";
 import { expect, test } from "../testing";
-import { formatDate } from "./format";
+import { catalogOf, CATALOGS } from "./all-catalogs";
+import { formatDate, plural, PLURAL_FORMS } from "./format";
 import { SETTINGS, type Setting } from "../settings/schema";
-import { CATALOGS, chooseLocale, DEFAULT_LOCALE, LOCALES, localeOfPath, pathInLocale } from "./locale";
+import { chooseLocale, COMPLETE_LOCALES, DEFAULT_LOCALE, LOCALE_TABLE, LOCALES, loadLocale, localeOfPath, messagesOf, pathInLocale, rowOf } from "./locale";
+import { en } from "./messages/en";
+import { withEnglish } from "./translation";
 
 /** Every message of `catalog` by its dotted path, each as its kind: `string` or `function`. */
 function shape(catalog: object, prefix = ""): Record<string, string> {
@@ -16,9 +21,10 @@ function shape(catalog: object, prefix = ""): Record<string, string> {
 
 test("every_locale_has_every_message", () => {
   expect(LOCALES[0]).toBe(DEFAULT_LOCALE);
+  expect(COMPLETE_LOCALES).toEqual(["en", "de"]);
   const english = shape(CATALOGS.en);
-  for (const locale of LOCALES) {
-    const catalog = CATALOGS[locale];
+  for (const locale of COMPLETE_LOCALES) {
+    const catalog = CATALOGS[locale]!;
     expect({ locale, shape: shape(catalog) }).toEqual({ locale, shape: english });
     for (const [path, kind] of Object.entries(english)) {
       const value = path.split(".").reduce<unknown>((node, key) => (node as Record<string, unknown>)[key], catalog);
@@ -26,12 +32,84 @@ test("every_locale_has_every_message", () => {
       expect({ locale, path, empty: text.trim().length === 0 }).toEqual({ locale, path, empty: false });
     }
   }
+  // A translation holds no key the English lacks, whether complete or not.
+  for (const [locale, catalog] of Object.entries(CATALOGS)) {
+    const extra = Object.keys(shape(catalog)).filter((path) => !(path in english) && !Object.keys(english).some((p) => p.startsWith(`${path}.`)));
+    expect({ locale, extra }).toEqual({ locale, extra: [] });
+  }
+});
+
+test("a_missing_text_shows_in_english", async () => {
+  const merged = withEnglish(en, { pages: { home: { title: "Título" } }, sponsor: { promises: ["Uno"] } });
+  expect(merged.pages.home.title).toBe("Título");
+  expect(merged.pages.home.description).toBe(en.pages.home.description);
+  expect(merged.pages.play).toBe(en.pages.play);
+  expect(merged.counts.badges(3)).toBe(en.counts.badges(3));
+  // A list is one leaf, so the translated list stands whole.
+  expect(merged.sponsor.promises).toEqual(["Uno"]);
+  // A locale without a catalog of its own reads English in every text.
+  await loadLocale("fr");
+  expect(shape(messagesOf("fr"))).toEqual(shape(en));
+  expect(messagesOf("fr").pages.learn.title).toBe(en.pages.learn.title);
+  expect(catalogOf("fr").footer).toEqual(en.footer);
+});
+
+/** Every module the static imports of `entry` reach, as paths from the repository's root. */
+async function staticGraph(entry: string): Promise<Set<string>> {
+  const scanner = new Bun.Transpiler({ loader: "ts" });
+  const seen = new Set<string>();
+  const queue = [entry];
+  for (let file = queue.shift(); file !== undefined; file = queue.shift()) {
+    if (seen.has(file) || !file.endsWith(".ts")) continue;
+    seen.add(file);
+    const imports = scanner.scan(await Bun.file(file).text()).imports;
+    for (const { path, kind } of imports) {
+      if (kind !== "import-statement" || !path.startsWith(".")) continue;
+      queue.push(Bun.resolveSync(path, dirname(file)));
+    }
+  }
+  return new Set([...seen].map((file) => relative(join(import.meta.dir, "../.."), file).replaceAll("\\", "/")));
+}
+
+test("a_page_loads_only_its_own_catalog", async () => {
+  // A locale's catalog is read only once its chunk has loaded.
+  expect(() => messagesOf("ja")).toThrow();
+  await loadLocale("ja");
+  expect(messagesOf("ja").siteName).toBe(en.siteName);
+  // The site's script reaches the English catalog by static imports, and no other locale's.
+  const graph = await staticGraph(join(import.meta.dir, "../main.ts"));
+  expect(graph.has("src/i18n/messages/en.ts")).toBe(true);
+  const english = (file: string) => file === "src/i18n/messages/en.ts" || file.endsWith(".en.ts");
+  const others = [...graph].filter((file) => (file.startsWith("src/i18n/messages/") && !english(file)) || file === "src/i18n/all-catalogs.ts");
+  expect(others).toEqual([]);
+});
+
+test("no_site_module_imports_every_catalog", async () => {
+  const src = join(import.meta.dir, "..");
+  const scanner = new Bun.Transpiler({ loader: "ts" });
+  const importers: string[] = [];
+  for (const file of await readdir(src, { recursive: true })) {
+    if (!file.endsWith(".ts") || file.endsWith(".test.ts") || file.endsWith(".d.ts")) continue;
+    const imports = scanner.scan(await Bun.file(join(src, file)).text()).imports;
+    if (imports.some(({ path }) => /(^|\/)all-catalogs$/.test(path))) importers.push(file);
+  }
+  expect(importers).toEqual([]);
+});
+
+test("every_locale_names_its_plural_forms", () => {
+  for (const row of LOCALE_TABLE) {
+    const categories = new Intl.PluralRules(row.intl).resolvedOptions().pluralCategories;
+    expect({ locale: row.code, forms: [...PLURAL_FORMS[row.code]].sort() }).toEqual({ locale: row.code, forms: [...categories].sort() });
+  }
+  expect(plural("ru", 3, { one: "нота", few: "ноты", many: "нот", other: "ноты" })).toBe("ноты");
+  expect(plural("ru", 5, { one: "нота", few: "ноты", many: "нот", other: "ноты" })).toBe("нот");
+  expect(plural("ja", 5, { other: "音" })).toBe("音");
 });
 
 test("every_setting_has_its_texts_in_every_locale", () => {
   const ids = (SETTINGS as readonly Setting[]).map((setting) => setting.id);
-  for (const locale of LOCALES) {
-    const texts: Record<string, { label: string; help: string; options?: Record<string, string> }> = CATALOGS[locale].player.settings.settings;
+  for (const locale of COMPLETE_LOCALES) {
+    const texts: Record<string, { label: string; help: string; options?: Record<string, string> }> = catalogOf(locale).player.settings.settings;
     expect({ locale, ids: Object.keys(texts).sort() }).toEqual({ locale, ids: [...ids].sort() });
     for (const setting of SETTINGS as readonly Setting[]) {
       const { label, help, options } = texts[setting.id]!;
@@ -57,6 +135,7 @@ test("plurals_and_numbers_follow_the_locale", () => {
   const day = new Date(2026, 2, 5);
   expect(formatDate("en", day)).toBe("March 5, 2026");
   expect(formatDate("de", day)).toBe("5. März 2026");
+  expect(rowOf("es").intl).toBe("es-419");
 });
 
 test("the_first_visit_takes_the_browser_language", () => {
@@ -77,6 +156,8 @@ test("the_first_visit_takes_the_browser_language", () => {
   expect(localeOfPath("play/")).toBe("en");
   expect(localeOfPath("de/learn/profile/")).toBe("de");
   expect(localeOfPath("design/")).toBe("en");
+  // A locale that has not shipped has no pages, so its folder is no locale's.
+  expect(localeOfPath("es/play/")).toBe("en");
   expect(pathInLocale("de/play/", "en")).toBe("play/");
   expect(pathInLocale("learn/profile/", "de")).toBe("de/learn/profile/");
   expect(pathInLocale("de/", "de")).toBe("de/");

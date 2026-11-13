@@ -32,7 +32,7 @@
 import "../ui/controls.css";
 import "./site.css";
 import type { Locale } from "../i18n/locale";
-import { LOCALES, messagesOf } from "../i18n/locale";
+import { LOCALES, messagesOf, rowOf } from "../i18n/locale";
 import type { SettingsStore } from "../settings/store";
 import { iconButton, iconLink } from "../ui/components/icon-button";
 import { topBar } from "../ui/components/top-bar";
@@ -87,7 +87,7 @@ export function siteSwitches(locale: Locale, settings: SettingsStore, onLanguage
   const language = selectControl(
     t.language,
     locale,
-    LOCALES.map((l) => [l, messagesOf(l).languageName] as const),
+    LOCALES.map((l) => [l, rowOf(l).endonym] as const),
     (picked) => {
       settings.set("language", picked);
       onLanguage(picked);
@@ -116,7 +116,7 @@ export function siteSwitches(locale: Locale, settings: SettingsStore, onLanguage
     attrs: { id: MENU_ID, popover: "auto" },
     children: [
       page,
-      switchOf(language.element, t.language, el("span", { class: "site-bar__value", text: messagesOf(locale).languageName }), [
+      switchOf(language.element, t.language, el("span", { class: "site-bar__value", text: rowOf(locale).endonym }), [
         el("span", { class: "site-bar__code", text: locale.toUpperCase() }),
       ]),
       switchOf(theme.element, t.theme, themeValue, [schemeIcon("sun", "light"), schemeIcon("moon", "dark")]),

@@ -1,5 +1,5 @@
 import { expect, test } from "../testing";
-import { CATALOGS } from "./locale";
+import { CATALOGS } from "./all-catalogs";
 import { translatedAway, untranslated } from "./untranslated";
 
 test("a_text_is_english_only_when_its_translation_differs", () => {

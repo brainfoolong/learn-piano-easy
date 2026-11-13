@@ -10,7 +10,7 @@
  * The footer is built again on every route, since its locale links name the page on screen. The player
  * fills the window, so its view shows no footer.
  */
-import { LOCALES, messagesOf, pathInLocale, type Locale } from "../i18n/locale";
+import { LOCALES, messagesOf, pathInLocale, rowOf, type Locale } from "../i18n/locale";
 import { el } from "../ui/dom";
 import { icon } from "../ui/icons/icons";
 import type { Page, StaticRouteId } from "./routes";
@@ -35,8 +35,8 @@ export function siteFooter(page: Page, onLanguage: (locale: Locale) => void): HT
   const others = LOCALES.filter((locale) => locale !== page.locale).map((locale) =>
     el("a", {
       class: "site-footer__link",
-      attrs: { href: `./${pathInLocale(page.path, locale)}`, hreflang: locale, lang: locale },
-      text: messagesOf(locale).languageName,
+      attrs: { href: `./${pathInLocale(page.path, locale)}`, hreflang: rowOf(locale).lang, lang: rowOf(locale).lang },
+      text: rowOf(locale).endonym,
       on: { click: () => onLanguage(locale) },
     }),
   );

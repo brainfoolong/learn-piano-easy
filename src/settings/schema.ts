@@ -31,6 +31,7 @@
  * Gaps: the sections of later goals join this list as each goal builds its feature. The pending list in
  * `coverage.test.ts` names the goal that owns each missing setting.
  */
+import { LOCALES } from "../i18n/locale-table";
 import type { IconName } from "../ui/icons/icons";
 
 /** The hue of a group, from the site's palette. `neutral` is no hue, for the app's own housekeeping. */
@@ -237,10 +238,9 @@ const MEASURE = { min: 1, max: 9999, step: 1 };
 /** Every setting, section by section. Inside a section the panel keeps this order. */
 export const SETTINGS = [
   // Site. The top bar switches both, and `src/i18n/locale.ts` says how `auto` picks a language.
-  // The locales are written out, since reading `LOCALES` makes the catalogs' type depend on itself. A
-  // locale missing here fails the type check where the top bar stores the learner's pick.
+  // The language's options are the shipped locales of the locale table, whose file imports nothing.
   choice("siteTheme", "site", "system", ["system", "light", "dark"]),
-  choice("language", "site", "auto", ["auto", "en", "de"]),
+  choice("language", "site", "auto", ["auto", ...LOCALES]),
   // The rewards' sounds of *Learn Piano*, which `src/learn/game/sfx.ts` plays. The profile switches it.
   toggle("learnSounds", "site", true),
   // The daily goal in XP, as `DAILY_GOALS` of `src/learn/game/streak.ts` lists them. The first visit

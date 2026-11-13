@@ -28,7 +28,8 @@
  * Every flaw is prefixed with its width, theme and locale, so a failing test says where to look.
  */
 import type { Browser, Page } from "@playwright/test";
-import { CATALOGS, DEFAULT_LOCALE, isLocale } from "../src/i18n/locale";
+import { CATALOGS } from "../src/i18n/all-catalogs";
+import { COMPLETE_LOCALES, DEFAULT_LOCALE, isLocale, LOCALES as SHIPPED_LOCALES } from "../src/i18n/locale";
 import { fold, translatedAway, untranslated } from "../src/i18n/untranslated";
 import { SETTINGS_VERSION, STORAGE_KEY } from "../src/settings/store";
 import { judgePage, type MeasuredText, type Named, type PageMeasure } from "../src/ui/layout-geometry";
@@ -39,8 +40,8 @@ export const WIDTHS = [360, 768, 1280, 1920] as const;
 /** The themes, as the system's colour scheme. */
 export const THEMES = ["light", "dark"] as const;
 
-/** The locales, English and German, the longest language the layout must fit. */
-export const LOCALES = ["en", "de"] as const;
+/** The locales every width is checked in: the complete ones, English and German, the longest the layout must fit. */
+export const LOCALES = SHIPPED_LOCALES.filter((locale) => COMPLETE_LOCALES.includes(locale));
 
 /** The widest viewport that emulates a touch screen. */
 export const TOUCH_MAX_WIDTH = 768;
@@ -235,8 +236,8 @@ function textsInPage(): string[] {
  * `own` holds the texts the page's locale writes outside its catalog, such as a lesson's, which never count.
  */
 export async function englishShown(page: Page, locale: string, own: readonly string[] = []): Promise<string[]> {
-  if (locale === DEFAULT_LOCALE || !isLocale(locale)) return [];
-  const english = translatedAway(CATALOGS[DEFAULT_LOCALE], CATALOGS[locale]);
+  if (locale === DEFAULT_LOCALE || !isLocale(locale) || !COMPLETE_LOCALES.includes(locale)) return [];
+  const english = translatedAway(CATALOGS[DEFAULT_LOCALE], CATALOGS[locale] ?? {});
   for (const text of own) english.delete(fold(text));
   return untranslated(await page.evaluate(textsInPage), english);
 }

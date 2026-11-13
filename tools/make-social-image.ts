@@ -19,7 +19,8 @@
 import { mkdir } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { chromium } from "@playwright/test";
-import { LOCALES, messagesOf, type Locale } from "../src/i18n/locale";
+import { catalogOf } from "../src/i18n/all-catalogs";
+import { LOCALES, rowOf, type Locale } from "../src/i18n/locale";
 import { SOCIAL_IMAGE_SIZE, socialImageOf } from "../src/site/routes";
 import { root } from "./build";
 
@@ -41,7 +42,7 @@ const NOTES: readonly { key: number; hand: "left" | "right"; top: number; length
 
 /** The SVG of the picture in `locale`, filled with the site's tokens. */
 function socialSvg(locale: Locale): string {
-  const t = messagesOf(locale);
+  const t = catalogOf(locale);
   const { width, height } = SOCIAL_IMAGE_SIZE;
   const keyWidth = 36;
   const keysX = width - 80 - WHITE_KEYS * keyWidth;
@@ -84,7 +85,7 @@ async function socialPage(locale: Locale): Promise<string> {
   const tokens = await Bun.file(join(root, "src/ui/tokens.css")).text();
   const font = await Bun.file(join(root, "public/fonts/plus-jakarta-sans/plus-jakarta-sans.woff2")).bytes();
   return `<!doctype html>
-<html lang="${locale}" data-site-theme="dark">
+<html lang="${rowOf(locale).lang}" data-site-theme="dark">
 <head>
 <style>
 @font-face { font-family: "Plus Jakarta Sans"; src: url(data:font/woff2;base64,${Buffer.from(font).toString("base64")}); font-weight: 200 800; }

@@ -17,7 +17,8 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { expect, type Locator, type Page } from "@playwright/test";
-import { messagesOf, type Locale } from "../src/i18n/locale";
+import { catalogOf as messagesOf } from "../src/i18n/all-catalogs";
+import type { Locale } from "../src/i18n/locale";
 import { DEFAULT_KEYS, keysOf } from "../src/input/keyboard";
 import { momentsOf, requiredNotes, type Hands } from "../src/input/wait-mode";
 import { COURSE } from "../src/learn/course";

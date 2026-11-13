@@ -10,6 +10,8 @@
  *   `pushState`, and every relative URL of the app would break on the next route.
  * - **Only a plain click on a link to a route is taken.** A click with a modifier, a link with a target
  *   or a download, a link that starts with `#`, and a link outside the site's routes stay the browser's.
+ * - **A page shows once what it needs has loaded,** through `prepare`, such as its locale's catalog. A
+ *   move made meanwhile wins, and the page it left never shows.
  * - **The swap runs in a view transition** where the browser has the API and motion is not reduced.
  *   Elsewhere the view changes at once.
  * - **The view being left hears so before the transition,** through `leave`. The browser runs the swap
@@ -29,6 +31,8 @@ export interface RouterOptions {
   root: string;
   /** Tells the view on screen that the page at `path` replaces it. It runs at once, before the view transition. */
   leave(path: string): void;
+  /** Loads what the page at `path` needs before it shows, such as its locale's catalog. */
+  prepare(path: string): Promise<void>;
   /** Shows the view of the page at `path`. It runs inside the view transition. */
   render(path: string): void;
   /** Resolves whether the view on screen may be left. */
@@ -78,8 +82,11 @@ export function startRouter(options: RouterOptions): Router {
     heading.focus({ preventScroll: true });
   };
 
-  const show = (path: string, scroll: number) => {
+  const show = async (path: string, scroll: number) => {
     current = path;
+    await options.prepare(path);
+    // A later move won while this page's needs loaded.
+    if (current !== path) return;
     options.leave(path);
     const swap = () => {
       options.render(path);
@@ -105,7 +112,7 @@ export function startRouter(options: RouterOptions): Router {
       key = newKey();
       history.pushState({ key }, "", url);
     }
-    show(path, 0);
+    void show(path, 0);
   };
 
   window.addEventListener("popstate", (event) => {
@@ -120,7 +127,7 @@ export function startRouter(options: RouterOptions): Router {
       }
       scrolls.set(key, scrollY);
       key = keyOf(event.state) ?? newKey();
-      show(path, scrolls.get(key) ?? 0);
+      void show(path, scrolls.get(key) ?? 0);
     });
   });
 

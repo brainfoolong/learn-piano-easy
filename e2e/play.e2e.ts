@@ -1,7 +1,7 @@
 /** The player inside the site: its layout at each size, its German, its theme, and its song across pages. */
 import { expect, test, type Locator, type Page } from "@playwright/test";
 
-import { CATALOGS } from "../src/i18n/locale";
+import { CATALOGS } from "../src/i18n/all-catalogs";
 import { checkLayout, englishShown, LOCALES, pastSetup, THEMES, WIDTHS } from "./layout-check";
 
 /** The site's top bar. */

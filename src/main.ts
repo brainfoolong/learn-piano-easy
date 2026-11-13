@@ -10,7 +10,7 @@ if (!root) throw new Error("The page has no #app element.");
 
 const settings = new SettingsStore();
 applyThemes(settings);
-startSite(root, settings);
+void startSite(root, settings);
 installTips();
 
 if (__DEV__) {

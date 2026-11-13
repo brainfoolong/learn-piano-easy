@@ -1,42 +1,55 @@
 /**
- * The site's locales: their catalogs, the locale of a page's path, and the locale a visit should show.
+ * The site's locales: each locale's catalog, the locale of a page's path, and the locale a visit should
+ * show. The locale table of `src/i18n/locale-table.ts` holds each locale's facts, and this module
+ * re-exports it.
  *
  * Decisions, and what each costs:
- * - The catalog table is the locale list. A third language is its catalog, the player's section files, and one line here.
- * - The first locale is the default, served from the site's root. Every other locale sits under its
+ * - **English is in the main bundle, and every other catalog is its own chunk.** `loadLocale` fetches
+ *   a catalog and fills its gaps with English once, so `messagesOf` stays synchronous. It throws for a
+ *   locale not loaded yet. The cost is one more request on a first visit to another locale.
+ * - **The first locale is the default, served from the site's root.** Every other locale sits under its
  *   own folder, so `play/` in German is `de/play/`.
- * - A path here is relative to the site's root, never the address's whole path. The site runs from
+ * - **A path here is relative to the site's root, never the address's whole path.** The site runs from
  *   any base path, so only the caller knows where its root is.
- * - The language choice is `auto` until the learner picks one. With `auto`, a page of the default
+ * - **A browser language matches by its first subtag,** so `es-MX` would find `es`.
+ * - **The language choice is `auto` until the learner picks one.** With `auto`, a page of the default
  *   locale moves to the first site locale in the browser's languages. A page of another locale stays,
  *   since a learner reached it by a link or a choice. A picked locale wins on every page.
  */
-import { de } from "./messages/de";
+import { DEFAULT_LOCALE, LOCALES, type Locale, type LocaleCode } from "./locale-table";
 import { en, type Messages } from "./messages/en";
+import { withEnglish, type Translation } from "./translation";
 
-/** Every locale's catalog, the default locale first. */
-export const CATALOGS = { en, de } satisfies Record<string, Messages>;
-
-/** A locale of the site. */
-export type Locale = keyof typeof CATALOGS;
-
-/** The site's locales, the default first. */
-export const LOCALES = Object.keys(CATALOGS) as Locale[];
-
-/** The default locale, served from the site's root. */
-export const DEFAULT_LOCALE: Locale = LOCALES[0]!;
+export * from "./locale-table";
 
 /** The stored language choice: a locale, or `auto` before the learner picks one. */
 export type LanguageChoice = "auto" | Locale;
 
-/** Whether `value` names a locale of the site. */
+/** Whether `value` names a shipped locale of the site. */
 export function isLocale(value: string): value is Locale {
-  return Object.hasOwn(CATALOGS, value);
+  return (LOCALES as readonly string[]).includes(value);
 }
 
-/** The catalog of `locale`. */
-export function messagesOf(locale: Locale): Messages {
-  return CATALOGS[locale];
+/** The catalog chunk of each locale that has one. English is in the main bundle and needs none. */
+const CATALOG_CHUNKS: Partial<Record<LocaleCode, () => Promise<Translation<Messages>>>> = {
+  de: () => import("./messages/de").then((module) => module.de),
+};
+
+/** Each loaded locale's catalog, its gaps filled with English. */
+const loaded = new Map<LocaleCode, Messages>([["en", en]]);
+
+/** Loads the catalog of `locale` once, so `messagesOf(locale)` may read it. */
+export async function loadLocale(locale: LocaleCode): Promise<void> {
+  if (loaded.has(locale)) return;
+  const translation = (await CATALOG_CHUNKS[locale]?.()) ?? {};
+  loaded.set(locale, withEnglish<Messages>(en, translation));
+}
+
+/** The catalog of `locale`, which `loadLocale` must have loaded. */
+export function messagesOf(locale: LocaleCode): Messages {
+  const messages = loaded.get(locale);
+  if (messages === undefined) throw new Error(`The catalog of "${locale}" is not loaded yet.`);
+  return messages;
 }
 
 /** The folder of `locale` relative to the site's root: `""` for the default locale. */
@@ -56,7 +69,7 @@ export function pathInLocale(path: string, locale: Locale): string {
   return localeRoot(locale) + path.slice(localeRoot(from).length);
 }
 
-/** The first site locale in the browser's `languages`, matched by their language subtag. */
+/** The first shipped locale in the browser's `languages`, matched by their first subtag. */
 export function browserLocale(languages: readonly string[]): Locale | undefined {
   for (const tag of languages) {
     const language = tag.split("-")[0]!.toLowerCase();
@@ -67,7 +80,7 @@ export function browserLocale(languages: readonly string[]): Locale | undefined 
 
 /** The locale a visit to a page in `pageLocale` should show, from the stored choice and the browser. */
 export function chooseLocale(pageLocale: Locale, choice: LanguageChoice, languages: readonly string[]): Locale {
-  if (choice !== "auto") return choice;
+  if (choice !== "auto" && isLocale(choice)) return choice;
   if (pageLocale !== DEFAULT_LOCALE) return pageLocale;
   return browserLocale(languages) ?? pageLocale;
 }

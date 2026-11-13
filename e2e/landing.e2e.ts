@@ -10,7 +10,7 @@
  *   another scheduled source, so a test sees that a press sounds without hearing it.
  */
 import { expect, test, type Page } from "@playwright/test";
-import { messagesOf } from "../src/i18n/locale";
+import { catalogOf as messagesOf } from "../src/i18n/all-catalogs";
 import { HERO_SONG, SHOWCASE_SONGS } from "../src/landing/songs";
 import { checkLayout, LOCALES, recordShifts, shiftSoFar, THEMES, WIDTHS } from "./layout-check";
 import { SHIFT_LIMIT } from "../src/ui/layout-geometry";

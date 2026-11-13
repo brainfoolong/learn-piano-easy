@@ -734,7 +734,7 @@ player is its part at `play/`, and every page reloads offline from any base path
 ### Decisions that still bind
 
 - The route table of `src/site/routes.ts` is the one list of routes. `design/` is the one hidden route.
-- German sits under `de/`, and a third locale is one message file and one row of `CATALOGS`.
+- German sits under `de/`, and a third locale is one row of the locale table in `src/i18n/locale-table.ts` and its translation files.
 - The build writes one page per route and locale, so a static host serves every route with no rewrite.
 - Every page carries `<base href>` to the site's root, and every URL in it is `./` from there.
 - The router freezes the base at boot and leaves a link that starts with `#` to the browser.

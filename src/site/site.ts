@@ -7,6 +7,8 @@
  * - **The first visit may move once.** `chooseLocale` of `src/i18n/locale.ts` picks the locale from
  *   the stored choice and the browser. When it differs from the page's, the address is replaced by the
  *   same page in that locale before anything shows.
+ * - **A page shows once its locale's catalog has loaded.** The boot awaits it before the first view, and
+ *   the router awaits it before each move, so the language switch shows the new locale whole.
  * - **Each page sets the live locale** of `src/i18n/live.ts`, which the player, the service worker's
  *   toasts and the About page read.
  * - **The language switch stores `language`** and shows the page on screen in that locale. The bar,
@@ -31,8 +33,7 @@
  */
 import { folderSyncOn } from "../data/changes";
 import { setLiveLocale } from "../i18n/live";
-import { chooseLocale, localeOfPath, pathInLocale, type Locale } from "../i18n/locale";
-import { messagesOf } from "../i18n/locale";
+import { chooseLocale, loadLocale, localeOfPath, messagesOf, pathInLocale, rowOf, type Locale } from "../i18n/locale";
 import { registerServiceWorker } from "../pwa/register";
 import type { SettingsStore } from "../settings/store";
 import { toasts } from "../ui/components/toast";
@@ -64,7 +65,7 @@ function followSiteTheme(settings: SettingsStore): void {
 }
 
 /** Starts the site in `root`, the page's `#app`. */
-export function startSite(root: HTMLElement, settings: SettingsStore): void {
+export async function startSite(root: HTMLElement, settings: SettingsStore): Promise<void> {
   followSiteTheme(settings);
   const site = siteRoot();
 
@@ -72,6 +73,7 @@ export function startSite(root: HTMLElement, settings: SettingsStore): void {
   const landed = pageFor(pathOf(new URL(location.href), site) ?? "");
   const locale = chooseLocale(landed.locale, settings.get("language"), navigator.languages);
   if (locale !== landed.locale) history.replaceState(history.state, "", site + pathInLocale(landed.path, locale));
+  await loadLocale(locale);
 
   const barHost = el("div", { class: "site-bar-host" });
   const main = el("main", { class: "site-main", attrs: { id: "main" } });
@@ -135,7 +137,7 @@ export function startSite(root: HTMLElement, settings: SettingsStore): void {
 
     footerHost.replaceChildren(page.route.id === "play" ? "" : siteFooter(page, storeLanguage));
     root.dataset.route = page.route.id;
-    document.documentElement.lang = locale;
+    document.documentElement.lang = rowOf(locale).lang;
     document.title = pageTitle(page);
     document.querySelector('meta[name="description"]')?.setAttribute("content", messagesOf(locale).pages[page.route.id].description);
     countVisit();
@@ -147,7 +149,8 @@ export function startSite(root: HTMLElement, settings: SettingsStore): void {
     shown.hidden?.();
   };
 
-  const router = startRouter({ root: site, leave, render, mayLeave });
+  const prepare = (path: string) => loadLocale(pageFor(path).locale);
+  const router = startRouter({ root: site, leave, prepare, render, mayLeave });
   render(router.current());
   // Measured before the first paint, so the view never moves when the observer first reports.
   measureBar();
