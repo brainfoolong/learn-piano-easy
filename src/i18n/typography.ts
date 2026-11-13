@@ -233,7 +233,10 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       { says: "A quote stands in “ ”, never in straight quotes or « »", mustNot: /["«»„]/ },
       { says: "No space stands before a period, a comma, a colon, a semicolon, ?, ! or %", mustNot: /\s[.,:;?!%]/ },
       { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
-      { says: "The learner is kamu, never Anda, engkau or slang", mustNot: /(?<!\p{L})(?:anda|engkau|gue|gua|gw|lo|lu|elo|elu)(?!\p{L})/iu },
+      {
+        says: "The learner is kamu, never Anda, engkau or slang. A lyric's | joins syllables, so du|lu is one word",
+        mustNot: /(?<![\p{L}|])(?:anda|engkau|gue|gua|gw|lo|lu|elo|elu)(?![\p{L}|])/iu,
+      },
       { says: "No word asks please: no silakan, mohon or tolong", mustNot: /(?<!\p{L})(?:silakan|silahkan|mohon|tolong)(?!\p{L})/iu },
       {
         says: "The text is standard Indonesian, with no bahasa gaul",

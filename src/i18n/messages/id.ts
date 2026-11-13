@@ -249,6 +249,7 @@ export const id: Translation<Messages> = {
   counts: {
     badges: (n: number) => `${formatNumber("id", n)} lencana`,
     minutesPlayed: (n: number) => `${formatNumber("id", n)} menit bermain`,
+    xp: (n: number) => `${formatNumber("id", n)} XP`,
   },
   lesson: learnLesson,
   badges: learnBadges,

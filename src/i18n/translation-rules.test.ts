@@ -293,6 +293,7 @@ test("the_indonesian_marks_hold_and_spare_kept_words", () => {
     "birama 1–4", "Tekan tuts di atas C.", "Pilih lagu apa pun.", "Bagaimanapun, coba lagi.", "Ada 3 lagu.", "Lagu-lagu Natal",
     "Mainkan dengan pelan-pelan.", "Mainkan dengan keyboard MIDI.", "1.234,5 not", "Keluar dari pelajaran ini?",
     "Mainkan C, E, dan G.", "Pilih “Putar”.", "Tunggu notmu", "Kamu yakin?", "Lihat dulu sebelum melompat.",
+    "pe|lan du|lu la|lu ce|pat",
   ];
   for (const text of kept) expect(problemsOf([textOf("English", text, "id")], "id")).toEqual([]);
 });

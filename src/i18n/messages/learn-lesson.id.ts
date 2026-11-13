@@ -103,7 +103,7 @@ export const learnLesson: Translation<typeof en> = {
     pattern: {
       taps: (countIn: number, taps: number) => `Hitungan awal ${n(countIn)} ketukan. Lalu ketuk ${n(taps)} ketukan.`,
       phrase: (countIn: number, ...parts: string[]) =>
-        `Hitungan awal ${n(countIn)} ketukan. Lalu mainkan: ${parts.join(", ")}.`,
+        `Hitungan awal ${n(countIn)} ketukan. Lalu mainkan${parts.length > 0 ? `: ${parts.join(", ")}` : ""}.`,
       held: (note: string, beats: number) => `${note} ditahan selama ${n(beats)} ketukan`,
       rest: (beats: number) => (beats === 1 ? "istirahat" : `istirahat selama ${n(beats)} ketukan`),
     },
