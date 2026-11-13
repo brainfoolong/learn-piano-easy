@@ -19,6 +19,7 @@ export const rhythm: WorldLessons = {
     es: () => import("./texts.es").then((module) => module.texts),
     zh: () => import("./texts.zh").then((module) => module.texts),
     hi: () => import("./texts.hi").then((module) => module.texts),
+    ar: () => import("./texts.ar").then((module) => module.texts),
   },
   skipPicks: rhythmSkipPicks,
 };

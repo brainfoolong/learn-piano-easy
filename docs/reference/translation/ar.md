@@ -122,7 +122,7 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | rhythm | الإيقاع | WP *إيقاع*; UC |
 | tempo; speed | السرعة | MS *Tempo*; MET. WP's `سرعة الإيقاع` is the long form |
 | metronome | المترونوم | MS; MET; WP's redirect *ميترونوم* |
-| whole, half, quarter note | مستديرة, بيضاء, سوداء | WP *مستديرة (موسيقى)*, *بيضاء (موسيقى)*, *سوداء (موسيقى)* |
+| whole, half, quarter note | مستديرة, بيضاء, سوداء; plural مستديرات, بيضاوات, سوداوات, never `نغمات بيضاء`, which reads as white keys | WP *مستديرة (موسيقى)*, *بيضاء (موسيقى)*, *سوداء (موسيقى)* |
 | eighth, sixteenth note | ذات السن, ذات السنين | WP *ذات السن (موسيقى)*, *ذات السنين (موسيقى)* |
 | dotted | منقوطة: `بيضاء منقوطة` | WP *نقطة (موسيقى)* |
 | rest; quarter rest | سكتة; سكتة سوداء | MS *Rest*; WP *ميزان (موسيقى)* «السكتات» |
@@ -182,7 +182,7 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | press a pedal, lift it | اضغط الدواسة, ارفع قدمك عنها | the plain verbs of a foot |
 | fingering | ترقيم الأصابع | MS *Fingering* «ترقيم اﻷصابع» |
 | finger numbers | 1 الإبهام, 2 السبابة, 3 الوسطى, 4 البنصر, 5 الخنصر | the everyday names of the fingers, unsourced |
-| a finger by number | الإصبع 3, or الإصبع الثالث | everyday words. `الوسطى` alone would blur with middle C |
+| a finger by number | الإصبع 3, or الإصبع الثالث; the middle finger الإصبع الأوسط | everyday words. `الإصبع` is masculine. `الوسطى` alone would blur with middle C |
 | right hand, left hand, both hands | اليد اليمنى, اليد اليسرى, اليدان معًا | everyday words; UC «اليد اليسرى» |
 | hand position; C position | وضعية اليد; وضعية دو | the course's own term, unsourced |
 | hand shape | شكل اليد | everyday words |
@@ -427,6 +427,8 @@ A step that only differs in its bars or its section follows the nearest row's sh
 - **"Low C" is `دو المنخفضة`, and "high C" is `دو العالية`.** These words name pitch alone. Loudness takes
   `بقوة` and `بهدوء`, so the two never blur.
 - **A spelled-out chord lists its syllables with `و`:** `دو ومي وصول`.
+- **The note `لا` never stands bare where it reads as "no".** After a verb, a preposition or `هي`, it is
+  `نغمة لا`: `اضغط نغمة لا`. A quiz answer or a list that holds only note names may write it bare.
 - **A note name never takes the article.** `الدو` reads stiff to a learner: `اعزف دو`, `من دو إلى صول`.
 - **A letter that code checks,** such as a quiz answer, stays the catalog's own.
 
@@ -539,7 +541,7 @@ Each row is the chosen translation, and why it beat the next best one.
 | Level up | Level up! / Every lesson takes you further. Keep going! | مستوى جديد! / كل درس يأخذك خطوة إلى الأمام. لنواصل! | `مستوى جديد` reads as a game. `لنواصل` invites without a gender. |
 | Lesson explanation | The right pedal is the sustain pedal. While it is down, every note keeps sounding after you let go of its key. | الدواسة اليمنى هي دواسة الحفاظ. ما دامت مضغوطة، يبقى صوت كل نغمة مسموعًا بعد رفع الإصبع عن مفتاحها. | `بعد رفع الإصبع` is a verbal noun, so the learner has no gender. |
 | Lesson instruction | Your turn. Put your right thumb on middle C and play C and E together. | دورك الآن. ضع إبهام يدك اليمنى على دو الوسطى، واعزف دو ومي معًا. | Two imperatives, as a teacher says them. § 4 names their form. |
-| Quiz | How many black keys are in the smaller group? / One, Two, Three, Four | كم مفتاحًا أسود في المجموعة الصغرى؟ / واحد، اثنان، ثلاثة، أربعة | Each answer is a bare number word, as a learner says it aloud. |
+| Quiz | How many black keys are in the smaller group? / One, Two, Three, Four | كم مفتاحًا أسود في المجموعة الصغرى؟ / مفتاح واحد، مفتاحان، 3 مفاتيح، 4 مفاتيح | Each answer follows § 8: one and two are words, and three to ten are digits. |
 | Rhythm | Count "1-2" for each half note. | مع كل بيضاء، عدّ «1، 2». | `بيضاء` is the note's name in Arabic notation. The shadda keeps `عدّ` from reading as "return". |
 | Guide, about | Beethoven wrote this tune for the last movement of his Ninth Symphony, first played in Vienna in 1824. | كتب بيتهوفن هذا اللحن للحركة الأخيرة من سيمفونيته التاسعة، التي عُزفت أول مرة في فيينا عام 1824. | The composer and the city take their Arabic names. The passive's damma keeps `عُزفت` clear. |
 | Guide, tricky bar | Look before you jump. | انظر قبل القفز. | Short and imperative, as the English is. `قبل أن تقفز` adds a second verb of the learner. |
