@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Spanish
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Spanish, from a to m"
     status: open
@@ -74,8 +74,14 @@ What the pilot teaches goes back into that file before the next locale starts.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
 - **A text whose Spanish equals the English stays out of its file,** such as *Audio*, *Normal* or *Cursor*.
   The site shows the same text either way, and the rules test refuses a copy. `status` counts each as
-  missing, so stage 6's gate allows the 42 of stage 2's catalogs, by unit: site 3, learn-lesson 2,
-  player-bar 5, player-input 3, player-library 5, player-settings 20, player-shell 4.
+  missing, so stage 6's gate allows these 47, by unit: site 3, learn-lesson 2, player-bar 5,
+  player-input 3, player-library 5, player-settings 20, player-shell 4, and in the course meet-the-piano 1,
+  rhythm 1, expression 3. A list whose items would all equal the English, such as `["1", "3", "5"]`,
+  stays out whole.
+- **The worlds' Spanish titles are settled in the guide's interface glossary.** `src/learn/course.ts`
+  types a world's title by `ShippedLocale`, so it takes them in stage 6, when `es` ships.
+- **The note *la* never reads as the article,** and *el do grave* is the course's "low C". Guide § 7
+  holds both rules, with *de tres en tres* over the River Plate's *de a tres*.
 - **"Just Play Piano" is *Piano libre*,** a noun that reads well inside a sentence (guide § 6).
 - **A setting is *una opción*, and Medium is *Intermedio*.** The glossary's interface table holds every
   term the writers of stage 2 settled, so later stages follow them.
@@ -121,12 +127,12 @@ then review them blind, as the method says.
 blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.es.ts:1`, `src/learn/lessons/first-melodies/texts.es.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.es.ts:1`, `src/learn/lessons/reading-music/texts.es.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.es.ts:1`, `src/learn/lessons/chords/texts.es.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.es.ts:1`, `src/learn/lessons/expression/texts.es.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp es` for each world. `src/i18n/stamps/es.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.es.ts:1`, `src/learn/lessons/first-melodies/texts.es.ts:1`
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.es.ts:1`, `src/learn/lessons/reading-music/texts.es.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.es.ts:1`, `src/learn/lessons/chords/texts.es.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.es.ts:1`, `src/learn/lessons/expression/texts.es.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp es` for each world. `src/i18n/stamps/es.json:1`
 
 ### 4. The song guides in Spanish, from a to m
 
@@ -158,6 +164,7 @@ address or mark that drifts between files.
 
 - [ ] Every drift the reader lists is settled in the files it names.
 - [ ] `es` is `shipped`. `src/i18n/locale.ts:18`
+- [ ] Each world's `title` takes its Spanish from the guide's interface glossary. `src/learn/course.ts:58`
 - [ ] The Spanish social image. `tools/make-social-image.ts:104`
 - [ ] The layout checks run in `es` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
 - [ ] Test `the_spanish_site_reads_in_spanish`: `lang`, the switch's *Español*, a lesson step and the player in Spanish. `e2e/locales.e2e.ts:1`
@@ -175,32 +182,39 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its Spanish file under `src/i18n/messages/`, and
-`es.ts` mounts them. `es` loads as a chunk (`src/i18n/locale.ts:46`) and sits in `CATALOGS`
-(`src/i18n/all-catalogs.ts:15`). It is not shipped, so no Spanish page is written yet.
+Stages 1 to 3 are done. Every catalog section and every lesson of the eight worlds has its Spanish file.
+Each world's `texts.es.ts` gathers its lessons, and its `index.ts` loads it under `translations.es`.
+`es` is not shipped, so no Spanish page is written yet, and the course was not looked at in a browser.
 
-Six writers took the stage, since the settings alone are 712 texts. Six blind reviews and two second
-reviews settled every finding. Every catalog unit is stamped in `src/i18n/stamps/es.json`, and `status`
-lists no stale text. The 42 missing texts are the deliberate copies of *Standing decisions*.
+Eight writers took one world each. Eight blind reviews found one *wrong* text, in scales-and-keys, and a
+second review of that world found none. Every finding is settled, and every world is stamped in
+`src/i18n/stamps/es.json`. The course's 5 missing texts are deliberate copies, as *Standing decisions*
+counts them.
 
-The guide gained its sources for most "unsourced" rows, *transponer* in place of *transportar*, and the
-interface terms the writers settled. Its `## Open` lists what still has one source or none.
+The reviews showed three recurring traps, now rules in the guide's § 7: *la* read as the article,
+*do grave* for a spelled-out place, and *de a tres*. A sweep fixed them in every world. The guide's
+piano glossary gained the course's new terms, and its interface glossary the worlds' titles.
 
-The writers' reusable files are `.agent-tmp/i18n/es/writer-brief.md` and `reviewer-brief.md`. They are
-scratch, so a new session rewrites them from this handoff when they are gone.
+The boss of *First melodies* moved from `mary.*` to `mary-had-a-little-lamb.*`, since `tools/i18n.ts`
+finds a lesson's English by its id.
+
+The briefs are scratch under `.agent-tmp/i18n/es/`: `writer-brief.md` and `reviewer-brief.md` for the
+catalogs, and `lesson-writer-brief.md`, `lesson-reviewer-brief.md` and `lesson-settle-brief.md` for the
+course. A new session rewrites a guide's brief from these when they are gone.
 
 ### Next
 
-**Stage 3: the course in Spanish.** Gate: stage 2's catalogs are stamped, which holds.
+**Stage 4: the song guides from a to m.** Gate: stage 3's worlds are stamped, which holds.
 
-- `bun tools/i18n.ts work es lesson/<world>` for each of the eight worlds.
-- Each world's files: one `<lesson>.es.ts` per `<lesson>.en.ts`, and `texts.es.ts` that gathers them,
-  as `src/learn/lessons/rhythm/texts.de.ts` does. Wire each in its `index.ts:17` `translations`.
-- The writer's brief: read the guide whole, then the method's writer's rules. Leave out a text whose
-  Spanish equals the English. A demo's "Play again" is *Escuchar otra vez*, and "Your turn" is *Ahora tú*.
-- Writers of disjoint worlds run side by side. The session runs `bun x tsc` and the rules test once
-  they all end, then sends one fresh `reader` reviewer per batch with the reviewer's brief.
-- Stamp each world with `bun tools/i18n.ts stamp es lesson/<world>` once its findings are settled.
+- 50 slugs, from `air-on-the-g-string` to `mozart-21-andante`. `ls tools/our-songs/` lists them.
+- A guide's German sits in its module's `de` field, `tools/our-songs/<slug>.ts`. Every other locale is a
+  file `tools/our-songs/<slug>.es.ts` exporting `translation: Translation<GuideTranslation>`, which
+  `guideTranslationsOf` finds (`tools/make-our-songs.ts:454`).
+- `bun tools/i18n.ts work es guide/<slug>` writes each work list. A batch is about seven songs, so about
+  seven writers side by side, then one fresh `reader` per batch.
+- A guide writes an accidental as a word, *fa sostenido* (guide § 7). Song titles stay as data writes them.
+- Rewrite the lesson briefs for guides: the input is the song module, and lists fall back whole.
+- Then `bun tools/make-our-songs.ts`, and `bun tools/i18n.ts stamp es guide/<slug>` per song.
 
 Expected red: none. `spanish_texts_keep_their_rules` turns red if a writer breaks a mark rule.
 
