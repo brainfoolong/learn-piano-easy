@@ -17,6 +17,7 @@ export const bothHands: WorldLessons = {
   translations: {
     de: () => import("./texts.de").then((module) => module.texts),
     es: () => import("./texts.es").then((module) => module.texts),
+    zh: () => import("./texts.zh").then((module) => module.texts),
   },
   skipPicks: bothHandsSkipPicks,
 };

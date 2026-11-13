@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Chinese
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Chinese, from a to m"
     status: open
@@ -129,12 +129,12 @@ then review them blind, as the method says.
 blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.zh.ts:1`, `src/learn/lessons/first-melodies/texts.zh.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.zh.ts:1`, `src/learn/lessons/reading-music/texts.zh.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.zh.ts:1`, `src/learn/lessons/chords/texts.zh.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.zh.ts:1`, `src/learn/lessons/expression/texts.zh.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp zh` for each world. `src/i18n/stamps/zh.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.zh.ts:1`, `src/learn/lessons/first-melodies/texts.zh.ts:1`
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.zh.ts:1`, `src/learn/lessons/reading-music/texts.zh.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.zh.ts:1`, `src/learn/lessons/chords/texts.zh.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.zh.ts:1`, `src/learn/lessons/expression/texts.zh.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp zh` for each world. `src/i18n/stamps/zh.json:1`
 
 ### 4. The song guides in Chinese, from a to m
 
@@ -183,27 +183,30 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its `.zh.ts` file, reviewed blind and stamped in
-`src/i18n/stamps/zh.json`. `zh` loads as its own chunk (`src/i18n/locale.ts:46`) and sits in
-`src/i18n/all-catalogs.ts`. Its status lists only deliberate copies as missing, such as the note letters,
-`+N XP` and the modifier keys. The four reviews found nothing *wrong*. The glossary gained the terms the
-writers shared, and the `kept` list gained the technical names, computer keys and mode cards' titles.
+Stages 1 to 3 are done. Every catalog section and every lesson of the eight worlds has its `.zh.ts`
+file, reviewed blind and stamped in `src/i18n/stamps/zh.json`. Each world's `index.ts` loads
+`texts.zh.ts` as its own chunk. The status lists only deliberate copies as missing, such as quiz answers
+made of note letters. The eight lesson reviews found three *wrong* texts, and each is settled.
+
+The guide gained three rules: a count's "and" is `哒`, a boss's title puts its song in `《》`, and the
+Italian word behind a mark stays in Latin letters. The `kept` list of `src/i18n/typography.ts` gained
+those Italian words and `rall.`, `decresc.`.
 
 ### Next
 
-**Stage 3: the course in Chinese.** Run `bun tools/i18n.ts work zh lesson/<world>` for each world. Each
-world's texts are `src/learn/lessons/<world>/<lesson>.zh.ts` and `texts.zh.ts`, beside the `.es.ts` files.
-The writer and reviewer briefs for the catalog are `.agent-tmp/i18n/zh/writer-brief.md` and
-`reviewer-brief.md`; adapt them for lessons, as `.agent-tmp/i18n/es/lesson-writer-brief.md` did for Spanish.
+**Stage 4: the song guides from a to m.** Run `bun tools/i18n.ts work zh guide/<slug>` for each slug.
+Each guide's text is `tools/our-songs/<slug>.zh.ts`, beside its `.es.ts`. Adapt the lesson briefs
+`.agent-tmp/i18n/zh/lesson-writer-brief.md` and `lesson-reviewer-brief.md` for guides, as
+`.agent-tmp/i18n/es/guide-writer-brief.md` did for Spanish.
 
-- **The rules test calls each message with digit markers.** A text argument then touches its neighbour,
-  so a writer puts it after `：`, inside `“ ”` or `《》`, or beside a space. A `${…}` that yields Han text,
-  such as `files(n)` ending in `个文件`, takes no space after it.
-- **A rest parameter's function is called with one marker.** `notes.slice(0, -1)` is then empty; list
-  notes with `notes.join("、")`, as `lesson.playNotes.hintChord` does.
-- Each new Latin word a writer keeps goes in the `zh` `kept` list of `src/i18n/typography.ts`.
+- **A song in prose takes its Chinese name in `《》`,** as Chinese Wikipedia gives it. A song with none
+  keeps its English title in `《》`, and that title goes in the `kept` list.
+- **A sharp or flat in prose is `升 F` or `降 B`.** Writers kept `F♯` in prose until told, so say it in
+  the brief.
+- **"Higher, lower or the same" is `比第一个高、低，还是一样`.** Writers wrote `更高、更低`, which a
+  review called unnatural.
 
-Expected red: none.
+Expected red: none known. `chinese_texts_keep_their_rules` was not run on the lessons this stage.
 
 ### Backlog
 

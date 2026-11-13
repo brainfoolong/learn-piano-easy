@@ -220,7 +220,7 @@ strings. AP is Apple's `support.apple.com/zh-cn` pages. GO is Google's help page
 | press a computer key | 按 | MS; AN |
 | lesson, step, world | 课, 步, 世界: `第 3 课` | MS *课*; the course's own terms |
 | quiz; demo | 小测验; 示范 | everyday words |
-| boss (a world's last lesson) | 终极挑战; a boss's title is `终极挑战：<song>` | the course's own term, as `Boss` would stay Latin |
+| boss (a world's last lesson) | 终极挑战; a boss's title is `终极挑战：《欢乐颂》`, its song in `《》` as in prose | the course's own term, as `Boss` would stay Latin |
 | skip test | 跳级测试 | the course's own term |
 | level; Level up! | 等级; 升级了！ | MS *级别*; the word of games |
 | XP | XP, a kept word | the word of games |
@@ -282,8 +282,10 @@ strings. AP is Apple's `support.apple.com/zh-cn` pages. GO is Google's help page
   Ped. A Roman numeral of a chord, such as V7, stays too.
 - **Product and site names:** GitHub, Matomo, Wikipedia, Wikimedia Commons, Mutopia, Chrome, Edge,
   Firefox and Safari.
-- **The printed marks of a score:** `p`, `mp`, `mf`, `f`, `pp`, `ff`, `rit.`, `cresc.`, `dim.` and
-  `a tempo`. A lesson names each one's meaning once: `f（强）`.
+- **The printed marks of a score:** `p`, `mp`, `mf`, `f`, `pp`, `ff`, `rit.`, `rall.`, `cresc.`,
+  `decresc.`, `dim.` and `a tempo`. A lesson names each one's meaning once: `f（强）`.
+- **The Italian word behind a mark stays in Latin letters** where the English names it, such as `piano`,
+  `forte`, `mezzo-piano` and `ritardando`. Chinese books print the Italian word beside its meaning.
 - **Catalog numbers:** `BWV 1068`, `K. 525`.
 - **The note letters and chord symbols,** as § 7 says.
 - **The song titles of the library stay as they are.** A title is data shared by every locale, and the
@@ -361,6 +363,8 @@ with each kept word written as `X`.
 - **A list of words takes `、`.** No `、` stands before `等`, nor between titles in `《》` or terms in quotes.
 - **An interface word the learner looks for stands in `“ ”`:** `点击“播放”`. MS § 4.1.7 and Apple do so.
 - **A counted beat or syllable stands in `“ ”`:** `数“1、2”`.
+- **The "and" of a count is `哒`,** with a space beside each digit: `数“1 哒 2 哒”`. Chinese teachers
+  count an offbeat so, and `和` would read as a joining word.
 - **Emphasis is bold, never italic,** as `src/ui/base.css` sets, since Chinese fonts have no italic.
 
 ## 10. Length
@@ -438,5 +442,5 @@ Each row is the chosen translation, and why it beat the next best one.
   Wikipedia uses, and the site uses it.
 - `水手号子`, `练习指南`, `连续练习天数`, `每日目标` and `跟随系统` have no source. Each is the everyday
   word.
-- How a Chinese teacher counts "and" in a rhythm, such as `1 哒 2 哒`, was not settled. A lesson writer
-  counts in digits, and asks the session where the English needs "and".
+- The `哒` of a count, `1 哒 2 哒`, has no source. It is the syllable mainland teachers say for an
+  offbeat.

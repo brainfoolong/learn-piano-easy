@@ -61,7 +61,8 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
     kept: [
       "Learn Piano Easy", "Wikimedia Commons", "Wikipedia", "Mutopia", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo",
       "Chrome", "Edge", "Firefox", "Safari", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz", "dB", "ms", "KB", "MB",
-      "BWV", "K.", "rit.", "cresc.", "dim.", "a tempo", "do", "re", "mi", "fa", "sol", "la", "si",
+      "BWV", "K.", "mezzo-piano", "mezzo-forte", "ritardando", "rallentando", "crescendo", "decrescendo", "diminuendo",
+      "piano", "forte", "rit.", "rall.", "decresc.", "cresc.", "dim.", "a tempo", "do", "re", "mi", "fa", "sol", "la", "si",
       "mp", "mf", "pp", "ff", "p", "f", "Ped.", "Do", "Re", "Mi", "JavaScript", "MIT", "Cookie", "3D", "px", "Esc",
       "Q", "W", "Z", "M", "I", "R", "V",
       "In the Hall of the Mountain King", "Carol of the Bells", "Ode to Joy", "Jingle Bells", "Mary Had a Little Lamb",
