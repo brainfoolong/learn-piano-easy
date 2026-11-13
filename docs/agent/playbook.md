@@ -17,6 +17,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **`bun run preview` fails with `EADDRINUSE` after a full build.** Another server may hold port 4173.
   Run `bun tools/dev.ts --preview --port 0 --no-tls --out .agent-tmp/<goal>` in the background. Pass
   its `Local:` URL to `--base` of `tools/shot.ts`, so each shot skips its own build.
+- **`bun run build` fails with `ENOENT` or `EBUSY` on `dist`.** Another session's build or server is
+  using `dist` at the same time. Pass `--out .agent-tmp/<goal>-dist` to `tools/build.ts`, and delete
+  that folder afterwards.
 - **A query in `--base` of `tools/shot.ts` never reaches the page.** The tool opens `--path` resolved
   against the base, and resolving `./` drops the query. Put the query in `--path`, such as
   `--path "./?phrase=chords"`.

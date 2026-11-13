@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "The song guides in Chinese, from n to z"
-    status: open
+    status: done
   - id: 6
     title: The Chinese site ships
     status: open
@@ -153,9 +153,9 @@ subagents review them blind. Thirteen guides fill about 120k tokens of a writer'
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.zh.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.zh.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp zh` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+- [x] One `tools/our-songs/<slug>.zh.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.zh.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp zh` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
 ### 6. The Chinese site ships
 
@@ -183,33 +183,35 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 4 are done. Every catalog section, every lesson and the 51 guides from
-`air-on-the-g-string` to `mozart-21-andante` have their `.zh.ts` file, reviewed blind and stamped in
-`src/i18n/stamps/zh.json`. `public/songs/ours/<slug>/guide.json` holds their Chinese.
+Stages 1 to 5 are done. All 80 guides of our songs have their `.zh.ts` file, reviewed blind and stamped
+in `src/i18n/stamps/zh.json`. `public/songs/ours/<slug>/guide.json` holds their Chinese.
 
-The four guide reviews found 22 findings, three of them *wrong*, and each is settled. The film *The Bad
-News Bears* keeps its Latin title, for want of a sure mainland one. *Lacrimosa* keeps the library's title.
+The two stage 5 reviews found 24 findings, one of them *wrong*. Each is settled, and two are refused:
 
-The `kept` list of `src/i18n/typography.ts` gained the guides' Latin titles and names, about 110 of them.
-A kept word is masked in list order, so a longer form stands before a shorter one it holds, such as
-`R. R. Terry` before `Terry`. `Carol`, `Noel` and `o` stand last, after `Carol of the Bells`.
+- **`华特·迪士尼` stays.** One reviewer took it for the Taiwan form, but the mainland company itself is
+  `华特迪士尼公司`.
+- **Handel's chorus stays `《看，英雄凯旋》`.** The reviewer's other title was unverified.
+
+The guides of *Silent Night* and *The First Noel* now give Gruber, Mohr and Stainer their Chinese names.
+The `kept` list of `src/i18n/typography.ts` gained the stage's 60 Latin titles and names, longer forms
+first. `.agent-tmp/zh-stray-latin.ts` finds no stray Latin word and no broken mark.
 
 ### Next
 
-**Stage 5: the song guides from n to z,** 29 slugs from `neon-chase` to `yankee-doodle`. Run
-`bun tools/i18n.ts work zh guide/<slug>` for each. The briefs are written:
-`.agent-tmp/i18n/zh/guide-writer-brief.md` and `guide-reviewer-brief.md`. Two writers of about 15
-slugs each fit, and two `reader` reviewers.
+**Stage 6: the Chinese site ships.** Its gate is not met yet. `bun tools/i18n.ts status zh` lists 71
+missing texts, which the English gained after stages 2 and 3:
 
-- **"A big chord" is `饱满的和弦` or `宽阔的和弦`, never `大和弦`,** which reads as a major chord. Two
-  reviews caught it, so add it to the writer brief.
-- **A film or person with a well-known mainland name takes it:** `卢基诺·维斯康蒂`, `《普通人》`,
-  `《末日经》`. Writers kept some in Latin letters or used a Taiwan title.
-- **List each new Latin word in the `kept` list,** longer forms first. `.agent-tmp/zh-stray-latin.ts`
-  prints each Latin word the list lacks and each mark a text breaks. Delete it when the goal ends.
+- catalog: `learn-lesson` 8, `play-modes` 1, `player-bar` 5, `player-input` 1, `player-settings` 22,
+  `player-shell` 6, `site` 3.
+- lessons: `meet-the-piano` 2, `first-melodies` 4, `reading-music` 6, `both-hands` 3, `scales-and-keys`
+  6, `chords` 3, `expression` 1.
 
-Expected red: none known. `chinese_texts_keep_their_rules` was not run this stage, and the scan
-above found nothing it would refuse.
+Run `bun tools/i18n.ts work zh <unit>` for each, and translate them with the briefs in
+`.agent-tmp/i18n/zh/`: `writer-brief.md` for the catalog and `lesson-writer-brief.md` for the lessons.
+One writer and one blind `reader` fit. Then stamp each unit, and take stage 6's items in order.
+
+Expected red: none known. `chinese_texts_keep_their_rules` was not run this stage. The scan above
+found nothing it would refuse.
 
 ### Backlog
 
