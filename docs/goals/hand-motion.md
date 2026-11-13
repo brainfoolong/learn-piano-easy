@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: The lab plays phrases in time, at any speed
-    status: open
+    status: done
   - id: 5
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -155,11 +155,11 @@ beside the right one.
 pause, slow down and seek, so every motion can be looked at.
 **Gate:** the `hand-touch` check passes.
 
-- [ ] The lab's phrases: the C major scale in each hand, an Alberti bass, staccato and legato fives, and C, F and G chords. `tools/hand-lab/main.ts:1`
-- [ ] Play, pause, half speed, quarter speed and a seek bar, and `lab.seek(seconds)` for shots. `tools/hand-lab/main.ts:1`
-- [ ] The piano presses and releases each key as the plan holds it. `tools/hand-lab/main.ts:1`
-- [ ] `lab.cost()` reports the plan's and the solver's time per frame, and it is under the budget. `tools/hand-lab/main.ts:131`
-- [ ] Look with `bun run shot` at the thumb-under and the finger-over, seeking to each, from the top, the right and the left.
+- [x] The lab's phrases: the C major scale in each hand, an Alberti bass, staccato and legato fives, and C, F and G chords. `tools/hand-lab/phrases.ts:1`
+- [x] Play, pause, half speed, quarter speed and a seek bar, and `lab.seek(seconds)` for shots. `tools/hand-lab/main.ts:1`
+- [x] The piano presses and releases each key as the plan holds it. `tools/hand-lab/main.ts:1`
+- [x] `lab.cost()` reports the plan's and the solver's time per frame, and it is under the budget. `tools/hand-lab/main.ts:1`
+- [x] Look with `bun run shot` at the thumb-under and the finger-over, seeking to each, from the top, the right and the left.
 
 ### 5. the goal is verified once, and every failure is fixed
 
@@ -171,28 +171,22 @@ pause, slow down and seek, so every motion can be looked at.
 
 ### State
 
-Stages 1 to 3 are done. `planHands` in `src/render/hand/hand-plan.ts` plans each hand's anchors,
-presses, crossings, stretches and chords. Each hand's wrist rises after a staccato note and across a
-phrase end, and its free fingers rise with it. A louder note starts its down-stroke higher and strikes
-faster. Two hands whose thumbs come closer than two white keys are pushed apart by halves. The
-`hand-plan`, `hand-crossings` and `hand-touch` checks pass. The lab still shows only the static C
-position.
+Stages 1 to 4 are done. `planHands` in `src/render/hand/hand-plan.ts` plans each hand's anchors,
+presses, crossings, stretches, chords and touch, and keeps two hands apart. The hand lab plays the
+phrases of `tools/hand-lab/phrases.ts` with both hands. It has play, pause, three speeds and a seek
+bar, and each hand lights its keys in its own colour. The lab no longer shows the static C position
+or its placement knobs. `tools/hand-lab/c-position.ts` stays for the rig's tests. Headless, `lab.cost()`
+read about 0.3 ms per hand per frame, under the 1 ms budget. Shots of the thumb-under at 1.3 s and
+the finger-over at 5.8 s of the right scale looked right from the top, the right and the left.
 
 ### Next
 
-**Stage 4: the lab plays phrases in time.** Files: `tools/hand-lab/main.ts`, and a new phrase file
-beside it. Gate: the `hand-touch` check passes.
+**Stage 5: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run
+it once more. Then harvest the goal into `docs/findings.md` § `hand-motion` and retire it.
 
-- The lab builds one rig per hand with `createHand(gltf, side)` (`tools/hand-lab/main.ts:110`). Each
-  frame it calls `planHands(phrase, piano.layout).poseAt(t)` and `applyPose` for each hand
-  (`src/render/hand/hand-rig.ts:183`).
-- The phrase world is centred on x = 0, as `contactPoint` says (`src/render/hand/hand-plan.ts:138`).
-  Check that the lab's piano group sits the same way before trusting a shot.
-- Keys follow each pose's `down` through `piano.press` and `piano.release` (`src/render/piano.ts:95`).
-  Diff the set from the frame before.
-- The clock is the lab's own, scaled by the speed, and `lab.seek(seconds)` sets it for shots.
-- `lab.cost()` times `poseAt` and `applyPose` per frame against the 1 ms per hand budget.
-- The lab is tools-only, so `bun x tsc` checks it, not `bun run build`.
+- The goal's checks are `hand-plan`, `hand-crossings` and `hand-touch`, all in
+  `src/render/hand/hand-plan.test.ts`.
+- The lab is tools-only, so `bun x tsc` type-checks it, and it passed.
 
 Expected red: none.
 

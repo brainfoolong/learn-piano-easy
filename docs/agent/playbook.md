@@ -14,6 +14,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **`bun run shot` on a page of the default locale may show it in German.** The site moves a first
   visit to the browser's language, which follows the system's. Pass `--locale en-US` or
   `--locale de-DE` to `tools/shot.ts` for each locale you look at.
+- **A query in `--base` of `tools/shot.ts` never reaches the page.** The tool opens `--path` resolved
+  against the base, and resolving `./` drops the query. Put the query in `--path`, such as
+  `--path "./?phrase=chords"`.
 - **A synthetic `pointerdown` on a key of the piano view plays nothing.** `src/render/piano-keys.ts`
   finds the key by a ray from the pointer's point on its canvas, and its key map's spans take no pointer.
   In a `--eval` of `tools/shot.ts`, send the event to the canvas, with `clientX` and `clientY` inside
