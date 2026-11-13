@@ -162,8 +162,10 @@ every component in every state.
 ## Languages
 
 - **Every text a person reads comes from the message catalog** of its locale. No component holds text.
+- **Every text is written in English and German.** Every other locale may lack a text and shows the
+  English in its place, until a translation pass, as [translation.md](agent/translation.md) says.
 - **Every layout fits the longest language.** German runs about a third longer than English, so the
-  layout checks run in German too.
+  layout checks run in English and German. A shipped locale adds its own run at 360 and 1280 pixels.
 
 ## The checks
 

@@ -36,7 +36,7 @@ under its slug.
 | Folder | Holds | Goal |
 |---|---|---|
 | `src/site/` | The site: its router, route table, top bar, footer, the sponsor and legal pages, and the visitor count | `site-shell` |
-| `src/i18n/` | The locales, their message catalogs and the switch between them | `site-shell`, `player-in-site` |
+| `src/i18n/` | The locale table, the message catalogs, their fallback to English, each locale's catalog as its own chunk, the switch between them, and the stamps and rules of a translation pass | `site-shell`, `player-in-site`, `many-locales` |
 | `src/landing/` | The landing page, one module per band | `landing-page` |
 | `src/learn/` | *Learn Piano*: the course, its lessons and steps, the map, the progress and the game layer | `learn-engine`, `learn-game` |
 | `src/app/` | The player's shell, the player's core, the embed and the About page | `foundation`, `one-player` |

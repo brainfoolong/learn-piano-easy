@@ -154,6 +154,4 @@ lands, and the glossary changes first when the report is about a term.
 
 ## Open
 
-- `tools/i18n.ts`, the stamps and `src/i18n/translation-rules.test.ts` do not exist yet. The
-  `many-locales` goal builds them, with the translation files' fallback to English.
 - No locale has a style guide yet. Each locale's goal writes its own as its first stage.

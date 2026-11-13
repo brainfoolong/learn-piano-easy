@@ -63,8 +63,10 @@ lesson is written by, until the lesson model's head comment in `src/learn/model.
 - **A demo of a movement names every note's finger,** and its hand when it is the left. The fingers
   are the ones the lesson's text teaches, so the mascot's hand plays exactly what the learner reads.
 - **Speak to the learner as "you",** in a warm and plain voice. No jargon before its lesson defines it.
-- **Every text is written for every locale.** A lesson's structure is one file, and each locale's text
-  is a file beside it. The type checker refuses a locale file that misses a text.
+- **Every text is written in English and German.** A lesson's structure is one file, and each locale's
+  text is a file beside it. The type checker refuses a German file that misses a text.
+- **Every other locale may lack a text,** and the lesson shows the English in its place. A translation
+  pass brings a locale up to date, as [translation.md](agent/translation.md) says.
 - **The German text is written in German,** never translated word for word. It uses "du", and the
   German note names: H for B, and the names of German teaching books, such as *Viertelnote*.
 - **No lyrics,** as for our songs.

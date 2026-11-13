@@ -122,8 +122,9 @@ Each version ships with a guide, so the learner knows how to play it before the 
 Every sentence of a guide follows [prose.md](agent/prose.md), because a learner reads it.
 
 Every text of a guide is written in English and German, and the app shows the learner's language. The
-head comment of [tools/make-our-songs.ts](../tools/make-our-songs.ts) says where the German goes. The
-German follows these rules:
+head comment of [tools/make-our-songs.ts](../tools/make-our-songs.ts) says where the German goes. Every
+other locale may lack a text, and the guide shows the English in its place. A translation pass brings a
+locale up to date, as [translation.md](agent/translation.md) says. The German follows these rules:
 
 - **Speak to the learner as "du",** in short imperatives: "Spiel", "Halt", "Zeig", "Wähl".
 - **Quote with straight double quotes,** never with German low and high quotes.

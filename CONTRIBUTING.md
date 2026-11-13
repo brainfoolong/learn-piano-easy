@@ -47,6 +47,16 @@ code. Once loaded, it runs offline, and so does every song it has opened.
 - **`looper verify` is green** before you open a pull request. Of the type check, the unit tests, the
   end-to-end tests and the doc checks, it runs each one your change reaches.
 
+## Reporting a translation
+
+Do you read one of the site's languages as your own? Tell us when a text reads wrong or stiff. Open an
+issue with the page, the text as it shows, and the text you would write.
+
+- **A report is a fix to review, not a fix to merge.** A fresh reviewer who never saw the report reads
+  the new text against the English, as [docs/agent/translation.md](docs/agent/translation.md) says.
+- **A report about a term changes the locale's glossary first.** Every text of the locale then follows it.
+- **English and German are checked by the project's author.** A report on them is welcome too.
+
 ## Reporting a bug
 
 Open an issue with the steps to reproduce it, your browser and your MIDI device if you use one. Attach

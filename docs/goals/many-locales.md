@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The translation tool, the stamps and the rules test
-    status: open
+    status: done
   - id: 4
     title: A pseudo-locale finds every hard-coded and every cramped text
     status: open
@@ -154,6 +154,19 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 - **A stamp is `src/i18n/stamps/<locale>.json`,** mapping each id to the first 12 hex digits of the
   SHA-256 of the English text it was made from. A function's stamp hashes its source text as Bun reads it.
   `stamp` writes only the ids of the unit it names.
+- **A unit is `catalog/<section>`, `lesson/<world>` or `guide/<slug>`.** A section is a catalog file's
+  stem, and `catalog/site` holds the texts of `en.ts` itself. A world's unit holds its lessons and its boss.
+  The built skip test reuses their texts, so no unit holds it.
+- **A translated text without a stamp is stale,** so German, which has no stamps, reads all stale.
+- **`stamp` drops an id no unit holds any more,** so a deleted text leaves no stamp behind.
+- **The rule table holds the kept words and the marks, and the scripts follow the row's alphabet** through
+  `SCRIPTS`, so a locale names its script once. A script matches by `Script_Extensions`.
+- **The rules test skips English and German.** English is the source, and German is checked by eye.
+- **A message's arguments are checked by calling it with marker numbers.** A message the English cannot
+  build from numbers is left to the review. An argument that shows in ASCII digits came in raw, so a
+  right-to-left locale must isolate it.
+- **The plural check reads each `plural(...)` call's forms from the message's source,** since the type
+  checker already refuses a missing form outside a cast.
 - **The plural forms are a typed table, `PLURAL_FORMS`,** naming each locale's categories. `plural()`
   takes forms typed by the locale, so a missing form fails the type check. A test holds the table equal
   to `Intl.PluralRules(...).resolvedOptions().pluralCategories`.
@@ -232,20 +245,20 @@ the live locale's texts.
 docs that state the new rules.
 **Gate:** `World.loadTexts` exists.
 
-- [ ] `status <locale>`: missing, stale and fallen-back texts by unit, and a total. `tools/i18n.ts:1`
-- [ ] `work <locale> <unit>`: each text's id, English, German, doc comment, use sites, kind and length. `tools/i18n.ts:1`
-- [ ] `stamp <locale> <unit>`: writes the unit's ids to the locale's stamp file. `src/i18n/stamps/README.md:1`
-- [ ] `bun run i18n` in `package.json`. `package.json:1`
-- [ ] Tests `status_lists_missing_and_stale_texts`, `stamp_records_only_the_named_unit` and `work_lists_each_text_with_its_use`, over fixtures. `tools/i18n.test.ts:1`
-- [ ] The rule table, empty for every locale but its script ranges. `src/i18n/typography.ts:1`
-- [ ] The rules test: script, arguments, plurals, marks, isolation and no copy, over every translation file. `src/i18n/translation-rules.test.ts:1`
-- [ ] Tests `a_text_in_the_wrong_script_fails`, `a_lost_argument_fails`, `a_missing_plural_form_fails` and `a_broken_mark_rule_fails`, over fixtures. `src/i18n/translation-rules.test.ts:1`
-- [ ] The curriculum says each text is written in English and German, and links the method. `docs/curriculum.md:64`
-- [ ] The song rules say the same of guides. `docs/our-songs.md:123`
-- [ ] The site design's languages say the same, and name the layout locales. `docs/site-design.md:162`
-- [ ] The design's `src/i18n/` row names the table, the fallback and the lazy chunks. `docs/design.md:39`
-- [ ] `docs/agent/translation.md` loses its `## Open` items this goal closed. `docs/agent/translation.md:1`
-- [ ] CONTRIBUTING invites native speakers to report a text, and says how a report is reviewed. `CONTRIBUTING.md:1`
+- [x] `status <locale>`: missing, stale and fallen-back texts by unit, and a total. `tools/i18n.ts:1`
+- [x] `work <locale> <unit>`: each text's id, English, German, doc comment, use sites, kind and length. `tools/i18n.ts:1`
+- [x] `stamp <locale> <unit>`: writes the unit's ids to the locale's stamp file. `src/i18n/stamps/README.md:1`
+- [x] `bun run i18n` in `package.json`. `package.json:1`
+- [x] Tests `status_lists_missing_and_stale_texts`, `stamp_records_only_the_named_unit` and `work_lists_each_text_with_its_use`, over fixtures. `tools/i18n.test.ts:1`
+- [x] The rule table, empty for every locale but its script ranges. `src/i18n/typography.ts:1`
+- [x] The rules test: script, arguments, plurals, marks, isolation and no copy, over every translation file. `src/i18n/translation-rules.test.ts:1`
+- [x] Tests `a_text_in_the_wrong_script_fails`, `a_lost_argument_fails`, `a_missing_plural_form_fails` and `a_broken_mark_rule_fails`, over fixtures. `src/i18n/translation-rules.test.ts:1`
+- [x] The curriculum says each text is written in English and German, and links the method. `docs/curriculum.md:64`
+- [x] The song rules say the same of guides. `docs/our-songs.md:123`
+- [x] The site design's languages say the same, and name the layout locales. `docs/site-design.md:162`
+- [x] The design's `src/i18n/` row names the table, the fallback and the lazy chunks. `docs/design.md:39`
+- [x] `docs/agent/translation.md` loses its `## Open` items this goal closed. `docs/agent/translation.md:1`
+- [x] CONTRIBUTING invites native speakers to report a text, and says how a report is reviewed. `CONTRIBUTING.md:1`
 
 ### 4. A pseudo-locale finds every hard-coded and every cramped text
 
@@ -291,36 +304,36 @@ and sorting by the live locale.
 
 ### State
 
-Stages 1 and 2 are done, and their checks `lesson-fallback` and `guide-fallback` pass.
+Stages 1, 2 and 3 are done. The checks `i18n-tool` and `translation-rules` pass, run once by file.
 
-- Each world's German lesson texts are `src/learn/lessons/<world>/texts.de.ts`, its own chunk. The
-  world's `index.ts` names it under `translations`.
-- `World.loadTexts` in `src/learn/course.ts` merges them into `Lesson.texts[locale]` with `mergeTexts`.
-  The lesson view, the map, `lessonPages` and the e2e `courseLessons` await it. `textsOf` reads them.
-- The guide writer reads `tools/our-songs/<slug>.<locale>.ts` through `guideTranslationsOf`. Every
-  guide on disk still matches its source byte for byte.
-- `tsc` and the build are clean. A shot of `de/learn/meet-the-piano/octaves/` and `de/learn/` showed
-  German, with no page errors.
+- `tools/i18n.ts` loads every unit through `loadUnits`: 4,475 texts in catalog sections, worlds and
+  guides. `bun run i18n status es` lists all of them as missing, and `status de` lists all as stale,
+  since German has no stamps.
+- `work` writes JSON to `.agent-tmp/i18n/<locale>/<unit>.json`. A setting's text, read by a computed
+  key, finds its use through the setting's id.
+- `src/i18n/translation-rules.test.ts` imports `loadUnits` from `tools/i18n.ts`. It names one test per
+  locale but English and German, and each passes with no translation files yet.
+- `src/i18n/stamps/` holds only its README. The first pass writes the first stamp file.
+- `tsc` and the build are clean.
 
-What stage 2 left to later stages:
+What earlier stages left to later ones:
 
 - `src/site/legal-view.ts:25` imports `legal.de` statically. Legal stays English and German only.
 - `src/theory/note-names.ts:71` compares the locale with `"de"`, and the two `player-settings-play`
   catalogs label the language options with endonyms. That is stage 5, which may read the table there.
+- `docs/site-design.md` § *Languages* names English and German as the layout locales. Stage 4 adds
+  `en-XA` there once the layout checks run in it.
 
 ### Next
 
-**Stage 3: the translation tool, the stamps and the rules test.** Files: `tools/i18n.ts` (new),
-`tools/i18n.test.ts` (new), `src/i18n/stamps/`, `src/i18n/typography.ts` (new),
-`src/i18n/translation-rules.test.ts` (new), `package.json`, then the docs the stage lists. A unit's
-texts come from three homes: `src/i18n/all-catalogs.ts` (`CATALOGS`), each world's `texts.<locale>.ts`
-beside `<lesson>.en.ts`, and `guideTranslationsOf` in `tools/make-our-songs.ts`. Lists of another
-length show English in `mergeTexts` (`src/learn/model.ts`) and `sameLength` (`tools/make-our-songs.ts`),
-which `status` reports as fallen back. The split: the tool and the rules test touch disjoint files, so
-two writing subagents may build them side by side once the session settles the shape of a unit.
+**Stage 4: the pseudo-locale.** Files: `src/i18n/pseudo.ts` (new), `src/i18n/locale-table.ts`,
+`tools/build.ts:241`, `tools/dev.ts`, `playwright.config.ts`, `e2e/pseudo.e2e.ts` (new),
+`e2e/layout-check.ts:43`, then the catalogs the sweep names. `en-XA` must stay out of `LOCALES`,
+the switch, the sitemap and `hreflang`, since `shipped` gates those. It needs its own flag or a row
+outside `LOCALE_TABLE`, and the units of `tools/i18n.ts` must never list it. Follow the stage's
+`**Split:**` line once the sweep's first run lists the hard-coded texts.
 
-Expected red: none known. Of the files this session touched, only `src/learn/course.test.ts` ran by one
-test name. Its other tests now await `loadCourseTexts` and should stay green.
+Expected red: none known. The two new test files passed when run once each.
 
 ### Backlog
 
