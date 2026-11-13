@@ -7,14 +7,16 @@
     "de": "Beethoven schrieb seine Siebte Sinfonie 1811 und 1812. Bei der Uraufführung in Wien im Dezember 1813 verlangte das Publikum, das Allegretto noch einmal zu hören. Der Film The King's Speech (2010) spielt es unter der Radioansprache des Königs im Krieg.",
     "es": "Beethoven escribió su Séptima Sinfonía en 1811 y 1812. En su estreno en Viena, en diciembre de 1813, el público exigió escuchar otra vez el Allegretto. La película The King's Speech (2010) lo pone de fondo bajo el discurso radial del rey en tiempos de guerra.",
     "zh": "贝多芬在 1811 年和 1812 年写下了他的《第七交响曲》。1813 年 12 月在维也纳首演时，听众要求把这个小快板乐章再演奏一遍。电影《国王的演讲》（2010 年）里，国王发表战时广播讲话时，背景放的就是它。",
-    "hi": "बीथोवेन ने अपनी सातवीं सिम्फ़नी 1811 और 1812 में लिखी। दिसंबर 1813 में वियना में इसकी पहली प्रस्तुति हुई, और श्रोताओं ने Allegretto को फिर से सुनने की माँग की। फ़िल्म The King's Speech (2010) में यह राजा के युद्ध के समय के रेडियो भाषण के पीछे बजता है।"
+    "hi": "बीथोवेन ने अपनी सातवीं सिम्फ़नी 1811 और 1812 में लिखी। दिसंबर 1813 में वियना में इसकी पहली प्रस्तुति हुई, और श्रोताओं ने Allegretto को फिर से सुनने की माँग की। फ़िल्म The King's Speech (2010) में यह राजा के युद्ध के समय के रेडियो भाषण के पीछे बजता है।",
+    "ar": "كتب بيتهوفن سيمفونيته السابعة بين عامي 1811 و1812. وفي عرضها الأول في فيينا في ديسمبر 1813، طلب الجمهور سماع حركة ⁨Allegretto⁩ مرة أخرى. وفي فيلم ⁨The King's Speech⁩ (2010) ترافق هذه الحركة خطاب الملك الإذاعي في زمن الحرب."
   },
   "funFact": {
     "en": "The tune first sounds low, in the violas and cellos.",
     "de": "Die Melodie erklingt zuerst tief, in den Bratschen und Celli.",
     "es": "La melodía suena primero en lo grave, en las violas y los violonchelos.",
     "zh": "这段旋律第一次出现时在低音区，由中提琴和大提琴奏出。",
-    "hi": "धुन पहली बार नीची पिच पर सुनाई देती है, वायोला और चेलो में।"
+    "hi": "धुन पहली बार नीची पिच पर सुनाई देती है, वायोला और चेलो में।",
+    "ar": "يُسمع اللحن أول مرة منخفضًا، من آلات الفيولا والتشيلو."
   },
   "mythic": null,
   "versions": {
@@ -40,7 +42,8 @@
             "de": "Spiel die Takte 1 bis 4 nur mit der rechten Hand. Dein Daumen spielt jedes E.",
             "es": "Toca los compases 1 a 4 con la mano derecha sola. Tu pulgar toca cada mi.",
             "zh": "只用右手弹第 1～4 小节。每个 E 都用拇指弹。",
-            "hi": "माप 1 से 4 तक सिर्फ़ दाएँ हाथ से बजाएँ। अँगूठा हर E बजाता है।"
+            "hi": "माप 1 से 4 तक सिर्फ़ दाएँ हाथ से बजाएँ। अँगूठा हर E बजाता है।",
+            "ar": "اعزف الموازير من 1 إلى 4 باليد اليمنى وحدها. يعزف إبهامك كل نغمة مي."
           },
           "hands": "right",
           "speed": 0.6,
@@ -53,7 +56,8 @@
             "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Dort steigt die Melodie zum G.",
             "es": "Toca los compases 5 a 8 con la mano derecha sola. Ahí la melodía sube hasta el sol.",
             "zh": "只用右手弹第 5～8 小节，这里旋律往上走到 G。",
-            "hi": "माप 5 से 8 तक सिर्फ़ दाएँ हाथ से बजाएँ। यहाँ धुन ऊपर G तक चढ़ती है।"
+            "hi": "माप 5 से 8 तक सिर्फ़ दाएँ हाथ से बजाएँ। यहाँ धुन ऊपर G तक चढ़ती है।",
+            "ar": "اعزف الموازير من 5 إلى 8 باليد اليمنى وحدها، حيث يصعد اللحن إلى صول."
           },
           "hands": "right",
           "speed": 0.6,
@@ -66,7 +70,8 @@
             "de": "Jetzt die linke Hand allein. Sie hält in jedem Takt eine Griffform.",
             "es": "Ahora la mano izquierda sola. Mantiene una sola posición en cada compás.",
             "zh": "现在只用左手弹。每个小节保持一个手型。",
-            "hi": "अब सिर्फ़ बायाँ हाथ। हर माप में यह एक ही आकार में रहता है।"
+            "hi": "अब सिर्फ़ बायाँ हाथ। हर माप में यह एक ही आकार में रहता है।",
+            "ar": "والآن اليد اليسرى وحدها. تبقى على شكل واحد في كل مازورة."
           },
           "hands": "left",
           "speed": 0.6,
@@ -79,7 +84,8 @@
             "de": "Nimm beide Hände zusammen, langsam.",
             "es": "Junta las dos manos, despacio.",
             "zh": "双手一起慢慢弹。",
-            "hi": "दोनों हाथों से धीरे-धीरे बजाएँ।"
+            "hi": "दोनों हाथों से धीरे-धीरे बजाएँ।",
+            "ar": "اعزف باليدين معًا، ببطء."
           },
           "hands": "both",
           "speed": 0.7,
@@ -92,7 +98,8 @@
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
             "zh": "双手合奏，用原速弹完整首歌。",
-            "hi": "दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।"
+            "hi": "दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।",
+            "ar": "اعزف الأغنية كاملة باليدين معًا، بالسرعة الكاملة."
           },
           "hands": "both",
           "speed": 1,
@@ -110,7 +117,8 @@
             "de": "Sag \"lang, kurz, kurz\", während du den ersten Takt spielst. Dieser Rhythmus ist das ganze Stück.",
             "es": "Di «larga, corta, corta» mientras tocas el primer compás. Ese ritmo es toda la pieza.",
             "zh": "弹第一小节时，嘴里念“长、短、短”。整首曲子就是这个节奏。",
-            "hi": "पहला माप बजाते हुए “लंबा, छोटा, छोटा” बोलें। पूरी रचना इसी लय पर टिकी है।"
+            "hi": "पहला माप बजाते हुए “लंबा, छोटा, छोटा” बोलें। पूरी रचना इसी लय पर टिकी है।",
+            "ar": "قل «طويلة، قصيرة، قصيرة» مع عزف المازورة الأولى. هذا الإيقاع هو المقطوعة كلها."
           }
         },
         {
@@ -122,7 +130,8 @@
             "de": "Deine Hand bewegt sich nie. Finger 1, 2 und 3 spielen E, Fis und G.",
             "es": "Tu mano nunca se mueve. Los dedos 1, 2 y 3 tocan el mi, el fa sostenido y el sol.",
             "zh": "手从不移动。1、2、3 指弹 E、升 F、G。",
-            "hi": "हाथ कभी नहीं हिलता। उँगलियाँ 1, 2 और 3, E, F शार्प और G बजाती हैं।"
+            "hi": "हाथ कभी नहीं हिलता। उँगलियाँ 1, 2 और 3, E, F शार्प और G बजाती हैं।",
+            "ar": "تبقى يدك في مكانها طوال الوقت. تعزف الأصابع 1 و2 و3 مي وفا دييز وصول."
           }
         },
         {
@@ -134,7 +143,8 @@
             "de": "Fang ganz leise an, und lass jeden Takt ein wenig lauter werden.",
             "es": "Empieza muy suave, y deja que cada compás suene un poco más fuerte.",
             "zh": "开始时弹得很轻，然后一个小节比一个小节稍响一点。",
-            "hi": "बहुत हल्के से शुरू करें, और हर माप को थोड़ा और ज़ोर से बजाएँ।"
+            "hi": "बहुत हल्के से शुरू करें, और हर माप को थोड़ा और ज़ोर से बजाएँ।",
+            "ar": "ابدأ بهدوء شديد، ودع صوت كل مازورة يقوى قليلًا عن سابقتها."
           }
         }
       ],
@@ -146,7 +156,8 @@
             "de": "Finger 4 spielt hier das A. Halt die Hand still, und lass nur den Finger hinaufgreifen.",
             "es": "Aquí el dedo 4 toca el la. Mantén la mano quieta, y deja que solo el dedo se estire hacia arriba.",
             "zh": "这里 4 指弹 A。手保持不动，只让手指往上够。",
-            "hi": "यहाँ उँगली 4, A बजाती है। हाथ स्थिर रखें, और सिर्फ़ उँगली को ऊपर पहुँचने दें।"
+            "hi": "यहाँ उँगली 4, A बजाती है। हाथ स्थिर रखें, और सिर्फ़ उँगली को ऊपर पहुँचने दें।",
+            "ar": "يعزف الإصبع 4 هنا نغمة لا. أبق اليد ثابتة، ودع الإصبع وحده يمتد إلى الأعلى."
           }
         },
         {
@@ -156,7 +167,8 @@
             "de": "Finger 4 kehrt für den letzten Ton zum A zurück. Halt ihn vier Schläge lang.",
             "es": "El dedo 4 vuelve al la para la última nota. Mantenla cuatro tiempos.",
             "zh": "最后一个音 4 指回到 A。把它按住四拍。",
-            "hi": "आखिरी नोट के लिए उँगली 4 वापस A पर आती है। A को चार बीट तक दबाए रखें।"
+            "hi": "आखिरी नोट के लिए उँगली 4 वापस A पर आती है। A को चार बीट तक दबाए रखें।",
+            "ar": "يعود الإصبع 4 إلى نغمة لا للنغمة الأخيرة. أبقها مضغوطة 4 نبضات."
           }
         },
         {
@@ -166,7 +178,8 @@
             "de": "Finger 5 spielt dreimal das H. Halt ihn gebogen, damit der kleinste Finger kräftig bleibt.",
             "es": "El dedo 5 toca el si tres veces. Mantenlo curvo, para que el dedo más pequeño siga firme.",
             "zh": "5 指弹三次 B。手指保持弯曲，这样最小的手指也有力。",
-            "hi": "उँगली 5 तीन बार B बजाती है। इसे मुड़ा हुआ रखें, ताकि सबसे छोटी उँगली मज़बूत रहे।"
+            "hi": "उँगली 5 तीन बार B बजाती है। इसे मुड़ा हुआ रखें, ताकि सबसे छोटी उँगली मज़बूत रहे।",
+            "ar": "يعزف الإصبع 5 سي 3 مرات. أبقه مقوسًا، ليبقى أصغر الأصابع قويًا."
           }
         }
       ]
@@ -193,7 +206,8 @@
             "de": "Spiel die ersten acht Takte nur mit der rechten Hand, und zähl \"lang, kurz, kurz\".",
             "es": "Toca la mano derecha sola en los primeros ocho compases, y cuenta «larga, corta, corta».",
             "zh": "只用右手弹前八个小节，数“长、短、短”。",
-            "hi": "पहले आठ माप सिर्फ़ दाएँ हाथ से बजाएँ, और “लंबा, छोटा, छोटा” गिनें।"
+            "hi": "पहले आठ माप सिर्फ़ दाएँ हाथ से बजाएँ, और “लंबा, छोटा, छोटा” गिनें।",
+            "ar": "اعزف أول 8 موازير باليد اليمنى وحدها، وعدّ «طويلة، قصيرة، قصيرة»."
           },
           "hands": "right",
           "speed": 0.6,
@@ -206,7 +220,8 @@
             "de": "Spiel die linke Hand allein. Jeder Takt hält einen Akkord aus drei Tönen.",
             "es": "Toca la mano izquierda sola. Cada compás mantiene un acorde de tres notas.",
             "zh": "只用左手弹。每个小节按住一个三个音的和弦。",
-            "hi": "सिर्फ़ बाएँ हाथ से बजाएँ। हर माप में तीन नोटों का एक कॉर्ड दबा रहता है।"
+            "hi": "सिर्फ़ बाएँ हाथ से बजाएँ। हर माप में तीन नोटों का एक कॉर्ड दबा रहता है।",
+            "ar": "اعزف باليد اليسرى وحدها. في كل مازورة تآلف واحد من 3 نغمات."
           },
           "hands": "left",
           "speed": 0.6,
@@ -219,7 +234,8 @@
             "de": "Spiel die ersten acht Takte mit beiden Händen und mit Pedal.",
             "es": "Junta las manos en los primeros ocho compases, con el pedal.",
             "zh": "加上踏板，双手一起弹前八个小节。",
-            "hi": "पहले आठ माप दोनों हाथों से पेडल के साथ बजाएँ।"
+            "hi": "पहले आठ माप दोनों हाथों से पेडल के साथ बजाएँ।",
+            "ar": "اعزف أول 8 موازير باليدين معًا، مع الدواسة."
           },
           "hands": "both",
           "speed": 0.6,
@@ -232,7 +248,8 @@
             "de": "Spiel die zweite Hälfte. Dort spielt die linke Hand abwechselnd einen tiefen Ton und einen Akkord.",
             "es": "Toca la segunda mitad, donde la mano izquierda alterna una nota grave y un acorde.",
             "zh": "弹后半部分，这里左手轮流弹一个低音和一个和弦。",
-            "hi": "दूसरा आधा हिस्सा बजाएँ, जहाँ बायाँ हाथ बारी-बारी से एक नीचे वाला नोट और एक कॉर्ड बजाता है।"
+            "hi": "दूसरा आधा हिस्सा बजाएँ, जहाँ बायाँ हाथ बारी-बारी से एक नीचे वाला नोट और एक कॉर्ड बजाता है।",
+            "ar": "اعزف النصف الثاني، حيث تتناوب اليد اليسرى بين نغمة منخفضة وتآلف."
           },
           "hands": "both",
           "speed": 0.7,
@@ -245,7 +262,8 @@
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
             "zh": "双手合奏，用原速弹完整首歌。",
-            "hi": "दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।"
+            "hi": "दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।",
+            "ar": "اعزف الأغنية كاملة باليدين معًا، بالسرعة الكاملة."
           },
           "hands": "both",
           "speed": 1,
@@ -263,7 +281,8 @@
             "de": "Hier rückt die linke Hand ein wenig nach unten. Finger 5 geht vom Gis zum G.",
             "es": "Aquí la mano izquierda baja un poco. El dedo 5 pasa de sol sostenido a sol.",
             "zh": "这里左手往下移一点。5 指从升 G 移到 G。",
-            "hi": "यहाँ बायाँ हाथ थोड़ा नीचे खिसकता है। उँगली 5, G शार्प से G पर जाती है।"
+            "hi": "यहाँ बायाँ हाथ थोड़ा नीचे खिसकता है। उँगली 5, G शार्प से G पर जाती है।",
+            "ar": "تنزل اليد اليسرى هنا قليلًا. ينتقل الإصبع 5 من صول دييز إلى صول."
           }
         },
         {
@@ -275,7 +294,8 @@
             "de": "Halt das Pedal jeweils einen ganzen Takt, und wechsle es genau am Taktstrich.",
             "es": "Mantén el pedal pisado durante cada compás entero, y cámbialo justo en la línea divisoria.",
             "zh": "每个小节都踩住踏板，正好在小节线上换踏板。",
-            "hi": "हर माप में पूरे समय पेडल दबाए रखें, और ठीक माप रेखा पर उसे बदलें।"
+            "hi": "हर माप में पूरे समय पेडल दबाए रखें, और ठीक माप रेखा पर उसे बदलें।",
+            "ar": "اضغط الدواسة طوال كل مازورة، وغيّرها عند فاصل المازورة تمامًا."
           }
         },
         {
@@ -287,7 +307,8 @@
             "de": "Die linke Hand spielt jetzt auf jeden Schlag. Halt sie gleichmäßig, wie einen langsamen Marsch.",
             "es": "Ahora la mano izquierda toca en cada tiempo. Mantenla pareja, como una marcha lenta.",
             "zh": "现在左手每拍都弹。要弹得均匀，像一首缓慢的进行曲。",
-            "hi": "अब बायाँ हाथ हर बीट पर बजाता है। इसे एक बराबर रखें, धीमी स्पीड वाले मार्च की तरह।"
+            "hi": "अब बायाँ हाथ हर बीट पर बजाता है। इसे एक बराबर रखें, धीमी स्पीड वाले मार्च की तरह।",
+            "ar": "تعزف اليد اليسرى الآن على كل نبضة. حافظ على انتظامها، كمارش بطيء."
           }
         }
       ],
@@ -299,7 +320,8 @@
             "de": "Die linke Hand wiegt sich mit Finger 5 und 2 zwischen G und D.",
             "es": "La mano izquierda se mece entre el sol y el re con los dedos 5 y 2.",
             "zh": "左手用 5 指和 2 指在 G 和 D 之间来回弹。",
-            "hi": "बायाँ हाथ उँगलियों 5 और 2 से G और D के बीच आगे-पीछे बजाता है।"
+            "hi": "बायाँ हाथ उँगलियों 5 और 2 से G और D के बीच आगे-पीछे बजाता है।",
+            "ar": "تتأرجح اليد اليسرى بين صول وري بالإصبعين 5 و2."
           }
         },
         {
@@ -309,7 +331,8 @@
             "de": "Spiel E und G zusammen mit Finger 1 und 3. Dann heb die rechte Hand in der Pause an.",
             "es": "Toca el mi y el sol a la vez con los dedos 1 y 3. Luego levanta la mano derecha en el silencio.",
             "zh": "用 1 指和 3 指同时弹 E 和 G。然后在休止符处把右手抬起。",
-            "hi": "उँगलियों 1 और 3 से E और G एक साथ बजाएँ। फिर रेस्ट में दायाँ हाथ उठाएँ।"
+            "hi": "उँगलियों 1 और 3 से E और G एक साथ बजाएँ। फिर रेस्ट में दायाँ हाथ उठाएँ।",
+            "ar": "اعزف مي وصول معًا بالإصبعين 1 و3. ثم ارفع اليد اليمنى في السكتة."
           }
         },
         {
@@ -319,7 +342,8 @@
             "de": "Die linke Hand spielt Gis mit Finger 5, dann H und E zusammen. Halt die Hand still.",
             "es": "La mano izquierda toca el sol sostenido con el dedo 5, y luego el si y el mi a la vez. Mantén la mano quieta.",
             "zh": "左手用 5 指弹升 G，然后同时弹 B 和 E。手保持不动。",
-            "hi": "बायाँ हाथ उँगली 5 से G शार्प बजाता है, फिर B और E एक साथ। हाथ स्थिर रखें।"
+            "hi": "बायाँ हाथ उँगली 5 से G शार्प बजाता है, फिर B और E एक साथ। हाथ स्थिर रखें।",
+            "ar": "تعزف اليد اليسرى صول دييز بالإصبع 5، ثم سي ومي معًا. أبق اليد ثابتة."
           }
         }
       ]
@@ -346,7 +370,8 @@
             "de": "Spiel die linke Hand allein, bis die gebrochenen Akkorde von selbst rollen: tief, hoch, Mitte, hoch.",
             "es": "Toca la mano izquierda sola hasta que los acordes arpegiados rueden por sí mismos: grave, aguda, media, aguda.",
             "zh": "只用左手弹，直到分解和弦自然流动起来：低、高、中、高。",
-            "hi": "सिर्फ़ बाएँ हाथ से बजाएँ, जब तक ब्रोकन कॉर्ड अपने-आप न बहने लगें: नीचे वाला, ऊपर वाला, बीच वाला, ऊपर वाला।"
+            "hi": "सिर्फ़ बाएँ हाथ से बजाएँ, जब तक ब्रोकन कॉर्ड अपने-आप न बहने लगें: नीचे वाला, ऊपर वाला, बीच वाला, ऊपर वाला।",
+            "ar": "اعزف باليد اليسرى وحدها حتى تنساب التآلفات المفككة من تلقاء نفسها: المنخفضة، فالعالية، فالوسطى، فالعالية."
           },
           "hands": "left",
           "speed": 0.5,
@@ -359,7 +384,8 @@
             "de": "Spiel die Zweiklänge der rechten Hand allein, und drück beide Töne jedes Paars wie einen an.",
             "es": "Toca las dobles notas de la mano derecha sola, y presiona las dos notas de cada una como si fueran una.",
             "zh": "只用右手弹双音，每对双音的两个音要像一个音那样同时按下。",
-            "hi": "सिर्फ़ दाएँ हाथ की जोड़ियाँ बजाएँ, और हर जोड़ी के दोनों नोट एक साथ दबाएँ।"
+            "hi": "सिर्फ़ दाएँ हाथ की जोड़ियाँ बजाएँ, और हर जोड़ी के दोनों नोट एक साथ दबाएँ।",
+            "ar": "اعزف أزواج اليد اليمنى وحدها، واضغط نغمتي كل زوج كأنهما نغمة واحدة."
           },
           "hands": "right",
           "speed": 0.6,
@@ -372,7 +398,8 @@
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros ocho compases, despacio.",
             "zh": "双手一起慢慢弹前八个小节。",
-            "hi": "पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ।"
+            "hi": "पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ।",
+            "ar": "اعزف أول 8 موازير باليدين معًا، ببطء."
           },
           "hands": "both",
           "speed": 0.5,
@@ -385,7 +412,8 @@
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
             "zh": "双手合奏，用四分之三速度弹完整首歌。",
-            "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।"
+            "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।",
+            "ar": "اعزف الأغنية كاملة باليدين معًا، بثلاثة أرباع السرعة."
           },
           "hands": "both",
           "speed": 0.75,
@@ -398,7 +426,8 @@
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
             "zh": "现在用原速弹，加上踏板。",
-            "hi": "अब इसे पूरी स्पीड पर पेडल के साथ बजाएँ।"
+            "hi": "अब इसे पूरी स्पीड पर पेडल के साथ बजाएँ।",
+            "ar": "والآن اعزفها بالسرعة الكاملة، مع الدواسة."
           },
           "hands": "both",
           "speed": 1,
@@ -416,7 +445,8 @@
             "de": "Halt die gebrochenen Akkorde leise, damit das wiederholte E darüber singt.",
             "es": "Mantén suaves los acordes arpegiados, para que el mi repetido cante por encima.",
             "zh": "分解和弦要弹得轻，让反复出现的 E 在上面歌唱。",
-            "hi": "ब्रोकन कॉर्ड हल्के से बजाएँ, ताकि बार-बार आने वाला E उनके ऊपर गा सके।"
+            "hi": "ब्रोकन कॉर्ड हल्के से बजाएँ, ताकि बार-बार आने वाला E उनके ऊपर गा सके।",
+            "ar": "اعزف التآلفات المفككة بهدوء، لتغني مي المتكررة فوقها."
           }
         },
         {
@@ -428,7 +458,8 @@
             "de": "Wechsle das Pedal auf dem letzten Schlag. Dort wird der Akkord zu D-Dur.",
             "es": "Cambia el pedal en el último tiempo, donde el acorde pasa a re mayor.",
             "zh": "在最后一拍换踏板，那里和弦变成 D 大三和弦。",
-            "hi": "आखिरी बीट पर पेडल बदलें, जहाँ कॉर्ड D मेजर में बदलता है।"
+            "hi": "आखिरी बीट पर पेडल बदलें, जहाँ कॉर्ड D मेजर में बदलता है।",
+            "ar": "غيّر الدواسة على النبضة الأخيرة، حيث يتحول التآلف إلى تآلف ري الكبير."
           }
         },
         {
@@ -440,7 +471,8 @@
             "de": "Wechsle das Pedal in diesem Takt dreimal, einmal für jeden neuen Akkord.",
             "es": "Cambia el pedal tres veces en este compás, una por cada acorde nuevo.",
             "zh": "这个小节要换三次踏板，每个新和弦换一次。",
-            "hi": "इस माप में पेडल तीन बार बदलें, हर नए कॉर्ड पर एक बार।"
+            "hi": "इस माप में पेडल तीन बार बदलें, हर नए कॉर्ड पर एक बार।",
+            "ar": "غيّر الدواسة 3 مرات في هذه المازورة، مرة مع كل تآلف جديد."
           }
         }
       ],
@@ -452,7 +484,8 @@
             "de": "Finger 1, 2 und 5 nehmen C, F und A. Die linke Hand rollt darunter einen F-Dur-Akkord.",
             "es": "Los dedos 1, 2 y 5 toman las notas do, fa y la. Debajo, la mano izquierda arpegia un acorde de fa mayor.",
             "zh": "1、2、5 指弹 C、F、A。左手在下面用分解和弦弹 F 大三和弦。",
-            "hi": "उँगलियाँ 1, 2 और 5, C, F और A पर रहती हैं। नीचे बायाँ हाथ F मेजर कॉर्ड को नीचे से ऊपर बिखेरकर बजाता है।"
+            "hi": "उँगलियाँ 1, 2 और 5, C, F और A पर रहती हैं। नीचे बायाँ हाथ F मेजर कॉर्ड को नीचे से ऊपर बिखेरकर बजाता है।",
+            "ar": "تأخذ الأصابع 1 و2 و5 دو وفا ونغمة لا. وتعزف اليد اليسرى تحتها تآلف فا الكبير مفككًا."
           }
         },
         {
@@ -462,7 +495,8 @@
             "de": "Der Akkord wechselt in der Mitte des Takts. Wechsle das Pedal mit ihm.",
             "es": "El acorde cambia a mitad del compás. Cambia el pedal con él.",
             "zh": "和弦在小节中间变化。跟着它换踏板。",
-            "hi": "माप के बीच में कॉर्ड बदलता है। उसी के साथ पेडल बदलें।"
+            "hi": "माप के बीच में कॉर्ड बदलता है। उसी के साथ पेडल बदलें।",
+            "ar": "يتغير التآلف في منتصف المازورة. غيّر الدواسة معه."
           }
         },
         {
@@ -472,7 +506,8 @@
             "de": "Spann die linke Hand über die Oktave: Finger 5 auf A, Finger 2 auf E und den Daumen auf das hohe A.",
             "es": "Abre la mano izquierda sobre la octava: el dedo 5 en el la, el dedo 2 en el mi y el pulgar en el la agudo.",
             "zh": "把左手张开成一个八度：5 指放在 A 上，2 指放在 E 上，拇指放在高音 A 上。",
-            "hi": "बाएँ हाथ को ऑक्टेव पर फैलाएँ: उँगली 5 A पर, उँगली 2 E पर और अँगूठा ऊपर वाले A पर।"
+            "hi": "बाएँ हाथ को ऑक्टेव पर फैलाएँ: उँगली 5 A पर, उँगली 2 E पर और अँगूठा ऊपर वाले A पर।",
+            "ar": "افرد اليد اليسرى على مدى الأوكتاف: الإصبع 5 على نغمة لا، والإصبع 2 على مي، والإبهام على نغمة لا العالية."
           }
         }
       ]
@@ -499,7 +534,8 @@
             "de": "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
             "es": "Toca los acordes de la mano derecha sola, y deja que el dedo de arriba cante la melodía.",
             "zh": "只用右手弹和弦，让最上面的手指唱出旋律。",
-            "hi": "सिर्फ़ दाएँ हाथ के कॉर्ड बजाएँ, और सबसे ऊपर वाली उँगली को धुन गाने दें।"
+            "hi": "सिर्फ़ दाएँ हाथ के कॉर्ड बजाएँ, और सबसे ऊपर वाली उँगली को धुन गाने दें।",
+            "ar": "اعزف تآلفات اليد اليمنى وحدها، ودع الإصبع الأعلى يغني اللحن."
           },
           "hands": "right",
           "speed": 0.5,
@@ -512,7 +548,8 @@
             "de": "Spiel die Arpeggien der linken Hand allein. Der Daumen geht unter, und Finger 3 kreuzt darüber.",
             "es": "Toca los arpegios de la mano izquierda sola. El pulgar pasa por debajo, y el dedo 3 cruza por encima.",
             "zh": "只用左手弹琶音。拇指从下面穿过去，3 指从上面跨过来。",
-            "hi": "सिर्फ़ बाएँ हाथ के आर्पेजियो बजाएँ। अँगूठा नीचे से जाता है, और उँगली 3 ऊपर से।"
+            "hi": "सिर्फ़ बाएँ हाथ के आर्पेजियो बजाएँ। अँगूठा नीचे से जाता है, और उँगली 3 ऊपर से।",
+            "ar": "اعزف أربيجيو اليد اليسرى وحده. يمر الإبهام من تحت، ويعبر الإصبع 3 من فوق."
           },
           "hands": "left",
           "speed": 0.5,
@@ -525,7 +562,8 @@
             "de": "Spiel die Takte 9 bis 16 langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los compases 9 a 16, despacio.",
             "zh": "双手一起慢慢弹第 9～16 小节。",
-            "hi": "माप 9 से 16 तक दोनों हाथों से धीरे-धीरे बजाएँ।"
+            "hi": "माप 9 से 16 तक दोनों हाथों से धीरे-धीरे बजाएँ।",
+            "ar": "اعزف الموازير من 9 إلى 16 باليدين معًا، ببطء."
           },
           "hands": "both",
           "speed": 0.6,
@@ -538,7 +576,8 @@
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
             "zh": "双手合奏，用四分之三速度弹完整首歌。",
-            "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।"
+            "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।",
+            "ar": "اعزف الأغنية كاملة باليدين معًا، بثلاثة أرباع السرعة."
           },
           "hands": "both",
           "speed": 0.75,
@@ -551,7 +590,8 @@
             "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
             "es": "Ahora tócala a velocidad completa, y deja sonar el último acorde.",
             "zh": "现在用原速弹，让最后一个和弦的声音延续下去。",
-            "hi": "अब इसे पूरी स्पीड पर बजाएँ, और आखिरी कॉर्ड की आवाज़ गूँजने दें।"
+            "hi": "अब इसे पूरी स्पीड पर बजाएँ, और आखिरी कॉर्ड की आवाज़ गूँजने दें।",
+            "ar": "والآن اعزفها بالسرعة الكاملة، واترك التآلف الأخير يرن."
           },
           "hands": "both",
           "speed": 1,
@@ -569,7 +609,8 @@
             "de": "Spiel den oberen Ton jeder Oktave etwas lauter, damit die Melodie heraussticht.",
             "es": "Toca la nota de arriba de cada octava un poco más fuerte, para que la melodía se destaque.",
             "zh": "每个八度最上面的音稍响一点，让旋律突显出来。",
-            "hi": "हर ऑक्टेव का ऊपर वाला नोट थोड़ा ज़ोर से बजाएँ, ताकि धुन अलग सुनाई दे।"
+            "hi": "हर ऑक्टेव का ऊपर वाला नोट थोड़ा ज़ोर से बजाएँ, ताकि धुन अलग सुनाई दे।",
+            "ar": "اعزف النغمة العليا في كل أوكتاف بقوة أكبر قليلًا، ليبرز اللحن."
           }
         },
         {
@@ -581,7 +622,8 @@
             "de": "Spann die rechte Hand für jeden Akkord über eine ganze Oktave, mit Daumen und Finger 5 außen.",
             "es": "Abre la mano derecha sobre una octava entera en cada acorde, con el pulgar y el dedo 5 en los extremos.",
             "zh": "每个和弦都把右手张开成一整个八度，拇指和 5 指在两边。",
-            "hi": "हर कॉर्ड के लिए दाएँ हाथ को पूरे ऑक्टेव पर फैलाएँ, अँगूठा और उँगली 5 दोनों किनारों पर।"
+            "hi": "हर कॉर्ड के लिए दाएँ हाथ को पूरे ऑक्टेव पर फैलाएँ, अँगूठा और उँगली 5 दोनों किनारों पर।",
+            "ar": "افرد اليد اليمنى على أوكتاف كامل في كل تآلف، والإبهام والإصبع 5 على الطرفين."
           }
         },
         {
@@ -593,7 +635,8 @@
             "de": "Für den Schluss steigt die Melodie zum A. Lass den letzten Akkord mit Pedal klingen.",
             "es": "Para el final, la melodía sube hasta el la. Deja sonar el último acorde con el pedal.",
             "zh": "结尾时旋律往上走到 A。踩着踏板，让最后一个和弦的声音延续下去。",
-            "hi": "आखिर में धुन ऊपर A तक चढ़ती है। आखिरी कॉर्ड की आवाज़ पेडल के साथ गूँजने दें।"
+            "hi": "आखिर में धुन ऊपर A तक चढ़ती है। आखिरी कॉर्ड की आवाज़ पेडल के साथ गूँजने दें।",
+            "ar": "يصعد اللحن إلى نغمة لا في الختام. اترك التآلف الأخير يرن مع الدواسة."
           }
         }
       ],
@@ -605,7 +648,8 @@
             "de": "Finger 3 kreuzt über den Daumen auf das H. Halt das Handgelenk ruhig, während die Hand steigt.",
             "es": "El dedo 3 cruza por encima del pulgar hasta el si. Mantén la muñeca nivelada mientras la mano sube.",
             "zh": "3 指从拇指上面跨过去弹 B。手往上走时，手腕保持平稳。",
-            "hi": "उँगली 3 अँगूठे के ऊपर से B पर जाती है। हाथ ऊपर चढ़ते समय कलाई सीधी रखें।"
+            "hi": "उँगली 3 अँगूठे के ऊपर से B पर जाती है। हाथ ऊपर चढ़ते समय कलाई सीधी रखें।",
+            "ar": "يعبر الإصبع 3 فوق الإبهام إلى سي. أبق المعصم مستويًا بينما تصعد اليد."
           }
         },
         {
@@ -615,7 +659,8 @@
             "de": "Die linke Hand beginnt auf einem tiefen E. Nutz die Pause am Ende von Takt 9, um hinunterzuspringen.",
             "es": "La mano izquierda empieza en un mi grave. Usa el silencio del final del compás 9 para saltar hacia abajo.",
             "zh": "左手从低音 E 开始。利用第 9 小节末尾的休止符往下跳。",
-            "hi": "बायाँ हाथ नीचे वाले E से शुरू होता है। नीचे छलाँग लगाने के लिए माप 9 के आखिर का रेस्ट इस्तेमाल करें।"
+            "hi": "बायाँ हाथ नीचे वाले E से शुरू होता है। नीचे छलाँग लगाने के लिए माप 9 के आखिर का रेस्ट इस्तेमाल करें।",
+            "ar": "تبدأ اليد اليسرى على مي منخفضة. استغل السكتة في آخر المازورة 9 للقفز إلى الأسفل."
           }
         },
         {
@@ -625,7 +670,8 @@
             "de": "Finger 1, 2, 4 und 5 nehmen A, C, F und A. Heb die linke Hand in jeder kurzen Pause an.",
             "es": "Los dedos 1, 2, 4 y 5 toman las notas la, do, fa y la. Levanta la mano izquierda en cada silencio corto.",
             "zh": "1、2、4、5 指弹 A、C、F、A。每个短休止符处都把左手抬起。",
-            "hi": "उँगलियाँ 1, 2, 4 और 5, A, C, F और A पर रहती हैं। हर छोटे रेस्ट में बायाँ हाथ उठाएँ।"
+            "hi": "उँगलियाँ 1, 2, 4 और 5, A, C, F और A पर रहती हैं। हर छोटे रेस्ट में बायाँ हाथ उठाएँ।",
+            "ar": "تأخذ الأصابع 1 و2 و4 و5 نغمة لا ودو وفا ونغمة لا. ارفع اليد اليسرى في كل سكتة قصيرة."
           }
         }
       ]

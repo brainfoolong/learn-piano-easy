@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "نشر \u2068Lowell Mason\u2069 هذا اللحن في بوسطن، باسم \u2068Antioch\u2069. وهو يحمل كلمات كتبها \u2068Isaac Watts\u2069 عام 1719. " +
-    "وأول 4 نغمات فيه تطابق بداية مقطع الجوقة \u2068Lift up your heads\u2069، من أوراتوريو \u2068Messiah\u2069 لهاندل.",
+    "وأول 4 نغمات فيه تطابق بداية جوقة\u2068Lift up your heads\u2069، من أوراتوريو \u2068Messiah\u2069 لهاندل.",
   funFact:
     "كتب \u2068Isaac Watts\u2069 هذه الكلمات صياغة جديدة للمزمور 98، ولم يقصد بها قط أن تكون أغنية ميلادية.",
   versions: {

@@ -188,6 +188,9 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | hand shape | شكل اليد | everyday words |
 | thumb under, finger over | تمرير الإبهام من تحت, عبور الإصبع من فوق | the course's own terms, unsourced |
 | lift (a finger, a key) | رفع | everyday word |
+| let go of (a key) | رفع: `ارفع دو القصيرة`. `اترك` reads as "leave" | stage 4's review |
+| lower (a hand, a finger) | أنزل with its object: `وأنزل الإبهام على صول`. Without one, `انزل` or `اهبط` | stage 4's review |
+| for (a chord, an interval) | لعزف: `لعزف السادسة`. `من أجل` reads translated | stage 4's review |
 | land (on a key, a beat) | الوصول إلى | everyday word |
 | jump, climb, slide | قفز, صعود, انزلاق | everyday words |
 | stretch, spread (the hand) | فرد اليد | everyday words |
@@ -429,7 +432,10 @@ A step that only differs in its bars or its section follows the nearest row's sh
 - **A spelled-out chord lists its syllables with `و`:** `دو ومي وصول`.
 - **The note `لا` never stands bare where it reads as "no".** After a verb, a preposition or `هي`, it is
   `نغمة لا`: `اضغط نغمة لا`. A quiz answer or a list that holds only note names may write it bare.
-- **A note name never takes the article.** `الدو` reads stiff to a learner: `اعزف دو`, `من دو إلى صول`.
+- **`و` never joins a bare `لا`,** since `ولا` reads as "nor". In running text it is `ونغمة لا`:
+  `نغمتا ري ونغمة لا`. A list may also put `لا` first: `لا وري`.
+- **The bass as a part may be a bare `الباص`,** which a piano text never reads as a bus. One note
+  of it is `نغمة الباص`.- **A note name never takes the article.** `الدو` reads stiff to a learner: `اعزف دو`, `من دو إلى صول`.
 - **A letter that code checks,** such as a quiz answer, stays the catalog's own.
 
 ## 8. Numbers

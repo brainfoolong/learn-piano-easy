@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in Arabic, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in Arabic, from n to z"
     status: open
@@ -167,15 +167,15 @@ blind.
 side by side, and three fresh reviewers review them blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.ar.ts` per slug from `air-on-the-g-string` to `mozart-21-andante`. `tools/our-songs/alle-jahre-wieder.ar.ts:1`
+- [x] One `tools/our-songs/<slug>.ar.ts` per slug from `air-on-the-g-string` to `mozart-21-andante`. `tools/our-songs/alle-jahre-wieder.ar.ts:1`
   - [x] A work list per slug, 51 slugs of 22 texts each, under `.agent-tmp/i18n/ar/`.
   - [x] Six writers of eight or nine guides each, since a third of 51 guides overruns a writer's context.
   - [x] Every Latin word the guides keep is in `src/i18n/typography.ts`.
-- [ ] Each batch reviewed blind, and every finding settled.
-  - [ ] Six blind reviews, one per writer's batch.
-  - [ ] Every *wrong* finding fixed, and each *unnatural* one ruled on.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ar` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
-  - [ ] `bun x tsc` and the build are green.
+- [x] Each batch reviewed blind, and every finding settled.
+  - [x] Six blind reviews, one per writer's batch.
+  - [x] Every *wrong* finding fixed, and each *unnatural* one ruled on.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ar` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+  - [x] `bun x tsc` and the build are green.
 
 ### 5. The song guides in Arabic, from n to z
 
@@ -183,7 +183,7 @@ side by side, and three fresh reviewers review them blind.
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.ar.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.ar.ts:1`
+- [ ] One `tools/our-songs/<slug>.ar.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.ar.ts:1`
 - [ ] Each batch reviewed blind, and every finding settled.
 - [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ar` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
@@ -214,31 +214,30 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 3 are done. Every catalog section and every lesson of the eight worlds has its Arabic file,
-reviewed blind and stamped in `src/i18n/stamps/ar.json`. Each world's `index.ts` loads `texts.ar`. `ar` is
-not shipped yet. `bun x tsc`, the build and `arabic_texts_keep_their_rules` are green. `status` lists one
-lesson text as missing on purpose: the answers `1`, `3`, `5` of `finger-numbers`, which equal the English.
+Stages 1 to 4 are done. Every catalog section, every lesson and the 51 guides from `air-on-the-g-string`
+to `mozart-21-andante` have their Arabic files, reviewed blind and stamped in `src/i18n/stamps/ar.json`.
+The six guide reviews found two *wrong* texts, both fixed: a bare `ولا` before the note `لا`, and a
+relative clause on the wrong noun. `ar` is not shipped yet. `bun x tsc` and the build are green. `status`
+lists one lesson text as missing on purpose: the answers `1`, `3`, `5` of `finger-numbers`.
 
 ### Next
 
-**Stage 4: the song guides from a to m.** Gate: stage 3's worlds are stamped, and they are.
+**Stage 5: the 29 guides from `neon-chase` to `yankee-doodle`.** Gate: stage 4's guides are stamped, and
+they are.
 
-- A read-only `Explore` subagent lists the slugs of `tools/our-songs/*.ts` from `a` to `m`. Split them in
-  three, and run `bun tools/i18n.ts work ar guide/<slug>` for each.
-- Each guide is `tools/our-songs/<slug>.ar.ts`, shaped like its `.hi.ts` sibling.
-- The lesson briefs are in `.agent-tmp/i18n/ar/`: `brief-lesson-writer.md`, `brief-lesson-reviewer.md`
-  and `brief-lesson-fixer.md`. Adapt their paths from a world to a batch of guides. The fixer brief
-  holds the rulings that bind every text, so give its rules section to the writers too.
-- The rulings stage 3 settled, now in `docs/reference/translation/ar.md`:
-  - A count from 3 to 10 is a digit (§ 8), quiz answers included: `4 موازير`. A count with the article,
-    such as `النغمات الثلاث`, names a known set and stays a word.
-  - A note value's plural is `بيضاوات`, `سوداوات`, `مستديرات` (§ 5). `نغمات بيضاء` reads as white keys.
-  - The note `لا` is `نغمة لا` after a verb, a preposition or `هي` (§ 7).
-  - `الإصبع` is masculine: `الإصبع الأوسط` (§ 5). `أخفض` is the plain comparative for pitch.
+- Run `bun tools/i18n.ts work ar guide/<slug>` for each slug. `ls tools/our-songs/` lists them.
+- Four writers of seven or eight guides each, side by side, then four blind reviewers, then four fixers.
+- The guide briefs are in `.agent-tmp/i18n/ar/`: `brief-guide-writer.md`, `brief-guide-reviewer.md` and
+  `brief-guide-fixer.md`. Put each batch's findings and rulings in `.agent-tmp/i18n/ar/review/batch-<n>.md`.
+  Stage 4's batch files are the model.
+- Add stage 4's new rulings, now in § 5 and § 7 of `docs/reference/translation/ar.md`, to the writer's
+  brief:
+  - `و` never joins a bare `لا`, which reads as "nor". Write `ونغمة لا`, or put `لا` first in the list.
+  - "Let go of" a key is `ارفع`, never `اترك`. "For a chord" is `لعزف`, never `من أجل`.
+  - An instruction to lower a hand is `أنزل` with its object, or `انزل` without one.
+- Stamp one unit at a time: `bun tools/i18n.ts stamp ar guide/<slug>`. Without a unit, `stamp` refuses.
 - Writers who type `⁨` with Write or Edit get the raw character. Tell them to type `\u2068`
   and Grep for a raw U+2068 afterwards.
-- The song titles stay in Latin letters and isolated. A composer with an Arabic Wikipedia article takes
-  its Arabic spelling, as the standing decisions say.
 
 Expected red: none.
 
@@ -246,3 +245,5 @@ Expected red: none.
 
 - A native Arabic speaker's read of the course would catch what a blind review cannot.
 - No Arabic piano method was reachable. The guide's *Open* lists the terms a teacher should confirm.
+- Stage 6's consistency read checks the Arabic Wikipedia spelling of Sullivan, Praetorius, Leontovych and
+  Saint-Saëns. The reviewers could not check them, so the guides keep their current spelling.
