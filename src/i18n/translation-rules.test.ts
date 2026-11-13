@@ -8,9 +8,9 @@
  *   such as one that reads a list, is left to the review.
  * - **A plural's forms are read from the message's source,** at each call of `plural`. The type checker
  *   already refuses a missing form, so this catches what a cast hides.
- * - **An argument that shows in ASCII digits was put in as it came,** so it may hold left-to-right text.
- *   In a right-to-left locale it must sit between an isolate and U+2069. A number that `Intl` formats
- *   shows in the locale's own digits, and needs none.
+ * - **An argument that shows in ASCII digits may hold left-to-right text.** In a right-to-left locale it
+ *   must sit between an isolate and U+2069, with any decimals `Intl` gives it. A number that `Intl`
+ *   formats in the locale's own digits, such as `ar-EG`'s, needs no isolate.
  * - **A mark rule reads a text with each kept word written as `X`,** so a kept title such as *Hark! The
  *   Herald Angels Sing* never breaks a rule about `¡`.
  * - **A kept word counts only where no Latin letter touches it,** so a short one such as the syllable `re`
@@ -173,7 +173,8 @@ function problemsOf(texts: readonly Text[], locale: LocaleCode, rules: Rules = r
         if (rules.dir === "rtl") {
           for (const index of kept) {
             const raw = translated.indexOf(String(MARKERS[index]));
-            const isolated = raw > 0 && /[⁦-⁨]/.test(translated[raw - 1]!) && translated[raw + String(MARKERS[index]).length] === "⁩";
+            const after = translated.slice(raw + String(MARKERS[index]).length);
+            const isolated = raw > 0 && /[⁦-⁨]/.test(translated[raw - 1]!) && /^(?:[.,]\d+)?⁩/.test(after);
             if (raw >= 0 && !isolated) say(`does not isolate argument ${index + 1}`);
           }
         }
@@ -211,7 +212,9 @@ test("a_lost_argument_fails", () => {
   expect(problemsOf([textOf(english, (n: number, title: string) => `${title}: ${n} notas`)], "es")).toEqual([]);
   expect(problemsOf([textOf(english, (n: number, title: string) => `${n} نوتة في ${title}`, "ar")], "ar")).toEqual(["fixture.text: does not isolate argument 1", "fixture.text: does not isolate argument 2"]);
   const isolated = (n: number, title: string) => `${new Intl.NumberFormat("ar-EG").format(n)} نوتة في ⁨${title}⁩`;
-  expect(problemsOf([textOf(english, isolated, "ar")], "ar")).toEqual([]);
+  expect(problemsOf([textOf(english, isolated, "ar")], "ar", { ...rulesOf("ar"), marks: [] })).toEqual([]);
+  const decimals = (n: number, title: string) => `⁨${n.toFixed(2)}⁩ نوتة في ⁨${title}⁩`;
+  expect(problemsOf([textOf(english, decimals, "ar")], "ar")).toEqual([]);
 });
 
 test("a_missing_plural_form_fails", () => {
