@@ -129,6 +129,11 @@ test("the_arabic_site_reads_in_arabic", async ({ page }) => {
   await expect(page.getByRole("button", { name: "تشغيل", exact: true })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "الأغاني" })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "الإعدادات" })).toBeVisible();
+
+  // The legal texts are English in Arabic, so they read left to right on the right-to-left page.
+  await page.goto("./ar/imprint/");
+  await expect(page.locator(".legal")).toHaveAttribute("dir", "ltr");
+  await expect(page.locator(".legal")).toHaveAttribute("lang", "en");
   expect(errors).toEqual([]);
 });
 

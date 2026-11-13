@@ -15,6 +15,7 @@
 import { legalDe } from "../i18n/messages/legal.de";
 import { legalEn, type Block, type Inline, type LegalTexts } from "../i18n/messages/legal.en";
 import type { CompleteLocale, Locale } from "../i18n/locale";
+import { isPseudoLocale } from "../i18n/locale-table";
 import { textFor } from "../i18n/pseudo";
 import { link } from "../ui/components/link";
 import { toggleControl } from "../ui/controls";
@@ -71,13 +72,18 @@ function blockElement(block: Block, texts: LegalTexts, locale: Locale): HTMLElem
   return optOutSwitch(texts.optOut);
 }
 
-/** The body of the legal page `kind` in `locale`. */
+/**
+ * The body of the legal page `kind` in `locale`. Where `locale` lacks the legal texts, the body is the
+ * English, marked `lang="en"` and `dir="ltr"` so it reads left to right on a right-to-left page.
+ */
 export function legalBody(kind: "imprint" | "privacy", locale: Locale): HTMLElement {
   const texts = textFor(TEXTS, locale);
   const doc = texts[kind];
   const blocks = (list: Block[]) => list.map((block) => blockElement(block, texts, locale));
+  const english = !isPseudoLocale(locale) && !(locale in TEXTS);
   return el("div", {
     class: "legal",
+    attrs: english ? { lang: "en", dir: "ltr" } : {},
     children: [
       ...blocks(doc.lead),
       ...doc.sections.map((section) =>
