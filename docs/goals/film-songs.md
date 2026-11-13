@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "Five film pieces: William Tell to Ave Maria"
-    status: open
+    status: done
   - id: 6
     title: "Five film pieces: Boléro to Barcarolle"
     status: open
@@ -120,6 +120,19 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
 - **A work whose first print no allowed source dates takes its earliest dated print read.** K. 467
   takes Cramer's transcription, printed by Richault in 1855. The Air takes 1871, the year of
   Wilhelmj's arrangement, which gave it its name.
+- **The sources of stage 5.** Gallica's scan on Commons of Niedermeyer's piano reduction of *William
+  Tell*, printed by Troupenas in 1829 or 1830, gives the galop's first phrase on its page 10. Its violin
+  part is an accompaniment, not the tune. A public domain typeset on Commons gives the *Swan Lake* oboe
+  theme. Mutopia's typeset of Chernov's piano arrangement gives the *Night on Bald Mountain* brass theme.
+  A Commons engraving gives Dukas's broom theme, and Wikipedia's `<score>` confirms its first notes.
+  Mutopia's typeset of the Peters edition gives the *Ave Maria*.
+- ***Swan Lake* takes 1877, the year of its first staging.** No source a session may read dates a
+  print of the score. Tchaikovsky died in 1893, so any print year passes `isPublicDomain`.
+- **A quick run the tune cannot write is cut to rests.** The *Night on Bald Mountain* theme ends two
+  bars with runs of 32nds and sixteenth triplets, so the tune rests there. Medium and Hard may run in
+  their own notes.
+- **The *William Tell* tune is the galop's first phrase alone,** an upbeat and four bars in E major. Its
+  repeated B is the print's top voice wherever no higher note sounds.
 - **The Toccata's tune carries no ornament.** Wikipedia prints a lower mordent on each long A, and the
   Bach-Gesellschaft edition prints an upper one. Its fermata rests are cut to four units each. Medium
   and Hard play Wikipedia's lower mordent on the beat.
@@ -278,12 +291,17 @@ in the first.
 
 **Split:** five writing subagents, one module each.
 
-- [ ] *William Tell* Overture, finale. `tools/our-songs/william-tell.ts:1`
-- [ ] *Swan Lake*. `tools/our-songs/swan-lake.ts:1`
-- [ ] *Night on Bald Mountain*. `tools/our-songs/night-on-bald-mountain.ts:1`
-- [ ] *The Sorcerer's Apprentice*. `tools/our-songs/the-sorcerers-apprentice.ts:1`
-- [ ] *Ave Maria*. `tools/our-songs/ave-maria.ts:1`
-- [ ] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [x] *William Tell* Overture, finale. `tools/our-songs/william-tell.ts:1`
+- [x] *Swan Lake*. `tools/our-songs/swan-lake.ts:1`
+- [x] *Night on Bald Mountain*. `tools/our-songs/night-on-bald-mountain.ts:1`
+- [x] *The Sorcerer's Apprentice*. `tools/our-songs/the-sorcerers-apprentice.ts:1`
+- [x] *Ave Maria*. `tools/our-songs/ave-maria.ts:1`
+- [x] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+  - [x] Each tune is read from a printed score, and its years are confirmed.
+  - [x] Each module's tune is compared note for note with the tune read.
+  - [x] The five modules join `ourSongs`, and the writer accepts them.
+  - [x] `bun x tsc` and the build are green.
+  - [x] The catalog count test reads 633.
 
 ### 6. Five film pieces: Boléro to Barcarolle
 
@@ -348,30 +366,32 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 to 4 are done. Fifteen film pieces ship in four versions, and the catalog holds 613 rows.
-Stage 4 added the *Lacrimosa*, the Andante of K. 467, the *Air on the G String*, the Toccata and
-Handel's Sarabande. Each tune was compared note for note with the score the standing decisions name.
-Every about text and fun fact was given to its writer from an article read. `tsc` and the build are
-green. The catalog count test, `every_film_song_is_in_the_collection` and `every_guide_is_complete`
-passed once.
+Stages 1 to 5 are done. Twenty film pieces ship in four versions, and the catalog holds 633 rows.
+Stage 5 added the *William Tell* galop, the *Swan Lake* oboe theme, the *Night on Bald Mountain* brass
+theme, Dukas's broom theme and Schubert's *Ave Maria*. Each tune was compared note for note with the
+score the standing decisions name. `tsc` and the worktree's build are green. The catalog count test,
+`every_film_song_is_in_the_collection` and `every_guide_is_complete` passed once.
 
 ### Next
 
-**Stage 5: five film pieces, *William Tell* to *Ave Maria*.** Follow the stage's `**Split:**` line,
-and work in a worktree under `.agent-tmp/`.
+**Stage 6: five film pieces, *Boléro* to *Barcarolle*.** Follow the stage's `**Split:**` line, and
+work in a worktree under `.agent-tmp/`.
 
-- [ ] Read each score on Wikipedia, Mutopia or Commons, and confirm its years. `tools/our-songs/lacrimosa.ts:1`
-- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/toccata-in-d-minor.ts:1`
+- [ ] Read each score on Wikipedia, Mutopia or Commons, and confirm its years. `tools/our-songs/swan-lake.ts:1`
+- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/night-on-bald-mountain.ts:1`
 - [ ] Five writing subagents, one module each, from a shared brief file. `tools/our-songs/fur-elise.ts:1`
-- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:279`
+- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:289`
 
-Mutopia's search is `cgibin/make-table.cgi?searchingfor=<word>`, and a composer's list is
-`make-table.cgi?Composer=<id>&startat=<n>`, ten rows a page. Commons' search API with `srnamespace=6`
-finds scans, and Ghostscript renders a page. Write one brief file under `.agent-tmp/` for what the
-writers share, and give each prompt its tune, chords, about text and fun fact. Pass each writer the
-texts word for word, so no fact comes from memory.
+Mutopia's search is `cgibin/make-table.cgi?searchingfor=<word>`. A Mutopia `.ly` file is text, so read
+its notes there rather than from a PDF. Commons' search API with `srnamespace=6` finds scans. Write
+one brief file under `.agent-tmp/` for what the writers share, and give each prompt its tune, chords,
+about text and fun fact, word for word. A tune bar of 4/2 in quarters takes `steps: 2`, and one of 4/1
+takes `steps: 4`.
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 613 to 633. The e2e test
+*Boléro* (Ravel died in 1937, published 1929) passes `isPublicDomain` only if 1929 + 95 < 2026 and
+1937 + 70 < 2026. Both hold, so check the print year in a source before it ships.
+
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 633 to 653. The e2e test
 `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once the film group
 outgrows one view.
 

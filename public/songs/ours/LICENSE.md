@@ -292,3 +292,28 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `handel-sarabande/epic.mid` | Sarabande in D minor, Medium | George Frideric Handel | MIT |
 | `handel-sarabande/legendary.mid` | Sarabande in D minor, Hard | George Frideric Handel | MIT |
 | `handel-sarabande/guide.json` | Sarabande in D minor, the guide | | MIT |
+| `william-tell/common.mid` | William Tell Overture, Beginner | Gioachino Rossini | MIT |
+| `william-tell/rare.mid` | William Tell Overture, Easy | Gioachino Rossini | MIT |
+| `william-tell/epic.mid` | William Tell Overture, Medium | Gioachino Rossini | MIT |
+| `william-tell/legendary.mid` | William Tell Overture, Hard | Gioachino Rossini | MIT |
+| `william-tell/guide.json` | William Tell Overture, the guide | | MIT |
+| `swan-lake/common.mid` | Swan Lake, Beginner | Pyotr Ilyich Tchaikovsky | MIT |
+| `swan-lake/rare.mid` | Swan Lake, Easy | Pyotr Ilyich Tchaikovsky | MIT |
+| `swan-lake/epic.mid` | Swan Lake, Medium | Pyotr Ilyich Tchaikovsky | MIT |
+| `swan-lake/legendary.mid` | Swan Lake, Hard | Pyotr Ilyich Tchaikovsky | MIT |
+| `swan-lake/guide.json` | Swan Lake, the guide | | MIT |
+| `night-on-bald-mountain/common.mid` | Night on Bald Mountain, Beginner | Modest Mussorgsky | MIT |
+| `night-on-bald-mountain/rare.mid` | Night on Bald Mountain, Easy | Modest Mussorgsky | MIT |
+| `night-on-bald-mountain/epic.mid` | Night on Bald Mountain, Medium | Modest Mussorgsky | MIT |
+| `night-on-bald-mountain/legendary.mid` | Night on Bald Mountain, Hard | Modest Mussorgsky | MIT |
+| `night-on-bald-mountain/guide.json` | Night on Bald Mountain, the guide | | MIT |
+| `the-sorcerers-apprentice/common.mid` | The Sorcerer's Apprentice, Beginner | Paul Dukas | MIT |
+| `the-sorcerers-apprentice/rare.mid` | The Sorcerer's Apprentice, Easy | Paul Dukas | MIT |
+| `the-sorcerers-apprentice/epic.mid` | The Sorcerer's Apprentice, Medium | Paul Dukas | MIT |
+| `the-sorcerers-apprentice/legendary.mid` | The Sorcerer's Apprentice, Hard | Paul Dukas | MIT |
+| `the-sorcerers-apprentice/guide.json` | The Sorcerer's Apprentice, the guide | | MIT |
+| `ave-maria/common.mid` | Ave Maria, Beginner | Franz Schubert | MIT |
+| `ave-maria/rare.mid` | Ave Maria, Easy | Franz Schubert | MIT |
+| `ave-maria/epic.mid` | Ave Maria, Medium | Franz Schubert | MIT |
+| `ave-maria/legendary.mid` | Ave Maria, Hard | Franz Schubert | MIT |
+| `ave-maria/guide.json` | Ave Maria, the guide | | MIT |

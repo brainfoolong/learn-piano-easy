@@ -87,6 +87,11 @@ import { mozart21Andante } from "./our-songs/mozart-21-andante";
 import { airOnTheGString } from "./our-songs/air-on-the-g-string";
 import { toccataInDMinor } from "./our-songs/toccata-in-d-minor";
 import { handelSarabande } from "./our-songs/handel-sarabande";
+import { williamTell } from "./our-songs/william-tell";
+import { swanLake } from "./our-songs/swan-lake";
+import { nightOnBaldMountain } from "./our-songs/night-on-bald-mountain";
+import { theSorcerersApprentice } from "./our-songs/the-sorcerers-apprentice";
+import { aveMaria } from "./our-songs/ave-maria";
 import { deckTheHalls } from "./our-songs/deck-the-halls";
 import { diesIrae } from "./our-songs/dies-irae";
 import { dingDongMerrilyOnHigh } from "./our-songs/ding-dong-merrily-on-high";
@@ -281,6 +286,11 @@ export const ourSongs: readonly OurSong[] = [
   airOnTheGString,
   toccataInDMinor,
   handelSarabande,
+  williamTell,
+  swanLake,
+  nightOnBaldMountain,
+  theSorcerersApprentice,
+  aveMaria,
 ];
 
 /** The version `rarity` of `song` as a song of the notation. */

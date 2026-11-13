@@ -1,0 +1,495 @@
+{
+  "song": "night-on-bald-mountain",
+  "title": "Night on Bald Mountain",
+  "composer": "Modest Mussorgsky",
+  "about": {
+    "en": "Mussorgsky finished his musical picture of a witches' sabbath on Bald Mountain on St. John's Eve, 23 June 1867. Five years after his death, Rimsky-Korsakov published his own arrangement of it in 1886. Walt Disney's film Fantasia (1940) made it famous, in Leopold Stokowski's arrangement based on Rimsky-Korsakov's version.",
+    "de": "Mussorgski vollendete sein musikalisches Bild eines Hexensabbats auf dem Kahlen Berg in der Johannisnacht, am 23. Juni 1867. Fünf Jahre nach seinem Tod veröffentlichte Rimski-Korsakow 1886 seine eigene Bearbeitung. Walt Disneys Film Fantasia (1940) machte sie berühmt, in Leopold Stokowskis Bearbeitung nach Rimski-Korsakows Fassung."
+  },
+  "funFact": {
+    "en": "Together with Rimsky-Korsakov's Sadko, also from 1867, it is one of the first tone poems by a Russian composer.",
+    "de": "Zusammen mit Rimski-Korsakows Sadko, ebenfalls von 1867, ist es eine der ersten sinfonischen Dichtungen eines russischen Komponisten."
+  },
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/night-on-bald-mountain/common.mid",
+      "skills": [
+        "five-finger-position",
+        "held-bass",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [5, 2, 3, 2, 1, 2, 3, 4, 5, 2, 2, 3, 2, 1, 2, 3, 4, 5, 2, 5, 3, 1, 3, 4, 5, 4, 3, 2, 1, 2, 3, 2, 1, 2, 5, 2, 3, 2, 1, 2, 3, 4, 5, 2, 2, 3, 2, 1, 2, 3, 4, 5, 2, 3, 2, 1],
+        "left": [4, 4, 4, 4, 1, 1, 1, 1, 5, 1, 3, 5, 1, 4, 1, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 4, 4, 1]
+      },
+      "start": {
+        "right": [62, 64, 65, 67, 69],
+        "left": [50, null, 46, 45, 43]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the first four bars with the right hand alone, and let the song wait for each note.",
+            "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play bars 5 to 8 with the right hand alone. The hand starts one step lower, on G.",
+            "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Die Hand beginnt einen Schritt tiefer, auf dem G."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Now the left hand alone. It holds one note for a whole bar.",
+            "de": "Jetzt die linke Hand allein. Sie hält einen Ton einen ganzen Takt lang."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Put both hands together on the first eight bars, slowly.",
+            "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 4,
+          "kind": "sound",
+          "text": {
+            "en": "Play the tune loud and heavy, like brass instruments calling in the night.",
+            "de": "Spiel die Melodie laut und schwer, wie Blechbläser, die in die Nacht rufen."
+          }
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "trick",
+          "text": {
+            "en": "Use the long rest to move the right hand up to G.",
+            "de": "Nutz die lange Pause, um die rechte Hand hinauf zum G zu setzen."
+          }
+        },
+        {
+          "fromBar": 12,
+          "toBar": 13,
+          "kind": "fingering",
+          "text": {
+            "en": "While A sounds, get ready to move the hand down. Finger 3 then lands on F.",
+            "de": "Mach dich bereit, die Hand nach unten zu setzen, während das A klingt. Dann landet Finger 3 auf dem F."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 23,
+          "text": {
+            "en": "Move the right hand down in the rest. Finger 3 plays F, and the thumb ends on D.",
+            "de": "Setz die rechte Hand in der Pause nach unten. Finger 3 spielt das F, und der Daumen endet auf dem D."
+          }
+        },
+        {
+          "bar": 13,
+          "text": {
+            "en": "Move the right hand down so the thumb sits on D. Finger 3 starts on F.",
+            "de": "Setz die rechte Hand nach unten, sodass der Daumen auf dem D liegt. Finger 3 beginnt auf dem F."
+          }
+        },
+        {
+          "bar": 5,
+          "text": {
+            "en": "The hand has moved up. Finger 2 plays A, and finger 3 plays B flat.",
+            "de": "Die Hand ist nach oben gerückt. Finger 2 spielt das A, und Finger 3 spielt das B."
+          }
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/night-on-bald-mountain/rare.mid",
+      "skills": [
+        "two-note-chords",
+        "eighth-notes"
+      ],
+      "fingers": {
+        "right": [5, 2, 3, 2, 1, 2, 3, 4, 5, 2, 2, 3, 2, 1, 2, 3, 4, 5, 2, 5, 4, 3, 1, 3, 4, 5, 4, 3, 4, 3, 2, 1, 3, 2, 1, 2, 5, 4, 3, 2, 1, 2, 4, 5, 5, 4, 3, 2, 5, 2, 3, 2, 1, 2, 3, 4, 5, 2, 2, 3, 2, 1, 2, 3, 4, 5, 2, 5, 4, 3, 4, 3, 2, 1, 2, 4, 5, 2, 1, 3, 2, 1, 2, 3, 2, 1, 1, 5],
+        "left": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 1, 5, 1, 5, 1, 3, 1, 3, 1, 3, 1, 5, 1, 5, 1, 5, 1, 4, 2, 4, 2, 4, 2, 4, 1, 4, 1, 4, 1, 5, 1, 5, 1, 5, 1, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 3, 1, 3, 1, 5, 1, 5, 1, 5, 1, 4, 1, 4, 1, 4, 1, 4, 2, 4, 2, 4, 2, 5, 1, 5, 1, 5, 1, 4, 2, 4, 2, 4, 2, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1, 4, 1]
+      },
+      "start": {
+        "right": [62, 64, 65, 67, 69],
+        "left": [50, 49, 46, 45, 43]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the first eight bars with the right hand alone, and let the song wait for each note.",
+            "de": "Spiel die ersten acht Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone. It plays on beats 1, 3 and 4 of every bar.",
+            "de": "Spiel die linke Hand allein. Sie spielt in jedem Takt auf den Schlägen 1, 3 und 4."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on bars 9 to 16, slowly.",
+            "de": "Spiel die Takte 9 bis 16 langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands, a little slower than written.",
+            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert."
+          },
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed.",
+            "de": "Jetzt spiel es im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": {
+            "en": "Play the tune loud and heavy, like brass instruments calling in the night.",
+            "de": "Spiel die Melodie laut und schwer, wie Blechbläser, die in die Nacht rufen."
+          }
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": {
+            "en": "Count four beats in each bar. The bass plays on beats 1, 3 and 4.",
+            "de": "Zähl in jedem Takt vier Schläge. Der Bass spielt auf den Schlägen 1, 3 und 4."
+          }
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": {
+            "en": "The left hand never moves. Each finger keeps its own key.",
+            "de": "Die linke Hand bewegt sich nie. Jeder Finger bleibt auf seiner eigenen Taste."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 31,
+          "text": {
+            "en": "Move the right hand down so the thumb lands on D at the end of the bar.",
+            "de": "Setz die rechte Hand nach unten, sodass der Daumen am Ende des Takts auf dem D landet."
+          }
+        },
+        {
+          "bar": 15,
+          "text": {
+            "en": "Move the right hand down so finger 2 plays E. Finger 4 then plays G.",
+            "de": "Setz die rechte Hand nach unten, sodass Finger 2 das E spielt. Dann spielt Finger 4 das G."
+          }
+        },
+        {
+          "bar": 5,
+          "text": {
+            "en": "The hand has moved up in the rest. Finger 2 plays A, and finger 3 plays B flat.",
+            "de": "Die Hand ist in der Pause nach oben gerückt. Finger 2 spielt das A, und Finger 3 spielt das B."
+          }
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/night-on-bald-mountain/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "thumb-under",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [5, 2, 3, 2, 1, 2, 3, 4, 5, 2, 3, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 1, 2, 3, 4, 5, 2, 3, 5, 4, 3, 1, 3, 4, 5, 4, 3, 4, 3, 2, 1, 3, 2, 4, 1, 2, 5, 4, 3, 2, 1, 1, 2, 2, 4, 1, 5, 5, 4, 3, 2, 5, 2, 3, 2, 1, 2, 3, 4, 5, 2, 3, 1, 2, 3, 4, 5, 4, 3, 2, 3, 2, 1, 2, 3, 4, 5, 2, 3, 5, 2, 4, 1, 3, 4, 3, 2, 1, 2, 4, 5, 1, 4, 1, 3, 3, 2, 1, 5, 4, 3, 2, 3, 2, 1, 1, 3, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 1, 2, 5, 2, 1, 2, 5, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [62, 64, 65, 67, 69],
+        "left": [57, null, null, null, 45]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the left hand alone. Under the tune it jumps between two notes an octave apart.",
+            "de": "Spiel die linke Hand allein. Unter der Melodie springt sie zwischen zwei Tönen hin und her, die eine Oktave auseinander liegen."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the run in bar 4 with the right hand alone. Pass the thumb under to G.",
+            "de": "Spiel den Lauf in Takt 4 nur mit der rechten Hand. Führ den Daumen unter zum G."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [4, 5],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on the first eight bars, slowly.",
+            "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, with the pedal.",
+            "de": "Jetzt spiel es im vollen Tempo, mit Pedal."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": {
+            "en": "Keep the pedal up under the tune, so every octave in the bass stays sharp.",
+            "de": "Lass das Pedal unter der Melodie oben, damit jede Oktave im Bass klar bleibt."
+          }
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "fingering",
+          "text": {
+            "en": "In the run, pass the thumb under to G, then climb with fingers 2 to 5.",
+            "de": "Führ im Lauf den Daumen unter zum G, dann steig mit Finger 2 bis 5 weiter."
+          }
+        },
+        {
+          "fromBar": 9,
+          "toBar": 16,
+          "kind": "sound",
+          "text": {
+            "en": "Change the pedal on each new bass note, twice in every bar.",
+            "de": "Wechsle das Pedal bei jedem neuen Basston, zweimal in jedem Takt."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 25,
+          "text": {
+            "en": "Bring the hand down an octave in the rest. Fingers 3 and 5 take the first third.",
+            "de": "Führ die Hand in der Pause eine Oktave tiefer. Finger 3 und 5 nehmen die erste Terz."
+          }
+        },
+        {
+          "bar": 17,
+          "text": {
+            "en": "The tune jumps up an octave. Use the rest before it to move the hand.",
+            "de": "Die Melodie springt eine Oktave höher. Nutz die Pause davor, um die Hand zu versetzen."
+          }
+        },
+        {
+          "bar": 4,
+          "text": {
+            "en": "Pass the thumb under to G, then let fingers 2, 3, 4 and 5 climb to D.",
+            "de": "Führ den Daumen unter zum G, dann lass Finger 2, 3, 4 und 5 hinauf zum D steigen."
+          }
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/night-on-bald-mountain/legendary.mid",
+      "skills": [
+        "sixteenth-notes",
+        "octave-bass",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [5, 2, 3, 2, 1, 2, 3, 4, 5, 2, 3, 1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 2, 1, 2, 3, 1, 2, 3, 2, 1, 2, 3, 4, 5, 2, 3, 5, 4, 3, 1, 3, 4, 5, 4, 3, 4, 3, 2, 1, 3, 2, 4, 1, 2, 5, 4, 3, 2, 1, 1, 2, 2, 4, 1, 5, 5, 4, 3, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 3, 5, 2, 4, 1, 3, 4, 3, 2, 1, 2, 4, 5, 1, 4, 1, 3, 3, 2, 1, 5, 4, 3, 2, 3, 2, 1, 1, 2, 3, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [62, 64, 65, 67, 69],
+        "left": [45, null, null, null, 33]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the run in bars 4 and 5 with the right hand alone, very slowly.",
+            "de": "Spiel den Lauf in Takt 4 und 5 nur mit der rechten Hand, ganz langsam."
+          },
+          "hands": "right",
+          "speed": 0.4,
+          "loop": [4, 5],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone: the octave, then two quicker notes.",
+            "de": "Spiel die linke Hand allein: die Oktave, dann zwei schnellere Töne."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand's octaves alone. Keep the hand open, with the thumb and little finger ready.",
+            "de": "Spiel die Oktaven der rechten Hand allein. Halt die Hand offen, mit Daumen und kleinem Finger bereit."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [17, 24],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, and let the last chord ring.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "trick",
+          "text": {
+            "en": "The run swirls up and down like the wind. Keep it light and even.",
+            "de": "Der Lauf wirbelt auf und ab wie der Wind. Spiel ihn leicht und gleichmäßig."
+          }
+        },
+        {
+          "fromBar": 17,
+          "toBar": 24,
+          "kind": "sound",
+          "text": {
+            "en": "Let the little finger sing the top note of each octave a little louder.",
+            "de": "Lass den kleinen Finger den oberen Ton jeder Oktave etwas lauter singen."
+          }
+        },
+        {
+          "fromBar": 32,
+          "toBar": 32,
+          "kind": "sound",
+          "text": {
+            "en": "Play the last chord loud, and hold it until the sound fades.",
+            "de": "Spiel den letzten Akkord laut, und halt ihn, bis der Klang verklingt."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 17,
+          "text": {
+            "en": "The octaves begin. Open the hand with the thumb on A and the little finger on the A above.",
+            "de": "Die Oktaven beginnen. Öffne die Hand, mit dem Daumen auf dem A und dem kleinen Finger auf dem A darüber."
+          }
+        },
+        {
+          "bar": 14,
+          "text": {
+            "en": "The left hand opens wide, from the low G up to B flat. Keep the wrist loose.",
+            "de": "Die linke Hand öffnet sich weit, vom tiefen G hinauf zum B. Halt das Handgelenk locker."
+          }
+        },
+        {
+          "bar": 13,
+          "text": {
+            "en": "The left hand jumps from the low D up to A and F. Use the short rest to jump back down.",
+            "de": "Die linke Hand springt vom tiefen D hinauf zu A und F. Nutz die kurze Pause, um zurückzuspringen."
+          }
+        }
+      ]
+    }
+  }
+}

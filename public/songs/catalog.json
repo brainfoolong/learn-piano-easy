@@ -5089,6 +5089,508 @@
     ]
   },
   {
+    "composer": "Gioachino Rossini",
+    "piece": "William Tell Overture",
+    "title": "Beginner",
+    "file": "ours/william-tell/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 48,
+    "high": 76,
+    "seconds": 58,
+    "song": "william-tell",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "William Tell",
+      "Guillaume Tell",
+      "Wilhelm Tell",
+      "March of the Swiss Soldiers"
+    ]
+  },
+  {
+    "composer": "Gioachino Rossini",
+    "piece": "William Tell Overture",
+    "title": "Easy",
+    "file": "ours/william-tell/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 71,
+    "seconds": 69,
+    "song": "william-tell",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "triads"
+    ],
+    "collection": "film",
+    "aka": [
+      "William Tell",
+      "Guillaume Tell",
+      "Wilhelm Tell",
+      "March of the Swiss Soldiers"
+    ]
+  },
+  {
+    "composer": "Gioachino Rossini",
+    "piece": "William Tell Overture",
+    "title": "Medium",
+    "file": "ours/william-tell/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 44,
+    "high": 85,
+    "seconds": 80,
+    "song": "william-tell",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "William Tell",
+      "Guillaume Tell",
+      "Wilhelm Tell",
+      "March of the Swiss Soldiers"
+    ]
+  },
+  {
+    "composer": "Gioachino Rossini",
+    "piece": "William Tell Overture",
+    "title": "Hard",
+    "file": "ours/william-tell/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 30,
+    "high": 85,
+    "seconds": 72,
+    "song": "william-tell",
+    "rarity": "legendary",
+    "skills": [
+      "stride",
+      "octave-bass",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "William Tell",
+      "Guillaume Tell",
+      "Wilhelm Tell",
+      "March of the Swiss Soldiers"
+    ]
+  },
+  {
+    "composer": "Pyotr Ilyich Tchaikovsky",
+    "piece": "Swan Lake",
+    "title": "Beginner",
+    "file": "ours/swan-lake/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 76,
+    "seconds": 58,
+    "song": "swan-lake",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "Schwanensee",
+      "Le Lac des cygnes",
+      "Swan Lake theme",
+      "Op. 20"
+    ]
+  },
+  {
+    "composer": "Pyotr Ilyich Tchaikovsky",
+    "piece": "Swan Lake",
+    "title": "Easy",
+    "file": "ours/swan-lake/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 76,
+    "seconds": 56,
+    "song": "swan-lake",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "waltz-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "Schwanensee",
+      "Le Lac des cygnes",
+      "Swan Lake theme",
+      "Op. 20"
+    ]
+  },
+  {
+    "composer": "Pyotr Ilyich Tchaikovsky",
+    "piece": "Swan Lake",
+    "title": "Medium",
+    "file": "ours/swan-lake/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 78,
+    "seconds": 80,
+    "song": "swan-lake",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Schwanensee",
+      "Le Lac des cygnes",
+      "Swan Lake theme",
+      "Op. 20"
+    ]
+  },
+  {
+    "composer": "Pyotr Ilyich Tchaikovsky",
+    "piece": "Swan Lake",
+    "title": "Hard",
+    "file": "ours/swan-lake/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 78,
+    "seconds": 76,
+    "song": "swan-lake",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Schwanensee",
+      "Le Lac des cygnes",
+      "Swan Lake theme",
+      "Op. 20"
+    ]
+  },
+  {
+    "composer": "Modest Mussorgsky",
+    "piece": "Night on Bald Mountain",
+    "title": "Beginner",
+    "file": "ours/night-on-bald-mountain/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 74,
+    "seconds": 48,
+    "song": "night-on-bald-mountain",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Night on the Bare Mountain",
+      "Eine Nacht auf dem Kahlen Berge",
+      "St. John's Eve on Bald Mountain"
+    ]
+  },
+  {
+    "composer": "Modest Mussorgsky",
+    "piece": "Night on Bald Mountain",
+    "title": "Easy",
+    "file": "ours/night-on-bald-mountain/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 74,
+    "seconds": 64,
+    "song": "night-on-bald-mountain",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "Night on the Bare Mountain",
+      "Eine Nacht auf dem Kahlen Berge",
+      "St. John's Eve on Bald Mountain"
+    ]
+  },
+  {
+    "composer": "Modest Mussorgsky",
+    "piece": "Night on Bald Mountain",
+    "title": "Medium",
+    "file": "ours/night-on-bald-mountain/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 86,
+    "seconds": 69,
+    "song": "night-on-bald-mountain",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Night on the Bare Mountain",
+      "Eine Nacht auf dem Kahlen Berge",
+      "St. John's Eve on Bald Mountain"
+    ]
+  },
+  {
+    "composer": "Modest Mussorgsky",
+    "piece": "Night on Bald Mountain",
+    "title": "Hard",
+    "file": "ours/night-on-bald-mountain/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 86,
+    "seconds": 64,
+    "song": "night-on-bald-mountain",
+    "rarity": "legendary",
+    "skills": [
+      "sixteenth-notes",
+      "octave-bass",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Night on the Bare Mountain",
+      "Eine Nacht auf dem Kahlen Berge",
+      "St. John's Eve on Bald Mountain"
+    ]
+  },
+  {
+    "composer": "Paul Dukas",
+    "piece": "The Sorcerer's Apprentice",
+    "title": "Beginner",
+    "file": "ours/the-sorcerers-apprentice/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 76,
+    "seconds": 26,
+    "song": "the-sorcerers-apprentice",
+    "rarity": "common",
+    "skills": [
+      "held-bass",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'Apprenti sorcier",
+      "Der Zauberlehrling",
+      "Sorcerer's Apprentice"
+    ]
+  },
+  {
+    "composer": "Paul Dukas",
+    "piece": "The Sorcerer's Apprentice",
+    "title": "Easy",
+    "file": "ours/the-sorcerers-apprentice/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 76,
+    "seconds": 27,
+    "song": "the-sorcerers-apprentice",
+    "rarity": "rare",
+    "skills": [
+      "waltz-bass",
+      "eighth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'Apprenti sorcier",
+      "Der Zauberlehrling",
+      "Sorcerer's Apprentice"
+    ]
+  },
+  {
+    "composer": "Paul Dukas",
+    "piece": "The Sorcerer's Apprentice",
+    "title": "Medium",
+    "file": "ours/the-sorcerers-apprentice/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 81,
+    "seconds": 24,
+    "song": "the-sorcerers-apprentice",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'Apprenti sorcier",
+      "Der Zauberlehrling",
+      "Sorcerer's Apprentice"
+    ]
+  },
+  {
+    "composer": "Paul Dukas",
+    "piece": "The Sorcerer's Apprentice",
+    "title": "Hard",
+    "file": "ours/the-sorcerers-apprentice/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 79,
+    "seconds": 23,
+    "song": "the-sorcerers-apprentice",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "sixteenth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'Apprenti sorcier",
+      "Der Zauberlehrling",
+      "Sorcerer's Apprentice"
+    ]
+  },
+  {
+    "composer": "Franz Schubert",
+    "piece": "Ave Maria",
+    "title": "Beginner",
+    "file": "ours/ave-maria/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 76,
+    "seconds": 55,
+    "song": "ave-maria",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ellens dritter Gesang",
+      "Ellen's Third Song",
+      "Schubert Ave Maria",
+      "D. 839"
+    ]
+  },
+  {
+    "composer": "Franz Schubert",
+    "piece": "Ave Maria",
+    "title": "Easy",
+    "file": "ours/ave-maria/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 76,
+    "seconds": 69,
+    "song": "ave-maria",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ellens dritter Gesang",
+      "Ellen's Third Song",
+      "Schubert Ave Maria",
+      "D. 839"
+    ]
+  },
+  {
+    "composer": "Franz Schubert",
+    "piece": "Ave Maria",
+    "title": "Medium",
+    "file": "ours/ave-maria/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 34,
+    "high": 77,
+    "seconds": 77,
+    "song": "ave-maria",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ellens dritter Gesang",
+      "Ellen's Third Song",
+      "Schubert Ave Maria",
+      "D. 839"
+    ]
+  },
+  {
+    "composer": "Franz Schubert",
+    "piece": "Ave Maria",
+    "title": "Hard",
+    "file": "ours/ave-maria/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 27,
+    "high": 77,
+    "seconds": 105,
+    "song": "ave-maria",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ellens dritter Gesang",
+      "Ellen's Third Song",
+      "Schubert Ave Maria",
+      "D. 839"
+    ]
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",
