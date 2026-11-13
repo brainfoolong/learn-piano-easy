@@ -48,7 +48,7 @@ const SONG_NAMES: readonly string[] = [
       "George Frideric Handel", "Franz Xaver Gruber", "Friedrich Schiller", "Leopold Stokowski", "Johann Strauss II",
       "Rimsky-Korsakov", "The Tree of Life", "The Lone Ranger", "Bolshoi Ballet", "Princess Royal", "Max Fleischer",
       "Adolphe Adam", "Mickey Mouse", "Joseph Mohr", "John Stainer", "Scott Joplin", "Silent Night", "O Holy Night",
-      "Yankee Doodle", "William Tell", "Paul Dukas", "Henry Wood", "Black Swan", "Swan Lake", "The Sting", "New Paris",
+      "Yankee Doodle", "William Tell", "Paul Dukas", "Henry Wood", "Black Swan", "Swan Lake", "The Sting", "New Paris", "New London",
       "Má vlast", "Die Hard",
       "God Rest Ye Merry, Gentlemen", "Ihr Kinderlein, kommet", "Kling, Glöckchen, klingelingeling", "Kommet, ihr Hirten",
       "Morgen, Kinder, wird's nichts geben", "Morgen, Kinder, wird's was geben", "Branle de l'Official",

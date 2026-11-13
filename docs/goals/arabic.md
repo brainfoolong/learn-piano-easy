@@ -167,9 +167,15 @@ blind.
 side by side, and three fresh reviewers review them blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.ar.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.ar.ts:1`
+- [ ] One `tools/our-songs/<slug>.ar.ts` per slug from `air-on-the-g-string` to `mozart-21-andante`. `tools/our-songs/alle-jahre-wieder.ar.ts:1`
+  - [x] A work list per slug, 51 slugs of 22 texts each, under `.agent-tmp/i18n/ar/`.
+  - [x] Six writers of eight or nine guides each, since a third of 51 guides overruns a writer's context.
+  - [x] Every Latin word the guides keep is in `src/i18n/typography.ts`.
 - [ ] Each batch reviewed blind, and every finding settled.
+  - [ ] Six blind reviews, one per writer's batch.
+  - [ ] Every *wrong* finding fixed, and each *unnatural* one ruled on.
 - [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ar` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+  - [ ] `bun x tsc` and the build are green.
 
 ### 5. The song guides in Arabic, from n to z
 

@@ -115,7 +115,7 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | bar | مازورة, plural موازير: `المازورة 3` | MS *Measure*; WP *ميزان (موسيقى)* and *مقياس الإيقاع* |
 | bar line | فاصل المازورة | MS *Barlines* «فواصل الموازير» |
 | time signature | الميزان | UC; WP *ميزان (موسيقى)*. The bar is `مازورة`, so `الميزان` stays free |
-| beat (one count of a bar) | نبضة, plural نبضات: `ثلاث نبضات في كل مازورة` | WP *نبضة (موسيقى)*; MET; UC |
+| beat (one count of a bar) | نبضة, plural نبضات: `3 نبضات في كل مازورة` | WP *نبضة (موسيقى)*; MET; UC |
 | hold for two beats | أبقها مضغوطة نبضتين | follows `نبضة` |
 | three-four time | ميزان 3/4 | follows `الميزان` |
 | count-in | العد التمهيدي | unsourced |
@@ -345,15 +345,15 @@ A step that only differs in its bars or its section follows the nearest row's sh
 | Now play it at full speed. | والآن اعزفها بالسرعة الكاملة. |
 | Now play it at full speed, with the pedal. | والآن اعزفها بالسرعة الكاملة، مع الدواسة. |
 | Now play it at full speed, and let the last chord ring. | والآن اعزفها بالسرعة الكاملة، واترك التآلف الأخير يرن. |
-| Join the hands on the first eight bars, slowly. | اعزف أول ثماني موازير باليدين معًا، ببطء. |
-| Put both hands together on the first eight bars, slowly. | اعزف أول ثماني موازير باليدين معًا، ببطء. |
+| Join the hands on the first eight bars, slowly. | اعزف أول 8 موازير باليدين معًا، ببطء. |
+| Put both hands together on the first eight bars, slowly. | اعزف أول 8 موازير باليدين معًا، ببطء. |
 | Put both hands together on the whole song, slowly. | اعزف الأغنية كاملة باليدين معًا، ببطء. |
 | Put both hands together, slowly. | اعزف باليدين معًا، ببطء. |
 | Join the hands on the first verse, slowly. | اعزف المقطع الأول باليدين معًا، ببطء. |
 | Join the hands on the first time through, slowly. | اعزف المرة الأولى باليدين معًا، ببطء. |
 | Join the hands on bars 9 to 16, slowly. | اعزف الموازير من 9 إلى 16 باليدين معًا، ببطء. |
-| Play the first four bars with the right hand alone, and let the song wait for each note. | اعزف أول أربع موازير باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة. |
-| Play the right hand alone on the first eight bars, and let the song wait for each note. | اعزف أول ثماني موازير باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة. |
+| Play the first four bars with the right hand alone, and let the song wait for each note. | اعزف أول 4 موازير باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة. |
+| Play the right hand alone on the first eight bars, and let the song wait for each note. | اعزف أول 8 موازير باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة. |
 | Play bars 1 to 4 with the right hand alone, and let the song wait for each note. | اعزف الموازير من 1 إلى 4 باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة. |
 | Play the right hand alone, slowly, and let the song wait for each note. | اعزف باليد اليمنى وحدها، ببطء، ودع الأغنية تنتظر كل نغمة. |
 | Play the left hand alone, and press the notes of each chord together. | اعزف باليد اليسرى وحدها، واضغط نغمات كل تآلف معًا. |
