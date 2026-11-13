@@ -69,6 +69,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   outside the key in any four bars, and moving the key moves the count with it. Count a tune's
   accidentals before briefing its writer, and swap a chromatic one. `docs/findings.md` § `film-songs`
   records the *Flight of the Bumblebee*'s swap.
+- **An edit of `tools/our-songs/<slug>.<locale>.ts` never reaches the site by itself.** The app reads
+  `public/songs/ours/<slug>/guide.json`, which only `tools/make-our-songs.ts` writes, and the build
+  stays green. Run `bun tools/make-our-songs.ts` after a guide's text changes, and commit its JSON.
 - **Commons' API answers "too many requests" after about twenty quick calls.** A shell `sleep` between
   them is refused by the guard. Pace them in a small Bun script under `.agent-tmp/`, run in the
   background, and fetch files through `Special:FilePath`, which the limit spares.

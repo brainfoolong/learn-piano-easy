@@ -85,6 +85,9 @@ what the `spanish` pilot taught.
   - Digits are Western. CLDR 48 gives `ar` Western digits, so the row's `intl` stays `ar`.
   - The plural forms `zero`, `one` and `two` show no digit: `لا دروس بعد`, `درس واحد`, `درسان`.
     Microsoft § 4.1.12 asks this.
+- **An Android phone's look goes to the backlog.** The loop runs on Windows, and Chromium's phone
+  emulation keeps Windows' fonts, so it cannot show Android's missing glyphs. Chrome on Windows at a
+  phone's width found none.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 2 also waits for `right-to-left`. Stage 6 needs all of
   them.
@@ -200,15 +203,25 @@ side by side, and three fresh reviewers review them blind.
 address or mark that drifts between files.
 **Gate:** `bun run i18n status ar` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `ar` is `shipped`. `src/i18n/locale.ts:18`
-- [ ] The Arabic social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `ar` at every width, not only at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_arabic_site_reads_in_arabic`: `lang`, the switch's *العربية*, a lesson step and the player in Arabic. `e2e/locales.e2e.ts:1`
+- [x] Every drift the reader lists is settled in the files it names.
+  - [x] The 30 catalog texts with nothing to translate, and the finger quiz's answers, are written and stamped.
+  - [x] Five readers, one per slice, list the drifts.
+  - [x] The catalog, the lessons and the guides are fixed, and the guides' JSON is written again.
+  - [x] The style guide records each ruling the read needed.
+- [x] `ar` is `shipped`. `src/i18n/locale-table.ts:54`
+- [x] The Arabic social image. `public/images/social/ar.png`
+- [x] The layout checks run in `ar` at every width, not only at 360 and 1280 pixels. `e2e/layout-check.ts` `passedWidthsOf`
+- [x] Test `the_arabic_site_reads_in_arabic`: `lang`, the switch's *العربية*, a lesson step and the player in Arabic. `e2e/locales.e2e.ts`
 - [ ] Look at every route in `ar` with `bun run shot --locale ar-EG`, on a phone and a desktop, in both themes.
-- [ ] Look at every route mirrored, and check that the music did not mirror.
+  - [x] 48 shots of 12 routes, with no page error.
+  - [ ] The English blocks of `about/`, `imprint/` and `privacy/` read left to right.
+  - [ ] `سريعة` in the setup bubble on a desktop is drawn whole.
+  - [ ] The light shots of modes, profile, about, data, sponsor, imprint and privacy are looked at.
+- [x] Look at every route mirrored, and check that the music did not mirror.
 - [ ] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
-- [ ] The feature list and the README name Arabic. `docs/reference/features.md:1`, `README.md:12`
+  - [x] Chrome on Windows, at phone and desktop widths: no box.
+  - [ ] An Android phone.
+- [x] The feature list and the README name Arabic. `docs/reference/features.md:160`, `README.md:12`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -220,43 +233,55 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. Every catalog section, every lesson and all 80 song guides have their Arabic
-files, reviewed blind and stamped in `src/i18n/stamps/ar.json`. Stage 5's four reviews found four
-*wrong* texts, all fixed: a bare `لا دييز` after a verb and after `إلى`, a spread hand written as
-"stands alone", and a rolled chord written as a turning hand. Two rulings joined the style guide: `لا دييز`
-follows the rules of a bare `لا` (§ 7), and "twice as" is `بضعف` (§ 8). `ar` is not shipped yet.
-`bun x tsc` and the build are green.
+Stages 1 to 5 are done, and stage 6 is nearly done. `ar` ships. `bun tools/i18n.ts status ar` lists 0
+missing and 0 stale of 4480 texts, so the gate holds. The test `the_arabic_site_reads_in_arabic` passed
+once by name, and `bun x tsc` and the build are green.
 
-`bun tools/i18n.ts status ar` lists 31 texts as missing. One is the lesson answers `1`, `3`, `5` of
-`finger-numbers`, left out on purpose. The other 30 are catalog texts with nothing to translate: `siteName`,
-`pages.home.title`, the language names, `Ctrl`, `Alt`, `Shift`, `Meta`, the time signatures, the XP
-goals, and the percent, KB, MB, BPM and FPS formatters. The shipped `hi` lists the same kind.
+- The 30 catalog texts with nothing to translate keep their English form. The percent, KB, MB, BPM and
+  FPS values are isolated whole, so a unit stays on the number's right.
+- Five readers read the whole locale. Every drift they listed is fixed, and the style guide records
+  the rulings. Where a batch ruling and the guide disagreed, the guide won.
+- The social picture `public/images/social/ar.png` is drawn right to left. A right-to-left passed
+  locale runs the layout checks at every width, through `passedWidthsOf` in `e2e/layout-check.ts`.
+- 48 shots of 12 routes in `ar-EG` showed mirrored layouts, unmirrored music, no missing glyph and no
+  page error. They also found the flaws that *Next* lists.
 
 ### Next
 
-**Stage 6: the Arabic site ships.** Its gate asks for no missing text outside `legal`, which the 30
-catalog texts above break.
+**Finish stage 6, then run stage 7.** Three shot flaws stay open, each a checkpoint under stage 6's
+shot item.
 
-- Settle the gate first. Write each of the 30 into its `src/i18n/messages/<section>.ar.ts`, with
-  `formatNumber("ar", …)` in the formatters, then stamp each section with
-  `bun tools/i18n.ts stamp ar catalog/<section>`. `bun tools/i18n.ts work ar catalog/<section>` lists
-  them, as rows whose `state` is `missing`.
-- Then follow stage 6's items in order. The consistency read is one `reader` subagent per third of the
-  files, since 80 guides overrun one reader. Brief it with the glossary and the ten review files'
-  rulings in `.agent-tmp/i18n/ar/review/`.
-- `ar` ships in `src/i18n/locale.ts:18`. Pass `--locale ar-EG` to `tools/shot.ts`.
-- A writer who types an isolate follows the playbook's first *Tooling* bullet, which this stage corrected.
+- **English blocks on an Arabic page read right to left.** The MIT License text on `about/`, and the
+  English bodies of `imprint/` and `privacy/`, take the page's `rtl`, so each period jumps to the
+  line's left end. The fix is `lang="en" dir="ltr"` on each English block where the page's locale
+  lacks its text. Find where the legal pages fall back to English, and where `about/` prints the
+  license. Hindi never showed this, since it is left to right. Add an assertion to
+  `the_arabic_site_reads_in_arabic` that such a block has `dir="ltr"`.
+- **`سريعة` shows as `سر يعة` in the setup bubble, on a desktop only.** The bubble is in
+  `src/learn/onboarding.ts`. Look for a per-letter reveal or a `letter-spacing`, either of which
+  breaks the joined letters. The phone view draws it whole.
+- **The light shots** of modes, profile, about, data, sponsor, imprint and privacy are not looked at
+  yet. Take them with `bun run shot --locale ar-EG --scheme light`.
+- Then look again at `about/`, `imprint/`, `privacy/` and the setup bubble, and tick stage 6.
+- An Android phone cannot be checked from this machine. Its checkpoint goes to the backlog when
+  stage 6 closes, as the standing decision says.
+- Stage 7 runs `looper verify` once over the goal. Every check runs then, from the layout checks at
+  every width in `ar` to the translation rules.
 
-Expected red: none until `ar` ships. Once it does, `the_arabic_site_reads_in_arabic` is red until its
-test is written.
+Expected red: none known. The layout checks of `ar` now run at four widths, so
+`every_page_passes_the_layout_checks_in_ar` may find a flaw at 768 or 1920 pixels that no session
+has looked at.
 
 ### Backlog
 
 - A native Arabic speaker's read of the course would catch what a blind review cannot.
 - No Arabic piano method was reachable. The guide's *Open* lists the terms a teacher should confirm.
-- Stage 6's consistency read checks the Arabic Wikipedia spelling of Sullivan, Praetorius, Leontovych,
-  Saint-Saëns, Mussorgsky (`موسورسكي`), Dukas (`بول دوكا`) and Mendelssohn (`مندلسون`). It also checks
-  whether Adolphe Adam has an article, so `o-holy-night` would take his Arabic name. The reviewers
-  could not check them, so the guides keep their current spelling.
-- Round is `كانون`, glossed `تُغنّى دائريًا (كانون)` at its first use. Synthesizer, ragtime, scherzo,
-  mordent and oratorio took loanwords that the glossary lacks. Stage 6's read adds them to it.
+- An Android phone's look at the Arabic site, for missing glyphs in its system font.
+- The Arabic Wikipedia spelling of Sullivan, Praetorius, Leontovych, Saint-Saëns, Mussorgsky
+  (`موسورسكي`), Dukas (`بول دوكا`), Mendelssohn (`مندلسون`) and Pachelbel (`باخلبل`) is unchecked. So is
+  whether Adolphe Adam has an article. No session could reach the wiki, so the guides keep their spelling.
+- The shots found two flaws that are not Arabic's own. On a phone, the player's notes stick out above
+  the note lane, and its bar numbers are nearly clipped at the left edge. On `learn/`, closing the
+  setup dialog with Escape leaves the page scrolled under the top bar.
+- `carol-of-the-bells.ar.ts:42` says the left hand `تترك` C, where the English means it leaves C out.
+  `تحذف` may read plainer.
