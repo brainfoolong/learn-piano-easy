@@ -38,7 +38,7 @@ test("build_writes_a_page_per_route_and_locale", async () => {
     expect(result.files).toContain(page.file);
     expect(result.shell).toContain(page.file);
     const html = await Bun.file(join(outDir, page.file)).text();
-    expect(html).toContain(`<html lang="${rowOf(page.locale).lang}">`);
+    expect(html).toContain(`<html lang="${rowOf(page.locale).lang}" dir="${rowOf(page.locale).dir}">`);
     expect(html).toContain(`<title>${pageTitle(page)}</title>`);
     // The base climbs to the site's root, and every asset resolves from there.
     expect(html).toContain(`<base href="${page.base}" />`);

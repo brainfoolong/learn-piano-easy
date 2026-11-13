@@ -9,7 +9,8 @@
  *   when it arrives in time and in the fallback otherwise. A late swap would move every text below one
  *   that wraps differently in the two faces.
  * - **The fallback face is Arial,** scaled to the font's mean letter width and set to its ascent and
- *   descent. A page drawn in it keeps nearly every size and line break of the font.
+ *   descent. A page drawn in it keeps nearly every size and line break of the font. Its
+ *   `unicode-range` is the Latin, the digits and the signs, so a letter of another script skips it.
  *
  * The reset sits in the `reset` layer and the base styles in `base`, so every component overrides them
  * without a stronger selector. Each script's font stack and line heights are tokens, and its line rules
@@ -30,6 +31,7 @@
   ascent-override: 98.79%;
   descent-override: 21.13%;
   line-gap-override: 0%;
+  unicode-range: U+0000-024F, U+0300-036F, U+1E00-1EFF, U+2000-22FF;
 }
 
 @layer reset {

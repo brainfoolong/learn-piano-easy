@@ -206,8 +206,8 @@
    * Each script's font stack and line heights, by the page's `lang`. No font is shipped for them, so
    * each names the system fonts of Windows, macOS, Android and Linux. Latin and its digits still draw in
    * Plus Jakarta Sans, which holds no glyph of these scripts. While it loads, they draw in its fallback
-   * face of matched metrics, so a number keeps its box. That face is Arial or its likes, which hold no
-   * Han, Devanagari or Bengali. They do hold Arabic, so Arabic and Urdu skip it. Han names its
+   * face of matched metrics, so a number keeps its box. That face is Arial or its likes, limited to
+   * Latin, so an Arabic letter skips it for its own script's font. Han names its
    * locale's fonts, because Chinese and Japanese draw the same character differently. Devanagari,
    * Bengali and Nastaliq reach far above and below the line, so they get the most room.
    */
@@ -236,13 +236,13 @@
   }
 
   :root:lang(ar) {
-    --font-sans: "Plus Jakarta Sans", "Segoe UI", "Geeza Pro", "Noto Sans Arabic", "Tahoma", sans-serif;
+    --font-sans: "Plus Jakarta Sans", "Plus Jakarta Sans Fallback", "Segoe UI", "Geeza Pro", "Noto Sans Arabic", "Tahoma", sans-serif;
     --lh-body: 1.75;
     --lh-heading: 1.35;
   }
 
   :root:lang(ur) {
-    --font-sans: "Plus Jakarta Sans", "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", "Segoe UI", "Noto Sans Arabic", sans-serif;
+    --font-sans: "Plus Jakarta Sans", "Plus Jakarta Sans Fallback", "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", "Segoe UI", "Noto Sans Arabic", sans-serif;
     --lh-body: 2.1;
     --lh-heading: 1.7;
   }
