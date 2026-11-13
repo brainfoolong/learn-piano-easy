@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "The song guides in Indonesian, from n to z"
-    status: open
+    status: done
   - id: 6
     title: The Indonesian site ships
     status: open
@@ -90,6 +90,9 @@ keeps to the standard language without sounding stiff. The method in
   English shows. A mark that stands in an answer with other answers takes *Tanda* before it: *Tanda rit.*
 - **A dialog's title keeps the glossary's short form,** even where a reviewer proposes a longer, clearer
   one. *File tanpa internet* stays the title of the offline files.
+- **A missing text that reads the same in Indonesian stays missing,** and the English shows. Examples
+  are a note letter, a time signature, a language's own name, *Zoom* and *XP*. The 73 missing texts of
+  `bun tools/i18n.ts status id` are all of this kind, so stage 6's gate counts only stale texts.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -170,9 +173,9 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.id.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.id.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp id` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+- [x] One `tools/our-songs/<slug>.id.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.id.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp id` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
 ### 6. The Indonesian site ships
 
@@ -199,39 +202,43 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 4 are done. The site, the player and the course were done before. Each of the 51 song
-guides from `air-on-the-g-string` to `mozart-21-andante` has its `tools/our-songs/<slug>.id.ts`. Each
-also has its `public/songs/ours/<slug>/guide.json` and its stamps in `src/i18n/stamps/id.json`.
-`bun x tsc` and `indonesian_texts_keep_their_rules` pass.
+Stages 1 to 5 are done. Every text of the site, the player, the course and all 80 song guides is
+translated, reviewed blind and stamped. `bun tools/i18n.ts status id` lists 0 stale and 73 missing.
+The missing texts read the same in Indonesian, as the standing decision says. `bun x tsc`, the build
+and `indonesian_texts_keep_their_rules` pass.
 
-Seven writers worked side by side, and seven blind reviewers followed. They found 43 findings, and 7 of
-them were *wrong*. The *wrong* ones were a lost "long", a crescendo read as a fixed level, an
-instruction turned into a fact, a choir named for a choral movement, five quarters of rest read as five rest signs, an E put "right below" a note a
-fourth away, and *anggun* for "proud". Every finding is applied. The three fixes of more than one word
-passed a narrow blind check, as the new standing decision says.
+Stage 5's four blind reviews found 29 findings, and 8 were *wrong*. Five were one pattern: "pass the
+thumb under" had become the statement *ibu jari menyusup*. A sweep of all guides fixed four more to
+*susupkan ibu jari*, and two texts that began with *naiki*. The glossary gained the instruction forms,
+*puisi simfonis*, *lemas* for a loose wrist and *naik melalui* for a climb through notes.
 
-The glossary gained *orgel* for the church organ, *Kanak-kanak Yesus* and *gerakan* for a hand's move.
-The batches had mixed *organ* and *Kanak-kanak Kristus*, and both are unified. The rule test's slang
-pattern refuses *gua*, which also means a cave, so *Hall of the Mountain King* writes *liang batu*.
+Stage 2 had never listed `id` in `src/i18n/all-catalogs.ts`. The status tool, the stamps and the rule
+test therefore never saw the Indonesian catalogs. It is listed and every catalog is stamped. The rule
+test then caught two texts, which are fixed. The slang pattern in `src/i18n/typography.ts` now treats
+a lyric's `|` as part of a word.
 
 ### Next
 
-**Stage 5: the 29 song guides from `neon-chase` to `yankee-doodle`.** `bun tools/i18n.ts status id`
-lists them as `guide/<slug>` units. Run `bun tools/i18n.ts work id guide/<slug>` for each, which writes
-`.agent-tmp/i18n/id/guide-<slug>.json`. Four writers of at most eight guides go side by side, in slug
-order. A guide is `tools/our-songs/<slug>.id.ts`, and each `.pt.ts` sibling is the code shape to copy.
+**Stage 6: the Indonesian site ships.** The gate holds: no stale text, and the missing ones are kept on
+purpose.
 
-- A writer's brief: read `docs/reference/translation/id.md` whole. Translate the English of the work
-  list, and keep every list's length and every tricky bar. Use Write only, and never build or test.
-  Report the terms the glossary lacks.
-- A reviewer's brief: compare `<slug>.ts` with `<slug>.id.ts` blind. Write one line per finding to
-  `.agent-tmp/i18n/id/review-<batch>.md`: slug, path, *wrong*, *term* or *style*, the problem and the
-  full proposed text. The session applies the findings.
-- Compare the writers' reported terms across batches, and unify any that drift.
-- Then run `bun x tsc` and `bun test src/i18n/translation-rules.test.ts -t indonesian`.
-- Run `bun tools/make-our-songs.ts` and commit each `public/songs/ours/<slug>/guide.json`, then stamp.
+- A fresh `reader` subagent reads every Indonesian file against `docs/reference/translation/id.md`.
+  These are `src/i18n/messages/*.id.ts`, `src/i18n/messages/id.ts`, `src/learn/lessons/*/*.id.ts` and
+  `tools/our-songs/*.id.ts`. It lists each term, address or mark that drifts between files. Split
+  it in two: the catalogs and lessons, then the guides.
+- Settle each drift in its file. Rerun `bun tools/make-our-songs.ts` after any guide edit, and commit
+  its JSON.
+- Set `shipped: true` in the `id` row of `src/i18n/locale-table.ts:56`.
+- Run `bun tools/make-social-image.ts` once `id` ships, since it draws one image per shipped locale.
+  Commit the image. Confirm that `e2e/layout-check.ts` runs `id` at 360 and 1280 pixels.
+- Write the test `the_indonesian_site_reads_in_indonesian` in `e2e/locales.e2e.ts`, after the Portuguese
+  one.
+- Look at every route with `bun run shot --locale id-ID`, on a phone and a desktop, in both themes.
+- Name Indonesian in `docs/reference/features.md` and `README.md:12`.
 
-Expected red: none.
+Expected red: tests that count the shipped locales may need `id` once it ships. These are in
+`src/i18n/i18n.test.ts`, `src/i18n/untranslated.test.ts` and the e2e files that read
+`src/i18n/all-catalogs.ts`.
 
 ### Backlog
 

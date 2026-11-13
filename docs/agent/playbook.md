@@ -141,6 +141,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **An Indonesian rule pattern can refuse a standard word.** The slang pattern in `src/i18n/typography.ts`
   refuses *gua*, which also means a cave. The plural pattern refuses a digit before *masing-masing*.
   Reword the text, as `tools/our-songs/hall-of-the-mountain-king.id.ts` does.
+- **A locale's catalogs are invisible to the tools until `src/i18n/all-catalogs.ts` lists them.** The
+  status tool counts them missing, `stamp` writes nothing, and the rules test skips them, all without
+  an error. List the locale there in the commit that adds its first catalog file.
 
 ## Rendering
 
