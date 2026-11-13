@@ -14,6 +14,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **`bun run shot` on a page of the default locale may show it in German.** The site moves a first
   visit to the browser's language, which follows the system's. Pass `--locale en-US` or
   `--locale de-DE` to `tools/shot.ts` for each locale you look at.
+- **`bun run preview` fails with `EADDRINUSE` after a full build.** Another server may hold port 4173.
+  Run `bun tools/dev.ts --preview --port 0 --no-tls --out .agent-tmp/<goal>` in the background. Pass
+  its `Local:` URL to `--base` of `tools/shot.ts`, so each shot skips its own build.
 - **A query in `--base` of `tools/shot.ts` never reaches the page.** The tool opens `--path` resolved
   against the base, and resolving `./` drops the query. Put the query in `--path`, such as
   `--path "./?phrase=chords"`.
