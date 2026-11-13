@@ -74,6 +74,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   modules lands, since an unchecked `patterns[chord]` passed to a function is refused.
 - **Hymnary.org refuses a plain `curl`.** A browser user agent to get past it is denied as bot-check
   circumvention. Take a tune's notes from Wikipedia's `<score>` blocks for `tools/our-songs/`.
+- **The Read tool cannot open a scanned score's PDF on this machine.** It needs `pdftoppm`, which is
+  not installed. Render the page with Ghostscript (`gswin64c -sDEVICE=pnggray -r150 -dFirstPage=<n>`)
+  under `.agent-tmp/`, crop it with `magick`, and read the PNG.
 - **A new landing picture's first run of `tools/landing-pictures.ts` fails on a 404.** The page asks
   for the picture the run is about to make, and `tools/shot.ts` exits 1 on that error. Copy an
   existing picture under each new name first, then run the tool over the copies.

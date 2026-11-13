@@ -77,6 +77,11 @@ import { angelsWeHaveHeardOnHigh } from "./our-songs/angels-we-have-heard-on-hig
 import { awayInAManger } from "./our-songs/away-in-a-manger";
 import { carolOfTheBells } from "./our-songs/carol-of-the-bells";
 import { clairDeLune } from "./our-songs/clair-de-lune";
+import { moonlightSonata } from "./our-songs/moonlight-sonata";
+import { beethoven7Allegretto } from "./our-songs/beethoven-7-allegretto";
+import { gymnopedie1 } from "./our-songs/gymnopedie-1";
+import { hungarianDance5 } from "./our-songs/hungarian-dance-5";
+import { eineKleineNachtmusik } from "./our-songs/eine-kleine-nachtmusik";
 import { deckTheHalls } from "./our-songs/deck-the-halls";
 import { diesIrae } from "./our-songs/dies-irae";
 import { dingDongMerrilyOnHigh } from "./our-songs/ding-dong-merrily-on-high";
@@ -261,6 +266,11 @@ export const ourSongs: readonly OurSong[] = [
   habanera,
   diesIrae,
   clairDeLune,
+  moonlightSonata,
+  beethoven7Allegretto,
+  gymnopedie1,
+  hungarianDance5,
+  eineKleineNachtmusik,
 ];
 
 /** The version `rarity` of `song` as a song of the notation. */

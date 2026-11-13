@@ -242,3 +242,28 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `clair-de-lune/epic.mid` | Clair de lune, Medium | Claude Debussy | MIT |
 | `clair-de-lune/legendary.mid` | Clair de lune, Hard | Claude Debussy | MIT |
 | `clair-de-lune/guide.json` | Clair de lune, the guide | | MIT |
+| `moonlight-sonata/common.mid` | Moonlight Sonata, Beginner | Ludwig van Beethoven | MIT |
+| `moonlight-sonata/rare.mid` | Moonlight Sonata, Easy | Ludwig van Beethoven | MIT |
+| `moonlight-sonata/epic.mid` | Moonlight Sonata, Medium | Ludwig van Beethoven | MIT |
+| `moonlight-sonata/legendary.mid` | Moonlight Sonata, Hard | Ludwig van Beethoven | MIT |
+| `moonlight-sonata/guide.json` | Moonlight Sonata, the guide | | MIT |
+| `beethoven-7-allegretto/common.mid` | Symphony No. 7: Allegretto, Beginner | Ludwig van Beethoven | MIT |
+| `beethoven-7-allegretto/rare.mid` | Symphony No. 7: Allegretto, Easy | Ludwig van Beethoven | MIT |
+| `beethoven-7-allegretto/epic.mid` | Symphony No. 7: Allegretto, Medium | Ludwig van Beethoven | MIT |
+| `beethoven-7-allegretto/legendary.mid` | Symphony No. 7: Allegretto, Hard | Ludwig van Beethoven | MIT |
+| `beethoven-7-allegretto/guide.json` | Symphony No. 7: Allegretto, the guide | | MIT |
+| `gymnopedie-1/common.mid` | Gymnopédie No. 1, Beginner | Erik Satie | MIT |
+| `gymnopedie-1/rare.mid` | Gymnopédie No. 1, Easy | Erik Satie | MIT |
+| `gymnopedie-1/epic.mid` | Gymnopédie No. 1, Medium | Erik Satie | MIT |
+| `gymnopedie-1/legendary.mid` | Gymnopédie No. 1, Hard | Erik Satie | MIT |
+| `gymnopedie-1/guide.json` | Gymnopédie No. 1, the guide | | MIT |
+| `hungarian-dance-5/common.mid` | Hungarian Dance No. 5, Beginner | Johannes Brahms | MIT |
+| `hungarian-dance-5/rare.mid` | Hungarian Dance No. 5, Easy | Johannes Brahms | MIT |
+| `hungarian-dance-5/epic.mid` | Hungarian Dance No. 5, Medium | Johannes Brahms | MIT |
+| `hungarian-dance-5/legendary.mid` | Hungarian Dance No. 5, Hard | Johannes Brahms | MIT |
+| `hungarian-dance-5/guide.json` | Hungarian Dance No. 5, the guide | | MIT |
+| `eine-kleine-nachtmusik/common.mid` | Eine kleine Nachtmusik, Beginner | Wolfgang Amadeus Mozart | MIT |
+| `eine-kleine-nachtmusik/rare.mid` | Eine kleine Nachtmusik, Easy | Wolfgang Amadeus Mozart | MIT |
+| `eine-kleine-nachtmusik/epic.mid` | Eine kleine Nachtmusik, Medium | Wolfgang Amadeus Mozart | MIT |
+| `eine-kleine-nachtmusik/legendary.mid` | Eine kleine Nachtmusik, Hard | Wolfgang Amadeus Mozart | MIT |
+| `eine-kleine-nachtmusik/guide.json` | Eine kleine Nachtmusik, the guide | | MIT |

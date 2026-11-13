@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: "Five film pieces: Moonlight Sonata to Eine kleine Nachtmusik"
-    status: open
+    status: done
   - id: 4
     title: "Five film pieces: Lacrimosa to Sarabande"
     status: open
@@ -106,6 +106,16 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
 - **The sources of stage 2.** Mutopia's piano reduction gives *The Blue Danube*, transposed to C, so
   the tune moves back to D. Mutopia's Fromont edition gives *Clair de lune*. Wikipedia's `<score>`
   blocks give *Dies irae*, *Habanera* and the dawn motif of *Also sprach Zarathustra*.
+- **The sources of stage 3.** Mutopia's Winterberger edition gives the *Moonlight Sonata*'s melody,
+  source bars 5 to 9. Wikipedia's `<score>` blocks give the Allegretto's opening chords, the
+  *Gymnopédie*'s first phrase and the serenade's first theme. Commons' scan of Satie's own print
+  confirms the *Gymnopédie*.
+- ***Hungarian Dance No. 5* is read from a Commons scan.** No wiki prints it and Mutopia holds no
+  Hungarian Dance. Commons holds Augener's piano solo edition, Moszkowski's arrangement, as a PDF.
+  Ghostscript renders its page 21, and the tune is the first four bars' melody alone.
+- **A tune the print gives only four bars of stays four bars.** The *Gymnopédie*, *Hungarian Dance
+  No. 5* and the serenade play their phrase, then bars of our own over the print's chords. No later
+  passage is quoted from memory.
 - **A tune whose leaps break Beginner's or Easy's position limit is cut to its hook phrase.** The meter
   finds those versions' tune in the right hand alone, and allows two moves in eight bars. *The Blue
   Danube* drops more than an octave every four bars, so its tune is bars 1 to 5. After the hook, Beginner
@@ -170,6 +180,14 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
   read. *Memory:* the offline cache grows by about 1.2 MB, from about 31 KB per song. *Usability:* a
   learner finds film music under one name, and no protected theme they ask for. *Simplicity:* one
   flag, `own`, joins the source model, and nothing else in the model changes.
+- **Medium and Hard move a tune whose key has more sharps or flats than they allow.** Medium allows 3
+  and Hard 4, so a tune of four moves for Medium alone. The meter refused every Medium of a tune in
+  C-sharp minor before, since it let a tune move only past 4. No song of ours changes its verdict.
+- **A tune keeps its print's key, even when every version moves it.** The *Moonlight Sonata*'s tune is
+  C-sharp minor. Beginner, Easy and Medium play it in D minor, and Hard in the print's own key.
+- **A tune with notes shorter than a quarter is written in longer lengths,** in a bar of 4/1 or 2/1.
+  The meter matches the hook by its place in quarters, and Beginner allows nothing shorter. Every
+  length keeps its proportion to the print's.
 - Lanes: stages run in order. Every stage edits `ourSongs` in `tools/make-our-songs.ts` and rewrites
   the catalog.
 
@@ -212,12 +230,16 @@ in the first.
 
 **Split:** five writing subagents, one module each.
 
-- [ ] *Moonlight Sonata*, with its Original. `tools/our-songs/moonlight-sonata.ts:1`
-- [ ] Symphony No. 7, Allegretto. `tools/our-songs/beethoven-7-allegretto.ts:1`
-- [ ] *Gymnopédie No. 1*. `tools/our-songs/gymnopedie-1.ts:1`
-- [ ] *Hungarian Dance No. 5*. `tools/our-songs/hungarian-dance-5.ts:1`
-- [ ] *Eine kleine Nachtmusik*. `tools/our-songs/eine-kleine-nachtmusik.ts:1`
-- [ ] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [x] *Moonlight Sonata*, with its Original. `tools/our-songs/moonlight-sonata.ts:1`
+- [x] Symphony No. 7, Allegretto. `tools/our-songs/beethoven-7-allegretto.ts:1`
+- [x] *Gymnopédie No. 1*. `tools/our-songs/gymnopedie-1.ts:1`
+- [x] *Hungarian Dance No. 5*. `tools/our-songs/hungarian-dance-5.ts:1`
+- [x] *Eine kleine Nachtmusik*. `tools/our-songs/eine-kleine-nachtmusik.ts:1`
+- [x] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+  - [x] Each tune is compared note for note with its printed score.
+  - [x] The five modules join `ourSongs`, and the writer accepts them.
+  - [x] `bun x tsc` and the build are green.
+  - [x] The catalog count test reads 593.
 
 ### 4. Five film pieces: Lacrimosa to Sarabande
 
@@ -308,28 +330,30 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 and 2 are done. *Also sprach Zarathustra*, *The Blue Danube*, *Habanera*, *Dies irae* and
-*Clair de lune* ship in four versions, and the catalog holds 573 rows. *Habanera* replaced *Ride of the
-Valkyries*, whose score no allowed source prints. Each tune was compared note for note with its
-source, as the standing decisions list. Two tunes were cut short so Beginner and Easy fit the meter's
-limit of two hand moves in eight bars. `tsc` and the build are green. The catalog count test and
+Stages 1 to 3 are done. Ten film pieces ship in four versions, and the catalog holds 593 rows.
+Stage 3 added the *Moonlight Sonata*, the Allegretto, *Gymnopédie No. 1*, *Hungarian Dance No. 5* and
+*Eine kleine Nachtmusik*. Each tune was compared note for note with the score the standing decisions
+name. The meter now lets Medium move a tune of four sharps or flats, so the *Moonlight Sonata*'s tune
+keeps C-sharp minor. `tsc` and the build are green. The catalog count test,
 `every_film_song_is_in_the_collection` and `every_guide_is_complete` passed once by name.
 
 ### Next
 
-**Stage 3: five film pieces, *Moonlight Sonata* to *Eine kleine Nachtmusik*.** Follow the stage's
-`**Split:**` line, and work in a worktree under `.agent-tmp/`.
+**Stage 4: five film pieces, *Lacrimosa* to *Sarabande*.** Follow the stage's `**Split:**` line, and
+work in a worktree under `.agent-tmp/`.
 
-- [ ] Read each score on Mutopia or Wikipedia, and confirm its years. `tools/our-songs/clair-de-lune.ts:1`
-- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/the-blue-danube.ts:1`
+- [ ] Read each score on Mutopia or Wikipedia, and confirm its years. `tools/our-songs/gymnopedie-1.ts:1`
+- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/hungarian-dance-5.ts:1`
 - [ ] Five writing subagents, one module each. `tools/our-songs/fur-elise.ts:1`
-- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:216`
+- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:221`
 
-Mutopia's search is `cgibin/make-table.cgi?searchingfor=<word>`. Each brief gives the tune as notation
-text with its hook bars, and names the limit of two hand moves in eight bars. The *Moonlight Sonata*
-names `piano-midi/mond_1.mid` as its Original.
+Mutopia's search is `cgibin/make-table.cgi?searchingfor=<word>`, and a composer's list is
+`make-table.cgi?Composer=<id>`, such as `MozartWA` or `BachJS`. Each brief gives the tune as notation
+text with its hook bars, the print's chords, and the limit of two hand moves in eight bars. Tell each
+writer that a tune with notes shorter than a quarter is written in longer lengths, as
+`tools/our-songs/moonlight-sonata.ts` does. Check every fun fact a writer adds against the article.
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 573 to 593. The e2e test
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 593 to 613. The e2e test
 `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once the film group
 outgrows one view.
 

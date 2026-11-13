@@ -4116,6 +4116,480 @@
     "collection": "film"
   },
   {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Moonlight Sonata",
+    "title": "Beginner",
+    "file": "ours/moonlight-sonata/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 72,
+    "seconds": 55,
+    "song": "moonlight-sonata",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "open-fifths"
+    ],
+    "mythic": "piano-midi/mond_1.mid",
+    "collection": "film",
+    "aka": [
+      "Mondscheinsonate",
+      "Piano Sonata No. 14"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Moonlight Sonata",
+    "title": "Easy",
+    "file": "ours/moonlight-sonata/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 84,
+    "seconds": 84,
+    "song": "moonlight-sonata",
+    "rarity": "rare",
+    "skills": [
+      "pedal",
+      "position-change"
+    ],
+    "mythic": "piano-midi/mond_1.mid",
+    "collection": "film",
+    "aka": [
+      "Mondscheinsonate",
+      "Piano Sonata No. 14"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Moonlight Sonata",
+    "title": "Medium",
+    "file": "ours/moonlight-sonata/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 72,
+    "seconds": 104,
+    "song": "moonlight-sonata",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "mythic": "piano-midi/mond_1.mid",
+    "collection": "film",
+    "aka": [
+      "Mondscheinsonate",
+      "Piano Sonata No. 14"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Moonlight Sonata",
+    "title": "Hard",
+    "file": "ours/moonlight-sonata/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 88,
+    "seconds": 88,
+    "song": "moonlight-sonata",
+    "rarity": "legendary",
+    "skills": [
+      "arpeggios",
+      "melody-in-chords",
+      "hand-crossing"
+    ],
+    "mythic": "piano-midi/mond_1.mid",
+    "collection": "film",
+    "aka": [
+      "Mondscheinsonate",
+      "Piano Sonata No. 14"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 7: Allegretto",
+    "title": "Beginner",
+    "file": "ours/beethoven-7-allegretto/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 71,
+    "seconds": 24,
+    "song": "beethoven-7-allegretto",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven 7",
+      "Symphony No. 7"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 7: Allegretto",
+    "title": "Easy",
+    "file": "ours/beethoven-7-allegretto/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 71,
+    "seconds": 36,
+    "song": "beethoven-7-allegretto",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "pedal",
+      "two-note-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven 7",
+      "Symphony No. 7"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 7: Allegretto",
+    "title": "Medium",
+    "file": "ours/beethoven-7-allegretto/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 69,
+    "seconds": 35,
+    "song": "beethoven-7-allegretto",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thirds-and-sixths",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven 7",
+      "Symphony No. 7"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 7: Allegretto",
+    "title": "Hard",
+    "file": "ours/beethoven-7-allegretto/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 81,
+    "seconds": 33,
+    "song": "beethoven-7-allegretto",
+    "rarity": "legendary",
+    "skills": [
+      "melody-in-chords",
+      "octave-bass",
+      "arpeggios"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven 7",
+      "Symphony No. 7"
+    ]
+  },
+  {
+    "composer": "Erik Satie",
+    "piece": "Gymnopédie No. 1",
+    "title": "Beginner",
+    "file": "ours/gymnopedie-1/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 79,
+    "seconds": 35,
+    "song": "gymnopedie-1",
+    "rarity": "common",
+    "skills": [
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Gymnopedie No. 1",
+      "Gymnopédie"
+    ]
+  },
+  {
+    "composer": "Erik Satie",
+    "piece": "Gymnopédie No. 1",
+    "title": "Easy",
+    "file": "ours/gymnopedie-1/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 48,
+    "high": 79,
+    "seconds": 42,
+    "song": "gymnopedie-1",
+    "rarity": "rare",
+    "skills": [
+      "waltz-bass",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Gymnopedie No. 1",
+      "Gymnopédie"
+    ]
+  },
+  {
+    "composer": "Erik Satie",
+    "piece": "Gymnopédie No. 1",
+    "title": "Medium",
+    "file": "ours/gymnopedie-1/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 81,
+    "seconds": 40,
+    "song": "gymnopedie-1",
+    "rarity": "epic",
+    "skills": [
+      "waltz-bass",
+      "thirds-and-sixths",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Gymnopedie No. 1",
+      "Gymnopédie"
+    ]
+  },
+  {
+    "composer": "Erik Satie",
+    "piece": "Gymnopédie No. 1",
+    "title": "Hard",
+    "file": "ours/gymnopedie-1/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 86,
+    "seconds": 38,
+    "song": "gymnopedie-1",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Gymnopedie No. 1",
+      "Gymnopédie"
+    ]
+  },
+  {
+    "composer": "Johannes Brahms",
+    "piece": "Hungarian Dance No. 5",
+    "title": "Beginner",
+    "file": "ours/hungarian-dance-5/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 72,
+    "seconds": 24,
+    "song": "hungarian-dance-5",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ungarischer Tanz Nr. 5"
+    ]
+  },
+  {
+    "composer": "Johannes Brahms",
+    "piece": "Hungarian Dance No. 5",
+    "title": "Easy",
+    "file": "ours/hungarian-dance-5/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 84,
+    "seconds": 38,
+    "song": "hungarian-dance-5",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ungarischer Tanz Nr. 5"
+    ]
+  },
+  {
+    "composer": "Johannes Brahms",
+    "piece": "Hungarian Dance No. 5",
+    "title": "Medium",
+    "file": "ours/hungarian-dance-5/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 81,
+    "seconds": 27,
+    "song": "hungarian-dance-5",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thirds-and-sixths",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ungarischer Tanz Nr. 5"
+    ]
+  },
+  {
+    "composer": "Johannes Brahms",
+    "piece": "Hungarian Dance No. 5",
+    "title": "Hard",
+    "file": "ours/hungarian-dance-5/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 30,
+    "high": 83,
+    "seconds": 17,
+    "song": "hungarian-dance-5",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords",
+      "stride"
+    ],
+    "collection": "film",
+    "aka": [
+      "Ungarischer Tanz Nr. 5"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Eine kleine Nachtmusik",
+    "title": "Beginner",
+    "file": "ours/eine-kleine-nachtmusik/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 86,
+    "seconds": 34,
+    "song": "eine-kleine-nachtmusik",
+    "rarity": "common",
+    "skills": [
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "A Little Night Music",
+      "Serenade No. 13"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Eine kleine Nachtmusik",
+    "title": "Easy",
+    "file": "ours/eine-kleine-nachtmusik/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 86,
+    "seconds": 34,
+    "song": "eine-kleine-nachtmusik",
+    "rarity": "rare",
+    "skills": [
+      "eighth-notes",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "A Little Night Music",
+      "Serenade No. 13"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Eine kleine Nachtmusik",
+    "title": "Medium",
+    "file": "ours/eine-kleine-nachtmusik/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 42,
+    "high": 86,
+    "seconds": 44,
+    "song": "eine-kleine-nachtmusik",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thirds-and-sixths",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "A Little Night Music",
+      "Serenade No. 13"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Eine kleine Nachtmusik",
+    "title": "Hard",
+    "file": "ours/eine-kleine-nachtmusik/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 86,
+    "seconds": 30,
+    "song": "eine-kleine-nachtmusik",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "sixteenth-notes",
+      "thumb-under"
+    ],
+    "collection": "film",
+    "aka": [
+      "A Little Night Music",
+      "Serenade No. 13"
+    ]
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",
