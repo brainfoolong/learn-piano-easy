@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Chinese site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -79,6 +79,10 @@ Latin. It puts no space between words, uses full-width marks and has no plural f
   and its writer adds the title to the `kept` list.
 - **The rules test counts a kept word only where no Latin letter touches it.** Stage 1 made this change,
   so the syllable `re` never cuts into an English word.
+- **Stage 6's gate counts a deliberate copy as met.** `bun run i18n status zh` lists 72 texts whose
+  Chinese equals the English: note letters, kept units, endonyms and numbers. Spanish shipped the same way.
+- **The guides keep a person's Latin name where no usual Chinese name was confirmed.** The stage 6
+  readers suggested Chinese forms from memory only. A name changes when Chinese Wikipedia confirms it.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -164,14 +168,18 @@ subagents review them blind. Thirteen guides fill about 120k tokens of a writer'
 address or mark that drifts between files.
 **Gate:** `bun run i18n status zh` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `zh` is `shipped`. `src/i18n/locale.ts:18`
-- [ ] The Chinese social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `zh` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_chinese_site_reads_in_chinese`: `lang`, the switch's *简体中文*, a lesson step and the player in Chinese. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `zh` with `bun run shot --locale zh-CN`, on a phone and a desktop, in both themes.
-- [ ] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
-- [ ] The feature list and the README name Chinese. `docs/reference/features.md:1`, `README.md:12`
+- [x] Every drift the reader lists is settled in the files it names.
+  - [x] Four `reader`s read the catalog, the lessons, the guides a to m and the guides n to z.
+  - [x] The catalog and the lessons are settled. `src/learn/lessons/chords/major-triads.zh.ts:1`
+  - [x] The guides are settled, and `make-our-songs` writes them again. `tools/our-songs/aquarium.zh.ts:9`
+  - [x] The settled terms are in the glossary. `docs/reference/translation/zh.md:105`
+- [x] `zh` is `shipped`. `src/i18n/locale-table.ts:50`
+- [x] The Chinese social image. `public/images/social/zh.png`
+- [x] The layout checks run in `zh` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
+- [x] Test `the_chinese_site_reads_in_chinese`: `lang`, the switch's *简体中文*, a lesson step and the player in Chinese. `e2e/locales.e2e.ts:55`
+- [x] Look at every route in `zh` with `bun run shot --locale zh-CN`, on a phone and a desktop, in both themes.
+- [x] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
+- [x] The feature list and the README name Chinese. `docs/reference/features.md:160`, `README.md:14`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -183,35 +191,29 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. All 80 guides of our songs have their `.zh.ts` file, reviewed blind and stamped
-in `src/i18n/stamps/zh.json`. `public/songs/ours/<slug>/guide.json` holds their Chinese.
+Stages 1 to 6 are done. `zh` is shipped: the build writes every page under `zh/`, and the switch offers
+简体中文. `bun run i18n status zh` lists 72 missing texts, each a deliberate copy, as a standing decision says.
 
-The two stage 5 reviews found 24 findings, one of them *wrong*. Each is settled, and two are refused:
-
-- **`华特·迪士尼` stays.** One reviewer took it for the Taiwan form, but the mainland company itself is
-  `华特迪士尼公司`.
-- **Handel's chorus stays `《看，英雄凯旋》`.** The reviewer's other title was unverified.
-
-The guides of *Silent Night* and *The First Noel* now give Gruber, Mohr and Stainer their Chinese names.
-The `kept` list of `src/i18n/typography.ts` gained the stage's 60 Latin titles and names, longer forms
-first. `.agent-tmp/zh-stray-latin.ts` finds no stray Latin word and no broken mark.
+- **Consistency.** Four `reader`s read the whole locale. Each drift is settled in the catalog, the lessons
+  and all 80 guides, and the guides are written again. The new terms are rows of `zh.md`'s glossary.
+- **Refused findings.** The readers' name changes came from memory, so `约翰·帕赫贝尔`, `查理·卫斯理` and
+  `《贝加马斯克组曲》` stay. *The Blue Danube*'s `八度低音` stays, since its English says "octave bass".
+- **Checks run once by name, green:** `the_chinese_site_reads_in_chinese` and
+  `every_page_passes_the_layout_checks_in_zh`. `bun x tsc` is green.
+- **Looked at:** all 10 shown routes and a lesson, phone and desktop, both themes. No page error, and no
+  missing-glyph box. The phone width ran in Chromium on Windows. No Android device was at hand, and
+  the `:lang(zh)` font stack names Noto Sans CJK SC for it.
 
 ### Next
 
-**Stage 6: the Chinese site ships.** Its gate is not met yet. `bun tools/i18n.ts status zh` lists 71
-missing texts, which the English gained after stages 2 and 3:
+**Stage 7: verify the goal.** Run `looper verify` once, fix every failure in one pass, then run it again.
 
-- catalog: `learn-lesson` 8, `play-modes` 1, `player-bar` 5, `player-input` 1, `player-settings` 22,
-  `player-shell` 6, `site` 3.
-- lessons: `meet-the-piano` 2, `first-melodies` 4, `reading-music` 6, `both-hands` 3, `scales-and-keys`
-  6, `chords` 3, `expression` 1.
-
-Run `bun tools/i18n.ts work zh <unit>` for each, and translate them with the briefs in
-`.agent-tmp/i18n/zh/`: `writer-brief.md` for the catalog and `lesson-writer-brief.md` for the lessons.
-One writer and one blind `reader` fit. Then stamp each unit, and take stage 6's items in order.
-
-Expected red: none known. `chinese_texts_keep_their_rules` was not run this stage. The scan above
-found nothing it would refuse.
+Expected red:
+- `chinese_texts_keep_their_rules` was not run since stage 5. `.agent-tmp/zh-stray-latin.ts` finds no
+  broken mark. Its only hit is the `·` of a Chinese name, which the scan itself takes for Latin.
+- The unit tests `src/i18n/i18n.test.ts` and `src/learn/game/unlock.test.ts` changed for the ship, and
+  neither was run.
+- A test that counts the shipped locales, the sitemap or the built pages may expect three locales, not four.
 
 ### Backlog
 

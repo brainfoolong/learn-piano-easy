@@ -113,6 +113,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   `e2e/lesson-walk.ts` does.
 - **A kept word that ends in a Han character breaks the Chinese spacing rule.** The rules test writes a
   kept word as `X`, which then touches the next Han character. Keep only Latin words in `src/i18n/typography.ts`.
+- **A writing subagent that starts its own subagents can hand back while they still edit.** Its report
+  then says nothing landed, and a second writer sent to the same files collides with them. Tell every
+  writer never to start a subagent, and split a large sweep such as `tools/our-songs/` across writers yourself.
 
 ## Rendering
 
