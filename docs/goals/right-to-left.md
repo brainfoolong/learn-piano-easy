@@ -6,7 +6,7 @@ context: [docs/goals/many-locales.md, src/i18n/locale.ts, src/ui/base.css, src/u
 stages:
   - id: 1
     title: "The page's direction, logical CSS and a right-to-left pseudo-locale"
-    status: open
+    status: done
   - id: 2
     title: What mirrors and what never does
     status: open
@@ -67,6 +67,15 @@ proves it with a pseudo-locale while no right-to-left translation exists.
   mirrored, on a page with `dir="rtl"`. It is built like `en-XA`, never released, and never listed.
 - **The layout checks run in `ar-XB` at every width.**
 - **Lanes:** stage 2 needs stage 1's logical CSS, so the stages run in order.
+- **The pseudo-locales are rows of `PSEUDO_ROWS`,** and `isPseudoLocale` names them. `pseudo()` and
+  `pseudoTree()` take the pseudo-locale, `en-XA` when absent, so every caller of `textFor` serves both.
+- **What CSS cannot name logically reads helpers at the end of `src/ui/base.css`.** They are
+  `--side-start`, `--side-end`, `--inline-sign`, `--safe-start` and `--safe-end`. They are set on
+  `:root` and on every `[dir]`, so the music's `dir="ltr"` resets them inside it.
+- **A box centred by `left: 50%` and `translate(-50%)` stays physical,** since it lands the same either
+  way. The test treats a `translate` by `-50%` as no side, and the `left` carries its marker.
+- **A position measured or projected from physical coordinates stays physical.** That covers a
+  tooltip, the 3D scene's cards and pops, the settings nav's marker and the colour picker's axes.
 
 ## Stages
 
@@ -78,12 +87,12 @@ proves it with a pseudo-locale while no right-to-left translation exists.
 `src/`, side by side.
 **Gate:** `src/i18n/pseudo.ts` exists and `en-XA` pages build.
 
-- [ ] The build writes `dir`, and the language switch sets it. `tools/build.ts:224`, `src/site/site.ts:136`
-- [ ] `ar-XB` in the table, built from the English by `pseudo()`. `src/i18n/pseudo.ts:1`
-- [ ] Every physical side the subagent lists becomes logical, or carries its `ltr:` reason. `src/app/player.css:45`, `src/game/game-hud.css:205`, `src/input/history.css:25`
-- [ ] Every left or right set from TypeScript reads the direction. `src/ui/layout-geometry.ts:1`
-- [ ] Test `no_stylesheet_uses_a_physical_side`. `tools/css-sides.test.ts:1`
-- [ ] The layout checks run in `ar-XB` at every width. `e2e/layout-check.ts:43`
+- [x] The build writes `dir`, and the language switch sets it. `tools/build.ts:224`, `src/site/site.ts:136`
+- [x] `ar-XB` in the table, built from the English by `pseudo()`. `src/i18n/pseudo.ts:1`
+- [x] Every physical side the subagent lists becomes logical, or carries its `ltr:` reason. `src/app/player.css:45`, `src/game/game-hud.css:205`, `src/input/history.css:25`
+- [x] Every left or right set from TypeScript reads the direction. `src/ui/layout-geometry.ts:1`
+- [x] Test `no_stylesheet_uses_a_physical_side`. `tools/css-sides.test.ts:1`
+- [x] The layout checks run in `ar-XB` at every width. `e2e/layout-check.ts:43`
 
 ### 2. What mirrors and what never does
 
@@ -109,16 +118,31 @@ proves it with a pseudo-locale while no right-to-left translation exists.
 
 ### State
 
-The goal is written, on the chain behind `hindi` and ahead of `arabic`. No stage has started.
+Stage 1 is done. Every page carries `dir` from its row, and the language switch sets it. A `--pseudo`
+build writes `ar-XB/` pages with `dir="rtl"`. `tools/css-sides.test.ts` passes, with every physical
+side made logical or marked. The landing, the site bar and the onboarding dialog mirror in `ar-XB`.
+
+The TypeScript sides need no change. The tooltip already reads the direction, and the rest are
+measured coordinates or music. `src/settings/panel.ts` scrolls its nav by negative `scrollLeft` in
+right-to-left, which no screenshot has checked yet.
 
 ### Next
 
-**Stage 1: the page's direction, logical CSS and a right-to-left pseudo-locale.** Files: `tools/build.ts`,
-`src/site/site.ts`, `src/i18n/pseudo.ts` and every stylesheet the subagent lists. Gate: the `en-XA`
-pages of `many-locales` build.
+**Stage 2: what mirrors and what never does.** Files: `src/render/piano-keys.ts`,
+`src/sheet/sheet-view.ts`, `src/play/timeline.ts`, `src/ui/icons/icons.ts`, `src/learn/map-view.ts`,
+`src/i18n/format.ts` and `e2e/rtl.e2e.ts`.
 
-Expected red: the layout checks in `ar-XB`, until stage 2 sets `dir="ltr"` on the music.
+- `dir="ltr"` on the music's roots. Add the play-modes preview of the note lanes, `src/play-modes/modes-view.css:196`, whose notes use `inset-inline-start` now.
+- The course map: `src/learn/map-view.ts:95` draws the road from a physical x, and `src/learn/map-view.css:338` places the stops from the same x. Mirror the x in the script for both.
+- `.icon--directional`: the "Start learning" arrow on the landing still points right in `ar-XB`.
+- The hero's highlighted last word, "Easy", shows unoverridden in `ar-XB`. Its script splits the title, so the override wraps only the first part.
+- Look at the settings nav in `ar-XB` on a phone, and check that the marker and the scroll follow the current section.
+
+Expected red: the layout checks in `ar-XB`, in `e2e/play.e2e.ts` and every file that loops over
+`LOCALES` of `e2e/layout-check.ts`, until stage 2 lands.
 
 ### Backlog
 
 - A number in a right-to-left sentence may need its own isolation once Arabic texts exist.
+- `src/ui/color-picker.ts:151` builds the alpha fill inline as `linear-gradient(to right, …)`. It
+  matches the picker's physical axes, but the CSS test cannot see a gradient set from a script.

@@ -173,7 +173,7 @@
     height: var(--btn-icon);
     margin: auto;
     border: 2px solid currentColor;
-    border-right-color: transparent;
+    border-right-color: transparent; /* ltr: the gap of a spinning ring, the same either way */
     border-radius: var(--r-pill);
     opacity: 0;
     transition: opacity var(--m-small) var(--ease-standard);

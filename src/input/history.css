@@ -3,7 +3,7 @@
  * table is built, and `src/input/pitch-practice.ts` builds its quiz table in the same shape.
  *
  * The table is a framed block: its head is a band of small caps on the well's colour, and each row
- * ends in a hairline. Numbers line up in columns, and only the first column reads from the left.
+ * ends in a hairline. Numbers line up in columns, and only the first column reads from the line's start.
  * A table wider than its dialog scrolls sideways inside the dialog's body.
  */
 @layer pages {
@@ -22,7 +22,7 @@
   .history-table td {
     padding: var(--s-2) var(--s-3);
     border-bottom: 1px solid var(--c-line);
-    text-align: right;
+    text-align: end;
     white-space: nowrap;
   }
 
@@ -41,7 +41,7 @@
 
   .history-table th:first-child,
   .history-table td:first-child {
-    text-align: left;
+    text-align: start;
   }
 
   .history-table td:first-child {

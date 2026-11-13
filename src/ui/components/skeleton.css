@@ -102,14 +102,14 @@
     inset-inline-start: -50%;
     width: 200%;
     background: linear-gradient(100deg, transparent 30%, var(--skel-shine) 50%, transparent 70%);
-    transform: translateX(-75%);
+    transform: translateX(calc(-75% * var(--inline-sign)));
     animation: skel-shine calc(var(--m-reward) * 1.5) var(--ease-standard) infinite;
     pointer-events: none;
   }
 
   @keyframes skel-shine {
     to {
-      transform: translateX(75%);
+      transform: translateX(calc(75% * var(--inline-sign)));
     }
   }
 

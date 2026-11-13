@@ -480,7 +480,8 @@
   @media (max-width: 1023px), (max-height: 480px) {
     .site-bar__switches:popover-open {
       position: fixed;
-      inset: calc(var(--site-bar-space, var(--s-12)) + var(--s-2)) var(--s-gutter) auto auto;
+      inset-block: calc(var(--site-bar-space, var(--s-12)) + var(--s-2)) auto;
+      inset-inline: auto var(--s-gutter);
       display: grid;
       gap: var(--s-2);
       min-width: calc(var(--s-12) * 2);

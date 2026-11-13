@@ -76,7 +76,7 @@
     width: var(--s-2);
     height: var(--s-2);
     margin-inline-end: var(--s-1);
-    border-right: 2px solid var(--c-text-soft);
+    border-right: 2px solid var(--c-text-soft); /* ltr: the turned corner points down either way */
     border-bottom: 2px solid var(--c-text-soft);
     transform: rotate(45deg);
     transition: transform var(--m-small) var(--ease-spring);

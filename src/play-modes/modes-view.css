@@ -197,7 +197,7 @@
       90deg,
       color-mix(in srgb, var(--mode-vivid) 16%, transparent) 0 1px,
       transparent 1px calc(100% / 7)
-    );
+    ); /* ltr: even lane lines, the same either way */
     transition: transform var(--m-large) var(--ease-standard);
   }
 
@@ -252,7 +252,7 @@
   .play-mode__lanes[data-beats] {
     background:
       repeating-linear-gradient(180deg, transparent 0 calc(16% - 1px), color-mix(in srgb, var(--mode-vivid) 30%, transparent) calc(16% - 1px) 16%),
-      repeating-linear-gradient(90deg, color-mix(in srgb, var(--mode-vivid) 16%, transparent) 0 1px, transparent 1px calc(100% / 7));
+      repeating-linear-gradient(90deg, color-mix(in srgb, var(--mode-vivid) 16%, transparent) 0 1px, transparent 1px calc(100% / 7)); /* ltr: even lane lines, the same either way */
   }
 
   /* A loop: a dashed frame over the looped part of the lanes, with its sign at the side. */
@@ -506,7 +506,7 @@
       }
 
       .play-mode:hover .play-mode__start .icon {
-        transform: translateX(var(--s-1));
+        transform: translateX(calc(var(--s-1) * var(--inline-sign)));
       }
 
       .play-mode:hover .play-mode__spark {

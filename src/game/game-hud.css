@@ -17,7 +17,7 @@
  */
 @layer pages {
   .game {
-    --game-stripe: linear-gradient(90deg, var(--c-accent-vivid), var(--c-brand), var(--c-orchid-vivid));
+    --game-stripe: linear-gradient(to var(--side-end), var(--c-accent-vivid), var(--c-brand), var(--c-orchid-vivid));
 
     position: absolute;
     inset: 0;
@@ -61,7 +61,7 @@
   /* The panel: the score, the combo and the multiplier, under a stripe of the brand's hues. */
   .game-hud {
     position: absolute;
-    right: max(var(--s-3), env(safe-area-inset-right));
+    inset-inline-end: max(var(--s-3), var(--safe-end));
     top: calc(var(--bar-height) + var(--s-3) + var(--s-8) + var(--s-2));
     min-width: calc(var(--s-12) + var(--s-9));
     display: flex;
@@ -202,7 +202,7 @@
   /* A popup's place is its outer transform, and its body pops, floats and fades on its own. */
   .game-pop {
     position: absolute;
-    left: 0;
+    left: 0; /* ltr: the script places it at a key's projected point */
     top: 0;
     --pop: var(--c-success);
   }
@@ -261,7 +261,7 @@
   .game-pop[data-kind="perfect"] .game-pop-body::after {
     content: "";
     position: absolute;
-    left: calc(50% - var(--s-9));
+    left: calc(50% - var(--s-9)); /* ltr: centred, the same either way */
     top: calc(50% - var(--s-9));
     z-index: -1;
     width: var(--s-11);
@@ -302,7 +302,7 @@
     --badge-text: var(--c-info);
 
     position: absolute;
-    left: 50%;
+    left: 50%; /* ltr: centred, the same either way */
     top: 34%;
     display: flex;
     flex-direction: column;
@@ -320,7 +320,7 @@
   .game-burst::before {
     content: "";
     position: absolute;
-    left: calc(50% - var(--s-11));
+    left: calc(50% - var(--s-11)); /* ltr: centred, the same either way */
     top: calc(50% - var(--s-11));
     width: calc(var(--s-11) * 2);
     height: calc(var(--s-11) * 2);
@@ -368,7 +368,7 @@
   /* The result card: the take's score in honey, its best combo, and a tile for each judgement. */
   .game-summary {
     position: absolute;
-    left: 50%;
+    left: 50%; /* ltr: centred, the same either way */
     top: 50%;
     box-sizing: border-box;
     width: min(calc(var(--s-12) * 3), calc(100% - var(--s-7)));
@@ -556,16 +556,16 @@
       transform: translateX(0);
     }
     20% {
-      transform: translateX(calc(-1 * var(--s-2)));
+      transform: translateX(calc(-1 * var(--s-2))); /* ltr: a shake is the same either way */
     }
     40% {
-      transform: translateX(var(--s-1));
+      transform: translateX(var(--s-1)); /* ltr: a shake is the same either way */
     }
     60% {
-      transform: translateX(calc(-1 * var(--s-1)));
+      transform: translateX(calc(-1 * var(--s-1))); /* ltr: a shake is the same either way */
     }
     80% {
-      transform: translateX(calc(var(--s-1) / 2));
+      transform: translateX(calc(var(--s-1) / 2)); /* ltr: a shake is the same either way */
     }
   }
 

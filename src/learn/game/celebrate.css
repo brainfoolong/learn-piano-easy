@@ -119,7 +119,7 @@
   .moment__star {
     position: absolute;
     top: var(--y);
-    left: var(--x);
+    inset-inline-start: var(--x);
     width: var(--size, var(--s-6));
     height: var(--size, var(--s-6));
     margin: calc(var(--size, var(--s-6)) / -2);

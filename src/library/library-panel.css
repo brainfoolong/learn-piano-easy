@@ -170,7 +170,7 @@
     padding: var(--s-1) var(--explorer-pad);
     overflow-x: auto;
     scrollbar-width: none;
-    mask-image: linear-gradient(to right, black calc(100% - var(--explorer-pad)), transparent);
+    mask-image: linear-gradient(to var(--side-end), black calc(100% - var(--explorer-pad)), transparent);
   }
 
   .song-explorer__quick {
@@ -837,8 +837,12 @@
     display: block;
     height: 100%;
     border-radius: var(--r-pill);
-    background: linear-gradient(to right, var(--c-accent-vivid), var(--c-iris-vivid) 55%, var(--c-orchid-vivid));
+    background: linear-gradient(to var(--side-end), var(--c-accent-vivid), var(--c-iris-vivid) 55%, var(--c-orchid-vivid));
     clip-path: inset(0 calc(100% - var(--level) * 10%) 0 0 round var(--r-pill));
+  }
+
+  .song-card__meter i:dir(rtl) {
+    clip-path: inset(0 0 0 calc(100% - var(--level) * 10%) round var(--r-pill));
   }
 
   .song-card__length {
@@ -868,7 +872,7 @@
     gap: var(--s-1);
     min-width: 0;
     overflow: hidden;
-    mask-image: linear-gradient(to right, black calc(100% - var(--s-5)), transparent);
+    mask-image: linear-gradient(to var(--side-end), black calc(100% - var(--s-5)), transparent);
   }
 
   /* The preview: a raised pill. While its song sounds it is teal, and a fill sweeps it. */
@@ -904,11 +908,7 @@
     inset: 0;
     background: color-mix(in oklab, var(--c-accent-vivid) 34%, transparent);
     transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  .song-card__sweep:dir(rtl) {
-    transform-origin: right;
+    transform-origin: var(--side-start);
   }
 
   .song-card__preview:not([data-state="idle"]) {
@@ -931,7 +931,7 @@
     width: var(--s-4);
     height: var(--s-4);
     border: 2px solid currentColor;
-    border-right-color: transparent;
+    border-inline-end-color: transparent;
     border-radius: var(--r-pill);
     animation: song-spin calc(var(--m-large) * 2) linear infinite;
   }

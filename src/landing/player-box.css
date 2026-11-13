@@ -58,7 +58,7 @@
 
   .player-box__cue {
     position: absolute;
-    inset: 50% auto auto 50%;
+    inset: 50% auto auto 50%; /* ltr: centred, the same either way */
     display: grid;
     place-items: center;
     width: var(--s-10);
@@ -96,11 +96,11 @@
 
   @keyframes player-box-pan {
     from {
-      transform: scale(1.06) translate(-2%, 1%);
+      transform: scale(1.06) translate(-2%, 1%); /* ltr: a decorative drift across the picture */
     }
 
     to {
-      transform: scale(1.16) translate(2%, -1.5%);
+      transform: scale(1.16) translate(2%, -1.5%); /* ltr: a decorative drift across the picture */
     }
   }
 }

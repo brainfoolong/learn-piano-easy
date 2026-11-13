@@ -44,7 +44,7 @@
   /* The panel sits one step above the raised things of its form, such as a toggle's thumb. */
   .colour-popover {
     position: absolute;
-    right: 0;
+    inset-inline-end: 0;
     top: calc(100% + var(--s-2));
     z-index: calc(var(--z-raised) + 1);
     display: grid;
@@ -79,12 +79,12 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background: linear-gradient(to top, #000, transparent), linear-gradient(to right, #fff, transparent);
+    background: linear-gradient(to top, #000, transparent), linear-gradient(to right, #fff, transparent); /* ltr: the picker's axes are physical, as its script measures them */
   }
 
   .hue-strip {
     height: var(--s-4);
-    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+    background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); /* ltr: the picker's axes are physical, as its script measures them */
   }
 
   .alpha-strip {

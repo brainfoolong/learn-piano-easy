@@ -66,7 +66,7 @@
 
   .medal__lock {
     position: absolute;
-    left: calc(-1 * var(--medal-rim));
+    left: calc(-1 * var(--medal-rim)); /* ltr: the art's count sits at its lower right */
     inset-block-end: calc(-1 * var(--medal-rim));
     display: grid;
     place-items: center;

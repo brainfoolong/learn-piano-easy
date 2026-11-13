@@ -72,7 +72,7 @@
     }
 
     .link[data-variant="standalone"]:hover .icon {
-      transform: translateX(calc(var(--motion-lift) * -2));
+      transform: translateX(calc(var(--motion-lift) * -2 * var(--inline-sign)));
     }
   }
 

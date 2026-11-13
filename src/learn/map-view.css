@@ -209,11 +209,7 @@
     border-radius: inherit;
     background: var(--c-world);
     transform: scaleX(var(--share));
-    transform-origin: left center;
-  }
-
-  :dir(rtl) .map__meter-fill {
-    transform-origin: right center;
+    transform-origin: var(--side-start) center;
   }
 
   .map__count {
@@ -339,7 +335,7 @@
   .map__stop {
     position: absolute;
     top: calc((var(--row) + 0.5) * var(--map-row));
-    left: calc(var(--x) * 100%);
+    left: calc(var(--x) * 100%); /* ltr: the road's script draws it from the same x */
     display: grid;
     justify-items: center;
     gap: calc(var(--map-depth) + var(--s-2));

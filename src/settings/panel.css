@@ -27,7 +27,7 @@
 
     position: absolute;
     top: calc(var(--bar-height) + var(--s-3));
-    right: var(--s-3);
+    inset-inline-end: var(--s-3);
     bottom: calc(var(--controls-height, 0px) + var(--s-3));
     z-index: 50;
     display: grid;
@@ -48,7 +48,7 @@
   @keyframes settings-enter {
     from {
       opacity: 0;
-      transform: translate(var(--enter-x), var(--enter-y));
+      transform: translate(calc(var(--enter-x) * var(--inline-sign)), var(--enter-y));
     }
   }
 
@@ -61,7 +61,7 @@
   @keyframes settings-leave {
     to {
       opacity: 0;
-      transform: translate(var(--enter-x), var(--enter-y));
+      transform: translate(calc(var(--enter-x) * var(--inline-sign)), var(--enter-y));
     }
   }
 
@@ -270,16 +270,16 @@
   .settings-nav__marker {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0; /* ltr: placed from measured coordinates */
     width: var(--marker-width);
     height: var(--marker-height);
     border: 1px solid var(--c-line-strong);
     border-radius: var(--r-control);
     background: var(--c-surface-2);
     box-shadow:
-      inset var(--s-1) 0 0 var(--hue),
+      inset calc(var(--s-1) * var(--inline-sign)) 0 0 var(--hue),
       var(--e-1);
-    transform: translate(var(--marker-x), var(--marker-y));
+    transform: translate(var(--marker-x), var(--marker-y)); /* ltr: placed from measured coordinates */
     transition: transform var(--m-medium) var(--ease-spring);
     pointer-events: none;
   }
@@ -598,7 +598,7 @@
     content: "";
     position: absolute;
     top: calc(var(--s-3) + (var(--t-md) * var(--lh-heading) - var(--s-2)) / 2);
-    left: calc(-1 * var(--s-3));
+    inset-inline-start: calc(-1 * var(--s-3));
     width: var(--s-2);
     height: var(--s-2);
     border-radius: var(--r-pill);
@@ -721,7 +721,7 @@
     .settings-nav {
       overflow: hidden auto;
       padding: var(--s-3) var(--s-2);
-      border-right: 1px solid var(--c-line);
+      border-inline-end: 1px solid var(--c-line);
       border-bottom: none;
     }
 

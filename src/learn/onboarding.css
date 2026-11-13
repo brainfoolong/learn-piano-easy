@@ -114,7 +114,7 @@
     }
 
     .setup__choice:hover .setup__choice-go {
-      transform: translateX(var(--s-1));
+      transform: translateX(calc(var(--s-1) * var(--inline-sign)));
     }
   }
 

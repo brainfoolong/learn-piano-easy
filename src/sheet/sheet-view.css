@@ -13,8 +13,8 @@
   .sheet {
     position: absolute;
     top: calc(max(var(--s-3), env(safe-area-inset-top)) + var(--bar-height) + var(--s-2));
-    left: max(var(--s-3), env(safe-area-inset-left));
-    right: max(var(--s-3), env(safe-area-inset-right));
+    left: max(var(--s-3), env(safe-area-inset-left)); /* ltr: the music never mirrors */
+    right: max(var(--s-3), env(safe-area-inset-right)); /* ltr: the music never mirrors */
     height: var(--sheet-height, 120px);
     max-height: 50%;
     overflow: hidden;
@@ -33,7 +33,7 @@
 
   .sheet-page {
     position: absolute;
-    left: 0;
+    left: 0; /* ltr: the music never mirrors */
     top: 0;
     will-change: transform;
   }
@@ -48,7 +48,7 @@
   .sheet-input,
   .sheet-tip {
     position: absolute;
-    left: 0;
+    left: 0; /* ltr: the music never mirrors */
     top: 0;
   }
 
@@ -61,7 +61,7 @@
 
   .sheet-number {
     position: absolute;
-    left: 2px;
+    left: 2px; /* ltr: the music never mirrors */
     top: var(--s-2);
     font-size: var(--t-xs);
     opacity: 0.7;
@@ -69,7 +69,7 @@
 
   .sheet-cursor {
     width: 2px;
-    margin-left: -1px;
+    margin-left: -1px; /* ltr: the music never mirrors */
     background: color-mix(in oklab, var(--c-accent-vivid) 70%, currentColor);
     pointer-events: none;
   }

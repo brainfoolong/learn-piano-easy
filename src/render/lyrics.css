@@ -10,7 +10,7 @@
 @layer pages {
   .lyrics {
     position: absolute;
-    left: 50%;
+    left: 50%; /* ltr: centred, the same either way */
     transform: translate(-50%, -50%);
     max-width: 90%;
     padding: 0.5em 0.7em 0.25em;
@@ -43,11 +43,11 @@
 
   .lyrics-cursor {
     position: absolute;
-    left: 0;
+    left: 0; /* ltr: the music never mirrors, and lyrics.ts moves the cursor by a physical x */
     top: 0.15em;
     width: 0.3em;
     height: 0.3em;
-    margin-left: -0.15em;
+    margin-left: -0.15em; /* ltr: the music never mirrors */
     border-radius: var(--r-pill);
     background: var(--lyric-active);
   }

@@ -515,7 +515,9 @@ export function createSettingsPanel(store: SettingsStore, options: PanelOptions)
 
   /**
    * Moves the marker onto the current section's link, and scrolls the navigation so the link and, where
-   * both fit, its group's tab are in view. The marker moves by a transform alone.
+   * both fit, its group's tab are in view. The marker moves by a transform alone, to the link's physical
+   * offset, so it lands the same in either reading way. A right-to-left navigation scrolls by the same
+   * sum on mirrored coordinates, where its tab starts on the right and `scrollLeft` runs negative.
    */
   const place = () => {
     const link = current?.link;
@@ -532,8 +534,14 @@ export function createSettingsPanel(store: SettingsStore, options: PanelOptions)
     const tab = current?.group.tab ?? link;
     const style = getComputedStyle(nav);
     const along = (start: number, end: number, room: number, pad: number) => (end - start + 2 * pad > room ? end - room + pad : start - pad);
+    const pad = Number.parseFloat(style.paddingInlineStart);
+    const room = nav.clientWidth;
+    const left =
+      style.direction === "rtl"
+        ? -room - along(-(tab.offsetLeft + tab.offsetWidth), -link.offsetLeft, room, pad)
+        : along(tab.offsetLeft, link.offsetLeft + link.offsetWidth, room, pad);
     nav.scrollTo({
-      left: along(tab.offsetLeft, link.offsetLeft + link.offsetWidth, nav.clientWidth, Number.parseFloat(style.paddingLeft)),
+      left,
       top: along(tab.offsetTop, link.offsetTop + link.offsetHeight, nav.clientHeight, Number.parseFloat(style.paddingTop)),
     });
   };

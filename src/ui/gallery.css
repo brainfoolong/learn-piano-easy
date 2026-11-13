@@ -40,7 +40,7 @@
     inset: calc(-1 * var(--s-9)) 0 calc(-1 * var(--s-7));
     z-index: -1;
     background: var(--g-aura);
-    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent); /* ltr: symmetric, the same either way */
     pointer-events: none;
   }
 

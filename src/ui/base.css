@@ -178,6 +178,30 @@
     letter-spacing: 0 !important;
   }
 
+  /*
+   * The reading way, for what CSS cannot name logically. `--side-start` and `--side-end` are the sides a
+   * line starts and ends on, for `transform-origin` or a gradient's `to`. `--inline-sign` turns a move
+   * along the line, as in `translateX(calc(var(--s-1) * var(--inline-sign)))`. `--safe-start` and
+   * `--safe-end` are the screen's safe-area insets on those sides. An element with its own `dir`, such
+   * as the music's `dir="ltr"`, sets them anew for everything inside it.
+   */
+  :root,
+  [dir="ltr"] {
+    --side-start: left; /* ltr: the page's start side, mirrored below */
+    --side-end: right; /* ltr: the page's end side, mirrored below */
+    --inline-sign: 1;
+    --safe-start: env(safe-area-inset-left); /* ltr: the screen's insets are physical */
+    --safe-end: env(safe-area-inset-right); /* ltr: the screen's insets are physical */
+  }
+
+  [dir="rtl"] {
+    --side-start: right; /* ltr: the start side of a right-to-left line */
+    --side-end: left; /* ltr: the end side of a right-to-left line */
+    --inline-sign: -1;
+    --safe-start: env(safe-area-inset-right); /* ltr: the screen's insets are physical */
+    --safe-end: env(safe-area-inset-left); /* ltr: the screen's insets are physical */
+  }
+
   /* With reduced motion, no animation loops and no scroll glides. */
   @media (prefers-reduced-motion: reduce) {
     *,

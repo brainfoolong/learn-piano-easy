@@ -221,14 +221,14 @@
   .timeline-fill {
     content: "";
     position: absolute;
-    left: 0;
+    left: 0; /* ltr: the music never mirrors */
     top: calc(50% - var(--s-3) / 2);
     height: var(--s-3);
     border-radius: var(--r-pill);
   }
 
   .timeline-track::before {
-    right: 0;
+    right: 0; /* ltr: the music never mirrors */
     background: var(--c-sunken);
     box-shadow:
       inset 0 0 0 1px var(--c-line-strong),
@@ -245,7 +245,7 @@
     content: "";
     position: absolute;
     top: calc(50% - var(--s-5) / 2);
-    right: calc(var(--s-5) / -2);
+    right: calc(var(--s-5) / -2); /* ltr: the music never mirrors */
     box-sizing: border-box;
     width: var(--s-5);
     height: var(--s-5);
@@ -312,7 +312,7 @@
     top: calc(50% - var(--s-2));
     width: var(--s-1);
     height: var(--s-4);
-    margin-left: calc(var(--s-1) / -2);
+    margin-left: calc(var(--s-1) / -2); /* ltr: the music never mirrors */
     border-radius: var(--r-pill);
     background: var(--c-orchid);
     pointer-events: auto;

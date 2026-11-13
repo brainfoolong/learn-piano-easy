@@ -168,6 +168,11 @@ every component in every state.
   layout checks run in English and German. A shipped locale adds its own run at 360 and 1280 pixels.
 - **The pseudo-locale `en-XA` runs every text 40% longer,** wrapped in `⟦ ⟧`. The layout checks run in
   it too. `e2e/pseudo.e2e.ts` fails on a text without the brackets, and on a flaw the longer text adds.
+- **The pseudo-locale `ar-XB` reads from right to left.** Its texts are the English, overridden to run
+  mirrored, on pages with `dir="rtl"`. The layout checks run in it at every width.
+- **Every side in CSS is logical,** such as `inset-inline-start`. A side that stays physical carries
+  `/* ltr: <reason> */`, and `tools/css-sides.test.ts` allows no other. The helpers of the reading way
+  are at the end of `src/ui/base.css`.
 
 ## The checks
 

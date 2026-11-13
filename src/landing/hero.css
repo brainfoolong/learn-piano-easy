@@ -59,8 +59,8 @@
     height: 0.2em;
     border-radius: var(--r-pill);
     background: var(--g-brand);
-    transform: rotate(-1.5deg);
-    transform-origin: left center;
+    transform: rotate(calc(-1.5deg * var(--inline-sign)));
+    transform-origin: var(--side-start) center;
   }
 
   .landing-hero__lead {
@@ -121,14 +121,15 @@
     max-width: min(22ch, 72%);
     padding: var(--s-3) var(--s-4);
     border: 1px solid var(--c-line);
-    border-radius: var(--s-1) var(--r-card) var(--r-card) var(--r-card);
+    border-radius: var(--r-card);
+    border-start-start-radius: var(--s-1);
     background: var(--c-surface-2);
     box-shadow: var(--e-rim), var(--e-2);
     color: var(--c-text);
     font-size: var(--t-sm);
     font-weight: var(--w-semibold);
     line-height: var(--lh-body);
-    transform-origin: top left;
+    transform-origin: var(--side-start) top;
   }
 
   /* The living piano: its words, its stage and its controls, on a raised panel. */
@@ -235,11 +236,13 @@
     .landing-hero__greeting {
       position: absolute;
       margin: 0;
-      inset: calc(-1 * var(--s-4)) auto auto calc(-1 * var(--s-7));
+      inset-block: calc(-1 * var(--s-4)) auto;
+      inset-inline: calc(-1 * var(--s-7)) auto;
       max-width: 20ch;
-      border-radius: var(--r-card) var(--r-card) var(--s-1) var(--r-card);
+      border-start-start-radius: var(--r-card);
+      border-end-end-radius: var(--s-1);
       font-size: var(--t-md);
-      transform-origin: bottom right;
+      transform-origin: var(--side-end) bottom;
     }
 
     /* The words and the controls stand in one column beside the stage, which spans both rows. */

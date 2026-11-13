@@ -39,10 +39,10 @@
     touch-action: none;
   }
 
-  /* The selected note's finger, at the top right of the scene. */
+  /* The selected note's finger, at the top of the scene on the end side. */
   .finger-status {
     position: absolute;
-    right: max(var(--s-3), env(safe-area-inset-right));
+    inset-inline-end: max(var(--s-3), var(--safe-end));
     top: calc(var(--bar-height) + var(--s-3));
     padding: var(--s-2) var(--s-4);
     border: 1px solid var(--c-line-strong);
@@ -62,10 +62,10 @@
     display: none;
   }
 
-  /* Lesson mode's banner, at the top left of the scene: the step's goal and the way back. */
+  /* Lesson mode's banner, at the top of the scene on the start side: the step's goal and the way back. */
   .lesson-banner {
     position: absolute;
-    left: max(var(--s-3), env(safe-area-inset-left));
+    inset-inline-start: max(var(--s-3), var(--safe-start));
     top: calc(var(--bar-height) + var(--s-3));
     display: flex;
     flex-direction: column;
@@ -121,13 +121,14 @@
    */
   @media (max-width: 720px) {
     .lesson-banner {
-      right: max(var(--s-3), env(safe-area-inset-right));
+      inset-inline-end: max(var(--s-3), var(--safe-end));
       height: var(--s-10);
       max-width: none;
       flex-direction: row;
       align-items: center;
       gap: var(--s-3);
-      padding: var(--s-2) var(--s-2) var(--s-2) var(--s-4);
+      padding-block: var(--s-2);
+      padding-inline: var(--s-4) var(--s-2);
     }
 
     .lesson-banner :is(.lesson-banner__label, .lesson-banner__practice, .lesson-banner__target) {

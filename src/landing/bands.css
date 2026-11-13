@@ -328,7 +328,7 @@
 
   .landing-devices__cue {
     position: absolute;
-    inset: 50% auto auto 50%;
+    inset: 50% auto auto 50%; /* ltr: centred, the same either way */
     display: grid;
     place-items: center;
     width: var(--s-10);

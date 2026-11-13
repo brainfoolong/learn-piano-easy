@@ -65,7 +65,7 @@
 
   .player-float {
     position: absolute;
-    inset-inline: max(var(--s-2), env(safe-area-inset-left)) max(var(--s-2), env(safe-area-inset-right));
+    inset-inline: max(var(--s-2), var(--safe-start)) max(var(--s-2), var(--safe-end));
     top: max(var(--s-2), env(safe-area-inset-top));
     z-index: var(--z-raised);
   }
@@ -202,7 +202,7 @@
     .player-bar > .song-title {
       position: absolute;
       top: calc(100% + var(--s-2));
-      left: var(--s-4);
+      inset-inline-start: var(--s-4);
       width: auto;
       max-width: calc(100% - var(--s-4) * 2);
       padding: var(--s-1) var(--s-3);

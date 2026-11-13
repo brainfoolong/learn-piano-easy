@@ -11,7 +11,7 @@
   .score-panel,
   .mode-panel {
     position: absolute;
-    left: 50%;
+    left: 50%; /* ltr: centred, the same either way */
     top: calc(var(--bar-height) + var(--s-3));
     translate: -50% 0;
     display: flex;

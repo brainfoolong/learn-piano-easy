@@ -79,11 +79,7 @@
 
   [data-control="toggle"]:checked::before {
     background: var(--c-accent-ink);
-    transform: translateX(calc(var(--toggle-width) - var(--toggle-height)));
-  }
-
-  [data-control="toggle"]:checked:dir(rtl)::before {
-    transform: translateX(calc(var(--toggle-height) - var(--toggle-width)));
+    transform: translateX(calc((var(--toggle-width) - var(--toggle-height)) * var(--inline-sign)));
   }
 
   /* The slider: a range and its number field side by side. */
@@ -100,7 +96,6 @@
     --range-track: var(--s-2);
     --range-thumb: var(--s-5);
     --range-fill: calc(var(--fill, 0) * 100%);
-    --range-to: right;
 
     flex: 1 1 auto;
     min-width: 0;
@@ -112,14 +107,10 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-  [data-control="slider"] input[type="range"]:dir(rtl) {
-    --range-to: left;
-  }
-
   [data-control="slider"] input[type="range"]::-webkit-slider-runnable-track {
     height: var(--range-track);
     border-radius: var(--r-pill);
-    background: linear-gradient(to var(--range-to), var(--c-accent) var(--range-fill), var(--c-line-strong) var(--range-fill));
+    background: linear-gradient(to var(--side-end), var(--c-accent) var(--range-fill), var(--c-line-strong) var(--range-fill));
   }
 
   [data-control="slider"] input[type="range"]::-moz-range-track {
