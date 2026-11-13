@@ -151,6 +151,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   A shell whose folder is spelled with a lower-case drive, as `e:\`, fails this way on Windows, and
   the e2e step of `looper verify` with it. The same run from the upper-case spelling passes. Start a
   test of `e2e/` or the gate as `cd "E:/learn-piano-easy" && looper verify`.
+- **A layout check of a `learn/` page can fail on a contrast near 1 to 1 that no colour causes.** The
+  bar slot of `src/learn/game/bar-slot.ts` fades in after its first read, and a measure two frames
+  after load can catch it mid fade. Pass `ready: '.bar-slot[data-ready="true"]'` to `checkLayout`.
 - **A test that fails only under load may be a race in the app, not a short limit.** The setup opened
   in the gap between Back and the swap in `src/site/router.ts`, then closed for good. Repeat the test with
   `--repeat-each 24 --workers 8`, and log what opens and when, before you raise a timeout.

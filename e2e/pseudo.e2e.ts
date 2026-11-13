@@ -9,7 +9,8 @@
  *
  * The longer texts run through the layout checks of `e2e/layout-check.ts` at every width, in English
  * and in the pseudo-locale. A flaw fails only where the longer text adds it, since each page's own test
- * holds its English. The theme changes no text's length, so one theme is enough.
+ * holds its English. The theme changes no text's length, so one theme is enough. A page of *Learn Piano*
+ * is measured once its bar slot has read the log and faded in, as its own tests measure it.
  */
 import { expect, test, type Browser } from "@playwright/test";
 import { PSEUDO_CLOSE, PSEUDO_OPEN } from "../src/i18n/pseudo";
@@ -96,7 +97,9 @@ test("every_page_holds_longer_text", async ({ browser, baseURL }) => {
   for (const path of paths) {
     // Each page's own test holds it to the layout checks in English. Here a flaw counts only where the
     // longer text adds it.
-    const options = { themes: ["light"] as const, locales: ["en", "en-XA"], reducedMotion: true, storage: PAST_SETUP };
+    // A page of *Learn Piano* fades its bar slot in once the slot's read ends, so it is measured after.
+    const ready = path.startsWith("learn/") ? '.bar-slot[data-ready="true"]' : undefined;
+    const options = { themes: ["light"] as const, locales: ["en", "en-XA"], reducedMotion: true, storage: PAST_SETUP, ...(ready === undefined ? {} : { ready }) };
     const found = await checkLayout(browser, new URL(path, baseURL).href, options);
     const english = new Set(found.filter((flaw) => !flaw.includes(" en-XA: ")).map(shapeOf));
     flaws.push(...found.filter((flaw) => flaw.includes(" en-XA: ") && !english.has(shapeOf(flaw))).map((flaw) => `${path || "./"} ${flaw}`));

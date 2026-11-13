@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: catalog-fallback
@@ -161,7 +161,7 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
   The built skip test reuses their texts, so no unit holds it.
 - **A translated text without a stamp is stale,** so German, which has no stamps, reads all stale.
 - **`stamp` drops an id no unit holds any more,** so a deleted text leaves no stamp behind.
-- **The rule table holds the kept words and the marks, and the scripts follow the row's alphabet** through
+- **The rule table holds the kept words and the marks.** The scripts follow the row's alphabet through
   `SCRIPTS`, so a locale names its script once. A script matches by `Script_Extensions`.
 - **The rules test skips English and German.** English is the source, and German is checked by eye.
 - **A message's arguments are checked by calling it with marker numbers.** A message the English cannot
@@ -212,7 +212,7 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 - **The naming setting's default is `auto`,** a third option beside letters and solfège.
   `namingSystemOf` resolves it by the live locale's row at each name, so a change of locale renames
   the notes at once. A default written from the browser's language at the first visit would freeze a
-  guess, and a learner who switches the site's language would keep the old names.
+  guess. A learner who switched the site's language would then keep the old names.
 - **The script tokens live in `src/ui/tokens.css`, and the line rules in `src/ui/base.css`.** The
   tokens file is the home of every token.
 - **A non-Latin stack keeps Plus Jakarta Sans first,** so Latin words and digits stay in the site's face.
@@ -321,47 +321,26 @@ and sorting by the live locale.
 ### 6. the goal is verified once, and every failure is fixed
 
 - [x] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 5 are done. The check `locale-scripts` passes, run once. `tsc` and the build are clean.
+Every stage is done, and the goal is reached. The second `looper verify` is green on every check.
 
-- Each script's font stack and line heights are tokens under `:root:lang(<code>)` in
-  `src/ui/tokens.css:205`. The line rules are in `src/ui/base.css`, in the `base` layer.
-- A shot of the player with `lang` set to `ja` and `ar` showed the stacks, `line-break: strict`,
-  `word-break: auto-phrase` and `letter-spacing: normal` applied, with no page errors.
-- `noteName` writes solfège in each locale's spelling, through `SOLFEGE_BY_LOCALE`. German letters now
-  follow the row's `naming`, never a compare with `"de"`.
-- `pitchNotationSystem` gains the option `auto`, its new default, labelled in English and German.
-  `NamingChoice` is the setting's type, and `namingSystemOf` resolves it.
-- `collator(locale)` in `src/i18n/format.ts` sorts the library by title and an uploaded folder's files.
-- `tools/font-coverage.test.ts` reads the WOFF2 `cmap` itself. A planted `ド` and `Ж` made it fail,
-  which also showed that Plus Jakarta Sans has no Cyrillic.
-- The profile's weekday letters take `rowOf(locale).intl`.
-
-What earlier stages left to later ones:
-
+- The first run's one red test was `every_page_holds_longer_text` in `e2e/pseudo.e2e.ts:92`. Its low
+  contrast was the bar slot's fade-in, caught mid-way. No colour was wrong.
+- The bar slot of `src/learn/game/bar-slot.ts` hides by opacity until its first read, then fades in.
+  The sweep now measures a `learn/` page once `.bar-slot[data-ready="true"]` matches and its animations
+  end. `e2e/game.e2e.ts` and `e2e/learn-layout.e2e.ts` already waited the same way.
 - `src/site/legal-view.ts:25` imports `legal.de` statically. Legal stays English and German only.
 
 ### Next
 
-**Stage 6: the gate.** The first `looper verify` ran. `bun install`, `tsc` and `bun test` are green.
-The e2e run had 154 passed and 1 failed. Fix that one failure, then run `looper verify` once more.
-
-The one red test:
-
-- `every_page_holds_longer_text` in `e2e/pseudo.e2e.ts:92`. On `learn/meet-the-piano/welcome/` at
-  1920 pixels, light theme, `en-XA` only, the XP counter's spans `0` and `⟦0 XP ĺ⟧` have a contrast
-  of 1.22 to 1. So low a contrast suggests the counter was caught mid fade or under an overlay, not a
-  wrong colour. Find the XP counter's view, check its opacity or transition at that moment, and fix
-  the cause. Never loosen the test.
-
-The trace is under `.agent-tmp/e2e/runs/30436/results/`, and the full log in `.agent-tmp/verify-e2e.log`.
-A later run may have cleaned both away.
+The goal is reached. Harvest it into `docs/findings.md` § `many-locales`, move its checks into the
+floor, and delete this file. The next goal on the chain is `spanish`. No test is expected to go red.
 
 ### Backlog
 
