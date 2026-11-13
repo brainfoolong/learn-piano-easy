@@ -78,7 +78,9 @@ test("a_lesson_page_carries_the_lessons_own_title_and_description", async () => 
     const meta = page.route.lesson!.meta![page.locale]!;
     expect(title).toBe(pageTitle(page));
     expect(title).toStartWith(meta.title);
-    expect(description).toStartWith(meta.title);
+    // A right-to-left description wraps the title in an isolate, which a reader never sees.
+    const unisolated = (text: string) => text.replace(/[⁦-⁩]/g, "");
+    expect(unisolated(description)).toStartWith(unisolated(meta.title));
     titles.add(`${page.locale} ${title}`);
     descriptions.add(`${page.locale} ${description}`);
   }

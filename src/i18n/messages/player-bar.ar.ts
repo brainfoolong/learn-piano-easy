@@ -29,7 +29,7 @@ export const playerBar: Translation<typeof en> = {
     pause: "إيقاف مؤقت",
     stop: "إيقاف",
     speed: "السرعة",
-    speedPercent: (n: number) => isolate(`${formatNumber("ar", n)}%`),
+    speedPercent: (n: number) => isolate(`${isolate(formatNumber("ar", n))}%`),
     transpose: "تصوير",
     loop: "تكرار",
     repeatAll: "تكرار الكل",
@@ -50,7 +50,6 @@ export const playerBar: Translation<typeof en> = {
     },
   },
   hotkeys: {
-    modifiers: { Ctrl: "Ctrl", Alt: "Alt", Shift: "Shift", Meta: "Meta" },
     none: "لا شيء",
   },
   hotkeyDialog: {
