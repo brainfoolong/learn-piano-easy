@@ -1188,3 +1188,34 @@ chords and touch, shown in the hand lab.
 - A louder note starts its down-stroke higher, and the default velocity strikes from `HOVER`.
 - Two hands keep one white key free between their thumbs' home keys, and crossed hands put the right above.
 - The plan and the solver together cost at most one millisecond per hand per frame on a desktop.
+
+## hand-lessons
+
+**Target:** every lesson that teaches a movement of the hand shows the mascot's hand playing its phrase
+with the exact fingers, slowed on request.
+
+### Findings
+
+- A demo note may carry `finger` and `hand`, as `PhraseNote` of `src/learn/model.ts` declares them.
+- `pianoKeys().show` of `src/render/piano-keys.ts` takes a `hands` option: a phrase and a clock.
+- The view imports `src/render/hand/hand-stage.ts` and loads `hand.glb` the first time a step asks.
+- `Playback` of `src/learn/lesson-sound.ts` reports the phrase's time, and the hand follows that clock.
+- A demo with fingers offers two toggles: "Slow" halves the bpm, and "Side view" looks from the thumb's side.
+- The view's element carries `data-hand`: `loading`, `playing` or `still`.
+- 22 lessons show the hand, and `TECHNIQUE_LESSONS` in `src/learn/course.test.ts` lists them.
+- three.js builds as one shared chunk, so the landing player carries the hand loader's share, about 5.5 kB gzipped.
+
+### Decisions that still bind
+
+- A demo names a finger for every note or for none, and the hand shows only when it does.
+- A demo that names a hand but no fingers is refused.
+- A lesson's fingers are written in the lesson, never guessed, and they match its text.
+- Where a text names no finger, the demo takes the fingering every method teaches.
+- The lessons that show the hand are listed, never found.
+- `sitting-at-the-piano` and `the-sustain-pedal` show no hand.
+- The view with a hand frames the keys from the player's side, and never from the top.
+- Slow and Side view stay as the learner left them for the rest of the lesson.
+- Under reduced motion the hand still plays, and a view change cuts.
+- The demo waits for the hand up to two seconds, then plays without it until it loads.
+- Without WebGL the demo plays with the view's fallback text.
+- The landing player's budget is 210,000 bytes, which holds the hand's share of three.js.
