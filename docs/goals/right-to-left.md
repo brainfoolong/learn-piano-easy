@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: css-sides
@@ -85,6 +85,9 @@ proves it with a pseudo-locale while no right-to-left translation exists.
 - **A position measured or projected from physical coordinates stays physical.** That covers a
   tooltip, the 3D scene's cards and pops, the settings nav's marker and the colour picker's axes.
 
+- **The fallback face of matched metrics covers Latin alone,** by its `unicode-range`. Every stack names
+  it, Arabic and Urdu too, so a digit keeps its box while an Arabic letter takes its own script's font.
+
 ## Stages
 
 ### 1. The page's direction, logical CSS and a right-to-left pseudo-locale
@@ -118,34 +121,26 @@ proves it with a pseudo-locale while no right-to-left translation exists.
 
 ### 3. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+  `tools/build.test.ts:41`, `src/ui/base.css:26`
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 and 2 are done. The piano view, the staff, the sheet's page, the timeline and the play
-modes' preview carry `dir="ltr"`. Arrows and chevrons mirror through `icon--directional`, and the
-course map's road swings left first in `ar-XB`. `isolate()` exists, and free-text fields carry
-`dir="auto"`. `e2e/rtl.e2e.ts` and `src/i18n/format.test.ts` pass, run once by name, and so does
-`tools/css-sides.test.ts`.
+Every stage is done, and `looper verify` is green over the whole goal. The gate fixed two failures.
+The build test now expects `dir` beside `lang` on each page's `<html>`. A badge's count was clipped on
+the `ar-XB` profile, because the Arabic stack skipped the fallback face of matched metrics. That face now
+covers Latin alone by `unicode-range`, so the Arabic and Urdu stacks name it too.
 
-Screenshots in `ar-XB` show the landing, the map, a lesson and the player mirrored, with the music
-unmirrored. On a phone, the player bar covers the settings panel's head and nav in English too. So the
-settings nav's marker and its negative `scrollLeft` are still unchecked in right-to-left.
+The settings nav works in `ar-XB` on a phone. A jump to the last section scrolls it to a negative
+`scrollLeft`, and the marker lands on the link inside the view.
 
 ### Next
 
-**Stage 3: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run
-it once more.
-
-- The layout checks in `ar-XB` have not run since stage 1. Each file that loops over `LOCALES` of
-  `e2e/layout-check.ts` may go red there, such as `e2e/design.e2e.ts` and `e2e/play.e2e.ts`.
-- A test that reads the hero's heading may see its new inner span, `src/landing/hero.ts:37`.
-- Check the settings nav in `ar-XB` on a phone at `src/settings/panel.ts`, with the panel opened from
-  the site bar so the player bar does not cover it.
+The goal is reached. Harvest it into `docs/findings.md` § `right-to-left`, then start `arabic`.
 
 ### Backlog
 

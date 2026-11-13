@@ -168,6 +168,10 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A layout check of a `learn/` page can fail on a contrast near 1 to 1 that no colour causes.** The
   bar slot of `src/learn/game/bar-slot.ts` fades in after its first read, and a measure two frames
   after load can catch it mid fade. Pass `ready: '.bar-slot[data-ready="true"]'` to `checkLayout`.
+- **A layout check can flag a text as clipped that a shot of the same page shows whole.** The font's
+  `font-display: optional` in `src/ui/base.css` leaves a test's page in the fallback face, while a shot
+  waits for the font.
+  Measure with the font left out of the stack, as `"Plus Jakarta Sans Fallback", "Segoe UI"`.
 - **A test that fails only under load may be a race in the app, not a short limit.** The setup opened
   in the gap between Back and the swap in `src/site/router.ts`, then closed for good. Repeat the test with
   `--repeat-each 24 --workers 8`, and log what opens and when, before you raise a timeout.
