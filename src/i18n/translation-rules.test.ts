@@ -266,6 +266,20 @@ test("the_hindi_marks_hold_and_spare_kept_words", () => {
   for (const text of kept) expect(problemsOf([textOf("English", text, "hi")], "hi")).toEqual([]);
 });
 
+test("the_portuguese_marks_hold_and_spare_kept_words", () => {
+  const broken = [
+    "Conte \"1-2\".", "Conte «1-2».", "¿Pronto?", "Nível :", "Carregando...", "Pronto !", "Uma idéia", "Agüente", "Tu tocas bem.",
+    "Bem-vindo!", "Abra o ficheiro.", "Toque no ecrã.", "compassos 1 - 4",
+  ];
+  for (const text of broken) expect(problemsOf([textOf("English", text, "pt")], "pt")).not.toEqual([]);
+  const kept = [
+    "Olá! Vamos tocar piano juntos?", "Sua vez. Coloque o polegar direito no Dó central e toque Dó e Mi juntos.",
+    "Conte “1-2” em cada mínima.", "Toque Hark! The Herald Angels Sing com a mão direita.", "Carregando…", "A 80%.", "compassos 1–4",
+    "Boas-vindas!", "Abra o arquivo.", "Uma ideia", "Aguente firme.", "O tempo é 3/4.", "Para Elise, toque Mi.", "1.234,5 notas",
+  ];
+  for (const text of kept) expect(problemsOf([textOf("English", text, "pt")], "pt")).toEqual([]);
+});
+
 const units = await loadUnits();
 const everyText = units.flatMap((unit) => unit.texts);
 

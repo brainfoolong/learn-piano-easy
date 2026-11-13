@@ -194,7 +194,32 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       { says: "A range between digits takes words, never a dash", mustNot: /\d\s?[-–—]\s?\d/ },
     ],
   },
-  pt: { kept: [], marks: [] },
+  pt: {
+    kept: [
+      "Learn Piano Easy", "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman", "Web MIDI", "MIDI", "MusicXML",
+      "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari", "XP", "BPM", "FPS", "PDF", "USB", "kHz", "Hz", "dB", "ms", "KB", "MB",
+      "combo", "Combo", "tempo", "Tempo", "legato", "staccato", "crescendo", "diminuendo", "forte", "piano", "Piano",
+      "coda", "fermata", "Normal", "Volume", "Backup", "backup", "app", "player", "quiz", "Quiz", "OK",
+    ],
+    marks: [
+      { says: "A quote stands in “ ”, never in straight quotes or « »", mustNot: /["«»„]/ },
+      { says: "No ¿ or ¡ opens a question or an exclamation", mustNot: /[¿¡]/ },
+      { says: "No space stands before a period, a comma, a colon, a semicolon, ?, ! or %", mustNot: /\s[.,:;?!%]/ },
+      { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
+      { says: "The 1990 agreement drops the trema", mustNot: /[gq]ü/iu },
+      {
+        says: "The 1990 agreement drops the accent of idéia, vôo, lêem and pára",
+        mustNot: /(?<!\p{L})(?:idéias?|assembléias?|jóias?|heróic[oa]s?|estréia|vôos?|enjôos?|lêem|vêem|crêem|dêem|pára|pêlos?|pólos?)(?!\p{L})/iu,
+      },
+      { says: "The learner is você, never tu or vós", mustNot: /(?<!\p{L})(?:tu|teus?|tuas?|ti|contigo|vós|vossos?|vossas?)(?!\p{L})/iu },
+      { says: "A welcome is Boas-vindas, never a gendered Bem-vindo", mustNot: /bem-vind[oa]s?/iu },
+      {
+        says: "A word is Brazil's, never Portugal's: tela, arquivo, usuário, celular, registro, equipe",
+        mustNot: /(?<!\p{L})(?:ecrãs?|ficheiros?|utilizador(?:es)?|telemóve(?:l|is)|registos?|equipas?)(?!\p{L})/iu,
+      },
+      { says: "A range between digits takes – with no spaces", mustNot: /\d\s+[–—-]\s*\d|\d\s*[–—-]\s+\d|\d—\d/ },
+    ],
+  },
   id: { kept: [], marks: [] },
   bn: { kept: [], marks: [] },
   ru: { kept: [], marks: [] },

@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Portuguese style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Portuguese
     status: open
@@ -63,9 +63,15 @@ the learner's gender, which the text must avoid. The method in
   *reproduzir*. The glossary settles each "play" by where it is used.
 - **The learner's gender stays out of the text.** *Boas-vindas*, not *Bem-vindo*. A neutral phrase
   replaces an adjective that describes the learner.
-- **Notes are solfège:** *Dó Ré Mi Fá Sol Lá Si*, as `many-locales` sets. A key is *Dó maior* or
-  *lá menor*.
-- **The marks:** quotes are `“ ”`.
+- **Notes are solfège:** *Dó Ré Mi Fá Sol Lá Si*, as `many-locales` sets. A note, a key and a chord
+  always take the capital: *Dó maior*, *Lá menor*. Stage 1 changed the lowercase key, since *lá*, *si*,
+  *sol* and *mi* are also everyday words. Middle C is `Dó4`, as the screen shows it.
+- **The teacher is male,** *seu professor de piano*, as the German *Klavierlehrer* is. Only the
+  learner's gender stays out of the text, and the app never says *Obrigado*.
+- **A control is *selecionado*, never *tocado*,** since *tocar* is the piano's verb.
+- **The marks:** quotes are `“ ”`, with `‘ ’` inside.
+- **The row of `src/i18n/locale-table.ts` stands as written:** `pt-BR` for `lang` and `Intl`, `pt_BR`
+  for Open Graph, and solfège. Stage 1 confirmed it against CLDR and the guide.
 - **Numbers follow `Intl` for `pt-BR`.** No digit or separator is set by hand.
 - **The plural forms come from `Intl` for `pt-BR`:** one, many and other. A counted message needs all
   three.
@@ -84,12 +90,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/pt.md:1`
-- [ ] Microsoft's Brazilian Portuguese style guide: the address, the marks and the interface terms. `docs/reference/translation/pt.md:1`
-- [ ] Portuguese Wikipedia's music articles and Brazilian piano methods: each music term with two sources. `docs/reference/translation/pt.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/pt.md:1`
-- [ ] The Portuguese entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Portuguese row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/pt.md:1`
+- [x] Microsoft's Brazilian Portuguese style guide: the address, the marks and the interface terms. `docs/reference/translation/pt.md:1`
+- [x] Portuguese Wikipedia's music articles and Brazilian piano methods: each music term with two sources. `docs/reference/translation/pt.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/pt.md:1`
+- [x] The Portuguese entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The Portuguese row of the locale table, confirmed or changed with its reason. `src/i18n/locale-table.ts:55`
 
 ### 2. The site and the player in Portuguese
 
@@ -166,12 +172,18 @@ term, address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `arabic` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/pt.md` holds every section the method names, with a
+recurring-steps table for the guides. The `pt` entry of `src/i18n/typography.ts` holds the kept words
+and ten mark rules. `the_portuguese_marks_hold_and_spare_kept_words` tests them and passes. The term
+list follows the Arabic guide's, which covers every recurring English term. The fetch reached no Brazilian
+piano method, so § *Open* lists the terms that rest on one source or none.
 
 ### Next
 
-**Stage 1: the Portuguese style guide and glossary.** Files: `docs/reference/translation/pt.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `arabic` is reached.
+**Stage 2: the site and the player in Portuguese.** Run `bun tools/i18n.ts status pt`, then
+`bun tools/i18n.ts work pt <unit>` for each catalog section. Three writers each get `pt.md` whole.
+Files: `src/i18n/messages/*.pt.ts`, `src/i18n/locale.ts:44` (its catalog chunk) and
+`src/i18n/stamps/pt.json`. A label that equals its English, such as *Total*, goes into the `pt` kept list.
 
 Expected red: none.
 
