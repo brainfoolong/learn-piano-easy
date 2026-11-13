@@ -147,7 +147,7 @@ on common usage alone, and *Open* lists it.
 | third, fourth, fifth, sixth, seventh | terça, quarta, quinta, sexta, sétima | WP *Escala maior*; AM. Portugal's *terceira* is not used. |
 | major third, minor third | terça maior, terça menor | WP *Escala maior*; AM |
 | open fifth | quinta aberta | the course's own term, since its lessons say it "sounds open" |
-| step, skip, leap (between keys) | grau vizinho, pulo, salto | the course's own terms, defined where they first appear |
+| step, skip, leap (between keys) | grau vizinho, pulo, salto; *um grau acima* once a lesson has named the step | the course's own terms, defined where they first appear |
 | tune, melody | a melodia | WP *Melodia*; WP *Pauta (música)* |
 | phrase | a frase | WP *Frase (música)*, one source |
 | call and answer (phrases) | pergunta e resposta | everyday words |
@@ -352,7 +352,10 @@ guide. A step that only differs in its bars or its section follows the nearest r
 - **A key or a chord takes the capital too:** *Dó maior*, *Lá menor*, *Si bemol maior*, *o acorde de Sol*.
 - **A clef follows its note:** *clave de Sol*, *clave de Fá*.
 - **An accidental is the sign, attached, in a label:** *Fá♯*, *Si♭*. Running text writes it as a word:
-  *Fá sustenido*, *Si bemol*.
+  *Fá sustenido*, *Si bemol*. Where the English writes the sign in running text, after a lesson has taught
+  it, the Portuguese keeps the sign too: *Encontre o Fá♯.*
+- **An Italian mark that reads as a Portuguese phrase takes *a indicação* before it:** *a indicação a
+  tempo*, so *a tempo* never reads as "in time".
 - **A name the code builds,** such as `Mi4` or `Fá menor`, keeps the form of `src/theory/note-names.ts`.
 - **The octave number is scientific:** the Dó central is `Dó4`, as the screen shows it. WP *Dó* calls it
   *Dó3*, after an older Brazilian count. A lesson names a note by its place, such as *o Dó central*, as
@@ -448,7 +451,8 @@ Each row is the chosen translation, and why it beat the next best one.
 | Dialog | Reset all progress? / Are you sure? | Redefinir todo o progresso? / Quer mesmo fazer isso? | *Tem certeza?* would also work, but *Está seguro?* would give the learner a gender. |
 | Counter | 3 of 8 lessons | 3 de 8 lições | The plain order. *Lições: 3/8* reads like a form. |
 | Streak | 3-day streak | Sequência de 3 dias | *Sequência* reads in Brazil and in Portugal. A game's branded word would not. |
-| Feedback | Right! | Certo! | *Muito bem!* is kept for a near miss, so the two do not blur. |
+| Feedback | Right! | Certo! | *Muito bem!* would blur with the recap's praise. A near miss is *Quase*. |
+| Lesson recap | Well done. You can count bars of four now. | Muito bem. Agora você já conta compassos de quatro tempos. | Every recap of the course opens so. *Parabéns!* is warmer than the English, and *Bom trabalho* reads as a boss's praise. |
 | Greeting | Hi, I'm your piano teacher. Shall we play? | Olá! Sou seu professor de piano. Vamos tocar? | *Vamos jogar?* would make the piano a game. |
 | Badge | Night owl / Finish a lesson at 10 at night or later. | Coruja da noite / Termine uma lição às 10 da noite ou mais tarde. | The badge is the owl, so no gender reaches the learner. *Notívago* would. |
 | Joke | Quality control is a cat that walks over the keys now and then. | O controle de qualidade fica por conta de um gato que, de vez em quando, passeia pelas teclas. | *Fica por conta de* keeps the deadpan. A word-for-word *é um gato* sounds odd. |

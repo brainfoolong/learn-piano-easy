@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Portuguese
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Portuguese, from a to m"
     status: open
@@ -119,12 +119,12 @@ hands* each go alone. *Chords* goes with *Rhythm*, *Reading music* with *Meet th
 keys* with *First melodies*. Five fresh reviewers then review the five batches blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.pt.ts:1`, `src/learn/lessons/first-melodies/texts.pt.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.pt.ts:1`, `src/learn/lessons/reading-music/texts.pt.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.pt.ts:1`, `src/learn/lessons/chords/texts.pt.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.pt.ts:1`, `src/learn/lessons/expression/texts.pt.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp pt` for each world. `src/i18n/stamps/pt.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.pt.ts:1`, `src/learn/lessons/first-melodies/texts.pt.ts:1`
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.pt.ts:1`, `src/learn/lessons/reading-music/texts.pt.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.pt.ts:1`, `src/learn/lessons/chords/texts.pt.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.pt.ts:1`, `src/learn/lessons/expression/texts.pt.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp pt` for each world. `src/i18n/stamps/pt.json:1`
 
 ### 4. The song guides in Portuguese, from a to m
 
@@ -172,23 +172,36 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/*.pt.ts`, and `pt` loads as
-its own chunk. Four writers wrote them, since the settings' 716 texts split into the look file and the
-rest. Each batch was reviewed blind. The two batches with a *wrong* finding were reviewed again and came
-back with none. Every catalog section is stamped. `status pt` still lists 8 catalog texts, which stay out
-on purpose: the site's name and the six languages' own names.
+Stages 1 to 3 are done. Every catalog section and every lesson has its `pt` file, and each world's
+`index.ts` loads `texts.pt` as its own chunk. Five writers wrote the course, and five fresh reviewers
+read it blind. The one batch with a *wrong* finding, *Reading music* with *Meet the piano*, was read
+again and came back with none. Every world is stamped.
 
-The review settled new terms into `pt.md` § *The interface glossary*. *Guardar* and *vista* are banned,
-*altura* is pitch alone, and the Expert key is *Avançado*. A count that can show zero writes *nenhum* or
-*nenhuma*.
+`status pt` lists 11 texts that stay out on purpose. Eight are catalog texts: the site's name and the
+six languages' own names. Three are in *Expression*: the titles *Legato* and *Staccato* and the quiz
+answers `p`, `mp`, `mf`, `f`. The site shows the English, which reads the same.
+
+The review settled three rulings into `pt.md`. Every lesson recap opens *Muito bem.* (§ 11), and a near
+miss stays *Quase*. A sign such as *Fá♯* stays in running text where the English writes it, and
+*a tempo* takes *a indicação* before it (§ 7). After a lesson names the step, *um grau acima* may drop
+*vizinho* (§ 5).
+
+The Portuguese course is not looked at in a browser yet. `pt` has no pages until stage 6 ships it, and
+stage 6 looks at a lesson.
 
 ### Next
 
-**Stage 3: the course in Portuguese.** Run `bun tools/i18n.ts work pt lesson/<world>` for each world.
-Each lesson is its own file, `src/learn/lessons/<world>/<lesson>.pt.ts`, beside its `.en.ts`. The
-stage's item anchors name a `texts.pt.ts` that does not exist. Brief each writer with `pt.md` whole,
-the method's § *The writer's rules* and the `*.es.ts` lessons as the model of shape. Tell it to list
-each text it writes equal to the English, for the `pt` kept list. Five writers, as the stage's split says.
+**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status pt` lists 51 `guide/<slug>` units
+from `air-on-the-g-string` to `mozart-21-andante`. The item's range names `alle-jahre-wieder` to
+`morgen-kinder`, but the stage covers every slug from a to m. Run `bun tools/i18n.ts work pt
+guide/<slug>` for each, and send seven writers of at most eight guides side by side. Each guide is
+`tools/our-songs/<slug>.pt.ts`, in the shape of `<slug>.es.ts`. Brief each writer with `pt.md` whole,
+its § *A guide's recurring steps*, and the method's § *The writer's rules*. Ask each writer to list the
+terms it needed that the glossary lacks, so the session settles them across batches. Tell each fixer
+that edits a text's first words to keep the space after the period, since the course's fixer lost it
+eight times.
+
+Then run `bun tools/make-our-songs.ts` and commit the guides' JSON, as the playbook says.
 
 Expected red: none.
 

@@ -20,6 +20,7 @@ export const bothHands: WorldLessons = {
     zh: () => import("./texts.zh").then((module) => module.texts),
     hi: () => import("./texts.hi").then((module) => module.texts),
     ar: () => import("./texts.ar").then((module) => module.texts),
+    pt: () => import("./texts.pt").then((module) => module.texts),
   },
   skipPicks: bothHandsSkipPicks,
 };
