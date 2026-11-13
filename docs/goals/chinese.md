@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Chinese
-    status: open
+    status: done
   - id: 3
     title: The course in Chinese
     status: open
@@ -107,12 +107,20 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/zh.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/zh.ts:1`, `src/i18n/messages/learn-lesson.zh.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.zh.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.zh.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `chinese_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp zh` for each catalog section. `src/i18n/stamps/zh.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/zh.ts:1`, `src/i18n/messages/learn-lesson.zh.ts:1`
+  - [x] Stubs written, and `zh` loads as its own chunk.
+  - [x] The writer fills the root and the six *Learn Piano* sections.
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.zh.ts:1`
+  - [x] The writer fills the five sections.
+- [x] The player's settings. `src/i18n/messages/player-settings.zh.ts:1`
+  - [x] One writer fills the panel and the look half.
+  - [x] One writer fills the play half.
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+  - [x] Four blind reviews run.
+  - [x] Each finding is applied or answered.
+  - [x] Each batch with a *wrong* finding is reviewed again. No batch had one.
+- [x] `bun x tsc` and `chinese_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+- [x] `bun run i18n stamp zh` for each catalog section. `src/i18n/stamps/zh.json:1`
 
 ### 3. The course in Chinese
 
@@ -175,19 +183,25 @@ address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/zh.md` holds every section the method names. Its glossary
-covers the Spanish guide's terms and the gaps a term count found, such as lift, hand shape and the
-judgement words. The `zh` entry of `src/i18n/typography.ts` holds the kept words and eleven mark rules.
-Test `the_chinese_marks_hold_and_spare_kept_words` pins them. The locale table's `zh` row is confirmed
-as it stands, so `src/i18n/locale-table.ts` did not change.
+Stages 1 and 2 are done. Every catalog section has its `.zh.ts` file, reviewed blind and stamped in
+`src/i18n/stamps/zh.json`. `zh` loads as its own chunk (`src/i18n/locale.ts:46`) and sits in
+`src/i18n/all-catalogs.ts`. Its status lists only deliberate copies as missing, such as the note letters,
+`+N XP` and the modifier keys. The four reviews found nothing *wrong*. The glossary gained the terms the
+writers shared, and the `kept` list gained the technical names, computer keys and mode cards' titles.
 
 ### Next
 
-**Stage 2: the site and the player in Chinese.** Follow `docs/agent/translation.md` § *A pass, step by
-step*, with `bun tools/i18n.ts status zh` and `work zh <unit>`. Catalogs: `src/i18n/messages/<section>.en.ts`,
-written as `<section>.zh.ts` beside the `.es.ts` files. Each writer's brief carries the whole of
-`docs/reference/translation/zh.md`. `src/i18n/locale.ts:44` needs a `zh` entry in `CATALOG_CHUNKS` once
-`src/i18n/messages/zh.ts` exists. Copy `es`'s line.
+**Stage 3: the course in Chinese.** Run `bun tools/i18n.ts work zh lesson/<world>` for each world. Each
+world's texts are `src/learn/lessons/<world>/<lesson>.zh.ts` and `texts.zh.ts`, beside the `.es.ts` files.
+The writer and reviewer briefs for the catalog are `.agent-tmp/i18n/zh/writer-brief.md` and
+`reviewer-brief.md`; adapt them for lessons, as `.agent-tmp/i18n/es/lesson-writer-brief.md` did for Spanish.
+
+- **The rules test calls each message with digit markers.** A text argument then touches its neighbour,
+  so a writer puts it after `：`, inside `“ ”` or `《》`, or beside a space. A `${…}` that yields Han text,
+  such as `files(n)` ending in `个文件`, takes no space after it.
+- **A rest parameter's function is called with one marker.** `notes.slice(0, -1)` is then empty; list
+  notes with `notes.join("、")`, as `lesson.playNotes.hintChord` does.
+- Each new Latin word a writer keeps goes in the `zh` `kept` list of `src/i18n/typography.ts`.
 
 Expected red: none.
 
