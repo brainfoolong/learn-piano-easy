@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Indonesian
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Indonesian, from a to m"
     status: open
@@ -81,6 +81,10 @@ keeps to the standard language without sounding stiff. The method in
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
 - **A second review's *wrong* finding with an exact one-word fix is applied without a third review.**
   A third reviewer costs a full read of the batch for one word. Any larger *wrong* fix gets a third review.
+- **A third review reads only the texts it checks,** blind, with their neighbours for context. The rest
+  of the batch was already read twice, so a full third read buys little for its cost.
+- **A quiz answer that is only marks or a kept word is left out,** as the other locales do, and the
+  English shows. A mark that stands in an answer with other answers takes *Tanda* before it: *Tanda rit.*
 - **A dialog's title keeps the glossary's short form,** even where a reviewer proposes a longer, clearer
   one. *File tanpa internet* stays the title of the offline files.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
@@ -126,13 +130,25 @@ hands* each go alone. *Chords* goes with *Rhythm*, *Reading music* with *Meet th
 keys* with *First melodies*. Five fresh reviewers then review the five batches blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Reading music* and *Meet the piano*. `src/learn/lessons/reading-music/bass-landmarks.id.ts:1`, `src/learn/lessons/meet-the-piano/black-key-groups.id.ts:1`
-- [ ] *Scales and keys* and *First melodies*. `src/learn/lessons/scales-and-keys/f-major.id.ts:1`, `src/learn/lessons/first-melodies/hands-take-turns.id.ts:1`
-- [ ] *Chords* and *Rhythm*. `src/learn/lessons/chords/alberti-bass.id.ts:1`, `src/learn/lessons/rhythm/counting-to-four.id.ts:1`
-- [ ] *Both hands*. `src/learn/lessons/both-hands/a-held-bass-note.id.ts:1`
-- [ ] *Expression*. `src/learn/lessons/expression/crescendo-and-diminuendo.id.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp id` for each world. `src/i18n/stamps/id.json:1`
+- [x] *Reading music* and *Meet the piano*. `src/learn/lessons/reading-music/bass-landmarks.id.ts:1`, `src/learn/lessons/meet-the-piano/black-key-groups.id.ts:1`
+  - [x] Every lesson file and `texts.id.ts` written, and `id` loaded in each `index.ts`.
+  - [x] Reviewed blind twice, and every finding settled.
+- [x] *Scales and keys* and *First melodies*. `src/learn/lessons/scales-and-keys/f-major.id.ts:1`, `src/learn/lessons/first-melodies/hands-take-turns.id.ts:1`
+  - [x] Every lesson file and `texts.id.ts` written, and `id` loaded in each `index.ts`.
+  - [x] Reviewed blind, and every finding settled.
+- [x] *Chords* and *Rhythm*. `src/learn/lessons/chords/alberti-bass.id.ts:1`, `src/learn/lessons/rhythm/counting-to-four.id.ts:1`
+  - [x] Every lesson file and `texts.id.ts` written, and `id` loaded in each `index.ts`.
+  - [x] Reviewed blind twice, and every finding settled.
+- [x] *Both hands*. `src/learn/lessons/both-hands/a-held-bass-note.id.ts:1`
+  - [x] Every lesson file and `texts.id.ts` written, and `id` loaded in `index.ts`.
+  - [x] Reviewed blind, and every finding settled.
+- [x] *Expression*. `src/learn/lessons/expression/crescendo-and-diminuendo.id.ts:1`
+  - [x] Every lesson file and `texts.id.ts` written, and `id` loaded in `index.ts`.
+  - [x] Reviewed blind, and every finding settled.
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp id` for each world. `src/i18n/stamps/id.json:1`
+  - [x] `bun x tsc` and `indonesian_texts_keep_their_rules` pass.
+  - [x] All eight worlds stamped.
 
 ### 4. The song guides in Indonesian, from a to m
 
@@ -180,31 +196,35 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its Indonesian in `src/i18n/messages/*.id.ts`, and
-`src/i18n/stamps/id.json` stamps all fourteen. `CATALOG_CHUNKS` in `src/i18n/locale.ts` loads `id`. `bun x
-tsc` and `indonesian_texts_keep_their_rules` pass.
+Stages 1 to 3 are done. Every lesson of the eight worlds has its Indonesian in
+`src/learn/lessons/<world>/<lesson>.id.ts`. Each world's `texts.id.ts` gathers them, and its `index.ts`
+loads that chunk for `id`. `src/i18n/stamps/id.json` stamps all eight worlds. `bun x tsc` and
+`indonesian_texts_keep_their_rules` pass.
 
-Four writers worked side by side, with the settings split into its play and look halves. Four blind
-reviewers followed. Three batches had a *wrong* finding, and each was reviewed again. The second reviews
-found one more *wrong* text, the bare *Kedua* for both hands, and it was fixed as proposed.
+Five writers worked side by side, and five blind reviewers followed. Two batches had *wrong* findings.
+In *Chords*, a count of half steps such as *empat setengah nada* read as 4½ tones. In *Reading music*, a
+dropped *di* moved a note to another space. Both batches were reviewed again. The second review found
+one more *wrong* text in *Meet the piano*, the E two keys right of middle C. A narrow third check passed it.
 
-The glossary grew from what the writers met. New rows cover the scene (*tampilan 3D*), the default
-(*bawaan*), input and output, the MIDI channel, combo, the chord's root, particle wander, frame,
-offline files, the ape, the sponsor page, setup, and the streak's heading. *Menu*, *Level* and *Audio*
-joined the kept words.
+The guide gained a table of the lessons' recurring lines, such as *Bagus sekali.* and *Giliranmu.* The
+half-step row now writes a count as *N kali setengah nada*. The hairpin row names the shape in a quiz,
+since *tanda diminuendo* gave the answer away. Quiz answers that are only marks or a kept word are
+left out, as the other locales do.
 
 ### Next
 
-**Stage 3: the course in Indonesian.** Run `bun tools/i18n.ts work id lesson/<world>` for each world. Five
-writers go side by side, in the batches of stage 3's items. A lesson is
-`src/learn/lessons/<world>/<lesson>.id.ts`, nine per world. Each `.zh.ts` sibling is the code shape to copy,
-since Chinese names notes by letters too.
+**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status id` lists them as `guide/<slug>`
+units: the 51 slugs from `alle-jahre-wieder` to `morgen-kinder`. Run `bun tools/i18n.ts work id
+guide/<slug>` for each. Seven writers of at most eight guides each go side by side, in slug order.
+A guide is `tools/our-songs/<slug>.id.ts`, and each `.pt.ts` sibling is the code shape to copy.
 
-- Each brief carries `docs/reference/translation/id.md` whole, and its § 5 rows added in stage 2.
+- Each brief carries `docs/reference/translation/id.md` whole. Its § *A guide's recurring steps* fixes
+  each repeated step word for word, and the half-step and hairpin rows apply to guides too.
 - A writer creates files with Write only. The guard refuses a shell write, even `sed -i`.
 - A reviewer writes its findings to `.agent-tmp/i18n/id/review-<batch>.md`, one line per finding with
   its proposed text. A fixer applies them.
-- Then run `bun x tsc` and `bun test src/i18n/translation-rules.test.ts -t indonesian`, and stamp each world.
+- Then run `bun x tsc` and `bun test src/i18n/translation-rules.test.ts -t indonesian`.
+- Run `bun tools/make-our-songs.ts` and commit each `public/songs/ours/<slug>/guide.json`, then stamp.
 
 Expected red: none.
 

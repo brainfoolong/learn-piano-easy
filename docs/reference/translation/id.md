@@ -92,7 +92,7 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | a sound; pitch | nada; tinggi nada | WP *Tala*; WP *Paranada* |
 | middle C | C tengah | WP *Kunci (musik)*; EP |
 | octave | oktaf | WP *Oktaf*; EP |
-| half step, whole step | setengah nada, satu nada | WP *Kres*; GR *tangga-nada-mayor* |
+| half step, whole step | setengah nada, satu nada; a count of half steps is *N kali setengah nada*, since *empat setengah nada* reads as 4½ tones | WP *Kres*; GR *tangga-nada-mayor* |
 | sharp, flat, natural (the signs) | kres, mol, pugar | WP *Tanda kromatis*; EP |
 | accidental | tanda kromatis | WP *Tanda kromatis*; EP |
 | staff | paranada | WP *Paranada*; EP; DN |
@@ -154,7 +154,7 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | loud, soft | keras, lembut | WP *Dinamika (musik)*, one source |
 | legato, staccato | legato, staccato | WP *Legato*; WH. WP's *stakato* is not used, so the word matches the score. |
 | crescendo, diminuendo | crescendo, diminuendo | WP *Crescendo*, one source |
-| hairpin | tanda crescendo, tanda diminuendo | no source names it |
+| hairpin | tanda crescendo, tanda diminuendo; a quiz that asks which is which names the shape: *tanda > yang menyempit*, *tanda < yang melebar* | no source names it |
 | mark (p, f, rit.) | tanda | the course's own term |
 | fermata | fermata | the Italian word, unsourced |
 | turn (ornament); ornament | hiasan turn; hiasan | unsourced |
@@ -350,6 +350,23 @@ More rules the guides settle:
 - **A work's title capitalises its main words,** as EYD asks: *Simfoni Kesembilan*, *Tarian Hungaria*.
 - **The *-nya* that means "its" is used where English writes "its":** *Mainkan melodinya.* It never stands
   for the learner's own hand, which is *-mu*.
+
+### A lesson's recurring lines
+
+The lessons repeat these lines. Each English line has one Indonesian text in every world.
+
+| English | Indonesian |
+|---|---|
+| Well done. | Bagus sekali. |
+| Your turn. | Giliranmu. |
+| Your turn, after one bar of count-in. | Giliranmu, setelah satu birama hitungan awal. |
+| Watch and listen. | Perhatikan dan dengarkan. |
+| Listen and watch. | Dengarkan dan perhatikan. |
+| Listen. | Dengarkan. |
+| Put your right hand in C position. | Letakkan tangan kananmu di posisi C. |
+| Put your right thumb on middle C. | Letakkan ibu jari kananmu di C tengah. |
+| Keep your hand where it is. | Biarkan tanganmu di tempatnya. |
+| Press Start and listen to four clicks first. | Tekan Mulai, lalu dengarkan dulu empat klik. |
 
 ## 6. Kept words
 
