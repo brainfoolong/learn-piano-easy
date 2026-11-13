@@ -22,6 +22,7 @@ import { LOCALES, localeOfPath, localeRoot, messagesOf, type Locale } from "../i
 import type { PageMeta } from "../i18n/messages/en";
 import { COURSE } from "../learn/course";
 import { textsOf } from "../learn/model";
+import { textFor } from "../i18n/pseudo";
 
 /** A route's id, which the router, the build and the catalogs name it by. */
 export type RouteId = "home" | "play" | "modes" | "learn" | "profile" | "about" | "data" | "sponsor" | "imprint" | "privacy" | "design" | "lesson";
@@ -40,11 +41,11 @@ export interface Route {
    * A lesson's route names its world and its lesson. It carries the lesson's title and description in
    * each locale only where the world is loaded, as in the build.
    */
-  lesson?: { world: string; lesson: string; meta?: Record<Locale, PageMeta> };
+  lesson?: { world: string; lesson: string; meta?: Partial<Record<Locale, PageMeta>> };
 }
 
 /** The route of lesson `lesson` of world `world`, with its `meta` in each locale when it is known. */
-export function lessonRoute(world: string, lesson: string, meta?: Record<Locale, PageMeta>): Route {
+export function lessonRoute(world: string, lesson: string, meta?: Partial<Record<Locale, PageMeta>>): Route {
   return { id: "lesson", path: `learn/${world}/${lesson}/`, hidden: false, lesson: { world, lesson, ...(meta === undefined ? {} : { meta }) } };
 }
 
@@ -58,22 +59,25 @@ function lessonRouteAt(routePath: string): Route | undefined {
   return lessonRoute(match[1]!, match[2]!);
 }
 
-/** Every lesson's page in every locale, the bosses and skip tests included. It loads every world. */
-export async function lessonPages(): Promise<Page[]> {
+/**
+ * Every lesson's page in each of `locales`, the bosses and skip tests included. It loads every world.
+ * The locales are the shipped ones, and a `--pseudo` build adds the pseudo-locale.
+ */
+export async function lessonPages(locales: readonly Locale[] = LOCALES): Promise<Page[]> {
   const pages: Page[] = [];
   for (const world of COURSE) {
-    for (const locale of LOCALES) await world.loadTexts(locale);
+    for (const locale of locales) await world.loadTexts(locale);
     const { lessons, boss, skipTest } = await world.load();
     for (const lesson of [...lessons, boss, skipTest]) {
       if (lesson === undefined) continue;
       const meta = Object.fromEntries(
-        LOCALES.map((locale) => {
+        locales.map((locale) => {
           const { title, steps } = textsOf(lesson, locale);
           const intro = steps[lesson.steps[0]!.id]!.text;
-          return [locale, { title, description: messagesOf(locale).lessonPage.description(title, world.title[locale], intro) }];
+          return [locale, { title, description: messagesOf(locale).lessonPage.description(title, textFor(world.title, locale), intro) }];
         }),
-      ) as Record<Locale, PageMeta>;
-      for (const locale of LOCALES) pages.push(pageOf(lessonRoute(world.id, lesson.id, meta), locale));
+      ) as Partial<Record<Locale, PageMeta>>;
+      for (const locale of locales) pages.push(pageOf(lessonRoute(world.id, lesson.id, meta), locale));
     }
   }
   return pages;
@@ -135,9 +139,9 @@ export function pageOf(route: Route, locale: Locale): Page {
   return { route, locale, path, file: `${path}index.html`, base: baseOf(path) };
 }
 
-/** Every page of a route of `ROUTES`: each in each locale. `lessonPages` adds the lessons'. */
-export function allPages(): Page[] {
-  return ROUTES.flatMap((route) => LOCALES.map((locale) => pageOf(route, locale)));
+/** Every page of a route of `ROUTES`: each in each of `locales`. `lessonPages` adds the lessons'. */
+export function allPages(locales: readonly Locale[] = LOCALES): Page[] {
+  return ROUTES.flatMap((route) => locales.map((locale) => pageOf(route, locale)));
 }
 
 /** The size in pixels of a social picture, the one social sites ask for. */
@@ -157,13 +161,13 @@ export function socialImageOf(locale: Locale): string {
  */
 export function pageTitle(page: Page): string {
   const { siteName, pages } = messagesOf(page.locale);
-  const title = page.route.lesson?.meta?.[page.locale].title ?? pages[page.route.id].title;
+  const title = page.route.lesson?.meta?.[page.locale]?.title ?? pages[page.route.id].title;
   return title === siteName ? title : `${title} · ${siteName}`;
 }
 
 /** The page's description: a lesson's own when the route knows it, else its route's. */
 export function pageDescription(page: Page): string {
-  return page.route.lesson?.meta?.[page.locale].description ?? messagesOf(page.locale).pages[page.route.id].description;
+  return page.route.lesson?.meta?.[page.locale]?.description ?? messagesOf(page.locale).pages[page.route.id].description;
 }
 
 /** The project's repository on GitHub, which holds its code and its license. */

@@ -1,7 +1,7 @@
 /** The gallery's section of the link: inline in a sentence, standalone, external and visited. */
 import { el } from "../dom";
 import { link } from "../components/link";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -26,11 +26,11 @@ const MESSAGES = {
     newTab: "Lieder in neuem Tab öffnen",
     visited: "Zurück zu dieser Seite",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** The link's section in the gallery. */
 export function linkSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const sentence = el("p", {
     children: [t.sentenceStart, link({ label: t.guide, href: "#", variant: "inline" }), t.sentenceEnd],
   });

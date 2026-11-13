@@ -4,7 +4,7 @@
  * reads.
  */
 import { chip, type ChipOptions } from "../components/chip";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -37,13 +37,13 @@ const MESSAGES = {
     legendary: "Schwer",
     mythic: "Original",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 const chips = (entries: [string, ChipOptions][]) => entries.map(([state, options]) => specimen(state, chip(options)));
 
 /** The chip's section in the gallery. */
 export function chipSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   return section("chip", t.chip, [
     group(
       t.variants,

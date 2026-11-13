@@ -35,6 +35,7 @@
 import { t } from "../i18n/live";
 import { LOCALE_TABLE, type LocaleCode } from "../i18n/locale";
 import { playerLibrary } from "../i18n/messages/player-library.en";
+import { textFor } from "../i18n/pseudo";
 import type { Finger, Hand } from "../theory/fingering";
 import { isSkillId, type SkillId } from "./skills";
 
@@ -90,9 +91,9 @@ export type StepHands = Hand | "both";
 /** A text of the guide in each locale it is written in. The English is always there. */
 export type GuideText = { en: string } & Partial<Record<LocaleCode, string>>;
 
-/** `text` in `locale`, or in English where `text` has none in `locale`. */
+/** `text` in `locale`, or in English where `text` has none in `locale`. The pseudo-locale derives its own. */
 export function textIn(text: GuideText, locale: LocaleCode): string {
-  return text[locale] ?? text.en;
+  return textFor(text, locale);
 }
 
 /** One step of a practice plan: what to do, and the setup one click applies. */

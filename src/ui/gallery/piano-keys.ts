@@ -16,7 +16,7 @@ import { button } from "../components/button";
 import { el } from "../dom";
 import type { Mark } from "../mark";
 import { signal } from "../signal";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -53,7 +53,7 @@ const MESSAGES = {
     start: "Abspielen",
     stop: "Stopp",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** A view in a box of a set width, since a view fills its parent and a specimen sizes to its content. */
 function sized(child: HTMLElement, width: string): HTMLElement {
@@ -62,7 +62,7 @@ function sized(child: HTMLElement, width: string): HTMLElement {
 
 /** The piano view's section in the gallery, whose embedded player sounds on the services of the site's `settings`. */
 export function pianoKeysSection(locale: Locale, settings: SettingsStore): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const base: PianoKeysOptions = {
     label: t.label,
     markNames: { next: t.next, correct: t.correct, mistake: t.mistake },

@@ -2,7 +2,7 @@
 import { button } from "../components/button";
 import { section as band, type SectionOptions } from "../components/section";
 import { el } from "../dom";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -27,7 +27,7 @@ const MESSAGES = {
     body: "Jedes Lied wartet auf dich, damit du nie zurückfällst.",
     start: "Jetzt spielen",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** A section in a box of a set width, since a specimen sizes to its content. */
 function sized(options: SectionOptions): HTMLElement {
@@ -41,7 +41,7 @@ const bands = (entries: [string, SectionOptions][]) => entries.map(([state, opti
 
 /** The section's section in the gallery. Its headings are `h3`, under the gallery's `h2`. */
 export function sectionSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const full = (options: Partial<SectionOptions>, withEyebrow = true): SectionOptions => ({
     level: 3,
     heading: t.heading,

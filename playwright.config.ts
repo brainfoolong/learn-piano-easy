@@ -6,7 +6,8 @@
  * `E2E_RUN` and `E2E_PORT`. A run deletes the folders of runs whose process has ended.
  *
  * The web server builds the app into the run's `dist/` and serves it with the service worker, like
- * `bun run preview`. It never reuses a running server, so every run tests the tree as it is.
+ * `bun run preview`, and with the pseudo-locale's pages under `en-XA/`. It never reuses a running
+ * server, so every run tests the tree as it is.
  * A failed test keeps its trace under the run's `results/` until the next run starts.
  * Test files are `e2e/*.e2e.ts`, a name `bun test` never picks up. Decision 0001 says why Playwright.
  *
@@ -80,7 +81,7 @@ export default defineConfig({
   },
   projects: [{ name: "chromium", use: { ...devices["Desktop Chrome"] } }],
   webServer: {
-    command: `bun tools/dev.ts --preview --port ${port} --out ${run}/dist --no-tls`,
+    command: `bun tools/dev.ts --preview --pseudo --port ${port} --out ${run}/dist --no-tls`,
     url: `http://localhost:${port}/`,
     reuseExistingServer: false,
     timeout: 60_000,

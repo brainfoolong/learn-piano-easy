@@ -8,7 +8,7 @@
  * - **A locale's style guide fills its kept words and its marks.** Its *Kept words* section lists what
  *   stays as it is, such as MIDI, and its *Marks* section gives each rule with the pattern here.
  */
-import type { Alphabet, LocaleCode } from "./locale-table";
+import type { Alphabet, LanguageCode } from "./locale-table";
 
 /** The Unicode scripts each alphabet writes in, by their `Script_Extensions` names. */
 export const SCRIPTS: Record<Alphabet, readonly string[]> = {
@@ -39,7 +39,7 @@ export interface Typography {
 }
 
 /** Each locale's rules. English is the source, and German is checked by eye, so the test skips both. */
-export const TYPOGRAPHY: Record<LocaleCode, Typography> = {
+export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
   en: { kept: [], marks: [] },
   de: { kept: [], marks: [] },
   es: { kept: [], marks: [] },

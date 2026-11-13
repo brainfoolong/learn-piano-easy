@@ -17,7 +17,7 @@
 import { loadUnits, type Leaf, type Text } from "../../tools/i18n";
 import { expect, test } from "../testing";
 import { PLURAL_FORMS } from "./format";
-import { LOCALE_TABLE, rowOf, type LocaleCode } from "./locale-table";
+import { LOCALE_TABLE, rowOf, type LanguageCode as LocaleCode } from "./locale-table";
 import { SCRIPTS, TYPOGRAPHY, type Typography } from "./typography";
 
 /** The numbers a message is called with, one per argument, each easy to find in its text. */

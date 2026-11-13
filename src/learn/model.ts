@@ -42,7 +42,7 @@
  * - Whether a song step's file is a version of ours is checked against the catalog by
  *   `src/learn/model.test.ts`, since this module never reads the catalog.
  */
-import type { Locale, LocaleCode } from "../i18n/locale";
+import type { Locale, LocaleCode, ShippedLocale } from "../i18n/locale";
 import { type Translation, withEnglish } from "../i18n/translation";
 import type { SkillId } from "../library/skills";
 import type { Finger, Hand } from "../theory/fingering";
@@ -287,7 +287,8 @@ export type WorldAccent = (typeof WORLD_ACCENTS)[number];
 export interface World {
   /** Unique in the course, kebab-case. Its lessons live in `src/learn/lessons/<id>/`. */
   id: string;
-  title: Record<Locale, string>;
+  /** The world's title in each shipped locale. `textFor` of `src/i18n/pseudo.ts` reads it. */
+  title: Record<ShippedLocale, string>;
   accent: WorldAccent;
   /** The world's lessons, loaded once on demand. */
   load: () => Promise<WorldLessons>;

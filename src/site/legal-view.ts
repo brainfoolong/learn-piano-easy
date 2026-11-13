@@ -14,7 +14,8 @@
  */
 import { legalDe } from "../i18n/messages/legal.de";
 import { legalEn, type Block, type Inline, type LegalTexts } from "../i18n/messages/legal.en";
-import type { Locale } from "../i18n/locale";
+import type { Locale, ShippedLocale } from "../i18n/locale";
+import { textFor } from "../i18n/pseudo";
 import { link } from "../ui/components/link";
 import { toggleControl } from "../ui/controls";
 import { el } from "../ui/dom";
@@ -22,7 +23,7 @@ import "./legal-view.css";
 import { hrefOf } from "./site-bar";
 import { browserRefuses, optedOut, setOptedOut } from "./stats";
 
-const TEXTS: Record<Locale, LegalTexts> = { en: legalEn, de: legalDe };
+const TEXTS: Record<ShippedLocale, LegalTexts> = { en: legalEn, de: legalDe };
 
 /** The switch of the visitor statistics, with the line of what the site does now. */
 function optOutSwitch(say: LegalTexts["optOut"]): HTMLElement {
@@ -71,7 +72,7 @@ function blockElement(block: Block, texts: LegalTexts, locale: Locale): HTMLElem
 
 /** The body of the legal page `kind` in `locale`. */
 export function legalBody(kind: "imprint" | "privacy", locale: Locale): HTMLElement {
-  const texts = TEXTS[locale];
+  const texts = textFor(TEXTS, locale);
   const doc = texts[kind];
   const blocks = (list: Block[]) => list.map((block) => blockElement(block, texts, locale));
   return el("div", {

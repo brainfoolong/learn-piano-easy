@@ -7,7 +7,7 @@ import { button } from "../components/button";
 import { iconButton } from "../components/icon-button";
 import { topBar, type TopBarLink } from "../components/top-bar";
 import { signal } from "../signal";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -42,7 +42,7 @@ const MESSAGES = {
     favourite: "Als Favorit markieren",
     practise: "Üben",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** A frame as wide as its panel, since a specimen is only as wide as its content. */
 const frame = (child: Node) =>
@@ -50,7 +50,7 @@ const frame = (child: Node) =>
 
 /** The top bar's section in the gallery. */
 export function topBarSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const brand = { label: t.brand, href: "#" };
   const nav = (current: number): TopBarLink[] =>
     [t.songs, t.lessons, t.progress].map((label, index) => ({ label, href: "#", current: index === current }));

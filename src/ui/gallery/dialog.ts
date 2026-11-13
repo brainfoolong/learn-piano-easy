@@ -6,7 +6,7 @@
 import { button } from "../components/button";
 import { dialog, dialogPreview, type Dialog } from "../components/dialog";
 import { el } from "../dom";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -56,7 +56,7 @@ const MESSAGES = {
     noteTitle: "Deine Tastatur ist verbunden",
     noteText: "Drücke eine beliebige Taste, um die Lektion zu starten.",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** A body of paragraphs, one for each line of `text`. */
 function paragraphs(text: string): HTMLElement {
@@ -64,7 +64,7 @@ function paragraphs(text: string): HTMLElement {
 }
 
 /** The two actions of the delete dialog. `done` closes the dialog they sit in. */
-function deleteActions(t: (typeof MESSAGES)[Locale], done: () => void): HTMLElement[] {
+function deleteActions(t: (typeof MESSAGES)["en"], done: () => void): HTMLElement[] {
   return [
     button({ label: t.cancel, variant: "secondary", onClick: done }),
     button({ label: t.confirm, variant: "danger", onClick: done }),
@@ -78,7 +78,7 @@ function framed(panel: HTMLElement): HTMLElement {
 
 /** The dialog's section in the gallery. */
 export function dialogSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
 
   const withActions: Dialog = dialog({
     title: t.deleteTitle,

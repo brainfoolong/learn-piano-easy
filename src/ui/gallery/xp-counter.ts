@@ -3,7 +3,7 @@ import { button } from "../components/button";
 import { xpCounter } from "../components/xp-counter";
 import { el } from "../dom";
 import { signal } from "../signal";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -16,14 +16,14 @@ const MESSAGES = {
     states: "Zustände",
     earn: "250 XP verdienen",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** The unit after the number. "XP" reads the same in both locales. */
 const format = (number: string) => `${number} XP`;
 
 /** The XP counter's section in the gallery. */
 export function xpCounterSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const counting = signal(1250);
   return section("xp-counter", t.xpCounter, [
     group(t.states, [

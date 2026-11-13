@@ -7,6 +7,7 @@
  * - The page opens with the mascot's portrait beside what the app is. The portrait only decorates, so
  *   its `alt` is empty. It costs one small picture, which the shell's cache already holds.
  * - Each text sits in its own fold, and only our license starts open, so the page opens short.
+ * - A license text is marked `lang="en"`, since it is English in every locale.
  * - Each text is fetched when the page opens. They are in the app group, so they load offline too.
  * - The page's own words come from the live catalog's `player.shell.about`, read once as the build of
  *   the page starts. The site's About page sets the live locale first, so it builds in that language.
@@ -85,7 +86,11 @@ export async function aboutPage(): Promise<HTMLElement> {
       ...files.map((file, i) =>
         el("details", {
           props: { open: i === 0 },
-          children: [el("summary", { text: licenseHeading(file, messages) }), el("pre", { text: texts[i] ?? "" })],
+          children: [
+            el("summary", { text: licenseHeading(file, messages) }),
+            // A license text is English in every locale, so a screen reader reads it as English.
+            el("pre", { text: texts[i] ?? "", attrs: texts[i] === say.offline ? {} : { lang: "en" } }),
+          ],
         }),
       ),
     ],

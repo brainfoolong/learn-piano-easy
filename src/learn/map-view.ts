@@ -41,6 +41,7 @@
  */
 import "./map-view.css";
 import { messagesOf, type Locale } from "../i18n/locale";
+import { textFor } from "../i18n/pseudo";
 import { lessonRoute, pageOf } from "../site/routes";
 import type { View, ViewContext } from "../site/views";
 import { badgeMedal } from "../ui/components/badge-medal";
@@ -140,7 +141,7 @@ function nodeOf(node: MapNode, world: string, title: string, next: boolean, loca
 function worldOf(loaded: LoadedWorld, state: MapWorld, number: number, first: number, next: MapNode | undefined, locale: Locale): HTMLElement {
   const t = messagesOf(locale);
   const { world, lessons } = loaded;
-  const title = world.title[locale];
+  const title = textFor(world.title, locale);
   const titles = new Map([...lessons.lessons, ...(lessons.boss === undefined ? [] : [lessons.boss])].map((lesson) => [lesson.id, textsOf(lesson, locale).title]));
   const xs = state.nodes.map((_, i) => swingAt(first + i));
   const reached = state.nodes.reduce((last, node, i) => (node.state === "locked" ? last : i), 0);

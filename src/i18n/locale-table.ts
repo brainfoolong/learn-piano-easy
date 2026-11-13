@@ -8,6 +8,8 @@
  * - **`complete` marks the locales whose catalogs hold every text.** The type checker and the catalog
  *   test hold them to it, and only their pages are checked for English that shows.
  * - **The first row is the default locale,** served from the site's root.
+ * - **The pseudo-locale `en-XA` has a row beside the table,** so no list of languages meets it. A page
+ *   may be in it, so `Locale` holds it, and `ShippedLocale` keys the texts every shipped locale holds.
  */
 
 /** The note names a locale shows a new learner. */
@@ -57,27 +59,46 @@ export const LOCALE_TABLE = [
   { code: "ja", english: "Japanese", endonym: "日本語", lang: "ja", intl: "ja", dir: "ltr", ogLocale: "ja_JP", naming: "solfege", alphabet: "japanese", shipped: false, complete: false },
 ] as const satisfies readonly LocaleRow[];
 
+/**
+ * The pseudo-locale, whose texts `src/i18n/pseudo.ts` derives from the English. It is no row of the
+ * table, so no language list, tool or translation check meets it. Only a build with `--pseudo` writes
+ * its pages.
+ */
+export const PSEUDO_ROW = {
+  code: "en-XA", english: "Pseudo", endonym: "Ƥšéüðö", lang: "en-XA", intl: "en", dir: "ltr", ogLocale: "en_US", naming: "letters", alphabet: "latin", shipped: false, complete: false,
+} as const satisfies LocaleRow;
+
+/** The pseudo-locale's code. */
+export const PSEUDO_LOCALE = PSEUDO_ROW.code;
+export type PseudoLocale = typeof PSEUDO_LOCALE;
+
 type Row = (typeof LOCALE_TABLE)[number];
 
-/** A locale of the table, shipped or not. */
-export type LocaleCode = Row["code"];
+/** A language of the table, shipped or not. */
+export type LanguageCode = Row["code"];
+
+/** A locale a catalog may be loaded in: a language of the table, or the pseudo-locale. */
+export type LocaleCode = LanguageCode | PseudoLocale;
 
 /**
- * A locale the site serves. A text keyed by locale, such as a lesson's, holds one for each, so a row
+ * A locale the site serves. A text keyed by it, such as a world's title, holds one for each, so a row
  * that ships fails the type check wherever its texts are missing.
  */
-export type Locale = Extract<Row, { shipped: true }>["code"];
+export type ShippedLocale = Extract<Row, { shipped: true }>["code"];
+
+/** A locale a page may be written in: a shipped one, or the pseudo-locale of a `--pseudo` build. */
+export type Locale = ShippedLocale | PseudoLocale;
 
 /** The row of `locale`. */
 export function rowOf(locale: LocaleCode): LocaleRow {
-  return LOCALE_TABLE.find((row) => row.code === locale)!;
+  return locale === PSEUDO_LOCALE ? PSEUDO_ROW : LOCALE_TABLE.find((row) => row.code === locale)!;
 }
 
 /** The site's shipped locales, the default first. */
 export const LOCALES = LOCALE_TABLE.filter((row): row is Extract<Row, { shipped: true }> => row.shipped).map((row) => row.code);
 
 /** The locales whose catalogs hold every text. */
-export const COMPLETE_LOCALES: readonly LocaleCode[] = LOCALE_TABLE.filter((row) => row.complete).map((row) => row.code);
+export const COMPLETE_LOCALES: readonly LanguageCode[] = LOCALE_TABLE.filter((row) => row.complete).map((row) => row.code);
 
 /** The default locale, served from the site's root. */
-export const DEFAULT_LOCALE: Locale = LOCALE_TABLE[0].code;
+export const DEFAULT_LOCALE: ShippedLocale = LOCALE_TABLE[0].code;

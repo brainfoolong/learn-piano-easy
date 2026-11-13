@@ -29,7 +29,7 @@
  */
 import type { Browser, Page } from "@playwright/test";
 import { CATALOGS } from "../src/i18n/all-catalogs";
-import { COMPLETE_LOCALES, DEFAULT_LOCALE, isLocale, LOCALES as SHIPPED_LOCALES } from "../src/i18n/locale";
+import { COMPLETE_LOCALES, DEFAULT_LOCALE, isLocale, LOCALES as SHIPPED_LOCALES, PSEUDO_LOCALE } from "../src/i18n/locale";
 import { fold, translatedAway, untranslated } from "../src/i18n/untranslated";
 import { SETTINGS_VERSION, STORAGE_KEY } from "../src/settings/store";
 import { judgePage, type MeasuredText, type Named, type PageMeasure } from "../src/ui/layout-geometry";
@@ -40,8 +40,21 @@ export const WIDTHS = [360, 768, 1280, 1920] as const;
 /** The themes, as the system's colour scheme. */
 export const THEMES = ["light", "dark"] as const;
 
-/** The locales every width is checked in: the complete ones, English and German, the longest the layout must fit. */
-export const LOCALES = SHIPPED_LOCALES.filter((locale) => COMPLETE_LOCALES.includes(locale));
+/**
+ * The locales every width is checked in: the complete ones, English and German, and the pseudo-locale,
+ * whose texts run 40% longer than the English.
+ */
+export const LOCALES = [...SHIPPED_LOCALES.filter((locale) => COMPLETE_LOCALES.includes(locale)), PSEUDO_LOCALE];
+
+/**
+ * `url`, the absolute URL of a page of the default locale, in the pseudo-locale. The end-to-end server
+ * serves the site from its root, so the locale's folder goes first.
+ */
+export function inPseudo(url: string): string {
+  const at = new URL(url);
+  at.pathname = `/${PSEUDO_LOCALE}${at.pathname}`;
+  return at.href;
+}
 
 /** The widest viewport that emulates a touch screen. */
 export const TOUCH_MAX_WIDTH = 768;
@@ -103,7 +116,7 @@ export function recordShifts(): void {
 }
 
 /** Waits until the page's fonts are ready and two frames have drawn. */
-async function settle(page: Page): Promise<void> {
+export async function settle(page: Page): Promise<void> {
   await page.waitForLoadState("load");
   await page.evaluate(async () => {
     await document.fonts.ready;
@@ -212,7 +225,7 @@ function measureInPage(): Omit<PageMeasure, "errors" | "shift" | "touch"> {
  * Every text of the page's own language that a person can see or hear: each element's own text, and
  * each shown label. A text in another `lang`, or under `translate="no"`, is left out.
  */
-function textsInPage(): string[] {
+export function textsInPage(): string[] {
   const out: string[] = [];
   const pageLang = document.documentElement.lang;
   for (const e of document.body.querySelectorAll("*")) {
@@ -274,7 +287,8 @@ export async function checkLayout(browser: Browser, url: string, options: Layout
           page.on("console", (message) => {
             if (message.type() === "error") errors.push(message.text());
           });
-          await page.goto(url);
+          // A browser's language never moves a visit to the pseudo-locale, so its check opens its page.
+          await page.goto(locale === PSEUDO_LOCALE ? inPseudo(url) : url);
           if (options.ready !== undefined) await drawn(page, options.ready);
           await settle(page);
           const where = `${width} ${theme} ${locale}`;

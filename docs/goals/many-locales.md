@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: A pseudo-locale finds every hard-coded and every cramped text
-    status: open
+    status: done
   - id: 5
     title: "Scripts, fonts, note names and sorting follow the locale"
     status: open
@@ -84,9 +84,11 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
   the Open Graph locale, the default naming system, the alphabet and the flags `shipped` and `complete`. Every list elsewhere derives from it.
 - **The table's file imports nothing,** and `src/i18n/locale.ts` re-exports it. The settings' schema
   and `format.ts` read it without loading a catalog, so no import cycle runs through the catalogs.
-- **`Locale` is a shipped locale, and `LocaleCode` is any row's.** A text keyed by `Locale`, such as a
-  lesson's or a world's title, then fails the type check when a row ships without it. Catalogs,
-  `loadLocale`, `messagesOf` and the `Intl` helpers take a `LocaleCode`.
+- **`ShippedLocale` is a shipped locale, and `Locale` is a page's locale: a shipped one or `en-XA`.**
+  A text keyed by `ShippedLocale`, such as a world's title, fails the type check when a row ships
+  without it. `textFor` reads it for any locale. `LanguageCode` is any row's code, and `LocaleCode` adds
+  `en-XA`. Catalogs, `loadLocale`, `messagesOf` and the `Intl` helpers take a `LocaleCode`. Renaming the
+  record keys touched about 30 lines, where a new page-locale type would have touched about 120.
 - **The language switch and the footer name a locale by the table's endonym.** The catalogs hold no
   `languageName`.
 - **The router awaits `prepare(path)` before a move,** which loads the page's catalog. A later move wins,
@@ -182,6 +184,15 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
 - **The pseudo-locale is `en-XA`.** Each text is wrapped in `⟦ ⟧`, its vowels are accented, and it runs
   40% longer. The dev server and a build with `--pseudo` write its pages. The release build never does,
   and the language switch never lists it.
+- **`PSEUDO_ROW` sits beside `LOCALE_TABLE`, never in it,** so the tools, the rules test and every list
+  of languages leave it out. `rowOf` finds it.
+- **The runtime always knows `en-XA`, and only the build decides whether its pages exist.** Its catalog,
+  lesson texts and guide texts derive from the English when they load. The cost is `pseudo.ts`, about
+  1 kB, in the release bundle. A build flag read by the runtime would break `bun test` and the tools.
+- **A browser's language never moves a visit to `en-XA`,** so the layout checks open its pages by path.
+- **`pseudoTree` keeps a value under `route` or `href`,** since an address is no text.
+- **The longer-text test fails only on a flaw `en-XA` adds over English,** since each page's own test
+  holds the English to the layout checks.
 - **No font is shipped for a new script.** Each script gets a system font stack as a token under
   `:root:lang(<code>)`. Han text names its locale's fonts, because Chinese and Japanese draw the same
   character differently.
@@ -267,15 +278,15 @@ docs that state the new rules.
 in English and German, one subagent per folder of `src/`, side by side.
 **Gate:** `src/i18n/translation-rules.test.ts` exists.
 
-- [ ] `en-XA` in the table, built from the English by `pseudo()`. `src/i18n/pseudo.ts:1`
-- [ ] The build's `--pseudo` flag, and the dev server writes its pages. `tools/build.ts:241`
-- [ ] The e2e web server builds with `--pseudo`. `playwright.config.ts:1`
-- [ ] The sweep: every visible text holds a `⟦` or is a number, a note name, a song title or a kept word. `e2e/pseudo.e2e.ts:1`
-- [ ] Every hard-coded text the sweep finds moves into the catalog, in English and German. `src/i18n/messages/en.ts:1`
-- [ ] The layout checks run in `en-XA` at every width. `e2e/layout-check.ts:43`
-- [ ] Every layout that breaks at 40% longer text wraps or gets room. `src/ui/base.css:1`
-- [ ] Tests `no_page_shows_a_hard_coded_text` and `every_page_holds_longer_text`. `e2e/pseudo.e2e.ts:1`
-- [ ] Look at the landing, the map, a lesson and the player in `en-XA` with `bun run shot`.
+- [x] `en-XA` in the table, built from the English by `pseudo()`. `src/i18n/pseudo.ts:1`
+- [x] The build's `--pseudo` flag, and the dev server writes its pages. `tools/build.ts:241`
+- [x] The e2e web server builds with `--pseudo`. `playwright.config.ts:1`
+- [x] The sweep: every visible text holds a `⟦` or is a number, a note name, a song title or a kept word. `e2e/pseudo.e2e.ts:1`
+- [x] Every hard-coded text the sweep finds moves into the catalog, in English and German. `src/i18n/messages/en.ts:1`
+- [x] The layout checks run in `en-XA` at every width. `e2e/layout-check.ts:43`
+- [x] Every layout that breaks at 40% longer text wraps or gets room. `src/ui/base.css:1`
+- [x] Tests `no_page_shows_a_hard_coded_text` and `every_page_holds_longer_text`. `e2e/pseudo.e2e.ts:1`
+- [x] Look at the landing, the map, a lesson and the player in `en-XA` with `bun run shot`.
 
 ### 5. Scripts, fonts, note names and sorting follow the locale
 
@@ -304,36 +315,41 @@ and sorting by the live locale.
 
 ### State
 
-Stages 1, 2 and 3 are done. The checks `i18n-tool` and `translation-rules` pass, run once by file.
+Stages 1 to 4 are done. The check `pseudo-locale` passes, and `src/i18n/pseudo.test.ts` passes, each
+run once by file.
 
-- `tools/i18n.ts` loads every unit through `loadUnits`: 4,475 texts in catalog sections, worlds and
-  guides. `bun run i18n status es` lists all of them as missing, and `status de` lists all as stale,
-  since German has no stamps.
-- `work` writes JSON to `.agent-tmp/i18n/<locale>/<unit>.json`. A setting's text, read by a computed
-  key, finds its use through the setting's id.
-- `src/i18n/translation-rules.test.ts` imports `loadUnits` from `tools/i18n.ts`. It names one test per
-  locale but English and German, and each passes with no translation files yet.
-- `src/i18n/stamps/` holds only its README. The first pass writes the first stamp file.
-- `tsc` and the build are clean.
+- `src/i18n/pseudo.ts` holds `pseudo`, `pseudoTree` and `textFor`. `PSEUDO_ROW` sits beside
+  `LOCALE_TABLE` in `src/i18n/locale-table.ts`, so no table loop meets it.
+- `Locale` is now a page's locale, and the pseudo-locale is one. `ShippedLocale` keys world titles,
+  the legal texts, the gallery's messages and the stored language choice.
+- The sweep's first run found few hard-coded texts, so no split ran. The license texts on About now carry
+  `lang="en"`. Weekday letters from `Intl`, chord degrees, locale codes, `XP` and `1k` pass the sweep.
+- The sweep found one bug: `pseudoTree` rewrote a legal link's `route`. It now keeps `route` and `href`.
+- `every_page_holds_longer_text` checks each page in English and in `en-XA`, and fails only on a flaw
+  the longer text adds. Each page's own test holds the English.
+- The sweep opens every route and the first lesson, fresh and past the setup. It opens no dialog or panel.
+- `tsc` and the build are clean. The shots of the landing, the map, a lesson and the player show
+  only bracketed text.
 
 What earlier stages left to later ones:
 
 - `src/site/legal-view.ts:25` imports `legal.de` statically. Legal stays English and German only.
 - `src/theory/note-names.ts:71` compares the locale with `"de"`, and the two `player-settings-play`
   catalogs label the language options with endonyms. That is stage 5, which may read the table there.
-- `docs/site-design.md` § *Languages* names English and German as the layout locales. Stage 4 adds
-  `en-XA` there once the layout checks run in it.
+- `src/learn/profile-view.ts:143` hands `Intl` the page's code, not `rowOf(locale).intl`. Stage 5 fixes it.
 
 ### Next
 
-**Stage 4: the pseudo-locale.** Files: `src/i18n/pseudo.ts` (new), `src/i18n/locale-table.ts`,
-`tools/build.ts:241`, `tools/dev.ts`, `playwright.config.ts`, `e2e/pseudo.e2e.ts` (new),
-`e2e/layout-check.ts:43`, then the catalogs the sweep names. `en-XA` must stay out of `LOCALES`,
-the switch, the sitemap and `hreflang`, since `shipped` gates those. It needs its own flag or a row
-outside `LOCALE_TABLE`, and the units of `tools/i18n.ts` must never list it. Follow the stage's
-`**Split:**` line once the sweep's first run lists the hard-coded texts.
+**Stage 5: scripts, fonts, note names and sorting.** Files: `src/ui/base.css:25`, `src/render/labels.ts`,
+`src/theory/note-names.ts:46`, `src/settings/schema.ts`, `src/library/search.ts:191`,
+`src/library/uploads.ts:201`, `src/learn/profile-view.ts:143`, `src/theory/note-names.test.ts` and
+`tools/font-coverage.test.ts` (new). The schema must stay free of runtime imports from `src/i18n/`
+but `locale-table.ts`, as the playbook's `tsc` trap says.
 
-Expected red: none known. The two new test files passed when run once each.
+Expected red: every layout test now runs `en-XA` too, through `LOCALES` of `e2e/layout-check.ts`. None of
+them ran in this session. A flaw only `en-XA` shows may fail `e2e/design.e2e.ts`, `e2e/site.e2e.ts`,
+`e2e/landing.e2e.ts`, `e2e/play.e2e.ts` or `e2e/game.e2e.ts`. Each runs 1.5 times
+longer, so a tight `test.setTimeout` may fail too. Stage 6 fixes each.
 
 ### Backlog
 

@@ -33,7 +33,7 @@ import { dialogSection } from "./gallery/dialog";
 import { emptyStateSection } from "./gallery/empty-state";
 import { iconButtonSection } from "./gallery/icon-button";
 import { linkSection } from "./gallery/link";
-import { group, section, specimen, type Locale } from "./gallery/parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./gallery/parts";
 import { pianoKeysSection } from "./gallery/piano-keys";
 import { progressSection } from "./gallery/progress";
 import { sectionSection } from "./gallery/section";
@@ -86,9 +86,9 @@ const MESSAGES = {
     emptyMessage: "Öffne eine MIDI-Datei, um mitzuspielen.",
     emptyAction: "Lied öffnen",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
-type Messages = (typeof MESSAGES)[Locale];
+type Messages = (typeof MESSAGES)["en"];
 
 /** The palette's groups in order, each with the token names it takes. The last takes the rest. */
 const PALETTE_GROUPS: { heading: keyof Messages; takes: RegExp }[] = [
@@ -132,7 +132,7 @@ function swatch(name: string): HTMLElement {
 
 /** The palette: every colour token as a labelled swatch, grouped by its role. */
 function paletteSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const groups = new Map<keyof Messages, string[]>();
   for (const name of paletteTokens()) {
     const heading = PALETTE_GROUPS.find((entry) => entry.takes.test(name))!.heading;
@@ -152,7 +152,7 @@ function paletteSection(locale: Locale): HTMLElement {
 
 /** The mascot's section: its portrait in each size, its scene, and its place in an empty state. */
 function mascotSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const sizes: MascotSize[] = ["small", "medium", "large"];
   return section("mascot", t.mascot, [
     group(
@@ -198,7 +198,7 @@ const SECTIONS: ((locale: Locale, settings: SettingsStore) => HTMLElement)[] = [
 
 /** The gallery's view in `locale`, whose embedded player sounds on the services of the site's `settings`. */
 export function galleryView(locale: Locale, settings: SettingsStore): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   return el("div", {
     class: "gallery",
     children: [

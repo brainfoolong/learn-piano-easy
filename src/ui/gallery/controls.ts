@@ -8,7 +8,7 @@
 import "../controls.css";
 import { actionControl, selectControl, sliderControl, textControl, toggleControl, type Control } from "../controls";
 import { el } from "../dom";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -53,7 +53,7 @@ const MESSAGES = {
     resetView: "Ansicht zurücksetzen",
     exportRecording: "Aufnahme exportieren",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** A control with its name as a visible label before it, wrapping under it where the row is narrow. */
 function labelled(name: string, control: Control<unknown>): HTMLElement {
@@ -68,7 +68,7 @@ function slider(name: string, value: number, range: { min: number; max: number; 
 
 /** The form controls' section in the gallery. */
 export function controlsSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const ignore = () => {};
   return section("controls", t.controls, [
     group(t.toggle, [

@@ -22,6 +22,7 @@
  * the steps of its last twelve.
  */
 import { DEFAULT_LOCALE, type Locale, messagesOf } from "../i18n/locale";
+import { textFor } from "../i18n/pseudo";
 import { CHECKING_KINDS, type Lesson, type LessonTexts, MAX_STEPS, type SkipPick, type Step, textsOf, type World, type WorldLessons } from "./model";
 
 /** The id of every built skip test. */
@@ -60,7 +61,7 @@ function pickedSteps(world: World, lessons: readonly Lesson[], picks?: readonly 
 /** The texts in `locale` of the skip test of `picked`: its title names `world`, and each step keeps its own texts. */
 function skipTestTexts(world: World, picked: readonly { lesson: Lesson; step: Step }[], locale: Locale): LessonTexts {
   return {
-    title: messagesOf(locale).map.skipTest.title(world.title[locale]),
+    title: messagesOf(locale).map.skipTest.title(textFor(world.title, locale)),
     steps: Object.fromEntries(picked.map(({ lesson, step }) => [`${lesson.id}-${step.id}`, textsOf(lesson, locale).steps[step.id] ?? { text: "" }])),
   };
 }

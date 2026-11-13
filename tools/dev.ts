@@ -11,7 +11,10 @@
  * `--preview` serves a production build without watching, so the app runs locally exactly as it does
  * when hosted, service worker included.
  *
- * `bun tools/dev.ts [--port <n>] [--preview] [--out <dir>] [--no-tls]`. The port defaults to 4173, and
+ * The dev server also writes the pages of the pseudo-locale under `en-XA/`. A preview writes them only
+ * with `--pseudo`, as the end-to-end tests ask.
+ *
+ * `bun tools/dev.ts [--port <n>] [--preview] [--pseudo] [--out <dir>] [--no-tls]`. The port defaults to 4173, and
  * port 0 takes any free one. The `Local:` line names the port served. The folder
  * built and served defaults to `dist/`. The end-to-end tests serve their own folder, so they never race
  * a dev server over `dist/`.
@@ -32,6 +35,8 @@ const args = process.argv.slice(2);
 const portAt = args.indexOf("--port");
 const port = Number(portAt >= 0 ? args[portAt + 1] : 4173);
 const preview = args.includes("--preview");
+/** The dev server always writes the pseudo-locale's pages, and a preview only when `--pseudo` asks. */
+const pseudo = !preview || args.includes("--pseudo");
 const outAt = args.indexOf("--out");
 const outDir = resolve(root, outAt >= 0 ? (args[outAt + 1] ?? "dist") : "dist");
 
@@ -54,7 +59,7 @@ const listeners = new Set<ReadableStreamDefaultController<string>>();
 async function rebuild(): Promise<void> {
   const started = performance.now();
   try {
-    const result = await build({ outDir, dev: !preview });
+    const result = await build({ outDir, dev: !preview, pseudo });
     console.log(`built ${result.files.length} files in ${Math.round(performance.now() - started)} ms`);
     for (const l of listeners) l.enqueue("data: reload\n\n");
   } catch (error) {

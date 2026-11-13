@@ -75,7 +75,7 @@ test("a_lesson_page_carries_the_lessons_own_title_and_description", async () => 
     const html = await Bun.file(join(outDir, page.file)).text();
     const title = /<title>(.*)<\/title>/.exec(html)![1]!;
     const description = /<meta name="description" content="([^"]*)"/.exec(html)![1]!;
-    const meta = page.route.lesson!.meta![page.locale];
+    const meta = page.route.lesson!.meta![page.locale]!;
     expect(title).toBe(pageTitle(page));
     expect(title).toStartWith(meta.title);
     expect(description).toStartWith(meta.title);

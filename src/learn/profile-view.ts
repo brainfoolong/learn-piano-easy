@@ -33,6 +33,7 @@
  */
 import "./profile-view.css";
 import { messagesOf, type Locale } from "../i18n/locale";
+import { textFor } from "../i18n/pseudo";
 import type { View, ViewContext } from "../site/views";
 import { badgeMedal } from "../ui/components/badge-medal";
 import { button, buttonLink } from "../ui/components/button";
@@ -182,7 +183,7 @@ export function profilePage(locale: Locale, context: ViewContext, refreshSlot: (
     const earned = new Set(standing.badges.map((b) => b.id));
     const items = badges.map((badge) => {
       const world = standing.course.find(({ world }) => world.id === badge.world)?.world;
-      const texts = world !== undefined ? worldBadgeText(all.badges, world.title[locale]) : all.badges.fixed[badge.id as FixedBadgeId];
+      const texts = world !== undefined ? worldBadgeText(all.badges, textFor(world.title, locale)) : all.badges.fixed[badge.id as FixedBadgeId];
       const has = earned.has(badge.id);
       return el("li", {
         class: "profile__badge",

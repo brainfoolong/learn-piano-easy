@@ -1,7 +1,7 @@
 /** The gallery's section of the skeleton: text, block and circle, and a card placeholder built of them. */
 import { el } from "../dom";
 import { skeleton } from "../components/skeleton";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -16,7 +16,7 @@ const MESSAGES = {
     shapes: "Blöcke und Kreise",
     composed: "Eine Karte beim Laden",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /**
  * A region that waits for its part, as a caller marks it, with a width a skeleton can fill.
@@ -36,7 +36,7 @@ const WIDE = "calc(var(--s-12) * 2.5)";
 
 /** The skeleton's section in the gallery. */
 export function skeletonSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const card = busy(
     WIDE,
     [

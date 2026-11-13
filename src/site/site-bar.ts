@@ -31,8 +31,8 @@
  */
 import "../ui/controls.css";
 import "./site.css";
-import type { Locale } from "../i18n/locale";
-import { LOCALES, messagesOf, rowOf } from "../i18n/locale";
+import type { Locale, ShippedLocale } from "../i18n/locale";
+import { DEFAULT_LOCALE, isLocale, LOCALES, messagesOf, rowOf } from "../i18n/locale";
 import type { SettingsStore } from "../settings/store";
 import { iconButton, iconLink } from "../ui/components/icon-button";
 import { topBar } from "../ui/components/top-bar";
@@ -82,11 +82,12 @@ function schemeIcon(name: "sun" | "moon", scheme: "light" | "dark"): SVGElement 
 }
 
 /** The language and theme switches. A language choice calls `onLanguage` after it is stored. */
-export function siteSwitches(locale: Locale, settings: SettingsStore, onLanguage: (locale: Locale) => void): SiteSwitches {
+export function siteSwitches(locale: Locale, settings: SettingsStore, onLanguage: (locale: ShippedLocale) => void): SiteSwitches {
   const t = messagesOf(locale).topBar;
-  const language = selectControl(
+  // The switch lists only shipped locales, so a page of the pseudo-locale shows the default one.
+  const language = selectControl<ShippedLocale>(
     t.language,
-    locale,
+    isLocale(locale) ? locale : DEFAULT_LOCALE,
     LOCALES.map((l) => [l, rowOf(l).endonym] as const),
     (picked) => {
       settings.set("language", picked);

@@ -5,7 +5,7 @@ import { quantize, type Sheet } from "../../sheet/quantize";
 import { staff } from "../components/staff";
 import { el } from "../dom";
 import type { Mark } from "../mark";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -26,7 +26,7 @@ const MESSAGES = {
     inG: "Zwei Takte in G-Dur",
     marked: "Vier Takte, die ersten Noten gespielt und die nächste hervorgehoben",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** Ticks per quarter note. */
 const TPQ = 480;
@@ -79,7 +79,7 @@ function sized(child: HTMLElement, width = "calc(var(--s-12) * 6)"): HTMLElement
 
 /** The staff section in the gallery. */
 export function staffSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const melody = sheetOf(MELODY);
   // The first four notes are played, the fourth wrongly, and the fifth comes next.
   const marks = new Map<number, Mark>([

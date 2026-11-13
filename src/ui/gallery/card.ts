@@ -2,7 +2,7 @@
 import { card, type CardOptions } from "../components/card";
 import { el } from "../dom";
 import { icon } from "../icons/icons";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -39,7 +39,7 @@ const MESSAGES = {
     wideTitle: "Übe jeden Tag",
     wideText: "Zehn Minuten am Tag lehren deine Hände mehr als eine lange Übungsstunde pro Woche.",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 /** A drawing for the media slot: a gradient from iris to teal with a piano in its centre, and no text on it. */
 function art(): HTMLElement {
@@ -70,7 +70,7 @@ const cards = (entries: [string, CardOptions, boolean?][]) =>
 
 /** The card's section in the gallery. */
 export function cardSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const meta = () => el("p", { attrs: { style: "color: var(--c-text-soft); font-size: var(--t-sm)" }, text: t.meta });
   return section("card", t.card, [
     group(

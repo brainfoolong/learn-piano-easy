@@ -1,7 +1,7 @@
 /** The gallery's section of the icon button: every variant, size and state, its link, and its tooltip open. */
 import { iconButton, iconLink, type IconButtonOptions } from "../components/icon-button";
 import { keepTipOpen } from "../components/tooltip";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -36,13 +36,13 @@ const MESSAGES = {
     saving: "Dein Fortschritt wird gespeichert",
     locked: "Ab Stufe 3 freigeschaltet",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 const iconButtons = (entries: [string, IconButtonOptions][]) => entries.map(([state, options]) => specimen(state, iconButton(options)));
 
 /** The icon button's section in the gallery. */
 export function iconButtonSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   const open = iconButton({ label: t.settings, icon: "settings", variant: "secondary" });
   keepTipOpen(open);
   return section("icon-button", t.iconButton, [

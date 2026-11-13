@@ -8,8 +8,10 @@
  *   and the build all see the same one.
  * - A world loads its lessons once, and each locale's texts once, so a lesson's texts gain a locale in
  *   place. A page awaits `loadTexts` of its locale before it reads a lesson's texts.
+ * - The pseudo-locale's lesson texts derive from the English through `pseudoTree`, so they need no chunk.
  */
-import { loadLocale, type Locale } from "../i18n/locale";
+import { loadLocale, PSEUDO_LOCALE, type Locale } from "../i18n/locale";
+import { pseudoTree } from "../i18n/pseudo";
 import { lessonKey } from "./lesson-run";
 import { type Lesson, mergeTexts, type World, type WorldLessons } from "./model";
 import { translateSkipTest, withSkipTest } from "./skip-test";
@@ -37,7 +39,9 @@ function world(spec: Omit<World, "load" | "loadTexts">, lessons: () => Promise<W
       const own = [...built.lessons, built.boss, written.skipTest].filter((lesson): lesson is Lesson => lesson !== undefined);
       if (own.every((lesson) => lesson.texts[locale] !== undefined)) return;
       const translation = (await built.translations?.[locale]?.()) ?? {};
-      for (const lesson of own) lesson.texts[locale] = mergeTexts(lesson.texts.en, translation[lesson.id] ?? {});
+      for (const lesson of own) {
+        lesson.texts[locale] = locale === PSEUDO_LOCALE ? pseudoTree(lesson.texts.en) : mergeTexts(lesson.texts.en, translation[lesson.id] ?? {});
+      }
       translateSkipTest(made, written, built, locale);
     },
   };

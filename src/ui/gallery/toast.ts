@@ -1,5 +1,5 @@
 /** The gallery's section of the toast: every variant, with a title, with a dismiss button and a trophy. */import { toast, type ToastOptions } from "../components/toast";
-import { group, section, specimen, type Locale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -36,13 +36,13 @@ const MESSAGES = {
     badgeMessage: "Perfekte Hände: ein Lied ganz ohne Fehler.",
     dismiss: "Hinweis schließen",
   },
-} satisfies Record<Locale, Record<string, string>>;
+} satisfies Record<ShippedLocale, Record<string, string>>;
 
 const toasts = (entries: [string, ToastOptions][]) => entries.map(([state, options]) => specimen(state, toast(options)));
 
 /** The toast's section in the gallery. Its toasts sit in flow, never in the fixed stack. */
 export function toastSection(locale: Locale): HTMLElement {
-  const t = MESSAGES[locale];
+  const t = textFor(MESSAGES, locale);
   return section("toast", t.toast, [
     group(
       t.variants,

@@ -48,6 +48,7 @@
  */
 import "./lesson-view.css";
 import { messagesOf, type Locale } from "../i18n/locale";
+import { textFor } from "../i18n/pseudo";
 import { attachKeyboard, keyReach, octaveShift } from "../input/keyboard";
 import type { KeyRange } from "../render/key-layout";
 import { type PianoKeys, pianoKeys } from "../render/piano-keys";
@@ -292,7 +293,7 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
     const retry = button({ label: t.end.retry, onClick: () => void save() });
     retry.classList.add("is-absent");
     const rewards = el("div", { class: "lesson-end__rewards" });
-    const worldTitle = world?.title[locale] ?? "";
+    const worldTitle = world === undefined ? "" : textFor(world.title, locale);
     const skipLine =
       at.lesson !== SKIP_TEST_ID ? null
       : el("p", { class: "lesson-end__skip", text: stars >= SKIP_TEST_STARS ? t.end.skipOpened(worldTitle) : t.end.skipShort(SKIP_TEST_STARS) });
@@ -396,7 +397,7 @@ export function lessonPage(at: { world: string; lesson: string }, locale: Locale
       const badge = all.find((b) => b.id === earned.id);
       if (had.has(earned.id) || badge === undefined) continue;
       const worldOf = to.course.find(({ world }) => world.id === badge.world)?.world;
-      const texts = worldOf !== undefined ? worldBadgeText(badgeTexts, worldOf.title[locale]) : badgeTexts.fixed[badge.id as FixedBadgeId];
+      const texts = worldOf !== undefined ? worldBadgeText(badgeTexts, textFor(worldOf.title, locale)) : badgeTexts.fixed[badge.id as FixedBadgeId];
       moments.push({
         cue: "badge",
         art: badgeMedal({ label: texts.name, icon: badgeArt(badge), state: "earned", size: "large" }),

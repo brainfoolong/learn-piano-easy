@@ -33,7 +33,7 @@
  */
 import { folderSyncOn } from "../data/changes";
 import { setLiveLocale } from "../i18n/live";
-import { chooseLocale, loadLocale, localeOfPath, messagesOf, pathInLocale, rowOf, type Locale } from "../i18n/locale";
+import { chooseLocale, loadLocale, localeOfPath, messagesOf, pathInLocale, rowOf, type Locale, type ShippedLocale } from "../i18n/locale";
 import { registerServiceWorker } from "../pwa/register";
 import type { SettingsStore } from "../settings/store";
 import { toasts } from "../ui/components/toast";
@@ -98,7 +98,7 @@ export async function startSite(root: HTMLElement, settings: SettingsStore): Pro
   // The view the router is leaving, which has heard `hidden` while it stays on screen until the swap.
   let left: View | undefined;
   let switches: { locale: Locale; switches: SiteSwitches } | undefined;
-  const storeLanguage = (picked: Locale) => settings.set("language", picked);
+  const storeLanguage = (picked: ShippedLocale) => settings.set("language", picked);
   const mayLeave = () => shown?.mayLeave?.() ?? Promise.resolve(true);
 
   const render = (path: string) => {

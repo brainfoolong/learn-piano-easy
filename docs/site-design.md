@@ -166,6 +166,8 @@ every component in every state.
   English in its place, until a translation pass, as [translation.md](agent/translation.md) says.
 - **Every layout fits the longest language.** German runs about a third longer than English, so the
   layout checks run in English and German. A shipped locale adds its own run at 360 and 1280 pixels.
+- **The pseudo-locale `en-XA` runs every text 40% longer,** wrapped in `⟦ ⟧`. The layout checks run in
+  it too. `e2e/pseudo.e2e.ts` fails on a text without the brackets, and on a flaw the longer text adds.
 
 ## The checks
 

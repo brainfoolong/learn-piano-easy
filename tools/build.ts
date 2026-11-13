@@ -20,8 +20,10 @@
  * Every page names the site, its locale and the other locales for social sites. A hidden route's page
  * asks search engines not to index it.
  *
- * `bun tools/build.ts [--dev] [--out <dir>] [--site-url <url>]`. `--dev` skips minifying and turns on
- * live reload. `--site-url` names where the site is hosted. Only then does an indexed page carry
+ * `bun tools/build.ts [--dev] [--out <dir>] [--site-url <url>] [--pseudo]`. `--dev` skips minifying and
+ * turns on live reload. `--pseudo` also writes every page in the pseudo-locale `en-XA` of
+ * `src/i18n/pseudo.ts`, under `en-XA/`. No sitemap, link or `hreflang` names those pages, and the release
+ * build never writes them. `--site-url` names where the site is hosted. Only then does an indexed page carry
  * canonical, `hreflang`, `og:url` and `og:image` links, and a landing page its JSON-LD. A social site
  * reads only an absolute `og:image`, so a local build carries none.
  *
@@ -35,7 +37,7 @@ import { cp, mkdir, readdir, rm } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { GROUP_INDEX, groupIndex, groupOf } from "../src/pwa/cache-groups";
 import { loadEveryLocale } from "../src/i18n/all-catalogs";
-import { DEFAULT_LOCALE, LOCALES, messagesOf, rowOf } from "../src/i18n/locale";
+import { DEFAULT_LOCALE, isLocale, loadLocale, LOCALES, messagesOf, PSEUDO_LOCALE, rowOf, type Locale } from "../src/i18n/locale";
 import {
   allPages,
   lessonPages,
@@ -59,6 +61,8 @@ export interface BuildOptions {
   dev: boolean;
   /** Where the site is hosted, such as `https://example.org/piano/`. Without it, no page names a domain. */
   siteUrl?: string | undefined;
+  /** Whether it also writes the pages of the pseudo-locale `en-XA`. The release build never does. */
+  pseudo?: boolean;
 }
 
 export interface BuildResult {
@@ -242,16 +246,23 @@ export function renderPage(template: string, page: Page, siteUrl?: string): stri
  * Writes every route's page in every locale into `outDir` from the template `public/index.html`. With a
  * site URL, it also writes the crawler's files.
  */
-async function writePages(outDir: string, siteUrl: string | undefined): Promise<void> {
+async function writePages(outDir: string, siteUrl: string | undefined, pseudo: boolean): Promise<void> {
   const template = await Bun.file(join(root, "public/index.html")).text();
-  const pages = [...allPages(), ...(await lessonPages())];
+  const locales: Locale[] = [...LOCALES];
+  if (pseudo) {
+    await loadLocale(PSEUDO_LOCALE);
+    locales.push(PSEUDO_LOCALE);
+  }
+  const pages = [...allPages(locales), ...(await lessonPages(locales))];
   for (const page of pages) {
     const file = join(outDir, page.file);
     await mkdir(dirname(file), { recursive: true });
     await Bun.write(file, renderPage(template, page, siteUrl));
   }
   if (siteUrl === undefined) return;
-  for (const [path, text] of Object.entries(crawlerFiles(pages, siteUrl))) await Bun.write(join(outDir, path), text);
+  // A crawler never meets the pseudo-locale.
+  const shipped = pages.filter((page) => isLocale(page.locale));
+  for (const [path, text] of Object.entries(crawlerFiles(shipped, siteUrl))) await Bun.write(join(outDir, path), text);
 }
 
 /** Copies our license, the notices, each runtime dependency's license and the icons' into `licenses/`. */
@@ -295,7 +306,7 @@ export async function build(options: BuildOptions): Promise<BuildResult> {
   check(parser, "parse worker");
 
   await cp(join(root, "public"), outDir, { recursive: true });
-  await writePages(outDir, options.siteUrl);
+  await writePages(outDir, options.siteUrl, options.pseudo ?? false);
   await copyLicenses(outDir);
 
   const files = await Promise.all((await listFiles(outDir)).map(async (path) => ({ path, bytes: Bun.file(join(outDir, path)).size })));
@@ -334,7 +345,7 @@ if (import.meta.main) {
   const started = performance.now();
   const siteAt = args.indexOf("--site-url");
   const siteUrl = siteAt >= 0 ? args[siteAt + 1] : undefined;
-  const result = await build({ outDir, dev: args.includes("--dev"), siteUrl });
+  const result = await build({ outDir, dev: args.includes("--dev"), siteUrl, pseudo: args.includes("--pseudo") });
   const ms = Math.round(performance.now() - started);
   console.log(`built ${result.files.length} files into ${relative(root, outDir)} in ${ms} ms, shell ${result.version}`);
 }

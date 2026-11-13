@@ -7,8 +7,12 @@
  */
 import { el } from "../dom";
 
-/** The gallery's locales are the site's. German is the longest language the layout must fit. */
-export type { Locale } from "../../i18n/locale";
+/**
+ * The gallery's locales are the site's. Each section's messages hold every shipped locale, and
+ * `textFor` reads them, so the pseudo-locale derives its own from the English.
+ */
+export type { Locale, ShippedLocale } from "../../i18n/locale";
+export { textFor } from "../../i18n/pseudo";
 
 /** A specimen of one state, marked for the tests. */
 export function specimen(state: string, child: Node): HTMLElement {
