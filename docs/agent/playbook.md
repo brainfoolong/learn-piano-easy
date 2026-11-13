@@ -138,6 +138,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A number isolated with its unit fails the rules test in a right-to-left locale.** The test wants the
   digits right after the isolate. Isolate the number, then the number with its unit, as
   `src/i18n/messages/player-shell.ar.ts` does for `KB`.
+- **An Indonesian rule pattern can refuse a standard word.** The slang pattern in `src/i18n/typography.ts`
+  refuses *gua*, which also means a cave. The plural pattern refuses a digit before *masing-masing*.
+  Reword the text, as `tools/our-songs/hall-of-the-mountain-king.id.ts` does.
 
 ## Rendering
 
