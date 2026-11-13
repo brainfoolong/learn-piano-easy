@@ -7,7 +7,7 @@
  *
  * The web server builds the app into the run's `dist/` and serves it with the service worker, like
  * `bun run preview`, and with the pseudo-locale's pages under `en-XA/`. It never reuses a running
- * server, so every run tests the tree as it is.
+ * server, so every run tests the tree as it is. It may take three minutes to come up on a loaded machine.
  * A failed test keeps its trace under the run's `results/` until the next run starts.
  * Test files are `e2e/*.e2e.ts`, a name `bun test` never picks up. Decision 0001 says why Playwright.
  *
@@ -84,6 +84,6 @@ export default defineConfig({
     command: `bun tools/dev.ts --preview --pseudo --port ${port} --out ${run}/dist --no-tls`,
     url: `http://localhost:${port}/`,
     reuseExistingServer: false,
-    timeout: 60_000,
+    timeout: 180_000,
   },
 });

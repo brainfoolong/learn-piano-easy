@@ -177,6 +177,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 
 ## End-to-end tests
 
+- **An acceptance check of `e2e/` can go red with "Timed out waiting … from config.webServer".** The
+  server builds the site first, and a loaded machine stretches that build. Read
+  `.looper/loops/main/checks/<id>.log` first, and rerun the check alone before you change a test.
 - **`bun x playwright test` fails with "did not expect test() to be called here" before any test runs.**
   A shell whose folder is spelled with a lower-case drive, as `e:\`, fails this way on Windows, and
   the e2e step of `looper verify` with it. The same run from the upper-case spelling passes. Start a

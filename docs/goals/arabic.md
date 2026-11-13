@@ -256,6 +256,7 @@ goal. `bun tools/i18n.ts status ar` lists 10 missing and 0 stale of 4480 texts.
   right on an Arabic page. `legalBody` in `src/site/legal-view.ts` and `aboutPage` in `src/app/about.ts`
   set them. The test `the_arabic_site_reads_in_arabic` checks the imprint's body.
 - The setup bubble's `سريعة` has no fault of ours. The standing decision on Segoe UI records why.
+- `rtl-pages` timed out on its web server under load. `playwright.config.ts` now allows it 180 s.
 
 ### Next
 
