@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Portuguese
-    status: open
+    status: done
   - id: 3
     title: The course in Portuguese
     status: open
@@ -104,12 +104,12 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/pt.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/pt.ts:1`, `src/i18n/messages/learn-lesson.pt.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.pt.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.pt.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `portuguese_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp pt` for each catalog section. `src/i18n/stamps/pt.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/pt.ts:1`, `src/i18n/messages/learn-lesson.pt.ts:1`
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.pt.ts:1`
+- [x] The player's settings. `src/i18n/messages/player-settings.pt.ts:1`
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+- [x] `bun x tsc` and `portuguese_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+- [x] `bun run i18n stamp pt` for each catalog section. `src/i18n/stamps/pt.json:1`
 
 ### 3. The course in Portuguese
 
@@ -172,18 +172,23 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/pt.md` holds every section the method names, with a
-recurring-steps table for the guides. The `pt` entry of `src/i18n/typography.ts` holds the kept words
-and ten mark rules. `the_portuguese_marks_hold_and_spare_kept_words` tests them and passes. The term
-list follows the Arabic guide's, which covers every recurring English term. The fetch reached no Brazilian
-piano method, so § *Open* lists the terms that rest on one source or none.
+Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/*.pt.ts`, and `pt` loads as
+its own chunk. Four writers wrote them, since the settings' 716 texts split into the look file and the
+rest. Each batch was reviewed blind. The two batches with a *wrong* finding were reviewed again and came
+back with none. Every catalog section is stamped. `status pt` still lists 8 catalog texts, which stay out
+on purpose: the site's name and the six languages' own names.
+
+The review settled new terms into `pt.md` § *The interface glossary*. *Guardar* and *vista* are banned,
+*altura* is pitch alone, and the Expert key is *Avançado*. A count that can show zero writes *nenhum* or
+*nenhuma*.
 
 ### Next
 
-**Stage 2: the site and the player in Portuguese.** Run `bun tools/i18n.ts status pt`, then
-`bun tools/i18n.ts work pt <unit>` for each catalog section. Three writers each get `pt.md` whole.
-Files: `src/i18n/messages/*.pt.ts`, `src/i18n/locale.ts:44` (its catalog chunk) and
-`src/i18n/stamps/pt.json`. A label that equals its English, such as *Total*, goes into the `pt` kept list.
+**Stage 3: the course in Portuguese.** Run `bun tools/i18n.ts work pt lesson/<world>` for each world.
+Each lesson is its own file, `src/learn/lessons/<world>/<lesson>.pt.ts`, beside its `.en.ts`. The
+stage's item anchors name a `texts.pt.ts` that does not exist. Brief each writer with `pt.md` whole,
+the method's § *The writer's rules* and the `*.es.ts` lessons as the model of shape. Tell it to list
+each text it writes equal to the English, for the `pt` kept list. Five writers, as the stage's split says.
 
 Expected red: none.
 
