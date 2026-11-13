@@ -83,6 +83,66 @@ test("a_chord_too_wide_for_the_computer_keys_is_played_a_key_at_a_time", async (
   expect(errors).toEqual([]);
 });
 
+/** The lesson *The C major scale*, which opens on a demo whose notes name their fingers. */
+async function cMajorScale() {
+  const entry = (await courseLessons()).find(({ world, lesson }) => world === "scales-and-keys" && lesson.id === "the-c-major-scale");
+  if (entry === undefined) throw new Error("The course has no lesson scales-and-keys/the-c-major-scale.");
+  const demo = stepsToRun(entry.lesson.steps, inputHas(false))[0];
+  if (demo?.kind !== "demo") throw new Error("The C major scale opens on no demo.");
+  expect(demo.notes.every((note) => note.finger !== undefined)).toBe(true);
+  return { entry, demo };
+}
+
+test("a_demo_with_fingers_shows_the_hand", async ({ page }) => {
+  const t = messagesOf("en").lesson.demo;
+  const { entry } = await cMajorScale();
+  const errors = watchErrors(page);
+  await page.goto(lessonPath(entry, "en"));
+  await onStep(page, 0);
+  const piano = stage(page).locator(".piano-keys");
+  // The model loads once, then the hand waits for the phrase or plays it.
+  await expect(piano).toHaveAttribute("data-hand", /^(playing|still)$/, { timeout: 15_000 });
+  await expect(page.getByRole("button", { name: t.slow })).toBeVisible();
+  const side = page.getByRole("button", { name: t.side });
+  await expect(side).toHaveAttribute("aria-pressed", "false");
+  await side.click();
+  await expect(side).toHaveAttribute("aria-pressed", "true");
+  await expect(piano).toHaveAttribute("data-hand", /^(playing|still)$/);
+  expect(errors).toEqual([]);
+});
+
+test("the_slow_button_plays_the_demo_at_half_speed", async ({ page }) => {
+  const t = messagesOf("en").lesson.demo;
+  const { entry, demo } = await cMajorScale();
+  const errors = watchErrors(page);
+  await page.goto(lessonPath(entry, "en"));
+  await onStep(page, 0);
+  const step = stage(page).locator(".lesson-demo");
+  await expect(step).toHaveAttribute("data-bpm", String(demo.bpm));
+  const slow = page.getByRole("button", { name: t.slow });
+  await slow.click();
+  await expect(slow).toHaveAttribute("aria-pressed", "true");
+  await expect(step).toHaveAttribute("data-bpm", String(demo.bpm / 2));
+  expect(errors).toEqual([]);
+});
+
+test("a_demo_without_fingers_shows_no_hand", async ({ page }) => {
+  const t = messagesOf("en").lesson.demo;
+  const { entry, steps } = await findC();
+  const demo = steps[0];
+  if (demo?.kind !== "demo") throw new Error("Find C opens on no demo.");
+  expect(demo.notes.some((note) => note.finger !== undefined)).toBe(false);
+  const errors = watchErrors(page);
+  await page.goto(lessonPath(entry, "en"));
+  await onStep(page, 0);
+  const piano = stage(page).locator(".piano-keys");
+  await expect(piano.locator(".piano-keys__canvas")).toBeVisible();
+  await expect(piano).not.toHaveAttribute("data-hand");
+  await expect(page.getByRole("button", { name: t.slow })).toHaveCount(0);
+  await expect(page.getByRole("button", { name: t.side })).toHaveCount(0);
+  expect(errors).toEqual([]);
+});
+
 /** The lesson *Find C*, which opens on a demo, explains, then asks for keys, and its steps without MIDI. */
 async function findC() {
   const entry = (await courseLessons()).find(({ world, lesson }) => world === "meet-the-piano" && lesson.id === "find-c");

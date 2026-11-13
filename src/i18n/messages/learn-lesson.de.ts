@@ -30,6 +30,8 @@ export const learnLesson: typeof en = {
     skip: "Überspringen",
     piano: "Das Klavier spielt das Beispiel",
     playing: "Spielt",
+    slow: "Langsam",
+    side: "Seitenansicht",
   },
   quiz: {
     answers: "Antworten",

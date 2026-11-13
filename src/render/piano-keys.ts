@@ -17,6 +17,12 @@
  *   lays it out before a frame draws and nothing shifts. A `ResizeObserver` sizes the canvas to the box.
  *   The rig keeps the keys' width and the piano's front edge, so a box of another shape shows more or
  *   less above the keys, and a key never stretches. `flatView` says where the frame then sits.
+ * - **A hand** plays the phrase `hands` gives, to the clock it gives. The view then looks through its
+ *   own perspective camera, from the angle `src/render/hand/hand-frame.ts` places, since the flat view
+ *   hides a thumb passing under the palm. The box takes that module's shape before the model loads. The
+ *   hand's code and model load with `import()` the first time a show asks, so a view without one never
+ *   fetches them. The hand presses the keys it holds in the colour of a key to play. Its key map keeps
+ *   the flat layout, so a span no longer lies over its key, and a step with a hand only shows.
  * - **The frame** runs from the felt behind the keys to the front rail under them. With `fingers` given
  *   it adds a band above the felt, and the band stays while the option does.
  * - **Reconfigured, never rebuilt.** `show` takes new options and drops the last ones' subscriptions. A
@@ -36,15 +42,17 @@
  * - **The pointer** plays through `src/input/pointer-piano.ts` and the piano's `keyAt`, by the player's
  *   rules. With `onPress` given, the canvas takes every touch, so the page does not scroll under a hand.
  * - **A frame draws only when the picture can differ:** an option, a held key, a resize, a theme change,
- *   or a key's spring or flash. A still view costs no render. The pixel ratio is capped at 2.
+ *   a key's spring or flash, or a hand whose clock runs short of its phrase's end. A still view costs no
+ *   render. The pixel ratio is capped at 2.
  * - **The key map** is an `aria-hidden` layer of one empty span per key, over its key's top face. It is
  *   the test seam: each span carries `data-pitch` and mirrors `data-mark`, `data-held` and `data-finger`.
  *   A span's place is a share of the frame, set on a new range. A resize moves only the layer. The view
  *   carries the range as `data-first` and `data-last`. While the bar shows, it carries the whole reach
- *   as `data-reach-first` and `data-reach-last`, even where the bar stops at the shown keys' edge.
+ *   as `data-reach-first` and `data-reach-last`, even where the bar stops at the shown keys' edge. While
+ *   a show asks for a hand, the view carries `data-hand`: `loading`, then `playing` or `still`.
  * - **Screen readers** hear a group named by `label`, and a polite live text naming each marked key.
  * - **Without WebGL** the view shows the catalog's `ui.pianoKeys.noWebgl` where the canvas would be. The
- *   key map, its attributes and the live text still follow the options.
+ *   key map, its attributes and the live text still follow the options. No hand loads.
  *
  * Bounds: one WebGL context per view until `dispose`. A page holds about 16, so a page shows few views.
  * The ring sprites number the most fingers shown at once.
@@ -57,6 +65,7 @@ import {
   Group,
   Mesh,
   MeshBasicMaterial,
+  PerspectiveCamera,
   Raycaster,
   Scene,
   Sprite,
@@ -70,6 +79,10 @@ import { localize } from "../i18n/live";
 import { attachPointerPiano } from "../input/pointer-piano";
 import { createCameraRig } from "./cameras";
 import { defaults } from "../settings/schema";
+import type { Hand } from "../theory/fingering";
+import { type HandAngle, handAspect, handShot } from "./hand/hand-frame";
+import type { PhraseNote as HandNote } from "./hand/hand-plan";
+import type { HandStage } from "./hand/hand-stage";
 import { noteName } from "../theory/note-names";
 import { el } from "../ui/dom";
 import { describeMarks, type Mark, MARKS } from "../ui/mark";
@@ -109,6 +122,20 @@ export interface PianoKeysOptions {
   onPress?: (pitch: number) => void;
   /** Called when a pointer lets a key go. */
   onRelease?: (pitch: number) => void;
+  /** A phrase the mascot's hand plays over the keys. The view frames them from the player's side while it is given. */
+  hands?: PianoHands;
+}
+
+/** The phrase a hand plays, and the clock it plays to. */
+export interface PianoHands {
+  /** The phrase, in seconds from its start, with each note's finger and hand. A new array plans it afresh. */
+  notes: readonly HandNote[];
+  /** The phrase's time in seconds, or undefined while it does not play. */
+  clock(): number | undefined;
+  /** Settles once the clock runs, or never will. */
+  started: Promise<unknown>;
+  /** The angle the camera sees the hand from, `player` when absent. */
+  angle?: HandAngle;
 }
 
 /** A piano view, which a page shows with options again and again, and frees once. */
@@ -117,6 +144,8 @@ export interface PianoKeys {
   readonly element: HTMLElement;
   /** Shows the keys as `options` say, in place of the last options. */
   show(options: PianoKeysOptions): void;
+  /** Resolves true once the hand the last `show` asked for has loaded, and false when it cannot. */
+  handReady(): Promise<boolean>;
   /** Frees the WebGL context and every listener, lets go every key a pointer holds, and removes `element`. */
   dispose(): void;
 }
@@ -367,6 +396,17 @@ export function pianoKeys(): PianoKeys {
   reachBar.visible = false;
   scene.add(piano.group, rings, names.group, digits.group, reachBar);
   const rig = createCameraRig(renderer?.domElement ?? element, "flat");
+  /** The camera while a hand plays, which sees the keys in perspective. */
+  const handCamera = new PerspectiveCamera(30, 1, 0.1, 200);
+  let handStage: HandStage | undefined;
+  let handLoad: Promise<HandStage | undefined> | undefined;
+  /** The notes the stage planned. A new array, or a new range, plans again. */
+  let planned: readonly HandNote[] | undefined;
+  /** The keys the hand holds down now, with the hand that holds each. */
+  let handHeld: ReadonlyMap<number, Hand> = new Map();
+  /** Whether the options ask for a hand and the view can draw one. */
+  let handMode = false;
+  const viewCamera = () => (handMode ? handCamera : rig.camera);
 
   const input = defaults();
   const heldWhite = new Color(input.inputNoteColorWhite.slice(0, 7));
@@ -417,7 +457,27 @@ export function pianoKeys(): PianoKeys {
     // The flat camera takes its place in `update`, which a pointer's ray needs before the next frame.
     rig.update(0, 0);
     rig.camera.updateMatrixWorld();
+    if (handMode) aimHand();
     placeAt(map, flatView(frame, aspect).inset);
+  };
+
+  /** Points the hand's camera at the phrase from the options' angle. */
+  const aimHand = () => {
+    const layout = piano.layout;
+    const notes = options.hands?.notes ?? [];
+    const xs = notes.flatMap((note) => {
+      const key = layout.key(note.pitch);
+      return key ? [key.center - layout.width / 2] : [];
+    });
+    const focus = xs.length > 0 ? (Math.min(...xs) + Math.max(...xs)) / 2 : 0;
+    const shape = aspect > 0 ? aspect : handAspect(layout.width);
+    const shot = handShot(options.hands?.angle ?? "player", layout.width, shape, focus, notes[0]?.hand === "left" ? 1 : -1);
+    handCamera.fov = shot.fov;
+    handCamera.aspect = shape;
+    handCamera.position.set(...shot.eye);
+    handCamera.lookAt(...shot.target);
+    handCamera.updateProjectionMatrix();
+    handCamera.updateMatrixWorld();
   };
 
   /** Frames the piano's range, with the finger band when `fingerBand` holds, and lays the key map out for it. */
@@ -426,7 +486,9 @@ export function pianoKeys(): PianoKeys {
     // A pointer's ray meets the keys where they are now, before the next frame draws them.
     piano.group.updateMatrixWorld(true);
     frame = frameOf(piano.layout, fingerBand);
-    element.style.setProperty("--piano-keys-aspect", String((frame.right - frame.left) / (frame.top - frame.bottom)));
+    const shape = handMode ? handAspect(piano.layout.width) : (frame.right - frame.left) / (frame.top - frame.bottom);
+    element.style.setProperty("--piano-keys-aspect", String(shape));
+    planned = undefined;
     element.dataset.first = String(range.first);
     element.dataset.last = String(range.last);
     fit();
@@ -443,13 +505,17 @@ export function pianoKeys(): PianoKeys {
     labelsStale = true;
   };
 
-  /** Shows the keys of `range`, with the finger band when `band` holds. Lays out again only on a change. */
-  const setRange = (range: KeyRange, band: boolean) => {
+  /**
+   * Shows the keys of `range`, with the finger band when `band` holds, framed for a hand when `hand`
+   * holds. Lays out again only on a change.
+   */
+  const setRange = (range: KeyRange, band: boolean, hand: boolean) => {
     const shown = layoutKeys(range).range;
     const now = piano.layout.range;
     const same = shown.first === now.first && shown.last === now.last;
-    if (same && band === fingerBand) return;
+    if (same && band === fingerBand && hand === handMode) return;
     fingerBand = band;
+    handMode = hand;
     if (!same) piano.setRange(shown);
     relayout();
   };
@@ -499,6 +565,33 @@ export function pianoKeys(): PianoKeys {
     digits.end();
   };
 
+  /** Presses the keys the hand holds in `now`, in the colour of a key to play, and lets the rest go. */
+  const pressHand = (now: ReadonlyMap<number, Hand>) => {
+    for (const pitch of handHeld.keys()) if (!now.has(pitch)) piano.release(pitch);
+    for (const pitch of now.keys()) if (!handHeld.has(pitch)) piano.press(pitch, colors.next);
+    handHeld = now;
+  };
+
+  const setHandState = (state: "loading" | "playing" | "still") => {
+    if (element.dataset.hand !== state) element.dataset.hand = state;
+  };
+
+  /** Poses the hand at its clock and presses its keys. Returns whether it still plays. */
+  const poseHand = (): boolean => {
+    const hands = options.hands;
+    if (!handMode || !hands || !handStage) return false;
+    if (planned !== hands.notes) {
+      handStage.plan(hands.notes, piano.layout);
+      planned = hands.notes;
+    }
+    const at = hands.clock();
+    const end = handStage.end;
+    pressHand(handStage.pose(Math.min(Math.max(at ?? 0, 0), end)));
+    const playing = at !== undefined && at < end;
+    setHandState(playing ? "playing" : "still");
+    return playing;
+  };
+
   const draw = (time: number) => {
     scheduled = 0;
     if (disposed || !renderer) return;
@@ -518,10 +611,11 @@ export function pianoKeys(): PianoKeys {
       placeLabels();
     }
     const seconds = last === undefined ? 1 / 60 : Math.min((time - last) / 1000, MAX_FRAME);
-    const moving = piano.update(seconds);
+    const playing = poseHand();
+    const moving = piano.update(seconds) || playing;
     rig.update(seconds, time / 1000);
-    if (aspect > 0) renderer.render(scene, rig.camera);
-    // A key still moving draws the next frame too, and a still piano draws none.
+    if (aspect > 0) renderer.render(scene, viewCamera());
+    // A key or a hand still moving draws the next frame too, and a still piano draws none.
     last = moving ? time : undefined;
     if (moving) invalidate();
   };
@@ -569,7 +663,7 @@ export function pianoKeys(): PianoKeys {
     const box = renderer?.domElement.getBoundingClientRect();
     if (!box || box.width === 0 || box.height === 0) return undefined;
     ndc.set(((x - box.left) / box.width) * 2 - 1, 1 - ((y - box.top) / box.height) * 2);
-    raycaster.setFromCamera(ndc, rig.camera);
+    raycaster.setFromCamera(ndc, viewCamera());
     return piano.keyAt(raycaster);
   };
   const stopPointer = renderer
@@ -626,7 +720,38 @@ export function pianoKeys(): PianoKeys {
       options = next;
       element.setAttribute("aria-label", next.label);
       element.dataset.interactive = String(next.onPress !== undefined);
-      setRange(next.range ?? FULL_RANGE, next.fingers !== undefined);
+      const hands = renderer ? next.hands : undefined;
+      setRange(next.range ?? FULL_RANGE, next.fingers !== undefined, hands !== undefined);
+      if (hands) {
+        handLoad ??= import("./hand/hand-stage")
+          .then(({ loadHandStage }) => loadHandStage())
+          .then(
+            (stage) => {
+              if (disposed) {
+                stage.dispose();
+                return undefined;
+              }
+              handStage = stage;
+              stage.group.visible = options.hands !== undefined;
+              scene.add(stage.group);
+              invalidate();
+              return stage;
+            },
+            () => {
+              // A failed load leaves the keys without a hand, and the next `show` tries again.
+              handLoad = undefined;
+              delete element.dataset.hand;
+              return undefined;
+            },
+          );
+        void hands.started.then(invalidate);
+        aimHand();
+        setHandState(handStage ? "still" : "loading");
+      } else {
+        pressHand(new Map());
+        delete element.dataset.hand;
+      }
+      if (handStage) handStage.group.visible = hands !== undefined;
       stops.push(
         follow(next.marks, new Map(), (value) => {
           marks = value;
@@ -664,6 +789,11 @@ export function pianoKeys(): PianoKeys {
       invalidate();
     },
 
+    handReady() {
+      if (!options.hands || !handLoad) return Promise.resolve(false);
+      return handLoad.then((stage) => stage !== undefined);
+    },
+
     dispose() {
       if (disposed) return;
       for (const stop of stops) stop();
@@ -677,6 +807,7 @@ export function pianoKeys(): PianoKeys {
       renderer?.domElement.removeEventListener("webglcontextrestored", invalidate);
       rig.dispose();
       piano.dispose();
+      handStage?.dispose();
       names.dispose();
       digits.dispose();
       for (const ring of ringPool) ring.material.dispose();

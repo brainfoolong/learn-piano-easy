@@ -21,6 +21,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   finds the key by a ray from the pointer's point on its canvas, and its key map's spans take no pointer.
   In a `--eval` of `tools/shot.ts`, send the event to the canvas, with `clientX` and `clientY` inside
   the span's `getBoundingClientRect()`.
+- **A `--click` of `tools/shot.ts` that first wakes a lesson's audio can stall for seconds.** The page
+  loads the sound set inside that gesture, so a `--wait` after it lands far later in the phrase. Click
+  "Play again" once to wake the audio, then click it again before the `--wait` you time.
 - **A goal check is red with "test … did not run and pass" while every test passes.** Bun's reporter
   omits `(pass)` lines when an AI agent runs it. Import `test` from `src/testing.ts`, never from
   `bun:test`, because it prints the line itself.

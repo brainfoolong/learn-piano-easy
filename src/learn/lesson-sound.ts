@@ -6,7 +6,8 @@
  *   gesture, so `start` waits for one there. Each call wakes the context again, so a first call
  *   outside a gesture never leaves the lesson silent.
  * - **A phrase plays on the audio clock.** Its notes are queued ahead on the song's sampler, and a frame
- *   loop reads the clock to report which notes sound, so a slow frame never moves the music.
+ *   loop reads the clock to report which notes sound, so a slow frame never moves the music. A playback
+ *   reports its time on the same clock, so the piano view's hand presses each key as its note sounds.
  * - **The learner's notes play on the input sampler,** as the player plays them. The lesson view feeds
  *   `press` and `release` from the input bus, so every input sounds the same way.
  * - **A step's clicks are the engine's free metronome.** `clicks` turns it on and frees it from the
@@ -29,6 +30,10 @@ const LEAD = 0.15;
 export interface Playback {
   /** Resolves true once the phrase has played to its end, and false once it was stopped. */
   finished: Promise<boolean>;
+  /** Resolves true once the phrase is queued and its clock runs, and false once it was stopped first. */
+  started: Promise<boolean>;
+  /** Seconds since the phrase's first beat on the audio clock, past its end too. Undefined before it starts and once stopped. */
+  time(): number | undefined;
   /** Stops the phrase and silences it. */
   stop(): void;
 }
@@ -112,11 +117,16 @@ export function lessonSound(settings: SettingsStore): LessonSound {
       let frame = 0;
       let settle: (played: boolean) => void = () => {};
       const finished = new Promise<boolean>((resolve) => (settle = resolve));
+      let begin: (running: boolean) => void = () => {};
+      const queued = new Promise<boolean>((resolve) => (begin = resolve));
+      let clock: { context: BaseAudioContext; t0: number } | undefined;
       const beat = 60 / bpm;
       const end = Math.max(...notes.map((n) => n.at + n.beats));
       void start().then(({ engine }) => {
         if (stopped) return;
         const t0 = engine.context.currentTime + LEAD;
+        clock = { context: engine.context, t0 };
+        begin(true);
         for (const n of notes) {
           void engine.song.noteOn(n.note, n.velocity ?? VELOCITY, t0 + n.at * beat);
           engine.song.noteOff(n.note, t0 + (n.at + n.beats) * beat);
@@ -138,12 +148,15 @@ export function lessonSound(settings: SettingsStore): LessonSound {
       });
       return {
         finished,
+        started: queued,
+        time: () => (stopped || clock === undefined ? undefined : clock.context.currentTime - clock.t0),
         stop() {
           if (stopped) return;
           stopped = true;
           cancelAnimationFrame(frame);
           void started?.then(({ engine }) => engine.song.stopAll());
           onSounding(new Set());
+          begin(false);
           settle(false);
         },
       };

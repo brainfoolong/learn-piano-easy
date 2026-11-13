@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The piano view plays the hand in a demo step
-    status: open
+    status: done
   - id: 3
     title: The scale and touch lessons show the hand
     status: open
@@ -66,15 +66,18 @@ hand playing its phrase with the exact fingers. The learner can slow it down and
 - **The clock is the phrase's audio clock.** `Playback` of `src/learn/lesson-sound.ts` reports the
   phrase's time, so the hand presses each key as its note sounds.
 - **The view with a hand frames the keys from the player's side,** about 35 degrees above them. The
-  hand's whole range and its wrist are in view. A "Side" button turns to a view from the thumb's side at
-  key height, where the thumb's pass under the palm shows. The top-down frame the view uses today
-  hides that pass, so a step with a hand never uses it.
+  hand's whole range and its wrist are in view. A "Side view" toggle turns to a view from the thumb's
+  side, a little above the keys, where the thumb's pass under the palm shows. The top-down frame
+  hides that pass, so a step with a hand never uses it. `src/render/hand/hand-frame.ts` places both.
 - **"Slow" plays the demo at half its tempo,** sound and hand together, by halving the bpm the phrase
-  plays at. It stays on for the rest of the lesson once pressed.
+  plays at. Slow and Side view are toggles, and each stays as the learner left it for the rest of the
+  lesson. A toggle the learner can undo costs nothing and spares a lesson stuck at half speed.
+- **Slow and Side view show only on a demo with fingers,** so every other demo stays as it is.
 - **Under reduced motion the hand still plays,** because the motion is the lesson. The camera never
   animates between views: a view change cuts.
 - **The hand loads before the phrase plays.** The demo waits for the model up to two seconds. If it
-  has not loaded by then, the phrase plays without it, and the hand joins at the next play.
+  has not loaded by then, the phrase plays without it. The hand joins where the phrase is once it
+  loads, since its pose is a function of the clock.
 - **Without WebGL the demo plays as today,** with the view's existing fallback text.
 - **The test seam is `data-hand`** on the view's element: `loading`, `playing` or `still`.
 - **New texts are English and German only,** with new keys, as decision 0012 says: `demo.slow`
@@ -112,17 +115,17 @@ but not all, or a finger outside one to five.
 step passes its phrase, offers Slow and Side, and the e2e tests pin it.
 **Gate:** `hand-motion` is reached: `planHands` exists in `src/render/hand/hand-plan.ts`.
 
-- [ ] `Playback` reports the phrase's time on the audio clock. `src/learn/lesson-sound.ts:29`
-- [ ] The `hands` option, the lazy load, the plan and the per-frame pose. `src/render/piano-keys.ts:84`
-- [ ] The hand joins the scene beside the piano. `src/render/piano-keys.ts:356`
-- [ ] The draw loop keeps drawing while the hand moves. `src/render/piano-keys.ts:487`
-- [ ] The hand's frame from the player's side, and the side view. `src/render/piano-keys.ts:141`
-- [ ] `data-hand` on the view's element. `src/render/piano-keys.ts:322`
-- [ ] The demo step passes its phrase and clock when its notes name fingers. `src/learn/steps/demo.ts:31`
-- [ ] Slow and Side buttons, with Slow halving the bpm. `src/learn/steps/demo.ts:54`
-- [ ] `demo.slow` and `demo.side` in English and German. `src/i18n/messages/learn-lesson.en.ts:30`, `src/i18n/messages/learn-lesson.de.ts:27`
-- [ ] E2e tests `a_demo_with_fingers_shows_the_hand`, `the_slow_button_plays_the_demo_at_half_speed` and `a_demo_without_fingers_shows_no_hand`. `e2e/lesson-keys.e2e.ts:86`
-- [ ] Look at the C major scale's demo with `bun run shot`, seeking to the thumb-under, in both views, both themes and on a phone.
+- [x] `Playback` reports the phrase's time on the audio clock. `src/learn/lesson-sound.ts:29`
+- [x] The `hands` option, the lazy load, the plan and the per-frame pose. `src/render/piano-keys.ts:84`
+- [x] The hand joins the scene beside the piano. `src/render/piano-keys.ts:356`
+- [x] The draw loop keeps drawing while the hand moves. `src/render/piano-keys.ts:487`
+- [x] The hand's frame from the player's side, and the side view. `src/render/piano-keys.ts:141`
+- [x] `data-hand` on the view's element. `src/render/piano-keys.ts:322`
+- [x] The demo step passes its phrase and clock when its notes name fingers. `src/learn/steps/demo.ts:31`
+- [x] Slow and Side buttons, with Slow halving the bpm. `src/learn/steps/demo.ts:54`
+- [x] `demo.slow` and `demo.side` in English and German. `src/i18n/messages/learn-lesson.en.ts:30`, `src/i18n/messages/learn-lesson.de.ts:27`
+- [x] E2e tests `a_demo_with_fingers_shows_the_hand`, `the_slow_button_plays_the_demo_at_half_speed` and `a_demo_without_fingers_shows_no_hand`. `e2e/lesson-keys.e2e.ts:86`
+- [x] Look at the C major scale's demo with `bun run shot`, seeking to the thumb-under, in both views, both themes and on a phone.
 
 ### 3. The scale and touch lessons show the hand
 
@@ -190,20 +193,25 @@ text, and writes the docs.
 
 ### State
 
-Stage 1 is done. A demo's `PhraseNote` takes `finger` and `hand`, and `lessonProblems` refuses a
-partial fingering, a finger outside 1 to 5, and a hand named without fingers. The C major scale's demo
-names 1 2 3 1 2 3 4 5. `hand-motion` is reached, so stage 2's gate is open.
+Stages 1 and 2 are done. A demo whose notes all name fingers shows the hand on the lesson's piano
+view, to the phrase's audio clock, with Slow and Side view toggles. The C major scale's demo is the one
+lesson that does so far. `src/render/hand/hand-stage.ts` is the lazy part: the model, the rigs and the
+plan. `src/render/hand/hand-frame.ts` places the camera for both angles. The three `demo-hand` e2e
+tests pass, run by name. Shots in both views, both themes and on a phone look right.
 
 ### Next
 
-**Stage 2: the piano view plays the hand in a demo step.** The items are the stage's list above.
+**Stage 3: the scale and touch lessons show the hand.** The items are the stage's list above. A demo
+names a finger on every note, as `src/learn/lessons/scales-and-keys/the-c-major-scale.ts:22` does.
 
-- The lesson's `PhraseNote` counts beats, and `planHands` at `src/render/hand/hand-plan.ts:200` takes
-  its own `PhraseNote` at `:48`, in seconds with `pitch`. Convert at the bpm the demo plays, with the
-  hand defaulting to `right`.
-- `Playback` is `src/learn/lesson-sound.ts:29`, and `play` is at `:49`.
-- The demo step calls `piano.show` at `src/learn/steps/demo.ts:31` and plays at `:46`.
-- `show` of the view is declared at `src/render/piano-keys.ts:119` and built at `:623`.
+- `finger-over-the-thumb` has demos at `:20` and `:41`, `g-major` at `:19` and `:54`, `f-major` at
+  `:19` and `:41`, `legato` at `:21`, and `staccato` at `:22` and `:44`.
+- Read each lesson's step texts in its `.ts` and `.de.ts` before choosing fingers, since the text wins.
+- A left-hand demo adds `hand: "left"` on every note. Its side view looks from the right.
+- The test goes in `src/learn/course.test.ts` beside its other `test(` calls, and `loadCourse` there
+  gives the lessons.
+- Look at each demo with `bun run shot --path "./learn/<world>/<lesson>/" --locale en-US`, then
+  `--click "Play again"` and a `--wait` to the crossing.
 
 Expected red: none.
 
@@ -212,3 +220,5 @@ Expected red: none.
 - The hand could show a play-notes step's next move as a hint after two mistakes.
 - In the player, the hands could play along with a song from its guide's fingering.
 - A third view from behind the hand, if learners ask to see it as they would their own.
+- The player's angle leaves about a third of the box empty above the keys on a narrow range. A
+  tighter `HALF_HEIGHT` in `src/render/hand/hand-frame.ts` would give the keys that room.

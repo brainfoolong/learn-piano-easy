@@ -34,6 +34,10 @@ export const learnLesson = {
     /** The keyboard's accessible name. */
     piano: "The piano playing the example",
     playing: "Playing",
+    /** Plays the example at half its tempo, and stays on for the lesson. */
+    slow: "Slow",
+    /** Turns the view of the hand to the thumb's side, and back. */
+    side: "Side view",
   },
   quiz: {
     /** The list of answers' accessible name. */
