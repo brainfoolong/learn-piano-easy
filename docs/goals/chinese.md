@@ -211,8 +211,8 @@ The first verify named eight failures, each fixed without loosening a test:
 
 ### Next
 
-Nothing is left in this goal. The next goal on the chain is `hindi`. Harvest this one into
-`docs/findings.md` § `chinese` first.
+The goal is reached and harvested into `docs/findings.md` § `chinese`. The driver retires it: its
+checks join the floor, and this file goes. The next goal on the chain is `hindi`.
 
 No test is expected to go red.
 

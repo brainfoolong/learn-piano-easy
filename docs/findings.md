@@ -1323,3 +1323,32 @@ teacher wrote it, and the Spanish site ships.
 - A song guide gives one note after a verb or a preposition its article, and the course keeps its bare *toca sol*.
 - "Just Play Piano" is *Piano libre*, a setting is *una opción*, and Medium is *Intermedio*.
 - The gallery and the legal pages stay in English on the Spanish site.
+
+## chinese
+
+**Target:** every text of the site, the course and the song guides reads in Chinese as if a native
+teacher wrote it, and the Chinese site ships.
+
+### Findings
+
+- `zh` ships. Every catalog section, all eight worlds and the 80 song guides hold their Chinese, and each is stamped.
+- `docs/reference/translation/zh.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- `bun run i18n status zh` lists only 72 deliberate copies: note letters, kept units, endonyms and numbers.
+- A page's `lang` and `hreflang` are the locale row's `lang`, such as `zh-Hans`, never its code.
+- The Han, Devanagari and Bengali font stacks in `src/ui/tokens.css` carry the metric-matched fallback face, so a Latin digit keeps its box while the font loads.
+- The legal pages and the sponsor page hold a screen's height while their chunk loads, by the class `chunk-page`.
+- The Latin font check in `tools/font-coverage.test.ts` skips a Han endonym in the language list.
+- No native Chinese speaker has read the texts.
+
+### Decisions that still bind
+
+- The variety is Simplified Chinese as mainland China writes it. `lang` is `zh-Hans`, `intl` is `zh-Hans-CN`, and `naming` is `letters`.
+- The learner is `你`, never `您`, and no `他` or `她` stands for the learner.
+- To play the piano is `弹`, starting playback is `播放`, and a game is `游戏`.
+- Notes are uppercase letters, and a key is `C 大调` or `A 小调`.
+- The marks are full width, and quotes are `“ ”`.
+- No space stands between two Han characters, and a half-width space stands between a Han character and a Latin letter or a digit.
+- Numbers follow `Intl` for `zh-Hans-CN`, and a counted message has one form.
+- The kept words are *Learn Piano Easy*, *MIDI*, the units, the printed marks and the song titles.
+- In prose, a work and a composer take their usual Chinese names, as Chinese Wikipedia confirms them. Otherwise the Latin name stays.
+- The rules test counts a kept word only where no Latin letter touches it.
