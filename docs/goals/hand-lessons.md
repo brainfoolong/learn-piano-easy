@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: The first melodies, both hands and expression lessons show the hand
-    status: open
+    status: done
   - id: 5
     title: The chord lessons show the hand, and the docs say so
     status: open
@@ -153,15 +153,15 @@ example. One takes the four first-melodies lessons, the other the two both-hands
 lessons. Neither builds. The session builds, checks each lesson's fingers against its text, and adds
 them to the test list.
 
-- [ ] `right-hand-c-position`. `src/learn/lessons/first-melodies/right-hand-c-position.ts:1`
-- [ ] `left-hand-c-position`, with the left hand. `src/learn/lessons/first-melodies/left-hand-c-position.ts:1`
-- [ ] `twinkle-first-phrase`, with the little finger's stretch to A. `src/learn/lessons/first-melodies/twinkle-first-phrase.ts:1`
-- [ ] `repeated-notes`. `src/learn/lessons/first-melodies/repeated-notes.ts:1`
-- [ ] `moving-the-hand`, with the move from C position to G position. `src/learn/lessons/both-hands/moving-the-hand.ts:1`
-- [ ] `open-fifths`, with the left hand's 5 and 1. `src/learn/lessons/both-hands/open-fifths.ts:1`
-- [ ] `loud-and-soft`, its soft and loud demos at their velocities. `src/learn/lessons/expression/loud-and-soft.ts:1`
-- [ ] `phrases`, with the lift at the breath. `src/learn/lessons/expression/phrases.ts:1`
-- [ ] The eight join the test's list. `src/learn/course.test.ts:1`
+- [x] `right-hand-c-position`. `src/learn/lessons/first-melodies/right-hand-c-position.ts:1`
+- [x] `left-hand-c-position`, with the left hand. `src/learn/lessons/first-melodies/left-hand-c-position.ts:1`
+- [x] `twinkle-first-phrase`, with the little finger's stretch to A. `src/learn/lessons/first-melodies/twinkle-first-phrase.ts:1`
+- [x] `repeated-notes`. `src/learn/lessons/first-melodies/repeated-notes.ts:1`
+- [x] `moving-the-hand`, with the move from C position to G position. `src/learn/lessons/both-hands/moving-the-hand.ts:1`
+- [x] `open-fifths`, with the left hand's 5 and 1. `src/learn/lessons/both-hands/open-fifths.ts:1`
+- [x] `loud-and-soft`, its soft and loud demos at their velocities. `src/learn/lessons/expression/loud-and-soft.ts:1`
+- [x] `phrases`, with the lift at the breath. `src/learn/lessons/expression/phrases.ts:1`
+- [x] The eight join the test's list. `src/learn/course.test.ts:1`
 
 ### 5. The chord lessons show the hand, and the docs say so
 

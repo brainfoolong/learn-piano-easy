@@ -49,7 +49,22 @@ test("every_key_a_lesson_asks_for_is_in_reach_of_the_default_computer_keys", asy
 });
 
 /** The lessons that teach a movement of the hand, whose every demo shows the hand play it. */
-const TECHNIQUE_LESSONS = ["the-c-major-scale", "finger-over-the-thumb", "g-major", "f-major", "legato", "staccato"];
+const TECHNIQUE_LESSONS = [
+  "the-c-major-scale",
+  "finger-over-the-thumb",
+  "g-major",
+  "f-major",
+  "legato",
+  "staccato",
+  "right-hand-c-position",
+  "left-hand-c-position",
+  "twinkle-first-phrase",
+  "repeated-notes",
+  "moving-the-hand",
+  "open-fifths",
+  "loud-and-soft",
+  "phrases",
+];
 
 test("every_technique_lesson_demo_names_its_fingers", async () => {
   const lessons = (await loadCourse()).flatMap(({ lessons }) => lessons.lessons);
