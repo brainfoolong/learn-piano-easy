@@ -38,28 +38,11 @@ export interface Typography {
   marks: readonly MarkRule[];
 }
 
-/** Each locale's rules. English is the source, and German is checked by eye, so the test skips both. */
-export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
-  en: { kept: [], marks: [] },
-  de: { kept: [], marks: [] },
-  es: {
-    kept: [
-      "Learn Piano Easy", "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman","Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari",
-      "XP", "BPM", "FPS", "PDF", "kHz", "Hz", "dB", "ms", "KB", "MB", "combo", "Combo", "tempo", "Tempo",
-      "legato", "staccato", "crescendo", "diminuendo", "forte", "piano", "Piano", "Error",
-    ],
-    marks: [
-      { says: "A question opens with ¿ and closes with ?, one pair per question", mustNot: /^[^¿]*\?|\?[^¿]*\?|¿[^?]*¿|¿[^?]*$/ },
-      { says: "An exclamation opens with ¡ and closes with !, one pair per exclamation", mustNot: /^[^¡]*!|![^¡]*!|¡[^!]*¡|¡[^!]*$/ },
-      { says: "An opening mark is never followed by a space, and a closing mark never follows one", mustNot: /[¿¡«]\s|\s[?!»]/ },
-      { says: "A quote stands in « », never in straight or curly double quotes", mustNot: /["“”]/ },
-      { says: "No space stands before a colon, a semicolon or a percent sign", mustNot: /\s[:;%]/ },
-      { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
-    ],
-  },
-  zh: {
-    kept: [
-      // The song guides' titles and names, each longer form before the shorter one it holds.
+/**
+ * The song guides' titles and names in Latin letters, which every non-Latin locale keeps. Each longer
+ * form stands before the shorter one it holds.
+ */
+const SONG_NAMES: readonly string[] = [
       "God Rest Ye Merry, Gentlemen", "Ihr Kinderlein, kommet", "Kling, Glöckchen, klingelingeling", "Kommet, ihr Hirten",
       "Morgen, Kinder, wird's nichts geben", "Morgen, Kinder, wird's was geben", "Branle de l'Official",
       "Seht, wie die Sonne dort sinket", "Tochter Zion, freue dich", "Baa, Baa, Black Sheep", "Minuit, chrétiens",
@@ -92,6 +75,30 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       "Therese Malfatti", "Thoinot Arbeau", "Thomas Helmore", "Thomas Oliphant", "We Wish You a Merry Christmas",
       "Wilhelm Gottlieb Becker", "Wilhelm Hey", "William Sandys", "con sordina", "senza sordino", "pianissimo", "ostinato",
       "Ebel", "Gloria", "Nohl", "Oliphant", "Schmid", "Terry", "Wilhelmj", "Wilhousky",
+];
+
+/** Each locale's rules. English is the source, and German is checked by eye, so the test skips both. */
+export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
+  en: { kept: [], marks: [] },
+  de: { kept: [], marks: [] },
+  es: {
+    kept: [
+      "Learn Piano Easy", "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman","Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari",
+      "XP", "BPM", "FPS", "PDF", "kHz", "Hz", "dB", "ms", "KB", "MB", "combo", "Combo", "tempo", "Tempo",
+      "legato", "staccato", "crescendo", "diminuendo", "forte", "piano", "Piano", "Error",
+    ],
+    marks: [
+      { says: "A question opens with ¿ and closes with ?, one pair per question", mustNot: /^[^¿]*\?|\?[^¿]*\?|¿[^?]*¿|¿[^?]*$/ },
+      { says: "An exclamation opens with ¡ and closes with !, one pair per exclamation", mustNot: /^[^¡]*!|![^¡]*!|¡[^!]*¡|¡[^!]*$/ },
+      { says: "An opening mark is never followed by a space, and a closing mark never follows one", mustNot: /[¿¡«]\s|\s[?!»]/ },
+      { says: "A quote stands in « », never in straight or curly double quotes", mustNot: /["“”]/ },
+      { says: "No space stands before a colon, a semicolon or a percent sign", mustNot: /\s[:;%]/ },
+      { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
+    ],
+  },
+  zh: {
+    kept: [
+      ...SONG_NAMES,
       "Learn Piano Easy", "Wikimedia Commons", "Wikipedia", "Mutopia", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo",
       "Chrome", "Edge", "Firefox", "Safari", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz", "dB", "ms", "KB", "MB",
       "BWV", "K.", "mezzo-piano", "mezzo-forte", "ritardando", "rallentando", "crescendo", "decrescendo", "diminuendo",
@@ -115,7 +122,29 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       { says: "No space stands between two Han characters", mustNot: /\p{Unified_Ideograph}\s+\p{Unified_Ideograph}/u },
     ],
   },
-  hi: { kept: [], marks: [] },
+  hi: {
+    kept: [
+      "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman", ...SONG_NAMES,
+      "In the Hall of the Mountain King", "Carol of the Bells", "Ode to Joy", "Jingle Bells", "Mary Had a Little Lamb",
+      "Für Elise", "Twinkle Twinkle Little Star", "Canon in D",
+      "Learn Piano Easy", "Wikimedia Commons", "Wikipedia", "Mutopia", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo",
+      "Chrome", "Edge", "Firefox", "Safari", "JavaScript", "MIT", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz",
+      "dB", "ms", "KB", "MB", "px", "3D", "Esc", "BWV", "K.", "HWV",
+      "mezzo-piano", "mezzo-forte", "ritardando", "rallentando", "piano", "forte", "rit.", "rall.", "decresc.", "cresc.",
+      "dim.", "a tempo", "Ped.", "mp", "mf", "pp", "ff", "p", "f",
+    ],
+    marks: [
+      { says: "A sentence ends with the danda ।, and an ASCII period stands only inside a number", mustNot: /(?<!\d)\.|\.(?!\d)/ },
+      { says: "The double danda ॥ is never used", mustNot: /॥/ },
+      { says: "No space stands before ।, ?, !, :, ;, a comma or %", mustNot: /\s[।?!:;,%]/ },
+      { says: "A quote stands in “ ”, with ‘ ’ inside", mustNot: /["'«»]/ },
+      { says: "Digits are Western", mustNot: /[०-९]/ },
+      { says: "A nukta is the combining sign after its letter, never a precomposed letter", mustNot: /[क़-य़]/ },
+      { says: "No nukta sits on क, ख or ग", mustNot: /[कखग]़/ },
+      { says: "A nasal vowel at a word's end takes the chandrabindu", mustNot: /(?:[एआऊ]|ा|ू)ं(?![\p{L}\p{M}])/u },
+      { says: "A range of numbers takes –", mustNot: /\d-\d/ },
+    ],
+  },
   ar: { kept: [], marks: [] },
   pt: { kept: [], marks: [] },
   id: { kept: [], marks: [] },

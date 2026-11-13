@@ -235,6 +235,21 @@ test("the_chinese_marks_hold_and_spare_kept_words", () => {
   for (const text of kept) expect(problemsOf([textOf("English", text, "zh")], "zh")).toEqual([]);
 });
 
+test("the_hindi_marks_hold_and_spare_kept_words", () => {
+  const broken = [
+    "पाठ पूरा हुआ.", "नमस्ते !", "\"1, 2\" गिनें।", "माप ३", "फ़ाइल खोलें।", "ग़लत नोट", "C दबाएं।", "माप 1-4", "बजाएँ॥",
+  ];
+  for (const text of broken) expect(problemsOf([textOf("English", text, "hi")], "hi")).not.toEqual([]);
+  const kept = [
+    "नमस्ते! मैं आपका पियानो टीचर हूँ। चलिए, बजाना शुरू करें?", "अब आपकी बारी। दाएँ हाथ का अँगूठा मध्य C पर रखें, और C और E एक साथ बजाएँ।",
+    "हर हाफ़ नोट पर “1, 2” गिनें।", "बीथोवेन ने यह धुन अपनी नौवीं सिम्फ़नी के आखिरी मूवमेंट के लिए लिखी थी। यह पहली बार 1824 में वियना में बजाई गई।",
+    "माप 1–4", "C शार्प माइनर", "A माइनर कॉर्ड में A, C और E हैं।", "f (ज़ोर से) और p (हल्के से)", "rit. का मतलब है धीरे-धीरे धीमा करना।",
+    "‘चलाएँ’ दबाएँ।", "फ़ोल्डर खोजा जा रहा है…", "12,34,567 गाने", "80% स्पीड पर", "MIDI कीबोर्ड से बजाएँ।", "Jingle Bells दाएँ हाथ से बजाएँ।",
+    "छोटे समूह में कितनी काली कुंजियाँ हैं?",
+  ];
+  for (const text of kept) expect(problemsOf([textOf("English", text, "hi")], "hi")).toEqual([]);
+});
+
 const units = await loadUnits();
 const everyText = units.flatMap((unit) => unit.texts);
 

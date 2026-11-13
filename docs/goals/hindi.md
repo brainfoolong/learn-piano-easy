@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Hindi style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Hindi
     status: open
@@ -72,6 +72,22 @@ and hangs vowel signs on them. Its verbs agree with gender, and its numbers grou
 - **The script is Devanagari,** and its fonts are the system stacks `many-locales` sets. The look in
   stage 6 covers conjuncts, which join consonants, and matras, which are vowel signs.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
+- **Stage 1 confirmed these facts against the sources,** and changed three. The guide's § 12 names
+  each source.
+  - **The danda stays,** though Microsoft's guide and Android's strings use the full stop. Hindi
+    Wikipedia and the Hindi learner apps use the danda. A teacher's prose reads native with it, and one
+    mark is simpler to keep and to test.
+  - **A composer with a Hindi Wikipedia article takes its Devanagari spelling,** such as `बीथोवेन`. A
+    native teacher never writes a famous name in Latin letters. Every other name stays in Latin.
+  - **The nukta is the combining sign on `ज़` and `फ़` alone,** and the chandrabindu ends a nasal word,
+    as Microsoft § 4.1.12 sets. The rule table checks both.
+  - **A note letter stays Latin and is never spelled `सी` or `जी`,** since `जी` is also the honorific.
+  - **The `hi-IN` row is unchanged:** `lang` `hi`, `intl` `hi-IN`, letters, Devanagari and `hi_IN`.
+    CLDR names the language `हिन्दी`, as the row's endonym does.
+- **The term list is the English column of the Chinese glossary,** `docs/reference/translation/zh.md`
+  § 5. Its reader built it from the same English two goals ago, so a new count would repeat it.
+- **The song guides' Latin titles and names are one list, `SONG_NAMES`,** in `src/i18n/typography.ts`.
+  Chinese and Hindi both spread it, and a stage 4 or 5 writer adds a missing title there.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -86,12 +102,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/hi.md:1`
-- [ ] Microsoft's Hindi style guide: the address, the marks and the interface terms. `docs/reference/translation/hi.md:1`
-- [ ] Hindi Wikipedia's music articles and Hindi piano methods: each music term with two sources. `docs/reference/translation/hi.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/hi.md:1`
-- [ ] The Hindi entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Hindi row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/hi.md:1`
+- [x] Microsoft's Hindi style guide: the address, the marks and the interface terms. `docs/reference/translation/hi.md:1`
+- [x] Hindi Wikipedia's music articles and Hindi piano methods: each music term with two sources. `docs/reference/translation/hi.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/hi.md:1`
+- [x] The Hindi entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The Hindi row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
 
 ### 2. The site and the player in Hindi
 
@@ -168,15 +184,24 @@ address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `chinese` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/hi.md` holds all twelve sections, and its *Open* lists the
+terms a teacher should confirm. The `hi` entry of `src/i18n/typography.ts` has the kept words and nine
+mark rules. Test `the_hindi_marks_hold_and_spare_kept_words` pins those rules, and
+`hindi_texts_keep_their_rules` passes, since no Hindi text exists yet.
 
 ### Next
 
-**Stage 1: the Hindi style guide and glossary.** Files: `docs/reference/translation/hi.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `chinese` is reached.
+**Stage 2: the site and the player in Hindi.** Run `bun tools/i18n.ts work hi <section>` for each
+catalog section, then brief three writers side by side with the whole of `hi.md`. Files:
+`src/i18n/messages/*.hi.ts`, and `src/i18n/locale.ts:44` for the `hi` catalog chunk. Then run three
+blind reviewers, and stamp each section into `src/i18n/stamps/hi.json`.
+
+- A writer adds a missing kept word to the `hi` list, and a song title to `SONG_NAMES`.
+- The `one` plural form shows for 0 too, as `hi.md` § 8 says. Brief each writer on it.
 
 Expected red: none.
 
 ### Backlog
 
 - A native Hindi speaker's read of the course would catch what a blind review cannot.
+- An Indian piano teacher's read of the glossary's notation loanwords, and of `स्केल` for a song's key.
