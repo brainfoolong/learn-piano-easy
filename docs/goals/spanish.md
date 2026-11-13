@@ -228,12 +228,12 @@ and each key's span mirrors its name as `data-name`.
 Stage 7 is done, and `looper verify` is green on every step. The first run failed two unit tests that
 held `es` unshipped. `src/i18n/i18n.test.ts` now reads `es/play/` as Spanish and `zh/play/` as no
 locale's. `src/learn/model.test.ts` gives the merged texts to every shipped locale. Every e2e test passed,
-`every_page_passes_the_layout_checks_in_es` among them.
+`every_page_passes_the_layout_checks_in_es` among them. `docs/findings.md` § `spanish` holds the harvest.
 
 ### Next
 
-The goal is reached. Harvest it into `docs/findings.md` § `spanish`, move its two checks into the floor,
-and delete this file. The next goal on the chain is `chinese`. No test is expected to go red.
+The goal is reached and harvested. The driver retires it: its checks join the floor, and this file
+goes. The next goal on the chain is `chinese`. No test is expected to go red.
 
 ### Backlog
 

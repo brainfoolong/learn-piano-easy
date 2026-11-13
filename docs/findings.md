@@ -1292,3 +1292,34 @@ texts, and the tools and checks of a translation pass exist.
 - Solfège is written in the locale's script and spelling, and the naming setting's `auto` follows the live locale.
 - Sorting uses `collator` of `src/i18n/format.ts`, with numbers compared as numbers.
 - A shipped locale adds its own layout run at 360 and 1280 pixels in its own goal.
+
+## spanish
+
+**Target:** every text of the site, the course and the song guides reads in Spanish as if a native
+teacher wrote it, and the Spanish site ships.
+
+### Findings
+
+- `es` ships. Every catalog section, all eight worlds and the 80 song guides hold their Spanish, and each is stamped.
+- `docs/reference/translation/es.md` is the style guide and glossary that every writer and reviewer read.
+- `bun run i18n status es` lists only 48 deliberate copies, texts whose Spanish equals the English.
+- The gallery's and the legal pages' texts are keyed by `CompleteLocale` in `src/i18n/locale-table.ts`, so a shipped locale outside it shows their English.
+- A lesson's piano names its keys in the locale's naming, and each key's span carries its name as `data-name`.
+- Blind reviews by fresh readers found real slips: *la* read as the article, a note's article, and drift between files.
+- A final consistency read across every file found drift that the per-batch reviews missed.
+- No native Spanish speaker has read the texts.
+
+### Decisions that still bind
+
+- The variety is neutral Latin American Spanish. `lang` is `es`, `intl` is `es-419`, `og` is `es_LA`, and `naming` is `solfege`.
+- The learner is *tú*, the plural is *ustedes*, and the learner's gender stays out of the text.
+- An instruction is a *tú* imperative, and a button or a menu item is an infinitive or a noun.
+- To play the piano is *tocar*, to play a game is *jugar*, and starting playback is *reproducir*.
+- Notes are lowercase solfège in prose. A name the code builds, such as `Mi4`, keeps its capital.
+- Every question and exclamation opens with `¿` or `¡`, and quotes are `« »`.
+- Numbers follow `Intl` for `es-419`, and no separator is set by hand.
+- The kept words are *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
+- A text whose Spanish equals the English stays out of its file, and a list whose items would all equal it stays out whole.
+- A song guide gives one note after a verb or a preposition its article, and the course keeps its bare *toca sol*.
+- "Just Play Piano" is *Piano libre*, a setting is *una opción*, and Medium is *Intermedio*.
+- The gallery and the legal pages stay in English on the Spanish site.
