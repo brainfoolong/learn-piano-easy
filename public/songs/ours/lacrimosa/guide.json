@@ -4,11 +4,13 @@
   "composer": "Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr",
   "about": {
     "en": "Mozart died in 1791 while he was writing his Requiem. His pupil Franz Xaver Süssmayr finished it, and Breitkopf & Härtel printed the score in 1800. The film Amadeus tells the story of how Mozart wrote this Requiem.",
-    "de": "Mozart starb 1791, während er an seinem Requiem schrieb. Sein Schüler Franz Xaver Süßmayr vollendete es, und Breitkopf & Härtel druckte die Partitur im Jahr 1800. Der Film Amadeus erzählt, wie Mozart dieses Requiem schrieb."
+    "de": "Mozart starb 1791, während er an seinem Requiem schrieb. Sein Schüler Franz Xaver Süßmayr vollendete es, und Breitkopf & Härtel druckte die Partitur im Jahr 1800. Der Film Amadeus erzählt, wie Mozart dieses Requiem schrieb.",
+    "es": "Mozart murió en 1791 mientras escribía su Réquiem. Su alumno Franz Xaver Süssmayr lo terminó, y Breitkopf & Härtel imprimió la partitura en 1800. La película Amadeus cuenta cómo Mozart escribió este Réquiem."
   },
   "funFact": {
     "en": "Mozart's own draft of the Lacrimosa breaks off after its first eight bars.",
-    "de": "Mozarts eigener Entwurf des Lacrimosa bricht nach den ersten acht Takten ab."
+    "de": "Mozarts eigener Entwurf des Lacrimosa bricht nach den ersten acht Takten ab.",
+    "es": "El borrador del propio Mozart para el Lacrimosa se interrumpe después de sus primeros ocho compases."
   },
   "mythic": null,
   "versions": {
@@ -31,7 +33,8 @@
         {
           "text": {
             "en": "Play the first four bars with the right hand alone, and let the song wait for each note.",
-            "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+            "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten.",
+            "es": "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota."
           },
           "hands": "right",
           "speed": 0.6,
@@ -41,7 +44,8 @@
         {
           "text": {
             "en": "Play bars 5 to 8 with the right hand alone. They answer the tune with a new phrase.",
-            "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Sie antworten der Melodie mit einer neuen Phrase."
+            "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Sie antworten der Melodie mit einer neuen Phrase.",
+            "es": "Toca los compases 5 a 8 con la mano derecha sola. Esos compases le responden a la melodía con una frase nueva."
           },
           "hands": "right",
           "speed": 0.6,
@@ -51,7 +55,8 @@
         {
           "text": {
             "en": "Now the left hand alone. It holds one shape for half a bar at a time.",
-            "de": "Jetzt die linke Hand allein. Sie hält jeden Griff einen halben Takt lang."
+            "de": "Jetzt die linke Hand allein. Sie hält jeden Griff einen halben Takt lang.",
+            "es": "Ahora la mano izquierda sola. Mantiene cada forma durante medio compás."
           },
           "hands": "left",
           "speed": 0.6,
@@ -61,7 +66,8 @@
         {
           "text": {
             "en": "Put both hands together on the first eight bars, slowly.",
-            "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen."
+            "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
+            "es": "Junta las dos manos en los primeros ocho compases, despacio."
           },
           "hands": "both",
           "speed": 0.7,
@@ -71,7 +77,8 @@
         {
           "text": {
             "en": "Play the whole song with both hands at full speed.",
-            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
+            "es": "Toca toda la canción con las dos manos juntas a velocidad completa."
           },
           "hands": "both",
           "speed": 1,
@@ -86,7 +93,8 @@
           "kind": "trick",
           "text": {
             "en": "Lift the hand just before the high F. Then finger 5 lands on it softly.",
-            "de": "Heb die Hand kurz vor dem hohen F an. Dann landet Finger 5 sanft darauf."
+            "de": "Heb die Hand kurz vor dem hohen F an. Dann landet Finger 5 sanft darauf.",
+            "es": "Levanta la mano justo antes del fa agudo. Luego el dedo 5 llega a esa nota con suavidad."
           }
         },
         {
@@ -95,7 +103,8 @@
           "kind": "sound",
           "text": {
             "en": "Each falling pair of notes is a sigh. Play the first note a little louder than the second.",
-            "de": "Jedes fallende Tonpaar ist ein Seufzer. Spiel den ersten Ton etwas lauter als den zweiten."
+            "de": "Jedes fallende Tonpaar ist ein Seufzer. Spiel den ersten Ton etwas lauter als den zweiten.",
+            "es": "Cada par de notas que baja es un suspiro. Toca la primera nota un poco más fuerte que la segunda."
           }
         },
         {
@@ -104,7 +113,8 @@
           "kind": "fingering",
           "text": {
             "en": "Each finger keeps its own key. Finger 2 always plays C sharp.",
-            "de": "Jeder Finger bleibt auf seiner eigenen Taste. Finger 2 spielt immer das Cis."
+            "de": "Jeder Finger bleibt auf seiner eigenen Taste. Finger 2 spielt immer das Cis.",
+            "es": "Cada dedo se queda en su propia tecla. El dedo 2 siempre toca do sostenido."
           }
         }
       ],
@@ -113,21 +123,24 @@
           "bar": 15,
           "text": {
             "en": "Fingers 5, 4 and 2 step down from F to C sharp. The left hand changes to A on the long note.",
-            "de": "Finger 5, 4 und 2 steigen vom F hinab zum Cis. Die linke Hand wechselt beim langen Ton zum A."
+            "de": "Finger 5, 4 und 2 steigen vom F hinab zum Cis. Die linke Hand wechselt beim langen Ton zum A.",
+            "es": "Los dedos 5, 4 y 2 bajan del fa al do sostenido. La mano izquierda cambia al la en la nota larga."
           }
         },
         {
           "bar": 1,
           "text": {
             "en": "Spread the right hand from A up to F. Lift it for a moment before finger 5 plays F.",
-            "de": "Spann die rechte Hand vom A hinauf bis zum F. Heb sie kurz an, bevor Finger 5 das F spielt."
+            "de": "Spann die rechte Hand vom A hinauf bis zum F. Heb sie kurz an, bevor Finger 5 das F spielt.",
+            "es": "Abre la mano derecha desde el la hasta el fa. Levántala un momento antes de que el dedo 5 toque el fa."
           }
         },
         {
           "bar": 7,
           "text": {
             "en": "The left hand changes from A to G in the middle of the bar. Finger 5 takes the low G.",
-            "de": "Die linke Hand wechselt mitten im Takt von A zu G. Finger 5 nimmt das tiefe G."
+            "de": "Die linke Hand wechselt mitten im Takt von A zu G. Finger 5 nimmt das tiefe G.",
+            "es": "La mano izquierda cambia del la al sol a la mitad del compás. El dedo 5 toma el sol grave."
           }
         }
       ]
@@ -150,7 +163,8 @@
         {
           "text": {
             "en": "Play the first four bars with the right hand alone, and let the song wait for each note.",
-            "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+            "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten.",
+            "es": "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota."
           },
           "hands": "right",
           "speed": 0.6,
@@ -160,7 +174,8 @@
         {
           "text": {
             "en": "Play the left hand alone. Each chord comes twice: long, then short.",
-            "de": "Spiel die linke Hand allein. Jeder Akkord kommt zweimal: erst lang, dann kurz."
+            "de": "Spiel die linke Hand allein. Jeder Akkord kommt zweimal: erst lang, dann kurz.",
+            "es": "Toca con la mano izquierda sola. Cada acorde suena dos veces: largo, y luego corto."
           },
           "hands": "left",
           "speed": 0.6,
@@ -170,7 +185,8 @@
         {
           "text": {
             "en": "Join the hands on the first twelve bars, slowly.",
-            "de": "Spiel die ersten zwölf Takte langsam mit beiden Händen zusammen."
+            "de": "Spiel die ersten zwölf Takte langsam mit beiden Händen zusammen.",
+            "es": "Junta las manos en los primeros doce compases, despacio."
           },
           "hands": "both",
           "speed": 0.6,
@@ -180,7 +196,8 @@
         {
           "text": {
             "en": "Play the whole song with both hands, a little slower than written.",
-            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert."
+            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
+            "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito."
           },
           "hands": "both",
           "speed": 0.8,
@@ -190,7 +207,8 @@
         {
           "text": {
             "en": "Now play it at full speed.",
-            "de": "Jetzt spiel es im vollen Tempo."
+            "de": "Jetzt spiel es im vollen Tempo.",
+            "es": "Ahora tócala a velocidad completa."
           },
           "hands": "both",
           "speed": 1,
@@ -205,7 +223,8 @@
           "kind": "rhythm",
           "text": {
             "en": "Count six beats in each bar. The left hand plays on beats 1, 3, 4 and 6.",
-            "de": "Zähl in jedem Takt sechs Schläge. Die linke Hand spielt auf den Schlägen 1, 3, 4 und 6."
+            "de": "Zähl in jedem Takt sechs Schläge. Die linke Hand spielt auf den Schlägen 1, 3, 4 und 6.",
+            "es": "Cuenta seis tiempos en cada compás. La mano izquierda toca en los tiempos 1, 3, 4 y 6."
           }
         },
         {
@@ -214,7 +233,8 @@
           "kind": "sound",
           "text": {
             "en": "Let the left hand rock gently, like a slow boat, and keep it softer than the tune.",
-            "de": "Lass die linke Hand sanft schaukeln wie ein langsames Boot, und spiel sie leiser als die Melodie."
+            "de": "Lass die linke Hand sanft schaukeln wie ein langsames Boot, und spiel sie leiser als die Melodie.",
+            "es": "Deja que la mano izquierda se meza con calma, como un bote lento, y tócala más suave que la melodía."
           }
         },
         {
@@ -223,7 +243,8 @@
           "kind": "fingering",
           "text": {
             "en": "Finger 5 reaches up to G for one note, then the hand comes back.",
-            "de": "Finger 5 greift für einen Ton hinauf zum G, dann kommt die Hand zurück."
+            "de": "Finger 5 greift für einen Ton hinauf zum G, dann kommt die Hand zurück.",
+            "es": "El dedo 5 sube hasta el sol por una nota, y luego la mano vuelve."
           }
         }
       ],
@@ -232,21 +253,24 @@
           "bar": 12,
           "text": {
             "en": "Stretch finger 5 up to G, then let fingers 4 and 2 fall back to E and C sharp.",
-            "de": "Streck Finger 5 hinauf zum G, dann lass Finger 4 und 2 zurück auf E und Cis fallen."
+            "de": "Streck Finger 5 hinauf zum G, dann lass Finger 4 und 2 zurück auf E und Cis fallen.",
+            "es": "Estira el dedo 5 hasta el sol, y luego deja que los dedos 4 y 2 vuelvan a caer en mi y do sostenido."
           }
         },
         {
           "bar": 17,
           "text": {
             "en": "The low A stays. The thumb leaves D, and finger 2 plays the C sharp just below it.",
-            "de": "Das tiefe A bleibt. Der Daumen verlässt das D, und Finger 2 spielt das Cis direkt darunter."
+            "de": "Das tiefe A bleibt. Der Daumen verlässt das D, und Finger 2 spielt das Cis direkt darunter.",
+            "es": "El la grave se queda. El pulgar deja el re, y el dedo 2 toca el do sostenido justo debajo."
           }
         },
         {
           "bar": 11,
           "text": {
             "en": "Play E twice with finger 4. Lift the finger a little between the two notes.",
-            "de": "Spiel das E zweimal mit Finger 4. Heb den Finger zwischen den beiden Tönen ein wenig an."
+            "de": "Spiel das E zweimal mit Finger 4. Heb den Finger zwischen den beiden Tönen ein wenig an.",
+            "es": "Toca mi dos veces con el dedo 4. Levanta un poco el dedo entre las dos notas."
           }
         }
       ]
@@ -270,7 +294,8 @@
         {
           "text": {
             "en": "Play the left hand alone. Each beat starts on the bass note, then rocks between two higher notes.",
-            "de": "Spiel die linke Hand allein. Jeder Schlag beginnt auf dem Basston und schaukelt dann zwischen zwei höheren Tönen."
+            "de": "Spiel die linke Hand allein. Jeder Schlag beginnt auf dem Basston und schaukelt dann zwischen zwei höheren Tönen.",
+            "es": "Toca con la mano izquierda sola. Cada tiempo empieza en la nota del bajo, y luego se mece entre dos notas más agudas."
           },
           "hands": "left",
           "speed": 0.5,
@@ -280,7 +305,8 @@
         {
           "text": {
             "en": "Play the right hand's sixths alone, and press both notes of each pair as one.",
-            "de": "Spiel die Sexten der rechten Hand allein, und drück beide Töne jedes Paars wie einen an."
+            "de": "Spiel die Sexten der rechten Hand allein, und drück beide Töne jedes Paars wie einen an.",
+            "es": "Toca las sextas de la mano derecha sola, y presiona las dos notas de cada doble nota como una."
           },
           "hands": "right",
           "speed": 0.6,
@@ -290,7 +316,8 @@
         {
           "text": {
             "en": "Join the hands on the first twelve bars, slowly.",
-            "de": "Spiel die ersten zwölf Takte langsam mit beiden Händen zusammen."
+            "de": "Spiel die ersten zwölf Takte langsam mit beiden Händen zusammen.",
+            "es": "Junta las manos en los primeros doce compases, despacio."
           },
           "hands": "both",
           "speed": 0.5,
@@ -300,7 +327,8 @@
         {
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
-            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
+            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad."
           },
           "hands": "both",
           "speed": 0.75,
@@ -310,7 +338,8 @@
         {
           "text": {
             "en": "Now play it at full speed, with the pedal.",
-            "de": "Jetzt spiel es im vollen Tempo, mit Pedal."
+            "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
+            "es": "Ahora tócala a velocidad completa, con el pedal."
           },
           "hands": "both",
           "speed": 1,
@@ -325,7 +354,8 @@
           "kind": "sound",
           "text": {
             "en": "Change the pedal on each new bass note, twice in every bar.",
-            "de": "Wechsle das Pedal bei jedem neuen Basston, zweimal in jedem Takt."
+            "de": "Wechsle das Pedal bei jedem neuen Basston, zweimal in jedem Takt.",
+            "es": "Cambia el pedal en cada nota nueva del bajo, dos veces en cada compás."
           }
         },
         {
@@ -334,7 +364,8 @@
           "kind": "sound",
           "text": {
             "en": "B flat in the bass rubs against the held A. That sad rub is on purpose.",
-            "de": "Das B im Bass reibt sich am gehaltenen A. Diese traurige Reibung ist gewollt."
+            "de": "Das B im Bass reibt sich am gehaltenen A. Diese traurige Reibung ist gewollt.",
+            "es": "El si bemol del bajo roza contra el la mantenido. Ese roce triste es a propósito."
           }
         },
         {
@@ -343,7 +374,8 @@
           "kind": "fingering",
           "text": {
             "en": "The tune is the top note of each pair, so let the upper finger lead.",
-            "de": "Die Melodie ist der obere Ton jedes Paars, also lass den oberen Finger führen."
+            "de": "Die Melodie ist der obere Ton jedes Paars, also lass den oberen Finger führen.",
+            "es": "La melodía es la nota de arriba de cada doble nota, así que deja que guíe el dedo de arriba."
           }
         }
       ],
@@ -352,21 +384,24 @@
           "bar": 29,
           "text": {
             "en": "In the middle of this bar, finger 2 stays on B flat and the thumb adds G below it.",
-            "de": "In der Mitte des Takts bleibt Finger 2 auf dem B, und der Daumen nimmt das G darunter dazu."
+            "de": "In der Mitte des Takts bleibt Finger 2 auf dem B, und der Daumen nimmt das G darunter dazu.",
+            "es": "A la mitad de este compás, el dedo 2 se queda en el si bemol y el pulgar agrega el sol debajo."
           }
         },
         {
           "bar": 25,
           "text": {
             "en": "The tune jumps up an octave. Move the thumb from the low A to the high A in one smooth arc.",
-            "de": "Die Melodie springt eine Oktave höher. Führ den Daumen in einem ruhigen Bogen vom tiefen A zum hohen A."
+            "de": "Die Melodie springt eine Oktave höher. Führ den Daumen in einem ruhigen Bogen vom tiefen A zum hohen A.",
+            "es": "La melodía salta una octava arriba. Lleva el pulgar del la grave al la agudo en un solo arco suave."
           }
         },
         {
           "bar": 13,
           "text": {
             "en": "The pairs open from a third to a sixth. Fingers 2 and 5 take A and F together.",
-            "de": "Die Paare öffnen sich von der Terz zur Sexte. Finger 2 und 5 nehmen A und F zusammen."
+            "de": "Die Paare öffnen sich von der Terz zur Sexte. Finger 2 und 5 nehmen A und F zusammen.",
+            "es": "Las dobles notas se abren de una tercera a una sexta. Los dedos 2 y 5 toman el la y el fa a la vez."
           }
         }
       ]
@@ -389,7 +424,8 @@
         {
           "text": {
             "en": "Play the left hand alone: the octave, two quick notes, then a short rest to jump.",
-            "de": "Spiel die linke Hand allein: die Oktave, zwei schnelle Töne, dann eine kurze Pause zum Springen."
+            "de": "Spiel die linke Hand allein: die Oktave, zwei schnelle Töne, dann eine kurze Pause zum Springen.",
+            "es": "Toca con la mano izquierda sola: la octava, dos notas rápidas, y luego un silencio corto para saltar."
           },
           "hands": "left",
           "speed": 0.5,
@@ -399,7 +435,8 @@
         {
           "text": {
             "en": "Play the right hand's octaves alone. Keep the hand open, with the thumb and little finger ready.",
-            "de": "Spiel die Oktaven der rechten Hand allein. Halt die Hand offen, mit Daumen und kleinem Finger bereit."
+            "de": "Spiel die Oktaven der rechten Hand allein. Halt die Hand offen, mit Daumen und kleinem Finger bereit.",
+            "es": "Toca las octavas de la mano derecha sola. Mantén la mano abierta, con el pulgar y el meñique listos."
           },
           "hands": "right",
           "speed": 0.5,
@@ -409,7 +446,8 @@
         {
           "text": {
             "en": "Join the hands on the first twelve bars, slowly.",
-            "de": "Spiel die ersten zwölf Takte langsam mit beiden Händen zusammen."
+            "de": "Spiel die ersten zwölf Takte langsam mit beiden Händen zusammen.",
+            "es": "Junta las manos en los primeros doce compases, despacio."
           },
           "hands": "both",
           "speed": 0.5,
@@ -419,7 +457,8 @@
         {
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
-            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
+            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad."
           },
           "hands": "both",
           "speed": 0.75,
@@ -429,7 +468,8 @@
         {
           "text": {
             "en": "Now play it at full speed, and let the last chord ring.",
-            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen."
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
+            "es": "Ahora tócala a velocidad completa, y deja sonar el último acorde."
           },
           "hands": "both",
           "speed": 1,
@@ -444,7 +484,8 @@
           "kind": "trick",
           "text": {
             "en": "Use the short rest at the end of each beat to jump to the next octave.",
-            "de": "Nutz die kurze Pause am Ende jedes Schlags, um zur nächsten Oktave zu springen."
+            "de": "Nutz die kurze Pause am Ende jedes Schlags, um zur nächsten Oktave zu springen.",
+            "es": "Aprovecha el silencio corto al final de cada tiempo para saltar a la octava siguiente."
           }
         },
         {
@@ -453,7 +494,8 @@
           "kind": "sound",
           "text": {
             "en": "Let the little finger sing the top note of each octave a little louder.",
-            "de": "Lass den kleinen Finger den oberen Ton jeder Oktave etwas lauter singen."
+            "de": "Lass den kleinen Finger den oberen Ton jeder Oktave etwas lauter singen.",
+            "es": "Deja que el meñique cante un poco más fuerte la nota de arriba de cada octava."
           }
         },
         {
@@ -462,7 +504,8 @@
           "kind": "sound",
           "text": {
             "en": "Play the last chord softly, and hold it until the sound fades.",
-            "de": "Spiel den letzten Akkord leise, und halt ihn, bis der Klang verklingt."
+            "de": "Spiel den letzten Akkord leise, und halt ihn, bis der Klang verklingt.",
+            "es": "Toca el último acorde suave, y mantenlo hasta que el sonido se apague."
           }
         }
       ],
@@ -471,21 +514,24 @@
           "bar": 25,
           "text": {
             "en": "The octaves begin. Open the hand with the thumb on the low A and the little finger on the A above.",
-            "de": "Die Oktaven beginnen. Öffne die Hand, mit dem Daumen auf dem tiefen A und dem kleinen Finger auf dem A darüber."
+            "de": "Die Oktaven beginnen. Öffne die Hand, mit dem Daumen auf dem tiefen A und dem kleinen Finger auf dem A darüber.",
+            "es": "Empiezan las octavas. Abre la mano con el pulgar en el la grave y el meñique en el la de arriba."
           }
         },
         {
           "bar": 27,
           "text": {
             "en": "Use the short rest after A to jump up to the octave on F.",
-            "de": "Nutz die kurze Pause nach dem A, um hinauf zur Oktave auf F zu springen."
+            "de": "Nutz die kurze Pause nach dem A, um hinauf zur Oktave auf F zu springen.",
+            "es": "Aprovecha el silencio corto después del la para saltar arriba a la octava de fa."
           }
         },
         {
           "bar": 13,
           "text": {
             "en": "The pairs open from a third to a sixth. Fingers 2 and 5 take A and F together.",
-            "de": "Die Paare öffnen sich von der Terz zur Sexte. Finger 2 und 5 nehmen A und F zusammen."
+            "de": "Die Paare öffnen sich von der Terz zur Sexte. Finger 2 und 5 nehmen A und F zusammen.",
+            "es": "Las dobles notas se abren de una tercera a una sexta. Los dedos 2 y 5 toman el la y el fa a la vez."
           }
         }
       ]

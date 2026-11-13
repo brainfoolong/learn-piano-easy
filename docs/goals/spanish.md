@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in Spanish, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in Spanish, from n to z"
     status: open
@@ -145,8 +145,13 @@ side by side, and three fresh reviewers review them blind.
   - [x] Every one of the 51 slugs from a to m has its `.es.ts`.
   - [x] The guide's glossary holds the guides' new terms, and `typography.ts` keeps *Moulin Rouge!*.
   - [x] `bun x tsc --noEmit` passes over them.
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp es` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+- [x] Each batch reviewed blind, and every finding settled.
+  - [x] Eight batches reviewed blind, each by a fresh `reader`.
+  - [x] Every finding applied, and the sweep's patterns gone from every guide.
+  - [x] `spanish_texts_keep_their_rules` passes.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp es` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+  - [x] All 51 `guide.json` files hold their Spanish.
+  - [x] `status es` lists no a-to-m guide as missing or stale.
 
 ### 5. The song guides in Spanish, from n to z
 
@@ -154,9 +159,9 @@ side by side, and three fresh reviewers review them blind.
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.es.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.es.ts:1`
+- [ ] One `tools/our-songs/<slug>.es.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/neon-chase.es.ts:1`
 - [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp es` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp es` stamps them. `public/songs/ours/neon-chase/guide.json:1`
 
 ### 6. The Spanish site ships
 
@@ -198,32 +203,36 @@ The reviews showed three recurring traps, now rules in the guide's § 7: *la* re
 *do grave* for a spelled-out place, and *de a tres*. A sweep fixed them in every world. The guide's
 piano glossary gained the course's new terms, and its interface glossary the worlds' titles.
 
-The boss of *First melodies* moved from `mary.*` to `mary-had-a-little-lamb.*`, since `tools/i18n.ts`
-finds a lesson's English by its id.
+Stage 4 is done. All 51 guides from `air-on-the-g-string` to `mozart-21-andante` have their `.es.ts`.
+Eight blind reviews found four *wrong* texts, all the *la*-as-article trap, and a set of stiff phrasings.
+A settle pass applied every finding and swept the recurring patterns from every guide. The guides are
+built into `public/songs/ours/*/guide.json` and stamped in `src/i18n/stamps/es.json`.
+`spanish_texts_keep_their_rules` passes. `status es` lists 685 missing texts: the 47 deliberate copies
+and the 638 texts of the n-to-z guides.
 
-The briefs are scratch under `.agent-tmp/i18n/es/`: `writer-brief.md` and `reviewer-brief.md` for the
-catalogs, and `lesson-writer-brief.md`, `lesson-reviewer-brief.md` and `lesson-settle-brief.md` for the
-course. A new session rewrites a guide's brief from these when they are gone.
-
-Stage 4's writers are done. All 51 guides from `air-on-the-g-string` to `mozart-21-andante` have their
-`.es.ts`, and `bun x tsc --noEmit` passes. A wip commit of session 0198 holds them, since the CLI's
-login failed before that session wrapped. No guide is reviewed, built or stamped yet.
+The briefs are scratch under `.agent-tmp/i18n/es/`. The guides use `guide-writer-brief.md`,
+`guide-reviewer-brief.md` and `guide-settle-brief.md`. The settle brief's sweep list holds the patterns
+the a-to-m reviews kept finding. A new session rewrites a brief from the `lesson-*` ones when they are gone.
 
 ### Next
 
-**Stage 4: review, build and stamp the guides from a to m.** Gate: stage 3's worlds are stamped, which holds.
+**Stage 5: the 29 guides from n to z.** Gate: stage 4's guides are stamped, which holds.
 
-- Review the 51 guides blind in batches of about seven, one fresh `reader` per batch, and settle each finding.
-- Then run the rules test once by name: `spanish_texts_keep_their_rules`.
-- The notes below are how the writers worked. Stage 5 follows them for n to z.
-- A guide's German sits in its module's `de` field, `tools/our-songs/<slug>.ts`. Every other locale is a
-  file `tools/our-songs/<slug>.es.ts` exporting `translation: Translation<GuideTranslation>`, which
+- The slugs: `neon-chase`, `night-on-bald-mountain`, `o-christmas-tree`, `o-come-all-ye-faithful`,
+  `o-du-froehliche`, `o-holy-night`, `o-little-town-of-bethlehem`, `ode-to-joy`, `old-macdonald-had-a-farm`,
+  `row-row-row-your-boat`, `sailors-hornpipe`, `silent-night`, `spanish-ladies`, `suesser-die-glocken`,
+  `swan-lake`, `the-blue-danube`, `the-entertainer`, `the-first-noel`, `the-sorcerers-apprentice`,
+  `the-twelve-days-of-christmas`, `toccata-in-d-minor`, `tochter-zion`, `twinkle-twinkle-little-star`,
+  `up-on-the-housetop`, `vltava`, `we-three-kings`, `wedding-march`, `william-tell`, `yankee-doodle`.
+- Writers follow `.agent-tmp/i18n/es/guide-writer-brief.md`, about seven songs per batch, side by side.
+  Add the settle brief's sweep patterns to the writer brief first, so writers avoid them.
+- A guide's German sits in its module's `de` field, `tools/our-songs/<slug>.ts`. The Spanish is a file
+  `tools/our-songs/<slug>.es.ts` exporting `translation: Translation<GuideTranslation>`, which
   `guideTranslationsOf` finds (`tools/make-our-songs.ts:454`).
-- `bun tools/i18n.ts work es guide/<slug>` writes each work list. A batch is about seven songs, so about
-  seven writers side by side, then one fresh `reader` per batch.
-- A guide writes an accidental as a word, *fa sostenido* (guide § 7). Song titles stay as data writes them.
-- Rewrite the lesson briefs for guides: the input is the song module, and lists fall back whole.
-- Then `bun tools/make-our-songs.ts`, and `bun tools/i18n.ts stamp es guide/<slug>` per song.
+- Then `bun x tsc --noEmit`, one fresh `reader` per batch with `guide-reviewer-brief.md`, and a settle
+  pass with `guide-settle-brief.md`.
+- Then `spanish_texts_keep_their_rules` once by name, `bun tools/make-our-songs.ts`, and
+  `bun tools/i18n.ts stamp es guide/<slug>` per song.
 
 Expected red: none. `spanish_texts_keep_their_rules` turns red if a writer breaks a mark rule.
 
