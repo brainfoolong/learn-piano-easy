@@ -1295,8 +1295,8 @@ texts, and the tools and checks of a translation pass exist.
 
 ## spanish
 
-**Target:** every text of the site, the course and the song guides reads in Spanish as if a native
-teacher wrote it, and the Spanish site ships.
+**Target:** the site, the course and the song guides read in Spanish as if a native teacher wrote
+them, and the Spanish site ships.
 
 ### Findings
 
@@ -1326,8 +1326,8 @@ teacher wrote it, and the Spanish site ships.
 
 ## chinese
 
-**Target:** every text of the site, the course and the song guides reads in Chinese as if a native
-teacher wrote it, and the Chinese site ships.
+**Target:** the site, the course and the song guides read in Chinese as if a native teacher wrote
+them, and the Chinese site ships.
 
 ### Findings
 
@@ -1352,3 +1352,32 @@ teacher wrote it, and the Chinese site ships.
 - The kept words are *Learn Piano Easy*, *MIDI*, the units, the printed marks and the song titles.
 - In prose, a work and a composer take their usual Chinese names, as Chinese Wikipedia confirms them. Otherwise the Latin name stays.
 - The rules test counts a kept word only where no Latin letter touches it.
+
+## hindi
+
+**Target:** the site, the course and the song guides read in Hindi as if a native teacher wrote
+them, and the Hindi site ships.
+
+### Findings
+
+- `hi` ships. Every catalog section, all eight worlds and the 80 song guides hold their Hindi, and each is stamped.
+- `docs/reference/translation/hi.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- `bun run i18n status hi` lists only 79 deliberate copies: note letters, key names, kept units, endonyms, time signatures and numbers.
+- The song guides' Latin titles and names are one list, `SONG_NAMES` in `src/i18n/typography.ts`, which Chinese and Hindi both spread.
+- The final consistency read found one true drift: `ढूँढ` lacked its nukta in 57 places.
+- The goal's first `looper verify` was green, with no test changed for a fourth shipped locale.
+- No native Hindi speaker has read the texts, and no Android device drew the pages.
+
+### Decisions that still bind
+
+- The variety is standard Hindi in Devanagari. `lang` is `hi`, `intl` is `hi-IN`, `og` is `hi_IN`, and `naming` is `letters`.
+- The learner is `आप`, and an instruction is the polite imperative, such as `चुनें`.
+- The learner's gender stays out of the text, and the honorific plural with `आप` is the fallback.
+- A common English loanword is written in Devanagari, and a heavy Sanskritized coinage is never used.
+- Notes are Latin letters, never spelled `सी` or `जी`, and sargam is never used.
+- The danda `।` ends a sentence.
+- The nukta is the combining sign on `ज़` and `फ़` alone, and the chandrabindu ends a nasal word.
+- A site page is `पेज`, and a printed page is `पन्ना`.
+- A composer with a Hindi Wikipedia article takes its Devanagari spelling. Every other name stays in Latin.
+- A count whose form changes picks it by `n === 1` where 0 can show, since Hindi says `0 गाने`.
+- A number that can pass 1,00,000 takes `hi-IN`'s grouping, which today is only `counts.xp`.
