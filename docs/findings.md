@@ -1381,3 +1381,43 @@ them, and the Hindi site ships.
 - A composer with a Hindi Wikipedia article takes its Devanagari spelling. Every other name stays in Latin.
 - A count whose form changes picks it by `n === 1` where 0 can show, since Hindi says `0 गाने`.
 - A number that can pass 1,00,000 takes `hi-IN`'s grouping, which today is only `counts.xp`.
+
+## right-to-left
+
+**Target:** a right-to-left locale mirrors every page's layout, while the piano, the notes, the staff
+and the song's timeline keep their direction.
+
+### Findings
+
+- Every page's `<html>` carries `dir` beside `lang`, from the locale table, and the language switch sets both.
+- `tools/css-sides.test.ts` refuses a physical side in any stylesheet unless its line says why.
+- The pseudo-locale `ar-XB` proves the split while no right-to-left translation exists.
+- `e2e/rtl.e2e.ts` checks that a page mirrors, the music never does, and a directional icon points the reading way.
+- The Arabic stack once skipped the fallback face of matched metrics, so a badge's count was clipped in `ar-XB`.
+- The settings nav scrolls to a negative `scrollLeft` on a right-to-left phone page, and its marker still lands on the link.
+- The range picker's octave buttons sit in a mirrored row, so "Octave down" stands right of "Octave up" (`src/keyboard/range-control.ts:149`).
+- A number in a right-to-left sentence may need its own isolation once Arabic texts exist.
+- `src/ui/color-picker.ts:151` sets a physical gradient from a script, which the CSS test cannot see.
+
+### Decisions that still bind
+
+- The direction comes from the locale table's `dir`.
+- Every side in CSS is logical. A rule that must stay physical carries `/* ltr: <reason> */` on its line.
+- The music never mirrors, and carries `dir="ltr"` on its root.
+- The music is the 3D piano and its lanes, the 2D notes, the staff, every sheet and the song's timeline.
+- It also covers the loop markers, the keyboard range picker, and the key and finger labels.
+- Everything else mirrors, including the course map's path, the lesson's steps and the progress bars.
+- A directional icon mirrors through `.icon--directional`, which `:dir(rtl)` flips by the `scale` property.
+- `icon` sets that class on `arrow-right`, `chevron-left` and `chevron-right`, unless a caller passes `directional: false`.
+- A media icon, such as play or rewind, never mirrors.
+- An argument that may hold left-to-right text is wrapped by `isolate()` of `src/i18n/format.ts`.
+- A field a learner types into gets `dir="auto"`, and a field for a note name or a colour code gets `dir="ltr"`.
+- A move along the piano stays physical, as the view buttons and the timeline's arrow keys show.
+- The hero's site name sits in a span with `dir="auto"`.
+- `ar-XB` wraps the English in U+202E and U+202C, and is never released or listed.
+- The pseudo-locales are rows of `PSEUDO_ROWS`, and `isPseudoLocale` names them.
+- The layout checks run in `ar-XB` at every width.
+- What CSS cannot name logically reads the side helpers at the end of `src/ui/base.css`.
+- A box centred by `left: 50%` and `translate(-50%)` stays physical.
+- A position measured or projected from physical coordinates stays physical.
+- The fallback face of matched metrics covers Latin alone by `unicode-range`, and every stack names it.

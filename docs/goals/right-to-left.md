@@ -140,7 +140,8 @@ The settings nav works in `ar-XB` on a phone. A jump to the last section scrolls
 
 ### Next
 
-The goal is reached. Harvest it into `docs/findings.md` § `right-to-left`, then start `arabic`.
+The goal is reached and harvested into `docs/findings.md` § `right-to-left`. Start `arabic`. No test is
+expected to go red.
 
 ### Backlog
 
