@@ -34,6 +34,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A `--click` of `tools/shot.ts` that first wakes a lesson's audio can stall for seconds.** The page
   loads the sound set inside that gesture, so a `--wait` after it lands far later in the phrase. Click
   "Play again" once to wake the audio, then click it again before the `--wait` you time.
+- **A `tools/shot.ts` shot with no `--wait` can show a page half blank.** The home, modes, learn and
+  player pages fade their sections in, and the shot lands before they end. Pass `--wait 2500` before
+  you call a blank region a flaw.
 - **A goal check is red with "test … did not run and pass" while every test passes.** Bun's reporter
   omits `(pass)` lines when an AI agent runs it. Import `test` from `src/testing.ts`, never from
   `bun:test`, because it prints the line itself.

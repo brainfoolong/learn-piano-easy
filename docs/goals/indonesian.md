@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Indonesian site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -184,13 +184,13 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 term, address or mark that drifts between files.
 **Gate:** `bun run i18n status id` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `id` is `shipped`. `src/i18n/locale.ts:18`
-- [ ] The Indonesian social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `id` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_indonesian_site_reads_in_indonesian`: `lang`, the switch's *Bahasa Indonesia*, a lesson step and the player in Indonesian. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `id` with `bun run shot --locale id-ID`, on a phone and a desktop, in both themes.
-- [ ] The feature list and the README name Indonesian. `docs/reference/features.md:1`, `README.md:12`
+- [x] Every drift the reader lists is settled in the files it names.
+- [x] `id` is `shipped`. `src/i18n/locale.ts:18`
+- [x] The Indonesian social image. `tools/make-social-image.ts:104`
+- [x] The layout checks run in `id` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
+- [x] Test `the_indonesian_site_reads_in_indonesian`: `lang`, the switch's *Bahasa Indonesia*, a lesson step and the player in Indonesian. `e2e/locales.e2e.ts:1`
+- [x] Look at every route in `id` with `bun run shot --locale id-ID`, on a phone and a desktop, in both themes.
+- [x] The feature list and the README name Indonesian. `docs/reference/features.md:1`, `README.md:12`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -202,43 +202,35 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. Every text of the site, the player, the course and all 80 song guides is
-translated, reviewed blind and stamped. `bun tools/i18n.ts status id` lists 0 stale and 73 missing.
-The missing texts read the same in Indonesian, as the standing decision says. `bun x tsc`, the build
-and `indonesian_texts_keep_their_rules` pass.
+Stages 1 to 6 are done, and the Indonesian site ships. `id` is `shipped` in
+`src/i18n/locale-table.ts:56`. The worlds carry their Indonesian titles in `src/learn/course.ts:58`.
+The language setting names *Bahasa Indonesia*, and `public/images/social/id.png` is drawn. The README
+and the feature list name Indonesian.
 
-Stage 5's four blind reviews found 29 findings, and 8 were *wrong*. Five were one pattern: "pass the
-thumb under" had become the statement *ibu jari menyusup*. A sweep of all guides fixed four more to
-*susupkan ibu jari*, and two texts that began with *naiki*. The glossary gained the instruction forms,
-*puisi simfonis*, *lemas* for a loose wrist and *naik melalui* for a climb through notes.
+`the_indonesian_site_reads_in_indonesian` in `e2e/locales.e2e.ts` passes when run by name. The layout
+checks take `id` by themselves, since they run every shipped locale. `src/i18n/i18n.test.ts` now
+expects `id/play/` to be Indonesian, and `bn/play/` stands for the unshipped folder.
 
-Stage 2 had never listed `id` in `src/i18n/all-catalogs.ts`. The status tool, the stamps and the rule
-test therefore never saw the Indonesian catalogs. It is listed and every catalog is stamped. The rule
-test then caught two texts, which are fixed. The slang pattern in `src/i18n/typography.ts` now treats
-a lyric's `|` as part of a word.
+Two `reader` subagents read the whole locale for drift. The catalogs and lessons had eight *-lah*
+instructions, one *ibu jari menyusup* and two *jari-jarinya* for the learner's hand. The guides had
+*hitungan* for a beat, *paruh birama*, *puisi simfoni*, *naik melewati*, *kuat* for loud and about thirty
+*-lah* instructions. All are fixed, and the guides' JSON is written anew. The timer's *dtk* stays,
+since the English badge is the one letter *s*.
+
+`bun tools/i18n.ts status id` lists 0 stale and 74 missing. The new one is the switch's own name,
+*Bahasa Indonesia*, which reads the same. Every route was looked at in `id`, on a phone and a desktop,
+in both themes. No page shows an error. A shot without `--wait` catches the fade-in half blank, and
+the playbook now says so.
 
 ### Next
 
-**Stage 6: the Indonesian site ships.** The gate holds: no stale text, and the missing ones are kept on
-purpose.
+**Stage 7: the goal is verified once.** Run `looper verify` over the whole goal, fix every failure in
+one pass, and run it once more.
 
-- A fresh `reader` subagent reads every Indonesian file against `docs/reference/translation/id.md`.
-  These are `src/i18n/messages/*.id.ts`, `src/i18n/messages/id.ts`, `src/learn/lessons/*/*.id.ts` and
-  `tools/our-songs/*.id.ts`. It lists each term, address or mark that drifts between files. Split
-  it in two: the catalogs and lessons, then the guides.
-- Settle each drift in its file. Rerun `bun tools/make-our-songs.ts` after any guide edit, and commit
-  its JSON.
-- Set `shipped: true` in the `id` row of `src/i18n/locale-table.ts:56`.
-- Run `bun tools/make-social-image.ts` once `id` ships, since it draws one image per shipped locale.
-  Commit the image. Confirm that `e2e/layout-check.ts` runs `id` at 360 and 1280 pixels.
-- Write the test `the_indonesian_site_reads_in_indonesian` in `e2e/locales.e2e.ts`, after the Portuguese
-  one.
-- Look at every route with `bun run shot --locale id-ID`, on a phone and a desktop, in both themes.
-- Name Indonesian in `docs/reference/features.md` and `README.md:12`.
-
-Expected red: tests that count the shipped locales may need `id` once it ships. These are in
-`src/i18n/i18n.test.ts`, `src/i18n/untranslated.test.ts` and the e2e files that read
-`src/i18n/all-catalogs.ts`.
+Expected red: a test that counts the shipped locales or their pages may need `id`. Look first in
+`src/i18n/untranslated.test.ts`, in the sitemap and build tests under `tools/`, and in the e2e files
+that read the shipped locales. The layout checks of `e2e/locales.e2e.ts` now run `id` at 360 and 1280
+pixels, so a flaw that only Indonesian's longer texts add would show there.
 
 ### Backlog
 
