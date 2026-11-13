@@ -257,6 +257,9 @@ goal. `bun tools/i18n.ts status ar` lists 10 missing and 0 stale of 4480 texts.
   set them. The test `the_arabic_site_reads_in_arabic` checks the imprint's body.
 - The setup bubble's `سريعة` has no fault of ours. The standing decision on Segoe UI records why.
 - `rtl-pages` timed out on its web server under load. `playwright.config.ts` now allows it 180 s.
+- Acceptance once found `messages`, `setting-messages` and `catalog-fallback` red. All three run
+  `src/i18n/i18n.test.ts`, which scans every file under `src/`. On a clean tree, all three pass, and the
+  file passes three runs in a row. The red came from the tree acceptance saw, not from a test.
 
 ### Next
 
