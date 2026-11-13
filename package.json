@@ -14,7 +14,8 @@
     "e2e": "playwright test",
     "e2e:install": "playwright install chromium",
     "e2e:docker": "bun tools/e2e-docker.ts",
-    "shot": "bun tools/shot.ts"
+    "shot": "bun tools/shot.ts",
+    "i18n": "bun tools/i18n.ts"
   },
   "engines": {
     "bun": "1.4.4"
