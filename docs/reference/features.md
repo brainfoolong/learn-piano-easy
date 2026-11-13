@@ -163,3 +163,5 @@ Each one is easy to make, and ours avoids it in the goal named.
   lesson, the computer keyboard shifts by octaves to reach the step's keys, and a bar under the piano
   shows what it reaches. A chord wider than its keys is played a key at a time.
 - A step that asks for one key always shows the same keys, with middle C in the middle.
+- In a lesson about the hand's movement, the mascot's hand plays each demo with the lesson's fingers.
+  The learner can slow it to half speed, and turn to a side view where the thumb's pass shows.

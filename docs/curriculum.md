@@ -26,7 +26,7 @@ lesson is written by, until the lesson model's head comment in `src/learn/model.
 | Step | The learner | It passes when |
 |---|---|---|
 | `explain` | Reads one short idea beside an animated illustration | They press Continue |
-| `demo` | Watches and hears the piano play, with keys and notes highlighted | It ends, or they skip it |
+| `demo` | Watches and hears the piano play, with keys and notes highlighted. When the demo names its fingers, the mascot's hand plays it | It ends, or they skip it |
 | `find-key` | Presses the key the step names | They press it, with mistakes counted |
 | `play-notes` | Plays a short phrase, which waits for each note or chord | Every note and chord is played, with mistakes counted |
 | `rhythm-tap` | Taps any key on the beat with a metronome, or plays a phrase's keys in time with it | Enough taps or notes land inside the window, and no key sounds in a rest |
@@ -60,6 +60,8 @@ lesson is written by, until the lesson model's head comment in `src/learn/model.
 - **Show before telling.** A new idea starts with a `demo` or an animated `explain`, then the learner
   does it at once.
 - **Every idea is checked.** An `explain` is followed within two steps by a step that checks it.
+- **A demo of a movement names every note's finger,** and its hand when it is the left. The fingers
+  are the ones the lesson's text teaches, so the mascot's hand plays exactly what the learner reads.
 - **Speak to the learner as "you",** in a warm and plain voice. No jargon before its lesson defines it.
 - **Every text is written for every locale.** A lesson's structure is one file, and each locale's text
   is a file beside it. The type checker refuses a locale file that misses a text.

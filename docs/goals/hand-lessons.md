@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: The chord lessons show the hand, and the docs say so
-    status: open
+    status: done
   - id: 6
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -95,6 +95,11 @@ hand playing its phrase with the exact fingers. The learner can slow it down and
 - **A demo's held fifth names the left hand's 5 and 1,** as the texts of the G and F major tunes place it.
 - **A demo that names a hand but no fingers is refused,** since the hand shows only with fingers and a
   lone hand would be dead data.
+- **Where a text names no finger, the demo takes the fingering every method teaches.** A first
+  inversion takes 1 2 5, and C-F-A and B-D-G beside C-E-G take 1 4 5 and 1 2 5. A broken chord up
+  to the octave takes 1 2 3 5. The boss's falling thirds take 3 5, 2 4, 1 3, then 1 3 again.
+- **Stages 4 and 5 ran inline, not by their split's subagents.** Each stage's demos fit about 300 lines,
+  so one session wrote and checked them cheaper than two briefs would.
 - **Lanes:** stages 1 and 2 touch the model, the demo step, the sound and the view, so they run in
   order. Stages 3 to 5 touch disjoint lesson files and can run as side goals once stage 2 lands. Each
   ends by adding its lessons to the one test list, so they commit that file one after another.
@@ -173,18 +178,18 @@ describe the hand.
 lessons as examples. It does not build. The session builds, checks each lesson's fingers against its
 text, and writes the docs.
 
-- [ ] `what-a-chord-is`. `src/learn/lessons/chords/what-a-chord-is.ts:1`
-- [ ] `major-triads`. `src/learn/lessons/chords/major-triads.ts:1`
-- [ ] `minor-triads`, with finger 3 sliding to E flat. `src/learn/lessons/chords/minor-triads.ts:1`
-- [ ] `c-f-and-g`, with the hand lifting from chord to chord. `src/learn/lessons/chords/c-f-and-g.ts:1`
-- [ ] `inversions`, with the hand staying in place. `src/learn/lessons/chords/inversions.ts:1`
-- [ ] `broken-chords`, with the fingers rocking. `src/learn/lessons/chords/broken-chords.ts:1`
-- [ ] `alberti-bass`, the left hand's 5 1 3 1. `src/learn/lessons/chords/alberti-bass.ts:1`
-- [ ] `the-waltz-bass`, the left hand's 5 then 3 and 1. `src/learn/lessons/chords/the-waltz-bass.ts:1`
-- [ ] The eight join the test's list. `src/learn/course.test.ts:1`
-- [ ] The demo row says the mascot's hand plays a demo that names its fingers. `docs/curriculum.md:29`
-- [ ] Writing a lesson: a demo of a movement names every note's finger. `docs/curriculum.md:57`
-- [ ] The feature list names the hand in Learn Piano's features. `docs/reference/features.md:158`
+- [x] `what-a-chord-is`. `src/learn/lessons/chords/what-a-chord-is.ts:1`
+- [x] `major-triads`. `src/learn/lessons/chords/major-triads.ts:1`
+- [x] `minor-triads`, with finger 3 sliding to E flat. `src/learn/lessons/chords/minor-triads.ts:1`
+- [x] `c-f-and-g`, with the hand lifting from chord to chord. `src/learn/lessons/chords/c-f-and-g.ts:1`
+- [x] `inversions`, with the hand staying in place. `src/learn/lessons/chords/inversions.ts:1`
+- [x] `broken-chords`, with the fingers rocking. `src/learn/lessons/chords/broken-chords.ts:1`
+- [x] `alberti-bass`, the left hand's 5 1 3 1. `src/learn/lessons/chords/alberti-bass.ts:1`
+- [x] `the-waltz-bass`, the left hand's 5 then 3 and 1. `src/learn/lessons/chords/the-waltz-bass.ts:1`
+- [x] The eight join the test's list. `src/learn/course.test.ts:1`
+- [x] The demo row says the mascot's hand plays a demo that names its fingers. `docs/curriculum.md:29`
+- [x] Writing a lesson: a demo of a movement names every note's finger. `docs/curriculum.md:57`
+- [x] The feature list names the hand in Learn Piano's features. `docs/reference/features.md:158`
 
 ### 6. the goal is verified once, and every failure is fixed
 
@@ -196,31 +201,26 @@ text, and writes the docs.
 
 ### State
 
-Stages 1 to 3 are done. Every demo of the six scale and touch lessons and of `the-c-major-scale` names
-its fingers, as its texts in English and German say. The G and F major tunes name the left hand's held
-fifth as 5 and 1. `TECHNIQUE_LESSONS` in `src/learn/course.test.ts` lists the seven, and
-`every_technique_lesson_demo_names_its_fingers` passes, run by name. The build is green. Shots of
-`finger-over-the-thumb`'s first demo show the descent and the crossing, in both views and slowed. Every
-demo of the seven was planned with `planHands` and sampled. Each plans without a throw or a bad pose,
-and the two tunes plan both hands. The left-hand demo and the two tunes sit behind quizzes and
-play-notes steps, so no shot reached them.
+Stages 1 to 5 are done. All 22 lessons the standing decisions list name a finger on every demo note.
+Their left-hand notes name the left hand. `TECHNIQUE_LESSONS` in `src/learn/course.test.ts` lists the
+22. `every_technique_lesson_demo_names_its_fingers` passes, run by name. The build and `bun x tsc` are
+green. A scratch script planned all 31 demos of stages 4 and 5 with `planHands` and sampled every 20
+ms. None threw or gave a bad pose, and the five two-hand demos plan both hands. Shots of
+`left-hand-c-position` and `what-a-chord-is` show the hand playing, the first in both views, with no
+page errors. `docs/curriculum.md` and `docs/reference/features.md` describe the hand.
 
 ### Next
 
-**Stage 4: the first melodies, both hands and expression lessons show the hand.** Follow the stage's
-`**Split:**` line. The demos are at `first-melodies/right-hand-c-position.ts:17`,
-`left-hand-c-position.ts:18`, `twinkle-first-phrase.ts:18`, `repeated-notes.ts:18`,
-`both-hands/moving-the-hand.ts:19`, `open-fifths.ts:19` and `:40`, `expression/loud-and-soft.ts:20`,
-`:46`, `:68` and `:87`, and `phrases.ts:20` and `:58`, all under `src/learn/lessons/`.
+**Stage 6: the goal is verified once, and every failure is fixed.** Run `looper verify`, fix every
+failure in one pass, and run it once more.
 
-- `loud-and-soft` has demos nested in a group at `:46` and `:68`. `allSteps` in the test finds them.
-- Add the eight ids to `TECHNIQUE_LESSONS` in `src/learn/course.test.ts`.
-- `left-hand-c-position`'s demo is its first step, so a shot can look at the left hand and its side
-  view from the right. Click "Play again" once to wake the audio, then again before the timed waits.
-- A lesson URL cannot open a later step. Check a demo behind other steps by planning it with
-  `planHands` in a scratch script under `.agent-tmp/`, with a `layoutKeys` range around its pitches.
+- The three goal checks are `demo-fingers`, `demo-hand` and `technique-lessons-fingered`. The floor
+  runs as well.
+- A lesson walk in `e2e/` that plays through a demo now waits up to two seconds for the hand. A walk
+  near its timeout may go red there. Raise that walk's timeout, never skip the demo.
+- Then harvest the goal into `docs/findings.md` § `hand-lessons`, as AGENTS.md § *Goals* says.
 
-Expected red: none.
+Expected red: none known. A lesson walk's timeout is the likeliest risk.
 
 ### Backlog
 
