@@ -290,7 +290,7 @@ export const canCan: OurSong = {
   },
   de: {
     about:
-      "Offenbach schrieb den Galop infernal für das wilde Fest der Götter am Ende seiner Operette Orpheus in der Unterwelt, die 1858 zum ersten Mal auf die Bühne kam. " +
+      "Offenbach schrieb den Galop infernal 1858 für das wilde Fest der Götter am Ende seiner Operette Orpheus in der Unterwelt. " +
       "In den 1890er-Jahren übernahmen die Pariser Kabaretts Moulin Rouge und Folies Bergère ihn als Musik zum Cancan. " +
       "Der Film Moulin Rouge! von 2001 verwendet ihn in seiner Musik.",
     funFact: "Seine Melodie teilt ihre Haupttöne mit zwei viel langsameren Liedern desselben Akts und klingt doch ganz anders.",

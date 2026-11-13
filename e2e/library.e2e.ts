@@ -74,7 +74,7 @@ test("an_original_piece_comes_first_and_opens_in_two_hands", async ({ page }) =>
   await expect(first.locator(".song-card__by")).toContainText("learn-piano-easy");
   // The composers' group shows its eight largest first, so this chip is read where it waits behind "more".
   const composer = dialog.locator(".song-explorer__rail .tag[data-kind='composer']").filter({ hasText: "learn-piano-easy" });
-  await expect(composer.locator(".tag__count")).toHaveText("10");
+  await expect(composer.locator(".tag__count")).toHaveText("13");
 
   await dialog.getByRole("searchbox", { name: "Search songs" }).fill("twelve bar walk");
   const card = cardOf(dialog, "Twelve-Bar Walk");
@@ -108,8 +108,8 @@ test("the_beginner_path_comes_first_and_opens_its_steps", async ({ page }) => {
   await expect(path.locator(".song-card")).toHaveCount(6);
 
   // The whole path is the tag "Beginner path", sorted from its first step on. It counts each song once.
-  await path.getByRole("button", { name: "Show all 73 songs" }).click();
-  await expect(count).toHaveText("73 songs");
+  await path.getByRole("button", { name: "Show all 111 songs" }).click();
+  await expect(count).toHaveText("111 songs");
   await expect(dialog.getByRole("combobox", { name: "Sort by" })).toHaveValue("difficulty");
   await expect(all.locator(".song-card__open").first()).toHaveAccessibleName("Canon in D, Beginner");
   // The cards draw a chunk at a time, so the list scrolls down until the step's card is drawn.
@@ -126,11 +126,17 @@ test("the_beginner_path_comes_first_and_opens_its_steps", async ({ page }) => {
   // The level "Easy" keeps the path's steps of that level, so the path starts at the first of them
   // and a song of ours shows its Easy version.
   await chip(dialog, "Difficulty", "Easy").click();
-  await expect(count).toHaveText("46 songs");
+  await expect(count).toHaveText("84 songs");
   await expect(all.locator(".song-card__open").first()).toHaveAccessibleName("Morning Light");
   await expect(cardOf(all, "Canon in D, Easy")).toHaveCount(1);
   await expect(cardOf(all, "Canon in D, Beginner")).toHaveCount(0);
-  await all.getByRole("button", { name: "1. La Candeur", exact: true }).click();
+  await expect
+    .poll(async () => {
+      await scroller.evaluate((node) => node.scrollTo(0, node.scrollHeight));
+      return candeur.count();
+    })
+    .toBe(1);
+  await candeur.click();
   await expect(page.getByLabel("Open song")).toHaveText("1. La Candeur");
 
   // With no filter on, the path leads the page again. A search hides it.
@@ -192,9 +198,9 @@ test("the_library_opens_a_song_at_each_rarity", async ({ page }) => {
   await search.fill("");
   await expect(count).toHaveText("83 songs");
   await hard.click();
-  await expect(count).toHaveText("144 songs");
+  await expect(count).toHaveText("182 songs");
   await advanced.click();
-  await expect(count).toHaveText("63 songs");
+  await expect(count).toHaveText("101 songs");
 });
 
 test("a_song_is_one_card_and_a_step_picks_its_version", async ({ page }) => {

@@ -290,7 +290,7 @@ export const blowTheManDown: OurSong = {
   de: {
     about:
       "Blow the Man Down ist ein Shanty zum Segelsetzen. Eine Mannschaft sang ihn, während sie ein schweres Segel den Mast hinaufzog. " +
-      "Unsere Melodie folgt dem Druck von R. R. Terry aus dem Jahr 1921.",
+      "Unsere Melodie folgt dem Druck von Richard Runciman Terry aus dem Jahr 1921.",
     funFact: "Eine Zeitung in Syracuse im Staat New York zitierte 1867 eine Zeile des Lieds. Seeleute hatten es auf einem Dampfschiff von New York nach Glasgow gesungen.",
     versions: {
       common: {

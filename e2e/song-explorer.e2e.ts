@@ -107,7 +107,7 @@ test("the_scroll_and_the_sort_come_back_after_a_close", async ({ page }) => {
   // One level of the catalog holds more songs than the explorer draws at first.
   await easy.click();
   await sort.selectOption("title");
-  await expect(dialog.locator(".library-count")).toHaveText("58 songs");
+  await expect(dialog.locator(".library-count")).toHaveText("96 songs");
   await expect(dialog.locator(".song-card")).toHaveCount(48);
 
   // The explorer notes the scroll on the scroll event, so the test waits for that event.
@@ -179,8 +179,8 @@ test("a_tag_on_a_card_filters_by_it", async ({ page }) => {
 
   await expect(inRail).toHaveAttribute("aria-pressed", "true");
   await expect(tag).toHaveAttribute("aria-pressed", "true");
-  await expect(count).toHaveText("73 songs");
-  expect(all).toBeGreaterThan(73);
+  await expect(count).toHaveText("111 songs");
+  expect(all).toBeGreaterThan(111);
 });
 
 test("nothing_found_shows_the_mascot_and_one_way_back", async ({ page }) => {
