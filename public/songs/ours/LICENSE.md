@@ -332,3 +332,18 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `beethoven-5/epic.mid` | Symphony No. 5, Medium | Ludwig van Beethoven | MIT |
 | `beethoven-5/legendary.mid` | Symphony No. 5, Hard | Ludwig van Beethoven | MIT |
 | `beethoven-5/guide.json` | Symphony No. 5, the guide | | MIT |
+| `chopin-nocturne-c-sharp-minor/common.mid` | Nocturne in C-sharp minor, Beginner | Frédéric Chopin | MIT |
+| `chopin-nocturne-c-sharp-minor/rare.mid` | Nocturne in C-sharp minor, Easy | Frédéric Chopin | MIT |
+| `chopin-nocturne-c-sharp-minor/epic.mid` | Nocturne in C-sharp minor, Medium | Frédéric Chopin | MIT |
+| `chopin-nocturne-c-sharp-minor/legendary.mid` | Nocturne in C-sharp minor, Hard | Frédéric Chopin | MIT |
+| `chopin-nocturne-c-sharp-minor/guide.json` | Nocturne in C-sharp minor, the guide | | MIT |
+| `morning-mood/common.mid` | Morning Mood, Beginner | Edvard Grieg | MIT |
+| `morning-mood/rare.mid` | Morning Mood, Easy | Edvard Grieg | MIT |
+| `morning-mood/epic.mid` | Morning Mood, Medium | Edvard Grieg | MIT |
+| `morning-mood/legendary.mid` | Morning Mood, Hard | Edvard Grieg | MIT |
+| `morning-mood/guide.json` | Morning Mood, the guide | | MIT |
+| `wedding-march/common.mid` | Wedding March, Beginner | Felix Mendelssohn | MIT |
+| `wedding-march/rare.mid` | Wedding March, Easy | Felix Mendelssohn | MIT |
+| `wedding-march/epic.mid` | Wedding March, Medium | Felix Mendelssohn | MIT |
+| `wedding-march/legendary.mid` | Wedding March, Hard | Felix Mendelssohn | MIT |
+| `wedding-march/guide.json` | Wedding March, the guide | | MIT |

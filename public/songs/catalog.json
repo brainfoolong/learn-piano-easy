@@ -5897,6 +5897,320 @@
     ]
   },
   {
+    "composer": "Frédéric Chopin",
+    "piece": "Nocturne in C-sharp minor",
+    "title": "Beginner",
+    "file": "ours/chopin-nocturne-c-sharp-minor/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 81,
+    "seconds": 44,
+    "song": "chopin-nocturne-c-sharp-minor",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lento con gran espressione",
+      "Nocturne No. 20",
+      "B. 49",
+      "Op. posth.",
+      "Nocturne cis-Moll"
+    ]
+  },
+  {
+    "composer": "Frédéric Chopin",
+    "piece": "Nocturne in C-sharp minor",
+    "title": "Easy",
+    "file": "ours/chopin-nocturne-c-sharp-minor/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 81,
+    "seconds": 58,
+    "song": "chopin-nocturne-c-sharp-minor",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "eighth-notes",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lento con gran espressione",
+      "Nocturne No. 20",
+      "B. 49",
+      "Op. posth.",
+      "Nocturne cis-Moll"
+    ]
+  },
+  {
+    "composer": "Frédéric Chopin",
+    "piece": "Nocturne in C-sharp minor",
+    "title": "Medium",
+    "file": "ours/chopin-nocturne-c-sharp-minor/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 35,
+    "high": 83,
+    "seconds": 77,
+    "song": "chopin-nocturne-c-sharp-minor",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lento con gran espressione",
+      "Nocturne No. 20",
+      "B. 49",
+      "Op. posth.",
+      "Nocturne cis-Moll"
+    ]
+  },
+  {
+    "composer": "Frédéric Chopin",
+    "piece": "Nocturne in C-sharp minor",
+    "title": "Hard",
+    "file": "ours/chopin-nocturne-c-sharp-minor/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 85,
+    "seconds": 74,
+    "song": "chopin-nocturne-c-sharp-minor",
+    "rarity": "legendary",
+    "skills": [
+      "arpeggios",
+      "sixteenth-notes",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lento con gran espressione",
+      "Nocturne No. 20",
+      "B. 49",
+      "Op. posth.",
+      "Nocturne cis-Moll"
+    ]
+  },
+  {
+    "composer": "Edvard Grieg",
+    "piece": "Morning Mood",
+    "title": "Beginner",
+    "file": "ours/morning-mood/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 48,
+    "high": 69,
+    "seconds": 48,
+    "song": "morning-mood",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Morgenstemning",
+      "Morgenstimmung",
+      "Morning",
+      "Peer Gynt Suite No. 1"
+    ]
+  },
+  {
+    "composer": "Edvard Grieg",
+    "piece": "Morning Mood",
+    "title": "Easy",
+    "file": "ours/morning-mood/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 76,
+    "seconds": 40,
+    "song": "morning-mood",
+    "rarity": "rare",
+    "skills": [
+      "waltz-bass",
+      "two-note-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Morgenstemning",
+      "Morgenstimmung",
+      "Morning",
+      "Peer Gynt Suite No. 1"
+    ]
+  },
+  {
+    "composer": "Edvard Grieg",
+    "piece": "Morning Mood",
+    "title": "Medium",
+    "file": "ours/morning-mood/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 86,
+    "seconds": 58,
+    "song": "morning-mood",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Morgenstemning",
+      "Morgenstimmung",
+      "Morning",
+      "Peer Gynt Suite No. 1"
+    ]
+  },
+  {
+    "composer": "Edvard Grieg",
+    "piece": "Morning Mood",
+    "title": "Hard",
+    "file": "ours/morning-mood/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 33,
+    "high": 88,
+    "seconds": 51,
+    "song": "morning-mood",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Morgenstemning",
+      "Morgenstimmung",
+      "Morning",
+      "Peer Gynt Suite No. 1"
+    ]
+  },
+  {
+    "composer": "Felix Mendelssohn",
+    "piece": "Wedding March",
+    "title": "Beginner",
+    "file": "ours/wedding-march/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 48,
+    "high": 84,
+    "seconds": 58,
+    "song": "wedding-march",
+    "rarity": "common",
+    "skills": [
+      "position-change",
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Hochzeitsmarsch",
+      "A Midsummer Night's Dream",
+      "Ein Sommernachtstraum",
+      "Op. 61"
+    ]
+  },
+  {
+    "composer": "Felix Mendelssohn",
+    "piece": "Wedding March",
+    "title": "Easy",
+    "file": "ours/wedding-march/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 84,
+    "seconds": 58,
+    "song": "wedding-march",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "Hochzeitsmarsch",
+      "A Midsummer Night's Dream",
+      "Ein Sommernachtstraum",
+      "Op. 61"
+    ]
+  },
+  {
+    "composer": "Felix Mendelssohn",
+    "piece": "Wedding March",
+    "title": "Medium",
+    "file": "ours/wedding-march/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 36,
+    "high": 84,
+    "seconds": 87,
+    "song": "wedding-march",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Hochzeitsmarsch",
+      "A Midsummer Night's Dream",
+      "Ein Sommernachtstraum",
+      "Op. 61"
+    ]
+  },
+  {
+    "composer": "Felix Mendelssohn",
+    "piece": "Wedding March",
+    "title": "Hard",
+    "file": "ours/wedding-march/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 84,
+    "seconds": 87,
+    "song": "wedding-march",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Hochzeitsmarsch",
+      "A Midsummer Night's Dream",
+      "Ein Sommernachtstraum",
+      "Op. 61"
+    ]
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",
