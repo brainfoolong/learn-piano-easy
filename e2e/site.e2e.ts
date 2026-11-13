@@ -1,7 +1,7 @@
 /**
  * The site's shell in a real browser: the top bar, the language switch, the history, what the landing
- * page loads, every route offline, each page's headings and landmarks, and the layout checks of the bar
- * and the footer.
+ * page loads, every route offline, the files the worker leaves to the network, each page's headings and
+ * landmarks, and the layout checks of the bar and the footer.
  *
  * Every page is reached from the site's root, as a learner's link would. The top bar's controls are
  * found inside `.site-bar-host`, since the player draws a bar of its own on `play/`. Every page starts
@@ -155,6 +155,15 @@ test("every_route_reloads_offline", async ({ page, context }) => {
   await expect(page).toHaveTitle(pageTitle(pageAt("de/")!));
   await expect(heading(page)).toHaveText(pageTitle(pageAt("de/")!));
   expect(errors).toEqual([]);
+});
+
+test("a_file_no_cache_group_holds_opens_as_itself_in_a_tab", async ({ page }) => {
+  // The worker answers an unknown route with the root page. A file it never caches is no route, so a
+  // tab that opens the social picture shows the picture. `sitemap.xml` is such a file on a hosted build.
+  await page.goto("./");
+  await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+  const response = await page.goto("./images/social/en.png");
+  expect(response?.headers()["content-type"]).toBe("image/png");
 });
 
 /**

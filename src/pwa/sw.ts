@@ -8,6 +8,8 @@
  *   as a video makes, gets that range of the cached file through `ranged.ts`.
  * - **Songs and sounds** are cached on first use into one content cache that outlives versions, so an
  *   update never downloads them again. The cache manager can also fill or empty either group at once.
+ * - **A file no cache group holds passes to the network,** such as a source map, `robots.txt` or a
+ *   social picture. A tab that opens one gets the file, never the root page.
  * - **A request with cache mode `reload` passes to the network.** The cache manager fetches that way, so
  *   it stores a fresh copy rather than the cached one.
  * - **An update waits.** A new worker installs beside the old one, the page offers a reload, and the
@@ -108,7 +110,10 @@ worker.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (url.origin !== scope.origin || !url.pathname.startsWith(scope.pathname)) return;
   const group = groupOf(decodeURIComponent(url.pathname.slice(scope.pathname.length)));
-  if (group !== undefined && group !== "app") {
+  // A file no group holds, such as `sitemap.xml`, is never cached and never a route, so the network
+  // answers it. A tab that opens it then shows the file, not the root page.
+  if (group === undefined) return;
+  if (group !== "app") {
     event.respondWith(fromContent(request));
     return;
   }
