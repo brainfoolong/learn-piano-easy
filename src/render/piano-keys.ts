@@ -45,7 +45,8 @@
  *   a key's spring or flash, or a hand whose clock runs short of its phrase's end. A still view costs no
  *   render. The pixel ratio is capped at 2.
  * - **The key map** is an `aria-hidden` layer of one empty span per key, over its key's top face. It is
- *   the test seam: each span carries `data-pitch` and mirrors `data-mark`, `data-held` and `data-finger`.
+ *   the test seam: each span carries `data-pitch` and mirrors `data-name`, `data-mark`, `data-held` and
+ *   `data-finger`.
  *   A span's place is a share of the frame, set on a new range. A resize moves only the layer. The view
  *   carries the range as `data-first` and `data-last`. While the bar shows, it carries the whole reach
  *   as `data-reach-first` and `data-reach-last`, even where the bar stops at the shown keys' edge. While
@@ -259,8 +260,11 @@ export function reachSpan(layout: KeyLayout, reach: KeyRange): ReachSpan | undef
   return { first: inside[0]!.pitch, last: inside.at(-1)!.pitch, x, width: Math.max(...inside.map((key) => key.x + key.width)) - x };
 }
 
-/** How a name is written when `nameOf` is absent: white keys only, the octave on C only, sharps, letters. */
-const NAME_STYLE = { white: true, black: false, flats: false, octave: "onlyC", system: "letters" } as const;
+/**
+ * How a name is written when `nameOf` is absent: white keys only, the octave on C only, sharps, and the
+ * page locale's own naming, so a Spanish lesson names `Do4` as its text says *do*.
+ */
+const NAME_STYLE = { white: true, black: false, flats: false, octave: "onlyC", system: "auto" } as const;
 /** How far a label floats above its key's top, in world units, so it never cuts into the key. */
 const LIFT = 0.02;
 /**
@@ -537,12 +541,15 @@ export function pianoKeys(): PianoKeys {
     const left = -layout.width / 2;
     const named = options.names ?? "none";
     names.begin();
+    for (const span of spans.values()) delete span.dataset.name;
     for (const rect of layout.keys) {
       if (named === "none" || rect.black || (named === "c" && rect.pitch % 12 !== 0)) continue;
       const text = options.nameOf?.(rect.pitch) ?? keyNameText(rect.pitch, NAME_STYLE) ?? "";
       const z = WHITE_KEY_LENGTH - KEY_NAME_INSET.white;
       const height = rect.width * NAME_HEIGHT;
       names.push(text, left + rect.center, height / 2 + LIFT, z, height, rect.width * NAME_FILL);
+      const span = spans.get(rect.pitch);
+      if (span !== undefined) span.dataset.name = text;
     }
     names.end();
     digits.begin();

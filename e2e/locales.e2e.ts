@@ -2,7 +2,8 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish reads in Spanish** from the language switch to a lesson's step and the player's controls.
+ * - **Spanish reads in Spanish** from the language switch to a lesson's step, its piano's key names and
+ *   the player's controls.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
  *   A flaw counts only where the locale's text adds it, since each page's own test holds its English.
  *   The pseudo-locale's longer texts already cover every width.
@@ -42,6 +43,7 @@ test("the_spanish_site_reads_in_spanish", async ({ page }) => {
   await page.goto("./es/learn/meet-the-piano/find-c/");
   await expect(page.locator(".lesson__title")).toHaveText("Encuentra el do");
   await expect(page.locator("main")).toContainText("Todas tienen el mismo nombre: do.");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "Do4");
 
   await page.goto("./es/play/");
   await expect(page.getByRole("button", { name: "Reproducir", exact: true })).toBeVisible();
