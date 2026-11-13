@@ -9,7 +9,9 @@
  *   that the canvas's own antialiasing smooths without bloom. The cost is two such targets on the GPU.
  * - The mode is auto, on or off. Auto starts with bloom unless the device reports low power, and it
  *   turns bloom off for the visit when frames run long, measured over a few seconds after a warm-up.
- *   Only a change of mode measures again. The scene sets the mode on every settings change, so any
+ *   A frame counts for at most `PAUSE`. A hidden tab's gap or one stall then barely moves the mean,
+ *   and a device whose every frame runs past `PAUSE` still reads as slow. Only a change of mode
+ *   measures again. The scene sets the mode on every settings change, so any
  *   other setting leaves bloom off on a slow device instead of slowing its frames for seconds.
  * - The composer is built on first use and freed when bloom turns off, so the plain render holds no
  *   bloom memory.
@@ -45,8 +47,40 @@ const SLOW_FRAME = 1 / 40;
 /** The seconds auto waits before measuring, and the length of each window it measures. */
 const WARM_UP = 2;
 const WINDOW = 3;
-/** A frame longer than this is a pause, such as a hidden tab, and is not measured. */
+/** The most seconds one frame counts for, so a hidden tab or a stall weighs as one slow frame. */
 const PAUSE = 0.25;
+
+/** Auto's frame-time watch. `feed` takes each frame's seconds, and says when a window's mean ran long. */
+export interface FrameWatch {
+  feed(seconds: number): boolean;
+  reset(): void;
+}
+
+/** A frame-time watch that waits `WARM_UP` seconds, then judges each `WINDOW` of frames. */
+export function createFrameWatch(): FrameWatch {
+  let measured = 0;
+  let windowTime = 0;
+  let windowFrames = 0;
+  return {
+    feed(seconds) {
+      const frame = Math.min(seconds, PAUSE);
+      measured += frame;
+      if (measured < WARM_UP) return false;
+      windowTime += frame;
+      windowFrames++;
+      if (windowTime < WINDOW) return false;
+      const slow = windowTime / windowFrames > SLOW_FRAME;
+      windowTime = 0;
+      windowFrames = 0;
+      return slow;
+    },
+    reset() {
+      measured = 0;
+      windowTime = 0;
+      windowFrames = 0;
+    },
+  };
+}
 
 /** Whether the browser says the device saves power or is small: data saver, little memory or few cores. */
 export function reportsLowPower(): boolean {
@@ -66,9 +100,7 @@ export function createGlow(renderer: WebGLRenderer, scene: Scene, view: () => Ca
   let failed = false;
   /** Whether auto has seen long frames and turned bloom off for the visit. */
   let tooSlow = false;
-  let measured = 0;
-  let windowTime = 0;
-  let windowFrames = 0;
+  const frames = createFrameWatch();
 
   const lowPower = reportsLowPower();
   const wanted = () => currentMode === "on" || (currentMode === "auto" && !tooSlow && !lowPower);
@@ -93,15 +125,8 @@ export function createGlow(renderer: WebGLRenderer, scene: Scene, view: () => Ca
 
   /** Feeds auto's frame-time watch, which turns bloom off when the mean frame runs long. */
   const watch = (seconds: number) => {
-    if (currentMode !== "auto" || tooSlow || seconds > PAUSE) return;
-    measured += seconds;
-    if (measured < WARM_UP) return;
-    windowTime += seconds;
-    windowFrames++;
-    if (windowTime < WINDOW) return;
-    if (windowTime / windowFrames > SLOW_FRAME) tooSlow = true;
-    windowTime = 0;
-    windowFrames = 0;
+    if (currentMode !== "auto" || tooSlow) return;
+    if (frames.feed(seconds)) tooSlow = true;
   };
 
   return {
@@ -117,9 +142,7 @@ export function createGlow(renderer: WebGLRenderer, scene: Scene, view: () => Ca
       if (next === currentMode) return;
       currentMode = next;
       tooSlow = false;
-      measured = 0;
-      windowTime = 0;
-      windowFrames = 0;
+      frames.reset();
     },
 
     setStrength(next) {
