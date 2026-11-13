@@ -36,7 +36,7 @@ export const phrasesId: Translation<PhrasesTexts> = {
       text: "Mainkan frasa pertama dengan tangan kananmu di posisi C: C-D-E-F, G, E, F-E-D-E, dan akhiri pada D. Mainkan dengan mulus.",
     },
     breathe: {
-      text: "Di akhir frasa, angkat tanganmu sedikit, seperti penyanyi menarik napas. Lalu mulailah frasa berikutnya.",
+      text: "Di akhir frasa, angkat tanganmu sedikit, seperti penyanyi menarik napas. Lalu mulai frasa berikutnya.",
     },
     "question-and-answer": {
       text: "Mainkan frasa pertama, lalu angkat tanganmu setelah D terakhirnya. Sesudah itu, mainkan frasa kedua: C-D-E-F, G, E, F-E-D-D, dan akhiri pada C.",

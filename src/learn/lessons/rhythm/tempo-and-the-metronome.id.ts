@@ -19,7 +19,7 @@ export const tempoAndTheMetronomeId: Translation<TempoAndTheMetronomeTexts> = {
       answers: ["60 ketukan per menit", "120 ketukan per menit"],
     },
     "slow-first": {
-      text: "Metronom berbunyi klik pada setiap ketukan, dengan tempo apa pun yang kamu pilih. Latihlah karya baru dengan pelan dulu. Setelah terasa mudah, atur metronom sedikit lebih cepat.",
+      text: "Metronom berbunyi klik pada setiap ketukan, dengan tempo apa pun yang kamu pilih. Latih karya baru dengan pelan dulu. Setelah terasa mudah, atur metronom sedikit lebih cepat.",
     },
     "slow-first-quiz": {
       text: "Sebuah karya baru terasa sulit. Bagaimana kamu melatihnya?",
@@ -36,7 +36,7 @@ export const tempoAndTheMetronomeId: Translation<TempoAndTheMetronomeTexts> = {
       points: [
         "Tempo adalah seberapa cepat ketukan berjalan, dihitung dalam ketukan per menit.",
         "Metronom berbunyi klik pada setiap ketukan, dengan tempo yang kamu pilih.",
-        "Berlatihlah pelan dulu, lalu sedikit lebih cepat.",
+        "Berlatih pelan dulu, lalu sedikit lebih cepat.",
       ],
     },
   },

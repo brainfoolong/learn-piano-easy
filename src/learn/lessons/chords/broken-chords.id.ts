@@ -25,7 +25,7 @@ export const brokenChordsId: Translation<BrokenChordsTexts> = {
       text: "Akor terurai sering naik, lalu turun lagi: C, E, G, E. Jika dimainkan berulang-ulang, bunyinya mengayun seperti ombak.",
     },
     "broken-up-and-down": {
-      text: "Mainkan C, E, G, E dua kali, dan akhiri di C. Biarkan tanganmu diam, sementara jari-jarinya mengayun.",
+      text: "Mainkan C, E, G, E dua kali, dan akhiri di C. Biarkan tanganmu diam, sementara jari-jarimu mengayun.",
     },
     "three-chords-broken": {
       text: "Uraikan tiga akor dengan tangan kananmu, mulai dari C tengah: C-E-G-E, F-A-C-A, dan G-B-D-B. Akhiri dengan C, E, dan G. Pindahkan tanganmu untuk setiap akor.",

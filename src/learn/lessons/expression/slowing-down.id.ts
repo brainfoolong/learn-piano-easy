@@ -24,7 +24,7 @@ export const slowingDownId: Translation<SlowingDownTexts> = {
       text: "Bunyi yang makin lambat baru terasa setelah denyut ketukan yang stabil. Ketuk bersama bunyi klik, dan ikuti klik itu dengan tepat.",
     },
     "play-the-ending": {
-      text: "Mainkan akhir frasa: G, F, E, D, dan C, dari G di atas C tengah. Beri sedikit lebih banyak waktu pada setiap not, dan berhentilah pada C terakhir.",
+      text: "Mainkan akhir frasa: G, F, E, D, dan C, dari G di atas C tengah. Beri sedikit lebih banyak waktu pada setiap not, dan berhenti pada C terakhir.",
     },
     "what-a-fermata-is": {
       text: "Tanda ini mirip mata: lengkungan dengan titik di bawahnya. Itulah fermata, tanda berhenti sejenak. Not di bawahnya ditahan lebih lama daripada yang tertulis.",

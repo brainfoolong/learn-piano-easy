@@ -16,7 +16,7 @@ export const majorTriadsId: Translation<MajorTriadsTexts> = {
       answers: ["Dua", "Tiga", "Empat"],
     },
     "major-recipe": {
-      text: "Itulah resep trisuara mayor. Mulailah dari nada akarnya, tuts yang memberi nama trisuara itu. Naik empat kali setengah nada, lalu tiga kali lagi.",
+      text: "Itulah resep trisuara mayor. Mulai dari nada akarnya, tuts yang memberi nama trisuara itu. Naik empat kali setengah nada, lalu tiga kali lagi.",
     },
     "right-hand-fingers": {
       text: "Tangan kananmu memainkan trisuara dengan jari 1, 3, dan 5. Ibu jari memainkan nada akar.",
@@ -31,7 +31,7 @@ export const majorTriadsId: Translation<MajorTriadsTexts> = {
       text: "Sekarang geser ibu jarimu ke G. Resepnya menghasilkan G, B, dan D. Mainkan satu per satu, lalu bersamaan.",
     },
     "four-up-from-d": {
-      text: "Mulailah dari D, lalu hitung naik empat kali setengah nada. Kamu sampai di tuts mana?",
+      text: "Mulai dari D, lalu hitung naik empat kali setengah nada. Kamu sampai di tuts mana?",
       answers: ["F kres", "F", "G"],
     },
     "find-f-sharp": {

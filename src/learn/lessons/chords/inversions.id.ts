@@ -44,7 +44,7 @@ export const inversionsId: Translation<InversionsTexts> = {
       answers: ["Akor C mayor", "Akor F mayor", "Akor A minor"],
     },
     "close-chords": {
-      text: "Mainkan C-E-G, C-F-A, B-D-G, dan C-E-G, mulai dari C tengah. Biarkan tanganmu di satu tempat, dan gerakkan jari-jarinya saja.",
+      text: "Mainkan C-E-G, C-F-A, B-D-G, dan C-E-G, mulai dari C tengah. Biarkan tanganmu di satu tempat, dan gerakkan jari-jarimu saja.",
     },
     "close-chords-with-bass": {
       text: "Sekarang tambahkan nada akar dengan tangan kirimu di bawah setiap akor: C, F, G, dan C di bawah C tengah.",

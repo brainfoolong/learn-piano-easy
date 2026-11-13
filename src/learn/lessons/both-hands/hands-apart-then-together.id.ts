@@ -26,7 +26,7 @@ export const handsApartThenTogetherId: Translation<HandsApartThenTogetherTexts> 
       text: "Sekarang tangan kirimu saja. Mulai dari C satu oktaf lebih rendah, lalu mainkan C D E D C yang sama.",
     },
     "together-steps": {
-      text: "Sekarang kedua tangan bersamaan. Tekan setiap pasangan tuts pada saat yang sama. Mulailah dengan satu C di setiap tangan.",
+      text: "Sekarang kedua tangan bersamaan. Tekan setiap pasangan tuts pada saat yang sama. Mulai dengan satu C di setiap tangan.",
     },
     "slow-together": {
       text: "Bermain bersamaan itu hal baru, jadi mainkan pelan-pelan. Kecepatan datang nanti, setelah kedua tanganmu mantap bermain bersama.",

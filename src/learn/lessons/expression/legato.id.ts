@@ -53,7 +53,7 @@ export const legatoId: Translation<LegatoTexts> = {
       text: "Legato butuh jari yang bebas untuk setiap not berikutnya. Dalam tangga nada, ibu jari menyusup, jadi alurnya tidak pernah putus.",
     },
     "scale-legato": {
-      text: "Mainkan tangga nada C mayor naik dari C tengah dengan jari 1, 2, 3, lalu ibu jari menyusup ke F. Sambungkan setiap not ke not berikutnya.",
+      text: "Mainkan tangga nada C mayor naik dari C tengah dengan jari 1, 2, 3, lalu susupkan ibu jari ke F. Sambungkan setiap not ke not berikutnya.",
     },
     "which-move-keeps-it-smooth": {
       text: "Kamu memainkan tangga nada C mayor naik secara legato. Setelah E dengan jari 3, bagaimana kamu mencapai F?",
