@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "Five film pieces: Can-can to Pomp and Circumstance"
-    status: open
+    status: done
   - id: 8
     title: Five sea shanties
     status: open
@@ -132,12 +132,28 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
   March*'s tutti theme. A typeset of the Nocturne's opening on Commons gives its bars 5 to 8.
   Heugel's piano score of *Orphée aux Enfers*, 1862, on Commons holds the galop on its page 80, file
   82 of 86.
-- **The Can-can's first strain in Heugel's print is not the tune a learner knows.** It reads A, E, E,
-  F sharp, then E, D, D, F sharp. The next session reads the strains that follow, on the score's pages
-  80 to 82, and takes the famous one. If no strain matches, a replacement takes its place.
+- **The Can-can's tune is the galop's "Ce bal est original" strain, on the score's page 81.** Heugel's
+  print plays it in G major, in octaves, after the repeat sign. It reads G, then A C B A, D D, D E B C,
+  A A, A C B A, G. A figure on Commons, `Orphéé aux enfers 3 numbers compared.tif`, prints the same
+  strain a step higher, in A major. The tune ends on the first eighth of bar 7, whose arpeggio is cut
+  to rests.
+- **The three replacements are *Vltava*, *Aquarium* and Mahler's Adagietto.** Their slugs are `vltava`,
+  `aquarium` and `mahler-adagietto`, in place of the *Bumblebee*, the *Barcarolle* and *Pomp and
+  Circumstance*. The theme book prints each on its pages 829, 672 and 405. Each is mostly inside its
+  key, and none leaps more than a fourth within its hook.
+- **The years of the replacements.** Wikipedia gives Smetana's *Vltava* its first performance in 1875,
+  and no print year, so it takes 1875. *The Carnival of the Animals* was published in 1922, the year
+  after Saint-Saëns died. Edition Peters published Mahler's Fifth in 1904.
+- **The theme book's PDF has no text layer.** Ghostscript renders a page of it, and its Commons page
+  gives the contents with page numbers. A page's number in the contents is its page in the PDF.
 - **The films of stage 7.** The Wikipedia list of *Moulin Rouge!*'s music names the *Galop
   infernal*. *The Pianist*'s soundtrack album opens with the Nocturne. Wikipedia's page on Grieg in
-  popular culture names *Soylent Green* for *Morning Mood*.
+  popular culture names *Soylent Green* for *Morning Mood*. Wikipedia names *The Tree of Life* for
+  *Vltava*, *Days of Heaven* for *Aquarium* and *Death in Venice* for the Adagietto.
+- **The 1812 Overture and Dvořák's *New World* Symphony were set aside.** Wikipedia's articles on them
+  name no film.
+- ***Aquarium*'s tune writes the staff's notes, below the print's 8va sign.** It is the theme's eight
+  bars. Its D sharps and C sharp put three notes outside A minor in bars 3 to 6, which the meter allows.
 - ***Wedding March*'s tune is the tutti theme's second phrase.** The first phrase ends on an arpeggio
   from C4 to G5, which breaks Beginner's position limit. The second closes on C, within one octave.
 - **The Nocturne's run in bar 7 is cut to a rest,** as *Night on Bald Mountain*'s runs are. It mixes a
@@ -373,10 +389,10 @@ took their places. The *Bumblebee* cannot pass Beginner, so it and the 25th piec
 
 **Split:** five writing subagents, one module each.
 
-- [ ] *Can-can*. `tools/our-songs/can-can.ts:1`
+- [x] *Can-can*. `tools/our-songs/can-can.ts:1`
   - [x] Its source, Heugel's piano score of 1862 on Commons, and its film are confirmed.
-  - [ ] The famous strain is found in the print and read into notation.
-  - [ ] Its module is written, checked against the read tune, and joins `ourSongs`.
+  - [x] The famous strain is found in the print and read into notation.
+  - [x] Its module is written, checked against the read tune, and joins `ourSongs`.
 - [x] Nocturne in C-sharp minor. `tools/our-songs/chopin-nocturne-c-sharp-minor.ts:1`
   - [x] Its theme is read from the Commons typeset, and its years and film are confirmed.
   - [x] Its module is written, and its tune matches the read tune.
@@ -390,12 +406,16 @@ took their places. The *Bumblebee* cannot pass Beginner, so it and the 25th piec
   - [x] Its module is written, and its tune matches the read tune.
   - [x] It joins `ourSongs`, and the writer accepts it.
 - [x] *Pomp and Circumstance* is not a song of ours, as the standing decisions say.
-- [ ] Three film pieces, in place of the *Bumblebee*, the *Barcarolle* and *Pomp and Circumstance*,
+- [x] Three film pieces, in place of the *Bumblebee*, the *Barcarolle* and *Pomp and Circumstance*,
   found on the film list's terms. Their slugs replace `flight-of-the-bumblebee`, `barcarolle` and
   `pomp-and-circumstance` in `FILM`. `tools/our-songs.test.ts:95`
-- [ ] Add the seven to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+  - [x] *Vltava*, *Aquarium* and the Adagietto are picked, and their films and years are confirmed.
+  - [x] Each tune is read from its theme book page, and its notes outside the key are counted.
+  - [x] `FILM` names `vltava`, `aquarium` and `mahler-adagietto`.
+  - [x] Each module is written and checked against the read tune.
+- [x] Add the seven to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
   - [x] The Nocturne, *Morning Mood* and the *Wedding March* join `ourSongs`, and `tsc` and the build are green.
-  - [ ] The Can-can and the three replacements join `ourSongs`, and `FILM` names their slugs.
+  - [x] The Can-can and the three replacements join `ourSongs`, and `FILM` names their slugs.
 
 ### 8. Five sea shanties
 
@@ -434,29 +454,28 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 to 6 are done, and stage 7 is half done. Twenty-six film pieces ship in four versions, and
-the catalog holds 657 rows. Stage 7 added the Nocturne in C-sharp minor, *Morning Mood* and the
-*Wedding March*. Each tune was compared note for note with its score. *Pomp and Circumstance* had no
-source, so three replacements are now owed. The Can-can's print is found, but its famous strain is
-not yet read. The standing decisions record each. The writer, `tsc` and the worktree's build are green.
-The catalog count in `src/midi/library-songs.test.ts` now reads 657, and no test ran.
+Stages 1 to 7 are done. Thirty film pieces ship in four versions, and the catalog holds 673 rows.
+Stage 7's last group added the Can-can, *Vltava*, *Aquarium* and Mahler's Adagietto. Each tune was
+compared note for note with the score the session read. The standing decisions record the sources,
+the years, the films and the three swaps. The writer, `tsc` and the worktree's build are green. The
+catalog count in `src/midi/library-songs.test.ts` reads 673, and no test ran.
 
 ### Next
 
-**Stage 7: the Can-can and three replacements.** Work in a worktree under `.agent-tmp/`, and copy
-`.agent-tmp/brief-s7.md` in the main checkout as the writers' brief.
+**Stage 8: the five sea shanties.** Work in a detached worktree under `.agent-tmp/`. Copy
+`.agent-tmp/brief-s7.md` from the main checkout as `brief-s8.md`, with `collection: "sea"` in place
+of the film module's shape.
 
-- [ ] Read the Galop's strains on the score's pages 80 to 82, and take the famous one. `tools/our-songs/funeral-march.ts:1`
-- [ ] Pick three replacements from the theme book's contents, each with a film Wikipedia names. `tools/our-songs.test.ts:95`
-- [ ] Read each from its theme book page, cut a leaping one to its hook, and count notes outside its key. `tools/our-songs/morning-mood.ts:1`
-- [ ] Writing subagents, one module each, and replace the three slugs in `FILM`. `tools/our-songs/wedding-march.ts:1`
-- [ ] Add the modules to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:305`
+- [ ] Read each shanty's tune from a Wikipedia `<score>` block, with `action=raw`, and its earliest dated print. `tools/our-songs/drunken-sailor.ts:1`
+- [ ] Count each tune's leaps and its notes outside the key, and cut a leaping one to its hook. `tools/our-songs/the-blue-danube.ts:1`
+- [ ] Writing subagents, one module each, briefed with the read tune, its source block, `about` and `funFact`. `tools/our-songs/vltava.ts:1`
+- [ ] Compare each module's `tune` with the read tune, note for note. `tools/our-songs/can-can.ts:32`
+- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:313`
 
-Render a theme book page through the Commons API: `prop=imageinfo&iiurlparam=page<n>-1800px`, then crop
-it with `magick`. Heugel's galop is file 82 of 86 of the `bpt6k1187743z` scans, and the right hand
-plays octaves there. If the Can-can's famous strain cannot be read with confidence, swap it too.
+A shanty whose tune no allowed source prints takes the next reserve, *Shenandoah* and then *Leave Her,
+Johnny*. Its slug replaces the old one in `SEA` in `tools/our-songs.test.ts`.
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 657 by four rows per new
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 673 by four rows per new
 piece. The e2e test `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once
 the film group outgrows one view.
 
