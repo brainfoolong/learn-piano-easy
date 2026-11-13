@@ -1,7 +1,7 @@
 import { rm } from "node:fs/promises";
 import { join } from "node:path";
 
-import { LOCALES } from "../src/i18n/locale";
+import { LOCALES, rowOf } from "../src/i18n/locale";
 import { LANDING_SONGS } from "../src/landing/songs";
 import { groupOf } from "../src/pwa/cache-groups";
 import { afterAll, beforeAll, expect, test } from "../src/testing";
@@ -38,7 +38,7 @@ test("build_writes_a_page_per_route_and_locale", async () => {
     expect(result.files).toContain(page.file);
     expect(result.shell).toContain(page.file);
     const html = await Bun.file(join(outDir, page.file)).text();
-    expect(html).toContain(`<html lang="${page.locale}">`);
+    expect(html).toContain(`<html lang="${rowOf(page.locale).lang}">`);
     expect(html).toContain(`<title>${pageTitle(page)}</title>`);
     // The base climbs to the site's root, and every asset resolves from there.
     expect(html).toContain(`<base href="${page.base}" />`);
@@ -98,7 +98,7 @@ test("the_sitemap_lists_every_indexed_page_with_its_alternates", async () => {
   for (const [i, page] of indexed.entries()) {
     const links = [...urls[i]!.matchAll(/<xhtml:link rel="alternate" hreflang="([\w-]+)" href="([^"]+)" \/>/g)].map((m) => [m[1], m[2]]);
     expect(links).toEqual([
-      ...LOCALES.map((locale) => [locale, SITE + pageOf(page.route, locale).path]),
+      ...LOCALES.map((locale) => [rowOf(locale).lang, SITE + pageOf(page.route, locale).path]),
       ["x-default", SITE + pageOf(page.route, "en").path],
     ]);
   }
@@ -126,7 +126,7 @@ test("a_landing_page_carries_json_ld_with_its_own_url", async () => {
     expect(raw).not.toContain("<");
     const data = JSON.parse(raw) as { "@graph": Record<string, unknown>[] };
     expect(data["@graph"].map((node) => node["@type"])).toEqual(["WebSite", "WebApplication"]);
-    for (const node of data["@graph"]) expect(node).toMatchObject({ url: SITE + home.path, inLanguage: locale });
+    for (const node of data["@graph"]) expect(node).toMatchObject({ url: SITE + home.path, inLanguage: rowOf(locale).lang });
     expect(data["@graph"][1]).toMatchObject({ applicationCategory: "EducationalApplication", isAccessibleForFree: true });
     expect(structuredData(home, SITE)).toEqual(data);
   }

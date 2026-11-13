@@ -10,6 +10,7 @@
  */
 import { expect, test, type Page } from "@playwright/test";
 import { loadEveryLocale } from "../src/i18n/all-catalogs";
+import { rowOf } from "../src/i18n/locale";
 import { allPages, pageAt, pageTitle } from "../src/site/routes";
 import { checkLayout, LOCALES, pastSetup, THEMES, WIDTHS } from "./layout-check";
 
@@ -151,7 +152,7 @@ test("every_route_reloads_offline", async ({ page, context }) => {
   for (const site of allPages()) {
     await page.goto(`./${site.path}`);
     await expect(page).toHaveTitle(pageTitle(site));
-    await expect(page.locator("html")).toHaveAttribute("lang", site.locale);
+    await expect(page.locator("html")).toHaveAttribute("lang", rowOf(site.locale).lang);
     await expect(heading(page)).toBeAttached();
   }
   // An unknown path shows the landing page of its locale.
