@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Indonesian
-    status: open
+    status: done
   - id: 3
     title: The course in Indonesian
     status: open
@@ -79,6 +79,10 @@ keeps to the standard language without sounding stiff. The method in
 - **The marks:** quotes are `“ ”`.
 - **Numbers follow `Intl` for `id`.** No digit or separator is set by hand.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
+- **A second review's *wrong* finding with an exact one-word fix is applied without a third review.**
+  A third reviewer costs a full read of the batch for one word. Any larger *wrong* fix gets a third review.
+- **A dialog's title keeps the glossary's short form,** even where a reviewer proposes a longer, clearer
+  one. *File tanpa internet* stays the title of the offline files.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -107,12 +111,12 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/id.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/id.ts:1`, `src/i18n/messages/learn-lesson.id.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.id.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.id.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `indonesian_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp id` for each catalog section. `src/i18n/stamps/id.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/id.ts:1`, `src/i18n/messages/learn-lesson.id.ts:1`
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.id.ts:1`
+- [x] The player's settings. `src/i18n/messages/player-settings.id.ts:1`
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+- [x] `bun x tsc` and `indonesian_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+- [x] `bun run i18n stamp id` for each catalog section. `src/i18n/stamps/id.json:1`
 
 ### 3. The course in Indonesian
 
@@ -122,10 +126,11 @@ hands* each go alone. *Chords* goes with *Rhythm*, *Reading music* with *Meet th
 keys* with *First melodies*. Five fresh reviewers then review the five batches blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.id.ts:1`, `src/learn/lessons/first-melodies/texts.id.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.id.ts:1`, `src/learn/lessons/reading-music/texts.id.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.id.ts:1`, `src/learn/lessons/chords/texts.id.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.id.ts:1`, `src/learn/lessons/expression/texts.id.ts:1`
+- [ ] *Reading music* and *Meet the piano*. `src/learn/lessons/reading-music/bass-landmarks.id.ts:1`, `src/learn/lessons/meet-the-piano/black-key-groups.id.ts:1`
+- [ ] *Scales and keys* and *First melodies*. `src/learn/lessons/scales-and-keys/f-major.id.ts:1`, `src/learn/lessons/first-melodies/hands-take-turns.id.ts:1`
+- [ ] *Chords* and *Rhythm*. `src/learn/lessons/chords/alberti-bass.id.ts:1`, `src/learn/lessons/rhythm/counting-to-four.id.ts:1`
+- [ ] *Both hands*. `src/learn/lessons/both-hands/a-held-bass-note.id.ts:1`
+- [ ] *Expression*. `src/learn/lessons/expression/crescendo-and-diminuendo.id.ts:1`
 - [ ] Each world reviewed blind, and every finding settled.
 - [ ] `bun run i18n stamp id` for each world. `src/i18n/stamps/id.json:1`
 
@@ -175,22 +180,33 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/id.md` holds every section the method names. The `id` entry of
-`src/i18n/typography.ts` holds its kept words and twelve mark rules. Test
-`the_indonesian_marks_hold_and_spare_kept_words` in `src/i18n/translation-rules.test.ts` pins them, and it
-passes. No Indonesian text exists yet.
+Stages 1 and 2 are done. Every catalog section has its Indonesian in `src/i18n/messages/*.id.ts`, and
+`src/i18n/stamps/id.json` stamps all fourteen. `CATALOG_CHUNKS` in `src/i18n/locale.ts` loads `id`. `bun x
+tsc` and `indonesian_texts_keep_their_rules` pass.
+
+Four writers worked side by side, with the settings split into its play and look halves. Four blind
+reviewers followed. Three batches had a *wrong* finding, and each was reviewed again. The second reviews
+found one more *wrong* text, the bare *Kedua* for both hands, and it was fixed as proposed.
+
+The glossary grew from what the writers met. New rows cover the scene (*tampilan 3D*), the default
+(*bawaan*), input and output, the MIDI channel, combo, the chord's root, particle wander, frame,
+offline files, the ape, the sponsor page, setup, and the streak's heading. *Menu*, *Level* and *Audio*
+joined the kept words.
 
 ### Next
 
-**Stage 2: the site and the player in Indonesian.** Run `bun tools/i18n.ts status id`, then `work id
-<unit>` for each catalog section. Three writers go side by side: `src/i18n/messages/id.ts` with
-`learn-lesson.id.ts`, `player-shell.id.ts`, and `player-settings.id.ts`. Each brief carries
-`docs/reference/translation/id.md` whole. Then three fresh blind reviewers, settle, and stamp.
+**Stage 3: the course in Indonesian.** Run `bun tools/i18n.ts work id lesson/<world>` for each world. Five
+writers go side by side, in the batches of stage 3's items. A lesson is
+`src/learn/lessons/<world>/<lesson>.id.ts`, nine per world. Each `.zh.ts` sibling is the code shape to copy,
+since Chinese names notes by letters too.
 
-- A mark rule that misfires on a real text is fixed in `src/i18n/typography.ts` and the guide's § 9 together.
-- `CATALOG_CHUNKS` in `src/i18n/locale.ts:44` needs an `id` line once `messages/id.ts` exists.
+- Each brief carries `docs/reference/translation/id.md` whole, and its § 5 rows added in stage 2.
+- A writer creates files with Write only. The guard refuses a shell write, even `sed -i`.
+- A reviewer writes its findings to `.agent-tmp/i18n/id/review-<batch>.md`, one line per finding with
+  its proposed text. A fixer applies them.
+- Then run `bun x tsc` and `bun test src/i18n/translation-rules.test.ts -t indonesian`, and stamp each world.
 
-Expected red: none. `indonesian_texts_keep_their_rules` passes on an empty locale.
+Expected red: none.
 
 ### Backlog
 
