@@ -5,7 +5,7 @@ import type { learnSetup as en } from "./learn-setup.en";
 
 export const learnSetup: Translation<typeof en> = {
   title: "أهلًا بك في «تعلم البيانو»",
-  welcome: "أهلًا! أنا هنا لأعلمك العزف على البيانو. ثلاثة أسئلة سريعة، ثم نبدأ العزف.",
+  welcome: "أهلًا! أنا هنا لأعلمك العزف على البيانو. 3 أسئلة سريعة، ثم نبدأ العزف.",
   mascot: "قرد بفرو بلون العسل يرتدي سترة من المخمل المضلع، ومعه تتعلم البيانو",
   close: "تخطي الإعداد",
   progress: "الإعداد",

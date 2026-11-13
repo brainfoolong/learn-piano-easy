@@ -10,7 +10,7 @@ export const playerLibrary: Translation<typeof en> = {
   rarity: {
     taglines: {
       common: "وضعية يد واحدة، ونغمات بطيئة، ونغمات باص تنتظرك.",
-      rare: "تعزف اليدان معًا. نغمات ذات السن، وتآلفات بسيطة، ويد تنتقل من حين لآخر.",
+      rare: "تعزف اليدان معًا. ذوات السن، وتآلفات بسيطة، ويد تنتقل من حين لآخر.",
       epic: "تآلفات مفككة، وتمرير الإبهام، والدواسة.",
       legendary: "اليدان مشغولتان، سريعتان ومستقلتان.",
     },
@@ -23,7 +23,7 @@ export const playerLibrary: Translation<typeof en> = {
     fiveFingerPosition: "وضعية الأصابع الخمس",
     heldBass: "نغمات باص ممتدة",
     openFifths: "خامسات مفتوحة",
-    eighthNotes: "النغمات ذات السن",
+    eighthNotes: "ذوات السن",
     dottedRhythm: "الإيقاع المنقوط",
     triads: "التآلفات الثلاثية",
     twoNoteChords: "تآلفات من نغمتين",
