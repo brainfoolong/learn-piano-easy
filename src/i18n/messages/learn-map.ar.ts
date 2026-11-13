@@ -7,7 +7,7 @@ import type { learnMap as en } from "./learn-map.en";
 const num = (n: number) => isolate(formatNumber("ar", n));
 
 export const learnMap: Translation<typeof en> = {
-  lead: "تقدم في الطريق درسًا بعد درس. ينتهي كل عالم بالتحدي الكبير.",
+  lead: "امضِ في الطريق درسًا بعد درس. ينتهي كل عالم بالتحدي الكبير.",
   loading: "جارٍ تحميل الدورة…",
   continue: "متابعة",
   nextUp: "التالي",
@@ -15,7 +15,7 @@ export const learnMap: Translation<typeof en> = {
   progress: (done: number, all: number) =>
     `${num(done)} من ${plural("ar", all, { zero: "لا دروس", one: "درس واحد", two: "درسين", few: `${num(all)} دروس`, many: `${num(all)} درسًا`, other: `${num(all)} درس` })}`,
   locked: "يُفتح هذا العالم بالفوز في التحدي الكبير للعالم السابق، أو باجتياز اختبار التخطي فيه.",
-  beaten: "تم الفوز",
+  beaten: "تم التغلب عليه",
   node: {
     locked: (name: string) => `${isolate(name)}، مقفل`,
     open: (name: string) => `${isolate(name)}، مفتوح`,

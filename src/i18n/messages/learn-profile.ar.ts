@@ -22,12 +22,12 @@ export const learnProfile: Translation<typeof en> = {
     currentLabel: "على التوالي حتى الآن",
     best: (count: number) => `الأفضل: ${days(count)}`,
     today: (xp: number, goal: number) =>
-      xp >= goal ? `اليوم: ${n(xp)} \u2068XP\u2069، وتحقق هدف ${n(goal)}` : `اليوم: ${n(xp)} من ${n(goal)} \u2068XP\u2069`,
+      xp >= goal ? `اليوم: ${n(xp)} \u2068XP\u2069، وتحقق الهدف البالغ ${n(goal)}` : `اليوم: ${n(xp)} من ${n(goal)} \u2068XP\u2069`,
   },
   calendar: {
     heading: "الأسابيع الثمانية الأخيرة",
     label: (met: number, played: number) =>
-      `في الأسابيع الثمانية الأخيرة، عدد أيام تحقيق الهدف ${n(met)}، وعدد أيام الدروس ${n(played)}.`,
+      `في الأسابيع الثمانية الأخيرة، ${plural("ar", met, { zero: "لم يتحقق الهدف في أي يوم", one: "تحقق الهدف في يوم واحد", two: "تحقق الهدف في يومين", few: `تحقق الهدف في ${n(met)} أيام`, many: `تحقق الهدف في ${n(met)} يومًا`, other: `تحقق الهدف في ${n(met)} يوم` })}، و${plural("ar", played, { zero: "لم يجرِ أي درس", one: "جرى درس في يوم واحد", two: "جرى درس في يومين", few: `جرى درس في ${n(played)} أيام`, many: `جرى درس في ${n(played)} يومًا`, other: `جرى درس في ${n(played)} يوم` })}.`,
     met: "تحقق الهدف",
     played: "يوم عزف",
     none: "دون درس",

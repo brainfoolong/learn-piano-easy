@@ -34,10 +34,10 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   noteEndedShrink: {
     label: "انكماش النغمات المعزوفة في مفاتيحها",
-    help: "تغوص النغمة في مفتاحها أثناء صوتها. عند الإيقاف، تواصل طريقها بعد المفاتيح.",
+    help: "تغوص النغمة في مفتاحها ما دامت مسموعة. عند تعطيله، تتجاوز المفاتيح وتواصل طريقها.",
   },
   playedNoteFalloffSpeed: {
-    label: "مسافة النغمات المعزوفة بعد المفاتيح",
+    label: "مدى امتداد النغمات المعزوفة بعد المفاتيح",
     help: "بعرض المفاتيح، حين لا تنكمش النغمات المعزوفة.",
   },
   showSustainedNotes: {
@@ -76,7 +76,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   enableDrawBeatLines: {
     label: "خطوط النبضات",
-    help: "خط أخفت عبر الأعمدة عند كل نبضة.",
+    help: "خط أبهت عبر الأعمدة عند كل نبضة.",
   },
   beatLineThickness: {
     label: "سماكة خط النبضة",
@@ -104,7 +104,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   showMarkersSong: {
     label: "العلامات",
-    help: "خط ونصه حيث تسمي الأغنية جزءًا منها، مثل مقطع.",
+    help: "خط مع نصه حيث تسمي الأغنية جزءًا منها، مثل مقطع.",
   },
   showSustainPeriods: {
     label: "فترات الدواسة",
@@ -122,7 +122,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   // Particles
   showParticles: {
     label: "الجزيئات",
-    help: "تأثيرات تتصاعد من كل مفتاح يصدر صوتًا. تثقل بطاقة الرسوميات، لذا تكون متوقفة في البداية.",
+    help: "تأثيرات تتصاعد من كل مفتاح يصدر صوتًا. تثقل على بطاقة الرسوميات، لذا تكون معطّلة في البداية.",
   },
   particlesFlames: {
     label: "اللهب",
@@ -156,7 +156,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleOverrideColor: {
     label: "لون خاص",
-    help: "عند الإيقاف، تأخذ كل جزيئة لون مفتاحها.",
+    help: "عند تعطيله، تأخذ كل جزيئة لون مفتاحها.",
   },
   particleColor: {
     label: "اللون",
@@ -164,7 +164,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesOpacity: {
     label: "العتامة",
-    help: "مدى صلابة كل جزيئة. القيم الأدنى تجعل ما خلفها أوضح.",
+    help: "مدى عتامة كل جزيئة. القيم الأدنى تجعل ما خلفها أوضح.",
   },
   particleSize: {
     label: "الحجم",
@@ -176,7 +176,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleLife: {
     label: "العمر (ث)",
-    help: "المدة التي تبقاها كل جزيئة قبل أن تختفي.",
+    help: "المدة التي تبقى فيها كل جزيئة قبل أن تختفي.",
   },
   particleSpeed: {
     label: "سرعة الحركة",
@@ -285,8 +285,8 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { auto: "كما تكتبها لغتي", letters: "الحروف: ⁨C D E⁩", solfege: "صولفيج: دو ري مي" },
   },
   noteLabel: {
-    label: "نصوص النغمات",
-    help: "النصوص على كل نغمة: يمكنك اختيار أي منها، أو لا شيء. لتحديد إصبع نغمة، اضغط عليها ثم اضغط رقمًا من 1 إلى 5.",
+    label: "تسميات النغمات",
+    help: "التسميات على كل نغمة: يمكنك اختيار أي منها، أو لا شيء. لتحديد إصبع نغمة، اضغط عليها ثم اضغط رقمًا من 1 إلى 5.",
     options: { name: "اسم النغمة", keyBinding: "زر لوحة المفاتيح", fingering: "الإصبع" },
   },
   noteLabelColor: {
@@ -328,9 +328,9 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "أعلى التآلف هو طرفه البعيد عن البيانو.",
     options: {
       above: "فوق التآلف",
-      top: "عند أعلاه",
+      top: "في أعلى التآلف",
       middle: "في وسطه",
-      bottom: "عند أسفله",
+      bottom: "في أسفل التآلف",
       below: "تحت التآلف",
     },
   },
@@ -371,8 +371,8 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "لون الكلمات التي غُنيت.",
   },
   lyricsFontColorActive: {
-    label: "لون المقطع المغنى الآن",
-    help: "يبرز المقطع الحالي بهذا اللون.",
+    label: "لون المقطع اللفظي المغنى الآن",
+    help: "يبرز المقطع اللفظي الحالي بهذا اللون.",
   },
   lyricsFontSize: {
     label: "حجم النص (⁨px⁩)",
@@ -384,11 +384,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   lyricsCursorEnabled: {
     label: "المؤشر",
-    help: "نقطة فوق المقطع المغنى الآن.",
+    help: "نقطة فوق المقطع اللفظي المغنى الآن.",
   },
   lyricsBouncingCursor: {
     label: "مؤشر قافز",
-    help: "تقفز النقطة من كل مقطع إلى الذي يليه.",
+    help: "تقفز النقطة من كل مقطع لفظي إلى الذي يليه.",
   },
 
   // Coding
@@ -397,7 +397,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "لكل نغمة من النغمات الاثنتي عشرة لونها الخاص.",
   },
   enableColorCodingNotePiano: {
-    label: "تلوين المفاتيح حسب النغمة",
+    label: "تلوين المفاتيح حسب اسم نغمتها",
     help: "يضيء كل مفتاح بلون نغمته ما دام صوتها مسموعًا.",
   },
   colorCodeNote0: { label: "دو", help: "لون كل دو." },
@@ -442,7 +442,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   // Sheet
   enableSheet: {
     label: "عرض النوتة الموسيقية",
-    help: "الأغنية بالنوتة الموسيقية، في أعلى المشهد.",
+    help: "الأغنية بالنوتة الموسيقية، فوق المشهد.",
   },
   enableFullSheet: {
     label: "النوتة الموسيقية وحدها",
@@ -450,7 +450,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   sheetMeasureScroll: {
     label: "تمرير النوتة مع الأغنية",
-    help: "عند الإيقاف، تُصف الموازير في أسطر، ويبقى السطر الحالي ظاهرًا.",
+    help: "عند تعطيله، تُصف الموازير في أسطر، ويبقى السطر الحالي ظاهرًا.",
   },
   sheetMeasureNumbers: {
     label: "أرقام الموازير",
@@ -458,12 +458,12 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { off: "بلا", lineStart: "في بداية كل سطر", every: "على كل مازورة" },
   },
   enableGrandStaff: {
-    label: "ربط مدرجين بقوس",
+    label: "ربط المدرجين بقوس معقوف",
     help: "قوس المدرج المزدوج، في بداية كل سطر.",
   },
   sheetAutoClef: {
     label: "اختيار مفتاح كل مدرج حسب النغمات",
-    help: "عند الإيقاف، يكون المدرج الأول بمفتاح صول والباقي بمفتاح فا.",
+    help: "عند تعطيله، يكون المدرج الأول بمفتاح صول والباقي بمفتاح فا.",
   },
   overrideTimeSignature: {
     label: "الميزان",
@@ -472,7 +472,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   sheetMinNoteDenom: {
     label: "أقصر قيمة زمنية",
-    help: "أقصر نغمة تكتبها النوتة. وتبقى ثلاثياتها ممكنة.",
+    help: "أقصر نغمة تكتبها النوتة. ويمكن كتابة ثلاثياتها أيضًا.",
     options: {
       "4": "سوداء",
       "8": "ذات السن",
@@ -502,7 +502,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   sheetColorByTrack: {
     label: "النغمات المسموعة بلون مسارها",
-    help: "عند الإيقاف، تأخذ اللون أدناه.",
+    help: "عند تعطيله، تأخذ اللون أدناه.",
   },
   sheetActiveNotesColor: {
     label: "لون النغمة المسموعة",
@@ -540,7 +540,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   exportPdfBackground: {
     label: "استخدام ألوان الخلفية",
-    help: "تأخذ الصفحات ألوان الأعمدة والمفاتيح. عند الإيقاف، تُطبع على ورق أبيض.",
+    help: "تأخذ الصفحات ألوان الأعمدة والمفاتيح. عند تعطيله، تُطبع على ورق أبيض.",
   },
 
   // Offline

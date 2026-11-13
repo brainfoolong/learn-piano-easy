@@ -9,13 +9,13 @@ const num = (n: number) => isolate(formatNumber("ar", n));
 export const playerLibrary: Translation<typeof en> = {
   rarity: {
     taglines: {
-      common: "وضعية يد واحدة، ونغمات بطيئة، وباص ينتظرك.",
+      common: "وضعية يد واحدة، ونغمات بطيئة، ونغمات باص تنتظرك.",
       rare: "تعزف اليدان معًا. نغمات ذات السن، وتآلفات بسيطة، ويد تنتقل من حين لآخر.",
       epic: "تآلفات مفككة، وتمرير الإبهام، والدواسة.",
       legendary: "اليدان مشغولتان، سريعتان ومستقلتان.",
     },
     originalName: "الأصلية",
-    originalTagline: "نغمات المؤلف نفسه.",
+    originalTagline: "نغمات الملحن نفسه.",
     stepTitle: (name: string, tagline: string) => `${isolate(name)}: ${isolate(tagline)}`,
   },
   collections: { christmas: "عيد الميلاد", film: "من السينما", sea: "أغاني البحارة" },
@@ -23,7 +23,7 @@ export const playerLibrary: Translation<typeof en> = {
     fiveFingerPosition: "وضعية الأصابع الخمس",
     heldBass: "نغمات باص ممتدة",
     openFifths: "خامسات مفتوحة",
-    eighthNotes: "ذات السن",
+    eighthNotes: "النغمات ذات السن",
     dottedRhythm: "الإيقاع المنقوط",
     triads: "التآلفات الثلاثية",
     twoNoteChords: "تآلفات من نغمتين",
@@ -42,12 +42,12 @@ export const playerLibrary: Translation<typeof en> = {
     counterMelody: "لحن مرافق",
     melodyInChords: "اللحن داخل التآلفات",
     handCrossing: "تقاطع اليدين",
-    sixteenthNotes: "ذات السنين",
+    sixteenthNotes: "النغمات ذات السنين",
   },
   panel: {
-    search: { placeholder: "البحث بالعنوان أو المؤلف أو الوسم", label: "البحث في الأغاني", clear: "مسح البحث" },
+    search: { placeholder: "البحث بالعنوان أو الملحن أو الوسم", label: "البحث في الأغاني", clear: "مسح البحث" },
     fits: "تناسب مفاتيحي",
-    kinds: { level: "الصعوبة", yours: "أغانيك", collection: "المجموعة", style: "الأسلوب", skill: "المهارة", composer: "المؤلف" },
+    kinds: { level: "الصعوبة", yours: "أغانيك", collection: "المجموعة", style: "الأسلوب", skill: "المهارة", composer: "الملحن" },
     levels: { beginner: "مبتدئ", easy: "سهل", medium: "متوسط", hard: "صعب", advanced: "متقدم", expert: "خبير" },
     styles: {
       baroque: "باروك",
@@ -58,7 +58,7 @@ export const playerLibrary: Translation<typeof en> = {
       folk: "لحن شعبي",
       contemporary: "معاصر",
     },
-    sets: { path: "مسار المبتدئين", ours: "توزيعاتنا" },
+    sets: { path: "طريق المبتدئين", ours: "توزيعاتنا" },
     yours: { favourite: "المفضلة", played: "عُزفت سابقًا", upload: "ملفاتك" },
     tagTitle: (name: string) => `إظهار ${isolate(name)} فقط`,
     sort: {
@@ -78,7 +78,7 @@ export const playerLibrary: Translation<typeof en> = {
     sections: {
       continue: "متابعة العزف",
       favourites: "المفضلة",
-      path: "مسار المبتدئين",
+      path: "طريق المبتدئين",
       pathLead: "خطواتك التالية، من النغمات الأولى حتى أول سوناتينا.",
       pathAll: (n: number) => `عرض كل الأغاني (${num(n)})`,
       all: "كل الأغاني",
@@ -119,7 +119,7 @@ export const playerLibrary: Translation<typeof en> = {
     hands: { right: "اليد اليمنى", left: "اليد اليسرى", split: "اليدان معًا، مقسومتان عند دو الوسطى", none: "ليس لي: يعزفه التطبيق" },
     fromNotes: "حسب النغمات",
     fromNotesKey: (key: string) => `حسب النغمات: ${isolate(key)}`,
-    useForNew: { label: "استخدام للأغاني الجديدة", title: "استخدام هذه الألوان ومستويات الصوت والخيارات للأغاني الجديدة" },
+    useForNew: { label: "تطبيق على الأغاني الجديدة", title: "تطبيق هذه الألوان ومستويات الصوت والخيارات على الأغاني الجديدة" },
     reset: { label: "إعادة ضبط هذه الأغنية", title: "إعادة مسارات هذه الأغنية إلى قيمها الافتراضية" },
     keyControl: "سلم الأغنية",
     key: "السلم",
@@ -167,6 +167,6 @@ export const playerLibrary: Translation<typeof en> = {
     fold: "نقلها إلى مفاتيحك",
     failed: (title: string, reason: string) => `تعذّر فتح «${isolate(title)}»: ${isolate(reason)}`,
     catalogFailed: (status: number) => `تعذّر تحميل قائمة الأغاني (${isolate(formatNumber("ar", status, { useGrouping: false }))}).`,
-    fileFailed: (status: number) => `تعذّر تحميل الملف (${isolate(formatNumber("ar", status, { useGrouping: false }))})`,
+    fileFailed: (status: number) => `لم يُحمَّل الملف (${isolate(formatNumber("ar", status, { useGrouping: false }))})`,
   },
 };

@@ -311,6 +311,16 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | opacity | العتامة | unsourced |
 | in key widths (a unit); per second | بعرض المفاتيح; بعرض المفاتيح في الثانية | the player's own unit |
 | a section named mid-sentence | in « »: `في قسم «العزف الحر»` | so the name never reads as part of the sentence |
+| background track (an audio file played with a song) | الصوت المرافق | the player's own term. `مسار` is kept for a MIDI track |
+| input, output (MIDI); channel | مدخل, مخرج; قناة | the terms of audio apps, unsourced |
+| the learner's own keyboard or instrument | آلتك | `لوحة المفاتيح` is kept for the computer's, and `البيانو` for the one on screen |
+| tuning; semitone; cent | الدوزان; نصف بعد; سنت | everyday words of musicians; `نصف بعد` follows *half step* |
+| composer; arrangement | الملحن; توزيع | everyday words. `المؤلف` is an author of words |
+| a setting on, off; when off | مفعّل, معطّل; عند تعطيله | AN. `إيقاف` is kept for stopping playback |
+| syllable (of lyrics) | المقطع اللفظي | `مقطع` alone is a verse |
+| highlighted (an answer, a key) | مظلل | `مميز` would read as excellent |
+| opacity of a thing; faint (a line) | عتامة; أبهت | `صلابة` is hardness, and `أخفت` is for a sound |
+| path (a set of songs in order) | طريق: `طريق المبتدئين` | everyday word. `مسار` is kept for a MIDI track |
 | a guide's stock practice steps | see *A guide's recurring steps* below | the guides' own forms, one per English step |
 
 ### Which "play" is which

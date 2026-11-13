@@ -59,7 +59,7 @@ export const playerInput: Translation<typeof en> = {
       accuracy: "الدقة",
       hits: "الإصابات",
       perfect: "ممتاز",
-      misses: "الفائتة",
+      misses: "النغمات الفائتة",
       mistakes: "الأخطاء",
     },
   },
@@ -70,8 +70,8 @@ export const playerInput: Translation<typeof en> = {
   learnRange: {
     lowest: "اضغط أخفض مفتاح لديك…",
     highest: "والآن أعلى مفتاح لديك…",
-    start: "الضبط من جهازك",
-    title: "ضبط المدى من مفاتيح جهازك",
+    start: "الضبط من مفاتيحك",
+    title: "ضبط المدى من مفاتيح آلتك",
   },
   pitchPractice: {
     heading: "تمرين على تمييز النغمات",
@@ -105,13 +105,13 @@ export const playerInput: Translation<typeof en> = {
         other: `${isolate(formatNumber("ar", count))} نغمة`,
       })}.`,
     columns: { note: "النغمة", asked: "مرات السؤال", mistakes: "الأخطاء", playedInstead: "ما عُزف بدلًا منها" },
-    firstTry: (n: number, count: number) => `من المحاولة الأولى: ${num(n)} من ${num(count)}.`,
+    firstTry: (n: number, count: number) => `عُثر على ${num(n)} من ${num(count)} من المحاولة الأولى.`,
   },
   scoring: {
     heading: "النتيجة",
     judgements: { perfect: "ممتاز", hit: "إصابة", mistake: "نغمة خاطئة", miss: "نغمة فائتة" },
     counts: (hits: number, perfect: number, misses: number, mistakes: number) =>
-      `الإصابات ${num(hits)} · ممتاز ${num(perfect)} · الفائتة ${num(misses)} · الأخطاء ${num(mistakes)}`,
+      `الإصابات ${num(hits)} · ممتاز ${num(perfect)} · النغمات الفائتة ${num(misses)} · الأخطاء ${num(mistakes)}`,
     history: "السجل",
     historyTitle: "محاولاتك في هذه الأغنية",
     readError: "تعذّرت قراءة السجل.",

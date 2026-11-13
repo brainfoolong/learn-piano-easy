@@ -17,7 +17,7 @@ export const learnLesson: Translation<typeof en> = {
     close: "إغلاق",
   },
   lacks: {
-    touch: "آلتي لا تعزف بقوة وبهدوء",
+    touch: "آلتي لا تميّز بين العزف بقوة وبهدوء",
     pedal: "آلتي بلا دواسة",
   },
   loading: "جارٍ تحميل الدرس…",
@@ -40,19 +40,19 @@ export const learnLesson: Translation<typeof en> = {
   quiz: {
     answers: "الإجابات",
     wrong: "ليس تمامًا. لنجرب إجابة أخرى.",
-    hint: "الإجابة المميزة هي الصحيحة.",
+    hint: "الإجابة المظللة هي الصحيحة.",
   },
   findKey: {
     piano: "البيانو. اضغط المفتاح الذي تذكره الخطوة.",
     marks: { next: "هذا المفتاح", correct: "صحيح", mistake: "ليس هذا" },
     wrong: "هذا مفتاح آخر. لنجرب مرة أخرى.",
-    hint: "المفتاح المميز هو المطلوب.",
+    hint: "المفتاح المظلل هو المطلوب.",
     timeUp: "انتهى الوقت.",
     secondsLeft: (seconds: number) => `${num(seconds)} ث`,
   },
   playNotes: {
     piano: "البيانو. اعزف الجملة الموسيقية بالترتيب.",
-    marks: { next: "التالي للعزف", correct: "عُزفت", mistake: "ليس هذا" },
+    marks: { next: "المفتاح التالي", correct: "عُزف", mistake: "ليس هذا" },
     wrong: "هذه نغمة أخرى. لنجرب مرة أخرى.",
     hint: (note: string) => `النغمة التالية هي ${isolate(note)}.`,
     hintChord: (...notes: string[]) =>
@@ -70,7 +70,7 @@ export const learnLesson: Translation<typeof en> = {
     group: "هل النغمة الثانية أعلى أم أخفض أم مثلها؟",
     answers: { higher: "أعلى", lower: "أخفض", same: "مثلها" },
     wrong: "ليس تمامًا. لنستمع مرة أخرى ونجرب إجابة أخرى.",
-    hint: "الإجابة المميزة هي الصحيحة.",
+    hint: "الإجابة المظللة هي الصحيحة.",
     roundAgain: (right: number, asked: number) => `الإجابات الصحيحة: ${num(right)} من ${num(asked)}. لنلعب جولة أخرى.`,
   },
   readNote: {
@@ -80,10 +80,10 @@ export const learnLesson: Translation<typeof en> = {
     letters: { C: "دو", D: "ري", E: "مي", F: "فا", G: "صول", A: "لا", B: "سي" },
     piano: "البيانو. اعزف النغمة المكتوبة على المدرج.",
     marks: { next: "هذا المفتاح", correct: "صحيح", mistake: "ليس هذا" },
-    wrongName: "هذه نغمة أخرى. لننظر مرة أخرى.",
+    wrongName: "هذه نغمة أخرى. لننظر من جديد.",
     wrongKey: "هذا مفتاح آخر. لنجرب مرة أخرى.",
-    hintName: "الاسم المميز هو الصحيح.",
-    hintKey: "المفتاح المميز هو المطلوب.",
+    hintName: "الاسم المظلل هو الصحيح.",
+    hintKey: "المفتاح المظلل هو المطلوب.",
     again: "بعض الإجابات لم تصح بعد. لنمر عليها مرة أخرى.",
   },
   rhythmTap: {
@@ -92,20 +92,20 @@ export const learnLesson: Translation<typeof en> = {
     tap: "والآن اضغط أي مفتاح مع كل نقرة.",
     piano: "لوحة النقر. اضغط أي مفتاح على النبضة.",
     marks: { next: "اضغط هنا", correct: "على النبضة", mistake: "خارج النبضة" },
-    short: (hits: number, beats: number) => `النبضات المضغوطة في وقتها: ${num(hits)} من ${num(beats)}. لنجرب مرة أخرى.`,
+    short: (hits: number, beats: number) => `النبضات المضغوطة: ${num(hits)} من ${num(beats)}. لنجرب مرة أخرى.`,
     hint: "اضغط لحظة سماع النقرة. تومض النقاط مع كل نبضة.",
     play: "والآن اعزف كل نغمة مع نقرتها.",
     phrasePiano: "المفاتيح. اعزف الجملة الموسيقية في وقتها مع النقرات.",
     shortNotes: (hits: number, notes: number) => `النغمات المعزوفة في وقتها: ${num(hits)} من ${num(notes)}. لنجرب مرة أخرى.`,
-    restSounded: "صدر صوت مفتاح أثناء سكتة. ارفع إصبعك والزم الصمت هناك.",
+    restSounded: "صدر صوت مفتاح أثناء سكتة. ارفع إصبعك واترك السكتة صامتة.",
     phraseHint: "اعزف كل نغمة مع نقرتها، وارفع إصبعك عن المفتاح قبل السكتة. تومض النقاط مع كل نبضة.",
     pattern: {
       taps: (countIn: number, taps: number) =>
-        `عدّ ${plural("ar", countIn, { zero: "دون نبضات", one: "نبضة واحدة", two: "نبضتين", few: `${num(countIn)} نبضات`, many: `${num(countIn)} نبضة`, other: `${num(countIn)} نبضة` })}. ثم اضغط مع ${plural("ar", taps, { zero: "لا نبضات", one: "نبضة واحدة", two: "نبضتين", few: `${num(taps)} نبضات`, many: `${num(taps)} نبضة`, other: `${num(taps)} نبضة` })}.`,
+        `عدّ ${plural("ar", countIn, { zero: "دون نبضات", one: "نبضة واحدة", two: "نبضتين", few: `${num(countIn)} نبضات`, many: `${num(countIn)} نبضة`, other: `${num(countIn)} نبضة` })}. ثم اضغط على ${plural("ar", taps, { zero: "لا نبضات", one: "نبضة واحدة", two: "نبضتين", few: `${num(taps)} نبضات`, many: `${num(taps)} نبضة`, other: `${num(taps)} نبضة` })}.`,
       phrase: (countIn: number, ...parts: string[]) =>
         `عدّ ${plural("ar", countIn, { zero: "دون نبضات", one: "نبضة واحدة", two: "نبضتين", few: `${num(countIn)} نبضات`, many: `${num(countIn)} نبضة`, other: `${num(countIn)} نبضة` })}. ثم اعزف بالترتيب${parts.length > 0 ? `: ${parts.map(isolate).join("، ")}` : ""}.`,
       held: (note: string, beats: number) =>
-        `${isolate(note)} ممدودة ${plural("ar", beats, { zero: "دون نبضات", one: "نبضة واحدة", two: "نبضتين", few: `${num(beats)} نبضات`, many: `${num(beats)} نبضة`, other: `${num(beats)} نبضة` })}`,
+        `${isolate(note)} مضغوطة ${plural("ar", beats, { zero: "دون نبضات", one: "نبضة واحدة", two: "نبضتين", few: `${num(beats)} نبضات`, many: `${num(beats)} نبضة`, other: `${num(beats)} نبضة` })}`,
       rest: (beats: number) =>
         plural("ar", beats, { zero: "سكتة", one: "سكتة", two: "سكتة لمدة نبضتين", few: `سكتة لمدة ${num(beats)} نبضات`, many: `سكتة لمدة ${num(beats)} نبضة`, other: `سكتة لمدة ${num(beats)} نبضة` }),
     },
