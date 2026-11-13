@@ -1160,3 +1160,31 @@ puts any fingertip on any key.
 - The runtime holds no measurements of the model. Each one is a marker bone's head.
 - A pad that starts over half a key from its target takes `SEEK_STEPS` in one frame.
 - The rig's tests load the shipped `hand.glb`, never a stand-in.
+
+## hand-motion
+
+**Target:** a phrase with its finger numbers becomes the motion of one or two hands, with crossings,
+chords and touch, shown in the hand lab.
+
+### Findings
+
+- `planHands(phrase, layout)` of `src/render/hand/hand-plan.ts` returns a plan whose `poseAt(seconds)` gives each hand's pose.
+- `applyPose(rig, pose)` of `src/render/hand/hand-rig.ts` places the wrist and reaches every digit.
+- A phrase note is `{ pitch, at, seconds, finger, hand, velocity? }`, with times in seconds.
+- The lab plays the phrases of `tools/hand-lab/phrases.ts` with play, pause, three speeds and a seek bar.
+- `lab.seek(seconds)` poses the lab for a shot, and `lab.cost()` reports the plan's and the solver's time.
+- Headless, the plan and the solver cost about 0.3 ms per hand per frame.
+
+### Decisions that still bind
+
+- The plan is a pure function of time, so a seek gives the same pose as playing.
+- The caller drives the clock, and in a lesson that is the audio clock of the phrase's playback.
+- A hand's anchor is the key under its thumb, and it moves only when a finger cannot reach its key.
+- Fingertips land on the arc of `INSET`, and a black key is played `BLACK_INSET` in from its front.
+- A crossing is read from the fingering and spans at most two white keys, and a wider step is a leap.
+- Only the thumb and the little finger stretch, each one white key past its home.
+- A chord never moves the anchor twice.
+- Touch is read from the phrase: staccato, legato and a phrase end at a silence of `PHRASE_GAP`.
+- A louder note starts its down-stroke higher, and the default velocity strikes from `HOVER`.
+- Two hands keep one white key free between their thumbs' home keys, and crossed hands put the right above.
+- The plan and the solver together cost at most one millisecond per hand per frame on a desktop.
