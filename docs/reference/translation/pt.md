@@ -36,6 +36,9 @@ of these rules is the `pt` entry of `src/i18n/typography.ts`.
 - **A pronoun the verb already shows is dropped:** *Quer continuar?*, not *Você quer continuar?* MS
   § 4.1.11 shows this.
 - **The possessive is *seu* and *sua*:** *sua mão direita*. *Teu* and *tua* belong to *tu*.
+- ***Seu* and *sua* mean the learner's, unless the owner is the subject of the same sentence.**
+  *Beethoven escreveu … a sua Nona Sinfonia* is clear. Elsewhere, write *dele*, the article alone or the
+  name: *a morte dele*, *a versão para orquestra*, *a mão esquerda desce do acorde*.
 - **The object pronoun is *você* or a rewrite,** never *te*, which belongs to *tu*. *Vamos ajudar você*
   reads in Brazil and in Portugal, where *te ajudamos* mixes two forms.
 - **An instruction in running text is an imperative of *você*:** *Toque*, *Coloque*, *Escolha*, *Ouça*.
