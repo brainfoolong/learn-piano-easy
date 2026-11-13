@@ -174,6 +174,23 @@ every component in every state.
   `/* ltr: <reason> */`, and `tools/css-sides.test.ts` allows no other. The helpers of the reading way
   are at the end of `src/ui/base.css`.
 
+## Direction
+
+A right-to-left page mirrors its layout, and the music keeps its own direction.
+
+- **The layout mirrors.** The site bar, the menus, the dialogs, the settings and the library start on
+  the right. So do the course map's road, a lesson's steps and every progress bar.
+- **The music never mirrors.** The piano view, the staff, the sheet, the timeline and the play modes'
+  preview carry `dir="ltr"` on their root. A piano's low keys are on the left in every country.
+- **An arrow or a chevron that means next, back, open or close mirrors.** `icon` of
+  `src/ui/icons/icons.ts` gives it `icon--directional`, which `src/ui/base.css` flips by `scale`. A
+  media icon, such as play, never mirrors. Nor does a chevron that moves the piano's view.
+- **A move along the piano stays physical,** as the player's view buttons and the timeline's arrow keys do.
+- **A field a learner types free text into carries `dir="auto"`.** A field for a note name or a colour
+  code carries `dir="ltr"`.
+- **An argument that may hold left-to-right text is isolated** by `isolate` of `src/i18n/format.ts`.
+- **`e2e/rtl.e2e.ts` checks the split** in `ar-XB`.
+
 ## The checks
 
 A flaw a person can see must fail a test. `e2e/layout-check.ts` runs these checks on a page, at the

@@ -16,6 +16,7 @@
  */
 import "./hero.css";
 import { messagesOf, type Locale } from "../i18n/locale";
+import { RTL_CLOSE, RTL_OPEN } from "../i18n/pseudo";
 import type { SettingsStore } from "../settings/store";
 import { hrefOf } from "../site/site-bar";
 import { buttonLink } from "../ui/components/button";
@@ -28,13 +29,26 @@ import { HERO_RANGE, HERO_SONG } from "./songs";
 /**
  * The site's `name` as the hero's heading, with its last word marked for the honey stroke. A name is
  * never translated, so the heading says so to a browser's translator.
+ *
+ * The marked word is an inline block, which no override crosses. So an `ar-XB` name has its marks
+ * repeated around each part, and its span reads right to left. Any other name sits in a span with
+ * `dir="auto"`, so a Latin name keeps its word order on a right-to-left page.
  */
 function title(name: string): HTMLElement {
-  const cut = name.lastIndexOf(" ");
+  const open = name.startsWith(RTL_OPEN) && name.endsWith(RTL_CLOSE) ? RTL_OPEN : "";
+  const close = open === "" ? "" : RTL_CLOSE;
+  const core = name.slice(open.length, name.length - close.length);
+  const cut = core.lastIndexOf(" ");
+  const marked = (part: string) => `${open}${part}${close}`;
   return el("h1", {
     class: "landing-hero__title",
     attrs: { translate: "no" },
-    children: [name.slice(0, cut + 1), el("span", { class: "landing-hero__stroke", text: name.slice(cut + 1) })],
+    children: [
+      el("span", {
+        attrs: { dir: open === "" ? "auto" : "rtl" },
+        children: [...(cut < 0 ? [] : [marked(core.slice(0, cut)), " "]), el("span", { class: "landing-hero__stroke", text: marked(core.slice(cut + 1)) })],
+      }),
+    ],
   });
 }
 

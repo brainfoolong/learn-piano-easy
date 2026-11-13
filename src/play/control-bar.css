@@ -337,6 +337,11 @@
     display: none;
   }
 
+  /* The view's move is physical, so on a right-to-left row the right move still sits right of the left. */
+  .control-shift + .control-shift:dir(rtl) {
+    order: -1;
+  }
+
   /*
    * Below the desktop width, or on a short window, the row keeps play, stop and the speed. The other
    * clusters fold into a sheet, which opens as a block of its own above them.

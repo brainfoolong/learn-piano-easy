@@ -235,7 +235,8 @@ function stage(mode: PlayMode, keyNames: readonly string[]): HTMLElement {
   const sparks = look.sparks ? [1, 2, 3].map(() => el("span", { class: "play-mode__spark", children: [icon("sparkles")] })) : [];
   return el("div", {
     class: "play-mode__stage",
-    attrs: { "aria-hidden": "true" },
+    // The preview is a piano and its lanes, so it never mirrors.
+    attrs: { "aria-hidden": "true", dir: "ltr" },
     children: [lanes, ...sparks, el("div", { class: "play-mode__keys", children: keys }), el("span", { class: "play-mode__badge", children: [icon(mode.icon)] })],
   });
 }

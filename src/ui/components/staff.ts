@@ -55,7 +55,8 @@ export function staff(options: StaffOptions): HTMLElement {
   const { sheet, key } = options;
   const first = options.bars?.first ?? 0;
   const count = Math.min(options.bars?.count ?? sheet.measures.length, sheet.measures.length - first);
-  const node = el("div", { class: "staff", attrs: { role: "img", "aria-label": options.label } });
+  // A staff runs left to right on every page, so it never mirrors.
+  const node = el("div", { class: "staff", attrs: { role: "img", dir: "ltr", "aria-label": options.label } });
 
   const engrave = (index: number, lineStart: boolean, width: number | null): EngravedMeasure => {
     const measure = sheet.measures[index]!;

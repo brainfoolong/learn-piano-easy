@@ -186,7 +186,8 @@ export class SheetView {
     this.#transport = transport;
     this.#tracks = tracks;
     this.#held = held;
-    this.#page = el("div", { class: "sheet-page" });
+    // Printed music runs left to right on every page, so the page of measures never mirrors.
+    this.#page = el("div", { class: "sheet-page", attrs: { dir: "ltr" } });
     this.#braces = el("div", { class: "sheet-braces" });
     this.#hint = localize(el("p", { class: "sheet-hint" }), (m) => m.player.shell.sheet.empty);
     this.#page.append(this.#braces);

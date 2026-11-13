@@ -365,7 +365,8 @@ export function pianoKeys(): PianoKeys {
   const map = el("div", { class: "piano-keys__map", attrs: { "aria-hidden": "true" } });
   const probe = el("span", { class: "piano-keys__probe", attrs: { "aria-hidden": "true" } });
   const live = el("p", { class: "piano-keys__live", attrs: { "aria-live": "polite" } });
-  const element = el("div", { class: "piano-keys", attrs: { role: "group", "data-interactive": "false" }, children: [map, probe, live] });
+  // A piano's low keys are on the left in every country, so the view never mirrors.
+  const element = el("div", { class: "piano-keys", attrs: { role: "group", dir: "ltr", "data-interactive": "false" }, children: [map, probe, live] });
 
   let renderer: WebGLRenderer | undefined;
   try {

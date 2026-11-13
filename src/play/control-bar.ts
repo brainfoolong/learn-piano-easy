@@ -397,9 +397,13 @@ function expert<E extends Element>(node: E): E {
   return node;
 }
 
-/** Marks `node` as a button of the view's sideways move, which hides under the flat camera. */
+/**
+ * Marks `node` as a button of the view's sideways move, which hides under the flat camera. The move is
+ * the piano's, so its chevron keeps pointing the physical way on a right-to-left page.
+ */
 function shifter<E extends Element>(node: E): E {
   node.classList.add("control-shift");
+  node.querySelector(".icon")?.classList.remove("icon--directional");
   return node;
 }
 

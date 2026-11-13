@@ -48,6 +48,14 @@ export function collator(locale: Locale): Intl.Collator {
   return new Intl.Collator(rowOf(locale).intl, { numeric: true });
 }
 
+/**
+ * `text` between U+2068 and U+2069, a first-strong isolate. A message of a right-to-left locale wraps
+ * each argument that may hold left-to-right text, such as a song title or a note name, so its order holds.
+ */
+export function isolate(text: string): string {
+  return `⁨${text}⁩`;
+}
+
 /** `date` in the locale's order and month names. */
 export function formatDate(locale: Locale, date: Date, options: Intl.DateTimeFormatOptions = { dateStyle: "long" }): string {
   return new Intl.DateTimeFormat(rowOf(locale).intl, options).format(date);

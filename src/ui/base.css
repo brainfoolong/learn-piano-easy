@@ -202,6 +202,14 @@
     --safe-end: env(safe-area-inset-left); /* ltr: the screen's insets are physical */
   }
 
+  /*
+   * An icon that points the reading way, such as a "next" arrow, mirrors on a right-to-left line. It
+   * uses `scale`, which composes with the `transform` a hover sets on it.
+   */
+  .icon--directional:dir(rtl) {
+    scale: -1 1;
+  }
+
   /* With reduced motion, no animation loops and no scroll glides. */
   @media (prefers-reduced-motion: reduce) {
     *,

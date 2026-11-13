@@ -123,7 +123,7 @@ export function colorPicker(name: string, value: string, onChange: (value: strin
   const alpha = slider("Opacity", "alpha-strip", [alphaFill, alphaThumb]);
   const field = el("input", {
     class: "hex",
-    attrs: { type: "text", "aria-label": `${name}, hex`, maxlength: "9", spellcheck: "false", "data-control": "text" },
+    attrs: { type: "text", dir: "ltr", "aria-label": `${name}, hex`, maxlength: "9", spellcheck: "false", "data-control": "text" },
     on: {
       change: () => {
         const parsed = parseHex(field.value);

@@ -142,7 +142,7 @@ export function chipsControl<V extends string>(
 /** A one-line text field of at most `maxLength` characters. It reports when the text is committed. */
 export function textControl(name: string, value: string, maxLength: number, onChange: (value: string) => void): Control<string> {
   const input = el("input", {
-    attrs: { type: "text", "aria-label": name, maxlength: String(maxLength), "data-control": "text" },
+    attrs: { type: "text", dir: "auto", "aria-label": name, maxlength: String(maxLength), "data-control": "text" },
     props: { value },
     on: { change: () => onChange(input.value) },
   });

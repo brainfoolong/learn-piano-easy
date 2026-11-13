@@ -17,7 +17,8 @@
  *   and its stroke keeps its width by `non-scaling-stroke`. It is drawn as a road: an edge, a bed and a
  *   dashed middle line. The part up to the last node reached repeats the three in the world's accent.
  * - **A node's place is fixed by its index in the course:** its row in the band, and a sideways swing
- *   that continues from world to world. No layout is measured, so the map draws in one pass.
+ *   that continues from world to world. No layout is measured, so the map draws in one pass. The swing
+ *   mirrors on a right-to-left page, in the script, since the road and the stops read the same x.
  *
  * On a show before the first-visit setup of `src/learn/onboarding.ts` has run, the map opens it over
  * itself, and reads the standing again once it ends. Hiding the map closes a setup still open.
@@ -40,7 +41,7 @@
  *   anew, so they rise on every show.
  */
 import "./map-view.css";
-import { messagesOf, type Locale } from "../i18n/locale";
+import { messagesOf, rowOf, type Locale } from "../i18n/locale";
 import { textFor } from "../i18n/pseudo";
 import { lessonRoute, pageOf } from "../site/routes";
 import type { View, ViewContext } from "../site/views";
@@ -66,9 +67,13 @@ const SWING_PERIOD = 6;
 /** The height of one row of the path, in the units of the path's SVG, which match pixels. */
 const ROW = 160;
 
-/** Where the node at `index` of the whole course sits across the band, from 0 to 1. */
-function swingAt(index: number): number {
-  return 0.5 + SWING * Math.sin((index * 2 * Math.PI) / SWING_PERIOD);
+/**
+ * Where the node at `index` of the whole course sits across the band, from 0 at its left to 1 at its
+ * right. The first swing goes towards the line's end, so a right-to-left page mirrors the road.
+ */
+function swingAt(index: number, dir: "ltr" | "rtl"): number {
+  const swing = SWING * Math.sin((index * 2 * Math.PI) / SWING_PERIOD);
+  return 0.5 + (dir === "rtl" ? -swing : swing);
 }
 
 /** The href of lesson `lesson` of world `world` in `locale`, relative to the site's root. */
@@ -143,7 +148,7 @@ function worldOf(loaded: LoadedWorld, state: MapWorld, number: number, first: nu
   const { world, lessons } = loaded;
   const title = textFor(world.title, locale);
   const titles = new Map([...lessons.lessons, ...(lessons.boss === undefined ? [] : [lessons.boss])].map((lesson) => [lesson.id, textsOf(lesson, locale).title]));
-  const xs = state.nodes.map((_, i) => swingAt(first + i));
+  const xs = state.nodes.map((_, i) => swingAt(first + i, rowOf(locale).dir));
   const reached = state.nodes.reduce((last, node, i) => (node.state === "locked" ? last : i), 0);
   // The world's badge needs its boss, so a world without one never shows it earned.
   const earned = state.beaten && lessons.boss !== undefined;

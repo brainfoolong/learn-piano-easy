@@ -306,7 +306,7 @@ export function createLibraryPanel(
   // The head: the search, the open song, the quick filters, the count and the sort.
   const search = el("input", {
     class: "song-explorer__field",
-    attrs: { type: "search", "data-control": "text", enterkeyhint: "search", autocomplete: "off", spellcheck: "false" },
+    attrs: { type: "search", dir: "auto", "data-control": "text", enterkeyhint: "search", autocomplete: "off", spellcheck: "false" },
     props: { value: view.query },
     on: {
       input: () => {

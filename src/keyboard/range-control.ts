@@ -55,7 +55,7 @@ export function noteField(name: string, value: number, onChange: (value: number)
   let shown = value;
   const input = el("input", {
     class: "note-field",
-    attrs: { type: "text", "aria-label": name, maxlength: "5", spellcheck: "false", autocomplete: "off", "data-control": "text" },
+    attrs: { type: "text", dir: "ltr", "aria-label": name, maxlength: "5", spellcheck: "false", autocomplete: "off", "data-control": "text" },
     props: { value: noteName(value) },
     on: {
       change: () => {

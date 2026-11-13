@@ -5,6 +5,8 @@
  * data, never markup, so `icon` builds them with `createElementNS` and no string reaches `innerHTML`.
  * The stroke is 1.75 pixels in `currentColor`, so an icon takes the colour of its text.
  *
+ * An icon that points the reading way mirrors on a right-to-left page, and every other icon never does.
+ *
  * Only the icons a page uses are here, which keeps the bundle small. A new icon is copied from the
  * same Lucide version that `LICENSE.md` beside this file names.
  */
@@ -224,6 +226,9 @@ export const ICONS = {
 /** The name of an icon of the subset. */
 export type IconName = keyof typeof ICONS;
 
+/** The icons that point the reading way, such as "next" or "back", and so mirror on a right-to-left line. */
+const DIRECTIONAL: ReadonlySet<IconName> = new Set(["arrow-right", "chevron-left", "chevron-right"]);
+
 const SVG = "http://www.w3.org/2000/svg";
 
 /**
@@ -231,12 +236,15 @@ const SVG = "http://www.w3.org/2000/svg";
  *
  * With a `label` it is an image with that accessible name. Without one it is hidden from screen
  * readers, because the text beside it already says what it means.
+ *
+ * An arrow or a chevron carries `icon--directional`, which `src/ui/base.css` mirrors on a right-to-left
+ * line. `directional: false` keeps one physical, as a button that moves the piano's view left does.
  */
-export function icon(name: IconName, options: { size?: number; label?: string } = {}): SVGSVGElement {
+export function icon(name: IconName, options: { size?: number; label?: string; directional?: boolean } = {}): SVGSVGElement {
   const size = String(options.size ?? 24);
   const svg = document.createElementNS(SVG, "svg");
   const attrs: Record<string, string> = {
-    class: "icon",
+    class: (options.directional ?? DIRECTIONAL.has(name)) ? "icon icon--directional" : "icon",
     width: size,
     height: size,
     viewBox: "0 0 24 24",

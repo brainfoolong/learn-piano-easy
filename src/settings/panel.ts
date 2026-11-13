@@ -396,7 +396,7 @@ export function createSettingsPanel(store: SettingsStore, options: PanelOptions)
 
   // The search field, with its icon and a button that clears it.
   const search = el("input", {
-    attrs: { type: "search", "data-control": "text", autocomplete: "off", spellcheck: "false" },
+    attrs: { type: "search", dir: "auto", "data-control": "text", autocomplete: "off", spellcheck: "false" },
     on: {
       input: () => filter(),
       keydown: (event) => {

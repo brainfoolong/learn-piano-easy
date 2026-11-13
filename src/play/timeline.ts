@@ -15,6 +15,8 @@
  * - The measure lines, the markers and the loop's band are rebuilt only when `refresh` runs. The bar
  *   calls it when the song or the loop changes, and the timeline when its own settings change.
  * - With `playNotesOnScrollEnabled`, a drag scrubs, so the notes it crosses sound. A click only seeks.
+ * - The song runs from left to right on every page, so the timeline carries `dir="ltr"` and never
+ *   mirrors. Its keys keep their physical way too, so the right arrow seeks forward.
  */
 import type { Song } from "../midi/song";
 import type { TempoMap } from "../midi/tempo-map";
@@ -72,7 +74,7 @@ export function createTimeline(transport: Transport, settings: SettingsStore): T
     children: [fill, marks],
   });
   localize(track, (m) => m.player.bar.timeline.position, "aria-label");
-  const element = el("div", { class: "timeline", children: [now, track, total] });
+  const element = el("div", { class: "timeline", attrs: { dir: "ltr" }, children: [now, track, total] });
 
   const duration = () => transport.song?.duration ?? 0;
   const label = (seconds: number) => {
