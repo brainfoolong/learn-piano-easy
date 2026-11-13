@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: "Five film pieces: Also sprach Zarathustra to Clair de lune"
-    status: open
+    status: done
   - id: 3
     title: "Five film pieces: Moonlight Sonata to Eine kleine Nachtmusik"
     status: open
@@ -66,7 +66,8 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
   text names:
   1. *Also sprach Zarathustra*, its opening: Richard Strauss, 1896. *2001: A Space Odyssey*.
   2. *The Blue Danube*: Johann Strauss II, 1867. *2001: A Space Odyssey*.
-  3. *Ride of the Valkyries*: Richard Wagner, 1870. *Apocalypse Now*.
+  3. *Habanera*, from *Carmen*: Georges Bizet, 1875. *The Bad News Bears*. It is the first reserve,
+     since no source a session may read prints *Ride of the Valkyries*.
   4. *Dies irae*: the medieval chant. *The Shining*.
   5. *Clair de lune*: Claude Debussy, 1905. *Ocean's Eleven*.
   6. *Moonlight Sonata*, its first movement: Ludwig van Beethoven, 1802. *Immortal Beloved*.
@@ -99,6 +100,21 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
 - **A song whose source cannot be confirmed is swapped for a reserve,** in this order. The first is
   *Habanera* from *Carmen*, by Georges Bizet, 1875. The second is *Liebestraum No. 3*, by Franz Liszt,
   1850. The third is the *Funeral March* from Chopin's Sonata No. 2, 1840. The swap is recorded here.
+- ***Habanera* took the place of *Ride of the Valkyries*.** Wikipedia's articles print no score of the
+  Ride, Mutopia holds no Wagner, and Commons holds only paintings and recordings of it. Wikipedia's
+  *Habanera* article prints Carmen's first phrase, and that phrase is the tune.
+- **The sources of stage 2.** Mutopia's piano reduction gives *The Blue Danube*, transposed to C, so
+  the tune moves back to D. Mutopia's Fromont edition gives *Clair de lune*. Wikipedia's `<score>`
+  blocks give *Dies irae*, *Habanera* and the dawn motif of *Also sprach Zarathustra*.
+- **A tune whose leaps break Beginner's or Easy's position limit is cut to its hook phrase.** The meter
+  finds those versions' tune in the right hand alone, and allows two moves in eight bars. *The Blue
+  Danube* drops more than an octave every four bars, so its tune is bars 1 to 5. After the hook, Beginner
+  and Easy give the low upbeats to the left hand, as a pianist plays the waltz.
+- ***Also sprach Zarathustra*'s tune is the one statement Wikipedia prints and describes.** The motif
+  spans more than one hand position, so two statements cost Easy three moves. Every version restates
+  the motif with the third's change reversed, as its own material.
+- **A tune that the notation cannot tie is rebarred.** *Clair de lune* ties a note over almost every
+  bar line, so its bar lines sit one eighth later than the print's, as *Es ist ein Ros entsprungen* does.
 - ***Dance of the Sugar Plum Fairy* is not on the list.** The Christmas goal found no source a session
   may read that prints it, as `docs/findings.md` § `christmas-songs` records.
 - **A tune follows its public domain source, never a film's protected arrangement.** *The Shining* plays
@@ -183,12 +199,12 @@ in the first.
 
 **Split:** five writing subagents, one module each.
 
-- [ ] *Also sprach Zarathustra*. `tools/our-songs/also-sprach-zarathustra.ts:1`
-- [ ] *The Blue Danube*. `tools/our-songs/the-blue-danube.ts:1`
-- [ ] *Ride of the Valkyries*. `tools/our-songs/ride-of-the-valkyries.ts:1`
-- [ ] *Dies irae*. `tools/our-songs/dies-irae.ts:1`
-- [ ] *Clair de lune*, with its Original. `tools/our-songs/clair-de-lune.ts:1`
-- [ ] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [x] *Also sprach Zarathustra*. `tools/our-songs/also-sprach-zarathustra.ts:1`
+- [x] *The Blue Danube*. `tools/our-songs/the-blue-danube.ts:1`
+- [x] *Habanera*, the first reserve. `tools/our-songs/habanera.ts:1`
+- [x] *Dies irae*. `tools/our-songs/dies-irae.ts:1`
+- [x] *Clair de lune*, with its Original. `tools/our-songs/clair-de-lune.ts:1`
+- [x] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
 
 ### 3. Five film pieces: Moonlight Sonata to Eine kleine Nachtmusik
 
@@ -292,23 +308,29 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stage 1 is done. The library groups "At the movies" after Christmas, and "Sea shanties" shows once a
-shanty ships. The four film songs we had are in it, each naming its film. `OurSource.own` lets a tune
-of our own pass `isPublicDomain`. `FILM` and `SEA` in `tools/our-songs.test.ts` already list every slug
-of the goal. The three unit tests and the e2e test passed once by name.
+Stages 1 and 2 are done. *Also sprach Zarathustra*, *The Blue Danube*, *Habanera*, *Dies irae* and
+*Clair de lune* ship in four versions, and the catalog holds 573 rows. *Habanera* replaced *Ride of the
+Valkyries*, whose score no allowed source prints. Each tune was compared note for note with its
+source, as the standing decisions list. Two tunes were cut short so Beginner and Easy fit the meter's
+limit of two hand moves in eight bars. `tsc` and the build are green. The catalog count test and
+`every_film_song_is_in_the_collection` and `every_guide_is_complete` passed once by name.
 
 ### Next
 
-**Stage 2: five film pieces, *Also sprach Zarathustra* to *Clair de lune*.** Follow the stage's
-`**Split:**` line and the playbook's song-module traps: write in a worktree under `.agent-tmp/`, check
-each tune against a printed score, and run `bun x tsc` once the batch lands.
+**Stage 3: five film pieces, *Moonlight Sonata* to *Eine kleine Nachtmusik*.** Follow the stage's
+`**Split:**` line, and work in a worktree under `.agent-tmp/`.
 
-- [ ] Read a score for each of the five, and confirm its years. `tools/our-songs/fur-elise.ts:1`
-- [ ] Five writing subagents, one module each. `tools/our-songs/also-sprach-zarathustra.ts:1`
-- [ ] Add the five to `ourSongs`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:97`
+- [ ] Read each score on Mutopia or Wikipedia, and confirm its years. `tools/our-songs/clair-de-lune.ts:1`
+- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/the-blue-danube.ts:1`
+- [ ] Five writing subagents, one module each. `tools/our-songs/fur-elise.ts:1`
+- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:216`
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` once stage 2 adds rows. The e2e
-test `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once the film group
+Mutopia's search is `cgibin/make-table.cgi?searchingfor=<word>`. Each brief gives the tune as notation
+text with its hook bars, and names the limit of two hand moves in eight bars. The *Moonlight Sonata*
+names `piano-midi/mond_1.mid` as its Original.
+
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 573 to 593. The e2e test
+`the_library_lists_the_film_songs` reads card titles, so it may need a scroll once the film group
 outgrows one view.
 
 ### Backlog

@@ -1,0 +1,494 @@
+{
+  "song": "habanera",
+  "title": "Habanera",
+  "composer": "Georges Bizet",
+  "about": {
+    "en": "Carmen sings this aria when she first appears in Georges Bizet's opera Carmen, first staged in Paris in 1875. Bizet took its tune from a song by Sebastián Iradier, believing it was a folk song. The film The Bad News Bears (1976) plays Carmen's music throughout.",
+    "de": "Carmen singt diese Arie bei ihrem ersten Auftritt in Georges Bizets Oper Carmen, die 1875 in Paris uraufgeführt wurde. Bizet nahm die Melodie aus einem Lied von Sebastián Iradier, weil er es für ein Volkslied hielt. Der Film The Bad News Bears (1976) spielt durchgehend Carmens Musik."
+  },
+  "funFact": {
+    "en": "A habanera is a dance from Cuba, and it is named after Havana, the capital.",
+    "de": "Die Habanera ist ein Tanz aus Kuba, und sie ist nach der Hauptstadt Havanna benannt."
+  },
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/habanera/common.mid",
+      "skills": [
+        "position-change",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 3, 3, 2, 1, 5, 4, 3, 2, 3, 2, 1, 5, 4, 3, 3, 3, 2, 1, 5, 4, 3, 2, 3, 2, 1, 5, 3, 2, 3, 1, 2],
+        "left": [5, 1, 1, 5, 1, 5, 5, 1, 5, 5, 1, 5, 1, 1, 5, 1, 5, 1, 1, 5, 1, 5, 5, 1, 5, 5, 1, 5, 1, 1, 5, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [70, 71, 72, 73, 74],
+        "left": [57, null, null, null, 50]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play bars 1 to 5 with the right hand alone, and let the song wait for each note.",
+            "de": "Spiel die Takte 1 bis 5 nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 5],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand alone from bar 5 to bar 9, low in the new position.",
+            "de": "Spiel die rechte Hand allein von Takt 5 bis Takt 9, tief in der neuen Lage."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [5, 9],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Now the left hand alone. It holds one shape per bar and never moves.",
+            "de": "Jetzt die linke Hand allein. Sie hält eine Griffform pro Takt und bewegt sich nie."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Put both hands together on the first ten bars.",
+            "de": "Spiel die ersten zehn Takte mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 10],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 4,
+          "kind": "fingering",
+          "text": {
+            "en": "Each finger plays one key, from 5 down to the thumb. The tune slides down step by step.",
+            "de": "Jeder Finger spielt eine Taste, von 5 hinab bis zum Daumen. Die Melodie gleitet Schritt für Schritt hinab."
+          }
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "trick",
+          "text": {
+            "en": "Lift the hand for a moment after B flat, and land with finger 5 on A.",
+            "de": "Heb die Hand nach dem B kurz an, und lande mit Finger 5 auf dem A."
+          }
+        },
+        {
+          "fromBar": 2,
+          "toBar": 6,
+          "kind": "sound",
+          "text": {
+            "en": "Play the slide down slowly and smoothly, like a cat stretching.",
+            "de": "Spiel das Hinabgleiten langsam und weich, wie eine Katze, die sich streckt."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 5,
+          "text": {
+            "en": "The hand moves down here. Lift it after B flat, then land finger 5 on A.",
+            "de": "Hier geht die Hand hinab. Heb sie nach dem B an, dann lande mit Finger 5 auf dem A."
+          }
+        },
+        {
+          "bar": 15,
+          "text": {
+            "en": "The same move as bar 5: lift after B flat, then land finger 5 on A.",
+            "de": "Derselbe Wechsel wie in Takt 5: Heb nach dem B an, dann lande mit Finger 5 auf dem A."
+          }
+        },
+        {
+          "bar": 20,
+          "text": {
+            "en": "After the rest, finger 5 plays A and finger 3 plays G. Finger 4 waits.",
+            "de": "Nach der Pause spielt Finger 5 das A und Finger 3 das G. Finger 4 wartet."
+          }
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/habanera/rare.mid",
+      "skills": [
+        "eighth-notes",
+        "dotted-rhythm"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 3, 3, 2, 1, 5, 5, 5, 4, 3, 2, 3, 2, 1, 2, 3, 2, 1, 5, 4, 3, 3, 3, 2, 1, 5, 5, 5, 4, 3, 2, 3, 2, 1, 2, 3, 2, 1, 5, 3, 2, 3, 1, 2, 5],
+        "left": [5, 3, 1, 5, 1, 4, 1, 5, 3, 1, 3, 1, 5, 2, 2, 5, 3, 1, 3, 1, 5, 4, 4, 5, 1, 1, 5, 1, 1, 4, 1, 5, 3, 1, 5, 3, 1, 5, 1, 4, 1, 5, 3, 1, 3, 1, 5, 2, 2, 5, 3, 1, 3, 1, 5, 4, 4, 5, 1, 1, 5, 1, 1, 4, 1, 5, 3, 1, 3, 1, 5, 1, 4, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [70, 71, 72, 73, 74],
+        "left": [57, 55, 53, 52, 50]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the right hand alone on bars 2 to 6, slowly, and count three beats in each bar.",
+            "de": "Spiel die Takte 2 bis 6 langsam nur mit der rechten Hand, und zähl drei Schläge in jedem Takt."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [2, 6],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand alone on bars 7 to 9, where the little turn comes.",
+            "de": "Spiel die Takte 7 bis 9 nur mit der rechten Hand. Dort kommt der kleine Doppelschlag."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [7, 9],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone. It keeps its five fingers on D, E, F, G and A.",
+            "de": "Spiel die linke Hand allein. Ihre fünf Finger bleiben auf D, E, F, G und A."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands, a little slower than written.",
+            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert."
+          },
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed.",
+            "de": "Jetzt spiel es im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 5,
+          "toBar": 5,
+          "kind": "rhythm",
+          "text": {
+            "en": "A long A, then two short ones. Think \"taa, ti-ti\".",
+            "de": "Ein langes A, dann zwei kurze. Denk \"taa, ti-ti\"."
+          }
+        },
+        {
+          "fromBar": 7,
+          "toBar": 7,
+          "kind": "fingering",
+          "text": {
+            "en": "The turn F, G, F uses fingers 2, 3 and 2. Keep them close to the keys.",
+            "de": "Der Doppelschlag F, G, F nimmt die Finger 2, 3 und 2. Halt sie nah an den Tasten."
+          }
+        },
+        {
+          "fromBar": 4,
+          "toBar": 5,
+          "kind": "trick",
+          "text": {
+            "en": "Lift the hand after B flat, and land with finger 5 on A.",
+            "de": "Heb die Hand nach dem B an, und lande mit Finger 5 auf dem A."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 5,
+          "text": {
+            "en": "Finger 5 lands on A after the move, then plays it twice more, short and quick.",
+            "de": "Finger 5 landet nach dem Wechsel auf dem A und spielt es dann noch zweimal, kurz und schnell."
+          }
+        },
+        {
+          "bar": 15,
+          "text": {
+            "en": "The same as bar 5: land finger 5 on A, then play the two short As.",
+            "de": "Wie in Takt 5: Lande mit Finger 5 auf dem A, dann spiel die zwei kurzen A."
+          }
+        },
+        {
+          "bar": 20,
+          "text": {
+            "en": "After the rest, finger 5 plays A and finger 3 plays G. Finger 4 waits.",
+            "de": "Nach der Pause spielt Finger 5 das A und Finger 3 das G. Finger 4 wartet."
+          }
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/habanera/epic.mid",
+      "skills": [
+        "thirds-and-sixths",
+        "dotted-rhythm",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 3, 3, 2, 1, 5, 5, 5, 4, 3, 2, 3, 2, 1, 2, 3, 2, 1, 2, 4, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 2, 4, 1, 3, 1, 2, 1, 3, 2, 4, 1, 3, 1, 3, 2, 4, 1, 3, 1, 3, 2, 4, 1, 2, 1, 3, 5],
+        "left": [5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 3, 5, 2, 1, 3, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 3, 5, 2, 1, 3, 5, 2, 5, 2, 1]
+      },
+      "start": {
+        "right": [70, 71, 72, 73, 74],
+        "left": [50, 45, null, null, 38]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the habanera rhythm alone in the left hand: long, short, then two even notes.",
+            "de": "Spiel den Habanera-Rhythmus allein in der linken Hand: lang, kurz, dann zwei gleiche Töne."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand's thirds alone, and press both notes of each pair as one.",
+            "de": "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs wie einen an."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [12, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on bars 1 to 6, slowly.",
+            "de": "Spiel die Takte 1 bis 6 langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 6],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed.",
+            "de": "Jetzt spiel es im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "rhythm",
+          "text": {
+            "en": "The left hand's short note leads into the next bar. Let it bounce.",
+            "de": "Der kurze Ton der linken Hand führt in den nächsten Takt. Lass ihn federn."
+          }
+        },
+        {
+          "fromBar": 12,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": {
+            "en": "The tune is the top note of each third, so let the upper finger lead.",
+            "de": "Die Melodie ist der obere Ton jeder Terz, also lass den oberen Finger führen."
+          }
+        },
+        {
+          "fromBar": 1,
+          "toBar": 10,
+          "kind": "sound",
+          "text": {
+            "en": "Keep the bass soft and light, like a dancer's steps under the voice.",
+            "de": "Halt den Bass leise und leicht, wie die Schritte einer Tänzerin unter der Stimme."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 20,
+          "text": {
+            "en": "After the rest, fingers 2 and 4 take F and A. Then the thirds walk down.",
+            "de": "Nach der Pause nehmen Finger 2 und 4 das F und das A. Dann gehen die Terzen hinab."
+          }
+        },
+        {
+          "bar": 5,
+          "text": {
+            "en": "The right hand moves down to A while the left hand starts its long D. Practise them together slowly.",
+            "de": "Die rechte Hand geht hinab zum A, während die linke Hand ihr langes D beginnt. Üb beides langsam zusammen."
+          }
+        },
+        {
+          "bar": 17,
+          "text": {
+            "en": "The thirds turn quickly here. Change between fingers 1 and 3 and fingers 2 and 4.",
+            "de": "Hier drehen sich die Terzen schnell. Wechsle zwischen Finger 1 und 3 und Finger 2 und 4."
+          }
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/habanera/legendary.mid",
+      "skills": [
+        "octave-bass",
+        "dotted-rhythm",
+        "melody-in-chords"
+      ],
+      "fingers": {
+        "right": [5, 4, 3, 3, 3, 2, 1, 5, 5, 5, 4, 3, 2, 3, 2, 1, 2, 3, 2, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 5, 2, 1, 5, 2, 1, 5, 1, 5, 5, 2, 1, 5, 2, 1, 5, 1, 5, 5, 2, 1, 5, 2, 1, 5, 1, 5, 5, 3, 1, 5, 3, 1, 5, 1, 5, 5, 3, 1, 5, 3, 1, 5, 1, 5, 5, 2, 1, 5, 2, 1, 5, 1, 5, 5, 2, 1, 5, 2, 1, 5, 1, 5, 5, 2, 1, 5, 2, 1, 5, 1, 5, 5, 3, 1, 5, 3, 1, 5, 1, 5, 5, 3, 1, 5, 3, 1, 5, 1, 5, 5, 2, 1]
+      },
+      "start": {
+        "right": [70, 71, 72, 73, 74],
+        "left": [50, null, null, null, 38]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the left hand alone: the low octave, the short A, then two chords.",
+            "de": "Spiel die linke Hand allein: die tiefe Oktave, das kurze A, dann zwei Akkorde."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand's octaves alone. Keep the hand open and move it as one piece.",
+            "de": "Spiel die Oktaven der rechten Hand allein. Halt die Hand offen, und beweg sie als ein Stück."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [12, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on the second time through, where the tune climbs an octave.",
+            "de": "Spiel den zweiten Durchgang mit beiden Händen zusammen. Dort steigt die Melodie eine Oktave höher."
+          },
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [11, 19],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, and let the last chord ring.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "trick",
+          "text": {
+            "en": "Look at the low octave, and let the hand find the chords by feel.",
+            "de": "Schau auf die tiefe Oktave, und lass die Hand die Akkorde nach Gefühl finden."
+          }
+        },
+        {
+          "fromBar": 12,
+          "toBar": 16,
+          "kind": "fingering",
+          "text": {
+            "en": "Thumb and little finger take every octave. Slide them down together, a key at a time.",
+            "de": "Daumen und kleiner Finger nehmen jede Oktave. Schieb sie zusammen hinab, Taste für Taste."
+          }
+        },
+        {
+          "fromBar": 12,
+          "toBar": 19,
+          "kind": "sound",
+          "text": {
+            "en": "Play the top note of each octave a little louder, so the tune sings.",
+            "de": "Spiel den oberen Ton jeder Oktave etwas lauter, damit die Melodie singt."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 12,
+          "text": {
+            "en": "The right hand jumps up to the octave on D. Use the rest in bar 11 to get there.",
+            "de": "Die rechte Hand springt hinauf zur Oktave auf D. Nutz die Pause in Takt 11, um dorthin zu kommen."
+          }
+        },
+        {
+          "bar": 17,
+          "text": {
+            "en": "The octaves turn quickly here. Keep the wrist loose, and let the arm guide the hand.",
+            "de": "Hier drehen sich die Oktaven schnell. Halt das Handgelenk locker, und lass den Arm die Hand führen."
+          }
+        },
+        {
+          "bar": 21,
+          "text": {
+            "en": "Thumb and little finger reach the black keys for C sharp. Move the hand a little forward.",
+            "de": "Daumen und kleiner Finger greifen die schwarzen Tasten für Cis. Schieb die Hand etwas nach vorn."
+          }
+        }
+      ]
+    }
+  }
+}

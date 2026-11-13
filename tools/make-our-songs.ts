@@ -72,15 +72,19 @@ import {
 import { fingerKey, parseSong, twoHandMidi, writtenFingers, type HandNote, type TwoHandSong } from "./song-notation";
 import { canonInD } from "./our-songs/canon-in-d";
 import { alleJahreWieder } from "./our-songs/alle-jahre-wieder";
+import { alsoSprachZarathustra } from "./our-songs/also-sprach-zarathustra";
 import { angelsWeHaveHeardOnHigh } from "./our-songs/angels-we-have-heard-on-high";
 import { awayInAManger } from "./our-songs/away-in-a-manger";
 import { carolOfTheBells } from "./our-songs/carol-of-the-bells";
+import { clairDeLune } from "./our-songs/clair-de-lune";
 import { deckTheHalls } from "./our-songs/deck-the-halls";
+import { diesIrae } from "./our-songs/dies-irae";
 import { dingDongMerrilyOnHigh } from "./our-songs/ding-dong-merrily-on-high";
 import { esIstEinRosEntsprungen } from "./our-songs/es-ist-ein-ros-entsprungen";
 import { furElise } from "./our-songs/fur-elise";
 import { godRestYeMerryGentlemen } from "./our-songs/god-rest-ye-merry-gentlemen";
 import { goodKingWenceslas } from "./our-songs/good-king-wenceslas";
+import { habanera } from "./our-songs/habanera";
 import { hallOfTheMountainKing } from "./our-songs/hall-of-the-mountain-king";
 import { happyBirthday } from "./our-songs/happy-birthday";
 import { harkTheHeraldAngelsSing } from "./our-songs/hark-the-herald-angels-sing";
@@ -103,6 +107,7 @@ import { odeToJoy } from "./our-songs/ode-to-joy";
 import { oldMacDonaldHadAFarm } from "./our-songs/old-macdonald-had-a-farm";
 import { rowRowRowYourBoat } from "./our-songs/row-row-row-your-boat";
 import { silentNight } from "./our-songs/silent-night";
+import { theBlueDanube } from "./our-songs/the-blue-danube";
 import { theEntertainer } from "./our-songs/the-entertainer";
 import { theFirstNoel } from "./our-songs/the-first-noel";
 import { suesserDieGlocken } from "./our-songs/suesser-die-glocken";
@@ -251,6 +256,11 @@ export const ourSongs: readonly OurSong[] = [
   suesserDieGlocken,
   esIstEinRosEntsprungen,
   tochterZion,
+  alsoSprachZarathustra,
+  theBlueDanube,
+  habanera,
+  diesIrae,
+  clairDeLune,
 ];
 
 /** The version `rarity` of `song` as a song of the notation. */

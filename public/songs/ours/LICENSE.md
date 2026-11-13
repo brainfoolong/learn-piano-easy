@@ -217,3 +217,28 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `tochter-zion/epic.mid` | Tochter Zion, freue dich, Medium | George Frideric Handel | MIT |
 | `tochter-zion/legendary.mid` | Tochter Zion, freue dich, Hard | George Frideric Handel | MIT |
 | `tochter-zion/guide.json` | Tochter Zion, freue dich, the guide | | MIT |
+| `also-sprach-zarathustra/common.mid` | Also sprach Zarathustra, Beginner | Richard Strauss | MIT |
+| `also-sprach-zarathustra/rare.mid` | Also sprach Zarathustra, Easy | Richard Strauss | MIT |
+| `also-sprach-zarathustra/epic.mid` | Also sprach Zarathustra, Medium | Richard Strauss | MIT |
+| `also-sprach-zarathustra/legendary.mid` | Also sprach Zarathustra, Hard | Richard Strauss | MIT |
+| `also-sprach-zarathustra/guide.json` | Also sprach Zarathustra, the guide | | MIT |
+| `the-blue-danube/common.mid` | The Blue Danube, Beginner | Johann Strauss II | MIT |
+| `the-blue-danube/rare.mid` | The Blue Danube, Easy | Johann Strauss II | MIT |
+| `the-blue-danube/epic.mid` | The Blue Danube, Medium | Johann Strauss II | MIT |
+| `the-blue-danube/legendary.mid` | The Blue Danube, Hard | Johann Strauss II | MIT |
+| `the-blue-danube/guide.json` | The Blue Danube, the guide | | MIT |
+| `habanera/common.mid` | Habanera, Beginner | Georges Bizet | MIT |
+| `habanera/rare.mid` | Habanera, Easy | Georges Bizet | MIT |
+| `habanera/epic.mid` | Habanera, Medium | Georges Bizet | MIT |
+| `habanera/legendary.mid` | Habanera, Hard | Georges Bizet | MIT |
+| `habanera/guide.json` | Habanera, the guide | | MIT |
+| `dies-irae/common.mid` | Dies irae, Beginner | Traditional | MIT |
+| `dies-irae/rare.mid` | Dies irae, Easy | Traditional | MIT |
+| `dies-irae/epic.mid` | Dies irae, Medium | Traditional | MIT |
+| `dies-irae/legendary.mid` | Dies irae, Hard | Traditional | MIT |
+| `dies-irae/guide.json` | Dies irae, the guide | | MIT |
+| `clair-de-lune/common.mid` | Clair de lune, Beginner | Claude Debussy | MIT |
+| `clair-de-lune/rare.mid` | Clair de lune, Easy | Claude Debussy | MIT |
+| `clair-de-lune/epic.mid` | Clair de lune, Medium | Claude Debussy | MIT |
+| `clair-de-lune/legendary.mid` | Clair de lune, Hard | Claude Debussy | MIT |
+| `clair-de-lune/guide.json` | Clair de lune, the guide | | MIT |

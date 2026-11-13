@@ -1,0 +1,494 @@
+{
+  "song": "the-blue-danube",
+  "title": "The Blue Danube",
+  "composer": "Johann Strauss II",
+  "about": {
+    "en": "Johann Strauss II wrote this waltz in 1866 and 1867 for a men's choir in Vienna. Its version for orchestra alone became a hit at the World's Fair in Paris in 1867. In the film *2001: A Space Odyssey* (1968), spaceships dock to its music.",
+    "de": "Johann Strauss II schrieb diesen Walzer 1866 und 1867 für einen Männerchor in Wien. Seine Fassung nur für Orchester wurde 1867 auf der Weltausstellung in Paris ein Erfolg. Im Film *2001: Odyssee im Weltraum* (1968) docken Raumschiffe zu seiner Musik an."
+  },
+  "funFact": {
+    "en": "By tradition, the Vienna Philharmonic plays it near the end of its New Year's Concert every year.",
+    "de": "Die Wiener Philharmoniker spielen ihn nach alter Tradition jedes Jahr gegen Ende ihres Neujahrskonzerts."
+  },
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/the-blue-danube/common.mid",
+      "skills": [
+        "position-change",
+        "open-fifths"
+      ],
+      "fingers": {
+        "right": [1, 1, 2, 3, 1, 5, 5, 3, 3, 1, 5, 5, 4, 4, 1, 5, 5, 3, 3, 1, 5, 5, 2, 2, 1, 5, 5, 2, 2, 1, 5, 5, 4, 4, 1, 2, 2, 1, 5, 5, 3, 1, 1, 4, 3, 1, 5, 5],
+        "left": [3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 5, 2, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 5, 1, 2, 5, 2, 5, 2, 4, 1, 4, 1, 4, 1, 5, 2, 5, 1, 2, 5, 2, 3, 1, 3, 1]
+      },
+      "start": {
+        "right": [60, 64, 67, null, null],
+        "left": [55, 50, 48, null, 43]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the first three bars with the right hand alone, and let the song wait for each note.",
+            "de": "Spiel die ersten drei Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 3],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Practise the octave leaps: thumb on the low note, then lift the hand in the short rest and land finger 5 an octave up.",
+            "de": "Übe die Oktavsprünge: Daumen auf den tiefen Ton, dann heb die Hand in der kurzen Pause und lande mit Finger 5 eine Oktave höher."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [3, 7],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Now the left hand alone. It holds one open fifth or one bass note for each count of three.",
+            "de": "Jetzt die linke Hand allein. Sie hält eine leere Quinte oder einen Basston für jedes Zählen bis drei."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Put both hands together on the first eight bars.",
+            "de": "Spiel die ersten acht Takte mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.7,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": {
+            "en": "Start with the thumb on middle C. The rising C, E and G take fingers 1, 2 and 3.",
+            "de": "Fang mit dem Daumen auf dem mittleren C an. Das steigende C, E und G nehmen Finger 1, 2 und 3."
+          }
+        },
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "trick",
+          "text": {
+            "en": "The repeated G changes from finger 3 to the thumb, so finger 5 reaches the high G.",
+            "de": "Beim wiederholten G wechselst du von Finger 3 zum Daumen, damit Finger 5 das hohe G erreicht."
+          }
+        },
+        {
+          "fromBar": 1,
+          "toBar": 8,
+          "kind": "sound",
+          "text": {
+            "en": "Lean on the first beat of each three, and play the other two lightly. That is the waltz.",
+            "de": "Betone den ersten Schlag jeder Drei, und spiel die anderen zwei leicht. Das ist der Walzer."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": {
+            "en": "Lift finger 4 off the high A, and land with the thumb on the A an octave down. The left hand moves up to D and A.",
+            "de": "Heb Finger 4 vom hohen A, und lande mit dem Daumen auf dem A eine Oktave tiefer. Die linke Hand geht hinauf zu D und A."
+          }
+        },
+        {
+          "bar": 12,
+          "text": {
+            "en": "Here the tune reaches the high C. In the left hand, finger 2 holds C alone, so finger 5 can take the low F.",
+            "de": "Hier erreicht die Melodie das hohe C. Links hält Finger 2 das C allein, damit Finger 5 das tiefe F nehmen kann."
+          }
+        },
+        {
+          "bar": 6,
+          "text": {
+            "en": "Put the thumb on A, then lift the hand in the short rest and land finger 5 on the A above.",
+            "de": "Setz den Daumen auf das A, dann heb die Hand in der kurzen Pause und lande mit Finger 5 auf dem A darüber."
+          }
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/the-blue-danube/rare.mid",
+      "skills": [
+        "waltz-bass",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [1, 1, 2, 3, 1, 5, 5, 3, 3, 1, 5, 5, 4, 4, 1, 5, 5, 3, 3, 1, 5, 5, 2, 2, 1, 5, 5, 2, 2, 1, 5, 5, 4, 4, 1, 1, 3, 1, 2, 5, 5, 3, 1, 1, 1, 4, 3, 1, 5, 5, 2, 5],
+        "left": [4, 2, 1, 2, 1, 4, 2, 1, 2, 1, 4, 2, 1, 2, 1, 4, 2, 1, 4, 4, 2, 1, 4, 2, 1, 2, 1, 4, 2, 1, 2, 1, 5, 2, 1, 4, 5, 3, 1, 4, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 2, 1, 4, 5, 3, 1, 4, 2, 1, 2, 1, 4, 2, 1, 2, 1, 4, 2, 1, 4, 4, 2, 1, 4, 2, 1, 2, 1, 4, 2, 1, 2, 1, 4, 2, 1, 4, 4, 2, 1, 4, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 2, 1, 5, 3, 3, 1, 5, 3, 1, 3, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 4, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 4, 2, 1, 2, 1, 4, 1]
+      },
+      "start": {
+        "right": [62, 66, 69, null, null],
+        "left": [57, 54, null, 50, null]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the first eight bars with the right hand alone, slowly.",
+            "de": "Spiel die ersten acht Takte langsam nur mit der rechten Hand."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone: a bass note, then the chord twice. Where the right hand rests, it climbs through the low notes.",
+            "de": "Spiel die linke Hand allein: einen Basston, dann zweimal den Akkord. Wo die rechte Hand pausiert, steigt sie durch die tiefen Töne."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": [1, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on the first four bars, where the tune passes from the right hand to the left and back.",
+            "de": "Spiel die ersten vier Takte mit beiden Händen zusammen. Dort wandert die Melodie von der rechten Hand zur linken und zurück."
+          },
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [1, 4],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands, a little slower than written.",
+            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert."
+          },
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed.",
+            "de": "Jetzt spiel es im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "rhythm",
+          "text": {
+            "en": "Count one, two, three in each half of a bar. The bass falls on every one.",
+            "de": "Zähl eins, zwei, drei in jeder Hälfte eines Takts. Der Bass kommt auf jede Eins."
+          }
+        },
+        {
+          "fromBar": 9,
+          "toBar": 10,
+          "kind": "trick",
+          "text": {
+            "en": "The right hand rests while the left climbs. Then the thumb lands on D, and finger 5 reaches the D an octave up.",
+            "de": "Die rechte Hand pausiert, während die linke steigt. Dann landet der Daumen auf dem D, und Finger 5 greift das D eine Oktave höher."
+          }
+        },
+        {
+          "fromBar": 14,
+          "toBar": 14,
+          "kind": "fingering",
+          "text": {
+            "en": "The G sharp is a black key. Take it with the thumb, then finger 2 plays A.",
+            "de": "Das Gis ist eine schwarze Taste. Nimm es mit dem Daumen, dann spielt Finger 2 das A."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 15,
+          "text": {
+            "en": "Lift the hand after A, and land with finger 5 on the high F sharp. The left hand jumps down to A.",
+            "de": "Heb die Hand nach dem A, und lande mit Finger 5 auf dem hohen Fis. Die linke Hand springt hinab zum A."
+          }
+        },
+        {
+          "bar": 16,
+          "text": {
+            "en": "The thumb plays F sharp, then moves down to E. The left hand jumps down to A again.",
+            "de": "Der Daumen spielt Fis, dann rückt er hinab zum E. Die linke Hand springt wieder hinab zum A."
+          }
+        },
+        {
+          "bar": 12,
+          "text": {
+            "en": "The right hand spans the octave from D to the high D. The left hand drops to B for the G chord.",
+            "de": "Die rechte Hand spannt die Oktave vom D zum hohen D. Die linke Hand geht für den G-Akkord hinab zum H."
+          }
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/the-blue-danube/epic.mid",
+      "skills": [
+        "waltz-bass",
+        "thirds-and-sixths",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [1, 1, 2, 3, 1, 3, 5, 3, 5, 1, 3, 1, 3, 1, 1, 2, 3, 1, 3, 5, 1, 5, 2, 4, 2, 4, 1, 1, 2, 5, 1, 3, 5, 3, 5, 1, 3, 1, 3, 1, 1, 2, 5, 1, 3, 5, 1, 5, 1, 3, 1, 3, 1, 1, 2, 3, 1, 2, 5, 2, 5, 2, 4, 2, 4, 1, 1, 2, 3, 1, 2, 5, 3, 5, 1, 3, 1, 3, 1, 1, 2, 4, 1, 3, 3, 1, 2, 3, 5, 5, 3, 1, 2, 1, 5, 4, 1, 5, 5, 1, 2, 5],
+        "left": [5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 4, 2, 1, 4, 2, 1, 5, 4, 2, 1, 4, 2, 1, 5, 2, 1, 2, 1, 5, 2, 1, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 2, 1, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 3, 2, 1, 3, 2, 1, 5, 2, 1]
+      },
+      "start": {
+        "right": [62, 66, 69, null, null],
+        "left": [62, 57, 54, null, 50]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the waltz bass alone: the low note, then the chord twice, light and short.",
+            "de": "Spiel den Walzerbass allein: den tiefen Ton, dann zweimal den Akkord, leicht und kurz."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 9],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand's thirds and sixths alone. Press both notes of each pair together.",
+            "de": "Spiel die Terzen und Sexten der rechten Hand allein. Drück beide Töne jedes Paars zusammen."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [2, 9],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on bars 1 to 9, slowly.",
+            "de": "Spiel die Takte 1 bis 9 langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [1, 9],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, with the pedal.",
+            "de": "Jetzt spiel es im vollen Tempo, mit Pedal."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "sound",
+          "text": {
+            "en": "Keep the chords soft and short, so the tune floats above them.",
+            "de": "Spiel die Akkorde leise und kurz, damit die Melodie über ihnen schwebt."
+          }
+        },
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "sound",
+          "text": {
+            "en": "Change the pedal on every bar line, as the new bass note sounds.",
+            "de": "Wechsle das Pedal an jedem Taktstrich, sobald der neue Basston klingt."
+          }
+        },
+        {
+          "fromBar": 18,
+          "toBar": 19,
+          "kind": "trick",
+          "text": {
+            "en": "The hand lifts after A, then the thumb lands on the D above it.",
+            "de": "Die Hand hebt sich nach dem A, dann landet der Daumen auf dem D darüber."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 26,
+          "text": {
+            "en": "Climb E, G and B with fingers 1, 2 and 4. Then thumb and finger 3 hold G and B.",
+            "de": "Steig E, G und H mit Finger 1, 2 und 4 hinauf. Dann halten Daumen und Finger 3 das G und das H."
+          }
+        },
+        {
+          "bar": 34,
+          "text": {
+            "en": "Spread the hand for the last chord: thumb on F sharp, finger 2 on A and finger 5 on D.",
+            "de": "Spreiz die Hand für den letzten Akkord: Daumen auf Fis, Finger 2 auf A und Finger 5 auf D."
+          }
+        },
+        {
+          "bar": 21,
+          "text": {
+            "en": "Lift the pair of notes a little early, then drop the thumb onto the low D.",
+            "de": "Heb das Tonpaar etwas früher ab, dann lass den Daumen auf das tiefe D fallen."
+          }
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/the-blue-danube/legendary.mid",
+      "skills": [
+        "octave-bass",
+        "melody-in-chords",
+        "waltz-bass"
+      ],
+      "fingers": {
+        "right": [1, 1, 2, 3, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 2, 3, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 2, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 2, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 2, 3, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 2, 3, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 1, 2, 4, 1, 2, 4, 3, 2, 1, 1, 5, 1, 5, 1, 5, 1, 2, 1, 5, 4, 1, 5, 5, 1, 2, 3, 5],
+        "left": [5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 4, 2, 1, 4, 2, 1, 5, 1, 4, 2, 1, 4, 2, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 2, 1, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1, 3, 2, 1, 3, 2, 1, 5, 1]
+      },
+      "start": {
+        "right": [62, 66, 69, null, null],
+        "left": [50, 57, 54, null, 38]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the octave bass alone: jump down for the octave, then back up for the chord.",
+            "de": "Spiel den Oktavbass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [2, 9],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand's octaves alone. Keep the hand open, with thumb and finger 5 ready.",
+            "de": "Spiel die Oktaven der rechten Hand allein. Halt die Hand offen, mit Daumen und Finger 5 bereit."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [3, 9],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on bars 18 to 25, where the tune reaches its highest notes.",
+            "de": "Spiel die Takte 18 bis 25 mit beiden Händen zusammen. Dort erreicht die Melodie ihre höchsten Töne."
+          },
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [18, 25],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, and let the last chord ring.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 2,
+          "toBar": 9,
+          "kind": "trick",
+          "text": {
+            "en": "In the octave bass, look at the low note and let the hand find the chord by feel.",
+            "de": "Schau beim Oktavbass auf den tiefen Ton, und lass die Hand den Akkord nach Gefühl finden."
+          }
+        },
+        {
+          "fromBar": 3,
+          "toBar": 4,
+          "kind": "fingering",
+          "text": {
+            "en": "Thumb and finger 5 take every octave. Keep the hand in that shape as it moves.",
+            "de": "Daumen und Finger 5 nehmen jede Oktave. Halt die Hand in dieser Form, während sie wandert."
+          }
+        },
+        {
+          "fromBar": 19,
+          "toBar": 24,
+          "kind": "sound",
+          "text": {
+            "en": "Let the top note of each octave sing, and keep the thumb lighter.",
+            "de": "Lass den oberen Ton jeder Oktave singen, und spiel den Daumen leiser."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 29,
+          "text": {
+            "en": "The hand opens from A to the octave F sharp. Lift it, then land on both notes together.",
+            "de": "Die Hand öffnet sich vom A zur Oktave Fis. Heb sie, dann lande auf beiden Tönen zugleich."
+          }
+        },
+        {
+          "bar": 24,
+          "text": {
+            "en": "Lift the octave D a little early, then land on the octave B in the same shape.",
+            "de": "Heb die Oktave D etwas früher ab, dann lande in derselben Form auf der Oktave H."
+          }
+        },
+        {
+          "bar": 8,
+          "text": {
+            "en": "The octave steps down from A to G. Keep the hand's shape, and move it as one.",
+            "de": "Die Oktave geht von A hinab zu G. Halt die Form der Hand, und beweg sie als Ganzes."
+          }
+        }
+      ]
+    }
+  }
+}

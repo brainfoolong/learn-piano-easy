@@ -48,6 +48,10 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   against the module's own `tune`, which a subagent writes from memory. Read the printed score in the
   song's Wikipedia wikitext (`action=raw`, its `<score>` block). Compare it note for note with the `tune`
   in `tools/our-songs/<slug>.ts`.
+- **A tune that leaps more than an octave every few bars cannot pass Beginner or Easy.** The meter
+  reads those versions' tune in the right hand alone, and allows two hand moves in eight bars. Count a
+  tune's leaps before briefing its writer, and cut a leaping tune to its hook phrase, as
+  `tools/our-songs/the-blue-danube.ts` does.
 - **A `<score>` in `\relative` mode can read an octave off,** as *Morgen, Kinder* seems to leap a fifth
   up in bar 1. A score with chords or `<< >>` blocks hides the melody's octave too. Settle the octave
   with the page's Commons MIDI, read with `readMidi` from `src/midi/smf-read.ts`.

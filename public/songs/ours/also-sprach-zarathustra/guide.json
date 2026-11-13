@@ -1,0 +1,494 @@
+{
+  "song": "also-sprach-zarathustra",
+  "title": "Also sprach Zarathustra",
+  "composer": "Richard Strauss",
+  "about": {
+    "en": "Richard Strauss wrote this tone poem in 1896, after a book by the philosopher Friedrich Nietzsche. Its opening fanfare paints a sunrise, rising over a deep held C. Stanley Kubrick's film 2001: A Space Odyssey (1968) opens with it.",
+    "de": "Richard Strauss schrieb diese Tondichtung 1896, nach einem Buch des Philosophen Friedrich Nietzsche. Ihre Eröffnungsfanfare malt einen Sonnenaufgang über einem tiefen, gehaltenen C. Stanley Kubricks Film 2001: Odyssee im Weltraum (1968) beginnt mit ihr."
+  },
+  "funFact": {
+    "en": "The three rising notes, C, G and C, are the second, third and fourth notes of the overtone series of a low C.",
+    "de": "Die drei aufsteigenden Töne C, G und C sind der zweite, dritte und vierte Ton der Obertonreihe eines tiefen C."
+  },
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/also-sprach-zarathustra/common.mid",
+      "skills": [
+        "open-fifths",
+        "position-change"
+      ],
+      "fingers": {
+        "right": [1, 1, 2, 5, 4, 1, 2, 4, 5, 1, 2, 5, 3, 1, 2, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, null, null, null, null],
+        "left": [55, null, null, null, 48]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the first two bars with the right hand alone, and let the song wait for each note.",
+            "de": "Spiel die ersten zwei Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 2],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Now play bars 3 to 8 with the right hand. Your thumb stays near G.",
+            "de": "Jetzt spiel die Takte 3 bis 8 mit der rechten Hand. Dein Daumen bleibt nahe beim G."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [3, 8],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone. It holds one open fifth in each bar.",
+            "de": "Spiel die linke Hand allein. Sie hält in jedem Takt eine leere Quinte."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Put both hands together on the whole song, slowly.",
+            "de": "Spiel das ganze Stück langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at full speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "sound",
+          "text": {
+            "en": "This is a sunrise. Play each long note fully, and let it ring to the end.",
+            "de": "Das ist ein Sonnenaufgang. Spiel jeden langen Ton voll aus, und lass ihn bis zum Ende klingen."
+          }
+        },
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "sound",
+          "text": {
+            "en": "E turns to E flat here, and the bright sound turns dark. Listen for the change.",
+            "de": "Hier wird aus E ein Es, und der helle Klang wird dunkel. Hör auf den Wechsel."
+          }
+        },
+        {
+          "fromBar": 3,
+          "toBar": 4,
+          "kind": "trick",
+          "text": {
+            "en": "Bar 3 leaves out the low C, so your thumb can wait on G.",
+            "de": "Takt 3 lässt das tiefe C weg, damit dein Daumen auf dem G warten kann."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 1,
+          "text": {
+            "en": "Your thumb plays middle C, then moves up to G. Move it during the long note.",
+            "de": "Dein Daumen spielt das mittlere C und geht dann hinauf zum G. Beweg ihn während des langen Tons."
+          }
+        },
+        {
+          "bar": 8,
+          "text": {
+            "en": "Both hands come home. The left hand returns to C and G, and the right hand ends on E.",
+            "de": "Beide Hände kommen nach Hause. Die linke kehrt zu C und G zurück, und die rechte endet auf E."
+          }
+        },
+        {
+          "bar": 7,
+          "text": {
+            "en": "The left hand moves down to G and D. The right hand goes from D down to G.",
+            "de": "Die linke Hand geht hinab zu G und D. Die rechte Hand geht vom D hinab zum G."
+          }
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/also-sprach-zarathustra/rare.mid",
+      "skills": [
+        "two-note-chords",
+        "triads"
+      ],
+      "fingers": {
+        "right": [1, 1, 2, 5, 4, 1, 2, 4, 5, 1, 2, 2, 5, 1, 3, 2, 5, 2, 4, 1, 2, 2, 4, 1, 3, 2, 5, 2, 5, 1, 2, 1, 3, 1, 2, 2, 5, 2, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 1, 5, 1, 5, 1, 5, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1, 5, 3, 1]
+      },
+      "start": {
+        "right": [60, null, null, null, null],
+        "left": [55, null, 52, null, 48]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play bars 3 to 6 with the right hand alone. This is the sunrise tune.",
+            "de": "Spiel die Takte 3 bis 6 nur mit der rechten Hand. Das ist die Melodie des Sonnenaufgangs."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [3, 6],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the right hand's two-note chords alone, in bars 9 to 16.",
+            "de": "Spiel die Zweiklänge der rechten Hand allein, in den Takten 9 bis 16."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone. In bars 7 and 8, it drums C and G like a timpani.",
+            "de": "Spiel die linke Hand allein. In Takt 7 und 8 trommelt sie C und G wie eine Pauke."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands, a little slower than written.",
+            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert."
+          },
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed.",
+            "de": "Jetzt spiel es im vollen Tempo."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "sound",
+          "text": {
+            "en": "The left hand starts alone, like a low organ note before dawn. Hold it for both bars.",
+            "de": "Die linke Hand beginnt allein, wie ein tiefer Orgelton vor der Morgendämmerung. Halt ihn beide Takte lang."
+          }
+        },
+        {
+          "fromBar": 7,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": {
+            "en": "Play the drum notes evenly, one on every beat, and a little louder each time.",
+            "de": "Spiel die Paukentöne gleichmäßig, einen auf jedem Schlag, und jedes Mal etwas lauter."
+          }
+        },
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "sound",
+          "text": {
+            "en": "The top note of each chord carries the tune. Play it a little louder.",
+            "de": "Der obere Ton jedes Zweiklangs trägt die Melodie. Spiel ihn etwas lauter."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 3,
+          "text": {
+            "en": "Your thumb plays middle C, then moves up to G during the long note.",
+            "de": "Dein Daumen spielt das mittlere C und geht während des langen Tons hinauf zum G."
+          }
+        },
+        {
+          "bar": 15,
+          "text": {
+            "en": "The left hand plays a full C chord here. Spread fingers 5, 3 and 1 over C, E and G.",
+            "de": "Die linke Hand spielt hier einen vollen C-Akkord. Leg Finger 5, 3 und 1 auf C, E und G."
+          }
+        },
+        {
+          "bar": 10,
+          "text": {
+            "en": "Keep finger 2 on C, and let finger 5 on E give way to finger 4 on E flat.",
+            "de": "Lass Finger 2 auf dem C, und lass Finger 5 auf dem E an Finger 4 auf dem Es übergeben."
+          }
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/also-sprach-zarathustra/epic.mid",
+      "skills": [
+        "broken-chords",
+        "pedal",
+        "thirds-and-sixths"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 5, 4, 1, 2, 2, 4, 5, 1, 3, 5, 1, 5, 1, 5, 1, 4, 1, 3, 5, 1, 5, 1, 5, 1, 5, 1, 2, 4, 1, 2, 4, 1, 2, 5, 1, 2, 5, 1, 2, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 2, 1, 5, 1, 5, 2, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 2, 1, 2, 5, 3, 1, 3, 5, 2, 1, 2, 5, 2, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, 67, null, null, null],
+        "left": [36, null, null, null, 24]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the left hand's broken chords alone, in bars 9 to 12: low C, G, C and G.",
+            "de": "Spiel die gebrochenen Akkorde der linken Hand allein, in den Takten 9 bis 12: tiefes C, G, C und G."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand alone on bars 9 to 12, and press both notes of each pair as one.",
+            "de": "Spiel die rechte Hand allein in den Takten 9 bis 12, und drück beide Töne jedes Paars wie einen an."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on bars 9 to 12, slowly.",
+            "de": "Spiel die Takte 9 bis 12 langsam mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, with the pedal.",
+            "de": "Jetzt spiel es im vollen Tempo, mit Pedal."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 2,
+          "kind": "sound",
+          "text": {
+            "en": "Hold the low octave with the pedal down. It should rumble like a great organ.",
+            "de": "Halt die tiefe Oktave mit gedrücktem Pedal. Sie soll grollen wie eine große Orgel."
+          }
+        },
+        {
+          "fromBar": 4,
+          "toBar": 4,
+          "kind": "sound",
+          "text": {
+            "en": "The bright E turns to a dark E flat. Play the E flat a little softer.",
+            "de": "Das helle E wird zum dunklen Es. Spiel das Es etwas leiser."
+          }
+        },
+        {
+          "fromBar": 7,
+          "toBar": 8,
+          "kind": "rhythm",
+          "text": {
+            "en": "Drum C and G like a timpani, and grow louder into bar 9.",
+            "de": "Trommle C und G wie eine Pauke, und werde lauter bis in Takt 9."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 16,
+          "text": {
+            "en": "Both hands jump down for the last chord. Use the short rest at the end of bar 15.",
+            "de": "Beide Hände springen für den letzten Akkord hinab. Nutz die kurze Pause am Ende von Takt 15."
+          }
+        },
+        {
+          "bar": 15,
+          "text": {
+            "en": "Spread the right hand over E, G and high C. The left hand holds a C octave under it.",
+            "de": "Spann die rechte Hand über E, G und das hohe C. Die linke Hand hält darunter eine C-Oktave."
+          }
+        },
+        {
+          "bar": 3,
+          "text": {
+            "en": "The right hand enters on middle C as the left hand moves up an octave. The rest in bar 2 gives it time.",
+            "de": "Die rechte Hand setzt auf dem mittleren C ein, während die linke eine Oktave hinaufgeht. Die Pause in Takt 2 gibt ihr Zeit."
+          }
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/also-sprach-zarathustra/legendary.mid",
+      "skills": [
+        "octave-bass",
+        "melody-in-chords",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [1, 2, 2, 5, 4, 1, 2, 2, 4, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 3, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 4, 5, 1, 2, 3, 5],
+        "left": [5, 1, 5, 1, 5, 1, 5, 2, 1, 1, 5, 1, 5, 1, 5, 2, 1, 1, 5, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 2, 1, 1, 5, 1, 5, 1, 5, 2, 1, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [60, 67, null, null, null],
+        "left": [36, null, null, null, 24]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the right hand's octaves alone, in bars 9 to 12. Keep the hand's shape and move the whole arm.",
+            "de": "Spiel die Oktaven der rechten Hand allein, in den Takten 9 bis 12. Halt die Form der Hand, und beweg den ganzen Arm."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [9, 12],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone. It switches between deep octaves and timpani rolls.",
+            "de": "Spiel die linke Hand allein. Sie wechselt zwischen tiefen Oktaven und Paukenwirbeln."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on the climax, bars 13 to 16.",
+            "de": "Spiel den Höhepunkt, die Takte 13 bis 16, mit beiden Händen zusammen."
+          },
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [13, 16],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, and let the last chord ring.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 9,
+          "toBar": 12,
+          "kind": "trick",
+          "text": {
+            "en": "Lock the hand in an octave, thumb and little finger. The arm carries it from key to key.",
+            "de": "Halt die Hand fest in einer Oktave, Daumen und kleiner Finger. Der Arm trägt sie von Taste zu Taste."
+          }
+        },
+        {
+          "fromBar": 10,
+          "toBar": 12,
+          "kind": "fingering",
+          "text": {
+            "en": "For the four-note chords, use fingers 1, 2, 3 and 5. Finger 4 rests.",
+            "de": "Nimm für die Vierklänge Finger 1, 2, 3 und 5. Finger 4 ruht."
+          }
+        },
+        {
+          "fromBar": 13,
+          "toBar": 16,
+          "kind": "sound",
+          "text": {
+            "en": "Each chord climbs higher and louder. Save your loudest sound for the last C chord.",
+            "de": "Jeder Akkord steigt höher und wird lauter. Heb dir den lautesten Klang für den letzten C-Akkord auf."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 13,
+          "text": {
+            "en": "The climb starts here. Lift after each chord, and let the pedal join the sound.",
+            "de": "Hier beginnt der Aufstieg. Heb nach jedem Akkord ab, und lass das Pedal den Klang verbinden."
+          }
+        },
+        {
+          "bar": 11,
+          "text": {
+            "en": "The right hand jumps from the high chord down to the octave on middle C. Use the rest before it.",
+            "de": "Die rechte Hand springt vom hohen Akkord hinab zur Oktave auf dem mittleren C. Nutz die Pause davor."
+          }
+        },
+        {
+          "bar": 14,
+          "text": {
+            "en": "On beat 4, the left hand drops to a low F octave as the right hand plays its F chord.",
+            "de": "Auf Schlag 4 fällt die linke Hand zu einer tiefen F-Oktave, während die rechte ihren F-Akkord spielt."
+          }
+        }
+      ]
+    }
+  }
+}

@@ -3686,6 +3686,436 @@
     ]
   },
   {
+    "composer": "Richard Strauss",
+    "piece": "Also sprach Zarathustra",
+    "title": "Beginner",
+    "file": "ours/also-sprach-zarathustra/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 76,
+    "seconds": 27,
+    "song": "also-sprach-zarathustra",
+    "rarity": "common",
+    "skills": [
+      "open-fifths",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Thus Spoke Zarathustra"
+    ]
+  },
+  {
+    "composer": "Richard Strauss",
+    "piece": "Also sprach Zarathustra",
+    "title": "Easy",
+    "file": "ours/also-sprach-zarathustra/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 47,
+    "high": 76,
+    "seconds": 48,
+    "song": "also-sprach-zarathustra",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "triads"
+    ],
+    "collection": "film",
+    "aka": [
+      "Thus Spoke Zarathustra"
+    ]
+  },
+  {
+    "composer": "Richard Strauss",
+    "piece": "Also sprach Zarathustra",
+    "title": "Medium",
+    "file": "ours/also-sprach-zarathustra/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 24,
+    "high": 88,
+    "seconds": 50,
+    "song": "also-sprach-zarathustra",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Thus Spoke Zarathustra"
+    ]
+  },
+  {
+    "composer": "Richard Strauss",
+    "piece": "Also sprach Zarathustra",
+    "title": "Hard",
+    "file": "ours/also-sprach-zarathustra/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 24,
+    "high": 89,
+    "seconds": 50,
+    "song": "also-sprach-zarathustra",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Thus Spoke Zarathustra"
+    ]
+  },
+  {
+    "composer": "Johann Strauss II",
+    "piece": "The Blue Danube",
+    "title": "Beginner",
+    "file": "ours/the-blue-danube/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 84,
+    "seconds": 55,
+    "song": "the-blue-danube",
+    "rarity": "common",
+    "skills": [
+      "position-change",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "An der schönen blauen Donau"
+    ]
+  },
+  {
+    "composer": "Johann Strauss II",
+    "piece": "The Blue Danube",
+    "title": "Easy",
+    "file": "ours/the-blue-danube/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 86,
+    "seconds": 51,
+    "song": "the-blue-danube",
+    "rarity": "rare",
+    "skills": [
+      "waltz-bass",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "An der schönen blauen Donau"
+    ]
+  },
+  {
+    "composer": "Johann Strauss II",
+    "piece": "The Blue Danube",
+    "title": "Medium",
+    "file": "ours/the-blue-danube/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 86,
+    "seconds": 40,
+    "song": "the-blue-danube",
+    "rarity": "epic",
+    "skills": [
+      "waltz-bass",
+      "thirds-and-sixths",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "An der schönen blauen Donau"
+    ]
+  },
+  {
+    "composer": "Johann Strauss II",
+    "piece": "The Blue Danube",
+    "title": "Hard",
+    "file": "ours/the-blue-danube/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 26,
+    "high": 86,
+    "seconds": 35,
+    "song": "the-blue-danube",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords",
+      "waltz-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "An der schönen blauen Donau"
+    ]
+  },
+  {
+    "composer": "Georges Bizet",
+    "piece": "Habanera",
+    "title": "Beginner",
+    "file": "ours/habanera/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 74,
+    "seconds": 33,
+    "song": "habanera",
+    "rarity": "common",
+    "skills": [
+      "position-change",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'amour est un oiseau rebelle"
+    ]
+  },
+  {
+    "composer": "Georges Bizet",
+    "piece": "Habanera",
+    "title": "Easy",
+    "file": "ours/habanera/rare.mid",
+    "difficulty": 2.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 74,
+    "seconds": 27,
+    "song": "habanera",
+    "rarity": "rare",
+    "skills": [
+      "eighth-notes",
+      "dotted-rhythm"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'amour est un oiseau rebelle"
+    ]
+  },
+  {
+    "composer": "Georges Bizet",
+    "piece": "Habanera",
+    "title": "Medium",
+    "file": "ours/habanera/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 74,
+    "seconds": 24,
+    "song": "habanera",
+    "rarity": "epic",
+    "skills": [
+      "thirds-and-sixths",
+      "dotted-rhythm",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'amour est un oiseau rebelle"
+    ]
+  },
+  {
+    "composer": "Georges Bizet",
+    "piece": "Habanera",
+    "title": "Hard",
+    "file": "ours/habanera/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 86,
+    "seconds": 21,
+    "song": "habanera",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "dotted-rhythm",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "L'amour est un oiseau rebelle"
+    ]
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Dies irae",
+    "title": "Beginner",
+    "file": "ours/dies-irae/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 79,
+    "seconds": 21,
+    "song": "dies-irae",
+    "rarity": "common",
+    "skills": [
+      "open-fifths",
+      "position-change"
+    ],
+    "collection": "film"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Dies irae",
+    "title": "Easy",
+    "file": "ours/dies-irae/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 79,
+    "seconds": 40,
+    "song": "dies-irae",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "held-bass"
+    ],
+    "collection": "film"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Dies irae",
+    "title": "Medium",
+    "file": "ours/dies-irae/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 36,
+    "high": 79,
+    "seconds": 45,
+    "song": "dies-irae",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film"
+  },
+  {
+    "composer": "Traditional",
+    "piece": "Dies irae",
+    "title": "Hard",
+    "file": "ours/dies-irae/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 24,
+    "high": 86,
+    "seconds": 43,
+    "song": "dies-irae",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords",
+      "left-hand-melody"
+    ],
+    "collection": "film"
+  },
+  {
+    "composer": "Claude Debussy",
+    "piece": "Clair de lune",
+    "title": "Beginner",
+    "file": "ours/clair-de-lune/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 79,
+    "seconds": 52,
+    "song": "clair-de-lune",
+    "rarity": "common",
+    "skills": [
+      "held-bass",
+      "open-fifths"
+    ],
+    "mythic": "piano-midi/deb_clai.mid",
+    "collection": "film"
+  },
+  {
+    "composer": "Claude Debussy",
+    "piece": "Clair de lune",
+    "title": "Easy",
+    "file": "ours/clair-de-lune/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 91,
+    "seconds": 87,
+    "song": "clair-de-lune",
+    "rarity": "rare",
+    "skills": [
+      "pedal",
+      "open-fifths"
+    ],
+    "mythic": "piano-midi/deb_clai.mid",
+    "collection": "film"
+  },
+  {
+    "composer": "Claude Debussy",
+    "piece": "Clair de lune",
+    "title": "Medium",
+    "file": "ours/clair-de-lune/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 79,
+    "seconds": 84,
+    "song": "clair-de-lune",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "mythic": "piano-midi/deb_clai.mid",
+    "collection": "film"
+  },
+  {
+    "composer": "Claude Debussy",
+    "piece": "Clair de lune",
+    "title": "Hard",
+    "file": "ours/clair-de-lune/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 28,
+    "high": 91,
+    "seconds": 81,
+    "song": "clair-de-lune",
+    "rarity": "legendary",
+    "skills": [
+      "arpeggios",
+      "melody-in-chords",
+      "hand-crossing"
+    ],
+    "mythic": "piano-midi/deb_clai.mid",
+    "collection": "film"
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",
