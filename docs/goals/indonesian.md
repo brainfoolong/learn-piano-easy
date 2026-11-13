@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: indonesian-rules
@@ -194,15 +194,20 @@ term, address or mark that drifts between files.
 
 ### 7. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 6 are done, and the Indonesian site ships. `id` is `shipped` in
+Every stage is done, and the goal is reached. `looper verify` is green over the whole goal on its first
+run. No failure needed a fix, so the run after the fixes is that same run. The layout checks ran in
+`id` at 360 and 1280 pixels in the full e2e run and passed. `indonesian-rules` and `indonesian-site`
+pass when run by `looper check --name`.
+
+The Indonesian site ships. `id` is `shipped` in
 `src/i18n/locale-table.ts:56`. The worlds carry their Indonesian titles in `src/learn/course.ts:58`.
 The language setting names *Bahasa Indonesia*, and `public/images/social/id.png` is drawn. The README
 and the feature list name Indonesian.
@@ -224,13 +229,10 @@ the playbook now says so.
 
 ### Next
 
-**Stage 7: the goal is verified once.** Run `looper verify` over the whole goal, fix every failure in
-one pass, and run it once more.
+**Harvest the goal.** Its target, findings and binding decisions go into `docs/findings.md` §
+`indonesian`, its checks into the floor, and its file is deleted. Then `bengali` is live.
 
-Expected red: a test that counts the shipped locales or their pages may need `id`. Look first in
-`src/i18n/untranslated.test.ts`, in the sitemap and build tests under `tools/`, and in the e2e files
-that read the shipped locales. The layout checks of `e2e/locales.e2e.ts` now run `id` at 360 and 1280
-pixels, so a flaw that only Indonesian's longer texts add would show there.
+Expected red: none known.
 
 ### Backlog
 
