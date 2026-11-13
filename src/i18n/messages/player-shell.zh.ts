@@ -48,7 +48,7 @@ export const playerShell: Translation<typeof en> = {
   },
   lesson: {
     label: "课",
-    target: (percent) => `在计分的一遍里弹对 ${formatNumber("zh", percent)}% 的音。`,
+    target: (percent) => `在评分的一遍里弹对 ${formatNumber("zh", percent)}% 的音。`,
     back: "返回这一课",
     missing: "曲库中没有这一课的歌曲。",
   },
@@ -105,7 +105,7 @@ export const playerShell: Translation<typeof en> = {
   scene: {
     piano: "钢琴",
     pianoRange: (range) => `钢琴，${range}`,
-    startKeys: (keys) => `，起始键 ${keys}`,
+    startKeys: (keys) => `，起始琴键 ${keys}`,
     chord: (chord) => `，和弦 ${chord}`,
   },
   demo: {

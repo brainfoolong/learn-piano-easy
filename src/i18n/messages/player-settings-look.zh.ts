@@ -156,11 +156,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleOverrideColor: {
     label: "自定颜色",
-    help: "关闭时，粒子使用所在琴键的颜色。",
+    help: "关闭时，粒子用所在琴键的颜色。",
   },
   particleColor: {
     label: "颜色",
-    help: "粒子使用自定颜色时的颜色。",
+    help: "粒子用自定颜色时的颜色。",
   },
   particlesOpacity: {
     label: "不透明度",
@@ -286,7 +286,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   noteLabel: {
     label: "音符标签",
-    help: "每个音符上显示的文字：可以选任意几项，也可以都不选。点击一个音符，再按 1～5 设置它的手指。",
+    help: "每个音符上显示的文字：可以选任意几项，也可以都不选。点击一个音符，再按 1～5 设定它的手指。",
     options: { name: "音名", keyBinding: "电脑按键", fingering: "手指" },
   },
   noteLabelColor: {
@@ -527,8 +527,8 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "打开一个对话框，把当前歌曲的下落音符保存成页面，每页的长度由你设定。",
   },
   exportPdfBackground: {
-    label: "使用背景颜色",
-    help: "页面使用轨道和琴键的颜色。关闭时，页面打印在白纸上。",
+    label: "用背景颜色",
+    help: "页面用轨道和琴键的颜色。关闭时，页面打印在白纸上。",
   },
 
   // Offline

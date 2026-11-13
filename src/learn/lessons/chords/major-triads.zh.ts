@@ -16,7 +16,7 @@ export const majorTriadsZh: Translation<MajorTriadsTexts> = {
       answers: ["两个", "三个", "四个"],
     },
     "major-recipe": {
-      text: "这就是大三和弦的构成方法。从根音开始，也就是给三和弦命名的那个键。先往上数四个半音，再往上数三个。",
+      text: "这就是大三和弦的构成方法。从根音开始，也就是给三和弦命名的那个琴键。先往上数四个半音，再往上数三个。",
     },
     "right-hand-fingers": {
       text: "右手用 1、3、5 指弹三和弦。拇指弹根音。",
@@ -31,7 +31,7 @@ export const majorTriadsZh: Translation<MajorTriadsTexts> = {
       text: "现在把拇指移到 G。按这个方法得到 G、B、D。先一个一个地弹，再一起弹。",
     },
     "four-up-from-d": {
-      text: "从 D 开始，往上数四个半音。你落在哪个键上？",
+      text: "从 D 开始，往上数四个半音。你落在哪个琴键上？",
       answers: ["升 F", "F", "G"],
     },
     "find-f-sharp": {
@@ -41,7 +41,7 @@ export const majorTriadsZh: Translation<MajorTriadsTexts> = {
       text: "把右手拇指放在中央 C 上面的 D 上，3 指落在升 F 上。先一个一个地弹 D、升 F、A，再一起弹。",
     },
     "left-hand-fingers": {
-      text: "左手用 5、3、1 指弹三和弦。5 指弹根音，拇指弹最上面的键。",
+      text: "左手用 5、3、1 指弹三和弦。5 指弹根音，拇指弹最上面的琴键。",
     },
     "left-c-major": {
       text: "把左手 5 指放在中央 C 下面的 C 上。先一个一个地弹 C、E、G，再一起弹。",
@@ -53,10 +53,10 @@ export const majorTriadsZh: Translation<MajorTriadsTexts> = {
       text: "轮到你了。用右手弹这四个三和弦。保持手型，从一个根音移到下一个根音。",
     },
     recap: {
-      text: "做得好。现在你能在任何一个键上搭出大三和弦了。",
+      text: "做得好。现在你能在任何一个琴键上搭出大三和弦了。",
       points: [
         "大三和弦从根音开始。",
-        "中间的键在根音上方四个半音，最上面的键再往上三个半音。",
+        "中间的琴键在根音上方四个半音，最上面的琴键再往上三个半音。",
         "C、F、G 大三和弦只用白键，D 大三和弦需要升 F。",
         "右手用 1、3、5 指，左手用 5、3、1 指。",
       ],

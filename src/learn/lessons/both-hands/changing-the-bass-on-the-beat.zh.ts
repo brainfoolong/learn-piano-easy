@@ -34,7 +34,7 @@ export const changingTheBassOnTheBeatZh: Translation<ChangingTheBassOnTheBeatTex
       text: "轮到你了。弹这四个小节，五度先在 C 上，然后在它下面的 F 和 G 上，最后回到 C。换五度时，和每个小节的第一个音一起弹。",
     },
     recap: {
-      text: "做得好！现在你的左手会跟着节拍换低音了。",
+      text: "做得好！现在你的左手会在拍点上换低音了。",
       points: [
         "低音在新小节的第一拍换。",
         "新的五度和右手的音同时落下。",

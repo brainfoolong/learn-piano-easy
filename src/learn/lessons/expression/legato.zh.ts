@@ -13,7 +13,7 @@ export const legatoZh: Translation<LegatoTexts> = {
     },
     "what-legato-means": {
       text: "连奏是什么意思？",
-      answers: ["非常响", "非常快", "每个音后面都有休止", "圆滑而连贯"],
+      answers: ["非常响", "非常快", "每个音后面都有休止符", "圆滑而连贯"],
     },
     "hand-over": {
       text: "连奏时，下一个琴键按下的同时，松开前一个琴键。一个手指抬起，下一个手指落下。",
@@ -50,7 +50,7 @@ export const legatoZh: Translation<LegatoTexts> = {
     },
     "which-is-legato": {
       text: "哪些音要连奏？",
-      answers: ["每个后面都有休止的音", "都在同一个琴键上的音", "离得很远、需要跳过去的音", "圆滑线下的音"],
+      answers: ["每个后面都有休止符的音", "都在同一个琴键上的音", "离得很远、需要跳过去的音", "圆滑线下的音"],
     },
     recap: {
       text: "真棒！现在你会弹得圆滑、连贯了。",

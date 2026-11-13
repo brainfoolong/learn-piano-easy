@@ -32,7 +32,7 @@ export const stepsZh: Translation<StepsTexts> = {
       text: "一路往上走到顶，再一路往下走回来。跟着标出的琴键弹。",
     },
     "stepping-tune": {
-      text: "把右手放在 C 手位上。这段旋律全是级进：C D E D E F E D C。",
+      text: "把右手放在 C 手位上。这段旋律全是级进：C、D、E、D、E、F、E、D、C。",
     },
     recap: {
       text: "做得好！你会弹全是级进的旋律了。",

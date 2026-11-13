@@ -231,7 +231,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   enableEqualizer: {
     label: "均衡器",
-    help: "让低音、中音和高音更响或更轻。",
+    help: "让低频、中频和高频更响或更轻。",
   },
   equalizerGain0: {
     label: "低频，60 Hz（dB）",

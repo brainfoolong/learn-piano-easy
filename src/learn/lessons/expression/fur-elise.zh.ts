@@ -9,7 +9,7 @@ export const furEliseRareZh: Translation<FurEliseRareTexts> = {
       text: "《致爱丽丝》是 A 小调，所以听起来有点忧伤。左手把每个和弦向上分解，右手接着往上走。弹得轻柔、圆滑一些。",
     },
     song: {
-      text: "用双手弹《致爱丽丝》，比原速稍慢一点。每逢休止符，就把右手拇指移到中央 C。",
+      text: "用双手弹《致爱丽丝》，比谱上写的稍慢一点。每逢休止符，就把右手拇指移到中央 C。",
     },
   },
 };

@@ -25,7 +25,7 @@ export const maryFirstPhraseZh: Translation<MaryFirstPhraseTexts> = {
       text: "现在弹下一部分：三次 D，然后 E，再弹两次 G。手指依次是 2、2、2，然后 3、5、5。",
     },
     "whole-phrase": {
-      text: "现在不停顿地弹完整个乐句：E D C D E E E，D D D，E G G。",
+      text: "现在不停顿地弹完整个乐句：E、D、C、D、E、E、E，D、D、D，E、G、G。",
     },
     recap: {
       text: "做得好！这是一首真正的歌曲，你已经弹出了它的前半段。",

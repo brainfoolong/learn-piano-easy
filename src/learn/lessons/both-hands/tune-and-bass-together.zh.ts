@@ -31,7 +31,7 @@ export const tuneAndBassTogetherZh: Translation<TuneAndBassTogetherTexts> = {
       text: "用双手弹前两个小节。低音和旋律的第一个音要同时按下。",
     },
     "held-bass-quiz": {
-      text: "在第 2 小节，右手弹 G、F、E、D。这时左手在做什么？",
+      text: "在第二小节，右手弹 G、F、E、D。这时左手在做什么？",
       answers: ["低一个八度弹 G、F、E、D", "按住它的 G", "抬起来休息"],
     },
     "whole-tune-together": {

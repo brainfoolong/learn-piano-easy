@@ -36,7 +36,7 @@ export const learnSetup: Translation<typeof en> = {
   },
   goal: {
     question: "每天练多少？",
-    lead: "每天达成目标，连续练习天数就会增加。拿三颗星学完一节新课，可以得到 30 XP。",
+    lead: "每天达成目标，连续练习天数就会增加。拿三颗星学完新的一课，可以得到 30 XP。",
     label: "每日目标",
     names: { "10": "轻松", "20": "稳步", "30": "认真", "50": "挑战" },
     option: (xp: number, name: string) => `${formatNumber("zh", xp)} XP，${name}`,

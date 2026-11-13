@@ -25,7 +25,7 @@ export const skipsZh: Translation<SkipsTexts> = {
       answers: ["级进", "跳进"],
     },
     "mixed-phrase": {
-      text: "把右手放在 C 手位上。这段旋律有级进，也有一个跳进：C D E，往上跳到 G，再 F E D C。",
+      text: "把右手放在 C 手位上。这段旋律有级进，也有一个跳进：C、D、E，往上跳到 G，再 F、E、D、C。",
     },
     recap: {
       text: "做得好！你会弹跳进了。",

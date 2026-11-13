@@ -19,7 +19,7 @@ export const handsApartThenTogetherZh: Translation<HandsApartThenTogetherTexts> 
       text: "先练右手。从中央 C 开始，弹 C、D、E、D、C。",
     },
     "left-alone": {
-      text: "现在单独练左手。从低一个八度的 C 开始，弹同样的 C、D、E、D、C。",
+      text: "现在只用左手弹。从低一个八度的 C 开始，弹同样的 C、D、E、D、C。",
     },
     "together-steps": {
       text: "现在双手一起弹。每一对琴键都要同时按下，开头两只手各弹一个 C。",
@@ -31,10 +31,10 @@ export const handsApartThenTogetherZh: Translation<HandsApartThenTogetherTexts> 
       text: "这是一段新旋律。你的两只手先向两边分开，再回到一起，就像照镜子一样。",
     },
     "mirror-right": {
-      text: "单独练右手。弹 E、F、G、F、E。",
+      text: "只用右手弹。弹 E、F、G、F、E。",
     },
     "mirror-left": {
-      text: "单独练左手。从中央 C 下面的 E 开始，弹 E、D、C、D、E。右手刚才往上走，这次左手往下走。",
+      text: "只用左手弹。从中央 C 下面的 E 开始，弹 E、D、C、D、E。右手刚才往上走，这次左手往下走。",
     },
     "mirror-together": {
       text: "现在把两只手合起来。慢慢来，每一对琴键都要同时按下。",
@@ -43,7 +43,7 @@ export const handsApartThenTogetherZh: Translation<HandsApartThenTogetherTexts> 
       text: "做得好！你第一次用双手同时弹琴了。",
       points: [
         "学新曲子时，先每只手单独练。",
-        "然后慢慢地把双手合起来。",
+        "然后双手一起慢慢弹。",
         "两只手可以朝同一个方向走，也可以朝相反的方向走。",
       ],
     },

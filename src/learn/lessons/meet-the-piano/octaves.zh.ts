@@ -6,7 +6,7 @@ export const octavesZh: Translation<OctavesTexts> = {
   title: "八度",
   steps: {
     "three-cs": {
-      text: "从低到高，听三个 C 键。看看每个 C 在钢琴上的位置。",
+      text: "从低到高，听三个 C。看看每个 C 在钢琴上的位置。",
     },
     "same-letter": {
       text: "从 C 开始往上数白键：C、D、E、F、G、A、B，然后又是 C。连起点那个白键一起数，同一个字母在第八个白键上再次出现。这段距离叫作八度。",

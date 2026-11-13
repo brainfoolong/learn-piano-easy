@@ -31,7 +31,7 @@ export const playerInput: Translation<typeof en> = {
     hint: "随意弹吧，或者点击“录制”留下你弹的内容。",
   },
   history: {
-    empty: "这首歌还没有弹完的记录。打开计分，把它弹到最后吧。",
+    empty: "这首歌还没有弹完的记录。打开评分，把它弹到最后吧。",
     hands: { both: "双手", right: "右手", left: "左手" },
     columns: {
       date: "日期",
@@ -121,7 +121,7 @@ export const playerInput: Translation<typeof en> = {
     noSong: "先打开一首歌，再把它的音符保存为 PDF。",
     intro: (title: string) => `把《${title}》下落的音符连同下方的钢琴一起保存，每页是歌曲中的几秒。`,
     secondsPerPage: "每页秒数",
-    background: "使用背景颜色",
+    background: "用背景颜色",
     pages: (pages: number, seconds: number) => `共 ${formatNumber("zh", pages)} 页，每页是歌曲中的 ${formatNumber("zh", seconds)} 秒。`,
     save: "保存 PDF",
     pageHeading: (title: string, from: string, to: string, page: number, count: number) =>

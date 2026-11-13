@@ -6,7 +6,7 @@ export const playingWithFeelingZh: Translation<PlayingWithFeelingTexts> = {
   title: "带着感情弹",
   steps: {
     "all-the-marks": {
-      text: "现在你认识了本世界的记号，比如 p 和 f、渐强和渐弱记号、圆滑线、跳音圆点和 rit.。它们合在一起，告诉你一首乐曲该是什么感觉。",
+      text: "现在你认识了这个世界的记号，比如 p 和 f、渐强和渐弱记号、圆滑线、跳音圆点和 rit.。它们合在一起，告诉你一首乐曲该是什么感觉。",
     },
     "read-the-marks": {
       text: "一段旋律以 p 开始。一条圆滑线连着它的前四个音，最后一个小节上方写着 rit.。你怎么弹它？",

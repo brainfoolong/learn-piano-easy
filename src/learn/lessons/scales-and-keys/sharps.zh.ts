@@ -34,7 +34,7 @@ export const sharpsZh: Translation<SharpsTexts> = {
       text: "读出每个带升号的音，再把它弹出来。先找到白键，再往上走一个半音。",
     },
     "through-f-sharp": {
-      text: "把右手拇指放在中央 C 上面的 D 上，中指放在升 F 上。弹 D、E、升 F 和 G，再弹回 D。",
+      text: "把右手拇指放在中央 C 上面的 D 上，3 指放在升 F 上。弹 D、E、升 F 和 G，再弹回 D。",
     },
     recap: {
       text: "做得好！你会读、也会弹升号了。",

@@ -34,10 +34,10 @@ export const whatAChordIsZh: Translation<WhatAChordIsTexts> = {
       text: "先听三度 C 和 E。然后 G 加在上面，三和弦听起来就饱满了。",
     },
     "first-triad": {
-      text: "用 1、3、5 指同时弹 C、E、G。三个键一起按下，把这个三和弦弹两遍。",
+      text: "用 1、3、5 指同时弹 C、E、G。三个琴键一起按下，把这个三和弦弹两遍。",
     },
     "which-is-a-triad": {
-      text: "三和弦由两个三度叠成。从 D 开始的三和弦是哪三个键？",
+      text: "三和弦由两个三度叠成。从 D 开始的三和弦是哪三个琴键？",
       answers: ["D、E、F", "D、G、A", "D、F、A"],
     },
     "triads-up": {

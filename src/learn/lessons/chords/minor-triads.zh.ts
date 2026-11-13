@@ -25,7 +25,7 @@ export const minorTriadsZh: Translation<MinorTriadsTexts> = {
       text: "轮到你了。从中央 C 开始，用 1、3、5 指弹 C 大三和弦。然后把 3 指滑到降 E，弹出 C 小三和弦。两个和弦都弹两遍。",
     },
     "hear-the-middle-drop": {
-      text: "从大三和弦到小三和弦，只有中间的音移动半音。第二个键比第一个高、低，还是一样？",
+      text: "从大三和弦到小三和弦，只有中间的音移动半音。第二个琴键比第一个高、低，还是一样？",
     },
     "white-key-minors": {
       text: "有三个小三和弦只用白键。A 小三和弦是 A、C、E，D 小三和弦是 D、F、A，E 小三和弦是 E、G、B。",
@@ -34,7 +34,7 @@ export const minorTriadsZh: Translation<MinorTriadsTexts> = {
       text: "把右手拇指放在中央 C 下面的 A 上。把 A 小三和弦弹两遍：A、C、E 一起弹。",
     },
     "d-and-e-minor": {
-      text: "现在换一下手位。从中央 C 上面的 D 弹 D 小三和弦，然后高一个白键弹 E 小三和弦，再弹一次 D 小三和弦。",
+      text: "现在移动一下手。从中央 C 上面的 D 弹 D 小三和弦，然后高一个白键弹 E 小三和弦，再弹一次 D 小三和弦。",
     },
     "g-major-to-minor": {
       text: "G 大三和弦是 G、B、D。要弹 G 小三和弦，你要把哪个音降低？",

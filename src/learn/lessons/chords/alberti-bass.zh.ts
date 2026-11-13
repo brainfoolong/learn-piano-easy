@@ -31,7 +31,7 @@ export const albertiBassZh: Translation<AlbertiBassTexts> = {
       text: "F 和弦用第二转位来弹：C、F、A。5 指留在 C 上。音型是 C、A、F、A。",
     },
     "thumb-on-f": {
-      text: "在 F 和弦的阿尔贝蒂低音里，拇指弹哪个键？",
+      text: "在 F 和弦的阿尔贝蒂低音里，拇指弹哪个琴键？",
     },
     "f-alberti": {
       text: "5 指留在 C 上。用 5、1、3、1 指把 C、A、F、A 弹两遍。",
@@ -49,7 +49,7 @@ export const albertiBassZh: Translation<AlbertiBassTexts> = {
       text: "终极挑战《D 大调卡农》是 D 大调。它的调号有两个升号，在 F 和 C 上，所以每个 F 都弹升 F，每个 C 都弹升 C。听一听 D 大调音阶。",
     },
     "two-sharps": {
-      text: "调号上有两个升号，在 F 和 C 上。弹 F 和 C 时，你要弹哪些键？",
+      text: "调号上有两个升号，在 F 和 C 上。弹 F 和 C 时，你要弹哪些琴键？",
       answers: ["升 F 和升 C，都是黑键", "F 和 C，都是白键", "只弹升 F，C 仍是白键"],
     },
     "d-major-scale": {
@@ -68,7 +68,7 @@ export const albertiBassZh: Translation<AlbertiBassTexts> = {
       text: "快结束时，终极挑战的右手用三度弹旋律。这四个三度里有三个带黑键：升 F 或升 C。",
     },
     "black-key-thirds": {
-      text: "轮到你了。把 3 指放在中央 C 往上第二个 D 上，5 指放在它上面的升 F 上。每个三度的两个键同时按下，一路往下走。",
+      text: "轮到你了。把 3 指放在中央 C 往上第二个 D 上，5 指放在它上面的升 F 上。每个三度的两个琴键同时按下，一路往下走。",
     },
     recap: {
       text: "做得好。现在你能弹阿尔贝蒂低音了。",

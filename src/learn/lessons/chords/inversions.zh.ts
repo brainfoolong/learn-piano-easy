@@ -18,7 +18,7 @@ export const inversionsZh: Translation<InversionsTexts> = {
       text: "现在把最下面的音移高一个八度。C、E、G 就变成 E、G、C。这是第一转位。",
     },
     "play-first-inversion": {
-      text: "弹第一转位：中央 C 上面的 E 和 G，再加上它们上面的 C。三个键一起按下。",
+      text: "弹第一转位：中央 C 上面的 E 和 G，再加上它们上面的 C。三个琴键一起按下。",
     },
     "which-chord-is-e-g-c": {
       text: "E、G、C 听起来和 C、E、G 有点不一样。它是什么和弦？",
@@ -28,7 +28,7 @@ export const inversionsZh: Translation<InversionsTexts> = {
       text: "再把最下面的音移高一次。E、G、C 就变成 G、C、E。这是第二转位。",
     },
     "play-second-inversion": {
-      text: "弹第二转位：中央 C 上面的 G，再加上它上面紧接着的 C 和 E。三个键一起按下。",
+      text: "弹第二转位：中央 C 上面的 G，再加上它上面紧接着的 C 和 E。三个琴键一起按下。",
     },
     "climb-the-inversions": {
       text: "用 C 大三和弦沿着琴键往上走：原位、第一转位、第二转位，再到高一个八度的原位。",
@@ -37,7 +37,7 @@ export const inversionsZh: Translation<InversionsTexts> = {
       text: "有了转位，手在和弦之间就能少移动。F 大三和弦弹成 C、F、A，G 大三和弦弹成 B、D、G，它们都紧挨着 C、E、G。",
     },
     "close-chords-demo": {
-      text: "再听一次 C、F、G、C，这次和弦弹得很紧凑。每根手指只移动一两个键。",
+      text: "再听一次 C、F、G、C，这次和弦弹得很紧凑。每根手指只移动一两个琴键。",
     },
     "which-chord-is-c-f-a": {
       text: "C、F、A 是把 F、A、C 这三个音换了顺序。它是什么和弦？",

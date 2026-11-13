@@ -16,7 +16,7 @@ export const learnBadges: Translation<typeof en> = {
     "streak-100": { name: "百日坚持", description: "连续一百天达成每日目标。" },
     "notes-1000": { name: "千音", description: "在课里弹一千个音。" },
     "notes-10000": { name: "万音", description: "在课里弹一万个音。" },
-    "rhythm-ace": { name: "节奏高手", description: "第一次尝试就通过一个节奏步骤。" },
+    "rhythm-ace": { name: "节奏高手", description: "第一次尝试就通过一步节奏练习。" },
     "sight-reader": { name: "识谱能手", description: "连续读对十个音，一个都不错。" },
     "early-bird": { name: "早起的鸟儿", description: "在早上 8 点前学完一课。" },
     "night-owl": { name: "夜猫子", description: "在晚上 10 点或更晚学完一课。" },

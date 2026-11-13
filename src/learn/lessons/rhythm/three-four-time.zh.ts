@@ -9,7 +9,7 @@ export const threeFourTimeZh: Translation<ThreeFourTimeTexts> = {
       text: "看一看，听一听。第一拍响一个低音，后面两拍响较高的音。这个音型不断重复。",
     },
     "beats-in-threes": {
-      text: "有些音乐每三拍为一组。你数“1、2、3、1、2、3”，第 1 拍最强。这就是 3/4 拍，读作四三拍，也是圆舞曲的拍子。",
+      text: "有些音乐每三拍为一组。你数“1、2、3、1、2、3”，第一拍最强。这就是 3/4 拍，读作四三拍，也是圆舞曲的拍号。",
     },
     "beats-in-a-bar-quiz": {
       text: "3/4 拍的一个小节有几拍？",
@@ -24,7 +24,7 @@ export const threeFourTimeZh: Translation<ThreeFourTimeTexts> = {
     },
     recap: {
       text: "做得好！你已经会三拍三拍地数了。",
-      points: ["有些音乐每三拍为一组。", "3/4 拍的一个小节有三拍，数“1、2、3”。", "第 1 拍最强，圆舞曲就是这样。"],
+      points: ["有些音乐每三拍为一组。", "3/4 拍的一个小节有三拍，数“1、2、3”。", "第一拍最强，圆舞曲就是这样。"],
     },
   },
 };
