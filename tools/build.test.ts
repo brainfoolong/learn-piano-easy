@@ -205,12 +205,12 @@ test("the_landing_player_stays_within_its_byte_budget", async () => {
 
 test("build_uses_only_relative_urls", async () => {
   const rootAbsolute = /(?:src|href)\s*=\s*["']\/(?!\/)|url\(\s*["']?\/(?!\/)/;
-  for (const file of result.files.filter((f) => /\.(html|css)$/.test(f))) {
-    expect({ file, rootAbsolute: rootAbsolute.test(await Bun.file(join(outDir, file)).text()) }).toEqual({
-      file,
-      rootAbsolute: false,
-    });
-  }
+  // The pages are read side by side, since one by one they outlast the timeout on a busy machine.
+  const files = result.files.filter((f) => /\.(html|css)$/.test(f));
+  const texts = await Promise.all(files.map((file) => Bun.file(join(outDir, file)).text()));
+  files.forEach((file, i) => {
+    expect({ file, rootAbsolute: rootAbsolute.test(texts[i]!) }).toEqual({ file, rootAbsolute: false });
+  });
   const manifest = (await Bun.file(join(outDir, "manifest.webmanifest")).json()) as Record<string, unknown>;
   for (const key of ["id", "start_url", "scope"]) expect(String(manifest[key])).toStartWith("./");
   const icons = manifest.icons as { src: string }[];
