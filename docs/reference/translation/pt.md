@@ -267,6 +267,18 @@ on common usage alone, and *Open* lists it.
 | download | baixar | MS § 2.1.4 |
 | error (a title); a failure in a message | Erro; *Não foi possível…* | MS § 5.6.2 |
 | loading | Carregando… | AN |
+| Expert (the bar's key for the expert tools); expert tools | Avançado; ferramentas avançadas | *Especialista* is too long for the key, and stays the level |
+| view (of the scene) | a exibição | *vista* reads as Portugal's or as scenery, unsourced |
+| Clear (a field, a key binding) | Limpar | AN |
+| how loud (a sound's level) | o volume | *altura* is pitch, see the piano glossary |
+| Play modes | Modos de tocar | the site's own term |
+| sound set; background track | o conjunto de sons; a faixa de fundo | plain words, unsourced |
+| hit line; hit window | a linha de acerto; a janela de acerto | the player's own terms |
+| loop trainer; a pass of a loop | a repetição progressiva; a volta | the player's own terms |
+| reverb; equaliser; detune | a reverberação; o equalizador; o ajuste fino | the words of audio apps |
+| particles; markers; labels | partículas; marcadores; rótulos | plain words |
+| tag (search); round (a game) | a etiqueta; a rodada | plain words |
+| Preview (a song) | Ouvir; Parar de ouvir | plain words, shorter than *pré-visualizar* |
 
 ### Which "play" is which
 
@@ -345,7 +357,8 @@ guide. A step that only differs in its bars or its section follows the nearest r
 - **The octave number is scientific:** the Dó central is `Dó4`, as the screen shows it. WP *Dó* calls it
   *Dó3*, after an older Brazilian count. A lesson names a note by its place, such as *o Dó central*, as
   the English does.
-- **A letter that code checks,** such as a quiz answer, stays the catalog's own.
+- **A letter that code checks,** such as a quiz answer, stays the catalog's own. The range fields of the
+  settings read letters alone, so their examples stay *C2* and *C7*.
 - **One note after a verb or a preposition takes its article when the sentence needs it:** *toque o Mi*,
   *até o Fá sustenido*, *desça para o Sol*. A range and a list stay bare: *de Dó a Sol*, *as notas Dó, Mi
   e Sol*.

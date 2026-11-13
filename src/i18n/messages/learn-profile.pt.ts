@@ -4,8 +4,8 @@ import type { Translation } from "../translation";
 import type { learnProfile as en } from "./learn-profile.en";
 
 const n = (value: number) => formatNumber("pt", value);
-const days = (value: number) => `${n(value)} ${plural("pt", value, { one: "dia", many: "de dias", other: "dias" })}`;
-const inDays = (value: number) => (value === 0 ? "nenhum dia" : days(value));
+const days = (value: number) =>
+  value === 0 ? "nenhum dia" : `${n(value)} ${plural("pt", value, { one: "dia", many: "de dias", other: "dias" })}`;
 
 export const learnProfile: Translation<typeof en> = {
   loading: "Carregando seu progresso…",
@@ -18,7 +18,7 @@ export const learnProfile: Translation<typeof en> = {
   streak: {
     heading: "Sequência",
     current: (count: number) => days(count),
-    currentLabel: "seguidos agora",
+    currentLabel: "em sequência agora",
     best: (count: number) => `Recorde: ${days(count)}`,
     today: (xp: number, goal: number) =>
       xp >= goal ? `Hoje: ${n(xp)} XP, meta de ${n(goal)} alcançada` : `Hoje: ${n(xp)} de ${n(goal)} XP`,
@@ -26,7 +26,7 @@ export const learnProfile: Translation<typeof en> = {
   calendar: {
     heading: "As últimas oito semanas",
     label: (met: number, played: number) =>
-      `Nas últimas oito semanas, você alcançou a meta em ${inDays(met)} e fez uma lição em ${inDays(played)}.`,
+      `Nas últimas oito semanas, você alcançou a meta em ${days(met)} e fez uma lição em ${days(played)}.`,
     met: "Meta alcançada",
     played: "Com lição",
     none: "Sem lição",

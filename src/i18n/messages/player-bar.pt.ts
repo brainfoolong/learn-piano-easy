@@ -20,8 +20,8 @@ export const playerBar: Translation<typeof en> = {
     zoomIn: "Aumentar o zoom",
     zoomOut: "Diminuir o zoom",
     fit: "Ajustar à música",
-    viewLeft: "Mover a vista para a esquerda",
-    viewRight: "Mover a vista para a direita",
+    viewLeft: "Mover a exibição para a esquerda",
+    viewRight: "Mover a exibição para a direita",
     fullscreen: "Tela cheia",
   },
   controls: {
@@ -41,7 +41,7 @@ export const playerBar: Translation<typeof en> = {
     more: "Mais ferramentas",
     zoom: "Zoom",
     fit: "Ajustar",
-    view: "Vista",
+    view: "Exibição",
     leaveFullScreen: "Sair da tela cheia",
     expert: "Avançado",
     expertTitles: {
@@ -56,8 +56,8 @@ export const playerBar: Translation<typeof en> = {
   hotkeyDialog: {
     pressKey: "Pressione uma tecla…",
     keyFor: (label: string) => `Tecla para ${label}`,
-    clear: "Apagar",
-    clearTitle: (label: string) => `Apagar a tecla de ${label}`,
+    clear: "Limpar",
+    clearTitle: (label: string) => `Limpar a tecla de ${label}`,
     resetAll: "Redefinir todas as teclas",
     help: "Selecione uma tecla e depois pressione a tecla que quiser. Esc fecha esta janela.",
     off: "Os atalhos do teclado estão desativados nas configurações, então estas teclas não fazem nada agora.",

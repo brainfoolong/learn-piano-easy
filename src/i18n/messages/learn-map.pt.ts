@@ -26,10 +26,14 @@ export const learnMap: Translation<typeof en> = {
   },
   bar: {
     label: "Seu progresso",
-    streak: (days: number) => `Sequência de ${formatNumber("pt", days)} ${plural("pt", days, { one: "dia", many: "de dias", other: "dias" })}`,
+    streak: (days: number) =>
+      days === 0
+        ? "Nenhum dia de sequência"
+        : `Sequência de ${formatNumber("pt", days)} ${plural("pt", days, { one: "dia", many: "de dias", other: "dias" })}`,
     level: (level: number) => `Nível ${formatNumber("pt", level)}`,
     today: "Hoje",
     todayGoal: (xp: number, goal: number) => `Hoje: ${formatNumber("pt", xp)} de ${formatNumber("pt", goal)} XP`,
-    days: (days: number) => `${formatNumber("pt", days)} ${plural("pt", days, { one: "dia", many: "de dias", other: "dias" })}`,
+    days: (days: number) =>
+      days === 0 ? "nenhum dia" : `${formatNumber("pt", days)} ${plural("pt", days, { one: "dia", many: "de dias", other: "dias" })}`,
   },
 };

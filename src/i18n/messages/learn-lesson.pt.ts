@@ -90,7 +90,7 @@ export const learnLesson: Translation<typeof en> = {
     piano: "O painel de ritmo. Toque qualquer tecla na pulsação.",
     marks: { next: "Toque aqui", correct: "No tempo", mistake: "Fora do tempo" },
     short: (hits: number, beats: number) =>
-      `Você tocou em ${formatNumber("pt", hits)} de ${formatNumber("pt", beats)} tempos. Tente de novo.`,
+      `Você tocou ${formatNumber("pt", hits)} de ${formatNumber("pt", beats)} tempos. Tente de novo.`,
     hint: "Toque no momento em que ouvir o clique. Os pontos piscam a cada tempo.",
     play: "Agora toque cada nota no seu clique.",
     phrasePiano: "As teclas. Toque a frase junto com os cliques.",

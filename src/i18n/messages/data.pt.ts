@@ -33,7 +33,7 @@ export const dataPage: Translation<typeof en> = {
     askingFrom: (date: string) => `Esses dados foram salvos em ${date}.`,
     restoreAction: "Restaurar da pasta",
     replaceAction: "Substituir pelos dados deste navegador",
-    replaced: "A pasta agora contém os dados deste navegador. O arquivo antigo dela fica na sua pasta de backups.",
+    replaced: "A pasta agora contém os dados deste navegador. O arquivo antigo fica na pasta de backups dela.",
     failed: "Não foi possível gravar na pasta. Reconecte a pasta, ou escolha a pasta de novo.",
     disconnect: "Desconectar",
     gone: "Não foi possível ler o arquivo da pasta. Nada mudou.",

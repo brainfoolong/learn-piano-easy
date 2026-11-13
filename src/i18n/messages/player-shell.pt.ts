@@ -13,7 +13,7 @@ export const playerShell: Translation<typeof en> = {
   dialog: {
     close: "Fechar",
     hotkeys: "Atalhos do teclado",
-    keyBindings: "Teclas do teclado do computador",
+    keyBindings: "Teclas do computador",
     pdf: "Salvar como PDF",
     offlineFiles: "Arquivos sem conexão",
     tracks: "Faixas",
@@ -68,7 +68,7 @@ export const playerShell: Translation<typeof en> = {
     suggested: "sugerido",
     none: "sem dedo",
     finger: (finger, source) => `dedo ${finger}, ${source}`,
-    line: (note, said) => `${note}: ${said}. Pressione de 1 a 5 para escolher o dedo, 0 para apagar e Esc para terminar.`,
+    line: (note, said) => `${note}: ${said}. Pressione de 1 a 5 para escolher o dedo, 0 para limpar e Esc para terminar.`,
   },
   backgroundTrack: {
     notAudio: (file) => `${file} não é um áudio que este navegador consegue reproduzir.`,
@@ -94,7 +94,7 @@ export const playerShell: Translation<typeof en> = {
     megabytes: (n) => `${tenths(n)} MB`,
     groupsFailed: (n, labels) => `Não foi possível salvar ${files(n)} de ${labels} para uso sem conexão.`,
     updated: (labels) => `Atualização concluída. Estes itens estão salvos de novo para uso sem conexão: ${labels}.`,
-    unavailable: "Este navegador não guarda arquivos sem conexão para esta página.",
+    unavailable: "Este navegador não salva arquivos para uso sem conexão nesta página.",
     reading: "Lendo o que está salvo…",
     unreadable: "Não foi possível ler a lista de arquivos sem conexão. Recarregue a página e tente de novo.",
     intro: "Os arquivos salvos continuam funcionando sem conexão. Cada parte pode ser salva ou removida separadamente.",
@@ -123,7 +123,7 @@ export const playerShell: Translation<typeof en> = {
   },
   demo: {
     lyrics: [
-      "O|lhe as lu|zes a des|cer",
+      "O|lhe as lu|zes des|cen|do",
       "to|que ca|da te|cla ao che|gar",
       "de|va|gar e de|pois ve|loz",
       "lo|go as mãos sa|be|rão o ca|mi|nho",

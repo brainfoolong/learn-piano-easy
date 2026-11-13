@@ -59,7 +59,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "A cor das pistas acima das teclas pretas.",
   },
   bgCol3: {
-    label: "Cor da divisa das oitavas",
+    label: "Cor do separador de oitavas",
     help: "A cor da linha entre cada Si e o Dó seguinte.",
   },
   drawMeasureLines: {
@@ -138,7 +138,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesStars: {
     label: "Estrelas",
-    help: "Pequenas estrelas e pontos girando sobem de cada tecla e voltam a cair.",
+    help: "Pequenas estrelas e pontos giram, sobem de cada tecla e voltam a cair.",
   },
   particlesCustom: {
     label: "Suas próprias partículas",
@@ -220,7 +220,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleNoiseResX: {
     label: "Detalhe do desvio lateral",
-    help: "Valores maiores fazem as partículas de teclas vizinhas se desviarem para os lados de modo mais diferente.",
+    help: "Valores maiores deixam o desvio lateral das partículas de teclas vizinhas mais diferente.",
   },
   particleNoiseStrengthX: {
     label: "Desvio lateral",
@@ -243,7 +243,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "O quanto as partículas balançam de um lado para o outro.",
   },
   turbulenceXFrequency: {
-    label: "Frequência do balanço lateral",
+    label: "Taxa do balanço lateral",
     help: "Balanços por segundo.",
   },
   turbulenceYAmplitude: {
@@ -251,7 +251,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "O quanto as partículas balançam para cima e para baixo enquanto sobem.",
   },
   turbulenceYFrequency: {
-    label: "Frequência do balanço na subida",
+    label: "Taxa do balanço na subida",
     help: "Balanços por segundo.",
   },
   particleYOffset: {
@@ -261,7 +261,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   particleDistributionX: {
     label: "Início na largura da tecla",
     help: "Onde, na largura da sua tecla, cada partícula começa.",
-    options: { across: "Em qualquer ponto da largura", centre: "No centro" },
+    options: { across: "Em toda a largura", centre: "No centro" },
   },
   particleDistributionXSpread: {
     label: "Espalhamento inicial (%)",
@@ -270,7 +270,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   particleDistributionY: {
     label: "Início ao longo da tecla",
     help: "Onde, ao longo da sua tecla, cada partícula começa.",
-    options: { hitLine: "Na linha de acerto", key: "Em qualquer ponto do topo" },
+    options: { hitLine: "Na linha de acerto", key: "Em qualquer ponto ao longo do topo" },
   },
   particleDistributionZ: {
     label: "Camada",
@@ -286,7 +286,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   noteLabel: {
     label: "Rótulos das notas",
-    help: "Os textos em cada nota: escolha quantos quiser, ou nenhum. Selecione uma nota e pressione de 1 a 5 para definir o dedo dela.",
+    help: "Os textos em cada nota: escolha quantos quiser, ou nenhum. Selecione uma nota e pressione uma tecla de 1 a 5 para definir o dedo dela.",
     options: { name: "Nome da nota", keyBinding: "Tecla do computador", fingering: "Dedo" },
   },
   noteLabelColor: {
@@ -339,7 +339,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "O grau de cada acorde na tonalidade da música, como V7.",
   },
   chordBlocks: {
-    label: "Blocos de notas",
+    label: "Blocos nas notas",
     help: "Um bloco acima de cada nota de um acorde nomeado diz o que a nota é.",
     options: { none: "Nenhum", tone: "Nota do acorde", degree: "Grau da escala" },
   },
@@ -482,11 +482,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   sheetMinNoteDenom: {
     label: "Figura mais curta",
-    help: "A nota mais curta que a partitura escreve. Tercinas dela ainda cabem.",
+    help: "A nota mais curta que a partitura escreve. Tercinas dessa figura ainda cabem.",
     options: { "4": "Semínima", "8": "Colcheia", "16": "Semicolcheia", "32": "Fusa", "64": "Semifusa" },
   },
   hideRestsBelow: {
-    label: "Esconder pausas menores que",
+    label: "Esconder pausas mais curtas que",
     help: "Deixa de fora as pausas curtas, para a partitura ficar mais fácil de ler.",
     options: { none: "Não esconder", "4": "Uma semínima", "8": "Uma colcheia", "16": "Uma semicolcheia", "32": "Uma fusa" },
   },
@@ -534,7 +534,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   // PDF
   pdfExportButtonGroup: {
     label: "Salvar as notas em PDF",
-    help: "Abre uma janela que salva as notas que caem da música aberta em páginas, com o comprimento que você definir.",
+    help: "Abre uma janela para salvar as notas que caem da música aberta como páginas, no comprimento que você escolher.",
   },
   exportPdfBackground: {
     label: "Usar as cores de fundo",
@@ -543,7 +543,7 @@ export const playerSettingsLook: Translation<typeof en> = {
 
   // Offline
   offlineCache: {
-    label: "Arquivos para usar sem conexão",
+    label: "Arquivos sem conexão",
     help: "Mostra o tamanho do app, das músicas e dos sons do piano, e salva ou remove cada um.",
   },
   autoCacheSongs: {

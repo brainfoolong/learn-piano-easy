@@ -98,7 +98,7 @@ export const playModes: Translation<typeof en> = {
     freeJam: {
       tag: "Só você",
       name: "Improviso livre",
-      text: "Sem música e sem regras. Toque o que quiser, e o piano responde com faíscas e luz. Grave e guarde como arquivo MIDI.",
+      text: "Sem música e sem regras. Toque o que quiser, e o piano responde com faíscas e luz. Grave e salve como arquivo MIDI.",
       traits: ["Tocar livremente, sem música", "Faíscas, estrelas e um piano que brilha", "Grave e salve o que você toca"],
     },
     chordExplorer: {

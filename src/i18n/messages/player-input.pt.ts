@@ -38,12 +38,12 @@ export const playerInput: Translation<typeof en> = {
     recorded: (n: number) => {
       const count = formatNumber("pt", n);
       return plural("pt", n, {
-        one: `${count} nota gravada. Selecione “Salvar” para guardá-la como arquivo MIDI.`,
-        many: `${count} notas gravadas. Selecione “Salvar” para guardá-las como arquivo MIDI.`,
-        other: `${count} notas gravadas. Selecione “Salvar” para guardá-las como arquivo MIDI.`,
+        one: `${count} nota gravada. Selecione “Salvar” para gerar um arquivo MIDI.`,
+        many: `${count} notas gravadas. Selecione “Salvar” para gerar um arquivo MIDI.`,
+        other: `${count} notas gravadas. Selecione “Salvar” para gerar um arquivo MIDI.`,
       });
     },
-    hint: "Toque livremente, ou selecione “Gravar” para guardar o que você toca.",
+    hint: "Toque livremente, ou selecione “Gravar” para registrar o que você toca.",
   },
   history: {
     empty: "Ainda não há tentativas concluídas desta música. Toque até o fim com a pontuação ativada.",
@@ -145,7 +145,7 @@ export const playerInput: Translation<typeof en> = {
   },
   pdf: {
     noSong: "Abra uma música primeiro e depois salve as notas dela como PDF.",
-    intro: (title: string) => `Salva as notas que caem de ${title} sobre um piano, com alguns segundos da música em cada página.`,
+    intro: (title: string) => `Salva as notas de ${title} que caem sobre um piano, com alguns segundos da música em cada página.`,
     secondsPerPage: "Segundos por página",
     background: "Usar cores de fundo",
     pages: (pages: number, seconds: number) =>

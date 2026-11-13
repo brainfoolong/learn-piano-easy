@@ -6,7 +6,7 @@ import type { learnSetup as en } from "./learn-setup.en";
 export const learnSetup: Translation<typeof en> = {
   title: "Boas-vindas ao Aprenda piano",
   welcome: "Olá! Sou seu professor de piano. Três perguntas rápidas, e depois vamos tocar.",
-  mascot: "Seu professor de piano, um macaco de pelo cor de mel com um paletó de veludo cotelê",
+  mascot: "Seu professor de piano, um macaco de pelo cor de mel com uma jaqueta de veludo cotelê",
   close: "Pular a configuração",
   progress: "Configuração",
   steps: ["Seu piano", "Sua experiência", "Sua meta diária"],
@@ -16,7 +16,7 @@ export const learnSetup: Translation<typeof en> = {
     question: "Em que você vai tocar?",
     midi: { name: "Um teclado MIDI", text: "Um piano digital ou um teclado, conectado por USB." },
     computer: { name: "O teclado do computador", text: "As teclas de letras tocam as notas." },
-    screen: { name: "A tela", text: "Selecione as teclas na tela com o dedo ou o mouse." },
+    screen: { name: "A tela", text: "Toque nas teclas da tela com o dedo ou o mouse." },
     noMidi: "Este navegador não tem MIDI. Toque no teclado do computador ou na tela.",
     check: "Toque qualquer tecla para conferir se ouvimos.",
     checkMidi: "Toque qualquer tecla do seu teclado MIDI.",
@@ -36,7 +36,7 @@ export const learnSetup: Translation<typeof en> = {
   },
   goal: {
     question: "Quanto por dia?",
-    lead: "Alcance sua meta todo dia para a sua sequência crescer. Uma lição nova com três estrelas dá 30 XP.",
+    lead: "Alcance sua meta todo dia para sua sequência crescer. Uma lição nova com três estrelas dá 30 XP.",
     label: "Meta diária",
     names: { "10": "Com calma", "20": "Constante", "30": "Com vontade", "50": "Com tudo" },
     option: (xp: number, name: string) => `${formatNumber("pt", xp)} XP, ${name}`,

@@ -19,8 +19,8 @@ export const sponsorPage: Translation<typeof en> = {
     heading: "Para onde vai o seu apoio",
     items: [
       { title: "Tempo", text: "Noites para novas lições, novas músicas e menos bugs." },
-      { title: "O domínio", text: "Para o site manter o endereço, e você continuar a encontrá-lo." },
-      { title: "Café", text: "Ele vira código num andamento estável de uns 120 tempos por minuto." },
+      { title: "O domínio", text: "Para o site manter o endereço e você sempre conseguir encontrá-lo." },
+      { title: "Café", text: "Ele vira código em um andamento estável de uns 120 tempos por minuto." },
     ],
   },
   help: {

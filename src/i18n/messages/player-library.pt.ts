@@ -26,7 +26,7 @@ export const playerLibrary: Translation<typeof en> = {
     twoNoteChords: "Acordes de duas notas",
     positionChange: "Mudança de posição",
     thumbUnder: "Passagem do polegar",
-    fingerOver: "Cruzamento de dedo sobre o polegar",
+    fingerOver: "Dedo sobre o polegar",
     brokenChords: "Acordes quebrados",
     albertiBass: "Baixo Alberti",
     waltzBass: "Baixo de valsa",
@@ -44,7 +44,7 @@ export const playerLibrary: Translation<typeof en> = {
   panel: {
     search: { placeholder: "Pesquisar título, compositor ou etiqueta", label: "Pesquisar músicas", clear: "Limpar a pesquisa" },
     fits: "Cabe no meu teclado",
-    kinds: { level: "Dificuldade", yours: "Suas", collection: "Coleção", style: "Estilo", skill: "Técnica", composer: "Compositor" },
+    kinds: { level: "Dificuldade", yours: "Suas músicas", collection: "Coleção", style: "Estilo", skill: "Técnica", composer: "Compositor" },
     levels: { beginner: "Iniciante", easy: "Fácil", medium: "Intermediário", hard: "Difícil", advanced: "Avançado", expert: "Especialista" },
     styles: {
       baroque: "Barroco",
@@ -102,7 +102,8 @@ export const playerLibrary: Translation<typeof en> = {
       delete: "Excluir",
       deleteTitle: (title: string) => `Excluir ${title}`,
     },
-    count: (n: number) => `${formatNumber("pt", n)} ${plural("pt", n, { one: "música", many: "músicas", other: "músicas" })}`,
+    count: (n: number) =>
+      n === 0 ? "nenhuma música" : `${formatNumber("pt", n)} ${plural("pt", n, { one: "música", many: "músicas", other: "músicas" })}`,
   },
   tracks: {
     hands: { right: "Mão direita", left: "Mão esquerda", split: "As duas mãos, divididas no Dó central", none: "Não é minha: o app toca esta faixa" },
@@ -119,7 +120,8 @@ export const playerLibrary: Translation<typeof en> = {
     colour: (name: string) => `Cor de ${name}`,
     volume: (name: string) => `Volume de ${name} (%)`,
     sheet: (name: string) => `Mostrar ${name} na partitura`,
-    notes: (n: number) => `${formatNumber("pt", n)} ${plural("pt", n, { one: "nota", many: "notas", other: "notas" })}`,
+    notes: (n: number) =>
+      n === 0 ? "nenhuma nota" : `${formatNumber("pt", n)} ${plural("pt", n, { one: "nota", many: "notas", other: "notas" })}`,
     drums: ", bateria, não é tocada",
     fields: { show: "Mostrar", mute: "Sem som", hand: "Mão", volume: "Volume", sheet: "Partitura" },
     empty: "Esta música não tem notas.",

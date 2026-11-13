@@ -11,7 +11,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   language: {
     label: "Idioma",
-    help: "Com “Padrão do navegador”, o site abre no idioma do navegador, quando o tem.",
+    help: "Com “Padrão do navegador”, o site abre no idioma do navegador, se esse idioma estiver disponível.",
     options: { auto: "Padrão do navegador" },
   },
   learnSounds: {
@@ -29,7 +29,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   expertControls: {
     label: "Ferramentas avançadas",
-    help: "O botão Avançado da barra de controle mostra a velocidade, a transposição, o primeiro e o último compasso da repetição, o ajuste e o deslocamento lateral da vista.",
+    help: "O botão Avançado da barra de controle mostra a velocidade, a transposição, o primeiro e o último compasso da repetição, o ajuste e o deslocamento lateral da exibição.",
   },
   // General
   theme: {
@@ -67,7 +67,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   playNotesOnScrollEnabled: {
     label: "Tocar as notas ao arrastar a linha do tempo",
-    help: "Você ouve cada nota por onde passa enquanto arrasta pela música.",
+    help: "Você ouve cada nota que atravessa ao arrastar pela música.",
   },
   fitZoomOnNewSong: {
     label: "Ajustar o zoom a cada nova música",
@@ -83,7 +83,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   renderOffset: {
     label: "Deslocamento da imagem (ms)",
-    help: "Atrasa a imagem em relação ao som, ou a adianta abaixo de 0.",
+    help: "Atrasa a imagem em relação ao som. Abaixo de 0, a imagem adianta.",
   },
   showBPM: {
     label: "Mostrar o andamento em BPM",
@@ -136,7 +136,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   autoLoop: {
     label: "Começar cada volta na hora",
-    help: "Desativado, a música pausa na contagem inicial depois de cada volta.",
+    help: "Desativado, a música para na contagem inicial depois de cada volta.",
   },
   muteLoop: {
     label: "Silenciar a música fora da repetição",
@@ -157,11 +157,11 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   masterGain: {
     label: "Volume da música",
-    help: "A altura do som das notas da música.",
+    help: "O volume das notas da música.",
   },
   inputGain: {
     label: "Volume do que você toca",
-    help: "A altura do som das notas que você toca no seu teclado.",
+    help: "O volume das notas que você toca no seu teclado.",
   },
   velocityStrength: {
     label: "Efeito da intensidade",
@@ -182,7 +182,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   detune: {
     label: "Ajuste fino (cents)",
-    help: "Afina todas as notas um pouco mais alto ou mais baixo. 100 cents são um semitom.",
+    help: "Afina todas as notas um pouco mais agudas ou mais graves. 100 cents são um semitom.",
   },
   adsrAttack: {
     label: "Ataque (s)",
@@ -190,7 +190,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   adsrDecay: {
     label: "Decaimento (s)",
-    help: "Quanto tempo uma nota leva para cair ao nível de sustentação.",
+    help: "Quanto tempo uma nota leva para cair até o nível de sustentação.",
   },
   adsrSustain: {
     label: "Nível de sustentação (%)",
@@ -224,7 +224,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   metronomeVolume: {
     label: "Volume do metrônomo",
-    help: "A altura do clique do metrônomo.",
+    help: "O volume do clique do metrônomo.",
   },
   synchedMetronome: {
     label: "Manter o metrônomo no tempo da música",
@@ -256,7 +256,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   scheduleAheadMs: {
     label: "Antecipação do áudio (ms)",
-    help: "Com quanta antecedência as notas entram na fila. Mais é mais estável, menos reage mais rápido.",
+    help: "Valores maiores deixam o som mais estável. Valores menores reagem mais rápido.",
   },
   scheduleIntervalMs: {
     label: "Intervalo de agendamento do áudio (ms)",
@@ -273,7 +273,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   bgTrackVolume: {
     label: "Volume (%)",
-    help: "A altura do som da faixa de fundo.",
+    help: "O volume da faixa de fundo.",
   },
   bgTrackSpeed: {
     label: "Velocidade (%)",
@@ -290,7 +290,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // View
   cameraPreset: {
     label: "Câmera",
-    help: "Arraste a cena para olhar em volta, exceto na vista plana. Clique duas vezes nela para voltar a esta câmera. A vista plana se alinha com um teclado logo abaixo da tela.",
+    help: "Arraste a cena para olhar em volta, exceto na exibição plana. Clique duas vezes nela para voltar a esta câmera. A exibição plana se alinha com um teclado logo abaixo da tela.",
     options: {
       classic: "Clássica, de cima",
       player: "Do banco do piano",
@@ -387,12 +387,12 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   playHands: {
     label: "Suas mãos",
-    help: "As mãos cuja execução recebe pontuação. Com “Esperar suas notas” ativado, o app toca a mão que você deixa de fora.",
+    help: "As mãos que recebem pontuação. Com “Esperar suas notas” ativado, o app toca a mão que você deixa de fora.",
     options: { both: "As duas mãos", right: "Mão direita", left: "Mão esquerda" },
   },
   playalongSilentNotes: {
-    label: "Acender as teclas a tocar no seu teclado MIDI",
-    help: "Envia cada próxima nota bem baixinho para a saída MIDI, para um teclado com luzes nas teclas mostrá-la.",
+    label: "Acender as próximas teclas no seu teclado MIDI",
+    help: "Envia cada próxima nota em volume bem baixo para a saída MIDI, para um teclado com luzes nas teclas mostrá-la.",
   },
   playalongSilentNotesChannel: {
     label: "Canal MIDI das luzes das teclas",
@@ -404,11 +404,11 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   scoreHitWindow: {
     label: "Janela de acerto (ms)",
-    help: "Uma nota tocada com essa diferença do seu tempo, adiantada ou atrasada, é um acerto.",
+    help: "Uma nota tocada tão perto do tempo certo, adiantada ou atrasada, é um acerto.",
   },
   scorePerfectWindow: {
     label: "Janela de perfeito (ms)",
-    help: "Um acerto com essa diferença do seu tempo é perfeito.",
+    help: "Um acerto tão perto do tempo certo é perfeito.",
   },
   enableGameMode: {
     label: "Modo jogo",
@@ -421,8 +421,8 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   // Piano
   clickablePiano: {
-    label: "Tocar o piano clicando ou tocando nele",
-    help: "As teclas na tela soam quando você clica ou toca nelas.",
+    label: "Tocar o piano na tela com o mouse ou o dedo",
+    help: "As teclas na tela soam quando você clica nelas ou as toca com o dedo.",
   },
   highlightActivePianoKeys: {
     label: "Colorir as teclas pressionadas",
@@ -453,7 +453,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "A cor atrás do piano e das pistas.",
   },
   pianoPosition: {
-    label: "Altura do piano na tela (%)",
+    label: "Posição vertical do piano (%)",
     help: "Move o piano para cima ou para baixo na tela.",
   },
   whiteKeyHeight: {
@@ -474,7 +474,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   pianoLineResolution: {
     label: "Ondas por oitava",
-    help: "Quantas ondas cabem em uma oitava. Mais ondas parecem mais finas.",
+    help: "Quantas ondas cabem em uma oitava. Mais ondas deixam a linha mais fina.",
   },
   pianoLineAmplitude: {
     label: "Altura da onda",
@@ -486,10 +486,10 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   pianoLineOpacity: {
     label: "Opacidade da linha de onda",
-    help: "O quanto a linha de onda aparece. Menos é mais fraca.",
+    help: "O quanto a linha de onda aparece. Valores menores deixam a linha mais fraca.",
   },
   pianoLineYOffset: {
-    label: "Altura da linha de onda",
+    label: "Posição da linha de onda sobre as teclas",
     help: "Em larguras de tecla acima das teclas.",
   },
 };

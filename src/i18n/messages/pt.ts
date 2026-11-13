@@ -23,7 +23,7 @@ export const pt: Translation<Messages> = {
   pages: {
     home: {
       description:
-        "Aprenda piano tocando. Um curso guiado, um piano 3D e seu teclado MIDI. Grátis, de código aberto e sem conexão.",
+        "Aprenda piano tocando. Um curso guiado, um piano 3D e seu teclado MIDI. Grátis, de código aberto e funciona sem conexão.",
     },
     play: {
       title: "Piano livre",
@@ -47,7 +47,7 @@ export const pt: Translation<Messages> = {
     },
     data: {
       title: "Seus dados",
-      description: "Salve tudo o que você tem neste navegador em um só arquivo e recupere em qualquer dispositivo.",
+      description: "Salve tudo o que você tem neste navegador em um só arquivo e restaure em qualquer dispositivo.",
     },
     sponsor: {
       title: "Apoiar",
@@ -183,7 +183,7 @@ export const pt: Translation<Messages> = {
         },
         {
           question: "Quais navegadores funcionam?",
-          answer: "Qualquer navegador atual reproduz. Um teclado MIDI precisa de Web MIDI, que o Chrome, o Edge e o Firefox têm e o Safari não tem.",
+          answer: "Qualquer navegador atual serve. Um teclado MIDI precisa de Web MIDI, que o Chrome, o Edge e o Firefox têm e o Safari não tem.",
         },
         {
           question: "Preciso de uma conta?",
@@ -213,7 +213,7 @@ export const pt: Translation<Messages> = {
     },
   },
   footer: {
-    tagline: "Aprenda piano tocando. Grátis, de código aberto e sem conexão.",
+    tagline: "Aprenda piano tocando. Grátis, de código aberto e funciona sem conexão.",
     nav: "Site",
     explore: "Explorar",
     about: "Sobre e licenças",
@@ -222,9 +222,12 @@ export const pt: Translation<Messages> = {
     license: "Código aberto sob a licença MIT.",
   },
   counts: {
-    badges: (n: number) => `${formatNumber("pt", n)} ${plural("pt", n, { one: "medalha", many: "de medalhas", other: "medalhas" })}`,
+    badges: (n: number) =>
+      n === 0 ? "nenhuma medalha" : `${formatNumber("pt", n)} ${plural("pt", n, { one: "medalha", many: "de medalhas", other: "medalhas" })}`,
     minutesPlayed: (n: number) =>
-      `${formatNumber("pt", n)} ${plural("pt", n, { one: "minuto tocado", many: "de minutos tocados", other: "minutos tocados" })}`,
+      n === 0
+        ? "nenhum minuto tocado"
+        : `${formatNumber("pt", n)} ${plural("pt", n, { one: "minuto tocado", many: "de minutos tocados", other: "minutos tocados" })}`,
     xp: (n: number) => `${formatNumber("pt", n)} XP`,
   },
   lesson: learnLesson,
