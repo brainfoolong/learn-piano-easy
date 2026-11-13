@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Hindi
-    status: open
+    status: done
   - id: 3
     title: The course in Hindi
     status: open
@@ -88,6 +88,8 @@ and hangs vowel signs on them. Its verbs agree with gender, and its numbers grou
   § 5. Its reader built it from the same English two goals ago, so a new count would repeat it.
 - **The song guides' Latin titles and names are one list, `SONG_NAMES`,** in `src/i18n/typography.ts`.
   Chinese and Hindi both spread it, and a stage 4 or 5 writer adds a missing title there.
+- **A count whose form changes picks it by `n === 1`, where 0 can show.** `Intl` puts 0 in `one`, but
+  Hindi says `0 गाने`. A noun that keeps its form still goes through `plural`, as `hi.md` § 8 says.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -116,12 +118,12 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/hi.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/hi.ts:1`, `src/i18n/messages/learn-lesson.hi.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.hi.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.hi.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `hindi_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp hi` for each catalog section. `src/i18n/stamps/hi.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/hi.ts:1`, `src/i18n/messages/learn-lesson.hi.ts:1`
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.hi.ts:1`
+- [x] The player's settings. `src/i18n/messages/player-settings.hi.ts:1`
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+- [x] `bun x tsc` and `hindi_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+- [x] `bun run i18n stamp hi` for each catalog section. `src/i18n/stamps/hi.json:1`
 
 ### 3. The course in Hindi
 
@@ -184,20 +186,27 @@ address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/hi.md` holds all twelve sections, and its *Open* lists the
-terms a teacher should confirm. The `hi` entry of `src/i18n/typography.ts` has the kept words and nine
-mark rules. Test `the_hindi_marks_hold_and_spare_kept_words` pins those rules, and
-`hindi_texts_keep_their_rules` passes, since no Hindi text exists yet.
+Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/<section>.hi.ts`, and `hi`
+loads as its own chunk (`src/i18n/locale.ts:48`, `src/i18n/all-catalogs.ts:16`). Four blind reviews
+found two wrong texts, and fresh reviewers found none on the second read. Every catalog unit is stamped
+in `src/i18n/stamps/hi.json`. The texts still missing are the ones equal to the English, as for Chinese.
+
+`hi.md` gained what the reviews settled: § 8's zero rule, the oblique plural and `Y में से X`, and § 5's
+rows for leave, skill, folk tune, size, opacity and the key-width unit. The rules test now compiles each
+kept word's pattern once, so the Chinese and Hindi checks finish within five seconds.
 
 ### Next
 
-**Stage 2: the site and the player in Hindi.** Run `bun tools/i18n.ts work hi <section>` for each
-catalog section, then brief three writers side by side with the whole of `hi.md`. Files:
-`src/i18n/messages/*.hi.ts`, and `src/i18n/locale.ts:44` for the `hi` catalog chunk. Then run three
-blind reviewers, and stamp each section into `src/i18n/stamps/hi.json`.
+**Stage 3: the course in Hindi.** Run `bun tools/i18n.ts work hi lesson/<world>` for each of the eight
+worlds. Brief eight writers side by side, each with the whole of `hi.md`, read in two parts. Each writes
+one `<lesson>.hi.ts` per lesson of its world, and its `texts.hi.ts`. The session then adds one line to
+each world's `index.ts`, as commit `cb2f086` did for Chinese. Then eight blind reviewers, a settler per
+batch, and a fresh reviewer for each batch with a *wrong* finding.
 
-- A writer adds a missing kept word to the `hi` list, and a song title to `SONG_NAMES`.
-- The `one` plural form shows for 0 too, as `hi.md` § 8 says. Brief each writer on it.
+- Writers report a missing kept word, such as an Italian mark's word, and the session adds it to the
+  `hi` list in `src/i18n/typography.ts`. A writer never edits that shared file.
+- Brief each writer on § 8: a form that changes picks by `n === 1` where 0 can show.
+- A settler per batch applies the findings, so the session's context stays small.
 
 Expected red: none.
 
