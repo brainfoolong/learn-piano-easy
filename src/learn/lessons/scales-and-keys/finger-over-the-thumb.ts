@@ -2,7 +2,8 @@
  * *Finger over the thumb*, a lesson of *Scales and keys*: going down the C major scale, the right hand's
  * finger 3 crosses over the thumb, and the left hand does the same going up.
  *
- * A demo plays the right hand down from C5 to middle C first. The learner plays the top five notes, then
+ * A demo plays the right hand down from C5 to middle C first, with 5 4 3 2 1, then 3 over the thumb
+ * onto E. The left hand's demo goes up with the same fingers, 3 crossing onto A. The learner plays the top five notes, then
  * the crossing onto E, then the whole way down. The left hand then goes up from C3 to C4 with the same
  * crossing, and the lesson ends on the right hand's scale up and down. The texts are
  * `finger-over-the-thumb.en.ts` and `finger-over-the-thumb.de.ts` beside it.
@@ -20,14 +21,14 @@ export const fingerOverTheThumb: Lesson = {
       kind: "demo",
       bpm: 72,
       notes: [
-        { note: 72, at: 0, beats: 1 },
-        { note: 71, at: 1, beats: 1 },
-        { note: 69, at: 2, beats: 1 },
-        { note: 67, at: 3, beats: 1 },
-        { note: 65, at: 4, beats: 1 },
-        { note: 64, at: 5, beats: 1 },
-        { note: 62, at: 6, beats: 1 },
-        { note: 60, at: 7, beats: 2 },
+        { note: 72, at: 0, beats: 1, finger: 5 },
+        { note: 71, at: 1, beats: 1, finger: 4 },
+        { note: 69, at: 2, beats: 1, finger: 3 },
+        { note: 67, at: 3, beats: 1, finger: 2 },
+        { note: 65, at: 4, beats: 1, finger: 1 },
+        { note: 64, at: 5, beats: 1, finger: 3 },
+        { note: 62, at: 6, beats: 1, finger: 2 },
+        { note: 60, at: 7, beats: 2, finger: 1 },
       ],
     },
     { id: "finger-over", kind: "explain" },
@@ -41,14 +42,14 @@ export const fingerOverTheThumb: Lesson = {
       kind: "demo",
       bpm: 72,
       notes: [
-        { note: 48, at: 0, beats: 1 },
-        { note: 50, at: 1, beats: 1 },
-        { note: 52, at: 2, beats: 1 },
-        { note: 53, at: 3, beats: 1 },
-        { note: 55, at: 4, beats: 1 },
-        { note: 57, at: 5, beats: 1 },
-        { note: 59, at: 6, beats: 1 },
-        { note: 60, at: 7, beats: 2 },
+        { note: 48, at: 0, beats: 1, finger: 5, hand: "left" },
+        { note: 50, at: 1, beats: 1, finger: 4, hand: "left" },
+        { note: 52, at: 2, beats: 1, finger: 3, hand: "left" },
+        { note: 53, at: 3, beats: 1, finger: 2, hand: "left" },
+        { note: 55, at: 4, beats: 1, finger: 1, hand: "left" },
+        { note: 57, at: 5, beats: 1, finger: 3, hand: "left" },
+        { note: 59, at: 6, beats: 1, finger: 2, hand: "left" },
+        { note: 60, at: 7, beats: 2, finger: 1, hand: "left" },
       ],
     },
     { id: "left-cross-key", kind: "quiz", right: 0 },
