@@ -1458,3 +1458,36 @@ them, and the Arabic site ships.
 - A composer with an Arabic Wikipedia article takes its Arabic spelling. Every other name stays in Latin.
 - Where a batch ruling and the style guide disagree, the guide wins.
 - The site keeps the system's Arabic font.
+
+## portuguese
+
+**Target:** the site, the course and the song guides read in Portuguese as if a native teacher wrote
+them, and the Portuguese site ships.
+
+### Findings
+
+- `pt` ships in Brazilian Portuguese. Every catalog section, all eight worlds and every song guide hold their Portuguese.
+- `docs/reference/translation/pt.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- `bun tools/i18n.ts status pt` lists 12 missing of 4481 texts, and each stays out on purpose.
+- Nine missing texts are the site's name and the languages' own names. Three are *Legato*, *Staccato* and the dynamics answers.
+- `looper verify` was green over the whole goal on its first run.
+- No label in `pt` is too long, since `every_page_passes_the_layout_checks_in_pt` passes.
+- The readers' drift pass added glossary rows: a figure is *o padrão* or *o desenho*, and a song that plays by itself is *a música toca*.
+- *Tochter Zion*'s *alegra-te* stays, since it quotes Zechariah 9:9 as Brazilian Bibles print it.
+- No Brazilian piano method was reached, and no native Portuguese speaker has read the texts.
+- `public/images/social/pt.png` draws the lead in Portuguese.
+- A European Portuguese locale, `pt-PT`, could follow if readers in Portugal ask for one.
+
+### Decisions that still bind
+
+- The variety is Brazilian Portuguese, spelled by the 1990 agreement, with no Brazilian slang.
+- `lang` and `intl` are `pt-BR`, `og` is `pt_BR`, and `naming` is `solfege`.
+- The learner is *você*, and an instruction is the imperative: *Toque*, *Escolha*, *Pressione*.
+- To play the piano is *tocar*, to play a game is *jogar*, and to start playback is *reproduzir*.
+- A control is *selecionado*, never *tocado*.
+- The learner's gender stays out of the text. *Boas-vindas* replaces *Bem-vindo*, and the app never says *Obrigado*.
+- The teacher is male, *seu professor de piano*.
+- Notes are solfège with a capital, *Dó Ré Mi Fá Sol Lá Si*, and middle C is `Dó4`.
+- Quotes are `“ ”`, with `‘ ’` inside.
+- Numbers and plural forms come from `Intl` for `pt-BR`. A counted message carries one, many and other.
+- *Learn Piano Easy*, *MIDI*, the song titles and the composers' names are kept.

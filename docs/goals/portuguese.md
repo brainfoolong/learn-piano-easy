@@ -194,8 +194,8 @@ A stamp hashes the English alone, so editing a translation never moves one.
 
 ### Next
 
-**Harvest the goal.** Its target, findings and binding decisions go into `docs/findings.md` §
-`portuguese`, its checks into the floor, and its file is deleted. Then `indonesian` is live.
+**Retire the goal.** Its target, findings and binding decisions are in `docs/findings.md` §
+`portuguese`. Its checks move into the floor, and its file is deleted. Then `indonesian` is live.
 
 Expected red: none known.
 
