@@ -23,9 +23,9 @@ export const translation: Translation<GuideTranslation> = {
         "Ve un poco más despacio en las últimas notas, y deja que el do grave resuene.",
       ],
       tricky: {
-        3: "Los dedos 3, 4 y 5 suben por re, mi y fa, y luego el dedo 3 vuelve al re.",
+        3: "Los dedos 3, 4 y 5 suben por el re, el mi y el fa, y luego el dedo 3 vuelve al re.",
         9: "El dedo 5 toca el fa, y luego el pulgar se estira hacia abajo hasta el re mientras la mano se queda quieta.",
-        11: "El pulgar se desliza del re al mi. Luego los dedos 2 a 5 suben por sol, la, si y el do agudo.",
+        11: "El pulgar se desliza del re al mi. Luego los dedos 2 a 5 suben por el sol, el la, el si y el do agudo.",
       },
     },
     rare: {

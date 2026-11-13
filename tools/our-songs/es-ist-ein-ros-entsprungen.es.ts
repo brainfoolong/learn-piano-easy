@@ -25,20 +25,20 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         3: "El dedo 2 mantiene el do, y luego el dedo 5 se estira hasta el sol. Cambia al dedo 4 en el sol siguiente.",
-        5: "Los dedos 4, 2, 3 y 2 tocan re, si, do y la, y luego el pulgar cae en el sol grave. Haz una pausa y sube con el dedo 5.",
+        5: "Los dedos 4, 2, 3 y 2 tocan el re, el si, el do y el la, y luego el pulgar cae en el sol grave. Haz una pausa y sube con el dedo 5.",
         9: "La misma extensión que en el compás 3: el dedo 5 sube de do a sol, y el dedo 4 toma el sol siguiente.",
       },
     },
     rare: {
       practice: [
-        "Toca la mano izquierda sola, y presiona juntas las notas de cada acorde. El pulgar se queda en sol.",
+        "Toca la mano izquierda sola, y presiona juntas las notas de cada acorde. El pulgar se queda en el sol.",
         "Toca los compases 7 a 13 con la mano derecha sola. La melodía sube una octava y vuelve.",
         "Junta las manos en la primera vuelta, despacio.",
         "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
         "Ahora tócala a velocidad completa.",
       ],
       tips: [
-        "Bajo el fa de la melodía, el acorde se reduce a re y sol. Mantén el pulgar en sol y deja sonar el fa.",
+        "Bajo el fa de la melodía, el acorde se reduce al re y al sol. Mantén el pulgar en el sol y deja sonar el fa.",
         "Aprovecha el silencio después del do para subir la mano derecha una octava.",
         "El mismo silencio lleva la mano derecha de vuelta abajo, para la última vuelta.",
       ],

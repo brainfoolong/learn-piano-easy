@@ -13,19 +13,19 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Toca los compases 1 a 4 con la mano derecha sola, y deja que la canción espere cada nota.",
         "Toca los compases 5 a 8 con la mano derecha sola, después de que la mano se mueva a su nuevo lugar.",
-        "Ahora la mano izquierda sola. Mantiene sol y re, o re solo, durante compases enteros.",
+        "Ahora la mano izquierda sola. Mantiene el sol y el re, o el re solo, durante compases enteros.",
         "Junta las dos manos, despacio.",
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
-        "El pulgar en re, el dedo 2 en sol, el dedo 4 en si y el dedo 5 en el re agudo.",
+        "El pulgar en el re, el dedo 2 en el sol, el dedo 4 en el si y el dedo 5 en el re agudo.",
         "Toca el sol corto y brillante, como si las cuerdas lo lanzaran de un golpe.",
-        "Aprovecha el silencio después del re agudo para llevar los dedos 2, 3 y 5 a fa sostenido, la y do.",
+        "Aprovecha el silencio después del re agudo para llevar los dedos 2, 3 y 5 al fa sostenido, al la y al do.",
       ],
       tricky: {
-        5: "Tu mano se movió durante el silencio. Ahora el dedo 5 toca do, y el dedo 3 toca el la.",
-        7: "Baja por do, la y fa sostenido con los dedos 5, 3 y 2, y luego vuelve a subir al la.",
-        13: "Sube la mano en el silencio del compás 12. El dedo 3 cae en si, y el pulgar en sol.",
+        5: "Tu mano se movió durante el silencio. Ahora el dedo 5 toca el do, y el dedo 3 toca el la.",
+        7: "Baja por el do, el la y el fa sostenido con los dedos 5, 3 y 2, y luego vuelve a subir al la.",
+        13: "Sube la mano en el silencio del compás 12. El dedo 3 cae en el si, y el pulgar en el sol.",
       },
     },
     rare: {
@@ -38,13 +38,13 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Cuenta la mano izquierda en negras. Cada nota de la melodía cae en un tiempo junto con ella.",
-        "Sube por re, fa sostenido, la y do con los dedos 1, 2, 3 y 5, y luego vuelve a bajar.",
+        "Sube por el re, el fa sostenido, el la y el do con los dedos 1, 2, 3 y 5, y luego vuelve a bajar.",
         "La respuesta vuelve a casa en sol. Deja sonar la última nota durante todo el compás.",
       ],
       tricky: {
-        5: "Mueve la mano en el silencio del compás 4. El dedo 5 cae en do, y el dedo 3 en el la.",
-        7: "Baja por do, la y fa sostenido con los dedos 5, 3 y 2, y luego vuelve a subir al la.",
-        13: "Sube la mano en el silencio del compás 12. El dedo 3 cae en si, y el pulgar en sol.",
+        5: "Mueve la mano en el silencio del compás 4. El dedo 5 cae en el do, y el dedo 3 en el la.",
+        7: "Baja por el do, el la y el fa sostenido con los dedos 5, 3 y 2, y luego vuelve a subir al la.",
+        13: "Sube la mano en el silencio del compás 12. El dedo 3 cae en el si, y el pulgar en el sol.",
       },
     },
     epic: {
@@ -63,7 +63,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         16: "Levanta la mano después de la última tercera, y luego bájala al la y al re con los dedos 1 y 4.",
         17: "La respuesta empieza arriba, en el la, con el dedo 3. Aprovecha el silencio de antes para subir.",
-        24: "Suelta el la en el silencio, y luego baja la mano a si, re y sol con los dedos 1, 2 y 5.",
+        24: "Suelta el la en el silencio, y luego baja la mano al si, al re y al sol con los dedos 1, 2 y 5.",
       },
     },
     legendary: {

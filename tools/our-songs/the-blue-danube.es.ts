@@ -6,7 +6,7 @@ export const translation: Translation<GuideTranslation> = {
   about:
     "Johann Strauss II escribió este vals en 1866 y 1867 para un coro de hombres de Viena. " +
     "Su versión solo para orquesta fue un éxito en la Exposición Universal de París de 1867. " +
-    "En la película *2001: A Space Odyssey* (1968), las naves espaciales se acoplan al ritmo de su música.",
+    "En la película 2001: A Space Odyssey (1968), las naves espaciales se acoplan al ritmo de su música.",
   funFact: "Por tradición, la Filarmónica de Viena lo toca cada año cerca del final de su Concierto de Año Nuevo.",
   versions: {
     common: {

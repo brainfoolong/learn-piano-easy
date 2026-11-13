@@ -25,8 +25,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         6: "El dedo 2 toca el re, y luego el pulgar se estira hacia abajo hasta el sol grave. La mano se queda donde está.",
-        7: "Desde el sol grave, los dedos 2 a 5 suben por do, re, mi y fa, una tecla cada uno.",
-        10: "La misma subida que en el compás 7: los dedos 2 a 5 en do, re, mi y fa.",
+        7: "Desde el sol grave, los dedos 2 a 5 suben por el do, el re, el mi y el fa, una tecla cada uno.",
+        10: "La misma subida que en el compás 7: los dedos 2 a 5 en el do, el re, el mi y el fa.",
       },
     },
     rare: {
@@ -38,12 +38,12 @@ export const translation: Translation<GuideTranslation> = {
         "Ahora tócala a velocidad completa.",
       ],
       tips: [
-        "La mano izquierda no se mueve: el dedo 5 en do, el 4 en re, el 3 en mi, el 2 en fa y el pulgar en sol.",
+        "La mano izquierda no se mueve: el dedo 5 en el do, el 4 en el re, el 3 en el mi, el 2 en el fa y el pulgar en el sol.",
         "La mano derecha descansa mientras la izquierda toca un acorde de sol séptima. Te lleva de vuelta al principio.",
         "La segunda vez, toca la nota grave un poco más fuerte que el acorde que la sigue.",
       ],
       tricky: {
-        6: "El dedo 2 toca el re, y luego el pulgar se estira hasta el sol grave, mientras la mano izquierda mantiene re y fa.",
+        6: "El dedo 2 toca el re, y luego el pulgar se estira hasta el sol grave, mientras la mano izquierda mantiene el re y el fa.",
         9: "Las mismas notas que en el compás 6. Mantén quieta la mano derecha y deja que el pulgar se estire hacia abajo.",
         17: "Otra vez el compás 6, ahora en la segunda vuelta. Mantén suaves los acordes bajo la melodía.",
       },

@@ -33,7 +33,7 @@
           "text": {
             "en": "Play the first four bars with the right hand alone, and let the song wait for each note.",
             "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
-            "es": "Toca los cuatro primeros compases con la mano derecha sola, y deja que la canción espere cada nota."
+            "es": "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota."
           },
           "hands": "right",
           "speed": 0.6,
@@ -123,7 +123,7 @@
           "text": {
             "en": "After the rest, finger 3 plays E twice. Fingers 4 and 5 climb to F and G, and finger 4 comes back to E.",
             "de": "Nach der Pause spielt Finger 3 zweimal das E. Finger 4 und 5 steigen zu F und G, und Finger 4 kehrt zum E zurück.",
-            "es": "Después del silencio, el dedo 3 toca mi dos veces. Los dedos 4 y 5 suben a fa y sol, y el dedo 4 vuelve al mi."
+            "es": "Después del silencio, el dedo 3 toca el mi dos veces. Los dedos 4 y 5 suben a fa y sol, y el dedo 4 vuelve al mi."
           }
         },
         {
@@ -131,7 +131,7 @@
           "text": {
             "en": "The same as bar 3: finger 3 on E, then fingers 4 and 5 up to F and G.",
             "de": "Wie in Takt 3: Finger 3 auf E, dann Finger 4 und 5 hinauf zu F und G.",
-            "es": "Igual que el compás 3: el dedo 3 en mi, y luego los dedos 4 y 5 suben a fa y sol."
+            "es": "Igual que el compás 3: el dedo 3 en el mi, y luego los dedos 4 y 5 suben a fa y sol."
           }
         },
         {
@@ -163,7 +163,7 @@
           "text": {
             "en": "Play the left hand alone, and press the notes of each chord together.",
             "de": "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen.",
-            "es": "Toca la mano izquierda sola, y presiona juntas las notas de cada acorde."
+            "es": "Toca con la mano izquierda sola, y presiona juntas las notas de cada acorde."
           },
           "hands": "left",
           "speed": 0.6,
@@ -174,7 +174,7 @@
           "text": {
             "en": "Play the right hand alone on the first eight bars, the opening phrase.",
             "de": "Spiel die ersten acht Takte nur mit der rechten Hand. Das ist die Anfangsphrase.",
-            "es": "Toca la mano derecha sola en los ocho primeros compases, la frase inicial."
+            "es": "Toca con la mano derecha sola en los primeros ocho compases, la frase inicial."
           },
           "hands": "right",
           "speed": 0.6,
@@ -185,7 +185,7 @@
           "text": {
             "en": "Join the hands on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
-            "es": "Junta las manos en los ocho primeros compases, despacio."
+            "es": "Junta las manos en los primeros ocho compases, despacio."
           },
           "hands": "both",
           "speed": 0.6,
@@ -233,7 +233,7 @@
           "text": {
             "en": "Bar 4 ends on a low G, and bar 5 starts high on E. Look at the E before you play the G.",
             "de": "Takt 4 endet auf einem tiefen G, und Takt 5 beginnt hoch auf dem E. Schau auf das E, bevor du das G spielst.",
-            "es": "El compás 4 termina en un sol grave, y el compás 5 empieza arriba, en mi. Mira el mi antes de tocar el sol."
+            "es": "El compás 4 termina en un sol grave, y el compás 5 empieza arriba, en el mi. Mira el mi antes de tocar el sol."
           }
         },
         {
@@ -261,7 +261,7 @@
           "text": {
             "en": "The same as bar 6: finger 5 on the high G, then finger 4 on E.",
             "de": "Wie in Takt 6: Finger 5 auf dem hohen G, dann Finger 4 auf dem E.",
-            "es": "Igual que el compás 6: el dedo 5 en el sol agudo, y luego el dedo 4 en mi."
+            "es": "Igual que el compás 6: el dedo 5 en el sol agudo, y luego el dedo 4 en el mi."
           }
         },
         {
@@ -294,7 +294,7 @@
           "text": {
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
-            "es": "Toca solo el bajo de Alberti hasta que ruede por sí mismo: grave, aguda, media, aguda."
+            "es": "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo."
           },
           "hands": "left",
           "speed": 0.5,
@@ -384,7 +384,7 @@
           "text": {
             "en": "The tune starts again an octave up. Finger 2 takes the high C, and the thumb drops to G.",
             "de": "Die Melodie beginnt eine Oktave höher von vorn. Finger 2 nimmt das hohe C, und der Daumen fällt auf das G.",
-            "es": "La melodía empieza otra vez una octava más arriba. El dedo 2 toma el do agudo, y el pulgar baja a sol."
+            "es": "La melodía empieza otra vez una octava más arriba. El dedo 2 toma el do agudo, y el pulgar baja al sol."
           }
         },
         {
@@ -400,7 +400,7 @@
           "text": {
             "en": "Fingers 4, 3, 2 and 1 walk down to B, and finger 2 ends on C over the last chord.",
             "de": "Finger 4, 3, 2 und 1 wandern hinab zum H, und Finger 2 endet über dem letzten Akkord auf dem C.",
-            "es": "Los dedos 4, 3, 2 y 1 bajan hasta si, y el dedo 2 termina en do sobre el último acorde."
+            "es": "Los dedos 4, 3, 2 y 1 bajan hasta el si, y el dedo 2 termina en el do sobre el último acorde."
           }
         }
       ]

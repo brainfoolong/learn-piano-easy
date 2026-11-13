@@ -17,14 +17,14 @@ export const translation: Translation<GuideTranslation> = {
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
-        "Empieza con el pulgar en sol. El dedo 2 toma si, el dedo 4 toma re y el dedo 5 toma mi.",
-        "Mantén el primer re durante tres tiempos, y luego toca mi durante un tiempo. El mi corto tira como una cuerda.",
+        "Empieza con el pulgar en el sol. El dedo 2 toma el si, el dedo 4 toma el re y el dedo 5 toma el mi.",
+        "Mantén el primer re durante tres tiempos, y luego toca el mi durante un tiempo. El mi corto tira como una cuerda.",
         "Los marineros cantaban esto mientras subían una vela. Apóyate un poco en la primera nota de cada compás, como en un tirón.",
       ],
       tricky: {
-        8: "Después del mi largo, la mano baja. El dedo 4 cae en do, y el pulgar espera sobre fa sostenido.",
-        13: "El dedo 4 se estira desde el la hasta mi, y el dedo 5 toca el sol agudo.",
-        14: "Después del sol agudo, el dedo 5 baja hasta re. Toca re tres veces: corto, largo y luego mediano.",
+        8: "Después del mi largo, la mano baja. El dedo 4 cae en el do, y el pulgar espera sobre el fa sostenido.",
+        13: "El dedo 4 se estira desde el la hasta el mi, y el dedo 5 toca el sol agudo.",
+        14: "Después del sol agudo, el dedo 5 baja hasta el re. Toca el re tres veces: corto, largo y luego mediano.",
       },
     },
     rare: {
@@ -41,9 +41,9 @@ export const translation: Translation<GuideTranslation> = {
         "Dos corcheas rápidas llenan un tiempo. Di «ti-ra» en cada par.",
       ],
       tricky: {
-        8: "Después del acorde de do y mi, la mano baja. El dedo 4 cae en do. La mano izquierda toca re, y luego el la y el re a la vez.",
-        13: "El dedo 4 se estira desde el la hasta mi, y el dedo 5 toca el sol agudo. La mano izquierda toca do, y luego sol y do a la vez.",
-        14: "El dedo 5 baja del sol agudo hasta re y lo toca tres veces. Mantén la muñeca suelta.",
+        8: "Después del acorde de do y mi, la mano baja. El dedo 4 cae en el do. La mano izquierda toca el re, y luego el la y el re a la vez.",
+        13: "El dedo 4 se estira desde el la hasta el mi, y el dedo 5 toca el sol agudo. La mano izquierda toca el do, y luego el sol y el do a la vez.",
+        14: "El dedo 5 baja del sol agudo hasta el re y lo toca tres veces. Mantén la muñeca suelta.",
       },
     },
     epic: {
@@ -56,13 +56,13 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Cambia el pedal en cada nota nueva del bajo, dos veces en cada compás.",
-        "Después del sol con el dedo 3, pasa el pulgar por debajo hasta el la bemol. Luego los dedos 2 y 3 llegan a si bemol y do.",
-        "Al bajar, el dedo 3 cruza por encima del pulgar hasta fa.",
+        "Después del sol con el dedo 3, pasa el pulgar por debajo hasta el la bemol. Luego los dedos 2 y 3 llegan al si bemol y al do.",
+        "Al bajar, el dedo 3 cruza por encima del pulgar hasta el fa.",
       ],
       tricky: {
-        14: "Después del mi bemol agudo, el dedo 5 baja hasta si bemol y lo toca tres veces.",
+        14: "Después del mi bemol agudo, el dedo 5 baja hasta el si bemol y lo toca tres veces.",
         18: "Pasa el pulgar por debajo hasta el la bemol, y mantén fluido el pasaje. La mano izquierda sigue rodando sin pausa.",
-        21: "La mano se abre sobre una octava, de mi bemol a mi bemol. Luego los dedos 4 y 3 bajan a re y do.",
+        21: "La mano se abre sobre una octava, de mi bemol a mi bemol. Luego los dedos 4 y 3 bajan al re y al do.",
       },
     },
     legendary: {
@@ -79,8 +79,8 @@ export const translation: Translation<GuideTranslation> = {
         "Deja que los arpegios rueden suaves, como olas bajo el barco.",
       ],
       tricky: {
-        19: "La mano izquierda empieza en el la bemol grave, y el dedo 3 cruza por encima del pulgar hasta do.",
-        22: "El pulgar derecho se queda cerca del la bemol, y al final el dedo 5 se estira hacia arriba hasta mi bemol.",
+        19: "La mano izquierda empieza en el la bemol grave, y el dedo 3 cruza por encima del pulgar hasta el do.",
+        22: "El pulgar derecho se queda cerca del la bemol, y al final el dedo 5 se estira hacia arriba hasta el mi bemol.",
         24: "Usa el silencio para saltar hacia abajo hasta el si bemol grave. La mano derecha sube de fa a re y vuelve caminando hasta el la bemol.",
       },
     },

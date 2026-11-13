@@ -18,14 +18,14 @@ export const translation: Translation<GuideTranslation> = {
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
-        "El primer tiempo es un silencio. Luego toca mi en los tiempos dos, tres y cuatro.",
+        "El primer tiempo es un silencio. Luego toca el mi en los tiempos dos, tres y cuatro.",
         "Toca fuerte las tres notas cortas, y deja que la nota larga suene durante todo el compás.",
-        "El pulgar se queda en si, y cada dedo mantiene su propia tecla.",
+        "El pulgar se queda en el si, y cada dedo mantiene su propia tecla.",
       ],
       tricky: {
-        1: "El primer tiempo es un silencio. Luego toca mi tres veces con el dedo 4. Mantén el dedo suelto para cada nota nueva.",
-        7: "El dedo 5 toca fa tres veces. Levántalo un poco entre las notas, para que cada una suene.",
-        9: "Los dedos 4 y 5 se mecen entre mi y fa. Mantén los dos dedos cerca de las teclas.",
+        1: "El primer tiempo es un silencio. Luego toca el mi tres veces con el dedo 4. Mantén el dedo suelto para cada nota nueva.",
+        7: "El dedo 5 toca el fa tres veces. Levántalo un poco entre las notas, para que cada una suene.",
+        9: "Los dedos 4 y 5 se mecen entre el mi y el fa. Mantén los dos dedos cerca de las teclas.",
       },
     },
     rare: {
@@ -39,31 +39,31 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Cada motivo empieza con un silencio corto. Luego tres notas rápidas llevan a la nota larga.",
         "Cada compás vuelve a tocar la idea del comienzo: tres notas cortas y una larga.",
-        "Termina con do y mi a la vez. Los dedos 2 y 4 las presionan como si fueran una sola.",
+        "Termina con el do y el mi a la vez. Los dedos 2 y 4 las presionan como si fueran una sola.",
       ],
       tricky: {
         1: "Tres mi rápidos siguen al silencio corto. Tócalos con el dedo 4, ligeros y parejos.",
-        5: "Toca tres mi rápidos con el dedo 4. Luego el dedo 2 mantiene do durante medio compás.",
-        13: "Después de los tres mi rápidos, los dedos 2 y 4 presionan do y mi a la vez.",
+        5: "Toca tres mi rápidos con el dedo 4. Luego el dedo 2 mantiene el do durante medio compás.",
+        13: "Después de los tres mi rápidos, los dedos 2 y 4 presionan el do y el mi a la vez.",
       },
     },
     epic: {
       practice: [
         "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, aguda, media, aguda.",
         "Toca solas las octavas de los primeros cuatro compases. Mantén la mano abierta del pulgar al meñique.",
-        "Toca la escala del compás 12 con la mano derecha sola. Pasa el pulgar por debajo hasta si bemol.",
+        "Toca la escala del compás 12 con la mano derecha sola. Pasa el pulgar por debajo hasta el si bemol.",
         "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
         "Ahora tócala a velocidad completa, con el pedal.",
       ],
       tips: [
         "Toca las octavas fuertes y secas, y luego deja sonar cada nota larga.",
         "Cambia el pedal al comienzo de cada compás, cuando cambia el acorde.",
-        "Pasa el pulgar por debajo hasta si bemol, y luego sube con los dedos 2 a 5.",
+        "Pasa el pulgar por debajo hasta el si bemol, y luego sube con los dedos 2 a 5.",
       ],
       tricky: {
-        5: "Toca mi bemol tres veces con el dedo 3. Luego abre bien la mano para do y sol.",
-        10: "Empieza arriba en do con el dedo 5, y baja caminando hasta el la bemol. Luego el pulgar cae en mi bemol.",
-        12: "Después del la bemol, pasa el pulgar por debajo hasta si bemol. Luego los dedos 2 a 5 suben hasta fa.",
+        5: "Toca el mi bemol tres veces con el dedo 3. Luego abre bien la mano para el do y el sol.",
+        10: "Empieza arriba en el do con el dedo 5, y baja caminando hasta el la bemol. Luego el pulgar cae en el mi bemol.",
+        12: "Después del la bemol, pasa el pulgar por debajo hasta el si bemol. Luego los dedos 2 a 5 suben hasta el fa.",
       },
     },
     legendary: {
@@ -77,12 +77,12 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Presiona las cuatro notas de cada acorde como si fueran una, con la nota de arriba un poco más fuerte.",
         "La mano izquierda sube dos octavas en cada compás. El dedo 3 cruza por encima del pulgar.",
-        "Pasa el pulgar por debajo hasta si bemol, y otra vez hasta fa. Luego el dedo 5 llega a do.",
+        "Pasa el pulgar por debajo hasta el si bemol, y otra vez hasta el fa. Luego el dedo 5 llega al do.",
       ],
       tricky: {
         3: "La mano izquierda salta del sol grave hasta el acorde. Usa el silencio corto después de cada octava para saltar.",
         4: "La mano derecha mantiene su acorde. Deja que la mano izquierda salte entre el sol grave y el acorde de arriba.",
-        19: "Toca fa en octavas tres veces, con la mano abierta. La mano izquierda salta desde el sol grave, como antes.",
+        19: "Toca el fa en octavas tres veces, con la mano abierta. La mano izquierda salta desde el sol grave, como antes.",
       },
     },
   },

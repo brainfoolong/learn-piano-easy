@@ -19,12 +19,12 @@ export const translation: Translation<GuideTranslation> = {
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
-        "El pulgar empieza en sol, y el dedo 4 toca el do repetido.",
+        "El pulgar empieza en el sol, y el dedo 4 toca el do repetido.",
         "Toca el segundo do con el pulgar. Luego el meñique se estira hacia arriba hasta el sol agudo.",
         "Levanta la mano después del do, y pon el dedo 2 sobre el la.",
       ],
       tricky: {
-        1: "El dedo 4 toca do tres veces, y luego el dedo 5 toca re. El pulgar espera sobre el sol.",
+        1: "El dedo 4 toca el do tres veces, y luego el dedo 5 toca el re. El pulgar espera sobre el sol.",
         5: "Las mismas notas que en el compás 1. Toca parejos los tres do, y ligero el re.",
         11: "Después de levantar la mano, el dedo 2 cae sobre el la y el pulgar toma el sol. Luego los dedos 2 y 3 suben al la y al si.",
       },
@@ -43,9 +43,9 @@ export const translation: Translation<GuideTranslation> = {
         "Toca la nota grave un poco más fuerte que el acorde que la sigue.",
       ],
       tricky: {
-        1: "El dedo 4 toca do tres veces, y luego el dedo 5 toca re. La mano izquierda toca dos veces el acorde de do.",
+        1: "El dedo 4 toca el do tres veces, y luego el dedo 5 toca el re. La mano izquierda toca dos veces el acorde de do.",
         5: "Las mismas notas que en el compás 1. Toca parejos los tres do, y ligero el re.",
-        11: "Después de levantar la mano, el dedo 2 cae sobre el la. La mano izquierda toca fa, luego do, luego sol y luego su acorde.",
+        11: "Después de levantar la mano, el dedo 2 cae sobre el la. La mano izquierda toca el fa, luego el do, luego el sol y luego su acorde.",
       },
     },
     epic: {

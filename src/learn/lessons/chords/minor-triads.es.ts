@@ -49,7 +49,7 @@ export const minorTriadsEs: Translation<MinorTriadsTexts> = {
         "Una tríada menor apila una tercera menor y luego una tercera mayor.",
         "Baja la nota del medio de una tríada mayor para volverla menor.",
         "Mayor suena brillante, y menor suena más oscuro.",
-        "Los acordes de la, re y mi menor usan solo teclas blancas.",
+        "Los acordes de la menor, re menor y mi menor usan solo teclas blancas.",
       ],
     },
   },

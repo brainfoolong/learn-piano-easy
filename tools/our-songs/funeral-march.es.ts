@@ -13,7 +13,7 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Toca los cuatro primeros compases con la mano derecha sola, y deja que la canción espere cada nota.",
         "Toca los compases 5 a 8 con la mano derecha sola. Por fin la melodía se aleja del re.",
-        "Ahora la mano izquierda sola. Se balancea entre re y si bemol, como una campana lenta.",
+        "Ahora la mano izquierda sola. Se balancea entre el re y el si bemol, como una campana lenta.",
         "Junta las dos manos en los ocho primeros compases, despacio.",
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
@@ -23,9 +23,9 @@ export const translation: Translation<GuideTranslation> = {
         "El pulgar descansa todo el tiempo sobre el do sostenido. Solo toca en los compases 7, 12 y 15.",
       ],
       tricky: {
-        7: "Mantén el mi tres tiempos, y luego toca re durante uno. Mantén el re tres tiempos, y al final el pulgar toca el do sostenido.",
+        7: "Mantén el mi tres tiempos, y luego toca el re durante uno. Mantén el re tres tiempos, y al final el pulgar toca el do sostenido.",
         12: "El dedo 3 mantiene el mi cuatro tiempos. Luego el pulgar toca el do sostenido, y la mano izquierda se queda en el la.",
-        15: "Cuatro notas parejas: mi, fa, mi, y luego do sostenido con el pulgar. Mantén cada dedo en su propia tecla.",
+        15: "Cuatro notas parejas: el mi, el fa, el mi, y luego el do sostenido con el pulgar. Mantén cada dedo en su propia tecla.",
       },
     },
     rare: {
@@ -38,13 +38,13 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Mantén suaves y parejos los acordes de la mano izquierda, para que la melodía quede por encima.",
-        "Entre los dos acordes, solo se mueve la nota grave. Los dedos 2 y 1 se quedan en re y fa.",
-        "Termina con re y fa juntos, y deja que se apaguen despacio.",
+        "Entre los dos acordes, solo se mueve la nota grave. Los dedos 2 y 1 se quedan en el re y el fa.",
+        "Termina con el re y el fa juntos, y deja que se apaguen despacio.",
       ],
       tricky: {
-        10: "Presiona re y fa juntos con los dedos 2 y 4. Luego el dedo 5 toca sol, y el dedo 4 toca fa.",
-        11: "La mano izquierda toca sol, si bemol y re con los dedos 5, 4 y 2. La mano derecha baja desde el sol.",
-        12: "El pulgar y el dedo 3 presionan do sostenido y mi juntos. La mano izquierda toca solo el la, con el dedo 5.",
+        10: "Presiona el re y el fa juntos con los dedos 2 y 4. Luego el dedo 5 toca el sol, y el dedo 4 toca el fa.",
+        11: "La mano izquierda toca el sol, el si bemol y el re con los dedos 5, 4 y 2. La mano derecha baja desde el sol.",
+        12: "El pulgar y el dedo 3 presionan el do sostenido y el mi juntos. La mano izquierda toca solo el la, con el dedo 5.",
       },
     },
     epic: {
@@ -61,8 +61,8 @@ export const translation: Translation<GuideTranslation> = {
         "Ahora la melodía va arriba de cada par. Deja que el dedo 5 la cante.",
       ],
       tricky: {
-        19: "Mantén la mano abierta, con el pulgar en mi bemol y el dedo 5 en do. Levanta el pulgar para el do corto.",
-        21: "Como en el compás 19, el pulgar y el dedo 5 tocan una sexta. Luego el dedo 5 toca do solo.",
+        19: "Mantén la mano abierta, con el pulgar en el mi bemol y el dedo 5 en el do. Levanta el pulgar para el do corto.",
+        21: "Como en el compás 19, el pulgar y el dedo 5 tocan una sexta. Luego el dedo 5 toca el do solo.",
         22: "El dedo 4 toma el do en la sexta, para que el dedo 5 quede libre y suba al mi bemol.",
       },
     },
@@ -82,7 +82,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         9: "Empiezan los arpegios. El dedo 3 cruza por encima del pulgar hasta el mi bemol, mientras la mano derecha baja desde el sol.",
         14: "La mano izquierda empieza en el fa grave con el dedo 5. El dedo 3 cruza por encima del pulgar hasta el la bemol.",
-        22: "Levanta la mano en el silencio corto, y luego baja la mano a mi bemol, la bemol, do y mi bemol.",
+        22: "Levanta la mano en el silencio corto, y luego baja la mano al mi bemol, al la bemol, al do y al mi bemol.",
       },
     },
   },

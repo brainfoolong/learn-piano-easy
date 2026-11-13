@@ -13,24 +13,24 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Toca los tres primeros compases con la mano derecha sola, y deja que la canción espere cada nota.",
         "Toca la mano derecha sola desde el compás 8, donde el pulgar baja al la.",
-        "Ahora la mano izquierda sola. Se queda en un solo lugar, con el meñique en re.",
+        "Ahora la mano izquierda sola. Se queda en un solo lugar, con el meñique en el re.",
         "Junta las dos manos en los siete primeros compases.",
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
         "Toca lento y parejo, como monjes que cantan en una iglesia de piedra.",
-        "Tu pulgar derecho está en do. Cada nota hasta sol queda bajo un dedo.",
+        "Tu pulgar derecho está en el do. Cada nota hasta el sol queda bajo un dedo.",
         "Mientras suena el re, desliza el pulgar hacia abajo hasta el la, listo para la última frase.",
       ],
       tricky: {
-        1: "Balancea la mano entre los dedos 4 y 3 para fa, mi y fa. Mantén la muñeca quieta.",
-        4: "El dedo 4 toca fa dos veces, y luego el dedo 5 alcanza el sol. No muevas la mano.",
-        10: "Balancea la mano entre los dedos 4 y 5 para mi, fa y mi. El meñique toca el fa.",
+        1: "Balancea la mano entre los dedos 4 y 3 para el fa, el mi y el fa. Mantén la muñeca quieta.",
+        4: "El dedo 4 toca el fa dos veces, y luego el dedo 5 alcanza el sol. No muevas la mano.",
+        10: "Balancea la mano entre los dedos 4 y 5 para el mi, el fa y el mi. El meñique toca el fa.",
       },
     },
     rare: {
       practice: [
-        "Toca la mano izquierda sola. Se queda en un solo lugar, con el meñique en re.",
+        "Toca la mano izquierda sola. Se queda en un solo lugar, con el meñique en el re.",
         "Toca la mano derecha sola en la primera vuelta de la melodía.",
         "Junta las manos en la primera frase, y presiona las tres notas de cada acorde como una sola.",
         "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
@@ -38,12 +38,12 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "En el segundo tiempo el acorde queda en dos notas, para que el mi de la melodía suene claro.",
-        "La segunda vez, la mano izquierda toca re y luego el la. Siente el vaivén lento de tres tiempos.",
+        "La segunda vez, la mano izquierda toca el re y luego el la. Siente el vaivén lento de tres tiempos.",
         "Deja sonar el último acorde de re menor hasta que se apague.",
       ],
       tricky: {
-        1: "Presiona re, fa y la juntos. Luego levanta el fa en el segundo tiempo y mantén abajo el re y el la.",
-        4: "La mano izquierda toca fa y la con los dedos 3 y 1. El dedo 5 de la mano derecha alcanza el sol.",
+        1: "Presiona el re, el fa y el la juntos. Luego levanta el fa en el segundo tiempo y mantén abajo el re y el la.",
+        4: "La mano izquierda toca el fa y el la con los dedos 3 y 1. El dedo 5 de la mano derecha alcanza el sol.",
         12: "Aprovecha el re que se mantiene en el compás 11 para llevar el pulgar derecho de vuelta arriba, al do.",
       },
     },
@@ -62,8 +62,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         13: "El pulgar se queda en el la durante dos acordes y luego baja al fa. Al principio solo se mueve el meñique.",
-        16: "El pulgar baja de si bemol al la, y el meñique desciende por fa, mi, re.",
-        17: "La mano sube en cada tiempo: fa y do, la y mi, y luego si bemol y fa.",
+        16: "El pulgar baja del si bemol al la, y el meñique desciende por el fa, el mi y el re.",
+        17: "La mano sube en cada tiempo: el fa y el do, el la y el mi, y luego el si bemol y el fa.",
       },
     },
     legendary: {
@@ -81,7 +81,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         2: "Suelta pronto la octava de mi, para que la mano tenga tiempo de bajar al do.",
-        5: "Las octavas descienden por fa, mi, re. Mantén los dedos 1 y 5 fijos en una misma forma.",
+        5: "Las octavas descienden por el fa, el mi y el re. Mantén los dedos 1 y 5 fijos en una misma forma.",
         11: "Aquí las dos manos tocan acordes. Levanta cada mano antes de que la melodía baje al bajo.",
       },
     },

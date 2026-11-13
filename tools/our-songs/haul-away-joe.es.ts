@@ -41,7 +41,7 @@ export const translation: Translation<GuideTranslation> = {
         "Termina con el re y el fa juntos. Los dedos 1 y 3 los presionan como una sola nota.",
       ],
       tricky: {
-        4: "Los dedos 3, 4 y 5 suben por el la, el si y el do. Este si es la tecla blanca, no si bemol.",
+        4: "Los dedos 3, 4 y 5 suben por el la, el si y el do. Este si es la tecla blanca, no el si bemol.",
         5: "Abre los dedos 1 y 5 sobre el fa y el re para la sexta. Luego el dedo 5 vuelve a tocar el re solo.",
         9: "La melodía sube por el re, el fa y el la. El sol y el fa son corcheas rápidas, así que cuéntalas con la misma duración.",
       },

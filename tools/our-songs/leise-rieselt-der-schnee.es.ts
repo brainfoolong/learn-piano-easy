@@ -13,7 +13,7 @@ export const translation: Translation<GuideTranslation> = {
   versions: {
     common: {
       practice: [
-        "Toca los dos primeros compases con la mano derecha sola, y deja que la canción espere cada nota.",
+        "Toca los primeros dos compases con la mano derecha sola, y deja que la canción espere cada nota.",
         "Toca los compases 1 a 8 con la mano derecha sola. Es la estrofa entera, una vez.",
         "Ahora la mano izquierda sola. Mantiene una forma por compás, o dos como mucho.",
         "Toca toda la canción con las dos manos juntas, despacio.",
@@ -21,25 +21,25 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Tu pulgar derecho empieza en el do central, y el dedo 3 toma el primer mi.",
-        "El dedo 4 toma el do que tu pulgar mantenía en el compás 2, y la mano baja hasta que el pulgar queda en sol.",
+        "El dedo 4 toma el do que tu pulgar mantenía en el compás 2, y la mano baja hasta que el pulgar queda en el sol.",
         "Cada frase termina en una nota larga y un silencio corto. Deja sonar la nota y luego respira, como la nieve que cae.",
       ],
       tricky: {
         7: "El dedo 4 mantiene el re, y luego el pulgar baja dos veces al la. Toca ligero el la rápido.",
-        9: "La estrofa empieza otra vez. Levanta el dedo 3 del do durante el silencio y ponlo en mi.",
+        9: "La estrofa empieza otra vez. Levanta el dedo 3 del do durante el silencio y ponlo en el mi.",
         15: "El mismo salto que en el compás 7: un re largo y luego un la rápido con el pulgar.",
       },
     },
     rare: {
       practice: [
-        "Toca la mano izquierda sola, y presiona juntas las notas de cada acorde.",
+        "Toca con la mano izquierda sola, y presiona juntas las notas de cada acorde.",
         "Toca sola el bajo de vals de la segunda estrofa: nota grave, acorde, acorde.",
         "Junta las manos en la primera estrofa, despacio.",
         "Toca toda la canción con las dos manos, un poco más lento de lo escrito.",
         "Ahora tócala a velocidad completa.",
       ],
       tips: [
-        "El pulgar izquierdo se queda en sol durante toda la primera estrofa. Solo se mueven los otros dedos.",
+        "El pulgar izquierdo se queda en el sol durante toda la primera estrofa. Solo se mueven los otros dedos.",
         "En el bajo de vals, toca la nota grave un poco más fuerte que los acordes que la siguen.",
         "Do sostenido es la única tecla negra de la canción. Deja que el pulgar se deslice sobre ella y vuelva a salir.",
       ],
@@ -51,7 +51,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toca solo el bajo de Alberti hasta que ruede por sí mismo: grave, aguda, media, aguda.",
+        "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
         "Toca solas las terceras y sextas de la mano derecha, y mantén juntas las dos notas de cada doble nota.",
         "Junta las manos en la primera estrofa, despacio.",
         "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
@@ -65,7 +65,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         7: "El la rápido cae en el pulgar mientras la mano izquierda rueda por re menor. Mantén parejo el bajo debajo.",
         13: "Las dobles notas giran en torno al do sostenido. Los dedos 1 y 3 toman el la y el do sostenido, y luego 2 y 4 vuelven a si y re.",
-        14: "La mano se abre de una tercera a una sexta, con el pulgar en mi y el dedo 3 en do.",
+        14: "La mano se abre de una tercera a una sexta, con el pulgar en el mi y el dedo 3 en el do.",
       },
     },
     legendary: {

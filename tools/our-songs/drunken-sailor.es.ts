@@ -19,10 +19,10 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Cada mitad del compás va larga, corta, corta. Zapatéala como un marinero en la cubierta.",
         "El dedo 5 toca el la, y luego el pulgar baja hasta el re. La mano se queda donde está.",
-        "Toca el último la del compás 5 con el dedo 2. Así los dedos 3, 4 y 5 quedan listos para si, do y re.",
+        "Toca el último la del compás 5 con el dedo 2. Así los dedos 3, 4 y 5 quedan listos para el si, el do y el re.",
       ],
       tricky: {
-        3: "El dedo 4 toca sol seis veces: larga, corta, corta, larga, corta, corta. Toca ligeras las notas cortas.",
+        3: "El dedo 4 toca el sol seis veces: larga, corta, corta, larga, corta, corta. Toca ligeras las notas cortas.",
         5: "El dedo 5 toca el la cinco veces. Luego el dedo 2 toma el último la, para que la mano quede lista para subir.",
         7: "El dedo 5 baja de re a do. Luego los dedos 4, 3 y 2 bajan al la, al sol y al mi.",
       },
@@ -38,12 +38,12 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "La mano izquierda se balancea grave, agudo, grave, agudo, como una tripulación que jala una cuerda al mismo tiempo.",
         "Después del re agudo largo, el dedo 5 se desliza hacia abajo hasta el do. Es el único movimiento de la mano.",
-        "Termina con re y fa juntos, y déjalos sonar.",
+        "Termina con el re y el fa juntos, y déjalos sonar.",
       ],
       tricky: {
-        3: "El dedo 4 toca sol seis veces, mientras la mano izquierda toca do y luego sol. Mantén las dos manos parejas.",
-        4: "El pulgar baja hasta el do, y el dedo 2 toca el mi. La mano izquierda se queda en do y sol.",
-        7: "Después del re largo, el dedo 5 baja al do. La mano izquierda toca do, luego fa y la, y luego do y sol.",
+        3: "El dedo 4 toca el sol seis veces, mientras la mano izquierda toca el do y luego el sol. Mantén las dos manos parejas.",
+        4: "El pulgar baja hasta el do, y el dedo 2 toca el mi. La mano izquierda se queda en el do y el sol.",
+        7: "Después del re largo, el dedo 5 baja al do. La mano izquierda toca el do, luego el fa y el la, y luego el do y el sol.",
       },
     },
     epic: {
@@ -61,8 +61,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         7: "El dedo 5 baja de re a do, y los dedos 4, 3 y 2 siguen bajando. La mano izquierda arpegia fa mayor y luego do mayor.",
-        17: "Los dedos 2 y 4 presionan fa y la juntos. Luego el dedo 4 toca el la dos veces solo.",
-        24: "La mano izquierda toca re, fa y la juntos con los dedos 5, 3 y 1. La mano derecha mantiene fa, la y re.",
+        17: "Los dedos 2 y 4 presionan el fa y el la juntos. Luego el dedo 4 toca el la dos veces solo.",
+        24: "La mano izquierda toca el re, el fa y el la juntos con los dedos 5, 3 y 1. La mano derecha mantiene el fa, el la y el re.",
       },
     },
     legendary: {
@@ -80,8 +80,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         9: "El pulgar pasa por debajo hasta el sol después del fa. La mano izquierda empieza su arpegio en el re grave.",
-        12: "La mano izquierda baja hasta el la grave con el dedo 5. La mano derecha empieza en mi con el pulgar.",
-        15: "La mano izquierda empieza en el fa grave, y luego en do. En la mano derecha, el pulgar toca fa y luego mi.",
+        12: "La mano izquierda baja hasta el la grave con el dedo 5. La mano derecha empieza en el mi con el pulgar.",
+        15: "La mano izquierda empieza en el fa grave, y luego en el do. En la mano derecha, el pulgar toca el fa y luego el mi.",
       },
     },
   },

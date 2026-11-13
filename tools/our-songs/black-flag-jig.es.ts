@@ -11,20 +11,20 @@ export const translation: Translation<GuideTranslation> = {
     common: {
       practice: [
         "Toca los compases 1 a 4 con la mano derecha sola, y deja que la canción espere cada nota.",
-        "Toca los compases 5 a 8 con la mano derecha sola. En el compás 7, el pulgar baja hasta do sostenido.",
+        "Toca los compases 5 a 8 con la mano derecha sola. En el compás 7, el pulgar baja hasta el do sostenido.",
         "Ahora la mano izquierda sola. Mantiene dos teclas y las cambia como mucho dos veces por compás.",
         "Junta las dos manos en los primeros ocho compases, despacio.",
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
         "Cuenta seis tiempos en cada compás: larga, corta, larga, corta. Ese es el brinco de la giga.",
-        "El dedo 5 toma si bemol, una tecla negra. Luego toca el la al comienzo del compás 3, y los dedos bajan caminando.",
-        "El pulgar toca do sostenido, la tecla negra justo debajo de re. Luego la mano se abre hasta el la.",
+        "El dedo 5 toma el si bemol, una tecla negra. Luego toca el la al comienzo del compás 3, y los dedos bajan caminando.",
+        "El pulgar toca el do sostenido, la tecla negra justo debajo del re. Luego la mano se abre hasta el la.",
       ],
       tricky: {
-        2: "Los dedos 3, 4 y 5 suben por las notas sol, la y si bemol. Luego el dedo 3 vuelve a sol.",
-        6: "La mano baja caminando de sol a re con los dedos 5, 4, 3 y 2. El pulgar espera sobre do sostenido.",
-        10: "Los dedos 4 y 5 se mecen entre sol y la. Luego el dedo 2 cae en mi.",
+        2: "Los dedos 3, 4 y 5 suben por las notas sol, la y si bemol. Luego el dedo 3 vuelve al sol.",
+        6: "La mano baja caminando de sol a re con los dedos 5, 4, 3 y 2. El pulgar espera sobre el do sostenido.",
+        10: "Los dedos 4 y 5 se mecen entre el sol y el la. Luego el dedo 2 cae en el mi.",
       },
     },
     rare: {
@@ -38,12 +38,12 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Cada medio compás de la mano izquierda tiene una nota larga y un acorde corto. Siente el rebote: larga, corta.",
         "Los pares rápidos de corcheas van el doble de rápido que las notas cortas. Cuéntalas parejas.",
-        "Termina con re y fa a la vez. Los dedos 1 y 3 las presionan como si fueran una sola.",
+        "Termina con el re y el fa a la vez. Los dedos 1 y 3 las presionan como si fueran una sola.",
       ],
       tricky: {
-        4: "El pulgar mantiene re durante tres tiempos, y luego el dedo 4 mantiene el la. La mano izquierda rebota debajo de las dos.",
+        4: "El pulgar mantiene el re durante tres tiempos, y luego el dedo 4 mantiene el la. La mano izquierda rebota debajo de las dos.",
         6: "Los dedos 5, 4, 3 y 2 bajan caminando de sol a re. La mano izquierda pasa del acorde de sol menor al de do mayor.",
-        13: "El dedo 5 llega al la, y luego el pulgar cae en re. Mi y fa son corcheas rápidas antes del siguiente la.",
+        13: "El dedo 5 llega al la, y luego el pulgar cae en el re. El mi y el fa son corcheas rápidas antes del siguiente la.",
       },
     },
     epic: {
@@ -56,12 +56,12 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Cambia el pedal en cada nota nueva del bajo, dos veces en cada compás.",
-        "Después de fa, pasa el pulgar por debajo hasta sol. Luego los dedos 2 y 3 llegan al la y al si bemol.",
+        "Después del fa, pasa el pulgar por debajo hasta el sol. Luego los dedos 2 y 3 llegan al la y al si bemol.",
         "La melodía es la nota de arriba de cada doble nota, así que deja que guíe el dedo de arriba.",
       ],
       tricky: {
-        14: "La mano salta entre si bemol, sol y re, y luego se abre hasta do. El dedo 2 se queda sobre sol todo el compás.",
-        19: "El pulgar mantiene do sostenido, y luego se desliza hasta do. El dedo de arriba baja caminando por las notas la, sol, fa y mi.",
+        14: "La mano salta entre el si bemol, el sol y el re, y luego se abre hasta el do. El dedo 2 se queda sobre el sol todo el compás.",
+        19: "El pulgar mantiene el do sostenido, y luego se desliza hasta el do. El dedo de arriba baja caminando por las notas la, sol, fa y mi.",
         21: "Los dedos 1 y 5 mantienen cada sexta y bajan deslizándose tecla por tecla. El dedo 4 toma el último fa.",
       },
     },
@@ -81,7 +81,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         2: "La mano izquierda salta de una octava de sol grave a un acorde de sol, re y sol. La mano derecha sube por las notas sol, la y si bemol.",
         18: "Levanta la mano después de cada acorde, y llega al siguiente. El pulgar sube de si bemol a re y vuelve.",
-        21: "El pulgar se queda en re durante dos acordes, y luego cae en si bemol. El dedo de arriba canta las notas si bemol, la, sol y fa.",
+        21: "El pulgar se queda en el re durante dos acordes, y luego cae en el si bemol. El dedo de arriba canta las notas si bemol, la, sol y fa.",
       },
     },
   },

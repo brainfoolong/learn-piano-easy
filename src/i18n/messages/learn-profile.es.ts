@@ -48,7 +48,7 @@ export const learnProfile: Translation<typeof en> = {
     goal: "Meta diaria",
     goalHelp: "Los XP que necesita un día para mantener tu racha.",
     sounds: "Sonidos de premio",
-    soundsHelp: "Campanitas al aprobar un paso, ganar una estrella, subir de nivel y obtener una insignia. El piano siempre suena.",
+    soundsHelp: "Campanitas al superar un paso, ganar una estrella, subir de nivel y obtener una insignia. El piano siempre suena.",
   },
   data: {
     heading: "Tus datos",

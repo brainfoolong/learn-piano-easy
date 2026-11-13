@@ -16,7 +16,7 @@ export const translation: Translation<GuideTranslation> = {
         "Toca los compases 5 a 8 con la mano derecha sola. Ahí la melodía sube y vuelve a bajar.",
         "Ahora la mano izquierda sola. En cada compás mantiene una nota o una quinta abierta.",
         "Junta las dos manos, despacio.",
-        "Toca toda la pieza con las dos manos a velocidad completa.",
+        "Toca toda la canción con las dos manos a velocidad completa.",
       ],
       tips: [
         "Mantén largo el primer la, y luego toca el la corto justo antes del siguiente largo.",
@@ -25,17 +25,17 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         2: "La mano izquierda baja del re y el la al la y el mi. El dedo 5 toma el la grave.",
-        5: "La mano izquierda baja hasta sol con el dedo 5, y el pulgar se queda en re.",
-        10: "La mano izquierda sube de fa a sol. La mano derecha vuelve con el dedo 2 en sol.",
+        5: "La mano izquierda baja hasta el sol con el dedo 5, y el pulgar se queda en el re.",
+        10: "La mano izquierda sube de fa a sol. La mano derecha vuelve con el dedo 2 en el sol.",
       },
     },
     rare: {
       practice: [
-        "Toca los ocho primeros compases con la mano derecha sola, y deja que la canción espere cada nota.",
-        "Toca la mano izquierda sola. Primero llega la nota grave, y la doble nota le responde.",
-        "Junta las manos en los ocho primeros compases, despacio y con el pedal.",
+        "Toca los primeros ocho compases con la mano derecha sola, y deja que la canción espere cada nota.",
+        "Toca con la mano izquierda sola. Primero llega la nota grave, y la doble nota le responde.",
+        "Junta las manos en los primeros ocho compases, despacio y con el pedal.",
         "Toca la segunda mitad, donde la melodía vuelve una octava más arriba.",
-        "Toca toda la pieza con las dos manos a velocidad completa.",
+        "Toca toda la canción con las dos manos a velocidad completa.",
       ],
       tips: [
         "Mantén pisado el pedal durante cada compás entero, y cámbialo justo en la línea divisoria.",
@@ -50,10 +50,10 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "Toca la mano izquierda sola. Cada acorde sube rodando de tres en tres: grave, media, aguda.",
+        "Toca con la mano izquierda sola. Cada acorde sube rodando de tres en tres: grave, media, aguda.",
         "Toca solas las terceras y sextas de la mano derecha, y presiona las dos notas de cada doble nota como una sola.",
-        "Junta las manos en los nueve primeros compases, despacio.",
-        "Toca toda la pieza con las dos manos a tres cuartos de velocidad.",
+        "Junta las manos en los primeros nueve compases, despacio.",
+        "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
         "Ahora tócala a velocidad completa, con el pedal.",
       ],
       tips: [
@@ -69,10 +69,10 @@ export const translation: Translation<GuideTranslation> = {
     },
     legendary: {
       practice: [
-        "Toca la mano izquierda sola. El pulgar pasa por debajo y el dedo 3 cruza por encima, así que cada arpegio abarca dos octavas.",
+        "Toca con la mano izquierda sola. El pulgar pasa por debajo y el dedo 3 cruza por encima, así que cada arpegio abarca dos octavas.",
         "Toca solas las octavas de la mano derecha. Mantén la mano abierta, con el pulgar y el meñique listos.",
         "Toca el final despacio. La mano izquierda cruza sobre la derecha para tres notas agudas.",
-        "Toca toda la pieza con las dos manos a tres cuartos de velocidad.",
+        "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
         "Ahora tócala a velocidad completa, y deja sonar las últimas notas.",
       ],
       tips: [

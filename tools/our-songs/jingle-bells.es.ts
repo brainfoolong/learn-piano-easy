@@ -18,13 +18,13 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Corta, corta, larga: el tercer mi dura dos tiempos, como el tintineo de un cascabel.",
-        "Aquí cada dedo tiene su propia tecla: el pulgar en do, el meñique en sol.",
+        "Aquí cada dedo tiene su propia tecla: el pulgar en el do, el meñique en el sol.",
         "Ve un poco más despacio en las últimas notas, y deja sonar el do grave.",
       ],
       tricky: {
-        5: "El dedo 4 toca fa tres veces, mientras el meñique izquierdo baja hasta el fa grave.",
-        13: "Vuelven los fa. Mantén el dedo 4 en fa, y baja otra vez el meñique izquierdo al fa grave.",
-        15: "El dedo 5 toca sol dos veces, y luego los dedos 4 y 2 bajan, listos para el último do del pulgar.",
+        5: "El dedo 4 toca el fa tres veces, mientras el meñique izquierdo baja hasta el fa grave.",
+        13: "Vuelven los fa. Mantén el dedo 4 en el fa, y baja otra vez el meñique izquierdo al fa grave.",
+        15: "El dedo 5 toca el sol dos veces, y luego los dedos 4 y 2 bajan, listos para el último do del pulgar.",
       },
     },
     rare: {
@@ -43,7 +43,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         5: "Cuatro fa con el dedo 4: el último es rápido, así que te lleva directo al compás 6.",
         9: "El meñique izquierdo vuelve a subir de si a do cuando la melodía empieza de nuevo.",
-        13: "Vuelven los fa. Deja que el dedo 4 rebote en fa, y cuenta el último, que es corto.",
+        13: "Vuelven los fa. Deja que el dedo 4 rebote en el fa, y cuenta el último, que es corto.",
       },
     },
     epic: {
@@ -60,8 +60,8 @@ export const translation: Translation<GuideTranslation> = {
         "Cambia el pedal al comienzo y a la mitad de cada compás, cuando la mano izquierda empieza su patrón otra vez.",
       ],
       tricky: {
-        12: "Después de la tercera, la mano baja corriendo por sol, fa, mi y re con los dedos 5, 4, 3 y 2.",
-        14: "En el segundo tiempo, la sexta se vuelve tercera: el pulgar deja el la, y los dedos 2 y 4 toman do y mi.",
+        12: "Después de la tercera, la mano baja corriendo por el sol, el fa, el mi y el re con los dedos 5, 4, 3 y 2.",
+        14: "En el segundo tiempo, la sexta se vuelve tercera: el pulgar deja el la, y los dedos 2 y 4 toman el do y el mi.",
         16: "Levanta las dos manos después del re, y luego baja al último acorde con la mano izquierda en octavas.",
       },
     },
@@ -79,7 +79,7 @@ export const translation: Translation<GuideTranslation> = {
         "Cada pasaje cabe en un tiempo: cuatro notas rápidas, y el cascabel vuelve a sonar.",
       ],
       tricky: {
-        6: "En el segundo tiempo, el pulgar y el meñique bajan una tecla, mientras el dedo 2 se queda en do.",
+        6: "En el segundo tiempo, el pulgar y el meñique bajan una tecla, mientras el dedo 2 se queda en el do.",
         7: "La melodía baja de mi a re sobre un sol y un si mantenidos. El dedo 4 toma el re.",
         8: "Abre la mano para cuatro notas a la vez: sol, si, fa y sol. Deja que el meñique cante.",
       },

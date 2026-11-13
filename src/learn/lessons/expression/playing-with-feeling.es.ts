@@ -58,7 +58,7 @@ export const playingWithFeelingEs: Translation<PlayingWithFeelingTexts> = {
       text: "Escucha la mano izquierda del jefe final, con los dedos 5, 2 y 1. La mano arpegia el acorde de la menor como la, mi y la, y luego el de mi mayor como mi, si y sol♯. La forma de mi mayor es más ancha que una octava, así que deja que tu mano suba mientras toca.",
     },
     "elise-left-hand": {
-      text: "Ahora tú. Toca las notas la, mi y la desde el segundo la debajo del do central, y luego mi, si y sol♯ desde el segundo mi debajo del do central. Termina otra vez en la, mi y la.",
+      text: "Ahora tú. Toca las notas la, mi y la desde el segundo la debajo del do central, y luego mi, si y sol♯ desde el segundo mi debajo del do central. Termina otra vez en el la, el mi y el la.",
     },
     "elise-octave-demo": {
       text: "En el compás 9, la mano derecha del jefe final se abre una octava. El pulgar toca el mi encima del do central, y el dedo 5, el mi una octava más arriba. Luego la melodía sigue como empezó.",

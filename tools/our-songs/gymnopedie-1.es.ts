@@ -37,7 +37,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Mantén el pedal pisado durante cada compás entero, y cámbialo justo en la línea divisoria.",
-        "El pulgar toca si y luego baja al la. Mantén sueltos los otros dedos.",
+        "El pulgar toca el si y luego baja al la. Mantén sueltos los otros dedos.",
         "Deja que los dos últimos compases suenen suaves, como el final de una canción de cuna.",
       ],
       tricky: {
@@ -81,7 +81,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         9: "Levanta la mano después de cada acorde, y mantén su forma mientras sube.",
         11: "Tres acordes suben paso a paso. Mantén los dedos 1, 2 y 4 en la misma forma.",
-        15: "La melodía vuelve sola. El dedo 3 toca fa sostenido, y el dedo 5 toca la nota la.",
+        15: "La melodía vuelve sola. El dedo 3 toca el fa sostenido, y el dedo 5 toca el la.",
       },
     },
   },

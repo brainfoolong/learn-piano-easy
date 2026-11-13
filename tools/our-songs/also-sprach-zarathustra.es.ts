@@ -19,20 +19,20 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Esto es un amanecer. Toca cada nota larga completa, y déjala sonar hasta el final.",
-        "Aquí el mi se vuelve mi bemol, y el sonido brillante se vuelve oscuro. Escucha el cambio.",
+        "Aquí el mi se vuelve un mi bemol, y el sonido brillante se vuelve oscuro. Escucha el cambio.",
         "El compás 3 omite el do grave, para que tu pulgar pueda esperar en el sol.",
       ],
       tricky: {
         1: "Tu pulgar toca el do central y luego sube hasta el sol. Muévelo durante la nota larga.",
-        7: "La mano izquierda baja a sol y re. La mano derecha baja del re al sol.",
-        8: "Las dos manos vuelven a casa. La izquierda regresa a do y sol, y la derecha termina en mi.",
+        7: "La mano izquierda baja al sol y al re. La mano derecha baja del re al sol.",
+        8: "Las dos manos vuelven a casa. La izquierda regresa al do y al sol, y la derecha termina en el mi.",
       },
     },
     rare: {
       practice: [
         "Toca los compases 3 a 6 con la mano derecha sola. Esta es la melodía del amanecer.",
         "Toca solos los acordes de dos notas de la mano derecha, en los compases 9 a 16.",
-        "Toca la mano izquierda sola. En los compases 7 y 8, golpea do y sol como un timbal.",
+        "Toca la mano izquierda sola. En los compases 7 y 8, golpea el do y el sol como un timbal.",
         "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
         "Ahora tócala a velocidad completa.",
       ],
@@ -44,7 +44,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         3: "Tu pulgar toca el do central y luego sube hasta el sol durante la nota larga.",
         10: "Mantén el dedo 2 en el do, y deja que el dedo 5 en el mi le ceda el lugar al dedo 4 en el mi bemol.",
-        15: "Aquí la mano izquierda toca un acorde de do completo. Abre los dedos 5, 3 y 1 sobre do, mi y sol.",
+        15: "Aquí la mano izquierda toca un acorde de do completo. Abre los dedos 5, 3 y 1 sobre el do, el mi y el sol.",
       },
     },
     epic: {
@@ -58,11 +58,11 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Mantén la octava grave con el pedal pisado. Debe retumbar como un gran órgano.",
         "El mi brillante se vuelve un mi bemol oscuro. Toca el mi bemol un poco más suave.",
-        "Golpea do y sol como un timbal, y crece en volumen hasta el compás 9.",
+        "Golpea el do y el sol como un timbal, y crece en volumen hasta el compás 9.",
       ],
       tricky: {
         3: "La mano derecha entra en el do central mientras la mano izquierda sube una octava. El silencio del compás 2 le da tiempo.",
-        15: "Abre la mano derecha sobre mi, sol y el do agudo. La mano izquierda mantiene una octava de do debajo.",
+        15: "Abre la mano derecha sobre el mi, el sol y el do agudo. La mano izquierda mantiene una octava de do debajo.",
         16: "Las dos manos saltan hacia abajo para el último acorde. Aprovecha el silencio corto al final del compás 15.",
       },
     },

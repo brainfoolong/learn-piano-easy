@@ -12,19 +12,19 @@ export const translation: Translation<GuideTranslation> = {
     common: {
       practice: [
         "Toca los compases 1 a 4 con la mano derecha sola. Tu pulgar toca cada mi.",
-        "Toca los compases 5 a 8 con la mano derecha sola. Ahí la melodía sube hasta sol.",
+        "Toca los compases 5 a 8 con la mano derecha sola. Ahí la melodía sube hasta el sol.",
         "Ahora la mano izquierda sola. Mantiene una sola posición en cada compás.",
         "Junta las dos manos, despacio.",
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
         "Di «larga, corta, corta» mientras tocas el primer compás. Ese ritmo es toda la pieza.",
-        "Tu mano nunca se mueve. Los dedos 1, 2 y 3 tocan mi, fa sostenido y sol.",
+        "Tu mano nunca se mueve. Los dedos 1, 2 y 3 tocan el mi, el fa sostenido y el sol.",
         "Empieza muy suave, y deja que cada compás suene un poco más fuerte.",
       ],
       tricky: {
         10: "Aquí el dedo 4 toca el la. Mantén la mano quieta, y deja que solo el dedo se estire hacia arriba.",
-        11: "El dedo 5 toca si tres veces. Mantenlo curvo, para que el dedo más pequeño siga firme.",
+        11: "El dedo 5 toca el si tres veces. Mantenlo curvo, para que el dedo más pequeño siga firme.",
         12: "El dedo 4 vuelve al la para la última nota. Mantenla cuatro tiempos.",
       },
     },
@@ -42,9 +42,9 @@ export const translation: Translation<GuideTranslation> = {
         "Ahora la mano izquierda toca en cada tiempo. Mantenla pareja, como una marcha lenta.",
       ],
       tricky: {
-        10: "La mano izquierda toca sol sostenido con el dedo 5, y luego si y mi a la vez. Mantén la mano quieta.",
-        15: "La mano izquierda se mece entre sol y re con los dedos 5 y 2.",
-        16: "Toca mi y sol a la vez con los dedos 1 y 3. Luego levanta la mano derecha en el silencio.",
+        10: "La mano izquierda toca el sol sostenido con el dedo 5, y luego el si y el mi a la vez. Mantén la mano quieta.",
+        15: "La mano izquierda se mece entre el sol y el re con los dedos 5 y 2.",
+        16: "Toca el mi y el sol a la vez con los dedos 1 y 3. Luego levanta la mano derecha en el silencio.",
       },
     },
     epic: {

@@ -78,7 +78,7 @@
           "text": {
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
-            "es": "Toca toda la pieza con las dos manos a velocidad completa."
+            "es": "Toca toda la canción con las dos manos a velocidad completa."
           },
           "hands": "both",
           "speed": 1,
@@ -124,7 +124,7 @@
           "text": {
             "en": "The left hand reaches down to G with finger 5, and the thumb stays on D.",
             "de": "Die linke Hand greift mit Finger 5 hinab zum G, und der Daumen bleibt auf dem D.",
-            "es": "La mano izquierda baja hasta sol con el dedo 5, y el pulgar se queda en re."
+            "es": "La mano izquierda baja hasta el sol con el dedo 5, y el pulgar se queda en el re."
           }
         },
         {
@@ -132,7 +132,7 @@
           "text": {
             "en": "The left hand moves up from F to G. The right hand comes back with finger 2 on G.",
             "de": "Die linke Hand rückt von F hinauf zu G. Die rechte Hand kommt mit Finger 2 auf dem G zurück.",
-            "es": "La mano izquierda sube de fa a sol. La mano derecha vuelve con el dedo 2 en sol."
+            "es": "La mano izquierda sube de fa a sol. La mano derecha vuelve con el dedo 2 en el sol."
           }
         },
         {
@@ -164,7 +164,7 @@
           "text": {
             "en": "Play the right hand alone on the first eight bars, and let the song wait for each note.",
             "de": "Spiel die ersten acht Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten.",
-            "es": "Toca los ocho primeros compases con la mano derecha sola, y deja que la canción espere cada nota."
+            "es": "Toca los primeros ocho compases con la mano derecha sola, y deja que la canción espere cada nota."
           },
           "hands": "right",
           "speed": 0.6,
@@ -175,7 +175,7 @@
           "text": {
             "en": "Play the left hand alone. The low note comes first, and the two-note chord answers it.",
             "de": "Spiel die linke Hand allein. Zuerst kommt der tiefe Ton, dann antwortet der Zweiklang.",
-            "es": "Toca la mano izquierda sola. Primero llega la nota grave, y la doble nota le responde."
+            "es": "Toca con la mano izquierda sola. Primero llega la nota grave, y la doble nota le responde."
           },
           "hands": "left",
           "speed": 0.6,
@@ -186,7 +186,7 @@
           "text": {
             "en": "Join the hands on the first eight bars, slowly, with the pedal.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen und mit Pedal.",
-            "es": "Junta las manos en los ocho primeros compases, despacio y con el pedal."
+            "es": "Junta las manos en los primeros ocho compases, despacio y con el pedal."
           },
           "hands": "both",
           "speed": 0.6,
@@ -208,7 +208,7 @@
           "text": {
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
-            "es": "Toca toda la pieza con las dos manos a velocidad completa."
+            "es": "Toca toda la canción con las dos manos a velocidad completa."
           },
           "hands": "both",
           "speed": 1,
@@ -295,7 +295,7 @@
           "text": {
             "en": "Play the left hand alone. Each chord rolls up in threes, low, middle, high.",
             "de": "Spiel die linke Hand allein. Jeder Akkord rollt in Dreiergruppen aufwärts, tief, Mitte, hoch.",
-            "es": "Toca la mano izquierda sola. Cada acorde sube rodando de tres en tres: grave, media, aguda."
+            "es": "Toca con la mano izquierda sola. Cada acorde sube rodando de tres en tres: grave, media, aguda."
           },
           "hands": "left",
           "speed": 0.5,
@@ -317,7 +317,7 @@
           "text": {
             "en": "Join the hands on the first nine bars, slowly.",
             "de": "Spiel die ersten neun Takte langsam mit beiden Händen zusammen.",
-            "es": "Junta las manos en los nueve primeros compases, despacio."
+            "es": "Junta las manos en los primeros nueve compases, despacio."
           },
           "hands": "both",
           "speed": 0.5,
@@ -328,7 +328,7 @@
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
-            "es": "Toca toda la pieza con las dos manos a tres cuartos de velocidad."
+            "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad."
           },
           "hands": "both",
           "speed": 0.75,
@@ -426,7 +426,7 @@
           "text": {
             "en": "Play the left hand alone. The thumb passes under and finger 3 crosses over, so each arpeggio spans two octaves.",
             "de": "Spiel die linke Hand allein. Der Daumen geht unter, Finger 3 kreuzt darüber, und so umspannt jedes Arpeggio zwei Oktaven.",
-            "es": "Toca la mano izquierda sola. El pulgar pasa por debajo y el dedo 3 cruza por encima, así que cada arpegio abarca dos octavas."
+            "es": "Toca con la mano izquierda sola. El pulgar pasa por debajo y el dedo 3 cruza por encima, así que cada arpegio abarca dos octavas."
           },
           "hands": "left",
           "speed": 0.5,
@@ -459,7 +459,7 @@
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
-            "es": "Toca toda la pieza con las dos manos a tres cuartos de velocidad."
+            "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad."
           },
           "hands": "both",
           "speed": 0.75,

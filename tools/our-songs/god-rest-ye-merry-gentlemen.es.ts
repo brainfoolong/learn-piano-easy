@@ -41,7 +41,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "El dedo 4 se desliza del re al do. En el compás siguiente, el pulgar se desliza del sol al la.",
         "Cambia de dedo en el segundo de los dos la rápidos, y también de los dos re. Así la mano avanza sin saltar.",
-        "Do y si comparten un tiempo. Cuenta «uno-y», y tócalas como dos pasos rápidos y parejos.",
+        "El do y el si comparten un tiempo. Cuenta «uno-y», y tócalos como dos pasos rápidos y parejos.",
       ],
       tricky: {
         11: "Los dedos 4 y 5 suben hasta el la agudo. Luego el meñique salta hacia abajo al mi, y el dedo 4 toma el re.",

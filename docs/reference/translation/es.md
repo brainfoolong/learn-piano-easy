@@ -265,8 +265,11 @@ GO is Google's Latin American help pages (`hl=es-419`).
 - **The note *la* never stands where it reads as the article.** Write *el la* or *la nota la*: *presiona
   el la*, *del sol al la*. Its chord or key is *el acorde de la menor*, since *la menor* alone can read
   as "the smaller one".
-- **A plural of notes keeps the name and counts it:** *los dos do*, *tres sol cortos*, or *cuatro teclas
-  do* where *dos do* would read as a number.
+- **In a song guide, one note after a verb or a preposition takes its article:** *toca el mi*, *hasta el fa
+  sostenido*, *baja al sol*. A range and a list after *las notas* stay bare: *de do a sol*, *las notas do,
+  mi y sol*. A bare *mi* or *si* after a preposition would read as "my" or "if".
+- **A plural of notes keeps the name and counts it:** *los dos do*, *tres sol cortos*. Where *dos do*
+  would read as a number, write *cuatro teclas do*.
 - **"Low C" is *el do grave*,** the C below middle C, as the bass clef's landmark. Where the English
   spells out "the C below middle C", the Spanish does too: *el do debajo del do central*. So does a note
   placed from it: *el sol debajo del do que queda bajo el do central*.

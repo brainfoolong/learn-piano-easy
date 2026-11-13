@@ -23,7 +23,7 @@ export const translation: Translation<GuideTranslation> = {
         "Cuenta parejas las notas repetidas, como campanas que suenan una tras otra.",
       ],
       tricky: {
-        3: "El pulgar se desliza del fa al mi, y luego la mano izquierda toca re y do.",
+        3: "El pulgar se desliza del fa al mi, y luego la mano izquierda toca el re y el do.",
         17: "Levanta la mano después del mi, y apoya el meñique en el do agudo.",
         20: "El pulgar se desliza del re al último do. Mantenlo hasta el final.",
       },
@@ -38,12 +38,12 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Larga, larga, corta: el la es rápido, y lleva al sol largo.",
-        "Toca el fa corto y levanta la mano. El dedo 3 cae en mi, listo para bajar caminando hasta el do.",
+        "Toca el fa corto y levanta la mano. El dedo 3 cae en el mi, listo para bajar caminando hasta el do.",
         "La melodía sube paso a paso, del la al si y al do. Deja que la música suene un poco más fuerte cada vez.",
       ],
       tricky: {
-        3: "La mano ya bajó: el dedo 3 toca mi, el dedo 2 toca re, y el pulgar espera el do.",
-        19: "El pulgar toca mi, y luego se desliza hasta el re.",
+        3: "La mano ya bajó: el dedo 3 toca el mi, el dedo 2 toca el re, y el pulgar espera el do.",
+        19: "El pulgar toca el mi, y luego se desliza hasta el re.",
         20: "El pulgar se desliza hacia abajo una vez más, hasta el último do. Mantenlo hasta el final.",
       },
     },

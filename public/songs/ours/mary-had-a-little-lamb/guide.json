@@ -33,7 +33,7 @@
           "text": {
             "en": "Play the right hand alone, slowly, and let the song wait for each note.",
             "de": "Spiel langsam nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
-            "es": "Toca la mano derecha sola, despacio, y deja que la canción espere cada nota."
+            "es": "Toca con la mano derecha sola, despacio, y deja que la canción espere cada nota."
           },
           "hands": "right",
           "speed": 0.6,
@@ -82,7 +82,7 @@
           "text": {
             "en": "Each finger has its own key here: thumb on C, third finger on E.",
             "de": "Hier hat jeder Finger seine eigene Taste: der Daumen das C, Finger 3 das E.",
-            "es": "Aquí cada dedo tiene su propia tecla: el pulgar en do y el dedo 3 en mi."
+            "es": "Aquí cada dedo tiene su propia tecla: el pulgar en el do y el dedo 3 en el mi."
           }
         },
         {
@@ -92,7 +92,7 @@
           "text": {
             "en": "The left hand's little finger takes the low G, and the thumb waits above it on C.",
             "de": "Der kleine Finger der linken Hand nimmt das tiefe G, und der Daumen wartet darüber auf dem C.",
-            "es": "El meñique de la mano izquierda toma el sol grave, y el pulgar espera encima, en do."
+            "es": "El meñique de la mano izquierda toma el sol grave, y el pulgar espera encima, en el do."
           }
         },
         {
@@ -128,7 +128,7 @@
           "text": {
             "en": "The right hand rocks between D and E with fingers 2 and 3, while the bass drops to G.",
             "de": "Die rechte Hand schaukelt mit Finger 2 und 3 zwischen D und E, während der Bass zum G fällt.",
-            "es": "La mano derecha se mece entre re y mi con los dedos 2 y 3, mientras el bajo baja a sol."
+            "es": "La mano derecha se mece entre re y mi con los dedos 2 y 3, mientras el bajo baja al sol."
           }
         }
       ]
@@ -153,7 +153,7 @@
           "text": {
             "en": "Play the right hand alone on the second half, where the eighths come in.",
             "de": "Spiel die zweite Hälfte nur mit der rechten Hand. Dort kommen die Achtel dazu.",
-            "es": "Toca la mano derecha sola en la segunda mitad, donde entran las corcheas."
+            "es": "Toca con la mano derecha sola en la segunda mitad, donde entran las corcheas."
           },
           "hands": "right",
           "speed": 0.6,
@@ -164,7 +164,7 @@
           "text": {
             "en": "Play the left hand alone, and keep each chord down until the next one.",
             "de": "Spiel die linke Hand allein, und halt jeden Akkord bis zum nächsten.",
-            "es": "Toca la mano izquierda sola, y mantén presionado cada acorde hasta el siguiente."
+            "es": "Toca con la mano izquierda sola, y mantén presionado cada acorde hasta el siguiente."
           },
           "hands": "left",
           "speed": 0.6,
@@ -175,7 +175,7 @@
           "text": {
             "en": "Join the hands on the first eight bars.",
             "de": "Spiel die ersten acht Takte mit beiden Händen zusammen.",
-            "es": "Junta las manos en los ocho primeros compases."
+            "es": "Junta las manos en los primeros ocho compases."
           },
           "hands": "both",
           "speed": 0.7,
@@ -223,7 +223,7 @@
           "text": {
             "en": "The left hand's little finger reaches down to F sharp for this chord.",
             "de": "Der kleine Finger der linken Hand greift für diesen Akkord hinunter zum Fis.",
-            "es": "El meñique de la mano izquierda baja hasta fa sostenido para este acorde."
+            "es": "El meñique de la mano izquierda baja hasta el fa sostenido para este acorde."
           }
         },
         {
@@ -251,7 +251,7 @@
           "text": {
             "en": "The left hand reaches down to F sharp while the right hand adds a quick B.",
             "de": "Die linke Hand greift hinunter zum Fis, während die rechte Hand ein schnelles H dazuspielt.",
-            "es": "La mano izquierda baja hasta fa sostenido mientras la derecha agrega un si rápido."
+            "es": "La mano izquierda baja hasta el fa sostenido mientras la derecha agrega un si rápido."
           }
         },
         {
@@ -284,7 +284,7 @@
           "text": {
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
-            "es": "Toca solo el bajo de Alberti hasta que ruede por sí mismo: grave, aguda, media, aguda."
+            "es": "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo."
           },
           "hands": "left",
           "speed": 0.5,
@@ -306,7 +306,7 @@
           "text": {
             "en": "Join the hands on the first four bars, slowly.",
             "de": "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
-            "es": "Junta las manos en los cuatro primeros compases, despacio."
+            "es": "Junta las manos en los primeros cuatro compases, despacio."
           },
           "hands": "both",
           "speed": 0.5,
@@ -436,7 +436,7 @@
           "text": {
             "en": "Join the hands on the first eight bars at three-quarter speed.",
             "de": "Spiel die ersten acht Takte mit beiden Händen zusammen in Dreiviertel-Tempo.",
-            "es": "Junta las manos en los ocho primeros compases a tres cuartos de velocidad."
+            "es": "Junta las manos en los primeros ocho compases a tres cuartos de velocidad."
           },
           "hands": "both",
           "speed": 0.75,
@@ -512,7 +512,7 @@
           "text": {
             "en": "Keep the thumb on G and the chord shape still, so only the left hand travels.",
             "de": "Lass den Daumen auf dem G und die Akkordform ruhig, damit nur die linke Hand wandert.",
-            "es": "Deja el pulgar en sol y la forma del acorde quieta, para que solo viaje la mano izquierda."
+            "es": "Deja el pulgar en el sol y la forma del acorde quieta, para que solo viaje la mano izquierda."
           }
         },
         {

@@ -80,7 +80,7 @@ export const translation: Translation<GuideTranslation> = {
         "Deja que los arpegios fluyan suaves bajo los pasajes rápidos, y cambia el pedal en cada compás.",
       ],
       tricky: {
-        17: "Abre la mano sobre sol, si, re y sol. Luego, en el silencio, la mano salta una octava hacia arriba hasta el la.",
+        17: "Abre la mano sobre el sol, el si, el re y el sol. Luego, en el silencio, la mano salta una octava hacia arriba hasta el la.",
         21: "Toca el la, el re y el la con los dedos 1, 2 y 5. En el silencio anterior, salta de vuelta desde el do agudo.",
         23: "Después del acorde, el pasaje rápido sube desde el re. El pulgar pasa por debajo en el sol.",
       },

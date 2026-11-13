@@ -25,8 +25,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         9: "El dedo 2 toma el do que tocaba el pulgar. Luego los dedos 4 y 5 tocan mi y sol.",
-        11: "Igual que el compás 9: el dedo 2 en do, el dedo 4 en mi y el dedo 5 en sol.",
-        13: "El dedo 5 llega al sol agudo. Luego los dedos 2 y 4 tocan mi y sol, y el pulgar toca re.",
+        11: "Igual que el compás 9: el dedo 2 en el do, el dedo 4 en el mi y el dedo 5 en el sol.",
+        13: "El dedo 5 llega al sol agudo. Luego los dedos 2 y 4 tocan mi y sol, y el pulgar toca el re.",
       },
     },
     rare: {
@@ -38,14 +38,14 @@ export const translation: Translation<GuideTranslation> = {
         "Ahora tócala a velocidad completa.",
       ],
       tips: [
-        "En la mayoría de los compases, la mano izquierda toca do en el primer tiempo, y luego un acorde en cada uno de los otros dos.",
+        "En la mayoría de los compases, la mano izquierda toca el do en el primer tiempo, y luego un acorde en cada uno de los otros dos.",
         "Toca el do grave un poco más fuerte que los acordes, como el bordón de una gaita.",
         "La melodía salta del sol grave al sol agudo. El dedo 4 abarca toda la octava.",
       ],
       tricky: {
         13: "El pulgar deja el sol grave, y el dedo 4 sube una octava hasta el sol agudo.",
         27: "El mismo estiramiento de octava que en el compás 13. Mantén la muñeca suelta mientras la mano se abre.",
-        28: "Para el último acorde, el pulgar baja al sol y el dedo 2 toca do, a la vez.",
+        28: "Para el último acorde, el pulgar baja al sol y el dedo 2 toca el do, a la vez.",
       },
     },
     epic: {
@@ -64,7 +64,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         9: "La mano izquierda salta al la para el acorde de la menor, mientras el dedo 2 de la mano derecha toma el do.",
         11: "Dos tiempos del acorde de la menor, y luego la mano izquierda se levanta y vuelve a caer en el do grave.",
-        15: "Las manos cambian de tarea. La mano izquierda empieza la melodía en sol, y la mano derecha toca acordes.",
+        15: "Las manos cambian de tarea. La mano izquierda empieza la melodía en el sol, y la mano derecha toca acordes.",
       },
     },
     legendary: {
@@ -77,7 +77,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "En el bajo stride, mira la octava grave y deja que la mano encuentre el acorde al tacto.",
-        "El pasaje sube por re, mi y fa, y luego la mano se levanta y pone el dedo 4 en sol.",
+        "El pasaje sube por re, mi y fa, y luego la mano se levanta y pone el dedo 4 en el sol.",
         "Mantén el pulgar y el meñique a una octava de distancia. Los silencios cortos le dan tiempo a la mano para saltar.",
       ],
       tricky: {

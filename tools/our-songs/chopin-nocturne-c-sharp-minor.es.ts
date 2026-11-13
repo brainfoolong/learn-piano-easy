@@ -61,7 +61,7 @@ export const translation: Translation<GuideTranslation> = {
         "La melodía es la nota de arriba de cada doble nota, así que deja que el dedo de arriba la guíe.",
       ],
       tricky: {
-        7: "El dedo 3 mantiene el re, y luego los dedos 2 y 1 bajan al si. La mano izquierda sigue rodando si, fa sostenido y re.",
+        7: "El dedo 3 mantiene el re, y luego los dedos 2 y 1 bajan al si. La mano izquierda sigue rodando el si, el fa sostenido y el re.",
         12: "Al final del compás, el pulgar se estira hacia abajo hasta el la sostenido. Luego los dedos 3 y 5 toman la primera tercera de la melodía.",
         17: "Toca el la sostenido y el do sostenido con los dedos 1 y 3, y luego el do sostenido y el mi con el 2 y el 4. La mano izquierda lleva de vuelta a si menor.",
       },
@@ -80,7 +80,7 @@ export const translation: Translation<GuideTranslation> = {
         "Toca la nota de arriba de cada acorde un poco más fuerte que las demás.",
       ],
       tricky: {
-        3: "Mantén el do sostenido agudo con el dedo 5. Luego toca la figura con ligereza: si, la, y luego fa sostenido con el pulgar.",
+        3: "Mantén el do sostenido agudo con el dedo 5. Luego toca la figura con ligereza: el si, el la, y luego el fa sostenido con el pulgar.",
         8: "La mano izquierda sube desde el fa sostenido grave, y luego desde el sol sostenido grave. Salta hacia abajo en el silencio corto.",
         15: "Abre la mano sobre cuatro notas, de do sostenido a do sostenido. Luego empieza la figura con el dedo 4.",
       },

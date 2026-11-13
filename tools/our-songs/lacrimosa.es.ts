@@ -20,7 +20,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Levanta la mano justo antes del fa agudo. Luego el dedo 5 llega a esa nota con suavidad.",
         "Cada par de notas que baja es un suspiro. Toca la primera nota un poco más fuerte que la segunda.",
-        "Cada dedo se queda en su propia tecla. El dedo 2 siempre toca do sostenido.",
+        "Cada dedo se queda en su propia tecla. El dedo 2 siempre toca el do sostenido.",
       ],
       tricky: {
         1: "Abre la mano derecha desde el la hasta el fa. Levántala un momento antes de que el dedo 5 toque el fa.",
@@ -42,7 +42,7 @@ export const translation: Translation<GuideTranslation> = {
         "El dedo 5 sube hasta el sol por una nota, y luego la mano vuelve.",
       ],
       tricky: {
-        11: "Toca mi dos veces con el dedo 4. Levanta un poco el dedo entre las dos notas.",
+        11: "Toca el mi dos veces con el dedo 4. Levanta un poco el dedo entre las dos notas.",
         12: "Estira el dedo 5 hasta el sol, y luego deja que los dedos 4 y 2 vuelvan a caer en mi y do sostenido.",
         17: "El la grave se queda. El pulgar deja el re, y el dedo 2 toca el do sostenido justo debajo.",
       },

@@ -24,9 +24,9 @@ export const translation: Translation<GuideTranslation> = {
         "El pasaje baja una tecla con cada nota larga. Los dedos 5, 4 y 3 tocan las tres primeras, y luego la mano baja de tecla en tecla.",
       ],
       tricky: {
-        1: "El dedo 4 toca do dos veces, y luego los dedos 5, 4, 3 y 2 bajan del re al la. El pulgar mantiene el sol largo.",
+        1: "El dedo 4 toca el do dos veces, y luego los dedos 5, 4, 3 y 2 bajan del re al la. El pulgar mantiene el sol largo.",
         5: "El pasaje empieza en el sol agudo con el meñique. Cada nota larga inicia el mismo patrón una tecla más abajo.",
-        7: "Los dedos 3, 2 y 1 tocan do, si y la, y luego si, do y la. Después bajan por si, la y sol.",
+        7: "Los dedos 3, 2 y 1 tocan el do, el si y el la, y luego el si, el do y el la. Después bajan por el si, el la y el sol.",
       },
     },
     rare: {
@@ -44,7 +44,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         5: "El pasaje empieza en el sol agudo con el meñique. Cada nota larga inicia el mismo patrón una tecla más abajo.",
-        7: "Los dedos 3, 2 y 1 tocan do, si y la, y luego si, do y la. Después bajan por si, la y sol.",
+        7: "Los dedos 3, 2 y 1 tocan el do, el si y el la, y luego el si, el do y el la. Después bajan por el si, el la y el sol.",
         15: "Las mismas notas que en el compás 7, ahora sobre una nota del bajo y un acorde que se turnan.",
       },
     },
@@ -63,7 +63,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         9: "La mano derecha toca el comienzo una octava más arriba. La mano izquierda baja al do grave para su acorde arpegiado.",
-        10: "La mano izquierda toca fa, luego sol con un silencio, y salta hacia abajo al do grave.",
+        10: "La mano izquierda toca el fa, luego el sol con un silencio, y salta hacia abajo al do grave.",
         12: "El mismo salto hacia abajo al do que en el compás 10. Luego el pulgar derecho toma el último do, listo para el sol agudo.",
       },
     },
@@ -81,7 +81,7 @@ export const translation: Translation<GuideTranslation> = {
         "Mantén el pulgar y el meñique abiertos a una octava, y deja que la muñeca rebote.",
       ],
       tricky: {
-        9: "Las octavas en do, re, si y la llegan rápido. Mantén la mano en su forma de octava y muévela desde la muñeca.",
+        9: "Las octavas en el do, el re, el si y el la llegan rápido. Mantén la mano en su forma de octava y muévela desde la muñeca.",
         11: "El comienzo vuelve en octavas. Mantenlas parejas mientras los arpegios corren debajo.",
         14: "El pasaje se balancea hacia abajo hasta el si, mientras la mano izquierda sube por debajo con un arpegio de do y luego uno de sol.",
       },

@@ -63,7 +63,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         9: "La mano salta de las sextas graves hacia arriba, al sol y al mi. Levántala en el silencio corto al final del compás 8.",
-        10: "El pulgar pasa por sol, fa, sol y mi, mientras los dedos 5 y 4 hacen repicar la melodía arriba.",
+        10: "El pulgar pasa por el sol, el fa, el sol y el mi, mientras los dedos 5 y 4 hacen repicar la melodía arriba.",
         19: "Pasa el pulgar por debajo después del sol sostenido, sin que el sonido tropiece.",
       },
     },

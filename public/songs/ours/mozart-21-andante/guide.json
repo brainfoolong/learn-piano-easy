@@ -77,7 +77,7 @@
           "text": {
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
-            "es": "Toca toda la pieza con las dos manos a velocidad completa."
+            "es": "Toca toda la canción con las dos manos a velocidad completa."
           },
           "hands": "both",
           "speed": 1,
@@ -139,7 +139,7 @@
           "text": {
             "en": "The right thumb lands on C after the rest. Halfway through the bar, the left hand moves down to G.",
             "de": "Der rechte Daumen landet nach der Pause auf dem C. In der Mitte des Takts rückt die linke Hand hinab zum G.",
-            "es": "El pulgar derecho llega al do después del silencio. A mitad del compás, la mano izquierda baja a sol."
+            "es": "El pulgar derecho llega al do después del silencio. A mitad del compás, la mano izquierda baja al sol."
           }
         }
       ]
@@ -163,7 +163,7 @@
           "text": {
             "en": "Play the right hand alone on the first six bars, and let the song wait for each note.",
             "de": "Spiel die ersten sechs Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten.",
-            "es": "Toca la mano derecha sola en los seis primeros compases, y deja que la canción espere cada nota."
+            "es": "Toca con la mano derecha sola en los primeros seis compases, y deja que la canción espere cada nota."
           },
           "hands": "right",
           "speed": 0.6,
@@ -174,7 +174,7 @@
           "text": {
             "en": "Play the left hand alone. A low note comes first, then the chord answers three times.",
             "de": "Spiel die linke Hand allein. Zuerst kommt ein tiefer Ton, dann antwortet der Akkord dreimal.",
-            "es": "Toca la mano izquierda sola. Primero llega una nota grave, y luego el acorde responde tres veces."
+            "es": "Toca con la mano izquierda sola. Primero llega una nota grave, y luego el acorde responde tres veces."
           },
           "hands": "left",
           "speed": 0.6,
@@ -207,7 +207,7 @@
           "text": {
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
-            "es": "Toca toda la pieza con las dos manos a velocidad completa."
+            "es": "Toca toda la canción con las dos manos a velocidad completa."
           },
           "hands": "both",
           "speed": 1,
@@ -253,7 +253,7 @@
           "text": {
             "en": "The left hand comes back to C with finger 2. Use the short rest before it.",
             "de": "Die linke Hand kommt mit Finger 2 zurück zum C. Nutz die kurze Pause davor.",
-            "es": "La mano izquierda vuelve a do con el dedo 2. Usa el silencio corto de antes."
+            "es": "La mano izquierda vuelve al do con el dedo 2. Usa el silencio corto de antes."
           }
         },
         {
@@ -261,7 +261,7 @@
           "text": {
             "en": "The left hand moves to B flat with finger 5. D and F sit above it.",
             "de": "Die linke Hand rückt mit Finger 5 zum B. D und F liegen darüber.",
-            "es": "La mano izquierda pasa a si bemol con el dedo 5. Re y fa quedan encima."
+            "es": "La mano izquierda pasa al si bemol con el dedo 5. Re y fa quedan encima."
           }
         },
         {
@@ -294,7 +294,7 @@
           "text": {
             "en": "Play the left hand alone. Each chord rolls up in threes: low, middle, high.",
             "de": "Spiel die linke Hand allein. Jeder Akkord rollt in Dreiergruppen aufwärts: tief, Mitte, hoch.",
-            "es": "Toca la mano izquierda sola. Cada acorde sube rodando de tres en tres: grave, media, aguda."
+            "es": "Toca con la mano izquierda sola. Cada acorde sube rodando de tres en tres: grave, media, aguda."
           },
           "hands": "left",
           "speed": 0.5,
@@ -305,7 +305,7 @@
           "text": {
             "en": "Play the right hand alone on bars 7 to 12, where sixths and thirds join the tune.",
             "de": "Spiel die Takte 7 bis 12 nur mit der rechten Hand. Dort kommen Sexten und Terzen zur Melodie.",
-            "es": "Toca la mano derecha sola en los compases 7 a 12, donde sextas y terceras se suman a la melodía."
+            "es": "Toca con la mano derecha sola en los compases 7 a 12, donde sextas y terceras se suman a la melodía."
           },
           "hands": "right",
           "speed": 0.6,
@@ -316,7 +316,7 @@
           "text": {
             "en": "Join the hands on the first six bars, slowly.",
             "de": "Spiel die ersten sechs Takte langsam mit beiden Händen zusammen.",
-            "es": "Junta las manos en los seis primeros compases, despacio."
+            "es": "Junta las manos en los primeros seis compases, despacio."
           },
           "hands": "both",
           "speed": 0.5,
@@ -327,7 +327,7 @@
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
-            "es": "Toca toda la pieza con las dos manos a tres cuartos de velocidad."
+            "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad."
           },
           "hands": "both",
           "speed": 0.75,
@@ -392,7 +392,7 @@
           "text": {
             "en": "Thumb on A under the F. Then the thumb moves up to C, and fingers 2 and 5 take F and A.",
             "de": "Daumen auf das A unter dem F. Dann rückt der Daumen hinauf zum C, und Finger 2 und 5 nehmen F und A.",
-            "es": "El pulgar en el la, debajo del fa. Luego el pulgar sube a do, y los dedos 2 y 5 toman el fa y el la."
+            "es": "El pulgar en el la, debajo del fa. Luego el pulgar sube al do, y los dedos 2 y 5 toman el fa y el la."
           }
         },
         {
@@ -400,7 +400,7 @@
           "text": {
             "en": "After F sharp, the thumb slides down to E, and finger 2 plays G with it.",
             "de": "Nach dem Fis gleitet der Daumen hinab zum E, und Finger 2 spielt das G dazu.",
-            "es": "Después del fa sostenido, el pulgar se desliza abajo hasta mi, y el dedo 2 toca sol con él."
+            "es": "Después del fa sostenido, el pulgar se desliza abajo hasta el mi, y el dedo 2 toca el sol con él."
           }
         }
       ]
@@ -425,7 +425,7 @@
           "text": {
             "en": "Play the left hand alone on bars 1 to 6. Jump down for the low octave, then back up for the chords.",
             "de": "Spiel die Takte 1 bis 6 nur mit der linken Hand. Spring hinunter zur tiefen Oktave, dann zurück hinauf zu den Akkorden.",
-            "es": "Toca la mano izquierda sola en los compases 1 a 6. Salta abajo a la octava grave y vuelve arriba a los acordes."
+            "es": "Toca con la mano izquierda sola en los compases 1 a 6. Salta abajo a la octava grave y vuelve arriba a los acordes."
           },
           "hands": "left",
           "speed": 0.5,
@@ -447,7 +447,7 @@
           "text": {
             "en": "Play the right hand alone from bar 7, where the tune climbs an octave.",
             "de": "Spiel ab Takt 7 nur die rechte Hand. Dort steigt die Melodie eine Oktave höher.",
-            "es": "Toca la mano derecha sola desde el compás 7, donde la melodía sube una octava."
+            "es": "Toca con la mano derecha sola desde el compás 7, donde la melodía sube una octava."
           },
           "hands": "right",
           "speed": 0.6,
@@ -458,7 +458,7 @@
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
-            "es": "Toca toda la pieza con las dos manos a tres cuartos de velocidad."
+            "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad."
           },
           "hands": "both",
           "speed": 0.75,
@@ -515,7 +515,7 @@
           "text": {
             "en": "Play G sharp with finger 2 and A with finger 4. The left hand jumps down to the low F octave.",
             "de": "Spiel das Gis mit Finger 2 und das A mit Finger 4. Die linke Hand springt hinab zur tiefen F-Oktave.",
-            "es": "Toca sol sostenido con el dedo 2 y el la con el dedo 4. La mano izquierda salta abajo a la octava de fa grave."
+            "es": "Toca el sol sostenido con el dedo 2 y el la con el dedo 4. La mano izquierda salta abajo a la octava de fa grave."
           }
         },
         {

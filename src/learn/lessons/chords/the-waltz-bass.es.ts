@@ -22,7 +22,7 @@ export const theWaltzBassEs: Translation<TheWaltzBassTexts> = {
       text: "Ahora tú, en do. El dedo 5 toca el do debajo del do central, y luego los dedos 3 y 1 tocan mi y sol a la vez, dos veces. Toca dos compases.",
     },
     "g-and-f-shapes": {
-      text: "El mismo patrón sirve para cualquier acorde. Para sol, toca el sol grave y luego si y re. Para fa, toca el fa grave y luego la y do.",
+      text: "El mismo patrón sirve para cualquier acorde. Para sol, toca el sol grave y luego si y re. Para fa, toca el fa grave y luego el la y el do.",
     },
     "g-waltz": {
       text: "Baja la mano al sol que está debajo del do que queda debajo del do central. El dedo 5 toca sol, y luego los dedos 3 y 1 tocan si y re a la vez, dos veces.",
@@ -32,7 +32,7 @@ export const theWaltzBassEs: Translation<TheWaltzBassTexts> = {
       answers: ["Fa solo", "Fa, la y do, una tras otra", "La y do a la vez"],
     },
     "f-waltz": {
-      text: "Ahora ve al fa, una tecla blanca debajo de ese sol. El dedo 5 toca fa, y luego los dedos 3 y 1 tocan la y do a la vez, dos veces.",
+      text: "Ahora ve al fa, una tecla blanca debajo de ese sol. El dedo 5 toca fa, y luego los dedos 3 y 1 tocan el la y el do a la vez, dos veces.",
     },
     "chord-walk": {
       text: "Toca un compás de cada acorde: do, fa, sol y do. Mueve la mano en el tiempo uno y sigue contando hasta tres.",

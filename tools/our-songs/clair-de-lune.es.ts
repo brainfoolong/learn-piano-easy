@@ -81,8 +81,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         13: "Aquí cae un acorde en cada tiempo. Levanta un poco la mano después de cada uno, y deja que el pedal los una.",
-        17: "Mantén el acorde de la mano derecha, y cruza la mano izquierda por encima para tocar si, re y sol.",
-        18: "Levanta la mano derecha de su acorde, y luego ábrela sobre do, mi, sol y do.",
+        17: "Mantén el acorde de la mano derecha, y cruza la mano izquierda por encima para tocar el si, el re y el sol.",
+        18: "Levanta la mano derecha de su acorde, y luego ábrela sobre el do, el mi, el sol y el do.",
       },
     },
   },

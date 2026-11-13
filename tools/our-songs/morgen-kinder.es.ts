@@ -13,7 +13,7 @@ export const translation: Translation<GuideTranslation> = {
   versions: {
     common: {
       practice: [
-        "Toca los cuatro primeros compases con la mano derecha sola, y deja que la canción espere cada nota.",
+        "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota.",
         "Toca los cuatro últimos compases con la mano derecha sola, donde la melodía sube hasta el la agudo.",
         "Ahora la mano izquierda sola. Mantiene una quinta, o un fa solo.",
         "Toca toda la canción con las dos manos juntas, despacio.",
@@ -25,33 +25,33 @@ export const translation: Translation<GuideTranslation> = {
         "El pulgar toca el primer do y el dedo 2 el segundo, así que el dedo 5 llega al fa.",
       ],
       tricky: {
-        3: "Después del silencio, el dedo 3 toca mi dos veces. Los dedos 4 y 5 suben a fa y sol, y el dedo 4 vuelve al mi.",
-        7: "Igual que el compás 3: el dedo 3 en mi, y luego los dedos 4 y 5 suben a fa y sol.",
+        3: "Después del silencio, el dedo 3 toca el mi dos veces. Los dedos 4 y 5 suben a fa y sol, y el dedo 4 vuelve al mi.",
+        7: "Igual que el compás 3: el dedo 3 en el mi, y luego los dedos 4 y 5 suben a fa y sol.",
         8: "Los dedos 5 y 4 tocan fa y mi, y el dedo 2 toma el re. Así el dedo 3 queda listo para el fa del compás 9.",
       },
     },
     rare: {
       practice: [
-        "Toca la mano izquierda sola, y presiona juntas las notas de cada acorde.",
-        "Toca la mano derecha sola en los ocho primeros compases, la frase inicial.",
-        "Junta las manos en los ocho primeros compases, despacio.",
+        "Toca con la mano izquierda sola, y presiona juntas las notas de cada acorde.",
+        "Toca con la mano derecha sola en los primeros ocho compases, la frase inicial.",
+        "Junta las manos en los primeros ocho compases, despacio.",
         "Toca toda la canción con las dos manos, un poco más lento de lo escrito.",
         "Ahora tócala a velocidad completa.",
       ],
       tips: [
         "Mantén cada acorde suave durante todo el compás, para que la melodía quede encima.",
-        "El compás 4 termina en un sol grave, y el compás 5 empieza arriba, en mi. Mira el mi antes de tocar el sol.",
+        "El compás 4 termina en un sol grave, y el compás 5 empieza arriba, en el mi. Mira el mi antes de tocar el sol.",
         "El pulgar toca el primer do y el dedo 2 el segundo, así que el dedo 5 llega al fa.",
       ],
       tricky: {
         5: "Después del sol del pulgar, el dedo 3 salta arriba al mi sin silencio. Mantén ligero el pulgar, para que la mano se abra.",
         6: "El dedo 5 toca el sol agudo, y el dedo 4 vuelve al mi sobre el acorde de do.",
-        14: "Igual que el compás 6: el dedo 5 en el sol agudo, y luego el dedo 4 en mi.",
+        14: "Igual que el compás 6: el dedo 5 en el sol agudo, y luego el dedo 4 en el mi.",
       },
     },
     epic: {
       practice: [
-        "Toca solo el bajo de Alberti hasta que ruede por sí mismo: grave, aguda, media, aguda.",
+        "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
         "Toca solos los acordes arpegiados de la segunda vuelta, de subida y de bajada.",
         "Junta las manos en la primera vuelta, despacio.",
         "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
@@ -63,9 +63,9 @@ export const translation: Translation<GuideTranslation> = {
         "Cambia el pedal en cada mitad de compás, cuando la mano izquierda empieza un acorde nuevo.",
       ],
       tricky: {
-        13: "La melodía empieza otra vez una octava más arriba. El dedo 2 toma el do agudo, y el pulgar baja a sol.",
+        13: "La melodía empieza otra vez una octava más arriba. El dedo 2 toma el do agudo, y el pulgar baja al sol.",
         23: "El pulgar toca el primer do y el dedo 2 el segundo, así que el dedo 5 llega al fa agudo.",
-        24: "Los dedos 4, 3, 2 y 1 bajan hasta si, y el dedo 2 termina en do sobre el último acorde.",
+        24: "Los dedos 4, 3, 2 y 1 bajan hasta el si, y el dedo 2 termina en el do sobre el último acorde.",
       },
     },
     legendary: {

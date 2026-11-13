@@ -42,7 +42,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Para el acorde de fa, el pulgar sube del sol al la, y vuelve para el acorde siguiente.",
         "En la segunda estrofa, toca las notas graves un poco más fuerte que las agudas.",
-        "Re y mi son rápidos, y el fa cae en la mitad del compás junto con el acorde.",
+        "El re y el mi son rápidos, y el fa cae en la mitad del compás junto con el acorde.",
       ],
       tricky: {
         3: "El pulgar derecho baja hasta el do central, mientras la mano izquierda suelta el mi para el segundo acorde.",

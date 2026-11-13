@@ -44,8 +44,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         6: "Después del silencio, el dedo 5 toma el mi. Luego los dedos 2 y 1 tocan el si bemol y el la.",
-        14: "El mismo movimiento que en el compás 6: el dedo 5 en el mi, y luego si bemol con el dedo 2.",
-        19: "La mano derecha toca do y mi a la vez. La mano izquierda se abre sobre do, mi y sol con los dedos 5, 3 y 1.",
+        14: "El mismo movimiento que en el compás 6: el dedo 5 en el mi, y luego el si bemol con el dedo 2.",
+        19: "La mano derecha toca el do y el mi a la vez. La mano izquierda se abre sobre el do, el mi y el sol con los dedos 5, 3 y 1.",
       },
     },
     epic: {
@@ -82,7 +82,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         9: "Aprovecha el silencio del principio para subir la mano una octava. Luego toma cuatro notas con los dedos 1, 2, 3 y 5.",
-        16: "Después del silencio, los dedos 3 y 5 toman do sostenido y mi. Luego el pulgar baja hasta el sol y vuelve a subir.",
+        16: "Después del silencio, los dedos 3 y 5 toman el do sostenido y el mi. Luego el pulgar baja hasta el sol y vuelve a subir.",
         17: "El dedo 5 sube hasta el si agudo. La mano izquierda aprovecha su silencio para saltar abajo, al sol grave.",
       },
     },

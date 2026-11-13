@@ -23,9 +23,9 @@ export const translation: Translation<GuideTranslation> = {
         "El pulgar se estira hacia abajo hasta el la, y la mano lo sigue hasta el sol grave.",
       ],
       tricky: {
-        6: "El dedo 3 toca fa dos veces, y luego el meñique se estira hacia arriba hasta el sol.",
-        7: "El dedo 4 toca mi, el dedo 2 baja hasta do, y el dedo 4 vuelve a mi.",
-        15: "Las mismas notas que en el compás 7: mi dos veces con el dedo 4, y luego do con el dedo 2.",
+        6: "El dedo 3 toca el fa dos veces, y luego el meñique se estira hacia arriba hasta el sol.",
+        7: "El dedo 4 toca el mi, el dedo 2 baja hasta el do, y el dedo 4 vuelve al mi.",
+        15: "Las mismas notas que en el compás 7: el mi dos veces con el dedo 4, y luego el do con el dedo 2.",
       },
     },
     rare: {
@@ -43,7 +43,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         6: "El pulgar izquierdo vuelve del la al sol mientras la mano derecha sube hasta el sol.",
-        7: "El dedo 4 toca mi, el dedo 2 baja hasta do, y el dedo 4 vuelve a mi.",
+        7: "El dedo 4 toca el mi, el dedo 2 baja hasta el do, y el dedo 4 vuelve al mi.",
         15: "Las mismas notas que en el compás 7, ahora sobre un bajo de vals. Mantén el bajo suave.",
       },
     },
@@ -63,7 +63,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         17: "Levanta la mano derecha después del do, y pon el pulgar en el sol una octava más arriba.",
         19: "El pulgar suelta el mi grave, y los dedos 2, 3 y 4 suben caminando hasta el fa.",
-        32: "Abre la mano para la sexta, y luego ciérrala para la última tercera, en sol y si.",
+        32: "Abre la mano para la sexta, y luego ciérrala para la última tercera, en el sol y el si.",
       },
     },
     legendary: {
@@ -81,7 +81,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         6: "La mano izquierda salta a la octava de sol grave mientras la mano derecha toca el acorde de si, re y fa.",
-        22: "Las octavas tocan fa dos veces, y luego sol, mientras la mano izquierda sube por un acorde de sol séptima y vuelve a bajar.",
+        22: "Las octavas tocan el fa dos veces, y luego el sol, mientras la mano izquierda sube por un acorde de sol séptima y vuelve a bajar.",
         30: "Igual que el compás 22. Mantén parejas las octavas mientras el arpegio corre por debajo.",
       },
     },

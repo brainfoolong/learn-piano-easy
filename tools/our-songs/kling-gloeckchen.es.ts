@@ -43,14 +43,14 @@ export const translation: Translation<GuideTranslation> = {
         "La mano izquierda vuelve a subir al do cuando regresa la frase de la campanita.",
       ],
       tricky: {
-        5: "El pulgar derecho baja al do central, mientras la mano izquierda toca do y luego su acorde.",
+        5: "El pulgar derecho baja al do central, mientras la mano izquierda toca el do y luego su acorde.",
         9: "Las dos manos se mueven: el pulgar derecho sube al re, y la mano izquierda baja a las notas la, do y re.",
         13: "La mano izquierda vuelve a subir al do, y la mano derecha empieza otra vez la frase de la campanita.",
       },
     },
     epic: {
       practice: [
-        "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
+        "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
         "Toca las terceras de la mano derecha sola, y mantén juntas las dos notas de cada doble nota.",
         "Junta las manos en la primera estrofa, despacio.",
         "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
@@ -63,7 +63,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         17: "La mano derecha llega una octava más arriba en una tercera, y la mano izquierda empieza su bajo y sus acordes.",
-        27: "El dedo 2 toca mi, y el meñique se estira hasta el la. Mantén el pulgar cerca del re.",
+        27: "El dedo 2 toca el mi, y el meñique se estira hasta el la. Mantén el pulgar cerca del re.",
         29: "La frase de la campanita vuelve en terceras. Los dedos 2 y 4 toman mi y sol a la vez.",
       },
     },
@@ -82,7 +82,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         3: "Presiona si, re y fa a la vez, y luego los dedos 2 y 4 tocan re y sol mientras la mano izquierda salta.",
-        7: "Los dedos 2 y 4 tocan la tercera, luego el dedo 4 repite fa y el meñique toma sol.",
+        7: "Los dedos 2 y 4 tocan la tercera, luego el dedo 4 repite el fa y el meñique toma el sol.",
         15: "El mismo acorde que en el compás 3. Fíjate en el salto de la mano izquierda hasta la octava de sol grave.",
       },
     },

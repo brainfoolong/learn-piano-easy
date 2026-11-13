@@ -37,13 +37,13 @@ export const translation: Translation<GuideTranslation> = {
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
-        "Re sostenido y si bemol son teclas negras. Los dedos 4 y 2 se estiran un poco más hacia dentro.",
+        "El re sostenido y el si bemol son teclas negras. Los dedos 4 y 2 se estiran un poco más hacia dentro.",
         "Las dos manos tocan en cada tiempo. Marcha con ellas, y mantén parejos los tiempos.",
         "En esta parte los trols se acercan. Tócala un poco más fuerte que el comienzo.",
       ],
       tricky: {
-        4: "El dedo 2 se estira hacia dentro para el si bemol, mientras la mano izquierda va y viene entre sol y re.",
-        9: "Aprovecha el silencio para bajar la mano izquierda al mi grave. El pulgar derecho empieza la subida en mi.",
+        4: "El dedo 2 se estira hacia dentro para el si bemol, mientras la mano izquierda va y viene entre el sol y el re.",
+        9: "Aprovecha el silencio para bajar la mano izquierda al mi grave. El pulgar derecho empieza la subida en el mi.",
         17: "Durante el silencio, las dos manos vuelven al la, y la melodía empieza una vez más.",
       },
     },

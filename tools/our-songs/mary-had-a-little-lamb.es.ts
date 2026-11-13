@@ -12,46 +12,46 @@ export const translation: Translation<GuideTranslation> = {
   versions: {
     common: {
       practice: [
-        "Toca la mano derecha sola, despacio, y deja que la canción espere cada nota.",
+        "Toca con la mano derecha sola, despacio, y deja que la canción espere cada nota.",
         "Ahora la mano izquierda sola. Mantiene una nota durante cada compás entero.",
         "Junta las dos manos, todavía despacio.",
         "Toca toda la canción con las dos manos a velocidad completa.",
       ],
       tips: [
-        "Aquí cada dedo tiene su propia tecla: el pulgar en do y el dedo 3 en mi.",
-        "El meñique de la mano izquierda toma el sol grave, y el pulgar espera encima, en do.",
+        "Aquí cada dedo tiene su propia tecla: el pulgar en el do y el dedo 3 en el mi.",
+        "El meñique de la mano izquierda toma el sol grave, y el pulgar espera encima, en el do.",
         "El último do dura todo el compás, así que cuenta cuatro tiempos antes de levantar la mano.",
       ],
       tricky: {
         3: "La mano izquierda va al sol grave mientras la derecha repite el re. Usa el meñique.",
         4: "La melodía salta el fa, de mi a sol. Toca el sol con el meñique, y deja los otros dedos sobre sus teclas.",
-        7: "La mano derecha se mece entre re y mi con los dedos 2 y 3, mientras el bajo baja a sol.",
+        7: "La mano derecha se mece entre re y mi con los dedos 2 y 3, mientras el bajo baja al sol.",
       },
     },
     rare: {
       practice: [
-        "Toca la mano derecha sola en la segunda mitad, donde entran las corcheas.",
-        "Toca la mano izquierda sola, y mantén presionado cada acorde hasta el siguiente.",
-        "Junta las manos en los ocho primeros compases.",
+        "Toca con la mano derecha sola en la segunda mitad, donde entran las corcheas.",
+        "Toca con la mano izquierda sola, y mantén presionado cada acorde hasta el siguiente.",
+        "Junta las manos en los primeros ocho compases.",
         "Toca toda la canción con las dos manos, un poco más lento de lo escrito.",
         "Ahora tócala a velocidad completa.",
       ],
       tips: [
         "Cada par rápido es un tiempo partido en dos. Cuenta «uno y, dos y».",
-        "El meñique de la mano izquierda baja hasta fa sostenido para este acorde.",
+        "El meñique de la mano izquierda baja hasta el fa sostenido para este acorde.",
         "Presiona juntos si y re al final del compás, como si fueran una sola tecla.",
       ],
       tricky: {
         9: "El dedo 4 toca el do rápido, y luego el dedo 2 toma el la. Mantén quieta la mano.",
-        11: "La mano izquierda baja hasta fa sostenido mientras la derecha agrega un si rápido.",
+        11: "La mano izquierda baja hasta el fa sostenido mientras la derecha agrega un si rápido.",
         13: "Aquí vuelven las notas rápidas. Cuenta «uno y, dos y» para que salgan parejas.",
       },
     },
     epic: {
       practice: [
-        "Toca solo el bajo de Alberti hasta que ruede por sí mismo: grave, aguda, media, aguda.",
+        "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
         "Toca solas las terceras de la mano derecha, y mantén juntas las dos notas de cada doble nota.",
-        "Junta las manos en los cuatro primeros compases, despacio.",
+        "Junta las manos en los primeros cuatro compases, despacio.",
         "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
         "Ahora tócala a velocidad completa, con el pedal.",
       ],
@@ -70,7 +70,7 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Toca solo el bajo stride: salta abajo a la nota del bajo y vuelve arriba al acorde.",
         "Toca solos los acordes de la mano derecha, y deja que el dedo de arriba cante la melodía.",
-        "Junta las manos en los ocho primeros compases a tres cuartos de velocidad.",
+        "Junta las manos en los primeros ocho compases a tres cuartos de velocidad.",
         "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
         "Ahora tócala a velocidad completa, y deja sonar el último acorde.",
       ],
@@ -81,7 +81,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         3: "El bajo salta abajo a la octava de sol grave. Echa un vistazo a la mano izquierda antes de que empiece el compás.",
-        11: "Deja el pulgar en sol y la forma del acorde quieta, para que solo viaje la mano izquierda.",
+        11: "Deja el pulgar en el sol y la forma del acorde quieta, para que solo viaje la mano izquierda.",
         15: "Levanta la mano después del último re, para que tenga tiempo de abrirse bien para el acorde final.",
       },
     },

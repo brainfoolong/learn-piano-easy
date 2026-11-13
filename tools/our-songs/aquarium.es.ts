@@ -19,12 +19,12 @@ export const translation: Translation<GuideTranslation> = {
         "Toca toda la canción con las dos manos juntas a velocidad completa.",
       ],
       tips: [
-        "Los dedos 5 y 4 se mecen entre mi y re sostenido, como agua que golpea suavemente un vidrio.",
+        "Los dedos 5 y 4 se mecen entre el mi y el re sostenido, como agua que golpea suavemente un vidrio.",
         "Toca suave y ligado, como peces que se deslizan por agua tranquila.",
         "Aquí la mano sube una tecla. Ahora el dedo 4 toca el mi, y el pulgar espera sobre el si.",
       ],
       tricky: {
-        1: "Alterna entre mi y re sostenido con los dedos 5 y 4. Luego el dedo 4 se desliza al re de la tecla blanca.",
+        1: "Alterna entre el mi y el re sostenido con los dedos 5 y 4. Luego el dedo 4 se desliza al re de la tecla blanca.",
         3: "El compás 3 es otra vez el compás 1. Mantén el dedo 4 cerca de la tecla negra, para que el re sostenido salga fácil.",
         9: "Durante el si largo, vuelve a bajar la mano. El pulgar regresa al la, y el dedo 5 toma el mi.",
       },
@@ -43,8 +43,8 @@ export const translation: Translation<GuideTranslation> = {
         "Termina con el la y el do a la vez. Los dedos 1 y 3 los presionan como si fueran una sola nota.",
       ],
       tricky: {
-        1: "Alterna entre mi y re sostenido con los dedos 5 y 4, mientras la mano izquierda pasa del la al do.",
-        3: "Como en el compás 1, los dedos 5 y 4 se mecen entre mi y re sostenido. Luego el dedo 4 toma el re de la tecla blanca.",
+        1: "Alterna entre el mi y el re sostenido con los dedos 5 y 4, mientras la mano izquierda pasa del la al do.",
+        3: "Como en el compás 1, los dedos 5 y 4 se mecen entre el mi y el re sostenido. Luego el dedo 4 toma el re de la tecla blanca.",
         9: "Durante el si largo, vuelve a bajar la mano derecha, para que el pulgar quede otra vez en el la.",
       },
     },
@@ -63,8 +63,8 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         9: "Durante el si largo, vuelve a bajar la mano derecha. Luego baja corriendo del mi al la con los dedos 5 a 1.",
-        15: "La mano izquierda se estira hacia abajo hasta el sol sostenido. La mano derecha toca si, re, do y si con los dedos 2, 4, 3 y 2.",
-        24: "Mantén sol sostenido y si con los dedos 1 y 3. Luego abre la mano sobre el la, el do y el mi para el último acorde.",
+        15: "La mano izquierda se estira hacia abajo hasta el sol sostenido. La mano derecha toca el si, el re, el do y el si con los dedos 2, 4, 3 y 2.",
+        24: "Mantén el sol sostenido y el si con los dedos 1 y 3. Luego abre la mano sobre el la, el do y el mi para el último acorde.",
       },
     },
     legendary: {
@@ -81,9 +81,9 @@ export const translation: Translation<GuideTranslation> = {
         "Toca la nota de arriba de cada acorde un poco más fuerte que las demás.",
       ],
       tricky: {
-        8: "La mano izquierda salta de la octava de mi grave hasta sol sostenido, si y mi. Aprovecha cada silencio corto para llegar.",
+        8: "La mano izquierda salta de la octava de mi grave hasta el sol sostenido, el si y el mi. Aprovecha cada silencio corto para llegar.",
         18: "Después del acorde agudo, la mano derecha baja al do, el mi y el la. Mantén la mano en la forma del acorde.",
-        24: "Levanta la mano derecha en el silencio corto después de mi, sol sostenido y si. La mano llega al la, al do, al mi y al la.",
+        24: "Levanta la mano derecha en el silencio corto después del mi, el sol sostenido y el si. La mano llega al la, al do, al mi y al la.",
       },
     },
   },

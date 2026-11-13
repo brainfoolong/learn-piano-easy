@@ -24,9 +24,9 @@ export const translation: Translation<GuideTranslation> = {
         "Mantén el último do durante los cuatro tiempos, y levanta las dos manos a la vez.",
       ],
       tricky: {
-        2: "El dedo 5 deja el mi, y el dedo 4 toca re tres veces. Mantén el último re durante dos tiempos.",
-        10: "Igual que el compás 2. Debajo, la mano izquierda pasa a re y sol.",
-        15: "Los dedos 4, 3, 4 y 5 tocan re, do, re y mi. Luego el dedo 3 baja al último do.",
+        2: "El dedo 5 deja el mi, y el dedo 4 toca el re tres veces. Mantén el último re durante dos tiempos.",
+        10: "Igual que el compás 2. Debajo, la mano izquierda pasa al re y al sol.",
+        15: "Los dedos 4, 3, 4 y 5 tocan el re, el do, el re y el mi. Luego el dedo 3 baja al último do.",
       },
     },
     rare: {
@@ -43,9 +43,9 @@ export const translation: Translation<GuideTranslation> = {
         "La nota del bajo cae en el primer tiempo y el acorde en el tercero. Cuenta cuatro en cada compás.",
       ],
       tricky: {
-        2: "El dedo 4 toca re tres veces, mientras la mano izquierda mantiene un acorde de sol séptima sin su si.",
+        2: "El dedo 4 toca el re tres veces, mientras la mano izquierda mantiene un acorde de sol séptima sin su si.",
         10: "Igual que el compás 2. Toca el re repetido parejo y ligero.",
-        15: "Los dedos 4, 3, 4 y 5 tocan re, do, re y mi. A la mitad del compás, la mano izquierda suelta el fa.",
+        15: "Los dedos 4, 3, 4 y 5 tocan el re, el do, el re y el mi. A la mitad del compás, la mano izquierda suelta el fa.",
       },
     },
     epic: {
@@ -62,8 +62,8 @@ export const translation: Translation<GuideTranslation> = {
         "Cambia el pedal en cada medio compás, cuando la mano izquierda empieza su patrón otra vez.",
       ],
       tricky: {
-        17: "La mano derecha llega una octava más arriba, en mi, y la mano izquierda empieza sus acordes arpegiados en el do grave.",
-        19: "El dedo 3 toca el do agudo cuatro veces, mientras la mano izquierda se levanta en el silencio y vuelve a caer en do.",
+        17: "La mano derecha llega una octava más arriba, en el mi, y la mano izquierda empieza sus acordes arpegiados en el do grave.",
+        19: "El dedo 3 toca el do agudo cuatro veces, mientras la mano izquierda se levanta en el silencio y vuelve a caer en el do.",
         25: "Igual que el compás 17, ahora después del re largo. Pon el dedo 5 en el mi agudo.",
       },
     },
@@ -83,7 +83,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         21: "Las octavas bajan del mi al la después de levantar la mano un momento. Mantén la mano en forma de octava mientras viaja.",
         29: "La misma bajada al la del compás 21, mientras la mano izquierda sube por un arpegio de fa debajo.",
-        31: "Las octavas avanzan por re, do, re y mi. Luego la mano se levanta y cae en el acorde de cuatro notas.",
+        31: "Las octavas avanzan por el re, el do, el re y el mi. Luego la mano se levanta y cae en el acorde de cuatro notas.",
       },
     },
   },

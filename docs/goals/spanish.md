@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Spanish site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -74,10 +74,16 @@ What the pilot teaches goes back into that file before the next locale starts.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
 - **A text whose Spanish equals the English stays out of its file,** such as *Audio*, *Normal* or *Cursor*.
   The site shows the same text either way, and the rules test refuses a copy. `status` counts each as
-  missing, so stage 6's gate allows these 47, by unit: site 3, learn-lesson 2, player-bar 5,
-  player-input 3, player-library 5, player-settings 20, player-shell 4, and in the course meet-the-piano 1,
-  rhythm 1, expression 3. A list whose items would all equal the English, such as `["1", "3", "5"]`,
-  stays out whole.
+  missing, so stage 6's gate allows these 48. By unit, the catalogs hold site 3, learn-lesson 2,
+  player-bar 5, player-input 3, player-library 5, player-settings 21 and player-shell 4. The course holds
+  meet-the-piano 1, rhythm 1 and expression 3. A list whose items would all equal the English, such as `["1", "3", "5"]`,
+  stays out whole. The 48th is the language option *Español*, which every locale names alike.
+- **The gallery and the legal pages stay in English on the Spanish site.** Their texts are keyed by
+  `CompleteLocale`, so only English and German hold them. The legal texts' binding wording is the English,
+  and the gallery is a contributors' page.
+- **A song guide gives one note after a verb or a preposition its article:** *toca el mi*, *baja al sol*.
+  The n-to-z guides set it, and guide § 7 holds it. The course keeps its bare *toca sol*, as § 7's
+  lowercase example writes it.
 - **The worlds' Spanish titles are settled in the guide's interface glossary.** `src/learn/course.ts`
   types a world's title by `ShippedLocale`, so it takes them in stage 6, when `es` ships.
 - **The note *la* never reads as the article,** and *el do grave* is the course's "low C". Guide § 7
@@ -176,15 +182,19 @@ side by side, and three fresh reviewers review them blind.
 address or mark that drifts between files.
 **Gate:** `bun run i18n status es` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `es` is `shipped`. `src/i18n/locale-table.ts:49`
-- [ ] Each world's `title` takes its Spanish from the guide's interface glossary. `src/learn/course.ts:58`
-- [ ] The Spanish social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `es` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_spanish_site_reads_in_spanish`: `lang`, the switch's *Español*, a lesson step and the player in Spanish. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `es` with `bun run shot --locale es-419`, on a phone and a desktop, in both themes.
-- [ ] The feature list and the README name Spanish. `docs/reference/features.md:1`, `README.md:12`
-- [ ] What the pilot taught goes into the method. `docs/agent/translation.md:1`
+- [x] Every drift the reader lists is settled in the files it names.
+  - [x] Three fresh readers list the drift: the catalogs and the course, and the guides in two halves.
+  - [x] The course's and the catalogs' findings are settled.
+  - [x] The k-to-m guides' findings are settled, and the a-to-j guides are swept for the note's article.
+  - [x] The guides are rebuilt with `bun tools/make-our-songs.ts`.
+- [x] `es` is `shipped`. `src/i18n/locale-table.ts:49`
+- [x] Each world's `title` takes its Spanish from the guide's interface glossary. `src/learn/course.ts:58`
+- [x] The Spanish social image. `tools/make-social-image.ts:104`
+- [x] The layout checks run in `es` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
+- [x] Test `the_spanish_site_reads_in_spanish`: `lang`, the switch's *Español*, a lesson step and the player in Spanish. `e2e/locales.e2e.ts:1`
+- [x] Look at every route in `es` with `bun run shot --locale es-419`, on a phone and a desktop, in both themes.
+- [x] The feature list and the README name Spanish. `docs/reference/features.md:1`, `README.md:12`
+- [x] What the pilot taught goes into the method. `docs/agent/translation.md:1`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -196,53 +206,42 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 3 are done. Every catalog section and every lesson of the eight worlds has its Spanish file.
-Each world's `texts.es.ts` gathers its lessons, and its `index.ts` loads it under `translations.es`.
-`es` is not shipped, so no Spanish page is written yet, and the course was not looked at in a browser.
+Stages 1 to 6 are done. Every text of the site, the course and the 80 song guides has its Spanish, and
+`es` ships. `status es` lists only the 48 deliberate copies, with nothing stale.
 
-Eight writers took one world each. Eight blind reviews found one *wrong* text, in scales-and-keys, and a
-second review of that world found none. Every finding is settled, and every world is stamped in
-`src/i18n/stamps/es.json`. The course's 5 missing texts are deliberate copies, as *Standing decisions*
-counts them.
+Shipping made every text keyed by `ShippedLocale` ask for Spanish. The gallery's and the legal pages'
+texts are keyed by the new `CompleteLocale` in `src/i18n/locale-table.ts`, so they show their English.
+The language option names *Español* in `player-settings-play.en.ts` and its German twin.
 
-The reviews showed three recurring traps, now rules in the guide's § 7: *la* read as the article,
-*do grave* for a spelled-out place, and *de a tres*. A sweep fixed them in every world. The guide's
-piano glossary gained the course's new terms, and its interface glossary the worlds' titles.
+The consistency read took three fresh readers. Their findings are settled:
+- The course and the catalogs: three *la*-as-article slips, one chord list, and one verb.
+- The k-to-m guides: the Alberti step, *toda la canción*, *Toca con la mano … sola*, *los primeros N
+  compases*, and a note's article.
+- The a-to-j guides: swept for a note's article, now guide § 7's rule for the song guides.
+- `the-blue-danube.es.ts` writes *2001: A Space Odyssey* bare, as every other guide does.
+Every guide is rebuilt into `public/songs/ours/*/guide.json`. No English changed, so no stamp moved.
 
-Stages 4 and 5 are done. All 80 guides have their `.es.ts`, and each is built into
-`public/songs/ours/*/guide.json` and stamped in `src/i18n/stamps/es.json`.
+The shots of every route in `es`, on a phone and a desktop in both themes, show no page error. They
+showed a lesson's piano naming `C4` in Spanish. `src/render/piano-keys.ts` now takes the locale's naming,
+and each key's span mirrors its name as `data-name`.
 
-The n-to-z guides took four writers and four blind reviews. The reviews found ten *wrong* texts, all the
-*la*-as-article trap, and about 60 stiff phrasings or nits. Four settle passes applied every finding.
-`spanish_texts_keep_their_rules` passes, and `status es` lists only the 47 deliberate copies.
-
-The settle passes also swept two patterns. A note after a verb or a preposition now takes its article, as
-*toca el fa sostenido*. Only the n-to-z guides were swept for it. The Alberti step reads *Toca con la mano
-izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: …* in every guide.
-
-The title *Ah! vous dirai-je, maman* joined the `es` kept list in `src/i18n/typography.ts`.
-
-The briefs are scratch under `.agent-tmp/i18n/es/`, with each batch's findings in `guide-findings-*.md`.
+`the_spanish_site_reads_in_spanish` passes. `every_page_passes_the_layout_checks_in_es` has not run yet.
 
 ### Next
 
-**Stage 6: the Spanish site ships.** Gate: `status es` lists only the 47 deliberate copies, which holds.
+**Stage 7: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run it
+once more.
 
-- First the consistency read, split across fresh `reader` subagents: the catalogs and the course in one,
-  and the 80 guides in two halves. Each lists the terms, address and marks that drift between files.
-  - Brief them to look for a note left without its article after a verb or a preposition in the a-to-m
-    guides, such as *toca fa sostenido*. Only the n-to-z guides were swept for it.
-  - Also *2001: A Space Odyssey*, which carries asterisks in `the-blue-danube.es.ts` and none in
-    `also-sprach-zarathustra.es.ts`.
-- Settle every drift, rebuild the guides with `bun tools/make-our-songs.ts`, and stamp each unit whose
-  file changed.
-- Then ship: `shipped: true` in `es`'s row, `src/i18n/locale-table.ts:49`. The worlds' titles in
-  `src/learn/course.ts:58`, the social image, the layout checks, the e2e test and the shots follow,
-  as stage 6 lists them.
-
-Expected red once `es` ships: any test that counts the shipped locales or reads the language switch's
-items, such as those in `e2e/locales.e2e.ts`.
+Expected red:
+- Any test that counts the shipped locales, the language switch's items, the sitemap's pages or the
+  social images, now that `es` ships.
+- `every_page_passes_the_layout_checks_in_es` in `e2e/locales.e2e.ts`, which no session has run.
+- A German lesson test that reads a key's drawn name, since B now draws as `H` there.
 
 ### Backlog
 
 - A native Spanish speaker's read of the course would catch what a blind review cannot.
+- The English `tools/our-songs/the-blue-danube.ts:323` and its German wrap *2001: A Space Odyssey* in
+  asterisks, which the guide shows as they are. `also-sprach-zarathustra.ts` writes it bare.
+- The course writes a note bare after a verb, *toca sol*, while the guides write *toca el sol*. A sweep
+  of the 80 lessons would make the locale read as one.

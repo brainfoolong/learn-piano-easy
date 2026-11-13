@@ -25,7 +25,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         2: "Mantén el mi con el dedo 5 casi todo el compás. Luego el dedo 4 toca el re, corto y suave.",
         4: "Los dedos 3, 2, 1 y 2 bajan y vuelven a subir. La mano izquierda pasa de fa a sol en la mitad.",
-        6: "Mantén el re con el dedo 4. Luego deja caer los dedos 3 y 2 en do y si.",
+        6: "Mantén el re con el dedo 4. Luego deja caer los dedos 3 y 2 en el do y el si.",
       },
     },
     rare: {
@@ -61,8 +61,8 @@ export const translation: Translation<GuideTranslation> = {
         "La melodía es la nota de arriba de cada par, así que deja que el dedo de arriba guíe.",
       ],
       tricky: {
-        9: "Después del silencio, abre la mano a una sexta, re y si bemol. Los dedos 1 y 5 la mantienen casi todo el compás.",
-        12: "Las terceras bajan y vuelven a subir. El pulgar toma mi bemol, luego fa, mi bemol y otra vez fa.",
+        9: "Después del silencio, abre la mano a una sexta, el re y el si bemol. Los dedos 1 y 5 la mantienen casi todo el compás.",
+        12: "Las terceras bajan y vuelven a subir. El pulgar toma el mi bemol, luego el fa, el mi bemol y otra vez el fa.",
         15: "Las sextas bajan una tecla a la vez, y luego la mano vuelve a saltar arriba tras un silencio corto.",
       },
     },
@@ -80,7 +80,7 @@ export const translation: Translation<GuideTranslation> = {
         "Toca el último acorde suave, y mantenlo hasta que el sonido se apague.",
       ],
       tricky: {
-        9: "Después del silencio, abre la mano a una sexta, re y si bemol. Los dedos 1 y 5 la mantienen casi todo el compás.",
+        9: "Después del silencio, abre la mano a una sexta, el re y el si bemol. Los dedos 1 y 5 la mantienen casi todo el compás.",
         17: "Empiezan las octavas. Mantén la mano abierta del pulgar al meñique, y muévela toda junta.",
         18: "Aprovecha el silencio corto antes de este compás para saltar arriba, a la octava de re.",
       },
