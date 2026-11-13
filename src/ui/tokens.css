@@ -202,6 +202,59 @@
     color-scheme: dark;
   }
 
+  /*
+   * Each script's font stack and line heights, by the page's `lang`. No font is shipped for them, so
+   * each names the system fonts of Windows, macOS, Android and Linux. Latin and its digits still draw in
+   * Plus Jakarta Sans, which holds no glyph of these scripts. Han names its locale's fonts, because
+   * Chinese and Japanese draw the same character differently. Devanagari, Bengali and Nastaliq reach
+   * far above and below the line, so they get the most room.
+   */
+  :root:lang(zh) {
+    --font-sans: "Plus Jakarta Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", sans-serif;
+    --lh-body: 1.7;
+    --lh-heading: 1.3;
+  }
+
+  :root:lang(ja) {
+    --font-sans: "Plus Jakarta Sans", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Meiryo", "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+    --lh-body: 1.7;
+    --lh-heading: 1.3;
+  }
+
+  :root:lang(hi) {
+    --font-sans: "Plus Jakarta Sans", "Nirmala UI", "Kohinoor Devanagari", "Noto Sans Devanagari", "Mangal", sans-serif;
+    --lh-body: 1.8;
+    --lh-heading: 1.4;
+  }
+
+  :root:lang(bn) {
+    --font-sans: "Plus Jakarta Sans", "Nirmala UI", "Kohinoor Bangla", "Noto Sans Bengali", "Vrinda", sans-serif;
+    --lh-body: 1.8;
+    --lh-heading: 1.4;
+  }
+
+  :root:lang(ar) {
+    --font-sans: "Plus Jakarta Sans", "Segoe UI", "Geeza Pro", "Noto Sans Arabic", "Tahoma", sans-serif;
+    --lh-body: 1.75;
+    --lh-heading: 1.35;
+  }
+
+  :root:lang(ur) {
+    --font-sans: "Plus Jakarta Sans", "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Urdu Typesetting", "Segoe UI", "Noto Sans Arabic", sans-serif;
+    --lh-body: 2.1;
+    --lh-heading: 1.7;
+  }
+
+  :root:lang(ru) {
+    --font-sans: "Plus Jakarta Sans", "Plus Jakarta Sans Fallback", "Segoe UI", "Roboto", "Noto Sans", sans-serif;
+  }
+
+  /* A joining script's letters touch, and spacing them apart breaks their shapes. */
+  :root:is(:lang(hi), :lang(bn), :lang(ar), :lang(ur)) {
+    --ls-heading: 0;
+    --ls-caps: 0;
+  }
+
   @media (min-width: 768px) {
     :root {
       --s-gutter: 24px;

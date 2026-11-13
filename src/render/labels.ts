@@ -10,6 +10,8 @@
  *   key, where an outline would only thicken it.
  * - A label always faces the camera, as a sprite does, so it reads the same from every camera preset.
  * - The glow is kept off every label, so a label on a lit note stays readable.
+ * - A label draws in the page's font stack, read when its text is first drawn, so a syllable such as
+ *   `ド` or `до` takes the script's font. A text cached before a change of locale keeps its first font.
  * - A label fits its width: it is `height` tall unless its text is too wide for `maxWidth`, and then it
  *   shrinks to fit. A finger stays large, and a long name stays inside its note.
  * - The layer keeps a pool of sprites, grown as a frame needs and never shrunk. The sprites a frame does
@@ -26,7 +28,12 @@ import { keepsGlowOff } from "./glow-source";
 const MAX_TEXTS = 512;
 /** The canvas height of one label, in pixels, and its font. */
 const PIXELS = 64;
-const FONT = `bold ${PIXELS * 0.8}px system-ui, sans-serif`;
+
+/** The canvas font of a label: bold, in the page's font stack, which follows the script of its `lang`. */
+function labelFont(): string {
+  const family = typeof document === "undefined" ? "" : getComputedStyle(document.documentElement).fontFamily;
+  return `bold ${PIXELS * 0.8}px ${family || "system-ui, sans-serif"}`;
+}
 /** The outline's width and the room left around the text, in pixels. */
 const OUTLINE = PIXELS * 0.12;
 const PADDING = PIXELS * 0.05;
@@ -74,11 +81,12 @@ export function createLabelLayer({ outline = true }: { outline?: boolean } = {})
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
     if (!context) return undefined;
-    context.font = FONT;
+    const font = labelFont();
+    context.font = font;
     canvas.width = Math.ceil(context.measureText(text).width + 2 * (stroke + PADDING));
     canvas.height = PIXELS;
     // A resized canvas forgets its font, so it is set again.
-    context.font = FONT;
+    context.font = font;
     context.textAlign = "center";
     context.textBaseline = "middle";
     if (outline) {

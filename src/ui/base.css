@@ -12,7 +12,8 @@
  *   descent. A page drawn in it keeps nearly every size and line break of the font.
  *
  * The reset sits in the `reset` layer and the base styles in `base`, so every component overrides them
- * without a stronger selector.
+ * without a stronger selector. Each script's font stack and line heights are tokens, and its line rules
+ * are base styles under the page's `lang`.
  */
 @font-face {
   font-family: "Plus Jakarta Sans";
@@ -145,6 +146,36 @@
 
   ::selection {
     background: color-mix(in oklab, var(--c-brand) 40%, transparent);
+  }
+
+  /*
+   * Line rules per script. Chinese and Japanese break lines strictly, so no small kana or closing mark
+   * starts a line, and Japanese keeps a phrase whole where the browser can. Their fonts have no
+   * italic, so emphasis is bold. A joining script never takes `letter-spacing`, so an important
+   * declaration of this layer wins over every component's, as the cascade's important order says.
+   */
+  :root:is(:lang(zh), :lang(ja)) {
+    line-break: strict;
+  }
+
+  :root:lang(ja) {
+    word-break: auto-phrase;
+  }
+
+  :root:is(:lang(zh), :lang(ja)) *,
+  :root:is(:lang(zh), :lang(ja)) *::before,
+  :root:is(:lang(zh), :lang(ja)) *::after {
+    font-style: normal !important;
+  }
+
+  :root:is(:lang(zh), :lang(ja)) :is(em, i, cite) {
+    font-weight: var(--w-bold);
+  }
+
+  :root:is(:lang(hi), :lang(bn), :lang(ar), :lang(ur)) *,
+  :root:is(:lang(hi), :lang(bn), :lang(ar), :lang(ur)) *::before,
+  :root:is(:lang(hi), :lang(bn), :lang(ar), :lang(ur)) *::after {
+    letter-spacing: 0 !important;
   }
 
   /* With reduced motion, no animation loops and no scroll glides. */
