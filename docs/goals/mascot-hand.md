@@ -129,6 +129,10 @@ Stage 3 is done. The first verify failed only on `build_uses_only_relative_urls`
 load, and that test now reads the pages side by side. The second verify is green. `docs/findings.md`
 § `mascot-hand` holds the harvest.
 
+The first DONE was refused on the floor check `learn-e2e`. Its `leaving_a_lesson_asks_first` missed
+the lesson's first draw within 5 s while song walks ran in other workers. `onStep` in
+`e2e/lesson-walk.ts` now waits up to 15 s, and `learn-e2e` is green.
+
 ### Next
 
 The goal is reached. Retire it, moving its three checks into the floor. Then `hand-motion` is live.

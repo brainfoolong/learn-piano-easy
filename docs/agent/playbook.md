@@ -70,6 +70,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A unit test that reads every built page one by one can time out only in `looper verify`.** It passes
   alone in under a second, but the full run loads the disk past bun's 5 s limit. Read the files with
   `Promise.all`, as `build_uses_only_relative_urls` in `tools/build.test.ts` does.
+- **An e2e test's first wait after `page.goto` can miss Playwright's 5 s default under load.** Song walks
+  in other workers slow the page's first draw. Give that wait a longer `timeout`, as `onStep` in
+  `e2e/lesson-walk.ts` does.
 
 ## Rendering
 

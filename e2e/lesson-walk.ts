@@ -95,9 +95,12 @@ export function watchErrors(page: Page): string[] {
 /** The step the lesson shows. */
 export const stage = (page: Page) => page.locator(".lesson__stage");
 
-/** Waits until the lesson shows its step `index`, counted from 0. */
+/**
+ * Waits until the lesson shows its step `index`, counted from 0. It waits up to 15 s, since a test's
+ * first wait after a page load meets the lesson's first draw while other workers walk songs.
+ */
 export async function onStep(page: Page, index: number): Promise<void> {
-  await expect(page.locator(".lesson__progress")).toHaveAttribute("aria-valuenow", String(index + 1));
+  await expect(page.locator(".lesson__progress")).toHaveAttribute("aria-valuenow", String(index + 1), { timeout: 15_000 });
 }
 
 /**
