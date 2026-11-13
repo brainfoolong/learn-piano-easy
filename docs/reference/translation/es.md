@@ -68,7 +68,8 @@ Warm, plain and short, as a good teacher speaks. Prefer the short everyday word:
 One term per idea, in every file. Sources: WP is Spanish Wikipedia, by article title. TC is
 teoria.com/es, a Puerto Rican teaching site. PP is a piano shop's teaching blog in Argentina, a weaker
 witness. MS is Microsoft's Spanish (Neutral) guide or its terminology collection. AN is Android's
-Latin American strings (`values-es-rUS`).
+Latin American strings (`values-es-rUS`). AP is Apple's Mexican support pages (`support.apple.com/es-mx`).
+GO is Google's Latin American help pages (`hl=es-419`).
 
 ### The piano glossary
 
@@ -121,13 +122,13 @@ Latin American strings (`values-es-rUS`).
 | dynamics | los matices | WP *Dinámica (música)*; PP |
 | legato, staccato | legato, staccato | WP *Legato*, *Staccato*; PP |
 | crescendo, diminuendo | crescendo, diminuendo | WP *Crescendo*; PP |
-| fermata | el calderón | common usage, unsourced (see *Open*) |
+| fermata | el calderón | WP *Calderón (música)*, one source (see *Open*) |
 | sustain pedal | pedal de resonancia; *el pedal derecho* in a lesson | WP *Pedal (piano)*; PP |
 | soft pedal | pedal izquierdo | WP *Pedal (piano)*; PP |
 | press a pedal, hold it down | pisar el pedal, mantenerlo pisado | the plain verb of a foot |
 | fingering | la digitación | WP *Digitación*; PP |
 | finger numbers | 1 pulgar, 2 índice, 3 medio, 4 anular, 5 meñique | PP; the course's own lesson |
-| thumb, little finger | el pulgar, el meñique | PP, one source (see *Open*) |
+| thumb, little finger | el pulgar, el meñique | PP; WP *Dedo pulgar*, *Meñique de la mano* |
 | right hand, left hand | mano derecha, mano izquierda | WP *Pentagrama*; PP |
 | hand position; C position | posición de la mano; posición de do | PP; the course's own term |
 | thumb under, finger over | paso del pulgar, cruce de dedos | PP; the course's own terms |
@@ -135,9 +136,9 @@ Latin American strings (`values-es-rUS`).
 | play (the piano, a key, a note) | tocar | WP *Pentagrama*; PP |
 | practise | practicar | PP; MS *práctica* |
 | song; piece | la canción; la pieza | WP *Figura musical*; TC |
-| sheet music | la partitura | common usage, unsourced (see *Open*) |
+| sheet music | la partitura | WP *Partitura*; AP (GarageBand, *Editor de partituras*) |
 | pitch | la altura | WP *Altura (música)*; TC |
-| transpose | transportar | common usage, unsourced (see *Open*) |
+| transpose | transponer; la transposición | WP *Transposición (música)*; AP (GarageBand). WP allows *transportar* too, but a player's *transporte* is its play controls. |
 
 ### The interface glossary
 
@@ -151,19 +152,19 @@ Latin American strings (`values-es-rUS`).
 | Skip | Omitir | MS; AN |
 | Reset | Restablecer | MS; AN |
 | Save, Delete | Guardar, Eliminar | MS; AN |
-| Restore | Restaurar | common usage, unsourced (see *Open*) |
+| Restore | Restaurar | AP; WP *Copia de seguridad* |
 | Search | Buscar | MS; AN |
 | Play, Pause, Stop (playback) | Reproducir, Pausar, Detener | MS; AN |
 | Loop (button); a loop | Repetir; la repetición en bucle | MS |
-| Speed | Velocidad | common usage, unsourced (see *Open*) |
+| Speed | Velocidad | GO (YouTube, *velocidad de reproducción*), one source |
 | Volume, Mute | Volumen, Silenciar | MS; AN |
 | Fullscreen | Pantalla completa | MS; AN |
 | Theme; Light, Dark, Like the system | Tema; Claro, Oscuro, Como el sistema | MS |
 | Language | Idioma | MS |
 | computer keyboard; computer key | teclado de la computadora; tecla | MS *computadora*; AN |
-| touch screen | pantalla táctil | common usage, unsourced (see *Open*) |
+| touch screen | pantalla táctil | WP *Pantalla táctil*; AP; MS |
 | device; connect | dispositivo; conectar | MS; AN |
-| browser | el navegador | common usage, unsourced (see *Open*) |
+| browser | el navegador | GO (Chrome); WP *Navegador web* |
 | offline | sin conexión | MS |
 | Install, Update | Instalar, Actualizar | MS; AN for *Actualizar* |
 | app | la aplicación | MS, which asks for the full word |
@@ -182,10 +183,20 @@ Latin American strings (`values-es-rUS`).
 | stars | estrellas | everyday word |
 | take (one recorded play) | el intento | everyday word; *toma* is a studio term |
 | Favourites | Favoritas, agreeing with *canciones* | MS *favoritos* |
-| track | la pista | common usage, unsourced (see *Open*) |
+| track | la pista | AP (GarageBand, *controles de pista*), one source |
 | progress | el progreso | MS |
-| backup | la copia de seguridad | common usage, unsourced (see *Open*) |
+| backup | la copia de seguridad | GO (Photos); WP *Copia de seguridad*. AP writes *respaldo*, which is Mexico's more than the region's. |
 | guide (a song's) | la guía | common usage, unsourced (see *Open*) |
+| a setting; options | una opción; las opciones | *Ajustes* is Spain's Android, as § 1 says |
+| the player (of songs) | el reproductor | the playback word, as *Reproducir* is |
+| Beginner, Easy, Medium, Hard, Advanced, Expert | Principiante, Fácil, Intermedio, Difícil, Avanzado, Experto | the usual ladder of levels |
+| free play; pitch practice | Tocar libremente; Práctica de oído | the course's own terms |
+| hotkeys | atajos de teclado | MS |
+| velocity (of a key) | la intensidad | *velocidad* is taken by Speed |
+| lane; timeline | el carril; la línea de tiempo | the player's own terms |
+| hit, miss, mistake | acierto, perdida, error | *fallo* is avoided, as § 1 says |
+| add; remove | agregar; quitar | AN |
+| open source | de código abierto | WP *Código abierto* |
 | attack, decay, sustain, release | ataque, caída, sostenimiento, liberación | synthesizer usage; *sostenido* is taken by the sharp |
 
 ### Which "play" is which
@@ -206,8 +217,9 @@ Latin American strings (`values-es-rUS`).
 - **The song titles and the composers' names.** A title is data shared by every locale, and the library
   searches it.
 - **The sections "Learn Piano" and "Just Play Piano" are translated,** since they describe what a learner
-  does. "Learn Piano" is *Aprende piano*. "Just Play Piano" is transcreated: it keeps the sense of
-  playing with no lesson, and its writer proposes the form.
+  does. "Learn Piano" is *Aprende piano*.
+- **"Just Play Piano" is *Piano libre*.** It keeps the sense of playing with no lesson. A noun reads well
+  inside a sentence, as in *Ábrelo en Piano libre*, where *Toca libremente* would not. It takes no quotes.
 - The `kept` list of `src/i18n/typography.ts` holds each kept word a test could misread.
 
 ## 7. Note names
@@ -327,8 +339,9 @@ Each row is the chosen translation, and why it beat the next best one.
 
 - A Spanish-language piano method for children was not reached. A native teacher's read would confirm
   *nota guía*, *conteo previo*, *paso* and *salto*.
-- The finger names, the thumb and the hand position have one independent source each.
-- Each row marked "common usage, unsourced" has no source yet. Each is the common word, and two sources
-  confirm or replace it before the site's batch is reviewed.
+- No Spanish piano source for finger numbers or the hand position was reached. WP *Dedo medio* confirms
+  *medio* for the third finger, and gives *corazón* as an alternative.
+- *Calderón*, *Velocidad* and *pista* have one source each. *Meta diaria*, *racha* and a song's *guía* have
+  none, since the fetch reached no page that uses them. Each is the everyday word, and the site uses it.
 - Spanish titles exist for many songs, such as *Para Elisa* and *Noche de paz*. Whether the library shows
   them is a feature, not a translation.

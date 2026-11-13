@@ -43,6 +43,7 @@ export function isPageLocale(value: string): value is Locale {
  */
 const CATALOG_CHUNKS: Partial<Record<LocaleCode, () => Promise<Translation<Messages>>>> = {
   de: () => import("./messages/de").then((module) => module.de),
+  es: () => import("./messages/es").then((module) => module.es),
   [PSEUDO_LOCALE]: async () => pseudoTree(en),
 };
 

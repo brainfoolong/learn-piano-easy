@@ -1,0 +1,137 @@
+/** A lesson page of *Learn Piano* in Spanish. A text it leaves out shows in English. */
+import { formatNumber, plural } from "../format";
+import type { Translation } from "../translation";
+import type { learnLesson as en } from "./learn-lesson.en";
+
+export const learnLesson: Translation<typeof en> = {
+  stepOf: (step: number, count: number) => `Paso ${formatNumber("es", step)} de ${formatNumber("es", count)}`,
+  leave: "Salir de la lección",
+  leaveDialog: {
+    title: "¿Salir de esta lección?",
+    body: "Tu progreso en esta lección se guarda solo cuando termina.",
+    stay: "Seguir aprendiendo",
+    leave: "Salir",
+    close: "Cerrar",
+  },
+  lacks: {
+    touch: "Mi teclado no toca fuerte y suave",
+    pedal: "Mi teclado no tiene pedal",
+  },
+  loading: "Cargando la lección…",
+  missing: "Esta lección no existe.",
+  backToCourse: "Volver al curso",
+  band: {
+    continue: "Continuar",
+    right: "¡Correcto!",
+    tryAgain: "Casi. Prueba otra vez.",
+  },
+  demo: {
+    play: "Escuchar",
+    playAgain: "Escuchar otra vez",
+    skip: "Omitir",
+    piano: "El piano toca el ejemplo",
+    playing: "Sonando",
+    slow: "Lento",
+    side: "Vista lateral",
+  },
+  quiz: {
+    answers: "Respuestas",
+    wrong: "Casi. Prueba con otra respuesta.",
+    hint: "La respuesta resaltada es la correcta.",
+  },
+  findKey: {
+    piano: "El piano. Presiona la tecla que nombra el paso.",
+    marks: { next: "Esta tecla", correct: "Correcto", mistake: "Esta no" },
+    wrong: "Esa es otra tecla. Prueba otra vez.",
+    hint: "La tecla resaltada es la correcta.",
+    timeUp: "Se acabó el tiempo.",
+  },
+  playNotes: {
+    piano: "El piano. Toca la frase en orden.",
+    marks: { next: "Toca esta ahora", correct: "Tocada", mistake: "Esta no" },
+    wrong: "Esa es otra nota. Prueba otra vez.",
+    hint: (note: string) => `La siguiente nota es ${note}.`,
+    hintChord: (...notes: string[]) => `Ahora toca ${notes.slice(0, -1).join(", ")} y ${notes.at(-1)} a la vez.`,
+    expression: {
+      "too-loud": "Tecla correcta, pero muy fuerte. Tócala suave.",
+      "too-soft": "Tecla correcta, pero muy suave. Tócala fuerte.",
+      "pedal-up": "Tecla correcta. Mantén el pedal pisado mientras la tocas.",
+      "pedal-down": "Tecla correcta. Levanta el pedal antes de tocarla.",
+    },
+  },
+  listen: {
+    question: (n: number, count: number) => `Par ${formatNumber("es", n)} de ${formatNumber("es", count)}`,
+    playAgain: "Escuchar otra vez",
+    group: "¿La segunda nota es más aguda, más grave o igual?",
+    answers: { higher: "Más aguda", lower: "Más grave", same: "Igual" },
+    wrong: "Casi. Escucha otra vez y prueba con otra respuesta.",
+    hint: "La respuesta resaltada es la correcta.",
+    roundAgain: (right: number, asked: number) => `Acertaste ${formatNumber("es", right)} de ${formatNumber("es", asked)}. Hagamos otra ronda.`,
+  },
+  readNote: {
+    staff: { treble: "Una nota en el pentagrama de clave de sol", bass: "Una nota en el pentagrama de clave de fa" },
+    count: (n: number, total: number) => `Nota ${formatNumber("es", n)} de ${formatNumber("es", total)}`,
+    answers: "Nombres de las notas",
+    letters: { C: "Do", D: "Re", E: "Mi", F: "Fa", G: "Sol", A: "La", B: "Si" },
+    piano: "El piano. Toca la nota del pentagrama.",
+    marks: { next: "Esta tecla", correct: "Correcto", mistake: "Esta no" },
+    wrongName: "Esa es otra nota. Mira otra vez.",
+    wrongKey: "Esa es otra tecla. Prueba otra vez.",
+    hintName: "El nombre resaltado es el correcto.",
+    hintKey: "La tecla resaltada es la correcta.",
+    again: "Algunas todavía no salieron bien. Vamos a repasarlas otra vez.",
+  },
+  rhythmTap: {
+    start: "Empezar",
+    listen: "Escucha: un compás de conteo previo.",
+    tap: "Ahora toca cualquier tecla con cada clic.",
+    piano: "El panel de toques. Presiona cualquier tecla a tiempo con el pulso.",
+    marks: { next: "Toca aquí", correct: "A tiempo", mistake: "Fuera de tiempo" },
+    short: (hits: number, beats: number) => `Tocaste en ${formatNumber("es", hits)} de ${formatNumber("es", beats)} tiempos. Prueba otra vez.`,
+    hint: "Toca justo cuando oigas el clic. Los puntos parpadean en cada tiempo.",
+    play: "Ahora toca cada nota en su clic.",
+    phrasePiano: "Las teclas. Toca la frase al ritmo de los clics.",
+    shortNotes: (hits: number, notes: number) => `Tocaste a tiempo ${formatNumber("es", hits)} de ${formatNumber("es", notes)} notas. Prueba otra vez.`,
+    restSounded: "Una tecla sonó en un silencio. Levanta el dedo y quédate en silencio ahí.",
+    phraseHint: "Toca cada nota en su clic y levanta la tecla antes de un silencio. Los puntos parpadean en cada tiempo.",
+    pattern: {
+      taps: (countIn: number, taps: number) => `Conteo previo de ${formatNumber("es", countIn)} tiempos. Luego toca ${formatNumber("es", taps)} tiempos.`,
+      phrase: (countIn: number, ...parts: string[]) => `Conteo previo de ${formatNumber("es", countIn)} tiempos. Luego toca: ${parts.join(", ")}.`,
+      held: (note: string, beats: number) => `${note} durante ${formatNumber("es", beats)} tiempos`,
+      rest: (beats: number) => (beats === 1 ? "silencio" : `silencio de ${formatNumber("es", beats)} tiempos`),
+    },
+  },
+  song: {
+    play: "Tocarla en el reproductor",
+    goal: (percent: number) => `Tócala con el ${formatNumber("es", percent)}% de las notas correctas.`,
+    notYet: (percent: number) => `La canción te espera. Vuelve a tocarla cuando quieras y apunta al ${formatNumber("es", percent)}%.`,
+    played: (percent: number) => `La tocaste con el ${formatNumber("es", percent)}% de las notas correctas.`,
+  },
+  recap: {
+    heading: "Lo que aprendiste",
+  },
+  end: {
+    heading: "Lección completada",
+    stars: (n: number) => `${formatNumber("es", n)} de ${formatNumber("es", 3)} estrellas`,
+    again: "Repetir",
+    saving: "Guardando tu progreso…",
+    saved: "Guardado en este dispositivo.",
+    unsaved: "Este navegador no guarda nada, así que este resultado dura hasta que cierres la pestaña.",
+    failed: "No se pudo guardar tu progreso.",
+    retry: "Prueba otra vez",
+    level: (level: number, toNext: number) =>
+      `Nivel ${formatNumber("es", level)}: faltan ${formatNumber("es", toNext)} XP para el nivel ${formatNumber("es", level + 1)}`,
+    skipOpened: (world: string) => `Todas las lecciones de «${world}» ya están abiertas.`,
+    skipShort: (stars: number) =>
+      `Con ${formatNumber("es", stars)} ${plural("es", stars, { one: "estrella", many: "de estrellas", other: "estrellas" })} se abre este mundo. Prueba otra vez cuando quieras.`,
+  },
+  moment: {
+    continue: "Continuar",
+    level: {
+      heading: "¡Subiste de nivel!",
+      name: (level: number) => `Nivel ${formatNumber("es", level)}`,
+      text: "Cada lección te lleva más lejos. ¡Sigue así!",
+    },
+    badge: { heading: "¡Nueva insignia!" },
+  },
+};
