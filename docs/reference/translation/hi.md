@@ -248,6 +248,8 @@ collection. AN is Android's `values-hi` strings.
 | tap, click or press a control | दबाएँ | MS *दबाएँ*; AN |
 | press a computer key | दबाएँ: `Esc दबाएँ` | MS; AN |
 | choose (one of several) | चुनें | MS § 2.1.1; AN |
+| find, search for | ढूँढ़ें, with the nukta under ढ: `C को ढूँढ़ें` | the standard spelling |
+| a page of the site; a printed page | पेज; पन्ना | everyday words |
 | lesson, step, world | पाठ, चरण, दुनिया: `पाठ 3` | the course's own terms |
 | quiz; demo | क्विज़; डेमो | everyday words |
 | boss (a world's last lesson) | बड़ी चुनौती | the course's own term |

@@ -93,7 +93,7 @@ test("the_hindi_site_reads_in_hindi", async ({ page }) => {
   await expect(page.locator("main")).toContainText("पियानो से पहचान");
 
   await page.goto("./hi/learn/meet-the-piano/find-c/");
-  await expect(page.locator(".lesson__title")).toHaveText("C को ढूँढें");
+  await expect(page.locator(".lesson__title")).toHaveText("C को ढूँढ़ें");
   await expect(page.locator("main")).toContainText("इन सबका नाम एक ही है: C।");
   await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "C4");
 
