@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Arabic style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Arabic
     status: open
@@ -75,6 +75,16 @@ what the `spanish` pilot taught.
 - **Arabic has six plural forms:** zero, one, two, few, many and other. A counted message needs all six.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names. They stay in
   Latin letters, so each one is isolated where a sentence holds it.
+- **Stage 1 confirmed the facts above, with these changes,** each recorded in
+  [docs/reference/translation/ar.md](../reference/translation/ar.md):
+  - An instruction step in a lesson or a guide is the masculine singular imperative, since a teacher
+    instructs so. Microsoft, Android and Firefox do the same. Labels and tooltips stay verbal nouns.
+  - A composer with an Arabic Wikipedia article takes its Arabic spelling, such as `بيتهوفن`. A Latin
+    name in every line reads foreign. Other names and every song title stay in Latin letters.
+  - Quotes are `« »`, as Arabic Wikipedia prints them, against Microsoft's straight quotes.
+  - Digits are Western. CLDR 48 gives `ar` Western digits, so the row's `intl` stays `ar`.
+  - The plural forms `zero`, `one` and `two` show no digit: `لا دروس بعد`, `درس واحد`, `درسان`.
+    Microsoft § 4.1.12 asks this.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 2 also waits for `right-to-left`. Stage 6 needs all of
   them.
@@ -90,12 +100,23 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/ar.md:1`
-- [ ] Microsoft's Arabic style guide: the address, the marks, the digits and the interface terms. `docs/reference/translation/ar.md:1`
-- [ ] Arabic Wikipedia's music articles and Arabic piano methods: each music term with two sources. `docs/reference/translation/ar.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/ar.md:1`
-- [ ] The Arabic entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Arabic row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/ar.md:1`
+  - [x] The English rows of the Hindi guide's glossaries, which a reader listed from the same texts.
+  - [x] Arabic terms for the piano glossary and the interface glossary.
+- [x] Microsoft's Arabic style guide: the address, the marks, the digits and the interface terms. `docs/reference/translation/ar.md:1`
+  - [x] The guide read, and what it settles reported by page.
+  - [x] Android's and Firefox's Arabic strings for the interface terms it lacks.
+- [x] Arabic Wikipedia's music articles and Arabic piano methods: each music term with two sources. `docs/reference/translation/ar.md:1`
+  - [x] Arabic Wikipedia's music articles read in their wikitext.
+  - [x] MuseScore's and two music apps' Arabic strings as the second source. No piano method was reachable.
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/ar.md:1`
+  - [x] The twelve sections, the guides' recurring steps and *Open*.
+  - [x] Twenty-one calibration rows.
+- [x] The Arabic entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+  - [x] The kept words shared with Hindi in one list.
+  - [x] Eleven mark rules, each stated in § 9 of the guide.
+- [x] The Arabic row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+  - [x] `intl` `ar` writes Western digits under CLDR 48, so the row stays as it is.
 
 ### 2. The site and the player in Arabic
 
@@ -173,15 +194,27 @@ address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `right-to-left` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/ar.md` is the style guide and glossary, and the `ar`
+entry of `src/i18n/typography.ts` holds its kept words and eleven mark rules. The Hindi entry now shares
+the kept list `KEPT_IN_OWN_SCRIPT`. `bun x tsc` is green. No Arabic text exists yet.
 
 ### Next
 
-**Stage 1: the Arabic style guide and glossary.** Files: `docs/reference/translation/ar.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `right-to-left` is reached.
+**Stage 2: the site and the player in Arabic.** Gate: `right-to-left` is reached, and it is.
+
+- Run `bun tools/i18n.ts status ar`, then `bun tools/i18n.ts work ar <unit>` per catalog section.
+- Three writing subagents, one per item, each given the whole of `docs/reference/translation/ar.md`.
+  Files: `src/i18n/messages/ar.ts`, `src/i18n/messages/learn-lesson.ar.ts`,
+  `src/i18n/messages/player-shell.ar.ts` and `src/i18n/messages/player-settings.ar.ts`.
+- Each argument that may hold Latin text goes through `isolate()` from `src/i18n/format.ts`.
+- A counted message gives all six forms, as the guide's § 8 table shows.
+- Add the `ar` catalog chunk to `CATALOG_CHUNKS` in `src/i18n/locale.ts:44` once `messages/ar.ts` exists.
+- `arabic_texts_keep_their_rules` already runs, one test per row of `src/i18n/translation-rules.test.ts:271`.
+  It passes with no Arabic file, and each new file must keep it green.
 
 Expected red: none.
 
 ### Backlog
 
 - A native Arabic speaker's read of the course would catch what a blind review cannot.
+- No Arabic piano method was reachable. The guide's *Open* lists the terms a teacher should confirm.
