@@ -119,6 +119,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A lesson writer's green rules test proves nothing about its own files.** `loadUnits` in `tools/i18n.ts`
   finds a world's translations through its `index.ts`, which the session edits after the writers end.
   Add the locale's line to each `index.ts` first, or run the rules test again once it is there.
+- **A short kept word placed before a longer title breaks that title's texts.** The rules test masks
+  kept words in list order, so `Mary` leaves `Had a Little Lamb` as stray Latin. Put a short word such
+  as `Mary` or `Elise` after every title that holds it in `src/i18n/typography.ts`.
 
 ## Rendering
 

@@ -298,7 +298,7 @@ collection. AN is Android's `values-hi` strings.
 | opacity | गाढ़ापन | everyday word. `चमक` is only *glow* |
 | in key widths (a unit); per second | कुंजी-चौड़ाई में; कुंजी-चौड़ाई प्रति सेकंड में | the player's own unit. `कुंजी की चौड़ाई में` means *within* the width |
 | a section named by an imperative, mid-sentence | `बस पियानो बजाएँ वाले हिस्से में` | so the name never reads as a verb |
-| a guide's stock practice steps | `सिर्फ़ बाएँ हाथ से बजाएँ।`, `दोनों हाथों से धीरे-धीरे बजाएँ।`, `दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।`, `दोनों हाथों से पूरा गाना, लिखी स्पीड से थोड़ा धीमा बजाएँ।`, `दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।`, `अब पूरी स्पीड पर पेडल के साथ बजाएँ।` | the guides' own forms, one per English step |
+| a guide's stock practice steps | see *A guide's recurring steps* below | the guides' own forms, one per English step |
 
 ### Which "play" is which
 
@@ -307,6 +307,50 @@ collection. AN is Android's `values-hi` strings.
 - **A game or a mode:** `गेम`, and `गेम मोड` for *Game mode*.
 - **A lesson's "Play again" that replays a demo:** `फिर से सुनें`, since the learner listens.
 - **"Your turn":** `अब आपकी बारी।`
+
+### A guide's recurring steps
+
+The song guides repeat these steps word for word. Each English step has one Hindi text in every guide.
+A step that only differs in its bars or its section follows the nearest row's shape.
+
+| English | Hindi |
+|---|---|
+| Play the whole song with both hands at three-quarter speed. | दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ। |
+| Join the hands on the whole song at three-quarter speed. | दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ। |
+| Play the whole song with both hands at full speed. | दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ। |
+| Play the whole song with both hands, a little slower than written. | दोनों हाथों से पूरा गाना, लिखी स्पीड से थोड़ा धीमा बजाएँ। |
+| Now play it at full speed. | अब इसे पूरी स्पीड पर बजाएँ। |
+| Now play it at full speed, with the pedal. | अब इसे पूरी स्पीड पर पेडल के साथ बजाएँ। |
+| Now play it at full speed, and let the last chord ring. | अब इसे पूरी स्पीड पर बजाएँ, और आखिरी कॉर्ड की आवाज़ गूँजने दें। |
+| Join the hands on the first eight bars, slowly. | पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ। |
+| Put both hands together on the first eight bars, slowly. | पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ। |
+| Put both hands together on the whole song, slowly. | दोनों हाथों से पूरा गाना धीरे-धीरे बजाएँ। |
+| Put both hands together, slowly. | दोनों हाथों से धीरे-धीरे बजाएँ। |
+| Join the hands on the first verse, slowly. | पहला अंतरा दोनों हाथों से धीरे-धीरे बजाएँ। |
+| Join the hands on the first time through, slowly. | पहली बार वाला हिस्सा दोनों हाथों से धीरे-धीरे बजाएँ। |
+| Join the hands on bars 9 to 16, slowly. | माप 9 से 16 तक दोनों हाथों से धीरे-धीरे बजाएँ। |
+| Play the first four bars with the right hand alone, and let the song wait for each note. | पहले चार माप सिर्फ़ दाएँ हाथ से बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें। |
+| Play the right hand alone on the first eight bars, and let the song wait for each note. | पहले आठ माप सिर्फ़ दाएँ हाथ से बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें। |
+| Play bars 1 to 4 with the right hand alone, and let the song wait for each note. | माप 1 से 4 तक सिर्फ़ दाएँ हाथ से बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें। |
+| Play the right hand alone, slowly, and let the song wait for each note. | सिर्फ़ दाएँ हाथ से धीरे-धीरे बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें। |
+| Play the left hand alone, and press the notes of each chord together. | सिर्फ़ बाएँ हाथ से बजाएँ, और हर कॉर्ड के नोट एक साथ दबाएँ। |
+| Now the left hand alone. It holds one shape for each bar. | अब सिर्फ़ बायाँ हाथ। हर माप में यह एक ही आकार में रहता है। |
+| Play the Alberti bass alone until it rolls by itself: low, high, middle, high. | सिर्फ़ अल्बर्टी बेस बजाएँ, जब तक वह अपने-आप न बहने लगे: नीचे वाला, ऊपर वाला, बीच वाला, ऊपर वाला। |
+| Keep the Alberti bass soft, so the tune sings above it. | अल्बर्टी बेस हल्के से बजाएँ, ताकि धुन उसके ऊपर गा सके। |
+| Play the right hand's thirds and sixths alone, and press both notes of each pair as one. | सिर्फ़ दाएँ हाथ के थर्ड और सिक्स्थ बजाएँ, और हर जोड़ी के दोनों नोट एक साथ दबाएँ। |
+| Play the right hand's thirds alone, and keep both notes of each pair together. | सिर्फ़ दाएँ हाथ के थर्ड बजाएँ, और हर जोड़ी के दोनों नोट एक साथ बजाएँ। |
+| The tune is the top note of each pair, so let the upper finger lead. | हर जोड़ी का ऊपर वाला नोट ही धुन है, इसलिए उसे बजाने वाली उँगली को अगुवाई करने दें। |
+| Play the right hand's chords alone, and let the top finger sing the tune. | सिर्फ़ दाएँ हाथ के कॉर्ड बजाएँ, और सबसे ऊपर वाली उँगली को धुन गाने दें। |
+| Play the top note of each chord a little louder than the others. | हर कॉर्ड का सबसे ऊपर वाला नोट बाकी नोटों से थोड़ा ज़ोर से बजाएँ। |
+| Play the stride bass alone: jump down for the octave, then back up for the chord. | सिर्फ़ स्ट्राइड बेस बजाएँ: ऑक्टेव के लिए नीचे छलाँग लगाएँ, फिर कॉर्ड के लिए वापस ऊपर आएँ। |
+| Play the stride bass alone: jump down for the low octave, then back up for the chord. | सिर्फ़ स्ट्राइड बेस बजाएँ: नीचे वाले ऑक्टेव के लिए नीचे छलाँग लगाएँ, फिर कॉर्ड के लिए वापस ऊपर आएँ। |
+| In stride, look at the low octave and let the hand find the chord by feel. | स्ट्राइड बेस में नीचे वाले ऑक्टेव पर नज़र रखें, और हाथ को कॉर्ड छूकर ढूँढ़ने दें। |
+| Use the short rest after each octave and chord to jump to the next one. | हर ऑक्टेव और कॉर्ड के बाद के छोटे रेस्ट में अगले पर छलाँग लगाएँ। |
+| Play the arpeggios of the second verse in the left hand alone. | दूसरे अंतरे के आर्पेजियो सिर्फ़ बाएँ हाथ से बजाएँ। |
+| In each arpeggio, the third finger crosses over the thumb on the way up. | हर आर्पेजियो में ऊपर जाते समय तीसरी उँगली अँगूठे के ऊपर से जाती है। |
+| Change the pedal on each new bass note, twice in every bar. | हर नए बेस नोट पर पेडल बदलें, यानी हर माप में दो बार। |
+| Hold the pedal down for each whole bar, and change it right on the bar line. | हर माप में पूरे समय पेडल दबाए रखें, और ठीक माप रेखा पर उसे बदलें। |
+| Up high, the octaves should ring like bells. Keep the wrist loose. | ऊपर वाले हिस्से में ऑक्टेव घंटियों की तरह गूँजने चाहिए। कलाई ढीली रखें। |
 
 ## 6. Kept words
 
@@ -326,8 +370,16 @@ collection. AN is Android's `values-hi` strings.
 - **The note letters and chord symbols,** as § 7 says.
 - **A song title stays in Latin letters,** without quotes. A title is data shared by every locale, and
   the library searches it. Indian readers meet English titles in Latin letters every day.
-- **A composer with a Hindi Wikipedia article takes its spelling:** `बीथोवेन`, `मोत्सार्ट`, `बाख़`.
-  Every other person's name stays in Latin letters, since a guessed spelling would mislead.
+- **A composer with a Hindi Wikipedia article takes its spelling:** `बीथोवेन`, `मोत्सार्ट`, `बाख`,
+  `चॉपिन`, `मेंडल्ससोन` and `वाग्नर`. A full name follows the article's title, such as `योहान सेबास्तियन बाख`.
+- **A city or a country Indian news names takes its everyday Devanagari spelling,** such as `वियना`,
+  `पेरिस` or `बोहेमिया`. A small town stays in Latin letters, such as Hexham or Olomouc.
+- **A generic dance or form is a Devanagari loanword,** such as `हबानेरा`. A piece's title stays in
+  Latin letters, such as Sarabande or Allegretto.
+- **Bach is `बाख`, without the nukta of the article's `बाख़`,** since § 9 puts no nukta on `ख`. Many
+  Hindi texts print the bare form.
+- **Every other person's name stays in Latin letters,** since a guessed spelling would mislead. Debussy,
+  Grieg, Satie, Schubert, Handel, Bizet, Brahms, Mahler, Ravel and Tchaikovsky have no Hindi article.
 - **The sections "Learn Piano" and "Just Play Piano" are translated,** since they describe what a
   learner does. "Learn Piano" is `पियानो सीखें`, and "Just Play Piano" is `बस पियानो बजाएँ`. Neither takes quotes.
 - **The worlds' titles are** पियानो से पहचान, पहली धुनें, लय, नोट पढ़ना, दोनों हाथ, स्केल, कॉर्ड and
