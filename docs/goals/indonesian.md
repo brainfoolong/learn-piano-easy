@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in Indonesian, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in Indonesian, from n to z"
     status: open
@@ -83,6 +83,9 @@ keeps to the standard language without sounding stiff. The method in
   A third reviewer costs a full read of the batch for one word. Any larger *wrong* fix gets a third review.
 - **A third review reads only the texts it checks,** blind, with their neighbours for context. The rest
   of the batch was already read twice, so a full third read buys little for its cost.
+- **A guide batch's first review is its only full review.** A *wrong* fix of one word is applied as is.
+  A larger *wrong* fix gets a narrow blind check of only the texts it changed. A guide is short
+  prose, so a second full read of the batch costs much and finds little.
 - **A quiz answer that is only marks or a kept word is left out,** as the other locales do, and the
   English shows. A mark that stands in an answer with other answers takes *Tanda* before it: *Tanda rit.*
 - **A dialog's title keeps the glossary's short form,** even where a reviewer proposes a longer, clearer
@@ -157,9 +160,9 @@ keys* with *First melodies*. Five fresh reviewers then review the five batches b
 most eight guides each work side by side, and one fresh reviewer per batch reviews it blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.id.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.id.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp id` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+- [x] One `tools/our-songs/<slug>.id.ts` per slug from `air-on-the-g-string` to `mozart-21-andante`. `tools/our-songs/alle-jahre-wieder.id.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp id` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
 
 ### 5. The song guides in Indonesian, from n to z
 
@@ -167,7 +170,7 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.id.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.id.ts:1`
+- [ ] One `tools/our-songs/<slug>.id.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.id.ts:1`
 - [ ] Each batch reviewed blind, and every finding settled.
 - [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp id` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
@@ -196,33 +199,35 @@ term, address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 3 are done. Every lesson of the eight worlds has its Indonesian in
-`src/learn/lessons/<world>/<lesson>.id.ts`. Each world's `texts.id.ts` gathers them, and its `index.ts`
-loads that chunk for `id`. `src/i18n/stamps/id.json` stamps all eight worlds. `bun x tsc` and
-`indonesian_texts_keep_their_rules` pass.
+Stages 1 to 4 are done. The site, the player and the course were done before. Each of the 51 song
+guides from `air-on-the-g-string` to `mozart-21-andante` has its `tools/our-songs/<slug>.id.ts`. Each
+also has its `public/songs/ours/<slug>/guide.json` and its stamps in `src/i18n/stamps/id.json`.
+`bun x tsc` and `indonesian_texts_keep_their_rules` pass.
 
-Five writers worked side by side, and five blind reviewers followed. Two batches had *wrong* findings.
-In *Chords*, a count of half steps such as *empat setengah nada* read as 4½ tones. In *Reading music*, a
-dropped *di* moved a note to another space. Both batches were reviewed again. The second review found
-one more *wrong* text in *Meet the piano*, the E two keys right of middle C. A narrow third check passed it.
+Seven writers worked side by side, and seven blind reviewers followed. They found 43 findings, and 7 of
+them were *wrong*. The *wrong* ones were a lost "long", a crescendo read as a fixed level, an
+instruction turned into a fact, a choir named for a choral movement, five quarters of rest read as five rest signs, an E put "right below" a note a
+fourth away, and *anggun* for "proud". Every finding is applied. The three fixes of more than one word
+passed a narrow blind check, as the new standing decision says.
 
-The guide gained a table of the lessons' recurring lines, such as *Bagus sekali.* and *Giliranmu.* The
-half-step row now writes a count as *N kali setengah nada*. The hairpin row names the shape in a quiz,
-since *tanda diminuendo* gave the answer away. Quiz answers that are only marks or a kept word are
-left out, as the other locales do.
+The glossary gained *orgel* for the church organ, *Kanak-kanak Yesus* and *gerakan* for a hand's move.
+The batches had mixed *organ* and *Kanak-kanak Kristus*, and both are unified. The rule test's slang
+pattern refuses *gua*, which also means a cave, so *Hall of the Mountain King* writes *liang batu*.
 
 ### Next
 
-**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status id` lists them as `guide/<slug>`
-units: the 51 slugs from `alle-jahre-wieder` to `morgen-kinder`. Run `bun tools/i18n.ts work id
-guide/<slug>` for each. Seven writers of at most eight guides each go side by side, in slug order.
-A guide is `tools/our-songs/<slug>.id.ts`, and each `.pt.ts` sibling is the code shape to copy.
+**Stage 5: the 29 song guides from `neon-chase` to `yankee-doodle`.** `bun tools/i18n.ts status id`
+lists them as `guide/<slug>` units. Run `bun tools/i18n.ts work id guide/<slug>` for each, which writes
+`.agent-tmp/i18n/id/guide-<slug>.json`. Four writers of at most eight guides go side by side, in slug
+order. A guide is `tools/our-songs/<slug>.id.ts`, and each `.pt.ts` sibling is the code shape to copy.
 
-- Each brief carries `docs/reference/translation/id.md` whole. Its § *A guide's recurring steps* fixes
-  each repeated step word for word, and the half-step and hairpin rows apply to guides too.
-- A writer creates files with Write only. The guard refuses a shell write, even `sed -i`.
-- A reviewer writes its findings to `.agent-tmp/i18n/id/review-<batch>.md`, one line per finding with
-  its proposed text. A fixer applies them.
+- A writer's brief: read `docs/reference/translation/id.md` whole. Translate the English of the work
+  list, and keep every list's length and every tricky bar. Use Write only, and never build or test.
+  Report the terms the glossary lacks.
+- A reviewer's brief: compare `<slug>.ts` with `<slug>.id.ts` blind. Write one line per finding to
+  `.agent-tmp/i18n/id/review-<batch>.md`: slug, path, *wrong*, *term* or *style*, the problem and the
+  full proposed text. The session applies the findings.
+- Compare the writers' reported terms across batches, and unify any that drift.
 - Then run `bun x tsc` and `bun test src/i18n/translation-rules.test.ts -t indonesian`.
 - Run `bun tools/make-our-songs.ts` and commit each `public/songs/ours/<slug>/guide.json`, then stamp.
 

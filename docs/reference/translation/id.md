@@ -203,6 +203,9 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | suite, symphony, sonata, concerto | suite, simfoni, sonata, konserto | everyday words of concerts |
 | movement, overture, variation | bagian, overture, variasi | everyday words of concerts |
 | march, hymn, lullaby, nocturne | mars, himne, lagu ninabobo, nokturno | WP *Tempo (musik)*; WP *Himne*; WP *Ninabobo* |
+| organ (the church's) | orgel; *orgel pipa* | KBBI. *Organ* reads as an electric keyboard, unsourced |
+| the Christ Child | Kanak-kanak Yesus | church usage, unsourced |
+| a move of the hand | gerakan | *langkah* is kept for a lesson's step |
 | attack, decay, sustain, release | attack, decay, sustain, release | synthesizer usage keeps the English |
 | enharmonic | enharmonis | WP *Akor*, one source |
 

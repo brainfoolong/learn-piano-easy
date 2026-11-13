@@ -9,7 +9,8 @@
     "zh": "1875 年，格里格为易卜生的戏剧《培尔·金特》写了《晨景》。1888 年，他把它收进《培尔·金特》第一组曲出版。它的旋律只用了音阶中的五个音，在长笛和双簧管之间轮流出现。1973 年的电影《Soylent Green》里，一个垂死的人听着自己选的音乐，放的就是它。",
     "hi": "Grieg ने Morning Mood 1875 में Ibsen के नाटक Peer Gynt के लिए लिखा, और 1888 में इसे अपने पहले Peer Gynt सुइट में छपवाया। इसकी धुन स्केल के सिर्फ़ पाँच नोट इस्तेमाल करती है, और फ़्लूट और ओबो के बीच आती-जाती रहती है। 1973 की फ़िल्म Soylent Green में यह तब बजता है, जब एक मरता हुआ आदमी अपना चुना हुआ संगीत सुन रहा होता है।",
     "ar": "كتب غريغ ⁨Morning Mood⁩ عام 1875 لمسرحية ⁨Peer Gynt⁩ التي كتبها ⁨Ibsen⁩، ونشرها عام 1888 في متتاليته الأولى من ⁨Peer Gynt⁩. لا يستعمل لحنها إلا 5 نغمات من السلم، ويتنقل بين الفلوت والأوبوا. وفي فيلم ⁨Soylent Green⁩ عام 1973، تُسمع بينما يصغي رجل يحتضر إلى الموسيقى التي اختارها.",
-    "pt": "Grieg escreveu Morning Mood em 1875 para a peça de teatro Peer Gynt, de Ibsen, e a publicou em 1888 na sua primeira Suíte Peer Gynt. A melodia usa só cinco notas da escala e alterna entre a flauta e o oboé. O filme Soylent Green, de 1973, usa a peça na cena em que um homem morre ouvindo a música que escolheu."
+    "pt": "Grieg escreveu Morning Mood em 1875 para a peça de teatro Peer Gynt, de Ibsen, e a publicou em 1888 na sua primeira Suíte Peer Gynt. A melodia usa só cinco notas da escala e alterna entre a flauta e o oboé. O filme Soylent Green, de 1973, usa a peça na cena em que um homem morre ouvindo a música que escolheu.",
+    "id": "Grieg menulis Morning Mood pada 1875 untuk drama Peer Gynt karya Ibsen, dan menerbitkannya dalam Suite Peer Gynt pertamanya pada 1888. Melodinya hanya memakai lima not dari tangga nada, dan berpindah-pindah antara flute dan obo. Film Soylent Green dari 1973 memutarnya saat seorang yang sekarat mendengarkan musik pilihannya."
   },
   "funFact": {
     "en": "The music paints a sunrise in the Moroccan desert, not over a Norwegian fjord as most listeners imagine.",
@@ -18,7 +19,8 @@
     "zh": "这段音乐描绘的是摩洛哥沙漠里的日出，而不是大多数听众想象中的挪威峡湾。",
     "hi": "यह संगीत मोरक्को के रेगिस्तान में सूरज उगने की तस्वीर बनाता है, नॉर्वे के किसी फ़्योर्ड पर नहीं, जैसा ज़्यादातर सुनने वाले सोचते हैं।",
     "ar": "ترسم الموسيقى شروق الشمس في صحراء المغرب، لا فوق فيورد نرويجي كما يتخيل معظم المستمعين.",
-    "pt": "A música pinta um nascer do sol no deserto do Marrocos, e não num fiorde norueguês, como a maioria das pessoas imagina."
+    "pt": "A música pinta um nascer do sol no deserto do Marrocos, e não num fiorde norueguês, como a maioria das pessoas imagina.",
+    "id": "Musik ini melukiskan matahari terbit di gurun Maroko, bukan di atas fyord Norwegia seperti yang dibayangkan kebanyakan pendengar."
   },
   "mythic": null,
   "versions": {
@@ -45,7 +47,8 @@
             "zh": "只用右手弹前四个小节，让歌曲等你弹每个音。",
             "hi": "पहले चार माप सिर्फ़ दाएँ हाथ से बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें।",
             "ar": "اعزف أول 4 موازير باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة.",
-            "pt": "Toque só a mão direita nos 4 primeiros compassos, e deixe a música esperar cada nota."
+            "pt": "Toque só a mão direita nos 4 primeiros compassos, e deixe a música esperar cada nota.",
+            "id": "Mainkan 4 birama pertama dengan tangan kanan saja, dan biarkan lagu menunggu setiap not."
           },
           "hands": "right",
           "speed": 0.6,
@@ -60,7 +63,8 @@
             "zh": "只用右手弹第 9～16 小节。手一直留在同一个位置。",
             "hi": "माप 9 से 16 तक सिर्फ़ दाएँ हाथ से बजाएँ। हाथ एक ही जगह पर रहता है।",
             "ar": "اعزف الموازير من 9 إلى 16 باليد اليمنى وحدها. تبقى اليد في مكانها نفسه.",
-            "pt": "Toque só a mão direita nos compassos 9 a 16. A mão fica sempre no mesmo lugar."
+            "pt": "Toque só a mão direita nos compassos 9 a 16. A mão fica sempre no mesmo lugar.",
+            "id": "Mainkan birama 9 sampai 16 dengan tangan kanan saja. Tanganmu tetap di tempat yang sama."
           },
           "hands": "right",
           "speed": 0.6,
@@ -75,7 +79,8 @@
             "zh": "现在只用左手弹。每个手型都按住一整个小节。",
             "hi": "अब सिर्फ़ बायाँ हाथ। यह हर आकार को पूरे माप तक बनाए रखता है।",
             "ar": "والآن اليد اليسرى وحدها. تبقى على كل شكل مازورة كاملة.",
-            "pt": "Agora só a mão esquerda. Ela mantém cada posição por um compasso inteiro."
+            "pt": "Agora só a mão esquerda. Ela mantém cada posição por um compasso inteiro.",
+            "id": "Sekarang tangan kiri saja. Tangan kiri menahan setiap posisi selama satu birama penuh."
           },
           "hands": "left",
           "speed": 0.6,
@@ -90,7 +95,8 @@
             "zh": "双手一起慢慢弹前八个小节。",
             "hi": "पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ।",
             "ar": "اعزف أول 8 موازير باليدين معًا، ببطء.",
-            "pt": "Junte as mãos nos 8 primeiros compassos, devagar."
+            "pt": "Junte as mãos nos 8 primeiros compassos, devagar.",
+            "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan."
           },
           "hands": "both",
           "speed": 0.7,
@@ -105,7 +111,8 @@
             "zh": "双手合奏，用原速弹完整首歌。",
             "hi": "दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، بالسرعة الكاملة.",
-            "pt": "Toque a música inteira com as duas mãos, na velocidade normal."
+            "pt": "Toque a música inteira com as duas mãos, na velocidade normal.",
+            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh."
           },
           "hands": "both",
           "speed": 1,
@@ -125,7 +132,8 @@
             "zh": "右手拇指放在中央 C 上，5 指从 G 开始。2 指和 3 指放在 D 和 E 上。",
             "hi": "दाएँ हाथ का अँगूठा मध्य C पर रहता है, और उँगली 5 G से शुरू करती है। उँगली 2 और 3 D और E पर टिकी रहती हैं।",
             "ar": "يستقر إبهام يدك اليمنى على دو الوسطى، ويبدأ الإصبع 5 على صول. ويرتاح الإصبعان 2 و3 على ري ومي.",
-            "pt": "Seu polegar direito fica no Dó central, e o dedo 5 começa no Sol. Os dedos 2 e 3 descansam no Ré e no Mi."
+            "pt": "Seu polegar direito fica no Dó central, e o dedo 5 começa no Sol. Os dedos 2 e 3 descansam no Ré e no Mi.",
+            "id": "Ibu jari kananmu ada di C tengah, dan jari 5 mulai di G. Jari 2 dan 3 bersiap di D dan E."
           }
         },
         {
@@ -139,7 +147,8 @@
             "zh": "第一个 C 之后，四个短音在 D 和 E 之间来回。把它们数均匀。",
             "hi": "पहले C के बाद चार छोटे नोट D और E के बीच आगे-पीछे बजते हैं। उन्हें एक जैसा गिनें।",
             "ar": "بعد دو الأولى، تتأرجح 4 نغمات قصيرة بين ري ومي. عدّها بانتظام.",
-            "pt": "Depois do primeiro Dó, quatro notas curtas balançam entre Ré e Mi. Conte-as por igual."
+            "pt": "Depois do primeiro Dó, quatro notas curtas balançam entre Ré e Mi. Conte-as por igual.",
+            "id": "Setelah C pertama, empat not pendek bergoyang di antara D dan E. Hitung dengan rata."
           }
         },
         {
@@ -153,7 +162,8 @@
             "zh": "弹得轻柔，就像太阳慢慢升起。每个音都要流进下一个音。",
             "hi": "हल्के से बजाएँ, जैसे सूरज धीरे-धीरे उग रहा हो। हर नोट अगले नोट में बहना चाहिए।",
             "ar": "اعزف بهدوء، كشمس تشرق ببطء. يجب أن تنساب كل نغمة إلى التي تليها.",
-            "pt": "Toque suave, como o sol nascendo devagar. Cada nota deve fluir para a próxima."
+            "pt": "Toque suave, como o sol nascendo devagar. Cada nota deve fluir para a próxima.",
+            "id": "Mainkan dengan lembut, seperti matahari yang terbit perlahan. Biarkan setiap not mengalir ke not berikutnya."
           }
         }
       ],
@@ -167,7 +177,8 @@
             "zh": "5 指从 A 退回到 G。左手在半小节处移到 D 和 G。",
             "hi": "उँगली 5 A से वापस G पर आती है। आधे माप पर बायाँ हाथ D और G पर जाता है।",
             "ar": "يعود الإصبع 5 من نغمة لا إلى صول. وفي منتصف المازورة تنتقل اليد اليسرى إلى ري وصول.",
-            "pt": "O dedo 5 volta do Lá para o Sol. A mão esquerda passa para Ré e Sol no meio do compasso."
+            "pt": "O dedo 5 volta do Lá para o Sol. A mão esquerda passa para Ré e Sol no meio do compasso.",
+            "id": "Jari 5 mundur dari A ke G. Tangan kiri pindah ke D dan G di tengah birama."
           }
         },
         {
@@ -179,7 +190,8 @@
             "zh": "这里 2 指弹 E，4 指弹 G。这样 5 指就空出来，可以弹第 6 小节的高音 A。",
             "hi": "यहाँ उँगली 2 E बजाती है, और उँगली 4 G बजाती है। इससे उँगली 5 माप 6 के ऊपर वाले A के लिए खाली रहती है।",
             "ar": "هنا يأخذ الإصبع 2 نغمة مي، والإصبع 4 نغمة صول. هكذا يبقى الإصبع 5 حرًا لنغمة لا العالية في المازورة 6.",
-            "pt": "Aqui o dedo 2 toca o Mi, e o dedo 4 toca o Sol. Assim, o dedo 5 fica livre para o Lá agudo do compasso 6."
+            "pt": "Aqui o dedo 2 toca o Mi, e o dedo 4 toca o Sol. Assim, o dedo 5 fica livre para o Lá agudo do compasso 6.",
+            "id": "Di sini jari 2 memainkan E, dan jari 4 memainkan G. Dengan begitu, jari 5 bebas untuk A tinggi di birama 6."
           }
         },
         {
@@ -191,7 +203,8 @@
             "zh": "5 指弹 A，2 指弹 E。两个音之间手要张开。",
             "hi": "उँगली 5 A बजाती है, और उँगली 2 E बजाती है। A और E के बीच हाथ खुला रखें।",
             "ar": "يعزف الإصبع 5 نغمة لا، والإصبع 2 نغمة مي. أبق يدك مفتوحة بينهما.",
-            "pt": "O dedo 5 toca o Lá, e o dedo 2 toca o Mi. Mantenha a mão aberta entre eles."
+            "pt": "O dedo 5 toca o Lá, e o dedo 2 toca o Mi. Mantenha a mão aberta entre eles.",
+            "id": "Jari 5 memainkan A, dan jari 2 memainkan E. Biarkan tanganmu tetap terbuka di antara keduanya."
           }
         }
       ]
@@ -219,7 +232,8 @@
             "zh": "只用左手弹：一个低音，然后一个两个音的和弦弹两次。手保持不动。",
             "hi": "सिर्फ़ बाएँ हाथ से बजाएँ: एक नीचे वाला नोट, फिर दो बार दो नोट वाला कॉर्ड। हाथ अपनी जगह पर रहता है।",
             "ar": "اعزف باليد اليسرى وحدها: نغمة منخفضة، ثم تآلف من نغمتين مرتين. تبقى اليد ثابتة.",
-            "pt": "Toque só a mão esquerda: uma nota grave, e depois duas vezes um acorde de duas notas. A mão fica parada."
+            "pt": "Toque só a mão esquerda: uma nota grave, e depois duas vezes um acorde de duas notas. A mão fica parada.",
+            "id": "Mainkan tangan kiri saja: satu not rendah, lalu akor dua not dua kali. Tanganmu tetap diam."
           },
           "hands": "left",
           "speed": 0.6,
@@ -234,7 +248,8 @@
             "zh": "只用右手弹前八个小节，让歌曲等你弹每个音。",
             "hi": "पहले आठ माप सिर्फ़ दाएँ हाथ से बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें।",
             "ar": "اعزف أول 8 موازير باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة.",
-            "pt": "Toque só a mão direita nos 8 primeiros compassos, e deixe a música esperar cada nota."
+            "pt": "Toque só a mão direita nos 8 primeiros compassos, e deixe a música esperar cada nota.",
+            "id": "Mainkan tangan kanan saja pada 8 birama pertama, dan biarkan lagu menunggu setiap not."
           },
           "hands": "right",
           "speed": 0.6,
@@ -249,7 +264,8 @@
             "zh": "双手一起慢慢弹前八个小节。",
             "hi": "पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ।",
             "ar": "اعزف أول 8 موازير باليدين معًا، ببطء.",
-            "pt": "Junte as mãos nos 8 primeiros compassos, devagar."
+            "pt": "Junte as mãos nos 8 primeiros compassos, devagar.",
+            "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan."
           },
           "hands": "both",
           "speed": 0.6,
@@ -264,7 +280,8 @@
             "zh": "用双手弹完整首歌，比谱上写的稍慢一点。",
             "hi": "दोनों हाथों से पूरा गाना, लिखी स्पीड से थोड़ा धीमा बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، أبطأ قليلًا من السرعة المكتوبة.",
-            "pt": "Toque a música inteira com as duas mãos, um pouco mais devagar que o escrito."
+            "pt": "Toque a música inteira com as duas mãos, um pouco mais devagar que o escrito.",
+            "id": "Mainkan seluruh lagu dengan kedua tangan, sedikit lebih lambat dari tertulis."
           },
           "hands": "both",
           "speed": 0.8,
@@ -279,7 +296,8 @@
             "zh": "现在用原速弹。",
             "hi": "अब इसे पूरी स्पीड पर बजाएँ।",
             "ar": "والآن اعزفها بالسرعة الكاملة.",
-            "pt": "Agora toque na velocidade normal."
+            "pt": "Agora toque na velocidade normal.",
+            "id": "Sekarang mainkan dengan kecepatan penuh."
           },
           "hands": "both",
           "speed": 1,
@@ -299,7 +317,8 @@
             "zh": "左手每一拍都弹。每个小节数两遍“1、2、3”。",
             "hi": "बायाँ हाथ हर बीट पर बजाता है। हर माप में दो बार “1, 2, 3” गिनें।",
             "ar": "تعزف اليد اليسرى على كل نبضة. عدّ «1، 2، 3» مرتين في كل مازورة.",
-            "pt": "A mão esquerda toca em todos os tempos. Conte “um, dois, três” duas vezes em cada compasso."
+            "pt": "A mão esquerda toca em todos os tempos. Conte “um, dois, três” duas vezes em cada compasso.",
+            "id": "Tangan kiri bermain di setiap ketukan. Hitung “1, 2, 3” dua kali di setiap birama."
           }
         },
         {
@@ -313,7 +332,8 @@
             "zh": "左手的和弦要弹得轻，让旋律像晨光一样在上面飘起来。",
             "hi": "बाएँ हाथ के कॉर्ड हल्के से बजाएँ, ताकि धुन उनके ऊपर सुबह की रोशनी की तरह तैरती रहे।",
             "ar": "اعزف تآلفات اليد اليسرى بهدوء، ليطفو اللحن فوقها كضوء الصباح.",
-            "pt": "Toque suave os acordes da mão esquerda, para a melodia flutuar por cima como a luz da manhã."
+            "pt": "Toque suave os acordes da mão esquerda, para a melodia flutuar por cima como a luz da manhã.",
+            "id": "Mainkan akor tangan kiri dengan lembut, agar melodi melayang di atasnya seperti cahaya pagi."
           }
         },
         {
@@ -327,7 +347,8 @@
             "zh": "最后同时弹 G 和 B 来结束。用 1 指和 3 指把它们当作一个音按下。",
             "hi": "आखिर में G और B एक साथ बजाएँ। उँगली 1 और 3 उन्हें एक ही नोट की तरह दबाती हैं।",
             "ar": "اختم بنغمتي صول وسي معًا. يضغطهما الإصبعان 1 و3 كأنهما نغمة واحدة.",
-            "pt": "Termine com Sol e Si juntos. Os dedos 1 e 3 pressionam as duas notas como se fossem uma."
+            "pt": "Termine com Sol e Si juntos. Os dedos 1 e 3 pressionam as duas notas como se fossem uma.",
+            "id": "Akhiri dengan G dan B bersamaan. Jari 1 dan 3 menekan keduanya seperti satu not."
           }
         }
       ],
@@ -341,7 +362,8 @@
             "zh": "5 指从 E 退回到 D。左手在半小节处移到 A 和 D。",
             "hi": "उँगली 5 E से वापस D पर आती है। आधे माप पर बायाँ हाथ A और D पर जाता है।",
             "ar": "يعود الإصبع 5 من مي إلى ري. وفي منتصف المازورة تنتقل اليد اليسرى إلى نغمتي لا وري.",
-            "pt": "O dedo 5 volta do Mi para o Ré. A mão esquerda passa para Lá e Ré no meio do compasso."
+            "pt": "O dedo 5 volta do Mi para o Ré. A mão esquerda passa para Lá e Ré no meio do compasso.",
+            "id": "Jari 5 mundur dari E ke D. Tangan kiri pindah ke A dan D di tengah birama."
           }
         },
         {
@@ -353,7 +375,8 @@
             "zh": "这里 2 指弹 B，4 指弹 D。这样 5 指就空出来，可以弹第 6 小节的高音 E。",
             "hi": "यहाँ उँगली 2 B बजाती है, और उँगली 4 D बजाती है। इससे उँगली 5 माप 6 के ऊपर वाले E के लिए खाली रहती है।",
             "ar": "هنا يأخذ الإصبع 2 نغمة سي، والإصبع 4 نغمة ري. هكذا يبقى الإصبع 5 حرًا لنغمة مي العالية في المازورة 6.",
-            "pt": "Aqui o dedo 2 toca o Si, e o dedo 4 toca o Ré. Assim, o dedo 5 fica livre para o Mi agudo do compasso 6."
+            "pt": "Aqui o dedo 2 toca o Si, e o dedo 4 toca o Ré. Assim, o dedo 5 fica livre para o Mi agudo do compasso 6.",
+            "id": "Di sini jari 2 memainkan B, dan jari 4 memainkan D. Dengan begitu, jari 5 bebas untuk E tinggi di birama 6."
           }
         },
         {
@@ -365,7 +388,8 @@
             "zh": "左手的 5 指留在 G 上。4 指和 2 指移到 A 和 C，弹新的和弦。",
             "hi": "बायाँ हाथ उँगली 5 को G पर ही रखता है। नए कॉर्ड के लिए उँगली 4 और 2 A और C पर जाती हैं।",
             "ar": "يبقى الإصبع 5 من اليد اليسرى على صول. وينتقل الإصبعان 4 و2 إلى نغمتي لا ودو للتآلف الجديد.",
-            "pt": "A mão esquerda mantém o dedo 5 no Sol. Os dedos 4 e 2 vão para Lá e Dó no novo acorde."
+            "pt": "A mão esquerda mantém o dedo 5 no Sol. Os dedos 4 e 2 vão para Lá e Dó no novo acorde.",
+            "id": "Tangan kiri menjaga jari 5 tetap di G. Jari 4 dan 2 pindah ke A dan C untuk akor yang baru."
           }
         }
       ]
@@ -394,7 +418,8 @@
             "zh": "单独弹阿尔贝蒂低音，直到它自己流动起来：低、高、中、高。",
             "hi": "सिर्फ़ अल्बर्टी बेस बजाएँ, जब तक वह अपने-आप न बहने लगे: नीचे वाला, ऊपर वाला, बीच वाला, ऊपर वाला।",
             "ar": "اعزف باص ألبرتي وحده حتى ينساب من تلقاء نفسه: المنخفضة، فالعالية، فالوسطى، فالعالية.",
-            "pt": "Toque só o baixo Alberti até ele rolar por conta própria: grave, agudo, meio, agudo."
+            "pt": "Toque só o baixo Alberti até ele rolar por conta própria: grave, agudo, meio, agudo.",
+            "id": "Mainkan bas Alberti saja sampai mengalir dengan sendirinya: rendah, tinggi, tengah, tinggi."
           },
           "hands": "left",
           "speed": 0.5,
@@ -409,7 +434,8 @@
             "zh": "单独弹右手的三度和六度，把每一对的两个音当作一个音同时按下。",
             "hi": "सिर्फ़ दाएँ हाथ के थर्ड और सिक्स्थ बजाएँ, और हर जोड़ी के दोनों नोट एक साथ दबाएँ।",
             "ar": "اعزف ثالثات اليد اليمنى وسادساتها وحدها، واضغط نغمتي كل زوج كأنهما نغمة واحدة.",
-            "pt": "Toque só as terças e sextas da mão direita, e pressione as duas notas de cada par como se fossem uma."
+            "pt": "Toque só as terças e sextas da mão direita, e pressione as duas notas de cada par como se fossem uma.",
+            "id": "Mainkan terts dan sekst tangan kanan saja, dan tekan kedua not setiap pasangan seperti satu not."
           },
           "hands": "right",
           "speed": 0.6,
@@ -424,7 +450,8 @@
             "zh": "双手一起慢慢弹前八个小节。",
             "hi": "पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ।",
             "ar": "اعزف أول 8 موازير باليدين معًا، ببطء.",
-            "pt": "Junte as mãos nos 8 primeiros compassos, devagar."
+            "pt": "Junte as mãos nos 8 primeiros compassos, devagar.",
+            "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan."
           },
           "hands": "both",
           "speed": 0.5,
@@ -439,7 +466,8 @@
             "zh": "双手合奏，用四分之三速度弹完整首歌。",
             "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، بثلاثة أرباع السرعة.",
-            "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade."
+            "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
+            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan."
           },
           "hands": "both",
           "speed": 0.75,
@@ -454,7 +482,8 @@
             "zh": "现在用原速弹，加上踏板。",
             "hi": "अब इसे पूरी स्पीड पर पेडल के साथ बजाएँ।",
             "ar": "والآن اعزفها بالسرعة الكاملة، مع الدواسة.",
-            "pt": "Agora toque na velocidade normal, com o pedal."
+            "pt": "Agora toque na velocidade normal, com o pedal.",
+            "id": "Sekarang mainkan dengan kecepatan penuh, dengan pedal."
           },
           "hands": "both",
           "speed": 1,
@@ -474,7 +503,8 @@
             "zh": "每换一个新的低音就换一次踏板，每个小节换两次。",
             "hi": "हर नए बेस नोट पर पेडल बदलें, यानी हर माप में दो बार।",
             "ar": "غيّر الدواسة مع كل نغمة باص جديدة، أي مرتين في كل مازورة.",
-            "pt": "Troque o pedal a cada nova nota do baixo, duas vezes por compasso."
+            "pt": "Troque o pedal a cada nova nota do baixo, duas vezes por compasso.",
+            "id": "Ganti pedal di setiap not bas baru, dua kali dalam setiap birama."
           }
         },
         {
@@ -488,7 +518,8 @@
             "zh": "在我们自己写的小节里，手要移动。提前看好每个小节的第一个手指。",
             "hi": "हमारे अपने जोड़े हुए माप में हाथ अपनी जगह बदलता है। पहले से देख लें कि हर माप किस उँगली से शुरू होता है।",
             "ar": "في الموازير التي أضفناها بأنفسنا، تتنقل اليد. انظر مسبقًا إلى أول إصبع ستستعمله في كل مازورة.",
-            "pt": "Nos compassos que nós mesmos escrevemos, a mão muda de lugar. Olhe adiante, para o primeiro dedo de cada compasso."
+            "pt": "Nos compassos que nós mesmos escrevemos, a mão muda de lugar. Olhe adiante, para o primeiro dedo de cada compasso.",
+            "id": "Di birama buatan kami sendiri, tanganmu berpindah-pindah. Lihat ke depan, ke jari pertama setiap birama."
           }
         },
         {
@@ -502,7 +533,8 @@
             "zh": "旋律是每一对音的上方音，所以让上面的手指来带领。",
             "hi": "हर जोड़ी का ऊपर वाला नोट ही धुन है, इसलिए उसे बजाने वाली उँगली को अगुवाई करने दें।",
             "ar": "اللحن هو النغمة العليا في كل زوج، فدع الإصبع الأعلى يقود.",
-            "pt": "A melodia é a nota de cima de cada par, então deixe o dedo de cima conduzir."
+            "pt": "A melodia é a nota de cima de cada par, então deixe o dedo de cima conduzir.",
+            "id": "Melodinya adalah not teratas setiap pasangan, jadi biarkan jari yang di atas memimpin."
           }
         }
       ],
@@ -516,7 +548,8 @@
             "zh": "利用短休止符，把右手张开，盖住升 F、A、D，弹最后的和弦。",
             "hi": "छोटे रेस्ट में आखिरी कॉर्ड के लिए दाएँ हाथ को F शार्प, A और D पर फैलाएँ।",
             "ar": "استغل السكتة القصيرة لتفرد اليد اليمنى على فا دييز ونغمة لا وري للتآلف الأخير.",
-            "pt": "Use a pausa curta para abrir a mão direita sobre Fá sustenido, Lá e Ré para o último acorde."
+            "pt": "Use a pausa curta para abrir a mão direita sobre Fá sustenido, Lá e Ré para o último acorde.",
+            "id": "Pakai tanda istirahat pendek untuk membentangkan tangan kanan di atas F kres, A, dan D, siap memainkan akor terakhir."
           }
         },
         {
@@ -528,7 +561,8 @@
             "zh": "五个音从 B 往下走到 D，每个音用一个手指。然后 2 指往上回到 E。",
             "hi": "पाँच नोट B से नीचे D तक उतरते हैं, हर नोट एक अलग उँगली से। फिर उँगली 2 वापस ऊपर E पर जाती है।",
             "ar": "تنزل 5 نغمات من سي إلى ري، لكل إصبع نغمة. ثم يعود الإصبع 2 صعودًا إلى مي.",
-            "pt": "Cinco notas descem de Si até Ré, um dedo para cada uma. Depois, o dedo 2 sobe de volta para o Mi."
+            "pt": "Cinco notas descem de Si até Ré, um dedo para cada uma. Depois, o dedo 2 sobe de volta para o Mi.",
+            "id": "Lima not berjalan turun dari B ke D, satu jari untuk setiap not. Lalu jari 2 naik kembali ke E."
           }
         },
         {
@@ -540,7 +574,8 @@
             "zh": "在半小节处，左手换成 A 大三和弦的阿尔贝蒂低音，5 指在低音 A 上。",
             "hi": "आधे माप पर बायाँ हाथ A मेजर के अल्बर्टी पैटर्न पर जाता है, और उँगली 5 नीचे वाले A पर रहती है।",
             "ar": "في منتصف المازورة، ينتقل باص ألبرتي في اليد اليسرى إلى تآلف لا الكبير، والإصبع 5 على نغمة لا المنخفضة.",
-            "pt": "No meio do compasso, a mão esquerda passa para o baixo Alberti em Lá maior, com o dedo 5 no Lá grave."
+            "pt": "No meio do compasso, a mão esquerda passa para o baixo Alberti em Lá maior, com o dedo 5 no Lá grave.",
+            "id": "Di tengah birama, tangan kiri berganti ke pola bas Alberti A mayor, dengan jari 5 di A rendah."
           }
         }
       ]
@@ -569,7 +604,8 @@
             "zh": "只用左手弹：在拍点上弹一个八度，然后一个和弦弹两次，每个后面都有一个短休止符，用来跳过去。",
             "hi": "सिर्फ़ बाएँ हाथ से बजाएँ: बीट पर एक ऑक्टेव, फिर दो बार एक कॉर्ड, और हर एक के बाद छलाँग के लिए एक छोटा रेस्ट।",
             "ar": "اعزف باليد اليسرى وحدها: أوكتاف على النبضة، ثم تآلف مرتين، وبعد كل منها سكتة قصيرة للقفز.",
-            "pt": "Toque só a mão esquerda: uma oitava no tempo, e depois um acorde duas vezes, cada um com uma pausa curta para saltar."
+            "pt": "Toque só a mão esquerda: uma oitava no tempo, e depois um acorde duas vezes, cada um com uma pausa curta para saltar.",
+            "id": "Mainkan tangan kiri saja: satu oktaf tepat pada ketukan, lalu satu akor dua kali, masing-masing dengan tanda istirahat pendek untuk melompat."
           },
           "hands": "left",
           "speed": 0.5,
@@ -584,7 +620,8 @@
             "zh": "单独弹左手的琶音。它们往上走两个八度，再走回来。",
             "hi": "सिर्फ़ बाएँ हाथ के आर्पेजियो बजाएँ। ये दो ऑक्टेव ऊपर चढ़ते हैं और फिर नीचे लौटते हैं।",
             "ar": "اعزف أربيجيو اليد اليسرى وحده. يصعد أوكتافين ثم ينزل.",
-            "pt": "Toque só os arpejos da mão esquerda. Eles sobem duas oitavas e descem de volta."
+            "pt": "Toque só os arpejos da mão esquerda. Eles sobem duas oitavas e descem de volta.",
+            "id": "Mainkan arpeggio tangan kiri saja. Arpeggio naik dua oktaf, lalu turun kembali."
           },
           "hands": "left",
           "speed": 0.5,
@@ -599,7 +636,8 @@
             "zh": "单独弹右手的和弦，让最上面的手指把旋律唱出来。",
             "hi": "सिर्फ़ दाएँ हाथ के कॉर्ड बजाएँ, और सबसे ऊपर वाली उँगली को धुन गाने दें।",
             "ar": "اعزف تآلفات اليد اليمنى وحدها، ودع الإصبع الأعلى يغني اللحن.",
-            "pt": "Toque só os acordes da mão direita, e deixe o dedo de cima cantar a melodia."
+            "pt": "Toque só os acordes da mão direita, e deixe o dedo de cima cantar a melodia.",
+            "id": "Mainkan akor tangan kanan saja, dan biarkan jari teratas menyanyikan melodi."
           },
           "hands": "right",
           "speed": 0.5,
@@ -614,7 +652,8 @@
             "zh": "双手合奏，用四分之三速度弹完整首歌。",
             "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، بثلاثة أرباع السرعة.",
-            "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade."
+            "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
+            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan."
           },
           "hands": "both",
           "speed": 0.75,
@@ -629,7 +668,8 @@
             "zh": "现在用原速弹，让最后的和弦的声音延续。",
             "hi": "अब इसे पूरी स्पीड पर बजाएँ, और आखिरी कॉर्ड की आवाज़ गूँजने दें।",
             "ar": "والآن اعزفها بالسرعة الكاملة، واترك التآلف الأخير يرن.",
-            "pt": "Agora toque na velocidade normal, e deixe o último acorde soar."
+            "pt": "Agora toque na velocidade normal, e deixe o último acorde soar.",
+            "id": "Sekarang mainkan dengan kecepatan penuh, dan biarkan akor terakhir terus berbunyi."
           },
           "hands": "both",
           "speed": 1,
@@ -649,7 +689,8 @@
             "zh": "利用每个八度和和弦后面的短休止符，跳到下一个。",
             "hi": "हर ऑक्टेव और कॉर्ड के बाद के छोटे रेस्ट में अगले पर छलाँग लगाएँ।",
             "ar": "استغل السكتة القصيرة بعد كل أوكتاف وتآلف للقفز إلى ما يليه.",
-            "pt": "Use a pausa curta depois de cada oitava e de cada acorde para saltar até o próximo."
+            "pt": "Use a pausa curta depois de cada oitava e de cada acorde para saltar até o próximo.",
+            "id": "Pakai tanda istirahat pendek setelah setiap oktaf dan akor untuk melompat ke posisi berikutnya."
           }
         },
         {
@@ -663,7 +704,8 @@
             "zh": "让琶音在旋律下面轻轻流动，每换一个新和弦就换一次踏板。",
             "hi": "आर्पेजियो को धुन के नीचे हल्के से बहने दें, और हर नए कॉर्ड पर पेडल बदलें।",
             "ar": "دع الأربيجيو ينساب بهدوء تحت اللحن، وغيّر الدواسة مع كل تآلف جديد.",
-            "pt": "Deixe os arpejos fluírem suaves sob a melodia, e troque o pedal a cada novo acorde."
+            "pt": "Deixe os arpejos fluírem suaves sob a melodia, e troque o pedal a cada novo acorde.",
+            "id": "Biarkan arpeggio mengalir lembut di bawah melodi, dan ganti pedal di setiap akor baru."
           }
         },
         {
@@ -677,7 +719,8 @@
             "zh": "每个和弦最上面的音要比其他音弹得稍响一点。",
             "hi": "हर कॉर्ड का सबसे ऊपर वाला नोट बाकी नोटों से थोड़ा ज़ोर से बजाएँ।",
             "ar": "اعزف النغمة العليا في كل تآلف بقوة أكبر قليلًا من غيرها.",
-            "pt": "Toque a nota de cima de cada acorde um pouco mais forte que as outras."
+            "pt": "Toque a nota de cima de cada acorde um pouco mais forte que as outras.",
+            "id": "Mainkan not teratas setiap akor sedikit lebih keras daripada not lainnya."
           }
         }
       ],
@@ -691,7 +734,8 @@
             "zh": "两个升 C 组成一个八度，中间是 E 和升 G。整个小节手都保持张开。",
             "hi": "दोनों C शार्प मिलकर एक ऑक्टेव बनाते हैं, और उनके बीच E और G शार्प हैं। पूरे माप तक हाथ फैलाए रखें।",
             "ar": "نغمتا دو دييز تشكلان أوكتافًا، وبينهما مي وصول دييز. أبق يدك مفرودة طوال المازورة.",
-            "pt": "Os dois Dós sustenidos formam uma oitava, com Mi e Sol sustenido entre eles. Mantenha a mão aberta durante o compasso inteiro."
+            "pt": "Os dois Dós sustenidos formam uma oitava, com Mi e Sol sustenido entre eles. Mantenha a mão aberta durante o compasso inteiro.",
+            "id": "Kedua C kres membentuk satu oktaf, dengan E dan G kres di antaranya. Biarkan tanganmu terbentang selama satu birama penuh."
           }
         },
         {
@@ -703,7 +747,8 @@
             "zh": "整个小节左手都跳到升 C 上。右手用 5 指弹升 C，用 2 指弹升 G。",
             "hi": "पूरे माप के लिए बायाँ हाथ C शार्प पर छलाँग लगाता है। दायाँ हाथ उँगली 5 से C शार्प और उँगली 2 से G शार्प बजाता है।",
             "ar": "تقفز اليد اليسرى إلى دو دييز وتبقى عليها طوال المازورة. وتعزف اليد اليمنى دو دييز بالإصبع 5، وصول دييز بالإصبع 2.",
-            "pt": "A mão esquerda salta para o Dó sustenido e fica nele o compasso inteiro. A mão direita toca Dó sustenido com o dedo 5 e Sol sustenido com o dedo 2."
+            "pt": "A mão esquerda salta para o Dó sustenido e fica nele o compasso inteiro. A mão direita toca Dó sustenido com o dedo 5 e Sol sustenido com o dedo 2.",
+            "id": "Tangan kiri melompat ke C kres dan tinggal di sana selama satu birama penuh. Tangan kanan memainkan C kres dengan jari 5 dan G kres dengan jari 2."
           }
         },
         {
@@ -715,7 +760,8 @@
             "zh": "三个手型接连出现：E 大三和弦，然后是 B 和升 G，再是 B 大三和弦。左手在半小节处换到 B。",
             "hi": "तीन आकार एक के बाद एक आते हैं: E मेजर, फिर B और G शार्प, फिर B मेजर। आधे माप पर बायाँ हाथ B पर जाता है।",
             "ar": "تتتابع 3 أشكال: تآلف مي الكبير، ثم سي وصول دييز، ثم تآلف سي الكبير. وفي منتصف المازورة تنتقل اليد اليسرى إلى سي.",
-            "pt": "Três posições vêm uma depois da outra: Mi maior, depois Si e Sol sustenido, depois Si maior. A mão esquerda passa para o Si no meio do compasso."
+            "pt": "Três posições vêm uma depois da outra: Mi maior, depois Si e Sol sustenido, depois Si maior. A mão esquerda passa para o Si no meio do compasso.",
+            "id": "Tiga posisi datang berurutan: E mayor, lalu B dan G kres, lalu B mayor. Tangan kiri pindah ke B di tengah birama."
           }
         }
       ]
