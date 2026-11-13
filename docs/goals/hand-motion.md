@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: Touch and two hands
-    status: open
+    status: done
   - id: 4
     title: The lab plays phrases in time, at any speed
     status: open
@@ -93,8 +93,17 @@ it.
 - **Touch is read from the phrase.** A note shorter than half its gap is staccato: the hand lifts from
   the wrist. Notes that overlap or touch are legato: each finger lifts as the next strikes. A gap of a
   beat or more after a note ends a phrase: the hand lifts a little, as a breath.
+- **A phrase end is a silence of 0.5 s or more,** a beat at 120 beats a minute. The phrase carries
+  seconds only, and a lesson's tempo rarely runs faster. The wrist rises 0.25 across it, and 0.4 after a
+  staccato note. A rise waits until every key struck so far is released, and it is gone by the next
+  down-stroke. Free fingers rise with the wrist.
+- **A louder note starts its down-stroke higher,** `HOVER` plus 0.25 times its velocity's distance from
+  80, over 127. The default velocity strikes from `HOVER`, so a phrase without velocities looks as before.
 - **Two hands keep at least one key width between their nearest fingers.** If a phrase would cross the
   hands, the plan lets them cross with the right hand above, which no lesson asks for today.
+- **The spacing is read at the anchors, one white key free between the thumbs' home keys.** Closer
+  anchors push both hands apart by halves, frame by frame in `planHands`. A press never moves, only the
+  wrists and the free fingers. Crossed hands are pushed less the further they cross, so nothing jumps.
 - **The cost budget is one millisecond per hand per frame** on a desktop, for the plan and the solver
   together, measured in the lab.
 - **Lanes:** every stage works in `src/render/hand/hand-plan.ts` and its test, so they run in order.
@@ -134,11 +143,11 @@ leave the anchor in place, whole-hand position changes, and chords whose fingers
 beside the right one.
 **Gate:** the `hand-crossings` check passes.
 
-- [ ] Staccato lifts from the wrist, and legato hands each note to the next. `src/render/hand/hand-plan.ts:1`
-- [ ] A louder note strikes faster from a little higher. `src/render/hand/hand-plan.ts:1`
-- [ ] A phrase end lifts the hand. `src/render/hand/hand-plan.ts:1`
-- [ ] A left hand is planned in mirrored space and kept a key width from the right. `src/render/hand/hand-plan.ts:1`
-- [ ] Unit tests `staccato_lifts_from_the_wrist`, `a_loud_note_strikes_faster`, `a_phrase_ends_with_a_lift` and `the_two_hands_keep_apart`. `src/render/hand/hand-plan.test.ts:1`
+- [x] Staccato lifts from the wrist, and legato hands each note to the next. `src/render/hand/hand-plan.ts:1`
+- [x] A louder note strikes faster from a little higher. `src/render/hand/hand-plan.ts:1`
+- [x] A phrase end lifts the hand. `src/render/hand/hand-plan.ts:1`
+- [x] A left hand is planned in mirrored space and kept a key width from the right. `src/render/hand/hand-plan.ts:1`
+- [x] Unit tests `staccato_lifts_from_the_wrist`, `a_loud_note_strikes_faster`, `a_phrase_ends_with_a_lift` and `the_two_hands_keep_apart`. `src/render/hand/hand-plan.test.ts:1`
 
 ### 4. The lab plays phrases in time, at any speed
 
@@ -162,27 +171,28 @@ pause, slow down and seek, so every motion can be looked at.
 
 ### State
 
-Stages 1 and 2 are done. `planHands` in `src/render/hand/hand-plan.ts` plans each hand's anchors,
-presses and hovering fingers. Each press carries its crossing, read from the fingering. A thumb-under
-drops and tucks towards the palm, and the hand turns towards it. A finger-over arcs high. The thumb and
-the little finger stretch one key outwards without moving the hand. A chord's fingers strike together.
-The `hand-plan` and `hand-crossings` checks pass. The lab does not play the plan yet; stage 4 does.
+Stages 1 to 3 are done. `planHands` in `src/render/hand/hand-plan.ts` plans each hand's anchors,
+presses, crossings, stretches and chords. Each hand's wrist rises after a staccato note and across a
+phrase end, and its free fingers rise with it. A louder note starts its down-stroke higher and strikes
+faster. Two hands whose thumbs come closer than two white keys are pushed apart by halves. The
+`hand-plan`, `hand-crossings` and `hand-touch` checks pass. The lab still shows only the static C
+position.
 
 ### Next
 
-**Stage 3: touch and two hands.** Files: `src/render/hand/hand-plan.ts` and its test. Gate: the
-`hand-crossings` check passes.
+**Stage 4: the lab plays phrases in time.** Files: `tools/hand-lab/main.ts`, and a new phrase file
+beside it. Gate: the `hand-touch` check passes.
 
-- Staccato lifts the wrist. Read it per note in `planHand`'s loop (`src/render/hand/hand-plan.ts:191`).
-  Add the lift to the wrist's height in `poseAt` (`src/render/hand/hand-plan.ts:297`).
-- A loud note strikes faster from higher. `strikeSeconds` (`src/render/hand/hand-plan.ts:112`) already
-  shortens the stroke. The height over the key is `HOVER` in `pressPoint`'s down-stroke branch
-  (`src/render/hand/hand-plan.ts:307`), so scale it there by velocity.
-- A phrase end is a gap of a beat or more. The phrase carries seconds only, so pick a gap in seconds,
-  record it under the standing decisions, and lift the wrist across it.
-- The left hand already mirrors through `side`. Keeping the hands apart needs both plans at once. Do it
-  in `planHands` (`src/render/hand/hand-plan.ts:150`), by shifting an anchor that comes within a key
-  of the other hand's nearest finger.
+- The lab builds one rig per hand with `createHand(gltf, side)` (`tools/hand-lab/main.ts:110`). Each
+  frame it calls `planHands(phrase, piano.layout).poseAt(t)` and `applyPose` for each hand
+  (`src/render/hand/hand-rig.ts:183`).
+- The phrase world is centred on x = 0, as `contactPoint` says (`src/render/hand/hand-plan.ts:138`).
+  Check that the lab's piano group sits the same way before trusting a shot.
+- Keys follow each pose's `down` through `piano.press` and `piano.release` (`src/render/piano.ts:95`).
+  Diff the set from the frame before.
+- The clock is the lab's own, scaled by the speed, and `lab.seek(seconds)` sets it for shots.
+- `lab.cost()` times `poseAt` and `applyPose` per frame against the 1 ms per hand budget.
+- The lab is tools-only, so `bun x tsc` checks it, not `bun run build`.
 
 Expected red: none.
 

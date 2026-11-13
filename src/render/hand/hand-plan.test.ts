@@ -6,6 +6,7 @@ import { layoutKeys } from "../key-layout";
 import { BLACK_KEY_LENGTH, BLACK_KEY_TOP, WHITE_KEY_LENGTH } from "../piano-geometry";
 import {
   BLACK_INSET,
+  BREATH_LIFT,
   contactPoint,
   HOVER,
   type HandPose,
@@ -13,6 +14,10 @@ import {
   OVER_LIFT,
   type PhraseNote,
   planHands,
+  REST,
+  STACCATO_LIFT,
+  strikeHeight,
+  strikeSeconds,
   UNDER,
 } from "./hand-plan";
 
@@ -249,4 +254,92 @@ test("a_stretch_keeps_the_hand_in_place", () => {
   expect(down.poseAt(0.5).right!.wrist.x).toBeCloseTo(down.poseAt(0).right!.wrist.x, 6);
   const far = planHands(phrase([[67, 5], [71, 5]]), LAYOUT);
   expect(far.poseAt(0.5).right!.wrist.x).toBeGreaterThan(far.poseAt(0).right!.wrist.x + 1);
+});
+
+/** C, D and E with the first three fingers, one every half second, each held for `seconds`. */
+const five = (seconds: number): PhraseNote[] =>
+  ([60, 62, 64] as const).map((pitch, i) => ({ pitch, at: i * 0.5, seconds, finger: (i + 1) as Finger, hand: "right" }));
+
+test("staccato_lifts_from_the_wrist", () => {
+  const staccato = planHands(five(0.1), LAYOUT);
+  // Between C's release at 0.1 s and D's down-stroke, the wrist and the free ring finger rise together.
+  const mid = (0.1 + 0.5 - strikeSeconds()) / 2;
+  const lifted = staccato.poseAt(mid).right!;
+  expect(lifted.wrist.y).toBeCloseTo(REST.lift + STACCATO_LIFT, 6);
+  expect(lifted.digits.ring!.y).toBeCloseTo(contactPoint(LAYOUT, 65, "ring").y + HOVER + STACCATO_LIFT, 6);
+  // The wrist is down again as D strikes.
+  const struck = staccato.poseAt(0.5).right!;
+  expect(struck.wrist.y).toBeCloseTo(REST.lift, 6);
+  expect(near(struck.digits.index!, contactPoint(LAYOUT, 62, "index"))).toBe(true);
+  // Legato keeps the wrist level, and each finger lets go as the next strikes.
+  const legato = planHands(five(0.5), LAYOUT);
+  for (let t = 0; t < legato.end; t += 0.01) expect(legato.poseAt(t).right!.wrist.y).toBeCloseTo(REST.lift, 6);
+  expect(legato.poseAt(0.49).right!.down).toEqual([60]);
+  expect(legato.poseAt(0.5).right!.down).toEqual([62]);
+});
+
+test("a_loud_note_strikes_faster", () => {
+  const plan = (velocity: number) =>
+    planHands(
+      [
+        { pitch: 60, at: 0, seconds: 0.4, finger: 1, hand: "right" },
+        { pitch: 62, at: 0.5, seconds: 0.4, finger: 2, hand: "right", velocity },
+      ],
+      LAYOUT,
+    );
+  const key = contactPoint(LAYOUT, 62, "index");
+  expect(strikeSeconds(120)).toBeLessThan(strikeSeconds(40));
+  expect(strikeHeight(120)).toBeGreaterThan(HOVER);
+  expect(strikeHeight(40)).toBeLessThan(HOVER);
+  // Each down-stroke starts from its own height and lands as the note sounds.
+  for (const velocity of [40, 120]) {
+    const p = plan(velocity);
+    expect(p.poseAt(0.5 - strikeSeconds(velocity)).right!.digits.index!.y).toBeCloseTo(key.y + strikeHeight(velocity), 6);
+    expect(near(p.poseAt(0.5).right!.digits.index!, key)).toBe(true);
+  }
+  // Halfway through the soft down-stroke, the loud finger is still higher.
+  const t = 0.5 - strikeSeconds(40) / 2;
+  expect(plan(120).poseAt(t).right!.digits.index!.y).toBeGreaterThan(plan(40).poseAt(t).right!.digits.index!.y);
+});
+
+test("a_phrase_ends_with_a_lift", () => {
+  // D holds until 1.4 s, and E comes 0.6 s later: a phrase end, though D is no staccato.
+  const notes: PhraseNote[] = [
+    { pitch: 60, at: 0, seconds: 0.4, finger: 1, hand: "right" },
+    { pitch: 62, at: 0.5, seconds: 0.9, finger: 2, hand: "right" },
+    { pitch: 64, at: 2, seconds: 0.4, finger: 3, hand: "right" },
+  ];
+  const plan = planHands(notes, LAYOUT);
+  const mid = (1.4 + 2 - strikeSeconds()) / 2;
+  expect(plan.poseAt(mid).right!.wrist.y).toBeCloseTo(REST.lift + BREATH_LIFT, 6);
+  // The short silence between C and D lifts nothing, and the wrist is down again as E strikes.
+  expect(plan.poseAt(0.45).right!.wrist.y).toBeCloseTo(REST.lift, 6);
+  expect(plan.poseAt(2).right!.wrist.y).toBeCloseTo(REST.lift, 6);
+  expect(near(plan.poseAt(2).right!.digits.middle!, contactPoint(LAYOUT, 64, "middle"))).toBe(true);
+});
+
+test("the_two_hands_keep_apart", () => {
+  const both = (leftPitch: number) =>
+    planHands(
+      [
+        { pitch: 64, at: 0, seconds: 0.4, finger: 3, hand: "right" },
+        { pitch: leftPitch, at: 0, seconds: 0.4, finger: 3, hand: "left" },
+      ],
+      LAYOUT,
+    );
+  const whiteKey = keyX(62) - keyX(60);
+  // The left middle finger on G puts its thumb over B, beside the right thumb's C, so both hands give way.
+  const close = both(55).poseAt(0.1);
+  expect(close.right!.digits.thumb!.x - close.left!.digits.thumb!.x).toBeCloseTo(2 * whiteKey, 6);
+  expect(close.right!.digits.thumb!.x).toBeGreaterThan(keyX(60));
+  expect(close.left!.digits.thumb!.x).toBeLessThan(keyX(59));
+  // The pressed keys stay where they are.
+  const struck = both(55).poseAt(0);
+  expect(near(struck.right!.digits.middle!, contactPoint(LAYOUT, 64, "middle"))).toBe(true);
+  expect(near(struck.left!.digits.middle!, contactPoint(LAYOUT, 55, "middle"))).toBe(true);
+  // The left middle finger on E leaves a key free between the thumbs, so neither hand moves.
+  const apart = both(52).poseAt(0.1);
+  expect(apart.right!.digits.thumb!.x).toBeCloseTo(keyX(60), 6);
+  expect(apart.left!.digits.thumb!.x).toBeCloseTo(keyX(55), 6);
+  expect(apart.left!.wrist.x).toBeCloseTo(keyX(52), 6);
 });

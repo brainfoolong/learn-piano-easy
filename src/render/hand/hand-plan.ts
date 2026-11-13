@@ -24,11 +24,18 @@
  *   which arcs high over the thumb. A crossing starts its travel earlier than a plain press.
  * - **A chord's notes share their time,** so their fingers strike together. A chord that set the anchor
  *   never moves it again, so a finger the anchor cannot reach stretches to its key.
+ * - **Touch is read from the phrase.** A note shorter than half the time to the next one is staccato,
+ *   and the wrist rises `STACCATO_LIFT` in the silence after it. A silence of `PHRASE_GAP` or more ends
+ *   a phrase, and the wrist rises `BREATH_LIFT`. Free fingers rise with the wrist. Legato needs nothing
+ *   more, since each finger lifts as its note ends.
+ * - **A louder note strikes faster from higher.** `strikeHeight` and `strikeSeconds` both follow the
+ *   velocity, and the default velocity strikes from `HOVER`.
+ * - **The two hands keep one white key free between their thumbs' home keys.** Closer thumbs push both
+ *   anchors apart by halves, so a press never moves, only the wrists and the free fingers. Hands that
+ *   cross are pushed less the further they cross, which keeps the motion free of jumps.
  *
- * Bounds: `poseAt` looks at each finger's notes by binary search, so a frame's cost grows with the log
- * of the phrase's length.
- *
- * Gaps: touch and the two hands' spacing belong to `hand-motion` stage 3.
+ * Bounds: `poseAt` looks at each finger's notes and the wrist's rises by binary search, so a frame's
+ * cost grows with the log of the phrase's length.
  */
 import { Euler, Quaternion, Vector3 } from "three";
 
@@ -107,10 +114,24 @@ const RETURN = 0.2;
 /** The shortest time a move of the hand is given, when the old note's release allows. */
 const MOVE_MIN = 0.15;
 const DEFAULT_VELOCITY = 80;
+/** How much higher than `HOVER` a full velocity strikes from, and how much lower a silent one. */
+const LOUD_RISE = 0.25;
+/** How high the wrist rises between staccato notes, and across a phrase end. */
+export const STACCATO_LIFT = 0.4;
+export const BREATH_LIFT = 0.25;
+/** The shortest silence that ends a phrase, in seconds: a beat at 120 beats a minute. */
+export const PHRASE_GAP = 0.5;
+/** How far apart the two thumbs' home keys stay, in white keys, so one key lies free between them. */
+const SPACING = 2;
 
 /** The time a press's down-stroke takes at `velocity`. */
 export function strikeSeconds(velocity = DEFAULT_VELOCITY): number {
   return STRIKE_SLOW - STRIKE_GAIN * Math.min(1, Math.max(0, velocity / 127));
+}
+
+/** How high over its key a finger starts its down-stroke at `velocity`: `HOVER` at the default velocity. */
+export function strikeHeight(velocity = DEFAULT_VELOCITY): number {
+  return HOVER + (LOUD_RISE * (Math.min(127, Math.max(0, velocity)) - DEFAULT_VELOCITY)) / 127;
 }
 
 /** The point on `pitch`'s key that `digit`'s pad meets, in world space, with the piano centred on x = 0. */
@@ -152,6 +173,8 @@ interface Press {
   contact: Vector3;
   /** How far the key dips at the pad. */
   dip: number;
+  /** How high over the key the down-stroke starts. */
+  height: number;
   /** The crossing the finger travels on its way over its key, if any. */
   cross: "under" | "over" | undefined;
 }
@@ -166,17 +189,34 @@ interface Anchor {
   arrive: number;
 }
 
+/** A rise of the wrist between two notes, peaking halfway. */
+interface Lift {
+  from: number;
+  to: number;
+  height: number;
+}
+
 /** Plans every hand of `phrase` on the keys of `layout`. */
 export function planHands(phrase: readonly PhraseNote[], layout: KeyLayout): HandPlan {
   const plans = (["right", "left"] as const)
     .map((hand) => ({ hand, notes: phrase.filter((n) => n.hand === hand).sort((a, b) => a.at - b.at) }))
     .filter((p) => p.notes.length > 0)
     .map((p) => planHand(p.hand, p.notes, layout));
+  const right = plans.find((p) => p.hand === "right");
+  const left = plans.find((p) => p.hand === "left");
   return {
     end: Math.max(0, ...plans.map((p) => p.end)),
     poseAt(seconds) {
+      // Two thumbs closer than `SPACING` push both hands apart by halves. Hands that cross fade the push
+      // out, so the anchors never jump.
+      let push = 0;
+      if (right && left) {
+        const gap = right.anchorAt(seconds) - left.anchorAt(seconds);
+        push = Math.max(0, SPACING - Math.abs(gap));
+      }
       const pose: Pose = {};
-      for (const plan of plans) pose[plan.hand] = plan.poseAt(seconds);
+      if (right) pose.right = right.poseAt(seconds, push / 2);
+      if (left) pose.left = left.poseAt(seconds, -push / 2);
       return pose;
     },
   };
@@ -185,7 +225,10 @@ export function planHands(phrase: readonly PhraseNote[], layout: KeyLayout): Han
 interface OneHand {
   hand: Hand;
   end: number;
-  poseAt(seconds: number): HandPose;
+  /** The white index under the thumb at `seconds`, before any push from the other hand. */
+  anchorAt(seconds: number): number;
+  /** The pose at `seconds`, with the anchor shifted `shift` white keys up the piano. */
+  poseAt(seconds: number, shift: number): HandPose;
 }
 
 function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): OneHand {
@@ -207,6 +250,8 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
   /** The time of the note that set the last anchor, which a chord on that time never moves again. */
   let anchoredAt = -Infinity;
   const presses: Press[][] = DIGITS.map(() => []);
+  /** Every press, in the order of its note. */
+  const all: Press[] = [];
   /** The last press, and the last one struck before the note at hand, which a chord's notes share. */
   let last: Press | undefined;
   let earlier: Press | undefined;
@@ -243,8 +288,10 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
       gone: note.at + note.seconds + LIFT + RETURN,
       contact,
       dip: dipAt(contact.z, layout.key(note.pitch)!.black),
+      height: strikeHeight(note.velocity),
       cross,
     };
+    all.push(press);
     presses[d]!.push(press);
 
     const current = anchors.at(-1);
@@ -259,6 +306,36 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
     }
     last = press;
   }
+
+  // The wrist rises in the silence after a staccato note or a phrase's end. Notes that share a time are
+  // one group, and the rise waits until every key struck so far has released.
+  const lifts: Lift[] = [];
+  let released = -Infinity;
+  let ended = -Infinity;
+  for (let i = 0; i < all.length; ) {
+    const at = all[i]!.note.at;
+    let j = i;
+    let longest = 0;
+    for (; j < all.length && all[j]!.note.at === at; j++) {
+      released = Math.max(released, all[j]!.up);
+      ended = Math.max(ended, at + all[j]!.note.seconds);
+      longest = Math.max(longest, all[j]!.note.seconds);
+    }
+    const next = all[j];
+    if (next) {
+      let to = Infinity;
+      for (let k = j; k < all.length && all[k]!.note.at === next.note.at; k++) to = Math.min(to, all[k]!.down);
+      const staccato = longest < (next.note.at - at) / 2 ? STACCATO_LIFT : 0;
+      const breath = next.note.at - ended >= PHRASE_GAP ? BREATH_LIFT : 0;
+      const height = Math.max(staccato, breath);
+      if (height > 0 && to > released) lifts.push({ from: released, to, height });
+    }
+    i = j;
+  }
+  const liftAt = (t: number): number => {
+    const l = lifts[lastIndex(lifts, (w) => w.from <= t)];
+    return l && t < l.to ? l.height * Math.sin((Math.PI * (t - l.from)) / (l.to - l.from)) : 0;
+  };
 
   const anchorAt = (t: number): number => {
     const i = lastIndex(anchors, (a) => a.leave <= t);
@@ -279,22 +356,24 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
 
   return {
     hand,
-    end: Math.max(...presses.flat().map((p) => p.gone)),
-    poseAt(t) {
-      const anchor = anchorAt(t);
-      const hover = (d: number) => new Vector3(home(anchor, d) + 0.5 - half, CONTACT + HOVER, WHITE_KEY_LENGTH - INSET[DIGITS[d]!]);
+    end: Math.max(...all.map((p) => p.gone)),
+    anchorAt,
+    poseAt(t, shift) {
+      const anchor = anchorAt(t) + shift;
+      const lift = liftAt(t);
+      const hover = (d: number) => new Vector3(home(anchor, d) + 0.5 - half, CONTACT + HOVER + lift, WHITE_KEY_LENGTH - INSET[DIGITS[d]!]);
       const digits = {} as Record<Digit, Vector3 | undefined>;
       const down: number[] = [];
       DIGITS.forEach((digit, d) => {
         const list = presses[d]!;
         const i = lastIndex(list, (p) => p.start <= t);
-        digits[digit] = i < 0 ? hover(d) : pressPoint(list, i, t, () => hover(d));
+        digits[digit] = i < 0 ? hover(d) : pressPoint(list, i, t, lift, () => hover(d));
         const held = i < 0 ? undefined : list[i]!;
         if (held && held.note.at <= t && t < held.up) down.push(held.note.pitch);
       });
       return {
         hand,
-        wrist: new Vector3(home(anchor, 2) + 0.5 - half, REST.lift, middle + REST.back),
+        wrist: new Vector3(home(anchor, 2) + 0.5 - half, REST.lift + lift, middle + REST.back),
         turn: turnAt(t),
         digits,
         down: down.sort((a, b) => a - b),
@@ -303,16 +382,19 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
   };
 }
 
-/** Where the pad of `list[i]`'s finger is at `t`, from its press's start until it is back home. */
-function pressPoint(list: readonly Press[], i: number, t: number, home: () => Vector3): Vector3 {
+/**
+ * Where the pad of `list[i]`'s finger is at `t`, from its press's start until it is back home. `lift` is
+ * the wrist's rise at `t`, which a finger off its key shares. A finger coming over its key sheds the rise
+ * by its down-stroke, so the stroke starts from the same point whatever the wrist does.
+ */
+function pressPoint(list: readonly Press[], i: number, t: number, lift: number, home: () => Vector3): Vector3 {
   const p = list[i]!;
-  const over = p.contact.clone().setY(p.contact.y + HOVER);
   if (t < p.down) {
     // The finger comes over its key from wherever it was, low under the palm or high over the thumb if it crosses.
-    const from = i > 0 ? pressPoint(list, i - 1, t, home) : home();
+    const from = i > 0 ? pressPoint(list, i - 1, t, lift, home) : home();
     const u = ease((t - p.start) / (p.down - p.start));
     const bow = Math.sin(Math.PI * u);
-    const point = from.lerp(over, u);
+    const point = from.lerp(p.contact.clone().setY(p.contact.y + p.height), u);
     if (p.cross === "under") return point.set(point.x, point.y - UNDER.drop * bow, point.z + UNDER.tuck * bow);
     if (p.cross === "over") return point.setY(point.y + OVER_LIFT * bow);
     return point;
@@ -320,11 +402,12 @@ function pressPoint(list: readonly Press[], i: number, t: number, home: () => Ve
   if (t < p.note.at) {
     // The down-stroke speeds up into the key.
     const u = (t - p.down) / (p.note.at - p.down);
-    return p.contact.clone().setY(p.contact.y + HOVER * (1 - u * u));
+    return p.contact.clone().setY(p.contact.y + p.height * (1 - u * u));
   }
   if (t < p.up) return p.contact.clone().setY(p.contact.y - p.dip * ease((t - p.note.at) / DIP));
-  if (t < p.free) return p.contact.clone().setY(p.contact.y - p.dip + (HOVER + p.dip) * ease((t - p.up) / (p.free - p.up)));
-  return over.lerp(home(), ease((t - p.free) / (p.gone - p.free)));
+  const rise = p.height + lift;
+  if (t < p.free) return p.contact.clone().setY(p.contact.y - p.dip + (rise + p.dip) * ease((t - p.up) / (p.free - p.up)));
+  return p.contact.clone().setY(p.contact.y + rise).lerp(home(), ease((t - p.free) / (p.gone - p.free)));
 }
 
 /** The index of the last item of `list` that `before` accepts, where it accepts a leading run, or -1. */
