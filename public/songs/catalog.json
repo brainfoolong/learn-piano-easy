@@ -4590,6 +4590,505 @@
     ]
   },
   {
+    "composer": "Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr",
+    "piece": "Lacrimosa",
+    "title": "Beginner",
+    "file": "ours/lacrimosa/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 77,
+    "seconds": 55,
+    "song": "lacrimosa",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lacrymosa",
+      "Requiem in D minor",
+      "K. 626"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr",
+    "piece": "Lacrimosa",
+    "title": "Easy",
+    "file": "ours/lacrimosa/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 79,
+    "seconds": 84,
+    "song": "lacrimosa",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "waltz-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lacrymosa",
+      "Requiem in D minor",
+      "K. 626"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr",
+    "piece": "Lacrimosa",
+    "title": "Medium",
+    "file": "ours/lacrimosa/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 89,
+    "seconds": 100,
+    "song": "lacrimosa",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lacrymosa",
+      "Requiem in D minor",
+      "K. 626"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr",
+    "piece": "Lacrimosa",
+    "title": "Hard",
+    "file": "ours/lacrimosa/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 79,
+    "seconds": 93,
+    "song": "lacrimosa",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Lacrymosa",
+      "Requiem in D minor",
+      "K. 626"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Piano Concerto No. 21: Andante",
+    "title": "Beginner",
+    "file": "ours/mozart-21-andante/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 86,
+    "seconds": 48,
+    "song": "mozart-21-andante",
+    "rarity": "common",
+    "skills": [
+      "held-bass",
+      "open-fifths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Elvira Madigan",
+      "K. 467",
+      "Klavierkonzert Nr. 21"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Piano Concerto No. 21: Andante",
+    "title": "Easy",
+    "file": "ours/mozart-21-andante/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 86,
+    "seconds": 87,
+    "song": "mozart-21-andante",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "two-note-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Elvira Madigan",
+      "K. 467",
+      "Klavierkonzert Nr. 21"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Piano Concerto No. 21: Andante",
+    "title": "Medium",
+    "file": "ours/mozart-21-andante/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 46,
+    "high": 86,
+    "seconds": 83,
+    "song": "mozart-21-andante",
+    "rarity": "epic",
+    "skills": [
+      "broken-chords",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Elvira Madigan",
+      "K. 467",
+      "Klavierkonzert Nr. 21"
+    ]
+  },
+  {
+    "composer": "Wolfgang Amadeus Mozart",
+    "piece": "Piano Concerto No. 21: Andante",
+    "title": "Hard",
+    "file": "ours/mozart-21-andante/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 98,
+    "seconds": 80,
+    "song": "mozart-21-andante",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Elvira Madigan",
+      "K. 467",
+      "Klavierkonzert Nr. 21"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Air on the G String",
+    "title": "Beginner",
+    "file": "ours/air-on-the-g-string/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 81,
+    "seconds": 55,
+    "song": "air-on-the-g-string",
+    "rarity": "common",
+    "skills": [
+      "held-bass",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Air",
+      "Orchestral Suite No. 3",
+      "BWV 1068",
+      "Air auf der G-Saite"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Air on the G String",
+    "title": "Easy",
+    "file": "ours/air-on-the-g-string/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 40,
+    "high": 81,
+    "seconds": 84,
+    "song": "air-on-the-g-string",
+    "rarity": "rare",
+    "skills": [
+      "two-note-chords",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Air",
+      "Orchestral Suite No. 3",
+      "BWV 1068",
+      "Air auf der G-Saite"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Air on the G String",
+    "title": "Medium",
+    "file": "ours/air-on-the-g-string/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 83,
+    "seconds": 104,
+    "song": "air-on-the-g-string",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "pedal",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Air",
+      "Orchestral Suite No. 3",
+      "BWV 1068",
+      "Air auf der G-Saite"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Air on the G String",
+    "title": "Hard",
+    "file": "ours/air-on-the-g-string/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 31,
+    "high": 95,
+    "seconds": 108,
+    "song": "air-on-the-g-string",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "melody-in-chords",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Air",
+      "Orchestral Suite No. 3",
+      "BWV 1068",
+      "Air auf der G-Saite"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Toccata and Fugue in D minor",
+    "title": "Beginner",
+    "file": "ours/toccata-in-d-minor/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 45,
+    "high": 81,
+    "seconds": 58,
+    "song": "toccata-in-d-minor",
+    "rarity": "common",
+    "skills": [
+      "position-change",
+      "open-fifths",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "Toccata",
+      "BWV 565",
+      "Toccata und Fuge d-Moll"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Toccata and Fugue in D minor",
+    "title": "Easy",
+    "file": "ours/toccata-in-d-minor/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 81,
+    "seconds": 69,
+    "song": "toccata-in-d-minor",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Toccata",
+      "BWV 565",
+      "Toccata und Fuge d-Moll"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Toccata and Fugue in D minor",
+    "title": "Medium",
+    "file": "ours/toccata-in-d-minor/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 26,
+    "high": 86,
+    "seconds": 80,
+    "song": "toccata-in-d-minor",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "left-hand-melody",
+      "sixteenth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "Toccata",
+      "BWV 565",
+      "Toccata und Fuge d-Moll"
+    ]
+  },
+  {
+    "composer": "Johann Sebastian Bach",
+    "piece": "Toccata and Fugue in D minor",
+    "title": "Hard",
+    "file": "ours/toccata-in-d-minor/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 25,
+    "high": 93,
+    "seconds": 64,
+    "song": "toccata-in-d-minor",
+    "rarity": "legendary",
+    "skills": [
+      "arpeggios",
+      "octave-bass",
+      "stride"
+    ],
+    "collection": "film",
+    "aka": [
+      "Toccata",
+      "BWV 565",
+      "Toccata und Fuge d-Moll"
+    ]
+  },
+  {
+    "composer": "George Frideric Handel",
+    "piece": "Sarabande in D minor",
+    "title": "Beginner",
+    "file": "ours/handel-sarabande/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 77,
+    "seconds": 55,
+    "song": "handel-sarabande",
+    "rarity": "common",
+    "skills": [
+      "held-bass",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Sarabande",
+      "Saraband",
+      "HWV 437",
+      "Händel Sarabande"
+    ]
+  },
+  {
+    "composer": "George Frideric Handel",
+    "piece": "Sarabande in D minor",
+    "title": "Easy",
+    "file": "ours/handel-sarabande/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 77,
+    "seconds": 55,
+    "song": "handel-sarabande",
+    "rarity": "rare",
+    "skills": [
+      "waltz-bass",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Sarabande",
+      "Saraband",
+      "HWV 437",
+      "Händel Sarabande"
+    ]
+  },
+  {
+    "composer": "George Frideric Handel",
+    "piece": "Sarabande in D minor",
+    "title": "Medium",
+    "file": "ours/handel-sarabande/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 38,
+    "high": 77,
+    "seconds": 60,
+    "song": "handel-sarabande",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thirds-and-sixths",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Sarabande",
+      "Saraband",
+      "HWV 437",
+      "Händel Sarabande"
+    ]
+  },
+  {
+    "composer": "George Frideric Handel",
+    "piece": "Sarabande in D minor",
+    "title": "Hard",
+    "file": "ours/handel-sarabande/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 89,
+    "seconds": 63,
+    "song": "handel-sarabande",
+    "rarity": "legendary",
+    "skills": [
+      "melody-in-chords",
+      "octave-bass",
+      "arpeggios"
+    ],
+    "collection": "film",
+    "aka": [
+      "Sarabande",
+      "Saraband",
+      "HWV 437",
+      "Händel Sarabande"
+    ]
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",

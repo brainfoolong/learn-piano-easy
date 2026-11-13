@@ -1,0 +1,495 @@
+{
+  "song": "toccata-in-d-minor",
+  "title": "Toccata and Fugue in D minor",
+  "composer": "Johann Sebastian Bach",
+  "about": {
+    "en": "Bach's Toccata and Fugue in D minor was first published in 1833, during the revival of Bach's music. Felix Mendelssohn championed it and played it to great acclaim in 1840. Walt Disney's film Fantasia (1940) opens with it.",
+    "de": "Bachs Toccata und Fuge d-Moll erschien 1833 zum ersten Mal im Druck, als man Bachs Musik wiederentdeckte. Felix Mendelssohn setzte sich dafür ein und spielte sie 1840 mit großem Erfolg. Walt Disneys Film Fantasia (1940) beginnt mit ihr."
+  },
+  "funFact": {
+    "en": "The piece stayed almost unknown until its first print, more than eighty years after Bach died.",
+    "de": "Das Stück blieb fast unbekannt bis zu seinem ersten Druck, mehr als achtzig Jahre nach Bachs Tod."
+  },
+  "mythic": null,
+  "versions": {
+    "common": {
+      "file": "ours/toccata-in-d-minor/common.mid",
+      "skills": [
+        "position-change",
+        "open-fifths",
+        "held-bass"
+      ],
+      "fingers": {
+        "right": [5, 5, 4, 3, 2, 1, 2, 5, 3, 4, 1, 2, 4, 5, 3, 2, 1, 2],
+        "left": [5, 1, 4, 1, 5, 1, 5, 1, 1, 4, 1, 5, 3, 2, 1, 5, 2, 5, 2, 5, 2, 3, 1]
+      },
+      "start": {
+        "right": [null, null, null, null, 81],
+        "left": [57, null, null, 52, 50]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play bars 1 to 3 with the right hand alone, and let the song wait for each note.",
+            "de": "Spiel die Takte 1 bis 3 nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 3],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play bars 4 to 6 with the right hand alone. The same idea comes back an octave lower.",
+            "de": "Spiel die Takte 4 bis 6 nur mit der rechten Hand. Dieselbe Idee kommt eine Oktave tiefer zurück."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [4, 6],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Now the left hand alone. In bars 7 and 8 it climbs a dark chord, one note at a time.",
+            "de": "Jetzt die linke Hand allein. In Takt 7 und 8 steigt sie einen dunklen Akkord hinauf, Ton für Ton."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Put both hands together, slowly.",
+            "de": "Nimm beide Hände zusammen, langsam."
+          },
+          "hands": "both",
+          "speed": 0.7,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at full speed, loud and bold.",
+            "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo, laut und mutig."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "sound",
+          "text": {
+            "en": "Play the first A loud and hold it for the whole bar, like a great organ.",
+            "de": "Spiel das erste A laut und halt es den ganzen Takt, wie eine große Orgel."
+          }
+        },
+        {
+          "fromBar": 2,
+          "toBar": 2,
+          "kind": "fingering",
+          "text": {
+            "en": "After the rest, finger 5 moves down to G. Then each finger plays one step lower.",
+            "de": "Nach der Pause rückt Finger 5 hinab zum G. Dann spielt jeder Finger einen Schritt tiefer."
+          }
+        },
+        {
+          "fromBar": 7,
+          "toBar": 8,
+          "kind": "sound",
+          "text": {
+            "en": "This chord sounds dark and tense. Let it hang in the air, then enjoy the bright chord in bar 9.",
+            "de": "Dieser Akkord klingt dunkel und gespannt. Lass ihn in der Luft hängen, dann genieß den hellen Akkord in Takt 9."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 4,
+          "text": {
+            "en": "Use the rest in bar 3 to move the hand down an octave. Finger 5 lands on A.",
+            "de": "Nutz die Pause in Takt 3, um die Hand eine Oktave tiefer zu setzen. Finger 5 landet auf dem A."
+          }
+        },
+        {
+          "bar": 11,
+          "text": {
+            "en": "After the short rest, the left hand jumps down to A with finger 5. The right thumb takes C sharp.",
+            "de": "Nach der kurzen Pause springt die linke Hand mit Finger 5 hinab zum A. Der rechte Daumen nimmt das Cis."
+          }
+        },
+        {
+          "bar": 2,
+          "text": {
+            "en": "Use the rest to move finger 5 from A down to G. The run then falls finger by finger.",
+            "de": "Nutz die Pause, um Finger 5 vom A hinab zum G zu setzen. Dann fällt der Lauf Finger für Finger."
+          }
+        }
+      ]
+    },
+    "rare": {
+      "file": "ours/toccata-in-d-minor/rare.mid",
+      "skills": [
+        "triads",
+        "pedal"
+      ],
+      "fingers": {
+        "right": [5, 5, 4, 3, 2, 1, 2, 5, 3, 4, 1, 2, 1, 2, 3, 5, 1, 3, 5, 4, 3, 1, 2, 2, 1, 2, 4, 3, 1, 1, 5, 3, 5, 4, 2, 1, 2, 3, 5, 2, 4, 1, 5],
+        "left": [5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 2, 1, 4, 1, 5, 3, 2, 1, 5, 3, 2, 4, 1, 4, 2, 1, 5, 3, 1, 4, 2, 1, 4, 2, 1, 4, 2, 1, 5, 3, 1, 5, 3, 1, 4, 2, 1, 5, 3, 1, 5, 1]
+      },
+      "start": {
+        "right": [null, null, null, null, 81],
+        "left": [57, 55, 53, 52, 50]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the right hand alone on the first six bars, and let the song wait for each note.",
+            "de": "Spiel die ersten sechs Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten."
+          },
+          "hands": "right",
+          "speed": 0.6,
+          "loop": [1, 6],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone. Keep each triad in one hand shape and move it only one step.",
+            "de": "Spiel die linke Hand allein. Halt jeden Dreiklang in einer Griffform, und bewege ihn nur einen Schritt."
+          },
+          "hands": "left",
+          "speed": 0.6,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on bars 7 to 9, with the pedal down for each whole bar.",
+            "de": "Spiel die Takte 7 bis 9 mit beiden Händen, mit dem Pedal unten für jeden ganzen Takt."
+          },
+          "hands": "both",
+          "speed": 0.6,
+          "loop": [7, 9],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands, a little slower than written.",
+            "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert."
+          },
+          "hands": "both",
+          "speed": 0.8,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, loud and proud.",
+            "de": "Jetzt spiel es im vollen Tempo, laut und stolz."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 3,
+          "kind": "sound",
+          "text": {
+            "en": "Play the long A strongly, then let the quick run tumble down to D.",
+            "de": "Spiel das lange A kräftig, dann lass den schnellen Lauf hinab zum D purzeln."
+          }
+        },
+        {
+          "fromBar": 7,
+          "toBar": 8,
+          "kind": "trick",
+          "text": {
+            "en": "The pedal keeps every note of the climb ringing, so the chord grows one note at a time.",
+            "de": "Das Pedal lässt jeden Ton des Aufstiegs klingen, so wächst der Akkord Ton für Ton."
+          }
+        },
+        {
+          "fromBar": 9,
+          "toBar": 9,
+          "kind": "sound",
+          "text": {
+            "en": "F sharp makes this chord bright. It is the answer to all the tension before it.",
+            "de": "Das Fis macht diesen Akkord hell. Es ist die Antwort auf all die Spannung davor."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 4,
+          "text": {
+            "en": "Use the rest in bar 3 to move the right hand down an octave. Finger 5 lands on A.",
+            "de": "Nutz die Pause in Takt 3, um die rechte Hand eine Oktave tiefer zu setzen. Finger 5 landet auf dem A."
+          }
+        },
+        {
+          "bar": 16,
+          "text": {
+            "en": "Use the short rest in bar 15 to jump the left hand down to the low D and A.",
+            "de": "Nutz die kurze Pause in Takt 15, um mit der linken Hand hinab zum tiefen D und A zu springen."
+          }
+        },
+        {
+          "bar": 2,
+          "text": {
+            "en": "Use the rest to move finger 5 from A down to G. Then the run falls finger by finger.",
+            "de": "Nutz die Pause, um Finger 5 vom A hinab zum G zu setzen. Dann fällt der Lauf Finger für Finger."
+          }
+        }
+      ]
+    },
+    "epic": {
+      "file": "ours/toccata-in-d-minor/epic.mid",
+      "skills": [
+        "alberti-bass",
+        "left-hand-melody",
+        "sixteenth-notes"
+      ],
+      "fingers": {
+        "right": [5, 4, 5, 5, 4, 3, 2, 1, 2, 5, 4, 5, 3, 4, 1, 2, 1, 2, 3, 5, 1, 2, 5, 1, 2, 5, 2, 4, 1, 2, 3, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 1, 3, 5, 5, 4, 3, 2, 1, 2, 1, 2, 3, 2, 1, 2, 3, 1, 3, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5, 1, 2, 5],
+        "left": [5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 2, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 4, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 1, 3, 1, 5, 3, 2, 1, 5, 2, 1, 5, 2, 1, 1, 1, 2, 3, 4, 5, 4, 5, 2, 1, 5, 2, 1, 5, 2, 1, 2, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [null, null, null, 79, 81],
+        "left": [57, null, 53, null, 50]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
+            "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [1, 4],
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Play the right hand alone on the first six bars. Flick a quick A, G, A at the start of each long A.",
+            "de": "Spiel die ersten sechs Takte nur mit der rechten Hand. Schnipp ein schnelles A, G, A an den Anfang jedes langen A."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 6],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone in bar 10, where the bass echoes the opening run.",
+            "de": "Spiel die linke Hand allein in Takt 10. Dort wiederholt der Bass den Lauf vom Anfang."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": [10, 10],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, with the pedal, as dramatic as you dare.",
+            "de": "Jetzt spiel es im vollen Tempo, mit Pedal, so dramatisch, wie du dich traust."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 1,
+          "kind": "trick",
+          "text": {
+            "en": "The quick A, G, A is a mordent. Play it as one tiny shake, then hold the A.",
+            "de": "Das schnelle A, G, A ist ein Mordent. Spiel es wie ein winziges Zittern, dann halt das A."
+          }
+        },
+        {
+          "fromBar": 13,
+          "toBar": 13,
+          "kind": "fingering",
+          "text": {
+            "en": "In this run finger 2 crosses over the thumb, and the thumb comes back. Keep the wrist level.",
+            "de": "In diesem Lauf kreuzt Finger 2 über den Daumen, und der Daumen kommt zurück. Halt das Handgelenk ruhig."
+          }
+        },
+        {
+          "fromBar": 14,
+          "toBar": 15,
+          "kind": "sound",
+          "text": {
+            "en": "Change the pedal halfway through each bar, right as the new chord sounds.",
+            "de": "Wechsle das Pedal in der Mitte jedes Takts, genau wenn der neue Akkord klingt."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 4,
+          "text": {
+            "en": "Use the rest in bar 3 to move the right hand down an octave. Then flick A, G, A and hold the A.",
+            "de": "Nutz die Pause in Takt 3, um die rechte Hand eine Oktave tiefer zu setzen. Dann schnipp A, G, A und halt das A."
+          }
+        },
+        {
+          "bar": 11,
+          "text": {
+            "en": "The run climbs A, C sharp, E and G with fingers 1, 2, 3 and 5, then turns back down.",
+            "de": "Der Lauf steigt A, Cis, E und G hinauf, mit Finger 1, 2, 3 und 5, dann kehrt er um."
+          }
+        },
+        {
+          "bar": 14,
+          "text": {
+            "en": "Use the short rest to jump the left hand down from D to the low A. Change the pedal there too.",
+            "de": "Nutz die kurze Pause, um mit der linken Hand vom D hinab zum tiefen A zu springen. Wechsle dort auch das Pedal."
+          }
+        }
+      ]
+    },
+    "legendary": {
+      "file": "ours/toccata-in-d-minor/legendary.mid",
+      "skills": [
+        "arpeggios",
+        "octave-bass",
+        "stride"
+      ],
+      "fingers": {
+        "right": [5, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 5, 4, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 3, 5, 1, 2, 3, 4, 1, 2, 3, 5, 3, 2, 1, 4, 3, 2, 1, 5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 1, 2, 3, 5, 5, 4, 3, 2, 1, 2, 1, 2, 3, 2, 1, 2, 2, 5, 1, 2, 3, 5, 1, 2, 3, 5, 1, 2, 4, 5, 1, 2, 4, 5, 1, 2, 3, 5],
+        "left": [5, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 2, 1, 3, 1, 5, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 2, 1, 3, 2, 1, 2, 3, 1, 2, 5, 2, 1, 3, 1, 5, 1, 5, 1, 2, 1, 5, 1, 5, 4, 3, 2, 1, 3, 2, 1, 5, 1, 5, 2, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 3, 1, 5, 1, 5, 1, 5, 1, 5, 1, 5, 1]
+      },
+      "start": {
+        "right": [81, null, null, 91, 93],
+        "left": [50, 45, 53, null, 38]
+      },
+      "practice": [
+        {
+          "text": {
+            "en": "Play the right hand's octaves alone on the first six bars. Keep the hand open, thumb and little finger ready.",
+            "de": "Spiel die Oktaven der rechten Hand allein in den ersten sechs Takten. Halt die Hand offen, mit Daumen und kleinem Finger bereit."
+          },
+          "hands": "right",
+          "speed": 0.5,
+          "loop": [1, 6],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the left hand alone. Each arpeggio spans two octaves, and the stride bass jumps between bass and chord.",
+            "de": "Spiel die linke Hand allein. Jedes Arpeggio umspannt zwei Oktaven, und der Stride-Bass springt zwischen Bass und Akkord."
+          },
+          "hands": "left",
+          "speed": 0.5,
+          "loop": null,
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Join the hands on bars 7 to 9, where the hands climb the dark chord in turns.",
+            "de": "Spiel die Takte 7 bis 9 mit beiden Händen. Dort steigen die Hände abwechselnd den dunklen Akkord hinauf."
+          },
+          "hands": "both",
+          "speed": 0.5,
+          "loop": [7, 9],
+          "wait": true
+        },
+        {
+          "text": {
+            "en": "Play the whole song with both hands at three-quarter speed.",
+            "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo."
+          },
+          "hands": "both",
+          "speed": 0.75,
+          "loop": null,
+          "wait": false
+        },
+        {
+          "text": {
+            "en": "Now play it at full speed, and let the last chord roar.",
+            "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord donnern."
+          },
+          "hands": "both",
+          "speed": 1,
+          "loop": null,
+          "wait": false
+        }
+      ],
+      "tips": [
+        {
+          "fromBar": 1,
+          "toBar": 3,
+          "kind": "sound",
+          "text": {
+            "en": "Octaves make the tune sound like an organ. Let the top note ring a little louder.",
+            "de": "Die Oktaven lassen die Melodie wie eine Orgel klingen. Lass den oberen Ton etwas lauter klingen."
+          }
+        },
+        {
+          "fromBar": 7,
+          "toBar": 7,
+          "kind": "trick",
+          "text": {
+            "en": "The left hand starts the climb and the right hand finishes it. It should sound like one long run.",
+            "de": "Die linke Hand beginnt den Aufstieg, und die rechte Hand beendet ihn. Es soll wie ein einziger langer Lauf klingen."
+          }
+        },
+        {
+          "fromBar": 10,
+          "toBar": 10,
+          "kind": "sound",
+          "text": {
+            "en": "The bass echoes the opening run in octaves. Make it rumble like the lowest organ pipes.",
+            "de": "Der Bass wiederholt den Lauf vom Anfang in Oktaven. Lass ihn grollen wie die tiefsten Orgelpfeifen."
+          }
+        }
+      ],
+      "tricky": [
+        {
+          "bar": 12,
+          "text": {
+            "en": "Keep the hand open over the octave, with finger 5 on the high D and the thumb on the low D.",
+            "de": "Halt die Hand offen über der Oktave, mit Finger 5 auf dem hohen D und dem Daumen auf dem tiefen D."
+          }
+        },
+        {
+          "bar": 13,
+          "text": {
+            "en": "Finger 2 crosses over the thumb to C sharp, and the thumb comes back to D.",
+            "de": "Finger 2 kreuzt über den Daumen zum Cis, und der Daumen kommt zurück zum D."
+          }
+        },
+        {
+          "bar": 11,
+          "text": {
+            "en": "The arpeggio climbs two octaves. The thumb passes under on A, and finger 4 crosses back over.",
+            "de": "Das Arpeggio steigt zwei Oktaven hinauf. Der Daumen geht auf dem A unter, und Finger 4 kreuzt zurück darüber."
+          }
+        }
+      ]
+    }
+  }
+}

@@ -74,6 +74,12 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   modules lands, since an unchecked `patterns[chord]` passed to a function is refused.
 - **Hymnary.org refuses a plain `curl`.** A browser user agent to get past it is denied as bot-check
   circumvention. Take a tune's notes from Wikipedia's `<score>` blocks for `tools/our-songs/`.
+- **Wikimedia answers a burst of calls with an HTML error page.** A dozen quick API or upload requests
+  trip its rate limit, and the saved "PDF" is then that page. Ask for many titles in one API call, and
+  check each download with `file` before rendering it under `.agent-tmp/`.
+- **A stacked chord on a score page is easy to misread by a third.** The heads of a chord touch, so the
+  eye cannot tell lines from spaces. Measure the staff lines' pixel rows and place each head against
+  them before you name its pitch, as the tune of `tools/our-songs/handel-sarabande.ts` was read.
 - **The Read tool cannot open a scanned score's PDF on this machine.** It needs `pdftoppm`, which is
   not installed. Render the page with Ghostscript (`gswin64c -sDEVICE=pnggray -r150 -dFirstPage=<n>`)
   under `.agent-tmp/`, crop it with `magick`, and read the PNG.

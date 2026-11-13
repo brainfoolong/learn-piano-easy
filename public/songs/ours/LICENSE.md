@@ -267,3 +267,28 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `eine-kleine-nachtmusik/epic.mid` | Eine kleine Nachtmusik, Medium | Wolfgang Amadeus Mozart | MIT |
 | `eine-kleine-nachtmusik/legendary.mid` | Eine kleine Nachtmusik, Hard | Wolfgang Amadeus Mozart | MIT |
 | `eine-kleine-nachtmusik/guide.json` | Eine kleine Nachtmusik, the guide | | MIT |
+| `lacrimosa/common.mid` | Lacrimosa, Beginner | Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr | MIT |
+| `lacrimosa/rare.mid` | Lacrimosa, Easy | Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr | MIT |
+| `lacrimosa/epic.mid` | Lacrimosa, Medium | Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr | MIT |
+| `lacrimosa/legendary.mid` | Lacrimosa, Hard | Wolfgang Amadeus Mozart, completed by Franz Xaver Süssmayr | MIT |
+| `lacrimosa/guide.json` | Lacrimosa, the guide | | MIT |
+| `mozart-21-andante/common.mid` | Piano Concerto No. 21: Andante, Beginner | Wolfgang Amadeus Mozart | MIT |
+| `mozart-21-andante/rare.mid` | Piano Concerto No. 21: Andante, Easy | Wolfgang Amadeus Mozart | MIT |
+| `mozart-21-andante/epic.mid` | Piano Concerto No. 21: Andante, Medium | Wolfgang Amadeus Mozart | MIT |
+| `mozart-21-andante/legendary.mid` | Piano Concerto No. 21: Andante, Hard | Wolfgang Amadeus Mozart | MIT |
+| `mozart-21-andante/guide.json` | Piano Concerto No. 21: Andante, the guide | | MIT |
+| `air-on-the-g-string/common.mid` | Air on the G String, Beginner | Johann Sebastian Bach | MIT |
+| `air-on-the-g-string/rare.mid` | Air on the G String, Easy | Johann Sebastian Bach | MIT |
+| `air-on-the-g-string/epic.mid` | Air on the G String, Medium | Johann Sebastian Bach | MIT |
+| `air-on-the-g-string/legendary.mid` | Air on the G String, Hard | Johann Sebastian Bach | MIT |
+| `air-on-the-g-string/guide.json` | Air on the G String, the guide | | MIT |
+| `toccata-in-d-minor/common.mid` | Toccata and Fugue in D minor, Beginner | Johann Sebastian Bach | MIT |
+| `toccata-in-d-minor/rare.mid` | Toccata and Fugue in D minor, Easy | Johann Sebastian Bach | MIT |
+| `toccata-in-d-minor/epic.mid` | Toccata and Fugue in D minor, Medium | Johann Sebastian Bach | MIT |
+| `toccata-in-d-minor/legendary.mid` | Toccata and Fugue in D minor, Hard | Johann Sebastian Bach | MIT |
+| `toccata-in-d-minor/guide.json` | Toccata and Fugue in D minor, the guide | | MIT |
+| `handel-sarabande/common.mid` | Sarabande in D minor, Beginner | George Frideric Handel | MIT |
+| `handel-sarabande/rare.mid` | Sarabande in D minor, Easy | George Frideric Handel | MIT |
+| `handel-sarabande/epic.mid` | Sarabande in D minor, Medium | George Frideric Handel | MIT |
+| `handel-sarabande/legendary.mid` | Sarabande in D minor, Hard | George Frideric Handel | MIT |
+| `handel-sarabande/guide.json` | Sarabande in D minor, the guide | | MIT |

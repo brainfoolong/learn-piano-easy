@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "Five film pieces: Lacrimosa to Sarabande"
-    status: open
+    status: done
   - id: 5
     title: "Five film pieces: William Tell to Ave Maria"
     status: open
@@ -113,6 +113,20 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
 - ***Hungarian Dance No. 5* is read from a Commons scan.** No wiki prints it and Mutopia holds no
   Hungarian Dance. Commons holds Augener's piano solo edition, Moszkowski's arrangement, as a PDF.
   Ghostscript renders its page 21, and the tune is the first four bars' melody alone.
+- **The sources of stage 4.** Commons' scan of a German vocal score of the Requiem gives the
+  *Lacrimosa*'s soprano, on its page 35. Commons' four-hands arrangement of K. 467 gives the Andante's
+  melody. Mutopia's Bach-Gesellschaft edition gives the Air's first violin. Wikipedia's `<score>` gives
+  the Toccata's opening, and Mutopia's edition confirms it. Commons' CC0 typeset gives the Sarabande.
+- **A work whose first print no allowed source dates takes its earliest dated print read.** K. 467
+  takes Cramer's transcription, printed by Richault in 1855. The Air takes 1871, the year of
+  Wilhelmj's arrangement, which gave it its name.
+- **The Toccata's tune carries no ornament.** Wikipedia prints a lower mordent on each long A, and the
+  Bach-Gesellschaft edition prints an upper one. Its fermata rests are cut to four units each. Medium
+  and Hard play Wikipedia's lower mordent on the beat.
+- ***Amadeus* is named only as the story of the Requiem.** No article read says the film plays the
+  *Lacrimosa*, so its about text says the film tells how Mozart wrote the Requiem.
+- **The Air keeps all four of the print's first bars,** since Beginner and Easy pass the meter with them.
+  Beginner and Easy play it in C major, Wilhelmj's key, and Medium and Hard in Bach's D major.
 - **A tune the print gives only four bars of stays four bars.** The *Gymnopédie*, *Hungarian Dance
   No. 5* and the serenade play their phrase, then bars of our own over the print's chords. No later
   passage is quoted from memory.
@@ -247,12 +261,16 @@ in the first.
 
 **Split:** five writing subagents, one module each.
 
-- [ ] *Lacrimosa*. `tools/our-songs/lacrimosa.ts:1`
-- [ ] Piano Concerto No. 21, Andante. `tools/our-songs/mozart-21-andante.ts:1`
-- [ ] *Air on the G String*. `tools/our-songs/air-on-the-g-string.ts:1`
-- [ ] Toccata and Fugue in D minor. `tools/our-songs/toccata-in-d-minor.ts:1`
-- [ ] Sarabande in D minor. `tools/our-songs/handel-sarabande.ts:1`
-- [ ] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [x] *Lacrimosa*. `tools/our-songs/lacrimosa.ts:1`
+- [x] Piano Concerto No. 21, Andante. `tools/our-songs/mozart-21-andante.ts:1`
+- [x] *Air on the G String*. `tools/our-songs/air-on-the-g-string.ts:1`
+- [x] Toccata and Fugue in D minor. `tools/our-songs/toccata-in-d-minor.ts:1`
+- [x] Sarabande in D minor. `tools/our-songs/handel-sarabande.ts:1`
+- [x] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+  - [x] Each tune is compared note for note with its printed score.
+  - [x] The five modules join `ourSongs`, and the writer accepts them.
+  - [x] `bun x tsc` and the build are green.
+  - [x] The catalog count test reads 613.
 
 ### 5. Five film pieces: William Tell to Ave Maria
 
@@ -330,30 +348,30 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 to 3 are done. Ten film pieces ship in four versions, and the catalog holds 593 rows.
-Stage 3 added the *Moonlight Sonata*, the Allegretto, *Gymnopédie No. 1*, *Hungarian Dance No. 5* and
-*Eine kleine Nachtmusik*. Each tune was compared note for note with the score the standing decisions
-name. The meter now lets Medium move a tune of four sharps or flats, so the *Moonlight Sonata*'s tune
-keeps C-sharp minor. `tsc` and the build are green. The catalog count test,
-`every_film_song_is_in_the_collection` and `every_guide_is_complete` passed once by name.
+Stages 1 to 4 are done. Fifteen film pieces ship in four versions, and the catalog holds 613 rows.
+Stage 4 added the *Lacrimosa*, the Andante of K. 467, the *Air on the G String*, the Toccata and
+Handel's Sarabande. Each tune was compared note for note with the score the standing decisions name.
+Every about text and fun fact was given to its writer from an article read. `tsc` and the build are
+green. The catalog count test, `every_film_song_is_in_the_collection` and `every_guide_is_complete`
+passed once.
 
 ### Next
 
-**Stage 4: five film pieces, *Lacrimosa* to *Sarabande*.** Follow the stage's `**Split:**` line, and
-work in a worktree under `.agent-tmp/`.
+**Stage 5: five film pieces, *William Tell* to *Ave Maria*.** Follow the stage's `**Split:**` line,
+and work in a worktree under `.agent-tmp/`.
 
-- [ ] Read each score on Mutopia or Wikipedia, and confirm its years. `tools/our-songs/gymnopedie-1.ts:1`
-- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/hungarian-dance-5.ts:1`
-- [ ] Five writing subagents, one module each. `tools/our-songs/fur-elise.ts:1`
-- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:221`
+- [ ] Read each score on Wikipedia, Mutopia or Commons, and confirm its years. `tools/our-songs/lacrimosa.ts:1`
+- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/toccata-in-d-minor.ts:1`
+- [ ] Five writing subagents, one module each, from a shared brief file. `tools/our-songs/fur-elise.ts:1`
+- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:279`
 
 Mutopia's search is `cgibin/make-table.cgi?searchingfor=<word>`, and a composer's list is
-`make-table.cgi?Composer=<id>`, such as `MozartWA` or `BachJS`. Each brief gives the tune as notation
-text with its hook bars, the print's chords, and the limit of two hand moves in eight bars. Tell each
-writer that a tune with notes shorter than a quarter is written in longer lengths, as
-`tools/our-songs/moonlight-sonata.ts` does. Check every fun fact a writer adds against the article.
+`make-table.cgi?Composer=<id>&startat=<n>`, ten rows a page. Commons' search API with `srnamespace=6`
+finds scans, and Ghostscript renders a page. Write one brief file under `.agent-tmp/` for what the
+writers share, and give each prompt its tune, chords, about text and fun fact. Pass each writer the
+texts word for word, so no fact comes from memory.
 
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 593 to 613. The e2e test
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 613 to 633. The e2e test
 `the_library_lists_the_film_songs` reads card titles, so it may need a scroll once the film group
 outgrows one view.
 
