@@ -16,12 +16,19 @@
  * - **A press takes its finger over its key, strikes, follows the key's dip, holds and lifts.** The
  *   strike is shorter for a louder note. A finger never leaves a key it holds for its next note.
  * - **A free finger hovers `HOVER` over the key it would play from the current anchor.**
+ * - **A stretch keeps the anchor.** The thumb and the little finger each reach `STRETCH` white keys
+ *   outwards past their home, as the little finger reaches A from the C position.
+ * - **A crossing is read from the fingering.** The thumb playing a key up to `CROSS_SPAN` beyond the
+ *   note before is a thumb-under. It travels low and back under the palm, and the hand turns a little
+ *   towards it. Any other finger playing up to `CROSS_SPAN` back past the thumb's note is a finger-over,
+ *   which arcs high over the thumb. A crossing starts its travel earlier than a plain press.
+ * - **A chord's notes share their time,** so their fingers strike together. A chord that set the anchor
+ *   never moves it again, so a finger the anchor cannot reach stretches to its key.
  *
  * Bounds: `poseAt` looks at each finger's notes by binary search, so a frame's cost grows with the log
  * of the phrase's length.
  *
- * Gaps: crossings, stretches and chords belong to `hand-motion` stage 2, and touch and the two hands'
- * spacing to its stage 3.
+ * Gaps: touch and the two hands' spacing belong to `hand-motion` stage 3.
  */
 import { Euler, Quaternion, Vector3 } from "three";
 
@@ -75,8 +82,19 @@ export const HOVER = 0.35;
 export const CONTACT = 0.02;
 /** How far a key's position may lie from a finger's home, in white keys, for the finger to reach it. */
 const REACH = 0.75;
-/** How long a finger takes to go over its key before it strikes. */
+/** How far the thumb and the little finger reach outwards past their home, in white keys. */
+const STRETCH = 1;
+/** How far past the note before a crossing finger may play, in white keys. A wider gap is a leap. */
+const CROSS_SPAN = 2;
+/** How far a thumb passing under drops below its hover, and how far back towards the palm it tucks. */
+export const UNDER = { drop: 0.2, tuck: 0.8 } as const;
+/** How high a finger crossing over the thumb rises above its hover. */
+export const OVER_LIFT = 1;
+/** How far the hand turns towards a thumb passing under it, in radians. */
+const CROSS_TURN = 0.15;
+/** How long a finger takes to go over its key before it strikes, and a crossing finger to travel. */
 const PREPARE = 0.2;
+const CROSS_PREPARE = 0.35;
 /** The strike's time at velocity 0 and how much a full velocity takes off it. */
 const STRIKE_SLOW = 0.12;
 const STRIKE_GAIN = 0.07;
@@ -134,6 +152,8 @@ interface Press {
   contact: Vector3;
   /** How far the key dips at the pad. */
   dip: number;
+  /** The crossing the finger travels on its way over its key, if any. */
+  cross: "under" | "over" | undefined;
 }
 
 /** An anchor and the move that lands on it. */
@@ -179,12 +199,30 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
   };
   const home = (anchor: number, digit: number) => anchor + side * digit;
 
+  /** Whether digit `d` reaches a key `offset` white keys past its home, counted the hand's way. */
+  const reaches = (d: number, offset: number) =>
+    Math.abs(offset) <= REACH || (d === 4 && offset > 0 && offset <= STRETCH) || (d === 0 && offset < 0 && offset >= -STRETCH);
+
   const anchors: Anchor[] = [];
+  /** The time of the note that set the last anchor, which a chord on that time never moves again. */
+  let anchoredAt = -Infinity;
   const presses: Press[][] = DIGITS.map(() => []);
+  /** The last press, and the last one struck before the note at hand, which a chord's notes share. */
   let last: Press | undefined;
+  let earlier: Press | undefined;
   for (const note of notes) {
+    if (last && last.note.at < note.at) earlier = last;
     const d = note.finger - 1;
     const digit = DIGITS[d]!;
+    const at = position(note.pitch);
+    // How far past the note before this one lies, counted the hand's way, and the crossing that makes.
+    const past = earlier ? side * (at - position(earlier.note.pitch)) : 0;
+    const cross =
+      d === 0 && earlier && earlier.digit !== "thumb" && past > 0 && past <= CROSS_SPAN
+        ? "under"
+        : d > 0 && earlier?.digit === "thumb" && past < 0 && past >= -CROSS_SPAN
+          ? "over"
+          : undefined;
     const contact = contactPoint(layout, note.pitch, digit);
     const strike = strikeSeconds(note.velocity);
     const before = presses[d]!.at(-1);
@@ -198,23 +236,26 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
     const press: Press = {
       note,
       digit,
-      start: Math.max(down - PREPARE, before?.up ?? -Infinity),
+      start: Math.max(down - (cross ? CROSS_PREPARE : PREPARE), before?.up ?? -Infinity),
       down,
       up: note.at + note.seconds,
       free: note.at + note.seconds + LIFT,
       gone: note.at + note.seconds + LIFT + RETURN,
       contact,
       dip: dipAt(contact.z, layout.key(note.pitch)!.black),
+      cross,
     };
     presses[d]!.push(press);
 
-    const at = position(note.pitch);
     const current = anchors.at(-1);
-    if (!current) anchors.push({ at: Math.round(at) - side * d, leave: -Infinity, arrive: -Infinity });
-    else if (Math.abs(at - home(current.at, d)) > REACH) {
+    if (!current) {
+      anchors.push({ at: Math.round(at) - side * d, leave: -Infinity, arrive: -Infinity });
+      anchoredAt = note.at;
+    } else if (anchoredAt < note.at && !reaches(d, side * (at - home(current.at, d)))) {
       // The move waits for the note before to sound, and for its release where time allows.
-      const leave = Math.max(last!.note.at, current.arrive, Math.min(last!.up, note.at - MOVE_MIN));
+      const leave = Math.max(earlier!.note.at, current.arrive, Math.min(earlier!.up, note.at - MOVE_MIN));
       anchors.push({ at: Math.round(at) - side * d, leave, arrive: note.at });
+      anchoredAt = note.at;
     }
     last = press;
   }
@@ -228,7 +269,13 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
   };
 
   const middle = WHITE_KEY_LENGTH - INSET.middle;
-  const turn = new Quaternion().setFromEuler(new Euler(0, 0, -side * REST.roll));
+  /** The hand's turn at `t`: its roll, and a turn towards a thumb passing under that peaks halfway. */
+  const turnAt = (t: number): Quaternion => {
+    const thumbs = presses[0]!;
+    const p = thumbs[lastIndex(thumbs, (q) => q.start <= t)];
+    const u = p?.cross === "under" && t < p.note.at ? (t - p.start) / (p.note.at - p.start) : 0;
+    return new Quaternion().setFromEuler(new Euler(0, -side * CROSS_TURN * Math.sin(Math.PI * u), -side * REST.roll, "YXZ"));
+  };
 
   return {
     hand,
@@ -248,7 +295,7 @@ function planHand(hand: Hand, notes: readonly PhraseNote[], layout: KeyLayout): 
       return {
         hand,
         wrist: new Vector3(home(anchor, 2) + 0.5 - half, REST.lift, middle + REST.back),
-        turn: turn.clone(),
+        turn: turnAt(t),
         digits,
         down: down.sort((a, b) => a - b),
       };
@@ -261,9 +308,14 @@ function pressPoint(list: readonly Press[], i: number, t: number, home: () => Ve
   const p = list[i]!;
   const over = p.contact.clone().setY(p.contact.y + HOVER);
   if (t < p.down) {
-    // The finger comes over its key from wherever it was.
+    // The finger comes over its key from wherever it was, low under the palm or high over the thumb if it crosses.
     const from = i > 0 ? pressPoint(list, i - 1, t, home) : home();
-    return from.lerp(over, ease((t - p.start) / (p.down - p.start)));
+    const u = ease((t - p.start) / (p.down - p.start));
+    const bow = Math.sin(Math.PI * u);
+    const point = from.lerp(over, u);
+    if (p.cross === "under") return point.set(point.x, point.y - UNDER.drop * bow, point.z + UNDER.tuck * bow);
+    if (p.cross === "over") return point.setY(point.y + OVER_LIFT * bow);
+    return point;
   }
   if (t < p.note.at) {
     // The down-stroke speeds up into the key.

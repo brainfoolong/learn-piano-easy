@@ -1,10 +1,20 @@
-import type { Vector3 } from "three";
+import { Vector3 } from "three";
 
 import type { Finger } from "../../theory/fingering";
 import { expect, test } from "../../testing";
 import { layoutKeys } from "../key-layout";
 import { BLACK_KEY_LENGTH, BLACK_KEY_TOP, WHITE_KEY_LENGTH } from "../piano-geometry";
-import { BLACK_INSET, contactPoint, HOVER, type HandPose, INSET, type PhraseNote, planHands } from "./hand-plan";
+import {
+  BLACK_INSET,
+  contactPoint,
+  HOVER,
+  type HandPose,
+  INSET,
+  OVER_LIFT,
+  type PhraseNote,
+  planHands,
+  UNDER,
+} from "./hand-plan";
 
 const LAYOUT = layoutKeys({ first: 48, last: 84 });
 
@@ -117,4 +127,126 @@ test("a_seek_gives_the_same_pose_as_playing", () => {
     }
   }
   expect(jump).toBeLessThan(0.5);
+});
+
+/** Where the fingertips point once `pose`'s turn is applied, as a unit vector on the keys' plane. */
+const pointing = (pose: HandPose) => new Vector3(0, 0, -1).applyQuaternion(pose.turn);
+
+test("the_thumb_passes_under_the_palm", () => {
+  // C, D and E under the first three fingers, then the thumb passes under to F.
+  const notes: [number, Finger][] = [
+    [60, 1],
+    [62, 2],
+    [64, 3],
+    [65, 1],
+  ];
+  const plan = planHands(phrase(notes), LAYOUT);
+  const hover = contactPoint(LAYOUT, 65, "thumb").y + HOVER;
+  // Find the thumb's lowest point on its way, after the E strikes and before the thumb's down-stroke.
+  let lowest = { t: 0, y: Infinity };
+  for (let t = 1; t < 1.4; t += 0.005) {
+    const y = plan.poseAt(t).right!.digits.thumb!.y;
+    if (y < lowest.y) lowest = { t, y };
+  }
+  const under = plan.poseAt(lowest.t).right!;
+  expect(lowest.y).toBeLessThan(hover - UNDER.drop / 2);
+  expect(lowest.y).toBeGreaterThan(contactPoint(LAYOUT, 65, "thumb").y);
+  // It travels between C and F, tucked back towards the palm, while the middle finger holds E.
+  expect(under.digits.thumb!.x > keyX(60) && under.digits.thumb!.x < keyX(65)).toBe(true);
+  expect(under.digits.thumb!.z).toBeGreaterThan(contactPoint(LAYOUT, 65, "thumb").z + UNDER.tuck / 2);
+  expect(under.down).toEqual([64]);
+  // The hand turns towards the thumb on its way, and is straight again as the thumb strikes F.
+  expect(pointing(under).x).toBeGreaterThan(0.05);
+  expect(pointing(plan.poseAt(0.6).right!).x).toBeCloseTo(0, 6);
+  const strike = plan.poseAt(1.5).right!;
+  expect(near(strike.digits.thumb!, contactPoint(LAYOUT, 65, "thumb"))).toBe(true);
+  expect(pointing(strike).x).toBeCloseTo(0, 6);
+});
+
+test("a_finger_crosses_over_the_thumb", () => {
+  // Down from G to F with the thumb on F, then the middle finger crosses over to E.
+  const notes: [number, Finger][] = [
+    [67, 2],
+    [65, 1],
+    [64, 3],
+  ];
+  const plan = planHands(phrase(notes), LAYOUT);
+  const hover = contactPoint(LAYOUT, 64, "middle").y + HOVER;
+  let highest = { t: 0, y: -Infinity };
+  for (let t = 0.5; t < 1; t += 0.005) {
+    const y = plan.poseAt(t).right!.digits.middle!.y;
+    if (y > highest.y) highest = { t, y };
+  }
+  expect(highest.y).toBeGreaterThan(hover + OVER_LIFT / 2);
+  // The arc is over the thumb, which holds F meanwhile, and the hand does not turn.
+  const over = plan.poseAt(highest.t).right!;
+  expect(over.down).toEqual([65]);
+  expect(over.digits.middle!.y).toBeGreaterThan(over.digits.thumb!.y);
+  expect(pointing(over).x).toBeCloseTo(0, 6);
+  expect(near(plan.poseAt(1).right!.digits.middle!, contactPoint(LAYOUT, 64, "middle"))).toBe(true);
+  // A plain step from finger to finger keeps its straight path at hover height.
+  const plain = planHands(phrase([[60, 1], [62, 2]]), LAYOUT);
+  for (let t = 0.2; t < 0.4; t += 0.01) {
+    expect(plain.poseAt(t).right!.digits.index!.y).toBeLessThanOrEqual(contactPoint(LAYOUT, 62, "index").y + HOVER + 1e-9);
+  }
+});
+
+test("a_chord_lands_its_fingers_together", () => {
+  // A C major chord with the thumb, middle and little fingers, after a D with the index finger.
+  const chord: PhraseNote[] = [
+    { pitch: 62, at: 0, seconds: 0.4, finger: 2, hand: "right" },
+    ...([
+      [60, 1],
+      [64, 3],
+      [67, 5],
+    ] as const).map(([pitch, finger]) => ({ pitch, at: 0.5, seconds: 0.4, finger, hand: "right" as const })),
+  ];
+  const plan = planHands(chord, LAYOUT);
+  // On the way down all three pads stay level with each other, and they meet their keys at once.
+  for (const t of [0.3, 0.4, 0.45, 0.48]) {
+    const pose = plan.poseAt(t).right!;
+    expect(pose.digits.middle!.y).toBeCloseTo(pose.digits.little!.y, 6);
+    expect(pose.digits.thumb!.y).toBeGreaterThan(contactPoint(LAYOUT, 60, "thumb").y);
+  }
+  const struck = plan.poseAt(0.5).right!;
+  expect(near(struck.digits.thumb!, contactPoint(LAYOUT, 60, "thumb"))).toBe(true);
+  expect(near(struck.digits.middle!, contactPoint(LAYOUT, 64, "middle"))).toBe(true);
+  expect(near(struck.digits.little!, contactPoint(LAYOUT, 67, "little"))).toBe(true);
+  expect(struck.down).toEqual([60, 64, 67]);
+  // A broken chord rocks between thumb, little and middle finger, and the hand stays where it is.
+  const broken = planHands(
+    phrase([
+      [60, 1],
+      [67, 5],
+      [64, 3],
+      [67, 5],
+      [60, 1],
+      [67, 5],
+      [64, 3],
+      [67, 5],
+    ]),
+    LAYOUT,
+  );
+  for (let t = 0; t < broken.end; t += 0.05) expect(broken.poseAt(t).right!.wrist.x).toBeCloseTo(keyX(64), 6);
+});
+
+test("a_stretch_keeps_the_hand_in_place", () => {
+  // Twinkle's first bars in the C position: the little finger stretches from G up to A.
+  const notes: [number, Finger][] = [
+    [60, 1],
+    [60, 1],
+    [67, 5],
+    [67, 5],
+    [69, 5],
+    [69, 5],
+    [67, 5],
+  ];
+  const plan = planHands(phrase(notes), LAYOUT);
+  for (let t = 0; t < plan.end; t += 0.05) expect(plan.poseAt(t).right!.wrist.x).toBeCloseTo(keyX(64), 6);
+  expect(near(plan.poseAt(2).right!.digits.little!, contactPoint(LAYOUT, 69, "little"))).toBe(true);
+  // The thumb stretches one key down the same way, but two keys past the little finger move the hand.
+  const down = planHands(phrase([[62, 2], [59, 1]]), LAYOUT);
+  expect(down.poseAt(0.5).right!.wrist.x).toBeCloseTo(down.poseAt(0).right!.wrist.x, 6);
+  const far = planHands(phrase([[67, 5], [71, 5]]), LAYOUT);
+  expect(far.poseAt(0.5).right!.wrist.x).toBeGreaterThan(far.poseAt(0).right!.wrist.x + 1);
 });

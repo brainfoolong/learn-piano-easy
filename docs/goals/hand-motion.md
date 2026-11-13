@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: Crossings, stretches, position changes and chords
-    status: open
+    status: done
   - id: 3
     title: Touch and two hands
     status: open
@@ -81,6 +81,15 @@ it.
   finger before it is a thumb-under. The thumb then travels low under the palm, and the hand turns a
   little towards it. A finger playing beyond the thumb the other way is a finger-over: the finger
   arcs high over the thumb.
+- **A crossing spans at most two white keys from the note before.** A wider step is a leap, which
+  moves the hand without a crossing path. A crossing starts its travel 0.35 s before its down-stroke,
+  where a plain press takes 0.2 s. The hand's turn peaks halfway through the thumb's travel, and it is
+  straight again as the thumb strikes.
+- **Only the thumb and the little finger stretch,** each one white key outwards past its home. A
+  stretch keeps the anchor, and an inward step past the reach still moves the hand.
+- **A chord never moves the anchor twice.** Once a note at a time sets the anchor, the chord's other
+  notes stretch to their keys from it. A move and a crossing read the last note struck before the
+  chord.
 - **Touch is read from the phrase.** A note shorter than half its gap is staccato: the hand lifts from
   the wrist. Notes that overlap or touch are legato: each finger lifts as the next strikes. A gap of a
   beat or more after a note ends a phrase: the hand lifts a little, as a breath.
@@ -113,11 +122,11 @@ presses that follow the key's dip, hovering free fingers, and a seek that gives 
 leave the anchor in place, whole-hand position changes, and chords whose fingers land together.
 **Gate:** the `hand-plan` check passes.
 
-- [ ] The thumb-under path: low, under the palm, with the hand's turn. `src/render/hand/hand-plan.ts:1`
-- [ ] The finger-over path: a high arc over the thumb. `src/render/hand/hand-plan.ts:1`
-- [ ] A stretch reaches one key past the five without moving the anchor, as the little finger to A does in *Twinkle*. `src/render/hand/hand-plan.ts:1`
-- [ ] A chord's fingers strike together, and a broken chord's hand stays still while the fingers rock. `src/render/hand/hand-plan.ts:1`
-- [ ] Unit tests `the_thumb_passes_under_the_palm`, `a_finger_crosses_over_the_thumb`, `a_chord_lands_its_fingers_together` and `a_stretch_keeps_the_hand_in_place`. `src/render/hand/hand-plan.test.ts:1`
+- [x] The thumb-under path: low, under the palm, with the hand's turn. `src/render/hand/hand-plan.ts:1`
+- [x] The finger-over path: a high arc over the thumb. `src/render/hand/hand-plan.ts:1`
+- [x] A stretch reaches one key past the five without moving the anchor, as the little finger to A does in *Twinkle*. `src/render/hand/hand-plan.ts:1`
+- [x] A chord's fingers strike together, and a broken chord's hand stays still while the fingers rock. `src/render/hand/hand-plan.ts:1`
+- [x] Unit tests `the_thumb_passes_under_the_palm`, `a_finger_crosses_over_the_thumb`, `a_chord_lands_its_fingers_together` and `a_stretch_keeps_the_hand_in_place`. `src/render/hand/hand-plan.test.ts:1`
 
 ### 3. Touch and two hands
 
@@ -153,22 +162,27 @@ pause, slow down and seek, so every motion can be looked at.
 
 ### State
 
-Stage 1 is done. `planHands` in `src/render/hand/hand-plan.ts` plans each hand's anchors, presses and
-hovering fingers, and `applyPose` in `src/render/hand/hand-rig.ts` puts a pose on a rig. The lab's C
-position reads its contact arc and resting hand from the plan. `PRESS_DEPTH` moved to
-`src/render/piano-geometry.ts`, so the plan reads the key's dip without the piano. The `hand-plan`
-check passes. The lab does not play the plan yet; stage 4 does.
+Stages 1 and 2 are done. `planHands` in `src/render/hand/hand-plan.ts` plans each hand's anchors,
+presses and hovering fingers. Each press carries its crossing, read from the fingering. A thumb-under
+drops and tucks towards the palm, and the hand turns towards it. A finger-over arcs high. The thumb and
+the little finger stretch one key outwards without moving the hand. A chord's fingers strike together.
+The `hand-plan` and `hand-crossings` checks pass. The lab does not play the plan yet; stage 4 does.
 
 ### Next
 
-**Stage 2: crossings, stretches, position changes and chords.** Files: `src/render/hand/hand-plan.ts`
-and its test. Gate: the `hand-plan` check passes.
+**Stage 3: touch and two hands.** Files: `src/render/hand/hand-plan.ts` and its test. Gate: the
+`hand-crossings` check passes.
 
-- The reach test is `REACH` in `planHand` (`src/render/hand/hand-plan.ts:214`). A stretch widens it by
-  one white key for the outer fingers without a new anchor.
-- A crossing is read where a press's position passes the previous finger's on the wrong side. Its path
-  replaces the straight lerp in `pressPoint`'s first branch (`src/render/hand/hand-plan.ts:263`).
-- A chord's notes share `at`, so they already strike together. The test only has to show it.
+- Staccato lifts the wrist. Read it per note in `planHand`'s loop (`src/render/hand/hand-plan.ts:191`).
+  Add the lift to the wrist's height in `poseAt` (`src/render/hand/hand-plan.ts:297`).
+- A loud note strikes faster from higher. `strikeSeconds` (`src/render/hand/hand-plan.ts:112`) already
+  shortens the stroke. The height over the key is `HOVER` in `pressPoint`'s down-stroke branch
+  (`src/render/hand/hand-plan.ts:307`), so scale it there by velocity.
+- A phrase end is a gap of a beat or more. The phrase carries seconds only, so pick a gap in seconds,
+  record it under the standing decisions, and lift the wrist across it.
+- The left hand already mirrors through `side`. Keeping the hands apart needs both plans at once. Do it
+  in `planHands` (`src/render/hand/hand-plan.ts:150`), by shifting an anchor that comes within a key
+  of the other hand's nearest finger.
 
 Expected red: none.
 
