@@ -200,6 +200,7 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       "GitHub", "Matomo", "Chrome", "Edge", "Firefox", "Safari", "XP", "BPM", "FPS", "PDF", "USB", "kHz", "Hz", "dB", "ms", "KB", "MB",
       "combo", "Combo", "tempo", "Tempo", "legato", "staccato", "crescendo", "diminuendo", "forte", "piano", "Piano",
       "coda", "fermata", "Normal", "Volume", "Backup", "backup", "app", "player", "quiz", "Quiz", "OK",
+      "App", "Cursor", "Envelope", "Layout", "Menu", "Site", "Zoom", "Ctrl", "Alt", "Shift", "Meta", "Original", "Ragtime",
     ],
     marks: [
       { says: "A quote stands in “ ”, never in straight quotes or « »", mustNot: /["«»„]/ },
