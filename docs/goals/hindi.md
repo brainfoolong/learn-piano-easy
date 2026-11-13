@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "The song guides in Hindi, from n to z"
-    status: open
+    status: done
   - id: 6
     title: The Hindi site ships
     status: open
@@ -162,9 +162,14 @@ side, and seven fresh reviewers review them blind.
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.hi.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.hi.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp hi` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+- [x] One `tools/our-songs/<slug>.hi.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.hi.ts:1`
+  - [x] The 29 work lists, under `.agent-tmp/i18n/hi/`.
+  - [x] Four writers write the four batches.
+  - [x] Every Latin title and name they report is in `SONG_NAMES`, and `tsc` and the rules test pass.
+- [x] Each batch reviewed blind, and every finding settled.
+  - [x] Four blind reviews, and their settlers.
+  - [x] A fresh review of each batch with a *wrong* finding.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp hi` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
 ### 6. The Hindi site ships
 
@@ -192,46 +197,35 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 4 are done. The course is stamped per world. The 51 song guides from
-`air-on-the-g-string` to `mozart-21-andante` each have a `tools/our-songs/<slug>.hi.ts`. Their
-`guide.json` files are rewritten, and each `guide/<slug>` unit is stamped in `src/i18n/stamps/hi.json`.
+Stages 1 to 5 are done. Every one of the 80 song guides has a `tools/our-songs/<slug>.hi.ts`. Each
+`guide.json` is rewritten, and each `guide/<slug>` unit is stamped in `src/i18n/stamps/hi.json`.
 
-Stage 4 ran seven writers of seven to nine songs each, side by side. The first blind reviews found 11
-*wrong* texts, mostly agreement slips, in six batches. All six were reviewed again. The second reviews
-found three more *wrong* texts: a plural verb in *Funeral March* and two in batch 1. The session
-fixed those three by hand, so no batch had a third review. The rules test passes for every locale,
-and the build is green.
+Stage 5 ran four writers of seven or eight songs each, side by side. The first blind reviews found four
+*wrong* texts, in batch A (`neon-chase` to `o-little-town-of-bethlehem`), B (`ode-to-joy` to
+`suesser-die-glocken`) and D (`tochter-zion` to `yankee-doodle`). Batch C found none. A, B and D
+were reviewed again. The second reviews found no *wrong* text, and the session settled their *awkward*
+ones by hand. The rules test passes for every locale, and `tsc` and the build are green.
 
-`hi.md` gained what stage 4 settled:
+The session overruled two findings. The fir of *O Tannenbaum* stays `फ़र`, since `देवदार` is a cedar.
+A dance's kind keeps its plain adjective, as in `धीमा वाल्ट्ज़` and `तेज़ गैलप`. `hi.md` § 5 now
+holds that row, and rows for `सेवेंथ`, two quick notes (`छोटे नोट`) and a synth stab.
 
-- § 5 *A guide's recurring steps* holds one Hindi text for each of 36 recurring English steps. Every
-  a–m guide matches it.
-- § 6 spells six composers in Devanagari, and writes Bach as `बाख`, with no nukta on `ख`.
-- § 6 puts a well-known city in Devanagari, and leaves a small town in Latin letters.
-- § 6 writes a generic dance as a Devanagari loanword, and keeps a piece's title in Latin.
-
-`SONG_NAMES` gained about 100 titles and names. The short words `Mary`, `Elise`, `Carol`, `Noel` and `o`
-sit at the end of the `hi` list instead. Placed earlier, they mask part of a longer title.
+`SONG_NAMES` gained about 60 titles and names. The long ones open the list, and the short ones, such
+as `Wade` and `Gruber`, close it after the titles that hold them.
 
 ### Next
 
-**Stage 5: the song guides from n to z,** the 29 slugs from `neon-chase` to `yankee-doodle`. Run
-`bun tools/i18n.ts work hi guide/<slug>` for each. Brief four writers side by side, about seven songs
-each, then a blind reviewer and a settler per batch. Give a fresh reviewer each batch that had a
-*wrong* finding.
+**Stage 6: the Hindi site ships.** Its gate is `bun tools/i18n.ts status hi` with no missing text
+outside `legal`. It lists 79 missing texts now, all in catalogs and lessons:
 
-- **The writer's brief:** read `hi.md` whole, in two Reads. Copy § *A guide's recurring steps* exactly.
-  Take the file's shape from `tools/our-songs/alle-jahre-wieder.hi.ts`. Write only `<slug>.hi.ts`, and
-  build nothing. Report every Latin run that is not a note letter, so the session can add it to `SONG_NAMES`.
-- **The traps to name in each brief:** `ऊँचा`/`नीचा` never qualifies a note. `तेज़` or `धीरे` alone never
-  names a speed. A bar is `माप`, never `बार`. Two subjects joined by `और` take a plural verb. "Up high"
-  is `ऊपर वाले हिस्से में` or `ऊपर वाले नोटों पर`, never `ऊपर की ओर`, which reads as upward.
-- **The reviewer's brief:** `hi.md`, then the `.hi.ts` files, then the work lists. One finding per
-  line, with id, kind, weight, reason and the fixed text. The second review reports no nits.
-- After the settlers, run `bun test src/i18n/translation-rules.test.ts`. Add each stray Latin word it
-  names to `SONG_NAMES`.
-  A short word that is part of a longer title goes at the end of the `hi` list instead.
-- Then `bun tools/make-our-songs.ts`, and `bun tools/i18n.ts stamp hi guide/<slug>` for each slug.
+- 23 in `catalog/player-settings`, 8 in `catalog/learn-lesson`, 6 in `catalog/player-shell`, 5 in
+  `catalog/player-bar`, and 8 more across `site`, `player-library`, `play-modes` and `player-input`.
+- 29 in the lesson worlds, such as 6 each in `reading-music` and `scales-and-keys`.
+
+First run `bun tools/i18n.ts work hi <unit>` for each unit, and check whether each text only equals
+its English, such as `MIDI`. Translate the rest with one writer and one blind reviewer. Then follow
+stage 6's items in order. The drift read goes to a fresh `reader`, and `hi` turns `shipped` in
+`src/i18n/locale.ts:18`. The test `the_hindi_site_reads_in_hindi` goes in `e2e/locales.e2e.ts`.
 
 Expected red: none.
 
@@ -241,6 +235,5 @@ Expected red: none.
   *High and low* in `src/learn/lessons/meet-the-piano/high-and-low.hi.ts`, whose `पिच` and `मोटी`/`पतली
   आवाज़` are a reviewer's choice.
 - An Indian piano teacher's read of the glossary's notation loanwords, and of `स्केल` for a song's key.
-- `bun tools/i18n.ts status hi` lists missing catalog and lesson texts, such as 23 in
-  `catalog/player-settings`. Stage 6's gate allows none outside `legal`. Check whether each one only
-  equals its English, before the gate counts it as missing.
+- A native reader's check of the guides' place names: `Leipzig` and `Weimar` stay Latin, while
+  `ओहायो` and `बेथलेहम` are Devanagari.

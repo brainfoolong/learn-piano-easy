@@ -145,6 +145,7 @@ collection. AN is Android's `values-hi` strings.
 | Alberti bass, waltz bass | अल्बर्टी बेस, वाल्ट्ज़ बेस | the course's own terms |
 | bass note | बेस नोट | follows `बेस क्लेफ़` |
 | third, fourth, fifth, sixth | थर्ड, फ़ोर्थ, फ़िफ़्थ, सिक्स्थ | WP *स्वर-संगति* writes `मेजर थर्ड` |
+| seventh | सेवेंथ | follows the row above |
 | major third, minor third | मेजर थर्ड, माइनर थर्ड | WP *स्वर-संगति*; WP *ब्लूज़* |
 | open fifth | ओपन फ़िफ़्थ | follows the row above |
 | step, skip (between keys) | बगल वाली कुंजी पर जाना, एक कुंजी छोड़कर जाना | everyday words |
@@ -171,6 +172,9 @@ collection. AN is Android's `values-hi` strings.
 | double notes | डबल नोट | unsourced |
 | stride (the bass style) | स्ट्राइड बेस | unsourced, the English term |
 | a run (fast notes) | तेज़ नोटों की लड़ी | the guides' own term |
+| two quick notes, a group of quick notes | दो छोटे नोट, छोटे नोटों का समूह | the guides' own term. `तेज़ नोट` alone can read as loud |
+| a slow waltz, a fast galop (the dance, not a tempo) | धीमा वाल्ट्ज़, तेज़ गैलप | everyday words. A dance's kind takes no `स्पीड` |
+| a stab (a short, hit chord) | छोटा कॉर्ड, or just `कॉर्ड` | a coinage such as `झटकेदार कॉर्ड` reads as made up |
 | sustain pedal | सस्टेन पेडल; `दायाँ पेडल` in a lesson | WP *पियानो* names the right pedal; the Piano-LED-Visualizer strings say `पेडल` |
 | soft pedal | सॉफ़्ट पेडल; `बायाँ पेडल` in a lesson | follows the row above |
 | press a pedal, lift it | पेडल दबाएँ, पेडल छोड़ें | the plain verbs of a foot |

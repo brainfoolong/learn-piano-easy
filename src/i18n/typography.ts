@@ -43,6 +43,13 @@ export interface Typography {
  * form stands before the shorter one it holds.
  */
 const SONG_NAMES: readonly string[] = [
+      "See, the conqu'ring hero comes", "A Midsummer Night's Dream", "Toccata and Fugue in D minor",
+      "The Twelve Days of Christmas", "Last Night of the Proms", "Der Zauberlehrling", "Judas Maccabaeus",
+      "George Frideric Handel", "Franz Xaver Gruber", "Friedrich Schiller", "Leopold Stokowski", "Johann Strauss II",
+      "Rimsky-Korsakov", "The Tree of Life", "The Lone Ranger", "Bolshoi Ballet", "Princess Royal", "Max Fleischer",
+      "Adolphe Adam", "Mickey Mouse", "Joseph Mohr", "John Stainer", "Scott Joplin", "Silent Night", "O Holy Night",
+      "Yankee Doodle", "William Tell", "Paul Dukas", "Henry Wood", "Black Swan", "Swan Lake", "The Sting", "New Paris",
+      "Má vlast", "Die Hard",
       "God Rest Ye Merry, Gentlemen", "Ihr Kinderlein, kommet", "Kling, Glöckchen, klingelingeling", "Kommet, ihr Hirten",
       "Morgen, Kinder, wird's nichts geben", "Morgen, Kinder, wird's was geben", "Branle de l'Official",
       "Seht, wie die Sonne dort sinket", "Tochter Zion, freue dich", "Baa, Baa, Black Sheep", "Minuit, chrétiens",
@@ -89,7 +96,9 @@ const SONG_NAMES: readonly string[] = [
       "Allegretto", "Ravel", "Offenbach", "Syracuse", "Debussy", "Bellagio", "Berlioz", "Amadeus", "Salieri", "Speyer",
       "Scrooge", "Wenceslas", "Satie", "Gymnopédie", "Bizet", "Carmen", "Grieg", "Ibsen", "Peer", "Christiania",
       "Handel", "Sarabande", "Louis", "Brahms", "csárdás", "Messiah", "Olomouc", "Requiem", "Adagietto", "Andante",
-      "Moonlight", "Mahler",
+      "Moonlight", "Mahler", "Lone Ranger", "Tchaikovsky", "Mussorgsky", "Shakespeare", "Smetana", "Rossini", "Goethe",
+      "Vltava", "Victoria", "Tiverton", "Erlangen", "Cornwall", "Leipzig", "Weimar", "Giselle", "Sadko", "Joshua",
+      "Popeye", "Oberndorf", "Gruber", "Mohr", "Joplin", "Dukas", "Wade", "Redner", "Jaws", "Quint", "Bald Mountain",
 ];
 
 /** Each locale's rules. English is the source, and German is checked by eye, so the test skips both. */

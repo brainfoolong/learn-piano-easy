@@ -6,13 +6,15 @@
     "en": "Old MacDonald Had a Farm is a children's song about a farmer and his animals. An early form called Ohio was printed in 1917, in a book of songs sung by British soldiers. Each verse adds an animal and its sound, so the song lasts as long as the singers like.",
     "de": "\"Old MacDonald hat 'ne Farm\" ist ein Kinderlied über einen Bauern und seine Tiere. Eine frühe Fassung namens Ohio erschien 1917 in einem Buch mit Liedern, die britische Soldaten sangen. Jede Strophe bringt ein Tier und seinen Laut dazu, also dauert das Lied so lange, wie die Sänger wollen.",
     "es": "Old MacDonald Had a Farm es una canción infantil sobre un granjero y sus animales. Una versión antigua llamada Ohio se publicó en 1917, en un libro de canciones que cantaban los soldados británicos. Cada estrofa agrega un animal y su sonido, así que la canción dura tanto como quieran los que cantan.",
-    "zh": "《王老先生有块地》是一首儿歌，唱的是一位农夫和他的动物们。它早期的一个版本名叫《Ohio》，1917 年印在一本收录英国士兵所唱歌曲的歌本里。每段歌词都会加进一种动物和它的叫声，所以大家想唱多久，这首歌就能唱多久。"
+    "zh": "《王老先生有块地》是一首儿歌，唱的是一位农夫和他的动物们。它早期的一个版本名叫《Ohio》，1917 年印在一本收录英国士兵所唱歌曲的歌本里。每段歌词都会加进一种动物和它的叫声，所以大家想唱多久，这首歌就能唱多久。",
+    "hi": "Old MacDonald Had a Farm बच्चों का एक गीत है, जो एक किसान और उसके जानवरों के बारे में है। इसका एक पुराना रूप, Ohio नाम से, 1917 में छपा था। वह ब्रिटिश सैनिकों के गाए गीतों की एक किताब में था। हर अंतरे में एक नया जानवर और उसकी आवाज़ जुड़ती है, इसलिए गाना तब तक चलता है, जब तक गाने वाले चाहें।"
   },
   "funFact": {
     "en": "In the 1917 song the farmer was called Old Macdougal, and his farm was in Ohio.",
     "de": "Im Lied von 1917 hieß der Bauer Old Macdougal, und sein Hof lag in Ohio.",
     "es": "En la canción de 1917, el granjero se llamaba Old Macdougal, y su granja estaba en Ohio.",
-    "zh": "在 1917 年的那首歌里，农夫叫 Old Macdougal，他的农场在俄亥俄州。"
+    "zh": "在 1917 年的那首歌里，农夫叫 Old Macdougal，他的农场在俄亥俄州。",
+    "hi": "1917 वाले गीत में किसान का नाम Old Macdougal था, और उसका खेत ओहायो में था।"
   },
   "mythic": null,
   "versions": {
@@ -36,7 +38,8 @@
             "en": "Play the right hand alone, slowly, and let the song wait for each note.",
             "de": "Spiel die rechte Hand allein und langsam, und lass das Lied auf jeden Ton warten.",
             "es": "Toca con la mano derecha sola, despacio, y deja que la canción espere cada nota.",
-            "zh": "只用右手慢慢弹，让歌曲等你弹每个音。"
+            "zh": "只用右手慢慢弹，让歌曲等你弹每个音。",
+            "hi": "सिर्फ़ दाएँ हाथ से धीरे-धीरे बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -48,7 +51,8 @@
             "en": "Now the left hand alone. It holds each note for two or four beats.",
             "de": "Jetzt die linke Hand allein. Sie hält jeden Ton zwei oder vier Schläge lang.",
             "es": "Ahora la mano izquierda sola. Mantiene cada nota dos o cuatro tiempos.",
-            "zh": "现在只用左手弹。它每个音保持两拍或四拍。"
+            "zh": "现在只用左手弹。它每个音保持两拍或四拍。",
+            "hi": "अब सिर्फ़ बायाँ हाथ। यह हर नोट को दो या चार बीट तक दबाए रखता है।"
           },
           "hands": "left",
           "speed": 0.6,
@@ -60,7 +64,8 @@
             "en": "Put both hands together on the first eight bars.",
             "de": "Nimm beide Hände zusammen für die ersten acht Takte.",
             "es": "Junta las dos manos en los primeros ocho compases.",
-            "zh": "双手一起弹前八个小节。"
+            "zh": "双手一起弹前八个小节。",
+            "hi": "पहले आठ माप दोनों हाथों से बजाएँ।"
           },
           "hands": "both",
           "speed": 0.7,
@@ -72,7 +77,8 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。",
+            "hi": "दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।"
           },
           "hands": "both",
           "speed": 1,
@@ -89,7 +95,8 @@
             "en": "Your thumb rests on D and your third finger on G. Each finger keeps its own key.",
             "de": "Dein Daumen liegt auf dem D und Finger 3 auf dem G. Jeder Finger behält seine eigene Taste.",
             "es": "El pulgar descansa en el re y el dedo 3 en el sol. Cada dedo se queda con su propia tecla.",
-            "zh": "拇指放在 D 上，3 指放在 G 上。每根手指守着自己的琴键。"
+            "zh": "拇指放在 D 上，3 指放在 G 上。每根手指守着自己的琴键。",
+            "hi": "अँगूठा D पर टिका रहता है, और तीसरी उँगली G पर। हर उँगली अपनी ही कुंजी पर रहती है।"
           }
         },
         {
@@ -100,7 +107,8 @@
             "en": "Lift your hand a little before the high B, so you land on it in time.",
             "de": "Heb die Hand kurz vor dem hohen H etwas an, damit du rechtzeitig darauf landest.",
             "es": "Levanta un poco la mano antes del si agudo, para llegar a tiempo.",
-            "zh": "弹高音 B 之前稍微把手抬起一点，这样就能准时落在它上面。"
+            "zh": "弹高音 B 之前稍微把手抬起一点，这样就能准时落在它上面。",
+            "hi": "ऊपर वाले B से पहले हाथ थोड़ा उठाएँ, ताकि आप समय पर उस पर पहुँचें।"
           }
         },
         {
@@ -111,7 +119,8 @@
             "en": "These are the animal's sounds. Make them bounce, and smile if you like.",
             "de": "Das sind die Laute der Tiere. Lass sie hüpfen, und lächle ruhig dabei.",
             "es": "Estos son los sonidos del animal. Hazlos rebotar, y sonríe si quieres.",
-            "zh": "这些是动物的叫声。把它们弹得蹦蹦跳跳的，想笑就笑吧。"
+            "zh": "这些是动物的叫声。把它们弹得蹦蹦跳跳的，想笑就笑吧。",
+            "hi": "ये जानवरों की आवाज़ें हैं। इन्हें उछलते हुए अंदाज़ में बजाएँ, और चाहें तो मुस्कुराएँ।"
           }
         }
       ],
@@ -122,7 +131,8 @@
             "en": "Your little finger reaches up for the high B, while the thumb stays near D.",
             "de": "Dein kleiner Finger greift hinauf zum hohen H, während der Daumen nah am D bleibt.",
             "es": "El meñique se estira hasta el si agudo, mientras el pulgar se queda cerca del re.",
-            "zh": "小指往上够到高音 B，拇指留在 D 附近。"
+            "zh": "小指往上够到高音 B，拇指留在 D 附近。",
+            "hi": "छोटी उँगली ऊपर वाले B तक पहुँचती है, जबकि अँगूठा D के पास रहता है।"
           }
         },
         {
@@ -131,7 +141,8 @@
             "en": "The same reach again: little finger on B, then fourth finger on A.",
             "de": "Wieder derselbe Griff: der kleine Finger auf H, dann Finger 4 auf A.",
             "es": "Otra vez el mismo estiramiento: el meñique en el si, y luego el dedo 4 en el la.",
-            "zh": "又是同样的伸展：小指弹 B，然后 4 指弹 A。"
+            "zh": "又是同样的伸展：小指弹 B，然后 4 指弹 A。",
+            "hi": "फिर वही फैलाव: छोटी उँगली B पर, फिर चौथी उँगली A पर।"
           }
         },
         {
@@ -140,7 +151,8 @@
             "en": "One last reach for B. Use the short rest before it to get ready.",
             "de": "Ein letzter Griff zum H. Nutz die kurze Pause davor, um dich bereitzumachen.",
             "es": "Un último estiramiento hasta el si. Usa el silencio corto de antes para prepararte.",
-            "zh": "最后一次够到 B。利用它前面短短的休止符做好准备。"
+            "zh": "最后一次够到 B。利用它前面短短的休止符做好准备。",
+            "hi": "आखिरी बार हाथ फैलाकर B तक पहुँचें। उससे पहले के छोटे रेस्ट में तैयार हो जाएँ।"
           }
         }
       ]
@@ -165,7 +177,8 @@
             "en": "Clap the quick notes of bars 11 and 12, then play the right hand alone.",
             "de": "Klatsch die schnellen Töne der Takte 11 und 12, dann spiel die rechte Hand allein.",
             "es": "Aplaude las notas rápidas de los compases 11 y 12, y luego toca con la mano derecha sola.",
-            "zh": "先拍出第 11、12 小节的快速音符，再只用右手弹。"
+            "zh": "先拍出第 11、12 小节的快速音符，再只用右手弹。",
+            "hi": "माप 11 और 12 के जल्दी वाले नोट ताली बजाकर देखें, फिर सिर्फ़ दाएँ हाथ से बजाएँ।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -177,7 +190,8 @@
             "en": "Play the left hand alone, and keep each chord until the next one.",
             "de": "Spiel die linke Hand allein, und halt jeden Akkord bis zum nächsten.",
             "es": "Toca con la mano izquierda sola, y mantén cada acorde hasta el siguiente.",
-            "zh": "只用左手弹，每个和弦一直按住，直到下一个和弦。"
+            "zh": "只用左手弹，每个和弦一直按住，直到下一个和弦。",
+            "hi": "सिर्फ़ बाएँ हाथ से बजाएँ, और हर कॉर्ड को अगले कॉर्ड तक दबाए रखें।"
           },
           "hands": "left",
           "speed": 0.6,
@@ -189,7 +203,8 @@
             "en": "Join the hands on the first four bars, slowly.",
             "de": "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros cuatro compases, despacio.",
-            "zh": "双手一起慢慢弹前四个小节。"
+            "zh": "双手一起慢慢弹前四个小节。",
+            "hi": "पहले चार माप दोनों हाथों से धीरे-धीरे बजाएँ।"
           },
           "hands": "both",
           "speed": 0.6,
@@ -201,7 +216,8 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。",
+            "hi": "दोनों हाथों से पूरा गाना, लिखी स्पीड से थोड़ा धीमा बजाएँ।"
           },
           "hands": "both",
           "speed": 0.8,
@@ -213,7 +229,8 @@
             "en": "Now play it at full speed.",
             "de": "Jetzt spiel es im vollen Tempo.",
             "es": "Ahora tócala a velocidad completa.",
-            "zh": "现在用原速弹。"
+            "zh": "现在用原速弹。",
+            "hi": "अब इसे पूरी स्पीड पर बजाएँ।"
           },
           "hands": "both",
           "speed": 1,
@@ -230,7 +247,8 @@
             "en": "The two quick D notes are eighths. Think of them as one beat split in two.",
             "de": "Die zwei schnellen D sind Achtel. Stell sie dir als einen geteilten Schlag vor.",
             "es": "Los dos re rápidos son corcheas. Piensa en ellos como un tiempo partido en dos.",
-            "zh": "这两个快速的 D 是八分音符。把它们想成一拍分成两半。"
+            "zh": "这两个快速的 D 是八分音符。把它们想成一拍分成两半。",
+            "hi": "दोनों जल्दी वाले D एट्थ नोट हैं। इन्हें दो हिस्सों में बँटी एक बीट समझें।"
           }
         },
         {
@@ -241,7 +259,8 @@
             "en": "Here a short, short, long pattern repeats. Say the animal's sound in your head as you play.",
             "de": "Hier wiederholt sich ein Muster aus kurz, kurz, lang. Sag beim Spielen im Kopf den Laut des Tiers.",
             "es": "Aquí se repite un patrón de corta, corta, larga. Di el sonido del animal en tu cabeza mientras tocas.",
-            "zh": "这里“短、短、长”的音型反复出现。弹的时候在心里念出动物的叫声。"
+            "zh": "这里“短、短、长”的音型反复出现。弹的时候在心里念出动物的叫声。",
+            "hi": "यहाँ छोटा, छोटा, लंबा वाला पैटर्न दोहराया जाता है। बजाते समय मन में जानवर की आवाज़ बोलें।"
           }
         },
         {
@@ -252,7 +271,8 @@
             "en": "The left hand's chord changes halfway through the bar. Let each one ring for two beats.",
             "de": "Der Akkord der linken Hand wechselt in der Taktmitte. Lass jeden zwei Schläge lang klingen.",
             "es": "El acorde de la mano izquierda cambia a la mitad del compás. Deja sonar cada uno dos tiempos.",
-            "zh": "左手的和弦在小节中间换。让每个和弦的声音延续两拍。"
+            "zh": "左手的和弦在小节中间换。让每个和弦的声音延续两拍。",
+            "hi": "बाएँ हाथ का कॉर्ड माप के बीच में बदलता है। हर कॉर्ड की आवाज़ दो बीट तक गूँजने दें।"
           }
         }
       ],
@@ -263,7 +283,8 @@
             "en": "The thumb leaves D and the little finger takes the high B at once. Keep the hand open.",
             "de": "Der Daumen verlässt das D, und der kleine Finger nimmt sofort das hohe H. Halt die Hand offen.",
             "es": "El pulgar deja el re y el meñique toma enseguida el si agudo. Mantén la mano abierta.",
-            "zh": "拇指离开 D 的同时，小指立刻弹高音 B。手保持张开。"
+            "zh": "拇指离开 D 的同时，小指立刻弹高音 B。手保持张开。",
+            "hi": "अँगूठा D छोड़ता है, और उसी पल छोटी उँगली ऊपर वाला B बजाती है। हाथ खुला रखें।"
           }
         },
         {
@@ -272,7 +293,8 @@
             "en": "The same jump up to B. Halfway through the bar, the left hand's fourth finger takes A.",
             "de": "Derselbe Sprung hinauf zum H. In der Taktmitte nimmt Finger 4 der linken Hand das A.",
             "es": "El mismo salto hasta el si. A la mitad del compás, el dedo 4 de la mano izquierda toma el la.",
-            "zh": "又是同样往上跳到 B。在小节中间，左手 4 指弹 A。"
+            "zh": "又是同样往上跳到 B。在小节中间，左手 4 指弹 A。",
+            "hi": "फिर वही छलाँग ऊपर B तक। माप के बीच में बाएँ हाथ की चौथी उँगली A बजाती है।"
           }
         },
         {
@@ -281,7 +303,8 @@
             "en": "The last jump to B. After it, both hands only have the final chord left.",
             "de": "Der letzte Sprung zum H. Danach bleibt beiden Händen nur noch der Schlussakkord.",
             "es": "El último salto hasta el si. Después, a las dos manos solo les queda el acorde final.",
-            "zh": "最后一次跳到 B。之后两只手就只剩最后一个和弦了。"
+            "zh": "最后一次跳到 B。之后两只手就只剩最后一个和弦了。",
+            "hi": "B तक आखिरी छलाँग। उसके बाद दोनों हाथों के लिए बस आखिरी कॉर्ड बचता है।"
           }
         }
       ]
@@ -307,7 +330,8 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独弹阿尔贝蒂低音，直到它自己流畅地滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己流畅地滚动起来：低、高、中、高。",
+            "hi": "सिर्फ़ अल्बर्टी बेस बजाएँ, जब तक वह अपने-आप न बहने लगे: नीचे वाला, ऊपर वाला, बीच वाला, ऊपर वाला।"
           },
           "hands": "left",
           "speed": 0.5,
@@ -319,7 +343,8 @@
             "en": "Play the right hand's thirds alone, and keep both notes of each pair together.",
             "de": "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs zusammen.",
             "es": "Toca las terceras de la mano derecha sola, y mantén juntas las dos notas de cada doble nota.",
-            "zh": "单独弹右手的三度，每一对的两个音要同时按下。"
+            "zh": "单独弹右手的三度，每一对的两个音要同时按下。",
+            "hi": "सिर्फ़ दाएँ हाथ के थर्ड बजाएँ, और हर जोड़ी के दोनों नोट एक साथ बजाएँ।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -331,7 +356,8 @@
             "en": "Join the hands on the first four bars, slowly.",
             "de": "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros cuatro compases, despacio.",
-            "zh": "双手一起慢慢弹前四个小节。"
+            "zh": "双手一起慢慢弹前四个小节。",
+            "hi": "पहले चार माप दोनों हाथों से धीरे-धीरे बजाएँ।"
           },
           "hands": "both",
           "speed": 0.5,
@@ -343,7 +369,8 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。",
+            "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।"
           },
           "hands": "both",
           "speed": 0.75,
@@ -355,7 +382,8 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在用原速弹，加上踏板。"
+            "zh": "现在用原速弹，加上踏板。",
+            "hi": "अब इसे पूरी स्पीड पर पेडल के साथ बजाएँ।"
           },
           "hands": "both",
           "speed": 1,
@@ -372,7 +400,8 @@
             "en": "Keep the Alberti bass soft, so the tune sings above it.",
             "de": "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
             "es": "Mantén suave el bajo de Alberti, para que la melodía cante por encima.",
-            "zh": "阿尔贝蒂低音弹得轻一些，让旋律在上面歌唱。"
+            "zh": "阿尔贝蒂低音弹得轻一些，让旋律在上面歌唱。",
+            "hi": "अल्बर्टी बेस हल्के से बजाएँ, ताकि धुन उसके ऊपर गा सके।"
           }
         },
         {
@@ -383,7 +412,8 @@
             "en": "The tune is the top note of each pair, so let the upper finger lead.",
             "de": "Die Melodie ist der obere Ton jedes Zweiklangs, also lass den oberen Finger führen.",
             "es": "La melodía es la nota de arriba de cada doble nota, así que deja que guíe el dedo de arriba.",
-            "zh": "旋律是每一对音里上面的那个，所以让上面的手指带头。"
+            "zh": "旋律是每一对音里上面的那个，所以让上面的手指带头。",
+            "hi": "हर जोड़ी का ऊपर वाला नोट ही धुन है, इसलिए उसे बजाने वाली उँगली को अगुवाई करने दें।"
           }
         },
         {
@@ -394,7 +424,8 @@
             "en": "Change the pedal on every half bar, as the Alberti bass starts again.",
             "de": "Wechsle das Pedal jeden halben Takt, sobald der Alberti-Bass neu beginnt.",
             "es": "Cambia el pedal en cada medio compás, cuando el bajo de Alberti empieza otra vez.",
-            "zh": "每半个小节换一次踏板，也就是阿尔贝蒂低音重新开始的时候。"
+            "zh": "每半个小节换一次踏板，也就是阿尔贝蒂低音重新开始的时候。",
+            "hi": "हर आधे माप पर, जब अल्बर्टी बेस फिर से शुरू होता है, पेडल बदलें।"
           }
         }
       ],
@@ -405,7 +436,8 @@
             "en": "Your hand falls from A to the last chord. Thumb on B, third finger on G.",
             "de": "Deine Hand fällt vom A zum Schlussakkord. Daumen auf H, Finger 3 auf G.",
             "es": "La mano baja del la al último acorde. El pulgar en el si, el dedo 3 en el sol.",
-            "zh": "手从 A 落到最后一个和弦上。拇指在 B 上，3 指在 G 上。"
+            "zh": "手从 A 落到最后一个和弦上。拇指在 B 上，3 指在 G 上。",
+            "hi": "हाथ A से उतरकर आखिरी कॉर्ड पर आता है। अँगूठा B पर, तीसरी उँगली G पर।"
           }
         },
         {
@@ -414,7 +446,8 @@
             "en": "After the quick run, your little finger lands on B. Let the run carry the hand there.",
             "de": "Nach dem schnellen Lauf landet dein kleiner Finger auf dem H. Lass den Lauf die Hand dorthin tragen.",
             "es": "Después del pasaje rápido, el meñique llega al si. Deja que el pasaje lleve la mano hasta ahí.",
-            "zh": "快速经过句之后，小指落在 B 上。让快速经过句把手带过去。"
+            "zh": "快速经过句之后，小指落在 B 上。让快速经过句把手带过去。",
+            "hi": "तेज़ नोटों की लड़ी के बाद छोटी उँगली B पर पहुँचती है। लड़ी को ही हाथ वहाँ तक ले जाने दें।"
           }
         },
         {
@@ -423,7 +456,8 @@
             "en": "The thirds jump up from D to G and B. Move the whole hand, and keep its shape.",
             "de": "Die Terzen springen vom D hinauf zu G und H. Beweg die ganze Hand, und behalte ihre Form.",
             "es": "Las terceras saltan del re hasta el sol y el si. Mueve toda la mano, y mantén su forma.",
-            "zh": "三度从 D 往上跳到 G 和 B。整只手一起移动，保持手型。"
+            "zh": "三度从 D 往上跳到 G 和 B。整只手一起移动，保持手型。",
+            "hi": "थर्ड D से ऊपर G और B तक छलाँग लगाते हैं। पूरा हाथ ले जाएँ, और उसका आकार बनाए रखें।"
           }
         }
       ]
@@ -449,7 +483,8 @@
             "en": "Play the stride bass alone: jump down for the bass note, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zum Basston, dann zurück hinauf zum Akkord.",
             "es": "Toca el bajo stride solo: salta abajo a la nota del bajo, y vuelve arriba al acorde.",
-            "zh": "单独弹跨步低音：往下跳弹低音，再跳回上面弹和弦。"
+            "zh": "单独弹跨步低音：往下跳弹低音，再跳回上面弹和弦。",
+            "hi": "सिर्फ़ स्ट्राइड बेस बजाएँ: बेस नोट के लिए नीचे छलाँग लगाएँ, फिर कॉर्ड के लिए वापस ऊपर आएँ।"
           },
           "hands": "left",
           "speed": 0.5,
@@ -461,7 +496,8 @@
             "en": "Play the right hand's chords alone, and let the top finger sing the tune.",
             "de": "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
             "es": "Toca los acordes de la mano derecha sola, y deja que el dedo de arriba cante la melodía.",
-            "zh": "单独弹右手的和弦，让最上面的手指唱出旋律。"
+            "zh": "单独弹右手的和弦，让最上面的手指唱出旋律。",
+            "hi": "सिर्फ़ दाएँ हाथ के कॉर्ड बजाएँ, और सबसे ऊपर वाली उँगली को धुन गाने दें।"
           },
           "hands": "right",
           "speed": 0.5,
@@ -473,7 +509,8 @@
             "en": "Play the quick runs of the right hand alone, slowly at first.",
             "de": "Spiel die schnellen Läufe der rechten Hand allein, am Anfang langsam.",
             "es": "Toca los pasajes rápidos con la mano derecha sola, despacio al principio.",
-            "zh": "单独弹右手的快速经过句，一开始慢慢弹。"
+            "zh": "单独弹右手的快速经过句，一开始慢慢弹。",
+            "hi": "सिर्फ़ दाएँ हाथ की तेज़ नोटों की लड़ियाँ बजाएँ, शुरू में धीरे-धीरे।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -485,7 +522,8 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。",
+            "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।"
           },
           "hands": "both",
           "speed": 0.75,
@@ -497,7 +535,8 @@
             "en": "Now play it at full speed, and let the last chord ring.",
             "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
             "es": "Ahora tócala a velocidad completa, y deja sonar el último acorde.",
-            "zh": "现在用原速弹，让最后一个和弦的声音延续。"
+            "zh": "现在用原速弹，让最后一个和弦的声音延续。",
+            "hi": "अब इसे पूरी स्पीड पर बजाएँ, और आखिरी कॉर्ड की आवाज़ गूँजने दें।"
           },
           "hands": "both",
           "speed": 1,
@@ -514,7 +553,8 @@
             "en": "In stride, look at the bass note and let the hand find the chord by feel.",
             "de": "Schau beim Stride auf den Basston, und lass die Hand den Akkord nach Gefühl finden.",
             "es": "En el bajo stride, mira la nota del bajo y deja que la mano encuentre el acorde al tacto.",
-            "zh": "弹跨步低音时，眼睛看着低音，让手凭手感找到和弦。"
+            "zh": "弹跨步低音时，眼睛看着低音，让手凭手感找到和弦。",
+            "hi": "स्ट्राइड बेस में बेस नोट पर नज़र रखें, और हाथ को कॉर्ड छूकर ढूँढ़ने दें।"
           }
         },
         {
@@ -525,7 +565,8 @@
             "en": "Play the top note of each chord a little louder than the others.",
             "de": "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
             "es": "Toca la nota de arriba de cada acorde un poco más fuerte que las demás.",
-            "zh": "每个和弦的最高音弹得比其他音稍响一点。"
+            "zh": "每个和弦的最高音弹得比其他音稍响一点。",
+            "hi": "हर कॉर्ड का सबसे ऊपर वाला नोट बाकी नोटों से थोड़ा ज़ोर से बजाएँ।"
           }
         },
         {
@@ -536,7 +577,8 @@
             "en": "The quick notes climb by step, one finger per key, up to the little finger on B.",
             "de": "Die schnellen Töne steigen stufenweise, ein Finger pro Taste, bis zum kleinen Finger auf H.",
             "es": "Las notas rápidas suben por pasos, un dedo por tecla, hasta el meñique en el si.",
-            "zh": "快速的音一级一级往上走，每根手指弹一个琴键，一直到小指弹 B。"
+            "zh": "快速的音一级一级往上走，每根手指弹一个琴键，一直到小指弹 B。",
+            "hi": "तेज़ नोट एक-एक कुंजी ऊपर चढ़ते हैं, हर कुंजी पर एक उँगली, B पर छोटी उँगली तक।"
           }
         }
       ],
@@ -547,7 +589,8 @@
             "en": "Hold the long chord for three beats, then drop the thumb to G for the chord on beat four.",
             "de": "Halt den langen Akkord drei Schläge lang. Dann lass den Daumen für den Akkord auf Schlag vier zum G fallen.",
             "es": "Mantén el acorde largo durante tres tiempos, y luego baja el pulgar al sol para el acorde del cuarto tiempo.",
-            "zh": "长长的和弦按住三拍，然后拇指落到 G 上，弹第四拍的和弦。"
+            "zh": "长长的和弦按住三拍，然后拇指落到 G 上，弹第四拍的和弦。",
+            "hi": "लंबे कॉर्ड को तीन बीट तक दबाए रखें। फिर चौथी बीट वाले कॉर्ड के लिए अँगूठा नीचे G पर ले आएँ।"
           }
         },
         {
@@ -556,7 +599,8 @@
             "en": "Your thumb plays both quick D notes, ready for the single notes of bar 9.",
             "de": "Dein Daumen spielt beide schnellen D und ist damit bereit für die einzelnen Töne von Takt 9.",
             "es": "El pulgar toca los dos re rápidos, y queda listo para las notas sueltas del compás 9.",
-            "zh": "两个快速的 D 都用拇指弹，为第 9 小节的单音做好准备。"
+            "zh": "两个快速的 D 都用拇指弹，为第 9 小节的单音做好准备。",
+            "hi": "अँगूठा दोनों जल्दी वाले D बजाता है, और माप 9 के अकेले नोटों के लिए तैयार रहता है।"
           }
         },
         {
@@ -565,7 +609,8 @@
             "en": "The run ends with your thumb on D. Slide it down to B for the chord, with finger 2 on D.",
             "de": "Der Lauf endet mit dem Daumen auf D. Schieb ihn hinunter zum H für den Akkord, mit Finger 2 auf D.",
             "es": "El pasaje termina con el pulgar en el re. Deslízalo hacia abajo hasta el si para el acorde, con el dedo 2 en el re.",
-            "zh": "快速经过句结束时拇指在 D 上。把它往下滑到 B 弹和弦，2 指放在 D 上。"
+            "zh": "快速经过句结束时拇指在 D 上。把它往下滑到 B 弹和弦，2 指放在 D 上。",
+            "hi": "लड़ी अँगूठे के D पर खत्म होती है। कॉर्ड के लिए अँगूठे को खिसकाकर नीचे B पर ले आएँ, और उँगली 2 D पर रखें।"
           }
         }
       ]
