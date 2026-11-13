@@ -4,7 +4,7 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "كتب يوهان باخلبل هذا الكانون نحو عام 1700، لثلاثة كمانات فوق خط باص. " +
+    "كتب يوهان باخلبل هذا الكانون نحو عام 1700، لتعزفه 3 كمانات فوق خط باص. " +
     "يكرر خط الباص 8 نغمات بعينها مرة بعد مرة، ويدخل كل كمان باللحن نفسه. " +
     "وظلت المقطوعة منسية حتى طبعها \u2068Gustav Beckmann\u2069 أول مرة عام 1919. " +
     "ثم جعلها فيلم \u2068Ordinary People\u2069 مشهورة عام 1980.",

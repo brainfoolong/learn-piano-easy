@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "كتب فيلكس مندلسون هذا اللحن عام 1840 لمهرجان في لايبزيغ. احتفل المهرجان بمرور 400 عام على الطباعة بالحروف المتحركة. " +
-    "وفي عام 1855، ركّب\u2068William H. Cummings\u2069 اللحن على كلمات عيد الميلاد كتبها \u2068Charles Wesley\u2069 عام 1739.",
+    "وفي عام 1855، ركّب \u2068William H. Cummings\u2069 اللحن على كلمات عيد الميلاد كتبها \u2068Charles Wesley\u2069 عام 1739.",
   funFact:
     "غنت اللحن أول مرة جوقة من الرجال مع فرقتين من آلات النحاس، في ساحة السوق في لايبزيغ، يوم 24 يونيو 1840.",
   versions: {

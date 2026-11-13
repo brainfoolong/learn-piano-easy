@@ -123,7 +123,8 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | tempo; speed | السرعة | MS *Tempo*; MET. WP's `سرعة الإيقاع` is the long form |
 | metronome | المترونوم | MS; MET; WP's redirect *ميترونوم* |
 | whole, half, quarter note | مستديرة, بيضاء, سوداء; plural مستديرات, بيضاوات, سوداوات, never `نغمات بيضاء`, which reads as white keys | WP *مستديرة (موسيقى)*, *بيضاء (موسيقى)*, *سوداء (موسيقى)* |
-| eighth, sixteenth note | ذات السن, ذات السنين | WP *ذات السن (موسيقى)*, *ذات السنين (موسيقى)* |
+| eighth, sixteenth note | ذات السن, ذات السنين; a bare plural is ذوات السن, ذوات السنين. After `نغمات` the form stays `نغمات ذات السن` | WP *ذات السن (موسيقى)*, *ذات السنين (موسيقى)*; stage 4's review |
+| thirty-second, sixty-fourth note | ذات الأسنان الثلاثة, ذات الأسنان الأربعة | follows the row above |
 | dotted | منقوطة: `بيضاء منقوطة` | WP *نقطة (موسيقى)* |
 | rest; quarter rest | سكتة; سكتة سوداء | MS *Rest*; WP *ميزان (موسيقى)* «السكتات» |
 | tie | رباط | MS *Tie*, one source |
@@ -172,7 +173,11 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | slow down, back in time | الإبطاء تدريجيًا, ثم العودة إلى السرعة الأصلية | everyday words |
 | turn (ornament) | الدوران | unsourced |
 | double notes | نغمات مزدوجة | unsourced |
-| a run (fast notes) | سلسلة نغمات سريعة | the guides' own term |
+| a run (fast notes) | سلسلة نغمات سريعة; once a text has named it, `السلسلة السريعة` | the guides' own term |
+| a gap (between notes, in time) | فجوة. `فسحة` is a staff's space | the guides' own term |
+| octave bass | باص الأوكتافات | the course's own term |
+| four-note chord | تآلف رباعي | follows `تآلف ثلاثي` |
+| the loanwords of a guide's *about* | كانون (glossed `تُغنّى دائريًا (كانون)` at first use), سنثسايزر, راغتايم, راغ, سكيرتسو, موردنت, أوراتوريو, سيرينادة, أوبريت, سوناتينا, أوبوا, فلوت, تيمباني, أرغن, هاربسيكورد, أوستيناتو, تشارداش, أوركسترا | the loanwords Arabic Wikipedia prints |
 | two quick notes, a group of quick notes | نغمتان سريعتان, مجموعة نغمات سريعة | the guides' own term |
 | a slow waltz, a fast galop (the dance) | فالس هادئ, غالوب سريع | everyday words |
 | a stab (a short, hit chord) | تآلف قصير حاد | the guides' own term |
@@ -188,7 +193,7 @@ is Microsoft's Arabic style guide. Music Blocks' Arabic strings are machine-made
 | hand shape | شكل اليد | everyday words |
 | thumb under, finger over | تمرير الإبهام من تحت, عبور الإصبع من فوق | the course's own terms, unsourced |
 | lift (a finger, a key) | رفع | everyday word |
-| let go of (a key) | رفع: `ارفع دو القصيرة`. `اترك` reads as "leave" | stage 4's review |
+| let go of (a key) | رفع: `ارفع دو القصيرة`. With a finger or a hand as the subject, `يرتفع … عن`: `يرتفع الإبهام عن مي`. `اترك` reads as "leave" | stage 4's review; stage 6's read |
 | lower (a hand, a finger) | أنزل with its object: `وأنزل الإبهام على صول`. Without one, `انزل` or `اهبط` | stage 4's review |
 | for (a chord, an interval) | لعزف: `لعزف السادسة`. `من أجل` reads translated | stage 4's review |
 | land (on a key, a beat) | الوصول إلى | everyday word |
