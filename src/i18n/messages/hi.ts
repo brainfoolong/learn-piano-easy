@@ -223,6 +223,7 @@ export const hi: Translation<Messages> = {
   counts: {
     badges: (n: number) => `${formatNumber("hi", n)} बैज`,
     minutesPlayed: (n: number) => `${formatNumber("hi", n)} मिनट का अभ्यास`,
+    xp: (n: number) => `${formatNumber("hi", n)} XP`,
   },
   lesson: learnLesson,
   badges: learnBadges,

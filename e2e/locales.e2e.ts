@@ -2,7 +2,7 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish and Chinese each read in their own language** from the language switch to a lesson's step,
+ * - **Spanish, Chinese and Hindi each read in their own language** from the language switch to a lesson's step,
  *   its piano's key names and the player's controls.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
  *   A flaw counts only where the locale's text adds it, since each page's own test holds its English.
@@ -75,6 +75,32 @@ test("the_chinese_site_reads_in_chinese", async ({ page }) => {
   await expect(page.getByRole("button", { name: "播放", exact: true })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "歌曲" })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "设置" })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test("the_hindi_site_reads_in_hindi", async ({ page }) => {
+  test.setTimeout(60_000);
+  await pastSetup(page);
+  const errors = watchErrors(page);
+
+  await page.goto("./learn/");
+  const choice = bar(page).getByRole("combobox", { name: "Language" });
+  await expect(choice.locator('option[value="hi"]')).toHaveText("हिन्दी");
+  await choice.selectOption("hi");
+  await expect(page).toHaveURL(/\/hi\/learn\/$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "hi");
+  await expect(heading(page)).toHaveText("पियानो सीखें");
+  await expect(page.locator("main")).toContainText("पियानो से पहचान");
+
+  await page.goto("./hi/learn/meet-the-piano/find-c/");
+  await expect(page.locator(".lesson__title")).toHaveText("C को ढूँढें");
+  await expect(page.locator("main")).toContainText("इन सबका नाम एक ही है: C।");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "C4");
+
+  await page.goto("./hi/play/");
+  await expect(page.getByRole("button", { name: "चलाएँ", exact: true })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "गाने" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "सेटिंग" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 

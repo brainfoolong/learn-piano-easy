@@ -158,8 +158,9 @@ test("the_first_visit_takes_the_browser_language", () => {
   expect(localeOfPath("design/")).toBe("en");
   expect(localeOfPath("es/play/")).toBe("es");
   expect(localeOfPath("zh/play/")).toBe("zh");
+  expect(localeOfPath("hi/play/")).toBe("hi");
   // A locale that has not shipped has no pages, so its folder is no locale's.
-  expect(localeOfPath("hi/play/")).toBe("en");
+  expect(localeOfPath("ar/play/")).toBe("en");
   expect(pathInLocale("de/play/", "en")).toBe("play/");
   expect(pathInLocale("learn/profile/", "de")).toBe("de/learn/profile/");
   expect(pathInLocale("de/", "de")).toBe("de/");
