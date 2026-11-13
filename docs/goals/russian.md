@@ -113,8 +113,9 @@ then review them blind, as the method says.
 ### 3. The course in Russian
 
 **Does:** every lesson of every world, translated, reviewed blind and stamped.
-**Split:** eight writing subagents, one per world, side by side. Eight fresh reviewers then review them
-blind.
+**Split:** five writing subagents, side by side, in batches sized by the method. *Expression* and *Both
+hands* each go alone. *Chords* goes with *Rhythm*, *Reading music* with *Meet the piano*, and *Scales and
+keys* with *First melodies*. Five fresh reviewers then review the five batches blind.
 **Gate:** stage 2's catalogs are stamped.
 
 - [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.ru.ts:1`, `src/learn/lessons/first-melodies/texts.ru.ts:1`
@@ -127,8 +128,8 @@ blind.
 ### 4. The song guides in Russian, from a to m
 
 **Does:** the guide of every song whose slug starts with a letter from a to m.
-**Split:** a read-only `Explore` subagent lists those slugs. Three writing subagents take a third each,
-side by side, and three fresh reviewers review them blind.
+**Split:** `bun run i18n status ru` lists those slugs as `guide/<slug>` units. Writing subagents of at
+most eight guides each work side by side, and one fresh reviewer per batch reviews it blind.
 **Gate:** stage 3's worlds are stamped.
 
 - [ ] One `tools/our-songs/<slug>.ru.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.ru.ts:1`

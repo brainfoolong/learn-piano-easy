@@ -64,7 +64,9 @@ Each glossary term has two sources that agree. Where they disagree, the guide sa
 
 ## A pass, step by step
 
-A pass works in batches. A batch is one catalog section, one world's lessons, or about seven songs.
+A pass works in batches. A batch is what one writer holds in its context: one catalog section, one or two
+worlds' lessons, or at most eight songs. Fewer, fuller batches cost less, since each writer and reviewer
+first reads the whole style guide.
 
 1. **Status.** `bun tools/i18n.ts status <locale>` lists every missing and every stale text, by unit.
 2. **Work list.** `bun tools/i18n.ts work <locale> <unit>` writes the batch's work list under
