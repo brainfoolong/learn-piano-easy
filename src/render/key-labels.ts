@@ -14,7 +14,7 @@
  */
 import { keysOf } from "../input/keyboard";
 import { keyLabel } from "../play/hotkeys";
-import { noteName, type NamingSystem, pitchClass } from "../theory/note-names";
+import { noteName, type NamingChoice, pitchClass } from "../theory/note-names";
 import { isBlack } from "./key-layout";
 
 /** A key label's height, in world units. */
@@ -31,7 +31,7 @@ export interface KeyLabelOptions {
   readonly black: boolean;
   readonly flats: boolean;
   readonly octave: OctaveLabel;
-  readonly system: NamingSystem;
+  readonly system: NamingChoice;
   /** Whether each key shows the computer key that plays it. */
   readonly bindings: boolean;
   /** The `keyBindings` setting's text. */

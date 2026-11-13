@@ -1,5 +1,5 @@
 /**
- * The number, plural and date helpers over `Intl`, which every counted message builds its text from.
+ * The number, plural, sorting and date helpers over `Intl`, which every counted message builds its text from.
  *
  * Each helper takes the locale first, so a message names its own locale and needs no global state.
  * It hands `Intl` the locale's own tag from the locale table, such as `es-419`. A formatter is built on
@@ -40,6 +40,11 @@ export function formatNumber(locale: Locale, n: number, options?: Intl.NumberFor
 export function plural<L extends Locale>(locale: L, n: number, forms: PluralForms<L>): string {
   const category = new Intl.PluralRules(rowOf(locale).intl).select(n) as keyof PluralForms<L>;
   return forms[category] ?? (forms as Record<string, string>)["other"]!;
+}
+
+/** A comparer of texts in the locale's alphabetical order, with numbers in a text compared as numbers. */
+export function collator(locale: Locale): Intl.Collator {
+  return new Intl.Collator(rowOf(locale).intl, { numeric: true });
 }
 
 /** `date` in the locale's order and month names. */

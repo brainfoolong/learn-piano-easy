@@ -37,7 +37,7 @@ import { t } from "../i18n/live";
 import type { Note, Song } from "../midi/song";
 import { type Chord, chordName, chordSpans, chordTone, romanNumeral, scaleDegree } from "../theory/chords";
 import { type Key, keyAccidentals, keyAt, type KeySection } from "../theory/key";
-import { type NamingSystem, pitchClass } from "../theory/note-names";
+import { type NamingChoice, pitchClass } from "../theory/note-names";
 import type { KeyLayout } from "./key-layout";
 import { createLabelLayer } from "./labels";
 import { forEachPass } from "./passes";
@@ -66,7 +66,7 @@ export interface ChordLabelOptions {
   readonly blocks: BlockKind;
   readonly notation: BlockNotation;
   readonly markRoot: boolean;
-  readonly system: NamingSystem;
+  readonly system: NamingChoice;
 }
 
 /** A note's block: its text, and whether it is tinted as the marked root. */

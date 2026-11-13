@@ -28,7 +28,8 @@
  *
  * The song explorer draws cards and never groups, so `groupSongs` serves the check of our songs alone.
  */
-import { t } from "../i18n/live";
+import { collator } from "../i18n/format";
+import { liveLocale, t } from "../i18n/live";
 import type { KeyRange } from "../render/key-layout";
 import { RARITIES, type Rarity, rarityName } from "./guide";
 
@@ -183,12 +184,13 @@ export interface SortFacts {
 export function sortSongs(songs: readonly CatalogSong[], sort: Sort, facts: SortFacts): CatalogSong[] {
   if (sort === "suggested") return [...songs];
   const rank = (song: CatalogSong) => (song.rarity === undefined ? RARITIES.length : RARITIES.indexOf(song.rarity));
+  const byText = collator(liveLocale());
   const name = (song: CatalogSong) => foldText(song.rarity === undefined ? song.title : (song.piece ?? song.title));
   /** Compares two values that may be unknown: a known one first, then by `order`. */
   const known = (a: number | undefined, b: number | undefined, order: 1 | -1) =>
     a === undefined || b === undefined ? Number(a === undefined) - Number(b === undefined) : (a - b) * order;
   const compare: Record<Exclude<Sort, "suggested">, (a: CatalogSong, b: CatalogSong) => number> = {
-    title: (a, b) => name(a).localeCompare(name(b)) || rank(a) - rank(b),
+    title: (a, b) => byText.compare(name(a), name(b)) || rank(a) - rank(b),
     difficulty: (a, b) => a.difficulty - b.difficulty,
     length: (a, b) => known(facts.length(a), facts.length(b), 1),
     recent: (a, b) => known(facts.played(a), facts.played(b), -1),

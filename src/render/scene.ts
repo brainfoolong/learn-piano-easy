@@ -98,7 +98,7 @@ import { secondsShown, zoomSettings } from "../play/view";
 import { NOTE_LABELS, picksOf } from "../settings/schema";
 import type { SettingsStore } from "../settings/store";
 import { type Key, keyAccidentals, keySections, songKey } from "../theory/key";
-import { type Accidentals, type NamingSystem, noteName } from "../theory/note-names";
+import { type Accidentals, type NamingChoice, noteName } from "../theory/note-names";
 import { type CameraPreset, createCameraRig } from "./cameras";
 import { type BlockKind, type BlockNotation, chordMarks, type ChordPlacement, type ChordStyle, createChordLabels } from "./chord-labels";
 import { codedColor, codesFingers, NO_CODING, type Played, readColorCoding } from "./color-coding";
@@ -347,7 +347,7 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
   const chooseLabels = () => {
     labelsOf = picksOf(settings.get("noteLabel"), NOTE_LABELS).map((kind): ((note: Note) => string | undefined) => {
       if (kind === "name") {
-        const system = settings.get("pitchNotationSystem") as NamingSystem;
+        const system = settings.get("pitchNotationSystem") as NamingChoice;
         return (note) => noteName(note.pitch, { system, accidentals, octave: false });
       }
       if (kind === "keyBinding") {
@@ -396,7 +396,7 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
         black: settings.get("showKeyNamesOnPianoBlack"),
         flats: settings.get("showPianoKeyNameFlats"),
         octave: settings.get("octaveLabel") as OctaveLabel,
-        system: settings.get("pitchNotationSystem") as NamingSystem,
+        system: settings.get("pitchNotationSystem") as NamingChoice,
         bindings: settings.get("showKeyBindingsOnPiano"),
         keyBindings: settings.get("keyBindings"),
       },
@@ -607,7 +607,7 @@ export function createScene(container: HTMLElement, settings: SettingsStore): Pi
       blocks: settings.get("chordBlocks") as BlockKind,
       notation: settings.get("chordToneNotation") as BlockNotation,
       markRoot: settings.get("chordMarkRoot"),
-      system: settings.get("pitchNotationSystem") as NamingSystem,
+      system: settings.get("pitchNotationSystem") as NamingChoice,
     });
     const nextCoding = readColorCoding(settings);
     const nextKey = JSON.stringify(nextCoding);

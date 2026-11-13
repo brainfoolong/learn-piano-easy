@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "Scripts, fonts, note names and sorting follow the locale"
-    status: open
+    status: done
   - id: 6
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -209,7 +209,20 @@ uses them is [docs/agent/translation.md](../agent/translation.md).
   | `ja` | `ド レ ミ ファ ソ ラ シ` |
   | every other | `Do Re Mi Fa Sol La Si` |
 - **A new learner's naming system is their locale's default** until they pick one in the settings.
-- **Sorting uses `Intl.Collator` of the live locale.**
+- **The naming setting's default is `auto`,** a third option beside letters and solfège.
+  `namingSystemOf` resolves it by the live locale's row at each name, so a change of locale renames
+  the notes at once. A default written from the browser's language at the first visit would freeze a
+  guess, and a learner who switches the site's language would keep the old names.
+- **The script tokens live in `src/ui/tokens.css`, and the line rules in `src/ui/base.css`.** The
+  tokens file is the home of every token.
+- **A non-Latin stack keeps Plus Jakarta Sans first,** so Latin words and digits stay in the site's face.
+  Only Cyrillic keeps the Arial fallback face, since the font has no Cyrillic and Arial matches it.
+- **A joining script's `letter-spacing: 0` and Han's `font-style: normal` are important declarations of
+  the `base` layer,** so they beat every component's value without touching its stylesheet.
+- **Sorting uses `Intl.Collator` of the live locale,** through `collator` in `src/i18n/format.ts`, with
+  numbers compared as numbers.
+- **The 3D labels read the root's computed `font-family` when a text is first drawn.** A text cached
+  before a change of locale keeps its first font until the cache starts over.
 - **The layout checks run in `en`, `de` and `en-XA` at every width.** A shipped locale adds its own run at
   360 and 1280 pixels in its own goal.
 - **Lanes:** every stage touches `src/i18n/`, so the stages run in order.
@@ -294,16 +307,16 @@ in English and German, one subagent per folder of `src/`, side by side.
 and sorting by the live locale.
 **Gate:** `e2e/pseudo.e2e.ts` exists.
 
-- [ ] A font token per script under `:root:lang(<code>)`, for Han in Chinese and in Japanese, Devanagari, Bengali, Arabic, Nastaliq and Cyrillic. `src/ui/base.css:25`
-- [ ] Line height per script, with more room for Devanagari, Bengali and Nastaliq. `src/ui/base.css:1`
-- [ ] No `letter-spacing` for a joining script, and no italic for Han. `src/ui/base.css:1`
-- [ ] `line-break: strict` for Chinese and Japanese, and `word-break: auto-phrase` for Japanese. `src/ui/base.css:1`
-- [ ] The 3D labels draw with the locale's font stack. `src/render/labels.ts:1`
-- [ ] Solfège syllables per locale. `src/theory/note-names.ts:46`
-- [ ] A new learner's naming system follows the locale until they pick one. `src/settings/schema.ts:1`
-- [ ] Sorting through `Intl.Collator` of the live locale. `src/library/search.ts:191`, `src/library/uploads.ts:201`
-- [ ] Tests `solfege_follows_the_locale_script` and `a_new_learner_gets_the_locale_naming_system`. `src/theory/note-names.test.ts:1`
-- [ ] Test `the_latin_font_covers_every_latin_locale`: the font's `cmap` holds each Latin locale's alphabet and every character its translation files use. `tools/font-coverage.test.ts:1`
+- [x] A font token per script under `:root:lang(<code>)`, for Han in Chinese and in Japanese, Devanagari, Bengali, Arabic, Nastaliq and Cyrillic. `src/ui/tokens.css:205`
+- [x] Line height per script, with more room for Devanagari, Bengali and Nastaliq. `src/ui/tokens.css:205`
+- [x] No `letter-spacing` for a joining script, and no italic for Han. `src/ui/base.css:1`
+- [x] `line-break: strict` for Chinese and Japanese, and `word-break: auto-phrase` for Japanese. `src/ui/base.css:1`
+- [x] The 3D labels draw with the locale's font stack. `src/render/labels.ts:1`
+- [x] Solfège syllables per locale. `src/theory/note-names.ts:46`
+- [x] A new learner's naming system follows the locale until they pick one. `src/settings/schema.ts:1`
+- [x] Sorting through `Intl.Collator` of the live locale. `src/library/search.ts:191`, `src/library/uploads.ts:201`
+- [x] Tests `solfege_follows_the_locale_script` and `a_new_learner_gets_the_locale_naming_system`. `src/theory/note-names.test.ts:1`
+- [x] Test `the_latin_font_covers_every_latin_locale`: the font's `cmap` holds each Latin locale's alphabet and every character its translation files use. `tools/font-coverage.test.ts:1`
 
 ### 6. the goal is verified once, and every failure is fixed
 
@@ -315,43 +328,42 @@ and sorting by the live locale.
 
 ### State
 
-Stages 1 to 4 are done. The check `pseudo-locale` passes, and `src/i18n/pseudo.test.ts` passes, each
-run once by file.
+Stages 1 to 5 are done. The check `locale-scripts` passes, run once. `tsc` and the build are clean.
 
-- `src/i18n/pseudo.ts` holds `pseudo`, `pseudoTree` and `textFor`. `PSEUDO_ROW` sits beside
-  `LOCALE_TABLE` in `src/i18n/locale-table.ts`, so no table loop meets it.
-- `Locale` is now a page's locale, and the pseudo-locale is one. `ShippedLocale` keys world titles,
-  the legal texts, the gallery's messages and the stored language choice.
-- The sweep's first run found few hard-coded texts, so no split ran. The license texts on About now carry
-  `lang="en"`. Weekday letters from `Intl`, chord degrees, locale codes, `XP` and `1k` pass the sweep.
-- The sweep found one bug: `pseudoTree` rewrote a legal link's `route`. It now keeps `route` and `href`.
-- `every_page_holds_longer_text` checks each page in English and in `en-XA`, and fails only on a flaw
-  the longer text adds. Each page's own test holds the English.
-- The sweep opens every route and the first lesson, fresh and past the setup. It opens no dialog or panel.
-- `tsc` and the build are clean. The shots of the landing, the map, a lesson and the player show
-  only bracketed text.
+- Each script's font stack and line heights are tokens under `:root:lang(<code>)` in
+  `src/ui/tokens.css:205`. The line rules are in `src/ui/base.css`, in the `base` layer.
+- A shot of the player with `lang` set to `ja` and `ar` showed the stacks, `line-break: strict`,
+  `word-break: auto-phrase` and `letter-spacing: normal` applied, with no page errors.
+- `noteName` writes solfège in each locale's spelling, through `SOLFEGE_BY_LOCALE`. German letters now
+  follow the row's `naming`, never a compare with `"de"`.
+- `pitchNotationSystem` gains the option `auto`, its new default, labelled in English and German.
+  `NamingChoice` is the setting's type, and `namingSystemOf` resolves it.
+- `collator(locale)` in `src/i18n/format.ts` sorts the library by title and an uploaded folder's files.
+- `tools/font-coverage.test.ts` reads the WOFF2 `cmap` itself. A planted `ド` and `Ж` made it fail,
+  which also showed that Plus Jakarta Sans has no Cyrillic.
+- The profile's weekday letters take `rowOf(locale).intl`.
 
 What earlier stages left to later ones:
 
 - `src/site/legal-view.ts:25` imports `legal.de` statically. Legal stays English and German only.
-- `src/theory/note-names.ts:71` compares the locale with `"de"`, and the two `player-settings-play`
-  catalogs label the language options with endonyms. That is stage 5, which may read the table there.
-- `src/learn/profile-view.ts:143` hands `Intl` the page's code, not `rowOf(locale).intl`. Stage 5 fixes it.
 
 ### Next
 
-**Stage 5: scripts, fonts, note names and sorting.** Files: `src/ui/base.css:25`, `src/render/labels.ts`,
-`src/theory/note-names.ts:46`, `src/settings/schema.ts`, `src/library/search.ts:191`,
-`src/library/uploads.ts:201`, `src/learn/profile-view.ts:143`, `src/theory/note-names.test.ts` and
-`tools/font-coverage.test.ts` (new). The schema must stay free of runtime imports from `src/i18n/`
-but `locale-table.ts`, as the playbook's `tsc` trap says.
+**Stage 6: the gate.** Run `looper verify`, fix every failure in one pass, and run it once more.
 
-Expected red: every layout test now runs `en-XA` too, through `LOCALES` of `e2e/layout-check.ts`. None of
-them ran in this session. A flaw only `en-XA` shows may fail `e2e/design.e2e.ts`, `e2e/site.e2e.ts`,
-`e2e/landing.e2e.ts`, `e2e/play.e2e.ts` or `e2e/game.e2e.ts`. Each runs 1.5 times
-longer, so a tight `test.setTimeout` may fail too. Stage 6 fixes each.
+Expected red:
+
+- Every layout test runs `en-XA` too, through `LOCALES` of `e2e/layout-check.ts`, and none has run yet.
+  A flaw only `en-XA` shows may fail `e2e/design.e2e.ts`, `e2e/site.e2e.ts`, `e2e/landing.e2e.ts`,
+  `e2e/play.e2e.ts` or `e2e/game.e2e.ts`. Each runs 1.5 times longer, so a tight `test.setTimeout`
+  may fail too.
+- A test that reads the naming setting's options or its default, such as one of
+  `src/settings/*.test.ts` or an e2e test of the panel's *Note names* select, now meets `auto`.
+- The 3D labels now draw in Plus Jakarta Sans, not `system-ui`. A test that measures a label may shift.
 
 ### Backlog
 
+- The settings panel's language options repeat the table's endonyms in both `player-settings-play`
+  catalogs. The panel could read `rowOf(code).endonym` instead, so the endonym has one home.
 - The web app manifest has one English name and description. A manifest per locale could follow.
 - A locale's 404 page, if the site ever gets one.

@@ -32,7 +32,7 @@
  *   that file, so even a reset loses no work. The cost is one download the learner may not want.
  */
 import "./profile-view.css";
-import { messagesOf, type Locale } from "../i18n/locale";
+import { messagesOf, rowOf, type Locale } from "../i18n/locale";
 import { textFor } from "../i18n/pseudo";
 import type { View, ViewContext } from "../site/views";
 import { badgeMedal } from "../ui/components/badge-medal";
@@ -140,7 +140,7 @@ export function profilePage(locale: Locale, context: ViewContext, refreshSlot: (
     const title = { met: t.calendar.met, played: t.calendar.played, none: t.calendar.none, ahead: "" };
     const today = dayOf(Date.now());
     // The first seven days are a week from Monday, so they name the columns in the locale's own letters.
-    const letter = new Intl.DateTimeFormat(locale, { weekday: "narrow", timeZone: "UTC" });
+    const letter = new Intl.DateTimeFormat(rowOf(locale).intl, { weekday: "narrow", timeZone: "UTC" });
     const weekdays = el("div", {
       class: "profile__weekdays",
       attrs: { "aria-hidden": "true" },

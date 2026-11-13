@@ -281,7 +281,7 @@ export const playerSettingsLook = {
   pitchNotationSystem: {
     label: "Note names",
     help: "How the names on the notes and the keys are written. Do is always C.",
-    options: { letters: "Letters: C D E", solfege: "Solfège: Do Re Mi" },
+    options: { auto: "As my language writes them", letters: "Letters: C D E", solfege: "Solfège: Do Re Mi" },
   },
   noteLabel: {
     label: "Note labels",

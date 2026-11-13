@@ -447,7 +447,8 @@ export const SETTINGS = [
   choice("particleDistributionZ", "particles", "behind", ["behind", "front"]),
 
   // Labels
-  choice("pitchNotationSystem", "labels", "letters", ["letters", "solfege"]),
+  // `auto` names the notes as the live locale teaches them, as `namingSystemOf` resolves it.
+  choice("pitchNotationSystem", "labels", "auto", ["auto", "letters", "solfege"]),
   multi("noteLabel", "labels", [], NOTE_LABELS),
   colour("noteLabelColor", "labels", "#ffffffff"),
   toggle("showKeyNamesOnPianoWhite", "labels", false),

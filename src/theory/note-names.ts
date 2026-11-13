@@ -11,31 +11,38 @@
  * - A black key is spelled with sharps or flats as a whole, never mixed. Which one a key uses is
  *   `keyAccidentals` in `src/theory/key.ts`, so a name follows the song's key.
  * - The octave is scientific: 60 is C4, and 21 is A0. A pitch below 12 has octave -1.
- * - Letters follow the locale, the live one unless a style names its own. German letters call B an H,
+ * - Names follow the locale, the live one unless a style names its own. German letters call B an H,
  *   and B♭ a B, as German teaching books do. The accidentals stay ♯ and ♭, never *Cis* or *Es*, so a
- *   name keeps one shape in every locale. Solfège is the same in every locale.
+ *   name keeps one shape in every locale.
+ * - Solfège is written in the locale's script and spelling, such as `Ré` in French and `ド` in
+ *   Japanese. `SOLFEGE_BY_LOCALE` holds each locale that differs, and every other writes `Do Re Mi`.
+ * - The system `auto` is the locale's own, from its row of the locale table. It is the setting's
+ *   default, so a new learner reads the names their locale teaches until they pick a system.
  * - Code that keys on a letter, such as the answers of a `read-note` step, names `locale: "en"`, and
  *   shows the letter through its catalog.
  *
  * Bounds: every name is a table lookup, with no allocation beyond the returned text.
  */
 import { liveLocale } from "../i18n/live";
-import type { Locale } from "../i18n/locale";
+import { type LocaleCode, rowOf } from "../i18n/locale-table";
 
 /** How a note's letter is written: `C D E` or `Do Re Mi`. */
 export type NamingSystem = "letters" | "solfege";
+
+/** A system, or `auto` for the locale's own. */
+export type NamingChoice = NamingSystem | "auto";
 
 /** How a black key is spelled: C♯ or D♭. */
 export type Accidentals = "sharps" | "flats";
 
 /** How a name is written. Every field is optional, and a missing one takes `DEFAULT_NAME_STYLE`'s. */
 export interface NameStyle {
-  system?: NamingSystem;
+  system?: NamingChoice;
   accidentals?: Accidentals;
   /** Whether the octave number follows the name, as in `C4`. */
   octave?: boolean;
-  /** The locale whose letters name the note. Missing, it is the live locale. */
-  locale?: Locale;
+  /** The locale whose letters or syllables name the note. Missing, it is the live locale. */
+  locale?: LocaleCode;
 }
 
 /** Letters, with sharps, with the octave: 61 is `C♯4`. */
@@ -44,6 +51,21 @@ export const DEFAULT_NAME_STYLE: Readonly<Required<Omit<NameStyle, "locale">>> =
 const LETTERS = ["C", "D", "E", "F", "G", "A", "B"] as const;
 const GERMAN_LETTERS = ["C", "D", "E", "F", "G", "A", "H"] as const;
 const SOLFEGE = ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si"] as const;
+
+/** The syllables of each locale that writes them otherwise than `SOLFEGE`. */
+const SOLFEGE_BY_LOCALE: Partial<Record<LocaleCode, readonly string[]>> = {
+  fr: ["Do", "Ré", "Mi", "Fa", "Sol", "La", "Si"],
+  pt: ["Dó", "Ré", "Mi", "Fá", "Sol", "Lá", "Si"],
+  ru: ["до", "ре", "ми", "фа", "соль", "ля", "си"],
+  ar: ["دو", "ري", "مي", "فا", "صول", "لا", "سي"],
+  ja: ["ド", "レ", "ミ", "ファ", "ソ", "ラ", "シ"],
+};
+
+/** The system `choice` names in `locale`: `auto` is the locale's own, from its row. */
+export function namingSystemOf(choice: NamingChoice, locale: LocaleCode = liveLocale()): NamingSystem {
+  if (choice !== "auto") return choice;
+  return rowOf(locale).naming === "solfege" ? "solfege" : "letters";
+}
 
 /** Each pitch class as a letter index and an accidental: 0 natural, 1 sharp, -1 flat. */
 const SHARP_SPELLING: readonly (readonly [number, number])[] = [
@@ -67,10 +89,11 @@ export function octaveOf(pitch: number): number {
 export function pitchClassName(pc: number, style: NameStyle = {}): string {
   const spelling = (style.accidentals ?? DEFAULT_NAME_STYLE.accidentals) === "flats" ? FLAT_SPELLING : SHARP_SPELLING;
   const [letter, accidental] = spelling[pitchClass(pc)]!;
-  const solfege = (style.system ?? DEFAULT_NAME_STYLE.system) === "solfege";
-  const german = !solfege && (style.locale ?? liveLocale()) === "de";
+  const locale = style.locale ?? liveLocale();
+  const solfege = namingSystemOf(style.system ?? DEFAULT_NAME_STYLE.system, locale) === "solfege";
+  const german = !solfege && rowOf(locale).naming === "german";
   if (german && letter === 6 && accidental === -1) return "B";
-  const names = solfege ? SOLFEGE : german ? GERMAN_LETTERS : LETTERS;
+  const names = solfege ? (SOLFEGE_BY_LOCALE[locale] ?? SOLFEGE) : german ? GERMAN_LETTERS : LETTERS;
   return `${names[letter]}${accidental === 1 ? "♯" : accidental === -1 ? "♭" : ""}`;
 }
 

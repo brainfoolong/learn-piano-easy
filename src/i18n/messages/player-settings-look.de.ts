@@ -281,7 +281,7 @@ export const playerSettingsLook: typeof en = {
   pitchNotationSystem: {
     label: "Notennamen",
     help: "Wie die Namen auf den Noten und Tasten geschrieben werden. Do ist immer C.",
-    options: { letters: "Buchstaben: C D E", solfege: "Solmisation: Do Re Mi" },
+    options: { auto: "Wie in meiner Sprache", letters: "Buchstaben: C D E", solfege: "Solmisation: Do Re Mi" },
   },
   noteLabel: {
     label: "Beschriftung der Noten",

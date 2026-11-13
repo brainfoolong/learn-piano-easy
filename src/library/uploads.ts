@@ -19,6 +19,8 @@
  * - The list is read whole. A MIDI file is rarely over 100 kB, so a few hundred uploads fit in memory.
  */
 import { noteChange } from "../data/changes";
+import { collator } from "../i18n/format";
+import { liveLocale } from "../i18n/live";
 import { looksLikeMusicXml } from "../midi/musicxml";
 import type { SettingsStore } from "../settings/store";
 import { el } from "../ui/dom";
@@ -198,7 +200,8 @@ export async function pickFolder(): Promise<File[]> {
     }
   };
   await walk(root);
-  return files.sort((a, b) => a.name.localeCompare(b.name));
+  const byName = collator(liveLocale());
+  return files.sort((a, b) => byName.compare(a.name, b.name));
 }
 
 /** The files the learner picks through `input`. Resolves empty when the picker closes without a pick. */
