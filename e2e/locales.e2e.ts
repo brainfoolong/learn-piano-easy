@@ -45,7 +45,8 @@ test("the_spanish_site_reads_in_spanish", async ({ page }) => {
 
   await page.goto("./es/play/");
   await expect(page.getByRole("button", { name: "Reproducir", exact: true })).toBeVisible();
-  await expect(bar(page).getByRole("link", { name: "Piano libre" })).toHaveAttribute("aria-current", "page");
+  await expect(bar(page).getByRole("button", { name: "Canciones" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "Configuración" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 

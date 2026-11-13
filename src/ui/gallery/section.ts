@@ -2,7 +2,7 @@
 import { button } from "../components/button";
 import { section as band, type SectionOptions } from "../components/section";
 import { el } from "../dom";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -27,7 +27,7 @@ const MESSAGES = {
     body: "Jedes Lied wartet auf dich, damit du nie zurückfällst.",
     start: "Jetzt spielen",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** A section in a box of a set width, since a specimen sizes to its content. */
 function sized(options: SectionOptions): HTMLElement {

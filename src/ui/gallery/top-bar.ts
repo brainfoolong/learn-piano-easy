@@ -7,7 +7,7 @@ import { button } from "../components/button";
 import { iconButton } from "../components/icon-button";
 import { topBar, type TopBarLink } from "../components/top-bar";
 import { signal } from "../signal";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -42,7 +42,7 @@ const MESSAGES = {
     favourite: "Als Favorit markieren",
     practise: "Üben",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** A frame as wide as its panel, since a specimen is only as wide as its content. */
 const frame = (child: Node) =>

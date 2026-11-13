@@ -1,6 +1,6 @@
 /** The gallery's section of the empty state: with a title, without one, and with another icon. */
 import { emptyState, type EmptyStateOptions } from "../components/empty-state";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -21,7 +21,7 @@ const MESSAGES = {
     noResults: "Kein Lied passt zu deiner Suche.",
     clearSearch: "Suche zurücksetzen",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 const states = (entries: [string, EmptyStateOptions][]) =>
   entries.map(([state, options]) => specimen(state, emptyState(options)));

@@ -1,7 +1,7 @@
 /** The gallery's section of the skeleton: text, block and circle, and a card placeholder built of them. */
 import { el } from "../dom";
 import { skeleton } from "../components/skeleton";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -16,7 +16,7 @@ const MESSAGES = {
     shapes: "Blöcke und Kreise",
     composed: "Eine Karte beim Laden",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /**
  * A region that waits for its part, as a caller marks it, with a width a skeleton can fill.

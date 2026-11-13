@@ -33,7 +33,7 @@ import { dialogSection } from "./gallery/dialog";
 import { emptyStateSection } from "./gallery/empty-state";
 import { iconButtonSection } from "./gallery/icon-button";
 import { linkSection } from "./gallery/link";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./gallery/parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./gallery/parts";
 import { pianoKeysSection } from "./gallery/piano-keys";
 import { progressSection } from "./gallery/progress";
 import { sectionSection } from "./gallery/section";
@@ -86,7 +86,7 @@ const MESSAGES = {
     emptyMessage: "Öffne eine MIDI-Datei, um mitzuspielen.",
     emptyAction: "Lied öffnen",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 type Messages = (typeof MESSAGES)["en"];
 

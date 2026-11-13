@@ -11,7 +11,7 @@ export const playerSettingsPlay = {
   language: {
     label: "Language",
     help: "Like the browser, the site opens in the browser's language when it has one.",
-    options: { auto: "Like the browser", en: "English", de: "Deutsch" },
+    options: { auto: "Like the browser", en: "English", de: "Deutsch", es: "Español" },
   },
   learnSounds: {
     label: "Reward sounds",

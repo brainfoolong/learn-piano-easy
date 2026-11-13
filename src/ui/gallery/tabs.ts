@@ -2,7 +2,7 @@
 import { segmented, tabs, type SegmentedOptions, type TabsOptions } from "../components/tabs";
 import { el } from "../dom";
 import { signal } from "../signal";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -83,7 +83,7 @@ const MESSAGES = {
     hard: "Schwer",
     expert: "Experte",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** A component in a box of a set width, since it fills its parent and a specimen sizes to its content. */
 function framed(node: HTMLElement, wide = false): HTMLElement {

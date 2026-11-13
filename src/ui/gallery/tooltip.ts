@@ -2,7 +2,7 @@
 import { button } from "../components/button";
 import { tooltip, type TooltipOptions } from "../components/tooltip";
 import { el } from "../dom";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -29,7 +29,7 @@ const MESSAGES = {
     readAfter: ".",
     guideTip: "Eine kurze Anleitung zum Üben",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** The tooltip's section in the gallery. */
 export function tooltipSection(locale: Locale): HTMLElement {

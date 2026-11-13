@@ -8,10 +8,10 @@
 import { el } from "../dom";
 
 /**
- * The gallery's locales are the site's. Each section's messages hold every shipped locale, and
- * `textFor` reads them, so the pseudo-locale derives its own from the English.
+ * The gallery's locales are the site's. Each section's messages hold every complete locale, and
+ * `textFor` reads them. Any other locale shows the English, and the pseudo-locale derives its own.
  */
-export type { Locale, ShippedLocale } from "../../i18n/locale";
+export type { Locale, CompleteLocale } from "../../i18n/locale";
 export { textFor } from "../../i18n/pseudo";
 
 /** A specimen of one state, marked for the tests. */

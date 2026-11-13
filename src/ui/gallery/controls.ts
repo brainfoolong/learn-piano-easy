@@ -8,7 +8,7 @@
 import "../controls.css";
 import { actionControl, selectControl, sliderControl, textControl, toggleControl, type Control } from "../controls";
 import { el } from "../dom";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -53,7 +53,7 @@ const MESSAGES = {
     resetView: "Ansicht zurücksetzen",
     exportRecording: "Aufnahme exportieren",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** A control with its name as a visible label before it, wrapping under it where the row is narrow. */
 function labelled(name: string, control: Control<unknown>): HTMLElement {

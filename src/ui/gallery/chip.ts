@@ -4,7 +4,7 @@
  * reads.
  */
 import { chip, type ChipOptions } from "../components/chip";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -37,7 +37,7 @@ const MESSAGES = {
     legendary: "Schwer",
     mythic: "Original",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 const chips = (entries: [string, ChipOptions][]) => entries.map(([state, options]) => specimen(state, chip(options)));
 

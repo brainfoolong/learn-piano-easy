@@ -259,7 +259,7 @@ export function textsInPage(): string[] {
  */
 export async function englishShown(page: Page, locale: string, own: readonly string[] = []): Promise<string[]> {
   if (locale === DEFAULT_LOCALE || !isLocale(locale) || !COMPLETE_LOCALES.includes(locale)) return [];
-  const english = translatedAway(CATALOGS[DEFAULT_LOCALE], CATALOGS[locale] ?? {});
+  const english = translatedAway(CATALOGS.en, CATALOGS[locale] ?? {});
   for (const text of own) english.delete(fold(text));
   return untranslated(await page.evaluate(textsInPage), english);
 }

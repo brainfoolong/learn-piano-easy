@@ -5,7 +5,7 @@ import { quantize, type Sheet } from "../../sheet/quantize";
 import { staff } from "../components/staff";
 import { el } from "../dom";
 import type { Mark } from "../mark";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -26,7 +26,7 @@ const MESSAGES = {
     inG: "Zwei Takte in G-Dur",
     marked: "Vier Takte, die ersten Noten gespielt und die nächste hervorgehoben",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** Ticks per quarter note. */
 const TPQ = 480;

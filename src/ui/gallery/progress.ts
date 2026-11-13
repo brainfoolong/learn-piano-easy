@@ -1,7 +1,7 @@
 /** The gallery's section of progress: a bar and a ring empty, part full and full, and steps at each stage. */
 import { progressBar, progressRing, progressSteps } from "../components/progress";
 import { el } from "../dom";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -32,7 +32,7 @@ const MESSAGES = {
     leftHand: "Linke Hand",
     bothHands: "Beide Hände",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** A part in a box of a set width, since a bar and steps fill their parent and a specimen sizes to its content. */
 function sized(child: HTMLElement, wide = false): HTMLElement {

@@ -16,7 +16,7 @@ import { button } from "../components/button";
 import { el } from "../dom";
 import type { Mark } from "../mark";
 import { signal } from "../signal";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -53,7 +53,7 @@ const MESSAGES = {
     start: "Abspielen",
     stop: "Stopp",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** A view in a box of a set width, since a view fills its parent and a specimen sizes to its content. */
 function sized(child: HTMLElement, width: string): HTMLElement {

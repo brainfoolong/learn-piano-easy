@@ -3,7 +3,7 @@ import { button } from "../components/button";
 import { xpCounter } from "../components/xp-counter";
 import { el } from "../dom";
 import { signal } from "../signal";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -16,7 +16,7 @@ const MESSAGES = {
     states: "Zustände",
     earn: "250 XP verdienen",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** The unit after the number. "XP" reads the same in both locales. */
 const format = (number: string) => `${number} XP`;

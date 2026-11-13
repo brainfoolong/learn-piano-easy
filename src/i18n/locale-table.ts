@@ -86,6 +86,12 @@ export type LocaleCode = LanguageCode | PseudoLocale;
  */
 export type ShippedLocale = Extract<Row, { shipped: true }>["code"];
 
+/**
+ * A locale whose catalog holds every text. A text only the complete locales hold, such as the gallery's
+ * or a legal text, is keyed by it, and every other locale shows its English.
+ */
+export type CompleteLocale = Extract<Row, { complete: true }>["code"];
+
 /** A locale a page may be written in: a shipped one, or the pseudo-locale of a `--pseudo` build. */
 export type Locale = ShippedLocale | PseudoLocale;
 

@@ -1,6 +1,6 @@
 /** The gallery's section of the button: every variant, size, icon placement and state. */
 import { button, type ButtonOptions } from "../components/button";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -39,7 +39,7 @@ const MESSAGES = {
     saving: "Dein Fortschritt wird gespeichert",
     locked: "Ab Stufe 3 freigeschaltet",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 const buttons = (entries: [string, ButtonOptions][]) => entries.map(([state, options]) => specimen(state, button(options)));
 

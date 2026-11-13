@@ -6,7 +6,7 @@
 import { button } from "../components/button";
 import { dialog, dialogPreview, type Dialog } from "../components/dialog";
 import { el } from "../dom";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -56,7 +56,7 @@ const MESSAGES = {
     noteTitle: "Deine Tastatur ist verbunden",
     noteText: "Drücke eine beliebige Taste, um die Lektion zu starten.",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 /** A body of paragraphs, one for each line of `text`. */
 function paragraphs(text: string): HTMLElement {

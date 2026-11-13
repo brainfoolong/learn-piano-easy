@@ -1,7 +1,7 @@
 /** The gallery's section of the badge medal: locked, earned and new, each at every size. */
 import { badgeMedal, type BadgeMedalSize, type BadgeMedalState } from "../components/badge-medal";
 import type { IconName } from "../icons/icons";
-import { group, section, specimen, textFor, type Locale, type ShippedLocale } from "./parts";
+import { group, section, specimen, textFor, type Locale, type CompleteLocale } from "./parts";
 
 const MESSAGES = {
   en: {
@@ -28,7 +28,7 @@ const MESSAGES = {
     streak: "Wochenserie",
     streakNew: "Wochenserie, neu verdient",
   },
-} satisfies Record<ShippedLocale, Record<string, string>>;
+} satisfies Record<CompleteLocale, Record<string, string>>;
 
 const SIZES: BadgeMedalSize[] = ["small", "medium", "large"];
 
