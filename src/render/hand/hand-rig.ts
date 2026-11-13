@@ -13,8 +13,11 @@
  *   middle joint, and its last joint follows its middle joint, as a real finger's does. The thumb bends
  *   and swings at its base and bends at its middle joint, and its last joint follows. A soft pull
  *   towards a relaxed pose picks the natural answer where several fit.
+ * - **A pad that starts far from its target takes more steps,** as after a seek, so it lands in one
+ *   frame. That frame costs four times a normal one.
  *
- * Bounds: `SOLVER_STEPS` steps per digit per frame, each with four forward passes of three bones.
+ * Bounds: `SOLVER_STEPS` steps per digit per frame, or `SEEK_STEPS` when its pad starts further than
+ * `FAR` away. Each step takes four forward passes of three bones.
  */
 import { Bone, Group, Matrix4, type Mesh, Quaternion, SkinnedMesh, Vector3 } from "three";
 import type { GLTF } from "three/addons/loaders/GLTFLoader.js";
@@ -42,6 +45,10 @@ interface Limits {
 
 /** How many solver steps each digit takes per frame. */
 const SOLVER_STEPS = 6;
+/** The steps a digit takes when its pad starts further than `FAR` from its target, as after a seek. */
+const SEEK_STEPS = 24;
+/** A pad this far from its target, in key widths, has jumped rather than moved with the music. */
+const FAR = 0.5;
 const FINGER: Limits = { min: [-0.35, -0.5, 0], max: [1.5, 0.5, 1.85], relaxed: [0.35, 0, 0.6], last: 0.72 };
 const THUMB: Limits = { min: [-0.6, -0.9, -0.2], max: [1.3, 0.9, 1.3], relaxed: [0.2, 0, 0.3], last: 0.85 };
 /** How strongly the solver leans towards the relaxed pose. */
@@ -179,7 +186,8 @@ function solve(c: Chain, target: Vector3, padAt: (c: Chain, angles: Angles, out:
   const r = new Vector3();
   const J = [new Vector3(), new Vector3(), new Vector3()] as const;
   const eps = 1e-3;
-  for (let step = 0; step < SOLVER_STEPS; step++) {
+  const steps = padAt(c, p, at).distanceTo(target) > FAR ? SEEK_STEPS : SOLVER_STEPS;
+  for (let step = 0; step < steps; step++) {
     padAt(c, p, at);
     r.copy(at).sub(target);
     if (r.lengthSq() < 1e-6) break;

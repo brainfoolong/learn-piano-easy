@@ -45,6 +45,7 @@ under its slug.
 | `src/midi/` | The Standard MIDI File reader and writer, the MusicXML reader, the song model and the tempo map | `midi-core`, `more-songs` |
 | `src/audio/` | The Web Audio engine: sampler, envelope, pedal, metronome and effects | `audio-engine`, `piano-sounds` |
 | `src/render/` | The three.js scene: piano, notes, lanes, camera and effects | `renderer-3d` |
+| `src/render/hand/` | The mascot's rigged hand, its skin material and the solver that puts a fingertip on a key | `mascot-hand` |
 | `src/play/` | The clock, the transport, the loop and the hotkeys | `transport` |
 | `src/keyboard/` | The learner's keyboard: its range, the size presets, and how a song fits it | `keyboard-range` |
 | `src/input/` | Web MIDI, the computer keyboard, the on-screen piano and the modes | `input-and-modes` |
@@ -56,7 +57,7 @@ under its slug.
 | `src/export/` | The PDF writer and its export dialog | `effects-and-extras` |
 | `src/ui/` | The tokens, the components, the icons, our small DOM helpers and the gallery | `foundation`, `site-design-system` |
 | `src/pwa/` | The service worker and the offline cache manager | `foundation`, `offline-release` |
-| `public/` | Static files copied as they are: the page, the manifest, icons, songs and sounds | `foundation` |
+| `public/` | Static files copied as they are: the page, the manifest, icons, songs, sounds and the hand model | `foundation`, `mascot-hand` |
 
 ## Time
 

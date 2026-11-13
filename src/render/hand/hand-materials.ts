@@ -5,8 +5,8 @@
  * - **One physical material with a few lines added,** so the hand takes the scene's lights, shadows
  *   and environment like every other part, in one draw call.
  * - **The skin is one colour with no pattern.** A soft warm sheen keeps it from looking like plastic.
-- **A faceted model is lit flat in the shader,** from the screen derivatives of each face. The model
-  then needs no normals, and its faces share their corners.
+ * - **A faceted model is lit flat in the shader,** from the screen derivatives of each face. The model
+ *   then needs no normals, and its faces share their corners.
  * - **Each nail is a rounded patch at a frame the model's markers give,** white and glossier than the
  *   skin. It is found from the rest-pose position, so it stays on the fingertip as the hand bends, and
  *   its edge is sharp at any mesh density.

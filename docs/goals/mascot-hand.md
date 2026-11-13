@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The rig is tested and recorded
-    status: open
+    status: done
   - id: 3
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -103,12 +103,12 @@ project names a third-party file.
 **Does:** pins the solver's behaviour in tests, and records the decision and the module in the docs.
 **Gate:** the `hand-model` check passes.
 
-- [ ] Unit tests `pads_reach_the_c_position_keys`, `a_left_hand_mirrors_the_right`, `a_relaxed_digit_returns_to_rest` and `every_nail_lies_on_its_fingertip`. `src/render/hand/hand-rig.test.ts:1`
-- [ ] A seek can jump far: `reach` takes extra solver steps when its pad starts far from its target. `src/render/hand/hand-rig.ts:174`
-- [ ] Decision 0013: a rigged MakeHuman hand over generated video and over a code-built hand. `docs/decisions/0013.md:1`
-- [ ] The decisions index lists 0013. `docs/decisions/README.md:1`
-- [ ] The module table names `src/render/hand/`. `docs/design.md:47`
-- [ ] The lab's head comment names the shot command for each view. `tools/hand-lab/main.ts:1`
+- [x] Unit tests `pads_reach_the_c_position_keys`, `a_left_hand_mirrors_the_right`, `a_relaxed_digit_returns_to_rest` and `every_nail_lies_on_its_fingertip`. `src/render/hand/hand-rig.test.ts:1`
+- [x] A seek can jump far: `reach` takes extra solver steps when its pad starts far from its target. `src/render/hand/hand-rig.ts:182`
+- [x] Decision 0013: a rigged MakeHuman hand over generated video and over a code-built hand. `docs/decisions/0013.md:1`
+- [x] The decisions README holds no list of records, so 0013 needs no entry there. `docs/decisions/README.md:1`
+- [x] The module table names `src/render/hand/`. `docs/design.md:58`
+- [x] The lab's head comment names the shot command for each view. `tools/hand-lab/main.ts:1`
 
 ### 3. the goal is verified once, and every failure is fixed
 
@@ -120,15 +120,16 @@ project names a third-party file.
 
 ### State
 
-The prototype works and is uncommitted. It is the model tool, the faceted low-poly `hand.glb` of
-35 KB, the rig with its solver, the skin material and the hand lab. In the lab, all five pads of the C position land within
-a thousandth of a key width, with natural joint angles.
+Stages 1 and 2 are done, and their three checks pass. A rebuild of `hand.glb` gives the same bytes.
+The C position the lab shows lives in `tools/hand-lab/c-position.ts`, and the rig's tests pose the same
+one. Its pads land within 0.003 of a key width, and the test allows 0.005. A pad further than half a
+key from its target takes `SEEK_STEPS` in one frame (`src/render/hand/hand-rig.ts:182`).
 
 ### Next
 
-**Stage 1: the model fits its budget and names its license.** Files: `tools/hand-model/`,
-`public/models/`, `THIRD-PARTY-NOTICES.md`, `tools/licenses.test.ts`, `src/render/hand/hand-model.test.ts`.
-No gate. The items are the stage's list above.
+**Stage 3: the goal is verified once.** Run `looper verify`, fix every failure in one pass, and run it
+again. The hand's own tests are `src/render/hand/hand-model.test.ts` and
+`src/render/hand/hand-rig.test.ts`. Then harvest the goal into `docs/findings.md` § `mascot-hand`.
 
 Expected red: none.
 

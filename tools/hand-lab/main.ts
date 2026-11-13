@@ -2,18 +2,24 @@
  * The hand lab: the mascot's hand on the 3D piano, lit like the warm music room, seen from the views a
  * lesson would use. It is a workbench for the hand's look and motion, never shipped in the app.
  *
- * `?view=<name>` opens a view, and `window.lab.view(name)` switches to one, so screenshots are repeatable.
+ * The hand holds the C position of `c-position.ts`. `?view=<name>` opens a view, and
+ * `window.lab.view(name)` switches to one, so screenshots are repeatable. With the lab served by
+ * `bun tools/hand-lab.ts`, one command shoots all five views into `.agent-tmp/shots/`:
+ *
+ *   bun run shot --base http://localhost:4417/ --name hand --wait 2500 --shot player
+ *     --eval "lab.view('top')" --wait 300 --shot top --eval "lab.view('right')" --wait 300 --shot right
+ *     --eval "lab.view('left')" --wait 300 --shot left --eval "lab.view('front')" --wait 300 --shot front
+ *
+ * `window.lab.report()` gives each digit's miss, joint angles, pad and target.
  */
 import {
   ACESFilmicToneMapping,
   Color,
   DirectionalLight,
-  Euler,
   HemisphereLight,
   PCFShadowMap,
   PerspectiveCamera,
   PMREMGenerator,
-  Quaternion,
   Scene,
   SRGBColorSpace,
   Vector3,
@@ -22,9 +28,9 @@ import {
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 
-import { createHand, DIGITS, type Digit } from "../../src/render/hand/hand-rig";
-import { WHITE_KEY_LENGTH } from "../../src/render/piano-geometry";
+import { createHand, DIGITS } from "../../src/render/hand/hand-rig";
 import { createPiano } from "../../src/render/piano";
+import { LAB_RANGE, PLACEMENT, type Placement, poseCPosition } from "./c-position";
 
 const renderer = new WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -59,14 +65,11 @@ const fill = new DirectionalLight(0xcfe0ff, 0.5);
 fill.position.set(10, 6, 12);
 scene.add(fill);
 
-const piano = createPiano({ range: { first: 48, last: 79 }, flare: false });
+const piano = createPiano({ range: LAB_RANGE, flare: false });
 piano.group.traverse((o) => {
   o.receiveShadow = true;
 });
 scene.add(piano.group);
-
-/** A key's centre in world x. */
-const keyX = (pitch: number) => piano.layout.key(pitch)!.center - piano.layout.width / 2;
 
 const camera = new PerspectiveCamera(32, 1, 0.1, 200);
 const views: Record<string, { eye: [number, number, number]; at: [number, number, number] }> = {
@@ -107,26 +110,14 @@ const gltf = await new GLTFLoader().loadAsync(`./${new URLSearchParams(location.
 const hand = createHand(gltf, "right");
 scene.add(hand.root);
 
-// The C position: thumb on middle C, a finger on each white key up to G, each resting on its key.
-const C4 = 60;
-const keys: Record<Digit, number> = { thumb: C4, index: 62, middle: 64, ring: 65, little: 67 };
-/** How far in from a white key's front edge each digit plays: the fingertips lie on an arc. */
-const INSET: Record<Digit, number> = { thumb: 0.8, index: 1.3, middle: 1.5, ring: 1.35, little: 0.95 };
-const contactZ = (digit: Digit) => WHITE_KEY_LENGTH - INSET[digit];
-const targets = new Map(DIGITS.map((d) => [d, new Vector3(keyX(keys[d]), 0.02, contactZ(d))]));
-
-// The wrist sits behind the middle finger's key, high enough for curved fingers.
+// `?yaw=`, `?roll=`, `?lift=`, `?back=` and `?shift=` try another placement of the C position.
 const params = new URLSearchParams(location.search);
-// The hand rolls a little towards its little finger, which is short and needs the height.
-const flat = new Quaternion().setFromEuler(new Euler(0, Number(params.get("yaw") ?? 0), Number(params.get("roll") ?? -0.12)));
-hand.place(new Vector3(0, 0, 0), flat);
-const middleRest = hand.pad("middle");
-const lift = Number(new URLSearchParams(location.search).get("lift") ?? 2.6);
-const back = Number(new URLSearchParams(location.search).get("back") ?? 5.0);
-const shift = Number(new URLSearchParams(location.search).get("shift") ?? 0);
-const wrist = new Vector3(targets.get("middle")!.x - middleRest.x + shift, lift, contactZ("middle") + back);
-hand.place(wrist, flat);
-for (let i = 0; i < 4; i++) for (const d of DIGITS) hand.reach(d, targets.get(d));
+const placement = { ...PLACEMENT };
+for (const key of Object.keys(placement) as (keyof Placement)[]) {
+  const value = params.get(key);
+  if (value !== null) placement[key] = Number(value);
+}
+const targets = poseCPosition(hand, piano.layout, placement);
 
 /** How far each digit's pad is from its target, and where both are, for checking the solver. */
 function report(): Record<string, string> {
