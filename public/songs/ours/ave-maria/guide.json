@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one bass note for half a bar or longer.",
             "de": "Jetzt die linke Hand allein. Sie hält jeden Basston einen halben Takt lang oder länger.",
             "es": "Ahora la mano izquierda sola. Mantiene cada nota del bajo durante medio compás o más.",
-            "zh": "现在只用左手。每个低音都要按住半个小节或更久。"
+            "zh": "现在只用左手弹。每个低音都要按住半个小节或更久。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首曲子。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首曲子，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -417,7 +417,7 @@
             "en": "After the rest, open the hand to a sixth, D and B flat. Fingers 1 and 5 hold it for most of the bar.",
             "de": "Öffne die Hand nach der Pause zur Sexte, D und B. Finger 1 und 5 halten sie fast den ganzen Takt.",
             "es": "Después del silencio, abre la mano a una sexta, el re y el si bemol. Los dedos 1 y 5 la mantienen casi todo el compás.",
-            "zh": "休止之后，把手张开成六度，弹 D 和降 B。1 指和 5 指把它按住几乎整个小节。"
+            "zh": "休止符之后，把手张开成六度，弹 D 和降 B。1 指和 5 指把它按住几乎整个小节。"
           }
         },
         {
@@ -426,7 +426,7 @@
             "en": "The sixths walk down one key at a time, then the hand jumps back up after a short rest.",
             "de": "Die Sexten gehen Taste für Taste hinab, dann springt die Hand nach einer kurzen Pause zurück.",
             "es": "Las sextas bajan una tecla a la vez, y luego la mano vuelve a saltar arriba tras un silencio corto.",
-            "zh": "六度一个琴键一个琴键地往下走，然后在短休止之后，手跳回上面。"
+            "zh": "六度一个琴键一个琴键地往下走，然后在短休止符之后，手跳回上面。"
           }
         },
         {
@@ -461,7 +461,7 @@
             "en": "Play the left hand alone: the octave, four quick notes, then a short rest to jump.",
             "de": "Spiel die linke Hand allein: die Oktave, vier schnelle Töne, dann eine kurze Pause zum Springen.",
             "es": "Toca la mano izquierda sola: la octava, cuatro notas rápidas y luego un silencio corto para saltar.",
-            "zh": "只用左手弹：一个八度，四个快音，然后一个短休止让你跳过去。"
+            "zh": "只用左手弹：一个八度，四个快音，然后一个短休止符让你跳过去。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -526,7 +526,7 @@
             "en": "Use the short rest at the end of each half bar to jump to the next octave.",
             "de": "Nutz die kurze Pause am Ende jedes halben Takts, um zur nächsten Oktave zu springen.",
             "es": "Aprovecha el silencio corto al final de cada medio compás para saltar a la octava siguiente.",
-            "zh": "利用每半个小节末尾的短休止，跳到下一个八度。"
+            "zh": "利用每半个小节末尾的短休止符，跳到下一个八度。"
           }
         },
         {
@@ -568,7 +568,7 @@
             "en": "After the rest, open the hand to a sixth, D and B flat. Fingers 1 and 5 hold it for most of the bar.",
             "de": "Öffne die Hand nach der Pause zur Sexte, D und B. Finger 1 und 5 halten sie fast den ganzen Takt.",
             "es": "Después del silencio, abre la mano a una sexta, el re y el si bemol. Los dedos 1 y 5 la mantienen casi todo el compás.",
-            "zh": "休止之后，把手张开成六度，弹 D 和降 B。1 指和 5 指把它按住几乎整个小节。"
+            "zh": "休止符之后，把手张开成六度，弹 D 和降 B。1 指和 5 指把它按住几乎整个小节。"
           }
         },
         {
@@ -577,7 +577,7 @@
             "en": "Use the short rest before this bar to jump up to the octave on D.",
             "de": "Nutz die kurze Pause vor diesem Takt, um hinauf zur Oktave auf D zu springen.",
             "es": "Aprovecha el silencio corto antes de este compás para saltar arriba, a la octava de re.",
-            "zh": "利用这个小节前面的短休止，往上跳到 D 的八度。"
+            "zh": "利用这个小节前面的短休止符，往上跳到 D 的八度。"
           }
         }
       ]

@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It strikes a shape twice in every bar and never moves.",
             "de": "Jetzt die linke Hand allein. Sie schlägt in jedem Takt zweimal einen Griff an und bewegt sich nie.",
             "es": "Ahora la mano izquierda sola. Golpea una misma forma dos veces en cada compás, y la mano nunca se mueve.",
-            "zh": "现在只用左手。它每个小节把同一个手型弹两次，手从不移动。"
+            "zh": "现在只用左手弹。它每个小节把同一个手型弹两次，手从不移动。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -123,7 +123,7 @@
             "en": "The left hand strikes on beats 1 and 3, like a slow engine. Keep it steady.",
             "de": "Die linke Hand schlägt auf Schlag 1 und 3 an, wie ein langsamer Motor. Halt sie gleichmäßig.",
             "es": "La mano izquierda toca en los tiempos 1 y 3, como un motor lento. Mantenla pareja.",
-            "zh": "左手在第 1 拍和第 3 拍弹下去，像一台慢慢转的发动机。保持平稳。"
+            "zh": "左手在第一拍和第三拍弹下去，像一台慢慢转的发动机。保持平稳。"
           }
         }
       ],
@@ -213,7 +213,7 @@
             "en": "Join the hands on the whole song, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Junta las manos en toda la canción, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -394,7 +394,7 @@
             "en": "The chords fall on 1, the and of 2, and 4. Count eight eighths and stab on 1, 4 and 7.",
             "de": "Die Akkorde fallen auf 1, das Und von 2 und auf 4. Zähl acht Achtel und schlag auf 1, 4 und 7 an.",
             "es": "Los acordes suenan en el 1, en el «y» del 2 y en el 4. Cuenta ocho corcheas y golpea en 1, 4 y 7.",
-            "zh": "和弦落在第 1 拍、第 2 拍的“哒”和第 4 拍上。数八个八分音符，在第 1、4、7 个上短促地弹下去。"
+            "zh": "和弦落在第一拍、第二拍的“哒”和第四拍上。数八个八分音符，在第 1、4、7 个上短促地弹下去。"
           }
         },
         {
@@ -558,7 +558,7 @@
             "en": "Stab each chord short, and use the rest after it to move to the next one.",
             "de": "Schlag jeden Akkord kurz an, und nutz die Pause danach, um zum nächsten zu wechseln.",
             "es": "Golpea cada acorde corto, y usa el silencio que sigue para ir al siguiente.",
-            "zh": "每个和弦都短促地弹，利用后面的休止去移到下一个和弦。"
+            "zh": "每个和弦都短促地弹，利用后面的休止符去移到下一个和弦。"
           }
         },
         {
@@ -576,7 +576,7 @@
             "en": "Four short chords carry A, C, B and G on top. Let go after each, and land the next in the rest.",
             "de": "Vier kurze Akkorde tragen A, C, H und G oben. Lass nach jedem los, und lande den nächsten in der Pause.",
             "es": "Cuatro acordes cortos llevan arriba el la, el do, el si y el sol. Suelta después de cada uno, y apoya el siguiente en el silencio.",
-            "zh": "四个短促的和弦，最高音分别是 A、C、B、G。每个弹完就松开，在休止里落到下一个。"
+            "zh": "四个短促的和弦，最高音分别是 A、C、B、G。每个弹完就松开，趁休止符落到下一个。"
           }
         }
       ]

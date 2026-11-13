@@ -6,7 +6,7 @@
     "en": "Erik Satie finished his three Gymnopédies in 1888, and the first was published that summer in a magazine. It is marked \"Lent et douloureux\", which means slow and sorrowful. The film The Royal Tenenbaums (2001) plays it.",
     "de": "Erik Satie vollendete seine drei Gymnopédies 1888, und die erste erschien im Sommer desselben Jahres in einer Zeitschrift. Sie trägt die Vortragsangabe \"Lent et douloureux\", also langsam und schmerzlich. Der Film The Royal Tenenbaums (2001) spielt dieses Stück.",
     "es": "Erik Satie terminó sus tres Gymnopédies en 1888, y la primera se publicó ese mismo verano en una revista. Lleva la indicación «Lent et douloureux», que significa lento y doloroso. La película The Royal Tenenbaums (2001) la usa.",
-    "zh": "埃里克·萨蒂在 1888 年完成了三首《Gymnopédies》，第一首在那年夏天发表在一本杂志上。它的标记是“Lent et douloureux”，意思是“缓慢而哀伤”。电影《天才一族》（2001）用到了这首曲子。"
+    "zh": "埃里克·萨蒂在 1888 年完成了三首《Gymnopédies》，第一首在那年夏天发表在一本杂志上。它的标记是“Lent et douloureux”，意思是“缓慢而哀伤”。电影《天才一族》（2001 年）用到了这首曲子。"
   },
   "funFact": {
     "en": "Claude Debussy, a friend of Satie, later set the first and third Gymnopédies for orchestra.",
@@ -36,7 +36,7 @@
             "en": "Play the left hand alone. It holds one open fifth in each bar.",
             "de": "Spiel die linke Hand allein. Sie hält in jedem Takt eine leere Quinte.",
             "es": "Toca la mano izquierda sola. Mantiene una quinta abierta en cada compás.",
-            "zh": "只练左手。它每小节按住一个空五度。"
+            "zh": "只用左手弹。它每小节按住一个空五度。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -60,7 +60,7 @@
             "en": "Put both hands together on bars 5 to 8, slowly.",
             "de": "Nimm beide Hände zusammen auf den Takten 5 bis 8, langsam.",
             "es": "Junta las dos manos en los compases 5 a 8, despacio.",
-            "zh": "双手合起来慢慢弹第 5～8 小节。"
+            "zh": "双手一起慢慢弹第 5～8 小节。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -72,7 +72,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -131,7 +131,7 @@
             "en": "As in bar 7, the thumb moves down to A after the short rest.",
             "de": "Wie in Takt 7 rückt der Daumen nach der kurzen Pause hinunter zum A.",
             "es": "Como en el compás 7, el pulgar baja al la después del silencio corto.",
-            "zh": "和第 7 小节一样，短暂的休止之后，拇指往下移到 A。"
+            "zh": "和第 7 小节一样，短暂的休止符之后，拇指往下移到 A。"
           }
         },
         {
@@ -165,7 +165,7 @@
             "en": "Play the left hand alone. A low note comes on beat 1, and two notes together on beat 2.",
             "de": "Spiel die linke Hand allein. Ein tiefer Ton kommt auf Schlag 1, zwei Töne zusammen auf Schlag 2.",
             "es": "Toca la mano izquierda sola. Una nota grave llega en el tiempo 1, y dos notas juntas en el tiempo 2.",
-            "zh": "只练左手。第 1 拍弹一个低音，第 2 拍同时弹两个音。"
+            "zh": "只用左手弹。第一拍弹一个低音，第二拍同时弹两个音。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -189,7 +189,7 @@
             "en": "Join the hands on bars 5 to 8, slowly, with the pedal.",
             "de": "Spiel die Takte 5 bis 8 langsam mit beiden Händen und mit Pedal.",
             "es": "Junta las manos en los compases 5 a 8, despacio y con el pedal.",
-            "zh": "双手合起来慢慢弹第 5～8 小节，踩上踏板。"
+            "zh": "双手一起慢慢弹第 5～8 小节，加上踏板。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -263,7 +263,7 @@
             "en": "Your left hand moves down to low C. Use the rest at the end of bar 14.",
             "de": "Deine linke Hand rückt hinunter zum tiefen C. Nutz die Pause am Ende von Takt 14.",
             "es": "Tu mano izquierda baja al do grave. Aprovecha el silencio al final del compás 14.",
-            "zh": "左手往下移到低音 C。利用第 14 小节末尾的休止。"
+            "zh": "左手往下移到低音 C。利用第 14 小节末尾的休止符。"
           }
         },
         {
@@ -307,7 +307,7 @@
             "en": "Play the left hand alone. Jump from the low note up to the chord in the short rest.",
             "de": "Spiel die linke Hand allein. Spring in der kurzen Pause vom tiefen Ton hinauf zum Akkord.",
             "es": "Toca la mano izquierda sola. En el silencio corto, salta de la nota grave hacia arriba al acorde.",
-            "zh": "只练左手。在短暂的休止里，从低音跳到上面的和弦。"
+            "zh": "只用左手弹。在短暂的休止符处，从低音跳到上面的和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -343,7 +343,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -355,7 +355,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在用原速弹，并踩上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -414,7 +414,7 @@
             "en": "Your thumb reaches down to C sharp as finger 3 lets go of F sharp.",
             "de": "Dein Daumen greift hinunter zum Cis, während Finger 3 das Fis loslässt.",
             "es": "Tu pulgar se estira hacia abajo hasta el do sostenido mientras el dedo 3 suelta el fa sostenido.",
-            "zh": "3 指放开升 F 时，拇指往下够到升 C。"
+            "zh": "3 指从升 F 抬起时，拇指往下够到升 C。"
           }
         },
         {
@@ -449,7 +449,7 @@
             "en": "Play the left hand alone. Jump from the low octave up to the chord in the short rest.",
             "de": "Spiel die linke Hand allein. Spring in der kurzen Pause von der tiefen Oktave hinauf zum Akkord.",
             "es": "Toca la mano izquierda sola. En el silencio corto, salta de la octava grave hacia arriba al acorde.",
-            "zh": "只练左手。在短暂的休止里，从低音八度跳到上面的和弦。"
+            "zh": "只用左手弹。在短暂的休止符处，从低音八度跳到上面的和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -485,7 +485,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

@@ -6,13 +6,13 @@
     "en": "Brahms wrote his Hungarian Dances for piano four hands, and the first set was published in 1869. No. 5 became the most famous of them all. In the film The Great Dictator (1940), Charlie Chaplin shaves a customer in time to it.",
     "de": "Brahms schrieb seine Ungarischen Tänze für Klavier zu vier Händen, und die erste Sammlung erschien 1869. Der fünfte Tanz wurde der berühmteste von allen. Im Film Der große Diktator (1940) rasiert Charlie Chaplin einen Kunden im Takt dazu.",
     "es": "Brahms escribió sus Danzas húngaras para piano a cuatro manos, y la primera serie se publicó en 1869. La Danza n.º 5 se volvió la más famosa de todas. En la película The Great Dictator (1940), Charlie Chaplin afeita a un cliente al compás de esta música.",
-    "zh": "勃拉姆斯为钢琴四手联弹写了《匈牙利舞曲》，第一集在 1869 年出版。其中第五首成了最有名的一首。在电影《大独裁者》（1940）里，查理·卓别林跟着它的节拍给一位顾客刮胡子。"
+    "zh": "勃拉姆斯为钢琴四手联弹写了《匈牙利舞曲》，第一集在 1869 年出版。其中第五首成了最有名的一首。在电影《大独裁者》（1940 年）里，查理·卓别林跟着它的节拍给一位顾客刮胡子。"
   },
   "funFact": {
     "en": "Brahms based this dance on a csárdás by Béla Kéler, but he believed it was a folk tune.",
     "de": "Brahms baute diesen Tanz auf einem Csárdás von Béla Kéler auf, hielt ihn aber für ein Volkslied.",
     "es": "Brahms basó esta danza en una csárdás de Béla Kéler, pero creía que era una melodía popular.",
-    "zh": "勃拉姆斯根据 Béla Kéler 的一首查尔达什舞曲写了这首舞曲，但他以为那是一首民间曲调。"
+    "zh": "勃拉姆斯根据 Béla Kéler 的一首查尔达什舞曲写了这首舞曲，但他以为那是一首民间旋律。"
   },
   "mythic": null,
   "versions": {
@@ -61,7 +61,7 @@
             "en": "Now the left hand alone. It holds an open fifth, and only the thumb plays in bars 3 and 7.",
             "de": "Jetzt die linke Hand allein. Sie hält eine leere Quinte, und in Takt 3 und 7 spielt nur der Daumen.",
             "es": "Ahora la mano izquierda sola. Mantiene una quinta abierta, y en los compases 3 y 7 solo toca el pulgar.",
-            "zh": "现在只练左手。它按住一个空五度，第 3、7 小节只有拇指在弹。"
+            "zh": "现在只用左手弹。它按住一个空五度，第 3、7 小节只有拇指在弹。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -85,7 +85,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -178,7 +178,7 @@
             "en": "Play the left hand alone. A low note comes first, then a chord on the second beat.",
             "de": "Spiel die linke Hand allein. Zuerst kommt ein tiefer Ton, dann ein Akkord auf dem zweiten Schlag.",
             "es": "Toca la mano izquierda sola. Primero viene una nota grave y luego un acorde en el segundo tiempo.",
-            "zh": "只练左手。先弹一个低音，然后在第二拍弹一个和弦。"
+            "zh": "只用左手弹。先弹一个低音，然后在第二拍弹一个和弦。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -202,7 +202,7 @@
             "en": "Join the hands on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros ocho compases, despacio.",
-            "zh": "双手合起来慢慢弹前八个小节。"
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -214,7 +214,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos, un poco más lento de lo escrito.",
-            "zh": "用双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -265,7 +265,7 @@
             "en": "The short rest at the end of bar 12 gives you time to jump back down.",
             "de": "Die kurze Pause am Ende von Takt 12 gibt dir Zeit, wieder hinunterzuspringen.",
             "es": "El silencio corto al final del compás 12 te da tiempo para saltar de nuevo hacia abajo.",
-            "zh": "第 12 小节末尾短暂的休止，给你时间跳回下面。"
+            "zh": "第 12 小节末尾短暂的休止符，给你时间跳回下面。"
           }
         }
       ],
@@ -276,7 +276,7 @@
             "en": "Use the rest in bar 12 to jump down an octave. Your thumb lands on E.",
             "de": "Nutz die Pause in Takt 12, um eine Oktave hinunterzuspringen. Dein Daumen landet auf dem E.",
             "es": "Usa el silencio del compás 12 para saltar una octava hacia abajo. Tu pulgar cae en el mi.",
-            "zh": "趁第 12 小节的休止往下跳一个八度。拇指落在 E 上。"
+            "zh": "趁第 12 小节的休止符往下跳一个八度。拇指落在 E 上。"
           }
         },
         {
@@ -320,7 +320,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca solo el bajo de Alberti hasta que ruede por sí solo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -344,7 +344,7 @@
             "en": "Join the hands on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros ocho compases, despacio.",
-            "zh": "双手合起来慢慢弹前八个小节。"
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.5,
@@ -356,7 +356,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -368,7 +368,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在用原速弹，并踩上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -462,7 +462,7 @@
             "en": "Play the left hand alone: jump down for the octave, then back up for the chord.",
             "de": "Spiel die linke Hand allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca la mano izquierda sola: salta hacia abajo a la octava y luego vuelve arriba al acorde.",
-            "zh": "只练左手：往下跳弹八度，再回到上面弹和弦。"
+            "zh": "只用左手弹：往下跳弹八度，再回到上面弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -498,7 +498,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合起来以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

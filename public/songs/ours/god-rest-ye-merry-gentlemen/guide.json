@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one low note or an open fifth at a time.",
             "de": "Jetzt die linke Hand allein. Sie hält immer einen tiefen Ton oder eine leere Quinte.",
             "es": "Ahora la mano izquierda sola. Mantiene siempre una nota grave o una quinta abierta.",
-            "zh": "现在只用左手。它每次按住一个低音或一个空五度。"
+            "zh": "现在只用左手弹。它每次按住一个低音或一个空五度。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手按原速弹完整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹完整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -293,7 +293,7 @@
             "en": "Finger 2 slides up from D to E. Then each finger takes the next key, up to the high A.",
             "de": "Finger 2 rutscht vom D hinauf zum E. Dann nimmt jeder Finger die nächste Taste, bis zum hohen A.",
             "es": "El dedo 2 se desliza del re al mi. Luego cada dedo toma la tecla siguiente, hasta el la agudo.",
-            "zh": "2 指从 D 往上滑到 E。然后每根手指依次弹下一个键，一直到高音 A。"
+            "zh": "2 指从 D 往上滑到 E。然后每根手指依次弹下一个琴键，一直到高音 A。"
           }
         }
       ]
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -461,7 +461,7 @@
             "en": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca el bajo stride solo: salta abajo a la octava grave y vuelve arriba al acorde.",
-            "zh": "单独练跨步低音：往下跳弹低音八度，再跳回来弹和弦。"
+            "zh": "单独弹跨步低音：往下跳弹低音八度，再跳回来弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -568,7 +568,7 @@
             "en": "Change to the little finger on the repeated E, and walk down one finger per key. The left hand jumps to the low E.",
             "de": "Wechsle beim wiederholten E auf den kleinen Finger, und geh mit einem Finger pro Taste hinab. Die linke Hand springt zum tiefen E.",
             "es": "Cambia al meñique en el mi repetido, y baja un dedo por tecla. La mano izquierda salta al mi grave.",
-            "zh": "在重复的 E 上换成小指，然后每个键换一根手指往下走。左手跳到低音 E。"
+            "zh": "在重复的 E 上换成小指，然后每个琴键换一根手指往下走。左手跳到低音 E。"
           }
         },
         {

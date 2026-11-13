@@ -61,7 +61,7 @@
             "en": "Now the left hand alone. It holds one note or an open fifth for a whole bar or half a bar.",
             "de": "Jetzt die linke Hand allein. Sie hält einen Ton oder eine leere Quinte einen ganzen oder einen halben Takt lang.",
             "es": "Ahora la mano izquierda sola. Mantiene una nota o una quinta abierta durante un compás entero o medio compás.",
-            "zh": "现在只练左手。它按住一个音或一个空五度，持续一整个小节或半个小节。"
+            "zh": "现在只用左手弹。它按住一个音或一个空五度，持续一整个小节或半个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -73,7 +73,7 @@
             "en": "Put both hands together on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las dos manos en los primeros ocho compases, despacio.",
-            "zh": "双手合起来慢慢弹前八个小节。"
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -85,7 +85,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -179,7 +179,7 @@
             "en": "Play the left hand alone. It plays a chord on every beat, like a marching band.",
             "de": "Spiel die linke Hand allein. Sie spielt auf jedem Schlag einen Akkord, wie eine Blaskapelle.",
             "es": "Toca con la mano izquierda sola. Toca un acorde en cada tiempo, como una banda de música en un desfile.",
-            "zh": "只练左手。它每拍弹一个和弦，就像一支行进的乐队。"
+            "zh": "只用左手弹。它每拍弹一个和弦，就像一支行进的乐队。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -203,7 +203,7 @@
             "en": "Join the hands on bars 9 to 16, slowly.",
             "de": "Spiel die Takte 9 bis 16 langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los compases 9 a 16, despacio.",
-            "zh": "双手合起来慢慢弹第 9～16 小节。"
+            "zh": "双手一起慢慢弹第 9～16 小节。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -215,7 +215,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -321,7 +321,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己流畅地滚动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -345,7 +345,7 @@
             "en": "Join the hands on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros ocho compases, despacio.",
-            "zh": "双手合起来慢慢弹前八个小节。"
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.5,
@@ -357,7 +357,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -369,7 +369,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在用原速弹，并踩上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -463,7 +463,7 @@
             "en": "Play the left hand alone: an octave on the beat, then a chord, each with a short rest to jump.",
             "de": "Spiel die linke Hand allein: eine Oktave auf dem Schlag, dann einen Akkord, jeweils mit einer kurzen Pause zum Springen.",
             "es": "Toca con la mano izquierda sola: una octava en el pulso, y luego un acorde, cada uno con un silencio corto para saltar.",
-            "zh": "只练左手：在拍子上弹一个八度，然后一个和弦，每次都有一个短休止符让你跳过去。"
+            "zh": "只用左手弹：在拍点上弹一个八度，然后一个和弦，每次都有一个短休止符让你跳过去。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -475,7 +475,7 @@
             "en": "Play the left hand's arpeggios alone. Finger 3 crosses over the thumb on the way up.",
             "de": "Spiel die Arpeggios der linken Hand allein. Auf dem Weg nach oben kreuzt Finger 3 über den Daumen.",
             "es": "Toca los arpegios de la mano izquierda sola. El dedo 3 cruza por encima del pulgar al subir.",
-            "zh": "只练左手的琶音。往上走时，3 指从拇指上面跨过去。"
+            "zh": "单独弹左手的琶音。往上走时，3 指从拇指上面跨过去。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -487,7 +487,7 @@
             "en": "Play the right hand's chords alone, and let the top finger sing the tune.",
             "de": "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
             "es": "Toca los acordes de la mano derecha sola, y deja que el dedo de arriba cante la melodía.",
-            "zh": "只用右手练和弦，让最上面的手指唱出旋律。"
+            "zh": "单独弹右手的和弦，让最上面的手指唱出旋律。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -499,7 +499,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

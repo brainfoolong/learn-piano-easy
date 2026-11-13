@@ -73,7 +73,7 @@
             "en": "Put both hands together, slowly.",
             "de": "Nimm beide Hände zusammen, langsam.",
             "es": "Junta las dos manos, despacio.",
-            "zh": "双手一起弹，慢慢弹。"
+            "zh": "双手一起慢慢弹。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -85,7 +85,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -202,7 +202,7 @@
             "en": "Join the hands on the first eight bars, slowly, with the pedal.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen und mit Pedal.",
             "es": "Junta las manos en los primeros ocho compases, despacio y con el pedal.",
-            "zh": "在前八个小节双手合奏，慢慢弹，加上踏板。"
+            "zh": "双手一起慢慢弹前八个小节，加上踏板。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -226,7 +226,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -344,7 +344,7 @@
             "en": "Join the hands on the first nine bars, slowly.",
             "de": "Spiel die ersten neun Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros nueve compases, despacio.",
-            "zh": "在前九个小节双手合奏，慢慢弹。"
+            "zh": "双手一起慢慢弹前九个小节。"
           },
           "hands": "both",
           "speed": 0.5,
@@ -356,7 +356,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -498,7 +498,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

@@ -61,7 +61,7 @@
             "en": "Now the left hand alone. It holds one shape in each bar.",
             "de": "Jetzt die linke Hand allein. Sie hält in jedem Takt eine Griffform.",
             "es": "Ahora la mano izquierda sola. Mantiene una sola posición en cada compás.",
-            "zh": "现在只用左手。每个小节保持一个手型。"
+            "zh": "现在只用左手弹。每个小节保持一个手型。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -73,7 +73,7 @@
             "en": "Put both hands together, slowly.",
             "de": "Nimm beide Hände zusammen, langsam.",
             "es": "Junta las dos manos, despacio.",
-            "zh": "双手一起弹，慢慢来。"
+            "zh": "双手一起慢慢弹。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -85,7 +85,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首曲子。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -227,7 +227,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首曲子。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -286,7 +286,7 @@
             "en": "Play E and G together with fingers 1 and 3. Then lift the right hand in the rest.",
             "de": "Spiel E und G zusammen mit Finger 1 und 3. Dann heb die rechte Hand in der Pause an.",
             "es": "Toca el mi y el sol a la vez con los dedos 1 y 3. Luego levanta la mano derecha en el silencio.",
-            "zh": "用 1 指和 3 指同时弹 E 和 G。然后在休止里把右手抬起。"
+            "zh": "用 1 指和 3 指同时弹 E 和 G。然后在休止符处把右手抬起。"
           }
         },
         {
@@ -357,7 +357,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -369,7 +369,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -499,7 +499,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -570,7 +570,7 @@
             "en": "The left hand starts on a low E. Use the rest at the end of bar 9 to jump down.",
             "de": "Die linke Hand beginnt auf einem tiefen E. Nutz die Pause am Ende von Takt 9, um hinunterzuspringen.",
             "es": "La mano izquierda empieza en un mi grave. Usa el silencio del final del compás 9 para saltar hacia abajo.",
-            "zh": "左手从低音 E 开始。利用第 9 小节末尾的休止往下跳。"
+            "zh": "左手从低音 E 开始。利用第 9 小节末尾的休止符往下跳。"
           }
         },
         {
@@ -579,7 +579,7 @@
             "en": "Fingers 1, 2, 4 and 5 take A, C, F and A. Lift the left hand in each short rest.",
             "de": "Finger 1, 2, 4 und 5 nehmen A, C, F und A. Heb die linke Hand in jeder kurzen Pause an.",
             "es": "Los dedos 1, 2, 4 y 5 toman las notas la, do, fa y la. Levanta la mano izquierda en cada silencio corto.",
-            "zh": "1、2、4、5 指弹 A、C、F、A。每个短休止都把左手抬起。"
+            "zh": "1、2、4、5 指弹 A、C、F、A。每个短休止符处都把左手抬起。"
           }
         }
       ]

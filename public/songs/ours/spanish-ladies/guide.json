@@ -48,7 +48,7 @@
             "en": "Play bars 5 to 9 with the right hand alone, and move the hand up in the short rest.",
             "de": "Spiel die Takte 5 bis 9 nur mit der rechten Hand, und rück die Hand in der kurzen Pause höher.",
             "es": "Toca los compases 5 a 9 con la mano derecha sola, y sube la mano en el silencio corto.",
-            "zh": "只用右手弹第 5～9 小节，在短短的休止里把手往上移。"
+            "zh": "只用右手弹第 5～9 小节，趁短短的休止符把手往上移。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape for a whole bar.",
             "de": "Jetzt die linke Hand allein. Sie hält jeden Griff einen ganzen Takt lang.",
             "es": "Ahora la mano izquierda sola. Mantiene una misma posición durante todo un compás.",
-            "zh": "现在只用左手。它一个手型保持一整个小节。"
+            "zh": "现在只用左手弹。它一个手型保持一整个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -214,7 +214,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -462,7 +462,7 @@
             "en": "Play the left hand alone: an octave on the first beat, then a chord twice, each with a short rest to jump.",
             "de": "Spiel die linke Hand allein: eine Oktave auf dem ersten Schlag, dann zweimal einen Akkord, jeweils mit einer kurzen Pause zum Springen.",
             "es": "Toca con la mano izquierda sola: una octava en el primer tiempo, y luego un acorde dos veces, cada uno con un silencio corto para saltar.",
-            "zh": "只用左手弹：第一拍一个八度，然后一个和弦弹两次，每个后面都有一个短短的休止用来跳。"
+            "zh": "只用左手弹：第一拍一个八度，然后一个和弦弹两次，每个后面都有一个短短的休止符用来跳。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -527,7 +527,7 @@
             "en": "Use the short rest after each octave and chord to jump to the next one.",
             "de": "Nutz die kurze Pause nach jeder Oktave und jedem Akkord, um zum nächsten Griff zu springen.",
             "es": "Usa el silencio corto después de cada octava y cada acorde para saltar al siguiente.",
-            "zh": "利用每个八度和和弦后面短短的休止，跳到下一个。"
+            "zh": "利用每个八度和和弦后面短短的休止符，跳到下一个。"
           }
         },
         {
@@ -560,7 +560,7 @@
             "en": "Lift both hands in the short rest of bar 25. Then land on the last chord, over the low E octave.",
             "de": "Heb beide Hände in der kurzen Pause von Takt 25. Dann lande auf dem letzten Akkord, über der tiefen E-Oktave.",
             "es": "Levanta las dos manos en el silencio corto del compás 25. Luego apóyalas en el último acorde, sobre la octava de mi grave.",
-            "zh": "在第 25 小节短短的休止里把双手抬起。然后落到最后一个和弦上，下面是低音 E 的八度。"
+            "zh": "趁第 25 小节短短的休止符把双手抬起。然后落到最后一个和弦上，下面是低音 E 的八度。"
           }
         },
         {

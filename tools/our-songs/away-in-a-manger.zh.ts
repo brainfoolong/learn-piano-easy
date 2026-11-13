@@ -5,15 +5,15 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "《Away in a Manger》的歌词来自美国，没有人知道是谁写的。" +
-    "人们为这段歌词写过很多曲调，这一首是 William J. Kirkpatrick 1895 年写的《Cradle Song》。" +
-    "英国和爱尔兰唱的就是这个曲调。",
+    "人们为这段歌词写过很多旋律，这一首是 William J. Kirkpatrick 1895 年写的《Cradle Song》。" +
+    "英国和爱尔兰唱的就是这个旋律。",
   funFact: "这段歌词很长时间被叫作《Luther's Cradle Hymn》，可马丁·路德从来没有写过它。",
   versions: {
     common: {
       practice: [
         "只用右手弹前五个小节，让歌曲等你弹每个音。",
         "只用右手弹第 5～9 小节，这里旋律一步步往下走到低音 G。",
-        "现在只用左手。每个小节保持一个手型。",
+        "现在只用左手弹。每个小节保持一个手型。",
         "双手一起慢慢弹完整首歌。",
         "双手合奏，用原速弹完整首歌。",
       ],
@@ -31,9 +31,9 @@ export const translation: Translation<GuideTranslation> = {
     rare: {
       practice: [
         "只用左手弹，把每个和弦的三个音同时按下。",
-        "单独练圆舞曲低音：低音、和弦、和弦。",
+        "单独弹圆舞曲低音：低音、和弦、和弦。",
         "双手一起慢慢弹前半部分。",
-        "双手合奏整首歌，比谱上写的稍慢一点。",
+        "用双手弹完整首歌，比谱上写的稍慢一点。",
         "现在用原速弹。",
       ],
       tips: [
@@ -49,11 +49,11 @@ export const translation: Translation<GuideTranslation> = {
     },
     epic: {
       practice: [
-        "单独练阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。",
+        "单独弹阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。",
         "只用右手弹三度和六度，每对双音的两个音要一起按住。",
         "双手一起慢慢弹第一段主歌。",
         "双手合奏，用四分之三速度弹完整首歌。",
-        "现在加上踏板，用原速弹。",
+        "现在用原速弹，加上踏板。",
       ],
       tips: [
         "阿尔贝蒂低音要弹得轻，让旋律在它上面歌唱。",
@@ -68,10 +68,10 @@ export const translation: Translation<GuideTranslation> = {
     },
     legendary: {
       practice: [
-        "单独练跨步低音：往下跳去弹八度，再跳回上面弹和弦。",
+        "单独弹跨步低音：往下跳去弹八度，再跳回上面弹和弦。",
         "只用右手弹和弦，让最上面的手指唱出旋律。",
         "只用左手弹第二段主歌的琶音。",
-        "双手一起，用四分之三速度弹完整首歌。",
+        "双手合奏，用四分之三速度弹完整首歌。",
         "现在用原速弹，让最后一个和弦的声音延续下去。",
       ],
       tips: [

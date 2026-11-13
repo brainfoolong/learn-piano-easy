@@ -48,7 +48,7 @@
             "en": "Now the left hand alone. It only changes between two shapes.",
             "de": "Jetzt die linke Hand allein. Sie wechselt nur zwischen zwei Formen.",
             "es": "Ahora la mano izquierda sola. Solo cambia entre dos posiciones.",
-            "zh": "现在只用左手。它只在两个手型之间切换。"
+            "zh": "现在只用左手弹。它只在两个手型之间切换。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -122,7 +122,7 @@
             "en": "After the rest, find E with your third finger, and the tune starts again.",
             "de": "Nach der Pause findest du das E mit Finger 3, und die Melodie beginnt von vorn.",
             "es": "Después del silencio, busca el mi con el dedo 3, y la melodía empieza de nuevo.",
-            "zh": "休止之后，用 3 指找到 E，旋律重新开始。"
+            "zh": "休止符之后，用 3 指找到 E，旋律重新开始。"
           }
         },
         {
@@ -202,7 +202,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,

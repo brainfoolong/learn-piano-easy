@@ -12,7 +12,7 @@ export const translation: Translation<GuideTranslation> = {
     common: {
       practice: [
         "只用右手慢慢弹，让歌曲等你弹每个音。",
-        "现在只用左手。它每个音保持两拍或四拍。",
+        "现在只用左手弹。它每个音保持两拍或四拍。",
         "双手一起弹前八个小节。",
         "双手合奏，用原速弹完整首歌。",
       ],
@@ -24,7 +24,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         3: "小指往上够到高音 B，拇指留在 D 附近。",
         7: "又是同样的伸展：小指弹 B，然后 4 指弹 A。",
-        15: "最后一次够到 B。利用它前面短短的休止做好准备。",
+        15: "最后一次够到 B。利用它前面短短的休止符做好准备。",
       },
     },
     rare: {
@@ -32,7 +32,7 @@ export const translation: Translation<GuideTranslation> = {
         "先拍出第 11、12 小节的快速音符，再只用右手弹。",
         "只用左手弹，每个和弦一直按住，直到下一个和弦。",
         "双手一起慢慢弹前四个小节。",
-        "双手合奏整首歌，比谱上写的稍慢一点。",
+        "用双手弹完整首歌，比谱上写的稍慢一点。",
         "现在用原速弹。",
       ],
       tips: [

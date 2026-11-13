@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one note for a whole bar.",
             "de": "Jetzt die linke Hand allein. Sie hält einen Ton einen ganzen Takt lang.",
             "es": "Ahora la mano izquierda sola. Mantiene una nota durante todo un compás.",
-            "zh": "现在只用左手。每个音都要按住一整个小节。"
+            "zh": "现在只用左手弹。每个音都要按住一整个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首曲子。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -101,7 +101,7 @@
             "en": "Rest on beat one. Then play E on beats two, three and four.",
             "de": "Auf Schlag eins ist Pause. Dann spielst du das E auf den Schlägen zwei, drei und vier.",
             "es": "El primer tiempo es un silencio. Luego toca el mi en los tiempos dos, tres y cuatro.",
-            "zh": "第一拍休止。然后在第二、三、四拍弹 E。"
+            "zh": "第一拍是休止符。然后在第二、三、四拍弹 E。"
           }
         },
         {
@@ -143,7 +143,7 @@
             "en": "Rest on beat one, then play E three times with finger 4. Keep the finger loose for each new note.",
             "de": "Auf Schlag eins ist Pause, dann spielst du dreimal das E mit Finger 4. Halt den Finger für jeden neuen Ton locker.",
             "es": "El primer tiempo es un silencio. Luego toca el mi tres veces con el dedo 4. Mantén el dedo suelto para cada nota nueva.",
-            "zh": "第一拍休止，然后用 4 指弹三次 E。每弹一个新音，手指都要放松。"
+            "zh": "第一拍是休止符，然后用 4 指弹三次 E。每弹一个新音，手指都要放松。"
           }
         },
         {
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首曲子，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -242,7 +242,7 @@
             "en": "Each motif starts with a short rest. Then three quick notes lead into the long one.",
             "de": "Jedes Motiv beginnt mit einer kurzen Pause. Dann führen drei schnelle Töne zum langen Ton.",
             "es": "Cada motivo empieza con un silencio corto. Luego tres notas rápidas llevan a la nota larga.",
-            "zh": "每个动机都从一个短休止开始。然后三个快音引向那个长音。"
+            "zh": "每个动机都从一个短休止符开始。然后三个快音引向那个长音。"
           }
         },
         {
@@ -284,7 +284,7 @@
             "en": "Three quick E's follow the short rest. Play them with finger 4, light and even.",
             "de": "Nach der kurzen Pause kommen drei schnelle E. Spiel sie mit Finger 4, leicht und gleichmäßig.",
             "es": "Tres mi rápidos siguen al silencio corto. Tócalos con el dedo 4, ligeros y parejos.",
-            "zh": "短休止之后是三个快速的 E。用 4 指弹，要轻巧、均匀。"
+            "zh": "短休止符之后是三个快速的 E。用 4 指弹，要轻巧、均匀。"
           }
         },
         {
@@ -319,7 +319,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, aguda, media, aguda.",
-            "zh": "单独练阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -461,7 +461,7 @@
             "en": "Play the left hand alone: an octave on the beat, then a chord, each with a short rest to jump.",
             "de": "Spiel die linke Hand allein: eine Oktave auf dem Schlag, dann einen Akkord, jeweils mit einer kurzen Pause zum Springen.",
             "es": "Toca la mano izquierda sola: una octava en el pulso, y luego un acorde, cada uno con un silencio corto para saltar.",
-            "zh": "只用左手弹：在拍子上弹一个八度，再弹一个和弦，每次都有一个短休止让你跳过去。"
+            "zh": "只用左手弹：在拍点上弹一个八度，再弹一个和弦，每次都有一个短休止符让你跳过去。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -568,7 +568,7 @@
             "en": "The left hand jumps from the low G up to the chord. Use the short rest after each octave to jump.",
             "de": "Die linke Hand springt vom tiefen G hinauf zum Akkord. Nutz die kurze Pause nach jeder Oktave zum Springen.",
             "es": "La mano izquierda salta del sol grave hasta el acorde. Usa el silencio corto después de cada octava para saltar.",
-            "zh": "左手从低音 G 往上跳到和弦。利用每个八度后面的短休止跳过去。"
+            "zh": "左手从低音 G 往上跳到和弦。利用每个八度后面的短休止符跳过去。"
           }
         },
         {

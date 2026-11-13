@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "这是英语世界里最有名的儿歌之一。" +
-    "Eliphalet Oram Lyte 在 1881 年把我们今天唱的这段曲调发表在《The Franklin Square Song Collection》里。" +
+    "Eliphalet Oram Lyte 在 1881 年把我们今天唱的这段旋律发表在《The Franklin Square Song Collection》里。" +
     "它沿着音阶的前五个音往上走，然后一口气滚落整整一个八度。",
   funFact: "这首歌是一首轮唱曲：第二个声部晚两个小节唱同样的旋律，两个声部正好配在一起。",
   versions: {

@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -189,7 +189,7 @@
             "en": "Play the left hand alone. It holds one chord for each half of a bar.",
             "de": "Spiel die linke Hand allein. Sie hält für jede Hälfte eines Takts einen Akkord.",
             "es": "Toca la mano izquierda sola. Mantiene un acorde en cada mitad del compás.",
-            "zh": "只练左手。它每半小节按住一个和弦。"
+            "zh": "只用左手弹。它每半小节按住一个和弦。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -201,7 +201,7 @@
             "en": "Join the hands on bars 13 to 20, where the right hand plays two notes at once.",
             "de": "Spiel die Takte 13 bis 20 mit beiden Händen zusammen. Dort spielt die rechte Hand zwei Töne zugleich.",
             "es": "Junta las manos en los compases 13 a 20. Ahí la mano derecha toca dos notas a la vez.",
-            "zh": "双手合起来弹第 13～20 小节，右手在这里同时弹两个音。"
+            "zh": "双手一起弹第 13～20 小节，右手在这里同时弹两个音。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos, un poco más lento de lo escrito.",
-            "zh": "用双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -319,7 +319,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca solo el bajo de Alberti hasta que ruede por sí solo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在用原速弹，并踩上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -461,7 +461,7 @@
             "en": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca solo el bajo stride: salta hacia abajo a la octava grave y luego vuelve arriba al acorde.",
-            "zh": "单独练跨步低音：往下跳弹低音八度，再回到上面弹和弦。"
+            "zh": "单独弹跨步低音：往下跳弹低音八度，再回到上面弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合起来以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -568,7 +568,7 @@
             "en": "From the big C chord, the hand jumps up to G, C and E. Lift it in the short rest first.",
             "de": "Vom großen C-Akkord springt die Hand hinauf zu G, C und E. Heb sie vorher in der kurzen Pause.",
             "es": "Desde el gran acorde de do, la mano salta hacia arriba al sol, el do y el mi. Antes, levántala en el silencio corto.",
-            "zh": "从大大的 C 和弦，手往上跳到 G、C、E。先趁短暂的休止把手抬起。"
+            "zh": "从大大的 C 和弦，手往上跳到 G、C、E。先趁短暂的休止符把手抬起。"
           }
         },
         {
@@ -577,7 +577,7 @@
             "en": "Bar 6 is bar 2 again. Lift the hand in the rest, then jump up to G, C and E.",
             "de": "Takt 6 ist wieder Takt 2. Heb die Hand in der Pause, dann spring hinauf zu G, C und E.",
             "es": "El compás 6 repite el compás 2. Levanta la mano en el silencio y luego salta hacia arriba al sol, el do y el mi.",
-            "zh": "第 6 小节就是第 2 小节。趁休止抬手，然后往上跳到 G、C、E。"
+            "zh": "第 6 小节就是第 2 小节。趁休止符抬手，然后往上跳到 G、C、E。"
           }
         }
       ]

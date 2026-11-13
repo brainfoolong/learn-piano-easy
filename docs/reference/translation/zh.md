@@ -102,7 +102,8 @@ strings. AP is Apple's `support.apple.com/zh-cn` pages. GO is Google's help page
 | whole, half, quarter note | 全音符, 二分音符, 四分音符 | WP *全音符* and its siblings; CC 12 |
 | eighth, sixteenth note | 八分音符, 十六分音符 | WP *八分音符*; CC 12 |
 | dotted | 附点: `附点二分音符` | WP *附點音符*; MSZ |
-| rest; quarter rest | 休止符; 四分休止符 | WP *休止符*; MSZ |
+| rest; quarter rest | 休止符; 四分休止符 | WP *休止符*; MSZ. During a rest is `在休止符处`; a hand that rests `休息` |
+| on the beat | 在拍点上 | everyday word; `打拍子` and `数拍子` stay as idioms |
 | tie | 延音线 | WP *延音线*; CC 30 |
 | slur | 圆滑线 | WP *圓滑線*; MSZ |
 | repeat sign | 反复记号 | WP *反复记号*; MSZ |
@@ -264,6 +265,8 @@ strings. AP is Apple's `support.apple.com/zh-cn` pages. GO is Google's help page
 | hit line | 击键线 | the player's own term |
 | hand crossing | 双手交叉 | everyday word, unsourced |
 | low, high band (of the equaliser) | 低频, 高频 | MS; never 低音 or 高音, which name notes |
+| scoring; a scored take | 评分; 评分的一遍 | the player's own term, never 计分 |
+| a guide's stock practice steps | `只用左手弹。`, `双手一起慢慢弹。`, `双手合奏，用四分之三速度弹完整首歌。`, `用双手弹完整首歌，比谱上写的稍慢一点。`, `双手合奏，用原速弹完整首歌。`, `现在用原速弹，加上踏板。` | the guides' own forms, one per English step |
 | chord tone as an interval | `♭3 度`, `5 度`; the root is `根音` | the course's own form of 三度 |
 
 ### Which "play" is which

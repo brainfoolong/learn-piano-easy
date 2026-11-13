@@ -61,7 +61,7 @@
             "en": "Now the left hand alone. It holds one note for a whole bar.",
             "de": "Jetzt die linke Hand allein. Sie hält einen Ton einen ganzen Takt lang.",
             "es": "Ahora la mano izquierda sola. Mantiene una nota durante todo un compás.",
-            "zh": "现在只用左手。它一个音保持一整个小节。"
+            "zh": "现在只用左手弹。它一个音保持一整个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -113,7 +113,7 @@
             "en": "Use the long rest to move the right hand up to G.",
             "de": "Nutz die lange Pause, um die rechte Hand hinauf zum G zu setzen.",
             "es": "Usa el silencio largo para subir la mano derecha hasta el sol.",
-            "zh": "利用长长的休止，把右手往上移到 G。"
+            "zh": "利用长长的休止符，把右手往上移到 G。"
           }
         },
         {
@@ -135,7 +135,7 @@
             "en": "Move the right hand down in the rest. Finger 3 plays F, and the thumb ends on D.",
             "de": "Setz die rechte Hand in der Pause nach unten. Finger 3 spielt das F, und der Daumen endet auf dem D.",
             "es": "Baja la mano derecha en el silencio. El dedo 3 toca el fa, y el pulgar termina en el re.",
-            "zh": "在休止里把右手往下移。3 指弹 F，拇指最后落在 D 上。"
+            "zh": "趁休止符把右手往下移。3 指弹 F，拇指最后落在 D 上。"
           }
         },
         {
@@ -214,7 +214,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -294,7 +294,7 @@
             "en": "The hand has moved up in the rest. Finger 2 plays A, and finger 3 plays B flat.",
             "de": "Die Hand ist in der Pause nach oben gerückt. Finger 2 spielt das A, und Finger 3 spielt das B.",
             "es": "La mano subió durante el silencio. El dedo 2 toca el la, y el dedo 3 toca el si bemol.",
-            "zh": "手已经在休止里往上移了。2 指弹 A，3 指弹降 B。"
+            "zh": "手已经趁休止符往上移了。2 指弹 A，3 指弹降 B。"
           }
         }
       ]
@@ -418,7 +418,7 @@
             "en": "Bring the hand down an octave in the rest. Fingers 3 and 5 take the first third.",
             "de": "Führ die Hand in der Pause eine Oktave tiefer. Finger 3 und 5 nehmen die erste Terz.",
             "es": "Baja la mano una octava en el silencio. Los dedos 3 y 5 toman la primera tercera.",
-            "zh": "在休止里把手往下移一个八度。3 指和 5 指弹第一个三度。"
+            "zh": "趁休止符把手往下移一个八度。3 指和 5 指弹第一个三度。"
           }
         },
         {
@@ -427,7 +427,7 @@
             "en": "The tune jumps up an octave. Use the rest before it to move the hand.",
             "de": "Die Melodie springt eine Oktave höher. Nutz die Pause davor, um die Hand zu versetzen.",
             "es": "La melodía salta una octava hacia arriba. Usa el silencio de antes para mover la mano.",
-            "zh": "旋律往上跳了一个八度。利用它前面的休止来移手。"
+            "zh": "旋律往上跳了一个八度。利用它前面的休止符来移手。"
           }
         },
         {
@@ -578,7 +578,7 @@
             "en": "The left hand jumps from the low D up to A and F. Use the short rest to jump back down.",
             "de": "Die linke Hand springt vom tiefen D hinauf zu A und F. Nutz die kurze Pause, um zurückzuspringen.",
             "es": "La mano izquierda salta del re grave hasta el la y el fa. Usa el silencio corto para volver a bajar.",
-            "zh": "左手从低音 D 跳上去弹 A 和 F。利用短短的休止跳回下面。"
+            "zh": "左手从低音 D 跳上去弹 A 和 F。利用短短的休止符跳回下面。"
           }
         }
       ]

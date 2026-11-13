@@ -6,7 +6,7 @@
     "en": "Deck the Halls is sung to Nos Galan, an old Welsh tune for New Year's Eve. The tune was first printed in 1794, and Joseph Haydn later arranged it. Thomas Oliphant wrote the English Christmas words in 1862, and the tune is sung to them today.",
     "de": "Deck the Halls wird auf Nos Galan gesungen, eine alte walisische Melodie für Silvester. Die Melodie erschien 1794 zum ersten Mal im Druck, und Joseph Haydn bearbeitete sie später. Thomas Oliphant schrieb 1862 den englischen Weihnachtstext, und auf ihn singt man die Melodie heute.",
     "es": "Deck the Halls se canta sobre la melodía de Nos Galan, una antigua tonada galesa de Nochevieja. La melodía se imprimió por primera vez en 1794, y más tarde Joseph Haydn hizo un arreglo de ella. Thomas Oliphant escribió la letra navideña en inglés en 1862, y hoy la melodía se canta con ella.",
-    "zh": "《Deck the Halls》的曲调来自《Nos Galan》，一首古老的威尔士新年前夜歌曲。这段曲调在 1794 年首次出版，后来约瑟夫·海顿为它编过曲。1862 年，Thomas Oliphant 写下了英文的圣诞歌词，今天人们唱的就是这版歌词。"
+    "zh": "《Deck the Halls》的旋律来自《Nos Galan》，一首古老的威尔士新年前夜歌曲。这段旋律在 1794 年首次出版，后来约瑟夫·海顿为它编过曲。1862 年，Thomas Oliphant 写下了英文的圣诞歌词，今天人们唱的就是这版歌词。"
   },
   "funFact": {
     "en": "Oliphant's words began with Deck the hall, for one hall only. Later songbooks changed it to the plural we sing today.",
@@ -72,7 +72,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手按原速弹完整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -201,7 +201,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹完整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -263,7 +263,7 @@
             "en": "After the G, finger 3 slides up one key to A, so fingers 4 and 5 reach B and C.",
             "de": "Nach dem G rutscht Finger 3 eine Taste hinauf zum A, damit Finger 4 und 5 H und C erreichen.",
             "es": "Después del sol, el dedo 3 se desliza una tecla hacia arriba hasta el la, para que los dedos 4 y 5 alcancen el si y el do.",
-            "zh": "弹完 G 后，3 指往上滑一个键到 A，这样 4 指和 5 指就能够到 B 和 C。"
+            "zh": "弹完 G 后，3 指往上滑一个琴键到 A，这样 4 指和 5 指就能够到 B 和 C。"
           }
         },
         {
@@ -307,7 +307,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -319,7 +319,7 @@
             "en": "Play the right hand's thirds alone, and keep both notes of each pair together.",
             "de": "Spiel die Terzen der rechten Hand allein, und halt beide Töne jedes Zweiklangs zusammen.",
             "es": "Toca solas las terceras de la mano derecha, y mantén juntas las dos notas de cada doble nota.",
-            "zh": "单独练右手的三度，每对音的两个音要一起弹。"
+            "zh": "单独弹右手的三度，每对音的两个音要一起弹。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -343,7 +343,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -355,7 +355,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在按原速弹，加上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -449,7 +449,7 @@
             "en": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca solo el bajo stride: salta hacia abajo a la octava grave, y luego vuelve arriba al acorde.",
-            "zh": "单独练跨步低音：往下跳弹低音八度，再跳回来弹和弦。"
+            "zh": "单独弹跨步低音：往下跳弹低音八度，再跳回来弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -485,7 +485,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合奏，以四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

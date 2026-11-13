@@ -6,7 +6,7 @@
     "en": "Carmen sings this aria when she first appears in Georges Bizet's opera Carmen, first staged in Paris in 1875. Bizet took its tune from a song by Sebastián Iradier, believing it was a folk song. The film The Bad News Bears (1976) plays Carmen's music throughout.",
     "de": "Carmen singt diese Arie bei ihrem ersten Auftritt in Georges Bizets Oper Carmen, die 1875 in Paris uraufgeführt wurde. Bizet nahm die Melodie aus einem Lied von Sebastián Iradier, weil er es für ein Volkslied hielt. Der Film The Bad News Bears (1976) spielt durchgehend Carmens Musik.",
     "es": "Carmen canta esta aria en su primera aparición en la ópera Carmen de Georges Bizet, estrenada en París en 1875. Bizet tomó la melodía de una canción de Sebastián Iradier, creyendo que era una canción popular. La película The Bad News Bears (1976) usa la música de Carmen de principio a fin.",
-    "zh": "卡门第一次登场时唱的就是这首咏叹调，它出自乔治·比才的歌剧《卡门》，1875 年在巴黎首演。比才以为这是一首民歌，就从 Sebastián Iradier 的一首歌里借用了它的旋律。电影《The Bad News Bears》（1976）从头到尾都用了《卡门》的音乐。"
+    "zh": "卡门第一次登场时唱的就是这首咏叹调，它出自乔治·比才的歌剧《卡门》，1875 年在巴黎首演。比才以为这是一首民歌，就从 Sebastián Iradier 的一首歌里借用了它的旋律。电影《The Bad News Bears》（1976 年）从头到尾都用了《卡门》的音乐。"
   },
   "funFact": {
     "en": "A habanera is a dance from Cuba, and it is named after Havana, the capital.",
@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape per bar and never moves.",
             "de": "Jetzt die linke Hand allein. Sie hält eine Griffform pro Takt und bewegt sich nie.",
             "es": "Ahora la mano izquierda sola. Mantiene una forma por compás y nunca se mueve.",
-            "zh": "现在只练左手。它每小节保持一个手型，从不移动。"
+            "zh": "现在只用左手弹。它每小节保持一个手型，从不移动。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -72,7 +72,7 @@
             "en": "Put both hands together on the first ten bars.",
             "de": "Spiel die ersten zehn Takte mit beiden Händen zusammen.",
             "es": "Junta las dos manos en los primeros diez compases.",
-            "zh": "双手合起来弹前十个小节。"
+            "zh": "双手一起弹前十个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -152,7 +152,7 @@
             "en": "After the rest, finger 5 plays A and finger 3 plays G. Finger 4 waits.",
             "de": "Nach der Pause spielt Finger 5 das A und Finger 3 das G. Finger 4 wartet.",
             "es": "Después del silencio, el dedo 5 toca el la y el dedo 3 toca el sol. El dedo 4 espera.",
-            "zh": "休止之后，5 指弹 A，3 指弹 G。4 指等着。"
+            "zh": "休止符之后，5 指弹 A，3 指弹 G。4 指等着。"
           }
         }
       ]
@@ -201,7 +201,7 @@
             "en": "Play the left hand alone. It keeps its five fingers on D, E, F, G and A.",
             "de": "Spiel die linke Hand allein. Ihre fünf Finger bleiben auf D, E, F, G und A.",
             "es": "Toca la mano izquierda sola. Sus cinco dedos se quedan sobre las notas re, mi, fa, sol y la.",
-            "zh": "只练左手。五个手指一直放在 D、E、F、G、A 上。"
+            "zh": "只用左手弹。五个手指一直放在 D、E、F、G、A 上。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -293,7 +293,7 @@
             "en": "After the rest, finger 5 plays A and finger 3 plays G. Finger 4 waits.",
             "de": "Nach der Pause spielt Finger 5 das A und Finger 3 das G. Finger 4 wartet.",
             "es": "Después del silencio, el dedo 5 toca el la y el dedo 3 toca el sol. El dedo 4 espera.",
-            "zh": "休止之后，5 指弹 A，3 指弹 G。4 指等着。"
+            "zh": "休止符之后，5 指弹 A，3 指弹 G。4 指等着。"
           }
         }
       ]
@@ -319,7 +319,7 @@
             "en": "Play the habanera rhythm alone in the left hand: long, short, then two even notes.",
             "de": "Spiel den Habanera-Rhythmus allein in der linken Hand: lang, kurz, dann zwei gleiche Töne.",
             "es": "Toca el ritmo de habanera con la mano izquierda sola: largo, corto, y luego dos notas parejas.",
-            "zh": "只用左手练哈巴涅拉节奏：长、短，然后两个均匀的音。"
+            "zh": "只用左手弹哈巴涅拉节奏：长、短，然后两个均匀的音。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -343,7 +343,7 @@
             "en": "Join the hands on bars 1 to 6, slowly.",
             "de": "Spiel die Takte 1 bis 6 langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los compases 1 a 6, despacio.",
-            "zh": "双手合起来慢慢弹第 1～6 小节。"
+            "zh": "双手一起慢慢弹第 1～6 小节。"
           },
           "hands": "both",
           "speed": 0.5,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -417,7 +417,7 @@
             "en": "After the rest, fingers 2 and 4 take F and A. Then the thirds walk down.",
             "de": "Nach der Pause nehmen Finger 2 und 4 das F und das A. Dann gehen die Terzen hinab.",
             "es": "Después del silencio, los dedos 2 y 4 toman el fa y el la. Luego las terceras bajan paso a paso.",
-            "zh": "休止之后，2、4 指弹 F 和 A。然后三度往下走。"
+            "zh": "休止符之后，2、4 指弹 F 和 A。然后三度往下走。"
           }
         },
         {
@@ -461,7 +461,7 @@
             "en": "Play the left hand alone: the low octave, the short A, then two chords.",
             "de": "Spiel die linke Hand allein: die tiefe Oktave, das kurze A, dann zwei Akkorde.",
             "es": "Toca la mano izquierda sola: la octava grave, el la corto, y luego dos acordes.",
-            "zh": "只练左手：低音八度、短的 A，然后两个和弦。"
+            "zh": "只用左手弹：低音八度、短的 A，然后两个和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -485,7 +485,7 @@
             "en": "Join the hands on the second time through, where the tune climbs an octave.",
             "de": "Spiel den zweiten Durchgang mit beiden Händen zusammen. Dort steigt die Melodie eine Oktave höher.",
             "es": "Junta las manos en la segunda vuelta, donde la melodía sube una octava.",
-            "zh": "双手合起来弹第二遍，旋律在这里升高一个八度。"
+            "zh": "双手一起弹第二遍，旋律在这里升高一个八度。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -497,7 +497,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -559,7 +559,7 @@
             "en": "The right hand jumps up to the octave on D. Use the rest in bar 11 to get there.",
             "de": "Die rechte Hand springt hinauf zur Oktave auf D. Nutz die Pause in Takt 11, um dorthin zu kommen.",
             "es": "La mano derecha salta hacia arriba a la octava de re. Aprovecha el silencio del compás 11 para llegar.",
-            "zh": "右手往上跳到 D 上的八度。利用第 11 小节的休止跳过去。"
+            "zh": "右手往上跳到 D 上的八度。利用第 11 小节的休止符跳过去。"
           }
         },
         {

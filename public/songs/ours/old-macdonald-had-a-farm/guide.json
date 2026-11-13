@@ -48,7 +48,7 @@
             "en": "Now the left hand alone. It holds each note for two or four beats.",
             "de": "Jetzt die linke Hand allein. Sie hält jeden Ton zwei oder vier Schläge lang.",
             "es": "Ahora la mano izquierda sola. Mantiene cada nota dos o cuatro tiempos.",
-            "zh": "现在只用左手。它每个音保持两拍或四拍。"
+            "zh": "现在只用左手弹。它每个音保持两拍或四拍。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -140,7 +140,7 @@
             "en": "One last reach for B. Use the short rest before it to get ready.",
             "de": "Ein letzter Griff zum H. Nutz die kurze Pause davor, um dich bereitzumachen.",
             "es": "Un último estiramiento hasta el si. Usa el silencio corto de antes para prepararte.",
-            "zh": "最后一次够到 B。利用它前面短短的休止做好准备。"
+            "zh": "最后一次够到 B。利用它前面短短的休止符做好准备。"
           }
         }
       ]
@@ -201,7 +201,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,

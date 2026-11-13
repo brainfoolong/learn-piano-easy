@@ -6,7 +6,7 @@
     "en": "Paul Dukas completed this symphonic poem in 1897, and it was published the same year. It follows Goethe's 1797 poem Der Zauberlehrling. In Walt Disney's film Fantasia (1940), Mickey Mouse plays the apprentice.",
     "de": "Paul Dukas vollendete diese sinfonische Dichtung 1897, und sie erschien im selben Jahr im Druck. Sie folgt Goethes Gedicht Der Zauberlehrling von 1797. In Walt Disneys Film Fantasia (1940) spielt Micky Maus den Zauberlehrling.",
     "es": "Paul Dukas terminó este poema sinfónico en 1897, y se publicó ese mismo año. Sigue el poema de Goethe El aprendiz de brujo, de 1797. En la película de Walt Disney Fantasia (1940), Mickey Mouse hace de aprendiz.",
-    "zh": "杜卡在 1897 年完成了这首交响诗《魔法师的学徒》，同年出版。它取材于歌德 1797 年的同名诗作。在华特·迪士尼的电影《幻想曲》（1940）里，米老鼠扮演了那个学徒。"
+    "zh": "杜卡在 1897 年完成了这首交响诗《魔法师的学徒》，同年出版。它取材于歌德 1797 年的同名诗作。在华特·迪士尼的电影《幻想曲》（1940 年）里，米老鼠扮演了那个学徒。"
   },
   "funFact": {
     "en": "Dukas subtitled it a scherzo after a ballad by Goethe. It is by far the most performed and recorded of his works.",
@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one low note or two in each bar.",
             "de": "Jetzt die linke Hand allein. Sie hält in jedem Takt einen oder zwei tiefe Töne.",
             "es": "Ahora la mano izquierda sola. Mantiene una o dos notas graves en cada compás.",
-            "zh": "现在只练左手。每小节按住一个或两个低音。"
+            "zh": "现在只用左手弹。每小节按住一个或两个低音。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -72,7 +72,7 @@
             "en": "Put both hands together on the first ten bars.",
             "de": "Spiel die ersten zehn Takte mit beiden Händen zusammen.",
             "es": "Junta las dos manos en los primeros diez compases.",
-            "zh": "双手合起来弹前十个小节。"
+            "zh": "双手一起弹前十个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -177,7 +177,7 @@
             "en": "Play the left hand alone. A low note comes first, and a two-note chord answers it twice.",
             "de": "Spiel die linke Hand allein. Zuerst kommt ein tiefer Ton, dann antwortet zweimal ein Zweiklang.",
             "es": "Toca con la mano izquierda sola. Primero llega una nota grave, y un acorde de dos notas le responde dos veces.",
-            "zh": "只练左手。先弹一个低音，然后一个双音和弦回应它两次。"
+            "zh": "只用左手弹。先弹一个低音，然后一个双音和弦回应它两次。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -201,7 +201,7 @@
             "en": "Join the hands on the first six bars, slowly.",
             "de": "Spiel die ersten sechs Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros seis compases, despacio.",
-            "zh": "双手合起来慢慢弹前六个小节。"
+            "zh": "双手一起慢慢弹前六个小节。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -225,7 +225,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -318,7 +318,7 @@
             "en": "Play the left hand's broken chords alone until they roll by themselves.",
             "de": "Spiel die gebrochenen Akkorde der linken Hand allein, bis sie von selbst rollen.",
             "es": "Toca los acordes arpegiados de la mano izquierda sola, hasta que rueden por sí mismos.",
-            "zh": "只练左手的分解和弦，直到它们自己滚动起来。"
+            "zh": "单独弹左手的分解和弦，直到它们自己滚动起来。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -342,7 +342,7 @@
             "en": "Play the right hand's thirds alone, and press both notes of each pair as one.",
             "de": "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Paars wie einen an.",
             "es": "Toca las terceras de la mano derecha sola, y presiona las dos notas de cada doble nota como una sola.",
-            "zh": "只用右手练三度，每对音的两个音要像一个音那样一起按下。"
+            "zh": "单独弹右手的三度，每一对的两个音要像一个音那样同时按下。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -354,7 +354,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -459,7 +459,7 @@
             "en": "Play the left hand alone. A low octave comes first, then two short chords.",
             "de": "Spiel die linke Hand allein. Zuerst kommt eine tiefe Oktave, dann zwei kurze Akkorde.",
             "es": "Toca con la mano izquierda sola. Primero llega una octava grave, y luego dos acordes cortos.",
-            "zh": "只练左手。先弹一个低音八度，然后两个短和弦。"
+            "zh": "只用左手弹。先弹一个低音八度，然后两个短和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -483,7 +483,7 @@
             "en": "Play the right hand's runs alone, four sixteenths to each beat.",
             "de": "Spiel die Läufe der rechten Hand allein, vier Sechzehntel auf jeden Schlag.",
             "es": "Toca los pasajes rápidos de la mano derecha sola, cuatro semicorcheas en cada tiempo.",
-            "zh": "只用右手练快速经过句，每拍四个十六分音符。"
+            "zh": "单独弹右手的快速经过句，每拍四个十六分音符。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -495,7 +495,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

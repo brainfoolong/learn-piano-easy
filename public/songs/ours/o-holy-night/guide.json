@@ -61,7 +61,7 @@
             "en": "Now the left hand alone. It holds one shape, then changes in the middle of each bar.",
             "de": "Jetzt die linke Hand allein. Sie hält eine Handform und wechselt in der Mitte jedes Takts.",
             "es": "Ahora la mano izquierda sola. Mantiene una forma, y cambia a la mitad de cada compás.",
-            "zh": "现在只用左手。它保持一个手型，在每个小节的中间换一次。"
+            "zh": "现在只用左手弹。它保持一个手型，在每个小节的中间换一次。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -113,7 +113,7 @@
             "en": "Use the rest at the end of bar 7 to move up. Finger 3 lands on the high C.",
             "de": "Nutz die Pause am Ende von Takt 7, um nach oben zu rücken. Finger 3 landet auf dem hohen C.",
             "es": "Usa el silencio del final del compás 7 para subir la mano. El dedo 3 llega al do agudo.",
-            "zh": "利用第 7 小节末尾的休止往上移。3 指落在高音 C 上。"
+            "zh": "利用第 7 小节末尾的休止符往上移。3 指落在高音 C 上。"
           }
         },
         {
@@ -135,7 +135,7 @@
             "en": "The hand moves up after the rest, with finger 3 on the high C. Then the thumb plays A.",
             "de": "Nach der Pause rückt die Hand nach oben, mit Finger 3 auf dem hohen C. Dann spielt der Daumen das A.",
             "es": "La mano sube después del silencio, con el dedo 3 en el do agudo. Luego el pulgar toca el la.",
-            "zh": "休止之后手往上移，3 指放在高音 C 上。然后拇指弹 A。"
+            "zh": "休止符之后手往上移，3 指放在高音 C 上。然后拇指弹 A。"
           }
         },
         {
@@ -214,7 +214,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -276,7 +276,7 @@
             "en": "The hand moves up after the rest, with finger 3 on the high C. Then the thumb plays A.",
             "de": "Nach der Pause rückt die Hand nach oben, mit Finger 3 auf dem hohen C. Dann spielt der Daumen das A.",
             "es": "La mano sube después del silencio, con el dedo 3 en el do agudo. Luego el pulgar toca el la.",
-            "zh": "休止之后手往上移，3 指放在高音 C 上。然后拇指弹 A。"
+            "zh": "休止符之后手往上移，3 指放在高音 C 上。然后拇指弹 A。"
           }
         },
         {
@@ -473,7 +473,7 @@
             "en": "Play the climb in octaves with the right hand alone. Keep the hand in the shape of an octave.",
             "de": "Spiel den Aufstieg in Oktaven nur mit der rechten Hand. Halt die Hand in Oktavform.",
             "es": "Toca la subida en octavas con la mano derecha sola. Mantén la mano en forma de octava.",
-            "zh": "右手单独用八度弹那段上行。手保持八度的手型。"
+            "zh": "只用右手以八度弹那段上行。手保持八度的手型。"
           },
           "hands": "right",
           "speed": 0.5,

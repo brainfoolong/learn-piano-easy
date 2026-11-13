@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape for each half bar.",
             "de": "Jetzt die linke Hand allein. Sie hält für jeden halben Takt eine Griffform.",
             "es": "Ahora la mano izquierda sola. Mantiene una misma forma en cada medio compás.",
-            "zh": "现在只用左手。每半个小节保持一个手型。"
+            "zh": "现在只用左手弹。每半个小节保持一个手型。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手按原速弹完整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -123,7 +123,7 @@
             "en": "The run falls one key with each long note. Fingers 5, 4 and 3 take the first three, then the hand moves down a key at a time.",
             "de": "Der Lauf fällt mit jedem langen Ton um eine Taste. Finger 5, 4 und 3 nehmen die ersten drei, dann rückt die Hand Taste für Taste hinab.",
             "es": "El pasaje baja una tecla con cada nota larga. Los dedos 5, 4 y 3 tocan las tres primeras, y luego la mano baja de tecla en tecla.",
-            "zh": "快速经过句每到一个长音就下降一个键。5、4、3 指负责前三个，然后手一个键一个键地往下移。"
+            "zh": "快速经过句每到一个长音就下降一个琴键。5、4、3 指负责前三个，然后手一个琴键一个琴键地往下移。"
           }
         }
       ],
@@ -143,7 +143,7 @@
             "en": "The run starts on the high G with the little finger. Each long note starts the same pattern one key lower.",
             "de": "Der Lauf beginnt mit dem kleinen Finger auf dem hohen G. Jeder lange Ton beginnt dasselbe Muster eine Taste tiefer.",
             "es": "El pasaje empieza en el sol agudo con el meñique. Cada nota larga inicia el mismo patrón una tecla más abajo.",
-            "zh": "快速经过句从高音 G 开始，用小指弹。每个长音都把同一个音型降低一个键重新开始。"
+            "zh": "快速经过句从高音 G 开始，用小指弹。每个长音都把同一个音型降低一个琴键重新开始。"
           }
         },
         {
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹完整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -284,7 +284,7 @@
             "en": "The run starts on the high G with the little finger. Each long note starts the same pattern one key lower.",
             "de": "Der Lauf beginnt mit dem kleinen Finger auf dem hohen G. Jeder lange Ton beginnt dasselbe Muster eine Taste tiefer.",
             "es": "El pasaje empieza en el sol agudo con el meñique. Cada nota larga inicia el mismo patrón una tecla más abajo.",
-            "zh": "快速经过句从高音 G 开始，用小指弹。每个长音都把同一个音型降低一个键重新开始。"
+            "zh": "快速经过句从高音 G 开始，用小指弹。每个长音都把同一个音型降低一个琴键重新开始。"
           }
         },
         {
@@ -319,7 +319,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在按原速弹，加上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -426,7 +426,7 @@
             "en": "The left hand plays F, then G with a rest, and jumps down to the low C.",
             "de": "Die linke Hand spielt F, dann G mit einer Pause, und springt hinab zum tiefen C.",
             "es": "La mano izquierda toca el fa, luego el sol con un silencio, y salta hacia abajo al do grave.",
-            "zh": "左手弹 F，再弹 G，接着一个休止，然后往下跳到低音 C。"
+            "zh": "左手弹 F，再弹 G，接着一个休止符，然后往下跳到低音 C。"
           }
         },
         {
@@ -461,7 +461,7 @@
             "en": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca el bajo stride solo: salta hacia abajo para la octava grave, y vuelve arriba para el acorde.",
-            "zh": "单独练跨步低音：往下跳弹低音八度，再跳回来弹和弦。"
+            "zh": "单独弹跨步低音：往下跳弹低音八度，再跳回来弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -485,7 +485,7 @@
             "en": "Play the arpeggios of the second verse in the left hand alone.",
             "de": "Spiel die Arpeggien der zweiten Strophe nur mit der linken Hand.",
             "es": "Toca los arpegios de la segunda estrofa con la mano izquierda sola.",
-            "zh": "单独练第二段主歌里左手的琶音。"
+            "zh": "单独弹第二段主歌里左手的琶音。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合奏，以四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

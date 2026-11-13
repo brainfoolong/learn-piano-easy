@@ -48,7 +48,7 @@
             "en": "Now the left hand alone. It only moves between C, F and G.",
             "de": "Jetzt die linke Hand allein. Sie bewegt sich nur zwischen C, F und G.",
             "es": "Ahora la mano izquierda sola. Solo se mueve entre el do, el fa y el sol.",
-            "zh": "现在只练左手。它只在 C、F、G 之间移动。"
+            "zh": "现在只用左手弹。它只在 C、F、G 之间移动。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -60,7 +60,7 @@
             "en": "Put both hands together on the first four bars.",
             "de": "Nimm beide Hände zusammen für die ersten vier Takte.",
             "es": "Junta las dos manos en los primeros cuatro compases.",
-            "zh": "双手合起来弹前四个小节。"
+            "zh": "双手一起弹前四个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -72,7 +72,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -177,7 +177,7 @@
             "en": "Play the left hand alone. It holds each chord for two or four beats.",
             "de": "Spiel die linke Hand allein. Sie hält jeden Akkord zwei oder vier Schläge lang.",
             "es": "Toca con la mano izquierda sola. Mantiene cada acorde dos o cuatro tiempos.",
-            "zh": "只练左手。每个和弦按住两拍或四拍。"
+            "zh": "只用左手弹。每个和弦按住两拍或四拍。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -189,7 +189,7 @@
             "en": "Put both hands together on the middle part.",
             "de": "Nimm beide Hände zusammen für den Mittelteil.",
             "es": "Junta las dos manos en la parte del medio.",
-            "zh": "双手合起来弹中间部分。"
+            "zh": "双手一起弹中间部分。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -201,7 +201,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -307,7 +307,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己流畅地滚动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -319,7 +319,7 @@
             "en": "Play the right hand's thirds alone, and press both notes of each pair as one.",
             "de": "Spiel die Terzen der rechten Hand allein, und drück beide Töne jedes Zweiklangs wie einen.",
             "es": "Toca las terceras de la mano derecha sola, y presiona las dos notas de cada doble nota como una sola.",
-            "zh": "只用右手练三度，每对音的两个音要像一个音那样一起按下。"
+            "zh": "单独弹右手的三度，每一对的两个音要像一个音那样同时按下。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -331,7 +331,7 @@
             "en": "Play the scale of bar 15 alone, with the thumb passing under after finger 3.",
             "de": "Spiel die Tonleiter in Takt 15 allein, mit Daumenuntersatz nach Finger 3.",
             "es": "Toca sola la escala del compás 15, con el paso del pulgar después del dedo 3.",
-            "zh": "单独练第 15 小节的音阶，弹完 3 指后拇指从下面穿过去。"
+            "zh": "单独弹第 15 小节的音阶，弹完 3 指后拇指从下面穿过去。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -343,7 +343,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -355,7 +355,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在用原速弹，并踩上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -460,7 +460,7 @@
             "en": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca el bajo stride solo: salta abajo a la octava, y vuelve arriba al acorde.",
-            "zh": "单独练跨步低音：往下跳弹八度，再回到上面弹和弦。"
+            "zh": "单独弹跨步低音：往下跳弹八度，再跳回上面弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -484,7 +484,7 @@
             "en": "Play the right hand's octaves alone, and lift the hand between them.",
             "de": "Spiel die Oktaven der rechten Hand allein, und heb die Hand zwischen ihnen an.",
             "es": "Toca las octavas de la mano derecha sola, y levanta la mano entre una y otra.",
-            "zh": "只用右手练八度，八度之间把手抬起来。"
+            "zh": "单独弹右手的八度，八度之间把手抬起来。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -496,7 +496,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合起来以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

@@ -6,7 +6,7 @@
     "en": "Yankee Doodle is a traditional tune that British soldiers sang to make fun of the American colonists. During the American Revolution, the Americans took the song as their own and sang it with pride. One of its first printings is in a book of tunes James Aird published in Glasgow in 1782.",
     "de": "Yankee Doodle ist eine überlieferte Melodie, mit der britische Soldaten die amerikanischen Kolonisten verspotteten. Im Amerikanischen Unabhängigkeitskrieg machten die Amerikaner das Lied zu ihrem eigenen und sangen es voller Stolz. Einer der ersten Drucke steht in einem Melodienbuch, das James Aird 1782 in Glasgow herausgab.",
     "es": "Yankee Doodle es una melodía tradicional que los soldados británicos cantaban para burlarse de los colonos estadounidenses. Durante la guerra de Independencia de los Estados Unidos, los estadounidenses hicieron suya la canción y la cantaron con orgullo. Una de sus primeras impresiones está en un libro de melodías que James Aird publicó en Glasgow en 1782.",
-    "zh": "《扬基歌》是一首传统曲调，英国士兵唱它来取笑美洲殖民者。在美国独立战争期间，美国人把这首歌当成了自己的歌，自豪地唱它。它最早的印本之一，收在 James Aird 1782 年于格拉斯哥出版的一本曲集里。"
+    "zh": "《扬基歌》是一首传统旋律，英国士兵唱它来取笑美洲殖民者。在美国独立战争期间，美国人把这首歌当成了自己的歌，自豪地唱它。它最早的印本之一，收在 James Aird 1782 年于格拉斯哥出版的一本曲集里。"
   },
   "funFact": {
     "en": "Yankee Doodle is the official state song of Connecticut.",
@@ -48,7 +48,7 @@
             "en": "Now the left hand alone. Each of its notes lasts two beats or more.",
             "de": "Jetzt die linke Hand allein. Jeder ihrer Töne dauert zwei Schläge oder länger.",
             "es": "Ahora la mano izquierda sola. Cada una de sus notas dura dos tiempos o más.",
-            "zh": "现在只练左手。它的每个音都持续两拍或更长。"
+            "zh": "现在只用左手弹。它的每个音都持续两拍或更长。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -60,7 +60,7 @@
             "en": "Put both hands together on the first four bars.",
             "de": "Nimm beide Hände zusammen für die ersten vier Takte.",
             "es": "Junta las dos manos en los primeros cuatro compases.",
-            "zh": "双手合起来弹前四个小节。"
+            "zh": "双手一起弹前四个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -72,7 +72,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -177,7 +177,7 @@
             "en": "Play the left hand alone. Keep each chord until the next note.",
             "de": "Spiel die linke Hand allein. Halt jeden Akkord bis zum nächsten Ton.",
             "es": "Toca con la mano izquierda sola. Mantén cada acorde hasta la nota siguiente.",
-            "zh": "只练左手。每个和弦都按住，直到下一个音。"
+            "zh": "只用左手弹。每个和弦都按住，直到下一个音。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -189,7 +189,7 @@
             "en": "Join the hands on the chorus, which sits higher on the keys.",
             "de": "Spiel den Refrain mit beiden Händen zusammen. Er liegt höher auf den Tasten.",
             "es": "Junta las manos en el estribillo, que queda más arriba en el teclado.",
-            "zh": "双手合起来弹副歌，它在琴键上的位置更高。"
+            "zh": "双手一起弹副歌，它在琴键上的位置更高。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -201,7 +201,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "用双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -307,7 +307,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca con la mano izquierda sola el bajo de Alberti, hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自己滚动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自己流畅地滚动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -319,7 +319,7 @@
             "en": "Play the run of bar 8 alone, and pass the thumb under to C.",
             "de": "Spiel den Lauf in Takt 8 allein, mit Daumenuntersatz zum C.",
             "es": "Toca solo el pasaje del compás 8, y pasa el pulgar por debajo hasta el do.",
-            "zh": "单独练第 8 小节的快速经过句，拇指从下面穿过去弹 C。"
+            "zh": "单独弹第 8 小节的快速经过句，拇指从下面穿过去弹 C。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -331,7 +331,7 @@
             "en": "Play the chorus in thirds alone, and keep both notes of each pair together.",
             "de": "Spiel den Refrain in Terzen allein, und drück beide Töne jedes Zweiklangs zusammen.",
             "es": "Toca solo el estribillo en terceras, y mantén juntas las dos notas de cada doble nota.",
-            "zh": "单独用三度练副歌，每对音的两个音要一起弹。"
+            "zh": "单独用三度弹副歌，每一对的两个音要同时按下。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -343,7 +343,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -355,7 +355,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在用原速弹，并踩上踏板。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -449,7 +449,7 @@
             "en": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca el bajo stride con la mano izquierda sola: salta abajo a la octava, y vuelve arriba al acorde.",
-            "zh": "单独练跨步低音：往下跳弹八度，再回到上面弹和弦。"
+            "zh": "单独弹跨步低音：往下跳弹八度，再跳回上面弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -461,7 +461,7 @@
             "en": "Play the right hand's sixths and thirds alone, and let the top finger sing the tune.",
             "de": "Spiel die Sexten und Terzen der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
             "es": "Toca las sextas y terceras de la mano derecha sola, y deja que el dedo de arriba cante la melodía.",
-            "zh": "只用右手练六度和三度，让最上面的手指唱出旋律。"
+            "zh": "单独弹右手的六度和三度，让最上面的手指唱出旋律。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -473,7 +473,7 @@
             "en": "Play the octaves of the chorus in the left hand alone.",
             "de": "Spiel die Oktaven des Refrains nur mit der linken Hand.",
             "es": "Toca las octavas del estribillo con la mano izquierda sola.",
-            "zh": "副歌只用左手练八度。"
+            "zh": "只用左手弹副歌的八度。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -485,7 +485,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合起来以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

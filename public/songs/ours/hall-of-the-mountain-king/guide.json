@@ -60,7 +60,7 @@
             "en": "The left hand holds one fifth or one note for each bar. Join the hands on the first eight bars.",
             "de": "Die linke Hand hält für jeden Takt eine Quinte oder einen Ton. Spiel die ersten acht Takte mit beiden Händen zusammen.",
             "es": "La mano izquierda mantiene una quinta o una nota en cada compás. Junta las manos en los primeros ocho compases.",
-            "zh": "左手每小节按住一个五度或一个音。双手合起来弹前八个小节。"
+            "zh": "左手每小节按住一个五度或一个音。双手一起弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -72,7 +72,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -122,7 +122,7 @@
             "en": "The tune starts again. Take the thumb back down to A during the rest, and the left hand back to A.",
             "de": "Die Melodie beginnt von vorn. Führ den Daumen in der Pause zurück zum A, und die linke Hand auch.",
             "es": "La melodía empieza otra vez. Durante el silencio, lleva el pulgar de vuelta al la, y la mano izquierda también al la.",
-            "zh": "旋律重新开始。趁休止把拇指移回下面的 A，左手也移回 A。"
+            "zh": "旋律重新开始。趁休止符把拇指移回下面的 A，左手也移回 A。"
           }
         },
         {
@@ -165,7 +165,7 @@
             "en": "Play the left hand alone. It steps between two notes on every beat, like a troll's march.",
             "de": "Spiel die linke Hand allein. Sie geht auf jedem Schlag zwischen zwei Tönen hin und her, wie ein Trollmarsch.",
             "es": "Toca la mano izquierda sola. Va y viene entre dos notas en cada tiempo, como una marcha de trols.",
-            "zh": "只练左手。它每拍都在两个音之间来回走，像山妖在行军。"
+            "zh": "只用左手弹。它每拍都在两个音之间来回走，像山妖在行军。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -189,7 +189,7 @@
             "en": "Join the hands on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros ocho compases, despacio.",
-            "zh": "双手合起来慢慢弹前八个小节。"
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -201,7 +201,7 @@
             "en": "Join the hands on bars 9 to 16, where the tune climbs.",
             "de": "Spiel die Takte 9 bis 16 mit beiden Händen zusammen. Dort steigt die Melodie.",
             "es": "Junta las manos en los compases 9 a 16, donde la melodía sube.",
-            "zh": "双手合起来弹第 9～16 小节，旋律在这里往上爬。"
+            "zh": "双手一起弹第 9～16 小节，旋律在这里往上爬。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -263,7 +263,7 @@
             "en": "Use the rest to drop the left hand to the low E. The right thumb starts the climb on E.",
             "de": "Nutz die Pause, um die linke Hand zum tiefen E zu bringen. Der rechte Daumen beginnt den Aufstieg auf dem E.",
             "es": "Aprovecha el silencio para bajar la mano izquierda al mi grave. El pulgar derecho empieza la subida en el mi.",
-            "zh": "趁休止把左手落到低音 E。右手拇指从 E 开始往上爬。"
+            "zh": "趁休止符把左手落到低音 E。右手拇指从 E 开始往上爬。"
           }
         },
         {
@@ -272,7 +272,7 @@
             "en": "Both hands go back to A during the rest, and the tune starts once more.",
             "de": "Beide Hände gehen in der Pause zurück zum A, und die Melodie beginnt noch einmal.",
             "es": "Durante el silencio, las dos manos vuelven al la, y la melodía empieza una vez más.",
-            "zh": "两只手趁休止回到 A，旋律再一次开始。"
+            "zh": "两只手趁休止符回到 A，旋律再一次开始。"
           }
         },
         {
@@ -307,7 +307,7 @@
             "en": "Play the left hand's broken chords alone until they roll by themselves: low, middle, high, middle.",
             "de": "Spiel die gebrochenen Akkorde der linken Hand allein, bis sie von selbst rollen: tief, Mitte, hoch, Mitte.",
             "es": "Toca con la mano izquierda sola los acordes arpegiados, hasta que rueden por sí mismos: grave, medio, agudo, medio.",
-            "zh": "单独练左手的分解和弦，直到它们自己滚动起来：低、中、高、中。"
+            "zh": "单独弹左手的分解和弦，直到它们自己滚动起来：低、中、高、中。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -343,7 +343,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -394,7 +394,7 @@
             "en": "The left hand plays the tune now. The right hand only taps short chords between the beats.",
             "de": "Jetzt spielt die linke Hand die Melodie. Die rechte Hand tupft nur kurze Akkorde zwischen die Schläge.",
             "es": "Ahora la mano izquierda toca la melodía. La mano derecha solo da toques de acordes cortos entre los tiempos.",
-            "zh": "现在由左手弹旋律。右手只在拍子之间轻点短和弦。"
+            "zh": "现在由左手弹旋律。右手只在拍点之间轻点短和弦。"
           }
         }
       ],
@@ -405,7 +405,7 @@
             "en": "The hands swap jobs. The left hand plays the tune on the beats, and the right hand taps between them.",
             "de": "Die Hände tauschen ihre Aufgaben. Die linke Hand spielt die Melodie auf den Schlägen, und die rechte tupft dazwischen.",
             "es": "Las manos intercambian sus tareas. La mano izquierda toca la melodía en los tiempos, y la derecha da toques entre ellos.",
-            "zh": "两只手交换任务。左手在拍子上弹旋律，右手在拍子之间轻点。"
+            "zh": "两只手交换任务。左手在拍点上弹旋律，右手在拍点之间轻点。"
           }
         },
         {
@@ -423,7 +423,7 @@
             "en": "Drop the left hand to the low F sharp during the short rest. The right thumb starts the climb.",
             "de": "Bring die linke Hand in der kurzen Pause hinab zum tiefen Fis. Der rechte Daumen beginnt den Aufstieg.",
             "es": "Baja la mano izquierda al fa sostenido grave durante el silencio corto. El pulgar derecho empieza la subida.",
-            "zh": "趁短暂的休止把左手落到低音升 F。右手拇指开始往上爬。"
+            "zh": "趁短暂的休止符把左手落到低音升 F。右手拇指开始往上爬。"
           }
         }
       ]
@@ -448,7 +448,7 @@
             "en": "Play the left hand's octaves alone, short and plucked, with a rest after each.",
             "de": "Spiel die Oktaven der linken Hand allein, kurz und gezupft, mit einer Pause nach jeder.",
             "es": "Toca solas las octavas de la mano izquierda, cortas y punteadas, con un silencio después de cada una.",
-            "zh": "只用左手弹八度，短促得像拨弦，每个后面都有休止。"
+            "zh": "只用左手弹八度，短促得像拨弦，每个后面都有休止符。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -472,7 +472,7 @@
             "en": "Play the driving octaves of the left hand alone, eight to a bar.",
             "de": "Spiel die treibenden Oktaven der linken Hand allein, acht pro Takt.",
             "es": "Toca solas las octavas insistentes de la mano izquierda, ocho por compás.",
-            "zh": "单独练左手那些推着音乐往前走的八度，每小节八个。"
+            "zh": "单独弹左手那些推着音乐往前走的八度，每小节八个。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -484,7 +484,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Stück in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手合起来以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

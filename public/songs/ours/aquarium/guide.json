@@ -6,7 +6,7 @@
     "en": "Aquarium is the seventh movement of The Carnival of the Animals, a musical joke Saint-Saëns wrote in 1886. The suite was published in 1922, the year after his death. Terrence Malick's 1978 film Days of Heaven plays it under its opening credits.",
     "de": "Aquarium ist der siebte Satz aus Der Karneval der Tiere, einem musikalischen Scherz, den Saint-Saëns 1886 schrieb. Die Suite erschien 1922, im Jahr nach seinem Tod. Terrence Malicks Film Days of Heaven von 1978 spielt den Satz zum Vorspann.",
     "es": "Aquarium es el séptimo movimiento de El carnaval de los animales, una broma musical que Saint-Saëns escribió en 1886. La suite se publicó en 1922, un año después de su muerte. La película de 1978 de Terrence Malick, Days of Heaven, la usa en sus créditos iniciales.",
-    "zh": "《水族馆》是《动物狂欢节》的第七首。《动物狂欢节》是圣桑在 1886 年写的一个音乐玩笑。这部组曲在 1922 年出版，那是他去世的次年。泰伦斯·马力克 1978 年的电影《天堂之日》，片头字幕下放的就是它。"
+    "zh": "《水族馆》是《动物狂欢节》的第七首。《动物狂欢节》是圣桑在 1886 年写的一个音乐玩笑。这部组曲在 1922 年出版，那是他去世的次年。特伦斯·马力克 1978 年的电影《天堂之日》，片头字幕下放的就是它。"
   },
   "funFact": {
     "en": "Saint-Saëns banned public performances of the suite while he lived, fearing its jokes would harm his name as a serious composer.",
@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape for each whole bar.",
             "de": "Jetzt die linke Hand allein. Sie hält jeden Griff einen ganzen Takt lang.",
             "es": "Ahora la mano izquierda sola. Mantiene cada forma durante un compás entero.",
-            "zh": "现在只用左手。每个手型保持一整个小节。"
+            "zh": "现在只用左手弹。每个手型保持一整个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首曲子。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首曲子，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -242,7 +242,7 @@
             "en": "Both hands play on every beat. Keep the beats as even as slow waves.",
             "de": "Beide Hände spielen auf jedem Schlag. Halt die Schläge so gleichmäßig wie langsame Wellen.",
             "es": "Las dos manos tocan en cada tiempo. Mantén los tiempos tan parejos como olas lentas.",
-            "zh": "两只手每拍都要弹。让拍子像缓慢的波浪一样均匀。"
+            "zh": "两只手每拍都要弹。让节拍像缓慢的波浪一样均匀。"
           }
         },
         {
@@ -319,7 +319,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -461,7 +461,7 @@
             "en": "Play the left hand alone: an octave on the beat, then a chord, each with a short rest to jump.",
             "de": "Spiel die linke Hand allein: eine Oktave auf dem Schlag, dann einen Akkord, jeweils mit einer kurzen Pause zum Springen.",
             "es": "Toca la mano izquierda sola: una octava en el pulso y luego un acorde, cada uno con un silencio corto para saltar.",
-            "zh": "只用左手弹：在拍子上弹一个八度，再弹一个和弦，每次都有一个短休止让你跳过去。"
+            "zh": "只用左手弹：在拍点上弹一个八度，再弹一个和弦，每次都有一个短休止符让你跳过去。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -526,7 +526,7 @@
             "en": "Use the short rest after each octave and chord to jump to the next one.",
             "de": "Nutz die kurze Pause nach jeder Oktave und jedem Akkord, um zum nächsten Griff zu springen.",
             "es": "Aprovecha el silencio corto después de cada octava y cada acorde para saltar al siguiente.",
-            "zh": "利用每个八度和每个和弦后面的短休止，跳到下一个位置。"
+            "zh": "利用每个八度和每个和弦后面的短休止符，跳到下一个位置。"
           }
         },
         {
@@ -559,7 +559,7 @@
             "en": "Lift the right hand in the short rest after E, G sharp and B. It lands on A, C, E and A.",
             "de": "Heb die rechte Hand in der kurzen Pause nach E, Gis und H. Sie landet auf A, C, E und A.",
             "es": "Levanta la mano derecha en el silencio corto después del mi, el sol sostenido y el si. La mano llega al la, al do, al mi y al la.",
-            "zh": "弹完 E、升 G、B 后，在短休止里把右手抬起。它落在 A、C、E、A 上。"
+            "zh": "弹完 E、升 G、B 后，在短休止符处把右手抬起。它落在 A、C、E、A 上。"
           }
         },
         {
@@ -568,7 +568,7 @@
             "en": "The left hand jumps from the low E octave up to G sharp, B and E. Use each short rest to land.",
             "de": "Die linke Hand springt von der tiefen E-Oktave hinauf zu Gis, H und E. Nutz jede kurze Pause zum Landen.",
             "es": "La mano izquierda salta de la octava de mi grave hasta el sol sostenido, el si y el mi. Aprovecha cada silencio corto para llegar.",
-            "zh": "左手从低音 E 的八度往上跳到升 G、B、E。利用每个短休止落到位。"
+            "zh": "左手从低音 E 的八度往上跳到升 G、B、E。利用每个短休止符落到位。"
           }
         },
         {

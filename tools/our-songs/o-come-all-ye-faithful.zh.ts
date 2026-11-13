@@ -4,7 +4,7 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "John Francis Wade 大约在 1751 年手抄下这段曲调，配的是以“Adeste fideles”开头的拉丁文歌词。" +
+    "John Francis Wade 大约在 1751 年手抄下这段旋律，配的是以“Adeste fideles”开头的拉丁文歌词。" +
     "他是一位英国天主教徒，在法国靠抄写乐谱为生。" +
     "如今大多数人唱的英文歌词，是 Frederick Oakeley 在 1841 年写的。",
   funFact: "在伦敦，它曾被叫作“葡萄牙赞美诗”，因为人们是在葡萄牙大使馆的礼拜堂里听到它的。",
@@ -13,7 +13,7 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "只用右手弹前三个小节，让歌曲等你弹每个音。",
         "只用右手弹第 1～9 小节，一直弹到长长的低音 G。",
-        "现在只用左手。它每半个小节保持一个手型。",
+        "现在只用左手弹。它每半个小节保持一个手型。",
         "双手一起慢慢弹完整首歌。",
         "双手合奏，用原速弹完整首歌。",
       ],
@@ -23,8 +23,8 @@ export const translation: Translation<GuideTranslation> = {
         "副歌把同一句呼唤唱了三遍。每一遍都比前一遍稍响一点。",
       ],
       tricky: {
-        4: "短短的休止之后，3 指落在 E 上。然后 2、3、4 指在 D、E、F 之间来回弹。",
-        10: "趁休止把手抬起，用小指落在高音 G 上。4 指和 3 指往下走到 F 和 E。",
+        4: "短短的休止符之后，3 指落在 E 上。然后 2、3、4 指在 D、E、F 之间来回弹。",
+        10: "趁休止符把手抬起，用小指落在高音 G 上。4 指和 3 指往下走到 F 和 E。",
         11: "这次小指弹 F，这样 4 指就准备好弹 E 了。",
       },
     },
@@ -33,13 +33,13 @@ export const translation: Translation<GuideTranslation> = {
         "只用左手弹，把每个和弦的音同时按下。",
         "只用右手弹前九个小节，感受第 8 小节里那一长一短的两个音。",
         "双手一起弹第 14～17 小节的副歌。",
-        "双手合奏整首歌，比谱上写的稍慢一点。",
+        "用双手弹完整首歌，比谱上写的稍慢一点。",
         "现在用原速弹。",
       ],
       tips: [
         "这里左手拇指在每个和弦上都留在 G 上，所以手几乎不用动。",
         "一长一短：A 的时长是 G 的三倍。",
-        "最后一行最有气势。让声音渐渐变强，然后停在最后的 C 上。",
+        "最后一行最有气势。让声音渐强，然后停在最后的 C 上。",
       ],
       tricky: {
         4: "把手张得很开：3 指往上够到 E 时，拇指离开低音 G。",

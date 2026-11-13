@@ -61,7 +61,7 @@
             "en": "Now the left hand alone. It holds one note or a fifth for a whole bar.",
             "de": "Jetzt die linke Hand allein. Sie hält einen Ton oder eine Quinte einen ganzen Takt lang.",
             "es": "Ahora la mano izquierda sola. Mantiene una nota o una quinta durante todo un compás.",
-            "zh": "现在只用左手。它把一个音或一个五度按住一整个小节。"
+            "zh": "现在只用左手弹。它把一个音或一个五度按住一整个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -85,7 +85,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首曲子。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -135,7 +135,7 @@
             "en": "Move the right thumb from D down to C. The left hand lands on C and G after its rest.",
             "de": "Setz den rechten Daumen vom D hinab zum C. Die linke Hand landet nach ihrer Pause auf C und G.",
             "es": "Baja el pulgar derecho de re a do. La mano izquierda cae en el do y el sol después de su silencio.",
-            "zh": "右手拇指从 D 往下移到 C。左手在休止之后落到 C 和 G 上。"
+            "zh": "右手拇指从 D 往下移到 C。左手在休止符之后落到 C 和 G 上。"
           }
         },
         {
@@ -144,7 +144,7 @@
             "en": "Use the short rest to move the left hand down to F and C. The right hand starts on F with finger 4.",
             "de": "Nutz die kurze Pause, um die linke Hand hinab zu F und C zu setzen. Die rechte Hand beginnt mit Finger 4 auf dem F.",
             "es": "Usa el silencio corto para bajar la mano izquierda al fa y al do. La mano derecha empieza en el fa con el dedo 4.",
-            "zh": "利用短休止把左手往下移到 F 和 C。右手用 4 指从 F 开始。"
+            "zh": "利用短休止符把左手往下移到 F 和 C。右手用 4 指从 F 开始。"
           }
         },
         {
@@ -215,7 +215,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首曲子，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -286,7 +286,7 @@
             "en": "Use the short rest to move the left hand down to F. The right hand starts on F with finger 4.",
             "de": "Nutz die kurze Pause, um die linke Hand hinab zum F zu setzen. Die rechte Hand beginnt mit Finger 4 auf dem F.",
             "es": "Usa el silencio corto para bajar la mano izquierda al fa. La mano derecha empieza en el fa con el dedo 4.",
-            "zh": "利用短休止把左手往下移到 F。右手用 4 指从 F 开始。"
+            "zh": "利用短休止符把左手往下移到 F。右手用 4 指从 F 开始。"
           }
         },
         {
@@ -357,7 +357,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -499,7 +499,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -528,7 +528,7 @@
             "en": "In the stride bass, use each short rest to jump between the low octave and the chord.",
             "de": "Nutz im Stride-Bass jede kurze Pause, um zwischen der tiefen Oktave und dem Akkord zu springen.",
             "es": "En el bajo stride, usa cada silencio corto para saltar entre la octava grave y el acorde.",
-            "zh": "弹跨步低音时，利用每个短休止在低音八度和和弦之间跳动。"
+            "zh": "弹跨步低音时，利用每个短休止符在低音八度和和弦之间跳动。"
           }
         },
         {
@@ -579,7 +579,7 @@
             "en": "The left hand jumps from the low F octave up to the chord. Use each short rest for the jump.",
             "de": "Die linke Hand springt von der tiefen F-Oktave hinauf zum Akkord. Nutz jede kurze Pause für den Sprung.",
             "es": "La mano izquierda salta de la octava de fa grave hasta el acorde. Usa cada silencio corto para el salto.",
-            "zh": "左手从低音 F 的八度往上跳到和弦。利用每个短休止来跳。"
+            "zh": "左手从低音 F 的八度往上跳到和弦。利用每个短休止符来跳。"
           }
         }
       ]

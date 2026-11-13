@@ -6,7 +6,7 @@
     "en": "John Francis Wade copied this tune by hand around 1751, with Latin words that begin Adeste fideles. Wade was an English Catholic who copied music for a living in France. Frederick Oakeley wrote the English words most people sing today in 1841.",
     "de": "John Francis Wade schrieb diese Melodie um 1751 von Hand ab, mit lateinischem Text, der mit Adeste fideles beginnt. Wade war ein englischer Katholik, der in Frankreich vom Abschreiben von Noten lebte. Frederick Oakeley schrieb 1841 den englischen Text, den die meisten heute singen.",
     "es": "John Francis Wade copió a mano esta melodía hacia 1751, con una letra en latín que empieza Adeste fideles. Wade era un católico inglés que vivía de copiar música en Francia. Frederick Oakeley escribió en 1841 la letra en inglés que casi todos cantan hoy.",
-    "zh": "John Francis Wade 大约在 1751 年手抄下这段曲调，配的是以“Adeste fideles”开头的拉丁文歌词。他是一位英国天主教徒，在法国靠抄写乐谱为生。如今大多数人唱的英文歌词，是 Frederick Oakeley 在 1841 年写的。"
+    "zh": "John Francis Wade 大约在 1751 年手抄下这段旋律，配的是以“Adeste fideles”开头的拉丁文歌词。他是一位英国天主教徒，在法国靠抄写乐谱为生。如今大多数人唱的英文歌词，是 Frederick Oakeley 在 1841 年写的。"
   },
   "funFact": {
     "en": "In London it was once called the Portuguese Hymn, because people heard it at the Portuguese embassy's chapel.",
@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape for each half of a bar.",
             "de": "Jetzt die linke Hand allein. Sie hält für jede Takthälfte eine Handform.",
             "es": "Ahora la mano izquierda sola. Mantiene una forma en cada mitad del compás.",
-            "zh": "现在只用左手。它每半个小节保持一个手型。"
+            "zh": "现在只用左手弹。它每半个小节保持一个手型。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -143,7 +143,7 @@
             "en": "Lift the hand during the rest, and land with the little finger on the high G. Fingers 4 and 3 step down to F and E.",
             "de": "Heb die Hand in der Pause, und setz den kleinen Finger auf das hohe G. Finger 4 und 3 gehen hinab zu F und E.",
             "es": "Levanta la mano durante el silencio, y apoya el meñique en el sol agudo. Los dedos 4 y 3 bajan al fa y al mi.",
-            "zh": "趁休止把手抬起，用小指落在高音 G 上。4 指和 3 指往下走到 F 和 E。"
+            "zh": "趁休止符把手抬起，用小指落在高音 G 上。4 指和 3 指往下走到 F 和 E。"
           }
         },
         {
@@ -152,7 +152,7 @@
             "en": "Finger 3 lands on E after the short rest. Then fingers 2, 3 and 4 rock between D, E and F.",
             "de": "Nach der kurzen Pause landet Finger 3 auf dem E. Dann schaukeln Finger 2, 3 und 4 zwischen D, E und F.",
             "es": "El dedo 3 llega al mi después del silencio corto. Luego los dedos 2, 3 y 4 se mecen entre re, mi y fa.",
-            "zh": "短短的休止之后，3 指落在 E 上。然后 2、3、4 指在 D、E、F 之间来回弹。"
+            "zh": "短短的休止符之后，3 指落在 E 上。然后 2、3、4 指在 D、E、F 之间来回弹。"
           }
         }
       ]
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -264,7 +264,7 @@
             "en": "The last line is the biggest. Let it swell, then rest on the last C.",
             "de": "Die letzte Zeile ist die größte. Lass sie anschwellen, dann ruh dich auf dem letzten C aus.",
             "es": "La última línea es la más grande. Deja que crezca, y luego descansa en el último do.",
-            "zh": "最后一行最有气势。让声音渐渐变强，然后停在最后的 C 上。"
+            "zh": "最后一行最有气势。让声音渐强，然后停在最后的 C 上。"
           }
         }
       ],

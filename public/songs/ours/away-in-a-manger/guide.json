@@ -6,7 +6,7 @@
     "en": "The words of Away in a Manger are American, and nobody knows who wrote them. Many tunes were written for them, and this one is Cradle Song by William J. Kirkpatrick, from 1895. It is the tune sung in Britain and Ireland.",
     "de": "Der Text von Away in a Manger stammt aus Amerika, und niemand weiß, wer ihn geschrieben hat. Viele Melodien entstanden dazu, und diese ist Cradle Song von William J. Kirkpatrick aus dem Jahr 1895. Diese Melodie singt man in Großbritannien und Irland.",
     "es": "La letra de Away in a Manger es estadounidense, y nadie sabe quién la escribió. Se escribieron muchas melodías para ella, y esta es Cradle Song, de William J. Kirkpatrick, de 1895. Es la melodía que se canta en Gran Bretaña e Irlanda.",
-    "zh": "《Away in a Manger》的歌词来自美国，没有人知道是谁写的。人们为这段歌词写过很多曲调，这一首是 William J. Kirkpatrick 1895 年写的《Cradle Song》。英国和爱尔兰唱的就是这个曲调。"
+    "zh": "《Away in a Manger》的歌词来自美国，没有人知道是谁写的。人们为这段歌词写过很多旋律，这一首是 William J. Kirkpatrick 1895 年写的《Cradle Song》。英国和爱尔兰唱的就是这个旋律。"
   },
   "funFact": {
     "en": "The words were long called Luther's Cradle Hymn, but Martin Luther never wrote them.",
@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape for each bar.",
             "de": "Jetzt die linke Hand allein. Sie hält für jeden Takt eine Griffform.",
             "es": "Ahora la mano izquierda sola. Mantiene una sola posición en cada compás.",
-            "zh": "现在只用左手。每个小节保持一个手型。"
+            "zh": "现在只用左手弹。每个小节保持一个手型。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -189,7 +189,7 @@
             "en": "Play the waltz bass alone: low note, chord, chord.",
             "de": "Spiel den Walzerbass allein: tiefer Ton, Akkord, Akkord.",
             "es": "Toca el bajo de vals solo: nota grave, acorde, acorde.",
-            "zh": "单独练圆舞曲低音：低音、和弦、和弦。"
+            "zh": "单独弹圆舞曲低音：低音、和弦、和弦。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -319,7 +319,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, aguda, media, aguda.",
-            "zh": "单独练阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -461,7 +461,7 @@
             "en": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca el bajo stride solo: salta hacia abajo a la octava, y luego vuelve arriba al acorde.",
-            "zh": "单独练跨步低音：往下跳去弹八度，再跳回上面弹和弦。"
+            "zh": "单独弹跨步低音：往下跳去弹八度，再跳回上面弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手一起，用四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

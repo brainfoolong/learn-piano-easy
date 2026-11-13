@@ -6,7 +6,7 @@
     "en": "Sarah Josepha Hale published the poem about Mary and her lamb in Boston in 1830. The tune it is sung to today is traditional, and nobody knows who first matched the two. It uses only four notes, which is why so many first piano books start with it.",
     "de": "Sarah Josepha Hale veröffentlichte das Gedicht über Mary und ihr Lamm 1830 in Boston. Die Melodie, zu der man es heute singt, ist überliefert, und niemand weiß, wer beides zuerst zusammenbrachte. Sie kommt mit nur vier Tönen aus, deshalb beginnen so viele erste Klavierschulen damit.",
     "es": "Sarah Josepha Hale publicó el poema sobre Mary y su corderito en Boston en 1830. La melodía con la que se canta hoy es tradicional, y nadie sabe quién unió primero el poema y la melodía. La melodía usa solo cuatro notas, y por eso tantos libros de piano para principiantes empiezan con ella.",
-    "zh": "1830 年，Sarah Josepha Hale 在波士顿发表了这首关于玛丽和她的小羊的诗。今天唱它用的旋律是传统曲调，没有人知道是谁最先把两者配在一起的。它只用了四个音，所以很多钢琴入门书都从它开始。"
+    "zh": "1830 年，Sarah Josepha Hale 在波士顿发表了这首关于玛丽和她的小羊的诗。今天唱它用的是一段传统旋律，没有人知道是谁最先把两者配在一起的。它只用了四个音，所以很多钢琴入门书都从它开始。"
   },
   "funFact": {
     "en": "In 1877 Thomas Edison recited its first lines into his new phonograph, so it was the first verse ever recorded and played back.",
@@ -72,7 +72,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -190,7 +190,7 @@
             "en": "Join the hands on the first eight bars.",
             "de": "Spiel die ersten acht Takte mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros ocho compases.",
-            "zh": "在前八个小节双手合奏。"
+            "zh": "双手一起弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -202,7 +202,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos, un poco más lento de lo escrito.",
-            "zh": "双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -332,7 +332,7 @@
             "en": "Join the hands on the first four bars, slowly.",
             "de": "Spiel die ersten vier Takte langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en los primeros cuatro compases, despacio.",
-            "zh": "在前四个小节双手合奏，慢慢弹。"
+            "zh": "双手一起慢慢弹前四个小节。"
           },
           "hands": "both",
           "speed": 0.5,
@@ -344,7 +344,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -473,7 +473,7 @@
             "en": "Join the hands on the first eight bars at three-quarter speed.",
             "de": "Spiel die ersten acht Takte mit beiden Händen zusammen in Dreiviertel-Tempo.",
             "es": "Junta las manos en los primeros ocho compases a tres cuartos de velocidad.",
-            "zh": "在前八个小节双手合奏，用四分之三速度。"
+            "zh": "双手一起以四分之三速度弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -485,7 +485,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

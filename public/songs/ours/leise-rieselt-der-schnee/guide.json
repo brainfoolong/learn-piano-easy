@@ -72,7 +72,7 @@
             "en": "Put both hands together on the whole song, slowly.",
             "de": "Spiel das ganze Lied langsam mit beiden Händen zusammen.",
             "es": "Toca toda la canción con las dos manos juntas, despacio.",
-            "zh": "双手合奏整首歌，慢慢弹。"
+            "zh": "双手一起慢慢弹整首歌。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos a velocidad completa.",
-            "zh": "用双手以原速弹整首歌。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -134,7 +134,7 @@
             "en": "The verse starts again. Lift finger 3 off C during the rest, and place it on E.",
             "de": "Die Strophe beginnt von vorn. Heb Finger 3 in der Pause vom C, und setz ihn auf das E.",
             "es": "La estrofa empieza otra vez. Levanta el dedo 3 del do durante el silencio y ponlo en el mi.",
-            "zh": "主歌重新开始。休止时把 3 指从 C 上抬起，放到 E 上。"
+            "zh": "主歌重新开始。在休止符处把 3 指从 C 上抬起，放到 E 上。"
           }
         },
         {
@@ -201,7 +201,7 @@
             "en": "Join the hands on the first verse, slowly.",
             "de": "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en la primera estrofa, despacio.",
-            "zh": "在第一段主歌双手合奏，慢慢弹。"
+            "zh": "双手一起慢慢弹第一段主歌。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos, un poco más lento de lo escrito.",
-            "zh": "双手弹整首歌，比原速稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -275,7 +275,7 @@
             "en": "The verse starts again, and the waltz begins. Move finger 3 from C up to E during the rest.",
             "de": "Die Strophe beginnt von vorn, und der Walzer setzt ein. Rück Finger 3 in der Pause vom C hinauf zum E.",
             "es": "La estrofa empieza otra vez, y comienza el vals. Sube el dedo 3 del do al mi durante el silencio.",
-            "zh": "主歌重新开始，圆舞曲也开始了。休止时把 3 指从 C 往上移到 E。"
+            "zh": "主歌重新开始，圆舞曲也开始了。在休止符处把 3 指从 C 往上移到 E。"
           }
         },
         {
@@ -343,7 +343,7 @@
             "en": "Join the hands on the first verse, slowly.",
             "de": "Spiel die erste Strophe langsam mit beiden Händen zusammen.",
             "es": "Junta las manos en la primera estrofa, despacio.",
-            "zh": "在第一段主歌双手合奏，慢慢弹。"
+            "zh": "双手一起慢慢弹第一段主歌。"
           },
           "hands": "both",
           "speed": 0.5,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -497,7 +497,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "用双手以四分之三速度弹整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,

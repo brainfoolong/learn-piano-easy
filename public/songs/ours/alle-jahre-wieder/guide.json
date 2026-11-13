@@ -6,13 +6,13 @@
     "en": "Alle Jahre wieder means Every year again in German. It is one of the best-known German Christmas songs. Wilhelm Hey wrote its three verses in 1837, and they tell of the Christ Child, who comes down to earth every year. Friedrich Silcher wrote the tune and published it in 1842, in a set of twelve songs for children.",
     "de": "Alle Jahre wieder ist eines der bekanntesten deutschen Weihnachtslieder. Wilhelm Hey schrieb 1837 seine drei Strophen, und sie erzählen vom Christkind, das jedes Jahr auf die Erde kommt. Friedrich Silcher schrieb die Melodie und veröffentlichte sie 1842 in einer Sammlung von zwölf Kinderliedern.",
     "es": "Alle Jahre wieder significa «Cada año otra vez» en alemán. Es una de las canciones de Navidad alemanas más conocidas. Wilhelm Hey escribió sus tres estrofas en 1837, y estas cuentan cómo el Niño Jesús baja a la tierra cada año. Friedrich Silcher escribió la melodía y la publicó en 1842, en una colección de doce canciones para niños.",
-    "zh": "《Alle Jahre wieder》在德语里的意思是“年年如此”。它是最有名的德国圣诞歌曲之一。Wilhelm Hey 在 1837 年写了它的三段歌词，讲的是圣婴每年都降临人间。Friedrich Silcher 写了曲调，并在 1842 年把它收进一本十二首儿歌的歌集里出版。"
+    "zh": "《Alle Jahre wieder》在德语里的意思是“年年如此”。它是最有名的德国圣诞歌曲之一。Wilhelm Hey 在 1837 年写了它的三段歌词，讲的是圣婴每年都降临人间。Friedrich Silcher 写了旋律，并在 1842 年把它收进一本十二首儿歌的歌集里出版。"
   },
   "funFact": {
     "en": "The same words are also sung to a tune by Christian Heinrich Rinck. Today that tune mostly carries another poem, Abend wird es wieder.",
     "de": "Dieselben Worte singt man auch auf eine Melodie von Christian Heinrich Rinck. Heute trägt diese Melodie meist ein anderes Gedicht, Abend wird es wieder.",
     "es": "La misma letra también se canta con una melodía de Christian Heinrich Rinck. Hoy esa melodía suele llevar otro poema, Abend wird es wieder.",
-    "zh": "同样的歌词也有人配上 Christian Heinrich Rinck 写的曲调来唱。如今那个曲调大多配的是另一首诗《Abend wird es wieder》。"
+    "zh": "同样的歌词也有人配上 Christian Heinrich Rinck 写的旋律来唱。如今那个旋律大多配的是另一首诗《Abend wird es wieder》。"
   },
   "mythic": null,
   "versions": {
@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape, and changes it at most once a bar.",
             "de": "Jetzt die linke Hand allein. Sie hält eine Griffform und wechselt sie höchstens einmal pro Takt.",
             "es": "Ahora la mano izquierda sola. Mantiene una forma y la cambia como mucho una vez por compás.",
-            "zh": "现在只用左手。它保持一个手型，每个小节最多换一次。"
+            "zh": "现在只用左手弹。它保持一个手型，每个小节最多换一次。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -319,7 +319,7 @@
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
             "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
-            "zh": "单独练阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
+            "zh": "单独弹阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -461,7 +461,7 @@
             "en": "Play the stride bass alone: jump down for the octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur Oktave, dann zurück hinauf zum Akkord.",
             "es": "Toca solo el bajo stride: salta hacia abajo para la octava y vuelve arriba para el acorde.",
-            "zh": "单独练跨步低音：往下跳去弹八度，再跳回上面弹和弦。"
+            "zh": "单独弹跨步低音：往下跳去弹八度，再跳回上面弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -497,7 +497,7 @@
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
             "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
-            "zh": "双手一起，用四分之三速度弹完整首歌。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -559,7 +559,7 @@
             "en": "After the C arpeggio, the left hand drops to the low G in the short rest.",
             "de": "Nach dem C-Arpeggio fällt die linke Hand in der kurzen Pause hinab zum tiefen G.",
             "es": "Después del arpegio de do, la mano izquierda baja hasta el sol grave en el silencio corto.",
-            "zh": "弹完 C 和弦的琶音，左手在短休止里落到低音 G。"
+            "zh": "弹完 C 和弦的琶音，左手在短休止符处落到低音 G。"
           }
         },
         {

@@ -84,7 +84,7 @@
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
-            "zh": "双手合奏，用原速弹完整首曲子。"
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -213,7 +213,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首曲子，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -355,7 +355,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -367,7 +367,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -417,7 +417,7 @@
             "en": "Both hands jump down for the last chord. Use the short rest at the end of bar 15.",
             "de": "Beide Hände springen für den letzten Akkord hinab. Nutz die kurze Pause am Ende von Takt 15.",
             "es": "Las dos manos saltan hacia abajo para el último acorde. Aprovecha el silencio corto al final del compás 15.",
-            "zh": "两只手都往下跳，去弹最后一个和弦。利用第 15 小节末尾的短休止。"
+            "zh": "两只手都往下跳，去弹最后一个和弦。利用第 15 小节末尾的短休止符。"
           }
         },
         {
@@ -435,7 +435,7 @@
             "en": "The right hand enters on middle C as the left hand moves up an octave. The rest in bar 2 gives it time.",
             "de": "Die rechte Hand setzt auf dem mittleren C ein, während die linke eine Oktave hinaufgeht. Die Pause in Takt 2 gibt ihr Zeit.",
             "es": "La mano derecha entra en el do central mientras la mano izquierda sube una octava. El silencio del compás 2 le da tiempo.",
-            "zh": "左手往上移一个八度时，右手从中央 C 进来。第 2 小节的休止给了它时间。"
+            "zh": "左手往上移一个八度时，右手从中央 C 进来。第 2 小节的休止符给了它时间。"
           }
         }
       ]
@@ -497,7 +497,7 @@
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
             "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
-            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -568,7 +568,7 @@
             "en": "The right hand jumps from the high chord down to the octave on middle C. Use the rest before it.",
             "de": "Die rechte Hand springt vom hohen Akkord hinab zur Oktave auf dem mittleren C. Nutz die Pause davor.",
             "es": "La mano derecha baja de un salto del acorde agudo a la octava sobre el do central. Aprovecha el silencio de antes.",
-            "zh": "右手从高处的和弦往下跳到中央 C 上的八度。利用它前面的休止。"
+            "zh": "右手从高处的和弦往下跳到中央 C 上的八度。利用它前面的休止符。"
           }
         },
         {

@@ -60,7 +60,7 @@
             "en": "Now the left hand alone. It holds one shape for a whole bar, and never moves.",
             "de": "Jetzt die linke Hand allein. Sie hält jeden Griff einen ganzen Takt lang und bewegt sich nie.",
             "es": "Ahora la mano izquierda sola. Mantiene una misma posición durante todo un compás, y nunca se mueve.",
-            "zh": "现在只用左手。它一个手型保持一整个小节，手从不移动。"
+            "zh": "现在只用左手弹。它一个手型保持一整个小节，手从不移动。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -213,7 +213,7 @@
             "en": "Join the hands on the whole song, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Junta las manos en toda la canción, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -461,7 +461,7 @@
             "en": "Play the left hand alone: an octave on the beat, then a chord, each with a short rest to jump.",
             "de": "Spiel die linke Hand allein: eine Oktave auf dem Schlag, dann einen Akkord, jeweils mit einer kurzen Pause zum Springen.",
             "es": "Toca con la mano izquierda sola: una octava en el pulso, y luego un acorde, cada uno con un silencio corto para saltar.",
-            "zh": "只用左手弹：拍点上一个八度，然后一个和弦，每个后面都有一个短短的休止用来跳。"
+            "zh": "只用左手弹：在拍点上弹一个八度，然后一个和弦，每个后面都有一个短短的休止符用来跳。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -526,7 +526,7 @@
             "en": "Use the short rest after each octave and chord to jump to the next one.",
             "de": "Nutz die kurze Pause nach jeder Oktave und jedem Akkord, um zum nächsten Griff zu springen.",
             "es": "Usa el silencio corto después de cada octava y cada acorde para saltar al siguiente.",
-            "zh": "利用每个八度和和弦后面短短的休止，跳到下一个。"
+            "zh": "利用每个八度和和弦后面短短的休止符，跳到下一个。"
           }
         },
         {

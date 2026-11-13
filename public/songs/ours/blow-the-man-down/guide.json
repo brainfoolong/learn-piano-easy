@@ -6,7 +6,7 @@
     "en": "Blow the Man Down is a halyard shanty, sung while a crew hauled a heavy sail up its mast. Our tune follows R. R. Terry's print of 1921.",
     "de": "Blow the Man Down ist ein Shanty zum Segelsetzen. Eine Mannschaft sang ihn, während sie ein schweres Segel den Mast hinaufzog. Unsere Melodie folgt dem Druck von Richard Runciman Terry aus dem Jahr 1921.",
     "es": "Blow the Man Down es una canción marinera de driza, que la tripulación cantaba mientras subía una vela pesada por el mástil. Nuestra melodía sigue la edición impresa de R. R. Terry de 1921.",
-    "zh": "《Blow the Man Down》是一首升帆时唱的水手号子，水手们一边唱，一边把沉重的帆沿着桅杆拉上去。我们的曲调依照 R. R. Terry 在 1921 年出版的版本。"
+    "zh": "《Blow the Man Down》是一首升帆时唱的水手号子，水手们一边唱，一边把沉重的帆沿着桅杆拉上去。我们的旋律依照 R. R. Terry 在 1921 年出版的版本。"
   },
   "funFact": {
     "en": "A newspaper in Syracuse, New York, quoted a line of the song in 1867. Sailors had sung it on a steamship from New York to Glasgow.",
@@ -61,7 +61,7 @@
             "en": "Now the left hand alone. It holds one note or two for a whole bar.",
             "de": "Jetzt die linke Hand allein. Sie hält einen oder zwei Töne einen ganzen Takt lang.",
             "es": "Ahora la mano izquierda sola. Mantiene una o dos notas durante todo un compás.",
-            "zh": "现在只用左手。它把一个或两个音按住一整个小节。"
+            "zh": "现在只用左手弹。它把一个或两个音按住一整个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -215,7 +215,7 @@
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
             "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
-            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
+            "zh": "用双手弹完整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -369,7 +369,7 @@
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
             "es": "Ahora tócala a velocidad completa, con el pedal.",
-            "zh": "现在加上踏板，用原速弹。"
+            "zh": "现在用原速弹，加上踏板。"
           },
           "hands": "both",
           "speed": 1,
@@ -463,7 +463,7 @@
             "en": "Play the left hand alone: an octave on the beat, then a chord twice, each with a short rest to jump.",
             "de": "Spiel die linke Hand allein: eine Oktave auf dem Schlag, dann zweimal einen Akkord, jeweils mit einer kurzen Pause zum Springen.",
             "es": "Toca la mano izquierda sola: una octava en el pulso, y luego un acorde dos veces, cada uno con un silencio corto para saltar.",
-            "zh": "只用左手弹：在拍子上弹一个八度，再弹两次和弦，每次都有一个短休止让你跳过去。"
+            "zh": "只用左手弹：在拍点上弹一个八度，再弹两次和弦，每次都有一个短休止符让你跳过去。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -528,7 +528,7 @@
             "en": "Use the short rest after each octave and chord to jump to the next one.",
             "de": "Nutz die kurze Pause nach jeder Oktave und jedem Akkord, um zum nächsten Griff zu springen.",
             "es": "Usa el silencio corto después de cada octava y cada acorde para saltar al siguiente.",
-            "zh": "利用每个八度和每个和弦后面的短休止，跳到下一个位置。"
+            "zh": "利用每个八度和每个和弦后面的短休止符，跳到下一个位置。"
           }
         },
         {
@@ -579,7 +579,7 @@
             "en": "Use the rest to jump down to the low B flat. The right hand climbs from F to D and walks back to A flat.",
             "de": "Nutz die Pause, um hinunter zum tiefen B zu springen. Die rechte Hand steigt vom F zum D und geht zurück zum As.",
             "es": "Usa el silencio para saltar hacia abajo hasta el si bemol grave. La mano derecha sube de fa a re y vuelve caminando hasta el la bemol.",
-            "zh": "利用休止往下跳到低音降 B。右手从 F 往上走到 D，再往下走回降 A。"
+            "zh": "利用休止符往下跳到低音降 B。右手从 F 往上走到 D，再往下走回降 A。"
           }
         }
       ]
