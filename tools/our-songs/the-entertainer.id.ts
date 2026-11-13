@@ -58,7 +58,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Injak pedal bersama setiap not bas dan lepaskan untuk akornya, agar akor tetap jernih.",
         "Bas turun satu tuts, dari E ke E mol. Biarkan itu terdengar.",
-        "Frasa terakhir mengulang satu kelompok not pendek tiga kali. Hitunglah, agar kamu tahu sedang di ulangan yang mana.",
+        "Frasa terakhir mengulang satu kelompok not pendek tiga kali. Hitung ulangannya, agar kamu tahu sedang di ulangan yang mana.",
       ],
       tricky: {
         4: "Tangan kiri melompat dari F rendah naik ke akor, sementara tangan kanan menahan A dan C.",

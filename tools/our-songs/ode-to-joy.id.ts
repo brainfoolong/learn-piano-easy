@@ -23,7 +23,7 @@ export const translation: Translation<GuideTranslation> = {
         "Bagian tengah adalah bagian yang tenang. Mainkan dengan lembut, lalu kembali dengan mantap di birama 13.",
       ],
       tricky: {
-        2: "Berjalanlah turun mulai dari kelingking, satu jari untuk setiap tuts: 5, 4, 3, 2.",
+        2: "Berjalan turun mulai dari kelingking, satu jari untuk setiap tuts: 5, 4, 3, 2.",
         12: "Ibu jarimu merentang turun ke G rendah, sementara jari lainnya tetap di tempatnya.",
         13: "Setelah tanda istirahat, temukan E dengan jari 3, dan melodi dimulai lagi.",
       },

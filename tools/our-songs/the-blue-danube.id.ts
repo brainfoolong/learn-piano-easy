@@ -13,7 +13,7 @@ export const translation: Translation<GuideTranslation> = {
       practice: [
         "Mainkan 3 birama pertama dengan tangan kanan saja, dan biarkan lagu menunggu setiap not.",
         "Latih lompatan oktaf: ibu jari di not rendah, lalu angkat tangan saat tanda istirahat pendek, dan daratkan jari 5 satu oktaf lebih tinggi.",
-        "Sekarang tangan kiri saja. Tangan kiri menahan satu kuint kosong atau satu not bas di setiap hitungan tiga.",
+        "Sekarang tangan kiri saja. Tangan kiri menahan satu kuint kosong atau satu not bas di setiap kelompok tiga ketukan.",
         "Gabungkan kedua tangan pada 8 birama pertama.",
         "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
       ],
@@ -31,7 +31,7 @@ export const translation: Translation<GuideTranslation> = {
     rare: {
       practice: [
         "Mainkan 8 birama pertama dengan tangan kanan saja, pelan-pelan.",
-        "Mainkan tangan kiri saja: satu not bas, lalu akornya dua kali. Saat tangan kanan beristirahat, tangan kiri naik melewati not-not rendah.",
+        "Mainkan tangan kiri saja: satu not bas, lalu akornya dua kali. Saat tangan kanan beristirahat, tangan kiri naik melalui not-not rendah.",
         "Gabungkan kedua tangan pada 4 birama pertama, tempat melodi berpindah dari tangan kanan ke tangan kiri, lalu kembali.",
         "Mainkan seluruh lagu dengan kedua tangan, sedikit lebih lambat dari tertulis.",
         "Sekarang mainkan dengan kecepatan penuh.",

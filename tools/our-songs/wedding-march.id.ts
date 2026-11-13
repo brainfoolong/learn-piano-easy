@@ -19,12 +19,12 @@ export const translation: Translation<GuideTranslation> = {
         "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
       ],
       tips: [
-        "Mulailah dengan ibu jari di F kres dan jari 5 di C tinggi. Melodinya tetap berada di bawah tanganmu.",
+        "Mulai dengan ibu jari di F kres dan jari 5 di C tinggi. Melodinya tetap berada di bawah tanganmu.",
         "Angkat tanganmu tepat sebelum G berakhir, lalu geser ke bawah. Sesudah itu jari 4 mendarat di F.",
         "Mainkan dengan cerah dan megah, seperti pintu gereja yang terbuka lebar.",
       ],
       tricky: {
-        2: "Tahan B dengan jari 4 selama enam hitungan. Lalu ibu jari memainkan F kres.",
+        2: "Tahan B dengan jari 4 selama enam ketukan. Lalu ibu jari memainkan F kres.",
         4: "Tanganmu sudah bergeser ke bawah. Jari 4 memainkan F, dan jari 2 memainkan D.",
         11: "Empat not yang rata: E, F, G, lalu E lagi. Jari 3, 4, dan 5 naik, lalu jari 3 kembali.",
       },

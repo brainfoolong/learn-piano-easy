@@ -79,7 +79,7 @@ export const translation: Translation<GuideTranslation> = {
         "Mainkan not teratas setiap akor sedikit lebih keras, agar melodi terdengar jelas.",
       ],
       tricky: {
-        4: "Tangan kiri melompat dari oktaf A rendah ke akor A, E, dan A. Tangan kanan naik ke A, B, dan C.",
+        4: "Tangan kiri melompat dari oktaf A rendah ke akor A, E, dan A. Tangan kanan naik melalui A, B, dan C.",
         20: "Setiap akor memindahkan seluruh tangan satu tuts ke atas atau ke bawah. Jaga posisinya, dan biarkan jari teratas memimpin.",
         23: "Tangan berpindah dari G mayor ke A mayor dalam satu gerakan. Ibu jari mendarat di C kres, sebuah tuts hitam.",
       },

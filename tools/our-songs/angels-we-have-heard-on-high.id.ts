@@ -19,7 +19,7 @@ export const translation: Translation<GuideTranslation> = {
         "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
       ],
       tips: [
-        "Mulailah dengan jari 3 di E. Ibu jari berada di C tengah, dan jari 5 di G.",
+        "Mulai dengan jari 3 di E. Ibu jari berada di C tengah, dan jari 5 di G.",
         "Setiap not panjang diikuti empat not cepat. Hitung keempatnya: satu, dua, tiga, empat.",
         "Biarkan C terakhir berbunyi selama satu birama penuh, lalu angkat kedua tangan bersamaan.",
       ],

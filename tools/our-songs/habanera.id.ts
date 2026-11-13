@@ -62,7 +62,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         5: "Tangan kanan turun ke A, sementara tangan kiri memulai D panjangnya. Latih keduanya bersamaan, pelan-pelan.",
-        17: "Di sini terts-terts berbelok dengan cepat. Bergantianlah antara jari 1 dan 3 dengan jari 2 dan 4.",
+        17: "Di sini terts-terts berbelok dengan cepat. Bergantian antara jari 1 dan 3 dengan jari 2 dan 4.",
         20: "Setelah tanda istirahat, jari 2 dan 4 memainkan F dan A. Lalu terts-terts itu berjalan turun.",
       },
     },

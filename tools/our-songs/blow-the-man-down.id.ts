@@ -20,7 +20,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Mulai dengan ibu jari di G. Jari 2 memainkan B, jari 4 memainkan D, dan jari 5 memainkan E.",
-        "Tahan D pertama selama tiga hitungan, lalu mainkan E selama satu hitungan. E yang pendek itu menarik seperti tali.",
+        "Tahan D pertama selama tiga ketukan, lalu mainkan E selama satu ketukan. E yang pendek itu menarik seperti tali.",
         "Para pelaut menyanyikan lagu ini sambil menarik layar. Beri sedikit tekanan pada not pertama setiap birama, seperti tarikan.",
       ],
       tricky: {
@@ -40,7 +40,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Tangan kiri memainkan panjang, pendek, panjang, pendek di setiap birama. Biarkan melodi melaju di atasnya seperti perahu di atas ombak.",
         "Tekan kedua not setiap akor seperti satu not. Not teratas adalah melodinya, jadi buat sedikit lebih keras.",
-        "Dua not seperdelapan yang cepat mengisi satu hitungan. Ucapkan “ta-rik” untuk setiap pasangan.",
+        "Dua not seperdelapan yang cepat mengisi satu ketukan. Ucapkan “ta-rik” untuk setiap pasangan.",
       ],
       tricky: {
         8: "Setelah akor C dan E, tangan berpindah ke bawah. Jari 4 mendarat di C. Tangan kiri memainkan D, lalu A dan D bersamaan.",

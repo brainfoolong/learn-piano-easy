@@ -4,7 +4,7 @@ import type { GuideTranslation } from "../make-our-songs";
 
 export const translation: Translation<GuideTranslation> = {
   about:
-    "Paul Dukas menyelesaikan puisi simfoni ini pada 1897, dan karya ini diterbitkan pada tahun yang sama. " +
+    "Paul Dukas menyelesaikan puisi simfonis ini pada 1897, dan karya ini diterbitkan pada tahun yang sama. " +
     "Karya ini mengikuti puisi Goethe dari tahun 1797, Der Zauberlehrling. " +
     "Dalam film Fantasia (1940) karya Walt Disney, Mickey Mouse memerankan sang murid penyihir.",
   funFact:

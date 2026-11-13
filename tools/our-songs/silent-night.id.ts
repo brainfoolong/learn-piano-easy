@@ -79,7 +79,7 @@ export const translation: Translation<GuideTranslation> = {
         "Biarkan oktaf terurai mengalun lembut di bawah melodi, seperti buaian yang berayun.",
       ],
       tricky: {
-        5: "Setelah rentetan not, mendaratlah di G, B, dan D dengan jari 1, 3, dan 5.",
+        5: "Setelah rentetan not, daratkan jari 1, 3, dan 5 di G, B, dan D.",
         9: "Tangan terbuka ke C, F, dan A, dan kelingking menyanyikan melodi.",
         10: "Jari 4 sendirian mengambil B di antara akor-akor. Jaga ibu jari tetap dekat F.",
       },

@@ -37,7 +37,7 @@ export const translation: Translation<GuideTranslation> = {
         "Sekarang mainkan dengan kecepatan penuh, keras dan gagah.",
       ],
       tips: [
-        "Mainkan A panjang dengan kuat, lalu biarkan rentetan not cepat berjatuhan turun ke D.",
+        "Mainkan A panjang dengan keras, lalu biarkan rentetan not cepat berjatuhan turun ke D.",
         "Pedal membuat setiap not tanjakan terus berbunyi, sehingga akor tumbuh not demi not.",
         "F kres membuat akor ini cerah. Akor inilah jawaban atas semua ketegangan sebelumnya.",
       ],

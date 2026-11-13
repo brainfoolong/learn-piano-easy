@@ -24,7 +24,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         5: "Tanganmu sudah pindah saat tanda istirahat. Kini jari 5 memainkan C, dan jari 3 memainkan A.",
-        7: "Berjalanlah turun di C, A, dan F kres dengan jari 5, 3, dan 2, lalu naik lagi ke A.",
+        7: "Berjalan turun di C, A, dan F kres dengan jari 5, 3, dan 2, lalu naik lagi ke A.",
         13: "Geser tanganmu naik saat tanda istirahat di birama 12. Jari 3 mendarat di B, dan ibu jari di G.",
       },
     },
@@ -43,7 +43,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         5: "Geser tanganmu saat tanda istirahat di birama 4. Jari 5 mendarat di C, dan jari 3 di A.",
-        7: "Berjalanlah turun di C, A, dan F kres dengan jari 5, 3, dan 2, lalu naik lagi ke A.",
+        7: "Berjalan turun di C, A, dan F kres dengan jari 5, 3, dan 2, lalu naik lagi ke A.",
         13: "Geser tanganmu naik saat tanda istirahat di birama 12. Jari 3 mendarat di B, dan ibu jari di G.",
       },
     },
@@ -82,7 +82,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         2: "Angkat oktaf G, lalu lompat turun ke oktaf D. Jaga tanganmu tetap terentang.",
         3: "Empat oktaf berturut-turut: G, D, G, dan B. Angkat tanganmu sedikit setelah setiap oktaf.",
-        14: "Lompat turun dari oktaf B ke oktaf G, lalu bersiaplah untuk rentetan not cepat.",
+        14: "Lompat turun dari oktaf B ke oktaf G, lalu bersiap untuk rentetan not cepat.",
       },
     },
   },

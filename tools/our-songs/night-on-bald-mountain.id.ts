@@ -20,7 +20,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Mainkan melodi dengan keras dan berat, seperti alat musik tiup logam yang berseru di malam hari.",
         "Pakai tanda istirahat yang panjang untuk memindahkan tangan kanan naik ke G.",
-        "Selama A berbunyi, bersiaplah memindahkan tangan turun. Lalu jari 3 mendarat di F.",
+        "Selama A berbunyi, bersiap memindahkan tangan turun. Lalu jari 3 mendarat di F.",
       ],
       tricky: {
         5: "Tangan sudah pindah naik. Jari 2 memainkan A, dan jari 3 memainkan B mol.",
@@ -57,7 +57,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Lepaskan pedal selama melodi berbunyi, agar setiap oktaf di bas tetap tegas.",
-        "Dalam rentetan not cepat, susupkan ibu jari ke G, lalu naiklah dengan jari 2 sampai 5.",
+        "Dalam rentetan not cepat, susupkan ibu jari ke G, lalu naik dengan jari 2 sampai 5.",
         "Ganti pedal di setiap not bas baru, dua kali dalam setiap birama.",
       ],
       tricky: {

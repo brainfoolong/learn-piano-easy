@@ -32,14 +32,14 @@ export const translation: Translation<GuideTranslation> = {
     rare: {
       practice: [
         "Mainkan tangan kiri saja, dan tekan ketiga not setiap akor bersamaan.",
-        "Mainkan birama 9 sampai 16 dengan tangan kiri saja, satu akor di setiap paruh birama.",
+        "Mainkan birama 9 sampai 16 dengan tangan kiri saja, satu akor di setiap setengah birama.",
         "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan.",
         "Mainkan seluruh lagu dengan kedua tangan, sedikit lebih lambat dari tertulis.",
         "Sekarang mainkan dengan kecepatan penuh.",
       ],
       tips: [
         "Tahan setiap akor dengan lembut, agar melodi yang berdentang tetap jelas di atasnya.",
-        "Sekarang tangan kiri memainkan satu akor di setiap paruh birama. Hitung “1, 2”, dan tekan di setiap hitungan.",
+        "Sekarang tangan kiri memainkan satu akor di setiap setengah birama. Hitung “1, 2”, dan tekan di setiap ketukan.",
         "Ibu jari kiri naik ke A untuk akor F, sementara tangan kanan melompat ke C tinggi.",
       ],
       tricky: {

@@ -58,7 +58,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Mainkan bas Alberti dengan lembut, agar melodi bernyanyi di atasnya.",
-        "Angkat tanganmu setelah C, lalu mendaratlah di G satu oktaf lebih tinggi.",
+        "Angkat tanganmu setelah C, lalu mendarat di G satu oktaf lebih tinggi.",
         "Melodinya adalah not teratas setiap pasangan not, jadi biarkan jari atas yang memimpin.",
       ],
       tricky: {

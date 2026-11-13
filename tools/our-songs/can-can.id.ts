@@ -83,7 +83,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         17: "Rentangkan tangan di atas G, B, D, dan G. Lalu, pada tanda istirahat, tangan melompat naik satu oktaf ke A.",
-        21: "Mainkan A, D, dan A dengan jari 1, 2, dan 5. Melompatlah kembali dari C tinggi pada tanda istirahat sebelumnya.",
+        21: "Mainkan A, D, dan A dengan jari 1, 2, dan 5. Melompat kembali dari C tinggi pada tanda istirahat sebelumnya.",
         23: "Setelah akor, rentetan not naik dari D. Ibu jari menyusup di G.",
       },
     },

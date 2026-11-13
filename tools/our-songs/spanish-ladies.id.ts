@@ -62,7 +62,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         16: "Jari 5, 4, 3, dan 2 berjalan turun dari B. Lalu ibu jari mengambil D kres, yang mengarah kembali ke E.",
         22: "Jari 5 memainkan E dua kali di atas, sementara not bawah bergerak dari G ke B. Lalu ibu jari menjangkau A.",
-        26: "Angkat kedua tangan setelah akor B mayor, lalu mendaratlah bersamaan di akor E minor terakhir.",
+        26: "Angkat kedua tangan setelah akor B mayor, lalu daratkan keduanya bersamaan di akor E minor terakhir.",
       },
     },
     legendary: {
@@ -81,7 +81,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         11: "Susupkan ibu jari kanan ke A setelah G. Sementara itu, tangan kiri naik dari A rendah melewati dua oktaf.",
         21: "Biarkan ibu jari di G sepanjang birama. Hanya not teratas yang bergerak, dari E ke D lalu ke B.",
-        26: "Angkat kedua tangan saat tanda istirahat pendek di birama 25. Lalu mendaratlah di akor terakhir, di atas oktaf E rendah.",
+        26: "Angkat kedua tangan saat tanda istirahat pendek di birama 25. Lalu daratkan keduanya di akor terakhir, di atas oktaf E rendah.",
       },
     },
   },

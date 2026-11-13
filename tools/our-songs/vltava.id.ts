@@ -19,7 +19,7 @@ export const translation: Translation<GuideTranslation> = {
         "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
       ],
       tips: [
-        "Mulailah dengan ibu jari di B. Lalu jari 2 sampai 5 naik dari E ke A.",
+        "Mulai dengan ibu jari di B. Lalu jari 2 sampai 5 naik dari E ke A.",
         "Lepaskan A sedikit lebih awal. Di jeda singkat itu, geser tanganmu satu tuts ke atas, dengan jari 4 di B.",
         "Hitung enam ketukan dalam satu birama: panjang, pendek, panjang, pendek. Sungai terus mengalir dan tidak pernah terburu-buru.",
       ],

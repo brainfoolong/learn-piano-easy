@@ -40,7 +40,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Tahan setiap akor dengan lembut, agar melodi yang berayun tetap jelas di atasnya.",
         "Ibu jari kiri naik ke A untuk akor F di birama 13, dan kembali ke G di birama 14.",
-        "Sekarang tangan kiri memainkan satu akor di setiap setengah birama. Hitung “1, 2”, dan tekan pada setiap hitungan.",
+        "Sekarang tangan kiri memainkan satu akor di setiap setengah birama. Hitung “1, 2”, dan tekan pada setiap ketukan.",
       ],
       tricky: {
         14: "Jari 3 memainkan G tiga kali, sementara ibu jari kiri bergeser kembali dari A ke G.",

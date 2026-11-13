@@ -17,7 +17,7 @@ export const translation: Translation<GuideTranslation> = {
         "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
       ],
       tips: [
-        "Mulailah dengan jari 4 di A. Ibu jari menunggu di atas D, dan jari 5 di atas B mol.",
+        "Mulai dengan jari 4 di A. Ibu jari menunggu di atas D, dan jari 5 di atas B mol.",
         "Hitung empat ketukan lambat di setiap birama. Tangan kiri menahan setiap not sampai birama berakhir.",
         "Mainkan dengan lembut dan rata, seperti musik di akhir sebuah film panjang.",
       ],
@@ -61,7 +61,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         6: "Jari 3 turun dari F ke E mol. Lalu jari 2 dan 1 turun ke C.",
-        15: "Tangan naik melewati G, B, dan D, lalu turun lagi. Ibu jari berakhir di F.",
+        15: "Tangan naik melalui G, B, dan D, lalu turun lagi. Ibu jari berakhir di F.",
         22: "Tahan G, C, dan E mol dengan jari 1, 2, dan 3. Lalu jari 2 dan 1 memainkan D dan C.",
       },
     },

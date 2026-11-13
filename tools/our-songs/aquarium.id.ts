@@ -24,7 +24,7 @@ export const translation: Translation<GuideTranslation> = {
         "Di sini tanganmu pindah naik satu tuts. Kini jari 4 memainkan E, dan ibu jari menunggu di atas B.",
       ],
       tricky: {
-        1: "Berayunlah di antara E dan D kres dengan jari 5 dan 4. Lalu jari 4 bergeser ke tuts putih D.",
+        1: "Berayun di antara E dan D kres dengan jari 5 dan 4. Lalu jari 4 bergeser ke tuts putih D.",
         3: "Birama 3 sama dengan birama 1. Jaga jari 4 dekat dengan tuts hitam, agar D kres mudah dijangkau.",
         9: "Selama B yang panjang, pindahkan tanganmu kembali turun. Ibu jari kembali ke A, dan jari 5 mengambil E.",
       },
@@ -43,7 +43,7 @@ export const translation: Translation<GuideTranslation> = {
         "Akhiri dengan A dan C bersamaan. Jari 1 dan 3 menekan keduanya sebagai satu.",
       ],
       tricky: {
-        1: "Berayunlah di antara E dan D kres dengan jari 5 dan 4, sementara tangan kiri bergantian antara A dan C.",
+        1: "Berayun di antara E dan D kres dengan jari 5 dan 4, sementara tangan kiri bergantian antara A dan C.",
         3: "Seperti di birama 1, jari 5 dan 4 berayun di antara E dan D kres. Lalu jari 4 mengambil tuts putih D.",
         9: "Selama B yang panjang, pindahkan tangan kanan kembali turun, agar ibu jari kembali di A.",
       },

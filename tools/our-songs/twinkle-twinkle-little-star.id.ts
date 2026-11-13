@@ -23,7 +23,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         3: "Di sini tanganmu bergeser satu tuts ke bawah, jadi jari 4 meninggalkan G dan mendarat di F.",
-        5: "Sekarang kelingkingmu memainkan G. Turunlah dari situ, satu jari untuk setiap tuts: 5, 4, 3, 2.",
+        5: "Sekarang kelingkingmu memainkan G. Turun dari situ, satu jari untuk setiap tuts: 5, 4, 3, 2.",
         11: "Ini birama 3 lagi. Geser tanganmu satu tuts ke bawah, agar jari 4 mendarat di F.",
       },
     },

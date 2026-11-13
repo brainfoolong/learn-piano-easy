@@ -24,7 +24,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         4: "Jari 3 mendarat di E setelah tanda istirahat pendek. Lalu jari 2, 3, dan 4 berayun di antara D, E, dan F.",
-        10: "Angkat tangan selama tanda istirahat, dan mendaratlah dengan kelingking di G tinggi. Jari 4 dan 3 turun ke F dan E.",
+        10: "Angkat tangan selama tanda istirahat, dan daratkan kelingking di G tinggi. Jari 4 dan 3 turun ke F dan E.",
         11: "Kali ini kelingking memainkan F, jadi jari 4 siap untuk E.",
       },
     },
@@ -39,7 +39,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Di sini ibu jari kiri tetap di G untuk setiap akor, jadi tangan hampir tidak bergerak.",
         "Panjang, pendek: A berbunyi tiga kali panjangnya G.",
-        "Baris terakhir adalah yang paling megah. Biarkan bunyinya mengembang, lalu berhentilah di C terakhir.",
+        "Baris terakhir adalah yang paling megah. Biarkan bunyinya mengembang, lalu berhenti di C terakhir.",
       ],
       tricky: {
         4: "Buka tangan lebar-lebar: ibu jari meninggalkan G rendah saat jari 3 menjangkau naik ke E.",
@@ -63,7 +63,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         7: "Tangan kanan naik dari B ke E, satu jari untuk setiap tuts, sementara tangan kiri berganti akor.",
         16: "Pasangan not berganti dari terts ke sekst, lalu kembali lagi. Lihat pasangan berikutnya sebelum kamu memainkannya.",
-        21: "Angkat tangan kiri setelah D terakhir, lalu mendaratlah di oktaf C rendah bersama akor penutup.",
+        21: "Angkat tangan kiri setelah D terakhir, lalu mendarat di oktaf C rendah bersama akor penutup.",
       },
     },
     legendary: {

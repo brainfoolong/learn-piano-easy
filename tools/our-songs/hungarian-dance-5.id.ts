@@ -18,7 +18,7 @@ export const translation: Translation<GuideTranslation> = {
         "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
       ],
       tips: [
-        "Setiap not panjang berlangsung enam ketukan, dan not pendek dua ketukan. Hitunglah, maka tariannya berayun.",
+        "Setiap not panjang berlangsung enam ketukan, dan not pendek dua ketukan. Hitung ketukannya, maka tariannya berayun.",
         "Jari 2 menahan G kres, lalu jari 3 dan 4 bergegas naik ke A dan B.",
         "G kres menarik kuat ke A. Biarkan G kres tertahan sebentar sebelum bergerak.",
       ],
@@ -82,7 +82,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         4: "Tahan oktaf F kres, dan biarkan tangan kiri melompat di antara oktaf dan akornya.",
         8: "Rentangkan tanganmu di atas F kres, A, C kres, dan F kres dengan jari 1, 2, 3, dan 5.",
-        12: "Akor empat not kembali lagi. Angkat dulu jari dari G kres rendah, lalu mendaratlah di seluruh oktaf.",
+        12: "Akor empat not kembali lagi. Angkat dulu jari dari G kres rendah, lalu mendarat di seluruh oktaf.",
       },
     },
   },

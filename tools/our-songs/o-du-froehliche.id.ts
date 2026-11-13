@@ -61,7 +61,7 @@ export const translation: Translation<GuideTranslation> = {
         "Melodinya adalah not teratas setiap pasangan, jadi biarkan jari yang di atas memimpin.",
       ],
       tricky: {
-        17: "Tangan melompat naik satu oktaf. Mendaratlah di E dan G dengan jari 3 dan 5, lalu buka tangan ke sekst C dan A.",
+        17: "Tangan melompat naik satu oktaf. Daratkan jari 3 dan 5 di E dan G, lalu buka tangan ke sekst C dan A.",
         22: "Jari 2 dan 4 memainkan F dan A, tangan terbuka ke sekst D dan B, dan jari 5 menjangkau C.",
         32: "Angkat tangan saat tanda istirahat pendek, lalu bentangkan di atas E, G, dan C untuk akor terakhir.",
       },

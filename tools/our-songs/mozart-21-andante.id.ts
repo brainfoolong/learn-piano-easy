@@ -18,7 +18,7 @@ export const translation: Translation<GuideTranslation> = {
         "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
       ],
       tips: [
-        "Tahan F pertama selama tujuh hitungan. C pendek datang tepat sebelum not panjang berikutnya.",
+        "Tahan F pertama selama tujuh ketukan. C pendek datang tepat sebelum not panjang berikutnya.",
         "Jari 4 menahan C tinggi. Lalu jari 5, 4, 3, dan 2 memainkan empat not cepat.",
         "Mainkan dengan lembut dan halus, seolah kamu sedang menyenandungkan lagu ninabobo.",
       ],
@@ -38,7 +38,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Mainkan akor dengan lembut, agar melodi bernyanyi di atasnya seperti suara orang.",
-        "F kres condong naik ke G. Beri masing-masing empat hitungan, lalu beristirahat.",
+        "F kres condong naik ke G. Beri masing-masing empat ketukan, lalu beristirahat.",
         "Angkat tangan kiri sejenak sebelum setiap akor baru. Lalu tangan kiri mendarat di tempat barunya.",
       ],
       tricky: {

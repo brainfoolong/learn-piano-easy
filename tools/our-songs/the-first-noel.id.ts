@@ -82,7 +82,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         5: "Setelah G panjang, oktaf bergerak cepat ke A dan B. Gerakkan seluruh tangan, dengan pergelangan tangan yang lemas.",
-        7: "Oktaf naik ke G, A, dan B. Biarkan tangan meluncur naik di atas tuts tanpa terangkat tinggi.",
+        7: "Oktaf naik melalui G, A, dan B. Biarkan tangan meluncur naik di atas tuts tanpa terangkat tinggi.",
         10: "Bentangkan tangan untuk akor C yang penuh, lalu rapatkan menjadi oktaf untuk D, E, dan F.",
       },
     },

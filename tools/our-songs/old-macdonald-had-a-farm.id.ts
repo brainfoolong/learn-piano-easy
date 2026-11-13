@@ -19,7 +19,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Ibu jarimu ada di D dan jari 3 di G. Setiap jari tetap di tutsnya sendiri.",
         "Angkat tanganmu sedikit sebelum B tinggi, agar kamu mendarat di sana tepat waktu.",
-        "Ini suara hewan-hewannya. Buat not-not itu memantul, dan tersenyumlah kalau mau.",
+        "Ini suara hewan-hewannya. Buat not-not itu memantul, dan tersenyum kalau mau.",
       ],
       tricky: {
         3: "Kelingkingmu menjangkau naik ke B tinggi, sementara ibu jari tetap di dekat D.",

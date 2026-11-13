@@ -67,7 +67,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     legendary: {
       practice: [
-        "Mainkan tangan kiri saja. Berayunlah di antara jari 5 dan ibu jari, yang berjarak satu oktaf.",
+        "Mainkan tangan kiri saja. Berayun di antara jari 5 dan ibu jari, yang berjarak satu oktaf.",
         "Mainkan rentetan not cepat tangan kanan saja, pelan-pelan, dan biarkan ibu jari menyusup saat naik.",
         "Mainkan akor tangan kanan saja, dan biarkan jari teratas menyanyikan melodinya.",
         "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan.",

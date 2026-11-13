@@ -18,12 +18,12 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Jari 2 berada di C, dan ibu jarimu meraih ke bawah ke G rendah di akhir birama 2.",
-        "Kedua not di birama 4 berlangsung dua ketukan, jadi hitunglah sampai habis.",
+        "Kedua not di birama 4 berlangsung dua ketukan, jadi hitung sampai habis.",
         "Angkat tanganmu sebentar setelah C di birama 6. Tanganmu mendarat satu tuts lebih rendah.",
       ],
       tricky: {
-        6: "Berjalanlah turun F, E, D, dan C dengan jari 5, 4, 3, dan 2, lalu angkat tanganmu.",
-        7: "Mendaratlah dengan jari 2 di B, dan ibu jari mengambil G rendah.",
+        6: "Berjalan turun F, E, D, dan C dengan jari 5, 4, 3, dan 2, lalu angkat tanganmu.",
+        7: "Daratkan jari 2 di B, dan ibu jari mengambil G rendah.",
         8: "Jari 4 memainkan kedua C. Tahan masing-masing selama dua ketukan.",
       },
     },

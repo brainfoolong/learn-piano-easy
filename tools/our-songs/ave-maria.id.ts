@@ -40,7 +40,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Hitung delapan ketukan di setiap birama. Tangan kiri bermain pada ketukan 1, 3, 5, dan 7.",
         "Tangan kanan tidak pernah berpindah. Jari 1 dan 3 memainkan terts A dan C bersamaan.",
-        "Mainkan tangan kiri lebih lembut daripada melodi, seperti harpa yang pelan di bawah suara penyanyi.",
+        "Mainkan tangan kiri lebih lembut daripada melodi, seperti harpa yang lembut di bawah suara penyanyi.",
       ],
       tricky: {
         3: "Tangan kanan beristirahat selama setengah birama. Terus hitung sementara tangan kiri bermain sendirian.",

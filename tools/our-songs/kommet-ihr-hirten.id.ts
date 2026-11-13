@@ -39,7 +39,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Di sebagian besar birama, tangan kiri memainkan C pada ketukan 1, lalu satu akor di masing-masing dua ketukan lainnya.",
-        "Mainkan C rendah sedikit lebih kuat daripada akornya, seperti nada dengung bagpipe.",
+        "Mainkan C rendah sedikit lebih keras daripada akornya, seperti nada dengung bagpipe.",
         "Melodi melompat dari G rendah naik ke G tinggi. Jari 4 meregang sejauh satu oktaf penuh.",
       ],
       tricky: {
@@ -77,7 +77,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "Saat bermain stride, lihat oktaf rendahnya, dan biarkan tangan menemukan akor dengan rabaan.",
-        "Rentetan not cepat naik melewati D, E, dan F, lalu tangan terangkat dan mendaratkan jari 4 di G.",
+        "Rentetan not cepat naik melalui D, E, dan F, lalu tangan terangkat dan mendaratkan jari 4 di G.",
         "Jaga jarak ibu jari dan kelingking tetap satu oktaf. Tanda istirahat yang pendek memberi tangan waktu untuk melompat.",
       ],
       tricky: {

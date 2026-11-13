@@ -62,7 +62,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         12: "Pasangan not bergeser turun, lalu jari 3 dan 5 melompat naik ke B dan D.",
-        15: "Setelah dua pasangan not yang rendah, raihlah D dan F tinggi dengan jari 3 dan 5.",
+        15: "Setelah dua pasangan not yang rendah, raih D dan F tinggi dengan jari 3 dan 5.",
         17: "Turunkan tangan ke akor terakhir: ibu jari di E, jari 2 di G, dan kelingking di C.",
       },
     },

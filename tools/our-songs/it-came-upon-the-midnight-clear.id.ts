@@ -41,7 +41,7 @@ export const translation: Translation<GuideTranslation> = {
       tips: [
         "Pada C kedua, ganti jari 4 dengan ibu jari. Lalu jari 2 dan 3 meraih D dan E.",
         "Pakai akor panjang di birama 5 untuk menyiapkan tanganmu ke E tinggi.",
-        "Melodi naik melewati F kres dan G kres. Biarkan melodinya sedikit makin keras sampai E tinggi.",
+        "Melodi naik melalui F kres dan G kres. Biarkan melodinya sedikit makin keras sampai E tinggi.",
       ],
       tricky: {
         10: "Melodi turun dari E tinggi ke E rendah. Lalu ibu jari bergeser naik ke F kres, dan jari 2 memainkan G kres.",

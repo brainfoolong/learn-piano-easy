@@ -62,7 +62,7 @@ export const translation: Translation<GuideTranslation> = {
       tricky: {
         12: "Setelah terts itu, tanganmu turun ke G, F, E, dan D dengan jari 5, 4, 3, dan 2.",
         14: "Pada ketukan 2, sekst berubah menjadi terts: ibu jari meninggalkan A, dan jari 2 dan 4 memainkan C dan E.",
-        16: "Angkat kedua tangan setelah D, lalu mendaratlah di akor terakhir dengan tangan kiri memainkan oktaf.",
+        16: "Angkat kedua tangan setelah D, lalu daratkan keduanya di akor terakhir, dengan tangan kiri memainkan oktaf.",
       },
     },
     legendary: {

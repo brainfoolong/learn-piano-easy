@@ -38,7 +38,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tips: [
         "D kres dan B mol adalah tuts hitam. Jari 4 dan 2 maju sedikit lebih ke dalam.",
-        "Kedua tangan bermain pada setiap ketukan. Ikutlah berbaris, dan jaga ketukannya tetap rata.",
+        "Kedua tangan bermain pada setiap ketukan. Ikut berbaris, dan jaga ketukannya tetap rata.",
         "Di bagian ini, para troll makin mendekat. Mainkan sedikit lebih keras daripada awalnya.",
       ],
       tricky: {
@@ -75,7 +75,7 @@ export const translation: Translation<GuideTranslation> = {
         "Sekarang mainkan dengan kecepatan penuh, dari lembut di awal sampai keras di akhir.",
       ],
       tips: [
-        "Mulailah dengan lembut. Seluruh karya ini makin keras sampai akhir, jadi jangan langsung keras, agar bunyinya masih bisa terus bertambah.",
+        "Mulai dengan lembut. Seluruh karya ini makin keras sampai akhir, jadi jangan langsung keras, agar bunyinya masih bisa terus bertambah.",
         "Untuk oktaf, ibu jari dan kelingking menjaga posisi yang sama. Biarkan pergelangan tangan yang bergerak.",
         "Inilah dentuman terakhir para troll. Mainkan setiap akor dengan keras dan pendek.",
       ],

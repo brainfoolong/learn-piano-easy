@@ -23,8 +23,8 @@ export const translation: Translation<GuideTranslation> = {
         "Ibu jari terus bersandar di C kres. Ibu jari hanya bermain di birama 7, 12, dan 15.",
       ],
       tricky: {
-        7: "Tahan E selama tiga hitungan, lalu mainkan D selama satu hitungan. Tahan D selama tiga hitungan, dan ibu jari memainkan C kres paling akhir.",
-        12: "Jari 3 menahan E selama empat hitungan. Lalu ibu jari memainkan C kres, dan tangan kiri tetap di A.",
+        7: "Tahan E selama tiga ketukan, lalu mainkan D selama satu ketukan. Tahan D selama tiga ketukan, dan ibu jari memainkan C kres paling akhir.",
+        12: "Jari 3 menahan E selama empat ketukan. Lalu ibu jari memainkan C kres, dan tangan kiri tetap di A.",
         15: "Empat not yang rata: E, F, E, lalu C kres dengan ibu jari. Jaga setiap jari di tutsnya sendiri.",
       },
     },
