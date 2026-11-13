@@ -251,7 +251,7 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | level; Level up! | level; Naik level! | AN *level*; the word of games |
 | XP | XP | kept |
 | badge, achievement | lencana | the word of games, unsourced |
-| streak | beruntun: *3 hari beruntun* | everyday word, unsourced |
+| streak | beruntun: *3 hari beruntun*; a heading or a *-mu* form is *Hari beruntun*, *hari beruntunmu* | everyday word, unsourced |
 | daily goal | target harian | everyday words, unsourced |
 | score; points | skor; poin | everyday words, unsourced |
 | stars | bintang | everyday word |
@@ -297,6 +297,8 @@ Indonesian strings (`values-in`). A row marked *unsourced* rests on common usage
 | MIDI channel | kanal MIDI | KBBI *kanal* |
 | combo; multiplier; accuracy | kombo; pengali; ketepatan | the words of rhythm games |
 | root (of a chord); a chord tone | akar; *ke-5*, *ke-♭3* | the player's own short labels |
+| Offline files (a title); offline | File tanpa internet; *tanpa internet* | everyday words. *Luring* is KBBI's but few learners know it. |
+| frame; frames per second | frame; *frame per detik* | the word of games. *Bingkai* reads as a picture frame. |
 | particles wander; sway | simpangan; ayunan | plain words, unsourced |
 | the teacher, an ape | kera | everyday word |
 | Sponsor (the page) | Dukungan; *Dukung di GitHub* | *Sponsor* reads as a company's |

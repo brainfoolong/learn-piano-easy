@@ -20,14 +20,14 @@ export const dataPage: Translation<typeof en> = {
   },
   folder: {
     heading: "Selaraskan dengan folder",
-    text: "Pilih folder, misalnya folder yang diselaraskan oleh penyimpanan cloud-mu. Setiap perubahan lalu masuk ke sana dengan sendirinya, beserta salinan bertanggal untuk setiap hari dari tujuh hari terakhir.",
+    text: "Pilih folder, misalnya folder yang diselaraskan oleh penyimpanan cloudmu. Setiap perubahan lalu masuk ke sana dengan sendirinya, beserta salinan bertanggal untuk setiap hari dari tujuh hari terakhir.",
     connect: "Hubungkan folder",
     starting: "Mencari foldermu…",
     synced: (name: string) => `Datamu disimpan di folder “${name}”.`,
     waiting: "Setiap perubahan masuk ke sana sesaat kemudian.",
     written: (time: string) => `Folder terakhir ditulis pukul ${time}.`,
-    reconnect: (name: string) => `Browser-mu akan bertanya lagi sebelum menulis ke folder “${name}”.`,
-    reconnectAction: "Hubungkan lagi folder",
+    reconnect: (name: string) => `Browsermu akan bertanya lagi sebelum menulis ke folder “${name}”.`,
+    reconnectAction: "Hubungkan folder lagi",
     asking: (name: string) =>
       `Folder “${name}” berisi data yang tidak ditulis oleh browser ini. Tidak ada yang ditulis ke sana sampai kamu memilih.`,
     askingFrom: (date: string) => `Data itu disimpan pada ${date}.`,
@@ -40,7 +40,7 @@ export const dataPage: Translation<typeof en> = {
   },
   ask: {
     title: "Pulihkan cadangan ini?",
-    merge: "Kemajuan, lagu, dan skormu digabung dengan yang sudah ada di sini, jadi tidak ada yang lebih baru yang hilang.",
+    merge: "Kemajuan, lagu, dan skormu digabung dengan yang sudah ada di sini, jadi data yang lebih baru tidak hilang.",
     replace: "Pengaturanmu dan pengaturan lagumu mengambil nilai dari file. Lalu halaman dimuat ulang.",
     confirm: "Pulihkan",
     cancel: "Biarkan seperti semula",

@@ -16,7 +16,7 @@ export const sponsorPage: Translation<typeof en> = {
     ],
   },
   spend: {
-    heading: "Ke mana dukunganmu pergi",
+    heading: "Untuk apa dukunganmu dipakai",
     items: [
       { title: "Waktu", text: "Malam-malam untuk pelajaran baru, lagu baru, dan lebih sedikit bug." },
       { title: "Domain", text: "Agar situs tetap punya alamatnya, dan kamu selalu bisa menemukannya." },
@@ -28,7 +28,7 @@ export const sponsorPage: Translation<typeof en> = {
     lead: "Uang hanyalah satu cara untuk membantu. Hal-hal ini sama berartinya:",
     star: { text: "Beri bintang proyek ini di GitHub, agar pelajar lain menemukannya.", action: "Beri bintang di GitHub" },
     bug: { text: "Laporkan bug kalau ada yang terdengar salah.", action: "Laporkan bug" },
-    friend: "Ceritakan pada teman yang sejak dulu ingin belajar piano.",
+    friend: "Ceritakan situs ini kepada teman yang sejak dulu ingin belajar piano.",
   },
   thanks: "Terima kasih sudah bermain. Kamulah alasan semua ini ada.",
 };

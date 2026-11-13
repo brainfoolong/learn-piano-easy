@@ -16,11 +16,11 @@ export const learnBadges: Translation<typeof en> = {
     "streak-100": { name: "Seratus hari", description: "Capai target harianmu seratus hari beruntun." },
     "notes-1000": { name: "Seribu not", description: "Mainkan seribu not dalam pelajaran." },
     "notes-10000": { name: "Sepuluh ribu not", description: "Mainkan sepuluh ribu not dalam pelajaran." },
-    "rhythm-ace": { name: "Raja ritme", description: "Lulus langkah ritme pada percobaan pertama." },
+    "rhythm-ace": { name: "Jagoan ritme", description: "Lulus langkah ritme pada percobaan pertama." },
     "sight-reader": { name: "Pembaca cepat", description: "Baca sepuluh not berturut-turut tanpa salah." },
     "early-bird": { name: "Ayam jago", description: "Selesaikan pelajaran sebelum pukul 8 pagi." },
     "night-owl": { name: "Burung hantu", description: "Selesaikan pelajaran pada pukul 10 malam atau lebih." },
-    comeback: { name: "Selamat datang kembali", description: "Kembali untuk satu pelajaran setelah seminggu pergi." },
+    comeback: { name: "Selamat datang kembali", description: "Kembali untuk satu pelajaran setelah seminggu absen." },
     legendary: {
       name: "Lagu sulit",
       description: "Mainkan versi Sulit dari salah satu lagu kami sampai selesai di Main Piano Saja.",

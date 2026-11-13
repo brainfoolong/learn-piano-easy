@@ -6,7 +6,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // Site
   siteTheme: {
     label: "Tema situs",
-    help: "Warna halaman situs. Tema adegan mengatur warna piano dan jalurnya.",
+    help: "Warna halaman situs. Tema tampilan 3D mengatur warna piano dan jalurnya.",
     options: { system: "Ikuti sistem", light: "Terang", dark: "Gelap" },
   },
   language: {
@@ -16,29 +16,29 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   learnSounds: {
     label: "Suara hadiah",
-    help: "Bunyi dari Belajar Piano untuk langkah yang lulus, bintang, level baru, dan lencana. Piano selalu berbunyi.",
+    help: "Bunyi dari Belajar Piano untuk langkah yang berhasil, bintang, level baru, dan lencana. Piano selalu berbunyi.",
   },
   learnDailyGoal: {
     label: "Target harian",
-    help: "XP yang dibutuhkan sehari di Belajar Piano agar hari beruntunmu terus berlanjut.",
+    help: "XP yang kamu butuhkan setiap hari di Belajar Piano agar hari beruntunmu tidak terputus.",
   },
   learnSetupDone: {
     label: "Kunjungan pertama selesai",
-    help: "Belajar Piano menampilkan pengaturan awal yang singkat pada kunjungan pertamamu, sampai selesai.",
+    help: "Belajar Piano menampilkan persiapan singkat pada kunjungan pertamamu, sampai persiapan itu selesai.",
   },
   expertControls: {
     label: "Alat lanjutan",
-    help: "Tombol “Lanjutan” di bilah kontrol menampilkan kecepatan, transposisi, birama pertama dan terakhir pengulangan, penyesuaian zoom, dan geser samping tampilan.",
+    help: "Tombol “Lanjutan” di bilah kontrol menampilkan kecepatan, transposisi, birama pertama dan terakhir pengulangan, penyesuaian zoom, dan pergeseran tampilan ke samping.",
   },
   // General
   theme: {
-    label: "Tema adegan",
+    label: "Tema tampilan 3D",
     help: "Mengatur warna piano dan jalurnya. Tema situs di bilah atas mengatur bagian lain pemutar.",
     options: { dark: "Gelap", light: "Terang" },
   },
   yourData: {
     label: "Cadangkan atau pulihkan datamu",
-    help: "Membuka halaman yang menyimpan pengaturan, kemajuan, lagu, dan skormu ke satu file, lalu memulihkannya.",
+    help: "Membuka halaman yang menyimpan pengaturan, kemajuan, lagu, dan skormu ke satu file, dan memulihkannya dari file itu.",
   },
   startWithLastSong: {
     label: "Buka lagu terakhir saat mulai",
@@ -50,15 +50,15 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   disableHotkeys: {
     label: "Matikan pintasan keyboard",
-    help: "Tombol komputer tidak lagi memutar lagu, melompat di dalamnya, atau mengulanginya.",
+    help: "Tombol komputer tidak lagi memutar lagu, melompat ke bagian lain, atau mengulanginya.",
   },
   hotKeyBindings: {
     label: "Pintasan keyboard",
-    help: "Tombol untuk memutar lagu, melompat di dalamnya, mengulanginya, dan mengatur zoom.",
+    help: "Tombol untuk memutar lagu, melompat ke bagian lain, mengulanginya, dan mengatur zoom.",
   },
   leadIn: {
     label: "Waktu sebelum not pertama (detik)",
-    help: "Setiap lagu dimulai sekian detik sebelum not pertamanya. Lagu menunggu selama itu lagi setiap kali diputar ulang dari akhir.",
+    help: "Setiap lagu dimulai sekian detik sebelum not pertamanya, dan menunggu selama itu juga setiap kali diputar lagi dari akhir.",
   },
   restartSongOnEnd: {
     label: "Ulangi lagu saat selesai",
@@ -69,7 +69,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "Kamu mendengar setiap not yang kamu lewati saat menggeser lagu.",
   },
   fitZoomOnNewSong: {
-    label: "Paskan zoom untuk setiap lagu baru",
+    label: "Sesuaikan zoom untuk setiap lagu baru",
     help: "Lagu yang kamu buka muat seluruhnya di jalur di depan piano.",
   },
   transposeOffset: {
@@ -90,15 +90,15 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   showFps: {
     label: "Tampilkan frame per detik",
-    help: "Menampilkan berapa gambar per detik yang digambar tampilan 3D. Angka rendah berarti gambar berjalan lambat.",
+    help: "Menampilkan berapa frame per detik yang digambar tampilan 3D. Angka rendah berarti gambar berjalan lambat.",
   },
   showNoteDebugInfo: {
     label: "Tampilkan detail not saat ditunjuk",
-    help: "Menunjuk sebuah not menampilkan tinggi nada, waktu, panjang, dan kekuatan tekannya.",
+    help: "Saat kamu menunjuk sebuah not, tinggi nada, waktu, panjang, dan kekuatan tekannya muncul.",
   },
   showMilliseconds: {
     label: "Tampilkan milidetik di linimasa",
-    help: "Waktu di linimasa juga menampilkan perseribu detik.",
+    help: "Waktu di linimasa juga menampilkan seperseribu detik.",
   },
   progressBarMeasures: {
     label: "Tampilkan linimasa dalam birama",
@@ -127,14 +127,14 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   loopDelay: {
     label: "Hitungan awal (ketukan)",
-    help: "Ketukan yang dimainkan sebelum setiap putaran pengulangan.",
+    help: "Ketukan yang dihitung sebelum setiap putaran pengulangan.",
   },
   enableLoopBeats: {
     label: "Bunyi klik pada hitungan awal",
     help: "Kamu mendengar bunyi klik di setiap ketukan hitungan awal.",
   },
   autoLoop: {
-    label: "Mulai setiap putaran langsung",
+    label: "Langsung mulai setiap putaran",
     help: "Jika mati, lagu berhenti sejenak di hitungan awal setelah setiap putaran.",
   },
   muteLoop: {
@@ -143,7 +143,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   loopTrainer: {
     label: "Latihan berulang",
-    help: "Mulai pelan dan menambah kecepatan 5% setelah setiap putaran, sampai 100%.",
+    help: "Dimulai pelan, lalu kecepatan bertambah 5% setelah setiap putaran, sampai 100%.",
   },
   loopTrainerSpeed: {
     label: "Kecepatan awal latihan berulang (%)",
@@ -205,7 +205,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   enableMetronome: {
     label: "Metronom",
-    help: "Berbunyi klik di setiap ketukan lagu.",
+    help: "Mengeluarkan bunyi klik di setiap ketukan lagu.",
   },
   metronomeMidiOutput: {
     label: "Keluaran metronom",
@@ -227,7 +227,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   synchedMetronome: {
     label: "Selaraskan metronom dengan lagu",
-    help: "Jika aktif, metronom berbunyi pada ketukan lagu dan mengikuti perubahan tempo dan kecepatannya. Jika mati, metronom menjaga ketukan tetap pada tempo lagu di titik pemutaran dimulai. Perubahan tempo dan kecepatan sesudahnya tidak mengubah ketukan itu. Metronom mulai dan berhenti bersama pemutaran. Metronom diam selama hitungan awal pengulangan, lalu mulai lagi pada ketukan pertama pengulangan.",
+    help: "Jika nyala, metronom berbunyi pada ketukan lagu dan mengikuti perubahan tempo dan kecepatannya. Jika mati, metronom menjaga ketukan tetap pada tempo lagu di titik pemutaran dimulai. Perubahan tempo dan kecepatan sesudahnya tidak mengubah ketukan itu. Metronom mulai dan berhenti bersama pemutaran. Metronom diam selama hitungan awal pengulangan, lalu mulai lagi pada ketukan pertama pengulangan.",
   },
   enableEqualizer: {
     label: "Equalizer",
@@ -276,7 +276,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   bgTrackSpeed: {
     label: "Kecepatan (%)",
-    help: "Seberapa cepat iringan berjalan dibanding lagu, agar cocok dengan rekaman bertempo lain.",
+    help: "Seberapa cepat iringan berjalan dibanding lagu, agar rekaman yang temponya berbeda tetap cocok dengan lagu.",
   },
   bgTrackOffset: {
     label: "Selisih (detik)",
@@ -289,7 +289,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // View
   cameraPreset: {
     label: "Kamera",
-    help: "Seret adegan untuk melihat sekeliling, kecuali dalam tampilan datar. Klik dua kali untuk kembali ke kamera ini. Tampilan datar sejajar dengan keyboard tepat di bawah layar.",
+    help: "Seret tampilan 3D untuk melihat sekeliling, kecuali dalam tampilan datar. Klik dua kali untuk kembali ke kamera ini. Tampilan datar sejajar dengan keyboard yang diletakkan tepat di bawah layar.",
     options: {
       classic: "Klasik, dari atas",
       player: "Dari bangku piano",
@@ -299,7 +299,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   resetCamera: {
     label: "Kembali ke kamera",
-    help: "Mengembalikan kamera setelah kamu menyeret adegan.",
+    help: "Mengembalikan kamera setelah kamu menyeret tampilan 3D.",
   },
   glowMode: {
     label: "Cahaya",
@@ -320,7 +320,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   measuresShownOnScreen: {
     label: "Birama yang terlihat ke depan",
-    help: "Berapa birama not mendatang yang ditampilkan jalur saat zoom per birama.",
+    help: "Berapa birama not mendatang yang ditampilkan jalur saat zoom per birama aktif.",
   },
   // Keyboard
   keyboardFirstNote: {
@@ -333,7 +333,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   foldOutsideNotes: {
     label: "Pindahkan not di luar tutsmu ke dalam jangkauan",
-    help: "Not yang tidak ada di keyboardmu dipindah per oktaf ke tutsmu, dan kamu memainkannya di sana.",
+    help: "Not yang tidak ada di keyboardmu dipindahkan per oktaf ke tutsmu, dan kamu memainkannya di sana.",
   },
   // Input
   playMode: {
@@ -386,7 +386,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   playHands: {
     label: "Tanganmu",
-    help: "Tangan yang permainannya dinilai. Jika “Tunggu notmu” aktif, aplikasi memainkan tangan yang tidak kamu mainkan.",
+    help: "Tangan yang permainannya dinilai. Jika “Tunggu notmu” aktif, aplikasi memainkan bagian tangan yang tidak kamu mainkan.",
     options: { both: "Kedua tangan", right: "Tangan kanan", left: "Tangan kiri" },
   },
   playalongSilentNotes: {
@@ -399,7 +399,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   enableScoreMode: {
     label: "Nilai setiap not",
-    help: "Menilai setiap not yang kamu mainkan terhadap lagu, dan menyimpan akurasimu per lagu.",
+    help: "Menilai setiap not yang kamu mainkan terhadap lagu, dan menyimpan ketepatanmu per lagu.",
   },
   scoreHitWindow: {
     label: "Rentang waktu tekan (ms)",
@@ -414,7 +414,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "Memberi poin untuk not yang kena tepat dan not yang ditahan, mengurangi poin untuk setiap kesalahan, dan melipatgandakan kombo not yang kena beruntun.",
   },
   gameDifficulty: {
-    label: "Tingkat kesulitan permainan",
+    label: "Kesulitan permainan",
     help: "Seberapa ketat ketepatan waktunya, serta berapa poin yang didapat dari sebuah not dan hilang karena kesalahan.",
     options: { easy: "Mudah: beberapa jam bermain", normal: "Normal: beberapa bulan", hard: "Sulit: sekitar setahun" },
   },
@@ -444,8 +444,8 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "Warna tuts hitam piano.",
   },
   pianoVelvetColor: {
-    label: "Warna kain laken",
-    help: "Jalur kain laken di belakang tuts.",
+    label: "Warna kain flanel",
+    help: "Pita kain flanel di belakang tuts.",
   },
   pianoBackgroundColor: {
     label: "Warna latar",

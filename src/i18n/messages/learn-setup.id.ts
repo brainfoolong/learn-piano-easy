@@ -36,9 +36,9 @@ export const learnSetup: Translation<typeof en> = {
   },
   goal: {
     question: "Berapa banyak setiap hari?",
-    lead: "Capai targetmu setiap hari agar beruntunmu bertambah. Pelajaran baru dengan tiga bintang memberi 30 XP.",
+    lead: "Capai targetmu setiap hari agar hari beruntunmu bertambah. Pelajaran baru dengan tiga bintang memberi 30 XP.",
     label: "Target harian",
-    names: { "10": "Santai", "20": "Tekun", "30": "Serius", "50": "Berani" },
+    names: { "10": "Santai", "20": "Tekun", "30": "Bersemangat", "50": "Berani" },
     option: (xp: number, name: string) => `${formatNumber("id", xp)} XP, ${name}`,
     start: "Mulai belajar",
   },

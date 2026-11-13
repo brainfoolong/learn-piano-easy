@@ -17,28 +17,28 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Membuat sudut not yang jatuh menjadi bulat.",
   },
   noteBorderRadius: {
-    label: "Jari-jari sudut (%)",
+    label: "Kelengkungan sudut (%)",
     help: "Seberapa bulat sudut sebuah not.",
   },
   minNoteHeight: {
     label: "Panjang not terpendek",
-    help: "Dalam lebar tuts, agar not yang sangat pendek tetap terlihat.",
+    help: "Diukur dalam lebar tuts, agar not yang sangat pendek tetap terlihat.",
   },
   strokeNotes: {
     label: "Cahaya tepi",
-    help: "Pinggiran cahaya dengan warna milik setiap not.",
+    help: "Pinggiran cahaya dengan warna masing-masing not.",
   },
   strokeNotesWidth: {
     label: "Kekuatan cahaya tepi",
     help: "Seberapa terang pinggiran cahaya di sekitar setiap not.",
   },
   noteEndedShrink: {
-    label: "Not yang dimainkan masuk ke tutsnya",
+    label: "Not yang dimainkan mengecil ke tutsnya",
     help: "Not tenggelam ke dalam tutsnya selama berbunyi. Jika dimatikan, not terus berjalan melewati tuts.",
   },
   playedNoteFalloffSpeed: {
     label: "Seberapa jauh not melewati tuts",
-    help: "Dalam lebar tuts, saat not yang dimainkan tidak mengecil.",
+    help: "Diukur dalam lebar tuts, jika not yang dimainkan tidak mengecil.",
   },
   showSustainedNotes: {
     label: "Tampilkan lama pedal menahan not",
@@ -64,7 +64,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   drawMeasureLines: {
     label: "Garis birama",
-    help: "Garis yang melintang jalur di awal setiap birama.",
+    help: "Garis yang melintangi jalur di awal setiap birama.",
   },
   measureLineThickness: {
     label: "Ketebalan garis birama",
@@ -76,7 +76,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   enableDrawBeatLines: {
     label: "Garis ketukan",
-    help: "Garis yang lebih samar melintang jalur di setiap ketukan.",
+    help: "Garis yang lebih samar melintangi jalur di setiap ketukan.",
   },
   beatLineThickness: {
     label: "Ketebalan garis ketukan",
@@ -92,7 +92,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   measureNumbersColor: {
     label: "Warna nomor birama",
-    help: "Warna nomor-nomor birama.",
+    help: "Warna nomor birama.",
   },
   highlightInputLanes: {
     label: "Nyalakan jalur tuts yang kamu tahan",
@@ -108,7 +108,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   showSustainPeriods: {
     label: "Rentang pedal",
-    help: "Pita yang melintang jalur selama lagu menahan pedal sustain.",
+    help: "Pita yang melintangi jalur selama lagu menahan pedal sustain.",
   },
   showSustainOnOffs: {
     label: "Pedal diinjak dan dilepas",
@@ -126,7 +126,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesFlames: {
     label: "Api",
-    help: "Setiap tuts terbakar dengan warna notnya. Api paling membebani kartu grafis.",
+    help: "Setiap tuts terbakar bersama notnya, dalam warna not itu. Api paling membebani kartu grafis.",
   },
   particlesSparks: {
     label: "Percikan",
@@ -150,7 +150,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { circle: "Cahaya", spark: "Percikan", smoke: "Asap", star: "Bintang", ring: "Cincin" },
   },
   particlesBlending: {
-    label: "Pembauran",
+    label: "Mode campuran",
     help: "“Tambah cahaya” mencerahkan apa yang ada di belakangnya, seperti api. “Tutupi” menyembunyikannya, seperti asap.",
     options: { additive: "Tambah cahaya", normal: "Tutupi" },
   },
@@ -164,11 +164,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesOpacity: {
     label: "Opasitas",
-    help: "Seberapa padat setiap partikel terlihat. Nilai yang lebih rendah membuat latarnya lebih tembus.",
+    help: "Seberapa padat setiap partikel terlihat. Nilai yang lebih rendah membuat apa yang di belakangnya makin terlihat.",
   },
   particleSize: {
     label: "Ukuran",
-    help: "Dalam lebar tuts.",
+    help: "Diukur dalam lebar tuts.",
   },
   particleAmount: {
     label: "Jumlah",
@@ -184,11 +184,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleFadeOut: {
     label: "Memudar",
-    help: "Bagian akhir dari umur partikel, saat partikel memudar.",
+    help: "Seberapa besar bagian akhir umur partikel yang dipakai untuk memudar.",
   },
   particlesShrink: {
     label: "Mengecil",
-    help: "Bagian ukuran yang hilang dari partikel. Di bawah 0, partikel membesar.",
+    help: "Seberapa banyak ukuran yang hilang dari partikel. Di bawah 0, partikel membesar.",
   },
   particleSpeedX: {
     label: "Kecepatan ke samping",
@@ -212,7 +212,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesRotationRandom: {
     label: "Sudut acak (°)",
-    help: "Setiap partikel muncul dengan putaran acak, paling besar sudut ini.",
+    help: "Setiap partikel muncul dengan putaran acak, hingga sebesar sudut ini.",
   },
   particlesRotationSpeed: {
     label: "Putaran (° per detik)",
@@ -256,12 +256,12 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleYOffset: {
     label: "Tinggi awal",
-    help: "Dalam lebar tuts, di atas tuts.",
+    help: "Jarak di atas tuts, diukur dalam lebar tuts.",
   },
   particleDistributionX: {
-    label: "Titik awal selebar tuts",
+    label: "Titik awal pada lebar tuts",
     help: "Tempat setiap partikel muncul pada lebar tutsnya.",
-    options: { across: "Di mana saja selebar tuts", centre: "Di tengahnya" },
+    options: { across: "Di mana saja pada lebarnya", centre: "Di tengahnya" },
   },
   particleDistributionXSpread: {
     label: "Sebaran awal (%)",
@@ -321,7 +321,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   chordLabelStyle: {
     label: "Gaya label akor",
     help: "Cara setiap nama akor digambar.",
-    options: { bar: "Bilah di atas tuts akor", ribbon: "Pita melintang jalur" },
+    options: { bar: "Bilah di atas tuts akor", ribbon: "Pita melintangi jalur" },
   },
   chordLabelPlacement: {
     label: "Posisi label akor",
@@ -340,23 +340,23 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   chordBlocks: {
     label: "Blok not",
-    help: "Blok di atas setiap not dari akor yang dinamai menunjukkan not apa itu.",
+    help: "Blok di atas setiap not dalam akor yang dinamai menunjukkan peran not itu.",
     options: { none: "Tidak ada", tone: "Nada akor", degree: "Tingkat tangga nada" },
   },
   chordToneNotation: {
     label: "Penulisan blok not",
     help: "Apakah blok not memakai tanda singkat atau kata lengkap.",
-    options: { simple: "Singkat: R ♭3 5", full: "Lengkap: akar, terts ♭3, kuint" },
+    options: { simple: "Singkat: R ♭3 5", full: "Lengkap: Akar ke-♭3 ke-5" },
   },
   chordMarkRoot: {
     label: "Tandai nada akar",
-    help: "Nada akar setiap akor membawa blok emas.",
+    help: "Nada akar setiap akor mendapat blok emas.",
   },
 
   // Lyrics
   lyricsEnabled: {
     label: "Lirik",
-    help: "Menampilkan lirik lagu, jika ada, satu baris setiap kali.",
+    help: "Menampilkan lirik lagu, jika ada, baris demi baris.",
   },
   lyricsBackground: {
     label: "Warna latar",
@@ -414,7 +414,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   colorCodeNote11: { help: "Warna setiap B." },
   enableColorCodingFinger: {
     label: "Warnai not menurut jari",
-    help: "Not tanpa jari tetap memakai warnanya yang lain.",
+    help: "Not yang tidak dimainkan tangan mana pun tetap memakai warnanya yang lain.",
   },
   enableColorCodingFingerPiano: {
     label: "Warnai tuts menurut jari",
@@ -458,7 +458,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { off: "Tidak ada", lineStart: "Di awal setiap baris", every: "Di setiap birama" },
   },
   enableGrandStaff: {
-    label: "Gabungkan dua paranada dengan kurung kurawal",
+    label: "Satukan dua paranada dengan kurawal",
     help: "Kurung kurawal paranada ganda, di awal setiap baris.",
   },
   sheetAutoClef: {
@@ -521,7 +521,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Not di partitur menjadi lebih besar selama berbunyi.",
   },
   sheetRenderInputNotes: {
-    label: "Gambar not yang kamu mainkan",
+    label: "Tampilkan not yang kamu mainkan",
     help: "Setiap tuts yang kamu tahan muncul sebagai not di kursor.",
   },
   sheetShowHoverInfo: {
@@ -536,7 +536,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   // PDF
   pdfExportButtonGroup: {
     label: "Simpan not sebagai PDF",
-    help: "Membuka dialog yang menyimpan not jatuh dari lagu yang terbuka sebagai halaman, dengan panjang yang kamu atur.",
+    help: "Membuka dialog yang menyimpan not yang jatuh dari lagu yang terbuka sebagai halaman, dengan panjang yang kamu atur.",
   },
   exportPdfBackground: {
     label: "Pakai warna latar",
@@ -546,14 +546,14 @@ export const playerSettingsLook: Translation<typeof en> = {
   // Offline
   offlineCache: {
     label: "Kelola file tanpa internet",
-    help: "Menampilkan ukuran aplikasi, lagu, dan suara piano, lalu menyimpan atau menghapus masing-masing.",
+    help: "Menampilkan ukuran aplikasi, lagu, dan suara piano. Masing-masing bisa disimpan atau dihapus.",
   },
   autoCacheSongs: {
-    label: "Tetap simpan lagu",
-    help: "Menyimpan semua lagu contoh sekarang, dan lagi setelah setiap pembaruan.",
+    label: "Selalu simpan lagu",
+    help: "Menyimpan semua lagu contoh sekarang, lalu menyimpannya lagi setelah setiap pembaruan.",
   },
   autoCacheSounds: {
-    label: "Tetap simpan suara piano",
-    help: "Menyimpan semua set suara sekarang, dan lagi setelah setiap pembaruan.",
+    label: "Selalu simpan suara piano",
+    help: "Menyimpan semua set suara sekarang, lalu menyimpannya lagi setelah setiap pembaruan.",
   },
 };

@@ -32,7 +32,7 @@ export const id: Translation<Messages> = {
     modes: {
       title: "Mode bermain",
       description:
-        "Cara bermain yang siap pakai: permainan dengan poin dan percikan, atau lagu yang menunggumu dengan nama di setiap not.",
+        "Cara bermain yang siap pakai: permainan dengan poin dan percikan cahaya, atau lagu yang menunggumu, dengan nama setiap not tertulis.",
     },
     learn: {
       title: "Belajar Piano",
@@ -52,7 +52,7 @@ export const id: Translation<Messages> = {
     },
     sponsor: {
       title: "Dukungan",
-      description: "Learn Piano Easy gratis dan dibuat oleh satu orang. Begini caramu membantunya tumbuh.",
+      description: "Learn Piano Easy gratis dan dibuat oleh satu orang. Begini cara kamu bisa membantunya tumbuh.",
     },
     imprint: {
       title: "Informasi hukum",
@@ -130,13 +130,13 @@ export const id: Translation<Messages> = {
     howItWorks: {
       eyebrow: "Cara belajarnya",
       heading: "Empat langkah, berulang terus",
-      lead: "Setiap pelajaran mengikuti putaran singkat yang sama, jadi kamu selalu tahu apa yang berikutnya.",
+      lead: "Setiap pelajaran mengikuti putaran singkat yang sama, jadi kamu selalu tahu apa yang datang berikutnya.",
       steps: [
         {
           title: "Pelajari keterampilan",
           text: "Pelajaran singkat menunjukkan satu hal baru, seperti not, ritme, atau posisi tangan.",
         },
-        { title: "Latih", text: "Mainkan di keyboardmu sendiri. Piano menunggumu dan menandai setiap not yang benar." },
+        { title: "Berlatih",text: "Mainkan di keyboardmu sendiri. Piano menunggumu dan menandai setiap not yang benar." },
         { title: "Mainkan lagu sungguhan", text: "Pakai keterampilan itu di lagu dari pustaka, dengan level yang cocok untukmu." },
         { title: "Raih lencana", text: "Setiap pelajaran memberi XP, dan setiap dunia yang kamu selesaikan memberi lencana." },
       ],
@@ -144,7 +144,7 @@ export const id: Translation<Messages> = {
     rarities: {
       eyebrow: "Satu melodi, empat level",
       heading: "Setiap lagu tumbuh bersamamu",
-      lead: "Setiap lagu kami punya empat versi. Beralihlah di antaranya dan lihat Ode to Joy tumbuh.",
+      lead: "Setiap lagu kami punya empat versi. Ganti versinya dan lihat Ode to Joy tumbuh.",
       control: "Versi",
       piano: "Piano yang memainkan Ode to Joy",
       names: { common: "Pemula", rare: "Mudah", epic: "Sedang", legendary: "Sulit" },
@@ -158,7 +158,7 @@ export const id: Translation<Messages> = {
     devices: {
       eyebrow: "Main dengan yang kamu punya",
       heading: "Tak punya piano? Mulai saja",
-      lead: "Semua ini bisa memainkan not. Keyboard sungguhan terasa paling enak, dan yang lain membuatmu bisa mulai hari ini.",
+      lead: "Semua ini bisa memainkan not. Keyboard sungguhan terasa paling enak, dan dengan yang lain kamu bisa mulai hari ini.",
       ways: [
         { title: "Keyboard MIDI", text: "Colokkan lewat USB dan izinkan MIDI sekali. Setelah itu, situs menemukannya sendiri." },
         { title: "Layar sentuh", text: "Ketuk tuts di layar, dengan jari sebanyak yang kamu mau." },
@@ -174,7 +174,7 @@ export const id: Translation<Messages> = {
     free: {
       eyebrow: "Gratis, dan milikmu",
       heading: "Tak perlu bayar, tak perlu daftar",
-      lead: "Situs ini hadiah dari seseorang yang mencintai piano. Situs ini tetap gratis.",
+      lead: "Situs ini hadiah dari seseorang yang mencintai piano, dan akan tetap gratis.",
       promises: [
         {
           title: "Gratis, tanpa akun",
@@ -214,7 +214,7 @@ export const id: Translation<Messages> = {
         {
           question: "Apakah bisa dipakai tanpa internet?",
           answer:
-            "Bisa. Buka situsnya sekali saat terhubung ke internet, dan setelah itu situs berjalan tanpa internet. Lagu bisa diputar tanpa internet setelah kamu membukanya sekali.",
+            "Bisa. Buka situsnya sekali saat terhubung ke internet, dan setelah itu situs berjalan tanpa jaringan. Lagu yang sudah pernah kamu buka juga bisa diputar tanpa internet.",
         },
         {
           question: "Bisakah aku memainkan laguku sendiri?",

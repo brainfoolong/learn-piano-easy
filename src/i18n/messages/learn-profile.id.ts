@@ -15,7 +15,7 @@ export const learnProfile: Translation<typeof en> = {
     toNext: (level: number) => `Menuju level ${n(level)}`,
   },
   streak: {
-    heading: "Beruntun",
+    heading: "Hari beruntun",
     current: (count: number) => days(count),
     currentLabel: "beruntun saat ini",
     best: (count: number) => `Terbaik: ${days(count)}`,
@@ -46,7 +46,7 @@ export const learnProfile: Translation<typeof en> = {
   choices: {
     heading: "Pengaturanmu",
     goal: "Target harian",
-    goalHelp: "XP yang dibutuhkan setiap hari agar beruntunmu terus berlanjut.",
+    goalHelp: "XP yang dibutuhkan setiap hari agar hari beruntunmu terus berlanjut.",
     sounds: "Suara hadiah",
     soundsHelp: "Bunyi denting untuk langkah yang lulus, bintang, level baru, dan lencana. Piano selalu berbunyi.",
   },

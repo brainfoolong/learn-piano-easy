@@ -7,7 +7,7 @@ const n = (value: number) => formatNumber("id", value);
 
 export const learnLesson: Translation<typeof en> = {
   stepOf: (step: number, count: number) => `Langkah ${n(step)} dari ${n(count)}`,
-  leave: "Tinggalkan pelajaran",
+  leave: "Keluar dari pelajaran",
   leaveDialog: {
     title: "Keluar dari pelajaran ini?",
     body: "Kemajuanmu di pelajaran ini baru disimpan setelah pelajaran selesai.",
@@ -16,7 +16,7 @@ export const learnLesson: Translation<typeof en> = {
     close: "Tutup",
   },
   lacks: {
-    touch: "Keyboardku tidak bisa main keras dan lembut",
+    touch: "Keyboardku tidak bisa membunyikan not keras dan lembut",
     pedal: "Keyboardku tidak punya pedal",
   },
   loading: "Memuat pelajaran…",
@@ -90,10 +90,10 @@ export const learnLesson: Translation<typeof en> = {
     start: "Mulai",
     listen: "Dengarkan: satu birama hitungan awal.",
     tap: "Sekarang tekan tuts apa saja di setiap bunyi klik.",
-    piano: "Bantalan ketuk. Tekan tuts apa saja tepat pada ketukan.",
+    piano: "Area ketuk.Tekan tuts apa saja tepat pada ketukan.",
     marks: { next: "Ketuk di sini", correct: "Tepat pada ketukan", mistake: "Meleset dari ketukan" },
-    short: (hits: number, beats: number) => `${n(hits)} dari ${n(beats)} ketukan terkena. Coba lagi.`,
-    hint: "Ketuk saat kamu mendengar klik. Titik-titik berkedip pada setiap ketukan.",
+    short: (hits: number, beats: number) => `Kamu mengetuk ${n(hits)} dari ${n(beats)} ketukan. Coba lagi.`,
+    hint: "Ketuk tepat saat kamu mendengar klik. Titik-titik berkedip pada setiap ketukan.",
     play: "Sekarang mainkan setiap not pada kliknya.",
     phrasePiano: "Tuts. Mainkan frasa ini mengikuti bunyi klik.",
     shortNotes: (hits: number, notes: number) => `${n(hits)} dari ${n(notes)} not tepat waktu. Coba lagi.`,
@@ -129,7 +129,7 @@ export const learnLesson: Translation<typeof en> = {
     retry: "Coba lagi",
     level: (level: number, toNext: number) => `Level ${n(level)}: ${n(toNext)} XP lagi menuju level ${n(level + 1)}`,
     skipOpened: (world: string) => `Semua pelajaran di “${world}” kini terbuka.`,
-    skipShort: (stars: number) => `${n(stars)} bintang membuka dunia ini. Coba lagi kapan saja.`,
+    skipShort: (stars: number) => `Butuh ${n(stars)} bintang untuk membuka dunia ini. Coba lagi kapan saja.`,
   },
   moment: {
     continue: "Lanjutkan",

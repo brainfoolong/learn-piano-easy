@@ -4,11 +4,11 @@ import type { playModes as en } from "./play-modes.en";
 
 export const playModes: Translation<typeof en> = {
   eyebrow: "Bersedia, siap, main!",
-  lead: "Pilih sebuah mode, dan pemutar menyiapkan dirinya dengan lagu, bantuan, dan tampilan yang pas. Lalu kamu bermain.",
-  note: "Mode mengubah beberapa pengaturan pemutar. Setelah dimulai, kamu bisa membatalkannya dengan satu klik, dan mengubah pengaturan apa pun nanti.",
+  lead: "Pilih satu mode, dan pemutar langsung menyiapkan lagu, bantuan, dan tampilan yang pas. Lalu kamu tinggal bermain.",
+  note: "Mode mengubah beberapa pengaturan pemutar. Setelah dimulai, kamu bisa membatalkannya dengan sekali pilih, dan mengubah pengaturan apa pun nanti.",
   traits: "Yang diatur",
   song: (title: string) => `Lagu: ${title}`,
-  noSong: "Tanpa lagu",
+  noSong: "Tidak butuh lagu",
   start: "Mulai",
   groups: {
     fun: {
@@ -28,7 +28,7 @@ export const playModes: Translation<typeof en> = {
     game: {
       tag: "Untuk hiburan",
       name: "Mode permainan",
-      text: "Setiap not yang kamu kenai memberi poin, dan piano membalas dengan kilauan. Kejar kombo dan kalahkan skor terbaikmu.",
+      text: "Setiap not yang kamu mainkan dengan tepat memberi poin, dan piano membalas dengan kilauan. Kejar kombo dan kalahkan skor terbaikmu.",
       traits: ["Poin dan kombo di level mudah", "Percikan, kilatan, dan piano yang bersinar", "Lagu pendek yang mudah diingat"],
       song: "In the Hall of the Mountain King, Pemula",
     },
@@ -54,7 +54,7 @@ export const playModes: Translation<typeof en> = {
       song: "Ode to Joy, Pemula",
     },
     oneHand: {
-      tag: "Mulai dari kecil",
+      tag: "Mulai dari yang kecil",
       name: "Satu tangan dulu",
       text: "Pelajari tangan kanan dulu, sementara aplikasi memainkan tangan kiri. Lagu menunggu setiap notmu.",
       traits: ["Hanya tangan kananmu yang bermain", "Aplikasi memainkan tangan kiri", "Ganti tangan di pengaturan, di bagian “Tanganmu”"],
@@ -71,11 +71,11 @@ export const playModes: Translation<typeof en> = {
       tag: "Latihan",
       name: "Pelan tapi pasti",
       text: "Empat birama pertama diulang, mulai dengan setengah kecepatan. Setiap putaran sedikit lebih cepat, sampai kamu bermain dengan kecepatan penuh.",
-      traits: ["Empat birama pertama diulang", "Mulai setengah kecepatan, lebih cepat tiap putaran", "Hitungan awal sebelum setiap putaran"],
+      traits: ["Empat birama pertama diulang", "Mulai dengan setengah kecepatan, lebih cepat tiap putaran", "Hitungan awal sebelum setiap putaran"],
       song: "Für Elise, Mudah",
     },
     rhythm: {
-      tag: "Ketepatan",
+      tag: "Tepat waktu",
       name: "Penjaga ritme",
       text: "Metronom berdetak, dan setiap not yang kamu mainkan dinilai dari ketepatan waktunya. Tanpa nama not dan tanpa menunggu, hanya ketukan.",
       traits: ["Metronom di setiap ketukan", "Setiap not dinilai dari ketepatan waktunya", "Lagu tidak pernah menunggu"],
@@ -103,7 +103,7 @@ export const playModes: Translation<typeof en> = {
     chordExplorer: {
       tag: "Harmoni",
       name: "Penjelajah akor",
-      text: "Setiap akor lagu diberi nama saat diputar, dengan angkanya dalam nada dasar. Balok di atas not menunjukkan tempat setiap not dalam tangga nada.",
+      text: "Setiap akor lagu diberi nama saat diputar, dengan tingkatnya dalam nada dasar. Balok di atas not menunjukkan tempat setiap not dalam tangga nada.",
       traits: ["Nama akor saat lagu diputar", "Angka Romawi untuk setiap akor", "Tingkat tangga nada, dengan setiap nada akar ditandai"],
       song: "Canon in D, Mudah",
     },

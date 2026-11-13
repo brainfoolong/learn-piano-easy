@@ -4,7 +4,7 @@ import type { Translation } from "../translation";
 import type { learnMap as en } from "./learn-map.en";
 
 export const learnMap: Translation<typeof en> = {
-  lead: "Jelajahi jalannya, pelajaran demi pelajaran. Setiap dunia berakhir dengan tantangan akhir.",
+  lead: "Ikuti jalannya, pelajaran demi pelajaran. Setiap dunia berakhir dengan tantangan akhir.",
   loading: "Memuat kursus…",
   continue: "Lanjutkan",
   nextUp: "Berikutnya",

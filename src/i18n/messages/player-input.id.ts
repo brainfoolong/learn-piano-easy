@@ -13,11 +13,11 @@ export const playerInput: Translation<typeof en> = {
     everyInput: "Semua masukan",
     noOutput: "Tanpa keluaran",
     notConnected: (name: string) => `${name} (tidak terhubung)`,
-    unsupported: "Browser ini tidak bisa menjangkau perangkat MIDI. Chrome, Edge, dan Firefox bisa.",
+    unsupported: "Browser ini tidak bisa terhubung ke perangkat MIDI. Chrome, Edge, dan Firefox bisa.",
     off: "Hubungkan perangkat MIDI-mu untuk bermain dengan keyboard MIDI.",
     asking: "Menunggu izin browser…",
     denied: "Akses MIDI ditolak. Izinkan di pengaturan situs browser, lalu hubungkan lagi.",
-    noInputs: "Tidak ada perangkat MIDI yang tersambung.",
+    noInputs: "Tidak ada perangkat MIDI yang terhubung.",
     inputsFound: (n: number) => `${formatNumber("id", n)} masukan MIDI ditemukan.`,
   },
   freePlay: {
@@ -32,8 +32,8 @@ export const playerInput: Translation<typeof en> = {
     hint: "Mainkan apa saja, atau pilih “Rekam” untuk menyimpan permainanmu.",
   },
   history: {
-    empty: "Belum ada percobaan lagu ini yang selesai. Mainkan sampai akhir dengan penilaian menyala.",
-    hands: { both: "Kedua", right: "Kanan", left: "Kiri" },
+    empty: "Belum ada percobaan yang selesai untuk lagu ini. Mainkan sampai akhir dengan penilaian aktif.",
+    hands: { both: "Keduanya", right: "Kanan", left: "Kiri" },
     columns: {
       date: "Tanggal",
       speed: "Kecepatan",
@@ -129,7 +129,7 @@ export const playerInput: Translation<typeof en> = {
   },
   pdf: {
     noSong: "Buka lagu dulu, lalu simpan notnya sebagai PDF.",
-    intro: (title: string) => `Menyimpan not ${title} yang jatuh di atas piano, beberapa detik lagu di setiap halaman.`,
+    intro: (title: string) => `Menyimpan not ${title} yang berjatuhan, dengan piano di bawahnya, beberapa detik lagu di setiap halaman.`,
     secondsPerPage: "Detik per halaman",
     background: "Pakai warna latar",
     pages: (pages: number, seconds: number) =>
