@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Hindi
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Hindi, from a to m"
     status: open
@@ -132,12 +132,12 @@ then review them blind, as the method says.
 blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.hi.ts:1`, `src/learn/lessons/first-melodies/texts.hi.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.hi.ts:1`, `src/learn/lessons/reading-music/texts.hi.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.hi.ts:1`, `src/learn/lessons/chords/texts.hi.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.hi.ts:1`, `src/learn/lessons/expression/texts.hi.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp hi` for each world. `src/i18n/stamps/hi.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.hi.ts:1`, `src/learn/lessons/first-melodies/texts.hi.ts:1`
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.hi.ts:1`, `src/learn/lessons/reading-music/texts.hi.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.hi.ts:1`, `src/learn/lessons/chords/texts.hi.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.hi.ts:1`, `src/learn/lessons/expression/texts.hi.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp hi` for each world. `src/i18n/stamps/hi.json:1`
 
 ### 4. The song guides in Hindi, from a to m
 
@@ -186,31 +186,42 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/<section>.hi.ts`, and `hi`
-loads as its own chunk (`src/i18n/locale.ts:48`, `src/i18n/all-catalogs.ts:16`). Four blind reviews
-found two wrong texts, and fresh reviewers found none on the second read. Every catalog unit is stamped
-in `src/i18n/stamps/hi.json`. The texts still missing are the ones equal to the English, as for Chinese.
+Stages 1 to 3 are done. Every lesson of the eight worlds has its `<lesson>.hi.ts`, each world's
+`texts.hi.ts` gathers them, and each `index.ts` loads it under `hi`. Each world is stamped in
+`src/i18n/stamps/hi.json`. The only texts left out are quiz answers made of note letters or digits,
+which equal the English.
 
-`hi.md` gained what the reviews settled: § 8's zero rule, the oblique plural and `Y में से X`, and § 5's
-rows for leave, skill, folk tune, size, opacity and the key-width unit. The rules test now compiles each
-kept word's pattern once, so the Chinese and Hindi checks finish within five seconds.
+The first blind reviews found 26 wrong texts. Most used `ऊँचा`/`नीचा` for pitch, or a bare `तेज़` for
+speed, and both read as loudness. Every batch with a *wrong* finding was reviewed again until a fresh
+reviewer found none, or its last *wrong* was a leftover the session checked by hand (*Chords*).
+
+`hi.md` gained what the reviews settled. § 7 says where `ऊपर वाला`, `ऊँची पिच` and never `ऊँचा` go.
+§ 3 sets "Well done." as `बहुत बढ़िया।`. § 5 gained rows for the step, skip and leap nouns, staff line and
+space, the genders of `बीट` and `की सिग्नेचर`, held beats, fast and slow with `स्पीड`, and the two holds.
+*Old MacDonald* joined the `hi` kept list.
 
 ### Next
 
-**Stage 3: the course in Hindi.** Run `bun tools/i18n.ts work hi lesson/<world>` for each of the eight
-worlds. Brief eight writers side by side, each with the whole of `hi.md`, read in two parts. Each writes
-one `<lesson>.hi.ts` per lesson of its world, and its `texts.hi.ts`. The session then adds one line to
-each world's `index.ts`, as commit `cb2f086` did for Chinese. Then eight blind reviewers, a settler per
-batch, and a fresh reviewer for each batch with a *wrong* finding.
+**Stage 4: the song guides from a to m.** A read-only `Explore` subagent lists the slugs in
+`tools/our-songs/` from `alle-jahre-wieder` to `morgen-kinder`. Run `bun tools/i18n.ts work hi
+guide/<slug>` for each. Brief three writers side by side, each with
+a third of the slugs and the whole of `hi.md`, read in two parts. Then a blind reviewer and a settler
+per batch, and a fresh reviewer for each batch with a *wrong* finding.
 
-- Writers report a missing kept word, such as an Italian mark's word, and the session adds it to the
-  `hi` list in `src/i18n/typography.ts`. A writer never edits that shared file.
-- Brief each writer on § 8: a form that changes picks by `n === 1` where 0 can show.
-- A settler per batch applies the findings, so the session's context stays small.
+- Brief each writer and reviewer on the traps this stage met. `ऊँचा`/`नीचा` never qualifies a note
+  (§ 7). `तेज़` or `धीरे` alone never means a speed (§ 5's tempo row). A pronoun must not point at the
+  wrong key, and a demo must not give a quiz away.
+- Copy the recurring steps' wording, such as "Play the whole song", from the first batch into the
+  next briefs, as `translation.md` § *Before a locale ships* asks.
+- A writer adds a missing Latin title to `SONG_NAMES` in `src/i18n/typography.ts` only through the
+  session, which edits that shared file.
+- `bun tools/make-our-songs.ts` writes the guides once all three batches are settled.
 
 Expected red: none.
 
 ### Backlog
 
-- A native Hindi speaker's read of the course would catch what a blind review cannot.
+- A native Hindi speaker's read of the course would catch what a blind review cannot. Start with
+  *High and low* in `src/learn/lessons/meet-the-piano/high-and-low.hi.ts`, whose `पिच` and `मोटी`/`पतली
+  आवाज़` are a reviewer's choice.
 - An Indian piano teacher's read of the glossary's notation loanwords, and of `स्केल` for a song's key.

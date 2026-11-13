@@ -116,6 +116,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A writing subagent that starts its own subagents can hand back while they still edit.** Its report
   then says nothing landed, and a second writer sent to the same files collides with them. Tell every
   writer never to start a subagent, and split a large sweep such as `tools/our-songs/` across writers yourself.
+- **A lesson writer's green rules test proves nothing about its own files.** `loadUnits` in `tools/i18n.ts`
+  finds a world's translations through its `index.ts`, which the session edits after the writers end.
+  Add the locale's line to each `index.ts` first, or run the rules test again once it is there.
 
 ## Rendering
 

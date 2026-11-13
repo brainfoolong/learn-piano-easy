@@ -61,6 +61,8 @@ Warm, plain and short, as a good teacher speaks. Prefer the everyday word: `क�
 
 The second row's `चूक गए` is the honorific plural of § 4, which is how a teacher speaks to `आप`.
 
+"Well done." is `बहुत बढ़िया।` in every lesson, with the danda of the calm English.
+
 ## 4. Gender
 
 Hindi verbs, participles and many adjectives agree with the gender of their subject. The text keeps the
@@ -102,11 +104,14 @@ collection. AN is Android's `values-hi` strings.
 | grand staff | ग्रैंड स्टाफ़ | MB, one source |
 | treble clef, bass clef | ट्रेबल क्लेफ़, बेस क्लेफ़ | BingeStudy; MB writes `ट्रेबल`, `बास` |
 | ledger line | लेजर लाइन | unsourced, the English term |
+| line, space (of the staff) | लाइन, feminine; स्पेस, masculine | unsourced, the English terms, as `लेजर लाइन` |
+| step, skip (on the staff) | कदम, छलाँग, as on the keys | follows the nouns' row below |
 | landmark (a note read at a glance) | पहचान वाला नोट | the course's own term, defined where it first appears |
 | bar | माप: `माप 3`, `तीसरा माप` | MB; the Piano-LED-Visualizer strings. `बार` is avoided, since it also means "time" |
 | bar line | माप रेखा | follows `माप`, unsourced |
 | time signature | टाइम सिग्नेचर | unsourced; `ताल चिह्न` and `समय स्वर चिह्न` are rare coinages |
-| beat (one count of a bar) | बीट: `हर माप में तीन बीट` | WP *ब्लूज़*; MB; MT |
+| beat (one count of a bar) | बीट, feminine: `हर माप में तीन बीट`, `आधी बीट` | WP *ब्लूज़*; MB; MT |
+| hold for two beats; through the next beat | दो बीट तक दबाए रखें; अगली बीट पूरी होने तक | the course's own terms. `अगली बीट तक` alone reads as until it starts |
 | the beat (the steady pulse) | बीट | as above |
 | three-four time | 3/4 टाइम | follows `टाइम सिग्नेचर` |
 | count-in | शुरुआती गिनती | everyday word, unsourced |
@@ -128,7 +133,7 @@ collection. AN is Android's `values-hi` strings.
 | scale | स्केल | WP *ब्लूज़*; MB; SE |
 | major, minor | मेजर, माइनर | WP *ब्लूज़*; MB; SE |
 | key (of a song) | स्केल: `यह गाना G मेजर स्केल में है` | the everyday Indian use, unsourced; see *Open* |
-| key signature | की सिग्नेचर | unsourced, the English term |
+| key signature | की सिग्नेचर, feminine | unsourced, the English term |
 | scale degree | डिग्री: `पाँचवीं डिग्री` | unsourced |
 | chord | कॉर्ड | WP *स्वर-संगति*; MB; SE |
 | triad; major, minor triad | ट्रायड; मेजर ट्रायड, माइनर ट्रायड | WP *स्वर-संगति* writes `प्रमुख त्रय`, which this guide does not follow |
@@ -143,6 +148,7 @@ collection. AN is Android's `values-hi` strings.
 | major third, minor third | मेजर थर्ड, माइनर थर्ड | WP *स्वर-संगति*; WP *ब्लूज़* |
 | open fifth | ओपन फ़िफ़्थ | follows the row above |
 | step, skip (between keys) | बगल वाली कुंजी पर जाना, एक कुंजी छोड़कर जाना | everyday words |
+| a step, a skip, a leap (nouns) | कदम, छलाँग, बड़ी छलाँग | everyday words; a lesson defines each by the row above |
 | tune, melody | धुन | WP *धुन*; MB |
 | phrase | धुन का टुकड़ा | everyday words, unsourced |
 | call and answer (phrases) | सवाल-जवाब | everyday word, unsourced |
@@ -157,6 +163,9 @@ collection. AN is Android's `values-hi` strings.
 | hairpin | हेयरपिन चिह्न | unsourced |
 | mark (p, f, rit.) | चिह्न | WP *संगीत सिद्धांत* |
 | fermata | फ़र्माटा | unsourced, the Italian term |
+| hold (a fermata's note) | खींचना: `नोट को थोड़ा देर तक खींचें` | everyday word. `रोकना` reads as stop |
+| hold (the pedal holds the notes) | थामना: `पेडल नोटों को थामे रखता है` | everyday word. `रोकना` reads as stop |
+| fast, slow (tempo); speed up | तेज़ स्पीड से, धीमी स्पीड से; स्पीड बढ़ाना | everyday words. `तेज़` alone also means loud, so tempo takes `स्पीड` |
 | slow down, back in time | धीरे-धीरे धीमा करना, फिर पहले वाली गति | everyday words |
 | turn (ornament) | टर्न | unsourced, the English term |
 | double notes | डबल नोट | unsourced |
@@ -340,6 +349,8 @@ collection. AN is Android's `values-hi` strings.
 - **The octave number is scientific:** middle C is `C4`. A lesson names a note by its place, as the
   English does: `मध्य C`.
 - **"Low C" is `नीचे वाला C`, and "high C" is `ऊपर वाला C`.** `ऊँचा` and `नीचा` would read as loud and soft.
+  A note or a key named by its place takes `ऊपर वाला` or `नीचे वाला`. A sound's height is `ऊँची पिच` or
+  `नीची पिच`. `ऊँचा` or `नीचा` never qualifies a note, a key or `आवाज़`.
 - **A key is its letter and its quality:** `C मेजर`, `A माइनर`. A chord adds `कॉर्ड`: `C कॉर्ड`,
   `A माइनर कॉर्ड`.
 - **A spelled-out chord lists its letters with commas:** `C, E और G`.
