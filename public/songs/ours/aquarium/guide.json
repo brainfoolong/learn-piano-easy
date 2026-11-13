@@ -5,12 +5,14 @@
   "about": {
     "en": "Aquarium is the seventh movement of The Carnival of the Animals, a musical joke Saint-Saëns wrote in 1886. The suite was published in 1922, the year after his death. Terrence Malick's 1978 film Days of Heaven plays it under its opening credits.",
     "de": "Aquarium ist der siebte Satz aus Der Karneval der Tiere, einem musikalischen Scherz, den Saint-Saëns 1886 schrieb. Die Suite erschien 1922, im Jahr nach seinem Tod. Terrence Malicks Film Days of Heaven von 1978 spielt den Satz zum Vorspann.",
-    "es": "Aquarium es el séptimo movimiento de El carnaval de los animales, una broma musical que Saint-Saëns escribió en 1886. La suite se publicó en 1922, un año después de su muerte. La película de 1978 de Terrence Malick, Days of Heaven, la usa en sus créditos iniciales."
+    "es": "Aquarium es el séptimo movimiento de El carnaval de los animales, una broma musical que Saint-Saëns escribió en 1886. La suite se publicó en 1922, un año después de su muerte. La película de 1978 de Terrence Malick, Days of Heaven, la usa en sus créditos iniciales.",
+    "zh": "《水族馆》是《动物狂欢节》的第七首。《动物狂欢节》是圣桑在 1886 年写的一个音乐玩笑。这部组曲在 1922 年出版，那是他去世的次年。泰伦斯·马力克 1978 年的电影《天堂之日》，片头字幕下放的就是它。"
   },
   "funFact": {
     "en": "Saint-Saëns banned public performances of the suite while he lived, fearing its jokes would harm his name as a serious composer.",
     "de": "Saint-Saëns verbot öffentliche Aufführungen der Suite zu Lebzeiten, weil er fürchtete, ihre Scherze würden seinem Ruf als ernster Komponist schaden.",
-    "es": "Mientras vivió, Saint-Saëns prohibió tocar la suite en público, por miedo a que sus bromas dañaran su fama de compositor serio."
+    "es": "Mientras vivió, Saint-Saëns prohibió tocar la suite en público, por miedo a que sus bromas dañaran su fama de compositor serio.",
+    "zh": "圣桑在世时禁止公开演出这部组曲，因为他担心里面的玩笑会损害他作为严肃作曲家的名声。"
   },
   "mythic": null,
   "versions": {
@@ -33,7 +35,8 @@
           "text": {
             "en": "Play the first four bars with the right hand alone, and let the song wait for each note.",
             "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten.",
-            "es": "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota."
+            "es": "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota.",
+            "zh": "只用右手弹前四个小节，让歌曲等你弹每个音。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -44,7 +47,8 @@
           "text": {
             "en": "Play bars 5 to 8 with the right hand alone. The thumb now starts on B.",
             "de": "Spiel die Takte 5 bis 8 nur mit der rechten Hand. Der Daumen beginnt jetzt auf dem H.",
-            "es": "Toca los compases 5 a 8 con la mano derecha sola. Ahora el pulgar empieza en el si."
+            "es": "Toca los compases 5 a 8 con la mano derecha sola. Ahora el pulgar empieza en el si.",
+            "zh": "只用右手弹第 5～8 小节。现在拇指从 B 开始。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -55,7 +59,8 @@
           "text": {
             "en": "Now the left hand alone. It holds one shape for each whole bar.",
             "de": "Jetzt die linke Hand allein. Sie hält jeden Griff einen ganzen Takt lang.",
-            "es": "Ahora la mano izquierda sola. Mantiene cada forma durante un compás entero."
+            "es": "Ahora la mano izquierda sola. Mantiene cada forma durante un compás entero.",
+            "zh": "现在只用左手。每个手型保持一整个小节。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -66,7 +71,8 @@
           "text": {
             "en": "Put both hands together on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
-            "es": "Junta las dos manos en los primeros ocho compases, despacio."
+            "es": "Junta las dos manos en los primeros ocho compases, despacio.",
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -77,7 +83,8 @@
           "text": {
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Stück mit beiden Händen im vollen Tempo.",
-            "es": "Toca toda la canción con las dos manos juntas a velocidad completa."
+            "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
+            "zh": "双手合奏，用原速弹完整首曲子。"
           },
           "hands": "both",
           "speed": 1,
@@ -93,7 +100,8 @@
           "text": {
             "en": "Fingers 5 and 4 rock between E and D sharp, like water lapping at glass.",
             "de": "Finger 5 und 4 schaukeln zwischen E und Dis, wie Wasser, das an Glas plätschert.",
-            "es": "Los dedos 5 y 4 se mecen entre el mi y el re sostenido, como agua que golpea suavemente un vidrio."
+            "es": "Los dedos 5 y 4 se mecen entre el mi y el re sostenido, como agua que golpea suavemente un vidrio.",
+            "zh": "5 指和 4 指在 E 和升 D 之间来回弹，就像水轻轻拍打着玻璃。"
           }
         },
         {
@@ -103,7 +111,8 @@
           "text": {
             "en": "Play softly and smoothly, as if fish glide through still water.",
             "de": "Spiel leise und weich, als ob Fische durch stilles Wasser gleiten.",
-            "es": "Toca suave y ligado, como peces que se deslizan por agua tranquila."
+            "es": "Toca suave y ligado, como peces que se deslizan por agua tranquila.",
+            "zh": "弹得轻柔、连贯，好像鱼儿在静水中滑过。"
           }
         },
         {
@@ -113,7 +122,8 @@
           "text": {
             "en": "The hand moves up one key here. Finger 4 now plays E, and the thumb waits over B.",
             "de": "Hier rückt die Hand eine Taste höher. Finger 4 spielt jetzt das E, und der Daumen wartet über dem H.",
-            "es": "Aquí la mano sube una tecla. Ahora el dedo 4 toca el mi, y el pulgar espera sobre el si."
+            "es": "Aquí la mano sube una tecla. Ahora el dedo 4 toca el mi, y el pulgar espera sobre el si.",
+            "zh": "这里手往上移一个琴键。现在 4 指弹 E，拇指在 B 上方等着。"
           }
         }
       ],
@@ -123,7 +133,8 @@
           "text": {
             "en": "During the long B, move the hand back down. The thumb returns to A, and finger 5 takes E.",
             "de": "Führ die Hand während des langen H wieder hinab. Der Daumen kehrt zum A zurück, und Finger 5 nimmt das E.",
-            "es": "Durante el si largo, vuelve a bajar la mano. El pulgar regresa al la, y el dedo 5 toma el mi."
+            "es": "Durante el si largo, vuelve a bajar la mano. El pulgar regresa al la, y el dedo 5 toma el mi.",
+            "zh": "在长长的 B 响着时，把手移回下面。拇指回到 A，5 指弹 E。"
           }
         },
         {
@@ -131,7 +142,8 @@
           "text": {
             "en": "Rock between E and D sharp with fingers 5 and 4. Then finger 4 slides to the white D.",
             "de": "Schaukle mit Finger 5 und 4 zwischen E und Dis. Dann rutscht Finger 4 auf das weiße D.",
-            "es": "Alterna entre el mi y el re sostenido con los dedos 5 y 4. Luego el dedo 4 se desliza al re de la tecla blanca."
+            "es": "Alterna entre el mi y el re sostenido con los dedos 5 y 4. Luego el dedo 4 se desliza al re de la tecla blanca.",
+            "zh": "用 5 指和 4 指在 E 和升 D 之间来回弹。然后 4 指滑到白键 D 上。"
           }
         },
         {
@@ -139,7 +151,8 @@
           "text": {
             "en": "Bar 3 is bar 1 again. Keep finger 4 close to the black key, so D sharp comes easily.",
             "de": "Takt 3 ist wieder Takt 1. Halt Finger 4 nah an der schwarzen Taste, dann kommt das Dis leicht.",
-            "es": "El compás 3 es otra vez el compás 1. Mantén el dedo 4 cerca de la tecla negra, para que el re sostenido salga fácil."
+            "es": "El compás 3 es otra vez el compás 1. Mantén el dedo 4 cerca de la tecla negra, para que el re sostenido salga fácil.",
+            "zh": "第 3 小节和第 1 小节一样。让 4 指靠近黑键，这样升 D 就容易弹到。"
           }
         }
       ]
@@ -163,7 +176,8 @@
           "text": {
             "en": "Play the left hand alone. It steps between a low note and a higher one, on every beat.",
             "de": "Spiel die linke Hand allein. Sie wechselt auf jedem Schlag zwischen einem tiefen und einem höheren Ton.",
-            "es": "Toca la mano izquierda sola. Pasa de una nota grave a una más aguda, en cada tiempo."
+            "es": "Toca la mano izquierda sola. Pasa de una nota grave a una más aguda, en cada tiempo.",
+            "zh": "只用左手弹。它每拍都在一个低音和一个高一点的音之间来回。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -174,7 +188,8 @@
           "text": {
             "en": "Play the right hand alone on the first eight bars, and let the song wait for each note.",
             "de": "Spiel die ersten acht Takte nur mit der rechten Hand, und lass das Stück auf jeden Ton warten.",
-            "es": "Toca la mano derecha sola en los primeros ocho compases, y deja que la canción espere cada nota."
+            "es": "Toca la mano derecha sola en los primeros ocho compases, y deja que la canción espere cada nota.",
+            "zh": "只用右手弹前八个小节，让歌曲等你弹每个音。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -185,7 +200,8 @@
           "text": {
             "en": "Join the hands on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
-            "es": "Junta las manos en los primeros ocho compases, despacio."
+            "es": "Junta las manos en los primeros ocho compases, despacio.",
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -196,7 +212,8 @@
           "text": {
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Stück mit beiden Händen, etwas langsamer als notiert.",
-            "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito."
+            "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
+            "zh": "双手合奏整首曲子，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -207,7 +224,8 @@
           "text": {
             "en": "Now play it at full speed.",
             "de": "Jetzt spiel es im vollen Tempo.",
-            "es": "Ahora tócala a velocidad completa."
+            "es": "Ahora tócala a velocidad completa.",
+            "zh": "现在用原速弹。"
           },
           "hands": "both",
           "speed": 1,
@@ -223,7 +241,8 @@
           "text": {
             "en": "Both hands play on every beat. Keep the beats as even as slow waves.",
             "de": "Beide Hände spielen auf jedem Schlag. Halt die Schläge so gleichmäßig wie langsame Wellen.",
-            "es": "Las dos manos tocan en cada tiempo. Mantén los tiempos tan parejos como olas lentas."
+            "es": "Las dos manos tocan en cada tiempo. Mantén los tiempos tan parejos como olas lentas.",
+            "zh": "两只手每拍都要弹。让拍子像缓慢的波浪一样均匀。"
           }
         },
         {
@@ -233,7 +252,8 @@
           "text": {
             "en": "Keep the left hand soft, so the tune floats above it.",
             "de": "Spiel die linke Hand leise, damit die Melodie darüber schwebt.",
-            "es": "Mantén suave la mano izquierda, para que la melodía flote encima."
+            "es": "Mantén suave la mano izquierda, para que la melodía flote encima.",
+            "zh": "左手弹得轻一点，让旋律飘在它上面。"
           }
         },
         {
@@ -243,7 +263,8 @@
           "text": {
             "en": "End with A and C together. Fingers 1 and 3 press them as one.",
             "de": "Am Ende spielst du A und C zusammen. Finger 1 und 3 drücken sie wie einen Ton.",
-            "es": "Termina con el la y el do a la vez. Los dedos 1 y 3 los presionan como si fueran una sola nota."
+            "es": "Termina con el la y el do a la vez. Los dedos 1 y 3 los presionan como si fueran una sola nota.",
+            "zh": "最后同时弹 A 和 C。1 指和 3 指像弹一个音那样把它们按下。"
           }
         }
       ],
@@ -253,7 +274,8 @@
           "text": {
             "en": "During the long B, move the right hand back down, so the thumb is on A again.",
             "de": "Führ die rechte Hand während des langen H wieder hinab, damit der Daumen wieder auf dem A liegt.",
-            "es": "Durante el si largo, vuelve a bajar la mano derecha, para que el pulgar quede otra vez en el la."
+            "es": "Durante el si largo, vuelve a bajar la mano derecha, para que el pulgar quede otra vez en el la.",
+            "zh": "在长长的 B 响着时，把右手移回下面，让拇指重新放在 A 上。"
           }
         },
         {
@@ -261,7 +283,8 @@
           "text": {
             "en": "Rock between E and D sharp with fingers 5 and 4, while the left hand steps between A and C.",
             "de": "Schaukle mit Finger 5 und 4 zwischen E und Dis, während die linke Hand zwischen A und C wechselt.",
-            "es": "Alterna entre el mi y el re sostenido con los dedos 5 y 4, mientras la mano izquierda pasa del la al do."
+            "es": "Alterna entre el mi y el re sostenido con los dedos 5 y 4, mientras la mano izquierda pasa del la al do.",
+            "zh": "用 5 指和 4 指在 E 和升 D 之间来回弹，同时左手在 A 和 C 之间来回。"
           }
         },
         {
@@ -269,7 +292,8 @@
           "text": {
             "en": "As in bar 1, fingers 5 and 4 rock between E and D sharp. Then finger 4 takes the white D.",
             "de": "Wie in Takt 1 schaukeln Finger 5 und 4 zwischen E und Dis. Dann nimmt Finger 4 das weiße D.",
-            "es": "Como en el compás 1, los dedos 5 y 4 se mecen entre el mi y el re sostenido. Luego el dedo 4 toma el re de la tecla blanca."
+            "es": "Como en el compás 1, los dedos 5 y 4 se mecen entre el mi y el re sostenido. Luego el dedo 4 toma el re de la tecla blanca.",
+            "zh": "和第 1 小节一样，5 指和 4 指在 E 和升 D 之间来回弹。然后 4 指弹白键 D。"
           }
         }
       ]
@@ -294,7 +318,8 @@
           "text": {
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
-            "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo."
+            "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
+            "zh": "单独练阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -305,7 +330,8 @@
           "text": {
             "en": "Play the right hand's pairs alone from bar 17, and press both notes of each pair as one.",
             "de": "Spiel die Paare der rechten Hand ab Takt 17 allein, und drück beide Töne jedes Paars wie einen an.",
-            "es": "Toca solos los pares de la mano derecha desde el compás 17, y presiona las dos notas de cada par como si fueran una."
+            "es": "Toca solos los pares de la mano derecha desde el compás 17, y presiona las dos notas de cada par como si fueran una.",
+            "zh": "从第 17 小节起只用右手弹双音，每对双音的两个音要像一个音那样同时按下。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -316,7 +342,8 @@
           "text": {
             "en": "Join the hands on the first eight bars, slowly.",
             "de": "Spiel die ersten acht Takte langsam mit beiden Händen zusammen.",
-            "es": "Junta las manos en los primeros ocho compases, despacio."
+            "es": "Junta las manos en los primeros ocho compases, despacio.",
+            "zh": "双手一起慢慢弹前八个小节。"
           },
           "hands": "both",
           "speed": 0.5,
@@ -327,7 +354,8 @@
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
-            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad."
+            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
+            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -338,7 +366,8 @@
           "text": {
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
-            "es": "Ahora tócala a velocidad completa, con el pedal."
+            "es": "Ahora tócala a velocidad completa, con el pedal.",
+            "zh": "现在加上踏板，用原速弹。"
           },
           "hands": "both",
           "speed": 1,
@@ -354,7 +383,8 @@
           "text": {
             "en": "Change the pedal on each new bar, so the water stays clear.",
             "de": "Wechsle das Pedal in jedem neuen Takt, damit das Wasser klar bleibt.",
-            "es": "Cambia el pedal en cada compás nuevo, para que el agua siga clara."
+            "es": "Cambia el pedal en cada compás nuevo, para que el agua siga clara.",
+            "zh": "每到新的小节就换一次踏板，让水保持清澈。"
           }
         },
         {
@@ -364,7 +394,8 @@
           "text": {
             "en": "The left hand keeps its low finger near A. It only shifts to G sharp for the E chord.",
             "de": "Der tiefe Finger der linken Hand bleibt nah am A. Nur für den E-Dur-Akkord rückt er zum Gis.",
-            "es": "La mano izquierda mantiene el dedo de la nota grave cerca del la. Solo se mueve al sol sostenido para el acorde de mi."
+            "es": "La mano izquierda mantiene el dedo de la nota grave cerca del la. Solo se mueve al sol sostenido para el acorde de mi.",
+            "zh": "左手最下面的手指一直留在 A 附近。只有弹 E 和弦时，它才移到升 G。"
           }
         },
         {
@@ -374,7 +405,8 @@
           "text": {
             "en": "The tune is the top note of each pair, so let the upper finger lead.",
             "de": "Die Melodie ist der obere Ton jedes Paars, also lass den oberen Finger führen.",
-            "es": "La melodía es la nota de arriba de cada par, así que deja que el dedo de arriba guíe."
+            "es": "La melodía es la nota de arriba de cada par, así que deja que el dedo de arriba guíe.",
+            "zh": "旋律是每对双音里上面的那个音，所以让上面的手指来带领。"
           }
         }
       ],
@@ -384,7 +416,8 @@
           "text": {
             "en": "Hold G sharp and B with fingers 1 and 3. Then spread the hand over A, C and E for the last chord.",
             "de": "Halt Gis und H mit Finger 1 und 3. Dann spann die Hand für den letzten Akkord über A, C und E.",
-            "es": "Mantén el sol sostenido y el si con los dedos 1 y 3. Luego abre la mano sobre el la, el do y el mi para el último acorde."
+            "es": "Mantén el sol sostenido y el si con los dedos 1 y 3. Luego abre la mano sobre el la, el do y el mi para el último acorde.",
+            "zh": "用 1 指和 3 指按住升 G 和 B。然后张开手按住 A、C、E，弹最后一个和弦。"
           }
         },
         {
@@ -392,7 +425,8 @@
           "text": {
             "en": "Move the right hand back down during the long B. Then it runs down from E to A with fingers 5 to 1.",
             "de": "Führ die rechte Hand während des langen H wieder hinab. Dann läuft sie mit Finger 5 bis 1 vom E hinunter zum A.",
-            "es": "Durante el si largo, vuelve a bajar la mano derecha. Luego baja corriendo del mi al la con los dedos 5 a 1."
+            "es": "Durante el si largo, vuelve a bajar la mano derecha. Luego baja corriendo del mi al la con los dedos 5 a 1.",
+            "zh": "在长长的 B 响着时，把右手移回下面。然后用 5～1 指从 E 往下跑到 A。"
           }
         },
         {
@@ -400,7 +434,8 @@
           "text": {
             "en": "The left hand reaches down to G sharp. The right hand plays B, D, C and B with fingers 2, 4, 3 and 2.",
             "de": "Die linke Hand greift hinunter zum Gis. Die rechte Hand spielt H, D, C und H mit Finger 2, 4, 3 und 2.",
-            "es": "La mano izquierda se estira hacia abajo hasta el sol sostenido. La mano derecha toca el si, el re, el do y el si con los dedos 2, 4, 3 y 2."
+            "es": "La mano izquierda se estira hacia abajo hasta el sol sostenido. La mano derecha toca el si, el re, el do y el si con los dedos 2, 4, 3 y 2.",
+            "zh": "左手往下够到升 G。右手用 2、4、3、2 指弹 B、D、C、B。"
           }
         }
       ]
@@ -425,7 +460,8 @@
           "text": {
             "en": "Play the left hand alone: an octave on the beat, then a chord, each with a short rest to jump.",
             "de": "Spiel die linke Hand allein: eine Oktave auf dem Schlag, dann einen Akkord, jeweils mit einer kurzen Pause zum Springen.",
-            "es": "Toca la mano izquierda sola: una octava en el pulso y luego un acorde, cada uno con un silencio corto para saltar."
+            "es": "Toca la mano izquierda sola: una octava en el pulso y luego un acorde, cada uno con un silencio corto para saltar.",
+            "zh": "只用左手弹：在拍子上弹一个八度，再弹一个和弦，每次都有一个短休止让你跳过去。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -436,7 +472,8 @@
           "text": {
             "en": "Play the left hand's arpeggios alone. The thumb passes under, and finger 3 crosses over.",
             "de": "Spiel die Arpeggios der linken Hand allein. Der Daumen geht unter, und Finger 3 kreuzt darüber.",
-            "es": "Toca solos los arpegios de la mano izquierda. El pulgar pasa por debajo, y el dedo 3 cruza por encima."
+            "es": "Toca solos los arpegios de la mano izquierda. El pulgar pasa por debajo, y el dedo 3 cruza por encima.",
+            "zh": "只用左手弹琶音。拇指从下面穿过去，3 指从上面跨过来。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -447,7 +484,8 @@
           "text": {
             "en": "Play the right hand's chords alone, and let the top finger sing the tune.",
             "de": "Spiel die Akkorde der rechten Hand allein, und lass den obersten Finger die Melodie singen.",
-            "es": "Toca solos los acordes de la mano derecha, y deja que el dedo de arriba cante la melodía."
+            "es": "Toca solos los acordes de la mano derecha, y deja que el dedo de arriba cante la melodía.",
+            "zh": "只用右手弹和弦，让最上面的手指唱出旋律。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -458,7 +496,8 @@
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Stück mit beiden Händen in Dreiviertel-Tempo.",
-            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad."
+            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
+            "zh": "双手合奏，用四分之三速度弹完整首曲子。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -469,7 +508,8 @@
           "text": {
             "en": "Now play it at full speed, and let the last chord ring.",
             "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
-            "es": "Ahora tócala a velocidad completa, y deja sonar el último acorde."
+            "es": "Ahora tócala a velocidad completa, y deja sonar el último acorde.",
+            "zh": "现在用原速弹，让最后一个和弦的声音延续下去。"
           },
           "hands": "both",
           "speed": 1,
@@ -485,7 +525,8 @@
           "text": {
             "en": "Use the short rest after each octave and chord to jump to the next one.",
             "de": "Nutz die kurze Pause nach jeder Oktave und jedem Akkord, um zum nächsten Griff zu springen.",
-            "es": "Aprovecha el silencio corto después de cada octava y cada acorde para saltar al siguiente."
+            "es": "Aprovecha el silencio corto después de cada octava y cada acorde para saltar al siguiente.",
+            "zh": "利用每个八度和每个和弦后面的短休止，跳到下一个位置。"
           }
         },
         {
@@ -495,7 +536,8 @@
           "text": {
             "en": "Let the arpeggios ripple softly, like light moving through water.",
             "de": "Lass die Arpeggios leise perlen, wie Licht, das durch Wasser fällt.",
-            "es": "Deja que los arpegios ondulen suaves, como luz que se mueve en el agua."
+            "es": "Deja que los arpegios ondulen suaves, como luz que se mueve en el agua.",
+            "zh": "让琶音轻轻地荡漾开来，就像光穿过水面。"
           }
         },
         {
@@ -505,7 +547,8 @@
           "text": {
             "en": "Play the top note of each chord a little louder than the others.",
             "de": "Spiel den oberen Ton jedes Akkords etwas lauter als die anderen.",
-            "es": "Toca la nota de arriba de cada acorde un poco más fuerte que las demás."
+            "es": "Toca la nota de arriba de cada acorde un poco más fuerte que las demás.",
+            "zh": "每个和弦最上面的音要比其他音稍响一点。"
           }
         }
       ],
@@ -515,7 +558,8 @@
           "text": {
             "en": "Lift the right hand in the short rest after E, G sharp and B. It lands on A, C, E and A.",
             "de": "Heb die rechte Hand in der kurzen Pause nach E, Gis und H. Sie landet auf A, C, E und A.",
-            "es": "Levanta la mano derecha en el silencio corto después del mi, el sol sostenido y el si. La mano llega al la, al do, al mi y al la."
+            "es": "Levanta la mano derecha en el silencio corto después del mi, el sol sostenido y el si. La mano llega al la, al do, al mi y al la.",
+            "zh": "弹完 E、升 G、B 后，在短休止里把右手抬起。它落在 A、C、E、A 上。"
           }
         },
         {
@@ -523,7 +567,8 @@
           "text": {
             "en": "The left hand jumps from the low E octave up to G sharp, B and E. Use each short rest to land.",
             "de": "Die linke Hand springt von der tiefen E-Oktave hinauf zu Gis, H und E. Nutz jede kurze Pause zum Landen.",
-            "es": "La mano izquierda salta de la octava de mi grave hasta el sol sostenido, el si y el mi. Aprovecha cada silencio corto para llegar."
+            "es": "La mano izquierda salta de la octava de mi grave hasta el sol sostenido, el si y el mi. Aprovecha cada silencio corto para llegar.",
+            "zh": "左手从低音 E 的八度往上跳到升 G、B、E。利用每个短休止落到位。"
           }
         },
         {
@@ -531,7 +576,8 @@
           "text": {
             "en": "After the high chord, the right hand drops to C, E and A. Keep the hand in its chord shape.",
             "de": "Nach dem hohen Akkord fällt die rechte Hand auf C, E und A. Halt die Hand in ihrer Akkordform.",
-            "es": "Después del acorde agudo, la mano derecha baja al do, el mi y el la. Mantén la mano en la forma del acorde."
+            "es": "Después del acorde agudo, la mano derecha baja al do, el mi y el la. Mantén la mano en la forma del acorde.",
+            "zh": "弹完高处的和弦，右手落到 C、E、A 上。手保持和弦的手型。"
           }
         }
       ]

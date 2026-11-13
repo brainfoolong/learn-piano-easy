@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in Chinese, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in Chinese, from n to z"
     status: open
@@ -139,13 +139,13 @@ blind.
 ### 4. The song guides in Chinese, from a to m
 
 **Does:** the guide of every song whose slug starts with a letter from a to m.
-**Split:** a read-only `Explore` subagent lists those slugs. Three writing subagents take a third each,
-side by side, and three fresh reviewers review them blind.
+**Split:** four writing subagents take about 13 slugs each, side by side, and four fresh `reader`
+subagents review them blind. Thirteen guides fill about 120k tokens of a writer's context.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.zh.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.zh.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp zh` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+- [x] One `tools/our-songs/<slug>.zh.ts` per slug from `air-on-the-g-string` to `mozart-21-andante`. `tools/our-songs/alle-jahre-wieder.zh.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp zh` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
 
 ### 5. The song guides in Chinese, from n to z
 
@@ -153,7 +153,7 @@ side by side, and three fresh reviewers review them blind.
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.zh.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.zh.ts:1`
+- [ ] One `tools/our-songs/<slug>.zh.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.zh.ts:1`
 - [ ] Each batch reviewed blind, and every finding settled.
 - [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp zh` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
@@ -183,30 +183,33 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 3 are done. Every catalog section and every lesson of the eight worlds has its `.zh.ts`
-file, reviewed blind and stamped in `src/i18n/stamps/zh.json`. Each world's `index.ts` loads
-`texts.zh.ts` as its own chunk. The status lists only deliberate copies as missing, such as quiz answers
-made of note letters. The eight lesson reviews found three *wrong* texts, and each is settled.
+Stages 1 to 4 are done. Every catalog section, every lesson and the 51 guides from
+`air-on-the-g-string` to `mozart-21-andante` have their `.zh.ts` file, reviewed blind and stamped in
+`src/i18n/stamps/zh.json`. `public/songs/ours/<slug>/guide.json` holds their Chinese.
 
-The guide gained three rules: a count's "and" is `哒`, a boss's title puts its song in `《》`, and the
-Italian word behind a mark stays in Latin letters. The `kept` list of `src/i18n/typography.ts` gained
-those Italian words and `rall.`, `decresc.`.
+The four guide reviews found 22 findings, three of them *wrong*, and each is settled. The film *The Bad
+News Bears* keeps its Latin title, for want of a sure mainland one. *Lacrimosa* keeps the library's title.
+
+The `kept` list of `src/i18n/typography.ts` gained the guides' Latin titles and names, about 110 of them.
+A kept word is masked in list order, so a longer form stands before a shorter one it holds, such as
+`R. R. Terry` before `Terry`. `Carol`, `Noel` and `o` stand last, after `Carol of the Bells`.
 
 ### Next
 
-**Stage 4: the song guides from a to m.** Run `bun tools/i18n.ts work zh guide/<slug>` for each slug.
-Each guide's text is `tools/our-songs/<slug>.zh.ts`, beside its `.es.ts`. Adapt the lesson briefs
-`.agent-tmp/i18n/zh/lesson-writer-brief.md` and `lesson-reviewer-brief.md` for guides, as
-`.agent-tmp/i18n/es/guide-writer-brief.md` did for Spanish.
+**Stage 5: the song guides from n to z,** 29 slugs from `neon-chase` to `yankee-doodle`. Run
+`bun tools/i18n.ts work zh guide/<slug>` for each. The briefs are written:
+`.agent-tmp/i18n/zh/guide-writer-brief.md` and `guide-reviewer-brief.md`. Two writers of about 15
+slugs each fit, and two `reader` reviewers.
 
-- **A song in prose takes its Chinese name in `《》`,** as Chinese Wikipedia gives it. A song with none
-  keeps its English title in `《》`, and that title goes in the `kept` list.
-- **A sharp or flat in prose is `升 F` or `降 B`.** Writers kept `F♯` in prose until told, so say it in
-  the brief.
-- **"Higher, lower or the same" is `比第一个高、低，还是一样`.** Writers wrote `更高、更低`, which a
-  review called unnatural.
+- **"A big chord" is `饱满的和弦` or `宽阔的和弦`, never `大和弦`,** which reads as a major chord. Two
+  reviews caught it, so add it to the writer brief.
+- **A film or person with a well-known mainland name takes it:** `卢基诺·维斯康蒂`, `《普通人》`,
+  `《末日经》`. Writers kept some in Latin letters or used a Taiwan title.
+- **List each new Latin word in the `kept` list,** longer forms first. `.agent-tmp/zh-stray-latin.ts`
+  prints each Latin word the list lacks and each mark a text breaks. Delete it when the goal ends.
 
-Expected red: none known. `chinese_texts_keep_their_rules` was not run on the lessons this stage.
+Expected red: none known. `chinese_texts_keep_their_rules` was not run this stage, and the scan
+above found nothing it would refuse.
 
 ### Backlog
 

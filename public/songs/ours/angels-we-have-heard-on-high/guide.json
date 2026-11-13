@@ -5,12 +5,14 @@
   "about": {
     "en": "Angels We Have Heard on High is a traditional French carol. In French it is Les Anges dans nos campagnes, which means The angels in our countryside. Its earliest known printing with words and notes is from 1842, in a collection by Louis Lambillotte. The English words are a paraphrase from 1862 by James Chadwick, the Roman Catholic Bishop of Hexham and Newcastle.",
     "de": "Hört der Engel helle Lieder ist ein traditionelles französisches Weihnachtslied, auf Englisch Angels We Have Heard on High. Auf Französisch heißt es Les Anges dans nos campagnes, das bedeutet Die Engel auf unseren Feldern. Der früheste bekannte Druck mit Text und Noten stammt von 1842, aus einer Sammlung von Louis Lambillotte. Der englische Text ist eine Nachdichtung von 1862 durch James Chadwick, den römisch-katholischen Bischof von Hexham und Newcastle.",
-    "es": "Angels We Have Heard on High es un villancico tradicional francés. En francés se llama Les Anges dans nos campagnes, que significa «Los ángeles en nuestros campos». La edición impresa más antigua que se conoce con letra y música es de 1842, en una colección de Louis Lambillotte. La letra inglesa es una paráfrasis de 1862 de James Chadwick, el obispo católico romano de Hexham y Newcastle."
+    "es": "Angels We Have Heard on High es un villancico tradicional francés. En francés se llama Les Anges dans nos campagnes, que significa «Los ángeles en nuestros campos». La edición impresa más antigua que se conoce con letra y música es de 1842, en una colección de Louis Lambillotte. La letra inglesa es una paráfrasis de 1862 de James Chadwick, el obispo católico romano de Hexham y Newcastle.",
+    "zh": "《Angels We Have Heard on High》是一首传统的法国圣诞颂歌。它的法语名是《Les Anges dans nos campagnes》，意思是“我们田野上的天使”。已知最早同时印有歌词和音符的版本出自 1842 年 Louis Lambillotte 编的一本歌集。英文歌词是 James Chadwick 在 1862 年的意译，他是天主教赫克瑟姆和纽卡斯尔教区的主教。"
   },
   "funFact": {
     "en": "In the refrain Gloria in excelsis Deo, the o of Gloria is held through a long run of notes that rise and fall.",
     "de": "Im Refrain Gloria in excelsis Deo wird das o von Gloria über einen langen Lauf von Tönen gehalten, die steigen und fallen.",
-    "es": "En el estribillo Gloria in excelsis Deo, la o de Gloria se sostiene durante una larga serie de notas que suben y bajan."
+    "es": "En el estribillo Gloria in excelsis Deo, la o de Gloria se sostiene durante una larga serie de notas que suben y bajan.",
+    "zh": "在副歌“Gloria in excelsis Deo”里，Gloria 的 o 要拖过一长串忽高忽低的音。"
   },
   "mythic": null,
   "versions": {
@@ -33,7 +35,8 @@
           "text": {
             "en": "Play the first four bars with the right hand alone, and let the song wait for each note.",
             "de": "Spiel die ersten vier Takte nur mit der rechten Hand, und lass das Lied auf jeden Ton warten.",
-            "es": "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota."
+            "es": "Toca los primeros cuatro compases con la mano derecha sola, y deja que la canción espere cada nota.",
+            "zh": "只用右手弹前四个小节，让歌曲等你弹每个音。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -44,7 +47,8 @@
           "text": {
             "en": "Play the Gloria, bars 5 to 7, with the right hand alone. Let the quick notes rise and fall evenly.",
             "de": "Spiel das Gloria, Takte 5 bis 7, nur mit der rechten Hand. Lass die schnellen Töne gleichmäßig steigen und fallen.",
-            "es": "Toca el Gloria, los compases 5 a 7, con la mano derecha sola. Deja que las notas rápidas suban y bajen parejas."
+            "es": "Toca el Gloria, los compases 5 a 7, con la mano derecha sola. Deja que las notas rápidas suban y bajen parejas.",
+            "zh": "只用右手弹 Gloria 这一段，也就是第 5～7 小节。让快速的音均匀地上行、下行。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -55,7 +59,8 @@
           "text": {
             "en": "Now the left hand alone. It holds one shape for each half bar.",
             "de": "Jetzt die linke Hand allein. Sie hält für jeden halben Takt eine Griffform.",
-            "es": "Ahora la mano izquierda sola. Mantiene una forma en cada medio compás."
+            "es": "Ahora la mano izquierda sola. Mantiene una forma en cada medio compás.",
+            "zh": "现在只用左手。每半个小节保持一个手型。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -66,7 +71,8 @@
           "text": {
             "en": "Put both hands together on the whole song, slowly.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Lied langsam.",
-            "es": "Junta las dos manos en toda la canción, despacio."
+            "es": "Junta las dos manos en toda la canción, despacio.",
+            "zh": "双手一起慢慢弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.7,
@@ -77,7 +83,8 @@
           "text": {
             "en": "Play the whole song with both hands at full speed.",
             "de": "Spiel das ganze Lied mit beiden Händen im vollen Tempo.",
-            "es": "Toca toda la canción con las dos manos juntas a velocidad completa."
+            "es": "Toca toda la canción con las dos manos juntas a velocidad completa.",
+            "zh": "双手合奏，用原速弹完整首歌。"
           },
           "hands": "both",
           "speed": 1,
@@ -93,7 +100,8 @@
           "text": {
             "en": "Start with finger 3 on E. The thumb rests on middle C, and finger 5 on G.",
             "de": "Beginn mit Finger 3 auf dem E. Der Daumen liegt auf dem mittleren C, Finger 5 auf dem G.",
-            "es": "Empieza con el dedo 3 en el mi. El pulgar descansa en el do central, y el dedo 5 en el sol."
+            "es": "Empieza con el dedo 3 en el mi. El pulgar descansa en el do central, y el dedo 5 en el sol.",
+            "zh": "开始时 3 指放在 E 上。拇指放在中央 C 上，5 指放在 G 上。"
           }
         },
         {
@@ -103,7 +111,8 @@
           "text": {
             "en": "Each long note is followed by four quick ones. Count them as one, two, three, four.",
             "de": "Auf jeden langen Ton folgen vier schnelle. Zähl sie als eins, zwei, drei, vier.",
-            "es": "Después de cada nota larga vienen cuatro rápidas. Cuéntalas como uno, dos, tres, cuatro."
+            "es": "Después de cada nota larga vienen cuatro rápidas. Cuéntalas como uno, dos, tres, cuatro.",
+            "zh": "每个长音后面都跟着四个快音。把它们数成“1、2、3、4”。"
           }
         },
         {
@@ -113,7 +122,8 @@
           "text": {
             "en": "Let the last C ring for the whole bar, and lift both hands together.",
             "de": "Lass das letzte C den ganzen Takt klingen, und heb beide Hände zusammen ab.",
-            "es": "Deja sonar el último do durante todo el compás, y levanta las dos manos a la vez."
+            "es": "Deja sonar el último do durante todo el compás, y levanta las dos manos a la vez.",
+            "zh": "让最后的 C 响满整个小节，然后双手一起抬起。"
           }
         }
       ],
@@ -123,7 +133,8 @@
           "text": {
             "en": "From the low G, fingers 2 to 5 climb C, D, E and F, one key each.",
             "de": "Vom tiefen G aus steigen Finger 2 bis 5 über C, D, E und F, je eine Taste.",
-            "es": "Desde el sol grave, los dedos 2 a 5 suben por el do, el re, el mi y el fa, una tecla cada uno."
+            "es": "Desde el sol grave, los dedos 2 a 5 suben por el do, el re, el mi y el fa, una tecla cada uno.",
+            "zh": "从低音 G 开始，2～5 指往上走，依次弹 C、D、E、F，每个手指一个琴键。"
           }
         },
         {
@@ -131,7 +142,8 @@
           "text": {
             "en": "The same climb as bar 7: fingers 2 to 5 on C, D, E and F.",
             "de": "Derselbe Aufstieg wie in Takt 7: Finger 2 bis 5 auf C, D, E und F.",
-            "es": "La misma subida que en el compás 7: los dedos 2 a 5 en el do, el re, el mi y el fa."
+            "es": "La misma subida que en el compás 7: los dedos 2 a 5 en el do, el re, el mi y el fa.",
+            "zh": "和第 7 小节一样往上走：2～5 指弹 C、D、E、F。"
           }
         },
         {
@@ -139,7 +151,8 @@
           "text": {
             "en": "Finger 2 plays D, then the thumb stretches down to the low G. The hand stays where it is.",
             "de": "Finger 2 spielt das D, dann streckt sich der Daumen hinab zum tiefen G. Die Hand bleibt, wo sie ist.",
-            "es": "El dedo 2 toca el re, y luego el pulgar se estira hacia abajo hasta el sol grave. La mano se queda donde está."
+            "es": "El dedo 2 toca el re, y luego el pulgar se estira hacia abajo hasta el sol grave. La mano se queda donde está.",
+            "zh": "2 指弹 D，然后拇指往下张开够到低音 G。手停在原处不动。"
           }
         }
       ]
@@ -162,7 +175,8 @@
           "text": {
             "en": "Play the left hand alone, and press the notes of each chord together.",
             "de": "Spiel die linke Hand allein, und drück die Töne jedes Akkords zusammen an.",
-            "es": "Toca la mano izquierda sola, y presiona juntas las notas de cada acorde."
+            "es": "Toca la mano izquierda sola, y presiona juntas las notas de cada acorde.",
+            "zh": "只用左手弹，把每个和弦的音同时按下。"
           },
           "hands": "left",
           "speed": 0.6,
@@ -173,7 +187,8 @@
           "text": {
             "en": "Play the Gloria, bars 5 to 7, with the right hand alone. Keep the quick notes even.",
             "de": "Spiel das Gloria, Takte 5 bis 7, nur mit der rechten Hand. Halt die schnellen Töne gleichmäßig.",
-            "es": "Toca el Gloria, los compases 5 a 7, con la mano derecha sola. Mantén parejas las notas rápidas."
+            "es": "Toca el Gloria, los compases 5 a 7, con la mano derecha sola. Mantén parejas las notas rápidas.",
+            "zh": "只用右手弹 Gloria 这一段，也就是第 5～7 小节。快速的音要弹得均匀。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -184,7 +199,8 @@
           "text": {
             "en": "Join the hands on the first time through, slowly.",
             "de": "Spiel den ersten Durchgang langsam mit beiden Händen zusammen.",
-            "es": "Junta las manos en la primera vuelta, despacio."
+            "es": "Junta las manos en la primera vuelta, despacio.",
+            "zh": "双手一起慢慢弹第一遍。"
           },
           "hands": "both",
           "speed": 0.6,
@@ -195,7 +211,8 @@
           "text": {
             "en": "Play the whole song with both hands, a little slower than written.",
             "de": "Spiel das ganze Lied mit beiden Händen, etwas langsamer als notiert.",
-            "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito."
+            "es": "Toca toda la canción con las dos manos juntas, un poco más lento de lo escrito.",
+            "zh": "双手合奏整首歌，比谱上写的稍慢一点。"
           },
           "hands": "both",
           "speed": 0.8,
@@ -206,7 +223,8 @@
           "text": {
             "en": "Now play it at full speed.",
             "de": "Jetzt spiel es im vollen Tempo.",
-            "es": "Ahora tócala a velocidad completa."
+            "es": "Ahora tócala a velocidad completa.",
+            "zh": "现在用原速弹。"
           },
           "hands": "both",
           "speed": 1,
@@ -222,7 +240,8 @@
           "text": {
             "en": "The left hand does not move: finger 5 on C, 4 on D, 3 on E, 2 on F and the thumb on G.",
             "de": "Die linke Hand bewegt sich nicht: Finger 5 auf C, 4 auf D, 3 auf E, 2 auf F und der Daumen auf G.",
-            "es": "La mano izquierda no se mueve: el dedo 5 en el do, el 4 en el re, el 3 en el mi, el 2 en el fa y el pulgar en el sol."
+            "es": "La mano izquierda no se mueve: el dedo 5 en el do, el 4 en el re, el 3 en el mi, el 2 en el fa y el pulgar en el sol.",
+            "zh": "左手不用移动：5 指放在 C 上，4 指在 D 上，3 指在 E 上，2 指在 F 上，拇指在 G 上。"
           }
         },
         {
@@ -232,7 +251,8 @@
           "text": {
             "en": "The right hand rests while the left hand plays a G seventh chord. It leads you back to the start.",
             "de": "Die rechte Hand pausiert, während die linke einen G-Septakkord spielt. Er führt dich zurück zum Anfang.",
-            "es": "La mano derecha descansa mientras la izquierda toca un acorde de sol séptima. Te lleva de vuelta al principio."
+            "es": "La mano derecha descansa mientras la izquierda toca un acorde de sol séptima. Te lleva de vuelta al principio.",
+            "zh": "左手弹 G7 和弦时，右手休息。这个和弦把你带回开头。"
           }
         },
         {
@@ -242,7 +262,8 @@
           "text": {
             "en": "The second time, play the low note a little louder than the chord after it.",
             "de": "Spiel beim zweiten Mal den tiefen Ton etwas lauter als den Akkord danach.",
-            "es": "La segunda vez, toca la nota grave un poco más fuerte que el acorde que la sigue."
+            "es": "La segunda vez, toca la nota grave un poco más fuerte que el acorde que la sigue.",
+            "zh": "第二遍时，把低音弹得比后面的和弦稍响一点。"
           }
         }
       ],
@@ -252,7 +273,8 @@
           "text": {
             "en": "Finger 2 plays D, then the thumb stretches down to the low G, while the left hand holds D and F.",
             "de": "Finger 2 spielt das D, dann streckt sich der Daumen hinab zum tiefen G, während die linke Hand D und F hält.",
-            "es": "El dedo 2 toca el re, y luego el pulgar se estira hasta el sol grave, mientras la mano izquierda mantiene el re y el fa."
+            "es": "El dedo 2 toca el re, y luego el pulgar se estira hasta el sol grave, mientras la mano izquierda mantiene el re y el fa.",
+            "zh": "2 指弹 D，然后拇指往下张开够到低音 G，同时左手按住 D 和 F。"
           }
         },
         {
@@ -260,7 +282,8 @@
           "text": {
             "en": "The same notes as bar 6. Keep the right hand still and let the thumb reach down.",
             "de": "Dieselben Töne wie in Takt 6. Halt die rechte Hand ruhig, und lass den Daumen hinabgreifen.",
-            "es": "Las mismas notas que en el compás 6. Mantén quieta la mano derecha y deja que el pulgar se estire hacia abajo."
+            "es": "Las mismas notas que en el compás 6. Mantén quieta la mano derecha y deja que el pulgar se estire hacia abajo.",
+            "zh": "和第 6 小节的音一样。右手保持不动，让拇指往下够。"
           }
         },
         {
@@ -268,7 +291,8 @@
           "text": {
             "en": "Bar 6 once more, now in the second time through. Keep the chords soft under the tune.",
             "de": "Noch einmal Takt 6, jetzt im zweiten Durchgang. Halt die Akkorde unter der Melodie leise.",
-            "es": "Otra vez el compás 6, ahora en la segunda vuelta. Mantén suaves los acordes bajo la melodía."
+            "es": "Otra vez el compás 6, ahora en la segunda vuelta. Mantén suaves los acordes bajo la melodía.",
+            "zh": "又是第 6 小节，这次在第二遍里。旋律下面的和弦要弹得轻。"
           }
         }
       ]
@@ -293,7 +317,8 @@
           "text": {
             "en": "Play the Alberti bass alone until it rolls by itself: low, high, middle, high.",
             "de": "Spiel den Alberti-Bass allein, bis er von selbst rollt: tief, hoch, Mitte, hoch.",
-            "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo."
+            "es": "Toca el bajo de Alberti solo hasta que ruede por sí mismo: grave, agudo, medio, agudo.",
+            "zh": "单独练阿尔贝蒂低音，直到它自然流动起来：低、高、中、高。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -304,7 +329,8 @@
           "text": {
             "en": "Play the broken chords of the second time through with the left hand alone.",
             "de": "Spiel die gebrochenen Akkorde des zweiten Durchgangs nur mit der linken Hand.",
-            "es": "Toca los acordes arpegiados de la segunda vuelta con la mano izquierda sola."
+            "es": "Toca los acordes arpegiados de la segunda vuelta con la mano izquierda sola.",
+            "zh": "只用左手弹第二遍的分解和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -315,7 +341,8 @@
           "text": {
             "en": "Play the high Gloria, bars 16 to 18, with the right hand alone.",
             "de": "Spiel das hohe Gloria, Takte 16 bis 18, nur mit der rechten Hand.",
-            "es": "Toca el Gloria agudo, los compases 16 a 18, con la mano derecha sola."
+            "es": "Toca el Gloria agudo, los compases 16 a 18, con la mano derecha sola.",
+            "zh": "只用右手弹高处的 Gloria，也就是第 16～18 小节。"
           },
           "hands": "right",
           "speed": 0.6,
@@ -326,7 +353,8 @@
           "text": {
             "en": "Play the whole song with both hands at three-quarter speed.",
             "de": "Spiel das ganze Lied mit beiden Händen in Dreiviertel-Tempo.",
-            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad."
+            "es": "Toca toda la canción con las dos manos juntas a tres cuartos de velocidad.",
+            "zh": "双手合奏，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -337,7 +365,8 @@
           "text": {
             "en": "Now play it at full speed, with the pedal.",
             "de": "Jetzt spiel es im vollen Tempo, mit Pedal.",
-            "es": "Ahora tócala a velocidad completa, con el pedal."
+            "es": "Ahora tócala a velocidad completa, con el pedal.",
+            "zh": "现在加上踏板，用原速弹。"
           },
           "hands": "both",
           "speed": 1,
@@ -353,7 +382,8 @@
           "text": {
             "en": "Keep the Alberti bass soft, so the tune sings above it.",
             "de": "Halt den Alberti-Bass leise, damit die Melodie darüber singt.",
-            "es": "Mantén suave el bajo de Alberti, para que la melodía cante encima."
+            "es": "Mantén suave el bajo de Alberti, para que la melodía cante encima.",
+            "zh": "阿尔贝蒂低音要弹得轻，让旋律在它上面歌唱。"
           }
         },
         {
@@ -363,7 +393,8 @@
           "text": {
             "en": "Lift the hand after the G, A and B, and land finger 3 on the E an octave up.",
             "de": "Heb die Hand nach G, A und H, und setz Finger 3 eine Oktave höher auf das E.",
-            "es": "Levanta la mano después del sol, el la y el si, y pon el dedo 3 en el mi una octava más arriba."
+            "es": "Levanta la mano después del sol, el la y el si, y pon el dedo 3 en el mi una octava más arriba.",
+            "zh": "弹完 G、A、B 后把手抬起，让 3 指落在高八度的 E 上。"
           }
         },
         {
@@ -373,7 +404,8 @@
           "text": {
             "en": "Change the pedal each time the left hand starts a new chord.",
             "de": "Wechsle das Pedal jedes Mal, wenn die linke Hand einen neuen Akkord beginnt.",
-            "es": "Cambia el pedal cada vez que la mano izquierda empieza un acorde nuevo."
+            "es": "Cambia el pedal cada vez que la mano izquierda empieza un acorde nuevo.",
+            "zh": "左手每开始一个新和弦，就换一次踏板。"
           }
         }
       ],
@@ -383,7 +415,8 @@
           "text": {
             "en": "Finger 2 plays the high D, and the thumb stretches down to G while the left hand climbs.",
             "de": "Finger 2 spielt das hohe D, und der Daumen streckt sich hinab zum G, während die linke Hand steigt.",
-            "es": "El dedo 2 toca el re agudo, y el pulgar se estira hacia abajo hasta el sol mientras la mano izquierda sube."
+            "es": "El dedo 2 toca el re agudo, y el pulgar se estira hacia abajo hasta el sol mientras la mano izquierda sube.",
+            "zh": "2 指弹高音 D，左手往上走时，拇指往下张开够到 G。"
           }
         },
         {
@@ -391,7 +424,8 @@
           "text": {
             "en": "The thumb takes C, then finger 2 lands on D. Keep the broken chords below even.",
             "de": "Der Daumen nimmt das C, dann landet Finger 2 auf dem D. Halt die gebrochenen Akkorde darunter gleichmäßig.",
-            "es": "El pulgar toma el do, y luego el dedo 2 cae en el re. Mantén parejos los acordes arpegiados de abajo."
+            "es": "El pulgar toma el do, y luego el dedo 2 cae en el re. Mantén parejos los acordes arpegiados de abajo.",
+            "zh": "拇指弹 C，然后 2 指落在 D 上。下面的分解和弦要保持均匀。"
           }
         },
         {
@@ -399,7 +433,8 @@
           "text": {
             "en": "The Gloria runs high now. Let fingers 5, 4, 3 and 2 roll down from A to E.",
             "de": "Das Gloria läuft jetzt hoch. Lass Finger 5, 4, 3 und 2 vom A hinab zum E rollen.",
-            "es": "Ahora el Gloria corre por arriba. Deja que los dedos 5, 4, 3 y 2 rueden hacia abajo del la al mi."
+            "es": "Ahora el Gloria corre por arriba. Deja que los dedos 5, 4, 3 y 2 rueden hacia abajo del la al mi.",
+            "zh": "现在 Gloria 跑到高处了。让 5、4、3、2 指从 A 往下滚到 E。"
           }
         }
       ]
@@ -424,7 +459,8 @@
           "text": {
             "en": "Play the stride bass alone: jump down for the low octave, then back up for the chord.",
             "de": "Spiel den Stride-Bass allein: Spring hinunter zur tiefen Oktave, dann zurück hinauf zum Akkord.",
-            "es": "Toca solo el bajo stride: salta hacia abajo para la octava grave y vuelve arriba para el acorde."
+            "es": "Toca solo el bajo stride: salta hacia abajo para la octava grave y vuelve arriba para el acorde.",
+            "zh": "单独练跨步低音：往下跳去弹低音八度，再跳回上面弹和弦。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -435,7 +471,8 @@
           "text": {
             "en": "Play the right hand's octaves alone, and let finger 5 sing the tune.",
             "de": "Spiel die Oktaven der rechten Hand allein, und lass Finger 5 die Melodie singen.",
-            "es": "Toca solas las octavas de la mano derecha, y deja que el dedo 5 cante la melodía."
+            "es": "Toca solas las octavas de la mano derecha, y deja que el dedo 5 cante la melodía.",
+            "zh": "只用右手弹八度，让 5 指唱出旋律。"
           },
           "hands": "right",
           "speed": 0.5,
@@ -446,7 +483,8 @@
           "text": {
             "en": "Play the broken octave bass of the second time through with the left hand alone.",
             "de": "Spiel den gebrochenen Oktavbass des zweiten Durchgangs nur mit der linken Hand.",
-            "es": "Toca el bajo de octavas arpegiadas de la segunda vuelta con la mano izquierda sola."
+            "es": "Toca el bajo de octavas arpegiadas de la segunda vuelta con la mano izquierda sola.",
+            "zh": "只用左手弹第二遍的分解八度低音。"
           },
           "hands": "left",
           "speed": 0.5,
@@ -457,7 +495,8 @@
           "text": {
             "en": "Join the hands on the whole song at three-quarter speed.",
             "de": "Nimm beide Hände zusammen, und spiel das ganze Lied in Dreiviertel-Tempo.",
-            "es": "Junta las manos en toda la canción a tres cuartos de velocidad."
+            "es": "Junta las manos en toda la canción a tres cuartos de velocidad.",
+            "zh": "双手一起，用四分之三速度弹完整首歌。"
           },
           "hands": "both",
           "speed": 0.75,
@@ -468,7 +507,8 @@
           "text": {
             "en": "Now play it at full speed, and let the last chord ring.",
             "de": "Jetzt spiel es im vollen Tempo, und lass den letzten Akkord klingen.",
-            "es": "Ahora tócala a velocidad completa, y deja sonar el último acorde."
+            "es": "Ahora tócala a velocidad completa, y deja sonar el último acorde.",
+            "zh": "现在用原速弹，让最后一个和弦的声音延续下去。"
           },
           "hands": "both",
           "speed": 1,
@@ -484,7 +524,8 @@
           "text": {
             "en": "In stride, look at the low octave and let the hand find the chord by feel.",
             "de": "Schau beim Stride auf die tiefe Oktave, und lass die Hand den Akkord nach Gefühl finden.",
-            "es": "En el bajo stride, mira la octava grave y deja que la mano encuentre el acorde al tacto."
+            "es": "En el bajo stride, mira la octava grave y deja que la mano encuentre el acorde al tacto.",
+            "zh": "弹跨步低音时，眼睛看着低音八度，让手凭手感找到和弦。"
           }
         },
         {
@@ -494,7 +535,8 @@
           "text": {
             "en": "After each octave, finger 5 stays up high and leads the quick notes down.",
             "de": "Nach jeder Oktave bleibt Finger 5 oben und führt die schnellen Töne hinab.",
-            "es": "Después de cada octava, el dedo 5 se queda arriba y guía las notas rápidas hacia abajo."
+            "es": "Después de cada octava, el dedo 5 se queda arriba y guía las notas rápidas hacia abajo.",
+            "zh": "每个八度之后，5 指留在高处，带着快速的音往下走。"
           }
         },
         {
@@ -504,7 +546,8 @@
           "text": {
             "en": "The quick run to G is a little fanfare. Play it light and bright.",
             "de": "Der schnelle Lauf zum G ist eine kleine Fanfare. Spiel ihn leicht und hell.",
-            "es": "La carrera rápida hasta el sol es una pequeña fanfarria. Tócala ligera y brillante."
+            "es": "La carrera rápida hasta el sol es una pequeña fanfarria. Tócala ligera y brillante.",
+            "zh": "跑向 G 的快速经过句像一小段号角。弹得轻快、明亮。"
           }
         }
       ],
@@ -514,7 +557,8 @@
           "text": {
             "en": "Four quick notes run from C up to F, and finger 5 lands on G. The stride bass keeps going below.",
             "de": "Vier schnelle Töne laufen vom C hinauf zum F, und Finger 5 landet auf dem G. Darunter läuft der Stride-Bass weiter.",
-            "es": "Cuatro notas rápidas corren de do hasta fa, y el dedo 5 cae en el sol. Abajo, el bajo stride sigue."
+            "es": "Cuatro notas rápidas corren de do hasta fa, y el dedo 5 cae en el sol. Abajo, el bajo stride sigue.",
+            "zh": "四个快音从 C 往上跑到 F，5 指落在 G 上。下面的跨步低音继续进行。"
           }
         },
         {
@@ -522,7 +566,8 @@
           "text": {
             "en": "The opening again. Keep the octaves even while the left hand jumps.",
             "de": "Wieder der Anfang. Halt die Oktaven gleichmäßig, während die linke Hand springt.",
-            "es": "Otra vez el comienzo. Mantén parejas las octavas mientras la mano izquierda salta."
+            "es": "Otra vez el comienzo. Mantén parejas las octavas mientras la mano izquierda salta.",
+            "zh": "又回到开头。左手跳动时，八度要保持均匀。"
           }
         },
         {
@@ -530,7 +575,8 @@
           "text": {
             "en": "Lift the hand off each single note before the next octave, so it lands without a stretch.",
             "de": "Heb die Hand nach jedem Einzelton ab, damit sie ohne Strecken auf der nächsten Oktave landet.",
-            "es": "Levanta la mano de cada nota suelta antes de la octava siguiente, para que caiga sin estirarse."
+            "es": "Levanta la mano de cada nota suelta antes de la octava siguiente, para que caiga sin estirarse.",
+            "zh": "弹完每个单音都把手抬起，再去弹下一个八度，这样落下时手不必再费力张开。"
           }
         }
       ]
