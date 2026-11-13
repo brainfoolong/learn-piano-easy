@@ -78,7 +78,8 @@ edition. The tune marks its *hook*, the bars a listener knows the song by.
   instead of them.
 - **The tune is the top voice of its hand,** so the ear finds it at once.
 - **Beginner and Easy may move the song to an easier key:** C, G or F major, or A, E or D minor. Medium
-  and Hard keep the tune's own key, unless it has more than 4 sharps or flats.
+  and Hard keep the tune's own key, unless it has more sharps or flats than the version allows. Medium
+  allows 3 and Hard 4.
 
 The meter finds the tune in a version and matches it after the move of key. A version that loses the
 hook is refused.

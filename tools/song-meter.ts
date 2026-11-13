@@ -86,7 +86,8 @@
  * - Common finds a tune note up to a 16th early or late, or held over from the note before, and
  *   needs 90% of them. Every other rarity needs every note at its place.
  * - Common and Rare may move the tune to C, G or F major, or A, E or D minor. Epic and Legendary keep its
- *   key, unless the key has more than 4 sharps or flats.
+ *   key, unless the key has more sharps or flats than the rarity allows. Then the tune moves to a key
+ *   the rarity allows.
  * - Common and Rare allow 3 notes outside the key in 4 bars and 2 position changes in 8 bars, so a
  *   chromatic tune keeps its notes. *In the Hall of the Mountain King* has 3 such notes in its second bar,
  *   in any key they may take, and each one moves a finger to another key.
@@ -713,9 +714,10 @@ export function matchTune(song: MeterSong, tune: Tune, rarity: Rarity): TuneMatc
   const keyKept = found.shift % 12 === 0;
   const moved: Key = { tonic: (((tune.key.tonic + found.shift) % 12) + 12) % 12, mode: tune.key.mode };
   if (!keyKept) {
+    const most = LIMITS.find((limit) => limit.name === "sharps or flats")!.values[RARITIES.indexOf(rarity)]!;
     const allowed = easy
       ? EASY_KEYS.some((key) => key.tonic === moved.tonic && key.mode === moved.mode)
-      : accidentalsOf(tune.key) > 4 && accidentalsOf(moved) <= 4;
+      : accidentalsOf(tune.key) > most && accidentalsOf(moved) <= most;
     if (!allowed) problems.push(`the tune moves to a key ${rarity} may not take`);
   }
 
