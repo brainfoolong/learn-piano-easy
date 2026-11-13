@@ -169,7 +169,9 @@ test("a_missing_lesson_text_shows_in_english", () => {
   expect(merged.steps.sum!.points).toEqual(["Dónde está Do", "Cómo marcar el pulso"]);
   // A step the lesson lacks is dropped.
   expect(Object.keys(merged.steps).sort()).toEqual(Object.keys(english.steps).sort());
-  expect(lessonProblems({ ...sampleLesson(), texts: { en: english, de: merged } }, LOCALES)).toEqual([]);
+  // The merged texts stand for every shipped translation, so the lesson holds texts for each locale.
+  const texts = Object.fromEntries(LOCALES.map((locale) => [locale, locale === "en" ? english : merged])) as Lesson["texts"];
+  expect(lessonProblems({ ...sampleLesson(), texts }, LOCALES)).toEqual([]);
 });
 
 test("every_song_step_names_a_version_of_ours", async () => {
