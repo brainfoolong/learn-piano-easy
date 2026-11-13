@@ -16,9 +16,12 @@ afterAll(async () => {
   await rm(outDir, { recursive: true, force: true });
 });
 
-/** The asset folders: each folder directly under `public/songs/` and `public/sounds/`. */
+/**
+ * The asset folders: `public/models/`, and each folder directly under `public/songs/` and
+ * `public/sounds/`.
+ */
 async function assetFolders(): Promise<string[]> {
-  const folders: string[] = [];
+  const folders: string[] = ["public/models"];
   for (const top of ON_DEMAND) {
     const dir = join(root, "public", top);
     const entries = await readdir(dir, { withFileTypes: true }).catch(() => []);

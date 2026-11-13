@@ -6,7 +6,7 @@ context: [tools/hand-model/hand.py, tools/hand-model.ts, src/render/hand/hand-ri
 stages:
   - id: 1
     title: The model fits its budget and names its license
-    status: open
+    status: done
   - id: 2
     title: The rig is tested and recorded
     status: open
@@ -91,12 +91,12 @@ project names a third-party file.
 
 - [x] The faceted low-poly hand is the builder's default, and `hand.glb` is 35 KB. `tools/hand-model/hand.py:80`
 - [x] Export only positions, joints and weights, with no normals, colours or UVs. `tools/hand-model/hand.py:397`
-- [ ] Rebuild with `bun tools/hand-model.ts` and see that the file does not change, since the build is repeatable. `tools/hand-model.ts:1`
+- [x] Rebuild with `bun tools/hand-model.ts` and see that the file does not change, since the build is repeatable. `tools/hand-model.ts:1`
 - [x] `public/models/LICENSE.md`: MakeHuman's CC0, the tool that makes the file, and a table of the file. `public/models/LICENSE.md:1`
 - [x] A `## Models` section names `public/models/` and MakeHuman's CC0. `THIRD-PARTY-NOTICES.md:64`
-- [ ] The license test covers `public/models/` as it covers the song and sound folders. `tools/licenses.test.ts:20`
-- [ ] Unit tests `the_hand_model_fits_its_byte_budget` and `the_hand_model_has_every_bone_and_marker`, reading the glb's JSON chunk. `src/render/hand/hand-model.test.ts:1`
-- [ ] Look at the hand in the lab from all five views with `bun run shot`, and see no tear or hole at a joint.
+- [x] The license test covers `public/models/` as it covers the song and sound folders. `tools/licenses.test.ts:20`
+- [x] Unit tests `the_hand_model_fits_its_byte_budget` and `the_hand_model_has_every_bone_and_marker`, reading the glb's JSON chunk. `src/render/hand/hand-model.test.ts:1`
+- [x] Look at the hand in the lab from all five views with `bun run shot`, and see no tear or hole at a joint.
 
 ### 2. The rig is tested and recorded
 
