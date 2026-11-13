@@ -17,7 +17,7 @@ export const playerInput: Translation<typeof en> = {
     asking: "ब्राउज़र की अनुमति का इंतज़ार है…",
     denied: "MIDI की अनुमति नहीं मिली। ब्राउज़र की साइट सेटिंग में इसकी अनुमति दें और फिर से कनेक्ट करें।",
     noInputs: "कोई MIDI डिवाइस लगा नहीं है।",
-    inputsFound: (n: number) => `${formatNumber("hi", n)} MIDI इनपुट ${plural("hi", n, { one: "मिला", other: "मिले" })}।`,
+    inputsFound: (n: number) => `${formatNumber("hi", n)} MIDI इनपुट ${n === 1 ? "मिला" : "मिले"}।`,
   },
   freePlay: {
     heading: "खुलकर बजाएँ",
@@ -28,7 +28,7 @@ export const playerInput: Translation<typeof en> = {
     saveTitle: "MIDI फ़ाइल के रूप में सेव करें",
     recording: (clock: string) => `रिकॉर्डिंग ${clock}`,
     recorded: (n: number) => `रिकॉर्ड किए गए नोट: ${formatNumber("hi", n)}। ‘सेव करें’ दबाकर इन्हें MIDI फ़ाइल में रखें।`,
-    hint: "खुलकर बजाएँ, या जो बजाएँ उसे रखने के लिए ‘रिकॉर्ड करें’ दबाएँ।",
+    hint: "खुलकर बजाएँ, या आप जो बजाएँ, उसे रखने के लिए ‘रिकॉर्ड करें’ दबाएँ।",
   },
   history: {
     empty: "इस गाने की अभी कोई पूरी कोशिश नहीं है। स्कोरिंग चालू करके इसे आखिर तक बजाएँ।",
@@ -65,7 +65,7 @@ export const playerInput: Translation<typeof en> = {
     done: "राउंड पूरा हुआ",
     found: (n: number, count: number) => `मिले नोट: ${formatNumber("hi", count)} में से ${formatNumber("hi", n)}।`,
     play: (note: string) => `${note} बजाएँ`,
-    progress: (i: number, count: number) => `नोट ${formatNumber("hi", i)}, कुल ${formatNumber("hi", count)}`,
+    progress: (i: number, count: number) => `${formatNumber("hi", count)} में से नोट ${formatNumber("hi", i)}`,
     wrong: (note: string) => `यह ${note} नहीं है। फिर से कोशिश करें।`,
     right: (note: string) => `${note} सही है।`,
     results: "सुर अभ्यास के नतीजे",
@@ -94,7 +94,7 @@ export const playerInput: Translation<typeof en> = {
       great: "बढ़िया",
       good: "अच्छा",
       hold: "होल्ड",
-      release: "साफ़",
+      release: "साफ़ छोड़ा",
       wrong: "गलत नोट",
       miss: "छूटा",
       short: "बहुत छोटा",
@@ -137,6 +137,6 @@ export const playerInput: Translation<typeof en> = {
       `${formatNumber("hi", pages)} पेज, हर पेज पर गाने के ${formatNumber("hi", seconds)} सेकंड।`,
     save: "PDF सेव करें",
     pageHeading: (title: string, from: string, to: string, page: number, count: number) =>
-      `${title}   ${from} से ${to}   पेज ${formatNumber("hi", page)}, कुल ${formatNumber("hi", count)}`,
+      `${title}   ${from} से ${to}   ${formatNumber("hi", count)} में से पेज ${formatNumber("hi", page)}`,
   },
 };

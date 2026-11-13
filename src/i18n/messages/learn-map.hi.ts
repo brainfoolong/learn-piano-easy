@@ -11,7 +11,7 @@ export const learnMap: Translation<typeof en> = {
   world: (n: number) => `दुनिया ${formatNumber("hi", n)}`,
   progress: (done: number, all: number) => `${formatNumber("hi", all)} में से ${formatNumber("hi", done)} पाठ`,
   locked: "इसे खोलने के लिए पिछली दुनिया की बड़ी चुनौती जीतें, या इसका आगे बढ़ने का टेस्ट पास करें।",
-  beaten: "जीत ली",
+  beaten: "बड़ी चुनौती जीत ली",
   node: {
     locked: (name: string) => `${name}, बंद`,
     open: (name: string) => `${name}, खुला`,
@@ -20,7 +20,7 @@ export const learnMap: Translation<typeof en> = {
   medal: (world: string, earned: boolean) => `“${world}” का बैज, ${earned ? "मिल गया" : "अभी नहीं मिला"}`,
   skipTest: {
     title: (world: string) => `आगे बढ़ने का टेस्ट: ${world}`,
-    text: "यह पहले से आता है? आगे बढ़ने का टेस्ट पास करें, और यहाँ के सारे पाठ खुल जाएँगे।",
+    text: "क्या आपको यह पहले से आता है? आगे बढ़ने का टेस्ट पास करें, और यहाँ के सारे पाठ खुल जाएँगे।",
     action: "आगे बढ़ने का टेस्ट दें",
   },
   bar: {

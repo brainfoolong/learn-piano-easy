@@ -20,8 +20,8 @@ export const learnBadges: Translation<typeof en> = {
     "sight-reader": { name: "नोट पढ़ने में माहिर", description: "बिना गलती के लगातार दस नोट पढ़ें।" },
     "early-bird": { name: "सुबह-सवेरे", description: "सुबह 8 बजे से पहले कोई पाठ पूरा करें।" },
     "night-owl": { name: "रात का उल्लू", description: "रात 10 बजे या उसके बाद कोई पाठ पूरा करें।" },
-    comeback: { name: "फिर से स्वागत है", description: "एक हफ़्ते की छुट्टी के बाद लौटकर कोई पाठ करें।" },
-    legendary: { name: "कठिन गाना", description: "बस पियानो बजाएँ में हमारे किसी गाने का ‘कठिन’ वर्शन शुरू से आखिर तक बजाएँ।" },
+    comeback: { name: "फिर से स्वागत है", description: "एक हफ़्ते दूर रहने के बाद लौटकर कोई पाठ करें।" },
+    legendary: { name: "कठिन गाना", description: "बस पियानो बजाएँ वाले हिस्से में हमारे किसी गाने का ‘कठिन’ वर्शन शुरू से आखिर तक बजाएँ।" },
   },
   world: {
     name: (world: string) => `“${world}” में महारत`,

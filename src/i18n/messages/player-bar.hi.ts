@@ -40,7 +40,7 @@ export const playerBar: Translation<typeof en> = {
     zoom: "ज़ूम",
     fit: "फ़िट",
     view: "व्यू",
-    leaveFullScreen: "फ़ुल स्क्रीन से बाहर",
+    leaveFullScreen: "फ़ुल स्क्रीन से बाहर निकलें",
     expert: "एक्सपर्ट",
     expertTitles: {
       off: "सारे टूल दिखाएँ",

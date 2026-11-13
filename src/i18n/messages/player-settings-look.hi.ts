@@ -22,7 +22,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   minNoteHeight: {
     label: "नोट की सबसे छोटी लंबाई",
-    help: "कुंजी की चौड़ाई में, ताकि बहुत छोटा नोट भी दिखे।",
+    help: "कुंजी-चौड़ाई में, ताकि बहुत छोटा नोट भी दिखे।",
   },
   strokeNotes: {
     label: "किनारे की चमक",
@@ -34,18 +34,18 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   noteEndedShrink: {
     label: "बजे नोट अपनी कुंजी में सिमटें",
-    help: "नोट बजते समय अपनी कुंजी में समा जाता है। बंद होने पर वह कुंजियों से आगे निकल जाता है।",
+    help: "नोट बजते समय अपनी कुंजी में समा जाता है। बंद होने पर नोट कुंजियों से आगे निकल जाता है।",
   },
   playedNoteFalloffSpeed: {
     label: "बजे नोट कुंजियों से कितना आगे जाएँ",
-    help: "कुंजी की चौड़ाई में, जब बजे नोट सिमटते नहीं।",
+    help: "कुंजी-चौड़ाई में, जब बजे नोट सिमटते नहीं।",
   },
   showSustainedNotes: {
     label: "दिखाएँ कि पेडल नोट को कितनी देर थामता है",
     help: "पेडल जिस नोट को थामता है, उससे एक पतली पूँछ आगे चलती है।",
   },
   sustainedNotesOpacity: {
-    label: "पेडल की पूँछ की चमक (%)",
+    label: "पेडल की पूँछ कितनी साफ़ दिखे (%)",
     help: "नोटों के पीछे पेडल की पूँछें कितनी साफ़ दिखें।",
   },
 
@@ -100,7 +100,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   inputLaneOpacity: {
     label: "लेन की रोशनी की तेज़ी",
-    help: "कुंजी दबाकर रखने पर उसकी लेन कितनी चमके।",
+    help: "कुंजी दबाकर रखने पर उसकी लेन की रोशनी कितनी तेज़ हो।",
   },
   showMarkersSong: {
     label: "मार्कर",
@@ -126,7 +126,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesFlames: {
     label: "लपटें",
-    help: "हर कुंजी अपने नोट के रंग में जलती है। इनका बोझ ग्राफ़िक्स कार्ड पर सबसे ज़्यादा है।",
+    help: "हर कुंजी अपने नोट के रंग में जलती है। लपटों का बोझ ग्राफ़िक्स कार्ड पर सबसे ज़्यादा है।",
   },
   particlesSparks: {
     label: "चिंगारियाँ",
@@ -164,11 +164,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesOpacity: {
     label: "गाढ़ापन",
-    help: "हर कण कितना ठोस दिखे। कम मान पर पीछे का ज़्यादा दिखता है।",
+    help: "हर कण कितना ठोस दिखे। कम मान पर पीछे की चीज़ें ज़्यादा दिखती हैं।",
   },
   particleSize: {
     label: "साइज़",
-    help: "कुंजी की चौड़ाई में।",
+    help: "कुंजी-चौड़ाई में।",
   },
   particleAmount: {
     label: "मात्रा",
@@ -192,11 +192,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleSpeedX: {
     label: "बगल की स्पीड",
-    help: "बगल की ओर सबसे तेज़ स्पीड, कुंजी की चौड़ाई प्रति सेकंड में।",
+    help: "बगल की ओर सबसे तेज़ स्पीड, कुंजी-चौड़ाई प्रति सेकंड में।",
   },
   particleSpeedY: {
     label: "उठने की स्पीड",
-    help: "ऊपर उठने की सबसे तेज़ स्पीड, कुंजी की चौड़ाई प्रति सेकंड में।",
+    help: "ऊपर उठने की सबसे तेज़ स्पीड, कुंजी-चौड़ाई प्रति सेकंड में।",
   },
   particlesFriction: {
     label: "रुकावट",
@@ -204,7 +204,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleRising: {
     label: "गुरुत्व",
-    help: "0 से ऊपर कण वापस गिरते हैं, 0 से नीचे वे और तेज़ी से उठते हैं।",
+    help: "0 से ज़्यादा पर कण वापस गिरते हैं, 0 से कम पर वे और तेज़ी से उठते हैं।",
   },
   particlesRotation: {
     label: "कोण (°)",
@@ -212,7 +212,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesRotationRandom: {
     label: "बेतरतीब कोण (°)",
-    help: "हर कण शुरू में इस कोण तक किसी भी मात्रा में घूमा होता है।",
+    help: "हर कण शुरू में इस कोण तक, बेतरतीब ढंग से घूमा होता है।",
   },
   particlesRotationSpeed: {
     label: "घुमाव (° प्रति सेकंड)",
@@ -220,7 +220,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleNoiseResX: {
     label: "बगल में भटकने की बारीकी",
-    help: "ज़्यादा मान पर पास-पास की कुंजियों के कण बगल में और अलग-अलग ढंग से भटकते हैं।",
+    help: "ज़्यादा मान पर पास-पास की कुंजियों के कण बगल में एक-दूसरे से ज़्यादा अलग ढंग से भटकते हैं।",
   },
   particleNoiseStrengthX: {
     label: "बगल में भटकना",
@@ -228,7 +228,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleNoiseResY: {
     label: "उठते हुए भटकने की बारीकी",
-    help: "ज़्यादा मान पर पास-पास की कुंजियों का उठते हुए भटकना और अलग होता है।",
+    help: "ज़्यादा मान पर पास-पास की कुंजियों के कणों का उठते हुए भटकना एक-दूसरे से ज़्यादा अलग होता है।",
   },
   particleNoiseStrengthY: {
     label: "उठते हुए भटकना",
@@ -244,7 +244,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   turbulenceXFrequency: {
     label: "बगल में झूलने की दर",
-    help: "हर सेकंड में कितनी बार झूलें।",
+    help: "कण हर सेकंड में कितनी बार झूलते हैं।",
   },
   turbulenceYAmplitude: {
     label: "उठते हुए झूलना",
@@ -252,11 +252,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   turbulenceYFrequency: {
     label: "उठते हुए झूलने की दर",
-    help: "हर सेकंड में कितनी बार झूलें।",
+    help: "कण हर सेकंड में कितनी बार झूलते हैं।",
   },
   particleYOffset: {
     label: "शुरुआती ऊँचाई",
-    help: "कुंजी के ऊपर, कुंजी की चौड़ाई में।",
+    help: "कुंजी के ऊपर, कुंजी-चौड़ाई में।",
   },
   particleDistributionX: {
     label: "कुंजी की चौड़ाई में शुरुआत",
@@ -270,7 +270,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   particleDistributionY: {
     label: "कुंजी की लंबाई में शुरुआत",
     help: "हर कण अपनी कुंजी की लंबाई में कहाँ से शुरू हो।",
-    options: { hitLine: "हिट लाइन पर", key: "उसके ऊपरी हिस्से पर कहीं भी" },
+    options: { hitLine: "हिट लाइन पर", key: "उसकी ऊपरी सतह पर कहीं भी" },
   },
   particleDistributionZ: {
     label: "परत",
@@ -286,8 +286,8 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   noteLabel: {
     label: "नोट पर लेबल",
-    help: "हर नोट पर लिखे टेक्स्ट: इनमें से कोई भी चुनें, या कोई नहीं। किसी नोट को दबाएँ, फिर उसकी उँगली तय करने के लिए 1 से 5 दबाएँ।",
-    options: { name: "नोट का नाम", keyBinding: "कीबोर्ड का बटन", fingering: "उँगली" },
+    help: "हर नोट पर लिखे टेक्स्ट: इनमें से जितने चाहें चुनें, या एक भी नहीं। किसी नोट को दबाएँ, फिर उसकी उँगली तय करने के लिए 1 से 5 दबाएँ।",
+    options: { name: "नोट का नाम", keyBinding: "कंप्यूटर कीबोर्ड का बटन", fingering: "उँगली" },
   },
   noteLabelColor: {
     label: "नोट लेबल का रंग",
@@ -311,8 +311,8 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { none: "कहीं नहीं", all: "हर कुंजी पर", onlyC: "सिर्फ़ C पर" },
   },
   showKeyBindingsOnPiano: {
-    label: "पियानो पर कीबोर्ड के बटन",
-    help: "हर कुंजी दिखाती है कि कीबोर्ड का कौन-सा बटन उसे बजाता है।",
+    label: "पियानो पर कंप्यूटर कीबोर्ड के बटन",
+    help: "हर कुंजी दिखाती है कि कंप्यूटर कीबोर्ड का कौन-सा बटन उसे बजाता है।",
   },
   showChords: {
     label: "कॉर्ड के नाम",
@@ -325,7 +325,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   chordLabelPlacement: {
     label: "कॉर्ड लेबल की जगह",
-    help: "कॉर्ड का ऊपरी सिरा उसका दूर वाला सिरा है, जो पियानो से दूर होता है।",
+    help: "कॉर्ड का ऊपरी सिरा वह है, जो पियानो से दूर है।",
     options: {
       above: "कॉर्ड के ऊपर",
       top: "उसके ऊपरी सिरे पर",
@@ -344,7 +344,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { none: "कोई नहीं", tone: "कॉर्ड टोन", degree: "स्केल डिग्री" },
   },
   chordToneNotation: {
-    label: "नोट ब्लॉक की लिखावट",
+    label: "नोट ब्लॉक पर लिखने का ढंग",
     help: "नोट ब्लॉक छोटे चिह्न दिखाएँ या पूरे शब्द।",
     options: { simple: "छोटा: R ♭3 5", full: "पूरा: रूट ♭थर्ड फ़िफ़्थ" },
   },
@@ -379,7 +379,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "बोल कितने बड़े लिखे जाएँ।",
   },
   lyricsY: {
-    label: "ऊपर से ऊँचाई (%)",
+    label: "ऊपर से दूरी (%)",
     help: "सीन में बोलों की लाइन का बीच कहाँ हो। 0 ऊपरी किनारा है।",
   },
   lyricsCursorEnabled: {
@@ -394,7 +394,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   // Coding
   enableColorCodingNote: {
     label: "पिच के हिसाब से नोटों का रंग",
-    help: "12 पिच में से हर एक का अपना रंग होता है।",
+    help: "12 पिचों में से हर एक का अपना रंग होता है।",
   },
   enableColorCodingNotePiano: {
     label: "पिच के हिसाब से कुंजियों का रंग",
@@ -462,8 +462,8 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "ग्रैंड स्टाफ़ का ब्रेस, हर लाइन की शुरुआत में।",
   },
   sheetAutoClef: {
-    label: "हर क्लेफ़ नोटों से चुनें",
-    help: "बंद होने पर पहला स्टाफ़ ट्रेबल होता है, और बाकी बेस।",
+    label: "नोटों के हिसाब से क्लेफ़ चुनें",
+    help: "बंद होने पर पहले स्टाफ़ पर ट्रेबल क्लेफ़ होता है, और बाकी पर बेस क्लेफ़।",
   },
   overrideTimeSignature: {
     label: "टाइम सिग्नेचर",
@@ -546,11 +546,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   // Offline
   offlineCache: {
     label: "ऑफ़लाइन फ़ाइलें संभालें",
-    help: "ऐप, गानों और पियानो की आवाज़ों का साइज़ दिखाता है, और हर एक को सेव करता है या हटाता है।",
+    help: "ऐप, गानों और पियानो की आवाज़ों का साइज़ दिखाता है, और हर एक को सेव करने या हटाने देता है।",
   },
   autoCacheSongs: {
     label: "गाने सेव रखें",
-    help: "हर उदाहरण गाना अभी सेव करता है, और हर अपडेट के बाद फिर से।",
+    help: "ऐप के साथ आने वाला हर गाना अभी सेव करता है, और हर अपडेट के बाद फिर से।",
   },
   autoCacheSounds: {
     label: "पियानो की आवाज़ें सेव रखें",

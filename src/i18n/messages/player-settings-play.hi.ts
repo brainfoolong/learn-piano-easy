@@ -24,7 +24,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   learnSetupDone: {
     label: "पहली विज़िट पूरी",
-    help: "पियानो सीखें आपकी पहली विज़िट पर छोटा-सा सेटअप दिखाता है, जब तक वह पूरा न हो जाए।",
+    help: "पियानो सीखें वाला हिस्सा आपकी पहली विज़िट पर छोटा-सा सेटअप दिखाता है, जब तक वह पूरा न हो जाए।",
   },
   expertControls: {
     label: "एक्सपर्ट टूल",
@@ -33,7 +33,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // General
   theme: {
     label: "सीन की थीम",
-    help: "पियानो और उसकी लेन के रंग तय करती है। प्लेयर के बाकी रंग ऊपर की पट्टी में साइट की थीम तय करती है।",
+    help: "पियानो और उसकी लेन के रंग तय करती है। प्लेयर के बाकी रंग साइट की थीम तय करती है, जिसे ऊपर की पट्टी में बदला जा सकता है।",
     options: { dark: "डार्क", light: "लाइट" },
   },
   yourData: {
@@ -50,11 +50,11 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   disableHotkeys: {
     label: "कीबोर्ड शॉर्टकट बंद करें",
-    help: "कंप्यूटर के बटनों से अब गाना चलाना, आगे-पीछे करना या लूप करना बंद हो जाता है।",
+    help: "कंप्यूटर कीबोर्ड के बटनों से अब गाना चलाना, आगे-पीछे करना या लूप करना बंद हो जाता है।",
   },
   hotKeyBindings: {
     label: "कीबोर्ड शॉर्टकट",
-    help: "वे बटन, जिनसे गाना चलता है, आगे-पीछे होता है, लूप होता है और ज़ूम होता है।",
+    help: "कंप्यूटर कीबोर्ड के वे बटन, जिनसे गाना चलता है, आगे-पीछे होता है, लूप होता है और ज़ूम होता है।",
   },
   leadIn: {
     label: "पहले नोट से पहले का समय (सेकंड)",
@@ -106,7 +106,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   progressBarMeasureLines: {
     label: "टाइमलाइन पर माप रेखाएँ दिखाएँ",
-    help: "जहाँ हर माप शुरू होता है, वहाँ टाइमलाइन पर एक पतली लाइन बनाता है।",
+    help: "जहाँ हर माप शुरू होता है, वहाँ टाइमलाइन पर एक पतली माप रेखा बनाता है।",
   },
   showMarkersTimeline: {
     label: "टाइमलाइन पर मार्कर दिखाएँ",
@@ -143,7 +143,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   loopTrainer: {
     label: "लूप ट्रेनर",
-    help: "धीमे शुरू होता है और हर दौर के बाद स्पीड 5% बढ़ाता है, 100% तक।",
+    help: "धीमी स्पीड से शुरू होता है और हर दौर के बाद स्पीड 5% बढ़ाता है, 100% तक।",
   },
   loopTrainerSpeed: {
     label: "लूप ट्रेनर की शुरुआती स्पीड (%)",
@@ -298,7 +298,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     },
   },
   resetCamera: {
-    label: "कैमरे पर लौटें",
+    label: "कैमरा वापस लाएँ",
     help: "सीन खींचने के बाद कैमरे को वापस लाता है।",
   },
   glowMode: {
@@ -338,7 +338,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // Input
   playMode: {
     label: "मोड",
-    help: "‘खुलकर बजाएँ’ गाने को अलग रख देता है, ताकि आप बजा सकें और रिकॉर्ड कर सकें। सुर पहचानने का अभ्यास आपसे नोट ढूँढने को कहता है।",
+    help: "‘खुलकर बजाएँ’ गाने को अलग रख देता है, ताकि आप बजा सकें और रिकॉर्ड कर सकें। ‘सुर पहचानने का अभ्यास’ आपसे नोट ढूँढने को कहता है।",
     options: { player: "गाना बजाएँ", freePlay: "खुलकर बजाएँ और रिकॉर्ड करें", pitchPractice: "सुर पहचानने का अभ्यास" },
   },
   pitchPracticeKey: {
@@ -378,7 +378,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   keyBindings: {
     label: "कंप्यूटर कीबोर्ड के बटन",
-    help: "कंप्यूटर के वे बटन, जिनसे नोट बजते हैं। Z से M तक के बटन C3 से B3 बजाते हैं, और Q से I तक के बटन C4 से C5।",
+    help: "कंप्यूटर कीबोर्ड के वे बटन, जिनसे नोट बजते हैं। Z से M तक के बटन C3 से B3 बजाते हैं, और Q से I तक के बटन C4 से C5।",
   },
   waitForNotes: {
     label: "आपके नोट का इंतज़ार",
@@ -390,7 +390,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     options: { both: "दोनों हाथ", right: "दायाँ हाथ", left: "बायाँ हाथ" },
   },
   playalongSilentNotes: {
-    label: "MIDI कीबोर्ड पर बजाने वाली कुंजियाँ जलाएँ",
+    label: "अपने MIDI कीबोर्ड पर बजाई जाने वाली कुंजियाँ जलाएँ",
     help: "हर अगला नोट बहुत हल्की आवाज़ में MIDI आउटपुट पर भेजता है, ताकि कुंजी-लाइट वाला कीबोर्ड उसे दिखा सके।",
   },
   playalongSilentNotesChannel: {
@@ -477,7 +477,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   pianoLineAmplitude: {
     label: "लहर की ऊँचाई",
-    help: "कुंजी की चौड़ाई में, पूरे ज़ोर से बजती कुंजी के ऊपर।",
+    help: "कुंजी-चौड़ाई में, पूरे ज़ोर से बजती कुंजी के ऊपर।",
   },
   pianoLineColor: {
     label: "लहर वाली लाइन का रंग",
@@ -488,7 +488,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "लहर वाली लाइन कितनी साफ़ दिखती है। कम होने पर लाइन फीकी दिखती है।",
   },
   pianoLineYOffset: {
-    label: "लहर वाली लाइन की ऊँचाई",
-    help: "कुंजियों के ऊपर, कुंजी की चौड़ाई में।",
+    label: "कुंजियों से लहर वाली लाइन की दूरी",
+    help: "कुंजियों से कितनी ऊपर, कुंजी-चौड़ाई में।",
   },
 };

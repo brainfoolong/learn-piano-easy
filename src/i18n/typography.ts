@@ -126,7 +126,7 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
     kept: [
       "Hark! The Herald Angels Sing", "Moulin Rouge!", "Ah! vous dirai-je, maman", ...SONG_NAMES,
       "In the Hall of the Mountain King", "Carol of the Bells", "Ode to Joy", "Jingle Bells", "Mary Had a Little Lamb",
-      "Für Elise", "Twinkle Twinkle Little Star", "Canon in D",
+      "Für Elise", "Twinkle, Twinkle, Little Star", "Twinkle Twinkle Little Star", "Canon in D",
       "Learn Piano Easy", "Wikimedia Commons", "Wikipedia", "Mutopia", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo",
       "Chrome", "Edge", "Firefox", "Safari", "JavaScript", "MIT", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz",
       "dB", "ms", "KB", "MB", "px", "3D", "Esc", "BWV", "K.", "HWV",

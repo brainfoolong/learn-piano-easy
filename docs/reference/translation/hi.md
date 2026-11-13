@@ -282,6 +282,13 @@ collection. AN is Android's `values-hi` strings.
 | low, high band (of the equaliser) | लो, हाई | the terms of audio apps; never `बेस`, which names a note |
 | scoring; a scored take | स्कोरिंग; स्कोर वाली कोशिश | the player's own term |
 | error (a title) | गड़बड़ी | AN; MS writes `त्रुटि`, which reads formal |
+| leave (a lesson, a page); skip | बाहर निकलें; छोड़ें | everyday words. `छोड़ें` also releases a key, never leaves a lesson |
+| skill (a song's technique tag); a skill in general | तकनीक; हुनर | everyday words |
+| folk tune; counter-melody | लोकधुन; साथ चलती दूसरी धुन | follow `धुन` |
+| size; shape | साइज़; आकार | everyday words. `आकार` never means size |
+| opacity | गाढ़ापन | everyday word. `चमक` is only *glow* |
+| in key widths (a unit); per second | कुंजी-चौड़ाई में; कुंजी-चौड़ाई प्रति सेकंड में | the player's own unit. `कुंजी की चौड़ाई में` means *within* the width |
+| a section named by an imperative, mid-sentence | `बस पियानो बजाएँ वाले हिस्से में` | so the name never reads as a verb |
 | a guide's stock practice steps | `सिर्फ़ बाएँ हाथ से बजाएँ।`, `दोनों हाथों से धीरे-धीरे बजाएँ।`, `दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।`, `दोनों हाथों से पूरा गाना, लिखी स्पीड से थोड़ा धीमा बजाएँ।`, `दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।`, `अब पूरी स्पीड पर पेडल के साथ बजाएँ।` | the guides' own forms, one per English step |
 
 ### Which "play" is which
@@ -354,6 +361,10 @@ collection. AN is Android's `values-hi` strings.
   form must read well for zero too.
 - **A counted noun that keeps its form is preferred,** such as `पाठ`, `दिन`, `नोट` or `स्टार`. Then both
   forms read alike: `0 पाठ`, `1 पाठ`, `5 पाठ`.
+- **A form that changes picks by `n === 1`, where 0 can show.** Hindi says `0 गाने`, not `0 गाना`. So
+  such a message tests for one itself, rather than calling `plural`.
+- **Before a postposition, a counted noun takes its oblique plural:** `40 फ़ाइलों में से 12`.
+- **"X of Y" is `Y में से X`** in every counter, such as `10 में से 3`.
 - **A time signature is printed as figures:** `3/4`, read `तीन-चार`.
 
 ## 9. Marks

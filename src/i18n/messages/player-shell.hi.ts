@@ -1,13 +1,16 @@
 /** The player's shell in Hindi. A text it leaves out shows in English. */
-import { formatNumber, plural } from "../format";
+import { formatNumber } from "../format";
 import type { Translation } from "../translation";
 import type { playerShell as en } from "./player-shell.en";
 
 /** `n` seconds with two decimals and no digit grouping, such as `12.50`. */
 const seconds = (n: number) => formatNumber("hi", n, { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: false });
-const files = (n: number) => `${formatNumber("hi", n)} ${plural("hi", n, { one: "फ़ाइल", other: "फ़ाइलें" })}`;
+/** `n` files. Only 1 is singular, since Hindi says `0 फ़ाइलें`. */
+const files = (n: number) => `${formatNumber("hi", n)} ${n === 1 ? "फ़ाइल" : "फ़ाइलें"}`;
+/** `n` files in the oblique case, as a postposition such as `में से` needs it: `40 फ़ाइलों`. */
+const filesOblique = (n: number) => `${formatNumber("hi", n)} ${n === 1 ? "फ़ाइल" : "फ़ाइलों"}`;
 /** "could not be saved", agreeing with the feminine `फ़ाइल` in number. */
-const couldNotSave = (n: number) => plural("hi", n, { one: "सेव नहीं की जा सकी", other: "सेव नहीं की जा सकीं" });
+const couldNotSave = (n: number) => (n === 1 ? "सेव नहीं की जा सकी" : "सेव नहीं की जा सकीं");
 
 export const playerShell: Translation<typeof en> = {
   dialog: {
@@ -30,7 +33,7 @@ export const playerShell: Translation<typeof en> = {
     guide: "गाइड",
     settings: "सेटिंग",
     about: "जानकारी",
-    openSong: "खुला गाना",
+    openSong: "अभी खुला गाना",
     demoSong: "डेमो गाना",
     songFallback: "गाना",
   },
@@ -38,7 +41,7 @@ export const playerShell: Translation<typeof en> = {
     noneFound: "गाने की कोई फ़ाइल नहीं मिली।",
     wrongKind: "सिर्फ़ MIDI और MusicXML फ़ाइलें जोड़ी जा सकती हैं।",
     added: (n) =>
-      `“आपके गाने” में ${formatNumber("hi", n)} ${plural("hi", n, { one: "गाना जोड़ा गया", other: "गाने जोड़े गए" })}।`,
+      `“आपके गाने” में ${formatNumber("hi", n)} ${n === 1 ? "गाना जोड़ा गया" : "गाने जोड़े गए"}।`,
     notKept: (reason) => `गाने सेव नहीं किए जा सके: ${reason}`,
     soundsFailed: "पियानो की आवाज़ें लोड नहीं हो सकीं, इसलिए गाने बिना आवाज़ के चलेंगे।",
   },
@@ -85,16 +88,16 @@ export const playerShell: Translation<typeof en> = {
       sounds: { label: "पियानो की आवाज़ें", description: "आवाज़ों के सारे सेट, ताकि कोई भी सेट चुना हो, पियानो ऑफ़लाइन बजे।" },
     },
     groupsFailed: (n, labels) => `${labels} की ${files(n)} ऑफ़लाइन इस्तेमाल के लिए ${couldNotSave(n)}।`,
-    updated: (labels) => `अपडेट हो गया। ${labels} फिर से ऑफ़लाइन इस्तेमाल के लिए सेव हैं।`,
+    updated: (labels) => `अपडेट हो गया। ${labels} को फिर से ऑफ़लाइन इस्तेमाल के लिए सेव कर लिया गया।`,
     unavailable: "यह ब्राउज़र इस पेज के लिए कोई ऑफ़लाइन फ़ाइल नहीं रखता।",
     reading: "सेव की गई चीज़ें पढ़ी जा रही हैं…",
     unreadable: "ऑफ़लाइन फ़ाइलों की सूची पढ़ी नहीं जा सकी। पेज फिर से लोड करें और फिर से कोशिश करें।",
     intro: "सेव की गई फ़ाइलें नेटवर्क के बिना भी काम करती हैं। हर हिस्सा अलग से सेव किया या हटाया जा सकता है।",
     allSaved: "सब सेव है",
     noneSaved: "सेव नहीं है",
-    someSaved: (count, total) => `${files(total)} में से ${formatNumber("hi", count)} सेव`,
+    someSaved: (count, total) => `${filesOblique(total)} में से ${formatNumber("hi", count)} सेव`,
     status: (size, total, state) => `${size}, ${files(total)}, ${state}।`,
-    saving: (done, total) => `सेव किया जा रहा है: ${files(total)} में से ${formatNumber("hi", done)}…`,
+    saving: (done, total) => `सेव किया जा रहा है: ${filesOblique(total)} में से ${formatNumber("hi", done)}…`,
     failed: (n) => `${files(n)} ${couldNotSave(n)}।`,
     save: "सेव करें",
     saveAgain: "फिर से सेव करें",

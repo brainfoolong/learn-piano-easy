@@ -5,12 +5,12 @@ import type { learnLesson as en } from "./learn-lesson.en";
 
 export const learnLesson: Translation<typeof en> = {
   stepOf: (step: number, count: number) => `${formatNumber("hi", count)} में से चरण ${formatNumber("hi", step)}`,
-  leave: "पाठ छोड़ें",
+  leave: "पाठ से बाहर निकलें",
   leaveDialog: {
-    title: "क्या यह पाठ छोड़ना है?",
+    title: "क्या पाठ से बाहर निकलना है?",
     body: "इस पाठ की प्रगति तभी सेव होती है, जब पाठ पूरा हो जाए।",
     stay: "सीखना जारी रखें",
-    leave: "छोड़ें",
+    leave: "बाहर निकलें",
     close: "बंद करें",
   },
   lacks: {
@@ -54,8 +54,8 @@ export const learnLesson: Translation<typeof en> = {
     hint: (note: string) => `अगला नोट ${note} है।`,
     hintChord: (...notes: string[]) => `अब ${notes.slice(0, -1).join(", ")} और ${notes.at(-1)} एक साथ बजाएँ।`,
     expression: {
-      "too-loud": "कुंजी सही है, पर आवाज़ बहुत तेज़ है। इसे हल्के से बजाएँ।",
-      "too-soft": "कुंजी सही है, पर आवाज़ बहुत हल्की है। इसे ज़ोर से बजाएँ।",
+      "too-loud": "कुंजी सही है, पर बहुत ज़ोर से बजी। इसे हल्के से बजाएँ।",
+      "too-soft": "कुंजी सही है, पर बहुत हल्के से बजी। इसे ज़ोर से बजाएँ।",
       "pedal-up": "कुंजी सही है। इसे बजाते समय पेडल दबाए रखें।",
       "pedal-down": "कुंजी सही है। इसे बजाने से पहले पेडल छोड़ें।",
     },
@@ -95,13 +95,13 @@ export const learnLesson: Translation<typeof en> = {
     phrasePiano: "कुंजियाँ। धुन का टुकड़ा टिक के साथ लय में बजाएँ।",
     shortNotes: (hits: number, notes: number) =>
       `${formatNumber("hi", notes)} में से ${formatNumber("hi", hits)} नोट समय पर बजे। फिर से कोशिश करें।`,
-    restSounded: "रेस्ट में कोई कुंजी बज गई। वहाँ उँगली उठाएँ और चुप रहें।",
+    restSounded: "रेस्ट में कोई कुंजी बज गई। वहाँ उँगली उठाएँ, ताकि कुछ न बजे।",
     phraseHint: "हर नोट उसके टिक पर बजाएँ, और रेस्ट से पहले कुंजी छोड़ें। बिंदु हर बीट पर चमकते हैं।",
     pattern: {
       taps: (countIn: number, taps: number) =>
         `${formatNumber("hi", countIn)} बीट तक गिनें। फिर ${formatNumber("hi", taps)} बीट पर दबाएँ।`,
       phrase: (countIn: number, ...parts: string[]) =>
-        `${formatNumber("hi", countIn)} बीट तक गिनें। फिर क्रम से ${parts.join(", ")} बजाएँ।`,
+        `${formatNumber("hi", countIn)} बीट तक गिनें। फिर क्रम से बजाएँ${parts.length > 0 ? `: ${parts.join(", ")}` : ""}।`,
       held: (note: string, beats: number) => `${note}, ${formatNumber("hi", beats)} बीट तक दबाकर`,
       rest: (beats: number) => (beats === 1 ? "रेस्ट" : `${formatNumber("hi", beats)} बीट का रेस्ट`),
     },

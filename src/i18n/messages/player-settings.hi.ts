@@ -1,5 +1,5 @@
 /** The player's settings panel in Hindi. A text it leaves out shows in English. */
-import { formatNumber, plural } from "../format";
+import { formatNumber } from "../format";
 import type { Translation } from "../translation";
 import type { playerSettings as en } from "./player-settings.en";
 import { playerSettingsLook } from "./player-settings-look.hi";
@@ -12,15 +12,15 @@ export const playerSettings: Translation<typeof en> = {
     search: "सेटिंग खोजें",
     clearSearch: "खोज साफ़ करें",
     sections: "सेटिंग के हिस्से",
-    found: (count) => `${formatNumber("hi", count)} ${plural("hi", count, { one: "सेटिंग मिली", other: "सेटिंग मिलीं" })}`,
+    found: (count) => `${formatNumber("hi", count)} ${count === 1 ? "सेटिंग मिली" : "सेटिंग मिलीं"}`,
     emptyTitle: "कुछ नहीं मिला",
     empty: (query) => `“${query}” से कोई सेटिंग मेल नहीं खाती। कोई दूसरा शब्द आज़माएँ।`,
     showAll: "सारी सेटिंग दिखाएँ",
-    changed: (count) => `${formatNumber("hi", count)} ${plural("hi", count, { one: "बदली गई", other: "बदली गईं" })}`,
+    changed: (count) => `${formatNumber("hi", count)} ${count === 1 ? "बदली गई" : "बदली गईं"}`,
     changedTotal: (count) =>
       count === 0
         ? "हर सेटिंग अपने डिफ़ॉल्ट पर है।"
-        : `${formatNumber("hi", count)} ${plural("hi", count, { one: "सेटिंग बदली गई", other: "सेटिंग बदली गईं" })}`,
+        : `${formatNumber("hi", count)} ${count === 1 ? "सेटिंग बदली गई" : "सेटिंग बदली गईं"}`,
     reset: (label) => `‘${label}’ को डिफ़ॉल्ट पर रीसेट करें`,
     resetAll: "सब डिफ़ॉल्ट पर रीसेट करें",
     confirmResetAll: "क्या हर सेटिंग डिफ़ॉल्ट पर रीसेट करें? आपके बदलाव मिट जाएँगे।",
@@ -28,7 +28,7 @@ export const playerSettings: Translation<typeof en> = {
   groups: {
     basics: "बुनियादी",
     audio: "ऑडियो",
-    instrument: "आपका वाद्य",
+    instrument: "आपका इंस्ट्रूमेंट",
     scene: "सीन",
     reading: "पढ़ने में मदद",
     app: "ऐप",
@@ -90,7 +90,7 @@ export const playerSettings: Translation<typeof en> = {
     pianoFlare: "रोशनी",
     pianoWave: "लहर वाली लाइन",
     lanesColours: "लेन के रंग",
-    lanesLines: "माप और बीट की लाइनें",
+    lanesLines: "माप और बीट रेखाएँ",
     lanesHeld: "दबाकर रखी कुंजियाँ",
     lanesMarkers: "मार्कर और पेडल",
     particlesEffects: "इफ़ेक्ट",
@@ -111,7 +111,7 @@ export const playerSettings: Translation<typeof en> = {
   settings: { ...playerSettingsPlay, ...playerSettingsLook },
   range: {
     label: "कीबोर्ड का साइज़",
-    keys: (count) => `${formatNumber("hi", count)} ${plural("hi", count, { one: "कुंजी", other: "कुंजियाँ" })}`,
+    keys: (count) => `${formatNumber("hi", count)} ${count === 1 ? "कुंजी" : "कुंजियाँ"}`,
     custom: "कस्टम",
     summary: (keys, first, last) => `${keys}, ${first} से ${last} तक`,
     octaveDown: "− ऑक्टेव",
