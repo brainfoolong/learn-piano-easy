@@ -49,7 +49,7 @@ export const playModes: Translation<typeof en> = {
     },
     playAlong: {
       tag: "Paso a paso",
-      name: "Tocar a la par",
+      name: "Tocar con la canción",
       text: "La canción te espera en cada nota. Cada nota muestra su nombre y su dedo, y cada tecla, su nombre.",
       traits: ["Las notas te esperan", "Nombres de notas y dedos sobre las notas", "Nombres en las teclas blancas y negras"],
       song: "Ode to Joy, Principiante",

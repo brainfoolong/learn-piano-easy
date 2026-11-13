@@ -332,13 +332,13 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "La tecla más aguda de tu teclado, como C7 o 96.",
   },
   foldOutsideNotes: {
-    label: "Llevar las notas fuera de tus teclas a tu rango",
+    label: "Mover a tu rango las notas que tu teclado no tiene",
     help: "Las notas que le faltan a tu teclado se mueven por octavas a tus teclas, y las tocas ahí.",
   },
   // Input
   playMode: {
     label: "Modo",
-    help: "El modo «Tocar libremente» deja la canción a un lado para que toques y grabes. La práctica de oído te pide encontrar notas.",
+    help: "El modo «Tocar libremente y grabar» deja la canción a un lado para que toques y grabes. La práctica de oído te pide encontrar notas.",
     options: { player: "Tocar una canción", freePlay: "Tocar libremente y grabar", pitchPractice: "Práctica de oído" },
   },
   pitchPracticeKey: {
