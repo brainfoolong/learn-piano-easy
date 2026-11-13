@@ -5591,6 +5591,312 @@
     ]
   },
   {
+    "composer": "Maurice Ravel",
+    "piece": "Boléro",
+    "title": "Beginner",
+    "file": "ours/bolero/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 74,
+    "seconds": 57,
+    "song": "bolero",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "open-fifths",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "Bolero",
+      "Ravel's Boléro",
+      "Ravel Bolero"
+    ]
+  },
+  {
+    "composer": "Maurice Ravel",
+    "piece": "Boléro",
+    "title": "Easy",
+    "file": "ours/bolero/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 41,
+    "high": 74,
+    "seconds": 72,
+    "song": "bolero",
+    "rarity": "rare",
+    "skills": [
+      "waltz-bass",
+      "eighth-notes",
+      "position-change"
+    ],
+    "collection": "film",
+    "aka": [
+      "Bolero",
+      "Ravel's Boléro",
+      "Ravel Bolero"
+    ]
+  },
+  {
+    "composer": "Maurice Ravel",
+    "piece": "Boléro",
+    "title": "Medium",
+    "file": "ours/bolero/epic.mid",
+    "difficulty": 3.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 36,
+    "high": 74,
+    "seconds": 90,
+    "song": "bolero",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "thirds-and-sixths"
+    ],
+    "collection": "film",
+    "aka": [
+      "Bolero",
+      "Ravel's Boléro",
+      "Ravel Bolero"
+    ]
+  },
+  {
+    "composer": "Maurice Ravel",
+    "piece": "Boléro",
+    "title": "Hard",
+    "file": "ours/bolero/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 24,
+    "high": 86,
+    "seconds": 75,
+    "song": "bolero",
+    "rarity": "legendary",
+    "skills": [
+      "stride",
+      "octave-bass",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Bolero",
+      "Ravel's Boléro",
+      "Ravel Bolero"
+    ]
+  },
+  {
+    "composer": "Frédéric Chopin",
+    "piece": "Funeral March",
+    "title": "Beginner",
+    "file": "ours/funeral-march/common.mid",
+    "difficulty": 1,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 67,
+    "seconds": 56,
+    "song": "funeral-march",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass",
+      "dotted-rhythm"
+    ],
+    "collection": "film",
+    "aka": [
+      "Marche funèbre",
+      "Chopin's Funeral March",
+      "Trauermarsch",
+      "Piano Sonata No. 2, Op. 35"
+    ]
+  },
+  {
+    "composer": "Frédéric Chopin",
+    "piece": "Funeral March",
+    "title": "Easy",
+    "file": "ours/funeral-march/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 43,
+    "high": 67,
+    "seconds": 56,
+    "song": "funeral-march",
+    "rarity": "rare",
+    "skills": [
+      "triads",
+      "two-note-chords",
+      "eighth-notes"
+    ],
+    "collection": "film",
+    "aka": [
+      "Marche funèbre",
+      "Chopin's Funeral March",
+      "Trauermarsch",
+      "Piano Sonata No. 2, Op. 35"
+    ]
+  },
+  {
+    "composer": "Frédéric Chopin",
+    "piece": "Funeral March",
+    "title": "Medium",
+    "file": "ours/funeral-march/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 36,
+    "high": 75,
+    "seconds": 96,
+    "song": "funeral-march",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Marche funèbre",
+      "Chopin's Funeral March",
+      "Trauermarsch",
+      "Piano Sonata No. 2, Op. 35"
+    ]
+  },
+  {
+    "composer": "Frédéric Chopin",
+    "piece": "Funeral March",
+    "title": "Hard",
+    "file": "ours/funeral-march/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 75,
+    "seconds": 96,
+    "song": "funeral-march",
+    "rarity": "legendary",
+    "skills": [
+      "octave-bass",
+      "arpeggios",
+      "melody-in-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Marche funèbre",
+      "Chopin's Funeral March",
+      "Trauermarsch",
+      "Piano Sonata No. 2, Op. 35"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 5",
+    "title": "Beginner",
+    "file": "ours/beethoven-5/common.mid",
+    "difficulty": 1.5,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 65,
+    "seconds": 24,
+    "song": "beethoven-5",
+    "rarity": "common",
+    "skills": [
+      "five-finger-position",
+      "held-bass"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven's Fifth",
+      "Fifth Symphony",
+      "Op. 67",
+      "Schicksalssinfonie"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 5",
+    "title": "Easy",
+    "file": "ours/beethoven-5/rare.mid",
+    "difficulty": 2,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 50,
+    "high": 65,
+    "seconds": 34,
+    "song": "beethoven-5",
+    "rarity": "rare",
+    "skills": [
+      "eighth-notes",
+      "two-note-chords"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven's Fifth",
+      "Fifth Symphony",
+      "Op. 67",
+      "Schicksalssinfonie"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 5",
+    "title": "Medium",
+    "file": "ours/beethoven-5/epic.mid",
+    "difficulty": 3,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 36,
+    "high": 84,
+    "seconds": 32,
+    "song": "beethoven-5",
+    "rarity": "epic",
+    "skills": [
+      "alberti-bass",
+      "thumb-under",
+      "pedal"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven's Fifth",
+      "Fifth Symphony",
+      "Op. 67",
+      "Schicksalssinfonie"
+    ]
+  },
+  {
+    "composer": "Ludwig van Beethoven",
+    "piece": "Symphony No. 5",
+    "title": "Hard",
+    "file": "ours/beethoven-5/legendary.mid",
+    "difficulty": 4,
+    "license": "MIT",
+    "credit": "Arranged by the learn-piano-easy authors",
+    "low": 29,
+    "high": 84,
+    "seconds": 45,
+    "song": "beethoven-5",
+    "rarity": "legendary",
+    "skills": [
+      "melody-in-chords",
+      "stride",
+      "arpeggios"
+    ],
+    "collection": "film",
+    "aka": [
+      "Beethoven's Fifth",
+      "Fifth Symphony",
+      "Op. 67",
+      "Schicksalssinfonie"
+    ]
+  },
+  {
     "composer": "Isaac Albéniz",
     "piece": "Opus 165 'España'",
     "title": "Prélude Andantino",

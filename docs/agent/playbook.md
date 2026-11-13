@@ -52,6 +52,13 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   reads those versions' tune in the right hand alone, and allows two hand moves in eight bars. Count a
   tune's leaps before briefing its writer, and cut a leaping tune to its hook phrase, as
   `tools/our-songs/the-blue-danube.ts` does.
+- **A chromatic tune cannot pass Beginner or Easy, in any key.** Those versions allow three notes
+  outside the key in any four bars, and moving the key moves the count with it. Count a tune's
+  accidentals before briefing its writer, and swap a chromatic one. `docs/goals/film-songs.md` records
+  the *Flight of the Bumblebee*'s swap.
+- **Commons' API answers "too many requests" after about twenty quick calls.** A shell `sleep` between
+  them is refused by the guard. Pace them in a small Bun script under `.agent-tmp/`, run in the
+  background, and fetch files through `Special:FilePath`, which the limit spares.
 - **A `<score>` in `\relative` mode can read an octave off,** as *Morgen, Kinder* seems to leap a fifth
   up in bar 1. A score with chords or `<< >>` blocks hides the melody's octave too. Settle the octave
   with the page's Commons MIDI, read with `readMidi` from `src/midi/smf-read.ts`.

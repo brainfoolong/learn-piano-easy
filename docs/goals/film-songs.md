@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: "Five film pieces: Boléro to Barcarolle"
-    status: open
+    status: done
   - id: 7
     title: "Five film pieces: Can-can to Pomp and Circumstance"
     status: open
@@ -98,11 +98,36 @@ own give the sound of modern film scores, with melodies that are ours alone. Eve
 - **The years above are from memory, so the session checks each in a source.** `isPublicDomain` must
   pass on years the session has read. A song whose years fail is swapped for a reserve.
 - **A song whose source cannot be confirmed is swapped for a reserve,** in this order. The first is
-  *Habanera* from *Carmen*, by Georges Bizet, 1875. The second is *Liebestraum No. 3*, by Franz Liszt,
-  1850. The third is the *Funeral March* from Chopin's Sonata No. 2, 1840. The swap is recorded here.
+  *Habanera* from *Carmen*, by Georges Bizet, 1875. The second is the *Funeral March* from Chopin's
+  Sonata No. 2, 1840. The third is the opening of Beethoven's Fifth Symphony, 1809. All three are in
+  use, and the swap is recorded here.
 - ***Habanera* took the place of *Ride of the Valkyries*.** Wikipedia's articles print no score of the
   Ride, Mutopia holds no Wagner, and Commons holds only paintings and recordings of it. Wikipedia's
   *Habanera* article prints Carmen's first phrase, and that phrase is the tune.
+- **Three pieces of stage 6 had no source a session may read.** Wikipedia prints only the opening
+  chords of Rachmaninoff's concerto, and Commons holds no score of it. Commons holds only a libretto of
+  *Cavalleria rusticana*. For the *Barcarolle*, Commons holds Métra's waltz suite on other themes of the
+  opera, not its tune.
+- ***Liebestraum No. 3* is not a reserve any more.** Wikipedia prints two bars of it, three notes of
+  tune, and neither Mutopia nor Commons holds a score.
+- **Chopin's *Funeral March* took the concerto's place, and Beethoven's Fifth took the Intermezzo's.**
+  The Fifth is a fourth reserve, chosen because Wikipedia prints its opening and *Fantasia 2000* opens
+  with it. Its slug is `beethoven-5`, and the march's is `funeral-march`.
+- ***Flight of the Bumblebee* is not a song of ours.** Its theme puts about three notes outside the key
+  in every bar. Beginner and Easy allow three in any four bars, in whatever key they take. Changing the
+  meter for one song would bend the model, so the song gives way.
+- **The 24th and 25th pieces move to stage 7,** since the reserves ran out. Each must be famous from a
+  film the session confirms, printed in a source a session may read, and mostly inside its key. *Rhapsody in Blue* was tried and set
+  aside, since its print is dense with triplets and its scan is poor. The Turkish March and the
+  *Pastoral* Symphony were set aside too: Wikipedia names no film for the march, and prints only bird
+  calls of the symphony.
+- **The sources of stage 6.** Nicolas Sceaux's CC0 typeset of the full score on Commons gives the
+  *Boléro* flute solo, bars 5 to 12. Two engravings on Commons give the *Funeral March*'s bars 1 to 4. Wikipedia's
+  `<score>` gives the Fifth's bars 1 to 5.
+- **A tie over a bar line that the notation cannot write is struck again.** *Boléro* ties three notes
+  over its bar lines at offsets that rebarring cannot all remove. Beginner may merge the repeated note.
+- **A fermata note holds one bar.** The Fifth's tune holds each long note for a bar of 4/4, and the tied
+  D of its bars 4 and 5 is one bar.
 - **The sources of stage 2.** Mutopia's piano reduction gives *The Blue Danube*, transposed to C, so
   the tune moves back to D. Mutopia's Fromont edition gives *Clair de lune*. Wikipedia's `<score>`
   blocks give *Dies irae*, *Habanera* and the dawn motif of *Also sprach Zarathustra*.
@@ -307,14 +332,19 @@ in the first.
 
 **Does:** film pieces 21 to 25 of the list ship in four versions.
 
-**Split:** five writing subagents, one module each.
+**Split:** four writing subagents, one module each. Three pieces had no source, so two reserves
+took their places. The *Bumblebee* cannot pass Beginner, so it and the 25th piece moved to stage 7.
 
-- [ ] *Boléro*. `tools/our-songs/bolero.ts:1`
-- [ ] *Flight of the Bumblebee*. `tools/our-songs/flight-of-the-bumblebee.ts:1`
-- [ ] Piano Concerto No. 2, first theme. `tools/our-songs/rachmaninoff-2.ts:1`
-- [ ] *Cavalleria rusticana*, Intermezzo. `tools/our-songs/cavalleria-intermezzo.ts:1`
-- [ ] *Barcarolle*. `tools/our-songs/barcarolle.ts:1`
-- [ ] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [x] *Boléro*. `tools/our-songs/bolero.ts:1`
+- [x] *Flight of the Bumblebee* is not a song of ours, as the standing decisions say.
+- [x] Chopin's *Funeral March*, in place of Rachmaninoff's Piano Concerto No. 2. `tools/our-songs/funeral-march.ts:1`
+- [x] Symphony No. 5, in place of the *Cavalleria rusticana* Intermezzo. `tools/our-songs/beethoven-5.ts:1`
+- [x] Add the three to `ourSongs`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:289`
+  - [x] Each tune is read from a printed score, and its years are confirmed.
+  - [x] Each module's tune is compared note for note with the tune read.
+  - [x] The three modules join `ourSongs`, and the writer accepts them.
+  - [x] `bun x tsc` and the build are green.
+  - [x] The catalog count test reads 645.
 
 ### 7. Five film pieces: Can-can to Pomp and Circumstance
 
@@ -327,7 +357,9 @@ in the first.
 - [ ] *Morning Mood*. `tools/our-songs/morning-mood.ts:1`
 - [ ] *Wedding March*. `tools/our-songs/wedding-march.ts:1`
 - [ ] *Pomp and Circumstance*. `tools/our-songs/pomp-and-circumstance.ts:1`
-- [ ] Add the five to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
+- [ ] Two film pieces, in place of the *Bumblebee* and the *Barcarolle*, found on the film list's
+  terms. Their slugs replace `flight-of-the-bumblebee` and `barcarolle` in `FILM`. `tools/our-songs.test.ts:95`
+- [ ] Add the seven to `ourSongs` and `FILM`, run the writer, and fix what the meter refuses. `tools/make-our-songs.ts:170`
 
 ### 8. Five sea shanties
 
@@ -366,34 +398,33 @@ and the rule that it quotes no protected theme.
 
 ### State
 
-Stages 1 to 5 are done. Twenty film pieces ship in four versions, and the catalog holds 633 rows.
-Stage 5 added the *William Tell* galop, the *Swan Lake* oboe theme, the *Night on Bald Mountain* brass
-theme, Dukas's broom theme and Schubert's *Ave Maria*. Each tune was compared note for note with the
-score the standing decisions name. `tsc` and the worktree's build are green. The catalog count test,
+Stages 1 to 6 are done. Twenty-three film pieces ship in four versions, and the catalog holds 645
+rows. Stage 6 added the *Boléro* flute solo, Chopin's *Funeral March* and the opening of Beethoven's
+Fifth. The concerto, the Intermezzo and the *Barcarolle* had no source, and the *Bumblebee* cannot pass
+Beginner. The standing decisions record each swap. Each tune was compared note for note with its
+score. `tsc` and the worktree's build are green. The catalog count test,
 `every_film_song_is_in_the_collection` and `every_guide_is_complete` passed once.
 
 ### Next
 
-**Stage 6: five film pieces, *Boléro* to *Barcarolle*.** Follow the stage's `**Split:**` line, and
-work in a worktree under `.agent-tmp/`.
+**Stage 7: the last seven film pieces.** Follow the stage's `**Split:**` line, and work in a worktree
+under `.agent-tmp/`. Seven pieces may not fit one session. If they do not, ship the five listed first,
+and leave the two replacements to the next session.
 
-- [ ] Read each score on Wikipedia, Mutopia or Commons, and confirm its years. `tools/our-songs/swan-lake.ts:1`
-- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/night-on-bald-mountain.ts:1`
-- [ ] Five writing subagents, one module each, from a shared brief file. `tools/our-songs/fur-elise.ts:1`
-- [ ] Add the five to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:289`
+- [ ] Read each score on Wikipedia, Mutopia or Commons, and confirm its years and film. `tools/our-songs/bolero.ts:1`
+- [ ] Find two replacements on the film list's terms, each mostly inside its key. `tools/our-songs.test.ts:95`
+- [ ] Decode each tune into notation, and cut a leaping one to its hook. `tools/our-songs/funeral-march.ts:1`
+- [ ] Writing subagents, one module each, from a shared brief file. `tools/our-songs/fur-elise.ts:1`
+- [ ] Add the modules to `ourSongs`, run the writer, run `bun x tsc`, and build. `tools/make-our-songs.ts:299`
 
-Mutopia's search is `cgibin/make-table.cgi?searchingfor=<word>`. A Mutopia `.ly` file is text, so read
-its notes there rather than from a PDF. Commons' search API with `srnamespace=6` finds scans. Write
-one brief file under `.agent-tmp/` for what the writers share, and give each prompt its tune, chords,
-about text and fun fact, word for word. A tune bar of 4/2 in quarters takes `steps: 2`, and one of 4/1
-takes `steps: 4`.
+Stage 6's brief, `.agent-tmp/brief-s6.md` in its worktree, is the shape to copy. Give each prompt its
+tune, chords, about text and fun fact, word for word. Before you brief a writer, count the tune's notes
+outside its key in every four bars: Beginner and Easy allow three. Mutopia holds no Liszt, Chopin
+sonata, Mascagni, Offenbach or Ravel. Commons' file pages give a scan's print year in `action=raw`.
 
-*Boléro* (Ravel died in 1937, published 1929) passes `isPublicDomain` only if 1929 + 95 < 2026 and
-1937 + 70 < 2026. Both hold, so check the print year in a source before it ships.
-
-Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 633 to 653. The e2e test
-`the_library_lists_the_film_songs` reads card titles, so it may need a scroll once the film group
-outgrows one view.
+Expected red: the catalog count in `src/midi/library-songs.test.ts` goes from 645 to 645 plus four rows
+per new piece. The e2e test `the_library_lists_the_film_songs` reads card titles, so it may need a
+scroll once the film group outgrows one view.
 
 ### Backlog
 

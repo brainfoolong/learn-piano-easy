@@ -317,3 +317,18 @@ They are under the MIT License, the same as the app: see `LICENSE` at the reposi
 | `ave-maria/epic.mid` | Ave Maria, Medium | Franz Schubert | MIT |
 | `ave-maria/legendary.mid` | Ave Maria, Hard | Franz Schubert | MIT |
 | `ave-maria/guide.json` | Ave Maria, the guide | | MIT |
+| `bolero/common.mid` | Boléro, Beginner | Maurice Ravel | MIT |
+| `bolero/rare.mid` | Boléro, Easy | Maurice Ravel | MIT |
+| `bolero/epic.mid` | Boléro, Medium | Maurice Ravel | MIT |
+| `bolero/legendary.mid` | Boléro, Hard | Maurice Ravel | MIT |
+| `bolero/guide.json` | Boléro, the guide | | MIT |
+| `funeral-march/common.mid` | Funeral March, Beginner | Frédéric Chopin | MIT |
+| `funeral-march/rare.mid` | Funeral March, Easy | Frédéric Chopin | MIT |
+| `funeral-march/epic.mid` | Funeral March, Medium | Frédéric Chopin | MIT |
+| `funeral-march/legendary.mid` | Funeral March, Hard | Frédéric Chopin | MIT |
+| `funeral-march/guide.json` | Funeral March, the guide | | MIT |
+| `beethoven-5/common.mid` | Symphony No. 5, Beginner | Ludwig van Beethoven | MIT |
+| `beethoven-5/rare.mid` | Symphony No. 5, Easy | Ludwig van Beethoven | MIT |
+| `beethoven-5/epic.mid` | Symphony No. 5, Medium | Ludwig van Beethoven | MIT |
+| `beethoven-5/legendary.mid` | Symphony No. 5, Hard | Ludwig van Beethoven | MIT |
+| `beethoven-5/guide.json` | Symphony No. 5, the guide | | MIT |
