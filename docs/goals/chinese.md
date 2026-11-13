@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: chinese-rules
@@ -183,37 +183,38 @@ address or mark that drifts between files.
 
 ### 7. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 6 are done. `zh` is shipped: the build writes every page under `zh/`, and the switch offers
-简体中文. `bun run i18n status zh` lists 72 missing texts, each a deliberate copy, as a standing decision says.
+The goal is reached. Every stage is done, `looper verify` is green, and both goal checks pass.
+`bun run i18n status zh` lists 72 missing texts, each a deliberate copy, as a standing decision says.
 
-- **Consistency.** Four `reader`s read the whole locale. Each drift is settled in the catalog, the lessons
-  and all 80 guides, and the guides are written again. The new terms are rows of `zh.md`'s glossary.
-- **Refused findings.** The readers' name changes came from memory, so `约翰·帕赫贝尔`, `查理·卫斯理` and
-  `《贝加马斯克组曲》` stay. *The Blue Danube*'s `八度低音` stays, since its English says "octave bass".
-- **Checks run once by name, green:** `the_chinese_site_reads_in_chinese` and
-  `every_page_passes_the_layout_checks_in_zh`. `bun x tsc` is green.
-- **Looked at:** all 10 shown routes and a lesson, phone and desktop, both themes. No page error, and no
-  missing-glyph box. The phone width ran in Chromium on Windows. No Android device was at hand, and
-  the `:lang(zh)` font stack names Noto Sans CJK SC for it.
+The first verify named eight failures, each fixed without loosening a test:
+- **The `lang` tag.** `tools/build.test.ts` and `e2e/site.e2e.ts` expected a page's `lang` and
+  `hreflang` to be its locale code. The build writes the row's `lang`, `zh-Hans`, so the tests read it.
+- **The Latin font check.** The endonym `简体中文` in the English and German language list is a Han
+  word. `tools/font-coverage.test.ts` now checks only Latin and shared characters.
+- **The map's and the profile's fades.** `e2e/locales.e2e.ts` waited on the bar slot only. It now waits
+  for the page's own body too, as `e2e/game.e2e.ts` does.
+- **The footer's jump.** The legal pages and the sponsor page load their body as a chunk. Their place
+  now holds a screen's height meanwhile, by the class `chunk-page` in `src/site/site.css`.
+- **The badge count.** The Han, Devanagari and Bengali font stacks in `src/ui/tokens.css` lacked the
+  metric-matched fallback face. A count drew in Microsoft YaHei while the Latin font loaded, and its box
+  passed the badge's.
+- **A timeout.** `fit_range_covers_every_note_of_a_song` reads every library song, so it takes 60 s, as
+  `src/midi/library-songs.test.ts` does.
 
 ### Next
 
-**Stage 7: verify the goal.** Run `looper verify` once, fix every failure in one pass, then run it again.
+Nothing is left in this goal. The next goal on the chain is `hindi`. Harvest this one into
+`docs/findings.md` § `chinese` first.
 
-Expected red:
-- `chinese_texts_keep_their_rules` was not run since stage 5. `.agent-tmp/zh-stray-latin.ts` finds no
-  broken mark. Its only hit is the `·` of a Chinese name, which the scan itself takes for Latin.
-- The unit tests `src/i18n/i18n.test.ts` and `src/learn/game/unlock.test.ts` changed for the ship, and
-  neither was run.
-- A test that counts the shipped locales, the sitemap or the built pages may expect three locales, not four.
+No test is expected to go red.
 
 ### Backlog
 
