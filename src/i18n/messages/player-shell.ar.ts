@@ -7,6 +7,8 @@ import type { playerShell as en } from "./player-shell.en";
 const num = (n: number, options?: Intl.NumberFormatOptions) => isolate(formatNumber("ar", n, options));
 /** `n` seconds with two decimals and no digit grouping, isolated, such as `12.50`. */
 const seconds = (n: number) => num(n, { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: false });
+/** `n` with one decimal and no digit grouping, such as `12.5`. */
+const tenths = (n: number) => formatNumber("ar", n, { minimumFractionDigits: 1, maximumFractionDigits: 1, useGrouping: false });
 /** `n` files as the subject of a sentence or a list item: `ملفان`, `11 ملفًا`. */
 const files = (n: number) =>
   plural("ar", n, { zero: "لا ملفات", one: "ملف واحد", two: "ملفان", few: `${num(n)} ملفات`, many: `${num(n)} ملفًا`, other: `${num(n)} ملف` });
@@ -97,6 +99,8 @@ export const playerShell: Translation<typeof en> = {
       sounds: { label: "أصوات البيانو", description: "كل مجموعات الأصوات، ليعزف البيانو دون اتصال أيًا كانت المجموعة المختارة." },
     },
     bytes: (n) => `${num(n, { useGrouping: false })} بايت`,
+    kilobytes: (n) => isolate(`${tenths(n)} KB`),
+    megabytes: (n) => isolate(`${tenths(n)} MB`),
     groupsFailed: (n, labels) => `تعذّر حفظ ${filesOf(n)} من ${isolate(labels)} للاستخدام دون اتصال.`,
     updated: (labels) => `تم التحديث. تم حفظ ${isolate(labels)} مجددًا للاستخدام دون اتصال.`,
     unavailable: "لا يحفظ هذا المتصفح أي ملفات دون اتصال لهذه الصفحة.",
@@ -145,7 +149,10 @@ export const playerShell: Translation<typeof en> = {
   },
   overlays: {
     fps: "الإطارات في الثانية",
+    fpsValue: (n) => isolate(`${formatNumber("ar", n, { useGrouping: false })} FPS`),
+    fpsNone: isolate("– FPS"),
     tempo: "السرعة",
+    bpmValue: (n) => isolate(`${formatNumber("ar", n, { useGrouping: false })} BPM`),
     track: (track, channel) => `المسار ${isolate(formatNumber("ar", track))}، القناة ${isolate(formatNumber("ar", channel))}`,
     velocity: (velocity) => `قوة الضغط ${isolate(formatNumber("ar", velocity))}`,
     timing: (start, length) => `يبدأ عند الثانية ${seconds(start)}، ومدته ${seconds(length)} ثانية`,

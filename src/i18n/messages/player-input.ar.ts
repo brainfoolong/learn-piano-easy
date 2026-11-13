@@ -7,6 +7,7 @@ import type { playerInput as en } from "./player-input.en";
 const num = (n: number) => isolate(formatNumber("ar", n));
 
 export const playerInput: Translation<typeof en> = {
+  percent: (n: number) => isolate(`${formatNumber("ar", n)}%`),
   devices: {
     heading: "أجهزة ⁨MIDI⁩",
     connect: "توصيل أجهزة ⁨MIDI⁩",

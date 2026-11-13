@@ -22,9 +22,11 @@ const SITE_NAME = isolate(en.siteName);
 const num = (n: number) => isolate(formatNumber("ar", n));
 
 export const ar: Translation<Messages> = {
+  siteName: en.siteName,
   noscript: `يحتاج ${SITE_NAME} إلى \u2068JavaScript\u2069 ليعمل.`,
   pages: {
     home: {
+      title: en.siteName,
       description: "تعلم البيانو بالعزف. دورة موجهة وبيانو \u20683D\u2069 ولوحة مفاتيح \u2068MIDI\u2069. مجاني ومفتوح المصدر ويعمل دون اتصال.",
     },
     play: {

@@ -17,6 +17,7 @@ export const fingerNumbersAr: Translation<FingerNumbersTexts> = {
     },
     "left-thumb-quiz": {
       text: "ما رقم الإبهام في اليد اليسرى؟",
+      answers: ["1", "3", "5"],
     },
     "five-fingers-demo": {
       text: "شاهد 5 مفاتيح متتالية، مفتاحًا لكل إصبع من أصابع اليد اليمنى. يعزف الإبهام المفتاح الأول، ثم الأصابع 2 و3 و4 و5.",

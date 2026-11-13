@@ -1,5 +1,5 @@
 /** The player's bar in Arabic. A text it leaves out shows in English. */
-import { isolate } from "../format";
+import { formatNumber, isolate } from "../format";
 import type { Translation } from "../translation";
 import type { playerBar as en } from "./player-bar.en";
 
@@ -29,6 +29,7 @@ export const playerBar: Translation<typeof en> = {
     pause: "إيقاف مؤقت",
     stop: "إيقاف",
     speed: "السرعة",
+    speedPercent: (n: number) => isolate(`${formatNumber("ar", n)}%`),
     transpose: "تصوير",
     loop: "تكرار",
     repeatAll: "تكرار الكل",
@@ -49,6 +50,7 @@ export const playerBar: Translation<typeof en> = {
     },
   },
   hotkeys: {
+    modifiers: { Ctrl: "Ctrl", Alt: "Alt", Shift: "Shift", Meta: "Meta" },
     none: "لا شيء",
   },
   hotkeyDialog: {

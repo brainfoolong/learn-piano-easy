@@ -12,7 +12,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   language: {
     label: "اللغة",
     help: "مع «مثل المتصفح»، يُفتح الموقع بلغة المتصفح إن كانت متوفرة فيه.",
-    options: { auto: "مثل المتصفح" },
+    options: { auto: "مثل المتصفح", en: "English", de: "Deutsch", es: "Español", zh: "简体中文", hi: "हिन्दी" },
   },
   learnSounds: {
     label: "أصوات المكافأة",
@@ -21,6 +21,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   learnDailyGoal: {
     label: "الهدف اليومي",
     help: "نقاط ⁨XP⁩ اللازمة كل يوم في «تعلم البيانو» لتستمر الأيام المتتالية.",
+    options: { "10": "10 XP", "20": "20 XP", "30": "30 XP", "50": "50 XP" },
   },
   learnSetupDone: {
     label: "انتهاء الزيارة الأولى",

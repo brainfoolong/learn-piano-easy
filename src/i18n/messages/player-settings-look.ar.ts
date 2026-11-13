@@ -468,7 +468,17 @@ export const playerSettingsLook: Translation<typeof en> = {
   overrideTimeSignature: {
     label: "الميزان",
     help: "الميزان الذي تُكتب به النوتة. يمكنك اختيار ميزان آخر إن كان ميزان الأغنية خاطئًا.",
-    options: { auto: "من الأغنية" },
+    options: {
+      auto: "من الأغنية",
+      "2/4": "2/4",
+      "3/4": "3/4",
+      "4/4": "4/4",
+      "5/4": "5/4",
+      "2/2": "2/2",
+      "6/8": "6/8",
+      "9/8": "9/8",
+      "12/8": "12/8",
+    },
   },
   sheetMinNoteDenom: {
     label: "أقصر قيمة زمنية",
