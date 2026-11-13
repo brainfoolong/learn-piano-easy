@@ -1111,3 +1111,27 @@ moving screenshot until one click loads it.
 - `OrbitControls` loads when the rig first takes a preset other than flat, never on a drag.
 - A switch of version loads its song into the running embed with `load`, in the same canvas.
 - An embed's canvas takes `touch-action: pan-y`, so a vertical swipe scrolls the page.
+
+## one-piano
+
+**Target:** every piano the site draws is the 3D piano, and the 2D keyboard is gone from the code.
+
+### Findings
+
+- The piano view is `pianoKeys()` of `src/render/piano-keys.ts`, styled by `src/render/piano-keys.css`.
+- Lessons, the setup check, the landing devices band and the gallery each draw the view.
+- The view frames `createPiano` of `src/render/piano.ts`, lit by `src/render/lights.ts` like the player's scene.
+- `src/input/pointer-piano.ts` takes press and release callbacks, so the player and the view share its rules.
+- `Mark` and `describeMarks` live in `src/ui/mark.ts`, so the landing names a mark without three.js.
+- A synthetic `pointerdown` on a key map span plays nothing, so a test sends it to the canvas.
+
+### Decisions that still bind
+
+- The site draws one piano, as [decision 0011](decisions/0011.md) records.
+- The view uses the rig's `flat` preset, so a key's top face is a screen rectangle and ignores drags.
+- A view is reconfigured with `show(options)`, never rebuilt, and a lesson holds one view and one WebGL context.
+- A mark tints its key in its token colour, by the share `MARK_STRENGTH` gives it.
+- The frame draws only when the picture can differ, at a pixel ratio of at most 2, with no glow.
+- The key map is an `aria-hidden` layer of one span per key, and the end-to-end tests find keys through it.
+- Without WebGL the view shows `ui.pianoKeys.noWebgl`, and the step still hears MIDI and the computer keyboard.
+- The devices band shows a picture until a click, as decision 0008 says for every landing piano.

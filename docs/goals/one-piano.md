@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: piano-keys
@@ -160,31 +160,23 @@ landing page, and decision 0008 already answers it: a picture until a click.
 ### 4. the goal is verified once, and every failure is fixed
 
 - [x] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 3 are committed. The 2D keyboard is deleted, and lessons, the setup check, the landing band
-and the gallery draw the 3D view in the rig's flat preset. The first `looper verify --all` passed the
-unit tests, all 149 e2e tests, lint, prose, layout and links. The e2e result was void, because other
-sessions changed files during the run. tsc was red only on `tools/hand-model.ts`, the `mascot-hand`
-goal's uncommitted file. No failure is this goal's.
+Every stage is done, and the goal is reached. The 2D keyboard is gone, and every piano the site draws
+is the 3D view. The findings name the view. The second `looper verify` was green: tsc, the unit tests,
+every e2e test, links, layout, prose and lint. The harvest is `docs/findings.md` § `one-piano`.
 
 ### Next
 
-**Stage 3's last item, then stage 4.** Files: `docs/findings.md`. Gate: `docs/findings.md` and
-`tools/hand-model.ts` have no other session's uncommitted change.
+**Retire the goal.** The driver checks the acceptance and the harvest, moves the checks into the floor,
+and deletes this file. `docs/findings.md:1115`
 
-- [x] Findings line 692 says the view's 88 keys, not "The 88-key keyboard". `docs/findings.md:692`
-- [x] Lines 709 and 710 give the view the live text, the keys that are no focus stops, and the shared `Mark`. `docs/findings.md:709`
-- [x] Line 765 says "Every landing piano", and the devices band shows a picture until a click. `docs/findings.md:765`
-- [x] Line 870 says the piano view, not the on-screen keyboard. `docs/findings.md:870`
-- [ ] Run `looper verify` once more, and it is green. `docs/goals/one-piano.md:164`
-
-Expected red: none of this goal's.
+Expected red: none.
 
 ### Backlog
 
