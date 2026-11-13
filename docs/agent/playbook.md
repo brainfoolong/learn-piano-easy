@@ -41,6 +41,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A commit took another session's message.** Both sessions wrote `.agent-tmp/commit-msg.txt`, and the
   later write won between the edit and the commit. Name a scratch file after its goal or slice, such as
   `.agent-tmp/msg-one-player.txt`.
+- **The `commit-msg` hook rejects a one-line last paragraph such as `Trade-offs: …`.** Git reads a
+  closing `Word: text` line as a trailer, and `tools/git-hooks/commit-msg` refuses every trailer. Start the last paragraph
+  with a plain sentence, such as "The cost is …".
 - **A site's license can allow a fetch while its `robots.txt` refuses agents by name.** OpenGameArt
   lists `Claude-Code`, `Codex` and `Cursor` under `Disallow: /`. Read a source's whole `robots.txt`
   for agent names before a goal plans a fetch tool for it.
