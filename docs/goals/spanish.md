@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: spanish-rules
@@ -198,9 +198,9 @@ address or mark that drifts between files.
 
 ### 7. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
@@ -225,18 +225,15 @@ The shots of every route in `es`, on a phone and a desktop in both themes, show 
 showed a lesson's piano naming `C4` in Spanish. `src/render/piano-keys.ts` now takes the locale's naming,
 and each key's span mirrors its name as `data-name`.
 
-`the_spanish_site_reads_in_spanish` passes. `every_page_passes_the_layout_checks_in_es` has not run yet.
+Stage 7 is done, and `looper verify` is green on every step. The first run failed two unit tests that
+held `es` unshipped. `src/i18n/i18n.test.ts` now reads `es/play/` as Spanish and `zh/play/` as no
+locale's. `src/learn/model.test.ts` gives the merged texts to every shipped locale. Every e2e test passed,
+`every_page_passes_the_layout_checks_in_es` among them.
 
 ### Next
 
-**Stage 7: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run it
-once more.
-
-Expected red:
-- Any test that counts the shipped locales, the language switch's items, the sitemap's pages or the
-  social images, now that `es` ships.
-- `every_page_passes_the_layout_checks_in_es` in `e2e/locales.e2e.ts`, which no session has run.
-- A German lesson test that reads a key's drawn name, since B now draws as `H` there.
+The goal is reached. Harvest it into `docs/findings.md` § `spanish`, move its two checks into the floor,
+and delete this file. The next goal on the chain is `chinese`. No test is expected to go red.
 
 ### Backlog
 
