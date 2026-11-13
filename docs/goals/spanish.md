@@ -141,7 +141,10 @@ blind.
 side by side, and three fresh reviewers review them blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.es.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.es.ts:1`
+- [x] One `tools/our-songs/<slug>.es.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.es.ts:1`
+  - [x] Every one of the 51 slugs from a to m has its `.es.ts`.
+  - [x] The guide's glossary holds the guides' new terms, and `typography.ts` keeps *Moulin Rouge!*.
+  - [x] `bun x tsc --noEmit` passes over them.
 - [ ] Each batch reviewed blind, and every finding settled.
 - [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp es` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
 
@@ -202,11 +205,17 @@ The briefs are scratch under `.agent-tmp/i18n/es/`: `writer-brief.md` and `revie
 catalogs, and `lesson-writer-brief.md`, `lesson-reviewer-brief.md` and `lesson-settle-brief.md` for the
 course. A new session rewrites a guide's brief from these when they are gone.
 
+Stage 4's writers are done. All 51 guides from `air-on-the-g-string` to `mozart-21-andante` have their
+`.es.ts`, and `bun x tsc --noEmit` passes. A wip commit of session 0198 holds them, since the CLI's
+login failed before that session wrapped. No guide is reviewed, built or stamped yet.
+
 ### Next
 
-**Stage 4: the song guides from a to m.** Gate: stage 3's worlds are stamped, which holds.
+**Stage 4: review, build and stamp the guides from a to m.** Gate: stage 3's worlds are stamped, which holds.
 
-- 50 slugs, from `air-on-the-g-string` to `mozart-21-andante`. `ls tools/our-songs/` lists them.
+- Review the 51 guides blind in batches of about seven, one fresh `reader` per batch, and settle each finding.
+- Then run the rules test once by name: `spanish_texts_keep_their_rules`.
+- The notes below are how the writers worked. Stage 5 follows them for n to z.
 - A guide's German sits in its module's `de` field, `tools/our-songs/<slug>.ts`. Every other locale is a
   file `tools/our-songs/<slug>.es.ts` exporting `translation: Translation<GuideTranslation>`, which
   `guideTranslationsOf` finds (`tools/make-our-songs.ts:454`).
