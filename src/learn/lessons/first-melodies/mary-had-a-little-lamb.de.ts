@@ -1,5 +1,5 @@
 /** The boss of *First melodies* in German. */
-import type { MaryTexts } from "./mary.en";
+import type { MaryTexts } from "./mary-had-a-little-lamb.en";
 
 export const maryDe: MaryTexts = {
   title: "Boss: Mary Had a Little Lamb",

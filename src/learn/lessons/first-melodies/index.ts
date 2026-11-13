@@ -2,7 +2,7 @@
 import type { WorldLessons } from "../../model";
 import { handsTakeTurns } from "./hands-take-turns";
 import { leftHandCPosition } from "./left-hand-c-position";
-import { mary } from "./mary";
+import { mary } from "./mary-had-a-little-lamb";
 import { maryFirstPhrase } from "./mary-first-phrase";
 import { repeatedNotes } from "./repeated-notes";
 import { rightHandCPosition } from "./right-hand-c-position";

@@ -2,7 +2,7 @@
 import type { WorldTexts } from "../../model";
 import { handsTakeTurnsDe } from "./hands-take-turns.de";
 import { leftHandCPositionDe } from "./left-hand-c-position.de";
-import { maryDe } from "./mary.de";
+import { maryDe } from "./mary-had-a-little-lamb.de";
 import { maryFirstPhraseDe } from "./mary-first-phrase.de";
 import { repeatedNotesDe } from "./repeated-notes.de";
 import { rightHandCPositionDe } from "./right-hand-c-position.de";

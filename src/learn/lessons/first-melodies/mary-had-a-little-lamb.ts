@@ -1,6 +1,6 @@
 /** The boss of *First melodies*: the Beginner version of *Mary Had a Little Lamb* in the player. Its id is `common`. */
 import type { Lesson } from "../../model";
-import { maryEn } from "./mary.en";
+import { maryEn } from "./mary-had-a-little-lamb.en";
 
 export const mary: Lesson = {
   id: "mary-had-a-little-lamb",
