@@ -2,8 +2,8 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish reads in Spanish** from the language switch to a lesson's step, its piano's key names and
- *   the player's controls.
+ * - **Spanish and Chinese each read in their own language** from the language switch to a lesson's step,
+ *   its piano's key names and the player's controls.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
  *   A flaw counts only where the locale's text adds it, since each page's own test holds its English.
  *   The pseudo-locale's longer texts already cover every width.
@@ -49,6 +49,32 @@ test("the_spanish_site_reads_in_spanish", async ({ page }) => {
   await expect(page.getByRole("button", { name: "Reproducir", exact: true })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Canciones" })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Configuración" })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test("the_chinese_site_reads_in_chinese", async ({ page }) => {
+  test.setTimeout(60_000);
+  await pastSetup(page);
+  const errors = watchErrors(page);
+
+  await page.goto("./learn/");
+  const choice = bar(page).getByRole("combobox", { name: "Language" });
+  await expect(choice.locator('option[value="zh"]')).toHaveText("简体中文");
+  await choice.selectOption("zh");
+  await expect(page).toHaveURL(/\/zh\/learn\/$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "zh-Hans");
+  await expect(heading(page)).toHaveText("学钢琴");
+  await expect(page.locator("main")).toContainText("认识钢琴");
+
+  await page.goto("./zh/learn/meet-the-piano/find-c/");
+  await expect(page.locator(".lesson__title")).toHaveText("找到 C");
+  await expect(page.locator("main")).toContainText("它们的名字都一样：C。");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "C4");
+
+  await page.goto("./zh/play/");
+  await expect(page.getByRole("button", { name: "播放", exact: true })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "歌曲" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "设置" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 

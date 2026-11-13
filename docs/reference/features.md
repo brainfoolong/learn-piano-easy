@@ -157,7 +157,7 @@ Each one is easy to make, and ours avoids it in the goal named.
 - Open source, with every third-party license named.
 - A sponsor page at `sponsor/`, opened by the top bar's heart. It links to GitHub Sponsors and names
   ways to help that cost no money.
-- The site, the course and the song guides read in English, German and Spanish. The language switch
+- The site, the course and the song guides read in English, German, Spanish and Chinese. The language switch
   in the top bar picks one, and a first visit opens in the browser's language.
 - Every page and every lesson is in a sitemap for search engines, with its page in each other language.
   The landing page describes the app as structured data.

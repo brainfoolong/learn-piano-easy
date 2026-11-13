@@ -5,6 +5,8 @@ MIT License, the same as the app: see `LICENSE` at the repository root.
 
 Their text is set in Plus Jakarta Sans, under the SIL Open Font License 1.1. The font's own license is
 `public/fonts/plus-jakarta-sans/LICENSE.md`. The license lets a picture show text set in the font.
+Plus Jakarta Sans has no Han glyphs, so `zh.png` draws them in the system's Chinese font, as the site does.
+A picture of rendered text holds no font file.
 
 The tool writes them, so a change is a new run of it, never an edit of a file here.
 
@@ -13,3 +15,4 @@ The tool writes them, so a change is a new run of it, never an edit of a file he
 | `en.png` | The site's name and the hero's lead in English, beside a keyboard with falling notes | MIT |
 | `de.png` | The site's name and the hero's lead in German, beside a keyboard with falling notes | MIT |
 | `es.png` | The site's name and the hero's lead in Spanish, beside a keyboard with falling notes | MIT |
+| `zh.png` | The site's name and the hero's lead in Chinese, beside a keyboard with falling notes | MIT |
