@@ -2,7 +2,7 @@
  * *Staccato*, a lesson of *Expression*: notes played short and detached, with a little silence after
  * each.
  *
- * A demo plays C to G and back staccato. The learner names what staccato means, learns the dot above or
+ * A demo plays C to G and back staccato, with fingers 1 to 5 and back. The learner names what staccato means, learns the dot above or
  * below a note and how it differs from a dotted note's dot. They learn to bounce off the key and play a
  * bounced C major chord, broken, in both hands. A second demo plays one phrase legato, then
  * staccato, and the learner names the order. They play a phrase that mixes legato and staccato, name
@@ -22,15 +22,15 @@ export const staccato: Lesson = {
       kind: "demo",
       bpm: 88,
       notes: [
-        { note: 60, at: 0, beats: 0.25 },
-        { note: 62, at: 1, beats: 0.25 },
-        { note: 64, at: 2, beats: 0.25 },
-        { note: 65, at: 3, beats: 0.25 },
-        { note: 67, at: 4, beats: 0.25 },
-        { note: 65, at: 5, beats: 0.25 },
-        { note: 64, at: 6, beats: 0.25 },
-        { note: 62, at: 7, beats: 0.25 },
-        { note: 60, at: 8, beats: 0.25 },
+        { note: 60, at: 0, beats: 0.25, finger: 1 },
+        { note: 62, at: 1, beats: 0.25, finger: 2 },
+        { note: 64, at: 2, beats: 0.25, finger: 3 },
+        { note: 65, at: 3, beats: 0.25, finger: 4 },
+        { note: 67, at: 4, beats: 0.25, finger: 5 },
+        { note: 65, at: 5, beats: 0.25, finger: 4 },
+        { note: 64, at: 6, beats: 0.25, finger: 3 },
+        { note: 62, at: 7, beats: 0.25, finger: 2 },
+        { note: 60, at: 8, beats: 0.25, finger: 1 },
       ],
     },
     { id: "short-and-detached", kind: "explain" },
@@ -44,16 +44,16 @@ export const staccato: Lesson = {
       kind: "demo",
       bpm: 80,
       notes: [
-        { note: 60, at: 0, beats: 1 },
-        { note: 62, at: 1, beats: 1 },
-        { note: 64, at: 2, beats: 1 },
-        { note: 65, at: 3, beats: 1 },
-        { note: 67, at: 4, beats: 2 },
-        { note: 60, at: 6, beats: 0.25 },
-        { note: 62, at: 7, beats: 0.25 },
-        { note: 64, at: 8, beats: 0.25 },
-        { note: 65, at: 9, beats: 0.25 },
-        { note: 67, at: 10, beats: 0.25 },
+        { note: 60, at: 0, beats: 1, finger: 1 },
+        { note: 62, at: 1, beats: 1, finger: 2 },
+        { note: 64, at: 2, beats: 1, finger: 3 },
+        { note: 65, at: 3, beats: 1, finger: 4 },
+        { note: 67, at: 4, beats: 2, finger: 5 },
+        { note: 60, at: 6, beats: 0.25, finger: 1 },
+        { note: 62, at: 7, beats: 0.25, finger: 2 },
+        { note: 64, at: 8, beats: 0.25, finger: 3 },
+        { note: 65, at: 9, beats: 0.25, finger: 4 },
+        { note: 67, at: 10, beats: 0.25, finger: 5 },
       ],
     },
     { id: "which-came-first", kind: "quiz", right: 1 },
