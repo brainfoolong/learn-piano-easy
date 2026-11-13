@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: What mirrors and what never does
-    status: open
+    status: done
   - id: 3
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -62,7 +62,15 @@ proves it with a pseudo-locale while no right-to-left translation exists.
   It wraps the text in U+2068 and U+2069, so a song title or a note name keeps its order in Arabic text.
   The rules test checks it in every right-to-left locale.
 - **A field a learner types into gets `dir="auto"`,** so a title typed in Latin letters reads left to
-  right on a right-to-left page.
+  right on a right-to-left page. A field for a note name or a colour code gets `dir="ltr"`, since
+  neither is ever right to left.
+- **`icon` sets `icon--directional` by the icon's name:** `arrow-right`, `chevron-left` and
+  `chevron-right`. A caller passes `directional: false` to keep one physical. The flip is the `scale`
+  property, so it composes with the `transform` a hover sets.
+- **A move along the piano stays physical.** The player's view buttons keep their chevrons, and the
+  right one sits right of the left one by `order`. The timeline's right arrow key seeks forward.
+- **The hero's site name sits in a span with `dir="auto"`,** so a Latin name keeps its word order on an
+  Arabic page. An `ar-XB` name repeats its override marks on each part, as its marked word is an inline block.
 - **The pseudo-locale is `ar-XB`.** Its texts are the English, wrapped in U+202E and U+202C so they read
   mirrored, on a page with `dir="rtl"`. It is built like `en-XA`, never released, and never listed.
 - **The layout checks run in `ar-XB` at every width.**
@@ -99,14 +107,14 @@ proves it with a pseudo-locale while no right-to-left translation exists.
 **Does:** `dir="ltr"` on the music, mirrored directional icons, isolated arguments and typed fields.
 **Gate:** `tools/css-sides.test.ts` passes.
 
-- [ ] `dir="ltr"` on the 3D piano, the lanes, the staff, the sheet, the timeline and the range picker. `src/render/piano-keys.ts:1`, `src/sheet/sheet-view.ts:1`
-- [ ] `.icon--directional` on every arrow and chevron that means a direction. `src/ui/icons/icons.ts:1`, `src/ui/components/link.ts:1`
-- [ ] The course map's path runs from the right. `src/learn/map-view.ts:1`
-- [ ] `isolate()`, and test `isolate_wraps_text_in_first_strong_isolates`. `src/i18n/format.ts:1`, `src/i18n/format.test.ts:1`
-- [ ] `dir="auto"` on every text field. `src/library/search.ts:1`
-- [ ] Tests `a_right_to_left_page_mirrors_its_layout`, `the_piano_and_the_staff_never_mirror` and `a_directional_icon_points_the_reading_way`. `e2e/rtl.e2e.ts:1`
-- [ ] The site design gains a section on direction. `docs/site-design.md:162`
-- [ ] Look at the landing, the map, a lesson, the player and the settings in `ar-XB` with `bun run shot`, on a phone and a desktop.
+- [x] `dir="ltr"` on the 3D piano, the lanes, the staff, the sheet, the timeline and the range picker. `src/render/piano-keys.ts:369`, `src/sheet/sheet-view.ts:190`
+- [x] `.icon--directional` on every arrow and chevron that means a direction. `src/ui/icons/icons.ts:243`, `src/ui/base.css:209`
+- [x] The course map's path runs from the right. `src/learn/map-view.ts:74`
+- [x] `isolate()`, and test `isolate_wraps_text_in_first_strong_isolates`. `src/i18n/format.ts:55`, `src/i18n/format.test.ts:1`
+- [x] `dir="auto"` on every text field. `src/library/library-panel.ts:309`, `src/settings/panel.ts:399`
+- [x] Tests `a_right_to_left_page_mirrors_its_layout`, `the_piano_and_the_staff_never_mirror` and `a_directional_icon_points_the_reading_way`. `e2e/rtl.e2e.ts:1`
+- [x] The site design gains a section on direction. `docs/site-design.md:177`
+- [x] Look at the landing, the map, a lesson, the player and the settings in `ar-XB` with `bun run shot`, on a phone and a desktop.
 
 ### 3. the goal is verified once, and every failure is fixed
 
@@ -118,30 +126,31 @@ proves it with a pseudo-locale while no right-to-left translation exists.
 
 ### State
 
-Stage 1 is done. Every page carries `dir` from its row, and the language switch sets it. A `--pseudo`
-build writes `ar-XB/` pages with `dir="rtl"`. `tools/css-sides.test.ts` passes, with every physical
-side made logical or marked. The landing, the site bar and the onboarding dialog mirror in `ar-XB`.
+Stages 1 and 2 are done. The piano view, the staff, the sheet's page, the timeline and the play
+modes' preview carry `dir="ltr"`. Arrows and chevrons mirror through `icon--directional`, and the
+course map's road swings left first in `ar-XB`. `isolate()` exists, and free-text fields carry
+`dir="auto"`. `e2e/rtl.e2e.ts` and `src/i18n/format.test.ts` pass, run once by name, and so does
+`tools/css-sides.test.ts`.
 
-The TypeScript sides need no change. The tooltip already reads the direction, and the rest are
-measured coordinates or music. `src/settings/panel.ts` scrolls its nav by negative `scrollLeft` in
-right-to-left, which no screenshot has checked yet.
+Screenshots in `ar-XB` show the landing, the map, a lesson and the player mirrored, with the music
+unmirrored. On a phone, the player bar covers the settings panel's head and nav in English too. So the
+settings nav's marker and its negative `scrollLeft` are still unchecked in right-to-left.
 
 ### Next
 
-**Stage 2: what mirrors and what never does.** Files: `src/render/piano-keys.ts`,
-`src/sheet/sheet-view.ts`, `src/play/timeline.ts`, `src/ui/icons/icons.ts`, `src/learn/map-view.ts`,
-`src/i18n/format.ts` and `e2e/rtl.e2e.ts`.
+**Stage 3: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run
+it once more.
 
-- `dir="ltr"` on the music's roots. Add the play-modes preview of the note lanes, `src/play-modes/modes-view.css:196`, whose notes use `inset-inline-start` now.
-- The course map: `src/learn/map-view.ts:95` draws the road from a physical x, and `src/learn/map-view.css:338` places the stops from the same x. Mirror the x in the script for both.
-- `.icon--directional`: the "Start learning" arrow on the landing still points right in `ar-XB`.
-- The hero's highlighted last word, "Easy", shows unoverridden in `ar-XB`. Its script splits the title, so the override wraps only the first part.
-- Look at the settings nav in `ar-XB` on a phone, and check that the marker and the scroll follow the current section.
-
-Expected red: the layout checks in `ar-XB`, in `e2e/play.e2e.ts` and every file that loops over
-`LOCALES` of `e2e/layout-check.ts`, until stage 2 lands.
+- The layout checks in `ar-XB` have not run since stage 1. Each file that loops over `LOCALES` of
+  `e2e/layout-check.ts` may go red there, such as `e2e/design.e2e.ts` and `e2e/play.e2e.ts`.
+- A test that reads the hero's heading may see its new inner span, `src/landing/hero.ts:37`.
+- Check the settings nav in `ar-XB` on a phone at `src/settings/panel.ts`, with the panel opened from
+  the site bar so the player bar does not cover it.
 
 ### Backlog
+
+- The octave buttons of the range picker sit in a mirrored row, so "Octave down" stands right of
+  "Octave up" in `ar-XB`, `src/keyboard/range-control.ts:149`. Their labels say which is which.
 
 - A number in a right-to-left sentence may need its own isolation once Arabic texts exist.
 - `src/ui/color-picker.ts:151` builds the alpha fill inline as `linear-gradient(to right, …)`. It
