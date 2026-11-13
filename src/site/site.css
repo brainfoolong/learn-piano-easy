@@ -38,13 +38,15 @@
   }
 
   /*
-   * A lesson's place, and that of the map, the profile, the Data page or the gallery, holds a screen's height while
-   * its chunk loads, so the footer never jumps.
+   * A page whose body loads as a chunk of its own holds a screen's height while the chunk loads, so the
+   * footer never jumps. These are a lesson, the map, the profile, the Data page, the gallery, the legal
+   * pages and the sponsor page.
    */
   .lesson-page,
   .learn-page,
   .data-page,
-  .gallery-page {
+  .gallery-page,
+  .chunk-page {
     min-height: calc(100dvh - var(--site-bar-space, var(--s-12)));
   }
 

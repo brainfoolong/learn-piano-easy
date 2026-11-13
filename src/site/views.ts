@@ -137,6 +137,7 @@ function dataView(locale: Locale, settings: SettingsStore): View {
 /** The legal notice or the privacy policy, whose heading shows at once and whose text loads as a chunk of its own. */
 function legalView(kind: "imprint" | "privacy", locale: Locale): View {
   const element = page(messagesOf(locale).pages[kind].title, []);
+  element.classList.add("chunk-page");
   void import("./legal-view").then((module) => element.append(module.legalBody(kind, locale)));
   return { element };
 }
@@ -144,6 +145,7 @@ function legalView(kind: "imprint" | "privacy", locale: Locale): View {
 /** The sponsor page, whose heading shows at once and whose body loads as a chunk of its own. */
 function sponsorView(locale: Locale): View {
   const element = page(messagesOf(locale).pages.sponsor.title, []);
+  element.classList.add("chunk-page");
   void import("./sponsor-view").then((module) => element.append(module.sponsorBody(locale)));
   return { element };
 }
