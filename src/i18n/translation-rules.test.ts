@@ -110,9 +110,22 @@ function pluralCalls(source: string): { locale: string; forms: string[] | undefi
   });
 }
 
+/** Each kept list's patterns, compiled once, since every text of a locale reads the same list. */
+const keptPatterns = new WeakMap<readonly string[], RegExp[]>();
+
+/** The pattern of each word of `kept`, which matches only where no Latin letter touches the word. */
+function patternsOf(kept: readonly string[]): RegExp[] {
+  let patterns = keptPatterns.get(kept);
+  if (patterns === undefined) {
+    patterns = kept.map((word) => new RegExp(`(?<!\\p{scx=Latin})${RegExp.escape(word)}(?!\\p{scx=Latin})`, "gu"));
+    keptPatterns.set(kept, patterns);
+  }
+  return patterns;
+}
+
 /** `text` with each of its kept words written as `by`, where no Latin letter touches the word. */
 function replaceKept(text: string, kept: readonly string[], by: string): string {
-  return kept.reduce((out, word) => out.replace(new RegExp(`(?<!\\p{scx=Latin})${RegExp.escape(word)}(?!\\p{scx=Latin})`, "gu"), by), text);
+  return patternsOf(kept).reduce((out, pattern) => out.replace(pattern, by), text);
 }
 
 /** `text` with its kept words and music's Latin taken out. */
