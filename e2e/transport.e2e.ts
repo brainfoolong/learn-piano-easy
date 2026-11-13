@@ -1,5 +1,19 @@
 /** The control bar in a real browser: play moves the song, and speed and transpose step as labelled. */
-import { expect, test } from "@playwright/test";
+import { expect, type Locator, type Page, test } from "@playwright/test";
+
+/**
+ * Clicks `button` in the playing song's bar, which fades after IDLE_MS without a pointer move.
+ * Each try moves the pointer to wake the bar, as a learner's would, and a slow page that lets it
+ * fade again before the click lands gets another try.
+ */
+async function clickInPlayingBar(page: Page, button: Locator): Promise<void> {
+  let corner = 1;
+  await expect(async () => {
+    corner = 3 - corner;
+    await page.mouse.move(corner, corner);
+    await button.click({ timeout: 2000 });
+  }).toPass({ timeout: 30_000 });
+}
 
 test("pressing_play_moves_the_song_time", async ({ page }) => {
   await page.goto("./play/");
@@ -9,9 +23,7 @@ test("pressing_play_moves_the_song_time", async ({ page }) => {
   await page.getByRole("button", { name: "Play" }).click();
   await expect(page.getByRole("button", { name: "Pause" })).toBeVisible();
   await expect(time).not.toHaveText("0:00", { timeout: 5000 });
-  // The bar fades after IDLE_MS of playing, so the pointer wakes it as a learner's would.
-  await page.mouse.move(1, 1);
-  await page.getByRole("button", { name: "Pause" }).click();
+  await clickInPlayingBar(page, page.getByRole("button", { name: "Pause" }));
   const paused = await time.textContent();
   await page.waitForTimeout(1200);
   await expect(time).toHaveText(paused ?? "");
@@ -211,9 +223,7 @@ test("stop_returns_the_song_to_its_start", async ({ page }) => {
   await page.getByRole("button", { name: "Play" }).click();
   await expect.poll(async () => Number(await position.getAttribute("aria-valuenow")), { timeout: 10_000 }).toBeGreaterThan(0);
 
-  // The bar fades after IDLE_MS of playing, so the pointer wakes it as a learner's would.
-  await page.mouse.move(1, 1);
-  await page.getByRole("button", { name: "Stop", exact: true }).click();
+  await clickInPlayingBar(page, page.getByRole("button", { name: "Stop", exact: true }));
   await expect(page.getByRole("button", { name: "Play" })).toBeVisible();
   await expect(position).toHaveAttribute("aria-valuenow", "-2");
   // The song stays stopped there.
