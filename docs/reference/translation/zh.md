@@ -266,7 +266,9 @@ strings. AP is Apple's `support.apple.com/zh-cn` pages. GO is Google's help page
 ## 6. Kept words
 
 - **Learn Piano Easy**, **MIDI**, **Web MIDI**, **MusicXML** and **XP** stay as they are.
-- **Units and formats:** BPM, FPS, PDF, USB, Hz, kHz, dB, ms, KB and MB.
+- **Units and formats:** BPM, FPS, PDF, USB, Hz, kHz, dB, ms, KB, MB, px and 3D.
+- **Technical names:** JavaScript, MIT, Cookie, a computer key such as Esc, Q or Z, and the pedal mark
+  Ped. A Roman numeral of a chord, such as V7, stays too.
 - **Product and site names:** GitHub, Matomo, Wikipedia, Wikimedia Commons, Mutopia, Chrome, Edge,
   Firefox and Safari.
 - **The printed marks of a score:** `p`, `mp`, `mf`, `f`, `pp`, `ff`, `rit.`, `cresc.`, `dim.` and

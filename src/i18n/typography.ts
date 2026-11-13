@@ -62,7 +62,10 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       "Learn Piano Easy", "Wikimedia Commons", "Wikipedia", "Mutopia", "Web MIDI", "MIDI", "MusicXML", "GitHub", "Matomo",
       "Chrome", "Edge", "Firefox", "Safari", "XP", "BPM", "bpm", "FPS", "PDF", "USB", "kHz", "Hz", "dB", "ms", "KB", "MB",
       "BWV", "K.", "rit.", "cresc.", "dim.", "a tempo", "do", "re", "mi", "fa", "sol", "la", "si",
-      "mp", "mf", "pp", "ff", "p", "f",
+      "mp", "mf", "pp", "ff", "p", "f", "Ped.", "Do", "Re", "Mi", "JavaScript", "MIT", "Cookie", "3D", "px", "Esc",
+      "Q", "W", "Z", "M", "I", "R", "V",
+      "In the Hall of the Mountain King", "Carol of the Bells", "Ode to Joy", "Jingle Bells", "Mary Had a Little Lamb",
+      "Für Elise", "Twinkle Twinkle Little Star", "Canon in D",
     ],
     marks: [
       { says: "A comma, question, exclamation or semicolon is full width", mustNot: /(?<!\d),|,(?!\d)|[?!;]/ },
