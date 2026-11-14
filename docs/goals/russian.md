@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Russian style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Russian
     status: open
@@ -75,6 +75,15 @@ taught.
 - **Russian runs longer than English, and its words are long.** The layout checks at 360 pixels matter
   most. A label that clips takes the glossary's short form.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
+- **The style guide confirmed each decision above,** and settled what they left open. The instrument is
+  `фортепиано`. `ё` is written everywhere, since children read the site, though Microsoft never writes
+  it. Quotes stay `« »`, though Microsoft's guide asks for straight ones in software. The locale row
+  stands unchanged: `ru`, `ru_RU`, solfège and Cyrillic.
+- **The guide changed one decision: names and works take their Russian form in prose.** A person, a
+  place or a work with a Russian Wikipedia article is written in Cyrillic, from its title. Russian prose
+  never prints a foreign name in Latin letters. The library's song titles stay Latin, as data.
+- **Units are Cyrillic (`мс`, `Гц`, `дБ`), and a counted beat is a word (`«раз-и, два-и»`),** as Russian
+  writes and counts them.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -89,12 +98,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/ru.md:1`
-- [ ] Microsoft's Russian style guide: the address, the marks and the interface terms. `docs/reference/translation/ru.md:1`
-- [ ] Russian Wikipedia's music articles and Russian-language piano methods: each music term with two sources. `docs/reference/translation/ru.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/ru.md:1`
-- [ ] The Russian entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Russian row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/ru.md:1`
+- [x] Microsoft's Russian style guide: the address, the marks and the interface terms. `docs/reference/translation/ru.md:1`
+- [x] Russian Wikipedia's music articles and Russian-language piano methods: each music term with two sources. `docs/reference/translation/ru.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/ru.md:1`
+- [x] The Russian entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The Russian row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
 
 ### 2. The site and the player in Russian
 
@@ -172,15 +181,30 @@ address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `bengali` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/ru.md` holds every section the method names. The `ru` entry
+of `src/i18n/typography.ts` keeps `KEPT_IN_OWN_SCRIPT` and checks thirteen mark rules. Test
+`the_russian_marks_hold_and_spare_kept_words` in `src/i18n/translation-rules.test.ts` passes. It shows
+each rule catching a broken text and sparing a good one.
+
+No Russian piano method was reached, so most music terms rest on Russian Wikipedia alone. The guide's
+*Open* lists the weak rows.
 
 ### Next
 
-**Stage 1: the Russian style guide and glossary.** Files: `docs/reference/translation/ru.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `bengali` is reached.
+**Stage 2: the site and the player in Russian.** Run `bun tools/i18n.ts status ru`, then `work ru <unit>`
+for each catalog section. Three writers translate side by side into `src/i18n/messages/ru.ts`,
+`learn-lesson.ru.ts`, `player-shell.ru.ts` and `player-settings.ru.ts`. Each writer reads `ru.md` whole.
+Copy the `bn` files' shape. Then three fresh reviewers review the batches blind, and `bun run i18n stamp ru` stamps each section.
 
-Expected red: none.
+- A `.ru.ts` file that holds no texts yet may still be missing. `ls src/i18n/messages/*.bn.ts` lists the
+  files to mirror.
+- A Russian number in a message goes through `formatNumber`, which writes a no-break space. A writer
+  types a no-break space before `%` and units by hand. Write tool calls turn an escape raw, as the
+  playbook says.
+
+Expected red: none. `russian_texts_keep_their_rules` reads every Russian file, and none exists yet.
 
 ### Backlog
 
 - A native Russian speaker's read of the course would catch what a blind review cannot.
+- A Russian piano teacher's read of the glossary's *unsourced* rows, as `ru.md` § *Open* lists.
