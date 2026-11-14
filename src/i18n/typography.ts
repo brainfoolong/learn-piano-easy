@@ -99,6 +99,7 @@ const SONG_NAMES: readonly string[] = [
       "Moonlight", "Mahler", "Lone Ranger", "Tchaikovsky", "Mussorgsky", "Shakespeare", "Smetana", "Rossini", "Goethe",
       "Vltava", "Victoria", "Tiverton", "Erlangen", "Cornwall", "Leipzig", "Weimar", "Giselle", "Sadko", "Joshua",
       "Popeye", "Oberndorf", "Gruber", "Mohr", "Joplin", "Dukas", "Wade", "Redner", "Jaws", "Quint", "Bald Mountain",
+      "Felix Mendelssohn", "Mendelssohn",
 ];
 
 /**

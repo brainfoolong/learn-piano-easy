@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in Bengali, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in Bengali, from n to z"
     status: open
@@ -140,9 +140,9 @@ keys* with *First melodies*. Five fresh reviewers then review the five batches b
 most eight guides each work side by side, and one fresh reviewer per batch reviews it blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.bn.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.bn.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp bn` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+- [x] One `tools/our-songs/<slug>.bn.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.bn.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp bn` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
 
 ### 5. The song guides in Bengali, from n to z
 
@@ -180,47 +180,46 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1, 2 and 3 are done. Every catalog section and every lesson of the eight worlds holds its
-Bengali. Each world loads `texts.bn.ts` through the `bn` line of its `index.ts`, such as
-`src/learn/lessons/chords/index.ts`. `src/i18n/stamps/bn.json` stamps every catalog section and world.
-`bun x tsc` and `bengali_texts_keep_their_rules` pass, and a build is green.
+Stages 1 to 4 are done. Every catalog section, every lesson and the guides of the 51 songs from
+`air-on-the-g-string` to `mozart-21-andante` hold their Bengali. `src/i18n/stamps/bn.json` stamps them
+all, and `public/songs/ours/<slug>/guide.json` carries each guide's Bengali. `bun x tsc` and
+`bengali_texts_keep_their_rules` pass, and a build is green.
 
-All five lesson batches were reviewed blind and every finding is settled. Only *Reading music* had a
-*wrong* finding: low C read as below the second space. A second blind review of that batch found nothing
-wrong.
+The seven guide batches were reviewed blind and every finding is settled. Only batch 5, from
+`hark-the-herald-angels-sing` to `joy-to-the-world`, had a *wrong* finding: a step lost "down". A
+second blind review of that batch found nothing wrong.
 
-`bun tools/i18n.ts status bn` lists 39 catalog texts and 28 lesson texts as missing, all on purpose.
-Their Bengali would equal the English: note letters, marks such as `mf`, beat counts, and names.
-
-`docs/reference/translation/bn.md` § 5 gained *The course's own terms*, such as `ঘর` for a place on
-the staff and `টোকা দেওয়া` for tapping along. The lessons' look waits for stage 6, since `bn` has no
-route before it ships.
+`SONG_NAMES` in `src/i18n/typography.ts` gained `Felix Mendelssohn`, since `bn.md` § 6 keeps his name in
+Latin letters. `bn.md` gained the guides' settled words: place spellings in § 6, and in § 5 `বিট` for a
+count, `বিটে` for "on the beat", a bare eighth, timpani, plucked, the manger and a hand leaving the keys.
 
 ### Next
 
-**Stage 4: the song guides from a to m.** That is 51 slugs, from `air-on-the-g-string` to
-`mozart-21-andante`, so seven batches of at most eight. Run `bun tools/i18n.ts work bn guide/<slug>`
-for each slug. Send the writers side by side, each with the whole of `bn.md` and the `.id.ts` sibling
-as the model, such as `tools/our-songs/canon-in-d.id.ts`. Then one fresh reviewer per batch writes its
-findings under `.agent-tmp/i18n/bn/review/`.
+**Stage 5: the song guides from n to z.** That is 29 slugs, from `neon-chase` to `yankee-doodle`, so
+four batches of at most eight. `bun tools/i18n.ts status bn` lists them as `guide/<slug>` with 22
+missing. Run `bun tools/i18n.ts work bn guide/<slug>` for each slug before its writer starts.
 
-- **The guides' recurring steps are settled** in `bn.md` § 5 *A guide's recurring steps*. Every writer
-  copies them word for word.
-- **A settler subagent per batch applies the findings,** since the writers end with their report. A
-  batch with a *wrong* finding gets a second fresh reviewer.
-- **A writer leaves out a text whose Bengali equals the English,** since the no-copy check refuses it.
-- **A song name the kept words lack fails the script rule.** `KEPT_IN_OWN_SCRIPT` in
-  `src/i18n/typography.ts:108` holds full titles, so a guide writes the full title, never a short one.
-- **Write and Edit store `য়` and `ড়` decomposed,** which the nukta rule wants. No writer builds a file
-  through a script.
-- **`bun tools/make-our-songs.ts` writes the guides' JSON** once every batch is settled, and its output
-  is committed.
+- **Three subagents per batch, each given a brief file under `.agent-tmp/i18n/bn/`:** a writer, a
+  fresh blind reviewer, and a settler that applies the findings. A batch with a *wrong* finding gets
+  a second fresh reviewer and settler.
+- **A writer reads `bn.md` whole and uses the `.id.ts` sibling as the model of the shape only,** such as
+  `tools/our-songs/canon-in-d.id.ts`. It translates from the English.
+- **A writer must not delete its work lists.** The reviewer reads them in step 3, so two writers'
+  deletions cost a regeneration here.
+- **The reviewer reads `bn.md`, then the `.bn.ts` files, and only then the work lists.** Each finding is
+  one line: `- <id> | <kind> | <weight> | <why> | <full fixed text>`.
+- **A name missing from `KEPT_IN_OWN_SCRIPT` goes into `SONG_NAMES`** when `bn.md` § 6 keeps it in Latin
+  letters, as Mendelssohn did. *Wedding March* names him again.
+- **Run the rules test after each batch lands,** stamp each guide with `bun tools/i18n.ts stamp bn
+  guide/<slug>`, then run `bun tools/make-our-songs.ts` once and commit its JSON.
 
 Expected red: none.
 
 ### Backlog
 
 - A native reader from Bangladesh and one from West Bengal would each catch words that read as the other country's.
+- The manger is `যাবপাত্র`, the Bengali Bible's spelling, though a reviewer proposed `জাবপাত্র`. A native
+  Christian reader settles it for `ihr-kinderlein-kommet` and any later carol.
 - The game's miss flash in `src/i18n/messages/player-input.bn.ts` reads `ফসকে গেছে`, while the glossary's
   miss is `ফসকে যাওয়া`. The stage 6 consistency read decides whether a flash keeps its past tense.
 - The Bengali marks in `src/i18n/typography.ts` miss a colon with no space after it, such as `করে:একটি`.

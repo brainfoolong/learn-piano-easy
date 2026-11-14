@@ -118,6 +118,12 @@ changed since it was made, apart from one setting's wording.
 | the beat (the steady pulse) | বিট | as above |
 | three-four time | 3/4 টাইম | follows `টাইম সিগনেচার` |
 | count-in | শুরুর গোনা | everyday words, unsourced |
+| an eighth, as a unit of time | একটি এইটথ নোট, never a bare `এইটথ`: `একটি এইটথ নোটের সময় আগে` | follows eighth note |
+| manger (of the Nativity) | যাবপাত্র, the Bengali Bible's spelling, never `জাবপাত্র` | the carols' word |
+| timpani | টিম্পানি, never `ঢাক`, a festival drum | the orchestra's name |
+| plucked (a short note, like a string) | `যেন গিটারের তার টেনে ছাড়ছেন`; a plucked bass is `টোকা দিয়ে বাজানো বেস` | an image, as the English is |
+| on the beat, on beat one | বিটে, `1 নম্বর বিটে`; never `বিটের উপরে`, a word-for-word copy | follows beat |
+| a count as a unit of time, "six counts" | বিট: `ছয়টি বিট`, never `ছয়টি গোনা` | follows beat |
 | rhythm | ছন্দ | WP *ছন্দ*; WP *তাল*; MB |
 | tempo; speed | টেম্পো; গতি | AN *গতি*; MB *গতি*. `লয়` names Indian music's tempo. |
 | metronome | মেট্রোনোম | unsourced, the English term |
@@ -381,6 +387,7 @@ A step that only differs in its bars or its section follows the nearest row's sh
 | Play the left hand alone, and press the notes of each chord together. | শুধু বাঁ হাতে বাজান, আর প্রতিটি কর্ডের নোটগুলো একসঙ্গে চাপুন। |
 | Now the left hand alone. It holds one shape for each bar. | এবার শুধু বাঁ হাত। প্রতিটি বারে হাত একই আকারে থাকে। |
 | Now the left hand alone. It holds one shape for half a bar or a whole bar. | এবার শুধু বাঁ হাত। আধা বার বা একটি পুরো বার ধরে হাত একই আকারে থাকে। |
+| It holds one shape for half a bar at a time. | প্রতিটি আধা বার ধরে হাত একই আকারে থাকে। |
 | Now the left hand alone. It keeps one shape and changes it at most once a bar. | এবার শুধু বাঁ হাত। হাত একই আকারে থাকে, আর প্রতিটি বারে বড়জোর একবার আকার বদলায়। |
 | Play the Alberti bass alone until it rolls by itself: low, high, middle, high. | আলবের্তি বেস আলাদা করে বাজান, যতক্ষণ না সেটি নিজে থেকে গড়িয়ে চলে: নিচের, উপরের, মাঝের, উপরের। |
 | Keep the Alberti bass soft, so the tune sings above it. | আলবের্তি বেস হালকা করে বাজান, যাতে সুরটি তার উপরে গেয়ে ওঠে। |
@@ -399,6 +406,10 @@ More rules the guides settle:
 - **A step that plays one part names the part, then `আলাদা করে`:** `আলবের্তি বেস আলাদা করে বাজান।` A
   hand alone is `শুধু ডান হাতে`.
 - **"First time through" is `প্রথমবার`,** and the second and the last time follow it: `দ্বিতীয়বারের অংশটি`.
+- **"Slow down" as an instruction is `গতি একটু কমিয়ে আনুন`.** The noun stays `ধীর হয়ে আসা`.
+- **A hand that lifts off the keys is `চাবি ছেড়ে ওঠে`.** `হাত উঠে` alone reads as moving up the keyboard.
+- **To lean on a note is `টেনে রাখা`,** as the fermata's hold. A strong pull, such as a sea shanty's, is
+  `জোরালোভাবে`, since `জোরে` is kept for loud.
 - **Loud is `জোরে`, never `উঁচু`.** `উঁচু` is kept for pitch.
 - **Rhythm syllables are `টা`,** such as `“টা-আ, টা-টা”`.
 - **A song is `গানটি` once it is named or plain,** as Bengali marks a known thing with `টি`.
@@ -473,7 +484,8 @@ The lessons' writers settled these, and the blind reviews kept them. Every row i
 - **Catalog numbers:** `BWV 1068`, `K. 525`.
 - **The note letters and chord symbols,** as § 7 says.
 - **A song title stays in Latin letters,** without quotes. A title is data shared by every locale, and
-  the library searches it.
+  the library searches it. A title whose English writes an apostrophe takes the curly `’` where the
+  kept list holds that form, such as `Branle de l’Official`.
 - **A Latin word takes a Bengali ending after a hyphen,** as Microsoft's guide joins product names:
   `MIDI-র`, `GitHub-এ`, `C-তে`.
 - **A composer with a Bengali Wikipedia article takes its spelling:** `বেটহোফেন`, `মোৎসার্ট`, `বাখ`,
@@ -483,6 +495,8 @@ The lessons' writers settled these, and the blind reviews kept them. Every row i
   Tchaikovsky is `চাইকোভস্কি`, without the article's explicit hasanta, which some fonts draw badly.
 - **A city Bengali news names takes its everyday spelling,** such as `ভিয়েনা` or `প্যারিস`. A smaller
   place stays in Latin letters, such as Leipzig, Hexham or Olomouc.
+- **The guides spell these places alike:** `বোস্টন`, `কোলন` (Cologne), `লন্ডন`, `নিউ ইয়র্ক`, `কিয়েভ`,
+  `ওয়ারশ`, `বোহেমিয়া` and `কানেটিকাট`. The United States is `মার্কিন যুক্তরাষ্ট্র`.
 - **Every other person's name stays in Latin letters,** since a guessed spelling would mislead. Grieg,
   Mendelssohn, Satie, Bizet, Mahler and Ravel have no Bengali article.
 - **The sections "Learn Piano" and "Just Play Piano" are translated,** since they describe what a

@@ -10,7 +10,8 @@
     "hi": "Last Horizon हमारी अपनी धुन है, जो आज के फ़िल्मी बैकग्राउंड म्यूज़िक के अंदाज़ में लिखी गई है। लंबे समय तक दबाए रखे कॉर्ड के नीचे एक धीमा पैटर्न बार-बार लौटता है, जैसे कोई लंबा सफ़र खत्म हो रहा हो।",
     "ar": "⁨Last Horizon⁩ لحن من تأليفنا، على طريقة موسيقى الأفلام الحديثة. يتكرر فيه نمط بطيء تحت تآلفات تمتد طويلًا، كما في نهاية رحلة طويلة.",
     "pt": "Last Horizon é uma melodia nossa, no estilo de uma trilha sonora de filme moderna. Um padrão lento se repete sob acordes longos e segurados, como no fim de uma longa viagem.",
-    "id": "Last Horizon adalah melodi buatan kami sendiri, dengan gaya musik film modern. Sebuah pola lambat berulang di bawah akor-akor yang ditahan panjang, seperti akhir sebuah perjalanan jauh."
+    "id": "Last Horizon adalah melodi buatan kami sendiri, dengan gaya musik film modern. Sebuah pola lambat berulang di bawah akor-akor yang ditahan panjang, seperti akhir sebuah perjalanan jauh.",
+    "bn": "Last Horizon আমাদের নিজেদের তৈরি একটি সুর, আধুনিক সিনেমার সংগীতের ধাঁচে। লম্বা করে ধরে রাখা কর্ডের নিচে একটি ধীর প্যাটার্ন বারবার ফিরে আসে, যেন একটি দীর্ঘ যাত্রা শেষ হচ্ছে।"
   },
   "funFact": {
     "en": "A figure that repeats again and again under a tune is called an ostinato, from the Italian word for stubborn.",
@@ -20,7 +21,8 @@
     "hi": "किसी धुन के नीचे बार-बार दोहराए जाने वाले पैटर्न को ओस्टिनाटो कहते हैं। यह नाम एक इतालवी शब्द से आया है, जिसका मतलब है “ज़िद्दी”।",
     "ar": "النمط الذي يتكرر مرة بعد مرة تحت اللحن يُسمى أوستيناتو، من الكلمة الإيطالية التي تعني «العنيد».",
     "pt": "Um padrão que se repete sem parar sob uma melodia se chama ostinato, palavra italiana que quer dizer “teimoso”.",
-    "id": "Pola yang terus berulang di bawah melodi disebut ostinato, dari kata Italia yang berarti “keras kepala”."
+    "id": "Pola yang terus berulang di bawah melodi disebut ostinato, dari kata Italia yang berarti “keras kepala”.",
+    "bn": "সুরের নিচে বারবার ফিরে আসা প্যাটার্নকে বলে ostinato। শব্দটি এসেছে ইতালীয় ভাষায় “জেদি” অর্থের শব্দ থেকে।"
   },
   "mythic": null,
   "versions": {
@@ -48,7 +50,8 @@
             "hi": "माप 1 से 4 तक सिर्फ़ दाएँ हाथ से बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें।",
             "ar": "اعزف الموازير من 1 إلى 4 باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة.",
             "pt": "Toque os compassos 1 a 4 só com a mão direita, e deixe a música esperar cada nota.",
-            "id": "Mainkan birama 1 sampai 4 dengan tangan kanan saja, dan biarkan lagu menunggu setiap not."
+            "id": "Mainkan birama 1 sampai 4 dengan tangan kanan saja, dan biarkan lagu menunggu setiap not.",
+            "bn": "1 থেকে 4 নম্বর বার শুধু ডান হাতে বাজান, আর প্রতিটি নোটের জন্য গানটিকে অপেক্ষা করতে দিন।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -64,7 +67,8 @@
             "hi": "माप 5 से 8 तक सिर्फ़ दाएँ हाथ से बजाएँ। उँगली 5 एक कुंजी ऊपर B फ़्लैट पर जाती है।",
             "ar": "اعزف الموازير من 5 إلى 8 باليد اليمنى وحدها. ينتقل الإصبع 5 مفتاحًا واحدًا إلى الأعلى، إلى سي بيمول.",
             "pt": "Toque os compassos 5 a 8 só com a mão direita. O dedo 5 sobe uma tecla, até o Si bemol.",
-            "id": "Mainkan birama 5 sampai 8 dengan tangan kanan saja. Jari 5 naik satu tuts ke B mol."
+            "id": "Mainkan birama 5 sampai 8 dengan tangan kanan saja. Jari 5 naik satu tuts ke B mol.",
+            "bn": "5 থেকে 8 নম্বর বার শুধু ডান হাতে বাজান। 5 নম্বর আঙুল এক চাবি উপরে B ফ্ল্যাটে সরে।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -80,7 +84,8 @@
             "hi": "अब सिर्फ़ बायाँ हाथ। यह हर माप में पूरे समय एक नीचे वाला नोट या एक फ़िफ़्थ दबाए रखता है।",
             "ar": "والآن اليد اليسرى وحدها. تبقي نغمة منخفضة واحدة أو خامسة مضغوطة طوال كل مازورة.",
             "pt": "Agora só a mão esquerda. Ela segura uma nota grave ou uma quinta durante cada compasso inteiro.",
-            "id": "Sekarang tangan kiri saja. Tangan kiri menahan satu not rendah atau satu kuint selama satu birama penuh."
+            "id": "Sekarang tangan kiri saja. Tangan kiri menahan satu not rendah atau satu kuint selama satu birama penuh.",
+            "bn": "এবার শুধু বাঁ হাত। প্রতিটি পুরো বার ধরে হাত একটি নিচের নোট বা একটি ফিফথ ধরে রাখে।"
           },
           "hands": "left",
           "speed": 0.6,
@@ -96,7 +101,8 @@
             "hi": "पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ।",
             "ar": "اعزف أول 8 موازير باليدين معًا، ببطء.",
             "pt": "Junte as mãos nos 8 primeiros compassos, devagar.",
-            "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan."
+            "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan.",
+            "bn": "প্রথম আটটি বার দুই হাতে ধীরে ধীরে বাজান।"
           },
           "hands": "both",
           "speed": 0.7,
@@ -112,7 +118,8 @@
             "hi": "दोनों हाथों से पूरा गाना पूरी स्पीड पर बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، بالسرعة الكاملة.",
             "pt": "Toque a música inteira com as duas mãos, na velocidade normal.",
-            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh."
+            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
+            "bn": "দুই হাতে পুরো গানটি পুরো গতিতে বাজান।"
           },
           "hands": "both",
           "speed": 1,
@@ -133,7 +140,8 @@
             "hi": "उँगली 4 को A पर रखकर शुरू करें। अँगूठा D के ऊपर और उँगली 5 B फ़्लैट के ऊपर तैयार रहते हैं।",
             "ar": "ابدأ بالإصبع 4 على نغمة لا. ينتظر الإبهام فوق ري، والإصبع 5 فوق سي بيمول.",
             "pt": "Comece com o dedo 4 no Lá. O polegar espera sobre o Ré, e o dedo 5 sobre o Si bemol.",
-            "id": "Mulai dengan jari 4 di A. Ibu jari menunggu di atas D, dan jari 5 di atas B mol."
+            "id": "Mulai dengan jari 4 di A. Ibu jari menunggu di atas D, dan jari 5 di atas B mol.",
+            "bn": "A-তে 4 নম্বর আঙুল দিয়ে শুরু করুন। বুড়ো আঙুল D-র উপরে অপেক্ষা করে, আর 5 নম্বর আঙুল B ফ্ল্যাটের উপরে।"
           }
         },
         {
@@ -148,7 +156,8 @@
             "hi": "हर माप में चार धीमी बीट गिनें। बायाँ हाथ हर नोट को माप खत्म होने तक दबाए रखता है।",
             "ar": "عدّ 4 نبضات بطيئة في كل مازورة. تبقي اليد اليسرى كل نغمة مضغوطة حتى نهاية المازورة.",
             "pt": "Conte quatro tempos lentos em cada compasso. A mão esquerda segura cada nota até o fim do compasso.",
-            "id": "Hitung empat ketukan lambat di setiap birama. Tangan kiri menahan setiap not sampai birama berakhir."
+            "id": "Hitung empat ketukan lambat di setiap birama. Tangan kiri menahan setiap not sampai birama berakhir.",
+            "bn": "প্রতিটি বারে চারটি ধীর বিট গুনুন। বার শেষ না হওয়া পর্যন্ত বাঁ হাত প্রতিটি নোট ধরে রাখে।"
           }
         },
         {
@@ -163,7 +172,8 @@
             "hi": "हल्के से और एक जैसा बजाएँ, जैसे किसी लंबी फ़िल्म के आखिर में बजता संगीत।",
             "ar": "اعزف بهدوء وبانتظام، مثل الموسيقى في نهاية فيلم طويل.",
             "pt": "Toque suave e por igual, como a música no fim de um filme longo.",
-            "id": "Mainkan dengan lembut dan rata, seperti musik di akhir sebuah film panjang."
+            "id": "Mainkan dengan lembut dan rata, seperti musik di akhir sebuah film panjang.",
+            "bn": "লম্বা সিনেমার শেষের সংগীতের মতো হালকা করে আর সমানভাবে বাজান।"
           }
         }
       ],
@@ -178,7 +188,8 @@
             "hi": "उँगली 5 एक कुंजी ऊपर B फ़्लैट पर जाती है। फिर उँगली 4 और 3 नीचे A और G पर उतरती हैं।",
             "ar": "ينتقل الإصبع 5 مفتاحًا واحدًا إلى الأعلى، إلى سي بيمول. ثم ينزل الإصبعان 4 و3 إلى نغمتي لا وصول.",
             "pt": "O dedo 5 sobe uma tecla, até o Si bemol. Depois os dedos 4 e 3 descem para Lá e Sol.",
-            "id": "Jari 5 naik satu tuts ke B mol. Lalu jari 4 dan 3 turun ke A dan G."
+            "id": "Jari 5 naik satu tuts ke B mol. Lalu jari 4 dan 3 turun ke A dan G.",
+            "bn": "5 নম্বর আঙুল এক চাবি উপরে B ফ্ল্যাটে সরে। তারপর 4 আর 3 নম্বর আঙুল নেমে A আর G-তে যায়।"
           }
         },
         {
@@ -191,7 +202,8 @@
             "hi": "चार बराबर लंबाई के नोट F से नीचे C शार्प तक उतरते हैं। अँगूठा C शार्प बजाता है, और फिर उँगली 2 D बजाती है।",
             "ar": "تنزل 4 نغمات متساوية من فا إلى دو دييز. يعزف الإبهام دو دييز، ثم يأخذ الإصبع 2 نغمة ري.",
             "pt": "Quatro notas descem por igual do Fá até o Dó sustenido. O polegar toca o Dó sustenido, e depois o dedo 2 pega o Ré.",
-            "id": "Empat not yang rata turun dari F ke C kres. Ibu jari memainkan C kres, lalu jari 2 memainkan D."
+            "id": "Empat not yang rata turun dari F ke C kres. Ibu jari memainkan C kres, lalu jari 2 memainkan D.",
+            "bn": "চারটি সমান নোট F থেকে C শার্প পর্যন্ত নেমে আসে। বুড়ো আঙুল C শার্প বাজায়, তারপর 2 নম্বর আঙুল D নেয়।"
           }
         },
         {
@@ -204,7 +216,8 @@
             "hi": "उँगली 5 से A को चार बीट तक दबाए रखें। बायाँ हाथ उँगली 5 और 2 से F और C एक साथ बजाता है।",
             "ar": "أبق نغمة لا مضغوطة بالإصبع 5 مدة 4 نبضات. تعزف اليد اليسرى فا ودو معًا بالإصبعين 5 و2.",
             "pt": "Segure o Lá com o dedo 5 por quatro tempos. A mão esquerda toca Fá e Dó juntos, com os dedos 5 e 2.",
-            "id": "Tahan A dengan jari 5 selama empat ketukan. Tangan kiri memainkan F dan C bersamaan dengan jari 5 dan 2."
+            "id": "Tahan A dengan jari 5 selama empat ketukan. Tangan kiri memainkan F dan C bersamaan dengan jari 5 dan 2.",
+            "bn": "5 নম্বর আঙুলে A চার বিট ধরে রাখুন। বাঁ হাত 5 আর 2 নম্বর আঙুলে F আর C একসঙ্গে বাজায়।"
           }
         }
       ]
@@ -233,7 +246,8 @@
             "hi": "सिर्फ़ बाएँ हाथ से बजाएँ: एक नीचे वाला नोट, फिर उसके ऊपर का फ़िफ़्थ, बार-बार।",
             "ar": "اعزف باليد اليسرى وحدها: نغمة منخفضة، ثم الخامسة فوقها، مرة بعد مرة.",
             "pt": "Toque só a mão esquerda: uma nota grave, depois a quinta acima dela, sem parar.",
-            "id": "Mainkan tangan kiri saja: satu not rendah, lalu kuint di atasnya, berulang-ulang."
+            "id": "Mainkan tangan kiri saja: satu not rendah, lalu kuint di atasnya, berulang-ulang.",
+            "bn": "শুধু বাঁ হাতে বাজান: একটি নিচের নোট, তারপর তার উপরের ফিফথ, বারবার।"
           },
           "hands": "left",
           "speed": 0.6,
@@ -249,7 +263,8 @@
             "hi": "पहले आठ माप सिर्फ़ दाएँ हाथ से बजाएँ, और गाने को हर नोट पर आपका इंतज़ार करने दें।",
             "ar": "اعزف أول 8 موازير باليد اليمنى وحدها، ودع الأغنية تنتظر كل نغمة.",
             "pt": "Toque só a mão direita nos 8 primeiros compassos, e deixe a música esperar cada nota.",
-            "id": "Mainkan tangan kanan saja pada 8 birama pertama, dan biarkan lagu menunggu setiap not."
+            "id": "Mainkan tangan kanan saja pada 8 birama pertama, dan biarkan lagu menunggu setiap not.",
+            "bn": "প্রথম আটটি বার শুধু ডান হাতে বাজান, আর প্রতিটি নোটের জন্য গানটিকে অপেক্ষা করতে দিন।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -265,7 +280,8 @@
             "hi": "पहले आठ माप दोनों हाथों से धीरे-धीरे बजाएँ।",
             "ar": "اعزف أول 8 موازير باليدين معًا، ببطء.",
             "pt": "Junte as mãos nos 8 primeiros compassos, devagar.",
-            "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan."
+            "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan.",
+            "bn": "প্রথম আটটি বার দুই হাতে ধীরে ধীরে বাজান।"
           },
           "hands": "both",
           "speed": 0.6,
@@ -281,7 +297,8 @@
             "hi": "दोनों हाथों से पूरा गाना, लिखी स्पीड से थोड़ा धीमा बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، أبطأ قليلًا من السرعة المكتوبة.",
             "pt": "Toque a música inteira com as duas mãos, um pouco mais devagar que o escrito.",
-            "id": "Mainkan seluruh lagu dengan kedua tangan, sedikit lebih lambat dari tertulis."
+            "id": "Mainkan seluruh lagu dengan kedua tangan, sedikit lebih lambat dari tertulis.",
+            "bn": "দুই হাতে পুরো গানটি লেখা গতির চেয়ে একটু ধীরে বাজান।"
           },
           "hands": "both",
           "speed": 0.8,
@@ -297,7 +314,8 @@
             "hi": "अब इसे पूरी स्पीड पर बजाएँ।",
             "ar": "والآن اعزفها بالسرعة الكاملة.",
             "pt": "Agora toque na velocidade normal.",
-            "id": "Sekarang mainkan dengan kecepatan penuh."
+            "id": "Sekarang mainkan dengan kecepatan penuh.",
+            "bn": "এবার পুরো গতিতে বাজান।"
           },
           "hands": "both",
           "speed": 1,
@@ -318,7 +336,8 @@
             "hi": "बायाँ हाथ हर बीट पर वही दो नोट बजाता है, पहले नीचे वाला, फिर ऊपर वाला। इसे एक जैसा और शांत रखें।",
             "ar": "تعزف اليد اليسرى النغمتين نفسيهما في كل نبضة، المنخفضة ثم العالية. اجعلها ثابتة وهادئة.",
             "pt": "A mão esquerda toca as mesmas duas notas em cada tempo, grave e aguda. Mantenha o ritmo regular e calmo.",
-            "id": "Tangan kiri memainkan dua not yang sama di setiap ketukan, rendah lalu tinggi. Mainkan dengan mantap dan tenang."
+            "id": "Tangan kiri memainkan dua not yang sama di setiap ketukan, rendah lalu tinggi. Mainkan dengan mantap dan tenang.",
+            "bn": "বাঁ হাত প্রতিটি বিটে একই দুটি নোট বাজায়, নিচের আর উপরের। সেটি স্থির আর শান্ত রাখুন।"
           }
         },
         {
@@ -333,7 +352,8 @@
             "hi": "माप 3 का आखिरी G थोड़ा पहले छोड़ें। तब बाएँ हाथ को नीचे F पर जाने का समय मिलता है।",
             "ar": "ارفع آخر نغمة صول في المازورة 3 قبل موعدها بقليل. هكذا يبقى لليد اليسرى وقت لتنزل إلى فا.",
             "pt": "Solte o último Sol do compasso 3 um pouco antes. Assim a mão esquerda tem tempo de descer até o Fá.",
-            "id": "Lepaskan G terakhir di birama 3 sedikit lebih awal. Dengan begitu tangan kiri punya waktu untuk turun ke F."
+            "id": "Lepaskan G terakhir di birama 3 sedikit lebih awal. Dengan begitu tangan kiri punya waktu untuk turun ke F.",
+            "bn": "3 নম্বর বারের শেষ G একটু আগেই ছেড়ে দিন। তাহলে বাঁ হাত F-এ নামার সময় পায়।"
           }
         },
         {
@@ -348,7 +368,8 @@
             "hi": "अँगूठे और उँगली 3 से C शार्प और E एक साथ दबाएँ।",
             "ar": "اضغط دو دييز ومي معًا بالإبهام والإصبع 3.",
             "pt": "Pressione Dó sustenido e Mi juntos, com o polegar e o dedo 3.",
-            "id": "Tekan C kres dan E bersamaan dengan ibu jari dan jari 3."
+            "id": "Tekan C kres dan E bersamaan dengan ibu jari dan jari 3.",
+            "bn": "বুড়ো আঙুল আর 3 নম্বর আঙুলে C শার্প আর E একসঙ্গে চাপুন।"
           }
         }
       ],
@@ -363,7 +384,8 @@
             "hi": "उँगली 5 एक कुंजी ऊपर B फ़्लैट पर जाती है। बायाँ हाथ G और D के बीच आगे-पीछे बजाता है।",
             "ar": "ينتقل الإصبع 5 مفتاحًا واحدًا إلى الأعلى، إلى سي بيمول. وتتأرجح اليد اليسرى بين صول وري.",
             "pt": "O dedo 5 sobe uma tecla, até o Si bemol. A mão esquerda balança entre Sol e Ré.",
-            "id": "Jari 5 naik satu tuts ke B mol. Tangan kiri berayun di antara G dan D."
+            "id": "Jari 5 naik satu tuts ke B mol. Tangan kiri berayun di antara G dan D.",
+            "bn": "5 নম্বর আঙুল এক চাবি উপরে B ফ্ল্যাটে সরে। বাঁ হাত G আর D-র মধ্যে দোলে।"
           }
         },
         {
@@ -376,7 +398,8 @@
             "hi": "आखिर में उँगली 2 और 4 से D और F एक साथ बजाएँ। बायाँ हाथ उनके नीचे D और A दबाए रखता है।",
             "ar": "اختم بنغمتي ري وفا معًا، بالإصبعين 2 و4. وتبقي اليد اليسرى نغمتي لا وري مضغوطتين تحتهما.",
             "pt": "Termine com Ré e Fá juntos, com os dedos 2 e 4. A mão esquerda segura Ré e Lá por baixo.",
-            "id": "Akhiri dengan D dan F bersamaan, dengan jari 2 dan 4. Tangan kiri menahan D dan A di bawahnya."
+            "id": "Akhiri dengan D dan F bersamaan, dengan jari 2 dan 4. Tangan kiri menahan D dan A di bawahnya.",
+            "bn": "2 আর 4 নম্বর আঙুলে D আর F একসঙ্গে বাজিয়ে শেষ করুন। বাঁ হাত সেগুলোর নিচে D আর A ধরে রাখে।"
           }
         },
         {
@@ -389,7 +412,8 @@
             "hi": "उँगली 3 G से नीचे F पर जाती है। फिर उँगली 2 और 1 E और D बजाती हैं।",
             "ar": "ينزل الإصبع 3 من صول إلى فا. ثم يعزف الإصبعان 2 و1 مي وري.",
             "pt": "O dedo 3 desce do Sol para o Fá. Depois os dedos 2 e 1 tocam Mi e Ré.",
-            "id": "Jari 3 turun dari G ke F. Lalu jari 2 dan 1 memainkan E dan D."
+            "id": "Jari 3 turun dari G ke F. Lalu jari 2 dan 1 memainkan E dan D.",
+            "bn": "3 নম্বর আঙুল G থেকে নেমে F-এ যায়। তারপর 2 আর 1 নম্বর আঙুল E আর D বাজায়।"
           }
         }
       ]
@@ -419,7 +443,8 @@
             "hi": "सिर्फ़ बाएँ हाथ से बजाएँ, जब तक ब्रोकन कॉर्ड अपने-आप न बहने लगें।",
             "ar": "اعزف باليد اليسرى وحدها حتى تنساب التآلفات المفككة من تلقاء نفسها.",
             "pt": "Toque só a mão esquerda até os acordes quebrados rolarem sozinhos.",
-            "id": "Mainkan tangan kiri saja sampai akor terurainya mengalir dengan sendirinya."
+            "id": "Mainkan tangan kiri saja sampai akor terurainya mengalir dengan sendirinya.",
+            "bn": "শুধু বাঁ হাতে বাজান, যতক্ষণ না ভাঙা কর্ডগুলো নিজে থেকে গড়িয়ে চলে।"
           },
           "hands": "left",
           "speed": 0.5,
@@ -435,7 +460,8 @@
             "hi": "माप 9 से 12 तक सिर्फ़ दाएँ हाथ से बजाएँ, और ऊपर जाते समय अँगूठा नीचे से ले जाएँ।",
             "ar": "اعزف الموازير من 9 إلى 12 باليد اليمنى وحدها، ومرر الإبهام من تحت في الصعود.",
             "pt": "Toque os compassos 9 a 12 só com a mão direita, e passe o polegar por baixo na subida.",
-            "id": "Mainkan birama 9 sampai 12 dengan tangan kanan saja, dan biarkan ibu jari menyusup saat naik."
+            "id": "Mainkan birama 9 sampai 12 dengan tangan kanan saja, dan biarkan ibu jari menyusup saat naik.",
+            "bn": "9 থেকে 12 নম্বর বার শুধু ডান হাতে বাজান, আর উপরে ওঠার পথে বুড়ো আঙুল নিচ দিয়ে নিন।"
           },
           "hands": "right",
           "speed": 0.5,
@@ -451,7 +477,8 @@
             "hi": "माप 17 से 24 तक सिर्फ़ दाएँ हाथ के कॉर्ड बजाएँ, और सबसे ऊपर वाले नोट को गाने दें।",
             "ar": "اعزف تآلفات اليد اليمنى وحدها في الموازير من 17 إلى 24، ودع النغمة العليا تغني.",
             "pt": "Toque só os acordes da mão direita nos compassos 17 a 24, e deixe a nota de cima cantar.",
-            "id": "Mainkan akor tangan kanan saja pada birama 17 sampai 24, dan biarkan not atas bernyanyi."
+            "id": "Mainkan akor tangan kanan saja pada birama 17 sampai 24, dan biarkan not atas bernyanyi.",
+            "bn": "17 থেকে 24 নম্বর বারে ডান হাতের কর্ডগুলো আলাদা করে বাজান, আর সবচেয়ে উপরের নোটটিকে গাইতে দিন।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -467,7 +494,8 @@
             "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، بثلاثة أرباع السرعة.",
             "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
-            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan."
+            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan.",
+            "bn": "দুই হাতে পুরো গানটি তিন-চতুর্থাংশ গতিতে বাজান।"
           },
           "hands": "both",
           "speed": 0.75,
@@ -483,7 +511,8 @@
             "hi": "अब इसे पूरी स्पीड पर पेडल के साथ बजाएँ।",
             "ar": "والآن اعزفها بالسرعة الكاملة، مع الدواسة.",
             "pt": "Agora toque na velocidade normal, com o pedal.",
-            "id": "Sekarang mainkan dengan kecepatan penuh, dengan pedal."
+            "id": "Sekarang mainkan dengan kecepatan penuh, dengan pedal.",
+            "bn": "এবার প্যাডেলসহ পুরো গতিতে বাজান।"
           },
           "hands": "both",
           "speed": 1,
@@ -504,7 +533,8 @@
             "hi": "हर माप की शुरुआत में पेडल बदलें, जहाँ कॉर्ड बदलता है।",
             "ar": "غيّر الدواسة في بداية كل مازورة، حيث يتغير التآلف.",
             "pt": "Troque o pedal no início de cada compasso, onde o acorde muda.",
-            "id": "Ganti pedal di awal setiap birama, tempat akornya berganti."
+            "id": "Ganti pedal di awal setiap birama, tempat akornya berganti.",
+            "bn": "প্রতিটি বারের শুরুতে, যেখানে কর্ড বদলায়, প্যাডেল বদলান।"
           }
         },
         {
@@ -519,7 +549,8 @@
             "hi": "बायाँ हाथ हल्के से बजाएँ। उसका पैटर्न धुन के नीचे किसी शांत इंजन की तरह बार-बार चलता रहता है।",
             "ar": "اعزف باليد اليسرى بهدوء. يتكرر نمطها تحت اللحن كمحرك هادئ.",
             "pt": "Mantenha a mão esquerda suave. O padrão dela se repete como um motor silencioso sob a melodia.",
-            "id": "Mainkan tangan kiri dengan lembut. Polanya berulang seperti mesin yang tenang di bawah melodi."
+            "id": "Mainkan tangan kiri dengan lembut. Polanya berulang seperti mesin yang tenang di bawah melodi.",
+            "bn": "বাঁ হাত হালকা রাখুন। এর প্যাটার্নটি সুরের নিচে একটি শান্ত ইঞ্জিনের মতো বারবার চলে।"
           }
         },
         {
@@ -534,7 +565,8 @@
             "hi": "E फ़्लैट के बाद अँगूठा नीचे से F पर ले जाएँ। फिर उँगली 2 और 4 G और C तक पहुँचती हैं।",
             "ar": "بعد مي بيمول، مرر الإبهام من تحت إلى فا. ثم يصل الإصبعان 2 و4 إلى صول ودو.",
             "pt": "Depois do Mi bemol, passe o polegar por baixo até o Fá. Em seguida, os dedos 2 e 4 alcançam Sol e Dó.",
-            "id": "Setelah E mol, biarkan ibu jari menyusup ke F. Lalu jari 2 dan 4 meraih G dan C."
+            "id": "Setelah E mol, biarkan ibu jari menyusup ke F. Lalu jari 2 dan 4 meraih G dan C.",
+            "bn": "E ফ্ল্যাটের পরে বুড়ো আঙুল নিচ দিয়ে F-এ নিন। তারপর 2 আর 4 নম্বর আঙুল G আর C পর্যন্ত পৌঁছায়।"
           }
         }
       ],
@@ -549,7 +581,8 @@
             "hi": "हाथ G, B और D पर ऊपर चढ़ता है, फिर वापस नीचे उतरता है। अँगूठा F पर रुकता है।",
             "ar": "تصعد اليد عبر صول وسي وري، ثم تعود نازلة. وينتهي الإبهام على فا.",
             "pt": "A mão sobe por Sol, Si e Ré, e depois desce de volta. O polegar termina no Fá.",
-            "id": "Tangan naik melalui G, B, dan D, lalu turun lagi. Ibu jari berakhir di F."
+            "id": "Tangan naik melalui G, B, dan D, lalu turun lagi. Ibu jari berakhir di F.",
+            "bn": "হাত G, B আর D বেয়ে ওঠে, তারপর আবার নেমে আসে। বুড়ো আঙুল F-এ গিয়ে থামে।"
           }
         },
         {
@@ -562,7 +595,8 @@
             "hi": "उँगली 1, 2 और 3 से G, C और E फ़्लैट दबाए रखें। फिर उँगली 2 और 1 D और C बजाती हैं।",
             "ar": "أبق صول ودو ومي بيمول مضغوطة بالأصابع 1 و2 و3. ثم يعزف الإصبعان 2 و1 ري ودو.",
             "pt": "Segure Sol, Dó e Mi bemol com os dedos 1, 2 e 3. Depois os dedos 2 e 1 tocam Ré e Dó.",
-            "id": "Tahan G, C, dan E mol dengan jari 1, 2, dan 3. Lalu jari 2 dan 1 memainkan D dan C."
+            "id": "Tahan G, C, dan E mol dengan jari 1, 2, dan 3. Lalu jari 2 dan 1 memainkan D dan C.",
+            "bn": "1, 2 আর 3 নম্বর আঙুলে G, C আর E ফ্ল্যাট ধরে রাখুন। তারপর 2 আর 1 নম্বর আঙুল D আর C বাজায়।"
           }
         },
         {
@@ -575,7 +609,8 @@
             "hi": "उँगली 3 F से नीचे E फ़्लैट पर जाती है। फिर उँगली 2 और 1 नीचे C तक उतरती हैं।",
             "ar": "ينزل الإصبع 3 من فا إلى مي بيمول. ثم ينزل الإصبعان 2 و1 إلى دو.",
             "pt": "O dedo 3 desce do Fá para o Mi bemol. Depois os dedos 2 e 1 descem até o Dó.",
-            "id": "Jari 3 turun dari F ke E mol. Lalu jari 2 dan 1 turun ke C."
+            "id": "Jari 3 turun dari F ke E mol. Lalu jari 2 dan 1 turun ke C.",
+            "bn": "3 নম্বর আঙুল F থেকে নেমে E ফ্ল্যাটে যায়। তারপর 2 আর 1 নম্বর আঙুল নেমে C পর্যন্ত যায়।"
           }
         }
       ]
@@ -605,7 +640,8 @@
             "hi": "माप 9 से 12 तक सिर्फ़ बाएँ हाथ से बजाएँ। यह हर बीट पर वही पैटर्न बार-बार बजाता है।",
             "ar": "اعزف باليد اليسرى وحدها في الموازير من 9 إلى 12. تكرّر النمط نفسه في كل نبضة.",
             "pt": "Toque só a mão esquerda nos compassos 9 a 12. Ela repete o mesmo padrão em cada tempo.",
-            "id": "Mainkan tangan kiri saja pada birama 9 sampai 12. Tangan kiri memainkan pola yang sama di setiap ketukan."
+            "id": "Mainkan tangan kiri saja pada birama 9 sampai 12. Tangan kiri memainkan pola yang sama di setiap ketukan.",
+            "bn": "9 থেকে 12 নম্বর বার শুধু বাঁ হাতে বাজান। প্রতিটি বিটে হাত একই প্যাটার্ন গড়িয়ে বাজায়।"
           },
           "hands": "left",
           "speed": 0.5,
@@ -621,7 +657,8 @@
             "hi": "पहले आठ माप सिर्फ़ दाएँ हाथ से बजाएँ, धुन से एक ऑक्टेव ऊपर।",
             "ar": "اعزف أول 8 موازير باليد اليمنى وحدها، أعلى من اللحن بأوكتاف.",
             "pt": "Toque só a mão direita nos 8 primeiros compassos, uma oitava acima da melodia.",
-            "id": "Mainkan tangan kanan saja pada 8 birama pertama, satu oktaf lebih tinggi daripada melodi."
+            "id": "Mainkan tangan kanan saja pada 8 birama pertama, satu oktaf lebih tinggi daripada melodi.",
+            "bn": "প্রথম আটটি বার শুধু ডান হাতে বাজান, সুরের চেয়ে এক অক্টেভ উপরে।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -637,7 +674,8 @@
             "hi": "माप 17 से 24 तक सिर्फ़ दाएँ हाथ के बड़े कॉर्ड बजाएँ, और सबसे ऊपर वाली उँगली को धुन गाने दें।",
             "ar": "اعزف باليد اليمنى وحدها تآلفاتها الممتلئة في الموازير من 17 إلى 24، ودع الإصبع الأعلى يغني.",
             "pt": "Toque só os acordes grandes da mão direita nos compassos 17 a 24, e deixe o dedo de cima cantar.",
-            "id": "Mainkan akor besar tangan kanan saja pada birama 17 sampai 24, dan biarkan jari atas bernyanyi."
+            "id": "Mainkan akor besar tangan kanan saja pada birama 17 sampai 24, dan biarkan jari atas bernyanyi.",
+            "bn": "17 থেকে 24 নম্বর বারে ডান হাতের বড় কর্ডগুলো আলাদা করে বাজান, আর সবচেয়ে উপরের আঙুলকে গাইতে দিন।"
           },
           "hands": "right",
           "speed": 0.5,
@@ -653,7 +691,8 @@
             "hi": "दोनों हाथों से पूरा गाना तीन-चौथाई स्पीड पर बजाएँ।",
             "ar": "اعزف الأغنية كاملة باليدين معًا، بثلاثة أرباع السرعة.",
             "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
-            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan."
+            "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan.",
+            "bn": "দুই হাতে পুরো গানটি তিন-চতুর্থাংশ গতিতে বাজান।"
           },
           "hands": "both",
           "speed": 0.75,
@@ -669,7 +708,8 @@
             "hi": "अब इसे पूरी स्पीड पर बजाएँ, और आखिरी कॉर्ड की आवाज़ गूँजने दें।",
             "ar": "والآن اعزفها بالسرعة الكاملة، واترك التآلف الأخير يرن.",
             "pt": "Agora toque na velocidade normal, e deixe o último acorde soar.",
-            "id": "Sekarang mainkan dengan kecepatan penuh, dan biarkan akor terakhir berbunyi."
+            "id": "Sekarang mainkan dengan kecepatan penuh, dan biarkan akor terakhir berbunyi.",
+            "bn": "এবার পুরো গতিতে বাজান, আর শেষ কর্ডের আওয়াজ বাজতে দিন।"
           },
           "hands": "both",
           "speed": 1,
@@ -690,7 +730,8 @@
             "hi": "यहाँ बायाँ हाथ एट्थ नोट में पैटर्न बजाता है। माप 9 में वे सिक्सटींथ नोट बन जाते हैं, और संगीत भरा-पूरा होने लगता है।",
             "ar": "تعزف اليد اليسرى هنا ذوات السن. وفي المازورة 9 تصير ذوات السنين، فتزداد الموسيقى امتلاءً.",
             "pt": "Aqui a mão esquerda toca colcheias em ondas. No compasso 9 elas viram semicolcheias, e a música cresce.",
-            "id": "Di sini tangan kiri memainkan not seperdelapan. Di birama 9 berubah menjadi not seperenambelas, dan musiknya makin besar."
+            "id": "Di sini tangan kiri memainkan not seperdelapan. Di birama 9 berubah menjadi not seperenambelas, dan musiknya makin besar.",
+            "bn": "এখানে বাঁ হাত এইটথ নোট গড়িয়ে বাজায়। 9 নম্বর বারে সেগুলো সিক্সটিন্থ নোট হয়ে যায়, আর সংগীত বেড়ে ওঠে।"
           }
         },
         {
@@ -705,7 +746,8 @@
             "hi": "हर बीट पर चार सिक्सटींथ नोट गिनें: रूट नोट, फ़िफ़्थ, ऑक्टेव, फ़िफ़्थ। पैटर्न को कभी जल्दबाज़ी न करने दें।",
             "ar": "عدّ 4 ذوات سنين في كل نبضة: الأصل، فالخامسة، فالأوكتاف، فالخامسة. ولا تدع النمط يتسرع أبدًا.",
             "pt": "Conte quatro semicolcheias em cada tempo: fundamental, quinta, oitava, quinta. Nunca deixe o padrão correr.",
-            "id": "Hitung empat not seperenambelas di setiap ketukan: nada akar, kuint, oktaf, kuint. Jangan biarkan polanya terburu-buru."
+            "id": "Hitung empat not seperenambelas di setiap ketukan: nada akar, kuint, oktaf, kuint. Jangan biarkan polanya terburu-buru.",
+            "bn": "প্রতিটি বিটে চারটি সিক্সটিন্থ নোট গুনুন: রুট নোট, ফিফথ, অক্টেভ, ফিফথ। প্যাটার্নটিকে কখনো তাড়াহুড়ো করতে দেবেন না।"
           }
         },
         {
@@ -720,7 +762,8 @@
             "hi": "यह धुन का आखिरी और सबसे भरा-पूरा रूप है। हर कॉर्ड का सबसे ऊपर वाला नोट थोड़ा ज़ोर से बजाएँ।",
             "ar": "هذه آخر مرة يُعزف فيها اللحن، وهي أكثرها امتلاءً. اعزف النغمة العليا في كل تآلف بقوة أكبر قليلًا.",
             "pt": "Esta é a última aparição do tema, e a mais cheia. Toque a nota de cima de cada acorde um pouco mais forte.",
-            "id": "Inilah kemunculan terakhir melodi, dan yang paling penuh. Mainkan not atas setiap akor sedikit lebih keras."
+            "id": "Inilah kemunculan terakhir melodi, dan yang paling penuh. Mainkan not atas setiap akor sedikit lebih keras.",
+            "bn": "এটিই শেষ আর সবচেয়ে ভরাট রূপ। প্রতিটি কর্ডের সবচেয়ে উপরের নোটটি একটু জোরে বাজান।"
           }
         }
       ],
@@ -735,7 +778,8 @@
             "hi": "हर कॉर्ड के लिए हाथ को चार नोटों पर फैलाएँ। माप के आखिर में हाथ जल्दी उठाएँ, ताकि नीचे छलाँग लगा सकें।",
             "ar": "افرد يدك على 4 نغمات في كل تآلف. ارفعها مبكرًا في نهاية المازورة، لتقفز إلى الأسفل.",
             "pt": "Abra a mão sobre quatro notas em cada acorde. Levante a mão cedo no fim do compasso, para saltar para baixo.",
-            "id": "Rentangkan tangan di atas empat not untuk setiap akor. Angkat lebih awal di akhir birama, untuk melompat turun."
+            "id": "Rentangkan tangan di atas empat not untuk setiap akor. Angkat lebih awal di akhir birama, untuk melompat turun.",
+            "bn": "প্রতিটি কর্ডের জন্য চারটি নোটের উপর হাত ছড়িয়ে দিন। নিচে লাফ দিতে বারের শেষে একটু আগেই হাত তুলুন।"
           }
         },
         {
@@ -748,7 +792,8 @@
             "hi": "E फ़्लैट, A फ़्लैट, C और E फ़्लैट को तीन बीट तक दबाए रखें। फिर उँगली 4 C बजाती है।",
             "ar": "أبق مي بيمول ونغمة لا بيمول ودو ومي بيمول مضغوطة مدة 3 نبضات. ثم يأخذ الإصبع 4 نغمة دو.",
             "pt": "Segure Mi bemol, Lá bemol, Dó e Mi bemol por três tempos. Depois o dedo 4 pega o Dó.",
-            "id": "Tahan E mol, A mol, C, dan E mol selama tiga ketukan. Lalu jari 4 memainkan C."
+            "id": "Tahan E mol, A mol, C, dan E mol selama tiga ketukan. Lalu jari 4 memainkan C.",
+            "bn": "E ফ্ল্যাট, A ফ্ল্যাট, C আর E ফ্ল্যাট তিন বিট ধরে রাখুন। তারপর 4 নম্বর আঙুল C নেয়।"
           }
         },
         {
@@ -761,7 +806,8 @@
             "hi": "पहले कॉर्ड के बाद हाथ उठाएँ। फिर उँगली 5 B पर पहुँचती है, और B के नीचे F और D रहते हैं।",
             "ar": "ارفع يدك بعد التآلف الأول. ثم يصل الإصبع 5 إلى سي، وتحته فا وري.",
             "pt": "Levante a mão depois do primeiro acorde. Depois o dedo 5 cai no Si, com Fá e Ré abaixo dele.",
-            "id": "Angkat tangan setelah akor pertama. Lalu jari 5 mendarat di B, dengan F dan D di bawahnya."
+            "id": "Angkat tangan setelah akor pertama. Lalu jari 5 mendarat di B, dengan F dan D di bawahnya.",
+            "bn": "প্রথম কর্ডের পরে হাত তুলুন। তারপর 5 নম্বর আঙুল B-তে গিয়ে পড়ে, তার নিচে F আর D।"
           }
         }
       ]
