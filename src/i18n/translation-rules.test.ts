@@ -280,6 +280,23 @@ test("the_portuguese_marks_hold_and_spare_kept_words", () => {
   for (const text of kept) expect(problemsOf([textOf("English", text, "pt")], "pt")).toEqual([]);
 });
 
+test("the_bengali_marks_hold_and_spare_kept_words", () => {
+  const broken = [
+    "পাঠটি শেষ হলো.", "হ্যালো !", "\"1, 2\" গুনুন।", "বার 1-4", "শেষ॥", "শেষ৷", "১2টি পাঠ", "৩ টি পাঠ", "MIDIর কিবোর্ড",
+    "তুমি বাজাতে পারো।", "এবার বাজাও।", "চার বার বাজান।", "গান তৈরী হলো।", "C-তে আঙ্গুল রাখুন।",
+  ];
+  for (const text of broken) expect(problemsOf([textOf("English", text, "bn")], "bn")).not.toEqual([]);
+  const kept = [
+    "হ্যালো! আমি আপনাকে পিয়ানো শেখাব। চলুন, বাজানো শুরু করি?", "এবার আপনার পালা। ডান হাতের বুড়ো আঙুল মধ্য C-তে রাখুন, তারপর C আর E একসঙ্গে বাজান।",
+    "প্রতিটি হাফ নোটে “1, 2” গুনুন।", "বেটহোফেন এই সুরটি লিখেছিলেন তাঁর নবম সিম্ফনির শেষ মুভমেন্টের জন্য। এটি প্রথম বাজানো হয় ১৮২৪ সালে, ভিয়েনায়।",
+    "বার 1–4", "C শার্প মাইনর", "A মাইনর কর্ডে আছে A, C আর E।", "f (জোরে) আর p (হালকা করে)", "rit. মানে ধীরে ধীরে গতি কমানো।",
+    "“চালান” চাপুন।", "ফোল্ডার খোঁজা হচ্ছে…", "১২,৩৪,৫৬৭টি গান", "৮০% গতিতে", "MIDI কিবোর্ডে বাজান।", "Jingle Bells ডান হাতে বাজান।",
+    "ছোট দলটিতে কয়টি কালো চাবি আছে?", "৮টির মধ্যে ৩টি পাঠ", "প্রতিটি বারে দুবার প্যাডেল বদলান।", "প্রথম চারটি বার শুধু ডান হাতে বাজান।",
+    "9 থেকে 16 নম্বর বার দুই হাতে ধীরে ধীরে বাজান।", "MIDI-র চ্যানেল", "এবার প্যাডেলসহ পুরো গতিতে বাজান।",
+  ];
+  for (const text of kept) expect(problemsOf([textOf("English", text, "bn")], "bn")).toEqual([]);
+});
+
 test("the_indonesian_marks_hold_and_spare_kept_words", () => {
   const broken = [
     "Hitung \"1-2\".", "Hitung «1-2».", "Memuat...", "Siap !", "Level :", "Anda bisa mulai.", "Gue main piano.",

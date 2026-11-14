@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The Bengali style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in Bengali
     status: open
@@ -68,6 +68,9 @@ sentence with the dari `।` and counts in its own digits. The method in
 - **The script is Bengali,** with the font stack of `many-locales`. The look check covers conjuncts and
   vowel signs.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
+- **The style guide confirmed each decision above,** and settled what they left open. Its § 8 adds
+  beats and time signatures to the Western digits. `bn-BD` stays, since CLDR treats `bn-IN` the same.
+  A bar is `বার`, kept apart from `দুবার`, "twice", by its classifier.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -82,12 +85,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/bn.md:1`
-- [ ] Microsoft's Bangla style guides, for Bangladesh and for India: the address, the marks and the interface terms. `docs/reference/translation/bn.md:1`
-- [ ] Bengali Wikipedia's music articles and Bengali-language piano methods: each music term with two sources. `docs/reference/translation/bn.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/bn.md:1`
-- [ ] The Bengali entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The Bengali row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/bn.md:1`
+- [x] Microsoft's Bangla style guides, for Bangladesh and for India: the address, the marks and the interface terms. `docs/reference/translation/bn.md:1`
+- [x] Bengali Wikipedia's music articles and Bengali-language piano methods: each music term with two sources. `docs/reference/translation/bn.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/bn.md:1`
+- [x] The Bengali entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The Bengali row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
 
 ### 2. The site and the player in Bengali
 
@@ -165,12 +168,27 @@ address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `indonesian` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/bn.md` holds every section the method names. The `bn` entry
+of `src/i18n/typography.ts` holds the kept words and fifteen mark rules. Test
+`the_bengali_marks_hold_and_spare_kept_words` in `src/i18n/translation-rules.test.ts` covers the rules, and
+it passes. The locale table's `bn` row in `src/i18n/locale-table.ts` stands unchanged, as the guide's § 1
+confirms.
+
+Microsoft has no Bangladesh guide, so the India guide and Android's `values-bn` settled the interface.
+No Bengali piano method was reached. Many music terms rest on one source, as the guide's *Open* lists.
 
 ### Next
 
-**Stage 1: the Bengali style guide and glossary.** Files: `docs/reference/translation/bn.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `indonesian` is reached.
+**Stage 2: the site and the player in Bengali.** Run `bun tools/i18n.ts work bn <section>` for each
+catalog section, then send three writers side by side, as the stage's split says. Files:
+`src/i18n/messages/bn.ts`, `src/i18n/messages/learn-lesson.bn.ts`, `src/i18n/messages/player-shell.bn.ts`
+and `src/i18n/messages/player-settings.bn.ts`. Brief each writer with the whole of `bn.md`. Then add the
+`bn` chunk to `CATALOG_CHUNKS` in `src/i18n/locale.ts:44`.
+
+- **A count goes through `formatNumber("bn", n)`,** so its digits are Bengali. Bars, fingers and beats
+  are typed in Western digits, as § 8 says.
+- **Write and Edit store `য়` and `ড়` decomposed,** which the nukta rule wants. A writer that builds a
+  file through a script must not precompose them.
 
 Expected red: none.
 
