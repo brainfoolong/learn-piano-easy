@@ -48,10 +48,10 @@ test("a_missing_text_shows_in_english", async () => {
   // A list is one leaf, so the translated list stands whole.
   expect(merged.sponsor.promises).toEqual(["Uno"]);
   // A locale without a catalog of its own reads English in every text.
-  await loadLocale("fr");
-  expect(shape(messagesOf("fr"))).toEqual(shape(en));
-  expect(messagesOf("fr").pages.learn.title).toBe(en.pages.learn.title);
-  expect(catalogOf("fr").footer).toEqual(en.footer);
+  await loadLocale("ur");
+  expect(shape(messagesOf("ur"))).toEqual(shape(en));
+  expect(messagesOf("ur").pages.learn.title).toBe(en.pages.learn.title);
+  expect(catalogOf("ur").footer).toEqual(en.footer);
 });
 
 /** Every module the static imports of `entry` reach, as paths from the repository's root. */
@@ -141,9 +141,10 @@ test("plurals_and_numbers_follow_the_locale", () => {
 test("the_first_visit_takes_the_browser_language", () => {
   // With no choice stored, an English page moves to the first site locale the browser names.
   expect(chooseLocale("en", "auto", ["de-AT", "en-US"])).toBe("de");
-  expect(chooseLocale("en", "auto", ["fr-FR", "de"])).toBe("de");
+  expect(chooseLocale("en", "auto", ["ur-PK", "de"])).toBe("de");
   expect(chooseLocale("en", "auto", ["en-GB", "de-DE"])).toBe("en");
-  expect(chooseLocale("en", "auto", ["fr-FR"])).toBe("en");
+  expect(chooseLocale("en", "auto", ["ur-PK"])).toBe("en");
+  expect(chooseLocale("en", "auto", ["fr-CA", "de"])).toBe("fr");
   expect(chooseLocale("en", "auto", [])).toBe("en");
   // A German page was reached on purpose, so it stays.
   expect(chooseLocale("de", "auto", ["en-US"])).toBe("de");
