@@ -14,6 +14,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   its isolates, though `src/i18n/messages/*.ar.ts` writes them as escapes. A typed backslash escape
   turns raw too, and a doubled backslash stays doubled. Write the backslash itself as the escape
   `u005C` behind a backslash, followed by `u2068`. Then Grep the file for a raw U+2068.
+- **Two guide sentences joined across a `" +` line passed the rules test.** An Edit at the line's end
+  had dropped the space before the closing quote, and only a blind review caught it. Grep every
+  `tools/our-songs/*.ru.ts` you touched for `[^ ]" \+$` before you stamp.
 - **A no-break space typed as itself in Write or Edit can land as an ASCII space.** The rules test
   then fails on `%` or a unit. Type a backslash, then `u00A0`, which the tools write raw, and Grep each
   file under `src/i18n/messages/` for a digit or `}` followed by an ASCII space and `%`.

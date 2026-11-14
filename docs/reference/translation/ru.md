@@ -538,6 +538,9 @@ The lessons repeat these lines. Each English line has one Russian text in every 
   does not follow.
 - **A chord symbol stays in Latin letters where the English shows a symbol:** `C`, `Am`, `G7`. Russian
   songbooks print them so. In prose the chord is named by its key, as above.
+- **A chord takes its mode only where the song's notes hold that triad.** An open fifth or a seventh
+  chord the English calls "the G chord" is named by its root: `аккорд на соль`, `переходит с до на
+  соль`. A seventh chord the guide names is `септаккорд от соль`.
 - **The octave is named the Russian way in prose:** middle C is `до первой октавы`, the C below is `до
   малой октавы`, and the C above is `до второй октавы`. WP *Октава* names them. The label `до4` stays the
   code's.

@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "The song guides in Russian, from n to z"
-    status: open
+    status: done
   - id: 6
     title: The Russian site ships
     status: open
@@ -151,9 +151,9 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.ru.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.ru.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ru` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+- [x] One `tools/our-songs/<slug>.ru.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.ru.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ru` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
 ### 6. The Russian site ships
 
@@ -163,7 +163,7 @@ address or mark that drifts between files.
 **Gate:** `bun run i18n status ru` lists no missing and no stale text outside `legal`.
 
 - [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `ru` is `shipped`. `src/i18n/locale.ts:18`
+- [ ] `ru` is `shipped`. `src/i18n/locale-table.ts:58`
 - [ ] The Russian social image. `tools/make-social-image.ts:104`
 - [ ] The layout checks run in `ru` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
 - [ ] Test `the_russian_site_reads_in_russian`: `lang`, the switch's *Русский*, a lesson step and the player in Russian. `e2e/locales.e2e.ts:1`
@@ -181,57 +181,49 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 4 are done. Every catalog section, every lesson and the guides of the 51 songs from
-`air-on-the-g-string` to `mozart-21-andante` hold their Russian. `src/i18n/stamps/ru.json` stamps them
-all, and `public/songs/ours/<slug>/guide.json` carries each guide's Russian. `bun x tsc`, every
-locale's rules test and a build pass. `bun tools/i18n.ts status ru` lists only the 29 guides from
-`neon-chase` to `yankee-doodle` as missing, besides the catalogs' kept words.
+Stages 1 to 5 are done. Every catalog section, every lesson and the guides of all 80 songs hold their
+Russian. `src/i18n/stamps/ru.json` stamps them all, and `public/songs/ours/<slug>/guide.json` carries
+each guide's Russian. `bun x tsc`, every locale's rules test and a build pass. `bun tools/i18n.ts
+status ru` lists 24 missing texts, all the catalogs' kept words in `player-bar`, `player-settings`,
+`player-shell` and `site`.
 
-Seven guide batches were reviewed blind and every finding is settled. Batches 2, 3, 5 and 6 had
-*wrong* findings, mostly undeclined sharps and the thumb. Their second blind reviews found only words a
-settler had run together, which are fixed and swept across every file.
+Stage 5 ran four batches. Batches 2 and 3 had *wrong* findings and each got a second blind review.
+The second review of batch 3 found chords named by a mode their notes do not hold, such as `соль
+мажор` for an open fifth or a seventh chord. `ru.md` now says a chord takes its mode only where the
+song's notes hold that triad, and is otherwise named by its root: `аккорд на соль`. The guides from a
+to m were written before that row and may carry the same slip.
+
+Reviewers on the `reader` agent cannot write files, so they report findings inline. Check a finding
+that a name lacks a Russian article with the `langlinks` API before applying it.
 
 The guides settled these rows in `ru.md`:
 
-- The thumb is `первый палец`, never `большой палец`. A finger the English numbers takes digits.
-- A sharp or a flat declines and is masculine: `на до-диезе`, `верхний до-диез`. A key's mode declines:
-  `в до мажоре`. A plain note stays neuter and never declines.
-- A century is a Roman numeral, and the `kept` list of `src/i18n/typography.ts` holds `XIII` to `XX`.
-- A run is `пассаж`, and single notes are `одиночные ноты`.
-- A new mark rule wants a space after a sentence's end. It caught a joined string in
-  `src/learn/lessons/both-hands/a-held-bass-note.ru.ts`, which is fixed.
-
-A person or work with no Russian Wikipedia article stays in Latin, and the writers rephrase so no
-Latin name takes a case ending. A quoted score direction such as `senza sordino` stays Latin.
+- The thumb is `первый палец`. A sharp or flat declines and is masculine: `на до-диезе`.
+- A key's mode declines: `в до мажоре`. A plain note stays neuter and never declines.
+- Centuries are Roman numerals. A run is `пассаж`, and single notes are `одиночные ноты`.
+- A person or work with no Russian Wikipedia article stays in Latin and takes no case ending.
 
 ### Next
 
-**Stage 5: the 29 song guides from n to z,** as `bun tools/i18n.ts status ru` lists them. Four
-batches, run as stage 4 ran:
+**Stage 6: the Russian site ships.** Bengali shipped the same way, in commits `29f46f9` and `d9df186`,
+so read their diffs first.
 
-1. `neon-chase night-on-bald-mountain o-christmas-tree o-come-all-ye-faithful o-du-froehliche
-   o-holy-night o-little-town-of-bethlehem ode-to-joy`
-2. `old-macdonald-had-a-farm row-row-row-your-boat sailors-hornpipe silent-night spanish-ladies
-   suesser-die-glocken swan-lake`
-3. `the-blue-danube the-entertainer the-first-noel the-sorcerers-apprentice
-   the-twelve-days-of-christmas toccata-in-d-minor tochter-zion`
-4. `twinkle-twinkle-little-star up-on-the-housetop vltava we-three-kings wedding-march william-tell
-   yankee-doodle`
+1. **The drift read.** Fresh `reader` subagents, split by kind (catalogs, lessons, guides a to m,
+   guides n to z), read every Russian file against `ru.md`. Each lists the terms, address and marks
+   that drift between files. The guide readers also check every chord named with a mode against the
+   notes in `tools/our-songs/<slug>.ts`, as the new chord row asks. Readers report inline. Settle each
+   drift with Edit, re-stamp what changed, and rerun `bun tools/make-our-songs.ts`.
+2. **Ship.** Set `shipped: true` on the `ru` row, `src/i18n/locale-table.ts:58`. Then write the social
+   image with `bun tools/make-social-image.ts` (`tools/make-social-image.ts:104`).
+3. **The test.** Add `the_russian_site_reads_in_russian` to `e2e/locales.e2e.ts`, after
+   `the_bengali_site_reads_in_bengali` (`e2e/locales.e2e.ts:194`), and run it once by name.
+4. **Look.** Run `bun run shot --locale ru-RU` on every route, phone and desktop, in both themes.
+   Include a Russian lesson at 360 pixels, where a long title or quiz answer may clip. Look for
+   missing-glyph boxes.
+5. **Docs.** Name Russian in `docs/reference/features.md` and `README.md:12`.
 
-- **A writer** runs `bun tools/i18n.ts work ru guide/<slug>` and writes `tools/our-songs/<slug>.ru.ts`,
-  mirroring `tools/our-songs/air-on-the-g-string.ru.ts`. Its brief points at `ru.md` whole and
-  translation.md § *The writer's rules*. It names the settled rows above, since writers drifted on
-  each. It checks every name with the English article's `langlinks` to `ru`.
-- **One fresh blind reviewer per batch,** on a smaller model, reads the Russian before the English. It
-  writes findings to `.agent-tmp/i18n/ru/review-batch-<n>.md`. Its brief names what is settled, so it
-  does not flag Latin names with no Russian article.
-- **A settler per batch** applies the findings with Edit and runs the Russian rules test once. A batch
-  with a *wrong* finding gets a second fresh reviewer.
-- Then grep the guides for `большой палец`, a feminine or neuter adjective before a sharp, and a
-  declined sharp glued to the next word. Stamp each with `bun tools/i18n.ts stamp ru guide/<slug>`.
-  Run `bun tools/make-our-songs.ts`, and build with `--out .agent-tmp/russian-dist`.
-
-Expected red: none.
+Expected red: tests that count the shipped locales or list the language switch's entries may go red
+once `ru` ships. Bengali's ship commit shows which ones it updated.
 
 ### Backlog
 
