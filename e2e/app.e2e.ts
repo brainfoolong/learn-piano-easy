@@ -4,6 +4,8 @@ import { createServer } from "node:http";
 import type { AddressInfo } from "node:net";
 import { extname, join } from "node:path";
 import { expect, test, type Page } from "@playwright/test";
+import { GROUP_INDEX, type GroupIndex } from "../src/pwa/cache-groups";
+import { contentHash } from "../src/pwa/current";
 
 /** Collects every uncaught error and console error the page reports from now on. */
 function watchErrors(page: Page): string[] {
@@ -87,20 +89,32 @@ const TYPES: Record<string, string> = {
   ".webmanifest": "application/manifest+json",
 };
 
+/** The line the next version adds to `app.css`. */
+const NEXT_CSS = "\n/* The next version. */\n";
+
 /**
  * A server of this run's build that the test can move to a next version. Playwright never sees the
- * request for a worker's script, so only a server can change it. The next version's `sw.js` differs by a
- * comment. The server is the test's own, so no other test's browser finds the update.
+ * request for a worker's script, so only a server can change it. The next version changes `app.css`
+ * alone, and its `sw.js` names the new version and the stylesheet's new hash. The server is the test's
+ * own, so no other test's browser finds the update. `fetched` lists the paths asked for since `next`.
  */
 async function updatableSite() {
   const dist = join(".agent-tmp/e2e/runs", process.env.E2E_RUN!, "dist");
+  const index = JSON.parse(await readFile(join(dist, GROUP_INDEX), "utf8")) as GroupIndex;
+  const css = await readFile(join(dist, "app.css"), "utf8");
+  const oldCss = index.groups.app.hashes[index.groups.app.files.indexOf("./app.css")]!;
+  const newCss = await contentHash(new TextEncoder().encode(css + NEXT_CSS));
+  const newVersion = await contentHash(new TextEncoder().encode(`next ${index.version}`));
   let next = false;
+  const fetched: string[] = [];
   const server = createServer(async (request, response) => {
     let path = decodeURIComponent(new URL(request.url!, "http://localhost").pathname);
+    if (next) fetched.push(path);
     if (path.endsWith("/")) path += "index.html";
     try {
       let body: Buffer | string = await readFile(join(dist, path));
-      if (next && path === "/sw.js") body = `${body.toString()}\n// The next version.\n`;
+      if (next && path === "/app.css") body = css + NEXT_CSS;
+      if (next && path === "/sw.js") body = body.toString().replaceAll(oldCss, newCss).replaceAll(index.version, newVersion);
       const type = TYPES[extname(path)] ?? "application/octet-stream";
       response.writeHead(200, { "content-type": type, "cache-control": "no-cache" }).end(body);
     } catch {
@@ -111,12 +125,34 @@ async function updatableSite() {
   return {
     url: `http://localhost:${(server.address() as AddressInfo).port}/`,
     next: () => (next = true),
+    fetched,
     close: () => {
       server.closeAllConnections();
       server.close();
     },
   };
 }
+
+test("an_update_fetches_only_the_shell_files_that_changed", async ({ page }) => {
+  const site = await updatableSite();
+  try {
+    await page.goto(site.url);
+    await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+    const errors = watchErrors(page);
+    site.next();
+    await page.evaluate(() => navigator.serviceWorker.getRegistration().then((r) => r?.update()));
+    await expect(page.getByRole("status").getByText("A new version is ready.")).toBeVisible({ timeout: 30_000 });
+    expect(site.fetched.filter((path) => path !== "/sw.js")).toEqual(["/app.css"]);
+
+    await Promise.all([page.waitForEvent("load"), page.getByRole("status").getByRole("button", { name: "Reload" }).click()]);
+    expect(await page.evaluate(() => fetch("./app.css").then((r) => r.text()))).toContain(NEXT_CSS);
+    await page.goto(`${site.url}play/`);
+    await expect(page.locator(".stage canvas")).toBeVisible();
+    expect(errors).toEqual([]);
+  } finally {
+    site.close();
+  }
+});
 
 test("the_offer_of_a_new_version_stays_until_the_learner_answers_it", async ({ page }) => {
   const site = await updatableSite();

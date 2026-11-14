@@ -12,10 +12,11 @@
  * written in.
  *
  * `src/pwa/cache-groups.ts` owns which file joins which group. The shell is the app group, and the
- * worker precaches it. The version hashes the shell's contents and every grouped file's path and size.
- * It names the worker's cache, so a change to a shell file, or a song or sound added, removed or resized,
- * makes the next visit fetch the new shell once. The index, `cache-groups.json`, joins the shell but not
- * the hash, because it holds the version. Its byte counts leave out the index itself.
+ * worker precaches it. Every grouped file gets a content hash, and the version hashes each one's path and
+ * hash. The version names the worker's cache, so a change to any grouped file makes the next visit
+ * install a new shell. That install fetches only the files whose hash changed. The index,
+ * `cache-groups.json`, lists the hashes. It joins the shell but not the version, because it holds the
+ * version. Its byte counts leave out the index itself.
  *
  * Every page names the site, its locale and the other locales for social sites. A hidden route's page
  * asks search engines not to index it.
@@ -32,10 +33,10 @@
  * page, as the hosted one allows. Neither file joins a cache group, since no learner fetches them.
  * The sitemap carries no `lastmod`, because nothing in the build dates a page without the clock.
  */
-import { createHash } from "node:crypto";
 import { cp, mkdir, readdir, rm } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
-import { GROUP_INDEX, groupIndex, groupOf } from "../src/pwa/cache-groups";
+import { GROUP_INDEX, groupIndex, groupOf, type BuiltFile } from "../src/pwa/cache-groups";
+import { contentHash } from "../src/pwa/current";
 import { loadEveryLocale } from "../src/i18n/all-catalogs";
 import { DEFAULT_LOCALE, isLocale, loadLocale, LOCALES, messagesOf, PSEUDO_LOCALES, rowOf, type Locale } from "../src/i18n/locale";
 import {
@@ -70,7 +71,7 @@ export interface BuildResult {
   files: string[];
   /** The shell files the service worker precaches. */
   shell: string[];
-  /** The content hash of the shell, which names the worker's cache. */
+  /** The hash of every grouped file's path and content hash, which names the worker's cache. */
   version: string;
 }
 
@@ -310,17 +311,25 @@ export async function build(options: BuildOptions): Promise<BuildResult> {
   await writePages(outDir, options.siteUrl, options.pseudo ?? false);
   await copyLicenses(outDir);
 
-  const files = await Promise.all((await listFiles(outDir)).map(async (path) => ({ path, bytes: Bun.file(join(outDir, path)).size })));
-  const hash = createHash("sha256");
-  for (const { path, bytes } of files) {
-    const group = groupOf(path);
-    if (group === undefined) continue;
-    hash.update(`${path}\0${bytes}\0`);
-    if (group === "app") hash.update(new Uint8Array(await Bun.file(join(outDir, path)).arrayBuffer()));
-  }
-  const version = hash.digest("hex").slice(0, 16);
-  await Bun.write(join(outDir, GROUP_INDEX), JSON.stringify(groupIndex(version, files)));
-  const shell = [...files.filter((f) => groupOf(f.path) === "app").map((f) => f.path), GROUP_INDEX].sort();
+  const grouped = (await listFiles(outDir)).filter((path) => groupOf(path) !== undefined);
+  const files: BuiltFile[] = await Promise.all(
+    grouped.map(async (path) => {
+      const file = Bun.file(join(outDir, path));
+      return { path, bytes: file.size, hash: await contentHash(await file.arrayBuffer()) };
+    }),
+  );
+  const version = await contentHash(new TextEncoder().encode(files.map((f) => `${f.path}\0${f.hash}\0`).join("")));
+  const index = groupIndex(version, files);
+  const indexText = JSON.stringify(index);
+  await Bun.write(join(outDir, GROUP_INDEX), indexText);
+  // The worker's shell: each file's URL with its content hash, the index too.
+  const app = index.groups.app;
+  const shellHashes: Record<string, string> = Object.fromEntries(app.files.map((file, i) => [file, app.hashes[i] ?? ""]));
+  shellHashes[`./${GROUP_INDEX}`] = await contentHash(new TextEncoder().encode(indexText));
+  const shell = Object.keys(shellHashes)
+    .filter((file) => file !== "./")
+    .map((file) => file.slice(2))
+    .sort();
 
   const worker = await Bun.build({
     entrypoints: [join(root, "src/pwa/sw.ts")],
@@ -330,7 +339,7 @@ export async function build(options: BuildOptions): Promise<BuildResult> {
     minify: !dev,
     define: {
       ...define,
-      __SHELL__: JSON.stringify(["./", ...shell.map((f) => `./${f}`)]),
+      __SHELL__: JSON.stringify(shellHashes),
       __VERSION__: JSON.stringify(version),
     },
   });

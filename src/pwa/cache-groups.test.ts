@@ -4,7 +4,6 @@ import { expect, test } from "../testing";
 import { LANDING_SONGS } from "../landing/songs";
 import { allPages } from "../site/routes";
 import { CACHE_GROUPS, groupIndex, groupOf } from "./cache-groups";
-
 const PUBLIC = join(import.meta.dir, "..", "..", "public");
 
 async function publicFiles(): Promise<string[]> {
@@ -39,20 +38,21 @@ test("built_files_join_the_app_group_except_maps_the_worker_and_the_crawler_file
   expect(groupOf("sitemap.xml")).toBeUndefined();
 });
 
-test("the_index_lists_each_group_and_sums_its_bytes", () => {
+test("the_index_lists_each_group_with_its_hashes_and_sums_its_bytes", () => {
   const index = groupIndex("v1", [
-    { path: "app.js", bytes: 10 },
-    { path: "app.js.map", bytes: 99 },
-    { path: "songs/catalog.json", bytes: 5 },
-    { path: "songs/a.mid", bytes: 3 },
-    { path: "sounds/x/y.json", bytes: 7 },
+    { path: "index.html", bytes: 2, hash: "h0" },
+    { path: "app.js", bytes: 10, hash: "h1" },
+    { path: "app.js.map", bytes: 99, hash: "h2" },
+    { path: "songs/catalog.json", bytes: 5, hash: "h3" },
+    { path: "songs/a.mid", bytes: 3, hash: "h4" },
+    { path: "sounds/x/y.json", bytes: 7, hash: "h5" },
   ]);
   expect(index).toEqual({
     version: "v1",
     groups: {
-      app: { files: ["./", "./app.js", "./songs/catalog.json"], bytes: 15 },
-      songs: { files: ["./songs/a.mid"], bytes: 3 },
-      sounds: { files: ["./sounds/x/y.json"], bytes: 7 },
+      app: { files: ["./", "./index.html", "./app.js", "./songs/catalog.json"], hashes: ["h0", "h0", "h1", "h3"], bytes: 17 },
+      songs: { files: ["./songs/a.mid"], hashes: ["h4"], bytes: 3 },
+      sounds: { files: ["./sounds/x/y.json"], hashes: ["h5"], bytes: 7 },
     },
   });
 });

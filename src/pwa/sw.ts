@@ -3,11 +3,12 @@
  *
  * - **The shell** is the app cache group of `cache-groups.ts`, as `tools/build.ts` lists it. It is
  *   precached on install into a cache named by the build's version, and served cache-first. The
- *   install checks each file with the server, past the HTTP cache. A navigation gets its route's page, so every route of the site reloads offline. An
+ *   install copies each file whose bytes it already holds, and fetches only the rest. A navigation gets its route's page, so every route of the site reloads offline. An
  *   unknown path gets the root page, which shows the landing page of the path's locale. A request for
  *   a byte range, as a video makes, gets that range of the cached file through `ranged.ts`.
- * - **Songs and sounds** are cached on first use into one content cache that outlives versions, so an
- *   update never downloads them again. The cache manager can also fill or empty either group at once.
+ * - **Songs and sounds** are cached on first use into one content cache that outlives versions. After
+ *   an update, the cache manager fetches again only the cached files whose bytes changed. It can also
+ *   fill or empty either group at once.
  * - **A file no cache group holds passes to the network,** such as a source map, `robots.txt` or a
  *   social picture. A tab that opens one gets the file, never the root page.
  * - **A request with cache mode `reload` passes to the network.** The cache manager fetches that way, so
@@ -36,20 +37,50 @@ interface WorkerScope {
 }
 
 import { CONTENT_CACHE, groupOf, shellCacheName } from "./cache-groups";
+import { inParallel, isCurrent } from "./current";
 import { ranged } from "./ranged";
 
-declare const __SHELL__: string[];
+/** The shell's file URLs, relative to the scope, each with its content hash. */
+declare const __SHELL__: Record<string, string>;
 declare const __VERSION__: string;
+
+/**
+ * How many shell files the install checks or fetches at once. A first visit fetches the whole shell, and
+ * a host speaks HTTP/2, so many requests share one connection. The page has loaded by then.
+ */
+const PARALLEL = 24;
 
 const worker = globalThis as unknown as WorkerScope;
 const SHELL_CACHE = shellCacheName(__VERSION__);
 const scope = new URL(worker.registration.scope);
 
-// Each shell file is checked with the server. A host lets the browser keep a file for minutes, and a
-// file such as `app.js` keeps its name across versions, so an unchecked copy could be the old version's.
+/**
+ * Fills this version's shell cache. A file that a shell cache already holds with the same bytes is
+ * copied, from an older version or from an install that was cut short. Only the other files are
+ * fetched, each checked with the server. A host lets the browser keep a file for minutes, and a file
+ * such as `app.js` keeps its name across versions, so an unchecked copy could be the old version's.
+ * One failed fetch fails the install, and the next visit tries again.
+ */
+async function installShell(): Promise<void> {
+  const cache = await caches.open(SHELL_CACHE);
+  const older = (await caches.keys()).filter((name) => name.startsWith("shell-") && name !== SHELL_CACHE);
+  const sources = [cache, ...(await Promise.all(older.map((name) => caches.open(name))))];
+  await inParallel(Object.entries(__SHELL__), PARALLEL, async ([path, hash]) => {
+    const url = new URL(path, scope).href;
+    for (const [i, source] of sources.entries()) {
+      const hit = await source.match(url);
+      if (hit === undefined || !(await isCurrent(hit, hash))) continue;
+      if (i > 0) await cache.put(url, hit);
+      return;
+    }
+    const response = await fetch(new Request(url, { cache: "no-cache" }));
+    if (!response.ok) throw new Error(`The shell file ${path} answered ${response.status}.`);
+    await cache.put(url, response);
+  });
+}
+
 worker.addEventListener("install", (event) => {
-  const requests = __SHELL__.map((path) => new Request(new URL(path, scope).href, { cache: "no-cache" }));
-  event.waitUntil(caches.open(SHELL_CACHE).then((cache) => cache.addAll(requests)));
+  event.waitUntil(installShell());
 });
 
 worker.addEventListener("activate", (event) => {

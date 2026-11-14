@@ -7,13 +7,13 @@
  * - **songs** is every other file under `songs/`. The worker caches each on first use.
  * - **sounds** is every file under `sounds/`, cached the same way.
  *
- * Songs and sounds share one content cache that outlives versions, so an update never downloads them
- * again unless the learner asks. Source maps, the worker script, the social pictures, `robots.txt` and
+ * Songs and sounds share one content cache that outlives versions, so an update downloads again only a
+ * cached file whose bytes changed. Source maps, the worker script, the social pictures, `robots.txt` and
  * `sitemap.xml` belong to no group. Only a developer loads a map, and the browser keeps the worker
  * itself. Only a search or social site fetches the rest.
  *
- * The build writes `cache-groups.json` into the shell. It names the version and lists each group's files
- * and bytes, so the cache manager reads sizes without a network call.
+ * The build writes `cache-groups.json` into the shell. It names the version and lists each group's files,
+ * their content hashes and their bytes, so the cache manager reads sizes without a network call.
  */
 import { LANDING_SONGS } from "../landing/songs";
 
@@ -97,17 +97,36 @@ export function cacheNameOf(group: GroupId, version: string): string {
 export interface GroupIndex {
   /** The build's version, which names its shell cache. */
   version: string;
-  /** Each group's file URLs, relative to the app's root as `./path`, and their bytes in total. */
-  groups: Record<GroupId, { files: string[]; bytes: number }>;
+  /**
+   * Each group's file URLs, relative to the app's root as `./path`, and their bytes in total. `hashes`
+   * holds the content hash of the file at the same place in `files`, as `current.ts` makes it.
+   */
+  groups: Record<GroupId, { files: string[]; hashes: string[]; bytes: number }>;
 }
 
-/** The index of `files`, each with its size in bytes, for `version`. The app group also holds `./`. */
-export function groupIndex(version: string, files: readonly { path: string; bytes: number }[]): GroupIndex {
-  const groups: GroupIndex["groups"] = { app: { files: ["./"], bytes: 0 }, songs: { files: [], bytes: 0 }, sounds: { files: [], bytes: 0 } };
-  for (const { path, bytes } of files) {
+/** A file of the build: its path relative to the app's root, its size in bytes and its content hash. */
+export interface BuiltFile {
+  path: string;
+  bytes: number;
+  hash: string;
+}
+
+/**
+ * The index of `files` for `version`. The app group also holds `./`, the root page, whose bytes are
+ * those of `index.html`.
+ */
+export function groupIndex(version: string, files: readonly BuiltFile[]): GroupIndex {
+  const root = files.find((file) => file.path === "index.html")?.hash ?? "";
+  const groups: GroupIndex["groups"] = {
+    app: { files: ["./"], hashes: [root], bytes: 0 },
+    songs: { files: [], hashes: [], bytes: 0 },
+    sounds: { files: [], hashes: [], bytes: 0 },
+  };
+  for (const { path, bytes, hash } of files) {
     const id = groupOf(path);
     if (id === undefined) continue;
     groups[id].files.push(`./${path}`);
+    groups[id].hashes.push(hash);
     groups[id].bytes += bytes;
   }
   return { version, groups };
