@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Russian
-    status: open
+    status: done
   - id: 3
     title: The course in Russian
     status: open
@@ -112,12 +112,12 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/ru.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/ru.ts:1`, `src/i18n/messages/learn-lesson.ru.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.ru.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.ru.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `russian_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp ru` for each catalog section. `src/i18n/stamps/ru.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/ru.ts:1`, `src/i18n/messages/learn-lesson.ru.ts:1`
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.ru.ts:1`
+- [x] The player's settings. `src/i18n/messages/player-settings.ru.ts:1`
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+- [x] `bun x tsc` and `russian_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+- [x] `bun run i18n stamp ru` for each catalog section. `src/i18n/stamps/ru.json:1`
 
 ### 3. The course in Russian
 
@@ -181,30 +181,36 @@ address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/ru.md` holds every section the method names. The `ru` entry
-of `src/i18n/typography.ts` keeps `KEPT_IN_OWN_SCRIPT` and checks thirteen mark rules. Test
-`the_russian_marks_hold_and_spare_kept_words` in `src/i18n/translation-rules.test.ts` passes. It shows
-each rule catching a broken text and sparing a good one.
+Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/<section>.ru.ts`, and
+`src/i18n/locale.ts` and `src/i18n/all-catalogs.ts` load `ru`. Six writers translated them, and four
+blind reviewers found nothing *wrong*. Every finding was applied, and every section is stamped in
+`src/i18n/stamps/ru.json`. `bun x tsc` and `russian_texts_keep_their_rules` pass.
+
+The texts still missing are kept words only, as in Bengali: the site's name, the modifier keys, the
+language names and the time signatures. The glossary in `ru.md` gained the rows the writers met.
 
 No Russian piano method was reached, so most music terms rest on Russian Wikipedia alone. The guide's
 *Open* lists the weak rows.
 
 ### Next
 
-**Stage 2: the site and the player in Russian.** Run `bun tools/i18n.ts status ru`, then `work ru <unit>`
-for each catalog section. Three writers translate side by side into `src/i18n/messages/ru.ts`,
-`learn-lesson.ru.ts`, `player-shell.ru.ts` and `player-settings.ru.ts`. Each writer reads `ru.md` whole.
-Copy the `bn` files' shape. Then three fresh reviewers review the batches blind, and `bun run i18n stamp ru` stamps each section.
+**Stage 3: the course in Russian.** Run `bun tools/i18n.ts work ru lesson/<world>` for each world. Five
+writers translate side by side into `src/learn/lessons/<world>/<lesson>.ru.ts`, and each world's index
+loads `texts.ru` as the `bn` one does. Mirror `src/learn/lessons/meet-the-piano/*.bn.ts`. Each writer
+reads `ru.md` whole, with § *A lesson's recurring lines*. Then five fresh reviewers review blind, and
+`bun tools/i18n.ts stamp ru lesson/<world>` stamps each world.
 
-- A `.ru.ts` file that holds no texts yet may still be missing. `ls src/i18n/messages/*.bn.ts` lists the
-  files to mirror.
-- A Russian number in a message goes through `formatNumber`, which writes a no-break space. A writer
-  types a no-break space before `%` and units by hand. Write tool calls turn an escape raw, as the
-  playbook says.
+- A writer's brief points at `ru.md` and translation.md § *The writer's rules*, and names its files and
+  work lists. A reviewer reads the Russian before the English, and reports one line per finding.
+- Grep each file for an ASCII space before `%` and units, as the playbook says.
+- A function message with a rest argument, such as `...parts`, must drop its colon when the list is
+  empty. The rules test calls it with no parts.
 
-Expected red: none. `russian_texts_keep_their_rules` reads every Russian file, and none exists yet.
+Expected red: none.
 
 ### Backlog
 
 - A native Russian speaker's read of the course would catch what a blind review cannot.
 - A Russian piano teacher's read of the glossary's *unsourced* rows, as `ru.md` § *Open* lists.
+- The keyboard range field may show a solfège name such as `до2` but accept only `C2`, since
+  `parsePitch` in `src/keyboard/range.ts` reads letters. The help texts keep `C2`, as Spanish does.

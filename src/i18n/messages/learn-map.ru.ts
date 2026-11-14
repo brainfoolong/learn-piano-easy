@@ -14,7 +14,7 @@ export const learnMap: Translation<typeof en> = {
   world: (world: number) => `Мир ${n(world)}`,
   progress: (done: number, all: number) =>
     `${n(done)} из ${n(all)} ${plural("ru", all, { one: "урока", few: "уроков", many: "уроков", other: "урока" })}`,
-  locked: "Этот мир откроется после финального испытания предыдущего мира. Или пройдите проверку, чтобы пропустить мир.",
+  locked: "Чтобы открыть этот мир, пройдите финальное испытание предыдущего мира или проверку, чтобы пропустить мир.",
   beaten: "Пройдено",
   node: {
     locked: (name: string) => `${name}, урок закрыт`,

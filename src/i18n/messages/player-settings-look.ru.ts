@@ -33,12 +33,12 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Насколько ярко светится контур вокруг каждой ноты.",
   },
   noteEndedShrink: {
-    label: "Сыгранные ноты уходят в клавишу",
+    label: "Сыгранные ноты уменьшаются до клавиши",
     help: "Нота погружается в клавишу, пока звучит. Когда выключено, она проходит дальше за клавиши.",
   },
   playedNoteFalloffSpeed: {
     label: "Как далеко сыгранные ноты уходят за клавиши",
-    help: "В ширинах клавиши, когда сыгранные ноты не уходят в клавишу.",
+    help: "В ширинах клавиши, когда сыгранные ноты не уменьшаются до клавиши.",
   },
   showSustainedNotes: {
     label: "Показывать, сколько педаль держит ноту",
@@ -270,7 +270,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   particleDistributionY: {
     label: "Старт по длине клавиши",
     help: "Где по длине клавиши появляется каждая частица.",
-    options: { hitLine: "На линии нажатия", key: "По всему её верху" },
+    options: { hitLine: "На линии нажатия", key: "По всему верху клавиши" },
   },
   particleDistributionZ: {
     label: "Слой",
@@ -302,7 +302,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "На каждой чёрной клавише написано название её ноты.",
   },
   showPianoKeyNameFlats: {
-    label: "Чёрные клавиши с бемолями",
+    label: "Бемоли в названиях чёрных клавиш",
     help: "На клавишах пишется ре♭ вместо до♯. Ноты следуют тональности песни.",
   },
   octaveLabel: {
@@ -346,7 +346,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   chordToneNotation: {
     label: "Запись в блоках нот",
     help: "Короткие знаки или полные слова в блоках нот.",
-    options: { simple: "Кратко: R ♭3 5", full: "Полностью: основной тон ♭3-я 5-я" },
+    options: { simple: "Кратко: R ♭3 5", full: "Полностью: основной тон, ♭3-я, 5-я" },
   },
   chordMarkRoot: {
     label: "Отмечать основной тон",
@@ -414,7 +414,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   colorCodeNote11: { label: "Си", help: "Цвет всех нот си." },
   enableColorCodingFinger: {
     label: "Цвет нот по пальцам",
-    help: "Нота, которую не играет ни одна рука, сохраняет свой прежний цвет.",
+    help: "Нота, которую не играет ни одна рука, остаётся в своём обычном цвете.",
   },
   enableColorCodingFingerPiano: {
     label: "Цвет клавиш по пальцам",
@@ -442,7 +442,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   // Sheet
   enableSheet: {
     label: "Показывать ноты",
-    help: "Песня в виде нот в верхней части сцены.",
+    help: "Песня в виде нот поверх сцены, вверху.",
   },
   enableFullSheet: {
     label: "Только ноты",
@@ -523,8 +523,8 @@ export const playerSettingsLook: Translation<typeof en> = {
 
   // PDF
   pdfExportButtonGroup: {
-    label: "Сохранить ноты в PDF",
-    help: "Открывает окно, которое сохраняет падающие ноты открытой песни в страницы заданной вами длины.",
+    label: "Сохранить падающие ноты в PDF",
+    help: "Открывает окно, где падающие ноты открытой песни сохраняются страницами нужной вам длины.",
   },
   exportPdfBackground: {
     label: "Цветной фон",

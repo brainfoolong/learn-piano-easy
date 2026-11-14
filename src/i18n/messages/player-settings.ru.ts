@@ -62,7 +62,7 @@ export const playerSettings: Translation<typeof en> = {
     audio: "Звук",
     backing: "Аккомпанемент",
     view: "Вид",
-    keyboard: "Клавиатура",
+    keyboard: "Ваша клавиатура",
     input: "Ввод",
     piano: "Фортепиано",
     notes: "Падающие ноты",

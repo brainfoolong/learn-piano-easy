@@ -54,7 +54,7 @@ export const playerShell: Translation<typeof en> = {
   },
   lesson: {
     label: "Урок",
-    target: (percent) => `Попадите в ${formatNumber("ru", percent)} % нот в попытке со счётом.`,
+    target: (percent) => `Сыграйте верно ${formatNumber("ru", percent)} % нот в попытке со счётом.`,
     back: "Назад к уроку",
     missing: "Песни этого урока нет в каталоге.",
   },
@@ -124,7 +124,7 @@ export const playerShell: Translation<typeof en> = {
       "Смо|три|те, как ог|ни ле|тят",
       "на|жи|май|те кла|ви|ши",
       "мед|лен|но, по|том бы|стрей",
-      "ско|ро ру|ки са|ми путь най|дут",
+      "ско|ро ру|ки зна|ют путь",
     ],
     part: (n) => `Часть ${formatNumber("ru", n)}`,
     leftHand: "Левая рука",

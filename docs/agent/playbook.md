@@ -14,6 +14,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
   its isolates, though `src/i18n/messages/*.ar.ts` writes them as escapes. A typed backslash escape
   turns raw too, and a doubled backslash stays doubled. Write the backslash itself as the escape
   `u005C` behind a backslash, followed by `u2068`. Then Grep the file for a raw U+2068.
+- **A no-break space typed as itself in Write or Edit can land as an ASCII space.** The rules test
+  then fails on `%` or a unit. Type a backslash, then `u00A0`, which the tools write raw, and Grep each
+  file under `src/i18n/messages/` for a digit or `}` followed by an ASCII space and `%`.
 
 - **`bun run shot` on a page of the default locale may show it in German.** The site moves a first
   visit to the browser's language, which follows the system's. Pass `--locale en-US` or

@@ -54,7 +54,7 @@ export const learnLesson: Translation<typeof en> = {
   },
   playNotes: {
     piano: "Фортепиано. Сыграйте фразу по порядку.",
-    marks: { next: "Сыграйте эту", correct: "Сыграно", mistake: "Не эта" },
+    marks: { next: "Сыграйте эту клавишу следующей", correct: "Сыграно", mistake: "Не эта" },
     wrong: "Это другая нота. Попробуйте ещё раз.",
     hint: (note: string) => `Следующая нота — ${note}.`,
     hintChord: (...notes: string[]) => `Теперь сыграйте ${notes.slice(0, -1).join(", ")} и ${notes.at(-1)} вместе.`,
