@@ -324,6 +324,7 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       ...KEPT_IN_OWN_SCRIPT, "Ah\u202F! vous dirai-je, maman", "OK", "Pause", "Stop", "Volume", "Tempo", "tempo", "Normal",
       "Menu", "Zoom", "Options", "Combo", "combo", "Mode", "Piano", "Ragtime", "Solo", "Code", "Original", "Expert",
       "Audio", "Quiz", "Badges", "Message", "Info", "Contact", "Notes", "Note", "Ctrl", "Alt", "Shift", "Meta", "Enter",
+      "Concert", "Date", "Score", "Collection", "Style", "Baroque", "Guide", "Version", "Open source", "Questions", "Site",
       "legato", "staccato", "crescendo", "diminuendo", "coda", "XVIII", "XVII", "XVI", "XIX", "XV", "XX",
     ],
     marks: [

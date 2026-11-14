@@ -396,6 +396,23 @@ it adds no term.
 | falling notes; sheet music (sections) | Notes qui tombent; Partition | the two sections need two names |
 | embers; wander; sway; edge glow | braises; dérive; balancement; contour lumineux | everyday words |
 | Blending: Add light, Cover | Fusion : Ajouter la lumière, Recouvrir | the verbs of image editors |
+| Shift; bytes | Maj; o, beside Ko and Mo | the French names on a keyboard and in a file size |
+| Start learning; Ready when you are | Commencer le cours; Quand tu veux | `prêt` would carry a gender |
+| the ape mascot | le singe qui t’apprend le piano | `ton professeur` would carry a gender |
+| Ready, set, play | Trois, deux, un, à toi | `À vos marques, prêts` takes `vous` and a gender |
+| For experts (a tag); Beginner path | Haut niveau; Parcours découverte | no tag describes the learner |
+| a toast that a mode is on | `Mode activé : X.` | the modes' names differ in gender |
+| Hold (a judgement); Recording (a clock) | Maintien; Prise en cours | `Tenue` reads as an outfit. `Enregistrer` stays Save. |
+| trick (a tip's kind); Fun fact | truc; Le savais-tu ? | `Astuce` is the Tip |
+| Measuring the songs | Analyse des morceaux… | `mesure` is the bar |
+| Practice plan; Tricky spot | Plan de travail; Passage difficile | the teacher's words |
+| Mute (a track) | Muet | `Couper le son` is too long for the field |
+| Low mid, Mid, High mid (bands) | Bas-médiums, Médiums, Haut-médiums | the names of equaliser bands |
+| rests in a setting's options | soupir, demi-soupir, quart de soupir | the French rest names |
+| edge rim; pedal tail; Drag; Layer; Fade out | liseré; traîne; Freinage; Plan; Fondu | everyday words and the words of image editors |
+| Notation (a settings heading) | Écriture | `Notation` would copy the English |
+| tap pad; Higher, Lower, The same | zone de frappe; Plus aigu, Plus grave, Pareil | the pitch quiz compares sounds |
+| Rhythm ace; Sight reader; Early bird (badges) | Le rythme dans la peau; Œil de lynx; Chant du coq | no badge names a person |
 
 ### Which "play" is which
 
