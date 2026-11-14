@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Bengali site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -169,14 +169,14 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 address or mark that drifts between files.
 **Gate:** `bun run i18n status bn` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `bn` is `shipped`. `src/i18n/locale-table.ts:57`
-- [ ] The Bengali social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `bn` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_bengali_site_reads_in_bengali`: `lang`, the switch's *বাংলা*, a lesson step and the player in Bengali. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `bn` with `bun run shot --locale bn-BD`, on a phone and a desktop, in both themes. Conjuncts and vowel signs draw whole.
-- [ ] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
-- [ ] The feature list and the README name Bengali. `docs/reference/features.md:1`, `README.md:12`
+- [x] Every drift the reader lists is settled in the files it names.
+- [x] `bn` is `shipped`. `src/i18n/locale-table.ts:57`
+- [x] The Bengali social image. `tools/make-social-image.ts:104`
+- [x] The layout checks run in `bn` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
+- [x] Test `the_bengali_site_reads_in_bengali`: `lang`, the switch's *বাংলা*, a lesson step and the player in Bengali. `e2e/locales.e2e.ts:1`
+- [x] Look at every route in `bn` with `bun run shot --locale bn-BD`, on a phone and a desktop, in both themes. Conjuncts and vowel signs draw whole.
+- [x] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
+- [x] The feature list and the README name Bengali. `docs/reference/features.md:1`, `README.md:12`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -188,49 +188,46 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. Every catalog section, every lesson and the guides of all 80 songs hold their
-Bengali, and `src/i18n/stamps/bn.json` stamps them all. `public/songs/ours/<slug>/guide.json` carries each
-guide's Bengali. `bun x tsc` and `bengali_texts_keep_their_rules` pass, and a build is green.
+Stages 1 to 6 are done, and Bengali ships. `bn` is `shipped` in `src/i18n/locale-table.ts`. The worlds
+carry their Bengali titles in `src/learn/course.ts`, and `public/images/social/bn.png` is drawn.
+`the_bengali_site_reads_in_bengali` passes, and so does the whole of `e2e/locales.e2e.ts`, whose layout
+checks now include `bn`.
 
-Stage 5's four batches were reviewed blind and every finding is settled. Only the batch from
-`the-blue-danube` to `tochter-zion` had a *wrong* finding: a step down read as "one key lower". A
-second blind review of that batch found nothing wrong.
+The gate holds. `bun tools/i18n.ts status bn` lists 67 missing texts, and each is a kept word. They are
+note letters, beat counts, time signatures, key modifiers, language endonyms, `+N XP`, `FPS` and
+`siteName`.
 
-`bn.md` gained the rules the batches settled. § 6 now spells more places, gives a Bible place or saint
-the Bengali Bible's name, and bans a detached `এর` after a Latin name. § 5 makes "the next bar"
-`পরের বারটি`, and the glossary maps "symphonic poem" to `টোন পোয়েম`. `SONG_NAMES` gained `Thuringia` and
-the curly `See, the conqu’ring hero comes`.
+Three `reader` subagents read every Bengali file against `bn.md`, and each drift is settled in the
+commit `fix(i18n): every Bengali file says each idea the same way`. `bn.md` records the rules this read
+settled. They cover `পরের বারটিতে` and `শেষ বারটি`, the miss as `ফসকে যাওয়া`, and the work number in
+Western digits. They also set the possessives `C-এর`, `E-র` and `G-এর`, and the line between `জোরে` and
+`জোরালো`. `bengali_texts_keep_their_rules` passes, and a build is green.
 
-`bun tools/i18n.ts status bn` still lists missing texts in some catalogs and lessons. The ones read so far
-are kept English on purpose, such as `siteName`, *Learn Piano Easy*.
+The look: the shot tool took every route, at phone and desktop widths and in both themes. No page logged
+an error, and no shot showed a missing-glyph box. Conjuncts and vowel signs draw whole. The home page's
+demo panels stay blank in a full-page shot until they are scrolled into view, which is lazy loading.
 
 ### Next
 
-**Stage 6: the Bengali site ships.** The gate is `bun tools/i18n.ts status bn`. Its remaining "missing"
-texts must each be a kept word, such as `siteName`. `bun tools/i18n.ts work bn <unit>` lists each one with
-its English. Translate any that is not a kept word before shipping.
+**Stage 7: the goal is verified once.** Run `looper verify` over the whole goal. Fix every failure it
+names in one pass, never deleting or loosening a test, then run it once more.
 
-- **The consistency read goes to fresh `reader` subagents, sent together:** one for the catalogs and the
-  course, and one for each half of the guides. Each reads `bn.md` first and lists each drift as
-  `file:line`. The session settles them, then runs the rules test once.
-- **Ship it:** `shipped: true` on the `bn` row of `src/i18n/locale-table.ts:57`. `PASSED_LOCALES` in
-  `e2e/layout-check.ts:53` then takes it with no edit.
-- **The test:** copy `the_indonesian_site_reads_in_indonesian` at `e2e/locales.e2e.ts:168`, with `বাংলা`,
-  `lang="bn"`, a lesson step and the player. Add Bengali to the list in the file's head comment at line 5.
-- **The social image:** `tools/make-social-image.ts` loops over `LOCALES`, so run it once and commit the image it writes.
-- **The look:** `bun run shot --locale bn-BD` on every route, at phone and desktop widths, in both themes.
-  Check that conjuncts and vowel signs draw whole.
+- The likeliest red is a test that counts the shipped locales or their pages, such as a sitemap or
+  build count. The ship commit already moved `src/i18n/i18n.test.ts` and `src/learn/game/unlock.test.ts`.
+- The language setting's options in `src/i18n/messages/player-settings-play.en.ts:14` gained `bn`.
+  A test that lists them would need `বাংলা`.
+- Once verify is green, harvest the goal into `docs/findings.md` § `bengali`, as AGENTS.md § *Goals* says.
 
-Expected red: `the_bengali_site_reads_in_bengali` until stage 6 adds it.
+Expected red: none known.
 
 ### Backlog
 
 - A native reader from Bangladesh and one from West Bengal would each catch words that read as the other country's.
 - The manger is `যাবপাত্র`, the Bengali Bible's spelling, though a reviewer proposed `জাবপাত্র`. A native
   Christian reader settles it for `ihr-kinderlein-kommet` and any later carol.
-- The game's miss flash in `src/i18n/messages/player-input.bn.ts` reads `ফসকে গেছে`, while the glossary's
-  miss is `ফসকে যাওয়া`. The stage 6 consistency read decides whether a flash keeps its past tense.
 - The Bengali marks in `src/i18n/typography.ts` miss a colon with no space after it, such as `করে:একটি`.
   A reviewer caught one in a lesson. A pattern for it would catch the next.
-- Several stage 4 guides write `পরের বারে` for "into the next bar", such as `tools/our-songs/bolero.bn.ts:43`.
-  It can also read as "next time". The consistency read decides whether each becomes `পরের বারটিতে`.
+- The possessive after A, B, D and F still mixes `-র` and `-এর`. `bn.md` § 7 settles only C, E and G.
+- The `kling-gloeckchen` guide glosses its title with `বাজো`, a familiar imperative. It stays, since the
+  song speaks to the bells and not to the learner. A native reader may prefer another form.
+- The home page's mode cards show English screenshots of the app, in Bengali as in every passed locale.
