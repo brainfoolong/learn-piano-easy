@@ -12,7 +12,7 @@ export const highAndLowFr: Translation<HighAndLowTexts> = {
       text: "Tu as entendu le son monter ? Les touches de gauche sonnent plus grave, et celles de droite sonnent plus aigu.",
     },
     "wide-listen": {
-      text: "Tu entends deux notes. La deuxième est-elle plus aiguë ou plus grave que la première, ou est-ce la même ?",
+      text: "Tu entends deux notes. Par rapport à la première, la deuxième est-elle plus aiguë, plus grave ou pareille ?",
     },
     "climb-up": {
       text: "Maintenant, tu montes. Joue les touches indiquées de gauche à droite, et écoute le son monter.",
@@ -28,7 +28,7 @@ export const highAndLowFr: Translation<HighAndLowTexts> = {
       answers: ["Il devient plus grave", "Il devient plus aigu", "Il reste pareil"],
     },
     "close-listen": {
-      text: "Écoute bien : les deux notes sont toutes proches, ou c’est la même note. La deuxième est-elle plus aiguë ou plus grave, ou est-ce la même ?",
+      text: "Écoute bien : les deux notes sont toutes proches, ou c’est la même note. La deuxième est-elle plus aiguë, plus grave ou pareille ?",
     },
     recap: {
       text: "Bravo. Tu sais entendre et jouer l’aigu et le grave.",

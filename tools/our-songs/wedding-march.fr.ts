@@ -71,7 +71,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     legendary: {
       practice: [
-        "Joue la main gauche seule : une octave sur le temps, puis un accord, chacun avec un court silence pour sauter.",
+        "Joue la main gauche seule : une octave sur le temps, puis un accord, chacun suivi d’un court silence pour sauter.",
         "Joue seuls les arpèges de la main gauche. Le doigt 3 passe par-dessus le pouce en montant.",
         "Joue seuls les accords de la main droite, et laisse le doigt du haut chanter la mélodie.",
         "Joue tout le morceau à deux mains, à 75 % de la vitesse.",

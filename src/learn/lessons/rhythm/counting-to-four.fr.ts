@@ -9,7 +9,7 @@ export const countingToFourFr: Translation<CountingToFourTexts> = {
       text: "Regarde et écoute. Un do grave ouvre chaque groupe de quatre temps, et un sol sonne sur les trois autres.",
     },
     "what-a-bar-is": {
-      text: "Les temps se regroupent en mesures, et une barre de mesure termine chaque mesure. Ici, chaque mesure a quatre temps, comptés 1, 2, 3, 4. C’est la mesure à quatre temps (4/4), et le 1er temps est le plus fort.",
+      text: "Les temps se regroupent en mesures, et une barre de mesure termine chaque mesure. Ici, chaque mesure a quatre temps, comptés 1, 2, 3, 4. C’est la mesure à quatre temps (4/4), et le premier temps est le plus fort.",
     },
     "beats-in-a-bar-quiz": {
       text: "Combien de temps compte une mesure à 4/4 ?",
@@ -28,7 +28,7 @@ export const countingToFourFr: Translation<CountingToFourTexts> = {
     },
     recap: {
       text: "Bravo. Tu sais maintenant compter des mesures à quatre temps.",
-      points: ["Les temps se regroupent en mesures, et une barre de mesure termine chaque mesure.", "Dans une mesure à 4/4, tu comptes 1, 2, 3, 4.", "Le 1er temps est le plus fort de la mesure."],
+      points: ["Les temps se regroupent en mesures, et une barre de mesure termine chaque mesure.", "Dans une mesure à 4/4, tu comptes 1, 2, 3, 4.", "Le premier temps est le plus fort de la mesure."],
     },
   },
 };

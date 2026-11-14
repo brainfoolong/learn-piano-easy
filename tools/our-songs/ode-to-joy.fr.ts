@@ -31,7 +31,7 @@ export const translation: Translation<GuideTranslation> = {
     },
     rare: {
       practice: [
-        "Frappe dans les mains ou tape le rythme pointé de la mesure 4, puis joue la main droite seule.",
+        "Frappe dans tes mains ou tape le rythme pointé de la mesure 4, puis joue la main droite seule.",
         "Joue la main gauche seule, et tiens chaque accord jusqu’au suivant.",
         "Joue la partie du milieu à deux mains. Les accords y changent tous les deux temps.",
         "Joue tout le morceau à deux mains, un peu plus lentement que le tempo écrit.",

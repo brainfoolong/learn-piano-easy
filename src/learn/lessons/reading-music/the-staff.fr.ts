@@ -33,7 +33,7 @@ export const theStaffFr: Translation<TheStaffTexts> = {
       text: "Regarde et écoute. Le piano monte de la ligne du bas jusqu’à la ligne du haut, une ligne ou un interligne à la fois. Chaque note sonne un peu plus aigu.",
     },
     "higher-or-lower-listen": {
-      text: "Tu entends deux notes. La deuxième est-elle plus aiguë ou plus grave que la première, ou est-ce la même ? Une note plus aiguë serait placée plus haut sur la portée.",
+      text: "Tu entends deux notes. Par rapport à la première, la deuxième est-elle plus aiguë, plus grave ou pareille ? Une note plus aiguë serait placée plus haut sur la portée.",
     },
     "top-or-bottom-quiz": {
       text: "Une note est sur la ligne du haut, et une autre sur la ligne du bas. Laquelle sonne plus aigu ?",

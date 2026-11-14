@@ -19,7 +19,7 @@ export const octavesFr: Translation<OctavesTexts> = {
       text: "Deux notes à une octave d’écart se ressemblent, comme si c’était la même note. L’une est pourtant plus aiguë que l’autre.",
     },
     "octave-listen": {
-      text: "Tu entends chaque fois deux notes. La deuxième est-elle plus aiguë ou plus grave que la première, ou est-ce la même ?",
+      text: "Tu entends chaque fois deux notes. Par rapport à la première, la deuxième est-elle plus aiguë, plus grave ou pareille ?",
     },
     "e-above": {
       text: "Le premier mi au-dessus du do central se trouve deux touches blanches à sa droite. Joue le mi une octave au-dessus de ce mi.",

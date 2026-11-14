@@ -24,7 +24,7 @@ export const translation: Translation<GuideTranslation> = {
       ],
       tricky: {
         10: "Ici, le doigt 4 joue la. Garde la main immobile, et laisse seulement le doigt monter.",
-        11: "Le doigt 5 joue trois fois si. Garde-le arrondi, pour que ce petit doigt reste solide.",
+        11: "Le doigt 5 joue trois fois si. Garde-le arrondi, pour que l’auriculaire reste solide.",
         12: "Le doigt 4 revient sur la pour la dernière note. Tiens-la quatre temps.",
       },
     },

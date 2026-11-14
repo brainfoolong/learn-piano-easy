@@ -94,7 +94,7 @@ export const learnLesson: Translation<typeof en> = {
   rhythmTap: {
     start: "Démarrer",
     listen: "Écoute : une mesure de décompte.",
-    tap: "Maintenant, appuie sur n’importe quelle touche à chaque clic.",
+    tap: "Maintenant, appuie sur une touche au choix à chaque clic.",
     piano: "La zone de frappe. Appuie sur une touche, sur le temps.",
     marks: { next: "Appuie ici", correct: "Sur le temps", mistake: "À côté du temps" },
     short: (hits: number, total: number) =>

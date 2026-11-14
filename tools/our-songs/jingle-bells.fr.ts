@@ -50,7 +50,7 @@ export const translation: Translation<GuideTranslation> = {
     epic: {
       practice: [
         "Joue la basse d’Alberti seule, jusqu’à ce qu’elle roule toute seule : grave, aigu, milieu, aigu.",
-        "Joue seules les tierces et les sixtes de la main droite, et tiens ensemble les deux notes de chaque paire.",
+        "Joue seules les tierces et les sixtes de la main droite, et garde ensemble les deux notes de chaque paire.",
         "Joue les quatre premières mesures à deux mains, lentement.",
         "Joue tout le morceau à deux mains, à 75 % de la vitesse.",
         "Maintenant, joue-le au tempo, avec la pédale.",

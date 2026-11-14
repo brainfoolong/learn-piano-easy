@@ -20,7 +20,7 @@ export const translation: Translation<GuideTranslation> = {
         "Joue tout le morceau à deux mains, au tempo.",
       ],
       tips: [
-        "Chaque mesure contient deux groupes de trois temps. Compte deux fois un, deux, trois.",
+        "Chaque mesure contient deux groupes de trois temps. Compte deux fois « un, deux, trois ».",
         "Sur le deuxième do, passe du doigt 3 au pouce. La main est alors prête à monter jusqu’au sol.",
         "Après le long do, toute la main descend d’une touche, pour que le doigt 2 joue le si.",
       ],
