@@ -3,7 +3,7 @@ import type { Translation } from "../translation";
 import type { dataPage as en } from "./data.en";
 
 export const dataPage: Translation<typeof en> = {
-  lead: "Tes paramètres, ta progression dans le cours, tes morceaux et tes résultats restent tous dans ce navigateur. Sauvegarde-les dans un seul fichier pour les garder en sécurité, ou pour les emmener sur un autre appareil.",
+  lead: "Tes paramètres, ta progression dans le cours, tes morceaux et tes résultats restent tous dans ce navigateur. Sauvegarde-les dans un seul fichier pour les garder à l’abri, ou pour les emmener sur un autre appareil.",
   save: {
     heading: "Faire une sauvegarde",
     text: "Un seul fichier contient tout. Garde-le en lieu sûr, par exemple dans un dossier en ligne.",
@@ -20,11 +20,11 @@ export const dataPage: Translation<typeof en> = {
   },
   folder: {
     heading: "Synchroniser un dossier",
-    text: "Choisis un dossier, par exemple un dossier que ton stockage en ligne synchronise. Chaque modification y arrive alors toute seule, avec une copie datée pour chacun des sept derniers jours.",
+    text: "Choisis un dossier, par exemple un dossier que ton stockage en ligne synchronise. Chaque modification y est alors copiée automatiquement, avec une copie datée pour chacun des sept derniers jours.",
     connect: "Connecter un dossier",
     starting: "Recherche de ton dossier…",
     synced: (name: string) => `Tes données sont gardées dans le dossier « ${name} ».`,
-    waiting: "Chaque modification y arrive un instant plus tard.",
+    waiting: "Chaque modification arrive dans le dossier un instant plus tard.",
     written: (time: string) => `Le dossier a été mis à jour pour la dernière fois à ${time}.`,
     reconnect: (name: string) =>
       `Ton navigateur redemande l’autorisation avant d’écrire dans le dossier « ${name} ».`,
@@ -34,14 +34,14 @@ export const dataPage: Translation<typeof en> = {
     askingFrom: (date: string) => `Ces données ont été sauvegardées le ${date}.`,
     restoreAction: "Restaurer depuis le dossier",
     replaceAction: "Remplacer par les données de ce navigateur",
-    replaced: "Le dossier contient maintenant les données de ce navigateur. Son ancien fichier est gardé dans son dossier de sauvegardes.",
+    replaced: "Le dossier contient maintenant les données de ce navigateur. L’ancien fichier est gardé dans son dossier de sauvegardes.",
     failed: "Impossible d’écrire dans le dossier. Reconnecte-le, ou choisis-le à nouveau.",
     disconnect: "Déconnecter",
     gone: "Impossible de lire le fichier du dossier. Rien n’a changé.",
   },
   ask: {
     title: "Restaurer cette sauvegarde ?",
-    merge: "Ta progression, tes morceaux et tes résultats s’ajoutent à ce qui est déjà là. Rien de plus récent n’est perdu.",
+    merge: "Ta progression, tes morceaux et tes résultats s’ajoutent à ce qui est déjà là. Les données plus récentes sont conservées.",
     replace: "Tes paramètres et ceux de tes morceaux prennent les valeurs du fichier. La page se recharge ensuite.",
     confirm: "Restaurer",
     cancel: "Ne rien changer",

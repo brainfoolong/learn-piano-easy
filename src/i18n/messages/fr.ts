@@ -48,7 +48,7 @@ export const fr: Translation<Messages> = {
     },
     data: {
       title: "Tes données",
-      description: "Sauvegarde tout ce que contient ce navigateur dans un seul fichier, et récupère-le sur n’importe quel appareil.",
+      description: "Sauvegarde tout ce que tu as dans ce navigateur dans un seul fichier, et récupère-le sur n’importe quel appareil.",
     },
     sponsor: {
       title: "Soutenir",
@@ -64,7 +64,7 @@ export const fr: Translation<Messages> = {
     },
     design: {
       title: "Système de design",
-      description: "Chaque composant du site dans chaque état.",
+      description: "Chaque composant du site, dans tous ses états.",
     },
     lesson: {
       title: "Leçon",
@@ -103,7 +103,7 @@ export const fr: Translation<Messages> = {
         text: "Chaque morceau ressemble à ça. Chaque note tombe sur sa touche, et tu joues la touche au moment où la note arrive.",
       },
       piano: "Le lecteur, avec les notes de « Ah ! vous dirai-je, maman » qui tombent sur ses touches",
-      hint: "Une fois la lecture lancée, joue ses touches pour suivre le morceau.",
+      hint: "Une fois la lecture lancée, joue les touches pour suivre le morceau.",
       playSong: "Lire",
       stopSong: "Arrêter",
     },
@@ -135,7 +135,7 @@ export const fr: Translation<Messages> = {
           title: "Apprendre une technique",
           text: "Une courte leçon montre une seule nouveauté, comme une note, un rythme ou une position de la main.",
         },
-        { title: "S’exercer", text: "Entraîne-toi sur ton propre clavier. Le piano t’attend et marque chaque note juste." },
+        { title: "S’exercer", text: "Joue-la sur ton propre clavier. Le piano t’attend et signale chaque note juste." },
         { title: "Jouer un vrai morceau", text: "Utilise la technique dans un morceau de la bibliothèque, à un niveau qui te convient." },
         { title: "Gagner des badges", text: "Chaque leçon rapporte des XP, et chaque monde terminé rapporte un badge." },
       ],
@@ -143,23 +143,23 @@ export const fr: Translation<Messages> = {
     rarities: {
       eyebrow: "Une mélodie, quatre niveaux",
       heading: "Chaque morceau grandit avec toi",
-      lead: "Chacun de nos morceaux existe en quatre versions. Passe de l’une à l’autre et regarde grandir l’« Hymne à la joie ».",
-      control: "Version",
+      lead: "Chacun de nos morceaux existe en quatre versions. Passe d’une version à l’autre et regarde grandir l’« Hymne à la joie ».",
+      control: "Niveau",
       piano: "Un piano qui joue l’« Hymne à la joie »",
       names: { common: "Débutant", rare: "Facile", epic: "Moyen", legendary: "Difficile" },
       taglines: {
         common: "Tes premiers jours. Une seule position de la main, des notes lentes et une basse qui t’attend.",
         rare: "Tes premières semaines. Des croches, des accords simples et une basse qui bouge.",
         epic: "Tes premiers mois. Des accords brisés, et le passage du pouce.",
-        legendary: "Après environ un an. Les deux mains occupées, rapides et indépendantes.",
+        legendary: "Au bout d’un an environ. Les deux mains occupées, rapides et indépendantes.",
       },
     },
     devices: {
       eyebrow: "Joue sur ce que tu as",
       heading: "Pas de piano ? Commence quand même",
-      lead: "Chacun de ces moyens joue les notes. Un vrai clavier est le plus agréable, et les autres te permettent de commencer dès aujourd’hui.",
+      lead: "Chacun de ces moyens permet de jouer les notes. Un vrai clavier est le plus agréable, et les autres te permettent de commencer dès aujourd’hui.",
       ways: [
-        { title: "Un clavier MIDI", text: "Branche-le en USB et autorise MIDI une fois. Ensuite, le site le trouve tout seul." },
+        { title: "Un clavier MIDI", text: "Branche-le en USB et autorise l’accès MIDI une fois. Ensuite, le site le trouve tout seul." },
         { title: "Un écran tactile", text: "Appuie sur les touches à l’écran, avec autant de doigts que tu veux." },
         {
           title: "Le clavier de ton ordinateur",
@@ -196,7 +196,7 @@ export const fr: Translation<Messages> = {
       items: [
         {
           question: "Faut-il un piano ?",
-          answer: "Non. Un clavier MIDI est l’idéal, mais un écran tactile ou le clavier de ton ordinateur jouent aussi toutes les notes.",
+          answer: "Non. Un clavier MIDI est l’idéal, mais un écran tactile ou le clavier de ton ordinateur joue aussi toutes les notes.",
         },
         {
           question: "Quels navigateurs sont compatibles ?",
@@ -215,7 +215,7 @@ export const fr: Translation<Messages> = {
         {
           question: "Puis-je jouer mes propres morceaux ?",
           answer:
-            "Oui. Ouvre n’importe quel fichier MIDI ou MusicXML dans « Jouer librement ». Il est lu sur ton appareil et n’est jamais envoyé en ligne.",
+            "Oui. Ouvre n’importe quel fichier MIDI ou MusicXML dans « Jouer librement ». Il reste sur ton appareil et n’est jamais envoyé en ligne.",
         },
         {
           question: "Quels morceaux contient la bibliothèque ?",
@@ -261,7 +261,7 @@ export const fr: Translation<Messages> = {
   ui: {
     pianoKeys: {
       noWebgl:
-        "Ce navigateur ne peut pas afficher le piano. Active l’accélération matérielle dans ses paramètres, ou joue sur ton clavier MIDI ou le clavier de l’ordinateur.",
+        "Impossible d’afficher le piano dans ce navigateur. Active l’accélération matérielle dans ses paramètres, ou joue sur ton clavier MIDI ou le clavier de l’ordinateur.",
     },
   },
 };

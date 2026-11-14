@@ -330,6 +330,7 @@ test("the_french_marks_hold_and_spare_kept_words", () => {
     "Note : 3", `à 80% de la vitesse`, "à 80 % de la vitesse", "C'est prêt.", "mesures 1-4", "mesures 1 – 4",
     "Vous pouvez commencer.", "Joue avec votre main droite.", "Appuyez sur Suivant.", `Prêt·e à jouer${N}?`,
     "Prêt(e) à jouer.", "Bienvenu dans la leçon.", "Ecoute la mélodie.", "A droite du do.", "Ca y est.", "Bravo.Encore une fois.",
+    `Va dans«${N}Lire${N}».`, `Va dans «${N}Lire${N}»maintenant.`, "Joue plus doucement.",
   ];
   for (const text of broken) expect(problemsOf([textOf("English", text, "fr")], "fr")).not.toEqual([]);
   const kept = [
@@ -339,6 +340,7 @@ test("the_french_marks_hold_and_spare_kept_words", () => {
     "Joue Hark! The Herald Angels Sing à deux mains.", `Joue «${N}Ah${N}! vous dirai-je, maman${N}» à la main droite.`,
     "Rendez-vous demain.", "Écoute la mélodie.", "À 22:00 ou plus tard.", "Accords C, Am et G7", "Ça y est.", "Joue sur un clavier MIDI.",
     `Quitter la leçon${N}?`, `Appuie sur «${N}Lire${N}».`, "Joue Twinkle, Twinkle, Little Star à la main droite.", "Tempo", "au XIXe siècle",
+    `Joue l’«${N}Hymne à la joie${N}».`, "Joue plus doux.",
   ];
   for (const text of kept) expect(problemsOf([textOf("English", text, "fr")], "fr")).toEqual([]);
 });

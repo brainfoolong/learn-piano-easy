@@ -40,8 +40,8 @@ export const playerShell: Translation<typeof en> = {
     wrongKind: "Seuls les fichiers MIDI et MusicXML peuvent être ajoutés.",
     added: (n) =>
       `${formatNumber("fr", n)} ${plural("fr", n, { one: "morceau ajouté", many: "de morceaux ajoutés", other: "morceaux ajoutés" })} à « Tes morceaux ».`,
-    notKept: (reason) => `Impossible de garder les morceaux : ${reason}`,
-    soundsFailed: "Impossible de charger les sons du piano. Les morceaux sont donc lus sans le son.",
+    notKept: (reason) => `Impossible de conserver les morceaux : ${reason}`,
+    soundsFailed: "Impossible de charger les sons du piano. Les morceaux sont donc lus sans son.",
   },
   guide: {
     step: (n, summary) => `Étape ${formatNumber("fr", n)} : ${summary}.`,
@@ -67,7 +67,7 @@ export const playerShell: Translation<typeof en> = {
       `${note} : ${said}. Appuie sur une touche de 1 à 5 pour choisir le doigt, sur 0 pour l’effacer, sur Échap pour terminer.`,
   },
   backgroundTrack: {
-    notAudio: (file) => `${file} n’est pas un fichier audio que ce navigateur peut lire.`,
+    notAudio: (file) => `${file} n’est pas un fichier audio lisible par ce navigateur.`,
     playsAlong: (file) => `${file} accompagne le morceau.`,
   },
   about: {
@@ -93,9 +93,9 @@ export const playerShell: Translation<typeof en> = {
     unavailable: "Ce navigateur ne garde aucun fichier hors ligne pour cette page.",
     reading: "Lecture des fichiers enregistrés…",
     unreadable: "Impossible de lire la liste des fichiers hors ligne. Recharge la page et réessaie.",
-    intro: "Les fichiers enregistrés fonctionnent sans réseau. Tu peux enregistrer ou retirer chaque partie séparément.",
+    intro: "Les fichiers enregistrés restent disponibles sans réseau. Tu peux enregistrer ou retirer chaque partie séparément.",
     allSaved: "tout est enregistré",
-    noneSaved: "non enregistré",
+    noneSaved: "rien n’est enregistré",
     someSaved: (count, total) =>
       `${files(count)} sur ${formatNumber("fr", total)} ${plural("fr", count, { one: "enregistré", many: "enregistrés", other: "enregistrés" })}`,
     status: (size, total, state) => `${size}, ${files(total)}, ${state}.`,
@@ -106,7 +106,7 @@ export const playerShell: Translation<typeof en> = {
     remove: "Retirer",
     saveGroup: (label) => `Enregistrer « ${label} »`,
     removeGroup: (label) => `Retirer « ${label} »`,
-    keep: "Garder les fichiers après chaque mise à jour",
+    keep: "Garder les fichiers enregistrés après chaque mise à jour",
   },
   update: {
     ready: "Une nouvelle version est prête.",
@@ -123,7 +123,7 @@ export const playerShell: Translation<typeof en> = {
     lyrics: [
       "Vois tom|ber les lu|miè|res",
       "joue les tou|ches à leur tour",
-      "len|te|ment, puis plus vi|te",
+      "len|te|ment puis plus vi|te",
       "tes mains sau|ront le che|min",
     ],
     part: (n) => `Partie ${formatNumber("fr", n)}`,

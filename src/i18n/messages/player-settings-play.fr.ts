@@ -11,7 +11,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   language: {
     label: "Langue",
-    help: "Avec « Comme le navigateur », le site s’ouvre dans la langue du navigateur quand il la propose.",
+    help: "Avec « Comme le navigateur », le site s’ouvre dans la langue du navigateur, si elle est disponible.",
     options: { auto: "Comme le navigateur" },
   },
   learnSounds: {
@@ -20,12 +20,12 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   learnDailyGoal: {
     label: "Objectif du jour",
-    help: "Les XP qu’une journée d’« Apprendre le piano » demande pour que ta série continue.",
+    help: "Les XP à gagner chaque jour dans « Apprendre le piano » pour garder ta série.",
     options: { "10": "10 XP", "20": "20 XP", "30": "30 XP", "50": "50 XP" },
   },
   learnSetupDone: {
     label: "Premiers pas terminés",
-    help: "« Apprendre le piano » te guide dans de courts premiers pas lors de ta première visite, jusqu’à ce qu’ils soient terminés.",
+    help: "« Apprendre le piano » te propose de courts premiers pas à ta première visite, jusqu’à ce que tu les termines.",
   },
   expertControls: {
     label: "Outils avancés",
@@ -58,8 +58,8 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "Les touches pour lire le morceau, t’y déplacer, le répéter en boucle et régler son zoom.",
   },
   leadIn: {
-    label: "Temps avant la première note (s)",
-    help: "Chaque morceau commence ce temps-là avant sa première note. Quand il reprend depuis sa fin, il attend encore autant.",
+    label: "Délai avant la première note (s)",
+    help: "Chaque morceau attend ce délai avant sa première note. Il attend encore autant chaque fois qu’il recommence après sa fin.",
   },
   restartSongOnEnd: {
     label: "Relancer le morceau à la fin",
@@ -74,7 +74,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "Un morceau que tu ouvres tient en entier dans les couloirs devant le piano.",
   },
   transposeOffset: {
-    label: "Transposer (demi-tons)",
+    label: "Transposition (demi-tons)",
     help: "Monte ou descend toutes les notes du morceau.",
   },
   reverseNoteDirection: {
@@ -87,7 +87,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   showBPM: {
     label: "Afficher le tempo en BPM",
-    help: "Affiche les pulsations par minute actuelles du morceau au-dessus de la scène, à côté des images par seconde.",
+    help: "Affiche le tempo actuel du morceau, en pulsations par minute, au-dessus de la scène, à côté des images par seconde.",
   },
   showFps: {
     label: "Afficher les images par seconde",
@@ -95,7 +95,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   showNoteDebugInfo: {
     label: "Afficher les détails d’une note au survol",
-    help: "Quand tu pointes une note, tu vois sa hauteur, son moment, sa durée et sa force de frappe.",
+    help: "Quand tu pointes une note, tu vois sa hauteur, son début, sa durée et sa force de frappe.",
   },
   showMilliseconds: {
     label: "Afficher les millisecondes sur la chronologie",
@@ -136,7 +136,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   autoLoop: {
     label: "Lancer chaque tour aussitôt",
-    help: "Quand c’est désactivé, le morceau s’arrête sur le décompte après chaque tour.",
+    help: "Quand c’est désactivé, le morceau se met en pause au décompte après chaque tour.",
   },
   muteLoop: {
     label: "Couper le son hors de la boucle",
@@ -256,16 +256,16 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   scheduleAheadMs: {
     label: "Anticipation audio (ms)",
-    help: "L’avance avec laquelle les notes sont mises en file. Plus d’avance est plus stable, moins d’avance réagit plus vite.",
+    help: "Combien de temps à l’avance les notes sont préparées. Plus d’avance rend le son plus stable, moins d’avance le rend plus réactif.",
   },
   scheduleIntervalMs: {
     label: "Intervalle de planification audio (ms)",
-    help: "La fréquence à laquelle les notes suivantes sont mises en file.",
+    help: "L’intervalle entre deux préparations des notes suivantes.",
   },
   // Backing track
   bgTrackFile: {
     label: "Choisir un fichier audio",
-    help: "Un enregistrement pour jouer avec, comme un groupe d’accompagnement. Il reste chargé jusqu’au rechargement de la page.",
+    help: "Un enregistrement sur lequel jouer, comme un groupe qui t’accompagne. Il reste chargé jusqu’au rechargement de la page.",
   },
   bgTrackEnable: {
     label: "Lire l’accompagnement",
@@ -304,8 +304,8 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   glowMode: {
     label: "Lueur",
-    help: "Automatique désactive la lueur sur un appareil en économie d’énergie, ou quand l’image saccade.",
-    options: { auto: "Automatique", on: "Activée", off: "Désactivée" },
+    help: "Auto désactive la lueur sur un appareil en économie d’énergie, ou quand l’image saccade.",
+    options: { auto: "Auto", on: "Activée", off: "Désactivée" },
   },
   glowStrength: {
     label: "Intensité de la lueur",
@@ -333,7 +333,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "La touche la plus aiguë de ton clavier, comme C7 ou 96.",
   },
   foldOutsideNotes: {
-    label: "Ramener les notes hors de tes touches",
+    label: "Ramener sur ton clavier les notes hors de portée",
     help: "Les notes absentes de ton clavier se déplacent d’octave en octave jusqu’à tes touches, et tu les joues là.",
   },
   // Input
@@ -379,11 +379,11 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   keyBindings: {
     label: "Touches du clavier de l’ordinateur",
-    help: "Les touches de l’ordinateur qui jouent des notes. De Z à M, elles jouent de Do3 à Si3. De Q à I, elles jouent de Do4 à Do5.",
+    help: "Les touches de l’ordinateur qui jouent des notes. En partant de la gauche, la rangée de lettres du bas joue de Do3 à Si3, et celle du haut de Do4 à Do5.",
   },
   waitForNotes: {
     label: "Attendre tes notes",
-    help: "Le morceau s’arrête sur chacune de tes notes jusqu’à ce que tu tiennes toutes ses touches. En mode jeu, une note qu’il attend longtemps compte comme jouée trop tard.",
+    help: "Le morceau s’arrête sur chacune de tes notes jusqu’à ce que tu tiennes toutes les touches demandées. En mode jeu, une note qu’il attend longtemps compte comme jouée trop tard.",
   },
   playHands: {
     label: "Tes mains",
@@ -392,7 +392,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   playalongSilentNotes: {
     label: "Allumer les touches à jouer sur ton clavier MIDI",
-    help: "Envoie chaque note suivante à très faible volume vers la sortie MIDI, pour qu’un clavier aux touches lumineuses l’affiche.",
+    help: "Envoie à chaque fois la note suivante, à très faible volume, vers la sortie MIDI, pour qu’un clavier aux touches lumineuses l’affiche.",
   },
   playalongSilentNotesChannel: {
     label: "Canal MIDI des touches lumineuses",
@@ -400,15 +400,15 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   enableScoreMode: {
     label: "Évaluer chaque note",
-    help: "Compare chaque note que tu joues au morceau, et garde ta précision pour chaque morceau.",
+    help: "Compare chaque note que tu joues au morceau, et enregistre ta précision morceau par morceau.",
   },
   scoreHitWindow: {
     label: "Fenêtre de frappe (ms)",
-    help: "Une note jouée à cet écart de son moment ou moins, en avance ou en retard, compte comme réussie.",
+    help: "Une note jouée avec au plus cet écart, en avance ou en retard, compte comme réussie.",
   },
   scorePerfectWindow: {
     label: "Fenêtre « Parfait » (ms)",
-    help: "Une note réussie à cet écart de son moment ou moins est parfaite.",
+    help: "Une note réussie avec au plus cet écart est parfaite.",
   },
   enableGameMode: {
     label: "Mode jeu",

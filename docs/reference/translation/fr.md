@@ -405,8 +405,11 @@ it adds no term.
 | Hold (a judgement); Recording (a clock) | Maintien; Prise en cours | `Tenue` reads as an outfit. `Enregistrer` stays Save. |
 | trick (a tip's kind); Fun fact | truc; Le savais-tu ? | `Astuce` is the Tip |
 | Measuring the songs | Analyse des morceaux… | `mesure` is the bar |
-| Practice plan; Tricky spot | Plan de travail; Passage difficile | the teacher's words |
-| Mute (a track) | Muet | `Couper le son` is too long for the field |
+| Practice plan; Tricky spot | Programme de travail; Point délicat | `passage` stays a time through |
+| Mute (a track) | Son coupé | `Couper le son` is too long for the field |
+| Your songs (a kind in the library) | Personnel | `À toi` reads as Your turn |
+| the version picker (on the landing page) | Niveau | its names agree with `niveau` |
+| the computer keys that play notes | la rangée de lettres du bas; celle du haut | the bindings are physical keys, and readers use AZERTY, QWERTZ or QWERTY |
 | Low mid, Mid, High mid (bands) | Bas-médiums, Médiums, Haut-médiums | the names of equaliser bands |
 | rests in a setting's options | soupir, demi-soupir, quart de soupir | the French rest names |
 | edge rim; pedal tail; Drag; Layer; Fade out | liseré; traîne; Freinage; Plan; Fondu | everyday words and the words of image editors |
@@ -609,6 +612,7 @@ space before `;`, `!`, `?` and inside `« »` is U+202F. The space before `:` an
 |---|---|
 | A quote stands in `« »`, never in straight or curly double quotes. | `["“”„]` |
 | A narrow no-break space (U+202F) stands inside `« »`. | `«` not followed by it, `»` not after it |
+| A space stands before `«` and after `»`, apart from an elision: `l’«`. | a letter or digit beside the quote |
 | A narrow no-break space stands before `;`, `!` and `?`. | each mark not after it |
 | A no-break space (U+00A0) stands before `:`, apart from a time such as `22:00`. | `:` not after it or a digit |
 | No ASCII space stands before `;`, `:`, `!`, `?`, `»` or `%`, nor after `«`. | the space and the mark |
@@ -620,6 +624,7 @@ space before `;`, `!`, `?` and inside `« »` is U+202F. The space before `:` an
 | The learner is `tu`, never `vous`. | `vous`, `votre`, `vos`, whole, apart from `rendez-vous` |
 | An instruction is the imperative of `tu`. | `appuyez`, `jouez`, `écoutez` and the like, whole |
 | No point médian or bracketed ending marks a gender. | `\p{L}·\p{L}`, `(e)`, `(ne)` and the like |
+| Soft is `doux` and slow is `lentement`, never `doucement`. | `doucement`, whole |
 | A welcome is `Bienvenue`, never an adjective with a gender. | `bienvenu`, `bienvenus`, `bienvenues` |
 | A capital keeps its accent: `À`, `É`, `Ç`. | `A la`, `A droite`, `Ecoute`, `Etape`, `Ca` and the like |
 

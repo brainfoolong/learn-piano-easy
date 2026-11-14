@@ -22,7 +22,7 @@ export const playModes: Translation<typeof en> = {
     },
     skills: {
       heading: "Travailler une compétence",
-      lead: "Trouve les notes vite, joue librement, ou écoute comment marchent les accords. Certains modes n’ont même pas besoin de morceau.",
+      lead: "Trouve vite les notes, joue librement, ou écoute comment marchent les accords. Certains modes n’ont même pas besoin de morceau.",
     },
   },
   modes: {
@@ -30,27 +30,27 @@ export const playModes: Translation<typeof en> = {
       tag: "Pour s’amuser",
       name: "Mode jeu",
       text: "Chaque note réussie rapporte des points, et le piano te répond en étincelles. Enchaîne les combos et bats ton record.",
-      traits: ["Points et combos en Facile", "Étincelles, éclats et piano lumineux", "Un morceau court et entraînant"],
+      traits: ["Points et combos en mode Facile", "Étincelles, éclats et piano lumineux", "Un morceau court et entraînant"],
       song: "In the Hall of the Mountain King, Débutant",
     },
     challenge: {
       tag: "Haut niveau",
       name: "Défi",
-      text: "Le mode jeu à son niveau le plus difficile, sans noms ni indices. Seul un parcours sans faute décroche le meilleur score.",
-      traits: ["Points et combos en Difficile", "Ni noms de notes ni indices sur les touches", "Une version plus difficile du morceau"],
+      text: "Le mode jeu à son niveau le plus difficile, sans noms de notes ni indices. Seul un parcours sans faute décroche le meilleur score.",
+      traits: ["Points et combos en mode Difficile", "Ni noms de notes ni indices sur les touches", "Une version plus difficile du morceau"],
       song: "In the Hall of the Mountain King, Moyen",
     },
     concert: {
       tag: "Installe-toi",
       name: "Concert",
-      text: "Le piano te joue un morceau, avec des flammes, des étoiles et une caméra en mouvement. Profite du spectacle, ou joue avec lui si tu l’oses.",
+      text: "Le piano te joue un morceau, avec des flammes, des étoiles et une caméra en mouvement. Profite du spectacle, ou accompagne-le si tu l’oses.",
       traits: ["Une caméra de cinéma", "Flammes, étoiles et étincelles", "Un piano lumineux et une onde de lumière"],
       song: "Carol of the Bells, Difficile",
     },
     playAlong: {
       tag: "Pas à pas",
       name: "Jouer avec le morceau",
-      text: "Le morceau t’attend à chaque note. Chaque note montre son nom et son doigt, et chaque touche montre son nom.",
+      text: "Le morceau t’attend à chaque note. Chaque note affiche son nom et son doigté, et chaque touche son nom.",
       traits: ["Les notes t’attendent", "Noms des notes et doigtés sur les notes", "Noms sur les touches blanches et noires"],
       song: "Ode to Joy, Débutant",
     },
@@ -110,8 +110,8 @@ export const playModes: Translation<typeof en> = {
     },
   },
   toast: {
-    started: (name: string) => `Mode activé : ${name}.`,
+    started: (name: string) => `C’est parti : ${name}.`,
     undo: "Défaire",
-    undone: "Tes propres paramètres sont revenus.",
+    undone: "Tes paramètres sont rétablis.",
   },
 };

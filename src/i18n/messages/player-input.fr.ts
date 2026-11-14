@@ -16,7 +16,7 @@ export const playerInput: Translation<typeof en> = {
     unsupported: "Ce navigateur n’a pas accès aux appareils MIDI. Chrome, Edge et Firefox y ont accès.",
     off: "Connecte tes appareils MIDI pour jouer sur un clavier MIDI.",
     asking: "En attente de l’autorisation du navigateur…",
-    denied: "L’accès MIDI a été refusé. Autorise-le dans les paramètres du site de ton navigateur, puis connecte-les à nouveau.",
+    denied: "L’accès MIDI a été refusé. Autorise-le dans les paramètres du site du navigateur, puis reconnecte tes appareils.",
     noInputs: "Aucun appareil MIDI n’est branché.",
     inputsFound: (n: number) =>
       plural("fr", n, {
@@ -35,14 +35,14 @@ export const playerInput: Translation<typeof en> = {
     recording: (clock: string) => `Prise en cours ${clock}`,
     recorded: (n: number) =>
       plural("fr", n, {
-        one: `${formatNumber("fr", n)} note dans la prise. Enregistrer la garde dans un fichier MIDI.`,
-        many: `${formatNumber("fr", n)} de notes dans la prise. Enregistrer les garde dans un fichier MIDI.`,
-        other: `${formatNumber("fr", n)} notes dans la prise. Enregistrer les garde dans un fichier MIDI.`,
+        one: `${formatNumber("fr", n)} note dans la prise. Appuie sur Enregistrer pour la garder dans un fichier MIDI.`,
+        many: `${formatNumber("fr", n)} de notes dans la prise. Appuie sur Enregistrer pour les garder dans un fichier MIDI.`,
+        other: `${formatNumber("fr", n)} notes dans la prise. Appuie sur Enregistrer pour les garder dans un fichier MIDI.`,
       }),
     hint: "Joue librement, ou appuie sur Enregistrer une prise pour garder ce que tu joues.",
   },
   history: {
-    empty: "Aucun essai terminé pour ce morceau. Joue-le jusqu’au bout avec le score activé.",
+    empty: "Aucun essai terminé pour l’instant sur ce morceau. Joue-le jusqu’au bout avec le score activé.",
     hands: { both: "Les deux", right: "Droite", left: "Gauche" },
     columns: {
       date: "Date",
@@ -62,7 +62,7 @@ export const playerInput: Translation<typeof en> = {
   learnRange: {
     lowest: "Joue la touche la plus grave…",
     highest: "Maintenant, la plus aiguë…",
-    start: "Détecter sur ton clavier",
+    start: "Détecter avec ton clavier",
     title: "Détecter l’étendue de ton clavier",
   },
   pitchPractice: {
@@ -82,7 +82,7 @@ export const playerInput: Translation<typeof en> = {
       }),
     play: (note: string) => `Joue ${note}`,
     progress: (i: number, count: number) => `Note ${formatNumber("fr", i)} sur ${formatNumber("fr", count)}`,
-    wrong: (note: string) => `Pas ${note}. Essaie encore une fois.`,
+    wrong: (note: string) => `Ce n’est pas ${note}. Essaie encore une fois.`,
     right: (note: string) => `C’est bien ${note}.`,
     results: "Résultats du travail de l’oreille",
     mistakes: (n: number, count: number) =>
@@ -90,9 +90,9 @@ export const playerInput: Translation<typeof en> = {
     columns: { note: "Note", asked: "Demandée", mistakes: "Erreurs", playedInstead: "Jouée à la place" },
     firstTry: (n: number, count: number) =>
       plural("fr", n, {
-        one: `${formatNumber("fr", n)} sur ${formatNumber("fr", count)} trouvée du premier coup.`,
-        many: `${formatNumber("fr", n)} sur ${formatNumber("fr", count)} trouvées du premier coup.`,
-        other: `${formatNumber("fr", n)} sur ${formatNumber("fr", count)} trouvées du premier coup.`,
+        one: `${formatNumber("fr", n)} note sur ${formatNumber("fr", count)} trouvée du premier coup.`,
+        many: `${formatNumber("fr", n)} de notes sur ${formatNumber("fr", count)} trouvées du premier coup.`,
+        other: `${formatNumber("fr", n)} notes sur ${formatNumber("fr", count)} trouvées du premier coup.`,
       }),
   },
   scoring: {
@@ -149,7 +149,7 @@ export const playerInput: Translation<typeof en> = {
   pdf: {
     noSong: "Ouvre d’abord un morceau, puis enregistre ses notes en PDF.",
     intro: (title: string) =>
-      `Enregistre les notes qui tombent de ${title} au-dessus d’un piano, avec quelques secondes du morceau sur chaque page.`,
+      `Un PDF de ${title} : ses notes qui tombent au-dessus d’un piano, avec quelques secondes du morceau par page.`,
     secondsPerPage: "Secondes par page",
     background: "Utiliser les couleurs de fond",
     pages: (pages: number, seconds: number) =>

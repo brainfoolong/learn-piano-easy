@@ -5,11 +5,11 @@ import type { sponsorPage as en } from "./sponsor.en";
 export const sponsorPage: Translation<typeof en> = {
   lead: "Learn Piano Easy est gratuit, et le restera. S’il a apporté un peu de musique dans ta journée, tu peux l’aider à grandir.",
   action: "Soutenir sur GitHub",
-  note: "Chaque montant aide, une seule fois ou chaque mois.",
+  note: "Chaque don compte, ponctuel ou mensuel.",
   promises: ["Sans publicité", "Sans inscription", "Fonctionne hors ligne", "Open source, licence MIT"],
   picture: "Un grand cœur, avec deux notes de musique qui flottent autour",
   who: {
-    heading: "Qui est derrière",
+    heading: "Qui se cache derrière",
     text: [
       "Une seule personne crée Learn Piano Easy sur son temps libre, entre le travail, la vie et les gammes.",
       "Le contrôle qualité, c’est un chat qui se promène de temps en temps sur les touches.",
@@ -25,8 +25,8 @@ export const sponsorPage: Translation<typeof en> = {
   },
   help: {
     heading: "D’autres façons d’aider",
-    lead: "L’argent est une façon d’aider. Ceci compte tout autant :",
-    star: { text: "Ajoute une étoile au projet sur GitHub, pour que d’autres élèves le trouvent.", action: "Étoile sur GitHub" },
+    lead: "L’argent est une façon d’aider. Ces gestes comptent tout autant :",
+    star: { text: "Ajoute une étoile au projet sur GitHub, pour que d’autres élèves le trouvent.", action: "Ajouter une étoile sur GitHub" },
     bug: { text: "Signale un bug quand quelque chose sonne faux.", action: "Signaler un bug" },
     friend: "Parles-en à quelqu’un qui a toujours voulu apprendre le piano.",
   },

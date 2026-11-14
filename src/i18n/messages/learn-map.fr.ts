@@ -16,7 +16,7 @@ export const learnMap: Translation<typeof en> = {
   nextUp: "À suivre",
   world: (world: number) => `Monde ${n(world)}`,
   progress: (done: number, all: number) => `${count(done, "leçon", "leçons")} sur ${n(all)}`,
-  locked: "Pour ouvrir ce monde, réussis l’épreuve finale du monde d’avant, ou le test pour passer ce monde.",
+  locked: "Pour ouvrir ce monde, réussis l’épreuve finale du monde précédent ou le test pour passer ce monde.",
   beaten: "Réussi",
   node: {
     locked: (name: string) => `${name}, leçon verrouillée`,
@@ -27,7 +27,7 @@ export const learnMap: Translation<typeof en> = {
   skipTest: {
     title: (world: string) => `Test pour passer le monde : ${world}`,
     text: "Tu sais déjà tout ça ? Réussis le test pour ouvrir toutes les leçons de ce monde.",
-    action: "Passer le test",
+    action: "Faire le test",
   },
   bar: {
     label: "Ta progression",

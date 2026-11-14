@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in French
-    status: open
+    status: done
   - id: 3
     title: The course in French
     status: open
@@ -77,6 +77,11 @@ marks and inside its quotes, and the rules test checks each one. The method in
   code's `Do4`.
 - **The narrow no-break space counts as Latin in Unicode's data.** The rules test now skips it beside a
   kept word, so a title inside `« »` is spared.
+- **A computer key a text names sits in the same place on every layout.** French readers type on
+  AZERTY, QWERTZ or QWERTY, and the bindings are physical keys. A text names E, R and T, or the rows of keys.
+- **A key name the code builds keeps the note label's capital:** `Si♭ majeur`, as § 7 of the guide says.
+- **Soft is `doux`, and a space stands outside `« »`.** The rules test now checks both, after a review
+  caught each.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -105,12 +110,12 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/fr.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/fr.ts:1`, `src/i18n/messages/learn-lesson.fr.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.fr.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.fr.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `french_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp fr` for each catalog section. `src/i18n/stamps/fr.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/fr.ts:1`, `src/i18n/messages/learn-lesson.fr.ts:1`
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.fr.ts:1`
+- [x] The player's settings. `src/i18n/messages/player-settings.fr.ts:1`
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+- [x] `bun x tsc` and `french_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+- [x] `bun run i18n stamp fr` for each catalog section. `src/i18n/stamps/fr.json:1`
 
 ### 3. The course in French
 
@@ -173,23 +178,38 @@ address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/fr.md` holds the whole guide and glossary. The `fr` entry
-of `src/i18n/typography.ts` holds the kept words and 15 mark rules. `the_french_marks_hold_and_spare_kept_words`
-in `src/i18n/translation-rules.test.ts` tests them, and it passes. The locale table's French row stands
-unchanged, as § 1 of the guide says.
+Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/*.fr.ts`, and `fr.ts` loads
+as the `fr` chunk of `src/i18n/locale.ts`. `src/i18n/all-catalogs.ts` holds it for the tools and tests.
+Six writers translated the catalogs, and six fresh reviewers read them blind. Settler subagents applied
+every finding. The three batches with a *wrong* finding were reviewed again until none was left.
+`src/i18n/stamps/fr.json` stamps every section. The 13 texts left missing are those Russian leaves to
+English too, such as `siteName`.
+
+The `fr` entry of `src/i18n/typography.ts` now holds 17 mark rules and a longer kept list. Both French
+rules tests pass. The glossary in `docs/reference/translation/fr.md` gained the terms the writers met.
 
 ### Next
 
-**Stage 2: the site and the player in French.** Files: `src/i18n/messages/*.fr.ts`, the `fr` chunk in
-`CATALOG_CHUNKS` of `src/i18n/locale.ts:44`, and `src/i18n/stamps/fr.json`. Start with
-`bun tools/i18n.ts status fr`, then `bun tools/i18n.ts work fr <unit>` per batch. Brief each writer with
-the whole guide and the playbook's no-break-space trap. Each French space is U+202F or U+00A0, and an
-ASCII space before `!`, `?`, `:` or `%` fails the rules test.
+**Stage 3: the course in French.** Files: `src/learn/lessons/<world>/*.fr.ts`, one `texts.fr.ts` per
+world, and one line per world's `index.ts` that loads `texts.fr` as its chunk, as `texts.ru` loads. Commit
+`5ec26ec` is the Russian model. Start with `bun tools/i18n.ts work fr lesson/<world>` for each world.
 
-Expected red: `french_texts_keep_their_rules` until every batch keeps the marks. A label French writes as
-English does, such as `Pause`, may need a new entry in the `fr` kept list.
+What worked in stage 2:
+- **One shared brief file per role,** under `.agent-tmp/`, which each subagent reads whole. The writer's
+  brief named its files, its Russian model for structure only, and the marks trap. The reviewer's brief
+  asked for one line per finding: id, kind, weight, the French that fixes it, and why.
+- **A settler subagent per batch** got the findings and the session's rulings, and edited the files.
+- **Write and Edit store a typed ` ` as the raw character,** which is right. Grep afterwards for an
+  ASCII space before `!?:;»%`.
+
+Expected red: `french_texts_keep_their_rules` until each world keeps the marks.
 
 ### Backlog
 
 - A read of the course by a speaker from Canada and one from Africa would catch words that read as France's only.
 - A French piano teacher's read would confirm the guide's *unsourced* rows, which its *Open* lists.
+- The key-binding dialog and the piano's key labels name each key by its QWERTY letter, through
+  `keyLabel` of `src/play/hotkeys.ts:101`. An AZERTY learner sees the wrong letters. `navigator.keyboard.getLayoutMap()`
+  would name them, where a browser offers it. This is a feature change, outside a translation pass.
+- The range fields show a note as `Do2` in a solfège locale, but `parsePitch` of `src/keyboard/range.ts`
+  reads letters only. Their help keeps `C2`. Solfège input would serve every solfège locale.

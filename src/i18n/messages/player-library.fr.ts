@@ -8,11 +8,11 @@ export const playerLibrary: Translation<typeof en> = {
     taglines: {
       common: "Une seule position de main, des notes lentes et une basse qui t’attend.",
       rare: "Les deux mains jouent. Des croches, des accords simples et une main qui se déplace de temps en temps.",
-      epic: "Accords brisés, passages du pouce et pédale.",
-      legendary: "Les deux mains sont occupées, rapides et indépendantes.",
+      epic: "Accords brisés, passages du pouce et la pédale.",
+      legendary: "Les deux mains très sollicitées, rapides et indépendantes.",
     },
     originalName: "Original",
-    originalTagline: "Les notes mêmes du compositeur.",
+    originalTagline: "Les notes telles que le compositeur les a écrites.",
     stepTitle: (name: string, tagline: string) => `${name} : ${tagline}`,
   },
   collections: { christmas: "Noël", film: "Au cinéma", sea: "Chants de marins" },
@@ -44,7 +44,7 @@ export const playerLibrary: Translation<typeof en> = {
   panel: {
     search: { placeholder: "Titre, compositeur ou mot-clé", label: "Rechercher des morceaux", clear: "Effacer la recherche" },
     fits: "Adapté à mon clavier",
-    kinds: { level: "Difficulté", yours: "À toi", collection: "Collection", style: "Style", skill: "Technique", composer: "Compositeur" },
+    kinds: { level: "Difficulté", yours: "Personnel", collection: "Collection", style: "Style", skill: "Technique", composer: "Compositeur" },
     levels: { beginner: "Débutant", easy: "Facile", medium: "Moyen", hard: "Difficile", advanced: "Avancé", expert: "Expert" },
     styles: {
       baroque: "Baroque",
@@ -60,7 +60,7 @@ export const playerLibrary: Translation<typeof en> = {
     tagTitle: (name: string) => `Afficher seulement : ${name}`,
     sort: {
       label: "Trier par",
-      suggested: "Suggérés",
+      suggested: "Ordre suggéré",
       title: "Titre",
       difficulty: "Difficulté",
       length: "Durée",
@@ -88,7 +88,7 @@ export const playerLibrary: Translation<typeof en> = {
       stop: "Arrêter l’extrait",
       title: (title: string) => `Écouter le début de ${title}`,
       failed: (title: string) =>
-        `« ${title} » n’est pas encore sur cet appareil. Connecte-toi à Internet pour écouter son extrait.`,
+        `« ${title} » n’est pas encore sur cet appareil. Connecte-toi à Internet pour écouter l’extrait.`,
     },
     favourite: { label: "Favori", title: (title: string) => `Favori : ${title}` },
     lengthTitle: "Durée",
@@ -110,7 +110,7 @@ export const playerLibrary: Translation<typeof en> = {
     hands: {
       right: "Main droite",
       left: "Main gauche",
-      split: "Deux mains, séparées au do central",
+      split: "Les deux mains, partagées au do central",
       none: "Pas pour moi : l’application la joue",
     },
     fromNotes: "D’après les notes",
@@ -131,7 +131,7 @@ export const playerLibrary: Translation<typeof en> = {
     sheet: (name: string) => `Afficher ${name} dans la partition`,
     notes: (n: number) => `${formatNumber("fr", n)} ${plural("fr", n, { one: "note", many: "de notes", other: "notes" })}`,
     drums: ", batterie, non jouée",
-    fields: { show: "Afficher", mute: "Muet", hand: "Main", volume: "Volume", sheet: "Partition" },
+    fields: { show: "Afficher", mute: "Son coupé", hand: "Main", volume: "Volume", sheet: "Partition" },
     empty: "Ce morceau n’a aucune note.",
   },
   guide: {
@@ -139,7 +139,7 @@ export const playerLibrary: Translation<typeof en> = {
     bars: (from: number, to: number) => (from === to ? `Mesure ${from}` : `Mesures ${from}–${to}`),
     loopBars: (from: number, to: number) => (from === to ? `mesure ${from}` : `mesures ${from}–${to}`),
     wholeSong: "tout le morceau",
-    waits: "t’attend",
+    waits: "attend chaque note",
     playsOn: "n’attend pas",
     summary: (hands: string, percent: number, loop: string, wait: string) =>
       `${hands}, ${formatNumber("fr", percent)} %, ${loop}, ${wait}`,
@@ -152,19 +152,19 @@ export const playerLibrary: Translation<typeof en> = {
       about: "À propos",
       funFact: "Le savais-tu ?",
       skills: "Techniques",
-      practice: "Plan de travail",
+      practice: "Programme de travail",
       tips: "Astuces",
-      tricky: "Passages difficiles",
+      tricky: "Points délicats",
     },
     tipKinds: { fingering: "doigté", rhythm: "rythme", sound: "son", trick: "truc" },
     tipMark: (kind: string) => `Astuce : ${kind}`,
-    trickyMark: "Passage difficile",
+    trickyMark: "Point délicat",
   },
   openSong: {
     outside: "Ce morceau a des notes hors de ton clavier.",
     fold: "Les ramener sur tes touches",
     failed: (title: string, reason: string) => `Impossible d’ouvrir « ${title} » : ${reason}`,
     catalogFailed: (status: number) => `Impossible de charger la liste des morceaux (${status}).`,
-    fileFailed: (status: number) => `impossible de charger le fichier (${status})`,
+    fileFailed: (status: number) => `le fichier n’a pas pu être chargé (${status})`,
   },
 };

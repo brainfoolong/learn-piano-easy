@@ -5,7 +5,7 @@ import type { playerSettingsLook as en } from "./player-settings-look.en";
 export const playerSettingsLook: Translation<typeof en> = {
   // Notes
   showHitKeys: {
-    label: "Éclairer les notes qui sonnent",
+    label: "Surbrillance des notes qui sonnent",
     help: "Une note brille de sa propre couleur pendant qu’elle sonne.",
   },
   noteWidth: {
@@ -95,7 +95,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "La couleur des numéros de mesure.",
   },
   highlightInputLanes: {
-    label: "Éclairer les couloirs des touches tenues",
+    label: "Éclairage des couloirs des touches tenues",
     help: "Le couloir au-dessus d’une touche s’éclaire tant que tu tiens cette touche.",
   },
   inputLaneOpacity: {
@@ -108,7 +108,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   showSustainPeriods: {
     label: "Durées de pédale",
-    help: "Une bande en travers des couloirs tant que le morceau tient la pédale forte.",
+    help: "Une bande en travers des couloirs tant que le morceau garde la pédale forte enfoncée.",
   },
   showSustainOnOffs: {
     label: "Pédale enfoncée et relevée",
@@ -122,11 +122,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   // Particles
   showParticles: {
     label: "Particules",
-    help: "Des effets s’élèvent de chaque touche qui sonne. Ils sollicitent la carte graphique, donc ils sont désactivés au départ.",
+    help: "Des effets s’élèvent de chaque touche qui sonne. Ils sollicitent la carte graphique, donc ils sont désactivés par défaut.",
   },
   particlesFlames: {
     label: "Flammes",
-    help: "Chaque touche brûle avec sa note, dans la couleur de la note. C’est l’effet qui sollicite le plus la carte graphique.",
+    help: "Chaque touche s’enflamme quand sa note sonne, dans la couleur de la note. C’est l’effet qui sollicite le plus la carte graphique.",
   },
   particlesSparks: {
     label: "Étincelles",
@@ -138,7 +138,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesStars: {
     label: "Étoiles",
-    help: "De petites étoiles et des points qui tournent montent de chaque touche, puis retombent.",
+    help: "De petites étoiles tournoyantes et des points montent de chaque touche, puis retombent.",
   },
   particlesCustom: {
     label: "Tes propres particules",
@@ -151,11 +151,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesBlending: {
     label: "Fusion",
-    help: "Ajouter la lumière éclaire ce qui est derrière, comme le feu. Recouvrir le cache, comme la fumée.",
+    help: "Avec Ajouter la lumière, les particules éclaircissent ce qui est derrière, comme le feu. Avec Recouvrir, elles le cachent, comme la fumée.",
     options: { additive: "Ajouter la lumière", normal: "Recouvrir" },
   },
   particleOverrideColor: {
-    label: "Couleur propre",
+    label: "Couleur personnalisée",
     help: "Quand c’est désactivé, chaque particule prend la couleur de sa touche.",
   },
   particleColor: {
@@ -164,7 +164,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesOpacity: {
     label: "Opacité",
-    help: "À quel point chaque particule paraît pleine. Une valeur plus basse laisse plus voir au travers.",
+    help: "À quel point chaque particule est opaque. Plus la valeur est basse, plus on voit à travers.",
   },
   particleSize: {
     label: "Taille",
@@ -212,7 +212,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesRotationRandom: {
     label: "Angle aléatoire (°)",
-    help: "Chaque particule part tournée d’un angle aléatoire, jusqu’à cet angle.",
+    help: "Chaque particule part avec un angle aléatoire, jusqu’à cette valeur.",
   },
   particlesRotationSpeed: {
     label: "Rotation (° par seconde)",
@@ -220,7 +220,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleNoiseResX: {
     label: "Détail de la dérive latérale",
-    help: "Plus la valeur est haute, plus les particules de touches voisines dérivent différemment sur les côtés.",
+    help: "Plus la valeur est élevée, plus les particules de touches voisines dérivent différemment sur les côtés.",
   },
   particleNoiseStrengthX: {
     label: "Dérive latérale",
@@ -228,7 +228,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particleNoiseResY: {
     label: "Détail de la dérive en montée",
-    help: "Plus la valeur est haute, plus la dérive en montée des touches voisines diffère.",
+    help: "Plus la valeur est élevée, plus la dérive en montée des touches voisines diffère.",
   },
   particleNoiseStrengthY: {
     label: "Dérive en montée",
@@ -243,7 +243,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Jusqu’où les particules se balancent d’un côté à l’autre.",
   },
   turbulenceXFrequency: {
-    label: "Rythme du balancement latéral",
+    label: "Fréquence du balancement latéral",
     help: "Balancements par seconde.",
   },
   turbulenceYAmplitude: {
@@ -251,7 +251,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Jusqu’où les particules se balancent de haut en bas en montant.",
   },
   turbulenceYFrequency: {
-    label: "Rythme du balancement en montée",
+    label: "Fréquence du balancement en montée",
     help: "Balancements par seconde.",
   },
   particleYOffset: {
@@ -286,7 +286,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   noteLabel: {
     label: "Étiquettes des notes",
-    help: "Les textes sur chaque note : choisis-en autant que tu veux, ou aucun. Appuie sur une note, puis sur une touche de 1 à 5 pour lui donner son doigt.",
+    help: "Les textes sur chaque note : choisis-en autant que tu veux, ou aucun. Appuie sur une note, puis sur une touche de 1 à 5 du clavier de l’ordinateur pour indiquer son doigt.",
     options: { name: "Nom de la note", keyBinding: "Touche de l’ordinateur", fingering: "Doigt" },
   },
   noteLabelColor: {
@@ -349,7 +349,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { simple: "Simple : R ♭3 5", full: "Complète : fondamentale ♭3e 5e" },
   },
   chordMarkRoot: {
-    label: "Marquer la fondamentale",
+    label: "Repère sur la fondamentale",
     help: "La fondamentale de chaque accord porte un bloc doré.",
   },
 
@@ -376,7 +376,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   lyricsFontSize: {
     label: "Taille du texte (px)",
-    help: "La taille d’écriture des paroles.",
+    help: "La taille des caractères des paroles.",
   },
   lyricsY: {
     label: "Hauteur (% depuis le haut)",
@@ -393,11 +393,11 @@ export const playerSettingsLook: Translation<typeof en> = {
 
   // Coding
   enableColorCodingNote: {
-    label: "Colorer les notes par hauteur",
+    label: "Couleurs des notes par hauteur",
     help: "Chacune des 12 hauteurs prend sa propre couleur.",
   },
   enableColorCodingNotePiano: {
-    label: "Colorer les touches par hauteur",
+    label: "Couleurs des touches par hauteur",
     help: "Chaque touche s’éclaire dans la couleur de sa hauteur pendant qu’elle sonne.",
   },
   colorCodeNote0: { label: "Do", help: "La couleur de chaque do." },
@@ -413,11 +413,11 @@ export const playerSettingsLook: Translation<typeof en> = {
   colorCodeNote10: { label: "La♯ ou si♭", help: "La couleur de chaque la♯ ou si♭." },
   colorCodeNote11: { label: "Si", help: "La couleur de chaque si." },
   enableColorCodingFinger: {
-    label: "Colorer les notes par doigt",
+    label: "Couleurs des notes par doigt",
     help: "Une note qu’aucune main ne joue garde son autre couleur.",
   },
   enableColorCodingFingerPiano: {
-    label: "Colorer les touches par doigt",
+    label: "Couleurs des touches par doigt",
     help: "Chaque touche s’éclaire dans la couleur du doigt qui la joue.",
   },
   colorCodeFinger1Right: { label: "Main droite, doigt 1", help: "La couleur des notes que joue le pouce droit." },
@@ -449,7 +449,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "La partition remplit l’écran à la place de la scène.",
   },
   sheetMeasureScroll: {
-    label: "Faire défiler la partition avec le morceau",
+    label: "Défilement de la partition avec le morceau",
     help: "Quand c’est désactivé, les mesures sont rangées en lignes, et la ligne en cours reste visible.",
   },
   sheetMeasureNumbers: {
@@ -458,11 +458,11 @@ export const playerSettingsLook: Translation<typeof en> = {
     options: { off: "Aucun", lineStart: "Au début de chaque ligne", every: "Sur chaque mesure" },
   },
   enableGrandStaff: {
-    label: "Relier deux portées par une accolade",
+    label: "Accolade entre deux portées",
     help: "L’accolade d’une double portée, au début de chaque ligne.",
   },
   sheetAutoClef: {
-    label: "Choisir chaque clef d’après les notes",
+    label: "Clef choisie d’après les notes",
     help: "Quand c’est désactivé, la première portée est en clef de sol et les autres en clef de fa.",
   },
   overrideTimeSignature: {
@@ -519,12 +519,12 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Une note de la partition grossit pendant qu’elle sonne.",
   },
   sheetRenderInputNotes: {
-    label: "Dessiner les notes que tu joues",
+    label: "Affichage des notes que tu joues",
     help: "Chaque touche que tu tiens apparaît comme une note au niveau du curseur.",
   },
   sheetShowHoverInfo: {
-    label: "Nommer les notes sous le pointeur",
-    help: "Pointe une note ou un accord de la partition pour voir le nom de ses notes.",
+    label: "Nom des notes sous le pointeur",
+    help: "Place le pointeur sur une note ou un accord de la partition pour voir le nom de ses notes.",
   },
   sheetBgColor: {
     label: "Couleur du papier",
@@ -534,10 +534,10 @@ export const playerSettingsLook: Translation<typeof en> = {
   // PDF
   pdfExportButtonGroup: {
     label: "Enregistrer les notes en PDF",
-    help: "Ouvre une fenêtre qui enregistre les notes qui tombent du morceau ouvert en pages, dont tu choisis la longueur.",
+    help: "Ouvre une fenêtre pour enregistrer en pages les notes qui tombent, pour le morceau ouvert. Tu choisis la longueur des pages.",
   },
   exportPdfBackground: {
-    label: "Utiliser les couleurs de fond",
+    label: "Couleurs de fond",
     help: "Les pages prennent les couleurs des couloirs et des touches. Quand c’est désactivé, elles s’impriment sur papier blanc.",
   },
 
@@ -547,11 +547,11 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "Affiche la taille de l’application, des morceaux et des sons de piano, et enregistre ou retire chacun d’eux.",
   },
   autoCacheSongs: {
-    label: "Garder les morceaux enregistrés",
+    label: "Conservation des morceaux",
     help: "Enregistre maintenant chaque morceau d’exemple, puis de nouveau après chaque mise à jour.",
   },
   autoCacheSounds: {
-    label: "Garder les sons de piano enregistrés",
+    label: "Conservation des sons de piano",
     help: "Enregistre maintenant chaque banque de sons, puis de nouveau après chaque mise à jour.",
   },
 };

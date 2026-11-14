@@ -324,12 +324,13 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       ...KEPT_IN_OWN_SCRIPT, "Ah\u202F! vous dirai-je, maman", "OK", "Pause", "Stop", "Volume", "Tempo", "tempo", "Normal",
       "Menu", "Zoom", "Options", "Combo", "combo", "Mode", "Piano", "Ragtime", "Solo", "Code", "Original", "Expert",
       "Audio", "Quiz", "Badges", "Message", "Info", "Contact", "Notes", "Note", "Ctrl", "Alt", "Shift", "Meta", "Enter",
-      "Concert", "Date", "Score", "Collection", "Style", "Baroque", "Guide", "Version", "Open source", "Questions", "Site",
+      "Auto", "Concert", "Date", "Score", "Collection", "Style", "Baroque", "Guide", "Version", "Open source", "Questions", "Site",
       "legato", "staccato", "crescendo", "diminuendo", "coda", "XVIII", "XVII", "XVI", "XIX", "XV", "XX",
     ],
     marks: [
       { says: "A quote stands in « », never in straight or curly double quotes", mustNot: /["“”„]/ },
       { says: "A narrow no-break space stands inside « »", mustNot: /«(?!\u202F)|(?<!\u202F)»/ },
+      { says: "A space stands before \u00AB and after \u00BB, apart from an elision such as l\u2019\u00AB", mustNot: /[\p{L}\p{N}]\u00AB|\u00BB[\p{L}\p{N}]/u },
       { says: "A narrow no-break space stands before ;, ! and ?", mustNot: /(?<!\u202F)[;!?]/ },
       { says: "A no-break space stands before a colon, apart from a time such as 22:00", mustNot: /(?<![\u00A0\d]):|(?<=\d):(?!\d)/ },
       { says: "No ASCII space stands before ;, :, !, ?, » or %, nor after «", mustNot: / [;:!?»%]|« / },
@@ -345,6 +346,7 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
           /(?<!\p{L})(?:appuyez|jouez|écoutez|choisissez|cliquez|essayez|placez|posez|gardez|comptez|regardez|ouvrez|fermez|lâchez|relâchez|touchez|commencez|recommencez|maintenez|tenez|utilisez|sélectionnez|continuez)(?!\p{L})/iu,
       },
       { says: "No point médian or bracketed ending marks a gender", mustNot: /\p{L}·\p{L}|\p{L}\((?:e|ne|se|rice)s?\)/u },
+      { says: "Soft is doux and slow is lentement, never doucement, which reads as both", mustNot: /(?<!\p{L})doucement(?!\p{L})/iu },
       { says: "A welcome is Bienvenue, never an adjective with a gender", mustNot: /(?<!\p{L})bienvenu(?:s|es)?(?!\p{L})/iu },
       {
         says: "A capital keeps its accent: À, É, Ç",

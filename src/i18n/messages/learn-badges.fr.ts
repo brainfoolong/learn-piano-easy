@@ -20,7 +20,7 @@ export const learnBadges: Translation<typeof en> = {
     "sight-reader": { name: "Œil de lynx", description: "Lis dix notes d’affilée sans erreur." },
     "early-bird": { name: "Chant du coq", description: "Termine une leçon avant 8 h du matin." },
     "night-owl": { name: "Hibou", description: "Termine une leçon à 22 h ou plus tard." },
-    comeback: { name: "Bon retour", description: "Reviens faire une leçon après une semaine d’absence." },
+    comeback: { name: "Te revoilà", description: "Reviens faire une leçon après une semaine d’absence." },
     legendary: {
       name: "Morceau difficile",
       description: "Joue jusqu’au bout la version Difficile d’un de nos morceaux dans « Jouer librement ».",

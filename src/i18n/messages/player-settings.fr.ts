@@ -8,13 +8,13 @@ import { playerSettingsLook } from "./player-settings-look.fr";
 import { playerSettingsPlay } from "./player-settings-play.fr";
 
 /**
- * A tonic given in letters, such as `B♭`, in French solfège in lower case, such as `si♭`, as prose
- * writes a key. Any other name stays as it is.
+ * A tonic given in letters, such as `B♭`, as the French solfège name the note labels show, such as
+ * `Si♭`. Any other name stays as it is.
  */
 function solfege(tonic: string): string {
   const pitch = parsePitch(`${tonic}4`);
   if (pitch === undefined) return tonic;
-  return pitchClassName(pitch, { system: "solfege", accidentals: tonic.endsWith("♭") ? "flats" : "sharps", locale: "fr" }).toLowerCase();
+  return pitchClassName(pitch, { system: "solfege", accidentals: tonic.endsWith("♭") ? "flats" : "sharps", locale: "fr" });
 }
 
 export const playerSettings: Translation<typeof en> = {
@@ -48,12 +48,12 @@ export const playerSettings: Translation<typeof en> = {
         other: `${n} paramètres modifiés`,
       });
     },
-    reset: (label) => `Rétablir la valeur par défaut de « ${label} »`,
-    resetAll: "Tout rétablir par défaut",
-    confirmResetAll: "Rétablir chaque paramètre à sa valeur par défaut ? Tes modifications seront perdues.",
+    reset: (label) => `Réinitialiser « ${label} »`,
+    resetAll: "Tout réinitialiser",
+    confirmResetAll: "Réinitialiser tous les paramètres ? Tes modifications seront perdues.",
   },
   groups: {
-    basics: "Essentiel",
+    basics: "L’essentiel",
     audio: "Audio",
     instrument: "Ton instrument",
     scene: "La scène",
@@ -81,7 +81,7 @@ export const playerSettings: Translation<typeof en> = {
   },
   about: {
     general: "Comment le lecteur démarre, comment un morceau se déroule et ce que montre la chronologie.",
-    loop: "Répète un passage jusqu’à ce qu’il soit acquis.",
+    loop: "Répète quelques mesures jusqu’à ce qu’elles soient acquises.",
     audio: "Le volume, le son du piano, le métronome et l’égaliseur.",
     backing: "Un fichier audio à toi, qui joue en même temps que le morceau.",
     view: "La caméra, la lueur et jusqu’où tu vois le morceau à l’avance.",
@@ -92,11 +92,11 @@ export const playerSettings: Translation<typeof en> = {
     lanes: "Les couloirs derrière les notes, avec leurs lignes et leurs repères.",
     particles: "Des flammes, des étincelles et tes propres particules, là où une note atteint sa touche.",
     labels: "Les noms sur les notes et les touches, et les accords du morceau.",
-    lyrics: "Les paroles du morceau, ligne par ligne, au-dessus de la scène.",
+    lyrics: "Les paroles du morceau, ligne par ligne, sur la scène.",
     coding: "Une couleur pour chaque hauteur ou chaque doigt.",
     sheet: "Le morceau en partition, à côté des notes qui tombent ou à leur place.",
-    pdf: "Enregistre les notes qui tombent en pages à imprimer.",
-    offline: "Ce que l’application garde enregistré pour jouer sans réseau.",
+    pdf: "Enregistre les notes qui tombent sous forme de pages à imprimer.",
+    offline: "Ce que l’application enregistre pour fonctionner hors ligne.",
   },
   subheadings: {
     generalApp: "Application et données",

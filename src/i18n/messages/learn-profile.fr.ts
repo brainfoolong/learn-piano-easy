@@ -50,7 +50,7 @@ export const learnProfile: Translation<typeof en> = {
   choices: {
     heading: "Tes paramètres",
     goal: "Objectif du jour",
-    goalHelp: "Les XP qu’il faut gagner chaque jour pour que ta série continue.",
+    goalHelp: "Les XP à gagner chaque jour pour garder ta série.",
     sounds: "Sons de récompense",
     soundsHelp: "Des carillons pour une étape réussie, une étoile, un nouveau niveau et un badge. Le piano sonne toujours.",
   },
@@ -58,14 +58,14 @@ export const learnProfile: Translation<typeof en> = {
     heading: "Tes données",
     lead: "Ta progression reste dans ce navigateur. La page « Tes données » la sauvegarde avec tout le reste dans un seul fichier, et la restaure.",
     open: "Sauvegarder ou restaurer",
-    reset: "Réinitialiser la progression",
+    reset: "Réinitialiser toute la progression",
     failed: "Impossible d’enregistrer. Rien n’a changé.",
-    resetDone: "Ta progression est réinitialisée. Le fichier de sauvegarde contient tout ce qu’elle avait.",
+    resetDone: "Ta progression est réinitialisée. Le fichier de sauvegarde contient toute ton ancienne progression.",
     close: "Fermer",
     cancel: "Garder ma progression",
     ask: {
       title: "Réinitialiser toute la progression ?",
-      text: "Cela efface de ce navigateur toutes les leçons, étoiles, XP et badges. Tes paramètres restent.",
+      text: "Cela efface de ce navigateur tes leçons, tes étoiles, tes XP et tes badges. Tes paramètres restent.",
       next: "Continuer",
     },
     askAgain: {
