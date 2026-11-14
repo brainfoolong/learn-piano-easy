@@ -334,6 +334,7 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       { says: "A narrow no-break space stands before ;, ! and ?", mustNot: /(?<!\u202F)[;!?]/ },
       { says: "A no-break space stands before a colon, apart from a time such as 22:00", mustNot: /(?<![\u00A0\d]):|(?<=\d):(?!\d)/ },
       { says: "No ASCII space stands before ;, :, !, ?, » or %, nor after «", mustNot: / [;:!?»%]|« / },
+      { says: "A space follows ;, :, ! and ?, apart from a time such as 22:00", mustNot: /[;!?](?=[\p{L}\p{N}«])|(?<!\d):(?=[\p{L}\p{N}«])/u },
       { says: "A percent sign follows its number after a no-break space, as Intl writes it", mustNot: /\d%/ },
       { says: "The apostrophe is ’, never '", mustNot: /'/ },
       { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },

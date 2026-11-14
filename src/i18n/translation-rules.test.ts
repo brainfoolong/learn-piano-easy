@@ -322,7 +322,7 @@ test("the_russian_marks_hold_and_spare_kept_words", () => {
 });
 
 test("the_french_marks_hold_and_spare_kept_words", () => {
-  /** The narrow no-break space before `;`, `!` and `?` and inside `« »`, and the no-break space before `:`. */
+  /** The narrow no-break space before `;`, `!` and `?` and inside `« »`, the no-break space before `:`, and a space after each. */
   const N = String.fromCharCode(0x202f);
   const B = String.fromCharCode(0xa0);
   const broken = [
@@ -331,6 +331,7 @@ test("the_french_marks_hold_and_spare_kept_words", () => {
     "Vous pouvez commencer.", "Joue avec votre main droite.", "Appuyez sur Suivant.", `Prêt·e à jouer${N}?`,
     "Prêt(e) à jouer.", "Bienvenu dans la leçon.", "Ecoute la mélodie.", "A droite du do.", "Ca y est.", "Bravo.Encore une fois.",
     `Va dans«${N}Lire${N}».`, `Va dans «${N}Lire${N}»maintenant.`, "Joue plus doucement.",
+    `Épreuve finale${B}:Mary Had a Little Lamb`, `Joue le début${B}:«${N}1 et 2${N}».`, `Prêt${N}?Alors joue.`,
   ];
   for (const text of broken) expect(problemsOf([textOf("English", text, "fr")], "fr")).not.toEqual([]);
   const kept = [
