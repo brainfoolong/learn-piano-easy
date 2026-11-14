@@ -12,7 +12,8 @@
     "pt": "Drunken Sailor é uma canção de marinheiro que as tripulações cantavam enquanto puxavam cordas ou giravam o cabrestante. Ninguém sabe quem a escreveu, e a melodia está no modo dórico.",
     "id": "Drunken Sailor adalah lagu pelaut yang dinyanyikan para awak kapal sambil menarik tali atau memutar penggulung jangkar. Tidak ada yang tahu siapa penciptanya, dan melodinya memakai modus Doria.",
     "bn": "Drunken Sailor হলো নাবিকদের একটি গান, যা জাহাজের নাবিকেরা দড়ি টানার বা নোঙর তোলার কপিকল ঘোরানোর সময় গাইতেন। কে এটি লিখেছেন, কেউ জানে না, আর এর সুরটি ডোরিয়ান মোডে।",
-    "ru": "Drunken Sailor — матросская песня. Её пели команды, когда тянули канаты или вращали кабестан. Никто не знает, кто её написал, а мелодия звучит в дорийском ладу."
+    "ru": "Drunken Sailor — матросская песня. Её пели команды, когда тянули канаты или вращали кабестан. Никто не знает, кто её написал, а мелодия звучит в дорийском ладу.",
+    "fr": "Drunken Sailor est un chant de marins. Les équipages le chantaient en halant les cordages ou en tournant le cabestan. Personne ne sait qui l’a écrit, et sa mélodie est en mode dorien."
   },
   "funFact": {
     "en": "The first written account of the shanty comes from a whaling voyage of 1839, out of New London, Connecticut.",
@@ -24,7 +25,8 @@
     "pt": "O primeiro registro escrito desta canção de marinheiro vem de uma viagem baleeira de 1839, que partiu de New London, em Connecticut.",
     "id": "Catatan tertulis pertama tentang lagu pelaut ini berasal dari pelayaran perburuan paus pada 1839, yang berangkat dari New London, Connecticut.",
     "bn": "এই গানের প্রথম লিখিত বিবরণ পাওয়া যায় ১৮৩৯ সালের একটি তিমি শিকারের সমুদ্রযাত্রা থেকে, যেটি শুরু হয়েছিল কানেটিকাটের New London থেকে।",
-    "ru": "Первое письменное упоминание этой песни относится к китобойному плаванию 1839 года из Нью-Лондона в Коннектикуте."
+    "ru": "Первое письменное упоминание этой песни относится к китобойному плаванию 1839 года из Нью-Лондона в Коннектикуте.",
+    "fr": "La première trace écrite de ce chant vient d’un voyage baleinier de 1839, parti de New London, dans le Connecticut."
   },
   "mythic": null,
   "versions": {
@@ -54,7 +56,8 @@
             "pt": "Toque os 4 primeiros compassos só com a mão direita, e deixe a música esperar cada nota.",
             "id": "Mainkan tangan kanan saja pada 4 birama pertama, dan biarkan lagu menunggu setiap not.",
             "bn": "প্রথম চারটি বার শুধু ডান হাতে বাজান, আর প্রতিটি নোটের জন্য গানটিকে অপেক্ষা করতে দিন।",
-            "ru": "Сыграйте первые четыре такта одной правой рукой. Песня подождёт каждую ноту."
+            "ru": "Сыграйте первые четыре такта одной правой рукой. Песня подождёт каждую ноту.",
+            "fr": "Joue les quatre premières mesures à la main droite seule. Le morceau attend chaque note."
           },
           "hands": "right",
           "speed": 0.6,
@@ -72,7 +75,8 @@
             "pt": "Toque os compassos 5 a 8 só com a mão direita. A melodia sobe até o Ré e volta para casa.",
             "id": "Mainkan birama 5 sampai 8 dengan tangan kanan saja. Melodinya naik ke D, lalu pulang ke nada asalnya.",
             "bn": "5 থেকে 8 নম্বর বার শুধু ডান হাতে বাজান। সুরটি D পর্যন্ত উঠে আবার নিজের জায়গায় ফিরে আসে।",
-            "ru": "Сыграйте такты 5–8 одной правой рукой. Мелодия поднимается к ре и возвращается домой."
+            "ru": "Сыграйте такты 5–8 одной правой рукой. Мелодия поднимается к ре и возвращается домой.",
+            "fr": "Joue les mesures 5 à 8 à la main droite seule. La mélodie monte jusqu’au ré, puis revient à son point de départ."
           },
           "hands": "right",
           "speed": 0.6,
@@ -90,7 +94,8 @@
             "pt": "Agora só a mão esquerda. Ela segura uma nota grave em cada compasso ou meio compasso.",
             "id": "Sekarang tangan kiri saja. Tangan kiri menahan satu not rendah selama satu birama atau setengah birama.",
             "bn": "এবার শুধু বাঁ হাত। প্রতিটি বার বা আধা বারে হাত একটি নিচের নোট ধরে রাখে।",
-            "ru": "Теперь одна левая рука. Она держит одну нижнюю ноту целый такт или полтакта."
+            "ru": "Теперь одна левая рука. Она держит одну нижнюю ноту целый такт или полтакта.",
+            "fr": "Maintenant, la main gauche seule. Elle tient une note grave par mesure ou par demi-mesure."
           },
           "hands": "left",
           "speed": 0.6,
@@ -108,7 +113,8 @@
             "pt": "Junte as mãos nos 8 primeiros compassos, devagar.",
             "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan.",
             "bn": "প্রথম আটটি বার দুই হাতে ধীরে ধীরে বাজান।",
-            "ru": "Сыграйте первые восемь тактов двумя руками, медленно."
+            "ru": "Сыграйте первые восемь тактов двумя руками, медленно.",
+            "fr": "Joue les huit premières mesures à deux mains, lentement."
           },
           "hands": "both",
           "speed": 0.7,
@@ -126,7 +132,8 @@
             "pt": "Toque a música inteira com as duas mãos, na velocidade normal.",
             "id": "Mainkan seluruh lagu dengan kedua tangan, dengan kecepatan penuh.",
             "bn": "দুই হাতে পুরো গানটি পুরো গতিতে বাজান।",
-            "ru": "Сыграйте всю песню двумя руками в полном темпе."
+            "ru": "Сыграйте всю песню двумя руками в полном темпе.",
+            "fr": "Joue tout le morceau à deux mains, au tempo."
           },
           "hands": "both",
           "speed": 1,
@@ -149,7 +156,8 @@
             "pt": "Cada metade do compasso tem uma nota longa e duas curtas. Marque o ritmo como um marinheiro batendo o pé no convés.",
             "id": "Setiap setengah birama berbunyi panjang, pendek, pendek. Hentakkan seperti pelaut di geladak kapal.",
             "bn": "বারের প্রতিটি অর্ধেক চলে লম্বা, ছোট, ছোট। জাহাজের ডেকে নাবিকের মতো পা ঠুকে বাজান।",
-            "ru": "Каждая половина такта звучит так: долго, коротко, коротко. Притопывайте, как матрос на палубе."
+            "ru": "Каждая половина такта звучит так: долго, коротко, коротко. Притопывайте, как матрос на палубе.",
+            "fr": "Chaque moitié de mesure fait long, court, court. Martèle-la comme un marin qui tape du pied sur le pont."
           }
         },
         {
@@ -166,7 +174,8 @@
             "pt": "O dedo 5 toca o Lá, e depois o polegar se estica para baixo até o Ré. A mão fica onde está.",
             "id": "Jari 5 memainkan A, lalu ibu jari meraih ke bawah ke D. Tanganmu tetap di tempatnya.",
             "bn": "5 নম্বর আঙুল A বাজায়, তারপর বুড়ো আঙুল নিচে D পর্যন্ত পৌঁছায়। হাত যেখানে আছে, সেখানেই থাকে।",
-            "ru": "5-й палец играет ля, затем первый палец тянется вниз к ре. Рука остаётся на месте."
+            "ru": "5-й палец играет ля, затем первый палец тянется вниз к ре. Рука остаётся на месте.",
+            "fr": "Le doigt 5 joue le la, puis le pouce descend chercher le ré. La main reste où elle est."
           }
         },
         {
@@ -183,7 +192,8 @@
             "pt": "Toque o último Lá do compasso 5 com o dedo 2. Assim os dedos 3, 4 e 5 ficam prontos para Si, Dó e Ré.",
             "id": "Mainkan A terakhir di birama 5 dengan jari 2. Lalu jari 3, 4, dan 5 sudah siap untuk B, C, dan D.",
             "bn": "5 নম্বর বারের শেষ A-টি 2 নম্বর আঙুলে বাজান। তখন B, C আর D-র জন্য 3, 4 আর 5 নম্বর আঙুল তৈরি থাকে।",
-            "ru": "Последнее ля такта 5 сыграйте 2-м пальцем. Тогда 3-й, 4-й и 5-й пальцы готовы к си, до и ре."
+            "ru": "Последнее ля такта 5 сыграйте 2-м пальцем. Тогда 3-й, 4-й и 5-й пальцы готовы к си, до и ре.",
+            "fr": "Joue le dernier la de la mesure 5 avec le doigt 2. Les doigts 3, 4 et 5 sont alors prêts pour si, do et ré."
           }
         }
       ],
@@ -200,7 +210,8 @@
             "pt": "O dedo 5 desce do Ré para o Dó. Depois os dedos 4, 3 e 2 descem para Lá, Sol e Mi.",
             "id": "Jari 5 bergeser turun dari D ke C. Lalu jari 4, 3, dan 2 berjalan turun ke A, G, dan E.",
             "bn": "5 নম্বর আঙুল D থেকে নেমে C-তে আসে। তারপর 4, 3 আর 2 নম্বর আঙুল নিচে নেমে A, G আর E বাজায়।",
-            "ru": "5-й палец переходит с ре вниз на до. Затем 4-й, 3-й и 2-й пальцы спускаются к ля, соль и ми."
+            "ru": "5-й палец переходит с ре вниз на до. Затем 4-й, 3-й и 2-й пальцы спускаются к ля, соль и ми.",
+            "fr": "Le doigt 5 descend du ré au do. Puis les doigts 4, 3 et 2 descendent vers la, sol et mi."
           }
         },
         {
@@ -215,7 +226,8 @@
             "pt": "O dedo 4 toca o Sol seis vezes: longa, curta, curta, longa, curta, curta. Toque leve as notas curtas.",
             "id": "Jari 4 memainkan G enam kali: panjang, pendek, pendek, panjang, pendek, pendek. Mainkan not pendeknya dengan ringan.",
             "bn": "4 নম্বর আঙুল ছয়বার G বাজায়: লম্বা, ছোট, ছোট, লম্বা, ছোট, ছোট। ছোট নোটগুলো হালকা রাখুন।",
-            "ru": "4-й палец играет соль шесть раз: долго, коротко, коротко, долго, коротко, коротко. Короткие ноты играйте легко."
+            "ru": "4-й палец играет соль шесть раз: долго, коротко, коротко, долго, коротко, коротко. Короткие ноты играйте легко.",
+            "fr": "Le doigt 4 joue six fois le sol : long, court, court, long, court, court. Garde les notes courtes légères."
           }
         },
         {
@@ -230,7 +242,8 @@
             "pt": "O dedo 5 toca o Lá cinco vezes. Depois o dedo 2 pega o último Lá, para a mão ficar pronta para subir.",
             "id": "Jari 5 memainkan A lima kali. Lalu jari 2 mengambil A terakhir, sehingga tanganmu siap naik.",
             "bn": "5 নম্বর আঙুল পাঁচবার A বাজায়। তারপর শেষ A-টি নেয় 2 নম্বর আঙুল, যাতে হাত উপরে ওঠার জন্য তৈরি থাকে।",
-            "ru": "5-й палец играет ля пять раз. Затем последнее ля берёт 2-й палец, и рука готова подниматься."
+            "ru": "5-й палец играет ля пять раз. Затем последнее ля берёт 2-й палец, и рука готова подниматься.",
+            "fr": "Le doigt 5 joue cinq fois le la. Puis le doigt 2 prend le dernier la, et la main est prête à monter."
           }
         }
       ]
@@ -262,7 +275,8 @@
             "pt": "Toque só a mão esquerda: uma nota grave, e depois duas notas no tempo seguinte.",
             "id": "Mainkan tangan kiri saja: satu not rendah, lalu dua not pada ketukan berikutnya.",
             "bn": "শুধু বাঁ হাতে বাজান: একটি নিচের নোট, তারপর পরের বিটে দুটি নোট।",
-            "ru": "Сыграйте одной левой рукой: нижняя нота, затем две ноты на следующую долю."
+            "ru": "Сыграйте одной левой рукой: нижняя нота, затем две ноты на следующую долю.",
+            "fr": "Joue la main gauche seule : une note grave, puis deux notes sur le temps suivant."
           },
           "hands": "left",
           "speed": 0.6,
@@ -280,7 +294,8 @@
             "pt": "Toque só a mão direita nos 8 primeiros compassos, e deixe a música esperar cada nota.",
             "id": "Mainkan tangan kanan saja pada 8 birama pertama, dan biarkan lagu menunggu setiap not.",
             "bn": "প্রথম আটটি বার শুধু ডান হাতে বাজান, আর প্রতিটি নোটের জন্য গানটিকে অপেক্ষা করতে দিন।",
-            "ru": "Сыграйте первые восемь тактов одной правой рукой. Песня подождёт каждую ноту."
+            "ru": "Сыграйте первые восемь тактов одной правой рукой. Песня подождёт каждую ноту.",
+            "fr": "Joue les huit premières mesures à la main droite seule. Le morceau attend chaque note."
           },
           "hands": "right",
           "speed": 0.6,
@@ -298,7 +313,8 @@
             "pt": "Junte as mãos nos compassos 9 a 16, devagar.",
             "id": "Gabungkan kedua tangan pada birama 9 sampai 16, pelan-pelan.",
             "bn": "9 থেকে 16 নম্বর বার দুই হাতে ধীরে ধীরে বাজান।",
-            "ru": "Сыграйте такты 9–16 двумя руками, медленно."
+            "ru": "Сыграйте такты 9–16 двумя руками, медленно.",
+            "fr": "Joue les mesures 9 à 16 à deux mains, lentement."
           },
           "hands": "both",
           "speed": 0.6,
@@ -316,7 +332,8 @@
             "pt": "Toque a música inteira com as duas mãos, um pouco mais devagar que o escrito.",
             "id": "Mainkan seluruh lagu dengan kedua tangan, sedikit lebih lambat dari tertulis.",
             "bn": "দুই হাতে পুরো গানটি লেখা গতির চেয়ে একটু ধীরে বাজান।",
-            "ru": "Сыграйте всю песню двумя руками чуть медленнее, чем написано."
+            "ru": "Сыграйте всю песню двумя руками чуть медленнее, чем написано.",
+            "fr": "Joue tout le morceau à deux mains, un peu plus lentement que le tempo écrit."
           },
           "hands": "both",
           "speed": 0.8,
@@ -334,7 +351,8 @@
             "pt": "Agora toque na velocidade normal.",
             "id": "Sekarang mainkan dengan kecepatan penuh.",
             "bn": "এবার পুরো গতিতে বাজান।",
-            "ru": "Теперь сыграйте в полном темпе."
+            "ru": "Теперь сыграйте в полном темпе.",
+            "fr": "Maintenant, joue-le au tempo."
           },
           "hands": "both",
           "speed": 1,
@@ -357,7 +375,8 @@
             "pt": "A mão esquerda balança grave, agudo, grave, agudo, como uma tripulação puxando uma corda ao mesmo tempo.",
             "id": "Tangan kiri berayun rendah, tinggi, rendah, tinggi, seperti awak kapal yang menarik tali bersama-sama.",
             "bn": "বাঁ হাত দোলে নিচে, উপরে, নিচে, উপরে, যেন নাবিকেরা একসঙ্গে দড়ি টানছেন।",
-            "ru": "Левая рука качается: низко, высоко, низко, высоко, как команда, которая дружно тянет канат."
+            "ru": "Левая рука качается: низко, высоко, низко, высоко, как команда, которая дружно тянет канат.",
+            "fr": "La main gauche se balance grave, aigu, grave, aigu, comme un équipage qui tire ensemble sur une corde."
           }
         },
         {
@@ -374,7 +393,8 @@
             "pt": "Depois do Ré agudo longo, o dedo 5 desliza para baixo até o Dó. É o único movimento da mão.",
             "id": "Setelah D tinggi yang panjang, jari 5 bergeser turun ke C. Hanya itu gerakan tanganmu.",
             "bn": "উপরের লম্বা D-র পরে 5 নম্বর আঙুল নেমে C-তে সরে যায়। হাতের নড়াচড়া শুধু এটুকুই।",
-            "ru": "После долгого верхнего ре 5-й палец скользит вниз на до. Это единственное движение руки."
+            "ru": "После долгого верхнего ре 5-й палец скользит вниз на до. Это единственное движение руки.",
+            "fr": "Après le long ré aigu, le doigt 5 glisse vers le do. C’est le seul déplacement de la main."
           }
         },
         {
@@ -391,7 +411,8 @@
             "pt": "Termine com Ré e Fá juntos, e deixe as duas notas soarem.",
             "id": "Akhiri dengan D dan F bersamaan, dan biarkan keduanya terus berbunyi.",
             "bn": "শেষে D আর F একসঙ্গে বাজান, আর আওয়াজ বাজতে দিন।",
-            "ru": "В конце возьмите ре и фа вместе и дайте им прозвучать."
+            "ru": "В конце возьмите ре и фа вместе и дайте им прозвучать.",
+            "fr": "Termine sur ré et fa ensemble, et laisse-les sonner."
           }
         }
       ],
@@ -408,7 +429,8 @@
             "pt": "Depois do Ré longo, o dedo 5 desce para o Dó. A mão esquerda toca Dó, depois Fá e Lá, e depois Dó e Sol.",
             "id": "Setelah D yang panjang, jari 5 bergeser turun ke C. Tangan kiri memainkan C, lalu F dan A, lalu C dan G.",
             "bn": "লম্বা D-র পরে 5 নম্বর আঙুল নেমে C-তে আসে। বাঁ হাত বাজায় C, তারপর F আর A, তারপর C আর G।",
-            "ru": "После долгого ре 5-й палец переходит вниз на до. Левая рука играет до, затем фа и ля, затем до и соль."
+            "ru": "После долгого ре 5-й палец переходит вниз на до. Левая рука играет до, затем фа и ля, затем до и соль.",
+            "fr": "Après le long ré, le doigt 5 descend au do. La main gauche joue do, puis fa et la, puis do et sol."
           }
         },
         {
@@ -423,7 +445,8 @@
             "pt": "O dedo 4 toca o Sol seis vezes, enquanto a mão esquerda toca Dó e depois Sol. Mantenha o ritmo regular nas duas mãos.",
             "id": "Jari 4 memainkan G enam kali, sementara tangan kiri memainkan C, lalu G. Mainkan kedua tangan dengan rata.",
             "bn": "4 নম্বর আঙুল ছয়বার G বাজায়, আর বাঁ হাত বাজায় C, তারপর G। দুই হাতই সমানভাবে বাজান।",
-            "ru": "4-й палец играет соль шесть раз, а левая рука играет до, затем соль. Обе руки играйте ровно."
+            "ru": "4-й палец играет соль шесть раз, а левая рука играет до, затем соль. Обе руки играйте ровно.",
+            "fr": "Le doigt 4 joue six fois le sol, pendant que la main gauche joue do, puis sol. Garde les deux mains régulières."
           }
         },
         {
@@ -438,7 +461,8 @@
             "pt": "O polegar se estica para baixo até o Dó, e o dedo 2 toca o Mi. A mão esquerda fica em Dó e Sol.",
             "id": "Ibu jari meraih ke bawah ke C, dan jari 2 memainkan E. Tangan kiri tetap di C dan G.",
             "bn": "বুড়ো আঙুল নিচে C পর্যন্ত পৌঁছায়, আর 2 নম্বর আঙুল E বাজায়। বাঁ হাত C আর G-তেই থাকে।",
-            "ru": "Первый палец тянется вниз к до, а 2-й палец играет ми. Левая рука остаётся на до и соль."
+            "ru": "Первый палец тянется вниз к до, а 2-й палец играет ми. Левая рука остаётся на до и соль.",
+            "fr": "Le pouce descend chercher le do, et le doigt 2 joue le mi. La main gauche reste sur do et sol."
           }
         }
       ]
@@ -470,7 +494,8 @@
             "pt": "Toque só o baixo Alberti até ele rolar sozinho: grave, agudo, meio, agudo.",
             "id": "Mainkan bas Alberti saja sampai mengalir dengan sendirinya: rendah, tinggi, tengah, tinggi.",
             "bn": "আলবের্তি বেস আলাদা করে বাজান, যতক্ষণ না সেটি নিজে থেকে গড়িয়ে চলে: নিচের, উপরের, মাঝের, উপরের।",
-            "ru": "Сыграйте альбертиевы басы отдельно, пока они не покатятся сами: нижняя, верхняя, средняя, верхняя."
+            "ru": "Сыграйте альбертиевы басы отдельно, пока они не покатятся сами: нижняя, верхняя, средняя, верхняя.",
+            "fr": "Joue la basse d’Alberti seule, jusqu’à ce qu’elle roule toute seule : grave, aigu, milieu, aigu."
           },
           "hands": "left",
           "speed": 0.5,
@@ -488,7 +513,8 @@
             "pt": "Toque os compassos 9 a 16 só com a mão direita, e passe o polegar por baixo na subida.",
             "id": "Mainkan birama 9 sampai 16 dengan tangan kanan saja, dan biarkan ibu jari menyusup saat naik.",
             "bn": "9 থেকে 16 নম্বর বার শুধু ডান হাতে বাজান, আর ওঠার সময় বুড়ো আঙুল নিচ দিয়ে নিয়ে যান।",
-            "ru": "Сыграйте такты 9–16 одной правой рукой и подкладывайте первый палец по пути вверх."
+            "ru": "Сыграйте такты 9–16 одной правой рукой и подкладывайте первый палец по пути вверх.",
+            "fr": "Joue les mesures 9 à 16 à la main droite seule, et passe le pouce dessous en montant."
           },
           "hands": "right",
           "speed": 0.5,
@@ -506,7 +532,8 @@
             "pt": "Junte as mãos nos 8 primeiros compassos, devagar.",
             "id": "Gabungkan kedua tangan pada 8 birama pertama, pelan-pelan.",
             "bn": "প্রথম আটটি বার দুই হাতে ধীরে ধীরে বাজান।",
-            "ru": "Сыграйте первые восемь тактов двумя руками, медленно."
+            "ru": "Сыграйте первые восемь тактов двумя руками, медленно.",
+            "fr": "Joue les huit premières mesures à deux mains, lentement."
           },
           "hands": "both",
           "speed": 0.5,
@@ -524,7 +551,8 @@
             "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
             "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan.",
             "bn": "দুই হাতে পুরো গানটি তিন-চতুর্থাংশ গতিতে বাজান।",
-            "ru": "Сыграйте всю песню двумя руками на скорости 75 %."
+            "ru": "Сыграйте всю песню двумя руками на скорости 75 %.",
+            "fr": "Joue tout le morceau à deux mains, à 75 % de la vitesse."
           },
           "hands": "both",
           "speed": 0.75,
@@ -542,7 +570,8 @@
             "pt": "Agora toque na velocidade normal, com o pedal.",
             "id": "Sekarang mainkan dengan kecepatan penuh, dengan pedal.",
             "bn": "এবার প্যাডেলসহ পুরো গতিতে বাজান।",
-            "ru": "Теперь сыграйте в полном темпе, с педалью."
+            "ru": "Теперь сыграйте в полном темпе, с педалью.",
+            "fr": "Maintenant, joue-le au tempo, avec la pédale."
           },
           "hands": "both",
           "speed": 1,
@@ -565,7 +594,8 @@
             "pt": "Troque o pedal a cada nova nota do baixo, duas vezes por compasso.",
             "id": "Ganti pedal di setiap not bas baru, dua kali dalam setiap birama.",
             "bn": "প্রতিটি নতুন বেস নোটে প্যাডেল বদলান, প্রতিটি বারে দুবার।",
-            "ru": "Меняйте педаль на каждой новой ноте баса, дважды в каждом такте."
+            "ru": "Меняйте педаль на каждой новой ноте баса, дважды в каждом такте.",
+            "fr": "Change de pédale à chaque nouvelle note de basse, deux fois par mesure."
           }
         },
         {
@@ -582,7 +612,8 @@
             "pt": "Passe o polegar por baixo até o Sol depois que o dedo 3 tocar o Fá.",
             "id": "Biarkan ibu jari menyusup ke G setelah jari 3 memainkan F.",
             "bn": "3 নম্বর আঙুল F বাজানোর পরে বুড়ো আঙুল নিচ দিয়ে G-তে নিয়ে যান।",
-            "ru": "Подложите первый палец на соль после того, как 3-й палец сыграет фа."
+            "ru": "Подложите первый палец на соль после того, как 3-й палец сыграет фа.",
+            "fr": "Passe le pouce dessous vers le sol, après le fa joué par le doigt 3."
           }
         },
         {
@@ -599,7 +630,8 @@
             "pt": "Agora a melodia é a nota de cima de cada par. Deixe o dedo de cima cantar a melodia.",
             "id": "Kini melodinya adalah not atas dari setiap pasangan not. Biarkan jari yang di atas menyanyikannya.",
             "bn": "এবার সুরটি হলো প্রতিটি জোড়ার উপরের নোট। উপরের আঙুলকে সুরটি গাইতে দিন।",
-            "ru": "Теперь мелодия — это верхняя нота каждой пары. Пусть её поёт верхний палец."
+            "ru": "Теперь мелодия — это верхняя нота каждой пары. Пусть её поёт верхний палец.",
+            "fr": "La mélodie est maintenant la note du haut de chaque paire. Laisse le doigt du haut la chanter."
           }
         }
       ],
@@ -616,7 +648,8 @@
             "pt": "Os dedos 2 e 4 pressionam Fá e Lá juntos. Depois o dedo 4 toca o Lá sozinho, duas vezes.",
             "id": "Jari 2 dan 4 menekan F dan A bersamaan. Lalu jari 4 memainkan A dua kali sendirian.",
             "bn": "2 আর 4 নম্বর আঙুল F আর A একসঙ্গে চাপে। তারপর 4 নম্বর আঙুল একা দুবার A বাজায়।",
-            "ru": "2-й и 4-й пальцы вместе нажимают фа и ля. Затем 4-й палец дважды играет одно ля."
+            "ru": "2-й и 4-й пальцы вместе нажимают фа и ля. Затем 4-й палец дважды играет одно ля.",
+            "fr": "Les doigts 2 et 4 enfoncent fa et la ensemble. Puis le doigt 4 joue deux fois le la seul."
           }
         },
         {
@@ -631,7 +664,8 @@
             "pt": "A mão esquerda toca Ré, Fá e Lá juntos, com os dedos 5, 3 e 1. A mão direita segura Fá, Lá e Ré.",
             "id": "Tangan kiri memainkan D, F, dan A bersamaan dengan jari 5, 3, dan 1. Tangan kanan menahan F, A, dan D.",
             "bn": "বাঁ হাত 5, 3 আর 1 নম্বর আঙুলে D, F আর A একসঙ্গে বাজায়। ডান হাত F, A আর D ধরে রাখে।",
-            "ru": "Левая рука берёт ре, фа и ля вместе 5-м, 3-м и 1-м пальцами. Правая рука держит фа, ля и ре."
+            "ru": "Левая рука берёт ре, фа и ля вместе 5-м, 3-м и 1-м пальцами. Правая рука держит фа, ля и ре.",
+            "fr": "La main gauche joue ré, fa et la ensemble, avec les doigts 5, 3 et 1. La main droite tient fa, la et ré."
           }
         },
         {
@@ -646,7 +680,8 @@
             "pt": "O dedo 5 desce do Ré para o Dó, e os dedos 4, 3 e 2 continuam descendo. A mão esquerda toca o acorde quebrado de Fá maior, e depois o de Dó maior.",
             "id": "Jari 5 bergeser turun dari D ke C, dan jari 4, 3, dan 2 berjalan turun. Tangan kiri memainkan akor terurai F mayor, lalu C mayor.",
             "bn": "5 নম্বর আঙুল D থেকে নেমে C-তে আসে, আর 4, 3 আর 2 নম্বর আঙুল নিচে নামে। বাঁ হাত গড়িয়ে বাজায় F মেজর কর্ড, তারপর C মেজর কর্ড।",
-            "ru": "5-й палец переходит с ре вниз на до, а 4-й, 3-й и 2-й пальцы спускаются. Левая рука играет разложенный аккорд фа мажор, затем до мажор."
+            "ru": "5-й палец переходит с ре вниз на до, а 4-й, 3-й и 2-й пальцы спускаются. Левая рука играет разложенный аккорд фа мажор, затем до мажор.",
+            "fr": "Le doigt 5 descend du ré au do, et les doigts 4, 3 et 2 descendent à sa suite. La main gauche roule fa majeur, puis do majeur."
           }
         }
       ]
@@ -678,7 +713,8 @@
             "pt": "Toque só a mão esquerda: uma oitava no tempo e depois um acorde, cada um com uma pausa curta para saltar.",
             "id": "Mainkan tangan kiri saja: satu oktaf tepat pada ketukan, lalu satu akor, masing-masing dengan tanda istirahat pendek untuk melompat.",
             "bn": "শুধু বাঁ হাতে বাজান: বিটে একটি অক্টেভ, তারপর একটি কর্ড, আর প্রতিটির পরে লাফের জন্য একটি ছোট রেস্ট।",
-            "ru": "Сыграйте одной левой рукой: октава на долю, затем аккорд, и перед каждым короткая пауза для прыжка."
+            "ru": "Сыграйте одной левой рукой: октава на долю, затем аккорд, и перед каждым короткая пауза для прыжка.",
+            "fr": "Joue la main gauche seule : une octave sur le temps, puis un accord, chacun suivi d’un court silence pour sauter."
           },
           "hands": "left",
           "speed": 0.5,
@@ -696,7 +732,8 @@
             "pt": "Toque só as oitavas da mão direita. Mantenha o polegar e o dedo 5 abertos, como uma moldura fixa.",
             "id": "Mainkan oktaf tangan kanan saja. Jaga ibu jari dan jari 5 tetap terbuka, seperti bingkai yang tidak berubah.",
             "bn": "ডান হাতের অক্টেভগুলো আলাদা করে বাজান। বুড়ো আঙুল আর 5 নম্বর আঙুল ছড়িয়ে রাখুন, যেন একটি স্থির ফ্রেম।",
-            "ru": "Сыграйте октавы правой руки отдельно. Держите 1-й и 5-й пальцы раскрытыми, как жёсткую рамку."
+            "ru": "Сыграйте октавы правой руки отдельно. Держите 1-й и 5-й пальцы раскрытыми, как жёсткую рамку.",
+            "fr": "Joue seules les octaves de la main droite. Garde le pouce et le doigt 5 ouverts, comme un cadre fixe."
           },
           "hands": "right",
           "speed": 0.5,
@@ -714,7 +751,8 @@
             "pt": "Toque só os arpejos da mão esquerda, e deixe o polegar passar por baixo na descida.",
             "id": "Mainkan arpeggio tangan kiri saja, dan biarkan ibu jari menyusup saat turun.",
             "bn": "বাঁ হাতের আর্পেজিওগুলো আলাদা করে বাজান, আর নামার সময় বুড়ো আঙুল নিচ দিয়ে নিয়ে যান।",
-            "ru": "Сыграйте арпеджио левой руки отдельно, и пусть первый палец подкладывается по пути вниз."
+            "ru": "Сыграйте арпеджио левой руки отдельно, и пусть первый палец подкладывается по пути вниз.",
+            "fr": "Joue seuls les arpèges de la main gauche, et laisse le pouce passer dessous en descendant."
           },
           "hands": "left",
           "speed": 0.5,
@@ -732,7 +770,8 @@
             "pt": "Toque a música inteira com as duas mãos, a três quartos da velocidade.",
             "id": "Mainkan seluruh lagu dengan kedua tangan, dengan tiga perempat kecepatan.",
             "bn": "দুই হাতে পুরো গানটি তিন-চতুর্থাংশ গতিতে বাজান।",
-            "ru": "Сыграйте всю песню двумя руками на скорости 75 %."
+            "ru": "Сыграйте всю песню двумя руками на скорости 75 %.",
+            "fr": "Joue tout le morceau à deux mains, à 75 % de la vitesse."
           },
           "hands": "both",
           "speed": 0.75,
@@ -750,7 +789,8 @@
             "pt": "Agora toque na velocidade normal, e deixe o último acorde soar.",
             "id": "Sekarang mainkan dengan kecepatan penuh, dan biarkan akor terakhir terus berbunyi.",
             "bn": "এবার পুরো গতিতে বাজান, আর শেষ কর্ডের আওয়াজ বাজতে দিন।",
-            "ru": "Теперь сыграйте в полном темпе и дайте последнему аккорду прозвучать."
+            "ru": "Теперь сыграйте в полном темпе и дайте последнему аккорду прозвучать.",
+            "fr": "Maintenant, joue-le au tempo et laisse sonner le dernier accord."
           },
           "hands": "both",
           "speed": 1,
@@ -773,7 +813,8 @@
             "pt": "Levante a mão em cada pausa curta, e depois caia na oitava seguinte.",
             "id": "Angkat tanganmu di setiap tanda istirahat pendek, lalu mendarat di oktaf berikutnya.",
             "bn": "প্রতিটি ছোট রেস্টে হাত তুলুন, তারপর পরের অক্টেভে গিয়ে পড়ুন।",
-            "ru": "В каждой короткой паузе поднимайте руку, затем попадайте на следующую октаву."
+            "ru": "В каждой короткой паузе поднимайте руку, затем попадайте на следующую октаву.",
+            "fr": "Lève la main à chaque court silence, puis arrive sur l’octave suivante."
           }
         },
         {
@@ -790,7 +831,8 @@
             "pt": "Deixe os arpejos rolarem suaves, como ondas debaixo do navio.",
             "id": "Biarkan arpeggio mengalun dengan lembut, seperti ombak di bawah kapal.",
             "bn": "আর্পেজিওগুলো হালকা করে গড়িয়ে যেতে দিন, যেন জাহাজের নিচে ঢেউ।",
-            "ru": "Пусть арпеджио перекатываются тихо, как волны под кораблём."
+            "ru": "Пусть арпеджио перекатываются тихо, как волны под кораблём.",
+            "fr": "Laisse les arpèges rouler tout en douceur, comme des vagues sous le navire."
           }
         },
         {
@@ -807,7 +849,8 @@
             "pt": "Toque os acordes curtos e firmes, como botas no convés. A nota de cima é a melodia.",
             "id": "Mainkan akor dengan pendek dan tegas, seperti sepatu bot di geladak. Not teratasnya adalah melodi.",
             "bn": "কর্ডগুলো ছোট ছোট করে আর জোরে বাজান, যেন ডেকে বুটের শব্দ। সবচেয়ে উপরের নোটটিই সুর।",
-            "ru": "Играйте аккорды коротко и смело, как сапоги стучат по палубе. Верхняя нота — это мелодия."
+            "ru": "Играйте аккорды коротко и смело, как сапоги стучат по палубе. Верхняя нота — это мелодия.",
+            "fr": "Joue les accords courts et francs, comme des bottes sur le pont. La note du haut est la mélodie."
           }
         }
       ],
@@ -824,7 +867,8 @@
             "pt": "A mão esquerda começa no Fá grave, e depois no Dó. Na mão direita, o polegar toca Fá e depois Mi.",
             "id": "Tangan kiri mulai di F rendah, lalu di C. Di tangan kanan, ibu jari memainkan F, lalu E.",
             "bn": "বাঁ হাত শুরু করে নিচের F থেকে, তারপর C থেকে। ডান হাতে বুড়ো আঙুল বাজায় F, তারপর E।",
-            "ru": "Левая рука начинает с нижнего фа, затем с до. В правой руке первый палец играет фа, затем ми."
+            "ru": "Левая рука начинает с нижнего фа, затем с до. В правой руке первый палец играет фа, затем ми.",
+            "fr": "La main gauche commence sur le fa grave, puis sur le do. À la main droite, le pouce joue fa, puis mi."
           }
         },
         {
@@ -839,7 +883,8 @@
             "pt": "A mão esquerda se estica para baixo até o Lá grave, com o dedo 5. A mão direita começa no Mi, com o polegar.",
             "id": "Tangan kiri meraih ke bawah ke A rendah dengan jari 5. Tangan kanan mulai di E dengan ibu jari.",
             "bn": "বাঁ হাত 5 নম্বর আঙুলে নিচের A পর্যন্ত পৌঁছায়। ডান হাত শুরু করে E থেকে, বুড়ো আঙুলে।",
-            "ru": "Левая рука тянется 5-м пальцем вниз к нижнему ля. Правая рука начинает первым пальцем на ми."
+            "ru": "Левая рука тянется 5-м пальцем вниз к нижнему ля. Правая рука начинает первым пальцем на ми.",
+            "fr": "La main gauche descend chercher le la grave avec le doigt 5. La main droite commence sur le mi avec le pouce."
           }
         },
         {
@@ -854,7 +899,8 @@
             "pt": "Depois do Fá, o polegar passa por baixo até o Sol. A mão esquerda começa o arpejo no Ré grave.",
             "id": "Ibu jari menyusup ke G setelah F. Tangan kiri memulai arpeggionya di D rendah.",
             "bn": "F-এর পরে বুড়ো আঙুল নিচ দিয়ে G-তে যায়। বাঁ হাত তার আর্পেজিও শুরু করে নিচের D থেকে।",
-            "ru": "После фа первый палец подкладывается на соль. Левая рука начинает арпеджио с нижнего ре."
+            "ru": "После фа первый палец подкладывается на соль. Левая рука начинает арпеджио с нижнего ре.",
+            "fr": "Le pouce passe dessous vers le sol après le fa. La main gauche commence son arpège sur le ré grave."
           }
         }
       ]

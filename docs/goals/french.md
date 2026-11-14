@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in French, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in French, from n to z"
     status: open
@@ -139,9 +139,16 @@ keys* with *First melodies*. Five fresh reviewers then review the five batches b
 most eight guides each work side by side, and one fresh reviewer per batch reviews it blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.fr.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.fr.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp fr` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+- [x] One `tools/our-songs/<slug>.fr.ts` per slug from `air-on-the-g-string` to `mozart-21-andante`. `tools/our-songs/alle-jahre-wieder.fr.ts:1`
+  - [x] The work lists of the 51 guides, and the writer's, reviewer's and settler's briefs.
+  - [x] Seven batches written, of seven or eight guides each.
+  - [x] `french_texts_keep_their_rules` passes on every batch.
+- [x] Each batch reviewed blind, and every finding settled.
+  - [x] Seven blind reviews.
+  - [x] Every finding settled, and every batch with a *wrong* finding reviewed again.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp fr` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+  - [x] The guides written, and the build green.
+  - [x] Each guide stamped.
 
 ### 5. The song guides in French, from n to z
 
@@ -149,7 +156,7 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.fr.ts` per slug from `o-christmas-tree` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.fr.ts:1`
+- [ ] One `tools/our-songs/<slug>.fr.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.fr.ts:1`
 - [ ] Each batch reviewed blind, and every finding settled.
 - [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp fr` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
 
@@ -178,33 +185,45 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 3 are done. The catalogs and all eight worlds of the course are in French, reviewed blind and
-stamped in `src/i18n/stamps/fr.json`. Each world's `index.ts` loads `texts.fr` as its own chunk.
+Stages 1 to 4 are done. The catalogs, the eight worlds and the 51 guides from `air-on-the-g-string` to
+`mozart-21-andante` are in French, reviewed blind and stamped in `src/i18n/stamps/fr.json`.
+`bun tools/make-our-songs.ts` wrote their `guide.json` files.
 
-Five writers translated the worlds, and five fresh reviewers read them blind. Settlers applied all 71
-findings. *Chords* with *Rhythm* and *Scales and keys* with *First melodies* each had one *wrong*
-finding, so each had a second blind review. Those found nothing wrong, and their five findings landed too.
-
-The `fr` marks gained a rule: a space follows `: ; ! ?`. Two writers had dropped it after 27 colons, and
-no test caught it. The guide's § *A lesson's recurring lines* gained the course's settled wordings. A
-boss's French song title stands in `« »`, and a run's fingers are `Joue-les avec les doigts …`.
+Seven writers wrote the guides in batches of seven or eight, and seven fresh `reader` reviewers read
+them blind. Their 58 findings all landed, with the second review's, and only one was *wrong*. *good-king-wenceslas* named a chord
+`accord de fa majeur` where its notes hold root, fifth and octave. That batch's second review found
+nothing wrong. The glossary gained two rules: `la habanera` with an aspirated h, and `l’auriculaire`
+for "little finger".
 
 ### Next
 
-**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status fr` lists each `guide/<slug>`, at 22
-texts each. Write the batch's work lists with `bun tools/i18n.ts work fr guide/<slug>`. Batches hold at
-most eight guides. The Russian model is each `tools/our-songs/<slug>.ru.ts`, for structure only. The guide's
-§ *A guide's recurring steps* gives the recurring steps' French, which every writer's brief must carry.
+**Stage 5: the 29 guides from `neon-chase` to `yankee-doodle`.** Run it as stage 4 ran, in four
+batches:
+1. neon-chase night-on-bald-mountain o-christmas-tree o-come-all-ye-faithful o-du-froehliche o-holy-night
+   o-little-town-of-bethlehem ode-to-joy
+2. old-macdonald-had-a-farm row-row-row-your-boat sailors-hornpipe silent-night spanish-ladies
+   suesser-die-glocken swan-lake
+3. the-blue-danube the-entertainer the-first-noel the-sorcerers-apprentice the-twelve-days-of-christmas
+   toccata-in-d-minor tochter-zion
+4. twinkle-twinkle-little-star up-on-the-housetop vltava we-three-kings wedding-march william-tell
+   yankee-doodle
 
-What worked in stage 3:
-- **Three shared briefs, one per role,** under `.agent-tmp/i18n/`: writer, reviewer and settler. Each
-  subagent reads its brief whole, and its prompt names only its batch.
-- **The brief must say how to type a special space.** Write and Edit turned a typed U+202F or U+00A0
-  into an ASCII space for three of five writers. A backslash, then `u202F` or `u00A0`, was stored raw.
-  Edit can also drop a space at the very end of `new_string`.
-- **A button the text names stands unquoted,** as the guide's § 9 says. Never brief `« »` around a label.
-- **A settler per batch** applied every finding in about a minute. The session applied a re-review's few
-  findings itself.
+What worked in stage 4:
+- **Work lists first,** with `bun tools/i18n.ts work fr guide/<slug>` for each slug.
+- **Three briefs under `.agent-tmp/i18n/`, one per role.** The writer reads the style guide whole, its
+  work lists, and `tools/our-songs/alle-jahre-wieder.fr.ts` as the model. It writes only its own
+  `<slug>.fr.ts` files and runs `bun test src/i18n/translation-rules.test.ts -t french`. The reviewer
+  is a `reader` that reads the French before the work list. It reports one line per finding:
+  `id | kind | weight | problem | fix`. The settler applies a batch's findings and runs the same test.
+- **The writer's brief names how to type a special space,** as a backslash and `u202F` or `u00A0`.
+  Write stored each as the real character this time, and every batch passed the rules test at once.
+- **The reviewer checks each chord's mode against the notes** in `tools/our-songs/<slug>.ts`, as § 7
+  of the guide asks. Writers guessed the mode from the key, and one guess was *wrong*.
+- **The reviewer checks titles and names against French Wikipedia.** Writers gave film titles from
+  memory, such as « La Chouette Équipe » and « Soleil vert ».
+- **A settler must keep a fact a fix drops.** One proposed fix lost the direction "down".
+
+Then stage 6 begins with the consistency read across every French file.
 
 No test is expected red.
 

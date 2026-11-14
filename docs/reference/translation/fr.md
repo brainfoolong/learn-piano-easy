@@ -483,6 +483,9 @@ More rules the guides settle:
 - **A miss is `note manquée` everywhere,** the game's flash and its count included.
 - **The thumb is `pouce` in every guide,** and the other fingers are numbers: `doigt 3`, `les doigts 5,
   4, 3 et 2`. A finger's name stands only where the English says it, such as "little finger".
+- **The h of `habanera` is aspirated:** `la habanera`, `le rythme de habanera`. French Wikipedia writes
+  it so, never `l’habanera`.
+- **"Little finger" is `l’auriculaire`,** never `petit doigt`, as for every finger the English names.
 - **`majeur` names the middle finger only where a lesson teaches the names.** Everywhere else it means
   major, so a finger is `doigt 3`.
 
