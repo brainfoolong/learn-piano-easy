@@ -155,9 +155,15 @@
    * starts a line, and Japanese keeps a phrase whole where the browser can. Their fonts have no
    * italic, so emphasis is bold. A joining script never takes `letter-spacing`, so an important
    * declaration of this layer wins over every component's, as the cascade's important order says.
+   * Russian hyphenates, as its print does, so a long word on a phone wraps at a syllable, not at any
+   * letter.
    */
   :root:is(:lang(zh), :lang(ja)) {
     line-break: strict;
+  }
+
+  :root:lang(ru) {
+    hyphens: auto;
   }
 
   :root:lang(ja) {
