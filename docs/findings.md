@@ -1562,3 +1562,44 @@ them, and the Bengali site ships.
 - A bar is `বার` with a classifier, and a count of times joins it, as `দুবার`.
 - A common English loanword is written in Bengali script where Bengali apps use it.
 - *Learn Piano Easy*, *MIDI*, the song titles and the composers' names are kept.
+
+## russian
+
+**Target:** the site, the course and the song guides read in Russian as if a native teacher wrote
+them, and the Russian site ships.
+
+### Findings
+
+- `ru` ships in standard Russian. Every catalog section, all eight worlds and every song guide hold their Russian.
+- `ru` is the first locale in Cyrillic, and the first whose counted messages need four plural forms.
+- `docs/reference/translation/ru.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- No Russian piano method was reached, so the glossary's *unsourced* rows wait on a Russian teacher's read.
+- `bun tools/i18n.ts status ru` lists 25 missing of 4484 texts and none stale. Each missing text is a kept word.
+- `looper verify` was green over the whole goal on its first run.
+- The layout checks pass in `ru` at 360 and 1280 pixels.
+- At 360 pixels, long Russian headings split at any letter. A Russian page sets `hyphens: auto` in `src/ui/base.css`, so they break at a syllable.
+- The readers' drift pass found four guide chords named with a mode their notes do not hold, and settled them.
+- The same pass added two glossary rows: `большой палец` only where *Finger numbers* teaches it, and `до-ми-соль` for a chord played in order.
+- At 360 pixels, the top bar's underline touches a two-line label such as *Режимы игры*.
+- A dash can start a line, as in `— и начнём`, since no no-break space holds it to the word before.
+- `vltava.ru.ts` calls three chords `ля минор`, though the third is an open fifth, as the English does.
+- `William Sandys` and `Ludwika` stay in Latin, and their Russian articles are unchecked.
+- The keyboard range field accepts only letter names such as `C2`, since `parsePitch` in `src/keyboard/range.ts` reads letters.
+- The Cyrillic heading face is heavier and wider than the Latin logotype beside it.
+- No native Russian speaker has read the texts.
+- `public/images/social/ru.png` draws the lead in Russian.
+
+### Decisions that still bind
+
+- The variety is standard Russian. `lang` and `intl` are `ru`, `og` is `ru_RU`, and the script is Cyrillic.
+- The learner is `вы`, written lower case, and an instruction is its imperative, such as `Нажмите`.
+- The learner's gender stays out of the text. A past verb and a short adjective take the plural of `вы`.
+- The instrument is `фортепиано`, and starting a song's playback is `воспроизвести`.
+- Notes are solfège in Cyrillic, `до ре ми фа соль ля си`. A chord symbol such as `Am` stays Latin.
+- `ё` is written everywhere, since children read the site.
+- Quotes are `« »`, and a counted message has the forms one, few, many and other.
+- Numbers follow `Intl` for `ru`, and units are Cyrillic, as `мс`, `Гц` and `дБ`.
+- A counted beat is a word, as `«раз-и, два-и»`.
+- A person, a place or a work with a Russian Wikipedia article is written in Cyrillic in prose, from its title.
+- The library's song titles stay Latin, as data.
+- *Learn Piano Easy* and *MIDI* are kept.
