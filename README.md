@@ -16,6 +16,7 @@
   <a href="https://learn-piano-easy.app/ar/">العربية</a> ·
   <a href="https://learn-piano-easy.app/pt/">Português</a> ·
   <a href="https://learn-piano-easy.app/id/">Bahasa Indonesia</a> ·
+  <a href="https://learn-piano-easy.app/bn/">বাংলা</a> ·
   <a href="https://learn-piano-easy.app/sponsor/">Sponsor</a>
 </p>
 

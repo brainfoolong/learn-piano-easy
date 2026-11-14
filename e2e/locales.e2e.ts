@@ -2,7 +2,7 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish, Chinese, Hindi, Arabic, Portuguese and Indonesian each read in their own language** from the language
+ * - **Spanish, Chinese, Hindi, Arabic, Portuguese, Indonesian and Bengali each read in their own language** from the language
  *   switch to a lesson's step, its piano's key names and the player's controls. Arabic also sets `dir="rtl"`.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
  *   A right-to-left one runs them at every width, as `passedWidthsOf` says. A flaw counts only where the
@@ -188,6 +188,32 @@ test("the_indonesian_site_reads_in_indonesian", async ({ page }) => {
   await expect(page.getByRole("button", { name: "Putar", exact: true })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Lagu" })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Pengaturan" })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test("the_bengali_site_reads_in_bengali", async ({ page }) => {
+  test.setTimeout(60_000);
+  await pastSetup(page);
+  const errors = watchErrors(page);
+
+  await page.goto("./learn/");
+  const choice = bar(page).getByRole("combobox", { name: "Language" });
+  await expect(choice.locator('option[value="bn"]')).toHaveText("বাংলা");
+  await choice.selectOption("bn");
+  await expect(page).toHaveURL(/\/bn\/learn\/$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "bn");
+  await expect(heading(page)).toHaveText("পিয়ানো শিখুন");
+  await expect(page.locator("main")).toContainText("পিয়ানোর সঙ্গে পরিচয়");
+
+  await page.goto("./bn/learn/meet-the-piano/find-c/");
+  await expect(page.locator(".lesson__title")).toHaveText("C খোঁজা");
+  await expect(page.locator("main")).toContainText("সবগুলোর নাম একই: C।");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "C4");
+
+  await page.goto("./bn/play/");
+  await expect(page.getByRole("button", { name: "চালান", exact: true })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "গান" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "সেটিংস" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
