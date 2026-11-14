@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "ব্রামস তাঁর Hungarian Dances লিখেছিলেন পিয়ানোতে চার হাতে বাজানোর জন্য, আর প্রথম খণ্ডটি প্রকাশিত হয় ১৮৬৯ সালে। " +
-    "৫ নম্বর নাচটি হয়ে ওঠে সবগুলোর মধ্যে সবচেয়ে বিখ্যাত। " +
+    "5 নম্বর নাচটি হয়ে ওঠে সবগুলোর মধ্যে সবচেয়ে বিখ্যাত। " +
     "The Great Dictator (১৯৪০) সিনেমায় Charlie Chaplin এই সুরের ছন্দে ছন্দে এক খদ্দেরের দাড়ি কামান।",
   funFact:
     "ব্রামস এই নাচটি গড়েছিলেন Béla Kéler-এর একটি csárdás থেকে, কিন্তু তিনি ভেবেছিলেন এটি একটি লোকসুর।",

@@ -410,10 +410,14 @@ More rules the guides settle:
 - **A hand that lifts off the keys is `চাবি ছেড়ে ওঠে`.** `হাত উঠে` alone reads as moving up the keyboard.
 - **To lean on a note is `টেনে রাখা`,** as the fermata's hold. A strong pull, such as a sea shanty's, is
   `জোরালোভাবে`, since `জোরে` is kept for loud.
-- **Loud is `জোরে`, never `উঁচু`.** `উঁচু` is kept for pitch.
+- **Loud is `জোরে`, never `উঁচু`.** `উঁচু` is kept for pitch. How to play is always `জোরে`, while a
+  sound that grows loud may be `জোরালো`, as in `ক্রমে জোরালো হয়ে ওঠে`.
+- **`মৃদু` only paints a picture,** such as `মৃদু ঢেউয়ের মতো`. A soft dynamic is `হালকা করে`.
 - **Rhythm syllables are `টা`,** such as `“টা-আ, টা-টা”`.
 - **A song is `গানটি` once it is named or plain,** as Bengali marks a known thing with `টি`.
 - **"The next bar" is `পরের বারটি`,** with its classifier. `পরের বারের জন্য` reads as "for next time".
+  "Into the next bar" is `পরের বারটিতে`, and "the last bar" is `শেষ বারটি`.
+- **A miss is `ফসকে যাওয়া` everywhere,** the game's flash and its count included.
 
 ### A lesson's recurring lines
 
@@ -531,6 +535,7 @@ The lessons' writers settled these, and the blind reviews kept them. Every row i
 - **A spelled-out chord lists its letters with commas:** `C, E আর G`.
 - **A note letter takes its case ending after a hyphen:** `C-তে`, `E-র`, `G-এর`. A postposition stands
   after a space: `C থেকে`, `G পর্যন্ত`.
+- **The possessive is `C-এর`, `E-র` and `G-এর` in every file.** A, B, D and F still mix both forms.
 - **A letter that code checks,** such as a quiz answer, stays the catalog's own.
 
 ## 8. Numbers
@@ -541,6 +546,7 @@ The lessons' writers settled these, and the blind reviews kept them. Every row i
 - **A message formats its count with `formatNumber`,** never with a bare `${n}`, so its digits are Bengali.
 - **Fingers, octaves, bars, beats and time signatures keep Western digits,** as printed music does:
   `বার 3`, `9 থেকে 16 নম্বর বার`, `3 নম্বর আঙুল`, `C4`, `3/4`. Their numbers name what the score shows.
+- **A work's number keeps Western digits,** as its catalog prints it: `Opus 52`, `HWV 437`, `5 নম্বর নাচ`.
 - **One number never mixes the two sets of digits,** and a sentence avoids mixing them where it can.
 - **A percent sign follows its number without a space:** `৮০%`, as CLDR writes it.
 - **A small count the English spells out is a Bengali word in prose:** `তিনটি চাবি`, `দুই হাত`.

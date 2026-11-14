@@ -156,7 +156,7 @@
             "ar": "أبطئ قليلًا في النغمات الأخيرة، ودع دو المنخفضة ترن.",
             "pt": "Diminua um pouco o andamento nas últimas notas, e deixe o Dó grave soar.",
             "id": "Perlambat sedikit pada not-not terakhir, dan biarkan C rendah terus berbunyi.",
-            "bn": "শেষের নোটগুলোতে গতি একটু কমান, আর নিচের C-র আওয়াজ বাজতে দিন।"
+            "bn": "শেষের নোটগুলোতে গতি একটু কমান, আর নিচের C-এর আওয়াজ বাজতে দিন।"
           }
         }
       ],
@@ -320,7 +320,7 @@
             "ar": "فا دييز هي المفتاح الأسود بين فا وصول. ترفع اللحن نحو دو العالية.",
             "pt": "O Fá sustenido é a tecla preta entre Fá e Sol. Ele leva a melodia para cima, rumo ao Dó agudo.",
             "id": "F kres adalah tuts hitam di antara F dan G. Not ini mengangkat melodi menuju C tinggi.",
-            "bn": "F শার্প হলো F আর G-র মাঝের কালো চাবি। এটি সুরটিকে উপরের C-র দিকে তুলে নেয়।"
+            "bn": "F শার্প হলো F আর G-এর মাঝের কালো চাবি। এটি সুরটিকে উপরের C-এর দিকে তুলে নেয়।"
           }
         },
         {
@@ -368,7 +368,7 @@
             "ar": "بعد صول، ينزلق الإصبع 3 مفتاحًا واحدًا صعودًا إلى نغمة لا، ليصل الإصبعان 4 و5 إلى سي ودو.",
             "pt": "Depois do Sol, o dedo 3 desliza uma tecla acima até o Lá, para os dedos 4 e 5 alcançarem Si e Dó.",
             "id": "Setelah G, jari 3 bergeser naik satu tuts ke A, sehingga jari 4 dan 5 bisa meraih B dan C.",
-            "bn": "G-র পরে 3 নম্বর আঙুল এক চাবি উপরে A-তে সরে যায়, যাতে 4 আর 5 নম্বর আঙুল B আর C-তে পৌঁছায়।"
+            "bn": "G-এর পরে 3 নম্বর আঙুল এক চাবি উপরে A-তে সরে যায়, যাতে 4 আর 5 নম্বর আঙুল B আর C-তে পৌঁছায়।"
           }
         },
         {
@@ -444,7 +444,7 @@
             "ar": "اعزف ثالثات اليد اليمنى وحدها، واعزف نغمتي كل زوج معًا.",
             "pt": "Toque só as terças da mão direita, e mantenha juntas as duas notas de cada par.",
             "id": "Mainkan terts tangan kanan saja, dan jaga kedua not setiap pasangan not tetap bersamaan.",
-            "bn": "ডান হাতের থার্ডগুলো আলাদা করে বাজান, আর প্রতিটি জোড়ার দুটি নোট একসঙ্গে রাখুন।"
+            "bn": "ডান হাতের থার্ডগুলো আলাদা করে বাজান, আর প্রতিটি জোড়ার দুটি নোট একসঙ্গে চাপুন।"
           },
           "hands": "right",
           "speed": 0.6,
@@ -579,7 +579,7 @@
             "ar": "بعد صول، يمر الإبهام من تحت الإصبع 3 إلى نغمة لا. ثم يختم الإصبعان 2 و3 على سي ودو.",
             "pt": "Depois do Sol, o polegar passa por baixo do dedo 3 até o Lá. Depois os dedos 2 e 3 terminam em Si e Dó.",
             "id": "Setelah G, ibu jari menyusup di bawah jari 3 ke A. Lalu jari 2 dan 3 menyelesaikannya di B dan C.",
-            "bn": "G-র পরে বুড়ো আঙুল 3 নম্বর আঙুলের নিচ দিয়ে A-তে যায়। তারপর 2 আর 3 নম্বর আঙুল B আর C-তে শেষ করে।"
+            "bn": "G-এর পরে বুড়ো আঙুল 3 নম্বর আঙুলের নিচ দিয়ে A-তে যায়। তারপর 2 আর 3 নম্বর আঙুল B আর C-তে শেষ করে।"
           }
         },
         {
@@ -790,7 +790,7 @@
             "ar": "ينزلق الإصبع 2 نزولًا إلى دو مرة أخرى، بينما تقفز اليد اليسرى إلى أوكتاف صول المنخفض.",
             "pt": "O dedo 2 desliza de novo para baixo até o Dó, enquanto a mão esquerda salta para a oitava de Sol grave.",
             "id": "Jari 2 bergeser turun ke C lagi, sementara tangan kiri melompat ke oktaf G rendah.",
-            "bn": "2 নম্বর আঙুল আবার নেমে C-তে সরে যায়, আর বাঁ হাত লাফিয়ে যায় নিচের G-র অক্টেভে।"
+            "bn": "2 নম্বর আঙুল আবার নেমে C-তে সরে যায়, আর বাঁ হাত লাফিয়ে যায় নিচের G-এর অক্টেভে।"
           }
         }
       ]
