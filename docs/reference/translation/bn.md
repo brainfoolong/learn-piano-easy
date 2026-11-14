@@ -420,6 +420,42 @@ The lessons repeat these lines. Each English line has one Bengali text in every 
 | Keep your hand where it is. | হাত যেখানে আছে, সেখানেই রাখুন। |
 | Press Start and listen to four clicks first. | “শুরু” চাপুন, আর আগে চারটি টিক শুনুন। |
 
+### The course's own terms
+
+The lessons' writers settled these, and the blind reviews kept them. Every row is *unsourced*.
+
+| English | Bengali | Why |
+|---|---|---|
+| a place on the staff (a line or a space) | ঘর: `এক ঘর উপরে` | keeps `ধাপ` for a lesson's step |
+| a step, a skip (on the staff) | পাশের ঘরে যাওয়া, এক ঘর বাদ দিয়ে যাওয়া | mirrors the keys' step and skip |
+| on a line, in a space | লাইনে, ফাঁকে | `লাইনের উপর` reads as above the line |
+| jump over a key | ডিঙিয়ে যাওয়া | keeps `লাফ` for a leap |
+| high C, low C | উপরের C, নিচের C | § 7 |
+| a line of printed music | স্বরলিপির সারি | keeps `লাইন` for a staff line |
+| brace (of the grand staff) | বাঁকা বন্ধনী | everyday words |
+| curl (of a clef) | পেঁচানো রেখা; `ঘিরে পেঁচিয়ে থাকে` | `পাক` is a loop's pass |
+| marked key | চিহ্ন দেওয়া চাবি | everyday words |
+| repeated note | একই নোট আবার | everyday words |
+| a move (between keys) | the verb `সরা`: `একটি সেমিটোন সরছেন` | everyday words |
+| sharp, flat in prose | `F শার্প`, `B ফ্ল্যাট`; the sign `F♯` only where a text names the sign | § 7 |
+| first, second inversion | প্রথম ইনভার্শন, দ্বিতীয় ইনভার্শন | the English terms |
+| dot, dotted rhythm | ডট, ডটেড ছন্দ | the English terms |
+| eighth note, eighth rest | এইটথ নোট, এইটথ রেস্ট | the English terms |
+| one and a half beats | দেড় বিট | everyday words |
+| in threes (a metre) | তিনের ছন্দে | `তাল` names Indian rhythm |
+| strong beat, steady beat | জোরালো বিট, স্থির বিট | everyday words |
+| tap (a key, with the clicks) | `চাবি চাপুন`; never the noun `চাপ`, which reads as pressure | § 2's one verb |
+| tap along (a finger or a foot) | টোকা দেওয়া | everyday words |
+| tempo in a sentence | `৬০ BPM`, `প্রতি মিনিটে ১২০ বিট` | a tempo is a count, unlike a beat's name |
+| a named beat | Western digits: `1 নম্বর বিট`; a spoken count quoted: `“1, 2, 3, 4”` | § 8 |
+| finger 4 | `4 নম্বর আঙুল`, or the finger's name | § 8 |
+| hairpin that opens, that closes | খুলে যাওয়া হেয়ারপিন চিহ্ন, বুজে আসা হেয়ারপিন চিহ্ন | everyday words |
+| staccato dot | স্ট্যাকাটোর বিন্দু | `বিন্দু` is a plain dot |
+| pause sign (a fermata) | নোট টেনে রাখার চিহ্ন | `থামা` reads as stop |
+| slowing down (a lesson) | ধীর হয়ে আসা | the adjective, never the adverb `ধীরে` |
+| toes | পায়ের আঙুল | `আঙুল` alone is a finger |
+| a step checks only the notes | এই ধাপে শুধু নোটগুলো যাচাই করা হয় | the step is no person |
+
 ## 6. Kept words
 
 - **Learn Piano Easy**, **MIDI**, **Web MIDI**, **MusicXML** and **XP** stay as they are.

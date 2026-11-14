@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Bengali
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Bengali, from a to m"
     status: open
@@ -126,12 +126,12 @@ hands* each go alone. *Chords* goes with *Rhythm*, *Reading music* with *Meet th
 keys* with *First melodies*. Five fresh reviewers then review the five batches blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.bn.ts:1`, `src/learn/lessons/first-melodies/texts.bn.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.bn.ts:1`, `src/learn/lessons/reading-music/texts.bn.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.bn.ts:1`, `src/learn/lessons/chords/texts.bn.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.bn.ts:1`, `src/learn/lessons/expression/texts.bn.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp bn` for each world. `src/i18n/stamps/bn.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.bn.ts:1`, `src/learn/lessons/first-melodies/texts.bn.ts:1`
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.bn.ts:1`, `src/learn/lessons/reading-music/texts.bn.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.bn.ts:1`, `src/learn/lessons/chords/texts.bn.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.bn.ts:1`, `src/learn/lessons/expression/texts.bn.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp bn` for each world. `src/i18n/stamps/bn.json:1`
 
 ### 4. The song guides in Bengali, from a to m
 
@@ -180,34 +180,41 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section holds its Bengali in `src/i18n/messages/*.bn.ts`. Each
-batch was reviewed blind, every finding is settled, and the settings' look half was reviewed again. The
-catalogs load through the `bn` chunk of `src/i18n/locale.ts:44` and are listed in `src/i18n/all-catalogs.ts`.
-`src/i18n/stamps/bn.json` stamps every catalog section. `bun x tsc` and `bengali_texts_keep_their_rules`
-pass.
+Stages 1, 2 and 3 are done. Every catalog section and every lesson of the eight worlds holds its
+Bengali. Each world loads `texts.bn.ts` through the `bn` line of its `index.ts`, such as
+`src/learn/lessons/chords/index.ts`. `src/i18n/stamps/bn.json` stamps every catalog section and world.
+`bun x tsc` and `bengali_texts_keep_their_rules` pass, and a build is green.
 
-`bun tools/i18n.ts status bn` still lists 39 catalog texts as missing. They are left out on purpose,
-since their Bengali would equal the English: note letters, time signatures, language names, the site's
-name, `– FPS` and the key names Ctrl, Alt, Shift and Meta.
+All five lesson batches were reviewed blind and every finding is settled. Only *Reading music* had a
+*wrong* finding: low C read as below the second space. A second blind review of that batch found nothing
+wrong.
 
-The glossary in `docs/reference/translation/bn.md` § 5 gained the terms the writers met, such as
-`পটভূমি` for a background, `বলয়` for a ring and `শতাংশ` for a percent unit in a label.
+`bun tools/i18n.ts status bn` lists 39 catalog texts and 28 lesson texts as missing, all on purpose.
+Their Bengali would equal the English: note letters, marks such as `mf`, beat counts, and names.
+
+`docs/reference/translation/bn.md` § 5 gained *The course's own terms*, such as `ঘর` for a place on
+the staff and `টোকা দেওয়া` for tapping along. The lessons' look waits for stage 6, since `bn` has no
+route before it ships.
 
 ### Next
 
-**Stage 3: the course in Bengali.** Run `bun tools/i18n.ts work bn lesson/<world>` for each world. Then
-send the five writers of the stage's split side by side, each briefed with the whole of `bn.md`. A
-world's files are `src/learn/lessons/<world>/<lesson>.bn.ts` and its `texts.bn.ts`, modelled on the
-`.id.ts` siblings. Five fresh reviewers then write findings under `.agent-tmp/i18n/bn/review/`.
+**Stage 4: the song guides from a to m.** That is 51 slugs, from `air-on-the-g-string` to
+`mozart-21-andante`, so seven batches of at most eight. Run `bun tools/i18n.ts work bn guide/<slug>`
+for each slug. Send the writers side by side, each with the whole of `bn.md` and the `.id.ts` sibling
+as the model, such as `tools/our-songs/canon-in-d.id.ts`. Then one fresh reviewer per batch writes its
+findings under `.agent-tmp/i18n/bn/review/`.
 
-- **A count goes through `formatNumber("bn", n)`,** so its digits are Bengali. Bars, fingers, beats and
-  time signatures are typed in Western digits, as § 8 says.
-- **Write and Edit store `য়` and `ড়` decomposed,** which the nukta rule wants. A writer that builds a
-  file through a script must not precompose them.
-- **A `%` after a space breaks the marks.** A label's unit is written `শতাংশ`, or `(%)` with no space.
-- **The lesson catalog's terms are settled** in `src/i18n/messages/learn-lesson.bn.ts`. A lesson's
-  higher and lower are `আরও উঁচু` and `আরও নিচু`, and a writer reads that file first.
+- **The guides' recurring steps are settled** in `bn.md` § 5 *A guide's recurring steps*. Every writer
+  copies them word for word.
+- **A settler subagent per batch applies the findings,** since the writers end with their report. A
+  batch with a *wrong* finding gets a second fresh reviewer.
 - **A writer leaves out a text whose Bengali equals the English,** since the no-copy check refuses it.
+- **A song name the kept words lack fails the script rule.** `KEPT_IN_OWN_SCRIPT` in
+  `src/i18n/typography.ts:108` holds full titles, so a guide writes the full title, never a short one.
+- **Write and Edit store `য়` and `ড়` decomposed,** which the nukta rule wants. No writer builds a file
+  through a script.
+- **`bun tools/make-our-songs.ts` writes the guides' JSON** once every batch is settled, and its output
+  is committed.
 
 Expected red: none.
 
@@ -216,3 +223,5 @@ Expected red: none.
 - A native reader from Bangladesh and one from West Bengal would each catch words that read as the other country's.
 - The game's miss flash in `src/i18n/messages/player-input.bn.ts` reads `ফসকে গেছে`, while the glossary's
   miss is `ফসকে যাওয়া`. The stage 6 consistency read decides whether a flash keeps its past tense.
+- The Bengali marks in `src/i18n/typography.ts` miss a colon with no space after it, such as `করে:একটি`.
+  A reviewer caught one in a lesson. A pattern for it would catch the next.
