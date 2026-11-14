@@ -14,7 +14,8 @@
  * - **A mark rule reads a text with each kept word written as `X`,** so a kept title such as *Hark! The
  *   Herald Angels Sing* never breaks a rule about `¡`.
  * - **A kept word counts only where no Latin letter touches it,** so a short one such as the syllable `re`
- *   never cuts into `Press`.
+ *   never cuts into `Press`. The narrow no-break space counts as Latin in Unicode's data, so the check
+ *   skips it, and a kept title stands inside French `« »`.
  * - **Music's Latin passes in every script:** note letters with ♯ and ♭, chord symbols such as `Am7`, and
  *   digits. A text made only of them may equal its English.
  */
@@ -117,7 +118,8 @@ const keptPatterns = new WeakMap<readonly string[], RegExp[]>();
 function patternsOf(kept: readonly string[]): RegExp[] {
   let patterns = keptPatterns.get(kept);
   if (patterns === undefined) {
-    patterns = kept.map((word) => new RegExp(`(?<!\\p{scx=Latin})${RegExp.escape(word)}(?!\\p{scx=Latin})`, "gu"));
+    const latin = "(?!\\u202F)\\p{scx=Latin}";
+    patterns = kept.map((word) => new RegExp(`(?<!${latin})${RegExp.escape(word)}(?!${latin})`, "gu"));
     keptPatterns.set(kept, patterns);
   }
   return patterns;
@@ -317,6 +319,28 @@ test("the_russian_marks_hold_and_spare_kept_words", () => {
     "Аккорды C, Am и G7", "Её", "Лёгкий", "Тёмная",
   ];
   for (const text of kept) expect(problemsOf([textOf("English", text, "ru")], "ru")).toEqual([]);
+});
+
+test("the_french_marks_hold_and_spare_kept_words", () => {
+  /** The narrow no-break space before `;`, `!` and `?` and inside `« »`, and the no-break space before `:`. */
+  const N = String.fromCharCode(0x202f);
+  const B = String.fromCharCode(0xa0);
+  const broken = [
+    "Compte \"1, 2\".", "Compte « 1, 2 ».", "Compte “1, 2”.", "Chargement...", "Prêt !", "Prêt!", `Prêt${B}!`, "Note: 3",
+    "Note : 3", `à 80% de la vitesse`, "à 80 % de la vitesse", "C'est prêt.", "mesures 1-4", "mesures 1 – 4",
+    "Vous pouvez commencer.", "Joue avec votre main droite.", "Appuyez sur Suivant.", `Prêt·e à jouer${N}?`,
+    "Prêt(e) à jouer.", "Bienvenu dans la leçon.", "Ecoute la mélodie.", "A droite du do.", "Ca y est.", "Bravo.Encore une fois.",
+  ];
+  for (const text of broken) expect(problemsOf([textOf("English", text, "fr")], "fr")).not.toEqual([]);
+  const kept = [
+    `Salut${N}! Je vais t’apprendre le piano. On commence${N}?`, "À toi. Pose le pouce droit sur le do central et joue do et mi ensemble.",
+    `Compte «${N}1, 2${N}» sur chaque blanche.`, "Beethoven a écrit cette mélodie pour le finale de sa Neuvième Symphonie, créée à Vienne en 1824.",
+    "mesures 1–4", "do dièse mineur", `Note${B}: 3`, `à 80${B}% de la vitesse`, `12${N}345 morceaux`, "Chargement…", `Bienvenue${N}!`,
+    "Joue Hark! The Herald Angels Sing à deux mains.", `Joue «${N}Ah${N}! vous dirai-je, maman${N}» à la main droite.`,
+    "Rendez-vous demain.", "Écoute la mélodie.", "À 22:00 ou plus tard.", "Accords C, Am et G7", "Ça y est.", "Joue sur un clavier MIDI.",
+    `Quitter la leçon${N}?`, `Appuie sur «${N}Lire${N}».`, "Joue Twinkle, Twinkle, Little Star à la main droite.", "Tempo", "au XIXe siècle",
+  ];
+  for (const text of kept) expect(problemsOf([textOf("English", text, "fr")], "fr")).toEqual([]);
 });
 
 test("the_indonesian_marks_hold_and_spare_kept_words", () => {

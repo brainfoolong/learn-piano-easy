@@ -319,7 +319,39 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
       },
     ],
   },
-  fr: { kept: [], marks: [] },
+  fr: {
+    kept: [
+      ...KEPT_IN_OWN_SCRIPT, "Ah\u202F! vous dirai-je, maman", "OK", "Pause", "Stop", "Volume", "Tempo", "tempo", "Normal",
+      "Menu", "Zoom", "Options", "Combo", "combo", "Mode", "Piano", "Ragtime", "Solo", "Code", "Original", "Expert",
+      "Audio", "Quiz", "Badges", "Message", "Info", "Contact", "Notes", "Note", "Ctrl", "Alt", "Shift", "Meta", "Enter",
+      "legato", "staccato", "crescendo", "diminuendo", "coda", "XVIII", "XVII", "XVI", "XIX", "XV", "XX",
+    ],
+    marks: [
+      { says: "A quote stands in « », never in straight or curly double quotes", mustNot: /["“”„]/ },
+      { says: "A narrow no-break space stands inside « »", mustNot: /«(?!\u202F)|(?<!\u202F)»/ },
+      { says: "A narrow no-break space stands before ;, ! and ?", mustNot: /(?<!\u202F)[;!?]/ },
+      { says: "A no-break space stands before a colon, apart from a time such as 22:00", mustNot: /(?<![\u00A0\d]):|(?<=\d):(?!\d)/ },
+      { says: "No ASCII space stands before ;, :, !, ?, » or %, nor after «", mustNot: / [;:!?»%]|« / },
+      { says: "A percent sign follows its number after a no-break space, as Intl writes it", mustNot: /\d%/ },
+      { says: "The apostrophe is ’, never '", mustNot: /'/ },
+      { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
+      { says: "A space follows the end of a sentence", mustNot: /[.!?…»][A-ZÀ-ÖØ-Þ]/ },
+      { says: "A range of numbers takes – with no spaces", mustNot: /\d\s*-\s*\d|\d\s+–|–\s+\d/ },
+      { says: "The learner is tu, never vous", mustNot: /(?<![\p{L}-])(?:vous|votre|vos)(?!\p{L})/iu },
+      {
+        says: "An instruction is the imperative of tu, never of vous",
+        mustNot:
+          /(?<!\p{L})(?:appuyez|jouez|écoutez|choisissez|cliquez|essayez|placez|posez|gardez|comptez|regardez|ouvrez|fermez|lâchez|relâchez|touchez|commencez|recommencez|maintenez|tenez|utilisez|sélectionnez|continuez)(?!\p{L})/iu,
+      },
+      { says: "No point médian or bracketed ending marks a gender", mustNot: /\p{L}·\p{L}|\p{L}\((?:e|ne|se|rice)s?\)/u },
+      { says: "A welcome is Bienvenue, never an adjective with a gender", mustNot: /(?<!\p{L})bienvenu(?:s|es)?(?!\p{L})/iu },
+      {
+        says: "A capital keeps its accent: À, É, Ç",
+        mustNot:
+          /(?<!\p{L})(?:A(?= (?:la|le|les|l’|toi|ton|ta|tes|chaque|droite|gauche|partir|bientôt)(?!\p{L}))|E(?:coute|tape|cran|toile|galement|chauffement|tat|levé|dition)(?!\p{L})|Ca(?= ))/u,
+      },
+    ],
+  },
   ur: { kept: [], marks: [] },
   ja: { kept: [], marks: [] },
 };
