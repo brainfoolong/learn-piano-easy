@@ -354,6 +354,33 @@ since that list was made.
 | a seconds unit in a label | с, with no period: `2 с` | the Russian unit, as § 6 says |
 | a percent unit in a label | % after a no-break space | § 8 |
 | More tools (beside the Expert key) | Другие инструменты | `Расширенные` is the Expert key |
+| account; No account | регистрация; Без регистрации | the everyday phrase of Russian sites. `Аккаунт` is a loanword. |
+| scores (saved results) | результаты | `счета` in the plural reads as bills |
+| cookies; domain | куки; домен | everyday words. A Latin `cookie` breaks the script. |
+| Legal; Explore (footer headings) | Документы; Разделы | `Правовая информация` is the legal notice page |
+| a star (on GitHub) | звезда: `поставить звезду` | GitHub's own wording |
+| Your songs (the library's list); Your hands | Ваши песни; Ваши руки | quoted the same in every file |
+| Offline files (the dialog) | Работа без интернета | follows `без интернета` |
+| Third-party notices; Build (a version) | Сторонние компоненты; Сборка | the usual software labels |
+| Dismiss (a toast); Fit (the zoom) | Скрыть; Вписать | the toast is hidden, not closed |
+| Challenge; Play along; Note trainer; Chord explorer; Rhythm keeper (modes) | Испытание; Играть вместе; Тренажёр нот; Аккорды изнутри; Точно в ритм | no mode names a person |
+| collection (a tag kind); Sort by | подборка; Сортировка | `Сортировать по` would force a case on each option |
+| Clean (a release judgement) | Чисто | the word of rhythm games |
+| dotted rhythm; hand crossing; held bass notes | пунктирный ритм; перекрещивание рук; выдержанные басовые ноты | the terms of Russian piano teaching, unsourced |
+| two-note chords | аккорды из двух нот | plain for a beginner, unlike `двузвучие` |
+| tap a beat; On the beat, Off the beat | отстучать; В долю, Мимо доли | follows `доля` |
+| Skip the setup | Пропустить вопросы | `настройка` stays a setting |
+| daily goal paces Relaxed, Steady, Keen, Bold | Спокойно, Размеренно, Усердно, Смело | adverbs name no gender |
+| a badge named for a person, such as Star collector | a thing instead: `Звездопад` | no badge names a person |
+| loop (in a setting's label) | фрагмент: `Повтор фрагмента` | `Цикл` stays the button |
+| felt; speakers; look-ahead | фетр; динамики; упреждение | the words of technicians and device settings |
+| drum kit; wood block | ударная установка; вуд-блок | the instruments' Russian names |
+| tuning (audio) | строй | the musician's word |
+| px | пикс. | a Cyrillic unit, like the guide's others |
+| Reading aids; Colour coding (sections) | Подсказки; Раскраска нот | short enough for 360 pixels |
+| falling notes; sheet music (sections) | Падающие ноты; Ноты | the two sections need two names |
+| embers; wander; sway; edge glow | угольки; блуждание; качание; светящийся контур | everyday words |
+| Blending: Add light, Cover | Наложение: Добавить свет, Перекрыть | the verbs of image editors |
 
 ### Which "play" is which
 
