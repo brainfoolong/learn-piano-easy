@@ -1603,3 +1603,43 @@ them, and the Russian site ships.
 - A person, a place or a work with a Russian Wikipedia article is written in Cyrillic in prose, from its title.
 - The library's song titles stay Latin, as data.
 - *Learn Piano Easy* and *MIDI* are kept.
+
+## french
+
+**Target:** the site, the course and the song guides read in French as if a native teacher wrote
+them, and the French site ships.
+
+### Findings
+
+- `fr` ships in standard French. Every catalog section, all eight worlds and every song guide hold their French.
+- `fr` is the first locale whose marks need two kinds of no-break space, and the rules test checks each.
+- `docs/reference/translation/fr.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- No printed French piano method was reached, so the glossary's *unsourced* rows wait on a French teacher's read.
+- `bun tools/i18n.ts status fr` lists 14 missing of 4485 texts and none stale. Each missing text reads the same in French.
+- The first `looper verify` failed two tests in `src/i18n/i18n.test.ts` that used `fr` as an unshipped locale. They use `ur` now.
+- The layout checks pass in `fr` at 360 and 1280 pixels.
+- The readers' drift pass listed 17 items and none *wrong*. It settled 11 and kept 6 as polish.
+- The rules test counts the narrow no-break space as Latin, so it skips that space beside a kept word.
+- The key-binding dialog names each key by its QWERTY letter, through `keyLabel` in `src/play/hotkeys.ts`. An AZERTY learner sees the wrong letters.
+- The keyboard range field accepts only letter names such as `C2`, since `parsePitch` in `src/keyboard/range.ts` reads letters.
+- At 360 pixels, the top bar's underline crosses a two-line label such as *Apprendre le piano*.
+- The home page's lead can break at the hyphen of `toi-même` or `joue-les`.
+- No native French speaker has read the texts, from France, Canada or Africa.
+- `public/images/social/fr.png` draws the lead in French.
+
+### Decisions that still bind
+
+- The variety is standard French that reads well in France, Belgium, Switzerland, Canada and Africa.
+- `lang` and `intl` are `fr`, `og` is `fr_FR`, and `naming` is `solfege`.
+- The learner is `tu`, and an instruction is its imperative, such as `Choisis`.
+- The learner's gender stays out of the text, with no *point médian* and no adjective that describes the learner.
+- To play the piano is `jouer du piano`, starting a song's playback is `lire`, and a game is a `jeu`.
+- Notes are solfège, and a note label is `Do Ré Mi Fa Sol La Si`. A key name keeps that capital, as `Si♭ majeur`.
+- Prose says `do central` with no octave number, since France's `do 3` differs from the code's `Do4`.
+- A narrow no-break space goes before `;`, `!` and `?`, and inside `« »`. A no-break space goes before `:`.
+- The apostrophe is `’`, and a space stands outside `« »`.
+- A counted message has the forms one, many and other, and numbers follow `Intl` for `fr`.
+- A text names only computer keys that sit in the same place on AZERTY, QWERTZ and QWERTY.
+- A guide's prose names a work by its French title and a person by French Wikipedia's spelling.
+- A text that reads the same in French stays missing, so the English shows.
+- *Learn Piano Easy*, *MIDI*, the song titles and the composers' names are kept.
