@@ -150,6 +150,10 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A locale's catalogs are invisible to the tools until `src/i18n/all-catalogs.ts` lists them.** The
   status tool counts them missing, `stamp` writes nothing, and the rules test skips them, all without
   an error. List the locale there in the commit that adds its first catalog file.
+- **A settler that declines a word with Edit can glue it to the next word.** A settler wrote
+  `соль-диезаснимите` into `tools/our-songs/carol-of-the-bells.ru.ts`, and no rules pattern sees a run-together lowercase word. After a settler
+  declines words, grep its files for the new ending followed by a letter, as
+  `(диез|бемол)(а|у|ом|е)[а-яё]`.
 
 ## Rendering
 

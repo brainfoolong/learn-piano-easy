@@ -292,12 +292,13 @@ export const TYPOGRAPHY: Record<LanguageCode, Typography> = {
     ],
   },
   ru: {
-    kept: [...KEPT_IN_OWN_SCRIPT],
+    kept: [...KEPT_IN_OWN_SCRIPT, "XIII", "XIV", "XVIII", "XVII", "XVI", "XIX", "XV", "XX"],
     marks: [
       { says: "A quote stands in « », with „ “ inside, never in straight quotes or ” ", mustNot: /["”]/ },
       { says: "An inner quote opens with „ and closes with “", mustNot: /^[^„]*“|„[^“]*$/ },
       { says: "No space stands before a period, a comma, a colon, a semicolon, ?, !, … or a closing mark", mustNot: /\s[.,:;?!…»“)]/ },
       { says: "No space follows an opening mark", mustNot: /[«„(]\s/ },
+      { says: "A space follows the end of a sentence", mustNot: /[.!?…»)][А-ЯЁ]/ },
       { says: "An ellipsis is the one character …", mustNot: /\.\.\./ },
       { says: "A dash between words is — with a space on each side", mustNot: /\S—|—\S|\s[-–]\s/ },
       { says: "A range of numbers takes – with no spaces", mustNot: /\d\s*-\s*\d|\d\s+–|–\s+\d/ },

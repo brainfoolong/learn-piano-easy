@@ -15,7 +15,7 @@ stages:
     status: done
   - id: 4
     title: "The song guides in Russian, from a to m"
-    status: open
+    status: done
   - id: 5
     title: "The song guides in Russian, from n to z"
     status: open
@@ -141,9 +141,9 @@ keys* with *First melodies*. Five fresh reviewers then review the five batches b
 most eight guides each work side by side, and one fresh reviewer per batch reviews it blind.
 **Gate:** stage 3's worlds are stamped.
 
-- [ ] One `tools/our-songs/<slug>.ru.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.ru.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ru` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
+- [x] One `tools/our-songs/<slug>.ru.ts` per slug from `alle-jahre-wieder` to `morgen-kinder`. `tools/our-songs/alle-jahre-wieder.ru.ts:1`
+- [x] Each batch reviewed blind, and every finding settled.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp ru` stamps them. `public/songs/ours/alle-jahre-wieder/guide.json:1`
 
 ### 5. The song guides in Russian, from n to z
 
@@ -181,38 +181,55 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1, 2 and 3 are done. Every catalog section and every lesson of the eight worlds has its Russian
-file, and each world's `index.ts` loads `texts.ru`. Every unit is stamped in `src/i18n/stamps/ru.json`.
-`bun x tsc`, `russian_texts_keep_their_rules` and a build pass. `bun tools/i18n.ts status ru` lists only
-the 80 song guides and the kept words of the catalogs as missing.
+Stages 1 to 4 are done. Every catalog section, every lesson and the guides of the 51 songs from
+`air-on-the-g-string` to `mozart-21-andante` hold their Russian. `src/i18n/stamps/ru.json` stamps them
+all, and `public/songs/ours/<slug>/guide.json` carries each guide's Russian. `bun x tsc`, every
+locale's rules test and a build pass. `bun tools/i18n.ts status ru` lists only the 29 guides from
+`neon-chase` to `yankee-doodle` as missing, besides the catalogs' kept words.
 
-Five blind reviews of the course found 135 findings, and all were applied. Only *Scales and keys* with
-*First melodies* had *wrong* ones, all of them the step and skip nouns. Its second blind review found
-nothing wrong.
+Seven guide batches were reviewed blind and every finding is settled. Batches 2, 3, 5 and 6 had
+*wrong* findings, mostly undeclined sharps and the thumb. Their second blind reviews found only words a
+settler had run together, which are fixed and swept across every file.
 
-The course settled these rows in `ru.md`. A step and a skip as nouns are `шаг` and `прыжок`. A boss's
-title is `Финальное испытание: …`. A quiz answer starts with a capital. Pachelbel's canon is
-`«Канон Пахельбеля»`. A tempo in prose is `60 ударов в минуту`. Russian Wikipedia keeps *Mary Had a
-Little Lamb*, *Jingle Bells*, *Twinkle, Twinkle, Little Star* and *Old MacDonald Had a Farm* in Latin.
+The guides settled these rows in `ru.md`:
 
-No Russian piano method was reached, so most music terms rest on Russian Wikipedia alone. The guide's
-*Open* lists the weak rows.
+- The thumb is `первый палец`, never `большой палец`. A finger the English numbers takes digits.
+- A sharp or a flat declines and is masculine: `на до-диезе`, `верхний до-диез`. A key's mode declines:
+  `в до мажоре`. A plain note stays neuter and never declines.
+- A century is a Roman numeral, and the `kept` list of `src/i18n/typography.ts` holds `XIII` to `XX`.
+- A run is `пассаж`, and single notes are `одиночные ноты`.
+- A new mark rule wants a space after a sentence's end. It caught a joined string in
+  `src/learn/lessons/both-hands/a-held-bass-note.ru.ts`, which is fixed.
+
+A person or work with no Russian Wikipedia article stays in Latin, and the writers rephrase so no
+Latin name takes a case ending. A quoted score direction such as `senza sordino` stays Latin.
 
 ### Next
 
-**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status ru` lists them as `guide/<slug>`,
-from `alle-jahre-wieder` to `morgen-kinder`. Run `bun tools/i18n.ts work ru guide/<slug>` for each.
-Writers of at most eight guides work side by side into `tools/our-songs/<slug>.ru.ts`. Mirror
-`tools/our-songs/air-on-the-g-string.bn.ts`. Then one fresh blind reviewer per batch reviews it, a settler
-applies its findings, and `bun tools/i18n.ts stamp ru guide/<slug>` stamps each. Then
-`bun tools/make-our-songs.ts` writes the guides.
+**Stage 5: the 29 song guides from n to z,** as `bun tools/i18n.ts status ru` lists them. Four
+batches, run as stage 4 ran:
 
-- A writer's brief points at `ru.md` whole, with § *A guide's recurring steps*, and at translation.md
-  § *The writer's rules*. It names its files and work lists.
-- Name a work by its Russian Wikipedia title, as `ru.md` § 6 says. Check each title with the English
-  article's `langlinks` to `ru`, since a writer guesses wrong from memory.
-- A reviewer reads the Russian before the English, and writes its findings to a file under
-  `.agent-tmp/i18n/ru/`. A settler per batch applies them, so the session's context stays small.
+1. `neon-chase night-on-bald-mountain o-christmas-tree o-come-all-ye-faithful o-du-froehliche
+   o-holy-night o-little-town-of-bethlehem ode-to-joy`
+2. `old-macdonald-had-a-farm row-row-row-your-boat sailors-hornpipe silent-night spanish-ladies
+   suesser-die-glocken swan-lake`
+3. `the-blue-danube the-entertainer the-first-noel the-sorcerers-apprentice
+   the-twelve-days-of-christmas toccata-in-d-minor tochter-zion`
+4. `twinkle-twinkle-little-star up-on-the-housetop vltava we-three-kings wedding-march william-tell
+   yankee-doodle`
+
+- **A writer** runs `bun tools/i18n.ts work ru guide/<slug>` and writes `tools/our-songs/<slug>.ru.ts`,
+  mirroring `tools/our-songs/air-on-the-g-string.ru.ts`. Its brief points at `ru.md` whole and
+  translation.md § *The writer's rules*. It names the settled rows above, since writers drifted on
+  each. It checks every name with the English article's `langlinks` to `ru`.
+- **One fresh blind reviewer per batch,** on a smaller model, reads the Russian before the English. It
+  writes findings to `.agent-tmp/i18n/ru/review-batch-<n>.md`. Its brief names what is settled, so it
+  does not flag Latin names with no Russian article.
+- **A settler per batch** applies the findings with Edit and runs the Russian rules test once. A batch
+  with a *wrong* finding gets a second fresh reviewer.
+- Then grep the guides for `большой палец`, a feminine or neuter adjective before a sharp, and a
+  declined sharp glued to the next word. Stamp each with `bun tools/i18n.ts stamp ru guide/<slug>`.
+  Run `bun tools/make-our-songs.ts`, and build with `--out .agent-tmp/russian-dist`.
 
 Expected red: none.
 

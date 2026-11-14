@@ -167,6 +167,8 @@ since that list was made.
 | tune, melody | мелодия | WP *Мелодия* |
 | phrase | фраза | WP *Фраза (музыка)* |
 | figure (a short musical idea) | мотив | *unsourced*, the theory's word |
+| single notes (not pairs or chords) | одиночные ноты | *unsourced*, everyday Russian |
+| run (a fast figure up or down) | пассаж | *unsourced*, the word Russian teachers use for a fast run |
 | call and answer (phrases) | вопрос и ответ | everyday words |
 | pattern (of notes) | рисунок: `ритмический рисунок` | *unsourced*, the teacher's word |
 | verse, chorus | куплет, припев | WP *Куплет*; WP *Рефрен* |
@@ -189,7 +191,7 @@ since that list was made.
 | soft pedal | левая педаль | WP *Фортепиано*, § *Педали* |
 | press a pedal, lift it | нажмите педаль, снимите педаль | the method's verbs, *unsourced* |
 | fingering | аппликатура | WP *Аппликатура* |
-| finger numbers | 1 большой, 2 указательный, 3 средний, 4 безымянный, 5 мизинец | WP *Аппликатура* numbers them from the thumb. The names are everyday words. |
+| finger numbers | 1 первый палец, 2 указательный, 3 средний, 4 безымянный, 5 мизинец | WP *Аппликатура* numbers them from the thumb. The thumb is `первый палец`, as Russian methods call it, and the others are everyday words. |
 | right hand, left hand, both hands | правая рука, левая рука, обе руки: `двумя руками` | everyday words |
 | hand position; C position | позиция руки; позиция до | the course's own terms |
 | thumb under, finger over | подкладывание первого пальца, перекладывание пальца | *unsourced*, the method's terms |
@@ -448,6 +450,9 @@ More rules the guides settle:
 - **Rhythm syllables are `та`,** such as `«та-а, та-та»`. A counted beat is `раз, два, три, четыре`, and
   "and" is `и`: `«раз-и, два-и»`. Russian teachers count so aloud.
 - **A miss is `промах` everywhere,** the game's flash and its count included.
+- **The thumb is `первый палец` in every guide,** as the lessons name it. Never `большой палец`.
+- **A finger the English numbers takes digits:** `3-й палец`, `2-м пальцем`, `пальцами 5, 4, 3 и 2`.
+  `мизинец` stands only where the English says "little finger".
 
 ### A lesson's recurring lines
 
@@ -488,6 +493,7 @@ The lessons repeat these lines. Each English line has one Russian text in every 
   `rall.`, `cresc.`, `decresc.`, `dim.`, `a tempo` and `Ped.`
 - **The Italian word behind a mark is written in Cyrillic,** as Russian methods write it: `пиано`,
   `форте`, `меццо-пиано`, `ритардандо`, `легато`, `стаккато`, `крещендо`, `диминуэндо`, `а темпо`.
+- **A century is a Roman numeral, as Russian writes it:** `в XVI веке`. The `kept` list holds `XIII` to `XX`.
 - **Catalog numbers:** `BWV 1068`, `K. 525`, `HWV 437`, and `соч. 52` for an opus.
 - **The chord symbols,** as § 7 says.
 - **A song title in the library stays in Latin letters,** without quotes. A title is data shared by every
@@ -524,6 +530,9 @@ The lessons repeat these lines. Each English line has one Russian text in every 
   that points at that label writes it the same way.
 - **A sharp or a flat in prose is a word after a hyphen:** `до-диез`, `си-бемоль`, as WP *Нота (музыка)*
   writes them.
+- **A sharp or a flat declines as its noun does,** while the note before it stays: `для ми-диеза`, `на
+  до-диезе`, `к си-бемолю`. The lessons write it so. It is masculine, as its noun is: `верхний до-диез`.
+- **A key declines its mode the same way:** `в до мажоре`, `от соль мажора к ля мажору`.
 - **A key is the note and its mode, with no hyphen:** `до мажор`, `ля минор`, `фа-диез минор`. A chord or a
   triad names its key: `аккорд до мажор`, `трезвучие ля минор`. WP mixes `ля-минор` in, which this guide
   does not follow.
@@ -572,6 +581,7 @@ each kept word written as `X`.
 | An inner quote opens with `„` and closes with `“`. | `^[^„]*“`, `„[^“]*$` |
 | No space stands before `.`, `,`, `:`, `;`, `?`, `!`, `…` or a closing mark. | `\s[.,:;?!…»“)]` |
 | No space follows an opening mark. | `[«„(]\s` |
+| A space follows the end of a sentence. A text built from joined strings drops it most. | `[.!?…»)][А-ЯЁ]` |
 | An ellipsis is the one character `…`. | `\.\.\.` |
 | A dash between words is `—` with a space on each side. | `\S—`, `—\S`, `\s[-–]\s` |
 | A range of numbers takes `–` with no spaces: `1–4`. | `\d\s*-\s*\d`, `\d\s+–`, `–\s+\d` |
