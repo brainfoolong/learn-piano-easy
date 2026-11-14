@@ -43,7 +43,7 @@ export interface Typography {
  * form stands before the shorter one it holds.
  */
 const SONG_NAMES: readonly string[] = [
-      "See, the conqu'ring hero comes", "A Midsummer Night's Dream", "Toccata and Fugue in D minor",
+      "See, the conqu'ring hero comes", "See, the conqu’ring hero comes", "A Midsummer Night's Dream", "Toccata and Fugue in D minor",
       "The Twelve Days of Christmas", "Last Night of the Proms", "Der Zauberlehrling", "Judas Maccabaeus",
       "George Frideric Handel", "Franz Xaver Gruber", "Friedrich Schiller", "Leopold Stokowski", "Johann Strauss II",
       "Rimsky-Korsakov", "The Tree of Life", "The Lone Ranger", "Bolshoi Ballet", "Princess Royal", "Max Fleischer",
@@ -99,7 +99,7 @@ const SONG_NAMES: readonly string[] = [
       "Moonlight", "Mahler", "Lone Ranger", "Tchaikovsky", "Mussorgsky", "Shakespeare", "Smetana", "Rossini", "Goethe",
       "Vltava", "Victoria", "Tiverton", "Erlangen", "Cornwall", "Leipzig", "Weimar", "Giselle", "Sadko", "Joshua",
       "Popeye", "Oberndorf", "Gruber", "Mohr", "Joplin", "Dukas", "Wade", "Redner", "Jaws", "Quint", "Bald Mountain",
-      "Felix Mendelssohn", "Mendelssohn",
+      "Felix Mendelssohn", "Mendelssohn", "Thuringia",
 ];
 
 /**

@@ -218,7 +218,7 @@ changed since it was made, apart from one setting's wording.
 | movement, overture, variation | মুভমেন্ট, ওভারচার, ভ্যারিয়েশন | unsourced. WP's `বৈচিত্র` reads as variety. |
 | march, hymn, lullaby, nocturne | মার্চ, স্তোত্র, ঘুমপাড়ানি গান, নকটার্ন | WP titles for `স্তোত্র` and `ঘুমপাড়ানি গান` |
 | organ (the church's) | অর্গান | WP *অর্গান* |
-| aria, tone poem, hornpipe, galop | আরিয়া, টোন পোয়েম, হর্নপাইপ, গ্যালপ | unsourced, the European terms |
+| aria, tone poem or symphonic poem, hornpipe, galop | আরিয়া, টোন পোয়েম, হর্নপাইপ, গ্যালপ | unsourced, the European terms |
 | conductor, bandleader | কন্ডাক্টর | everyday word |
 | film score | সিনেমার সংগীত | everyday words |
 | enharmonic | এনহারমোনিক | unsourced, the English term |
@@ -413,6 +413,7 @@ More rules the guides settle:
 - **Loud is `জোরে`, never `উঁচু`.** `উঁচু` is kept for pitch.
 - **Rhythm syllables are `টা`,** such as `“টা-আ, টা-টা”`.
 - **A song is `গানটি` once it is named or plain,** as Bengali marks a known thing with `টি`.
+- **"The next bar" is `পরের বারটি`,** with its classifier. `পরের বারের জন্য` reads as "for next time".
 
 ### A lesson's recurring lines
 
@@ -488,6 +489,8 @@ The lessons' writers settled these, and the blind reviews kept them. Every row i
   kept list holds that form, such as `Branle de l’Official`.
 - **A Latin word takes a Bengali ending after a hyphen,** as Microsoft's guide joins product names:
   `MIDI-র`, `GitHub-এ`, `C-তে`.
+- **A Latin name is never followed by a detached `এর`,** "of it". It reads as a possessive whose hyphen
+  is lost. Name the thing instead: `August Wilhelmj রচনাটির …`.
 - **A composer with a Bengali Wikipedia article takes its spelling:** `বেটহোফেন`, `মোৎসার্ট`, `বাখ`,
   `শোপাঁ`, `হ্যান্ডেল`, `শুবার্ট`, `ব্রামস`, `দেবুসি`, `ভিভালদি`, `হাইডন` and `চাইকোভস্কি`. A full
   name follows the article's title, such as `ইয়োহান জেবাস্টিয়ান বাখ`.
@@ -496,7 +499,10 @@ The lessons' writers settled these, and the blind reviews kept them. Every row i
 - **A city Bengali news names takes its everyday spelling,** such as `ভিয়েনা` or `প্যারিস`. A smaller
   place stays in Latin letters, such as Leipzig, Hexham or Olomouc.
 - **The guides spell these places alike:** `বোস্টন`, `কোলন` (Cologne), `লন্ডন`, `নিউ ইয়র্ক`, `কিয়েভ`,
-  `ওয়ারশ`, `বোহেমিয়া` and `কানেটিকাট`. The United States is `মার্কিন যুক্তরাষ্ট্র`.
+  `ওয়ারশ`, `বোহেমিয়া`, `কানেটিকাট`, `সালৎসবুর্গ`, `আইওয়া`, `মেরিল্যান্ড`, `ফিলাডেলফিয়া` and `সেন্ট লুইস` (the city).
+  The United States is `মার্কিন যুক্তরাষ্ট্র`. Thuringia is a region, so it stays in Latin letters.
+- **A place or saint of the Bible takes the Bengali Bible's name:** `বেথলেহেম`, `সিয়োন` (Zion), and
+  `সাধু যোহন` for Saint John.
 - **Every other person's name stays in Latin letters,** since a guessed spelling would mislead. Grieg,
   Mendelssohn, Satie, Bizet, Mahler and Ravel have no Bengali article.
 - **The sections "Learn Piano" and "Just Play Piano" are translated,** since they describe what a

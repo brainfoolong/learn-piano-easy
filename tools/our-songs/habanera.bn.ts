@@ -5,7 +5,7 @@ import type { GuideTranslation } from "../make-our-songs";
 export const translation: Translation<GuideTranslation> = {
   about:
     "Georges Bizet-র অপেরা Carmen-এ Carmen প্রথম যখন মঞ্চে আসেন, তখন এই আরিয়াটি গেয়ে ওঠেন। অপেরাটি প্রথম মঞ্চস্থ হয় ১৮৭৫ সালে, প্যারিসে। " +
-    "Bizet এর সুর নেন Sebastián Iradier-এর একটি গান থেকে, সেটিকে লোকসুর ভেবে। " +
+    "আরিয়াটির সুর Bizet নেন Sebastián Iradier-এর একটি গান থেকে, সেটিকে লোকসুর ভেবে। " +
     "The Bad News Bears (১৯৭৬) সিনেমায় পুরো সময় জুড়ে Carmen-এর সংগীত বাজে।",
   funFact: "হাবানেরা কিউবার একটি নাচ, আর এর নাম এসেছে দেশটির রাজধানী হাভানা থেকে।",
   versions: {
