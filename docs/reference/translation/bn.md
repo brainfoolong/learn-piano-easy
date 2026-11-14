@@ -324,6 +324,24 @@ changed since it was made, apart from one setting's wording.
 | Sponsor (the page) | সমর্থন করুন; `GitHub-এ সমর্থন করুন` | `স্পনসর` reads as a company's |
 | setup (the first visit) | প্রস্তুতি | everyday word |
 | a section named by an imperative, mid-sentence | `“শুধু পিয়ানো বাজান” অংশে` | the quotes keep the name from reading as a verb |
+| On, Off, Auto; when off | চালু, বন্ধ, অটো; বন্ধ থাকলে | AN |
+| site; data; sync | সাইট; ডেটা; সিঙ্ক | AN |
+| button; dialog; pointer; cursor | বোতাম; ডায়ালগ; পয়েন্টার; কার্সর | AN |
+| Apply; Reload; Undo | প্রয়োগ করুন; আবার লোড করুন; ফিরিয়ে নিন | AN. `পূর্বাবস্থায় ফেরান` reads formal. |
+| background (a colour, a page's) | পটভূমি | everyday word. `ব্যাকগ্রাউন্ড` would blur with the background track. |
+| free (no cost) | বিনামূল্যে | everyday word. `ফ্রি` reads as slang. |
+| About; Legal notice; Privacy policy | পরিচিতি; আইনি তথ্য; গোপনীয়তা নীতি | the usual site labels |
+| the course's map | ম্যাপ | the word of games. `মানচিত্র` reads like geography. |
+| Repeat; Repeat all | রিপিট; সব রিপিট | the word of music players, kept apart from `লুপ` |
+| arrangement; harmony | অ্যারেঞ্জমেন্ট; হারমোনি | the words musicians use |
+| Classical, Baroque, Romantic, Impressionist, Contemporary | ক্লাসিক্যাল, বারোক, রোমান্টিক, ইমপ্রেশনিস্ট, সমকালীন | the loanwords Bengali writes |
+| Ragtime; Christmas | র‍্যাগটাইম; বড়দিন | `রাগ…` alone would read as a raga |
+| effects; flare; sparks; wave line | ইফেক্ট; ঝলক; ফুলকি; ঢেউ রেখা | everyday words |
+| falling notes; a strip or band | নেমে আসা নোট; পট্টি | `বার` stays the musical bar |
+| layout; timing; envelope | লেআউট; টাইমিং; এনভেলপ | the words of apps and synthesizers |
+| a seconds unit in a label | সেকেন্ড, written in full | an abbreviation needs an ASCII period |
+| a percent unit in a label | শতাংশ: `(চাবির শতাংশ)` | a `%` after a space breaks the marks |
+| More tools (beside the Expert key) | অন্যান্য টুল | `আরও টুল` is the Expert key |
 
 ### Which "play" is which
 
