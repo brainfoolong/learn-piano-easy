@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The Russian site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -162,14 +162,14 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 address or mark that drifts between files.
 **Gate:** `bun run i18n status ru` lists no missing and no stale text outside `legal`.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `ru` is `shipped`. `src/i18n/locale-table.ts:58`
-- [ ] The Russian social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `ru` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_russian_site_reads_in_russian`: `lang`, the switch's *Русский*, a lesson step and the player in Russian. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `ru` with `bun run shot --locale ru-RU`, on a phone and a desktop, in both themes.
-- [ ] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
-- [ ] The feature list and the README name Russian. `docs/reference/features.md:1`, `README.md:12`
+- [x] Every drift the reader lists is settled in the files it names.
+- [x] `ru` is `shipped`. `src/i18n/locale-table.ts:58`
+- [x] The Russian social image. `tools/make-social-image.ts:104`
+- [x] The layout checks run in `ru` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
+- [x] Test `the_russian_site_reads_in_russian`: `lang`, the switch's *Русский*, a lesson step and the player in Russian. `e2e/locales.e2e.ts:1`
+- [x] Look at every route in `ru` with `bun run shot --locale ru-RU`, on a phone and a desktop, in both themes.
+- [x] Look for any character drawn as a missing-glyph box, in Chrome on Windows and on an Android phone width.
+- [x] The feature list and the README name Russian. `docs/reference/features.md:1`, `README.md:12`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -181,54 +181,47 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. Every catalog section, every lesson and the guides of all 80 songs hold their
-Russian. `src/i18n/stamps/ru.json` stamps them all, and `public/songs/ours/<slug>/guide.json` carries
-each guide's Russian. `bun x tsc`, every locale's rules test and a build pass. `bun tools/i18n.ts
-status ru` lists 24 missing texts, all the catalogs' kept words in `player-bar`, `player-settings`,
-`player-shell` and `site`.
+Stages 1 to 6 are done. `ru` is shipped, so the build writes every page under `ru/`, and the switch
+offers *Русский*. The worlds carry their Russian titles in `src/learn/course.ts`. The language setting
+names *Русский* in English and German, and `public/images/social/ru.png` draws the lead in Russian.
+`bun tools/i18n.ts status ru` lists 25 missing texts and none stale. All are kept words, such as the
+endonyms of the language setting, as Bengali shipped with.
 
-Stage 5 ran four batches. Batches 2 and 3 had *wrong* findings and each got a second blind review.
-The second review of batch 3 found chords named by a mode their notes do not hold, such as `соль
-мажор` for an open fifth or a seventh chord. `ru.md` now says a chord takes its mode only where the
-song's notes hold that triad, and is otherwise named by its root: `аккорд на соль`. The guides from a
-to m were written before that row and may carry the same slip.
+The drift read ran four readers: catalogs, lessons, guides a to m, guides n to z. Every confident
+finding is settled in commit `c7780cd`. Four guide chords lost a mode their notes do not hold. `ru.md`
+gained two rows: `большой палец` stands only where *Finger numbers* teaches it, and a chord played in
+a set order is hyphenated, as `до-ми-соль`.
 
-Reviewers on the `reader` agent cannot write files, so they report findings inline. Check a finding
-that a name lacks a Russian article with the `langlinks` API before applying it.
+The shots covered 12 routes at 360 and 1280 pixels in both themes. Desktop was clean, with no page
+errors and no missing-glyph boxes. At 360 pixels, long headings split at any letter. A Russian page
+now sets `hyphens: auto` (`src/ui/base.css:165`), and they break at a syllable.
 
-The guides settled these rows in `ru.md`:
-
-- The thumb is `первый палец`. A sharp or flat declines and is masculine: `на до-диезе`.
-- A key's mode declines: `в до мажоре`. A plain note stays neuter and never declines.
-- Centuries are Roman numerals. A run is `пассаж`, and single notes are `одиночные ноты`.
-- A person or work with no Russian Wikipedia article stays in Latin and takes no case ending.
+`the_russian_site_reads_in_russian` passed once by name. `bun x tsc` and a build pass.
 
 ### Next
 
-**Stage 6: the Russian site ships.** Bengali shipped the same way, in commits `29f46f9` and `d9df186`,
-so read their diffs first.
+**Stage 7: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run
+it once more.
 
-1. **The drift read.** Fresh `reader` subagents, split by kind (catalogs, lessons, guides a to m,
-   guides n to z), read every Russian file against `ru.md`. Each lists the terms, address and marks
-   that drift between files. The guide readers also check every chord named with a mode against the
-   notes in `tools/our-songs/<slug>.ts`, as the new chord row asks. Readers report inline. Settle each
-   drift with Edit, re-stamp what changed, and rerun `bun tools/make-our-songs.ts`.
-2. **Ship.** Set `shipped: true` on the `ru` row, `src/i18n/locale-table.ts:58`. Then write the social
-   image with `bun tools/make-social-image.ts` (`tools/make-social-image.ts:104`).
-3. **The test.** Add `the_russian_site_reads_in_russian` to `e2e/locales.e2e.ts`, after
-   `the_bengali_site_reads_in_bengali` (`e2e/locales.e2e.ts:194`), and run it once by name.
-4. **Look.** Run `bun run shot --locale ru-RU` on every route, phone and desktop, in both themes.
-   Include a Russian lesson at 360 pixels, where a long title or quiz answer may clip. Look for
-   missing-glyph boxes.
-5. **Docs.** Name Russian in `docs/reference/features.md` and `README.md:12`.
+Expected red:
 
-Expected red: tests that count the shipped locales or list the language switch's entries may go red
-once `ru` ships. Bengali's ship commit shows which ones it updated.
+- The layout checks in `e2e/locales.e2e.ts` now take `ru` at 360 and 1280 pixels. A Russian label
+  may overflow where English fits. A label that clips takes the glossary's short form.
+- A test that counts the shipped locales or the sitemap's pages may need `ru`. Bengali's ship commit
+  `29f46f9` updated `src/i18n/i18n.test.ts` and `src/learn/game/unlock.test.ts`, and so did this one.
+- `russian_texts_keep_their_rules` covers the edits of `c7780cd`, which no test has run yet.
 
 ### Backlog
 
 - A native Russian speaker's read of the course would catch what a blind review cannot.
-- Stage 6's shots include a Russian lesson, where a long title or quiz answer may clip at 360 pixels.
 - A Russian piano teacher's read of the glossary's *unsourced* rows, as `ru.md` § *Open* lists.
+- At 360 pixels, the top bar's underline touches a two-line label such as *Режимы игры*.
+- The piano's key names, such as `до4`, are tiny on a phone in *Find C*.
+- The Cyrillic heading face is heavier and wider than the Latin logotype beside it.
+- A dash can start a line, as in `— и начнём`. A no-break space before it would keep it on the line
+  above.
+- `vltava.ru.ts:85` calls three chords `ля минор`, though the third is an open fifth, as the English
+  does.
+- Two names stay in Latin, `William Sandys` and `Ludwika`. Their Russian articles are unchecked.
 - The keyboard range field may show a solfège name such as `до2` but accept only `C2`, since
   `parsePitch` in `src/keyboard/range.ts` reads letters. The help texts keep `C2`, as Spanish does.
