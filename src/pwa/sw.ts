@@ -2,10 +2,10 @@
  * The service worker: serves the app offline.
  *
  * - **The shell** is the app cache group of `cache-groups.ts`, as `tools/build.ts` lists it. It is
- *   precached on install into a cache named by the build's version, and served cache-first. A
- *   navigation gets its route's page, so every route of the site reloads offline. An unknown path
- *   gets the root page, which shows the landing page of the path's locale. A request for a byte range,
- *   as a video makes, gets that range of the cached file through `ranged.ts`.
+ *   precached on install into a cache named by the build's version, and served cache-first. The
+ *   install checks each file with the server, past the HTTP cache. A navigation gets its route's page, so every route of the site reloads offline. An
+ *   unknown path gets the root page, which shows the landing page of the path's locale. A request for
+ *   a byte range, as a video makes, gets that range of the cached file through `ranged.ts`.
  * - **Songs and sounds** are cached on first use into one content cache that outlives versions, so an
  *   update never downloads them again. The cache manager can also fill or empty either group at once.
  * - **A file no cache group holds passes to the network,** such as a source map, `robots.txt` or a
@@ -45,10 +45,11 @@ const worker = globalThis as unknown as WorkerScope;
 const SHELL_CACHE = shellCacheName(__VERSION__);
 const scope = new URL(worker.registration.scope);
 
+// Each shell file is checked with the server. A host lets the browser keep a file for minutes, and a
+// file such as `app.js` keeps its name across versions, so an unchecked copy could be the old version's.
 worker.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(SHELL_CACHE).then((cache) => cache.addAll(__SHELL__.map((path) => new URL(path, scope).href))),
-  );
+  const requests = __SHELL__.map((path) => new Request(new URL(path, scope).href, { cache: "no-cache" }));
+  event.waitUntil(caches.open(SHELL_CACHE).then((cache) => cache.addAll(requests)));
 });
 
 worker.addEventListener("activate", (event) => {
