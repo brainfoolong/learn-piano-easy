@@ -6,7 +6,7 @@ context: [docs/agent/translation.md, docs/decisions/0012.md, docs/goals/many-loc
 stages:
   - id: 1
     title: The French style guide and glossary
-    status: open
+    status: done
   - id: 2
     title: The site and the player in French
     status: open
@@ -71,6 +71,12 @@ marks and inside its quotes, and the rules test checks each one. The method in
 - **Numbers follow `Intl` for `fr`.** No digit or separator is set by hand.
 - **French runs about a fifth longer than English.** A label that clips takes the glossary's short form.
 - **The kept words:** *Learn Piano Easy*, *MIDI*, the song titles and the composers' names.
+- **The style guide confirmed each decision above,** and added three. A guide's prose names a work by
+  its French title and a person by French Wikipedia's spelling. An interface word stands unquoted, as
+  Microsoft asks. Prose says `do central` with no octave number, since France's `do 3` differs from the
+  code's `Do4`.
+- **The narrow no-break space counts as Latin in Unicode's data.** The rules test now skips it beside a
+  kept word, so a title inside `« »` is spared.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -85,12 +91,12 @@ catalogs, lessons and guides, with a count. `web-fetch` subagents, sent together
 report what each settles.
 **Gate:** `tools/i18n.ts` and `src/i18n/typography.ts` exist.
 
-- [ ] The term list: every music and interface term the English uses more than once. `docs/reference/translation/fr.md:1`
-- [ ] Microsoft's French style guides, for France and for Canada: the address, the marks and the interface terms. `docs/reference/translation/fr.md:1`
-- [ ] French Wikipedia's music articles and French-language piano methods: each music term with two sources. `docs/reference/translation/fr.md:1`
-- [ ] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/fr.md:1`
-- [ ] The French entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
-- [ ] The French row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
+- [x] The term list: every music and interface term the English uses more than once. `docs/reference/translation/fr.md:1`
+- [x] Microsoft's French style guides, for France and for Canada: the address, the marks and the interface terms. `docs/reference/translation/fr.md:1`
+- [x] French Wikipedia's music articles and French-language piano methods: each music term with two sources. `docs/reference/translation/fr.md:1`
+- [x] Every section of the style guide, with calibration texts from every kind of text. `docs/reference/translation/fr.md:1`
+- [x] The French entry of the rule table: script, kept words and the patterns of the marks. `src/i18n/typography.ts:1`
+- [x] The French row of the locale table, confirmed or changed with its reason. `src/i18n/locale.ts:18`
 
 ### 2. The site and the player in French
 
@@ -167,15 +173,23 @@ address or mark that drifts between files.
 
 ### State
 
-The goal is written, behind `russian` on the chain. No stage has started.
+Stage 1 is done. `docs/reference/translation/fr.md` holds the whole guide and glossary. The `fr` entry
+of `src/i18n/typography.ts` holds the kept words and 15 mark rules. `the_french_marks_hold_and_spare_kept_words`
+in `src/i18n/translation-rules.test.ts` tests them, and it passes. The locale table's French row stands
+unchanged, as § 1 of the guide says.
 
 ### Next
 
-**Stage 1: the French style guide and glossary.** Files: `docs/reference/translation/fr.md`,
-`src/i18n/typography.ts` and `src/i18n/locale.ts`. Gate: `russian` is reached.
+**Stage 2: the site and the player in French.** Files: `src/i18n/messages/*.fr.ts`, the `fr` chunk in
+`CATALOG_CHUNKS` of `src/i18n/locale.ts:44`, and `src/i18n/stamps/fr.json`. Start with
+`bun tools/i18n.ts status fr`, then `bun tools/i18n.ts work fr <unit>` per batch. Brief each writer with
+the whole guide and the playbook's no-break-space trap. Each French space is U+202F or U+00A0, and an
+ASCII space before `!`, `?`, `:` or `%` fails the rules test.
 
-Expected red: none.
+Expected red: `french_texts_keep_their_rules` until every batch keeps the marks. A label French writes as
+English does, such as `Pause`, may need a new entry in the `fr` kept list.
 
 ### Backlog
 
 - A read of the course by a speaker from Canada and one from Africa would catch words that read as France's only.
+- A French piano teacher's read would confirm the guide's *unsourced* rows, which its *Open* lists.
