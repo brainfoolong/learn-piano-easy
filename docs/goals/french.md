@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: french-rules
@@ -190,17 +190,22 @@ that read the same in French.
 
 ### 7. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test. `src/i18n/i18n.test.ts:42`
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 6 are done. Every French text is reviewed and stamped, and `fr` ships. The build writes
-every page under `fr/`, and the language switch offers Français. The worlds carry their French titles
-in `src/learn/course.ts`. `public/images/social/fr.png` draws the lead in French.
+The goal is reached. Every stage is done, and `looper verify` is green over the whole goal.
+
+The first verify failed two tests in `src/i18n/i18n.test.ts`. Each used `fr` as a locale with no
+catalog, and `fr` now ships. They use `ur` instead, and the first-visit test checks a French browser
+lands on `fr`. The second verify passed every step, the layout checks in `fr` among them.
+
+Every French text is reviewed and stamped, and `fr` ships. The build writes every page under `fr/`,
+and the language switch offers Français. `public/images/social/fr.png` draws the lead in French.
 
 The consistency read ran as five `reader`s: the catalogs, the lessons, and the guides in three parts.
 They listed 17 items and none *wrong*, and 11 are settled. The 6 kept are polish items, each named in the
@@ -216,13 +221,8 @@ on a phone and a desktop in both themes, showed no page error and no French-only
 
 ### Next
 
-**Stage 7: the goal is verified once.** Run `looper verify` over the whole goal. Fix every failure in
-one pass, never loosening a test, and run it once more. Then harvest the goal into `docs/findings.md`
-§ `french`, as the earlier locales' sections do, and delete this file.
-
-The layout checks of `e2e/locales.e2e.ts` now run `fr` at 360 and 1280 pixels for the first time. A
-French label that runs long may fail there. The fix is the glossary's short form, per § 10 of the guide.
-No other test is expected red.
+**Retire the goal.** Harvest it into `docs/findings.md` § `french`, in the shape of § `russian` at
+`docs/findings.md:1566`. Move its two checks into the floor, and delete this file. No test is expected red.
 
 ### Backlog
 
