@@ -17,7 +17,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "নেমে আসা নোটের কোণগুলো গোল করে।",
   },
   noteBorderRadius: {
-    label: "কোণের গোলাই (%)",
+    label: "কোণ কতটা গোল (%)",
     help: "একটি নোটের কোণ কতটা গোল।",
   },
   minNoteHeight: {
@@ -38,7 +38,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   playedNoteFalloffSpeed: {
     label: "বাজানো নোট চাবি পেরিয়ে কতদূর যায়",
-    help: "চাবির প্রস্থে, যখন বাজানো নোট ঢুকে যায় না।",
+    help: "চাবির প্রস্থে, বাজানো নোট চাবিতে ঢুকে না গেলে।",
   },
   showSustainedNotes: {
     label: "প্যাডেল নোট কতক্ষণ ধরে রাখে, তা দেখান",
@@ -116,7 +116,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   showSustainChannels: {
     label: "প্যাডেলের চ্যানেল",
-    help: "প্যাডেলের প্রতিটি সময়ের MIDI চ্যানেল দেখায়।",
+    help: "প্যাডেল চেপে রাখার প্রতিটি সময়ের MIDI চ্যানেল দেখায়।",
   },
 
   // Particles
@@ -126,7 +126,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesFlames: {
     label: "শিখা",
-    help: "প্রতিটি চাবি তার নোটের রঙে জ্বলে। গ্রাফিক্স কার্ডের উপর এর চাপই সবচেয়ে বেশি।",
+    help: "প্রতিটি চাবি তার নোট বাজার সময় নোটের রঙে জ্বলে। গ্রাফিক্স কার্ডের উপর এর চাপই সবচেয়ে বেশি।",
   },
   particlesSparks: {
     label: "ফুলকি",
@@ -138,7 +138,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   particlesStars: {
     label: "তারা",
-    help: "প্রতিটি চাবি থেকে ছোট ঘূর্ণি তারা আর বিন্দু উঠে আবার নেমে আসে।",
+    help: "প্রতিটি চাবি থেকে ঘুরতে থাকা ছোট তারা আর বিন্দু উঠে আবার নেমে আসে।",
   },
   particlesCustom: {
     label: "নিজের কণা",
@@ -147,12 +147,12 @@ export const playerSettingsLook: Translation<typeof en> = {
   particlesTexture: {
     label: "গড়ন",
     help: "আপনার নিজের প্রতিটি কণা যে ছবি দেখায়।",
-    options: { circle: "আভা", spark: "ফুলকি", smoke: "ধোঁয়া", star: "তারা", ring: "আংটি" },
+    options: { circle: "আভা", spark: "ফুলকি", smoke: "ধোঁয়া", star: "তারা", ring: "বলয়" },
   },
   particlesBlending: {
     label: "মেশানো",
-    help: "“আলো যোগ” পেছনের জিনিস উজ্জ্বল করে, আগুনের মতো। “ঢেকে দিন” তা লুকিয়ে ফেলে, ধোঁয়ার মতো।",
-    options: { additive: "আলো যোগ", normal: "ঢেকে দিন" },
+    help: "“আলো যোগ” পেছনের জিনিস উজ্জ্বল করে, আগুনের মতো। “ঢেকে দেওয়া” তা লুকিয়ে ফেলে, ধোঁয়ার মতো।",
+    options: { additive: "আলো যোগ", normal: "ঢেকে দেওয়া" },
   },
   particleOverrideColor: {
     label: "নিজের রং",
@@ -259,18 +259,18 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "চাবির উপরে, চাবির প্রস্থে।",
   },
   particleDistributionX: {
-    label: "চাবির আড়াআড়ি শুরু",
+    label: "চাবির আড়াআড়ি শুরুর জায়গা",
     help: "চাবির আড়াআড়ি কোথায় প্রতিটি কণা শুরু হয়।",
     options: { across: "আড়াআড়ি যেকোনো জায়গায়", centre: "ঠিক মাঝখানে" },
   },
   particleDistributionXSpread: {
-    label: "শুরুর ছড়ানো (%)",
+    label: "শুরুর জায়গা কতটা ছড়ানো (%)",
     help: "চাবির প্রস্থের কতটা জুড়ে কণা শুরু হয়।",
   },
   particleDistributionY: {
-    label: "চাবির লম্বালম্বি শুরু",
+    label: "চাবির লম্বালম্বি শুরুর জায়গা",
     help: "চাবির লম্বালম্বি কোথায় প্রতিটি কণা শুরু হয়।",
-    options: { hitLine: "হিট লাইনে", key: "চাবির উপরের দিকের যেকোনো জায়গায়" },
+    options: { hitLine: "হিট লাইনে", key: "চাবির উপরের তলে যেকোনো জায়গায়" },
   },
   particleDistributionZ: {
     label: "স্তর",
@@ -286,7 +286,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   noteLabel: {
     label: "নোটের লেবেল",
-    help: "প্রতিটি নোটের উপরের লেখা: যেকোনোটি বেছে নিন, বা একটিও না। একটি নোট চাপুন, তারপর আঙুল ঠিক করতে 1 থেকে 5 কী চাপুন।",
+    help: "প্রতিটি নোটের উপরের লেখা: যতগুলো খুশি বেছে নিন, বা একটিও না। একটি নোট চাপুন, তারপর আঙুল ঠিক করতে 1 থেকে 5-এর মধ্যে একটি কী চাপুন।",
     options: { name: "নোটের নাম", keyBinding: "কম্পিউটারের কী", fingering: "আঙুল" },
   },
   noteLabelColor: {
@@ -359,7 +359,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "গানে কথা থাকলে, একবারে একটি লাইন করে দেখায়।",
   },
   lyricsBackground: {
-    label: "পেছনের রং",
+    label: "পটভূমির রং",
     help: "গানের কথার পেছনের পট্টির রং।",
   },
   lyricsFontColor: {
@@ -426,7 +426,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   colorCodeFinger4Right: { label: "ডান হাত, 4 নম্বর আঙুল", help: "ডান হাতের অনামিকায় বাজানো নোটের রং।" },
   colorCodeFinger5Right: { label: "ডান হাত, 5 নম্বর আঙুল", help: "ডান হাতের কড়ে আঙুলে বাজানো নোটের রং।" },
   colorCodeFingerDefaultRight: {
-    label: "ডান হাত, আঙুল ছাড়া",
+    label: "ডান হাত, আঙুল ঠিক করা নেই",
     help: "ডান হাতের যে নোটে আঙুল ঠিক করা নেই, তার রং।",
   },
   colorCodeFinger1Left: { label: "বাঁ হাত, 1 নম্বর আঙুল", help: "বাঁ হাতের বুড়ো আঙুলে বাজানো নোটের রং।" },
@@ -435,7 +435,7 @@ export const playerSettingsLook: Translation<typeof en> = {
   colorCodeFinger4Left: { label: "বাঁ হাত, 4 নম্বর আঙুল", help: "বাঁ হাতের অনামিকায় বাজানো নোটের রং।" },
   colorCodeFinger5Left: { label: "বাঁ হাত, 5 নম্বর আঙুল", help: "বাঁ হাতের কড়ে আঙুলে বাজানো নোটের রং।" },
   colorCodeFingerDefaultLeft: {
-    label: "বাঁ হাত, আঙুল ছাড়া",
+    label: "বাঁ হাত, আঙুল ঠিক করা নেই",
     help: "বাঁ হাতের যে নোটে আঙুল ঠিক করা নেই, তার রং।",
   },
 
@@ -494,10 +494,10 @@ export const playerSettingsLook: Translation<typeof en> = {
   },
   renderSheetCursor: {
     label: "কার্সর",
-    help: "একটি লাইন গানের জায়গাটি দেখায়।",
+    help: "একটি লাইন দেখায়, গানের কোন জায়গা এখন বাজছে।",
   },
   sheetColorActiveNotes: {
-    label: "বাজতে থাকা নোটের রং",
+    label: "বাজতে থাকা নোট রাঙানো",
     help: "স্বরলিপির নোট বাজার সময় রং বদলায়।",
   },
   sheetColorByTrack: {
@@ -539,7 +539,7 @@ export const playerSettingsLook: Translation<typeof en> = {
     help: "একটি ডায়ালগ খোলে, যা খোলা গানের নেমে আসা নোটগুলো পাতা হিসেবে সেভ করে। পাতার দৈর্ঘ্য আপনি ঠিক করেন।",
   },
   exportPdfBackground: {
-    label: "পেছনের রং ব্যবহার করুন",
+    label: "পটভূমির রং ব্যবহার করুন",
     help: "পাতাগুলো লেন আর চাবির রং নেয়। বন্ধ থাকলে সাদা কাগজে প্রিন্ট হয়।",
   },
 

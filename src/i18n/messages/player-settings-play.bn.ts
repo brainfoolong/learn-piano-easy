@@ -11,12 +11,12 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   language: {
     label: "ভাষা",
-    help: "“ব্রাউজারের মতো” বেছে নিলে, ব্রাউজারের ভাষাটি থাকলে সাইট সেই ভাষায় খোলে।",
+    help: "“ব্রাউজারের মতো” বেছে নিলে, সাইটে ব্রাউজারের ভাষাটি থাকলে সাইট সেই ভাষায় খোলে।",
     options: { auto: "ব্রাউজারের মতো" },
   },
   learnSounds: {
     label: "পুরস্কারের আওয়াজ",
-    help: "“পিয়ানো শিখুন” অংশে ধাপ পার হলে, তারা পেলে, নতুন লেভেলে উঠলে আর ব্যাজ পেলে টুংটাং আওয়াজ বাজে। পিয়ানো সবসময় বাজে।",
+    help: "“পিয়ানো শিখুন” অংশে ধাপ পার হলে, তারা পেলে, নতুন লেভেলে উঠলে বা ব্যাজ পেলে টুংটাং আওয়াজ বাজে। পিয়ানো সবসময় বাজে।",
   },
   learnDailyGoal: {
     label: "দৈনিক লক্ষ্য",
@@ -47,7 +47,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   saveIndexedDb: {
     label: "ফাইলগুলো এই ব্রাউজারে রাখা",
-    help: "কম্পিউটার থেকে খোলা গান পেজ আবার লোড হওয়ার পরেও গানের তালিকায় থাকে।",
+    help: "কম্পিউটার থেকে যে গান খোলেন, পেজ আবার লোড হলেও তা গানের তালিকায় থাকে।",
   },
   disableHotkeys: {
     label: "কিবোর্ড শর্টকাট বন্ধ",
@@ -83,7 +83,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   renderOffset: {
     label: "ছবির সময় সরানো (ms)",
-    help: "আওয়াজের তুলনায় ছবি দেরিতে দেখায়। শূন্যের কম হলে আগে দেখায়।",
+    help: "আওয়াজের তুলনায় ছবি এতটা দেরিতে দেখায়। শূন্যের কম হলে ছবি আগে দেখায়।",
   },
   showBPM: {
     label: "BPM-এ টেম্পো দেখানো",
@@ -102,7 +102,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
     help: "টাইমলাইনের সময়ে সেকেন্ডের হাজার ভাগের এক ভাগও দেখায়।",
   },
   progressBarMeasures: {
-    label: "টাইমলাইন বারে দেখানো",
+    label: "টাইমলাইন বারের হিসাবে দেখানো",
     help: "টাইমলাইন মিনিট আর সেকেন্ডের বদলে বার গোনে।",
   },
   progressBarMeasureLines: {
@@ -116,7 +116,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   // Loop
   enableLoop: {
     label: "একটি অংশ লুপে চালানো",
-    help: "নিচের বারগুলো বারবার চলে, যাতে আপনি সেগুলো অনুশীলন করতে পারেন।",
+    help: "নিচের বারগুলো ঘুরে ঘুরে চলে, যাতে আপনি সেগুলো অনুশীলন করতে পারেন।",
   },
   loopStart: {
     label: "লুপ শুরুর বার",
@@ -124,7 +124,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   loopEnd: {
     label: "লুপ শেষের বার",
-    help: "লুপটি এই বারের শেষে থামে।",
+    help: "লুপটি এই বারের শেষ পর্যন্ত চলে।",
   },
   loopDelay: {
     label: "শুরুর গোনা (বিট)",
@@ -269,7 +269,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   bgTrackEnable: {
     label: "সঙ্গত চালানো",
-    help: "বেছে নেওয়া রেকর্ডিং গানের সঙ্গে একসঙ্গে চলে।",
+    help: "বেছে নেওয়া রেকর্ডিংটি গানের সঙ্গে একই সময়ে চলে।",
   },
   bgTrackVolume: {
     label: "ভলিউম (%)",
@@ -334,7 +334,7 @@ export const playerSettingsPlay: Translation<typeof en> = {
   },
   foldOutsideNotes: {
     label: "চাবির বাইরের নোট নাগালে আনা",
-    help: "আপনার কিবোর্ডে যে নোট নেই, তা অক্টেভ ধরে সরে আপনার চাবিতে আসে, আর আপনি সেখানেই বাজান।",
+    help: "আপনার কিবোর্ডে যে নোট নেই, তা এক এক অক্টেভ করে সরে আপনার চাবিতে আসে, আর আপনি সেখানেই বাজান।",
   },
   // Input
   playMode: {

@@ -31,7 +31,7 @@ export const learnLesson: Translation<typeof en> = {
     play: "শুনুন",
     playAgain: "আবার শুনুন",
     skip: "এড়িয়ে যান",
-    piano: "উদাহরণটি বাজাচ্ছে যে পিয়ানো",
+    piano: "যে পিয়ানোটি উদাহরণটি বাজাচ্ছে",
     playing: "বাজছে",
     slow: "ধীরে",
     side: "পাশ থেকে দৃশ্য",
@@ -65,8 +65,8 @@ export const learnLesson: Translation<typeof en> = {
   listen: {
     question: (pair: number, count: number) => `${n(count)}টির মধ্যে ${n(pair)} নম্বর জোড়া`,
     playAgain: "আবার শুনুন",
-    group: "দ্বিতীয় নোটটি কি বেশি উঁচু, বেশি নিচু, নাকি একই?",
-    answers: { higher: "বেশি উঁচু", lower: "বেশি নিচু", same: "একই" },
+    group: "দ্বিতীয় নোটটি কি প্রথমটির চেয়ে উঁচু, নিচু, নাকি একই?",
+    answers: { higher: "আরও উঁচু", lower: "আরও নিচু", same: "একই" },
     wrong: "একটুর জন্য হলো না। আবার শুনে অন্য একটি উত্তর বেছে নিন।",
     hint: "হাইলাইট করা উত্তরটিই ঠিক।",
     roundAgain: (right: number, asked: number) =>

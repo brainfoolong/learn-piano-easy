@@ -21,7 +21,7 @@ export const learnProfile: Translation<typeof en> = {
     best: (count: number) => `সেরা: ${days(count)}`,
     today: (xp: number, goal: number) =>
       xp >= goal
-        ? `আজ: ${n(xp)} XP, ${n(goal)}-এর লক্ষ্য পূরণ হয়েছে`
+        ? `আজ: ${n(xp)} XP, ${n(goal)} XP-র লক্ষ্য পূরণ হয়েছে`
         : `আজ: ${n(goal)}-এর মধ্যে ${n(xp)} XP`,
   },
   calendar: {

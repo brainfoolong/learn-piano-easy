@@ -81,7 +81,7 @@ export const playerInput: Translation<typeof en> = {
     heading: "স্কোর",
     judgements: { perfect: "পারফেক্ট", hit: "ঠিক নোট", mistake: "ভুল নোট", miss: "ফসকে যাওয়া নোট" },
     counts: (hits: number, perfect: number, misses: number, mistakes: number) =>
-      `ঠিক ${formatNumber("bn", hits)} · পারফেক্ট ${formatNumber("bn", perfect)} · ফসকে গেছে ${formatNumber("bn", misses)} · ভুল ${formatNumber("bn", mistakes)}`,
+      `ঠিক ${formatNumber("bn", hits)} · পারফেক্ট ${formatNumber("bn", perfect)} · ফসকে যাওয়া ${formatNumber("bn", misses)} · ভুল ${formatNumber("bn", mistakes)}`,
     history: "ইতিহাস",
     historyTitle: "এই গানে আপনার চেষ্টাগুলো",
     readError: "ইতিহাস পড়া যায়নি।",
@@ -129,7 +129,7 @@ export const playerInput: Translation<typeof en> = {
   },
   pdf: {
     noSong: "আগে একটি গান খুলুন, তারপর তার নোটগুলো PDF হিসেবে সেভ করুন।",
-    intro: (title: string) => `${title} গানের নেমে আসা নোটগুলো একটি পিয়ানোর উপরে সেভ করে, প্রতিটি পাতায় গানের কয়েক সেকেন্ড।`,
+    intro: (title: string) => `${title} গানের নেমে আসা নোটগুলো একটি পিয়ানোর উপরে PDF-এ সেভ হয়, প্রতিটি পাতায় গানের কয়েক সেকেন্ড।`,
     secondsPerPage: "প্রতি পাতায় সেকেন্ড",
     background: "পটভূমির রং ব্যবহার করুন",
     pages: (pages: number, seconds: number) =>

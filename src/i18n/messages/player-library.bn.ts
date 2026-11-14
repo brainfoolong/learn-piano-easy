@@ -38,7 +38,7 @@ export const playerLibrary: Translation<typeof en> = {
     arpeggios: "আর্পেজিও",
     counterMelody: "পাশাপাশি চলা আরেকটি সুর",
     melodyInChords: "কর্ডের মধ্যে সুর",
-    handCrossing: "হাত পার করে বাজানো",
+    handCrossing: "দুই হাত আড়াআড়ি করে বাজানো",
     sixteenthNotes: "সিক্সটিন্থ নোট",
   },
   panel: {

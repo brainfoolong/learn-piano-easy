@@ -9,7 +9,7 @@ stages:
     status: done
   - id: 2
     title: The site and the player in Bengali
-    status: open
+    status: done
   - id: 3
     title: The course in Bengali
     status: open
@@ -99,12 +99,24 @@ report what each settles.
 then review them blind, as the method says.
 **Gate:** `docs/reference/translation/bn.md` exists.
 
-- [ ] The site, its pages and *Learn Piano*. `src/i18n/messages/bn.ts:1`, `src/i18n/messages/learn-lesson.bn.ts:1`
-- [ ] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.bn.ts:1`
-- [ ] The player's settings. `src/i18n/messages/player-settings.bn.ts:1`
-- [ ] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
-- [ ] `bun x tsc` and `bengali_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
-- [ ] `bun run i18n stamp bn` for each catalog section. `src/i18n/stamps/bn.json:1`
+- [x] The site, its pages and *Learn Piano*. `src/i18n/messages/bn.ts:1`, `src/i18n/messages/learn-lesson.bn.ts:1`
+  - [x] The work lists of every catalog section are written under `.agent-tmp/i18n/bn/`.
+  - [x] `bn` joins `CATALOG_CHUNKS` and `src/i18n/all-catalogs.ts`.
+  - [x] The root, the pages, *Learn Piano* and the play modes hold their Bengali.
+- [x] The player's shell, bar, library, input and play modes. `src/i18n/messages/player-shell.bn.ts:1`
+  - [x] The shell, the bar, the library and the input hold their Bengali.
+- [x] The player's settings. `src/i18n/messages/player-settings.bn.ts:1`
+  - [x] The panel and the look half hold their Bengali.
+  - [x] The play half holds its Bengali.
+- [x] Each batch reviewed blind, every finding settled, and every *wrong* batch reviewed again.
+  - [x] Each batch has a blind review.
+  - [x] Every finding is settled, and the glossary holds each new term.
+  - [x] Each batch with a *wrong* finding is reviewed again.
+- [x] `bun x tsc` and `bengali_texts_keep_their_rules` pass. `src/i18n/translation-rules.test.ts:1`
+  - [x] `bun x tsc` passes.
+  - [x] `bengali_texts_keep_their_rules` passes.
+- [x] `bun run i18n stamp bn` for each catalog section. `src/i18n/stamps/bn.json:1`
+  - [x] Every catalog section is stamped.
 
 ### 3. The course in Bengali
 
@@ -168,30 +180,39 @@ address or mark that drifts between files.
 
 ### State
 
-Stage 1 is done. `docs/reference/translation/bn.md` holds every section the method names. The `bn` entry
-of `src/i18n/typography.ts` holds the kept words and fifteen mark rules. Test
-`the_bengali_marks_hold_and_spare_kept_words` in `src/i18n/translation-rules.test.ts` covers the rules, and
-it passes. The locale table's `bn` row in `src/i18n/locale-table.ts` stands unchanged, as the guide's § 1
-confirms.
+Stages 1 and 2 are done. Every catalog section holds its Bengali in `src/i18n/messages/*.bn.ts`. Each
+batch was reviewed blind, every finding is settled, and the settings' look half was reviewed again. The
+catalogs load through the `bn` chunk of `src/i18n/locale.ts:44` and are listed in `src/i18n/all-catalogs.ts`.
+`src/i18n/stamps/bn.json` stamps every catalog section. `bun x tsc` and `bengali_texts_keep_their_rules`
+pass.
 
-Microsoft has no Bangladesh guide, so the India guide and Android's `values-bn` settled the interface.
-No Bengali piano method was reached. Many music terms rest on one source, as the guide's *Open* lists.
+`bun tools/i18n.ts status bn` still lists 39 catalog texts as missing. They are left out on purpose,
+since their Bengali would equal the English: note letters, time signatures, language names, the site's
+name, `– FPS` and the key names Ctrl, Alt, Shift and Meta.
+
+The glossary in `docs/reference/translation/bn.md` § 5 gained the terms the writers met, such as
+`পটভূমি` for a background, `বলয়` for a ring and `শতাংশ` for a percent unit in a label.
 
 ### Next
 
-**Stage 2: the site and the player in Bengali.** Run `bun tools/i18n.ts work bn <section>` for each
-catalog section, then send three writers side by side, as the stage's split says. Files:
-`src/i18n/messages/bn.ts`, `src/i18n/messages/learn-lesson.bn.ts`, `src/i18n/messages/player-shell.bn.ts`
-and `src/i18n/messages/player-settings.bn.ts`. Brief each writer with the whole of `bn.md`. Then add the
-`bn` chunk to `CATALOG_CHUNKS` in `src/i18n/locale.ts:44`.
+**Stage 3: the course in Bengali.** Run `bun tools/i18n.ts work bn lesson/<world>` for each world. Then
+send the five writers of the stage's split side by side, each briefed with the whole of `bn.md`. A
+world's files are `src/learn/lessons/<world>/<lesson>.bn.ts` and its `texts.bn.ts`, modelled on the
+`.id.ts` siblings. Five fresh reviewers then write findings under `.agent-tmp/i18n/bn/review/`.
 
-- **A count goes through `formatNumber("bn", n)`,** so its digits are Bengali. Bars, fingers and beats
-  are typed in Western digits, as § 8 says.
+- **A count goes through `formatNumber("bn", n)`,** so its digits are Bengali. Bars, fingers, beats and
+  time signatures are typed in Western digits, as § 8 says.
 - **Write and Edit store `য়` and `ড়` decomposed,** which the nukta rule wants. A writer that builds a
   file through a script must not precompose them.
+- **A `%` after a space breaks the marks.** A label's unit is written `শতাংশ`, or `(%)` with no space.
+- **The lesson catalog's terms are settled** in `src/i18n/messages/learn-lesson.bn.ts`. A lesson's
+  higher and lower are `আরও উঁচু` and `আরও নিচু`, and a writer reads that file first.
+- **A writer leaves out a text whose Bengali equals the English,** since the no-copy check refuses it.
 
 Expected red: none.
 
 ### Backlog
 
 - A native reader from Bangladesh and one from West Bengal would each catch words that read as the other country's.
+- The game's miss flash in `src/i18n/messages/player-input.bn.ts` reads `ফসকে গেছে`, while the glossary's
+  miss is `ফসকে যাওয়া`. The stage 6 consistency read decides whether a flash keeps its past tense.

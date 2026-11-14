@@ -337,6 +337,8 @@ changed since it was made, apart from one setting's wording.
 | Classical, Baroque, Romantic, Impressionist, Contemporary | ক্লাসিক্যাল, বারোক, রোমান্টিক, ইমপ্রেশনিস্ট, সমকালীন | the loanwords Bengali writes |
 | Ragtime; Christmas | র‍্যাগটাইম; বড়দিন | `রাগ…` alone would read as a raga |
 | effects; flare; sparks; wave line | ইফেক্ট; ঝলক; ফুলকি; ঢেউ রেখা | everyday words |
+| ring (a shape) | বলয় | the shape's word. `আংটি` is the jewellery. |
+| a setting's on/off label | a noun phrase: `বাজতে থাকা নোট রাঙানো` | § 2's label form, kept apart from the colour's label |
 | falling notes; a strip or band | নেমে আসা নোট; পট্টি | `বার` stays the musical bar |
 | layout; timing; envelope | লেআউট; টাইমিং; এনভেলপ | the words of apps and synthesizers |
 | a seconds unit in a label | সেকেন্ড, written in full | an abbreviation needs an ASCII period |
