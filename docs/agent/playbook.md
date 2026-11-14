@@ -20,6 +20,9 @@ Traps a session paid for once, so the next one does not. **It is not a changelog
 - **A no-break space typed as itself in Write or Edit can land as an ASCII space.** The rules test
   then fails on `%` or a unit. Type a backslash, then `u00A0`, which the tools write raw, and Grep each
   file under `src/i18n/messages/` for a digit or `}` followed by an ASCII space and `%`.
+- **An Edit of a French or Arabic text fails with "String to replace not found".** The text holds a
+  narrow no-break space before `?`, `!`, `;` or `:`, which the old string typed as a plain space. End
+  the old string before that mark, so it holds no such space, as in `src/learn/lessons/*/*.fr.ts`.
 
 - **`bun run shot` on a page of the default locale may show it in German.** The site moves a first
   visit to the browser's language, which follows the system's. Pass `--locale en-US` or

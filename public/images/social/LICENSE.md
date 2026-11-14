@@ -23,3 +23,4 @@ The tool writes them, so a change is a new run of it, never an edit of a file he
 | `id.png` | The site's name and the hero's lead in Indonesian, beside a keyboard with falling notes | MIT |
 | `bn.png` | The site's name and the hero's lead in Bengali, beside a keyboard with falling notes | MIT |
 | `ru.png` | The site's name and the hero's lead in Russian, beside a keyboard with falling notes | MIT |
+| `fr.png` | The site's name and the hero's lead in French, beside a keyboard with falling notes | MIT |

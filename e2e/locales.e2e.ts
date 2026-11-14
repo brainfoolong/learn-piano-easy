@@ -2,7 +2,7 @@
  * The locales a translation pass keeps, in a real browser: each reads in its own language, and its pages
  * pass the layout checks.
  *
- * - **Spanish, Chinese, Hindi, Arabic, Portuguese, Indonesian, Bengali and Russian each read in their own language** from the language
+ * - **Spanish, Chinese, Hindi, Arabic, Portuguese, Indonesian, Bengali, Russian and French each read in their own language** from the language
  *   switch to a lesson's step, its piano's key names and the player's controls. Arabic also sets `dir="rtl"`.
  * - **A passed locale's pages run the layout checks at a phone's and a desktop's width,** in both themes.
  *   A right-to-left one runs them at every width, as `passedWidthsOf` says. A flaw counts only where the
@@ -240,6 +240,32 @@ test("the_russian_site_reads_in_russian", async ({ page }) => {
   await expect(page.getByRole("button", { name: "Воспроизвести", exact: true })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Песни" })).toBeVisible();
   await expect(bar(page).getByRole("button", { name: "Настройки" })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test("the_french_site_reads_in_french", async ({ page }) => {
+  test.setTimeout(60_000);
+  await pastSetup(page);
+  const errors = watchErrors(page);
+
+  await page.goto("./learn/");
+  const choice = bar(page).getByRole("combobox", { name: "Language" });
+  await expect(choice.locator('option[value="fr"]')).toHaveText("Français");
+  await choice.selectOption("fr");
+  await expect(page).toHaveURL(/\/fr\/learn\/$/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "fr");
+  await expect(heading(page)).toHaveText("Apprendre le piano");
+  await expect(page.locator("main")).toContainText("Découvrir le piano");
+
+  await page.goto("./fr/learn/meet-the-piano/find-c/");
+  await expect(page.locator(".lesson__title")).toHaveText("Trouver le do");
+  await expect(page.locator("main")).toContainText("Elles ont toutes le même nom : do.");
+  await expect(page.locator('.piano-keys__key[data-pitch="60"]')).toHaveAttribute("data-name", "Do4");
+
+  await page.goto("./fr/play/");
+  await expect(page.getByRole("button", { name: "Lire", exact: true })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "Morceaux" })).toBeVisible();
+  await expect(bar(page).getByRole("button", { name: "Paramètres" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 

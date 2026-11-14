@@ -21,7 +21,7 @@ stages:
     status: done
   - id: 6
     title: The French site ships
-    status: open
+    status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
     status: open
@@ -82,6 +82,9 @@ marks and inside its quotes, and the rules test checks each one. The method in
 - **A key name the code builds keeps the note label's capital:** `Si♭ majeur`, as § 7 of the guide says.
 - **Soft is `doux`, and a space stands outside `« »`.** The rules test now checks both, after a review
   caught each.
+- **A text that reads the same in French stays missing, and the English shows.** These are the language
+  names, `fpsNone`, `siteName` and `pages.home.title`. The rules test refuses a copy of the English, and
+  Portuguese, Indonesian and Bengali leave the same texts out.
 - **Lanes:** stage 1 comes first. Stages 2 to 5 touch disjoint files, but each follows the glossary
   stage 1 writes, so they run in order. Stage 6 needs all of them.
 
@@ -171,15 +174,19 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 **Does:** one read of the whole locale for consistency, then `fr` ships, and every page is looked at.
 **Split:** a fresh `reader` subagent reads every French file against the glossary, and lists each term,
 address or mark that drifts between files.
-**Gate:** `bun run i18n status fr` lists no missing and no stale text outside `legal`.
+**Gate:** `bun run i18n status fr` lists no stale text, and no missing text outside `legal` but the 14
+that read the same in French.
 
-- [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `fr` is `shipped`. `src/i18n/locale-table.ts:59`
-- [ ] The French social image. `tools/make-social-image.ts:104`
-- [ ] The layout checks run in `fr` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
-- [ ] Test `the_french_site_reads_in_french`: `lang`, the switch's *Français*, a lesson step and the player in French. `e2e/locales.e2e.ts:1`
-- [ ] Look at every route in `fr` with `bun run shot --locale fr-FR`, on a phone and a desktop, in both themes.
-- [ ] The feature list and the README name French. `docs/reference/features.md:1`, `README.md:12`
+- [x] Every drift the reader lists is settled in the files it names.
+  - [x] Five readers: the catalogs, the lessons, and the guides in three parts.
+  - [x] 11 of 17 items settled, and 6 polish items kept with a reason.
+  - [x] The rules test passes, and `bun tools/make-our-songs.ts` wrote the touched guides.
+- [x] `fr` is `shipped`. `src/i18n/locale-table.ts:59`
+- [x] The French social image. `tools/make-social-image.ts:104`
+- [x] The layout checks run in `fr` at 360 and 1280 pixels. `e2e/layout-check.ts:53`
+- [x] Test `the_french_site_reads_in_french`: `lang`, the switch's *Français*, a lesson step and the player in French. `e2e/locales.e2e.ts:246`
+- [x] Look at every route in `fr` with `bun run shot --locale fr-FR`, on a phone and a desktop, in both themes.
+- [x] The feature list and the README name French. `docs/reference/features.md:161`, `README.md:21`
 
 ### 7. the goal is verified once, and every failure is fixed
 
@@ -191,39 +198,31 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 5 are done. The catalogs, the eight worlds and all 80 song guides are in French, reviewed
-blind and stamped in `src/i18n/stamps/fr.json`. `bun tools/make-our-songs.ts` wrote every `guide.json`.
-`bun tools/i18n.ts status fr` lists no guide or lesson text missing or stale.
+Stages 1 to 6 are done. Every French text is reviewed and stamped, and `fr` ships. The build writes
+every page under `fr/`, and the language switch offers Français. The worlds carry their French titles
+in `src/learn/course.ts`. `public/images/social/fr.png` draws the lead in French.
 
-Stage 5 ran in four batches, each with a writer, a blind `reader` review and a settler. The four
-reviews found 49 items, and 5 were *wrong*. Most findings were a direction the French lost, such as
-"up" or "down" in a hand's move. A review also caught `rebondi` used for "bouncy", and a key named
-where the English meant a chord. Every chord named `majeur` or `mineur` was checked against its notes.
-The briefs are `.agent-tmp/i18n/fr/guide-*-brief.md`, and the findings are `guide-findings-nz-*.md`.
+The consistency read ran as five `reader`s: the catalogs, the lessons, and the guides in three parts.
+They listed 17 items and none *wrong*, and 11 are settled. The 6 kept are polish items, each named in the
+commit `fix(i18n): the French texts use one term for each idea across files`. The brief is
+`.agent-tmp/i18n/fr/consistency-brief.md`.
 
-Two texts depart from the glossary's step on purpose. *up-on-the-housetop* and *wedding-march* say
-`résonne au-dessus`, since their English says "rings", not "sings". The Lone Ranger stands bare in
-*william-tell*'s fun fact, where it names the character and not the show.
+`bun tools/i18n.ts status fr` lists 14 missing and none stale. Each missing text reads the same in
+French, as the standing decisions say. The language setting's `fr: "Français"` is new in English and
+German, so every other passed locale lists it missing too.
+
+`the_french_site_reads_in_french` passed once by name, and the rules test passes. Shots of nine routes,
+on a phone and a desktop in both themes, showed no page error and no French-only flaw.
 
 ### Next
 
-**Stage 6: the French site ships.** Take its items in order, from `docs/goals/french.md` § 6.
-1. **The consistency read.** One fresh `reader` per area reads its French files against
-   `docs/reference/translation/fr.md`, and lists each term, address or mark that drifts between files.
-   Split it three ways: `src/i18n/messages/*.fr.ts`, `src/learn/lessons/*/*.fr.ts` and
-   `tools/our-songs/*.fr.ts`. One settler per area applies the drifts. Rerun the rules test, then
-   `bun tools/make-our-songs.ts` and restamp each unit a drift touched.
-2. **The gate's 13 missing texts read the same in every locale.** They are the ten language names of
-   `player.settings.settings.language.options.*`, `player.shell.overlays.fpsNone`, `siteName` and
-   `pages.home.title`. Read each English value, and write it into the `fr` catalog where French keeps it
-   as is. Then `bun tools/i18n.ts status fr` reads 0 missing.
-3. **`fr` ships** at `src/i18n/locale-table.ts:59`, with its social image at `tools/make-social-image.ts:104`.
-4. **The layout checks in `fr`** at `e2e/layout-check.ts:43`, and the test
-   `the_french_site_reads_in_french` in `e2e/locales.e2e.ts`, modelled on the Spanish one beside it.
-5. **Shots of every route** with `bun run shot --locale fr-FR`, on a phone and a desktop, in both themes.
-6. **The feature list and the README name French:** `docs/reference/features.md:1`, `README.md:12`.
+**Stage 7: the goal is verified once.** Run `looper verify` over the whole goal. Fix every failure in
+one pass, never loosening a test, and run it once more. Then harvest the goal into `docs/findings.md`
+§ `french`, as the earlier locales' sections do, and delete this file.
 
-The acceptance check `french-site` goes red until item 4 lands. No other test is expected red.
+The layout checks of `e2e/locales.e2e.ts` now run `fr` at 360 and 1280 pixels for the first time. A
+French label that runs long may fail there. The fix is the glossary's short form, per § 10 of the guide.
+No other test is expected red.
 
 ### Backlog
 
@@ -234,3 +233,7 @@ The acceptance check `french-site` goes red until item 4 lands. No other test is
   would name them, where a browser offers it. This is a feature change, outside a translation pass.
 - The range fields show a note as `Do2` in a solfège locale, but `parsePitch` of `src/keyboard/range.ts`
   reads letters only. Their help keeps `C2`. Solfège input would serve every solfège locale.
+- On a phone, a nav tab whose label wraps to two lines has its active underline cross the second line.
+  *Apprendre le piano* and Russian's *Учиться играть* both show it. A fix in the tab's CSS serves every locale.
+- The home page's lead breaks at the hyphen of `toi-même` or `joue-les`. French allows it, but a
+  no-break hyphen would keep each word whole where the font draws U+2011.
