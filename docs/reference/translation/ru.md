@@ -451,6 +451,8 @@ More rules the guides settle:
   "and" is `и`: `«раз-и, два-и»`. Russian teachers count so aloud.
 - **A miss is `промах` everywhere,** the game's flash and its count included.
 - **The thumb is `первый палец` in every guide,** as the lessons name it. Never `большой палец`.
+- **`большой палец` stands only where a lesson teaches the numbers.** *Finger numbers* defines it as
+  finger 1, and a quiz answer pairs a number with its name: `1-й палец, большой`.
 - **A finger the English numbers takes digits:** `3-й палец`, `2-м пальцем`, `пальцами 5, 4, 3 и 2`.
   `мизинец` stands only where the English says "little finger".
 
@@ -549,6 +551,8 @@ The lessons repeat these lines. Each English line has one Russian text in every 
 - **The note `до` never meets the preposition `до` bare.** Write `от до до соль` only with the octave, as
   `от до первой октавы до соль`, or name the note: `до ноты до`.
 - **A spelled-out chord lists its notes with commas and `и`:** `до, ми и соль`.
+- **A chord played in a set order joins its notes with hyphens,** from the bottom up: `до-ми-соль`,
+  `ми-соль-до`. The order is the point of an inversion or a broken chord, and a teacher writes it so.
 - **The letters `C D E F G A H` of the German system are never used in prose.** WP *Нота (музыка)* names
   them, but a beginner reads solfège.
 - **A letter that code checks,** such as a quiz answer, stays the catalog's own.
