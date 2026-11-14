@@ -1472,7 +1472,7 @@ them, and the Portuguese site ships.
 - Nine missing texts are the site's name and the languages' own names. Three are *Legato*, *Staccato* and the dynamics answers.
 - `looper verify` was green over the whole goal on its first run.
 - No label in `pt` is too long, since `every_page_passes_the_layout_checks_in_pt` passes.
-- The readers' drift pass added glossary rows: a figure is *o padrão* or *o desenho*, and a song that plays by itself is *a música toca*.
+- The readers' drift pass added glossary rows. A figure is *o padrão* or *o desenho*, and a song that plays by itself is *a música toca*.
 - *Tochter Zion*'s *alegra-te* stays, since it quotes Zechariah 9:9 as Brazilian Bibles print it.
 - No Brazilian piano method was reached, and no native Portuguese speaker has read the texts.
 - `public/images/social/pt.png` draws the lead in Portuguese.
@@ -1525,3 +1525,40 @@ them, and the Indonesian site ships.
 - Quotes are `“ ”`, with `‘ ’` inside. Numbers come from `Intl` for `id`.
 - *Learn Piano Easy*, *MIDI*, the song titles and the composers' names are kept.
 - A missing text that reads the same in Indonesian stays missing, and the English shows.
+
+## bengali
+
+**Target:** the site, the course and the song guides read in Bengali as if a native teacher wrote
+them, and the Bengali site ships.
+
+### Findings
+
+- `bn` ships in standard written Bengali. Every catalog section, all eight worlds and every song guide hold their Bengali.
+- `bn` is the first locale in the Bengali script, and the first whose counts use their own digits.
+- `docs/reference/translation/bn.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- `bun tools/i18n.ts status bn` lists 68 missing of 4483 texts and none stale. Each missing text is a kept word.
+- The missing texts are note letters, beat counts, time signatures, key modifiers, the languages' own names, `+N XP`, `FPS` and the site's name.
+- `looper verify` was green over the whole goal on its first run.
+- No label in `bn` is too long, since the layout checks pass in `bn` at 360 and 1280 pixels.
+- The shots of every route showed conjuncts and vowel signs whole, and no missing-glyph box.
+- The readers' drift pass settled `পরের বারটিতে`, `শেষ বারটি` and the miss as `ফসকে যাওয়া`.
+- The same pass set the possessives `C-এর`, `E-র` and `G-এর`. A, B, D and F still mix `-র` and `-এর`.
+- The manger is `যাবপাত্র`, the Bengali Bible's spelling. A reviewer proposed `জাবপাত্র`, which a native reader settles.
+- The marks in `src/i18n/typography.ts` miss a colon with no space after it, such as `করে:একটি`.
+- No native Bengali speaker has read the texts, from Bangladesh or from West Bengal.
+- `public/images/social/bn.png` draws the lead in Bengali.
+
+### Decisions that still bind
+
+- The variety is standard written Bengali, the *chalit* form, with Bangla Academy spelling and no word used in one country only.
+- `lang` is `bn`, `intl` is `bn-BD`, `og` is `bn_BD`, and `naming` is `letters`. CLDR treats `bn-IN` the same.
+- The learner is `আপনি`, and an instruction is its polite imperative, such as `চাপুন` or `বেছে নিন`.
+- The learner's gender stays out of the text, so no noun or adjective describes the learner.
+- Notes are letters, C D E F G A B, and middle C is `C4`. Sargam is never used.
+- A note letter takes its case ending after a hyphen, such as `C-তে`.
+- A sentence ends with the dari `।`, and quotes are `“ ”`, with `‘ ’` inside.
+- A count in a sentence takes Bengali digits through `Intl`, and its classifier `টি` joins the number.
+- Fingers, octaves, bars, beats, time signatures and a work's number keep Western digits.
+- A bar is `বার` with a classifier, and a count of times joins it, as `দুবার`.
+- A common English loanword is written in Bengali script where Bengali apps use it.
+- *Learn Piano Easy*, *MIDI*, the song titles and the composers' names are kept.
