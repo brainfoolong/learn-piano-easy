@@ -18,7 +18,7 @@ stages:
     status: done
   - id: 5
     title: "The song guides in French, from n to z"
-    status: open
+    status: done
   - id: 6
     title: The French site ships
     status: open
@@ -156,9 +156,15 @@ most eight guides each work side by side, and one fresh reviewer per batch revie
 **Split:** as stage 4.
 **Gate:** stage 4's guides are stamped.
 
-- [ ] One `tools/our-songs/<slug>.fr.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.fr.ts:1`
-- [ ] Each batch reviewed blind, and every finding settled.
-- [ ] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp fr` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+- [x] One `tools/our-songs/<slug>.fr.ts` per slug from `neon-chase` to `yankee-doodle`. `tools/our-songs/o-christmas-tree.fr.ts:1`
+  - [x] The work lists and the three briefs under `.agent-tmp/i18n/fr/`.
+  - [x] Four writers wrote the four batches, and the rules test passes.
+- [x] Each batch reviewed blind, and every finding settled.
+  - [x] Four blind reviews, one per batch.
+  - [x] Every finding settled, and the rules test passes.
+- [x] `bun tools/make-our-songs.ts` writes the guides, and `bun run i18n stamp fr` stamps them. `public/songs/ours/o-christmas-tree/guide.json:1`
+  - [x] The guides written, and the build green.
+  - [x] Each guide stamped.
 
 ### 6. The French site ships
 
@@ -168,7 +174,7 @@ address or mark that drifts between files.
 **Gate:** `bun run i18n status fr` lists no missing and no stale text outside `legal`.
 
 - [ ] Every drift the reader lists is settled in the files it names.
-- [ ] `fr` is `shipped`. `src/i18n/locale.ts:18`
+- [ ] `fr` is `shipped`. `src/i18n/locale-table.ts:59`
 - [ ] The French social image. `tools/make-social-image.ts:104`
 - [ ] The layout checks run in `fr` at 360 and 1280 pixels. `e2e/layout-check.ts:43`
 - [ ] Test `the_french_site_reads_in_french`: `lang`, the switch's *Français*, a lesson step and the player in French. `e2e/locales.e2e.ts:1`
@@ -185,47 +191,39 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 to 4 are done. The catalogs, the eight worlds and the 51 guides from `air-on-the-g-string` to
-`mozart-21-andante` are in French, reviewed blind and stamped in `src/i18n/stamps/fr.json`.
-`bun tools/make-our-songs.ts` wrote their `guide.json` files.
+Stages 1 to 5 are done. The catalogs, the eight worlds and all 80 song guides are in French, reviewed
+blind and stamped in `src/i18n/stamps/fr.json`. `bun tools/make-our-songs.ts` wrote every `guide.json`.
+`bun tools/i18n.ts status fr` lists no guide or lesson text missing or stale.
 
-Seven writers wrote the guides in batches of seven or eight, and seven fresh `reader` reviewers read
-them blind. Their 58 findings all landed, with the second review's, and only one was *wrong*. *good-king-wenceslas* named a chord
-`accord de fa majeur` where its notes hold root, fifth and octave. That batch's second review found
-nothing wrong. The glossary gained two rules: `la habanera` with an aspirated h, and `l’auriculaire`
-for "little finger".
+Stage 5 ran in four batches, each with a writer, a blind `reader` review and a settler. The four
+reviews found 49 items, and 5 were *wrong*. Most findings were a direction the French lost, such as
+"up" or "down" in a hand's move. A review also caught `rebondi` used for "bouncy", and a key named
+where the English meant a chord. Every chord named `majeur` or `mineur` was checked against its notes.
+The briefs are `.agent-tmp/i18n/fr/guide-*-brief.md`, and the findings are `guide-findings-nz-*.md`.
+
+Two texts depart from the glossary's step on purpose. *up-on-the-housetop* and *wedding-march* say
+`résonne au-dessus`, since their English says "rings", not "sings". The Lone Ranger stands bare in
+*william-tell*'s fun fact, where it names the character and not the show.
 
 ### Next
 
-**Stage 5: the 29 guides from `neon-chase` to `yankee-doodle`.** Run it as stage 4 ran, in four
-batches:
-1. neon-chase night-on-bald-mountain o-christmas-tree o-come-all-ye-faithful o-du-froehliche o-holy-night
-   o-little-town-of-bethlehem ode-to-joy
-2. old-macdonald-had-a-farm row-row-row-your-boat sailors-hornpipe silent-night spanish-ladies
-   suesser-die-glocken swan-lake
-3. the-blue-danube the-entertainer the-first-noel the-sorcerers-apprentice the-twelve-days-of-christmas
-   toccata-in-d-minor tochter-zion
-4. twinkle-twinkle-little-star up-on-the-housetop vltava we-three-kings wedding-march william-tell
-   yankee-doodle
+**Stage 6: the French site ships.** Take its items in order, from `docs/goals/french.md` § 6.
+1. **The consistency read.** One fresh `reader` per area reads its French files against
+   `docs/reference/translation/fr.md`, and lists each term, address or mark that drifts between files.
+   Split it three ways: `src/i18n/messages/*.fr.ts`, `src/learn/lessons/*/*.fr.ts` and
+   `tools/our-songs/*.fr.ts`. One settler per area applies the drifts. Rerun the rules test, then
+   `bun tools/make-our-songs.ts` and restamp each unit a drift touched.
+2. **The gate's 13 missing texts read the same in every locale.** They are the ten language names of
+   `player.settings.settings.language.options.*`, `player.shell.overlays.fpsNone`, `siteName` and
+   `pages.home.title`. Read each English value, and write it into the `fr` catalog where French keeps it
+   as is. Then `bun tools/i18n.ts status fr` reads 0 missing.
+3. **`fr` ships** at `src/i18n/locale-table.ts:59`, with its social image at `tools/make-social-image.ts:104`.
+4. **The layout checks in `fr`** at `e2e/layout-check.ts:43`, and the test
+   `the_french_site_reads_in_french` in `e2e/locales.e2e.ts`, modelled on the Spanish one beside it.
+5. **Shots of every route** with `bun run shot --locale fr-FR`, on a phone and a desktop, in both themes.
+6. **The feature list and the README name French:** `docs/reference/features.md:1`, `README.md:12`.
 
-What worked in stage 4:
-- **Work lists first,** with `bun tools/i18n.ts work fr guide/<slug>` for each slug.
-- **Three briefs under `.agent-tmp/i18n/`, one per role.** The writer reads the style guide whole, its
-  work lists, and `tools/our-songs/alle-jahre-wieder.fr.ts` as the model. It writes only its own
-  `<slug>.fr.ts` files and runs `bun test src/i18n/translation-rules.test.ts -t french`. The reviewer
-  is a `reader` that reads the French before the work list. It reports one line per finding:
-  `id | kind | weight | problem | fix`. The settler applies a batch's findings and runs the same test.
-- **The writer's brief names how to type a special space,** as a backslash and `u202F` or `u00A0`.
-  Write stored each as the real character this time, and every batch passed the rules test at once.
-- **The reviewer checks each chord's mode against the notes** in `tools/our-songs/<slug>.ts`, as § 7
-  of the guide asks. Writers guessed the mode from the key, and one guess was *wrong*.
-- **The reviewer checks titles and names against French Wikipedia.** Writers gave film titles from
-  memory, such as « La Chouette Équipe » and « Soleil vert ».
-- **A settler must keep a fact a fix drops.** One proposed fix lost the direction "down".
-
-Then stage 6 begins with the consistency read across every French file.
-
-No test is expected red.
+The acceptance check `french-site` goes red until item 4 lands. No other test is expected red.
 
 ### Backlog
 
