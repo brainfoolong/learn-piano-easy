@@ -508,6 +508,14 @@ The lessons repeat these lines. Each English line has one French text in every w
 - **A quiz answer starts with a capital, as any label does:** `Ré`, `Fa dièse`, `1er temps`. A note name
   inside an answer stays lower case.
 - **Pachelbel's canon is `Canon de Pachelbel`,** the title of its French Wikipedia article.
+- **A boss's song with a French title stands in `« »`,** as in prose: `Épreuve finale : « Hymne à la joie »`.
+  A song with no French title stays bare: `Épreuve finale : Jingle Bells à deux mains`.
+- **The fingers of a run of notes follow it:** `Joue-les avec les doigts 3, 2, 1.` Never `Les doigts font`.
+- **A key pressed on each click is `appuie sur une touche au choix`.** A beat itself is `taper`.
+- **A title that is a single Italian term takes its article:** `Le legato`, `Le staccato`.
+- **A rest of two beats is `demi-pause`,** the French name, beside `pause`, `soupir` and `demi-soupir`.
+- **A finger the English numbers is `le doigt 3`,** never a bare `le 3`. A finger the English names keeps
+  its name, such as `le pouce` or `l’auriculaire`.
 
 ## 6. Kept words
 

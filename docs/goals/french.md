@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in French
-    status: open
+    status: done
   - id: 4
     title: "The song guides in French, from a to m"
     status: open
@@ -125,12 +125,12 @@ hands* each go alone. *Chords* goes with *Rhythm*, *Reading music* with *Meet th
 keys* with *First melodies*. Five fresh reviewers then review the five batches blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.fr.ts:1`, `src/learn/lessons/first-melodies/texts.fr.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.fr.ts:1`, `src/learn/lessons/reading-music/texts.fr.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.fr.ts:1`, `src/learn/lessons/chords/texts.fr.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.fr.ts:1`, `src/learn/lessons/expression/texts.fr.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp fr` for each world. `src/i18n/stamps/fr.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.fr.ts:1`, `src/learn/lessons/first-melodies/texts.fr.ts:1`
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.fr.ts:1`, `src/learn/lessons/reading-music/texts.fr.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.fr.ts:1`, `src/learn/lessons/chords/texts.fr.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.fr.ts:1`, `src/learn/lessons/expression/texts.fr.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp fr` for each world. `src/i18n/stamps/fr.json:1`
 
 ### 4. The song guides in French, from a to m
 
@@ -178,31 +178,35 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/*.fr.ts`, and `fr.ts` loads
-as the `fr` chunk of `src/i18n/locale.ts`. `src/i18n/all-catalogs.ts` holds it for the tools and tests.
-Six writers translated the catalogs, and six fresh reviewers read them blind. Settler subagents applied
-every finding. The three batches with a *wrong* finding were reviewed again until none was left.
-`src/i18n/stamps/fr.json` stamps every section. The 13 texts left missing are those Russian leaves to
-English too, such as `siteName`.
+Stages 1 to 3 are done. The catalogs and all eight worlds of the course are in French, reviewed blind and
+stamped in `src/i18n/stamps/fr.json`. Each world's `index.ts` loads `texts.fr` as its own chunk.
 
-The `fr` entry of `src/i18n/typography.ts` now holds 17 mark rules and a longer kept list. Both French
-rules tests pass. The glossary in `docs/reference/translation/fr.md` gained the terms the writers met.
+Five writers translated the worlds, and five fresh reviewers read them blind. Settlers applied all 71
+findings. *Chords* with *Rhythm* and *Scales and keys* with *First melodies* each had one *wrong*
+finding, so each had a second blind review. Those found nothing wrong, and their five findings landed too.
+
+The `fr` marks gained a rule: a space follows `: ; ! ?`. Two writers had dropped it after 27 colons, and
+no test caught it. The guide's § *A lesson's recurring lines* gained the course's settled wordings. A
+boss's French song title stands in `« »`, and a run's fingers are `Joue-les avec les doigts …`.
 
 ### Next
 
-**Stage 3: the course in French.** Files: `src/learn/lessons/<world>/*.fr.ts`, one `texts.fr.ts` per
-world, and one line per world's `index.ts` that loads `texts.fr` as its chunk, as `texts.ru` loads. Commit
-`5ec26ec` is the Russian model. Start with `bun tools/i18n.ts work fr lesson/<world>` for each world.
+**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status fr` lists each `guide/<slug>`, at 22
+texts each. Write the batch's work lists with `bun tools/i18n.ts work fr guide/<slug>`. Batches hold at
+most eight guides. The Russian model is each `tools/our-songs/<slug>.ru.ts`, for structure only. The guide's
+§ *A guide's recurring steps* gives the recurring steps' French, which every writer's brief must carry.
 
-What worked in stage 2:
-- **One shared brief file per role,** under `.agent-tmp/`, which each subagent reads whole. The writer's
-  brief named its files, its Russian model for structure only, and the marks trap. The reviewer's brief
-  asked for one line per finding: id, kind, weight, the French that fixes it, and why.
-- **A settler subagent per batch** got the findings and the session's rulings, and edited the files.
-- **Write and Edit store a typed ` ` as the raw character,** which is right. Grep afterwards for an
-  ASCII space before `!?:;»%`.
+What worked in stage 3:
+- **Three shared briefs, one per role,** under `.agent-tmp/i18n/`: writer, reviewer and settler. Each
+  subagent reads its brief whole, and its prompt names only its batch.
+- **The brief must say how to type a special space.** Write and Edit turned a typed U+202F or U+00A0
+  into an ASCII space for three of five writers. A backslash, then `u202F` or `u00A0`, was stored raw.
+  Edit can also drop a space at the very end of `new_string`.
+- **A button the text names stands unquoted,** as the guide's § 9 says. Never brief `« »` around a label.
+- **A settler per batch** applied every finding in about a minute. The session applied a re-review's few
+  findings itself.
 
-Expected red: `french_texts_keep_their_rules` until each world keeps the marks.
+No test is expected red.
 
 ### Backlog
 

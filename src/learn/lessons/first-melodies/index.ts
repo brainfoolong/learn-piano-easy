@@ -24,6 +24,7 @@ export const firstMelodies: WorldLessons = {
     id: () => import("./texts.id").then((module) => module.texts),
     bn: () => import("./texts.bn").then((module) => module.texts),
     ru: () => import("./texts.ru").then((module) => module.texts),
+    fr: () => import("./texts.fr").then((module) => module.texts),
   },
   skipPicks: firstMelodiesSkipPicks,
 };
