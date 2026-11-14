@@ -1491,3 +1491,37 @@ them, and the Portuguese site ships.
 - Quotes are `“ ”`, with `‘ ’` inside.
 - Numbers and plural forms come from `Intl` for `pt-BR`. A counted message carries one, many and other.
 - *Learn Piano Easy*, *MIDI*, the song titles and the composers' names are kept.
+
+## indonesian
+
+**Target:** the site, the course and the song guides read in Indonesian as if a native teacher wrote
+them, and the Indonesian site ships.
+
+### Findings
+
+- `id` ships in standard Indonesian. Every catalog section, all eight worlds and every song guide hold their Indonesian.
+- `docs/reference/translation/id.md` is the style guide and glossary, and its § *Open* lists the terms no source settled.
+- `bun tools/i18n.ts status id` lists 74 missing of 4482 texts and none stale. Each missing text reads the same in Indonesian.
+- The missing texts are note letters, time signatures, the languages' own names, *Zoom* and *XP*.
+- `looper verify` was green over the whole goal on its first run.
+- No label in `id` is too long, since the layout checks pass in `id` at 360 and 1280 pixels.
+- The readers' drift pass removed about forty *-lah* instructions, which a blind writer adds by habit.
+- The same pass replaced *hitungan* for a beat with *ketukan*, and *kuat* for loud with *keras*.
+- The timer keeps *dtk*, since the English badge is the one letter *s*.
+- No Indonesian piano method was reached, and no native Indonesian speaker has read the texts.
+- `public/images/social/id.png` draws the lead in Indonesian.
+
+### Decisions that still bind
+
+- The variety is standard Indonesian, *bahasa baku*, spelled by EYD with the word forms of KBBI, and with no slang.
+- `lang` and `intl` are `id`, `og` is `id_ID`, and `naming` is `letters`.
+- The learner is *kamu*, and the teacher speaks as *aku*. *Anda* is never used, though Microsoft and Android write it.
+- An instruction is a bare imperative: *Tekan*, *Pilih*, *Mainkan*. No word asks "please", and *-lah* is rare.
+- To play the piano is *mainkan*, and to start playback is *putar*.
+- Settings is *Pengaturan*, and the loanwords *file* and *folder* stand, never *berkas*.
+- A label is sentence case.
+- Notes are letters, C D E F G A B, and middle C is `C4`. Do re mi appears only for singing.
+- Indonesian has one plural form, and a noun is never doubled where a count shows the plural.
+- Quotes are `“ ”`, with `‘ ’` inside. Numbers come from `Intl` for `id`.
+- *Learn Piano Easy*, *MIDI*, the song titles and the composers' names are kept.
+- A missing text that reads the same in Indonesian stays missing, and the English shows.

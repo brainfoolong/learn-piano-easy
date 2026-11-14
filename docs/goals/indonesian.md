@@ -229,8 +229,8 @@ the playbook now says so.
 
 ### Next
 
-**Harvest the goal.** Its target, findings and binding decisions go into `docs/findings.md` §
-`indonesian`, its checks into the floor, and its file is deleted. Then `bengali` is live.
+**Retire the goal.** Its target, findings and binding decisions are in `docs/findings.md` §
+`indonesian`. Its checks move into the floor, and its file is deleted. Then `bengali` is live.
 
 Expected red: none known.
 
