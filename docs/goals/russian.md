@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: russian-rules
@@ -173,16 +173,21 @@ address or mark that drifts between files.
 
 ### 7. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 6 are done. `ru` is shipped, so the build writes every page under `ru/`, and the switch
-offers *Русский*. The worlds carry their Russian titles in `src/learn/course.ts`. The language setting
+Every stage is done, and the goal is reached. `looper verify` is green over the whole goal on its first
+run. No failure needed a fix, so the run after the fixes is that same run. `russian-rules` and
+`russian-site` pass when run by `looper check --name`. The layout checks of `e2e/locales.e2e.ts` pass in
+`ru` at 360 and 1280 pixels.
+
+`ru` is shipped in `src/i18n/locale-table.ts:58`, so the build writes every page under `ru/`, and the
+switch offers *Русский*. The worlds carry their Russian titles in `src/learn/course.ts`. The language setting
 names *Русский* in English and German, and `public/images/social/ru.png` draws the lead in Russian.
 `bun tools/i18n.ts status ru` lists 25 missing texts and none stale. All are kept words, such as the
 endonyms of the language setting, as Bengali shipped with.
@@ -196,20 +201,13 @@ The shots covered 12 routes at 360 and 1280 pixels in both themes. Desktop was c
 errors and no missing-glyph boxes. At 360 pixels, long headings split at any letter. A Russian page
 now sets `hyphens: auto` (`src/ui/base.css:165`), and they break at a syllable.
 
-`the_russian_site_reads_in_russian` passed once by name. `bun x tsc` and a build pass.
-
 ### Next
 
-**Stage 7: the gate.** Run `looper verify` over the whole goal, fix every failure in one pass, and run
-it once more.
+**Retire the goal.** Harvest its target, findings and binding decisions into `docs/findings.md` §
+`russian`, as § `bengali` is. Its checks move into the floor, and its file is deleted. Then `french` is
+live.
 
-Expected red:
-
-- The layout checks in `e2e/locales.e2e.ts` now take `ru` at 360 and 1280 pixels. A Russian label
-  may overflow where English fits. A label that clips takes the glossary's short form.
-- A test that counts the shipped locales or the sitemap's pages may need `ru`. Bengali's ship commit
-  `29f46f9` updated `src/i18n/i18n.test.ts` and `src/learn/game/unlock.test.ts`, and so did this one.
-- `russian_texts_keep_their_rules` covers the edits of `c7780cd`, which no test has run yet.
+Expected red: none known.
 
 ### Backlog
 
