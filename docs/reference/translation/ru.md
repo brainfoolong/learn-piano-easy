@@ -130,6 +130,7 @@ since that list was made.
 | a count as a unit of time, "six counts" | доля: `шесть долей` | follows `доля` |
 | rhythm | ритм | WP *Ритм* |
 | tempo; speed | темп; скорость | *unsourced* for `темп`, since WP *Темп* is a list. `Скорость` is the player's setting. |
+| a tempo in a lesson's prose, such as "60 a minute" | `60 ударов в минуту` | everyday words; a label keeps BPM |
 | metronome | метроном | WP *Метроном* |
 | whole, half, quarter note | целая, половинная, четверть | WP *Нота (музыка)* |
 | eighth, sixteenth note | восьмая, шестнадцатая | WP *Нота (музыка)* |
@@ -162,6 +163,7 @@ since that list was made.
 | major third, minor third | большая терция, малая терция | *unsourced*, the theory's names |
 | open fifth | пустая квинта | *unsourced*, the theory's name |
 | step, skip, leap (between keys) | на соседнюю клавишу, через клавишу, скачок | everyday words; a lesson defines each |
+| a step, a skip (as nouns, on keys or on the staff) | шаг, прыжок: `Это шаг или прыжок?` | everyday words, short for children; a lesson defines each |
 | tune, melody | мелодия | WP *Мелодия* |
 | phrase | фраза | WP *Фраза (музыка)* |
 | figure (a short musical idea) | мотив | *unsourced*, the theory's word |
@@ -463,6 +465,11 @@ The lessons repeat these lines. Each English line has one Russian text in every 
 | Put your right thumb on middle C. | Поставьте первый палец правой руки на до первой октавы. |
 | Keep your hand where it is. | Оставьте руку на месте. |
 | Press Start and listen to four clicks first. | Нажмите «Старт» и сначала послушайте четыре щелчка. |
+
+- **A boss's title is `Финальное испытание: <the song>`,** with `двумя руками` where the English says both hands.
+- **A quiz answer starts with a capital, as any label does:** `Ре`, `Фа-диез`, `1-я доля`. A note name
+  inside an answer stays lower case.
+- **Pachelbel's canon is `«Канон Пахельбеля»`,** the title of its Russian Wikipedia article.
 
 ## 6. Kept words
 

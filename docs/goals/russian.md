@@ -12,7 +12,7 @@ stages:
     status: done
   - id: 3
     title: The course in Russian
-    status: open
+    status: done
   - id: 4
     title: "The song guides in Russian, from a to m"
     status: open
@@ -127,12 +127,12 @@ hands* each go alone. *Chords* goes with *Rhythm*, *Reading music* with *Meet th
 keys* with *First melodies*. Five fresh reviewers then review the five batches blind.
 **Gate:** stage 2's catalogs are stamped.
 
-- [ ] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.ru.ts:1`, `src/learn/lessons/first-melodies/texts.ru.ts:1`
-- [ ] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.ru.ts:1`, `src/learn/lessons/reading-music/texts.ru.ts:1`
-- [ ] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.ru.ts:1`, `src/learn/lessons/chords/texts.ru.ts:1`
-- [ ] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.ru.ts:1`, `src/learn/lessons/expression/texts.ru.ts:1`
-- [ ] Each world reviewed blind, and every finding settled.
-- [ ] `bun run i18n stamp ru` for each world. `src/i18n/stamps/ru.json:1`
+- [x] *Meet the piano* and *First melodies*. `src/learn/lessons/meet-the-piano/texts.ru.ts:1`, `src/learn/lessons/first-melodies/texts.ru.ts:1`
+- [x] *Rhythm* and *Reading music*. `src/learn/lessons/rhythm/texts.ru.ts:1`, `src/learn/lessons/reading-music/texts.ru.ts:1`
+- [x] *Both hands* and *Chords*. `src/learn/lessons/both-hands/texts.ru.ts:1`, `src/learn/lessons/chords/texts.ru.ts:1`
+- [x] *Scales and keys* and *Expression*. `src/learn/lessons/scales-and-keys/texts.ru.ts:1`, `src/learn/lessons/expression/texts.ru.ts:1`
+- [x] Each world reviewed blind, and every finding settled.
+- [x] `bun run i18n stamp ru` for each world. `src/i18n/stamps/ru.json:1`
 
 ### 4. The song guides in Russian, from a to m
 
@@ -181,36 +181,45 @@ address or mark that drifts between files.
 
 ### State
 
-Stages 1 and 2 are done. Every catalog section has its `src/i18n/messages/<section>.ru.ts`, and
-`src/i18n/locale.ts` and `src/i18n/all-catalogs.ts` load `ru`. Six writers translated them, and four
-blind reviewers found nothing *wrong*. Every finding was applied, and every section is stamped in
-`src/i18n/stamps/ru.json`. `bun x tsc` and `russian_texts_keep_their_rules` pass.
+Stages 1, 2 and 3 are done. Every catalog section and every lesson of the eight worlds has its Russian
+file, and each world's `index.ts` loads `texts.ru`. Every unit is stamped in `src/i18n/stamps/ru.json`.
+`bun x tsc`, `russian_texts_keep_their_rules` and a build pass. `bun tools/i18n.ts status ru` lists only
+the 80 song guides and the kept words of the catalogs as missing.
 
-The texts still missing are kept words only, as in Bengali: the site's name, the modifier keys, the
-language names and the time signatures. The glossary in `ru.md` gained the rows the writers met.
+Five blind reviews of the course found 135 findings, and all were applied. Only *Scales and keys* with
+*First melodies* had *wrong* ones, all of them the step and skip nouns. Its second blind review found
+nothing wrong.
+
+The course settled these rows in `ru.md`. A step and a skip as nouns are `шаг` and `прыжок`. A boss's
+title is `Финальное испытание: …`. A quiz answer starts with a capital. Pachelbel's canon is
+`«Канон Пахельбеля»`. A tempo in prose is `60 ударов в минуту`. Russian Wikipedia keeps *Mary Had a
+Little Lamb*, *Jingle Bells*, *Twinkle, Twinkle, Little Star* and *Old MacDonald Had a Farm* in Latin.
 
 No Russian piano method was reached, so most music terms rest on Russian Wikipedia alone. The guide's
 *Open* lists the weak rows.
 
 ### Next
 
-**Stage 3: the course in Russian.** Run `bun tools/i18n.ts work ru lesson/<world>` for each world. Five
-writers translate side by side into `src/learn/lessons/<world>/<lesson>.ru.ts`, and each world's index
-loads `texts.ru` as the `bn` one does. Mirror `src/learn/lessons/meet-the-piano/*.bn.ts`. Each writer
-reads `ru.md` whole, with § *A lesson's recurring lines*. Then five fresh reviewers review blind, and
-`bun tools/i18n.ts stamp ru lesson/<world>` stamps each world.
+**Stage 4: the song guides from a to m.** `bun tools/i18n.ts status ru` lists them as `guide/<slug>`,
+from `alle-jahre-wieder` to `morgen-kinder`. Run `bun tools/i18n.ts work ru guide/<slug>` for each.
+Writers of at most eight guides work side by side into `tools/our-songs/<slug>.ru.ts`. Mirror
+`tools/our-songs/air-on-the-g-string.bn.ts`. Then one fresh blind reviewer per batch reviews it, a settler
+applies its findings, and `bun tools/i18n.ts stamp ru guide/<slug>` stamps each. Then
+`bun tools/make-our-songs.ts` writes the guides.
 
-- A writer's brief points at `ru.md` and translation.md § *The writer's rules*, and names its files and
-  work lists. A reviewer reads the Russian before the English, and reports one line per finding.
-- Grep each file for an ASCII space before `%` and units, as the playbook says.
-- A function message with a rest argument, such as `...parts`, must drop its colon when the list is
-  empty. The rules test calls it with no parts.
+- A writer's brief points at `ru.md` whole, with § *A guide's recurring steps*, and at translation.md
+  § *The writer's rules*. It names its files and work lists.
+- Name a work by its Russian Wikipedia title, as `ru.md` § 6 says. Check each title with the English
+  article's `langlinks` to `ru`, since a writer guesses wrong from memory.
+- A reviewer reads the Russian before the English, and writes its findings to a file under
+  `.agent-tmp/i18n/ru/`. A settler per batch applies them, so the session's context stays small.
 
 Expected red: none.
 
 ### Backlog
 
 - A native Russian speaker's read of the course would catch what a blind review cannot.
+- Stage 6's shots include a Russian lesson, where a long title or quiz answer may clip at 360 pixels.
 - A Russian piano teacher's read of the glossary's *unsourced* rows, as `ru.md` § *Open* lists.
 - The keyboard range field may show a solfège name such as `до2` but accept only `C2`, since
   `parsePitch` in `src/keyboard/range.ts` reads letters. The help texts keep `C2`, as Spanish does.
