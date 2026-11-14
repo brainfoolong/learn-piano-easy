@@ -24,7 +24,7 @@ stages:
     status: done
   - id: 7
     title: "the goal is verified once, and every failure is fixed"
-    status: open
+    status: done
     gate: true
 checks:
   - id: bengali-rules
@@ -180,22 +180,25 @@ address or mark that drifts between files.
 
 ### 7. the goal is verified once, and every failure is fixed
 
-- [ ] Run `looper verify` over the whole goal.
-- [ ] Fix every failure it names in one pass, never deleting or loosening a test.
-- [ ] Run `looper verify` once more, and it is green.
+- [x] Run `looper verify` over the whole goal.
+- [x] Fix every failure it names in one pass, never deleting or loosening a test.
+- [x] Run `looper verify` once more, and it is green.
 
 ## Handoff
 
 ### State
 
-Stages 1 to 6 are done, and Bengali ships. `bn` is `shipped` in `src/i18n/locale-table.ts`. The worlds
-carry their Bengali titles in `src/learn/course.ts`, and `public/images/social/bn.png` is drawn.
-`the_bengali_site_reads_in_bengali` passes, and so does the whole of `e2e/locales.e2e.ts`, whose layout
-checks now include `bn`.
+Every stage is done, and the goal is reached. `looper verify` is green over the whole goal on its first
+run. No failure needed a fix, so the run after the fixes is that same run. `bengali-rules` and
+`bengali-site` pass when run by `looper check --name`.
 
-The gate holds. `bun tools/i18n.ts status bn` lists 67 missing texts, and each is a kept word. They are
-note letters, beat counts, time signatures, key modifiers, language endonyms, `+N XP`, `FPS` and
-`siteName`.
+Bengali ships. `bn` is `shipped` in `src/i18n/locale-table.ts:57`. The worlds carry their Bengali titles
+in `src/learn/course.ts:58`, and `public/images/social/bn.png` is drawn. The layout checks of
+`e2e/locales.e2e.ts` pass in `bn` at 360 and 1280 pixels.
+
+`bun tools/i18n.ts status bn` lists 68 missing of 4483 texts, none stale, and each is a kept word. They
+are note letters, beat counts, time signatures, key modifiers, language endonyms, `+N XP`, `FPS`,
+`siteName` and the home page's title.
 
 Three `reader` subagents read every Bengali file against `bn.md`, and each drift is settled in the
 commit `fix(i18n): every Bengali file says each idea the same way`. `bn.md` records the rules this read
@@ -209,14 +212,8 @@ demo panels stay blank in a full-page shot until they are scrolled into view, wh
 
 ### Next
 
-**Stage 7: the goal is verified once.** Run `looper verify` over the whole goal. Fix every failure it
-names in one pass, never deleting or loosening a test, then run it once more.
-
-- The likeliest red is a test that counts the shipped locales or their pages, such as a sitemap or
-  build count. The ship commit already moved `src/i18n/i18n.test.ts` and `src/learn/game/unlock.test.ts`.
-- The language setting's options in `src/i18n/messages/player-settings-play.en.ts:14` gained `bn`.
-  A test that lists them would need `বাংলা`.
-- Once verify is green, harvest the goal into `docs/findings.md` § `bengali`, as AGENTS.md § *Goals* says.
+**Retire the goal.** Its target, findings and binding decisions are in `docs/findings.md` §
+`bengali`. Its checks move into the floor, and its file is deleted. Then `russian` is live.
 
 Expected red: none known.
 
