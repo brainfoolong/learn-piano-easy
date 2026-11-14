@@ -32,7 +32,7 @@
  *   `src/data/folder-sync.ts`. A page without a folder loads none of its code.
  */
 import { folderSyncOn } from "../data/changes";
-import { setLiveLocale } from "../i18n/live";
+import { setLiveLocale, t } from "../i18n/live";
 import { chooseLocale, loadLocale, localeOfPath, messagesOf, pathInLocale, rowOf, type Locale, type ShippedLocale } from "../i18n/locale";
 import { registerServiceWorker } from "../pwa/register";
 import type { SettingsStore } from "../settings/store";
@@ -164,8 +164,12 @@ export async function startSite(root: HTMLElement, settings: SettingsStore): Pro
   if (folderSyncOn()) void import("../data/folder-sync").then((sync) => sync.startFolderSync(settings), () => undefined);
   attachDrop(root, openSongs);
   attachLaunchQueue(openSongs);
+  // A toast with an action, such as the offer of a new version, stays until the learner closes it.
   registerServiceWorker(
-    { toast: (message, action) => void stack.show(action === undefined ? { message } : { message, action }) },
+    {
+      toast: (message, action) =>
+        void stack.show(action === undefined ? { message } : { message, action, dismissLabel: t().player.shell.toast.dismiss }),
+    },
     settings,
   );
 }

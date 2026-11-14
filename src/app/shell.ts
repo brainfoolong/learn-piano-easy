@@ -152,9 +152,6 @@ export interface Shell {
   run(on: boolean): void;
 }
 
-/** How long a toast with an action stays, in milliseconds: the longest a timer takes, so in effect until dismissed. */
-const ACTION_TOAST_MS = 2_147_483_647;
-
 /** Makes the player in `root`, which takes over `bar`, the bar the site already shows. */
 export function createShell(root: HTMLElement, settings: SettingsStore, bar: PlayerBar): Shell {
   const stage = el("div", { class: "stage" });
@@ -250,7 +247,7 @@ export function createShell(root: HTMLElement, settings: SettingsStore, bar: Pla
     toast(message, action) {
       dropToast?.();
       const dismissLabel = t().player.shell.toast.dismiss;
-      dropToast = stack.show(action === undefined ? { message, dismissLabel } : { message, dismissLabel, action, duration: ACTION_TOAST_MS });
+      dropToast = stack.show(action === undefined ? { message, dismissLabel } : { message, dismissLabel, action });
     },
     run(on) {
       if (on === running) return;

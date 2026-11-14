@@ -14,7 +14,8 @@
  *   new version. The toast holds one action at most, so it never turns into a menu.
  * - **The stack:** a `status` region that screen readers announce politely. `aria-atomic` is off, so a
  *   new toast is read alone. A toast enters with a rise, leaves with a fade, and is removed after
- *   `TOAST_DURATION_MS` or on dismiss. Its timer pauses while the pointer or the focus is on it.
+ *   `TOAST_DURATION_MS` or on dismiss. Its timer pauses while the pointer or the focus is on it. A
+ *   toast with an action has no timer, so an offer such as a new version waits for the learner.
  * - **Reward:** in the stack, its mark pops in with the site's one bigger animation.
  *
  * The stack holds one timer per shown toast, which ends when the toast is removed.
@@ -40,12 +41,18 @@ export interface ToastOptions {
   dismissLabel?: string;
   /** Called when the learner presses the dismiss button. */
   onDismiss?: () => void;
-  /** One action under the message, such as Reload. In the stack, pressing it also removes the toast. */
+  /**
+   * One action under the message, such as Reload. In the stack, pressing it also removes the toast. A
+   * toast with an action then stays until pressed or dismissed, so it also takes a `dismissLabel`.
+   */
   action?: { label: string; run: () => void };
 }
 
 export interface ShowOptions extends ToastOptions {
-  /** How long the toast stays, in milliseconds. `TOAST_DURATION_MS` when absent. */
+  /**
+   * How long the toast stays, in milliseconds. When absent, a toast with an action stays until the
+   * learner acts or dismisses it, and any other stays `TOAST_DURATION_MS`.
+   */
   duration?: number;
 }
 
@@ -106,7 +113,7 @@ export function toasts(): ToastStack {
   });
 
   function show(options: ShowOptions): () => void {
-    const duration = options.duration ?? TOAST_DURATION_MS;
+    const duration = options.duration ?? (options.action === undefined ? TOAST_DURATION_MS : undefined);
     let timer: ReturnType<typeof setTimeout> | undefined;
     let leaving = false;
 
@@ -120,7 +127,7 @@ export function toasts(): ToastStack {
     };
     const start = () => {
       clearTimeout(timer);
-      if (!leaving) timer = setTimeout(remove, duration);
+      if (!leaving && duration !== undefined) timer = setTimeout(remove, duration);
     };
     const pause = () => clearTimeout(timer);
 

@@ -1,4 +1,8 @@
 /** The app shell in a real browser: it starts without errors, shows the scene, and works offline. */
+import { readFile } from "node:fs/promises";
+import { createServer } from "node:http";
+import type { AddressInfo } from "node:net";
+import { extname, join } from "node:path";
 import { expect, test, type Page } from "@playwright/test";
 
 /** Collects every uncaught error and console error the page reports from now on. */
@@ -71,6 +75,71 @@ test("first_visit_is_not_reloaded_when_the_worker_takes_control", async ({ page 
   await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
   await page.waitForTimeout(500);
   expect(await page.evaluate(() => "firstLoadMarker" in window)).toBe(true);
+});
+
+/** The types of the files a page of the build loads. Any other file is served as bytes. */
+const TYPES: Record<string, string> = {
+  ".html": "text/html",
+  ".js": "text/javascript",
+  ".css": "text/css",
+  ".json": "application/json",
+  ".svg": "image/svg+xml",
+  ".webmanifest": "application/manifest+json",
+};
+
+/**
+ * A server of this run's build that the test can move to a next version. Playwright never sees the
+ * request for a worker's script, so only a server can change it. The next version's `sw.js` differs by a
+ * comment. The server is the test's own, so no other test's browser finds the update.
+ */
+async function updatableSite() {
+  const dist = join(".agent-tmp/e2e/runs", process.env.E2E_RUN!, "dist");
+  let next = false;
+  const server = createServer(async (request, response) => {
+    let path = decodeURIComponent(new URL(request.url!, "http://localhost").pathname);
+    if (path.endsWith("/")) path += "index.html";
+    try {
+      let body: Buffer | string = await readFile(join(dist, path));
+      if (next && path === "/sw.js") body = `${body.toString()}\n// The next version.\n`;
+      const type = TYPES[extname(path)] ?? "application/octet-stream";
+      response.writeHead(200, { "content-type": type, "cache-control": "no-cache" }).end(body);
+    } catch {
+      response.writeHead(404).end();
+    }
+  });
+  await new Promise<void>((resolve) => server.listen(0, "localhost", resolve));
+  return {
+    url: `http://localhost:${(server.address() as AddressInfo).port}/`,
+    next: () => (next = true),
+    close: () => {
+      server.closeAllConnections();
+      server.close();
+    },
+  };
+}
+
+test("the_offer_of_a_new_version_stays_until_the_learner_answers_it", async ({ page }) => {
+  const site = await updatableSite();
+  try {
+    await page.goto(site.url);
+    await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+    const errors = watchErrors(page);
+    site.next();
+    await page.evaluate(() => navigator.serviceWorker.getRegistration().then((r) => r?.update()));
+
+    const offer = page.getByRole("status").getByText("A new version is ready.");
+    await expect(offer).toBeVisible({ timeout: 30_000 });
+    // A toast without an action leaves after 5 seconds, and the offer outlasts that.
+    await page.waitForTimeout(6_000);
+    await expect(offer).toBeVisible();
+    await expect(page.getByRole("status").getByRole("button", { name: "Dismiss" })).toBeVisible();
+
+    await Promise.all([page.waitForEvent("load"), page.getByRole("status").getByRole("button", { name: "Reload" }).click()]);
+    await expect(offer).toBeHidden();
+    expect(errors).toEqual([]);
+  } finally {
+    site.close();
+  }
 });
 
 test("app_reloads_offline_from_the_service_worker", async ({ page, context }) => {
