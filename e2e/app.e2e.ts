@@ -298,3 +298,10 @@ test("a_page_with_a_query_opens_offline_as_its_own_page", async ({ page, context
   expect(await response?.text()).toContain('<base href="../"');
   expect(errors).toEqual([]);
 });
+
+test("a_fetch_of_a_page_folder_is_answered_offline_with_its_page", async ({ page, context }) => {
+  await openParts(page, ["player"]);
+  await context.setOffline(true);
+  const html = await page.evaluate(async () => (await fetch("./play/")).text());
+  expect(html).toContain('<base href="../"');
+});

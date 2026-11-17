@@ -170,22 +170,24 @@ async function rootPage(cache: Cache): Promise<Response | undefined> {
 }
 
 /**
- * A shell file, cache-first. A navigation is answered with its route's page, its folder's
- * `index.html`, such as `de/play/index.html`. Where the cache holds no page, the root page answers.
- * Its `<base>` is rewritten, since the page's own `./` would resolve from the folder of the address.
+ * A shell file, cache-first. A navigation, and any request for a folder's address such as `de/`, is
+ * answered with the folder's `index.html`, such as `de/play/index.html`. Where the cache holds no page
+ * for a navigation, the root page answers. Its `<base>` is rewritten, since the page's own `./` would
+ * resolve from the folder of the address.
  */
 async function fromShell(request: Request, navigate: boolean): Promise<Response> {
   const cache = await caches.open(SHELL_CACHE);
-  if (!navigate) {
+  const url = new URL(request.url);
+  const folder = url.pathname.endsWith("/");
+  if (!navigate && !folder) {
     const file = await cache.match(request);
     return file ? ranged(request, file) : fetch(request);
   }
   // The page is looked up by its exact URL, without the query. `ignoreSearch` would walk every entry
   // of the cache instead, which costs seconds when the browser has not touched the cache for hours.
-  const url = new URL(request.url);
   url.search = "";
-  const page = url.pathname.endsWith("/") ? new URL("index.html", url).href : url.href;
-  const hit = (await cache.match(page)) ?? (await rootPage(cache));
+  const page = folder ? new URL("index.html", url).href : url.href;
+  const hit = (await cache.match(page)) ?? (navigate ? await rootPage(cache) : undefined);
   return hit ?? fetch(request);
 }
 
