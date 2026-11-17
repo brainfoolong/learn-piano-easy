@@ -180,9 +180,12 @@ async function fromShell(request: Request, navigate: boolean): Promise<Response>
     const file = await cache.match(request);
     return file ? ranged(request, file) : fetch(request);
   }
+  // The page is looked up by its exact URL, without the query. `ignoreSearch` would walk every entry
+  // of the cache instead, which costs seconds when the browser has not touched the cache for hours.
   const url = new URL(request.url);
-  const page = url.pathname.endsWith("/") ? new URL("index.html", url).href : request.url;
-  const hit = (await cache.match(page, { ignoreSearch: true })) ?? (await rootPage(cache));
+  url.search = "";
+  const page = url.pathname.endsWith("/") ? new URL("index.html", url).href : url.href;
+  const hit = (await cache.match(page)) ?? (await rootPage(cache));
   return hit ?? fetch(request);
 }
 

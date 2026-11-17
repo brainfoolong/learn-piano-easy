@@ -286,3 +286,15 @@ test("app_reloads_offline_from_the_service_worker", async ({ page, context }) =>
   await expect(page.locator(".stage canvas")).toBeVisible();
   expect(errors).toEqual([]);
 });
+
+test("a_page_with_a_query_opens_offline_as_its_own_page", async ({ page, context }) => {
+  await openParts(page, ["player"]);
+  await context.setOffline(true);
+  const errors = watchErrors(page);
+  const response = await page.goto("./play/?from=link");
+  await expect(page.locator(".stage canvas")).toBeVisible();
+  // The play page is served with its own relative `<base>`. The root page, the fallback, carries the
+  // scope's absolute URL. The router makes the live element absolute at boot, so the served HTML is read.
+  expect(await response?.text()).toContain('<base href="../"');
+  expect(errors).toEqual([]);
+});
